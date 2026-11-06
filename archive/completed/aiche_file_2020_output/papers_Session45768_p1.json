@@ -1,0 +1,288 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/607208",
+    "paper_endpoint": "Paper/607208",
+    "paper_id": "607208",
+    "topic": "Comparison of Dynamic and Steady-State Machine Learning Based Optimization of a Coal-Fired Boiler",
+    "title": "Comparison of Dynamic and Steady-State Machine Learning Based Optimization of a Coal-Fired Boiler",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45768",
+    "session_title": "Optimization-based Estimation and Control",
+    "session_number": "687",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Increased renewable energy penetration into the grid has created new opportunities for baseload operating coal-fired power plants to participate in load-following [1]. This has led to operational challenges by driving the boilers to deviate from design specifications and to operate in a primarily transient condition, continually ramping up and down to follow the desired load. Although this has added flexibility into the supply-side of the electrical grid, this ramping frequently results in suboptimal performance, which is not desirable considering current efforts to minimize emissions [2]. In order to maintain usefulness of older fossil fuel plants, it is necessary to design better closed-loop control methods for maximizing performance under these new conditions. There have been previous works that have modeled a boiler at steady-state using feedforward artificial neural networks (FF-ANN) and support vector machines (SVM) [3]. There have also been works that use such models for closed-loop steady-state optimization [4, 5]. However, these works do not account for the process dynamics, which can be modeled using recurrent neural networks (RNN) such as long short-term memory (LSTM) [6]. In order to demonstrate the significance of the process dynamics and the need for real-time dynamic optimization, a simplified dynamic model of a coal-fired boiler is optimized using both steady-state and dynamic optimization. The same dataset is modeled using two types of machine learning: LSTM for the dynamic model and an FF-ANN for the steady-state model. Both models are in simulated closed-loop control with particle swarm optimization (PSO) to find the optimal operating parameters. The overall heat-rate of the simulated plant using dynamic optimization and steady-state optimization is compared. The results are not computed in real-time, but they demonstrate a significant improvement on overall boiler efficiency when process dynamics are included in the optimization. The steady-state and dynamic optimization methods are compared using equally-sized timesteps on the same load profile to demonstrate that accounting for the system dynamics yields significantly better performance. Successfully computing these results in real-time will allow more coal-fired boilers to efficiently perform load following and add additional flexibility to the electrical grid. [1] Hannan, M. A., Tan, S. Y., Al-Shetwi, A. Q., Jern, K. P., & Begum, R. A. (2020). Optimised controller for renewable energy sources integration into microgrid: Functions, constraints and suggestions. Journal of Cleaner Production, 120419. [2] Tuttle, J. F., & Powell, K. M. (2019). Analysis of a thermal generator’s participation in the Western Energy Imbalance Market and the resulting effects on overall performance and emissions. The Electricity Journal, 32(5), 38-46. [3] Li, Q., & Yao, G. (2017). Improved coal combustion optimization model based on load balance and coal qualities. Energy, 132, 204-212. [4] Tuttle, J. F., Vesel, R., Alagarsamy, S., Blackburn, L. D., & Powell, K. (2019). Sustainable NOx emission reduction at a coal-fired power station through the use of online neural network modeling and particle swarm optimization. Control Engineering Practice, 93, 104167. [5] Tan, P., Xia, J., Zhang, C., Fang, Q., & Chen, G. (2016). Modeling and reduction of NOX emissions for a 700 MW coal-fired boiler with the advanced machine learning method. Energy, 94, 672-679. [6] Tan, P., He, B., Zhang, C., Rao, D., Li, S., Fang, Q., & Chen, G. (2019). Dynamic modeling of NOX emission in a 660 MW coal-fired boiler with long short-term memory. Energy, 176, 429-436.",
+    "presenting_author": "Landen Blackburn | University of Utah, Salt Lake City",
+    "authors": [
+      "Landen Blackburn | University of Utah, Salt Lake City",
+      "Jacob F. Tuttle | University of Utah, Salt Lake City",
+      "Kody Powell | The University of Utah, Salt Lake City"
+    ],
+    "authors_structured": [
+      {
+        "name": "Landen Blackburn",
+        "affiliation": "University of Utah, Salt Lake City",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jacob F. Tuttle",
+        "affiliation": "University of Utah, Salt Lake City",
+        "designation": "Author"
+      },
+      {
+        "name": "Kody Powell",
+        "affiliation": "The University of Utah, Salt Lake City",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "687a",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/607208"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/602064",
+    "paper_endpoint": "Paper/602064",
+    "paper_id": "602064",
+    "topic": "Large-Scale Dynamic and Multi-Objective Optimization for Power Plant Cycling",
+    "title": "Large-Scale Dynamic and Multi-Objective Optimization for Power Plant Cycling",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45768",
+    "session_title": "Optimization-based Estimation and Control",
+    "session_number": "687",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Traditional electricity grids are currently facing challenges to manage high penetration levels of variable renewable energy (VRE), such as solar and wind [1] . Solar and wind power generation are known to have zero marginal costs and zero fuel emissions to dispatch, thus the VRE from these sources should be prioritized when available. However, the high variability introduced by the VRE leads to dispatchable energy sources such as baseload power plants to cycle their loads so that they can supply the net load in a reliable manner. The increased power plant cycling can introduce unexpected inefficiencies into the system that potentially incur increase in costs, emissions, and wear&tear, as the power plants are no longer operating at their optimal design points [2] . The development of approaches to address these challenges has become a significant topic of research in process systems engineering, from design to control and optimization [3-8] . In particular, a framework comprised of a Tchebycheff-based multi-objective and a hybrid of a Particle Swarm Optimization (PSO) and Sequential Quadratic Programming (SQP) dynamic real-time optimization was previously introduced for a carbon capture subsystem from a supercritical coal-fired (SCPC) power plant [7] . Due to the promising performance results for a low-dimensional case, the extension of the framework to plant-wide optimization was initiated [9] . Such plant-wide optimization had 10 decision variables per time step, including the slack variables, which leaded to a total number of decision variables up to 300 per time horizon. An additional customized Interior-Point-based (IP) step was designed to assess trajectory optimality of the plant-wide optimization. With that additional step, the PSO-SQP algorithm was used to generate an initial feasible trajectory, while the IP step was employed to search for trajectory optimality. Results indicated that the PSO-SQP component performed slower than real-time, while the IP component performed faster than real-time. Based on the previous implementation results, in this presentation, the developed optimization framework is extended to address large-scale dynamic multi-objective optimization challenges for power plant cycling. The system dimensionality, the imposed load-following demand, and the computational time for real-time implementation are the main challenges for this framework. Assessments of subsections of the optimization algorithm are conducted to analyze large-scale suitability of the current methods as well as other IP algorithms to improve computational efficiency. Parallelization of the PSO component is also performed considering 4 and 64 cores clusters. The optimization is focused on economic and environmental objectives, considering overall efficiency and demand load as constraints. Electricity price market, renewable intermittency profiles, and policies are included as forcing functions/constraints to determine the optimal output trajectories. The obtained optimal dynamic trajectories for power generation can be ultimately sent to lower-level advanced model-based controllers [3][10][11] . References [1] REN21 Renewable Energy Policy Network for 21 st Century. Available at: http://www.ren21.net/status-of-renewables/global-status-report/. Accessed on April 16, 2018. [2] Bentek Energy LLC., (2010). How Less Became More: Wind, Power and Unintended Consequences in the Colorado Energy Market. Prepared for Independent Petroleum Association of Mountain States . [3] He, X., Lima, F. V., (2019). Development and Implementation of Advanced Control Strategies for Power Plant Cycling with Carbon Capture. Computers & Chemical Engineering, 121, pp. 497–509. [4] Chen, C., Bollas, G. M., (2018). Dynamic Optimization of Subcritical Steam Power Plant Under Time-Varying Power Load. Processes, 6(8), pp. 114–114. doi: 10.3390/pr6080114. [5] Bankole, T., Jones, D., Bhattacharyya, D., Turton, R., Zitney, S. E., (2018). Optimal Scheduling and Its Lyapunov Stability for Advanced Load-Following Energy Plants with CO 2 Capture. Computers and Chemical Engineering, 109, pp. 30–47. doi: 10.1016/j.compchemeng.2017.10.025 [6] He, X, Wang, Y, Bhattacharyya, D, Lima, F.V, Turton, R., (2018). Dynamic Modeling and Advanced Control of Post-Combustion CO 2 Capture Plants. Chemical Engineering Research and Design., 131, pp. 430-439. doi: 10.1016/j.cherd.2017.12.020. [7] Kim, R., Lima, F. V., (2020). A Tchebycheff-Based Multi-Objective Combined with a PSO-SQP Dynamic Real-Time Optimization for Cycling Energy Systems. Chemical Engineering Research and Design, 156, pp. 180-194. doi: 10.1016/j.cherd.2020.01.020 [8] Wang, Y., Bhattacharyya, D., Turton, R., (2020). Evaluation of Novel Configurations of Natural Gas Combined Cycle (NGCC) Power Plants for Load-Following Operation using Dynamic Modeling and Optimization. Energy & Fuels, 34, pp. 1053-1070. doi: 10.1021/acs.energyfuels.9b03036 [9] Kim, R., Lima, F. V., (2019). Multi-objective and Dynamic Real-time Optimization of Supercritical Coal-fired Power Plant Cycling. AIChE Annual Meeting, Orlando, FL . [10] Zhang, Q., Turton, R., Bhattacharyya, D., (2016). Development of Model and Model-Predictive Control of an MEA-Based Postcombustion CO 2 Capture Process. Industrial and Engineering Chemistry Research, 55, pp. 1292-1308. [11] He, X., Lima, F. V., (2019). A Modified SQP-based Model Predictive Control Algorithm: Application to Supercritical Coal-fired Power Plant Cycling. Submitted for publication.",
+    "presenting_author": "Rebecca Kim | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Rebecca Kim | West Virginia University, Morgantown, WV",
+      "Fernando Lima | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rebecca Kim",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Fernando Lima",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "687b",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/602064"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/608684",
+    "paper_endpoint": "Paper/608684",
+    "paper_id": "608684",
+    "topic": "Hybrid Optimisation of Flow Reactor Performance: A Combined Mechanistic and Data-Driven Approach Using Model-Based Design of Experiments and Gaussian Processes",
+    "title": "Hybrid Optimisation of Flow Reactor Performance: A Combined Mechanistic and Data-Driven Approach Using Model-Based Design of Experiments and Gaussian Processes",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45768",
+    "session_title": "Optimization-based Estimation and Control",
+    "session_number": "687",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Kinetic modelling has become an indispensable tool in the industry for a quantitative understanding of reaction systems. A reliable kinetic model can potentially be used to predict the behaviour of the system outside of the experimental conditions used in the model validation and then be used for design, optimization and control in systems engineering applications [1]. However, the kinetic model that describes the physical system may suffer from both parametric and structural uncertainty. Such issues are well known to be present when kinetic models are used in the scale-up of chemical processes when models developed at the lab-scale are used at the pilot or plant scale. The conditions in the lab-scale environments are usually very well controlled and often cannot be guaranteed in the scaled-up process. Furthermore, phenomena such as catalyst deactivation, measurement/control system malfunctions and mass transfer limitations may lead to inaccurate predictions, even though the chemical kinetics and mechanisms have been correctly identified. As a result, the nominal model may lead to a substantial miscalculation of optimal design solutions [2]. To address this issue black-box optimization techniques have been proposed to address the plant-model mismatch [3], where efficient sampling is employed (via the optimization of an acquisition function). However, in many cases, both large design spaces and high sampling variability necessitate a large number of experiments. Hence, the critical challenge is to reduce both the number and the duration of the experiments required. Model-based design of experiments (MBDoE) has been widely used to improve parameter precision and model discrimination in highly nonlinear dynamic systems [4] minimizing the number of experiments needed for kinetic model validation. Nevertheless, even after the MBDoE procedure, the nominal model may not be adequate to represent the actual system. Various solutions have been proposed to tackle the optimal experimental design problem in the presence of parametric uncertainty, including the use of unscented transformations [5] and polynomial chaos expansions [6] for efficient uncertainty propagation. However, so far only a few contributions have been proposed tackling the problem of optimal experimental design under structural model uncertainty [7]. In this work, a novel hybrid two-step optimization technique is proposed, which accounts for structural model uncertainty, especially for the cases that the kinetic model is utilized in the scaled-up process. We propose to first perform an MBDoE technique to reduce the parametric uncertainty of the kinetic model as much as possible. The proposed MBDoE is potentially performed in a lab scale where the conditions are well controlled. Following that, the nominal model is used in the uncertain process as the prior mean function of the Gaussian process, and this hybrid model can account now effectively for the plant-model mismatch. We propose the use of Gaussian processes to capture the plant-model mismatch and propagate the uncertainty to the next time instances. The Gaussian process can precisely approximate the probability density function of an underlying system and propagate the uncertainties effectively as well as estimate the variance of the noise and model. Hence, the prior acquired knowledge can effectively be used for the optimization of the scaled-up process. Nevertheless, the hybrid model results in a non-Gaussian distribution that needs to be approximated. Analytical expressions for the covariance of the iterated predictions for multi-step predictions are utilized, allowing the integration of the techniques in an efficient framework. A physics-informed acquisition function is proposed given the hybrid model that takes into account the mechanistic knowledge that is available. Therefore, in an iterative approach, the model parameters are updated, requiring the training of the Gaussian process to capture the new mismatch. The algorithm mentioned above is depicted in Figure 1. The proposed methodology has been applied to the optimization of the online (re)-design of flow reactor to demonstrate the effectiveness of this new algorithm. A nucleophilic aromatic substitution (SNAr) of 2, 4- difluoronitrobenzene with pyrrolidine in ethanol (EtOH) give a mixture of the desired product ortho-substituted, para-substituted and bis-adduct as side products. This case study has been adopted from [8]. The underlying algorithms are implemented in python and CasADi, a dedicated framework for efficient algorithmic differentiation and numerical optimization [9], enabling the fast computations of the proposed optimizations. [1] Marin G B, Yablonsky G S, Constales D, Kinetics of Chemical Reactions: Decoding Complexity, Second completely revised and enlarged Edition, 2019, Wiley [2] Petsagkourakis P, Sandoval I O, Bradford E, Zhang D, del Rio-Chanona E A, Reinforcement learning for batch bioprocess optimization, Comput. Chem. Eng., 133 (2020) [3] Jones D R, Schonlau M, Welch W J, Efﬁcient Global Optimization of Expensive Black-Box Functions, 1998, Journal of Global Optimization, 13, 455–492 [4] Franceschini G, Macchietto S, Model-based design of experiments for parameter precision: State of the art. Chem Eng Sci. 2008, 63(19), 4846 -72. [5] Telen D, Vercammen, Logist F, Van Impe J, Robustifying optimal experiment design for nonlinear, dynamic (bio)chemical systems, Comput Chem Eng, 2014, 415–25. [6] Streif S, Petzke F, Mesbah A, R. Findeisen, R.D. Braatz. Optimal Experimental Design for Probabilistic Model Discrimination Using Polynomial Chaos, IFAC Proceedings Volumes (IFAC-PapersOnline), 2017, 19 [7] Petsagkourakis P, Galvanin F, Backoff-Based Model-Based Design of Experiments Under Model Mismatch, Computer Aided Chemical Engineering, 2020 [8] Hone C A, Holmes N, Akien G R, Bourne R A, Muller F L, 2017. Rapid multistep kinetic model generation from transient flow data, Reaction Chemistry and Engineering, 2, 103–108. [9] Andersson J, Åkesson J, Diehl M, {CasADI}: A Symbolic Package for Automatic Differentiation and Optimal Control. In: Forth S, Hovland P, Phipps E, Utke J, Walther A, editors. Recent Advances in Algorithmic Differentiation. Berlin: Springer; 2012. p. 297–307",
+    "presenting_author": "Panagiotis Petsagkourakis | University College of London, United Kingdom",
+    "authors": [
+      "Federico Galvanin | University College London, London WC1E 7JE, United Kingdom",
+      "Panagiotis Petsagkourakis | University College of London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Federico Galvanin",
+        "affiliation": "University College London, London WC1E 7JE, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Petsagkourakis",
+        "affiliation": "University College of London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "687c",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/608684"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/610571",
+    "paper_endpoint": "Paper/610571",
+    "paper_id": "610571",
+    "topic": "Reinforcement (Q-) Learning and Adaptive Model Predictive Control: Conflict or Conflux",
+    "title": "Reinforcement (Q-) Learning and Adaptive Model Predictive Control: Conflict or Conflux",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45768",
+    "session_title": "Optimization-based Estimation and Control",
+    "session_number": "687",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Adaptive and machine learning controllers perform tracking and regulation tasks by tuning control parameters. In the case of RL/Q-Learning, the control function is adapted directly in such a way that the performance improves over time. In the case of adaptive model predictive control (aMPC), a model is updated and then MPC controller is updated indirectly using optimization. The purpose of the current paper is to compare and contrast the direct and indirect control methods by using a linear system with a quadratic performance objective as an example. The system to be controlled and the control objective can now be equivalent, and it is possible to compare and contrast the two approaches in simulation and by Lyapunov-type stability theory. In both cases, we will apply the same recursive least squares (RLS) algorithm to tune control parameters. The control design methods are quite different however; and the performance and stability properties of the two approaches also turn out to be quite different. To compare the methods, we will say that a conflux exists if the parameter tuning and control algorithms exhibit coinciding and unique fixed points. In such a case we can guarantee optimality of the algorithm if it is stable and converges. Otherwise, tuning and control are said to be in conflict and optimality cannot be guaranteed even if the algorithm converges. Classical certainty-equivalence(CE) aMPC treats control and learning as separate tasks. This approach does not generate input signals that are rich enough for good parameter estimation. It is known that stability can be guaranteed while optimality cannot be guaranteed unless additional excitation is provided. In this paper we show that the RL/Q-Learning approach provides neither stability nor optimality unless the signals are excited. Moreover, the excitation requirements are more stringent and to make matters worse, RL/Q-Learning has to use slow learning to be stable. This requirement is not paralleled in aMPC. Thus, the same asymptotic stability and optimality properties hold for direct and indirect learning as long as excitation holds; but the convergence rate of RL/Q-Learning is much slower. Dual control theory [4] discusses the trade-off between two tasks: trajectory and parameter convergence. A dual adaptive controller is designed to optimally improve the learning while maintaining robust control performance. The ideas go back to the original work of Feldbaum [1]. However, algorithms and theory for application in non-trivial examples have been developed only recently [2]. In the current paper we explore the application of dual control as a vehicle to improve the performance of aMPC and RL/Q-Learning. In particular we want to address the issue Polderman [3] described as the “conflux or conflict” between estimation and control as described above. In his seminal work, he showed that the conflux existed between estimation and control for minimum variance and pole-placement control. However, it does not exist for infinite horizon aMPC. Instead, there is conflict resulting in stable, but sub-optimal controls. Bradke et al. [4] demonstrated a similar conflict between estimation and control in RL/Q-learning. The purpose of our presentation is to reviews these results very briefly and explore the possibility of using dual control to stabilize learning controllers and provide asymptotic optimality, thus resolving the above-mentioned conflict that exist in both the direct and indirect approaches to learning control. References Feldbaum, A. (1960). Dual control theory. i. Avtomatika i Telemekhanika , 21(9), 1240– 1249. Heirung, T. A. N., Ydstie, B. E., & Foss, B. (2017). Dual adaptive model predictive control. Automatica , 80, 340–348. Polderman, J.W., 1989. Adaptive control & identification: conflict or conflux?. CWI Tracts , (67). Bradtke, S.J., Ydstie, B.E. and Barto, A.G., 1994, June. Adaptive linear quadratic control using policy iteration. In Proceedings of 1994 American Control Conference-ACC'94 (Vol. 3, pp. 3475-3479). IEEE",
+    "presenting_author": "Zicheng Cai | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Zicheng Cai | Carnegie Mellon University, Pittsburgh, PA",
+      "Birger Ydstie | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zicheng Cai",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Birger Ydstie",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "687d",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/610571"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/607997",
+    "paper_endpoint": "Paper/607997",
+    "paper_id": "607997",
+    "topic": "Accounting for Equipment Stress in Economic Model Predictive Control",
+    "title": "Accounting for Equipment Stress in Economic Model Predictive Control",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45768",
+    "session_title": "Optimization-based Estimation and Control",
+    "session_number": "687",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Economic model predictive control (EMPC) uses optimization of an economics-based cost function subject to constraints including a system model to determine control actions for dynamic processes. EMPC has been explored for its potential to increase profits, reduce utility costs, and improve safety [1]. Unlike traditional control, EMPC may promote time-varying operation around a steady-state based on economic objectives. Much research has focused on methods of theoretically ensuring closed-loop stability of a process under EMPC (e.g., [2] and [3]). However, little has been done in connecting potential operating strategies under EMPC directly to process equipment considerations such as stress, strain, and displacement under various loads. Initial investigations in this direction were performed in [4] by elucidating relationships between stress in a pipe downstream of a continuous stirred tank reactor for which the manipulated inputs were computed by an EMPC. However, all calculations involving stress were performed for an equilibrium case, so that it is desirable to better understand the impacts of transient loading (e.g., by time-varying temperatures in equipment caused by time-varying fluid temperatures due to control actions computed by an EMPC) on the stress profiles in the equipment. Motivated by the above considerations, this work examines the relationship between equipment considerations and control via the integration of a stress and strain model [5] into the EMPC algorithm. This model will be used in predicting stress under the inputs computed by the EMPC and thereby enforcing constraints directly on stress in the controller. The results of this approach in terms of profits and maximum stress reached in the material over time will be compared against the results from utilizing alternative controller methodologies (e.g., operating the process under a traditional tracking MPC with a quadratic objective function [6], an EMPC with a constraint on process temperature rather than directly on stress, and an EMPC with no constraints on temperature or stress). The impacts of controlling the process under an EMPC on equipment stress will be further analyzed through ANSYS Fluent and Mechanical simulations. The simulations will integrate an EMPC that uses a data-driven model fit from stress and strain data determined in ANSYS Mechanical and allow the effectiveness of constraining the approximate stress profiles in the EMPC to be assessed by observing the resulting stress in the equipment. References: [1] Ellis, M., Durand, H., Christofides, P. D. “A tutorial review of economic model predictive control methods.” Journal of Process Control. Volume 24, Issue 8, Pages 1156-1178. (2014) [2] Angeli, D., Amrit, R., and Rawlings, J. “On Average Performance and Stability of Economic Model Predictive Control.” IEEE Transactions on Automatic Control . Volume 57, Issue 7, Pages 1615-1626. (2012) [3] Müller, M., Angeli, D., Allgöwer, F. “Economic model predictive control with self-tuning terminal cost.” European Journal of Control . Volume 19, Issue 5, Pages 408-416. (2013) [4] Durand, H. “On accounting for equipment control interactions in economic model predictive control via process state constraints.” Chemical Engineering Research and Design. Volume 144, Pages 63-78. 2019. [5] Barron, R. and Barron, B. Design for Thermal Stresses. Wiley. (2012) [6] Joe Qin, S., Badgwell, T. “A survey of industrial model predictive control technology” Control Engineering Practice. Volume 11, Issue 7, Pages 733-764. (2003)",
+    "presenting_author": "Kip Nieman | Wayne State University, Detroit, MI",
+    "authors": [
+      "Kip Nieman | Wayne State University, Detroit, MI",
+      "Helen Durand | Wayne State University, Detroit, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kip Nieman",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Helen Durand",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "687e",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/607997"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/611148",
+    "paper_endpoint": "Paper/611148",
+    "paper_id": "611148",
+    "topic": "Robust Economic Model Predictive Control with Zone Control",
+    "title": "Robust Economic Model Predictive Control with Zone Control",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45768",
+    "session_title": "Optimization-based Estimation and Control",
+    "session_number": "687",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Nonlinear Model Predictive Control (NMPC) with general objective known as economic Model Predictive Control (EMPC) has received significant attention in recent years. The objective function of EMPC reflects some economic criterion such as profit maximization or heat minimization, etc which is different from traditional tracking NMPC where the objective is a positive definite quadratic function. The integration of process economics in the control layer makes EMPC of interest in many areas especially in the process industry [1]. Uncertainties arise as a result of imperfect models or unmeasured disturbances in a control system. The presence of disturbances in any control system can lead to performance degradation and/or loss of feasibility which can lead to loss of stability. Due to the integration of process economics in the control layer, it is not fully understood how the presence of uncertainties affect the operation of a system under EMPC. While several robust NMPC concepts has been introduced to address problems arising from the presence of uncertainties in stabilizing NMPC, simply transferring robust NMPC techniques to EMPC could result in poor economic performance [2]. This is because robust NMPC techniques have been designed to reject all disturbances to achieve its desired goal which may not be the case of EMPC as some disturbances can lead to better economic performance. To this end, some results on robust EMPC techniques have been proposed. However, they either use a min-max optimization approach or use the nominal model with tightened invariant constraints. In both cases, the computational demands are very high even for linear systems. In this work, we present a novel economic Model Predictive Control formulation for controlling constrained nonlinear systems subject to unmeasured but bounded disturbances. The formulation incorporates the concept of economic risk in the controller design using only the nominal model and the zone control technique. This not only ensures that the closed-loop system and process economics are robust to disturbances, but also averts the computational demand encountered in the current approaches. This work extends the recent MPC formulation with zone tracking [3] to uncertain systems in a more general setting and can be considered as an economic trust region-based controller design. The key idea is to drive the states of the system to a robust positively invariant subset of the constrained space with specified economic performance. This is achieved by incorporating a fictitious zone tracking objective which is robust control invariant into the original economic objective. By creating a fictitious zone objective, the desired closed-loop economic performance in the presence of uncertainties can be specified in the controller design. We conduct rigorous stability analysis using input-to-state-stability and demonstrate the effectiveness of the proposed controller design using a CSTR example. An algorithm for the construction of the robust economic trust region is also presented. References [1] Ellis, M., Durand, H., & Christofides, P. D. (2014). A tutorial review of economic model predictive control methods. Journal of Process Control, 24(8), 1156-1178. [2] Bayer, F. A., Müller, M. A., & Allgöwer, F. (2014). Tube-based robust economic model predictive control. Journal of Process Control, 24(8), 1237-1246. [3] Liu, S., Mao, Y., & Liu, J. (2019). Model-Predictive Control with generalized zone tracking. IEEE Transactions on Automatic Control, 64(11), 4698-4704.",
+    "presenting_author": "Benjamin Decardi-Nelson | Cornell University, Ithaca, NY",
+    "authors": [
+      "Benjamin Decardi-Nelson | Cornell University, Ithaca, NY",
+      "Jinfeng Liu | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Benjamin Decardi-Nelson",
+        "affiliation": "Cornell University, Ithaca, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jinfeng Liu",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "687f",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/611148"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/602162",
+    "paper_endpoint": "Paper/602162",
+    "paper_id": "602162",
+    "topic": "Distributed Model Predictive Control of Integrated Process Networks Using Community Detection",
+    "title": "Distributed Model Predictive Control of Integrated Process Networks Using Community Detection",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45768",
+    "session_title": "Optimization-based Estimation and Control",
+    "session_number": "687",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The applicability of model predictive control (MPC) as a ubiquitous control method in today’s chemical processes, hinges on the solvability of the underlying constrained dynamic optimization problem in real-time [1]. Such a concern makes the centralized approach to MPC challenging, especially for large-scale and highly integrated process networks [2]. An alternative solution is distributed model predictive control (DMPC), where we decompose the large-scale optimization-based control problem into multiple weakly interacting sub-problems, which can be solved in-parallel to reduce the complexity [3]. The system decomposition lies at the heart of DMPC design. It identifies the number of controllers and describes how the manipulated inputs and controlled output variables must be distributed across the control system. The closed-loop performance and the computational efficiency of the DMPC are impacted directly by a selected decomposition method that alters the geometry of subsystems and the communication between them [2]. Community detection on the representing graphs of integrated process systems has been shown a promising approach to synthesize distributed estimation and control architectures [4, 5]. In previous work, a community detection-based DMPC architecture was developed by maximizing the modularity of the representing directed graphs [6, 7]. Such a decomposition method results in a minimum inter-subsystem communication without considering the strength of interactions between variables belonging to different subsystems [8]. In this work, we explore the impact of variables’ interactions on the community detection-based DMPC of complex process networks. Specifically, decomposition of the control problem into distributed sub-controllers is pursued to maximize the strength of input-output impact. To this end, the control problem is recast as a weighted directed graph and subsequently decomposed using community detection algorithm. As the strength of variable interaction is dependent on the operating state (e.g. recycle ratio), the corresponding optimal decomposition changes based on the operating state. We synthesize an iterative DMPC for output regulation of based on such distributed architecture and we evaluate the closed-loop performance and the computation time of the proposed DMPC for a benchmark reactor-separator process network over a wide operating range. It is illustrated that, for each operating point, the optimal decomposition maximizing the input-output impact performs better compared to ad-hoc architectures like topology-based or balance variable-based decompositions. Rawlings, J.B.; Mayne, D.Q.; Diehl, M. Model Predictive Control: Theory, Computation, And Design; Nob Hill Publishing: Madison, WI, 2017. Pourkargar, D.B.; Almansoori, A.; Daoutidis, P. The impact of decomposition on distributed model predictive control: A process network case study. Ind. Eng. Chem. Res. 2017, 56, 9606−9616. Christofides, P.D.; Scattolini, R.; Munoz de la Pena, D.; Liu, J. Distributed model predictive control: A tutorial review and future research directions. Comput. Chem. Eng. 2013, 51, 21−41. Yin, X.; Liu, J. Subsystem decomposition of process networks for simultaneous distributed state estimation and control. AIChE J. 2019, 65, 904−914. Pourkargar, D.B.; Moharir, M.; Almansoori, A.; Daoutidis, P. Distributed estimation and nonlinear model predictive control using community detection. Ind. Eng. Chem. Res. 2019, 58, 13495−13507. Jogwar, S.S.; Daoutidis, P. Community-based synthesis of distributed control architectures for integrated networks. Chem. Eng. Sci. 2017, 172, 434−443. Pourkargar, D. B.; Almansoori, A.; Daoutidis, P. Comprehensive study of decomposition effects on distributed output tracking of an integrated process over a wide operating range. Chem. Eng. Res. Des. 2018, 134, 553−563. Jogwar, S.S. Distributed control architecture synthesis for integrated process networks through maximization of strength of input-output impact. J. Process Control 2019, 83, 77−87.",
+    "presenting_author": "Davood Pourkargar | Kansas State University, Manhattan, KS",
+    "authors": [
+      "Davood Pourkargar | Kansas State University, Manhattan, KS",
+      "Sujit Jogwar | Indian Institute of Technology Bombay, Mumbai"
+    ],
+    "authors_structured": [
+      {
+        "name": "Davood Pourkargar",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sujit Jogwar",
+        "affiliation": "Indian Institute of Technology Bombay, Mumbai",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "687g",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/602162"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/605035",
+    "paper_endpoint": "Paper/605035",
+    "paper_id": "605035",
+    "topic": "A Model Predictive Control Framework Utilizing a Hybrid Subspace Based Model",
+    "title": "A Model Predictive Control Framework Utilizing a Hybrid Subspace Based Model",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45768",
+    "session_title": "Optimization-based Estimation and Control",
+    "session_number": "687",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Subspace based models have demonstrated an excellent ability to model complex and highly non-linear batch processes. Methods have been developed to accommodate batches of different lengths in the model building stage. The usage of these models in model predictive control (MPC) schemes been applied in different application areas [1-2] in the recent past. Even more recently, a parallel hybrid modeling scheme [3] using a first principles model and a data based residual model was proposed. The residual model was developed using subspace based technique and built with error between the process measurement data and the first principles output of historical batches. The hybrid model was effective in capturing the dynamics of the process and provided better predictions than subspace (built with process data only) and the first principles model. In this work, a model predictive scheme utilizing the hybrid model is proposed. The key consideration in the present formulation is to retain the linearity of the model utilized within the MPC. However, presence of the non-linear first principles model in the hybrid model renders the MPC optimization problem into a non-convex optimization problem. In this proposed approach, a subspace model built with output data of first principles model is first developed and then appended with the residual model to have the same parallel hybrid model structure. This linear hybrid model is now used as the predictive tool inside the MPC. A batch crystallization process is considered as the motivating example. Fines or crystals due to nucleation are produced during the crystallization process which are undesirable in downstream processing industries. The aim of the MPC scheme is to reduce the volume of fines at batch termination while maintaining a desired quality and following certain physical constraints. The MPC embedding the hybrid model is implemented and the results are compared with purely data driven subspace model predictive controlle. The hybrid MPC is shown to achieve superior results compared to the other strategies. [1] Subspace Identification-Based Modeling and Control of Batch Particulate Processes Abhinav Garg and Prashant Mhaskar, Industrial &amp; Engineering Chemistry Research 2017 56 (26), 7491-7502, DOI: 10.1021/acs.iecr.7b00682 [2] Model predictive control of uni-axial rotational molding process, Abhinav Garg, Felipe P.C. Gomes, Prashant Mhaskar, Michael R. Thompson, Computers &amp; Chemical Engineering, Volume 121, 2019, Pages 306-316, ISSN 0098-1354 [3] Hybrid Modeling Approach Integrating First-Principles Models with Subspace Identification Debanjan Ghosh, Emma Hermonat, Prashant Mhaskar, Spencer Snowling, and Rajeev Goel, Industrial &amp; Engineering Chemistry Research 2019 58 (30), 13533-13543",
+    "presenting_author": "Debanjan Ghosh | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Debanjan Ghosh | McMaster University, Hamilton, Canada",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Debanjan Ghosh",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "687h",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/605035"
+  }
+]

@@ -1,0 +1,360 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/495928",
+    "paper_endpoint": "Paper/495928",
+    "paper_id": "495928",
+    "topic": "Combination of Stochastic NMPC/DRTO and Dynamic (re-)Evaluation of the Description of Model Uncertainty in the Optimization of Batch Campaigns",
+    "title": "Combination of Stochastic NMPC/DRTO and Dynamic (re-)Evaluation of the Description of Model Uncertainty in the Optimization of Batch Campaigns",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35677",
+    "session_title": "Estimation and Control of Uncertain Systems",
+    "session_number": "284",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Robust dynamic optimization/adaptive control has been proposed to overcome a significant drawback of conventional dynamic optimization (DRTO) and optimal control (NMPC), namely, the requirement for accurate process models. One of the existing types of robust NMPC/DRTO is stochastic NMPC/DRTO (Rossi et al., 2016). This approach relies on stochastic optimization techniques and approximates the uncertainty in the process model using an appropriate set of uncertain parameters (SUP) and their joint probability distribution function (PDFUP). Although this type of strategy is applicable to a large variety of systems, we will consider the case of batch processes. It is well-known that the performance of stochastic NMPC/DRTO primarily depends on the selection of the SUP and on the estimate of the PDFUP. The latter can be updated periodically based on the measurements acquired in successful batch cycles, using, for instance, Monte-Carlo approaches or Bayesian frameworks ( Mockus et al., 2015). However, the PDFUP mainly affects the performance of the stochastic NMPC/DRTO algorithm and not its robustness. The selection of the SUP is the more crucial and challenging aspect because it may strongly affect both the robustness and the performance of the stochastic NMPC/DRTO method. Moreover, in order to meet real time computational constraints, the SUP can only include a limited number N p (N p ≤ 4, 5) of uncertain parameters. Typically, the SUP is identified statically using sensitivity analysis ( Saltelli et al., 2005) or based on empirical knowledge of the batch process. However, the use of a fixed SUP is often sub-optimal because the importance of any given uncertain parameter can be expected to vary over time, even over a single batch cycle. This is because the relevance of the uncertain parameters may depend on both their stochastic properties (PDFUP) and the operating conditions of the batch process. While the PDFUP does not significantly change over time in a single batch cycle, the same does not apply to the operating conditions of the process, which are continuously modified to compensate for process disturbances and to improve process performance. Therefore, we identify the SUP in real-time, using a three-stage, hierarchical procedure (Figure 1). First, we employ conventional methods based on sensitivity analysis and/or empirical knowledge of the batch process to construct a set of N p tot parameters called SUP tot ( N p tot ≤ 10, 15) (Phase I). This set includes those parameters, which have the most impact on the model predictions over a wide range of operating conditions. Secondly, after every batch cycle, we employ the algorithm called PDFE&U (Probability Distribution Function Estimation & Update), presented at the 2016 AIChE Annual Meeting, to re-estimate in parallel the joint probability distributions of all the subsets of N p uncertain parameters (SUPs) included in SUP tot (Phase II). In this phase, we also define proper indicators of both the statistical dispersion of all the uncertain parameters and their correlation. Note that the application of parallel computing allows us to carry out this phase in the idle time between two consecutive batch cycles. Finally, after every control action (specifically, in the idle time between two consecutive actions), we apply the novel algorithm called RTSASUP (Real-Time Selection of the Active Set of Uncertain Parameters) to select the optimal SUP ( SUP opt ) (Phase III). This newly estimated set of uncertain parameters is used, in the stochastic NMPC/DRTO engine, to compute the control action after the next one (in other words, the SUP opt identified at the end of control action n is used to compute control action n+2 ). Figure 1 : Architecture of the proposed strategy for the online identification of the optimal uncertainty set. Note that RTSASUP chooses SUP opt as the set of N p uncertain parameters that have the most influence on the predictions of the process model, show the largest statistical dispersion and exhibit the smallest correlation among them. In order to do this, the algorithm measures the sensitivity of the process model to the uncertain parameters by solving a series of decoupled small-scale dynamic optimization problems in parallel, and then combines this latter information with the indicators of the statistical dispersion and the correlation of the uncertain parameters, estimated in Phase II. The use of parallel computing allows RTSASUP to be efficient enough to run in the idle time between two consecutive control actions (approximately a minute or two of clock time). We demonstrate the proposed approach to the online identification of the optimal SUP ( SUP opt ) using a batch version of the Tennessee Eastman challenge. The case study confirms that the online re-estimation of the SUP carried out via RTSASUP benefits both the performance and the robustness insured by stochastic NMPC/DRTO frameworks. Such efficiency improvements appear to be more pronounced in the presence of process perturbations, i.e. when the operating conditions of the process experience larger variations in single batch cycles. References: L. Mockus , J.J. Peterson, J.M. Lainez , G.V. Reklaitis , 2015, Batch-to-batch variation: a key component for modeling chemical manufacturing processes, Organic Process Research & Development, 19, 908-914. F. Rossi, G. Reklaitis, F. Manenti , G. Buzzi -Ferraris, 2016, Multi-scenario robust online optimization and control of fed-batch systems via dynamic model-based scenario selection, AIChE Journal, 62, 3264-3284. A. Saltelli , M. Ratto , S. Tarantola , F. Campolongo , 2005, Sensitivity analysis for chemical models, Chemical Reviews, 105, 2811-2828.",
+    "presenting_author": "Francesco Rossi | Politecnico di Milano, Italy",
+    "authors": [
+      "Francesco Rossi | Politecnico di Milano, Italy",
+      "Flavio Manenti | Politecnico di Milano, Italy",
+      "Guido Buzzi-Ferraris | Politecnico di Milano, Italy",
+      "Gintaras Reklaitis | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Francesco Rossi",
+        "affiliation": "Politecnico di Milano, Italy",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Flavio Manenti",
+        "affiliation": "Politecnico di Milano, Italy",
+        "designation": "Author"
+      },
+      {
+        "name": "Guido Buzzi-Ferraris",
+        "affiliation": "Politecnico di Milano, Italy",
+        "designation": "Author"
+      },
+      {
+        "name": "Gintaras Reklaitis",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "284a",
+    "sortable_time": "2017-10-31_08:00:00_08:19:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/495928"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/496627",
+    "paper_endpoint": "Paper/496627",
+    "paper_id": "496627",
+    "topic": "Autocovariance-Based Model Mismatch Diagnosis for MPC with State Estimation",
+    "title": "Autocovariance-Based Model Mismatch Diagnosis for MPC with State Estimation",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35677",
+    "session_title": "Estimation and Control of Uncertain Systems",
+    "session_number": "284",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Model predictive control (MPC) is widely used in the process industries for complex, multivariate control problems [1],[2]. MPC offers significant advantages over conventional multi-loop PID control schemes; however, as a model-based method, its performance depends greatly on the quality of the process model. If the model used in the MPC does not provide an accurate representation of the plant, control performance will suffer. Recognizing this, practitioners invest significant time and resources in the model building phase of an MPC implementation, performing, e.g., extensive open loop step testing to the plant dynamics. Nevertheless, chemical process systems are subject to a variety of physical phenomena (corrosion, fouling, catalyst deactivation) and other changes (to equipment, process operation, etc.) that cause the plant dynamics to drift in time, such that the response at a given time after the system identification effort will be different from the model used in the MPC. Since frequent model updating iscostly, re-identification efforts are generally only pursued once controller performance has degraded severely. A method for detecting plant-model mismatch before this stage would thus be highly desirable, and MPC controller performance monitoring (CPM) has become an area of vigorous research activity in recent years. Many proposed approaches are extensions of previously established CPM methods to MPC systems. Notably, data-driven methods like Principal Component Analysis and Partial Least Squares regression have been proposed [3],[4]. More recently, approaches based on input-output partial correlation analysis [5] and statistical analysis of higher moments of the output and error distribution [6] have been introduced to improve specificity; they attempt to trace the source of the mismatch to a subset of variables. In our previous work, we provided further specificity, proposing an output autocovariance-based method for both locating and quantifying plant-model mismatch from routine operation data, i.e. without requiring disruption to the process [7],[8],[9]. In this work, we extend the autocovariance-based approach to the important class of systems consisting of state-space MPC controllers employing Kalman filtering for state estimation. Since, in contrast to previous frameworks, these systems incorporate both state and output noise models, we represent the closed loop outputs as Vector Moving Average processes from which the theoretical autocovariance function can be derived [10]. Then, the sample estimator for the autocovariance of process outputs obtained from routine operating data is used to formulate a minimization problem, whose result is an asymptotically consistent estimator of the true plant-model mismatch. We present case studies demonstrating the application of our approach for MPC systems with state estimation. References [1] S. J. Qin, “Statistical process monitoring: Basics and beyond,” Journal of Chemometrics, 17:480–502, 2003. [2] M. L. Darby and M. Nikolaou, “MPC: Current practice and challenges,” Control Engineering Practice, 20(4):328–342, 2012. [3] J. Yu and S. J. Qin, “Statistical MIMO controller performance monitoring. Part I: Data-driven covariance benchmark,” Journal of Process Control, 18:277–296, 2008. [4] A. AlGhazzawi and B. Lennox, “Monitoring a complex refining process using multivariate statistics,” Control Engineering Practice, 16:294–307, 2008. [5] Abhijit S. Badwe, Ravindra D. Gudi, Rohit S. Patwardhan, Sirish L. Shah, and Sachin C. Patwardhan, “Detection of model-plant mismatch in MPC applications,” Journal of Process Control, 19(8):1305–1313, 2009. [6] V. Botelho, J.O. Trierweiler, M. Farenzena, R. Duraiski, “Perspectives and challenges in performance assessment of model predictive control,” Canadian Journal of Chemical Engineering, 94: 1225–1241, 2016. [7] S. Wang, J. M. Simkoff, M. Baldea, I. Castillo, D. Stanley, L. Chiang, and R. Bindlish, “Autocovariance- based plant-model mismatch estimation for linear model predictive control,” Systems and Control Letters, vol. DOI:10.1016/j.sysconle.2017.03.002, 2017. [8] S. Wang, J. M. Simkoff, M. Baldea, I. Castillo, D. Stanley, L. Chiang, and R. Bindlish, “Autocovariance- based MPC model mismatch estimation for systems with measurable disturbances,” Journal of Process Control, vol. DOI:10.1016/j.jprocont.2017.03.002, 2017. [9] J. M. Simkoff, S. Wang, M. Baldea, I. Castillo, D. Stanley, L. Chiang, and R. Bindlish, “Plant-model mismatch diagnosis and estimation from closed-loop data for state-space MPC,” AIChE Journal, 2017 ( submitted) . [10] G. Box, G. Jenkings, and G. Reinsel, Time Series Analysis: forecasting and control, Prentice-Hall, Inc., 3rd edition, 1994.",
+    "presenting_author": "Jodie Simkoff | McKetta Department of Chemical Engineering, University of Texas at Austin, Austin, TX",
+    "authors": [
+      "Jodie Simkoff | McKetta Department of Chemical Engineering, University of Texas at Austin, Austin, TX",
+      "Siyun Wang | University of Texas at Austin, TX",
+      "Michael Baldea | The University of Texas at Austin, TX",
+      "Leo Chiang | Dow Inc., Lake Jackson, TX",
+      "Ivan Castillo | Dow Inc., Houston, TX",
+      "Rahul Bindlish | Dow, Houston, TX",
+      "David Stanley | Dow Chemical, Freeport, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jodie Simkoff",
+        "affiliation": "McKetta Department of Chemical Engineering, University of Texas at Austin, Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Siyun Wang",
+        "affiliation": "University of Texas at Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Baldea",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Leo Chiang",
+        "affiliation": "Dow Inc., Lake Jackson, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Ivan Castillo",
+        "affiliation": "Dow Inc., Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Rahul Bindlish",
+        "affiliation": "Dow, Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "David Stanley",
+        "affiliation": "Dow Chemical, Freeport, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "284b",
+    "sortable_time": "2017-10-31_08:19:00_08:38:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/496627"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/498049",
+    "paper_endpoint": "Paper/498049",
+    "paper_id": "498049",
+    "topic": "A Tractable Method for Closed-Loop Active Fault Diagnosis of Stochastic Linear Systems",
+    "title": "A Tractable Method for Closed-Loop Active Fault Diagnosis of Stochastic Linear Systems",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35677",
+    "session_title": "Estimation and Control of Uncertain Systems",
+    "session_number": "284",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Reliable fault detection and isolation in increasingly complex engineering systems is critical for ensuring stability and reliability of system operation in the face of anomalies such as sensor and actuator malfunctions, system failures, and drifts in system parameters. Various sources of system uncertainty, including incomplete knowledge of system faults, exogenous disturbances, and measurement noise, increase the challenges of the diagnosis problem. Methods for fault diagnosis can be broadly categorized as being data- or model-based [1]. The latter category generally seeks to detect the system fault status based on measurements obtained during operation, commonly referred to as passive fault diagnosis. The reliability of passive fault diagnosis can, however, be adversely impacted by system uncertainties and the presence of feedback controllers that can mask the impact of faults on system outputs. This observation motivates active fault diagnosis (AFD), which involves designing an input sequence that, when applied to the system, facilitates ‘correct’ (with high probability) fault diagnosis in the presence of uncertainty [2]. When the system uncertainty is deterministic and bounded, AFD methods generally aim to design input sequences that are robust to worst-case realizations of the uncertainty. Most of these methods, primarily developed for linear time-invariant systems, separate all reachable sets of the fault models to guarantee diagnosis [3, 4, 5]. With probabilistic descriptions of system uncertainty, the AFD problem is more naturally addressed in a stochastic setting. Probabilistic AFD formulations utilize distributional information on the uncertainties, potentially reducing the conservatism commonly observed in worst-case deterministic AFD. An early approach to open-loop (offline) AFD for linear time-variant systems with additive stochastic disturbances and measurement noise is developed in [6], which relies on minimizing an upper bound on the probability of misclassification of fault models that is defined in terms of the Bhattacharyya coefficient [7]. In this talk, we present a computationally efficient method for closed-loop AFD of multiple faults in stochastic linear systems with uncertain initial conditions. The proposed AFD method relies on computing an optimal open-loop input sequence that is applied to the system in a receding-horizon fashion by updating the input design problem online based on the system measurements. A key challenge in this approach is ensuring the online solution time is significantly shorter than the sampling time. This challenge is addressed by defining the finite-horizon AFD problem as maximizing the pairwise Bhattacharyya distances (a statistical distance measure) between the predicted output probability distributions, subject to system constraints represented by a convex polytope. The main advantage of the proposed closed-loop AFD method is that the global solution can be determined efficiently through exhaustive enumeration of a small number of vertices. This approach contrasts with formulations that directly minimize the nonconvex error bound, proposed in [6], that require solving a nonconvex problem either to some local optimum or to its global optimum using algorithms such as [8] with (possibly) excessive computational requirements. Furthermore, the computational complexity of the proposed method is independent of the number of fault models and the number of states in each model. We demonstrate the performance of the closed-loop AFD method on a benchmark stochastic fault diagnosis problem with five models. References [1] V. Venkatasubramanian, R. Rengaswamy, K. Yin, and S. N. Kavuri, “A review of process fault detection and diagnosis. Part I: Quantitative model-based methods,” Computers & Chemical Engineering , vol. 27, no. 3, pp. 293–311, 2003. [2] M. Blanke, M. Kinnaert, J. Lunze, and M. Staroswiecki, Diagnosis and Fault-Tolerant Control , second edition. Springer, 2006. [3] S. L. Campbell and R. Nikoukhah, Auxiliary Signal Design for Failure Detection . Princeton University Press, 2004. [4] M. Sampath, S. Lafortune, and D. Teneketzis, “Active diagnosis of discrete-event systems,” IEEE Transactions on Automatic Control , vol. 43, no. 7, pp. 908–929, 1998. [5] A. E. Ashari, R. Nikoukhah, and S. L. Campbell, “Auxiliary signal design for robust active fault detection of linear discrete-time systems,” Automatica , vol. 47, no. 9, pp. 1887–1895, 2011. [6] L. Blackmore and B. Williams, “Finite horizon control design for optimal discrimination between several models,” in Proceedings of the IEEE Conference on Decision and Control , San Diego, CA, pp. 1147–1152, 2006. [7] T. Kailath, “The divergence and Bhattacharyya distance measures in signal selection,” IEEE Transactions on Communication Technology , vol. 15, no. 1, pp. 52–60, 1967. [8] M. Tawarmalani and N. V. Sahinidis, “A polyhedral branch-and-cut approach to global optimization,” Mathematical Programming , vol. 103, no. 2, pp. 225–249, 2005.",
+    "presenting_author": "Tor Aksel N. Heirung | University of California - Berkeley",
+    "authors": [
+      "Tor Aksel N. Heirung | University of California - Berkeley",
+      "Joel Paulson | University of California, Berkeley",
+      "Richard Braatz | Massachusetts Institute of Technology, Cambridge",
+      "Ali Mesbah | University of California, Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Tor Aksel N. Heirung",
+        "affiliation": "University of California - Berkeley",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Richard Braatz",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "284c",
+    "sortable_time": "2017-10-31_08:38:00_08:57:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/498049"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/502512",
+    "paper_endpoint": "Paper/502512",
+    "paper_id": "502512",
+    "topic": "Set-Membership Nonlinear Regression Approach to Parameter Estimation",
+    "title": "Set-Membership Nonlinear Regression Approach to Parameter Estimation",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35677",
+    "session_title": "Estimation and Control of Uncertain Systems",
+    "session_number": "284",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Most commonly, regression problems in nonlinear parameter estimation are posed as optimization problems, where selected parameter values are tuned so that the model predictions match the available measurements as close as possible, for instance in the maximum-likelihood sense. Incorporation of measurement uncertainty into the regression exercise has spawned several different schools of thought. Statistical approaches can be broadly classified as Frequentist or Bayesian . The former seek to determine confidence regions around the regressed parameter values, considered as the `true' parameter values [ 1 ]. They are capable of dealing with large-scale models, but confidence analysis based on model linearization can be misleading, especially for highly nonlinear models or when the available measurements are scarce. Bayesian approaches meanwhile construct a probability distribution of the parameters based on the available observations, from which credibility regions can be inferred [ 2 ]. These approaches are appealing, but they rely on a so-called prior for the parameter estimates, and existing algorithms such as Markov-chain Monte-Carlo (MCMC) can be time consuming for problems having upwards of 5-10 parameters. An alternative to these statistical approaches is set-membership estimation, which seeks to determine the set of all possible parameter values that are consistent with bounded-error measurements [ 3 ]. Such problems have been shown to be tractable using complete-search methods with ca. 10 parameters, e.g., based on interval analysis or higher-order inclusion techniques [ 4 , 5 ]. Issues may arise however, as model mismatch or outlying measurements can lead to situations where the resulting parameter set is empty. We propose a new approach to nonlinear regression, called set-membership nonlinear regression (SMNLR). Given a residual function , where stands for the (unknown) model parameters and the measurement errors, the problem addressed involves characterizing the set P given by (1) where is a (non-empty) prior set for the model parameters; and a given measurement-error set (e.g., bounds on the measurement errors, level-sets of a joint probability distribution, etc ). We study the properties of SMNLR, with a view to relating problem ( 1 ) with existing parameter estimation approaches. In the context of bounded-error measurement estimation, SMNLR presents the advantage that the set P is always non-empty, regardless of the model mismatch or measurement error. In the context of statistical inference, P may be interpreted as parameter estimability sets for a given confidence level-set E on the measurement errors [ 6 ]. Moreover, we derive conditions under which the SMNLR regions are asymptotically equivalent to the classical Wald confidence regions. Notwithstanding, SMNLR is a particular arduous problem as it involves finding all global minimizers to all parameter estimation problems with . We describe how this problem can be tackled using complete-search methods (branch-and-prune), and we discuss several simplifications for reducing the computational burden. Comparisons are made with the classical set-membership estimation approach as well as classical confidence analysis methods for selected parameter estimation problems. Bibliography [1] S.P. Asprey, S. Macchietto, 2000. Statistical tools for optimal dynamic model building. Computers & Chemical Engineering 24 :1261-1267. [2] D. Alspach, H. Sorenson, 1972. Nonlinear Bayesian estimation using Gaussian sum approximations. IEEE Transactions on Automatic Control 17 (4):439-448. [3] E. Walter, 1990. Special Issue on Parameter Identification with Error Bounds. Mathematics & Computers in Simulation 32 :447-607. [4] L. Jaulin and E. Walter, 1993. Set inversion via interval analysis for nonlinear bounded-error estimation. Automatica 29 (4):1053-1064. [5] B. Chachuat, B. Houska, R. Paulen R, N.D. Peric, J. Rajyaguru, M.E. Villanueva, 2015. Set-theoretic approaches in analysis, estimation and control of nonlinear systems. IFAC-PapersOnLine 48 (8):981-995. [6] K.A. McLean and K.B. McAuley, 2012. Mathematical modelling of chemical processes - obtaining the best model predictions and parameter estimates using identifiability and estimability procedures. The Canadian Journal of Chemical Engineering 90 (2):351-366.",
+    "presenting_author": "Benoit Chachuat | Imperial College London, United Kingdom",
+    "authors": [
+      "Nikola D. Peric | Imperial College London, United Kingdom",
+      "Benoit Chachuat | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nikola D. Peric",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Benoit Chachuat",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "284d",
+    "sortable_time": "2017-10-31_08:57:00_09:16:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/502512"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/490302",
+    "paper_endpoint": "Paper/490302",
+    "paper_id": "490302",
+    "topic": "Model Predictive Control Under Model Structural Uncertainty",
+    "title": "Model Predictive Control Under Model Structural Uncertainty",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35677",
+    "session_title": "Estimation and Control of Uncertain Systems",
+    "session_number": "284",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Model predictive control is a widely used control strategy in the process control industry. Model predictive control, as the name suggests uses a model to predict the future behaviour of the process and compute optimal input moves in a receding horizon fashion. Models that are used in the controller may be developed based on first principles or from experimental data or a combination of both. However, models are inherently uncertain due to model simplification or lack of knowledge. In order to handle the uncertainty, many different forms of MPC have been developed in the past, such as robust MPC, stochastic MPC, feedback min-max MPC and adaptive MPC. Almost all the works in the literature on MPC under uncertainty, focuses on model parameters and external disturbances as the primary source of uncertainty. However, more commonly, plant-model mismatch occurs due to model simplification and/or lack of knowledge. Alternatively, step response models may be identified using experimental data with the model order chosen rather arbitrarily. This leads to model structural uncertainty, where the underlying model structure itself is uncertain. Structural uncertainty however, is often disregarded in model based control design and has received little attention in the past. This is due to the fact that, unlike model parametric uncertainty, it is more challenging to handle structural uncertainty. A robust MPC framework considering structural uncertainty for linear systems has been presented in [3] and very recently, an explicit dual control framework for handling structural uncertainty was presented in [4]. However, in this work, we consider the scenario-based MPC framework presented in [1]. In this work, we show that scenario-based MPC is an efficient tool to handle model structural uncertainty. Scenario-based MPC or feedback min-max MPC is based on the evolution of the uncertainty represented by a scenario tree. It was first introduced as a means to handle uncertainty in the model parameters and future disturbances [1],[2]. Traditionally in this approach, the uncertain parameters, either belonging to a compact set or described by a probability distribution function, are sampled to form a discrete set of scenarios. The scenario tree is then used to predict a cone of state trajectories to represent the propagation of uncertainty. An optimization problem is then solved to compute optimal control trajectories. The notion of feedback is introduced by letting the computed optimal input vary according to the different scenarios. The closed-loop optimization nature of the scenario-based MPC has led to reduced conservativeness compared to robust MPC methods [2]. Similarly, we apply the same principle to handle model structure uncertainty. In the case of model structure uncertainty, the cone of predicted state trajectories is based on different model structures, instead of a single model structure with sampled parameters. The optimization problem is then solved over the entire scenario tree, hence taking into account the different model structures. Each model can be given different weights to prioritize between the different models. Previous work considering scenario-based MPC either assumes uncertainty in the form of constant model parameters as in [2] or future external disturbances as in [1]. In this work, we show that scenario-based MPC is not just restricted to these forms of uncertainty, but is also an efficient tool to handle model structural uncertainty, hence opening up a new class of uncertainty that can be handled in MPC problems. An offshore oil and gas production optimization problem is used as a case study to demonstrate the proposed method. Oil well models are often subject to structural uncertainty due to lack of knowledge or model simplifications. Consider the reservoir inflow performance model that describes the flow rate of fluids from the reservoir that enters the well. Due to the lack of measurements in the wellbore, it is challenging to develop empirical model based on data and thus, one usually relies on physical models. Different physical models exist that describe the inflow performance. For example, the linear PI model [5], Vogel inflow model [6], Fektovich inflow model [7] and Jones inflow model [8] are often used in the oil and gas industry. Such model structure uncertainty is often ignored, which may lead to suboptimal performance or even constraint violations. Scenario-based MPC can be used in such cases to account for this uncertainty. References [1] Scokaert, P., Mayne, D., 1998. Min-max feedback model predictive control for constrained linear systems. IEEE Transactions on Automatic control 43 (8), 1136–1142. [2] Lucia, S., Finkler, T., Engell, S., 2013. Multi-stage nonlinear model predictive control applied to a semi-batch polymerization reactor under uncertainty. Journal of Process Control 23 (9), 1306–1319. [3] Feng L, Wang JL, Poh EK. Improved robust model predictive control with structured uncertainty. Journal of Process Control. 2007 Sep 30;17(8):683-8. [4] Heirung TA, Mesbah A. Perspectives On Stochastic Predictive Control With Autonomous Model Adaptation For Model Structure Uncertainty. FOCAPO-CPC, 2017. [5] Evinger, H.H. and Muskat, M. 1942. Calculation of Theoretical Productivity Factor. Trans., AIME 146: 126. [6] Vogel, J.V. 1968. Inflow Performance Relationships for Solution-Gas Drive Wells. J Pet Technol 20 (1): 83–92. SPE 1476-PA. [7] Fetkovich, M.J.: “The Isochronal Testing of Oil Wells,” paper SPE 4529 presented at the 1973 SPE Annual Meeting, Las Vegas, Nevada [8] Jones, L.G., Blount, E.M., and Glaze, O.H. 1976. Use of Short Term Multiple Rate Flow Tests To Predict Performance of Wells Having Turbulence. Presented at the SPE Annual Fall Technical Conference and Exhibition, New Orleans, Louisiana, 3-6 October 1976. SPE-6133-MS",
+    "presenting_author": "Dinesh Krishnamoorthy | Norwegian University of Science and Technology, Trondheim, Norway",
+    "authors": [
+      "Dinesh Krishnamoorthy | Norwegian University of Science and Technology, Trondheim, Norway",
+      "Bjarne Foss | Norwegian University of Science and Technology, Trondheim, Norway",
+      "Sigurd Skogestad | Norwegian University of Science and Technology (NTNU), Trondheim, Norway"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dinesh Krishnamoorthy",
+        "affiliation": "Norwegian University of Science and Technology, Trondheim, Norway",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Bjarne Foss",
+        "affiliation": "Norwegian University of Science and Technology, Trondheim, Norway",
+        "designation": "Author"
+      },
+      {
+        "name": "Sigurd Skogestad",
+        "affiliation": "Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "284e",
+    "sortable_time": "2017-10-31_09:16:00_09:35:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/490302"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/490403",
+    "paper_endpoint": "Paper/490403",
+    "paper_id": "490403",
+    "topic": "Passivity-Based Observer and Application in Reaction Heat Estimation",
+    "title": "Passivity-Based Observer and Application in Reaction Heat Estimation",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35677",
+    "session_title": "Estimation and Control of Uncertain Systems",
+    "session_number": "284",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Title: Passivity-Based High Gain Observer with Application to Reaction Heat Estimation This work presents a passivity-based approach to estimate rapidly varying parameters in partially modelled dynamical systems. The proposed observer can be applied to a wide range of practical problems. The main assumption is that the measurements are not “too noisy” and that the interconnections between the system that is modeled and the un-modelled system has the same dimension as the observation vector. Noise is a problem since the observer uses derivatives. A trade-off occurs between the speed of parameter tracking and the noise level, as been stated in [1] where a sliding-mode differentiator is designed for noisy measurements. The observer is applied to estimate reaction heat in an unsteady state polymerization reactor. Some industrial results will be discussed. Estimation of time-varying parameter is important for process control, process monitoring and fault detection. Luenberger theory [2] provides the foundation for observer design in linear systems. Kazantzis and Kravaris [3] generalized this theory to nonlinear systems using Lyapunov’s auxiliary theorem. One important assumption for these observers, the Kalman filter and the closely related moving horizon estimation schemes, is that the system dynamics are modeled. In many practical applications, it may be difficult to model the system dynamics completely. In this work, we present the design of a passivity-based observer that can be applied to some classes of systems with un-modeled internal dynamics. To illustrate, consider the following problem: (1) (2) (3) Equation (1) represents the un-modelled dynamics, equation (2) represents the model and equation (3) represents the measurement. The objective is to estimate the time-varying interconnection parameter . The important point to note that is that the measurement vector includes the measurement of x as well as the estimate of the time derivative of . The bounded signal represents the uncertainty in the derivative estimate. The problem we consider is how to infer the interconnecting parameter, through the measurement vector y and model equations (2). The proposed approach treats the parameter estimation problem as a control problem. In this approach, we construct and error between the observations and the output produced from the observer equation (2). The system is passive and fast tracking can be achieved by high gain feedback. A Lyapunov function argument in conjunction with the time derivative estimation due to Levant [1] provides theoretical justification for the application. The theory shows that there will be a trade-off between the accuracy of the tracking estimate and the noise level and that the error converges to zero in the limit of no noise. It is quite straightforward to generalize the theory to problems where the dynamics of system (1) has high order and the dynamics of system (2) are nonlinear as long as the input-output passivity condition is maintained. The practical problem is motivated by an industrial application to polymerization reactor control. In this application, the monomer concentration is inferred by estimating the heat of reaction through a nonlinear energy balance written on the form of equation (2). The temperature and its derivative are estimated using a Savitzky-Golay filter. Simulation results and results from industrial trials show that the estimator converges quickly in semi-batch polymerization. [1] Levant, Arie. Robust exact differentiation via sliding mode technique. Automatica 34(3): 379-384 (1998). [2] Luenberger, David. An introduction to observers. IEEE Transactions on automatic control 16(6): 596-602 (1971). [3] Kazantzis, Nikolaos, and Costas Kravaris. Nonlinear observer design using Lyapunov’s auxiliary theorem. Systems & Control Letters 34(5): 241-247 (1998).",
+    "presenting_author": "Zixi Zhao | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Zixi Zhao | Carnegie Mellon University, Pittsburgh, PA",
+      "Birger Ydstie | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zixi Zhao",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Birger Ydstie",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "284f",
+    "sortable_time": "2017-10-31_09:35:00_09:54:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/490403"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/491978",
+    "paper_endpoint": "Paper/491978",
+    "paper_id": "491978",
+    "topic": "Parameter Estimation and Process Optimization of Heterogeneous Batch Reactors Under Uncertainty",
+    "title": "Parameter Estimation and Process Optimization of Heterogeneous Batch Reactors Under Uncertainty",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35677",
+    "session_title": "Estimation and Control of Uncertain Systems",
+    "session_number": "284",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Heterogeneous solid-liquid batch reactors are widely applied to produce fine chemicals in metallurgical, agrochemical and pharmaceutical processes. Compared with fundamental homogenous reactions, solid-liquid reactions are usually coupled with mass transfer, such as liquid phase diffusion and solid particle dissolution. However, a detailed reaction mechanism is typically inaccessible in a real industrial plant due to limited prior knowledge and difficulty of measurements. Understanding reaction mechanisms and constructing acceptable models based on obtainable information are desired to facilitate process optimization and control. In this study, we first introduce a model identification and parameter estimation procedure and implement it on our batch reactors with limited real plant/experimental data. Optimal control is then implemented on the estimated model to reduce total batch time while satisfying operation constraints and final concentration requirements. Two particular mechanisms -- solid surface reaction models and dissolution controlled models are considered in the targeted solid-liquid reactions. A uniform kinetic model is developed with a model indicating factor to differentiate mechanisms. Particle morphology is considered similar to that described in [1] by introducing a shape factor. In addition, several other parameters are also included, such as activation energies, diffusion coefficients and heat transfer coefficients. A detailed procedure for parameter estimation [2] and model identification [3] is implemented, including pre-selection of estimable parameter subset, simultaneous estimation by using measured data, estimation quality evaluation, model simplification and model discrimination. In our case, only reactor temperature profiles and highly limited concentrations are measured. Small confidence intervals and good data fitting are obtained by the identified model. The motivation behind the model identification effort is to develop an optimal control solution to minimize batch time and increase process capacity. The end of batch is defined by satisfying final conversion requirements. Feeding of liquid reactive components and reactor/jacket inlet temperatures are treated as decision variables. Optimal control is obtained by solving the optimality conditions of the Hamiltonian together with the corresponding adjoint system. A dynamic model is derived with multiple stages describing different batch operation steps. Orthogonal collocation on finite elements is applied to discretize the problem, resulting in a large scale nonlinear programming problem formulated and solved in AMPL/IPOPT. Finally, to address potential parametric uncertainties, disturbances and model mismatch, a robust optimization strategy is applied by adding back-off terms to ensure that constraints are satisfied in the worst-case scenario. References [1] Salmi , Tapio , Henrik Grénman , Johan Wärnå , and Dmitry Yu Murzin . \"New modelling approach to liquid–solid reaction kinetics: From ideal particles to real particles.\" Chemical Engineering Research and Design 91.10 (2013): 1876-1889. [2] Lin, Weijie , Lorenz T. Biegler , and Annette M. Jacobson. \"Modeling and optimization of a seeded suspension polymerization process.\" Chemical Engineering Science 65.15 (2010): 4350-4362. [3] Stewart, W. E., Y. Shon, and G. E. P. Box. \"Discrimination and goodness of fit of multiresponse mechanistic models.\" AIChE journal 44.6 (1998): 1404-1412. [4] Diehl, Moritz, Hans Georg Bock, and Ekaterina Kostina . \"An approximation technique for robust nonlinear optimization.\" Mathematical Programming 107.1 (2006): 213-230.",
+    "presenting_author": "Yajun Wang | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Yajun Wang | Carnegie Mellon University, Pittsburgh, PA",
+      "Mukund Patel | The Dow Chemical Company, Midland",
+      "John Wassick | The Dow Chemical Company, Midland",
+      "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yajun Wang",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mukund Patel",
+        "affiliation": "The Dow Chemical Company, Midland",
+        "designation": "Author"
+      },
+      {
+        "name": "John Wassick",
+        "affiliation": "The Dow Chemical Company, Midland",
+        "designation": "Author"
+      },
+      {
+        "name": "Lorenz Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "284g",
+    "sortable_time": "2017-10-31_09:54:00_10:13:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/491978"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/493774",
+    "paper_endpoint": "Paper/493774",
+    "paper_id": "493774",
+    "topic": "Rapid and Accurate Fault Detection and Diagnosis for Uncertain Nonlinear Systems Using Advanced Set-Based State Estimation Techniques",
+    "title": "Rapid and Accurate Fault Detection and Diagnosis for Uncertain Nonlinear Systems Using Advanced Set-Based State Estimation Techniques",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35677",
+    "session_title": "Estimation and Control of Uncertain Systems",
+    "session_number": "284",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In applications such as wind energy, industrial robotics, and chemical processing, increases in complexity and automation have made component malfunctions and other abnormal events (i.e., faults) an ever-present threat to safety and reliability. Thus, fault detection and diagnosis (FDD) algorithms have become an essential feature of modern control systems, leading to significant decreases in downtime, maintenance costs, and catastrophic failures. However, while well-established statistical methods are effective in many cases, they often fail to make the critical distinction between faults and normal process disturbances. An attractive alternative is to exploit detailed process models that, at least in principle, can be used to characterize the outputs consistent with normal operation, providing a rigorous basis for FDD. Methods that furnish a guaranteed enclosure of these outputs (e.g., using set-based state estimators) are particularly attractive because they eliminate the possibility of costly false alarms, and can even guarantee FDD for certain faults using active inputs (i.e., excitations). However, such methods are currently impractical for systems with strong nonlinearites or large uncertainties. For such systems, existing set-based estimation techniques often produce enclosures that are far too conservative to be useful for FDD, or avoid this only at excessive computational cost. Thus, there is a critical need for advanced algorithms that can rapidly detect and diagnose faults for realistic nonlinear systems, and do so rigorously in the presence of disturbances, measurement noise, and large model uncertainties. In this contribution, we will present recent advances in set-based state estimation for uncertain nonlinear systems, and demonstrate their application to provide fast and accurate fault detection and diagnosis for such systems. Specifically, these advances are based on a powerful new method for enclosing the reachable sets of nonlinear systems recently developed by the authors. This algorithm achieves high efficiency (necessary for online implementation) by using simple interval enclosures, but overcomes the high conservatism typically associated with interval methods using a technique called the addition of states and invariants (ASI). In ASI, additional state variables are defined as certain linear or nonlinear combinations of the original states, and the original dynamics are augmented with additional differential or difference equations for these new states. By construction, the states of this augmented system satisfy a set of linear or nonlinear equality constraints at all times, called solution invariants. The key idea is then to compute an enclosure of the solutions of the augmented system at each time step using a cheap (and often conservative) interval method, and subsequently refine this enclosure using the solution invariants. Our recent results demonstrate that, for very many systems of practical interest, there exist choices of new state variables that lead to dramatically tighter enclosures of the reachable set through ASI, with only modest additional computational cost relative to standard interval methods. This contribution will discuss a preliminary extension of this technique to set-based state estimation rather than reachability analysis (the former incorporates process measurements), and the application of the resulting estimators to achieve significantly faster and more accurate fault detection and diagnosis than is achievable with existing set-based methods. The proposed approach will be demonstrated using two CSTR and batch reactor case studies (and potentially others), and compared with existing state-of-the-art set-based FDD algorithms based on more complex zonotopic and polytopic set enclosures.",
+    "presenting_author": "Joe Scott | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Xuejiao Yang | Clemson University, SC",
+      "Kai Shen | Clemson University, SC",
+      "Joe Scott | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Xuejiao Yang",
+        "affiliation": "Clemson University, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Kai Shen",
+        "affiliation": "Clemson University, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Joe Scott",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "284h",
+    "sortable_time": "2017-10-31_10:13:00_10:32:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/493774"
+  }
+]

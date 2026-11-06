@@ -1,0 +1,271 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/597192",
+    "paper_endpoint": "Paper/597192",
+    "paper_id": "597192",
+    "topic": "Nonlinear Programming Strategies for Optimization of Dynamic Chemical Looping Reactor Models",
+    "title": "Nonlinear Programming Strategies for Optimization of Dynamic Chemical Looping Reactor Models",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "43814",
+    "session_title": "Modeling, Control and Optimization of Energy Systems",
+    "session_number": "596",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Nonlinear Programming (NLP) is an important tool for many chemical engineering applications where design and operating variables can have significant impacts on process efficiency. This is especially important in the energy industry, where efficiency directly translates to the societal goal of having reliable electric power infrastructure with a small carbon footprint. In this industry, simulations of optimal operation of carbon-based power generators allow practitioners to make informed decisions when evaluating alternatives for construction and investment. One such alternative is chemical looping combustion (CLC), a combustion process conducive to carbon capture in which oxygen is transferred from air to fuel through a solid oxygen carrier that continually loops between oxidation and reduction reactions that occur in separate reaction beds. CLC reactors are modeled as systems of partial differential and algebraic equations, discretized to form large systems of nonlinear equations that are the equality constraints of nonlinear optimization problems. These equations include material and energy balances in the gas and solid phases, hydrodynamic equations for pressure drop across the reactor, Shomate equations for thermodynamic properties, and nonlinear transfer correlations. The large and highly nonlinear nature of these system makes them very difficult to solve due to poor scaling of the nonlinear system and starting points that are not close to local optimum. Because of these challenges, optimal simulations of these processes are not widely available. This work presents equation-oriented NLP strategies necessary to overcome these challenges for optimal control of moving bed and bubbling fluidized bed chemical looping combustion reactors. The two-phase nature of these processes leads to variables and constraint expressions of significantly different orders of magnitude and thus ill-conditioned constraint Jacobian matrices, which at feasible points have condition numbers upwards of 10 20 . While linear system scaling methods are well-established and effective for reducing error introduced during a linear system solve, scaling of the nonlinear system is equally important for convergence of NLP algorithms, but systematic methods for scaling general nonlinear systems have not been established. Here we introduce a systematic scaling strategy for variables and constraints based on our knowledge of these processes and investigate the impact on condition numbers and convergence of NLP algorithms. We also investigate strategies to promote convergence of interior point nonlinear optimization solvers in the presence of poorly conditioned nonlinear systems. To avoid small steps due to ill-conditioning and to keep search directions close to Newton directions when possible, we take a conservative approach to regularization of the KKT matrix, performing more refactorizations in order to prevent regularization coefficents from becoming unnecessarily large. To promote convergence of feasibility restoration, we use an l 1 -penalty restoration phase that guarantees satisfaction of constraint qualifications (Thierry, 2019). The co-dependence of these NLP strategies is investigated as well as the trade-off between computation time and robustness. We synthesize these results to present a class of NLP algorithms tailored to perform dynamic optimization of CLC reactor models. Several real-world examples are presented to demonstrate the effectiveness of these approaches.",
+    "presenting_author": "Robert Parker | Los Alamos National Laboratory, NM",
+    "authors": [
+      "Robert Parker | Los Alamos National Laboratory, NM",
+      "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Robert Parker",
+        "affiliation": "Los Alamos National Laboratory, NM",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Lorenz Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "596a",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/597192"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/608204",
+    "paper_endpoint": "Paper/608204",
+    "paper_id": "608204",
+    "topic": "Optimal Control of Chemical Looping Reactors for Process Intensification of Natural Gas Upgrading",
+    "title": "Optimal Control of Chemical Looping Reactors for Process Intensification of Natural Gas Upgrading",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "43814",
+    "session_title": "Modeling, Control and Optimization of Energy Systems",
+    "session_number": "596",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Upgrading natural gas to valuable aromatics locally at the extraction sites has proven to be economical primarily because this saves the otherwise high transportation costs. Nonoxidative dehydroaromatization (DHA), which only involves methane as a reactant, is a promising approach for converting natural gas into valuable aromatics [1]. However, the thermodynamics of DHA severely limits aromatics conversion efficiency. Such thermodynamic constraints can be overcome with a technique known as chemical looping. In this presentation, we will focus on the reactor structure, modeling, and control of chemical looping processes. Chemical looping has been proposed as an effective technique for process intensification in the DHA process through the reactive separation of hydrogen, which shifts the thermodynamic equilibrium of the process and increases the yield of aromatics conversion [1]. The DHA reaction produces a mixture of methane, aromatics, and H 2 , following which H 2 is selectively oxidized using a solid oxygen carrier (reducible metal oxides) to produce a reduced oxide (reduction phase) and water. The reduced oxide is re-oxidized (oxidation phase) using steam to produce H 2 , thus, effectively separating H 2 from the DHA effluent. A temperature-swing adsorber is used to remove the water during the adsorption phase, and the adsorbent is regenerated during the desorption phase. This process, which is repeated to convert methane into aromatics, is carried out in multiple interconnected packed bed reactors. An optimization-based process control strategy is proposed to maximize the aromatics conversion efficiency while minimizing the operating cost in the face of the uncertainty. A hierarchical control system implementation scheme typically used for industrial processes is adopted for the looping process. This scheme is chosen because it makes possible the design of a controller that will keep the process at desired operating conditions that simultaneously meet the economic objectives [2]. For this purpose, a first principles-based partial differential equation model for packed bed reactors is developed to model the chemical looping process. However, because the looping process exhibits cyclic behavior and never quite reaches a steady-state, the dynamics of looping reactors are different from the regular dynamics of processes that achieve steady-state conditions. Hence, \"off-the-shelf\" techniques for controller design may not be appropriate for such processes. In this presentation, we will also discuss the challenges faced during the design and testing of the control system and the approaches employed to deal with them effectively. References Brady, C., Murphy, B. and Xu, B., 2017. Enhanced Methane Dehydroaromatization via Coupling with Chemical Looping. ACS Catalysis, 7(6), pp.3924-3928. Tatjewski, P., 2010. Supervisory predictive control and on-line setpoint optimization. International Journal of Applied Mathematics and Computer Science, 20(3), pp.483-495.",
+    "presenting_author": "Ajay Ganesh | University of Delaware, Newark",
+    "authors": [
+      "Ajay Ganesh | University of Delaware, Newark",
+      "Vivek S. Pinnamaraju | Indian Institute of Technology Dhanbad",
+      "Dionisios Vlachos | University of Delaware, Newark",
+      "Babatunde A. Ogunnaike | University of Delaware, Newark"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ajay Ganesh",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Vivek S. Pinnamaraju",
+        "affiliation": "Indian Institute of Technology Dhanbad",
+        "designation": "Author"
+      },
+      {
+        "name": "Dionisios Vlachos",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Author"
+      },
+      {
+        "name": "Babatunde A. Ogunnaike",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "596b",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/608204"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/610127",
+    "paper_endpoint": "Paper/610127",
+    "paper_id": "610127",
+    "topic": "An Integrated Approach for Real-Time Economic Optimization, State Estimation, and Control for a Post-Combustion Carbon Capture Absorber Section Under Uncertainty",
+    "title": "An Integrated Approach for Real-Time Economic Optimization, State Estimation, and Control for a Post-Combustion Carbon Capture Absorber Section Under Uncertainty",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "43814",
+    "session_title": "Modeling, Control and Optimization of Energy Systems",
+    "session_number": "596",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Model-based optimization and control provide plant operators with systematic methods to ensure the safety, productivity, and cost effectiveness of a process despite unexpected disturbances, diurnal cycles, and seasonal process changes. A common approach to this is the so called two-layer structure in which a steady-state economic optimization problem is solved at a slow timescale to generate operating set points for a dynamic optimal control problem that is executed at a faster timescale. While the top optimization layer generates cost-effective operating points, the bottom control layer ensures that these points are actually reached by the closed-loop system. Although this integrated approach adds complexity into the hierarchical manufacturing framework, it has been shown to return significant improvements in the process economics. In particular, such economic improvements are critical in the energy sector where prices must be kept low as the product is a public utility that must be widely accessible. With the increased effect of global warming owing to the release of anthropogenic greenhouse gas emissions from industry, the energy sector is under scrutiny for its largely emissive operations. In particular, combustion emissions remain prevalent as much of the world is still reliant on carbon-based fuels for energy production [1]. To this end, more attention is being placed on emission mitigation strategies. A category of technologies poised to address the emissions of these carbon-based fuels is known as carbon capture and storage (CCS). Within this wider umbrella of technologies, solvent-based post-combustion CO 2 absorption is arguably the most mature method of CO 2 removal. In this technology, the crucial unit for removal is the absorber column, for which a mechanistic dynamic model has previously been developed [2]. This model consists of a large-scale partial differential algebraic system (PDAE) of equations, which, although more difficult to implement that simpler models, provides an accurate treatment of the phenomena occurring inside the column. This level of detail allows for a hierarchical implementation of a real-time optimization (RTO) and nonlinear model predictive control (NMPC) structure that uses the same model. This operational two-layer structure, as described above, has been shown to result in cost-effective operation of complex systems, such as the absorber column. While the economically optimal operation of the solvent-based CO 2 capture system has been addressed [3-5], the two-layer structure has yet to be implemented and tested comprehensively. Furthermore, the key issues of process uncertainty and state estimation in this system have not been addressed comprehensively for this system. In this work, we present an implementation of the aforementioned two-layer optimization and control structure for the solvent-based CO 2 absorber downstream from a coal-based power plant subject to uncertainty. In the economic optimization layer, a cost function has been built featuring energy costs, carbon tax costs, and solvent degradation cost of the process. In the control layer, the performance of an NMPC and a linear MPC is contrasted. State estimation is also addressed in this study. An important aspect of the model used in the two layers is its axially discretization, which models the substantial variation in states along the length of the column and is crucial to the accuracy of the model. However, due to the axially discretization of the PDAE system, the model requires information on all of the absorber states at all axial discretization points (110 process state variables). Hence, a moving horizon estimator (MHE) is implemented whereby only a small portion of the total states needed for the model are assumed to be available for online measurement. Moreover, uncertainties are introduced at the different operational levels via some key parameters (i.e. prices, inlet compositions, and thermodynamic coefficients) and the inherent robustness of the nonlinear model to these uncertainties is assessed. The effect of some of these uncertainties has been previously studied [6,7] and shown to have a substantial effect on the absorber. The performance of the linear and nonlinear MPCs are first analyzed in a single-layer implementation (i.e. no economic optimization) subject to a disturbance rejection (load-following) scenario with measurement and process noise. This will illustrate the performance difference between the control-layer models. Moreover, the entire proposed two-layer structure is subjected to fluctuations in carbon price and parametric uncertainty in the process model in a repeated set point update scenario; this aims to simulate the substantial variation to which the absorber could be subjected to in day-to-day operations. This will elucidate the inherent robustness in the NMPC owing to its highly detailed model relative to the linear model, as well as show the performance improvement afforded by the RTO layer. The trade-offs between the two control-layer models will also be discussed. This study presents the first comparison of linear and nonlinear control-layer model for the CO 2 absorber subject to price and parametric uncertainty. Moreover, it also presents the first combined optimization/control/estimation structure for the post-combustion CO 2 capture plant. These novelties present an increasingly holistic picture of how to approach the control and optimization of the absorber unit, which remains in its industrial infancy, thereby advancing its development towards eventual industrial-scale deployment. References [1] International Energy Agency (IEA), “Coal Information 2018”, Coal Information , 2018. Available: https://doi.org/10.1787/coal-2018-en. [2] N. Harun, T. Nittaya, P. Douglas, E. Croiset and L. Ricardez-Sandoval, \"Dynamic simulation of MEA absorption process for CO2 capture from power plants\", International Journal of Greenhouse Gas Control , vol. 10, pp. 295-309, 2012. Available: https://doi.org/10.1016/j.ijggc.2012.06.017. [3] Chan, L. and Chen, J., “Improving the energy cost of an absorber-stripper CO2 capture process through economic model predictive control”, International Journal of Greenhouse Gas Control , 76, pp.158-166, 2018. Available: https://doi.org/10.1016/j.ifacol.2018.09.284. [4] Decardi-Nelson, B., Liu, S. and Liu, J., “Improving Flexibility and Energy Efficiency of Post-Combustion CO2 Capture Plants Using Economic Model Predictive Control”, Processes , 6(9), p.135, 2018. Available: https://doi.org/10.3390/pr6090135. [5] Panahi, M. and Skogestad, S., “Economically efficient operation of CO2 capturing process. Part II. Design of control layer”, Chemical Engineering and Processing: Process Intensification , 52, pp.112-124, 2012. Available: https://doi.org/10.1016/j.cep.2011.11.004. [6] G. Patron and L. Ricardez-Sandoval, \"A robust nonlinear model predictive controller for a post-combustion CO2 capture absorber unit\", Fuel , vol. 265, p. 116932, 2020. Available: https://doi.org/10.1016/j.fuel.2019.116932. [7] Cerrillo-Briones, I. and Ricardez-Sandoval, L., 2019. Robust optimization of a post-combustion CO2 capture absorber column under process uncertainty. Chemical Engineering Research and Design , 144, pp.386-396.",
+    "presenting_author": "Luis Ricardez-Sandoval | University of Waterloo, Canada",
+    "authors": [
+      "Gabriel Patron | University of Waterloo, Canada",
+      "Luis Ricardez-Sandoval | University of Waterloo, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gabriel Patron",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Luis Ricardez-Sandoval",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "596c",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/610127"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/602247",
+    "paper_endpoint": "Paper/602247",
+    "paper_id": "602247",
+    "topic": "Enhancing Glucose Yield By Modeling of Cellulose Accessibility: Application of Model Predictive Control to Alkaline Pretreatment for Bioethanol Production",
+    "title": "Enhancing Glucose Yield By Modeling of Cellulose Accessibility: Application of Model Predictive Control to Alkaline Pretreatment for Bioethanol Production",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "43814",
+    "session_title": "Modeling, Control and Optimization of Energy Systems",
+    "session_number": "596",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "As a sustainable alternative for petroleum-derived fuel, biofuels have attracted much attention over the last few decades [1-2]. However, since the conversion of lignocellulosic biomass to cellulosic biofuel is not economically viable with existing methods, optimization of biorefinery processes is a key to successful commercialization of cellulosic biofuel [3]. Typically, four main processes are involved in the biorefinery: pretreatment, enzymatic hydrolysis, fermentation and distillation. Among them, pretreatment has become a bottleneck for commercialization of cellulosic biofuel production due to the compact and rigid structure of lignocellulosic biomass known as recalcitrance cellulose; the sugar yield after enzymatic hydrolysis is primarily determined by the degree of pretreatment [1,4]. Specifically, during the pretreatment step, the recalcitrant structure of biomass is disrupted by delignification, thereby increasing the cellulose accessible surface area for improved biomass enzymatic digestibility [5-6]. Nevertheless, existing kinetic models for pretreatments in the literature are not able to capture the evolution of the accessible surface area of biomass during pretreatment [7-8]. We developed a multiscale model for biomass pretreatment that can describe the dynamic evolution of cellulose accessible area of biomass. Specifically, the degradation events of several biomass components under alkali chemical solvents (called pretreatment) are modeled by developing a new kMC algorithm, and the transport phenomena of the continuous phases are captured by a mathematical model that has been widely used to model pulp digesters; this is reasonable as pulp digester and pretreatment processes share many common features and fundamental chemical reactions. Then, we modeled enzymatic hydrolysis, which follows pretreatment and converts pretreated lignocellulosic biomass to fermentable sugars, by adopting a kinetic model from the literature to calculate the glucose yield under given enzymatic hydrolysis conditions (e.g., hydrolysis time, concentration of enzymes) [9-10]. Therefore, by integrating the proposed multiscale model of pretreatment and the existing kinetic model of enzymatic hydrolysis, we were able to predict the glucose production over different pretreatment temperatures. Once this integrated model was validated against experimental data from the literature [11], a reduced-order model was developed to design a model-based feedback controller for enhanced cellulose accessible area that ultimately leads to higher glucose yield. Within the controller, the solvent temperature that directly affects the biomass is manipulated while minimizing the energy used for heating during pretreatment. The implementation of the control framework demonstrated that the proposed modeling and control approaches improved the glucose yield by 46% while consuming only 7.2% more heat energy than a conventional constant-temperature pretreatment method. References [1] Zhao X.; Zhang L.; Liu D. Biomass recalcitrance. Part II: Fundamentals of different pre-treatments to increase the enzymatic digestibility of lignocellulose, Biofuels, Bioproducts and Biorefining, 2012, 6, 561–579. [2] Kim JS.; Lee YY.; Kim TH. A review on alkaline pretreatment technology for bioconversion of lignocellulosic biomass, Bioresource Technology, 2016, 199, 42–48. [3] Zhao X.; Zhang L.; Liu D. Biomass recalcitrance. Part I: the chemical compositions and physical structures affecting the enzymatic hydrolysis of lignocellulose, Biofuels, Bioproducts and Biorefining, 2012, 6, 465–482. [4] Zhu W.; Zhu JY.; Gleisner R.; Pan XJ. On energy consumption for size-reduction and yields from subsequent enzymatic saccharification of pretreated lodgepole pine, Bioresources Technology, 2010, 101, 2782–2792 [5] Xu J.; Cheng JJ.; Sharma-Shivappa RR.; Burns JC. Sodium hydroxide pretreatment of switchgrass for ethanol production, Energy Fuels, 2010, 24, 2113–2119. [6] Mosier N.; Wyman C.; Dale B.; Elander R.; Lee YY.; Holtzapple M.; Ladisch M. Features of promising technologies for pretreatment of lignocellulosic biomass, Bioresource Technology, 2005. 96, 673–686. [7] Rocha MSRS.; Pratto B.; Junior RS.; Almeida RMRG.; Cruz AJG. A kinetic model for hydrothermal pretreatment of sugarcane straw, Bioresource Technology, 2017, 228, 176–185. [8] Liu J.; Gong Z.; Yang G.; Chen L.; Huang L.; Zhou Y. Luo X. Novel kinetic models of xylan dissolution and degradation during ethanol based auto-catalyzed organosolv pretreatment of bamboo, Polymers, 2018, 10, 1149. [9] Zheng Y.; Pan Z.; Zhang R.; Jenkins BM. Kinetic modeling for enzymatic hydrolysis of pretreated creeping wild ryegrass, Biotechnology & Bioengineering, 2009, 102, 1558-1569. [10] Kadam KL.; Rydholm EC.; McMillan JD. Development and validation of a kinetic model for enzymatic saccharification of lignocellulosic biomass, Biotechnol. Prog., 2004, 20, 698-705. [11] Xu J.; Cheng JJ.; Sharma-Shivappa RR.; Burns JC. Sodium hydroxide pretreatment of switchgrass for ethanol production, Energy Fuels, 2010, 24, 2113-2119.",
+    "presenting_author": "Hyun-Kyu Choi | Texas A&M University, College Station, TX",
+    "authors": [
+      "Hyun-Kyu Choi | Texas A&M University, College Station, TX",
+      "Sang Hwan Son | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hyun-Kyu Choi",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sang Hwan Son",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "596d",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/602247"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/607182",
+    "paper_endpoint": "Paper/607182",
+    "paper_id": "607182",
+    "topic": "Machine Learning Based Real-Time Optimization of Multi-Cell Industrial Evaporative Cooling Tower",
+    "title": "Machine Learning Based Real-Time Optimization of Multi-Cell Industrial Evaporative Cooling Tower",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "43814",
+    "session_title": "Modeling, Control and Optimization of Energy Systems",
+    "session_number": "596",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "There is a need for greater operational flexibility at thermal power stations in response to increasing renewable energy penetration on the electrical grid [1]. Many coal-fired power stations have responded by changing to load following operation instead of traditional baseload operation to aid in grid stability [2]. This has resulted in new operating regimes for all auxiliary equipment at the power station, including the cooling tower. Cooling towers represent a significant auxiliary energy expense for thermal power stations; however, with more attention given to optimizing the boiler [3], less work has been done to maximize cooling tower performance, particularly under these new operating conditions. Current operation is typically achieved through operating curves and PID controllers [4]. It has been shown that even simple logical rules can significantly increase the efficiency of multiple cooling towers that are in parallel [5]. Previous works have treated such cooling towers or sets of cooling tower cells as identical, but in practice cooling tower cells tend to have different efficiencies. This work demonstrates through simulation that a multi-cell cooling tower can be optimized in real-time through a novel closed-loop machine learning based particle swarm optimization. A neural network is trained using synthetic operating data, and the optimization is tested using a year of historic data. The results are compared to the same year of operations using the current control scheme. This work demonstrates that a data-driven machine learning based optimization algorithm can be built on top of existing cooling tower controls and yields as much as 6.7% energy savings compared to current practice, while still meeting the required outlet temperature. This has direct implications for increasing the overall efficiency of the power plant by decreasing auxiliary power usage. The results are shown to be more relevant as the plant more frequently experiences lower loads, which is more common with load following operation. [1] Mararakanye, N., & Bekker, B. (2019). Renewable energy integration impacts within the context of generator type, penetration level and grid characteristics. Renewable and Sustainable Energy Reviews, 108, 441-451. [2] Tuttle, J. F., & Powell, K. M. (2019). Analysis of a thermal generator’s participation in the Western Energy Imbalance Market and the resulting effects on overall performance and emissions. The Electricity Journal, 32(5), 38-46. [3] Tuttle, J. F., Vesel, R., Alagarsamy, S., Blackburn, L. D., & Powell, K. (2019). Sustainable NOx emission reduction at a coal-fired power station through the use of online neural network modeling and particle swarm optimization. Control Engineering Practice, 93, 104167. [4] Liao, J., Xie, X., Nemer, H., Claridge, D. E., & Culp, C. H. (2019). A simplified methodology to optimize the cooling tower approach temperature control schedule in a cooling system. Energy Conversion and Management, 199, 111950. [5] Schlei‐Peters, I., Wichmann, M. G., Matthes, I. G., Gundlach, F. W., & Spengler, T. S. (2018). Integrated material flow analysis and process modeling to increase energy and water efficiency of industrial cooling water systems. Journal of Industrial Ecology, 22(1), 41-54.",
+    "presenting_author": "Landen Blackburn | University of Utah, Salt Lake City",
+    "authors": [
+      "Landen Blackburn | University of Utah, Salt Lake City",
+      "Jacob F. Tuttle | University of Utah, Salt Lake City",
+      "Kody Powell | The University of Utah, Salt Lake City"
+    ],
+    "authors_structured": [
+      {
+        "name": "Landen Blackburn",
+        "affiliation": "University of Utah, Salt Lake City",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jacob F. Tuttle",
+        "affiliation": "University of Utah, Salt Lake City",
+        "designation": "Author"
+      },
+      {
+        "name": "Kody Powell",
+        "affiliation": "The University of Utah, Salt Lake City",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "596f",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/607182"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/611570",
+    "paper_endpoint": "Paper/611570",
+    "paper_id": "611570",
+    "topic": "Recurrent Neural Network-Based Economic Model Predictive Control Framework Applied to a Building HVAC System",
+    "title": "Recurrent Neural Network-Based Economic Model Predictive Control Framework Applied to a Building HVAC System",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "43814",
+    "session_title": "Modeling, Control and Optimization of Energy Systems",
+    "session_number": "596",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Economic model predictive control (EMPC) is a unique control strategy that combines economic optimization and control in a unified framework (e.g., [2]). Over the last ten years, EMPC has proved to be well suited to handle features commonly arising in the context of energy systems including time-varying electric rates, electric peak demand charges, and time-varying demands. As such, EMPC has been adopted in industry and commercialized (e.g., [6]). For buildings and HVAC systems, a well documented source of substantial deployment cost of EMPC systems is model construction/identification (e.g., [3], [4]). Given the renewed interest in machine learning within the control community (e.g., [1], [6]), it is important to consider if recurrent neural network (RNN)-based modeling may reduce model development cost in EMPC deployments compared to conventional control modeling approaches. While recent work on artificial neural network- or RNN-based MPC strategies proposed in the literature (e.g., [1], [6]) has shown potential, limited work has been done on the end-to-end design of RNN-based EMPC that addresses important practical considerations including state estimation, disturbance/exogenous input forecasting, and automatic EMPC problem generation. To this end, an EMPC framework is developed, which incorporates a sequence-to-sequence RNN model as the predictive model. Specifically, the model training methodology and the overall EMPC framework design are presented. The framework utilizes the trained model for state estimation and for the predictive model used within the EMPC problem. In this sense, an interpretation of the model as a black-box nonlinear state space model is given. The automatic EMPC problem construction and solution strategy, which leverages a multiple shooting approach, is also provided. Finally, the overall framework is applied to a building HVAC system simulated using EnergyPlus to demonstrate the approach. Issues arise from using an RNN-based model within an EMPC framework are also discussed. [1] Afram A, F Janabi-sharifi, AS Fung, K Raahemifar. Artificial neural network (ANN) based model predictive control (MPC) and optimization of HVAC systems: A state of the art review and case study of a residential HVAC system. Energy and Buildings. 2017; 141: 96-113. [2] M. Ellis, H. Durand, and P. D. Christofides. A tutorial review of economic model predictive control methods. Journal of Process Control. 2014; 24: 1156-1178. [3] Henze GP. Model predictive control for buildings: a quantum leap? Journal of Building Performance Simulation. 2013; 6: 157-158. [4] Killian, M, M Kozek. Ten questions concerning model predictive control for energy efficient buildings. Building and Environment. 2016; 105: 403-412. [5] Wenzel MJ, MN ElBsat, MJ Ellis, MJ Asmus, AJ Przybyiski, R Baumgartner, JH Burroughs, G Willmott, KH Drees, and RD Turney. Large scale optimization problems for central energy facilities with distributed energy storage. In: Proceedings of the 5th International High Performance Buildings Conference, Paper 3560, West Lafayette, IN, 2018. [6] Wu, Z, A Tran, D Rincon, PD Christofides. Machine learning-based predictive control of nonlinear processes. Part I: Theory. AIChE Journal. 2019; 65: e16729.",
+    "presenting_author": "Matthew Ellis | University of California, Davis",
+    "authors": [
+      "Matthew Ellis | University of California, Davis"
+    ],
+    "authors_structured": [
+      {
+        "name": "Matthew Ellis",
+        "affiliation": "University of California, Davis",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "596g",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/611570"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/611766",
+    "paper_endpoint": "Paper/611766",
+    "paper_id": "611766",
+    "topic": "Using Residual Neural Networking and Lagrange Optimization to Predict Cooling Demand and Calculate Optimal Chiller Settings",
+    "title": "Using Residual Neural Networking and Lagrange Optimization to Predict Cooling Demand and Calculate Optimal Chiller Settings",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "43814",
+    "session_title": "Modeling, Control and Optimization of Energy Systems",
+    "session_number": "596",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Deep learning (i.e. neural networking) methods has become more prevalent across many different subfields in engineering. Specifically, these deep learning methods can improve operational efficiencies by predicting user demand. For warmer climates, cooling demand prediction has a large potential for savings, so we piloted a deep learning based optimization system on the University of Arizona central cooling loop. We propose a two module system which predicts cooling demand and calculates optimally efficient chiller settings which can be adapted to most multi-chiller central cooling systems. To predict cooling demand for a serviceable area, a neural network was used with historical load, weather, and other user indicators. Convolutional (1-dimensional) and gated recurrent neural architectures work well with time sequenced features such as past load and weather [1]. Novel gains in prediction accuracy are obtained by adding an input layer of the most recent past demand to the final layer of the network. In effect, this residual like layering of past load compels the network to predict the demand difference from the previous day. Switching to a difference-based output decreased the mean absolute error of energy demand by 40%. To find the optimal settings for a set of connected chillers, LaGrange optimization was used [2]. With this system, operators can set optimal chiller settings for variable lengths of time. The proposed system was implemented on a central cooling loop that supports the hospital, research laboratories, classrooms, sports facilities, and offices with up to 27 MW of cooling. Past load, weather, class scheduling, sports scheduling, and date indices are used as features to train and evaluate the offset convolutional and recurrent neural network. The data was split into testing and training data to allow model evaluation without data leakage or overfitting. On an AWS p2.xlarge instance with GPU enabled Tensorflow, training for 10 epochs took around 50 minutes. On a CPU-based computer (4 core), the model can make predictions in about 7-10 minutes. The load prediction model and the LaGrange optimization computed optimal chiller flowrates at hourly intervals. The overall system was evaluated based on system energy use and overall cost savings. Based on historical testing data, cost savings were estimated to be in the tens of thousands per year. [1] He, W. (2017). Load forecasting via deep neural networks. Procedia Computer Science , 122 , 308-314. [2] Chang, Y. C. (2004). A novel energy conservation method—optimal chiller loading. Electric Power Systems Research , 69 (2-3), 221-226.",
+    "presenting_author": "Nicholas Ziolkowski | University of Arizona, Tucson, AZ",
+    "authors": [
+      "Nicholas Ziolkowski | University of Arizona, Tucson, AZ",
+      "Jonathan Samuel | University of Arizona, Tucson, AZ",
+      "Ethan Weiss | University of Arizona, Tucson, AZ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nicholas Ziolkowski",
+        "affiliation": "University of Arizona, Tucson, AZ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jonathan Samuel",
+        "affiliation": "University of Arizona, Tucson, AZ",
+        "designation": "Author"
+      },
+      {
+        "name": "Ethan Weiss",
+        "affiliation": "University of Arizona, Tucson, AZ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "596h",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/611766"
+  }
+]

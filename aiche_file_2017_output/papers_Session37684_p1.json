@@ -1,0 +1,265 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/493035",
+    "paper_endpoint": "Paper/493035",
+    "paper_id": "493035",
+    "topic": "Global Optimization of Nonconvex Problems with Convex-Transformable Intermediates",
+    "title": "Global Optimization of Nonconvex Problems with Convex-Transformable Intermediates",
+    "date_time": "2017-11-01_12:30:00_15:00:00",
+    "session_id": "37684",
+    "session_title": "Advances in MINLP and Global Optimization",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "Current global optimization solvers rely on factorable programming techniques to construct convex relaxations of nonconvex optimizations problems [5–7]. These techniques iteratively decompose a nonconvex factorable function by introducing auxiliary variables for intermediate expressions, until each intermediate expression can be outer-approximated by a convex feasible set. While they are easy to automate, factorable programming techniques often result in large relaxation gaps. Factorable relaxations of global optimization problems can be strengthened through the use of functional transformations. A particular example of this approach is the use of power and exponential transformations to convexify signomial terms [2–4]. A more general transformation scheme was recently proposed by Khajavirad et al. [1]. This technique exploits convex transformability of component functions of factorable programs, and is applicable to various classes of functional forms including signomials, products and ratios of convex and/or concave functions, and logarithmically-concave functions. As illustrated in [1], this transformation method often leads to relaxations which are tighter than those obtained by standard approaches. Motivated by the potential of these new relaxations to enhance the performance of global solvers, in this paper, we introduce a new class of cutting planes for convex-transformable functions, and describe its implementation into the branch-and-reduce global solver BARON. The proposed implementation involves a recognition tool which identifies convex-transformable functions that are present in the problem, including those in intermediate expressions of factorable functions. To exploit local information regarding variable bounds for relaxation construction, as well as utilize the generated cutting planes for range reduction, we embed the proposed cutting plane generation technique at each node of the branch-and-reduce algorithm. An extensive computational study is carried out on problems selected from a collection of publicly available test sets. Results demonstrate that the generated cutting planes accelerate the convergence speed of the branch-and-reduce algorithm, by significantly reducing the average CPU time and number of nodes in the search tree. References cited [1] A. Khajavirad, J. J. Michalek, and N. V. Sahinidis. Relaxations of factorable functions with convex-transformable intermediates. Mathematical Programming, 144:107–140, 2014. [2] H. Lu, H. Li, C. E. Gounaris, and Ch. A. Floudas. Convex relaxation for solving posynomial programs. Journal of Global Optimization, 46:147–154, 2010. [3] A. Lundell and T. Westerlund. Convex underestimation strategies for signomial functions. Optimization Methods and Software, 24:505–522, 2009. [4] C. D. Maranas and Ch. A. Floudas. Global optimization of generalized geometric programming. Computers & Chemical Engineering, 21:351–369, 1997. [5] G. P. McCormick. Computability of global solutions to factorable nonconvex programs: Part I—Convex underestimating problems. Mathematical Programming, 10:147–175, 1976. [6] H. D. Sherali and H. Wang. Global optimization of nonconvex factorable programming problems. Mathematical Programming, 89:459–478, 2001. [7] M. Tawarmalani and N. V. Sahinidis. Global optimization of mixed-integer nonlinear programs: A theoretical and computational study. Mathematical Programming, 99:563–591, 2004.",
+    "presenting_author": "Carlos Nohra | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Carlos Nohra | Carnegie Mellon University, Pittsburgh, PA",
+      "Nikolaos Sahinidis | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Carlos Nohra",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nikolaos Sahinidis",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "522a",
+    "sortable_time": "2017-11-01_12:30:00_12:51:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/493035"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/495256",
+    "paper_endpoint": "Paper/495256",
+    "paper_id": "495256",
+    "topic": "Deterministic Global Optimization Algorithm Using Piecewise Relaxations and Bound Tightening with Dynamic Partitioning",
+    "title": "Deterministic Global Optimization Algorithm Using Piecewise Relaxations and Bound Tightening with Dynamic Partitioning",
+    "date_time": "2017-11-01_12:30:00_15:00:00",
+    "session_id": "37684",
+    "session_title": "Advances in MINLP and Global Optimization",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "Deterministic global optimization algorithms can compute a ε-global solution for nonconvex optimization problems, where ε is the difference between the best feasible solution found and an estimate of the theoretical optimum. To compute such estimates, deterministic global optimization algorithms relax the original nonconvex problem into either a linear (LP), a mixed-integer linear (MILP), or a convex nonlinear program (NLP). The relaxation scheme can be derived using: convex envelopes, piecewise linear relaxations, αBB underestimators, the reformulation-linearization technique, by removing integrality constraints, etc. To iteratively improve the estimate of the global optimum, one can rely on spatial branch-and-bound [1], cutting planes [2], bound tightening [3,4], interval elimination strategies [5], and increasing number of partitions of piecewise relaxations [6]. To compute feasible solutions, information from the relaxation is often used by single/multistart NLP strategies and other heuristic techniques. Bilinear terms are the product of two different variables and are very common in planning models for industrial processes, appearing in material balances, blending equations, and energy balances. For bilinear terms, McCormick envelopes [7] provide the tightest linear relaxation. Piecewise relaxation techniques partition the domain of one of the variables in a bilinear term, so as to benefit from tighter, partition-dependent bounds. However, they require the addition of extra binary variables (and continuous) to identify the optimal partition. The larger the number of partitions, the tighter the relaxation (i.e., the closer to the original nonconvex model) and the higher the computational cost to solve it to optimality. Two common piecewise relaxation techniques are piecewise McCormick (PMCR) [6,8] and normalized multiparametric disaggregation (NMDT) [6]. PMCR constructs McCormick envelopes for each partition, while NMDT uses a different formulation that requires fewer number of binary variables than PMCR for the same partitioning level. It has been shown that NMDT presents a computational advantage over PMCR when the number of partitions is equal to or greater than 10 [6]. Bound tightening techniques can also be used to improve the relaxation by reducing the domain of the variables involved in nonlinear terms. Optimality-based bound tightening (OBBT) involves solving one minimization and one maximization problem for each variable. These optimization problems can be solved sequentially [9] or in parallel [10]. In a branch-and-bound algorithm, OBBT can be applied at each node in order to reduce the number of nodes to explore and the final optimality gap [11]. Since OBBT is very effective but requires significant computational effort, accelerating and approximation techniques have been proposed for OBBT in a branch-and-bound framework [12]. In this work, we propose a deterministic global optimization algorithm for mixed-integer bilinear programming problems that works by dynamically partitioning piecewise relaxations. The proposed algorithm starts by partitioning all the variables from bilinear terms using PMCR with 2 partitions. The resulting MILP relaxation (denoted as model PR ) with NPR partitions is solved using CPLEX with the solution pool option active. The stored solutions are employed as starting points for a local nonlinear solver (in this case CONOPT) in a multistart strategy implemented in parallel fashion. If the termination criterion is not met, the algorithm will continue by increasing NPR . Whenever the number of partitions reaches 10, PMCR is replaced by NMDT. If model PR cannot be solved to optimality within the allocated time, the algorithm reverts back to the previous smaller number of partitions. OBBT is used extensively. It is applied in each iteration using a relaxation (denoted as PRB ) with NPRB partitions, starting with NPRB = 1 (i.e., standard McCormick envelopes). Whenever NPR is increased, NPRB remains the same. If NPR remains constant, NPRB is increased by 1. The algorithm goes back to increase NPR when the domain of the variables cannot be reduced significantly. Parallelization of the OBBT step is used to reduce wall execution times. In summary, the proposed algorithm focuses more at the beginning on model PR than in the bound tightening procedure. Small problems are usually solved faster by increasing the number of partitions NPR than by applying OBBT several times. Then, the algorithm seeks to exploit the OBBT procedure to a major extent when the size of model PR becomes too large. The algorithm was tested on seven examples from a refinery planning model considering different demand scenarios and number of time periods [10], and three scheduling examples from a hydro energy system considering different number of reservoirs [3]. The refinery planning problems feature few binary variables (12 to 36) but large number of bilinear terms (476 to 1608), while the hydro scheduling problems have significant number of binary variables (96 to 336) and twice as many bilinear terms. Results show that the proposed algorithm computes smaller optimality gaps than commercial global solvers BARON and ANTIGONE for the hydro scheduling problems within the same allocated execution time, and the same or better optimality gaps for the refinery planning problems. These results indicate that using piecewise relaxations with dynamic partitioning to compute estimates of the global optimum and bound-tightening is a promising strategy in the development of global optimization algorithms. Future work will be to include relaxation techniques for other types of nonlinear terms, as well as to determine if our proposed strategy can be complemented by a spatial branch-and-bound method. References [1] Quesada I, Grossmann IE. Global optimization of bilinear process networks with multicomponent flows. Comput Chem Eng. 1995; 19(12): 1219-1242. [2] Karuppiah R, Furman KC, Grossmann IE. Global optimization for scheduling refinery crude oil operations. Comput Chem Eng. 2008; 32(11): 2745-2766. [3] Castro PM, Grossmann IE. Optimality-based bound contraction with multiparametric disaggregation for the global optimization of mixed-integer bilinear problems. J Glob Optim . 2014; 59(2-3), 277-306. [4] Yang Y, Barton PI. Refinery optimization integrated with a nonlinear crude distillation unit model. IFAC-PapersOnLine . 2015; 48(8): 205-210. [5] Faria DC, Bagajewicz MJ. A new approach for global optimization of a class of MINLP problems with applications to water management and pooling problems. AIChE J. 2012; 58(8): 2320-2335. [6] Castro PM. Normalized multiparametric disaggregation: An efficient relaxation for mixed-integer bilinear problems. J Glob Optim . 2016; 64(4): 765-784. [7] McCormick GP. Computability of global solutions to factorable nonconvex programs: Part I—Convex underestimating problems. Math Program. 1976; 10(1): 147-175. [8] Bergamini ML, Aguirre P, Grossmann IE. Logic-based outer approximation for globally optimal synthesis of process networks. Comput Chem Eng . 2005; 29(9): 1914-1933. [9] Castro PM. Tightening piecewise McCormick relaxations for bilinear problems. Comput Chem Eng . 2015; 72: 300-311. [10] Castillo Castillo PA, Castro PM, Mahalec V. Global optimization algorithm for large-scale refinery planning models with bilinear terms. Ind Eng Chem Res . 2016; 56(2): 530-548. [11] Castro PM. Spatial branch-and-bound algorithm for MIQCPs featuring multiparametric disaggregation. Optim Method Softw . 2017. DOI: http://dx.doi.org/10.1080/10556788.2016.1264397 [12] Gleixner AM, Berthold T, Muller B, Weltge S. Three enhancements for optimization-based bound tightening. J Glob Optim . 2017; 67:731–757.",
+    "presenting_author": "Pedro A. Castillo Castillo | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Pedro A. Castillo Castillo | McMaster University, Hamilton, Canada",
+      "Pedro Castro | Universidade De Lisboa, Portugal",
+      "Vladimir Mahalec | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pedro A. Castillo Castillo",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Pedro Castro",
+        "affiliation": "Universidade De Lisboa, Portugal",
+        "designation": "Author"
+      },
+      {
+        "name": "Vladimir Mahalec",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "522b",
+    "sortable_time": "2017-11-01_12:51:00_13:12:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/495256"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/500211",
+    "paper_endpoint": "Paper/500211",
+    "paper_id": "500211",
+    "topic": "A Level-Based Quadratic Outer Approximation Algorithm for Convex MINLP",
+    "title": "A Level-Based Quadratic Outer Approximation Algorithm for Convex MINLP",
+    "date_time": "2017-11-01_12:30:00_15:00:00",
+    "session_id": "37684",
+    "session_title": "Advances in MINLP and Global Optimization",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "A Level-Based Quadratic Outer Approximation Algorithm for Convex MINLP Jan Kronqvist*, David E. Bernal**, Ignacio E. Grossmann** *Chemical Engineering, Åbo Akademi University, Turku Finland, jan.kronqvist@abo.fi **Chemical Engineering, Carnegie Mellon University, Pittsburgh PA Mixed-integer Nonlinear programming (MINLP) deals with optimization problems containing both continuous and integer variables as well as linear and nonlinear functions. The integer variables make it possible to incorporate logic relations and discrete quantities in the optimization problem. The ability to incorporate logic decisions and nonlinear functions make it possible to accurately model complex systems. Therefore, there is a large number of applications in engineering and other fields, e.g., see [1] and [2]. An MINLP problem is usually regarded as convex, if an integer relaxation results in a convex nonlinear programming (NLP) problem [3]. There are several techniques for solving convex MINLP problems available, for example, the extended cutting plane (ECP) algorithm [4], extended supporting hyperplane (ESH) algorithm [5], outer approximation (OA) [6], generalized Benders decomposition (GDB) [7], and branch and bound techniques [8]. However, solving convex MINLP instances may still be a difficult task, as shown in a recent benchmark on convex MINLP solvers in [8]. OA can be considered as a decomposition technique, where the optimal solution is obtained by solving a sequence of mixed-integer linear programming (MILP) and convex NLP subproblems. A linear approximation of the MINLP problem is constructed and improved in each iteration in order to predict a non-decreasing sequence of lower bounds (assuming minimization problem). In each iteration, the integer variables are chosen as the minimizer of the linear approximation, and values for the continuous variables are obtained by solving a convex NLP problem where the integer variables are fixed. This problem yields an upper bound. When applied to a difficult MINLP problems, the normal OA technique may require a substantial number of iterations to obtain the optimal solution and verify optimality; i.e. converging the corresponding lower and upper bounds within a small tolerance. Here we present a different approach for obtaining trial solutions, within an OA framework. The main idea is to use a different technique for obtaining trial values to the integer variables, and using these integer solutions in an OA algorithm. By utilizing second order derivatives of the nonlinear functions, we should be able to construct a better approximation of the MINLP problem, and thus, obtain better trial solutions. Instead of choosing the integer variables as the minimizer of a linear approximation, we propose to use a second order approximation of the Lagrangean function combined with the outer approximation cuts to obtain trial values for the integer variables. In order to guarantee convergence, we cannot simply replace the linear objective of the MILP subproblems with a quadratic approximation of the Lagragean. However, by using ideas from the level method [9] we are able to guarantee convergence by introducing linear constraints that impose a specific improvement of the linearized objective function. These linear constraints restrict the search space into a specific level set of the linearized objective. Trial values for the integer variables are therefore obtained by minimizing a quadratic approximation the Lagrangean function such that all linear constraints and obtained cuts are satisfied. Thus, the algorithm uses second order information for obtaining trial solutions for the integer variables. Therefore, the algorithm should be able to find the optimal integer combination in fewer iterations. However, each iteration also becomes more computationally demanding compared to normal OA since it also requires the solution of a mixed-integer quadratic programming problem. The level-based quadratic outer approximation algorithm will be presented in detail, including its theoretical properties. Furthermore, we present numerical comparisons against other convex MINLP techniques. [1] Biegler, L. T., Grossmann, I. E., 2004. Retrospective on optimization. Computers & Chemical Engineering 28 (8), 1169–1192. [2] Floudas, C. A., 2000. Deterministic Global Optimization, vol. 37 of Nonconvex Optimization and its Applications. [3] Lee, J., Leyffer, S. (Eds.), 2011. Mixed Integer Nonlinear Programming. Vol. 154. Springer Science & Business Media. [4] Westerlund, T., Petterson, F., 1995. An extended cutting plane method for solving convex MINLP problems. Computers and Chemical Engineering 19, S131–S136. [5] Kronqvist, J., Lundell, A., Westerlund, T., 2015. The extended supporting hyperplane algorithm for convex mixed-integer nonlinear programming. Journal of Global Optimization 64 (2), 249–272. [6] Duran, M. A., Grossmann, I. E., 1986. An outer-approximation algorithm for a class of mixed-integer nonlinear programs. Mathematical Programming 36 (3), 307–339. [7] Geoffrion, A.M.: Generalized Benders decomposition. J. Optim. Theory Appl. 10 (4), 237–260 (1972) [8] Dakin, R.J.: A tree-search algorithm for mixed integer programming problems. Comput. J. 8 (3), 250–255 (1965) [9] Lemarechal, C., Nemirovskii, A., Nesterov, Y.: New variants of bundle methods. Mathematical programming 69 (1-3), 111-147 (1995)",
+    "presenting_author": "David E. Bernal | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Jan Kronqvist | Åbo Akademi University, Turku, Finland",
+      "David E. Bernal | Carnegie Mellon University, Pittsburgh, PA",
+      "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jan Kronqvist",
+        "affiliation": "Åbo Akademi University, Turku, Finland",
+        "designation": "Author"
+      },
+      {
+        "name": "David E. Bernal",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ignacio Grossmann",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "522c",
+    "sortable_time": "2017-11-01_13:12:00_13:33:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/500211"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/491310",
+    "paper_endpoint": "Paper/491310",
+    "paper_id": "491310",
+    "topic": "Heuristic for Improved Mccormick Relaxations in a Branch-and-Bound Framework",
+    "title": "Heuristic for Improved Mccormick Relaxations in a Branch-and-Bound Framework",
+    "date_time": "2017-11-01_12:30:00_15:00:00",
+    "session_id": "37684",
+    "session_title": "Advances in MINLP and Global Optimization",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "Deterministic Global Optimization (DGO) has many applications in the field of Chemical Engineering reaching from phase and chemical equilibrium problems [2, 4, 6, 7] to robust parameter estimation [8]. Modelling Chemical Engineering tasks often eventuate in a large number of variables making the solution of the underlying model very difficult for DGO. DGO relies on tight convex and concave relaxations, in best-case envelopes, of the functions used in the underlying model are needed. In many problems, the number of degrees of freedom is relatively small and this fact can be exploited by the application of the McCormick technique to algorithmic structures presented in [5]. The original McCormick rules [3] are applicable to factorable functions, i.e., functions of the form F 1 (f 1 )+F 2 (f 2 )·F 3 (f 3 ) , where F i are univariate and f i are multivariate functions and were extended to multivariate outer functions in [9]. When constructing McCormick under- and overestimators, valid range bounds for each factor are needed. As the number of propagations increases, the quality of estimated range bounds gets worse [1]. This is particularly true when using simple interval arithmetics for the underlying variable bounds and each factor in the propagation procedure. To overcome this issue, we present a heuristic to improve the range bounds in each factor based in part on [5]. Theoretically, the heuristic cannot worsen the range bounds but it does not guarantee to improve the bounds. Practically, we demonstrate substantial improvement. Finally, we compare its performance to other known range and domain reduction techniques. References [1] Bompadre, A. and A. Mitsos (2012). Convergence rate of McCormick relaxations. Journal of Global Optimization 52(1), 1 - 28. [2] Duran, M. A. and I. E. Grossmann (1986). An outer-approximation algorithm for a class of mixed-integer nonlinear programs. Mathematical Programming 36(3), 307 - 339. [3] McCormick, G. P. (1976). Computability of global solutions to factorable nonconvex programs: Part I-Convex underestimating problems. Mathematical Programming, 10(1):147-175. [4] McDonald, C. and C. Floudas (1995). Global optimization for the phase and chemical equilibrium problem: Application to the NRTL equation. Computers & Chemical Engineering 19(11), 1111 - 1139. [5] Mitsos, A., B. Chachuat, and P. I. Barton (2009). McCormick-based relaxations of algorithms. SIAM Journal on Optimization 20(2), 573 - 601. [6] Ryoo, H. S. and N. V. Sahinidis (1995). Global optimization of nonconvex NLPs and MINLPs with applications in process design. Computers & Chemical Engineering 19(5), 551 - 566. [7] Sahinidis, N.V., I.E. Grossmann, R.E. Fornari and M. Chathrathi (1989). Optimization model for long range planning in the chemical industry. Computers & Chemical Engineering 13(9), 1049 – 1063. [8] Singer, A.B., J. W. Taylor, P. I. Barton, and W. H. Green (2006). Global dynamic optimization for parameter estimation in chemical kinetics, J. Phys. Chem. A, 110, pp. 971–976. [9] Tsoukalas, A. and A. Mitsos (2014). Multivariate McCormick relaxations. Journal of Global Optimization, 59:633-662.",
+    "presenting_author": "Alexander Mitsos | RWTH Aachen University, Germany",
+    "authors": [
+      "Jaromił Najman | Process Systems Engineering (AVT.SVT), RWTH Aachen University, Germany",
+      "Alexander Mitsos | RWTH Aachen University, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jaromił Najman",
+        "affiliation": "Process Systems Engineering (AVT.SVT), RWTH Aachen University, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Alexander Mitsos",
+        "affiliation": "RWTH Aachen University, Germany",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "522d",
+    "sortable_time": "2017-11-01_13:33:00_13:54:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/491310"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/494501",
+    "paper_endpoint": "Paper/494501",
+    "paper_id": "494501",
+    "topic": "Scalable Global Algorithms for Stochastic Nonlinear Programming",
+    "title": "Scalable Global Algorithms for Stochastic Nonlinear Programming",
+    "date_time": "2017-11-01_12:30:00_15:00:00",
+    "session_id": "37684",
+    "session_title": "Advances in MINLP and Global Optimization",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "Many large-scale nonlinear programs (NLPs) are block structured and weakly coupled [1,2] (i.e., the NLP is composed of block subproblems problems connected by few complicating variables). For example, a two-stage stochastic program has multiple scenarios connected by first stage variables. Problems arising from parameter estimation and machine learning can also fit in this category. This presentation introduces a new global optimization algorithm for block structured NLPs that uses a specialized branch and bound strategy. For each node in the branch and bound scheme, a lower bound is constructed by relaxing coupling constraints between complicating variables and an upper bound is constructed by fixing the complicating variables. A key advantage of this approach is that both lower bounding and upper bounding problems can be decomposed into blocks that are solved in parallel to global and local optimality, respectively. Another key property of this approach is that, because the gap between the upper bound and lower bound converges to zero as the bounds of the coupling variables converges to zero, we only need to perform branching on the complicating variables. A similar approach has been recently proposed for stochastic MINLPs [5]. We show how the algorithm can be easily implemented in Julia and interfaced to modeling languages such as JuMP and PLASMO. Our implementation also contains typical global optimization algorithmic features such as convexification, outer approximation, feasibility-based bound tightening (FBBT), optimality-based bound tightening (OBBT), and local search. Numerical experiments are performed on a stochastic optimization formulation for controller tuning and a parameter estimation formulation for microbial community models. We compare the computational results with the commercial solver BARON [3] and with open-source solver SCIP [4], and we show that the new approach achieves significant speedups. References: [1] Kang, J., Cao, Y., Word, D.P. and Laird, C.D., 2014. An interior-point method for efficient solution of block-structured NLP problems using an implicit Schur-complement decomposition. Computers & Chemical Engineering, 71, pp.563-573. [2] Kang, J., Chiang, N., Laird, C.D. and Zavala, V.M., 2015, December. Nonlinear programming strategies on high-performance computers. In Decision and Control (CDC), 2015 IEEE 54th Annual Conference on (pp. 4612-4620). IEEE. [3] Tawarmalani, M. and Sahinidis, N.V., 2005. A polyhedral branch-and-cut approach to global optimization. Mathematical Programming, 103(2), pp.225-249. [4] Maher, S.J., Fischer, T., Gally, T., Gamrath, G., Gleixner, A., Gottwald, R.L., Hendel, G., Koch, T., Lübbecke, M.E., Miltenberger, M. and Müller, B., 2017. The SCIP Optimization Suite 4.0. [5] Li, Xiang, Asgeir Tomasgard, and Paul I. Barton. \"Nonconvex generalized Benders decomposition for stochastic separable mixed-integer nonlinear programs.\" Journal of optimization theory and applications 151.3 (2011): 425.",
+    "presenting_author": "Yankai Cao | University of Wisconsin-Madison",
+    "authors": [
+      "Victor M. Zavala | University of Wisconsin-Madison",
+      "Yankai Cao | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Victor M. Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Yankai Cao",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "522e",
+    "sortable_time": "2017-11-01_13:54:00_14:15:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/494501"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/496269",
+    "paper_endpoint": "Paper/496269",
+    "paper_id": "496269",
+    "topic": "Analysis of the Alternating Direction Method of Multipliers for the Optimization of Distributed Nonconvex Systems",
+    "title": "Analysis of the Alternating Direction Method of Multipliers for the Optimization of Distributed Nonconvex Systems",
+    "date_time": "2017-11-01_12:30:00_15:00:00",
+    "session_id": "37684",
+    "session_title": "Advances in MINLP and Global Optimization",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "The alternating direction method of multipliers (ADMM) is an optimization method that has received a lot of attention for solving convex optimization problems. Some of this attention is because ADMM can be parallelized for problems with a certain separable structure. It is particularly suited to problems that have a decentralized or distributed nature. However, very little analysis has been done on the theoretical properties and numerical performance of ADMM for the nonconvex problems of interest in chemical engineering applications. As a motivating example, consider the coordination or integration of various real-time optimization (RTO) applications across a refinery. Each RTO application can be a large nonconvex optimization problem with the aim of achieving economically optimal steady-state operation of a particular process unit or group of units. Of course these units, with separate RTO applications, are actually connected by material flows. Thus, the RTO problems can be connected by extra constraints in order to obtain a larger-scope optimization problem. Ideally, an optimization method for this larger, integrated optimization problem could take advantage of the existing infrastructure, and “sit on top” of the models and software in use for the RTO applications. At least superficially, ADMM is a promising candidate, and numerical experiments with problems with similar structure show that ADMM does seem to work. This work aims to support these numerical experiments and provide a convergence analysis of ADMM applied to nonconvex problems. Under fairly standard regularity assumptions on a local minimizer, we establish conditions under which ADMM does indeed converge to that minimum. These conditions include that the penalty parameter in the augmented Lagrangian be greater than a certain threshold. Bolstered by these theoretical guarantees, we propose putting ADMM in a trust region framework to improve its robustness and global convergence properties.",
+    "presenting_author": "Stuart Harwood | ExxonMobil Research and Engineering Company, Clinton, NJ",
+    "authors": [
+      "Stuart Harwood | ExxonMobil Research and Engineering Company, Clinton, NJ",
+      "Shivakumar Kameswaran | ExxonMobil Research and Engineering Company, Clinton, NJ",
+      "Thomas Badgwell | Corporate Strategic Research, ExxonMobil Research and Engineering Company, Clinton, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Stuart Harwood",
+        "affiliation": "ExxonMobil Research and Engineering Company, Clinton, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Shivakumar Kameswaran",
+        "affiliation": "ExxonMobil Research and Engineering Company, Clinton, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Thomas Badgwell",
+        "affiliation": "Corporate Strategic Research, ExxonMobil Research and Engineering Company, Clinton, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "522f",
+    "sortable_time": "2017-11-01_14:15:00_14:36:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/496269"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/493722",
+    "paper_endpoint": "Paper/493722",
+    "paper_id": "493722",
+    "topic": "Guaranteed Global Optimization of Expected-Value Minimization Problems with Continuous Ranom Variables",
+    "title": "Guaranteed Global Optimization of Expected-Value Minimization Problems with Continuous Ranom Variables",
+    "date_time": "2017-11-01_12:30:00_15:00:00",
+    "session_id": "37684",
+    "session_title": "Advances in MINLP and Global Optimization",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "Stochastic programming is a powerful framework for determining optimal design and operational decisions under uncertainty, and is extensively used in manufacturing, chemical processing, power distribution, and wireless communication, to name only a few. In this talk, we propose a new algorithm for globally solving a specific class of stochastic programs with (i) nonconvex models, which arise in chemical processes, water and gas networks, AC power systems, etc.; (ii) continuously distributed random variables (RVs), which characterize uncertainty in, e.g., product demands, returns on investments, and renewable energy resources; (iii) expected-value objective functions; and (iv) no recourse decisions. In the existing literature, such problems are most commonly addressed using sample-average approximation (SAA), which solves a deterministic approximation using a finite number of sampled scenarios. However, this often provides an unworkable compromise between accuracy and efficiency. Specifically, using too few scenarios can result in approximate solutions that are highly suboptimal or even infeasible. On the other hand, increasing the number of scenarios leads to high computational costs when computing sample-average approximations of the objective and constraints. Moreover, verifying the accuracy of a solution generally requires solving many repeats of the deterministic problem with independent samples, leading to an unmanageable computational burden for many problems of practical interest. Another common approach is the so-called stochastic branch-and-bound (B&B) algorithm. However, unlike standard B&B algorithms, the upper and lower bounds obtained in stochastic B&B are sample-based and are only valid in a probabilistic sense. Thus, stochastic B&B has a nonzero probability of fathoming optimal solutions. To address these challenges, this talk presents a new Branch-and-Bound (B&B) algorithm that is guaranteed to converge finitely to epsilon-global solutions of nonconvex stochastic programs with continuous RVs, and does so with significantly higher efficiency than existing approaches. This is achieved using discrete approximations based on exhaustive partitions of the uncertainty space rather than on sampled scenarios. A key insight in our approach is that such approximations enable the construction of convergent convex relaxations that rigorously account for discretization error. In turn, this enables the computation of rigorous, deterministic upper and lower bounds that can be exploited within B&B to obtain global solutions with provable accuracy. To our knowledge, no existing approach can provide such deterministic bounds for nonconvex programs with continuous RVs. Moreover, by deterministically bounding the discretization error, it becomes possible to prove infeasibility or suboptimality of regions of the decision space using only coarse partitions of the uncertainty space. Using this insight, we achieve high efficiency by adaptively refining the uncertainty partition as the B&B search proceeds. Compared to stochastic B&B, our B&B approach is advantageous because it uses deterministic rather than probabilistic upper and lower bounds. Thus, it is impossible to fathom a global solution. Compared to SAA, our approach is more rigorous because it provides epsilon-global solutions finitely, whereas SAA converges to the true solution with probability 1 only as the number of scenarios goes to infinity. Moreover, our approach can be significantly more efficient than SAA because we use a partition of the uncertainty space that is adaptively refined during B&B. In contrast, SAA must use a fixed number of scenarios during optimization, and must begin from scratch if additional scenarios are deemed necessary. The advantages of our proposed B&B approach will be demonstrated through case studies in chemical reactor design and renewable energy systems.",
+    "presenting_author": "Joe Scott | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Yuanxun Shao | Georgia Institute of Technology, Atlanta, GA",
+      "Joe Scott | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yuanxun Shao",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Joe Scott",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "522g",
+    "sortable_time": "2017-11-01_14:36:00_14:57:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/493722"
+  }
+]

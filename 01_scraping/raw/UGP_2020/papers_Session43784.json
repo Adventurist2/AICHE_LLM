@@ -1,0 +1,376 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/599842",
+    "paper_endpoint": "Paper/599842",
+    "paper_id": "599842",
+    "topic": "Deep Learning of Low-Dimensional Latent Space Molecular Simulators",
+    "title": "Deep Learning of Low-Dimensional Latent Space Molecular Simulators",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43784",
+    "session_title": "Software Engineering in and for the Molecular Sciences",
+    "session_number": "657",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "The long-time microscopic evolution of molecular systems is governed by the leading eigenfunctions of the transfer operator that propagates the system through time. The low-dimensional latent space defined by these eigenfunctions parameterize the slow manifold to which the system is constrained to evolve. We have developed deep neural networks of various architectures to (i) learn the leading transfer operator eigenfunctions and project molecular configurations into this latent space, (ii) propagate the molecular dynamics within the encoded latent space, and (iii) decode the latent space back to the all-atom coordinate space. We train the networks over short simulation trajectories to establish low-dimensional latent space simulators capable of performing molecular dynamics simulations at orders-of-magnitude lower cost than traditional physics-based simulation. In an application to Trp-cage protein, we train latent space simulators over 200 µs of traditional physics-based simulation trajectories costing millions of CPU-h to generate. Our trained model can generate simulations of equal length in just 2.3 s of wall time on a single CPU core, and the synthetic trajectories are in excellent accord with the structure, thermodynamics, and kinetics of the original simulations: our all-atom configurations are lie within <5 Å RMSD and our free energy landscapes and kinetic rates are in quantitative agreement. The trained latent space simulators can generate thousands of folding and unfolding events in a matter of minutes, enabling us to quantify long-time kinetic phenomena at unprecedented statistical accuracy while maintaining a continuous-time, continuous-space, all-atom representation of the molecular dynamics.",
+    "presenting_author": "Andrew Ferguson | The University of Chicago, IL",
+    "authors": [
+      "Hythem Sidky | University of Chicago, IL",
+      "Wei Chen | University of Illinois at Urbana-Champaign",
+      "Andrew Ferguson | The University of Chicago, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hythem Sidky",
+        "affiliation": "University of Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Wei Chen",
+        "affiliation": "University of Illinois at Urbana-Champaign",
+        "designation": "Author"
+      },
+      {
+        "name": "Andrew Ferguson",
+        "affiliation": "The University of Chicago, IL",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "657a",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/599842"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/607296",
+    "paper_endpoint": "Paper/607296",
+    "paper_id": "607296",
+    "topic": "Mosdef Cassandra: A Python Interface Providing Complete Integration between the Cassandra Monte Carlo Software and Mosdef Tools",
+    "title": "Mosdef Cassandra: A Python Interface Providing Complete Integration between the Cassandra Monte Carlo Software and Mosdef Tools",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43784",
+    "session_title": "Software Engineering in and for the Molecular Sciences",
+    "session_number": "657",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Over the previous half-century, molecular simulations have proven an invaluable technique for investigating and predicting the behavior of matter. The Monte Carlo (MC) methods are particularly valuable for their ability to easily simulate open ensembles, i.e., including molecule insertions and deletions. This capability enables the simulation of phase equilibria, such as vapor-liquid equilibrium and adsorption in porous materials. Rapidly increasing computing power makes MC simulation, in principle, more powerful. However, generating input files and managing the overall simulation workflow still requires human intervention and suffers from human error. The next generation of simulation studies will likely include more high-throughput screening and perhaps even iterative approaches that combine statistical methods (e.g., machine learning) and molecular simulations to probe the behavior of chemical systems across large parameter spaces. These types of studies will require two key components from the next generation of MC simulation software: enhanced simulation reproducibility and improved integration with other community-based software tools. In this work, we demonstrate our recent integration of the Molecular Simulation Design Framework (MoSDeF) [1] with Cassandra [2] via a new Python interface for Cassandra . MoSDeF is an effort to promote TRUE simulation workflows (Transparent, Reproducible, Usable by others and Extensible) by providing modular Python-based tools that can be used during the system creation and force field application steps of a simulation workflow. The goal of these tools is to remove the use of graphical user interfaces, in-house interconversion scripts, and other ad-hoc steps used by many researchers to create and modify input files for molecular simulations. The Python-based Cassandra interface offers three main advantages: improved reproducibility by containing the entire simulation workflow within a single script, a tremendously simplified process of performing an MC simulation, and easier integration with other software tools. We describe the philosophy and design of the MoSDeF Cassandra interface and demonstrate how the software simplifies the act of performing an MC simulation. Starting from the “traditional” Cassandra simulation workflow, we show how MoSDeF Cassandra removes ad-hoc modifications and the need for graphical user interfaces. Instead, the entire simulation workflow (system creation, force field assignment, simulation, and analysis) is contained in a single Python script. This script is easy to version-control and share. Reproducing a simulation is as trivial as downloading the script and installing the appropriate software. Modifying the simulation (e.g., different conditions, molecules, etc.) is often nearly as trivial. We then demonstrate extensions to more complex workflows, such as calculating adsorption isotherms in porous media. Finally, we show how MoSDeF Cassandra integration with Signac [3] enables simplified job management and submission for thousands or more simulations. With this power, we believe MoSDeF Cassandra is well-positioned to enable the next generation of Monte Carlo simulations. [1] M.W. Thompson, J.B. Gilmer, R.A. Matsumoto, C.D. Quach, P. Shamaprasad, A.H. Yang, C.R. Iacovella, C. McCabe, P.T. Cummings. Towards molecular simulations that are transparent, reproducible, usable by others, and extensible. Mol. Sim. In press, (2020). [2] J.K. Shah, E. Marin-Rimoldi, R.G. Mullen, B.P. Keene, S. Khan, A.S. Paluch, N. Rai, L.L. Romanelo, T.W. Rosch, B. Yoo, E.J. Maginn, Cassandra: An open source Monte Carlo package for molecular simulation. J. Comput. Chem. 38 (2017) 1727-1739. [3] V. Ramasubramani, C.S. Ardorf, P.M. Dodd, B.D. Dice, S.C. Glotzer , Simple data and workflow management with the signac framework. Comput. Mater. Sci. 146 (2018) 220-229.",
+    "presenting_author": "Ryan S. DeFever | University of Notre Dame, IN",
+    "authors": [
+      "Ryan S. DeFever | University of Notre Dame, IN",
+      "Edward Maginn | University of Notre Dame, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ryan S. DeFever",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Edward Maginn",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "657b",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/607296"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/609734",
+    "paper_endpoint": "Paper/609734",
+    "paper_id": "609734",
+    "topic": "Automatic Generation of Ionic Liquid Libraries for High Throughput Screening",
+    "title": "Automatic Generation of Ionic Liquid Libraries for High Throughput Screening",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43784",
+    "session_title": "Software Engineering in and for the Molecular Sciences",
+    "session_number": "657",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Ionic liquids are a class of solvents comprised entirely of bulky cations and anions. The asymmetry in the ionic structures often prevents organized packing, which results in these solvents existing as liquids at or below room temperatures. Manipulation of the cation, anion, and the substituents on the ions is the primary strategy aimed at designing a large number of ionic liquids possessing desired physicochemical, electrical, or biological properties. Probably one of the most studied substituents is the alkyl chain, especially attached to the cation. For the most part, the focus in the literature has been predominantly on the n- alkyl group; the isomerism embedded in the alkyl chain has been examined to a significantly lesser extent. As the number of isomers grows dramatically with the carbon chain length, there is a great potential for exploiting the isomerism to expand the number of ionic liquids. In this presentation, we will describe an algorithm for enumerating the structural isomers of alkyl groups up to hexadecyl and the corresponding SMILES strings. We will then elaborate on our protocol for eliminating SMILES strings producing identical isomers, so that the computational effort is concentrated only on unique isomers. Next, we will describe methods for attaching the isomers to various functional groups and generating three-dimensional starting structures from SMILES strings by taking the 1-alkyl-3-methylimidazolium family of cations as an example. Results of the frontier energy orbitals obtained from electronic structure calculations will be presented and analyzed for patterns based on the respective Tanimoto similarity index.",
+    "presenting_author": "Jindal K. Shah | Oklahoma State University, Stillwater",
+    "authors": [
+      "Jindal K. Shah | Oklahoma State University, Stillwater",
+      "Zachary Gassaway | Oklahoma State University, Stillwater"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jindal K. Shah",
+        "affiliation": "Oklahoma State University, Stillwater",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zachary Gassaway",
+        "affiliation": "Oklahoma State University, Stillwater",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "657c",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/609734"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/609374",
+    "paper_endpoint": "Paper/609374",
+    "paper_id": "609374",
+    "topic": "Gixstapose: Interactive and Reproducible Scattering Analysis of Simulation Snapshots",
+    "title": "Gixstapose: Interactive and Reproducible Scattering Analysis of Simulation Snapshots",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43784",
+    "session_title": "Software Engineering in and for the Molecular Sciences",
+    "session_number": "657",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "We develop a tool for solving common problems in structural analysis at nanometer length scales. Molecular simulations typically employ periodic boundary conditions to represent conditions in bulk materials, but this places constraints on observable structural features. Analyzing material structure in the frequency domain quantifies the degree to which repeating structural features exist, but can be difficult to implement, interpret, and reproduce. Furthermore, the generation of simulated diffraction patterns from molecular simulation plays a crucial role in validating simulation results against experiments that rely on diffraction patterns to quantify structure. In this work we develop GIXStapose, a new interactive analysis software for studying crystalline and amorphous materials structures. It enables grazing incidence X-ray scattering (GIXS) patterns to be visualized while interactively rotating chemical structures, especially periodic simulation volumes generated from molecular simulations. This functionality is useful for interactively identifying real-space chemical features that correspond to bright diffraction peaks and the rotation matrices that generate them. As such, this tool has potential to aid in the reproducible generation of publication quality figures which connect both GIXS and structural data, and it has pedagogical potential for students learning about crystal structures and diffraction. GIXStapose is made possible by open-source packages, including the high-quality rendering of the Fresnel ray-tracer, the chemical file formats parsing of MBuild, and numpy's fast Fourier implementations used in interactive diffraction analysis, and by funding from the National Science Foundation (#1835593)",
+    "presenting_author": "Jenny Fothergill | Boise State University, ID",
+    "authors": [
+      "Jenny Fothergill | Boise State University, ID",
+      "Chris Jones | Boise State University, ID",
+      "Eric Jankowski | Boise State University, ID"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jenny Fothergill",
+        "affiliation": "Boise State University, ID",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chris Jones",
+        "affiliation": "Boise State University, ID",
+        "designation": "Author"
+      },
+      {
+        "name": "Eric Jankowski",
+        "affiliation": "Boise State University, ID",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "657d",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/609374"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/610963",
+    "paper_endpoint": "Paper/610963",
+    "paper_id": "610963",
+    "topic": "Automated Calculation of Coarse-Grained Potentials Using the Iterative Boltzmann Inversion (IBI) Method",
+    "title": "Automated Calculation of Coarse-Grained Potentials Using the Iterative Boltzmann Inversion (IBI) Method",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43784",
+    "session_title": "Software Engineering in and for the Molecular Sciences",
+    "session_number": "657",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Computation at mesoscopic length scales between the atomistic and continuum for polymeric and similar soft materials requires coarse-graining (CG) techniques. These techniques enable computational access to the greater length and time scales inherent to these materials by subsuming atoms associated with monomers or other chemical moieties into “coarse-grained” sites and then describing the physics by means of a potential parametrized for the coarse-grained description of the material. The development of methods to properly parametrize coarse-grained potentials is an active area of research compromising many different approaches across the soft matter community. Systematic, \"bottom-up\" methods, in which the coarse-grained (CG) force-field is directly derived from all-atom (AA) simulation data, have the advantage of retaining a high degree of chemical specificity, and thus, can typically capture equilibrium structure quite well. A widely used systematic method is Iterative Boltzmann inversion (IBI) which retains chemical structure via the radial distribution function (RDF), and hence, thermodynamic properties. In IBI, an initial guess for the CG bonded and non-bonded potential are iteratively refined by means of a correction proportional to the ratio between the atomistic (target) and coarse-grained sampling distributions. We report here on a software code which automates the development of coarse-grained potentials using IBI. The code base to support this consists of a Python driver, several Python modules with core library functions, an external C++ code for calculating distributions, and the use of LAMMPS as a molecular dynamics (MD) engine. Two major problems make automation difficult: 1) noisy distributions derived from sampling; 2) low sampling regions which introduces discontinuities in the sampling. Both of these make differentiation of the energy to calculate forces difficult and error prone. Our approach addresses these problems by the construction of library functions which combine data smoothing, fitting to Gaussian functionals (bonded potentials), and flexible extrapolation schemes to handle low sampling regions without discontinuity or data distortion. The problem of overfitting is handled in part by error handling to keep the procedure running smoothly. We also introduce a library to automate the conversion of AA to CG representations and have built in an input-output framework which aims at providing reproducibility. Several use cases will be discussed aimed at providing guidance on usage. References S. Plimpton, Fast Parallel Algorithms for Short-Range Molecular Dynamics, J Comp Phys, 117, 1-19 (1995).",
+    "presenting_author": "Frederick Phelan Jr. | National Institute of Standards and Technology, Gaithersburg, MD",
+    "authors": [
+      "Lilian Johnson | National Institute of Standards and Technology, Gaithersburg, MD",
+      "Frederick Phelan Jr. | National Institute of Standards and Technology, Gaithersburg, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Lilian Johnson",
+        "affiliation": "National Institute of Standards and Technology, Gaithersburg, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Frederick Phelan Jr.",
+        "affiliation": "National Institute of Standards and Technology, Gaithersburg, MD",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "657e",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/610963"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/606572",
+    "paper_endpoint": "Paper/606572",
+    "paper_id": "606572",
+    "topic": "Designing Stable Semiconductor Nanowires Via a Generic Materials Optimization Toolkit",
+    "title": "Designing Stable Semiconductor Nanowires Via a Generic Materials Optimization Toolkit",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43784",
+    "session_title": "Software Engineering in and for the Molecular Sciences",
+    "session_number": "657",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Semiconductor nanowires (NWs) exhibit distinct properties due to its unique one-dimensional (1d) periodicity [1]. They are promising materials in numerous catalytic applications [2,3,4], and have attracted extensive research focus. The fast-growing NWs fabrication ability [5] brings the new challenge of NWs engineering design. This work proposes designing highly stable NWs using our new Python-based generic materials optimization package, MatOpt [6]. Cohesive energy (CE) indicates a NW’s overall stability. Consequently, the search for energetically most stable NWs can be simplified to maximizing CE. Previous work in the literature has focused on using heuristic search methods such as genetic algorithms [7] and simulated annealing [8] to find the energetically most favorable NW structure. These approaches generally find stable nanostructures but often miss some of the most stable ones. We propose here a mathematical optimization-based design framework for this combinatorial design problem. The CE structure-function relationships are cast into a rigorous Mixed Integer Linear Programming (MILP) model. The design space can then be explored systematically by solving the model via established numerical optimization algorithms. The obtained, optimally-stable NW designs can serve as model structures for further experimental and theoretical investigations. A similar, MILP-based, bottom-up design framework has been previously demonstrated for various types of nanomaterials, including metallic nanoclusters [9,10], periodic catalytic surfaces [11,12], and bulk metallic oxides [13]. In those cases, the design framework has found unintuitive optimal solutions and revealed interesting physical trends. To simplify the implementation of our generic framework and make it accessible to non-experts in combinatorial mathematical optimization, we have codified our methodologies into the Python-based toolkit MatOpt. While we focus on using MatOpt to design 1d-periodic NWs by maximizing CE, we shall also illustrate how the methodology can be easily extended further to a broad range of NW design problem and other NW functionalities of interest.",
+    "presenting_author": "Xiangyu Yin | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Xiangyu Yin | Carnegie Mellon University, Pittsburgh, PA",
+      "Christopher Hanselman | Eli Lilly and Company, Indianapolis, IN",
+      "Chrysanthos Gounaris | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Xiangyu Yin",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christopher Hanselman",
+        "affiliation": "Eli Lilly and Company, Indianapolis, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Chrysanthos Gounaris",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "657g",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/606572"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/597100",
+    "paper_endpoint": "Paper/597100",
+    "paper_id": "597100",
+    "topic": "Extending the Reach of Particle-Based Simulations with Machine-Learned Models",
+    "title": "Extending the Reach of Particle-Based Simulations with Machine-Learned Models",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43784",
+    "session_title": "Software Engineering in and for the Molecular Sciences",
+    "session_number": "657",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Many of the most challenging problems in chemical engineering involve reactivity in complicated systems. First principles methods like density functional theory (DFT) are attractive for such studies but due to computational expense, are confined to problems of a few 100s atoms and 10s of ps. These limitations have motivated extensive work towards development of accurate, scalable, and reliable reactive force fields but these models generally rely on complicated functional forms requiring time consuming parameterization schemes. As a result, the physiochemical space over which parameters are available is limited. In this work, we present the Chebyshev Interaction Model for Efficient Simulations (ChIMES), a new reactive force field and semi-automated fitting framework that retains most of the accuracy of DFT while decreasing computational requirements by several orders of magnitude. ChIMES models are comprised of n -body atomic interactions constructed from linear combinations of Chebyshev polynomials, and are entirely linear in fitting coefficients. Thus, model parameters can be rapidly (and iteratively) generated by force matching to short DFT trajectories. ChIMES models are particularly well suited for studies that frequently rely on costly quantum simulations for elucidation and interpretation of experiments, and to date, have been successfully applied to problems including chemical reactivity under extreme conditions and surface chemistry, which can probe time and lengths that are many orders of magnitude greater that what can be achieved with standard DFT. Moreover, by overcoming this time and length scale gap, ChIMES enables direct comparisons to experiment for the first time, in many cases. Model details will be presented as will selected applications. This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344. LLNL-ABS-808063",
+    "presenting_author": "Rebecca Lindsey | Lawrence Livermore National Laboratory, CA",
+    "authors": [
+      "Rebecca Lindsey | Lawrence Livermore National Laboratory, CA",
+      "Laurence E. Fried | Lawrence Livermore National Laboratory, CA",
+      "Nir Goldman | Lawrence Livermore National Laboratory, CA",
+      "Sorin Bastea | Lawrence Livermore National Laboratory, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rebecca Lindsey",
+        "affiliation": "Lawrence Livermore National Laboratory, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Laurence E. Fried",
+        "affiliation": "Lawrence Livermore National Laboratory, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Nir Goldman",
+        "affiliation": "Lawrence Livermore National Laboratory, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Sorin Bastea",
+        "affiliation": "Lawrence Livermore National Laboratory, CA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "657h",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/597100"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/610207",
+    "paper_endpoint": "Paper/610207",
+    "paper_id": "610207",
+    "topic": "Physically-Motivated Requirements of Machine Learning Potentials",
+    "title": "Physically-Motivated Requirements of Machine Learning Potentials",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43784",
+    "session_title": "Software Engineering in and for the Molecular Sciences",
+    "session_number": "657",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Machine learning potentials (MLPs) for molecular dynamics simulations have been found to be capable of approaching ab initio accuracy with the computational efficiency of empirical potentials. The accuracy and performance of an MLP is highly dependent upon the choice of descriptors used to characterize the local atomic environment though, as well as on the training data that the algorithm uses to predict the energies and forces. The descriptors should respect the symmetries of the atomic environment, be differentiable with respect to the atomic coordinates, and contain sufficient information. If a Gaussian process is used for machine learning, the covariance function that quantifies the similarity or closeness between two points in descriptor space also has requirements to consider. Specifically, the choice of covariance function should impose minimal constraints on the potential to reduce the risk of systematic error. This work reports on recent progress using Gaussian process regression and a novel set of descriptors to construct accurate and efficient interatomic potentials.",
+    "presenting_author": "Jared Stimac | UC Davis, CA",
+    "authors": [
+      "Jared Stimac | UC Davis, CA",
+      "Jeremy Mason | UC Davis, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jared Stimac",
+        "affiliation": "UC Davis, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jeremy Mason",
+        "affiliation": "UC Davis, CA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "657i",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/610207"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/607356",
+    "paper_endpoint": "Paper/607356",
+    "paper_id": "607356",
+    "topic": "Many-Body Machine Learning Force Fields for Explicit Solvent Modeling",
+    "title": "Many-Body Machine Learning Force Fields for Explicit Solvent Modeling",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43784",
+    "session_title": "Software Engineering in and for the Molecular Sciences",
+    "session_number": "657",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Modeling solvation effects in computational chemistry often requires fully explicit treatments (i.e. molecular dynamics) to accurately and reliably capture solute-solvent interactions. Unfortunately, such methods require pre-parameterized force fields or many quantum mechanics calculations that can incur a prohibitively high computational cost. Recent developments in efficiently trained symmetric gradient-domain machine learning (sGDML) force fields have shown that they can enable molecular dynamics with CCSD(T) accuracy. However, a central limitation of sGDML force fields is their lack of transferability in that they are only applicable to systems the force field has been trained on. To address this issue, we consider the applicability of using a many-body decomposition comprised of multiple sGDML models that run simultaneously. Specifically, we trained sGDML models to learn energies for monomer, dimer, trimer, and tetramer interactions based on ab initio molecular dynamics simulations of solvent clusters. We found that many-body GDML models for water, acetonitrile, and methanol have more accurate force and energy prediction when compared to standard sGDML models. Furthermore, we demonstrate that force fields with up to 3-body interactions are reasonably accurate and transferable for dynamics simulations on larger solvent clusters o f arbitrary size.",
+    "presenting_author": "Alex M. Maldonado | University of Pittsburgh, PA",
+    "authors": [
+      "Alex M. Maldonado | University of Pittsburgh, PA",
+      "John Keith | University of Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Alex M. Maldonado",
+        "affiliation": "University of Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "John Keith",
+        "affiliation": "University of Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "657j",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/607356"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/598149",
+    "paper_endpoint": "Paper/598149",
+    "paper_id": "598149",
+    "topic": "Quantum Computation for Simulating Vibrational Properties of Molecules",
+    "title": "Quantum Computation for Simulating Vibrational Properties of Molecules",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43784",
+    "session_title": "Software Engineering in and for the Molecular Sciences",
+    "session_number": "657",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Many technologically pertinent chemical properties, including reaction rates and light absorption behavior, depend on a molecule’s vibrational and dynamical behavior. But in a large subset of molecules for which vibrations are relevant, accurate simulations are intractable on classical computers. Here, we discuss the use of quantum computers to achieve exponential computational speedups, highlighting approaches designed to make optimal algorithm choices based on an arbitrary quantum computer’s performance characteristics. Our numerical tests show that there is a rich relationship between the problem type and the optimal method for encoding a vibrational degree of freedom into the quantum computer. The approaches we present are relevant to running simulations on near-term quantum hardware.",
+    "presenting_author": "Nicolas P. D. Sawaya | Intel Labs, Santa Clara, CA",
+    "authors": [
+      "Nicolas P. D. Sawaya | Intel Labs, Santa Clara, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nicolas P. D. Sawaya",
+        "affiliation": "Intel Labs, Santa Clara, CA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "657k",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/598149"
+  }
+]

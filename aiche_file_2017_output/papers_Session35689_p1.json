@@ -1,0 +1,253 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/489748",
+    "paper_endpoint": "Paper/489748",
+    "paper_id": "489748",
+    "topic": "Distributed Model Predictive Control of Complex Plants: A Systematic Study of Decomposition Effects",
+    "title": "Distributed Model Predictive Control of Complex Plants: A Systematic Study of Decomposition Effects",
+    "date_time": "2017-11-01_08:00:00_10:30:00",
+    "session_id": "35689",
+    "session_title": "Networked, Decentralized, and Distributed Control",
+    "session_number": "497",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The decomposition of a large scale complex plant into constituent subsystems is an essential step for the synthesis of distributed model predictive control (DMPC) architectures, which directly affects the closed-loop performance and computational effort [1-3]. While there have been some initial attempts to address the decomposition problem for specific classes of systems [4, 5], developing a systematic framework for optimal decomposition into subsystems with desirable interaction characteristics is still an open problem. From a network theory perspective, this problem can be posed as identifying weakly-connected subsystems whereby the variables of each subsystem are strongly connected. Such a point of view has been adopted to generate hierarchies of system decompositions with different degrees of decentralization based on input-output connectivity, following an agglomerative or divisive clustering procedure [6]. An alternative method based on the maximization of the modularity of the system equation graph was recently proposed to decompose the network into ”communities” that include inputs, states, and outputs [7]. The latter approach minimizes the interactions between the resulting communities and appears well suited for distributed control. In this work, we provide a systematic evaluation of the impact of system decomposition on DMPC designs for a benchmark integrated plant. An iterative DMPC architecture is applied to a reactor-separator system containing two continuous stirred tank reactors and a vapor-liquid separator. The performance and computational effort of implementing the iterative DMPC for different decompositions identified through community detection methods [6, 7] or by intuition [3, 8], are analyzed and compared to those obtained by a centralized model predictive control (CMPC) design. State/output regulation and tracking case studies are considered. In each case, it is documented that the optimal decomposition obtained by the community detection method, which minimizes the interactions between the subsystems, enables closed-loop performance close to that of the CMPC, while reducing the computation effort significantly. [1] P.D. Christofides, R. Scattolini, D. Munoz de la Pena, and J. Liu. Distributed model predictive control: A tutorial review and future research directions. Computers & Chemical Engineering, 51:21–41, 2013. [2] B.T. Stewart, S.J. Wright, and J.B. Rawlings. Cooperative distributed model predictive control for nonlinear systems. Journal of Process Control, 21:698–704, 2011. [3] P.D. Christofides, J. Liu, D. Munoz de la Pena. Networked and Distributed Predictive Control. Springer-Verlag, London, 2011. [4] W. Al-Gherwi, H. Budman, and A. Elkamel. Selection of control structure for distributed model predictive control in the presence of model errors. Journal of Process Control, 20:270–284, 2010. [5] N. Motee and B. Sayyar-Rodsari. Optimal partitioning in distributed model predictive control. In Proceedings of the American Control Conference, 5300–5305, Denver, CO, 2003. [6] S. Heo and P. Daoutidis. Control-relevant decomposition of process networks via optimization-based hierarchical clustering. AIChE Journal, 62(9):3177–3188, 2016. [7] S.S. Jogwar and P. Daoutidis. Community-based synthesis of distributed control architectures for integrated networks. Chemical Engineering Science, Submitted, 2016. [8] M.J. Tippett, J. Bao. Distributed model predictive control based on dissipativity. AIChE J., 59(3):787– 804, 2013.",
+    "presenting_author": "Davood Babaei Pourkargar | University of Minnesota, Twin Cities, Minneapolis, MN",
+    "authors": [
+      "Davood Babaei Pourkargar | University of Minnesota, Twin Cities, Minneapolis, MN",
+      "Ali Almansoori | The Petroleum Institute, Abu Dhabi, United Arab Emirates",
+      "Prodromos Daoutidis | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Davood Babaei Pourkargar",
+        "affiliation": "University of Minnesota, Twin Cities, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ali Almansoori",
+        "affiliation": "The Petroleum Institute, Abu Dhabi, United Arab Emirates",
+        "designation": "Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "497a",
+    "sortable_time": "2017-11-01_08:00:00_08:21:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/489748"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/500103",
+    "paper_endpoint": "Paper/500103",
+    "paper_id": "500103",
+    "topic": "Dynamic Real-Time Optimization of Distributed MPC Systems Using Rigorous Closed-Loop Prediction",
+    "title": "Dynamic Real-Time Optimization of Distributed MPC Systems Using Rigorous Closed-Loop Prediction",
+    "date_time": "2017-11-01_08:00:00_10:30:00",
+    "session_id": "35689",
+    "session_title": "Networked, Decentralized, and Distributed Control",
+    "session_number": "497",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Dynamic real-time optimization (DRTO) has been developed as a supervisory layer within the process control architecture that computes set-point trajectories for an underlying regulatory control system based on economic optimization and a dynamic process model. Unlike traditional steady-state RTO systems, it does not require the plant to be at steady state prior to execution, thus making it well-suited for systems with recycle, with slow dynamics and which undergo frequent grade changes. Tosukhowong et al. propose a DRTO formulation to capture slow dynamics of a system using a linear model [1], while Kadam and Marquardt develop a DRTO formulation that estimates uncertain parameters and performs fast updates based on a sensitivity technique [2]. Most DRTO systems are based on an open-loop model of the process that does not consider the dynamic effects of the underlying regulatory controller. However, DRTO formulations based on the closed-loop prediction of the plant under constrained MPC have recently been developed [3, 4]. Large process plants are generally not controlled using a single, monolithic MPC system, with a distributed MPC architecture favored to take the modularity of a large process into consideration and provide additional flexibility [5]. Thorough reviews on the architecture and formulations of distributed MPCs have been conducted in [6, 7, 8]. Camponogara et al. propose a coordination scheme that allows communication among MPC subsystems which is allowed once for each local problem and multiple times before implementation of the control actions [9]. Liu et al. introduce distributed Lyapunov-based MPCs that adopt a sequential and iterative approach with one or bi-directional strategies, under the assumption of known state feedback for all controllers [10]. Stewart et al. present a cooperative scheme for distributed MPCs that ensures the closed-loop stability of the system upon termination of iterations for all subsystems [11]. In this work, a closed-loop DRTO formulation is developed for the economic coordination of distributed MPC systems by assigning computed set-point trajectories based on the prediction of future interactions between the plant dynamics and distributed MPCs. This closed-loop formulation naturally results in a multilevel optimization problem whose primary optimization problem computes the reference trajectories for each MPC subsystem based on a full plant dynamic model under an economic objective, and whose MPC optimization sub-problems compute optimal control actions to be applied to the full plant dynamic model based on partial models each of which contains model equations relevant to its associated subsystem. Such a multilevel optimization problem can be transformed into a single-level optimization problem by applying the Karush-Kuhn-Tucker (KKT) optimality conditions to transform the MPC optimization sub-problems into sets of algebraic constraints embedded in the primary optimization problem, resulting in a single mathematical program with complementarity constraints (MPCC). Relevant linear and nonlinear case studies are conducted to explore two modes of operation of the DRTO formulation: target tracking and economic optimization. Results show that for economic optimization, due to the flexibility of set-point trajectories and ability to foresee future interactions, the closed-loop DRTO formulation has the capacity to coordinate distributed MPCs to achieve similar economic performance when compared to the centralized counterpart, and for target tracking, each output is able to achieve the desired target value rapidly compared to both centralized and decentralized MPC cases. Due to the large scale and level of detail modeled for each subunit of a process, approximation techniques for the closed-loop DRTO formulation would be useful in order to efficiently coordinate multiple distributed MPCs at various locations. Strategies of this type are under development, with economic and computational performance comparisons planned. References [1] T.Tosukhowong, J. Lee, J. Lee and J. Lu, \"An introduction to a dynamic plant-wide optimization strategy for an integrated plant,\" Comp. Chem. Eng. , vol. 29, no. 1, pp. 199-208, 2004. [2] J. Kadam and W. Marquardt, \"Sensitivity-based solution updates in closed-loop dynamic optimization,\" in Proceedings of the 7th International Conference on the Dynamics and Control of Process Systems - DYCOPS 7, Boston, Massachusetts, USA , Boston, 2004. [3] M. Z. Jamaludin and C. L. E. Swartz, \"Approximation of Closed-loop Prediction for Dynamic Real-time Optimization Calculations,\" Computers and Chemical Engineering, vol. 103, pp. 23-38, 2017. [4] M. Z. Jamaludin and C. L. E. Swartz, \"Dynamic Real-time Optimization with Closed-loop Prediction,\" AIChE Journal, Accepted Author Manuscript. doi:10.1002/aic.15752, 2017. [5] G. Pannocchia, \"Distributed Model Predictive Control\",\" in Encyclopedia of Systems and Control , London, Springer London, 2013, pp. 1-9. [6] R. Scattolini, \"Architectures for distributed and hierarchical Model Predictive Control – A review,\" J. Process Control, vol. 19, no. 5, pp. 723-731, 2009. [7] P. Christofides, R. Scattolini, D. Muñoz de la Peña and J. Liu, \"Distributed model predictive control: A tutorial review and future research directions,\" Comp. Chem. Eng., vol. 51, pp. 21-41, 2013. [8] J. Rawlings and B. Stewart, \"Coordinating multiple optimization-based controllers: New opportunities and challenges,\" J. Process Control, vol. 18, no. 9, pp. 839-845, 2008. [9] E. Camponogara, D. Jia, B. Krogh and S. Talukdar, \"Distributed model predictive control,\" IEEE Control Systems, vol. 22, no. 1, pp. 44-52, 2002. [10] J. Liu, X. Chen, D. Muñoz de la Peña and P. Christofides, \"Sequential and iterative architectures for distributed model predictive control of nonlinear process systems,\" AIChE J., vol. 56, no. 8, pp. 2137-2149, 2010. [11] B. Stewart, A. Venkat, J. Rawlings, S. J. Wright and G. Pannocchia, \"Cooperative distributed model predictive control,\" Syst. Control Lett., vol. 59, no. 8, pp. 460-469, 2010.",
+    "presenting_author": "Hao Li | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Hao Li | McMaster University, Hamilton, Canada",
+      "Christopher Swartz | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hao Li",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christopher Swartz",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "497b",
+    "sortable_time": "2017-11-01_08:21:00_08:42:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/500103"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/494837",
+    "paper_endpoint": "Paper/494837",
+    "paper_id": "494837",
+    "topic": "Graph-Theoretic Approach for the Synthesis of Distributed Control Architecture",
+    "title": "Graph-Theoretic Approach for the Synthesis of Distributed Control Architecture",
+    "date_time": "2017-11-01_08:00:00_10:30:00",
+    "session_id": "35689",
+    "session_title": "Networked, Decentralized, and Distributed Control",
+    "session_number": "497",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Designs with multiple material recycle and energy integration loops are quite common in modern chemical plants. Such designs promise favourable economics, however, their operation and control is quite challenging due to strong interactions between process units. For such networks, traditional decentralized controllers have limited effectiveness due severe control loop interactions. On the other hand, the design and implementation of a fully centralized controller is impractical due to large system size. To this end, distributed control has been exploited as an efficient control framework [1]. Most of the work in this area has addressed issues like feasibility, stability and optimality of the control solution for a heuristically selected architecture. In this talk, we present a systematic framework for the synthesis of distributed control architecture using principles of graph theory. To this end, the control problem of an integrated network is abstracted as an equation graph with the various input, output and state variables as nodes and their (static or dynamic) interdependence as edges. In this setting, the distributed architecture synthesis problem is equivalent to decomposing the equation graph into ‘communities’ with strong connectivity between nodes belonging to each community and weak inter-community edges. Initially, it is considered that all the edges are equally important. The distributed structure obtained in this case thus results in minimum inter-controller interactions. Subsequently, strength of interaction between a variable pair is used as an edge weight. The distributed architecture obtained in this case results in optimal input-output pairing. The direct decomposition of the equation graph allows for deriving state-space descriptions for the individual sub-controllers. The framework uses minimum system information and is highly scalable due to advances in community detection algorithms. The effectiveness of the proposed framework is illustrated with the help of a case study on an integrated network. References: [1] Liu, J., Munoz de la Pena, D., Christofides, P. D. Distributed model predictive control of nonlinear process systems. AIChE J. 55 (5), 1171-1184.",
+    "presenting_author": "Sujit Jogwar | Indian Institute of Technology Bombay, Mumbai",
+    "authors": [
+      "Sujit Jogwar | Indian Institute of Technology Bombay, Mumbai"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sujit Jogwar",
+        "affiliation": "Indian Institute of Technology Bombay, Mumbai",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "497c",
+    "sortable_time": "2017-11-01_08:42:00_09:03:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/494837"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/494271",
+    "paper_endpoint": "Paper/494271",
+    "paper_id": "494271",
+    "topic": "Event-Based Networked Control of Distributed Process Systems with Sensor-Controller Communication Failures",
+    "title": "Event-Based Networked Control of Distributed Process Systems with Sensor-Controller Communication Failures",
+    "date_time": "2017-11-01_08:00:00_10:30:00",
+    "session_id": "35689",
+    "session_title": "Networked, Decentralized, and Distributed Control",
+    "session_number": "497",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The design and analysis of event-based control systems have emerged in recent years as the focus of significant attention in both the academic and industrial circles in networked control research. Interest in event-based control approaches stems, in part, from their promising capabilities to achieve the desired levels of control system performance with reduced utilization of the resources of the sensor- controller communication medium. Maintaining a balance between control performance, on the one hand, and extent of network utilization, on the other, is an important objective in the design of any networked control system, particularly in the context of applications involving large-scale sensor and actuator networks, where reducing network utilization can lead to savings in the energy expenditure of battery-powered wireless devices, thereby prolonging their service life and enabling their deployment in a wide range of technological applications [1]. A key idea in event-triggered model-based control is to compute the control action based on the predictions of an approximate model of the plant, and to suspend or restore sensor-controller communication in response to events that tie the model estimation error to a certain stability threshold. Sensor-controller communication is established only to update the model state when the prescribed stability threshold is breached; otherwise communication is suspended and network resources are saved. Compared with time-triggered communication strategies (e.g., [2]–[4]), event-triggered approaches are more responsive to changes in operating conditions and generally lead to lower overall network load and improved system robustness since they allow a more timely feedback of the potential changes in process operating conditions. A close inspection of the available literature on this topic shows that while event-triggered control has been widely studied in the context of lumped parameter systems (e.g., see [5]– [7] for some results and references in this area), it has received only limited attention in the context of distributed parameter systems. This is an important gap that needs to be addressed given the fact that many important practical applications (e.g., transport-reaction processes and fluid flows) are characterized by spatial variations and are modeled by Partial Differential Equations (PDEs). Efforts aimed at the development of a framework for event-triggered control of spatially distributed systems have been initiated in a number of recent studies (e.g., [8]–[10]), where the focus has been on addressing various practical implementation issues such as performance optimization, the accommodation of control actuator faults and the handling of limited state measurements. An important consideration in the implementation of the above approaches is the assumption that the communication medium is available whenever sensor-controller communication is needed. In other words, the communication medium is assumed to reliably transmit the broadcasted data from the sensor to the controller whenever needed. This assumption needs to be re-examined, especially in the context of wireless sensor and actuator networks where transmission failures, communication outages and environmental impacts are common and can interfere with the implementation of the event-triggered control strategy by precluding the execution of timely model updates. This consideration calls for an assessment of the event-triggered control system’s robustness to failures in the communication medium, and the development of appropriate measures to help mitigate the impact of these failures on the stability and performance of the networked closed-loop system. Motivated by these considerations, the objective of this work is to develop a model-based framework for the analysis and handling of sensor-controller communication failures in event-triggered networked control of a class of spatially-distributed processes. We focus on distributed processes whose dominant dynamics are finite-dimensional, but uncertain, with a finite number of spatially- distributed networked control actuators and measurement sensors. Initially, a model-based networked output-feedback controller is designed based on an approximate low-order model that captures the slow dynamics of the infinite-dimensional system. The controller is implemented using an event-triggered sensor-controller communication policy, which determines the times when the sensor data need to be transmitted to the controller to update the model state based on a suitably-designed stability threshold. An assessment of the networked control systems robustness to failures in the communication medium is carried out using an on-line forecasting approach that tracks the growth of the estimation errors during times of communication outages. An explicit characterization of the allowable down time that communication losses can be tolerated without compromising closed-loop stability is obtained in terms of the various control system design parameters, and used to devise various accommodation measures that enhance the networked closed-loop systems robustness against communication losses. A simulated diffusion-reaction process example is used to illustrate the developed approach. References: [1] Christofides, P.D., Davis, J., El-Farra, N.H., Clark, D., Harris, K., and Gipson, J. “Smart plant operations: Vision, progress and challenges,” AIChE J. , 53(11), 2734–2741, 2007. [2] Y. Sun and N. H. El-Farra, “Quasi-decentralized model-based net- worked control of process systems,” Comp. & Chem. Eng. , vol. 32, pp. 2016–2029, 2008. [3] E. Garcia, P. J. Antsaklis, and L. A. Montestruque, Model-Based Control of Networked Systems, Systems & Control: Foundations & Applications. Switzerland: Springer International Publishing, 2014. [4] C. Zheng, M. Tippett, J. Bao, and J. Liu, “Dissipativity-based distributed model predictive control with low rate communication,” AIChE J. , vol. 61, pp. 3288–3303, 2015. [5] X. Wang and M. Lemmon, “Event-triggering in distributed networked control systems,” IEEE Trans. Automat. Contrr. , vol. 56, no. 3, pp. 586–601, 2011. [6] W. Heemels, M. Donkers, and A. Teel, “Periodic event-triggered control for linear systems,” IEEE Trans. Automat. Contr. , vol. 58, no. 4, pp. 847–861, 2013. [7] E. Garcia, Y. Cao, H. Yu, P. Antsaklis, and D. Casbeer, “Decentralized event-triggered cooperative control with limited communication,” International Journal of Control , vol. 86, no. 9, pp. 1479–1488, 2013. [8] Z. Yao and N. H. El-Farra, “Resource-aware model predictive control of spatially distributed processes using event-triggered communication,” in Proceedings of 52th IEEE Conference on Decision and Control , Florence, Italy, 2013, pp. 3726–3731. [9] D. Xue and N. H. El-Farra, “Networked event-triggered control of spatially distributed processes using a dual-mode communication strategy,” in Proceedings of 54th IEEE Conference on Decision and Control , 2015, pp. 1899–1904. [10] D. Xue and N. H. El-Farra, “Actuator fault-tolerant control of networked distributed processes with event-triggered sensor-controller communication,” in Proceedings of American Control Conference , Boston, MA, 2016, pp. 1661–1666.",
+    "presenting_author": "Da Xue | University of California, Davis",
+    "authors": [
+      "Da Xue | University of California, Davis",
+      "Nael El-Farra | University of California, Davis"
+    ],
+    "authors_structured": [
+      {
+        "name": "Da Xue",
+        "affiliation": "University of California, Davis",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nael El-Farra",
+        "affiliation": "University of California, Davis",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "497d",
+    "sortable_time": "2017-11-01_09:03:00_09:24:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/494271"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/493385",
+    "paper_endpoint": "Paper/493385",
+    "paper_id": "493385",
+    "topic": "Distributed Safeness Index-Based Predictive Control for Enhanced Process Operational Safety",
+    "title": "Distributed Safeness Index-Based Predictive Control for Enhanced Process Operational Safety",
+    "date_time": "2017-11-01_08:00:00_10:30:00",
+    "session_id": "35689",
+    "session_title": "Networked, Decentralized, and Distributed Control",
+    "session_number": "497",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Though industry has traditionally decoupled the designs of the process control and safety systems, recent work [1] has demonstrated that coordinating the control and safety systems through a common metric termed the Safeness Index can enhance process operational safety. The Safeness Index is a process-specific metric that is a function of the closed-loop state and therefore mathematically formalizes a systems approach to process safety [2]. It is developed from information on past process accidents, first-principles models, industrial safety studies, and process operating data. Thresholds on this index are used to set constraints in model predictive control and to trigger actions of the safety system. An economic model predictive control (EMPC) design with Lyapunov-based stability constraints and Safeness Index-based constraints (termed Safeness Index-based LEMPC) was developed in [1] with a centralized control architecture. Distributed control designs (e.g., sequential and iterative [3], [4]) can be beneficial for reducing the computation time of EMPC and are thus an attractive method for implementing Safeness Index-based LEMPC that may enhance its acceptance by industry. In this work, we investigate the development of sequential and iterative distributed Safeness Index-based LEMPC designs. Due to the hard Safeness Index-based constraints that require the EMPC to maintain the process state within a region where the Safeness Index is below a given threshold, the distributed Safeness Index-based LEMPC design poses unique feasibility challenges that suggest that inputs should be partitioned such that those inputs that most affect the value of the Safeness Index are computed by one distributed controller. Feasibility considerations also affect the order in which the distributed controllers are recommended to be evaluated in a sequential distributed Safeness Index-based LEMPC design. Implementation strategies for both sequential and iterative distributed Safeness Index-based LEMPC are developed that are proven to maintain closed-loop stability in a bounded region of state-space and to always drive the closed-loop state into the region in state-space where the Safeness Index is below a threshold whenever it exits this region. A chemical process example is used to demonstrate the proposed control designs. [1] Albalawi A, Durand H, Christofides PD. Process operational safety using model predictive control based on a process safeness index. Computers & Chemical Engineering. in press. [2] Leveson NG, Stephanopoulos G. A system-theoretic, control-inspired view and approach to process safety. AIChE Journal. 2014;60:2-14. [3] Liu J, Chen X, Muñoz de la Peña D, Christofides PD. Sequential and iterative architectures for distributed model predictive control of nonlinear process systems. AIChE Journal. 2010;56:2137-2149. [4] Scattolini R. Architectures for distributed and hierarchical model predictive control - A review. Journal of Process Control. 2009;19:723-731.",
+    "presenting_author": "Fahad Albalawi | University of California, Los Angeles",
+    "authors": [
+      "Fahad Albalawi | University of California, Los Angeles",
+      "Helen Durand | University of California, Los Angeles",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Fahad Albalawi",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Helen Durand",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "497e",
+    "sortable_time": "2017-11-01_09:24:00_09:45:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/493385"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/483990",
+    "paper_endpoint": "Paper/483990",
+    "paper_id": "483990",
+    "topic": "Two-Point Constraint Control of Water Quality in Distribution Networks",
+    "title": "Two-Point Constraint Control of Water Quality in Distribution Networks",
+    "date_time": "2017-11-01_08:00:00_10:30:00",
+    "session_id": "35689",
+    "session_title": "Networked, Decentralized, and Distributed Control",
+    "session_number": "497",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Providing potable drinking water with sufficient free residual chlorine (used as disinfectant worldwide) to prevent microbial regrowth and contaminant by-product formation is of utmost importance for municipal authorities. The work presented in this paper aims towards water quality control as it transports through water distribution networks. Maintaining free residual chlorine concentration levels in water is a critical task as chlorine reacts while it transports through the pipe network with incoming dissolved organic matter (DOM) in bulk flow as well as in biofilms present at the pipe surfaces. Presence of excessive chlorine in water causes the generation of carcinogenic disinfectant by-products such as tri-halo methane (THMs). On the other hand, lower chlorine levels in water results in microbial contamination. Hence, this is a two-point constraint control problem of maintaining free residual chlorine levels under the maximum and minimum bounds by suitably optimizing the disinfectant dosage at booster stations. However, transport delay, and complex interrelations present amongst the nodes in large water distribution network makes it difficult to design a global feedback control system. Therefore, in this work we have proposed to decentralize the water distribution system by clustering demand nodes of the network based on knowledge of interactions between manipulating and control variables using partial correlation analysis. In such multivariable control, due to the presence of interactions, the stability of system might get affected. Knowing the feasibility, stability and integrity of control structure by clustering variables in the above manner constitutes an important design aspect. To address this aspect, we have proposed efficient use of effective relative gain array analysis (ERGA) which accounts for transport delay also instead of regular steady state relative gain array analysis (RGA). The partitioning and control strategy presented in this work is based on concentration sensitivity matrix analysis by using PCA (Principle Component Analysis), Partial Correlation Analysis and ERGA stepwise.We also considered the results of partial correlation analysis to generate communication links which will be implemented for higher level coordinated decentralized control to account for dynamic, non-negligible interactions as disturbances to local control units. The proposed three step clustering-mapping strategy and mathematical formulation for two point control by optimized dosage is successfully verified for the steady state case on a prototype distribution example network 2 of EPANET (USEPA, 2000).",
+    "presenting_author": "Abhilasha Maheshwari | IIT Bombay, Mumbai, India",
+    "authors": [
+      "Abhilasha Maheshwari | IIT Bombay, Mumbai, India"
+    ],
+    "authors_structured": [
+      {
+        "name": "Abhilasha Maheshwari",
+        "affiliation": "IIT Bombay, Mumbai, India",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "497f",
+    "sortable_time": "2017-11-01_09:45:00_10:06:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/483990"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/490507",
+    "paper_endpoint": "Paper/490507",
+    "paper_id": "490507",
+    "topic": "Relative Time Averaged Gain Array for Distributed Control Architecture Design",
+    "title": "Relative Time Averaged Gain Array for Distributed Control Architecture Design",
+    "date_time": "2017-11-01_08:00:00_10:30:00",
+    "session_id": "35689",
+    "session_title": "Networked, Decentralized, and Distributed Control",
+    "session_number": "497",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Modern chemical and energy plants are large-scale, complex networks. Distributed control strategies, especially distributed model predictive control (DMPC) [1], which are based on a decomposition of the network into separate subsystems and coordination between the corresponding controllers, play a central role in controlling such systems. A major problem in the implementation of DMPC is the network decomposition itself, i.e. the assignment of input and output variables into subsystems. This requires an analysis of input-output interactions with an appropriate characterization of the effect of inputs on the outputs. The classical concept of relative gain array (RGA) for input-output interaction analysis has been a mainstream for traditional decentralized control design. The applicability of RGA was well established through theoretical analysis and many variants has been proposed for a better characterization of interactions [2]. Since RGA and its variants characterize input-output interactions based on long-time response, the network topology is not taken into consideration when used in the context of large-scale networks. Recently, input-output partitioning methods based on network connectivity (relative degrees) and response sensitivities have been proposed. Specifically, in [3], an input-output interaction measure combining connectivity and response sensitivities was defined, and the input-output subsystems were generated through a community detection approach based on modularity maximization. In [4], the inputs and outputs are first grouped based on the corresponding relative degree values, and then paired within each group using response sensitivities in the form of a relative sensitivity array (RSA). However, connectivity and sensitivities used in the above methods capture only infinitesimally short time response characteristics. In this work, we first propose a time-averaged gain, defined as the integration of output responses over step inputs weighted by an exponential distribution, equivalent to a real-axis evaluation of the system transfer function, to capture the effect of the inputs on the outputs during any given time scale of interest. A relative time-averaged gain array (RTAGA), defined in the same manner as RGA, is then proposed as the input-output interaction measure. We show that the classical RGA and RSA are in fact limiting cases of RTAGA as the time scale parameter becomes infinitely long and infinitesimally short, respectively. To generate multiple-input-multiple-output subsystems efficiently, we employ the network-theoretic tool of community detection in the input-output bipartite network, where the input-output edges are weighted by the RTAGA elements. The communities thus detected correspond to the control subsystems with favorable interaction properties over any desired time scale. We also provide systematic guidelines for the proper choice of time scale in the context of distributed model predictive control. The proposed method is applied to a reactor-separator process containing 9 inputs and 9 outputs, and the decomposition result is tested with a distributed MPC scheme. Compared to other decompositions, the proposed method results in a finer decomposition and a significant reduction of computational time, while the control performance remains close to that under centralized control. References: [1] Christofides, P. D., Scattolini, R., Muñoz de la Peña, D., & Liu, J. (2013). Distributed model predictive control: A tutorial review and future research. Computers & Chemical Engineering , 51, 21-41. [2] McAvoy, T. J. (1983). Interaction analysis: Principles and applications . ISA. [3] Tang, W. & Daoutidis, P. (2017). Community detection in input-output bipartite graph based on short-time response. IEEE Transactions on Automatic Control , submitted. [4] Yin, X. & Liu, J. (2017). Input-output pairing accounting for both structure and strength in coupling. AIChE Journal , 63 (4): 1226-1235.",
+    "presenting_author": "Wentao Tang | University of Minnesota, Twin Cities, Minneapolis, MN",
+    "authors": [
+      "Wentao Tang | University of Minnesota, Twin Cities, Minneapolis, MN",
+      "Davood Babaei Pourkargar | University of Minnesota, Twin Cities, Minneapolis, MN",
+      "Prodromos Daoutidis | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Wentao Tang",
+        "affiliation": "University of Minnesota, Twin Cities, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Davood Babaei Pourkargar",
+        "affiliation": "University of Minnesota, Twin Cities, Minneapolis, MN",
+        "designation": "Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "497g",
+    "sortable_time": "2017-11-01_10:06:00_10:27:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/490507"
+  }
+]

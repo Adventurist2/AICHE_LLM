@@ -1,0 +1,296 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/610274",
+    "paper_endpoint": "Paper/610274",
+    "paper_id": "610274",
+    "topic": "Dynamical-Systems-Guided Learning of PDEs from Data",
+    "title": "Dynamical-Systems-Guided Learning of PDEs from Data",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "44086",
+    "session_title": "Artificial Intelligence and Advanced Computation I",
+    "session_number": "46",
+    "program_title": "Topical Conference: Next-Gen Manufacturing",
+    "symposium_title": "Next-Gen Manufacturing",
+    "abstract": "Traditionally, a Partial Differential Equation (PDE) is derived by applying basic laws of physics (e.g. Newton's second law, conservation of energy) to one or several continuum variables. However, for many systems of current interest, like fluid systems sampled sparsely in space, we do not know physical laws that lead to analytical PDE forms. Yet, it is suspected that there may exist PDEs that could (approximately) predict the evolution of target variables in those systems. Recent data-driven methods have shown great promise for discovering such PDEs from experimental and computational data. These methods have potential drawbacks, such as dependence on training data, lack of guarantees for stability, and high computational cost compared to classical computational schemes. In this talk, we discuss some concepts from dynamical systems theory that underpin such data-driven approaches; through those concepts, we connect data-driven methods to a special class of physics-informed discretization schemes that can eliminate some of those drawbacks. First, we investigate the problems where the PDE trajectories are attracted to a global low-dimensional manifold in the state space. For these problems, if the dimension of the underlying manifold is $n$ then knowledge of the solution at $2n+1$ spatial locations is enough to predict the evolution everywhere. This observation — justified by the well-known Whitney embedding theorem— allows us to learn multiple forms of PDEs that explain the evolution of the system. We demonstrate the application of this idea by learning a few PDEs for a reaction-diffusion system from data. It is known that PDEs with strongly nonlinear behavior (e.g. turbulent fluid flows) do not possess a global low-dimensional attracting manifold. However, recent works on data-driven learning of coarse-grained PDEs suggest that post-transient low-dimensional behavior may still prevail locally. In particular, the neural-net-based architecture by Bar-Sinai et al. [1] learns the evolution of the solution profile restricted to a small spatial subdomain by using a smaller number of local measurements compared to, say, classical finite volume schemes. We justify this observation by appealing to a dynamical-systems coarse-graining of nonlinear PDEs known as “holistic discretization” [2]. This methodology, based on center manifold theory, gives a systematic approximation of the manifold that attracts the local solution profiles and hence provides relatively sparse but accurate discretizations for time stepping of the solution. Previous work, e.g. [3], has shown the effectiveness of this approach in guiding equation-free modeling of multi-scale systems. Through examples from a linear advection-diffusion PDE and the nonlinear Burgers equation, we show that indeed the low-dimensional manifold exploited in data-driven methods coincides with the manifold approximated by the holistic discretization. We compare the performance of the holistic method to recent neural-net architectures, and explore the behavior of both approaches for a wide range of system parameters (Peclet/Reynolds number) and coarse-graining factors. An important feature of the holistic approach is that its stability and accuracy does not depend on the choice of the training data. [1] Y. Bar-Sinai, S. Hoyer, J. Hickey, and M. P. Brenner, “Learning data-driven discretizations for partial differential equations,” Proceedings of the National Academy of Sciences 116, 15344–15349 (2019). [2] A. Roberts, “Holistic discretization ensures fidelity to Burgers’ equation,” Applied numerical mathematics 37, 371–396 (2001). [3] A. Roberts and I.G. Kevrekidis, ``General tooth boundary conditions for equation-free modeling\", SIAM Journal of Scientific Computing 29.4, 1495-1510 (2007)",
+    "presenting_author": "Hassan Arbabi | Massachusetts Institute of Technology, Cambridge",
+    "authors": [
+      "Hassan Arbabi | Massachusetts Institute of Technology, Cambridge",
+      "Thomas Bertalan | Johns Hopkins University, Baltimore, MD",
+      "Anthony Roberts | The University of Adelaide, Australia",
+      "Giovanni Samaey | KU Leuven, Belgium",
+      "Ioannis Kevrekidis | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hassan Arbabi",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Thomas Bertalan",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Anthony Roberts",
+        "affiliation": "The University of Adelaide, Australia",
+        "designation": "Author"
+      },
+      {
+        "name": "Giovanni Samaey",
+        "affiliation": "KU Leuven, Belgium",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "46a",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/610274"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/611103",
+    "paper_endpoint": "Paper/611103",
+    "paper_id": "611103",
+    "topic": "A New Method for Building Surrogate Models of Stochastic Simulations",
+    "title": "A New Method for Building Surrogate Models of Stochastic Simulations",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "44086",
+    "session_title": "Artificial Intelligence and Advanced Computation I",
+    "session_number": "46",
+    "program_title": "Topical Conference: Next-Gen Manufacturing",
+    "symposium_title": "Next-Gen Manufacturing",
+    "abstract": "With the increase in computational power and our understanding of fundamental phenomena, we can now develop high-fidelity simulation models to study, design, and optimize engineering systems (Eaton et al., 2017; Ookawara et al., 2007; Szilágyi et al., 2018). Despite these advances, some of these simulation models are still computationally expensive to utilize in sensitivity analysis or optimization studies where many simulation runs may be necessary (Liu et al., 2016; Peherstorfer et al., 2017). Different approaches have been recommended in the literature for handling this computational expense. One commonly-used approach is building a surrogate/meta-model model of the simulation and employing the surrogate model in the analysis when an evaluation of the high-fidelity simulation is required (Han and Zhang, 2012). Surrogate models or meta-models, are representative of the original models, but cheaper to evaluate computationally. The surrogate models approximate the output of the high-fidelity simulation models based on the inputs (Quirante et al., 2015). When high-fidelity simulation models have uncertain parameters and/or uncertain inputs, the traditional techniques for building surrogate models fail to accurately represent the original model outputs (Staum, 2009). Current approaches for building surrogate models of stochastic simulations, in general, fall into one of two groups. The first group considers a nominal value for the uncertain parameter(s) and builds surrogate models at these values of uncertain parameters (Hüllen et al., 2019) or defines an uncertainty set for the stochastic parameter, evaluates the high-fidelity simulation model using the values of the elements of these sets and carries out the surrogate modeling (Hüllen et al., 2019). The second group, which has been quite popular in recent years, applies stochastic kriging (Ankenman et al., 2008). By utilizing the methods under the first group, more uncertainty may be added to the surrogate model because part of the information is being ignored by fixing the value of uncertain parameters (Hüllen et al., 2019). Stochastic kriging has been shown to exhibit good performance in predicting the expected output value (Ankenman et al., 2008). However, by using this method, the surrogate model type is predetermined because it is built based on kriging meta-models, while other surrogate modeling techniques may be more appropriate for representing the data (Williams and Cremaschi, 2019). Developing approaches for building surrogate models to estimate the outputs of high-fidelity stochastic simulation models accurately can overcome these shortcomings. In this study, we propose that accurate surrogate models can be built for estimating the outputs of high-fidelity stochastic simulations by considering each uncertain parameter of the stochastic simulation as an uncertain input to the simulation. Isolating the uncertain stochastic parameters of the high-fidelity simulation converts the simulation to a deterministic one, for which most of the popular surrogate modeling techniques can be used to train a meta-model. The uncertain parameter(s) are still part of the meta-model, which paves the way for easier analysis of the uncertainty. Assume we have a high-fidelity simulation model g(X;K), where X is the input vector with dimension d 1 , where some of the inputs may be uncertain, and K is the vector of system uncertain parameters with d 2 components. The new simulation model is defined as g'(X*), where X* is a d dimensional vector of inputs with d = d 1 + d 2 , which contains all inputs and the uncertain parameters of the stochastic simulation (g(X;K)). It is assumed that the distributions of the uncertain parameters (K) are known, and the parameters of the distributions are constant. With these definitions, the new simulation model (g'(X*)) becomes deterministic, and any of the surrogate modeling techniques can be utilized to train a model representing this simulation (Fig. 1). With these definitions, the new simulation model (g'(X*)) becomes deterministic, and any of the surrogate modeling techniques can be utilized to train a model representing this simulation. g'(X*) ≈ F'(X* ), where F'(X* ) is the trained meta-model representing the deterministic formulation. With this new method, the high fidelity stochastic simulation is approximated using the existing surrogate modeling techniques for deterministic models. There are various machine learning techniques practiced for surrogate modeling. Seven different techniques are implemented in this study to train the meta-models of deterministic formulation, g'(X*). The performance of the new method is evaluated computationally using these seven surrogate modeling methods for test functions with uncertain parameters. The test functions are from the Virtual Library of Simulation Experiments (Surjanovic and Bingham, 2013) with a different number of inputs and uncertain parameters. The quality of the predictions is evaluated for test functions with various features. The number of inputs of the function (dimension of X), number of uncertain parameters (cardinality of K), and nonlinearity of the uncertain parameters are considered as features of the test functions. Root mean square error and the mean absolute error are the metrics of the quality of the performance. One thousand data points generated for each of the test functions were used as the training data set. The test set was 10 5 new data points for comparison of the model performances. The results suggest that the prediction accuracy depends on the specifications of the test functions. The number of uncertain parameters, as well as the number of input parameters have a significant effect on the quality of the predictions. References Ankenman, B., Nelson, B.L., Staum, J., 2008. Stochastic kriging for simulation metamodeling. Proc. - Winter Simul. Conf. 362–370. https://doi.org/10.1109/WSC.2008.4736089 Eaton, A.N., Beal, L.D.R., Thorpe, S.D., Hubbell, C.B., Hedengren, J.D., Nybø, R., Aghito, M., 2017. Real time model identification using multi-fidelity models in managed pressure drilling. Comput. Chem. Eng. 97, 76–84. https://doi.org/10.1016/j.compchemeng.2016.11.008 Han, Z.-H., Zhang, K.-S., 2012. Surrogate-based optimization. Real-world Appl. Genet. algorithms 343–362. Hüllen, G., Zhai, J., Kim, S.H., Sinha, A., Realff, M.J., Boukouvala, F., 2019. Managing Uncertainty in Data-Driven Simulation-Based Optimization. Comput. Chem. Eng. 106519. https://doi.org/10.1016/j.compchemeng.2019.106519 Liu, B., Koziel, S., Zhang, Q., 2016. A multi-fidelity surrogate-model-assisted evolutionary algorithm for computationally expensive optimization problems. J. Comput. Sci. 12, 28–37. https://doi.org/10.1016/j.jocs.2015.11.004 Ookawara, S., Kuroki, M., Street, D., Ogawa, K., 2007. High-fidelity DEM-CFD modeling of packed bed reactors for process intensification. Chem. Eng. 16–20. Peherstorfer, B., Kramer, B., Willcox, K., 2017. Combining multiple surrogate models to accelerate failure probability estimation with expensive high-fidelity models. J. Comput. Phys. 341, 61–75. https://doi.org/10.1016/j.jcp.2017.04.012 Quirante, N., Javaloyes, J., Ruiz-Femenia, R., Caballero, J.A., 2015. Optimization of chemical processes using surrogate models based on a kriging interpolation, in: Computer Aided Chemical Engineering. Elsevier, pp. 179–184. Staum, J., 2009. Better Simulation Metamodeling: The why, what, and how of Stochastic Kriging 119–133. Surjanovic, S., Bingham, D., 2013. Virtual Library of Simulation Experiments: Test Functions and Datasets. Szilágyi, B., Agachi, P.Ş., Nagy, Z.K., 2018. Chord Length Distribution Based Modeling and Adaptive Model Predictive Control of Batch Crystallization Processes Using High Fidelity Full Population Balance Models. Ind. Eng. Chem. Res. 57, 3320–3332. https://doi.org/10.1021/acs.iecr.7b03964 Williams, B.A., Cremaschi, S., 2019. Surrogate Model Selection for Design Space Approximation And Surrogatebased Optimization, in: Computer Aided Chemical Engineering. Elsevier, pp. 353–358.",
+    "presenting_author": "Samira Mohammadi | Auburn University, AL",
+    "authors": [
+      "Samira Mohammadi | Auburn University, AL",
+      "Selen Cremaschi | Auburn University, AL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Samira Mohammadi",
+        "affiliation": "Auburn University, AL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Selen Cremaschi",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "46b",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/611103"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/602617",
+    "paper_endpoint": "Paper/602617",
+    "paper_id": "602617",
+    "topic": "Machine Learning-Based Prediction of Liquid Wettability of iCVD Polymers",
+    "title": "Machine Learning-Based Prediction of Liquid Wettability of iCVD Polymers",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "44086",
+    "session_title": "Artificial Intelligence and Advanced Computation I",
+    "session_number": "46",
+    "program_title": "Topical Conference: Next-Gen Manufacturing",
+    "symposium_title": "Next-Gen Manufacturing",
+    "abstract": "Initiated chemical vapor deposition (iCVD) is a reactive process that creates polymeric materials by adsorbing vapor phase monomers, which then polymerize on a surface via free-radical additive propagation. Although contiguous polymer thin films are usually formed, the iCVD process can sometimes lead to discrete micro- and nano-structures. For example, our iCVD synthesis of poly(perfluorodecyl acrylate) (PPFDA) has resulted in the growth of micro- and nano-worms, which tend to grow normal to the surface [1]. Due to the low surface energy of the fluorinated polymer and the heterogeneous worm-like surface, liquid wetting can be substantially reduced by entering the Cassie-Baxter state. The micro- and nano-structures of the worm-like features directly depend on iCVD operating conditions. They in turn influence bulk properties such as repellency of oils, like heptane. With the contact angle being dependent on iCVD operating conditions, it would be advantageous to create a model that captures the dependence. Using conventional reaction rate equations and parameters, the reaction kinetics can be modeled with enough accuracy [2]. However, the mechanisms that determine the growth of the worm-like structures are currently not well understood. Given this currently-inadequate chemical and physical understanding, an alternative to first-principles modeling to relate product (polymer) properties such as contact angle to iCVD processing conditions is to use an empirical modeling approach such as neural networks. A typical neural network model can contain a number of fitting parameters, many times greater than the number of observations available to fit the model with. This relatively large number of fitting parameters provides a lot of flexibility for shaping the response surface of the target (output) variable(s). In this work, we model the contact angle of heptane on PPFDA as a function of iCVD operating conditions using a neural network architecture. We then use the developed model to determine the optimal iCVD operating conditions that maximizes the heptane contact angle on the worm-like surface. To verify model predictions, we independently perform iCVD laboratory experiments with the model-predicted optimal operating conditions, perform microscopy to elucidate the polymer structure, and measure the resulting heptane contact angles. References Lau, K.K.S.; Chen, Z.; Nguyen, T. Directed Vapor Deposition and Assembly of Polymer Micro- and Nanostructures. S. Patent Application 62941086; November 27, 2019. Lau, K.K.S. Growth Mechanism, Kinetics, and Molecular Weight. In CVD Polymers: Fabrication of Organic Surfaces and Devices (ed. Gleason, K.K.); Wiley 2015.",
+    "presenting_author": "Jacob Hunsberger | Drexel University, Philadelphia, PA",
+    "authors": [
+      "Jacob Hunsberger | Drexel University, Philadelphia, PA",
+      "Tien Nguyen | Drexel University, Philadelphia, PA",
+      "Zhengtao Chen | Drexel University, Philadelphia, PA",
+      "Kenneth Lau | Drexel University, Philadelphia, PA",
+      "Masoud Soroush | Drexel University, Philadelphia, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jacob Hunsberger",
+        "affiliation": "Drexel University, Philadelphia, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Tien Nguyen",
+        "affiliation": "Drexel University, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Zhengtao Chen",
+        "affiliation": "Drexel University, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Kenneth Lau",
+        "affiliation": "Drexel University, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Masoud Soroush",
+        "affiliation": "Drexel University, Philadelphia, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "46c",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/602617"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/611261",
+    "paper_endpoint": "Paper/611261",
+    "paper_id": "611261",
+    "topic": "Approximating Process Safety Metrics Using Artificial Neural Networks",
+    "title": "Approximating Process Safety Metrics Using Artificial Neural Networks",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "44086",
+    "session_title": "Artificial Intelligence and Advanced Computation I",
+    "session_number": "46",
+    "program_title": "Topical Conference: Next-Gen Manufacturing",
+    "symposium_title": "Next-Gen Manufacturing",
+    "abstract": "Safety of a chemical plant and its personnel is always a priority. During expansion projects and unit upgrades, often changes in one equipment may result in upset conditions for a downstream equipment. At the most benign level, this can cause the relief valves to open, losing valuable products to the flare thereby affecting the economics of that unit. A more severe case can damage equipment or result in loss of life. As a result, it is paramount that process safety and consideration of system-wide consequences are at the forefront of any decision making process. One challenge in accounting for process safety incidents is that accurate modeling is complex, time-intensive, and requires many inputs [1]. Heat exchangers are a great example of this complexity. Heat exchanger modeling using first principles can be complicated [2]. At the same time, setting up experiments is not always practical [3]. The advent of machine learning and Artificial Neural Network (ANN)-based models have shown significant promises in addressing complex problems in many areas in recent times, heat exchangers [3,4]. This work expands on these by proposing how ANN can be used to predict process safety metrics. Specifically, we apply ANN to predict heat exchanger safety ratings. This metric is used to measure the severity of a heat exchanger tube rupture, an event that is listed under API 521 as a credible overpressure scenario [5-7]. In the event of a tube rupture, the tube side can quickly overpressure the shell side. Upon the shell side pressure increasing beyond the hydrotest pressure, the shell material is prone to fail, potentially resulting in a catastrophic outcome [8]. By training ANN to a set of tube rupture simulation data, we are able to bypasses the need for tedious non-steady state equations. Lastly, we illustrate how these predictions can be used to develop tube-rupture resilient heat exchanger networks. References: [1] Crowl, D. A., & Louvar, J. F. (2001). Chemical process safety: fundamentals with applications . Pearson Education. [2] Shah, R. K., & Sekulic, D. P. (2003). Fundamentals of heat exchanger design . John Wiley & Sons. [3] Wang, Q., Xie, G., Zeng, M., & Luo, L. (2006). Prediction of heat transfer rates for shell-and-tube heat exchangers by artificial neural networks approach. Journal of Thermal Science , 15 (3), 257-262. [4] Mohanraj, M., Jayaraj, S., & Muraleedharan, C. (2015). Applications of artificial neural networks for thermal analysis of heat exchangers–a review. International Journal of Thermal Sciences , 90 , 150-172. [5] Harhara, A., & Hasan, M. F. (2020). Dynamic modeling of heat exchanger tube rupture. BMC Chemical Engineering , 2 (1), 1-20. [6] Harhara, A., & Hasan, M. F. (2019). Incorporating Process Safety into Heat Exchanger Network Synthesis and Operation. In Computer Aided Chemical Engineering (Vol. 47, pp. 221-226). Elsevier. [7] API Standard 521. (2014). Pressure‐Relieving and Depressuring Systems. [8] Hellemans, M. (2009). The safety relief valve handbook: design and use of process safety valves to ASME and International codes and standards . Elsevier.",
+    "presenting_author": "Ahmed Harhara | Texas A&M University, College Station, TX",
+    "authors": [
+      "Ahmed Harhara | Texas A&M University, College Station, TX",
+      "Akhil Arora | Texas A&M University, College Station, TX",
+      "Faruque Hasan | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ahmed Harhara",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Akhil Arora",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Faruque Hasan",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "46d",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/611261"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/603315",
+    "paper_endpoint": "Paper/603315",
+    "paper_id": "603315",
+    "topic": "Long-Term Hybrid AI-Expert Combustion Optimization System for Coal-Fired Electricity Generation NOx Reduction",
+    "title": "Long-Term Hybrid AI-Expert Combustion Optimization System for Coal-Fired Electricity Generation NOx Reduction",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "44086",
+    "session_title": "Artificial Intelligence and Advanced Computation I",
+    "session_number": "46",
+    "program_title": "Topical Conference: Next-Gen Manufacturing",
+    "symposium_title": "Next-Gen Manufacturing",
+    "abstract": "An ever-increasing concern for the environmental impact of fossil-fuel electricity generation has amplified efforts by academia and industry to identify methods to mitigate this issue [1]–[5]. An attractive option has been the development and installation of optimization systems which utilize machine learning models to represent the combustion process and improve system performance. Consisting of primarily software, these systems can potentially provide significant improvements with little capital expenditure [6]. Numerous potential models and systems have been discussed within the literature, but each of these represent entirely offline or only short duration online performance studies [7], [8]. This work aims to satisfy the need for the long-term evaluation and characterization of the performance and effects of a hybrid AI-expert combustion optimization system (COS) on NOx emission rates as well as the secondary effects on the remainder of the system. The COS uses artificial neural networks to model the combustion process, particle swarm optimization (PSO) to optimize the 80+ manipulated variables, and expert logic to address adverse conditions in real-time. Over a two-year operational period, the hybrid AI-expert system was able to aid in the reduction of the NOx emission rate by more than 22.5% compared to baseline, while improving unit temperature management and realizing high operator acceptance leading to a system service factor greater than 86%. [1] G. H. Richards, C. Q. Maney, J. L. Marion, R. Lewis, and C. Smith, “Ultra-Low NOx integrated system for coal fired power plants,” Fuel Energy Abstr. , vol. 43, no. 3, pp. 218–219, 2003. [2] J. F. Tuttle and K. M. Powell, “Analysis of a thermal generator’s participation in the Western Energy Imbalance Market and the resulting effects on overall performance and emissions,” Electr. J. , vol. 32, no. 5, pp. 38–46, 2019. [3] F. Wang, S. Ma, H. Wang, Y. Li, Z. Qin, and J. Zhang, “A hybrid model integrating improved flower pollination algorithm-based feature selection and improved random forest for NO X emission estimation of coal-fired power plants,” Meas. J. Int. Meas. Confed. , vol. 125, no. 1, pp. 303–312, 2018. [4] P. Tan et al. , “Dynamic modeling of NOX emission in a 660 MW coal-fired boiler with long short-term memory,” Energy , vol. 176, no. X, pp. 429–436, 2019. [5] J. F. Tuttle, R. Vesel, S. Alagarsamy, L. D. Blackburn, and K. Powell, “Sustainable NOx emission reduction at a coal-fired power station through the use of online neural network modeling and particle swarm optimization,” Control Eng. Pract. , vol. 93, no. September, 2019. [6] D. Hasler and W. Rosenquist, “Coal-Fired Power Plant Heat Rate Reductions,” 2009. [7] J. Song, C. E. Romero, Z. Yao, and B. He, “A globally enhanced general regression neural network for on-line multiple emissions prediction of utility boiler,” Knowledge-Based Syst. , vol. 118, no. X, pp. 4–14, 2017. [8] J. Smrekar, P. Potočnik, and A. Senegačnik, “Multi-step-ahead prediction of NOx emissions for a coal-based boiler,” Appl. Energy , vol. 106, no. 2013, pp. 89–99, 2013.",
+    "presenting_author": "Jacob F. Tuttle | University of Utah, Salt Lake City",
+    "authors": [
+      "Jacob F. Tuttle | University of Utah, Salt Lake City",
+      "Ricky Vesel | Griffin Open Systems, LLC., Chardon, OH",
+      "Siva Alagarsamy | Griffin Open Systems, LLC., Chardon, OH",
+      "Landen Blackburn | University of Utah, Salt Lake City",
+      "Kody Powell | The University of Utah, Salt Lake City"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jacob F. Tuttle",
+        "affiliation": "University of Utah, Salt Lake City",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ricky Vesel",
+        "affiliation": "Griffin Open Systems, LLC., Chardon, OH",
+        "designation": "Author"
+      },
+      {
+        "name": "Siva Alagarsamy",
+        "affiliation": "Griffin Open Systems, LLC., Chardon, OH",
+        "designation": "Author"
+      },
+      {
+        "name": "Landen Blackburn",
+        "affiliation": "University of Utah, Salt Lake City",
+        "designation": "Author"
+      },
+      {
+        "name": "Kody Powell",
+        "affiliation": "The University of Utah, Salt Lake City",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "46e",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/603315"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/602401",
+    "paper_endpoint": "Paper/602401",
+    "paper_id": "602401",
+    "topic": "Reinforcement Learning Augmented Model Predictive Control with Fuzzy Subtractive Clustering and Fuzzy Cognitive Mapping",
+    "title": "Reinforcement Learning Augmented Model Predictive Control with Fuzzy Subtractive Clustering and Fuzzy Cognitive Mapping",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "44086",
+    "session_title": "Artificial Intelligence and Advanced Computation I",
+    "session_number": "46",
+    "program_title": "Topical Conference: Next-Gen Manufacturing",
+    "symposium_title": "Next-Gen Manufacturing",
+    "abstract": "Reinforcement learning (RL) is a model-free machine learning framework in which an agent learns from a system by direct interaction, as opposed to learning from labeled sets of data that occurs with unsupervised learning. RL can be applied to process control [1], but there are considerable opportunities for its improvement as well as expansion of application areas [2]. RL has been shown to outperform traditional controllers by accounting for plant-model mismatch [3] especially for systems with complex dynamics [4]. The potential of RL to improve the approximation of uncertain system dynamics has also been illustrated, and was shown to converge to a solution with small optimality gap for the discrete linear case [5]. Applications for decision making and process optimization have also been shown [6], [7]. Recent work has shown the application of deep neural networks to represent the Hamilton-Jacobi-Bellman equation in a large state space for an optimal control problem [8]. As can be seen, the research on RL for practical application to process control applications is diverse and growing, but significant work remains in solving key issues and exploiting all of the features of RL. In this work, a novel adaptive model predictive controller (MPC) augmented with RL is proposed, where a supervisory RL agent learns an optimal tuning policy from the performance of the MPC while improving its performance through exploration and exploitation. However, for a general class of nonlinear systems, the state space is infinite dimensional thus leading to computational intractability due to the aggregation of infinite states. Here we propose to reduce the size of the state space via a clustering approach. First, an updated value function approximation is considered, using a Bayesian Smoothing Spline (BSS)-ANOVA framework where eigenfunctions of the Karhunen-Loéve (KL) expansion are used as basis functions. Fuzzy Subtractive Clustering is then used to partition the state space in a control-centric way [9]. Clustering is performed in a state-optimal action space where the optimality of the action is evaluated with respect to cluster-specific basis functions. The state of the system is determined using a Fuzzy Cognitive Map (FCM) based on the existing cluster centers. This fuzzy clustering can be considered as an adaptive mapping of the states and actions where cluster aggregation is minimized using an information theoretic criterion. The FCM exploits stored memory for computing the optimal move. In this algorithm, policy improvement is performed using a TD(λ) update [10]. For fast and efficient learning, a two-stage learning approach is proposed where exploration in the first stage, where the agent learns on a reduced model, is followed by exploitation of the control space. The approach enables use of the RL technique for large-scale systems nonlinear with acceptable optimality gap. Performance of the proposed controller is benchmarked against the static underlying MPC by applying it to several applications. Of particular importance is the application of the proposed approach to a time-varying time-delay system. [1] J. Shin, T. A. Badgwell, K.-H. Liu, and J. H. Lee, “Reinforcement Learning – Overview of recent progress and implications for process control,” Comput. Chem. Eng. , vol. 127, pp. 282–294, Aug. 2019, doi: 10.1016/j.compchemeng.2019.05.029. [2] J. B. Rawlings and C. T. Maravelias, “Bringing new technologies and approaches to the operation and control of chemical process systems,” AIChE J. , vol. 65, no. 6, Jun. 2019, doi: 10.1002/aic.16615. [3] L. A. Brujeni, J. M. Lee, and S. L. Shah, “Dynamic tuning of PI-controllers based on model-free Reinforcement Learning methods,” in ICCAS 2010 , Oct. 2010, pp. 453–458, doi: 10.1109/ICCAS.2010.5669655. [4] I. Carlucho, M. De Paula, S. A. Villar, and G. G. Acosta, “Incremental Q-learning strategy for adaptive PID control of mobile robots,” Expert Syst. Appl. , vol. 80, pp. 183–199, Sep. 2017, doi: 10.1016/j.eswa.2017.03.002. [5] J. E. Morinelly and B. E. Ydstie, “Dual MPC with Reinforcement Learning,” 11th IFAC Symp. Dyn. Control Process Syst. Biosyst. DYCOPS-CAB 2016 , vol. 49, no. 7, pp. 266–271, Jan. 2016, doi: 10.1016/j.ifacol.2016.07.276. [6] J. Shin and J. H. Lee, “Multi-timescale, multi-period decision-making model development by combining reinforcement learning and mathematical programming,” Comput. Chem. Eng. , vol. 121, pp. 556–573, Feb. 2019, doi: 10.1016/j.compchemeng.2018.11.020. [7] P. Petsagkourakis, I. O. Sandoval, E. Bradford, D. Zhang, and E. A. del Rio-Chanona, “Reinforcement learning for batch bioprocess optimization,” Comput. Chem. Eng. , vol. 133, p. 106649, Feb. 2020, doi: 10.1016/j.compchemeng.2019.106649. [8] J. W. Kim, B. J. Park, H. Yoo, T. H. Oh, J. H. Lee, and J. M. Lee, “A model-based deep reinforcement learning method applied to finite-horizon optimal control of nonlinear control-affine system,” J. Process Control , vol. 87, pp. 166–178, Mar. 2020, doi: 10.1016/j.jprocont.2020.02.003. [9] Q. Gao, G. Feng, Z. Xi, Y. Wang, and J. Qiu, “A New Design of Robust ${\\rm H}_{\\infty}$ Sliding Mode Control for Uncertain Stochastic T-S Fuzzy Time-Delay Systems,” IEEE Trans. Cybern. , vol. 44, no. 9, pp. 1556–1566, Sep. 2014, doi: 10.1109/TCYB.2013.2289923. [10] R. S. Sutton and A. G. Barto, Reinforcement Learning - An Introduction , 2nd ed. United States of America: Westchester Publishing Services, 2018.",
+    "presenting_author": "Elijah Hedrick | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Elijah Hedrick | West Virginia University, Morgantown, WV",
+      "Katherine Reynolds | West Virginia University, Morgantown, WV",
+      "Vinayak Dwivedy | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV",
+      "Stephen Zitney | National Energy Technology Laboratory, Morgantown, WV",
+      "Benjamin P. Omell | National Energy Technology Laboratory, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Elijah Hedrick",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Katherine Reynolds",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Vinayak Dwivedy",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephen Zitney",
+        "affiliation": "National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Benjamin P. Omell",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "46g",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/602401"
+  }
+]

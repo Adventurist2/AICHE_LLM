@@ -1,0 +1,372 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/627993",
+    "paper_endpoint": "Paper/627993",
+    "paper_id": "627993",
+    "topic": "Modeling Complex Nonlinear Systems Using Concatenated Static-Dynamic Neural Networks",
+    "title": "Modeling Complex Nonlinear Systems Using Concatenated Static-Dynamic Neural Networks",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46445",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "415",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Developing accurate first-principles models for complex nonlinear dynamic systems can be time consuming and difficult and may be infeasible to construct for certain systems due to lack of knowledge. It is also difficult to adapt first-principles models for time-varying systems. Data-driven or black-box models are easier to develop, simulate, and adapt online 1 . However, it can be difficult to accurately represent complex, nonlinear dynamical system using data-driven models. Typical approach in the use of concatenated network for representing nonlinear dynamic system is to use a linear dynamic model integrated with a nonlinear static neural network 2–5 . These models may fail to accurately represent the nonlinearities in the process dynamics. If both the static and dynamic models are nonlinear, it becomes considerably challenging to synthesize optimal hybrid network and estimate the network parameters. This work proposes concatenated static-dynamic neural networks with nonlinearities in both static and dynamic models. Efficient algorithms are also developed for optimal synthesis of the network and estimation of parameters. Classical backpropagation algorithms for solving static and dynamic neural networks use first order methods, but these methods may require significant tuning of hyper parameters, can suffer from slow convergence, and may lead to difficulty in convergence in presence of inequality constraints. On the other hand, while second order methods can address some of the issues mentioned above, they can be computationally expensive due to Hessian calculation, may be limited in terms of candidate architectures, and may only be used for parameter estimating of small or medium size networks without incurring excessive computational expense. Therefore, applying the second order methods for the entire nonlinear static-dynamic network can be computationally expensive. Furthermore, the most efficient algorithm for solving the static network can be different than the most efficient algorithm for solving the dynamic network. Therefore, a novel strategy is developed where the static and dynamic networks are solved independently by efficient algorithms for those respective networks while solving an outer layer optimization for estimating the connection weights between the static and dynamic networks. Several outer layer optimization algorithms are proposed for efficient solution of the concatenated network. The developed algorithms are flexible for incorporating flexible network architectures and can include inequality constraints. Various architectures are proposed for both the static and dynamic networks. In addition, various neuronal models with several candidate basis functions are considered to develop flexible networks that offer tradeoffs between computational expense and accuracy for highly nonlinear systems. The proposed algorithms are applied to modeling the widely used Van de Vusse reactor and pH neutralization reactors as well as a highly complex superheater system with spatio-temporal variation, where complex dynamics associated with reactive-diffusive processes leading to oxide scale formation in the superheater tube banks coupled with mass and heat transfer makes it a challenging system. It is observed the concatenated static-dynamic neural network results in superior performance compared to the existing conventional static or dynamic networks taken separately or linear dynamic-nonlinear static networks 4 . Computational expense and convergence performance of the proposed algorithms are found to be far superior compared to the first order-only and second order-only methods especially for the superheater system. Impact of various basis functions on the computational expense and accuracy of the algorithms are also evaluated. Overall, proposed algorithms show promise for solving large nonlinear dynamic network problems. References Su, H.-T., Bhat, N., Minderman, P. A. & McAvoy, T. J. Integrating Neural Networks With First Principles Models for Dynamic Modeling . Dynamics and Control of Chemical Reactors, Distillation Columns and Batch Processes (IFAC, 1993). doi:10.1016/b978-0-08-041711-0.50054-4 Chen, L., Hontoir, Y., Huang, D., Zhang, J. & Morris, A. J. Combining first principles with black-box techniques for reaction systems. Control Eng. Pract. 12 , 819–826 (2004). Sentoni, G. B., Biegler, L. T., Guiver, J. B. & Zhao, H. T. State-Space Nonlinear Process Modeling: Identification and Universality AIChE J. 44 , 2229–2239 (1998). Mahapatra, P., Ma, J. & Zitney, S. E. Nonlinear Model Predictive Control Using Decoupled A-B Net Formulation for Carbon Capture Systems - Comparison with Algorithmic Differentiation Approach. Proc. Am. Control Conf. 2018 - June , 6439–6444 (2018). Zhao, H., Guiver, J., Neelakantan, R. & Biegler, L. T. A nonlinear industrial model predictive controller using integrated PLS and neural net state-space model. Control Eng. Pract. 9 , 125–133 (2001).",
+    "presenting_author": "Angan Mukherjee | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Angan Mukherjee | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Angan Mukherjee",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "415a",
+    "sortable_time": "2021-11-10_08:00:00_08:15:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/627993"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/628447",
+    "paper_endpoint": "Paper/628447",
+    "paper_id": "628447",
+    "topic": "Optimal Synthesis and Heat Integration Using Generalized Disjunctive Programming with Hybrid Models",
+    "title": "Optimal Synthesis and Heat Integration Using Generalized Disjunctive Programming with Hybrid Models",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46445",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "415",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Surrogate models (SM), also known as data-driven models or metamodels, are simplified functions that replace computationally expensive simulations to estimate output data from a set of input variables. SM are especially useful to represent black-box models, whose analytical form is unknown to include in an equation-oriented optimization framework. They can be used for different purposes such as simulation, optimization and flexibility analysis (Bhosekar and Ierapetritou, 2018). A mathematical model that includes both first principle-based and data-driven models, is referred to as a hybrid or grey-box model. This type of model has proven to provide an efficient representation of complex systems (Bajaj et al., 2018). There are particular optimization frameworks to address hybrid models since surrogate models` accuracy is uncertain over the entire feasible region and in the neighborhood of the optimal solution. On the one hand, exploration-based strategies improve SMs global performance in the entire domain to reduce the probability of not finding the global optimum. On the other hand, exploitation-based methods refine SMs in regions where optima could be potentially found. To address process synthesis problems, Generalized Disjunctive Programming (GDP) allows a more intuitive way of formulating a mathematical problem, introducing specific process information through disjunctive constraints and logical prepositions (Chen et al., 2018). Furthermore, GDP formulations can be solved using powerful decomposition techniques such as the Logic-based Outer-Approximation (L-bOA) algorithm (Türkay and Grossmann, 1996), which proceeds by decomposing the GDP into reduced NLP subproblems and master MILP problems. In this work, we propose a novel optimization framework for the optimal synthesis of chemical process flowsheets through first principle-based and surrogate models, i.e., hybrid models embedded within a superstructure representation that is modeled with a GDP formulation and solved with a custom implementation of the L-bOA algorithm. We build surrogate models using a combination of Simple Algebraic Regression Functions (SARFs) and Gaussian Radial Basis Functions (GRBFs). In this way, we can exploit the benefits of each type of basis. On the one hand, SARFs are low complexity, interpretable, and suitable for optimization purposes. On the other hand, GRBFs can refine the approximation models to make them exact in the interpolation points, and consequently, they can capture highly nonlinear behavior in particular domain regions. The machine learning software ALAMO (Cozad et al., 2014; Wilson and Sahinidis, 2017) is employed to generate an initial model based on SARFs. The proposed optimization framework is shown in Fig. 1. As a first step, initial bounds for the input variables are selected for each surrogate model to generate sampling data. The Latin Hypercube sampling (LHS) technique is employed in MATLAB. Original or true models are coded in GAMS, which are evaluated for each sampling point from MATLAB. Since some simulations can be infeasible due to the problem constraints, a filtering step to discard those outcomes is implemented. Next, ALAMO is used to build an initial SM based on SARFs. Since this initial SMs accuracy might not be good enough in all sampling points, we evaluate the corresponding relative errors, and add GRBFs to represent those points whose errors are greater than a tolerance. In this way, we build the first SM based on both, SARFs and GRBFs, to carry out the first exploration step. The Error Maximization Sampling (EMS) strategy is applied in the exploration step. This method consists of maximizing the SMs relative error in the entire domain, subject to the constraints of the original model. As a result, low-accuracy domain points are determined, and an interpolation point is included through a GRBF to improve the SM performance in that region. In the following step, we solve the GDP problem with the hybrid model in GAMS. A custom Logic-based Outer Approximation (L-bOA) algorithm is employed. We exploit the information of the L-bOA subproblems to refine the SM in the exploitation step. As some NLP subproblems or simulations might be infeasible due to the performance of SMs, we formulate mathematical problems to determine the feasible sampling point that minimizes the Euclidean distance to the NLP subproblem solution, and this point is added in the training set. The iterative algorithm, which is shown in Fig. 1, terminates until a convergence criterion is satisfied. Otherwise, the exploration step is carried out again (the number of major iterations of the algorithm is equal to the times the GDP problem is solved). The objective function is the maximization of the net present value (NPV), subject to general equations, disjunctions for the units and logical constraints. After validating the hybrid model through the algorithm proposed in Fig. 1, it is extended with energy integration equations to perform simultaneous optimization and heat integration (Duran and Grossmann, 1986). Therefore, a new GDP is solved to analyze the potential improvement on the plant NPV associated to energy savings. The case study we address is the optimal synthesis of a propylene production plant via olefins metathesis. As a first step, we formulate a detailed model, which includes distillation columns represented by mass, equilibrium, summation and heat (MESH) equations, considering ideal thermodynamics, and reactor, compressor, pump, and heat exchanger models (Pedrozo et al., 2021). In a second step, we propose SMs that replace rigorous models of columns, thus obtaining a “hybrid model”, whose equation number and complexity are reduced with respect to the true model. We analyze the effect of the number of initial sampling points over the hybrid model generation and the algorithm computational performance. The proposed iterative procedure effectively determines the optimal solution in every analyzed case, requiring higher CPU times in the cases where the initial sampling point number is lower. We perform sensitivity analysis of the NPV with respect to raw material costs. Different ethylene price scenarios were set and the same optimal flowsheet configuration was determined for each of them, using both the true and hybrid models. Numerical results show that the optimal configuration largely depends on ethylene price. Furthermore, the solutions of the hybrid GDP model exhibit higher numerical stability than the true model. This feature allows the simultaneous optimization and heat integration of the plant, which provides a valuable insight on further improvement of the plant NPV. References Bajaj, I., Iyer, S.S., Faruque Hasan, M.M., 2018. A trust region-based two phase algorithm for constrained black-box and grey-box optimization with infeasible initial point. Comput. Chem. Eng. 116, 306–321. https://doi.org/10.1016/j.compchemeng.2017.12.011 Bhosekar, A., Ierapetritou, M., 2018. Advances in surrogate based modeling, feasibility analysis, and optimization: A review. Comput. Chem. Eng. 250–267. https://doi.org/10.1016/j.compchemeng.2017.09.017 Chen, Q., Johnson, E.S., Siirola, J.D., Grossmann, I.E., 2018. Pyomo. GDP: Disjunctive models in python, in: Computer Aided Chemical Engineering. Elsevier, pp. 889–894. Cozad, A., Sahinidis, N. V, Miller, D.C., 2014. Learning surrogate models for simulation‐based optimization. AIChE J. 60, 2211–2227. https://doi.org/https://doi.org/10.1002/aic.14418 Duran, M.A., Grossmann, I.E., 1986. Simultaneous optimization and heat integration of chemical processes. AIChE J. https://doi.org/10.1002/aic.690320114 Fang, H., Rais-Rohani, M., Liu, Z., Horstemeyer, M.F., 2005. A comparative study of metamodeling methods for multiobjective crashworthiness optimization. Comput. Struct. 83, 2121–2136. Pedrozo, H.A., Reartes, S.B.R., Vecchietti, A.R., Diaz, M.S., Grossmann, I.E., 2021. Optimal Design Of Ethylene And Propylene Coproduction Plants With Generalized Disjunctive Programming And State Equipment Network Models. Comput. Chem. Eng. 107295. Türkay, M., Grossmann, I.E., 1996. Logic-based MINLP algorithms for the optimal synthesis of process networks. Comput. Chem. Eng. 20, 959–978. https://doi.org/https://doi.org/10.1016/0098-1354(95)00219-7 Wilson, Z.T., Sahinidis, N. V, 2017. The ALAMO approach to machine learning. Comput. Chem. Eng. 106, 785–795. https://doi.org/https://doi.org/10.1016/j.compchemeng.2017.02.010",
+    "presenting_author": "Maria Diaz | Planta Piloto de Ingenieria Quimica-UNS, Bahia Blanca, Argentina",
+    "authors": [
+      "Alejandro Pedrozo | Universidad Nacional del Sur, Planta Piloto de Ingeniería Química (PLAPIQUI), CONICET, Bahia Blanca, Argentina",
+      "Sabrina Belen Rodriguez Reartes | Planta Piloto de Ingenieria Quimica (PLAPIQUI), Universidad Nacional del Sur - CONICET, Bahia Blanca, Argentina",
+      "David E. Bernal | Universities Space Research Association, Pittsburgh",
+      "Aldo Vecchietti | INGAR (CONICET-UTN), Santa Fe, Argentina",
+      "Maria Diaz | Planta Piloto de Ingenieria Quimica-UNS, Bahia Blanca, Argentina",
+      "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Alejandro Pedrozo",
+        "affiliation": "Universidad Nacional del Sur, Planta Piloto de Ingeniería Química (PLAPIQUI), CONICET, Bahia Blanca, Argentina",
+        "designation": "Author"
+      },
+      {
+        "name": "Sabrina Belen Rodriguez Reartes",
+        "affiliation": "Planta Piloto de Ingenieria Quimica (PLAPIQUI), Universidad Nacional del Sur - CONICET, Bahia Blanca, Argentina",
+        "designation": "Author"
+      },
+      {
+        "name": "David E. Bernal",
+        "affiliation": "Universities Space Research Association, Pittsburgh",
+        "designation": "Author"
+      },
+      {
+        "name": "Aldo Vecchietti",
+        "affiliation": "INGAR (CONICET-UTN), Santa Fe, Argentina",
+        "designation": "Author"
+      },
+      {
+        "name": "Maria Diaz",
+        "affiliation": "Planta Piloto de Ingenieria Quimica-UNS, Bahia Blanca, Argentina",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ignacio Grossmann",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "415b",
+    "sortable_time": "2021-11-10_08:15:00_08:30:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/628447"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/622909",
+    "paper_endpoint": "Paper/622909",
+    "paper_id": "622909",
+    "topic": "Regularized Subsets: A Framework for High-Dimensional Linear Regression with Noisy Data and Optional Constraints",
+    "title": "Regularized Subsets: A Framework for High-Dimensional Linear Regression with Noisy Data and Optional Constraints",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46445",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "415",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Building accurate linear models using high-dimensional, noisy data is a very challenging statistical task. Still, high-dimensional linear regression is popular because it leads to models that are easy to understand and simpler to fit than alternative methods. Subset selection (SS) is a methodology for constructing sparse linear regression models by either penalizing according to or constraining the number of variables selected in the model. Subset selection works by selecting a subset of potential regression variables to include into the regression model and calculating their coefficients using Ordinary Least Squares [1]. However, SS leads to model that fit the data poorly when there is a large amount of noise in the data. Research shows that applying shrinkage to the coefficients of variables selected by l0-regression greatly enhances the model's robustness in these scenarios [2]. Consequently, we propose the flexible Regularized Subsets framework that performs variable selection and coefficient shrinkage in two-stages: first using any subset selection to select variables, then using a convex penalty to shrink coefficients. Our experiments show that Regularized Subsets out-performs other popular linear model-building approaches in the literature for a variety of problem settings, including other approaches that use a convex regularization penalty in the context of subset selection. In addition, Regularized Subsets is able to build models from a candidate set of thousands of variables in seconds. We further demonstrate how the Regularized Subsets framework can easily be extended to handle linear equality and inequality constraints that allow users to incorporate prior knowledge into the model-building process. We show that our approach leads to significantly sparser models than the current most popular method for constrained linear regression--the Constrained Lasso [3]--with similar predictive performance. Finally, we provide our model building framework as an open-source tool. [1] A Cozad, NV Sahinidis, DC Miller. Learning surrogate models for simulation-based optimization. AIChE Journal, 2016. [2] O Sarwar, B Sauk, NV Sahinidis. A Discussion on Practical Considerations with Sparse Regression Methodologies. Statistical Science, 2020. [3] BR Gaines, J Kim, H Zhou. Algorithms for fitting the Constrained Lasso. Journal of Computational and Graphical Statistics, 2018.",
+    "presenting_author": "Owais Sarwar | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Owais Sarwar | Carnegie Mellon University, Pittsburgh, PA",
+      "Nikolaos Sahinidis | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Owais Sarwar",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nikolaos Sahinidis",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "415c",
+    "sortable_time": "2021-11-10_08:30:00_08:45:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/622909"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/625903",
+    "paper_endpoint": "Paper/625903",
+    "paper_id": "625903",
+    "topic": "A Data-Driven Inverse Optimization Approach to Learning Surrogate Optimizers",
+    "title": "A Data-Driven Inverse Optimization Approach to Learning Surrogate Optimizers",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46445",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "415",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Mathematical optimization has become indispensable for informing decisions in complex industrial systems. However, rigorous models of such systems tend to be nonlinear and nonconvex, which makes them computationally inefficient. In many cases such as real-time optimization of chemical plants, a safe and optimal operation hinges on solving these ‘hard’ optimization problems at frequent intervals. A common strategy is to replace the original model with a surrogate model of reduced computational complexity [1]. In this work, we introduce a data-driven inverse optimization [2] (IO) approach for constructing surrogate optimizers [3], which are surrogate models that are trained to obtain (almost) the same optimal solutions as the original optimization models. In contrast to traditional machine learning methods, IO allows the incorporation of domain knowledge in the form of explicit constraints and tends to be more data-efficient. Moreover, it allows the resulting models to be inherently interpretable. Our work assumes that a parameterized convex optimization model can be trained to obtain optimal solutions that are similar to what the original model generates. Here, the IO problem is to determine the model parameters that minimize the difference between the true optimal solutions and the solutions obtained from solving the resulting learned optimization model. We formulate the bilevel program and apply a penalty block coordinate descent method [4] to solve the single-level KKT-based reformulation of the IO problem. We demonstrate the effectiveness of our method using several case studies including a nonlinear model predictive control example. References: 1. Caballero, J. A. & Grossmann, I. E. An algorithm for the use of surrogate models in modular flowsheet optimization. AIChE J. 54, (2008). 2. Mohajerin Esfahani, P., Shafieezadeh-Abadeh, S., Hanasusanto, G. A. & Kuhn, D. Data-driven inverse optimization with imperfect information. Math. Program. 167, 191–234 (2018). 3. Krishnamoorthy, D., dos Santos, A., & Skogestad, S. Online Process Optimization Using a Surrogate Optimizer. 2019 AIChE Annual Meeting . AIChE. 4. Kleinert, T. & Schmidt, M. Computing Feasible Points of Bilevel Problems with a Penalty Alternating Direction Method. INFORMS J. Comput. (2020).",
+    "presenting_author": "Rishabh Gupta | University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "Rishabh Gupta | University of Minnesota, Minneapolis, MN",
+      "Qi Zhang | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rishabh Gupta",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Qi Zhang",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "415d",
+    "sortable_time": "2021-11-10_08:45:00_09:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/625903"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/631041",
+    "paper_endpoint": "Paper/631041",
+    "paper_id": "631041",
+    "topic": "A Hybrid Model Feature Relevance Analysis for Mechanistic Model Refinement Suggestions",
+    "title": "A Hybrid Model Feature Relevance Analysis for Mechanistic Model Refinement Suggestions",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46445",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "415",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "The hybrid models combine first principle knowledge with data, which is used to infer the missing information due to an insufficient understanding of the mechanistic details [1]. The mechanistic (MH) models rely on process knowledge, while the data-driven (DD) models depend on the information obtained from process data. As a combination, the hybrid models enhance the modeling methodology by incorporating the physical significance and generalization capabilities of the mechanistic models with the data-driven models’ ability to capture knowledge that is too complex to be captured by the mechanistic model [1]. There are numerous hybrid modeling applications in chemical engineering. For example, Zahedi et al. [2] developed an ethylene oxide fixed bed reactor model with reaction kinetics estimated by an artificial neural network (ANN). Tsen et al. [3] used a hybrid ANN model to perform predictive control of quality in a polymerization process. Mahalec and Sanchez [4] modeled a distillation tower incorporating a partial least square (PLS) regression and fundamental conservation balances. Bangi and Kwon [5] integrated the first principles models with a deep neural network and applied them to a hydraulic fracturing process to predict unobserved process parameters. There are different ways to construct hybrid models. One of them is the serial structure, where the data-driven model is used to supplement the mechanistic model where it is missing the process mechanism [1]. Given the experimental measurements, the difference between the measurements and the mechanistic model predictions, called model discrepancy [6], is modeled by the data-driven model. We hypothesize that, in a series structure hybrid model, the data-driven model development studies and the resulting model can be utilized to refine a mechanistic model in addition to serving as an approach to enhance the prediction accuracy. In a series structure, the information captured by the data-driven model from the data represents the information that the mechanistic model fails to capture. Suppose a feature is important in estimating the model discrepancy but makes no significant contribution to the mechanistic model predictions. Such an outcome suggests that the mechanistic model does not correctly incorporate the impact of that feature. Hence, the sensitivity of the data-driven model output to input features contains evidence regarding information missing from the mechanistic model. Identification of these features provides the mechanistic model developers with potential avenues for refinement by pointing out the equations and parameters related to these identified features. Feature selection is a commonly used approach to selecting a subset of variables with better representation of predictive information in building data-driven models. For this reason, most machine learning techniques have an embedded feature selection approach [7]. The other two widely-used feature selection approaches are wrapper methods and filtering approaches [8]. All feature selection approaches provide relative importance of the inputs for determining the outputs. These importance values combined with the sensitivity of the mechanistic model predictions to input variables can be used for mechanistic model refinement. This study introduces a framework that provides suggestions for refining a mechanistic model from an input-variable perspective using a feature relevance study with a hybrid model. The framework starts by constructing a serial structure hybrid modeling framework. The input feature relevances of the mechanistic and the data-driven model predictions are obtained using two approaches. For the mechanistic model, a Sobol sensitivity analysis [10] is performed. Gaussian Process Regression (GPR) [9] is used as the data-driven model to estimate the model discrepancy. A Gaussian Process embedded feature selection approach, automatic relevance determination (ARD) [11] with sensitivity analysis, is applied to determine the relevant features for the model discrepancy. The framework compares the Sobol sensitivity analysis and the ARD results to determine which features the mechanistic model fails to capture information from. Finally, the mechanistic model refinement suggestions for which equations and parameters should be paid more attention is inferred from the comparison results. This proposed framework is also applied to nine models that predict the liquid entrainment fraction in two-phase flow. The results reveal that equations and parameters related to gas properties should be further studied for vertical pipeline orientation models, while the ones related to liquid properties need to be refined for horizontal pipeline orientation models. For inclined pipeline orientation models, liquid density is a feature that needs to be paid more attention to for improving model predictions. References Zendehboudi, S.; Rezaei, N.; Lohi, A. Applications of hybrid models in chemical, petroleum, and energy systems: A systematic review. Appl. Energy 2018 , 228 , 2539–2566. Zahedi, G.; Lohi, A.; Mahdi, K.A. Hybrid modeling of ethylene to ethylene oxide heterogeneous reactor. Fuel Process. Technol. 2011 , 92 , 1725–1732. Tsen, A.Y.; Jang, S.S.; Wong, D.S.H.; Joseph, B. Predictive control of quality in batch polymerization using hybrid ANN models. AIChE J. 1996 , 42 , 455–465. Mahalec, V.; Sanchez, Y. Inferential monitoring and optimization of crude separation units via hybrid models. Comput. Chem. Eng. 2012 , 45 , 15–26. Bangi, M.S.F.; Kwon, J.S. Il Deep hybrid modeling of chemical process: Application to hydraulic fracturing. Comput. Chem. Eng. 2020 , 134 . Jiang, Z.; Chen, W.; Fu, Y.; Yang, R.J. Reliability-based design optimization with model bias and data uncertainty. SAE Int. J. Mater. Manuf. 2013 , 6 . Chandrashekar, G.; Sahin, F. A survey on feature selection methods. Comput. Electr. Eng. 2014 , 40 , 16–28. Rodriguez-Galiano, V.F.; Luque-Espinar, J.A.; Chica-Olmo, M.; Mendes, M.P. Feature selection approaches for predictive modelling of groundwater nitrate pollution: An evaluation of filters, embedded and wrapper methods. Sci. Total Environ. 2018 , 624 , 661–672. Williams, C.K.I.; Rasmussen, C.E. Gaussian Processes for Machine Learning ; 2004; Vol. 14; ISBN 026218253X. Homma, T.; Saltelli, A. Importance measures in global sensitivity analysis of nonlinear models. Reliab. Eng. Syst. Saf. 1996 , 52 , 1–17. Blix, K.; Eltoft, T. Evaluation of Feature Ranking and Regression Methods for Oceanic Chlorophyll-a Estimation. IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens. 2018 , 11 , 1403–1418.",
+    "presenting_author": "Yushi Deng | Auburn University, AL",
+    "authors": [
+      "Yushi Deng | Auburn University, AL",
+      "Selen Cremaschi | Auburn University, AL",
+      "Mario Eden | Auburn University, AL",
+      "Haijing Gao | Chevron Energy Technology Company, Houston, TX",
+      "Shuxing Cheng | Chevron Energy Technology Company, Houston, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yushi Deng",
+        "affiliation": "Auburn University, AL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Selen Cremaschi",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      },
+      {
+        "name": "Mario Eden",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      },
+      {
+        "name": "Haijing Gao",
+        "affiliation": "Chevron Energy Technology Company, Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Shuxing Cheng",
+        "affiliation": "Chevron Energy Technology Company, Houston, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "415e",
+    "sortable_time": "2021-11-10_09:00:00_09:15:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/631041"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/631298",
+    "paper_endpoint": "Paper/631298",
+    "paper_id": "631298",
+    "topic": "A General Strategy for Quantification of the Uncertainty on a Hybrid Model’s Uncertainty Estimates",
+    "title": "A General Strategy for Quantification of the Uncertainty on a Hybrid Model’s Uncertainty Estimates",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46445",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "415",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "The industry 4.0 paradigm [1] calls for the systematic use of model-based design, monitoring, control and optimization for improving quality and reproducibility in product manufacturing as well as enhancing process automation, economics, reliability and safety. This paradigm shift in industrial practice has already influenced several industrial sectors, including the chemical and pharmaceutical industries [2], and is expected to accelerate in the future. So, every research contribution, which can help facilitate this transition, should interest both academia and industry. A key barrier in the systematic implementation of the industry 4.0 guidelines is the lack of process models, accurate and reliable enough for purposes of process design, monitoring, control and optimization (the predictions of any mathematical model are indeed affected by parametric and/or structural uncertainty [3]). To help mitigate this problem, we can develop hybrid mechanistic/statistical models (conventional first-principles models, based on mass, energy and momentum conservation, augmented with Bayesian neural networks), which retain all the benefits of first-principles models, learn from experimental/process data as data-driven models, and provide point estimates of the process variables of interest as well as estimates of their degree of uncertainty. These smart machine learning models are accurate, reliable and easy to maintain, thus can be safely embedded into any framework for optimal design and operation of industrial processes [4]. Although hybrid mechanistic/statistical models represent a substantial step forward compared to conventional first-principles and machine learning models, they still suffer from certain limitations, the most important of which is the unknown degree of uncertainty of the estimates of the uncertainty on their predictions. It is not surprising that a hybrid model’s uncertainty estimates are, in turn, uncertain because their computation ultimately relies on Bayes theorem and thus on a likelihood function (Figure 1), for which we often do not have an exact expression (the formulation of an exact likelihood function would require the actual probability distribution/s of the experimental/process data, used to train the hybrid model, which is/are usually not available). This contribution offers a way to mitigate this limitation of smart machine learning models, namely, it describes a general strategy for quantification of the uncertainty on their uncertainty estimates. The aforementioned strategy, called HM-UQ 2 , relies on hierarchical Bayesian inference [5] and encompasses four major steps: 1. First, given the available experimental/process data, we use hierarchical Bayesian inference to estimate an appropriate distribution over distributions (DoD) for every measured process variable (each of these statistical objects is a parametric family of probability distributions, in which every single member distribution is associated with a specific probability value) 2. Then, we define two different likelihood functions through appropriate manipulation of the distributions over distributions, estimated in phase 1, namely, a conventional likelihood function, computed with the global modes of the single DoD’s (the global mode of a DoD is the member distribution associated with the maximum probability value), and an augmented likelihood function, computed considering all the member distributions of all the DoD’s, which incorporates valuable information on the degree of uncertainty of the likelihood formulation. 3. Next, we exploit the two likelihood functions, formulated in phase 2, and hierarchical Bayesian inference to estimate two different probability distributions of the parameters/hyperparameters of the hybrid model. 4. Finally, to estimate the degree of uncertainty of the hybrid model’s uncertainty estimates, we perform uncertainty propagation with the two different model parameter/hyperparameter distributions, estimated in phase 3, and use the results of these calculations to compute an appropriate measure of the distance between the two different, resulting uncertainty estimates. Note that HM-UQ 2 moderately increases the computational cost of training smart machine learning models (it requires solution of a larger number of hierarchical Bayesian inference problems than traditional training approaches) but it only marginally affects the computational burden associated with using smart machine learning models to make predictions (the uncertainty propagation step is fully parallelizable and thus quite fast). Consequently, the benefits offered by HM-UQ 2 far outweigh its sub-optimal computational efficiency. The value of quantifying the uncertainty of a hybrid model’s uncertainty estimates is demonstrated on two important pharmaceutical engineering applications, namely, online quality assurance and sensor health monitoring in drug product manufacturing. The pilot-scale plant for production of solid oral doses, used as reference system in these case studies, is part of the assets of the Center for Particulate Products and Processes (CP 3 ) at Purdue University. References 1. Santos, C., Mehrsai, A., Barros, A. C., Araújo, M., and Ares, E., Towards Industry 4.0: an overview of European strategic roadmaps, Procedia Manufacturing, 13, 972-979 (2017) 2. Mockus, L., Reklaitis, G., Morris, K., and LeBlond, D., Risk-Based Approach to Lot Release, Journal of Pharmaceutical Sciences, 109, 1035-1042 (2020) 3. Rossi, F., Mockus, L., and Reklaitis, G., Rigorous Bayesian Inference VS New Approximate Strategies for Estimation of the Probability Distribution of the Parameters of DAE Models, Computer Aided Chemical Engineering, 46, 931-936 (2019a) 4. Rossi, F., Manenti, F., Buzzi-Ferraris, G., and Reklaitis, G., Stochastic NMPC/DRTO of batch operations: Batch-to-batch dynamic identification of the optimal description of model uncertainty, Computers & Chemical Engineering, 122, 395-414 (2019b) 5. Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., and Rubin, D. B., Bayesian Data Analysis, CRC press (2013)",
+    "presenting_author": "Francesco Rossi | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Francesco Rossi | Purdue University, West Lafayette, IN",
+      "Yan-Shu Huang | Purdue University, West Lafayette, IN",
+      "Sumit Kumar | Purdue University, West Lafayette, IN",
+      "Rexonni Lagare | Purdue University, Springfield, IL",
+      "Linas Mockus | Purdue University, West Lafayette, IN",
+      "Gintaras Reklaitis | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Francesco Rossi",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yan-Shu Huang",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Sumit Kumar",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Rexonni Lagare",
+        "affiliation": "Purdue University, Springfield, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Linas Mockus",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Gintaras Reklaitis",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "415f",
+    "sortable_time": "2021-11-10_09:15:00_09:30:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/631298"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/630702",
+    "paper_endpoint": "Paper/630702",
+    "paper_id": "630702",
+    "topic": "Machine Learning and Multi-Way Method Modelling Methods for Pharmaceutical Process Quality",
+    "title": "Machine Learning and Multi-Way Method Modelling Methods for Pharmaceutical Process Quality",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46445",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "415",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "The production of pharmaceuticals has always had a strong focus on quality. A common method for producing Active Pharmaceutical Ingredients (API) is via biological processes or fermentation of high producing bacteria or fungal strains. These processes have been subject to mechanistic modeling for use in batch optimization, monitoring and control. However, the metabolic pathways responsible for the main product can lead to accumulation of related substances in the batch that hamper the final product quality and may be impossible to remove in the downstream process. Mechanistic models rarely take batch quality into account and most model development is focused on main product only. Additionally, biological systems are notoriously complex so sufficient knowledge to build a biologically structured mechanistic model is rare and extremely difficult to obtain. There is a vast amount of historical data for use in statistical and data-driven models. These types of models rely only on finding correlations between input and outputs detected by a choice of various machine learning algorithms or multivariate methods with the likes of Partial Least Squares (PLS), Artificial Neural Networks (ANN), Support Vector Machines (SVM), Gaussian Process Regression (GPR) and more. Many of these machine learning algorithms have been successfully used for applications in the field of process engineering with ANN receiving a great deal of interest due to its flexibility to model any input-output correlation. All the aforementioned methods however rely on a two-way structure of the dataset which can be represented in matrix form where the rows and columns denote observations and variables respectively. Essentially the data is represented by input matrix X which are measured variables and output matrix Y which are variables that are to be predicted by the model. This two-way structure can describe a single batch. However, with multiple batches the data structure becomes three-dimensional with batch indices, variable indices and time indices. The traditional approach is to unfold the data into the two-way matrix form. This however creates a problem due to different batch lengths and improper synchronization of events that will create artifacts that affect the final model. Preprocessing techniques like Dynamic Time Warping (DTW) can be used to synchronize batch trajectories but this method is subjective and time consuming. An alternative approach is use multi-way techniques for modelling the dataset. Parallel Factor Analysis (PARAFAC) and PARAFAC2 models are widely used in chemistry for processing spectral and chromatographic data. Both models have shown excellent robustness to noisy and missing data and require no data unfolding. PARAFAC2 is especially promising as it does not assume synchronization of batch trajectories and thus does not require any preprocessing with regards to time warping. Multi-way models are extremely powerful tools when analyzing 3D data structures. However, their application to bioprocessing has been not commonly applied or explored. In this work, historical data of over 60 batches are analyzed from a production process operating at LEO Pharma A/S. Comparison of different data driven methods are analyzed ranging from multivariate bilinear models, machine learning models and multi-way models. The aim of the models is predicting final product concentrations and final batch quality, which is measured offline at the harvest of each batch. Many modelling iterations are considered, utilizing different pre-processing, validation, and variable selection methods. The final model quality is based on the average prediction error of both product concentration and batch quality. This research aims to produce a consistent data-driven modeling methodology that can be readily and reliably applied to pharmaceutical production to ensure high quality and consistent batch-to-batch manufacturing.",
+    "presenting_author": "Atli Magnússon | LEO Pharma A/S, Ballerup, Denmark",
+    "authors": [
+      "Atli Magnússon | LEO Pharma A/S, Ballerup, Denmark",
+      "Gurkan Sin | Technical University of Denmark, 2800 Kgs. Lyngby",
+      "Jari Pajander | Leo Pharma A/S, Ballerup, Denmark",
+      "Stuart Michael Stocks | LEO Pharma A/S, Industriparken 55, 2750 Ballerup, Denmark"
+    ],
+    "authors_structured": [
+      {
+        "name": "Atli Magnússon",
+        "affiliation": "LEO Pharma A/S, Ballerup, Denmark",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Gurkan Sin",
+        "affiliation": "Technical University of Denmark, 2800 Kgs. Lyngby",
+        "designation": "Author"
+      },
+      {
+        "name": "Jari Pajander",
+        "affiliation": "Leo Pharma A/S, Ballerup, Denmark",
+        "designation": "Author"
+      },
+      {
+        "name": "Stuart Michael Stocks",
+        "affiliation": "LEO Pharma A/S, Industriparken 55, 2750 Ballerup, Denmark",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "415g",
+    "sortable_time": "2021-11-10_09:30:00_09:45:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/630702"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632772",
+    "paper_endpoint": "Paper/632772",
+    "paper_id": "632772",
+    "topic": "Surrogate Thermodynamics for Process Synthesis: A Computational Study on Model Selection, Accuracy and Performance",
+    "title": "Surrogate Thermodynamics for Process Synthesis: A Computational Study on Model Selection, Accuracy and Performance",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46445",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "415",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Reliable estimation of physicochemical, equilibrium and transport properties of chemicals and materials is critical to establish the confidence and effectiveness of conceptual designs based on systematic process synthesis and intensification methods. Over the years, many rigorous and first-principles based property models, thermodynamic packages and equation-of-states (e.g., Gamma-Phi method with NRTL and Peng Robinson) have been developed. Because of historically standalone and vertical development, these models come in various forms and involve large systems of highly nonlinear and nonconvex equations. Incorporating them in their original forms in process synthesis frameworks pose significant algorithmic and computational challenges. Data-driven surrogate models can be used as an alternative. However, the trade-offs between the accuracy and the efficiency of different surrogate approaches remain a key challenge. There are many surrogate modeling approaches including artificial neural networks (ANN), gaussian processes, response surface methods, and quadratic or polynomial approximators. These approaches have their own advantages and disadvantages. For example, ANN models are good approximators but cannot guarantee the type of approximation (underestimation or overestimation). Depending on the activation functions and architecture, their performance also vary. Additionally, replacing rigorous thermodynamic models with a purely data-driven surrogate may not guarantee good prediction over the whole domain of interest. In this work, we first search for functional forms for surrogate thermodynamic modeling (STM) that are computationally more efficient than others and, at the same time, accurate when used in superstructure-based process synthesis, and then develop a hybrid mechanistic/data-driven thermodynamic model-integrated process synthesis approach that efficiently converges to process flowsheets with accurately predicted properties. We present several case studies where the thermophysical properties are predicted using ANN models with different activation functions, each resulting in a different degree of tradeoff between accuracy and runtime complexity. Furthermore, these models are incorporated using different mathematical formulations (e.g., MILP, BLP, or NLP) to test their computational performance. Furthermore, we provide guaranteed bounds on model predictions based on developments in data-driven underestimation techniques [1-2]. References: [1] Bajaj, I.; Hasan, M. M. F. (2019). Deterministic Global Derivative-free Optimization of Black-Box Problems with Bounded Hessian. Optimization Letters , DOI: 10.1007/s11590-019-01421-0. [2] Rebennack, S., & Kallrath, J. (2015). Continuous piecewise linear delta-approximations for univariate functions: computing minimal breakpoint systems. Journal of Optimization Theory and Applications , 167(2), 617-643.",
+    "presenting_author": "Ashfaq Iftakher | Texas A&M University, College Station, TX",
+    "authors": [
+      "Ashfaq Iftakher | Texas A&M University, College Station, TX",
+      "Mohammed Sadaf Monjur | Texas A&M University, College Station, TX",
+      "Chinmay Aras | Texas A&M University, College Station, TX",
+      "Faruque Hasan | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ashfaq Iftakher",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mohammed Sadaf Monjur",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Chinmay Aras",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Faruque Hasan",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "415h",
+    "sortable_time": "2021-11-10_09:45:00_10:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632772"
+  }
+]

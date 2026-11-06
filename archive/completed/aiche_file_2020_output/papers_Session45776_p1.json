@@ -1,0 +1,307 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/604953",
+    "paper_endpoint": "Paper/604953",
+    "paper_id": "604953",
+    "topic": "Comparison of Surrogate Modeling Techniques for Design Space Approximation and Surrogate-Based Optimization: Effect of Sampling Technique and Sample Size",
+    "title": "Comparison of Surrogate Modeling Techniques for Design Space Approximation and Surrogate-Based Optimization: Effect of Sampling Technique and Sample Size",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45776",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Comparison of Surrogate Modeling Techniques for Design Space Approximation and Surrogate-Based Optimization: Effect of Sampling Technique and Sample Size Bianca Williams, Selen Cremaschi Session: Advances in Machine Learning and Intelligent Systems Surrogate models, also known as response surfaces, black-box models, metamodels, or emulators, are simplified approximations of more complex, higher order models. These models are used to map input data to output data when the actual relationship between the two is unknown or computationally expensive to evaluate (Han & Zhang, 2012). Surrogate models can also be constructed for use in surrogate-based optimization when a closed analytical form of the relationship between input data and output data does not exist or is not conducive for use in traditional gradient-based optimization methods. Surrogate modeling techniques are of particular interest where high-fidelity, thus expensive, simulations are used (Han & Zhang, 2012) or when the fundamental relationship between the design variables and output variables is not well understood, such as in the design of cell or tissue manufacturing processes (Du et al., 2016). With all the surrogate modeling techniques currently available, there is a need for a systematic procedure for selecting the appropriate technique for a given application. Current common practices for selecting the appropriate surrogate model form rely on process-specific expertise. Numerous studies have been conducted comparing the performance of surrogate modeling techniques for approximation purposes (Bhosekar & Ierapetritou, 2018; Davis et al., 2017). The majority of these only compare a few models on a limited number of data sets or for specific applications (Ju et al., 2016; Luo & Lu, 2014). Progress has been made in recent works in generalizing the process for selecting a surrogate model to approximate a design space by using meta-learning approaches to build selection frameworks (Cui et al., 2016; Garud et al., 2018), avoiding expensive trial-and-error methods. However, few of the developed meta-learning frameworks take model complexity into account, which can lead to overfitting, or consider that multiple models might perform similarly to the one identified as best in terms of their accuracies. The selection of surrogate models for surrogate-based optimization remains an open challenge. Our goal is to comprehensively investigate and compare the performance of several different surrogate modeling techniques for both approximating functional relationships and for surrogate-based optimization to link that performance to the characteristics of the data involved in the application. Previous work on this topic has shown that the performance for approximation is dependent on data characteristics such as the input dimension and the underlying function shape (Davis et al., 2017; Williams & Cremaschi, 2019). The specific data characteristics being investigated in this study are the shape of the underlying function being modeled, the number of input dimensions, the sampling method used to generate the data, and the number of sample points in the dataset. The surrogate-modeling techniques considered include Artificial Neural Networks, Automated Learning of Algebraic Models using Optimization (ALAMO), Radial Basis Networks, Extreme Learning Machines, Gaussian Progress Regression, Random Forests, Support Vector Regression, and Multivariate Adaptive Regression Splines (MARS). These techniques are used to construct surrogate models for data generated using the 47 optimization challenge functions from the Virtual Library of Simulation Experiments (Surjanovic & Bingham, 2013). The sampling methods studied are Sobol sequence sampling, Halton sequence sampling, and Latin Hypercube sampling. Four performance measures are used to evaluate the accuracy of the surrogate models: root mean squared error (RMSE), maximum percent error (MPE), the R-squared value, and the adjusted R-squared value. The surrogate models’ ability to locate the extrema of the functions are evaluated by calculating the distance between the extreme point(s) estimated by the model and the actual function extrema. The results provide guidance on which surrogate models generate the best predictions and give general “rules of thumb.” Using information extracted from the surrogate modeling comparison experiments and building upon previous meta-learning approaches, we constructed a tool to provide recommendations for the appropriate modeling techniques for the datasets based only on the characteristics of the data being modeled. Characteristics, i.e., attributes, were calculated for each dataset with the goal of representing its overall behavior. Attributes were calculated based only on input and output values in the dataset. The attributes that have the strongest relationships with the performance metrics are determined using feature reduction methods, including the ReliefF algorithm (Kira & Rendell, 1992) and principal component analysis (Hotelling, 1933). These attributes were used as inputs, with designated performance metrics as outputs, to train models to make predictions on the performance of the surrogate modeling techniques. The performance metrics used as outputs for training the recommendation tool are the adjusted R-squared value for the design space approximation application and the normalized distance between the extreme point(s) estimated by the models and the actual extrema of the true model for surrogate-based optimization. The adjusted R-squared value takes into account both the surrogate model accuracy and its complexity (Miles, 2005). The tool identifies which surrogate modeling techniques are recommended for use for either approximating a design space or for surrogate-based optimization given a set of data. References: Bhosekar, A., & Ierapetritou, M. (2018). Advances in surrogate based modeling, feasibility analysis, and optimization: A review. Computers & Chemical Engineering, 108, 250-267. Cui, C., et al. (2016). A recommendation system for meta-modeling: A meta-learning based approach. Expert Systems with Applications, 46, 33-44. Davis, S., et al. (2017). Efficient Surrogate Model Development: Optimum Model Form Based on Input Function Characteristics. In A. Espuna, M. Graells & L. Puigjaner (Eds.), 27th European Symposium on Computer Aided Process Engineering (ESCAPE 27) (Vol. 40, pp. 457-462). Barcelona, Spain: Elsevier. Du, D., et al. (2016). Statistical Metamodeling and Sequential Design of Computer Experiments to Model Glyco-Altered Gating of Sodium Channels in Cardiac Myocytes. IEEE J Biomed Health Inform, 20, 1439-1452. Garud, S. S., et al. (2018). LEAPS2: Learning based Evolutionary Assistive Paradigm for Surrogate Selection. Computers & Chemical Engineering, 119, 352-370. Han, Z., & Zhang, K. (2012). Surrogate-Based Optimization. In O. Roeva (Ed.), Real-World Applications of Genetic Algorithms (pp. 343-362). Rijeka, Croatia: InTech Open. Hotelling, H. (1933). Analysis of a complex of statistical variables into principal components. Journal of Educational Psychology, 24, 498-520. Ju, Y. P., et al. (2016). Artificial intelligence metamodel comparison and application to wind turbine airfoil uncertainty analysis. Advances in Mechanical Engineering, 8. Kira, K., & Rendell, L. A. (1992). A Practical Approach to Feature-Selection. Machine Learning /, 249-256. Luo, J. N., & Lu, W. X. (2014). Comparison of surrogate models with different methods in groundwater remediation process. Journal of Earth System Science, 123, 1579-1589. Miles, J. (2005). R Squared, Adjusted R Squared. In Encyclopedia of Statistics in Behavioral Science: John Wiley & Sons Ltd. Surjanovic, S., & Bingham, D. (2013). Virtual Library of Simulation Experiments. In (Vol. 2018). Simon Fraser University. Williams, B., & Cremaschi, S. (2019). Surrogate Model Selection for Design-Space Approximation and Surrogate-Based Optimization. In S. Munoz, C. Laird & M. Realff (Eds.), Ninth International Conference on Foundations of Computer-Aided Process Design (FOCAPD-19) (pp. 353-358). Copper Mountain, CO, USA: Elsevier B.V.",
+    "presenting_author": "Bianca Williams | Auburn University, AL",
+    "authors": [
+      "Bianca Williams | Auburn University, AL",
+      "Selen Cremaschi | Auburn University, AL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bianca Williams",
+        "affiliation": "Auburn University, AL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Selen Cremaschi",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "522a",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/604953"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/609659",
+    "paper_endpoint": "Paper/609659",
+    "paper_id": "609659",
+    "topic": "Investigating Performance Metrics and Machine Learning Models Towards Automating the Diagnosis of Membranous Nepthropathy",
+    "title": "Investigating Performance Metrics and Machine Learning Models Towards Automating the Diagnosis of Membranous Nepthropathy",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45776",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Membranous nephropathy (MN) is a glomerular disease that causes nephrotic syndrome among adult patients. Records indicate that approximately one third of the patients that possess MN further progress into end-stage renal diseases in 5 to 15 years; among patients that are above 60 years old, 20-30% of the cases are found to be associated with malignancy such as lung cancer and prostate cancer.[2][3] Diagnosis of MN is exclusively achieved by renal biopsy with a focus on the glomerular basement membrane area, which involves examination to the images of histochemically stained tissue samples captured by either light microscopy (LM) or electron microscopy (EM) [1]. For precise identification of glomerular features, the pathoanatomical examination often involves using whole-slide images (WSIs) of tissues stained in multiple histochemical approaches, which is a labor-intensive process. Motivated by this, we aim to develop an automated examination method based on artificial intelligence and investigate its efficacy towards reducing the workload of clinicians and improving the consistency of diagnostic results. The basis for this effort is artificial intelligence algorithms to design an efficacious data-driven classification model. In this work, a Convolutional Neural Network (CNN)[4] based model was structured and trained to determine the existence of MN within the images of glomeruli. To further address the issue of model accuracy not satisfying the requirement of the application, a method called high confidence acceptance (HCA) was designed to boost the precision of the model to an application specified target of 95\\%. With HCA, we are aiming to use only strongly confident predictions as automated diagnostic results, leaving the relatively lower confidence instances to manual inspections performed by renal pathologists. In such scenario, a partial replacement of the manual examination by renal pathologists at the demanded accuracy can be accomplished. A metric called Acceptance Rate (AR) was accordingly defined and used in our scheme to measure HCA performance; AR represents the percentage of workload being automated and replaced by the CNN model. As a result, the model trained in this work which initially had an overall accuracy of approximately 86% demonstrated an AR of approximately 34%, with a precision that met target accuracy as high as 95%. This result implied that one third of the workload will be fully automated at target accuracy, and the rest of the less confident instances (declared inconclusive) will be sent to renal pathologists for manual inspection. Furthermore, the model developed in this work also presented an acceptance rate of 23% when applied to a dataset solely comprised of HE (Hematoxylin-Eosin) stained biopsy images, which indicated a potential reduction to the staining effort which conventionally requires up to 4 different staining methods and usage of excessive specialist labor. A further test on images of larger field of view was also carried out; a performance consistent with tests on glomeruli-level images was obtained and the practical value of the model and HCA method is thus illustrated. The result illustrated the feasibility of automatically diagnosing membranous nephropathy with CNN, which has considerable value to the relevant medical profession. Meanwhile, the HCA method is an universal technique that can be applied to improve and measure the applicability of any classification model that is not satisfying the required accuracy of the target application, and may thus further broaden the horizon of artificial intelligence in practical implementation. References: [1] Agarwal, S. K., Sethi, S., & Dinda, A. K. (2013). Basics of kidney biopsy: A nephrologist’s perspective. Indian Journal of Nephrology , 23 (4), 243–252. doi: 10.4103/0971-4065 .114462 [2] Couser, W. G. (2017). Primary membranous nephropathy.Clinical Journal of the AmericanSociety of Nephrology,12(6), 983–997. doi: 10.2215/CJN.11761116 [3] Lai, W. L., Yeh, T. H., Chen, P. M., Chan, C. K., Chiang, W. C., Chen, Y. M., . . . Tsai,T. J. (2015, 2).Membranous nephropathy: A review on the pathogenesis, diagnosis,and treatment(Vol. 114) (No. 2). Elsevier. doi: 10.1016/j.jfma.2014.11.002 [4] LeCun, Y., Haffner, P., Bottou, L., & Bengio, Y. (1999). Object Recognition with Gradient-Based Learning. In (pp. 319–345). Retrieved fromhttp://link.springer.com/10.1007/3-540-46805-619doi: 10.1007/3-540-46805-6{\\}19",
+    "presenting_author": "Yao Xue | Pennsylvania State University, UNIVERSITY PARK, PA",
+    "authors": [
+      "Antonios Armaou | The Pennsylvania State University, University Park, PA",
+      "Yao Xue | Pennsylvania State University, UNIVERSITY PARK, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Antonios Armaou",
+        "affiliation": "The Pennsylvania State University, University Park, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Yao Xue",
+        "affiliation": "Pennsylvania State University, UNIVERSITY PARK, PA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "522c",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/609659"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/611386",
+    "paper_endpoint": "Paper/611386",
+    "paper_id": "611386",
+    "topic": "High-Throughput Adsorbent Screening for Gas Separation Via Artificial Neural Networks",
+    "title": "High-Throughput Adsorbent Screening for Gas Separation Via Artificial Neural Networks",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45776",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Pressure swing adsorption (PSA) is an advanced technology widely used for gas separation and storage applications. Several types of adsorbents including zeolites, metal organic frameworks (MOFs) and activated carbon have been characterized and synthesized with a wide array of applications in PSA operations [1–4]. Numerous hypothetical zeolites and MOFs can be also conceptualized [5,6]. The available feedstock specifications and the desired product specifications determine the choice of adsorbent and process design. A majority of the previous material-screening studies either use computationally expensive methods, and are able to screen only a few prospective adsorbents, or use significant modeling assumptions thereby leading to uncertainties in the reported results. This incentivizes the search of more predictive methods and metrics that can correctly estimate material performance in a real processing operation. We have developed a high-throughput material screening framework that is capable of quickly screening millions of potential adsorbent materials. The framework integrates a high-fidelity adsorption process model with an artificial neural network (ANN) model to describe breakthrough dynamics in adsorber columns. Detailed Grand Canonical Monte Carlo (GCMC) simulations are performed for obtaining equilibrium adsorption capacity data for different adsorbent-adsorbent pairs. We introduce ANN-based surrogate models for predicting breakthrough dynamics in an adsorber column. The resulting models have much less complexity compared to the detailed first-principles model, and can be leveraged for rapid screening of a large adsorbent database. The developed framework can be used to evaluate material separation performance for different process designs, operating conditions and adsorbent materials. For example, it can predict the so-called “breakthrough time” that can be used as a single metric to capture the effects of both adsorption capacity and selectivity [7]. Breakthrough time also influences the column size and regeneration frequency. This metric is shown to facilitate a more efficient and realistic screening of adsorbent materials as it combines the effects of adsorption capacity and selectivity to indicate PSA performance. To demonstrate the utility of the framework, we screen 196 pure-silica zeolites in the Structure Commission of the International Zeolite Association (IZA-SC) database for post-combustion carbon capture and natural gas purification. Using the framework, we have identified zeolites WEI and JBW as the top two candidate adsorbents, as they are consistently ranked among the top zeolites for both applications. References [1] L.J. Murray, M. Dincua, J.R. Long, Hydrogen storage in metal--organic frameworks, Chem. Soc. Rev. 38 (2009) 1294–1314. [2] D. Farrusseng, Metal-organic frameworks: applications from catalysis to gas storage, John Wiley & Sons, 2011. [3] A.U. Czaja, N. Trukhan, U. Müller, Industrial applications of metal--organic frameworks, Chem. Soc. Rev. 38 (2009) 1284–1293. [4] J.-R. Li, R.J. Kuppler, H.-C. Zhou, Selective gas adsorption and separation in metal--organic frameworks, Chem. Soc. Rev. 38 (2009) 1477–1504. [5] A.N. Dickey, A.Ö. Yazayd\\in, R.R. Willis, R.Q. Snurr, Screening \\ce{CO}2/\\ce{N2} selectivity in metal-organic frameworks using Monte Carlo simulations and ideal adsorbed solution theory, Can. J. Chem. Eng. 90 (2012) 825–832. [6] K. Sumida, D.L. Rogow, J.A. Mason, T.M. McDonald, E.D. Bloch, Z.R. Herm, T.-H. Bae, J.R. Long, Carbon dioxide capture in metal--organic frameworks, Chem. Rev. 112 (2012) 724–781. [7] R. Krishna, J.R. Long, Screening metal-organic frameworks by analysis of transient breakthrough of gas mixtures in a fixed bed adsorber, J. Phys. Chem. C. 115 (2011) 12941–12950.",
+    "presenting_author": "Akhil Arora | Texas A&M University, College Station, TX",
+    "authors": [
+      "Akhil Arora | Texas A&M University, College Station, TX",
+      "Faruque Hasan | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Akhil Arora",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Faruque Hasan",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "522d",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/611386"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/606814",
+    "paper_endpoint": "Paper/606814",
+    "paper_id": "606814",
+    "topic": "A Hybrid Modelling Framework for on-Line Data-Driven Modelling of Particle Processes",
+    "title": "A Hybrid Modelling Framework for on-Line Data-Driven Modelling of Particle Processes",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45776",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Particles play a key role in many industrial productions, where particle processes are frequently used for removal of insolubles, product isolation, purification and polishing. Because particle processes are quite complex and fundamental understanding of underlying phenomena is lacking, control and monitoring these processes are often challenging tasks. To overcome these challenges, it has previously been examined whether hybrid modelling could capture particle dynamics and be used to optimize these processes. Shallow neural networks have here been used to estimate particle phenomena kinetics and combined with low-order population balance models to produce predictions of particle size evolution. During the last two decades, hybrid models have been employed in various particle processes, including crystallization operations [1,2,3] and a pharmaceutical milling process [4]. While these models have shown good predictive capabilities, they have been rather case-specific and been trained either using indirect process variables or using fairly small data sets of particle size distributions due to historical limitations of particle analysis methods. With recent developments in particle monitoring tools, such as dynamic image analysis and focused beam reflectance measurements, it is now possible to measure particle properties with a much higher frequency, allowing for better capture of the process dynamics. In this work, a hybrid modelling framework is presented for particle processes that include all the common particle phenomena, including nucleation, growth, shrinkage, agglomeration and breakage. The hybrid model is trained using time-series data from an on-line/at-line particle analysis sensor, along with other measured process states that may have an impact on the phenomena kinetics. The particle phenomena kinetics are estimated using a deep neural network, where all the available measured and calculated process states are used as inputs. The kinetic model is combined with a medium-resolution discretized population balance model and mass balances, ensuring that physicochemical constraints are not violated. With the high flexibility and the automatic feature selection capabilities of the deep neural network, it becomes possible to model an arbitrary particle process without relying on excessive prior process understanding. The only requirement is that the process dynamics related to the particle phenomena and the particle size distribution can be measured during the process. The presented modelling approach utilizes automatic differentiation for training of the hybrid model, which significantly speeds up the model training from an order of O(2n) using a finite difference method to O(1), where n is the number of weights in the neural network. This opens up for training the hybrid model in real-time, where new sensor data can be continuously incorporated into the hybrid model during process operation. It furthermore allows for easy scaling of the neural networks to higher complexity without significant additional computational costs. The versatility of the hybrid modelling framework is demonstrated through three case studies of varying nature and scale, where on-line/at-line dynamic image analysis has been used to measure particle properties during process operation. The case studies include a lab-scale crystallization of lactose, an industrial scale crystallization of an active pharmaceutical ingredient and a lab-scale flocculation and breakage of silica particles. We demonstrate how data quality and quantity affects the model performance and compare with traditional first principles modelling. It is furthermore illustrated how computational chemistry methods can bring the framework an additional understanding of nanoscale particle interactions [5] by including first-principles model-based soft-sensors as inputs to the deep neural network. This includes estimations of solid-liquid interfacial tension (IFT), which can predict attractive or repulsive forces between particles in a robust way, much faster than experimental measurement of surface forces. Lastly, a couple of future perspectives are presented, including the use of the hybrid model in model predictive control (MPC) where the hybrid model can be trained in parallel with solving the MPC problem. [1] P. Lauret, H. Boyer, J. Gatina, Hybrid modelling of the sucrose crystal growth rate, Int. J. Model. Simul. 21 (2001) 23-29. doi:10.1080/02286203.2001.11442183. [2] V. Galvanauskas, P. Georgieva, S. F. D. Azevedo, Dynamic optimisation of industrial sugar crystallizationprocess based on a hybrid (mechanistic+ann) model (2006). doi:10.1.1.124.7855. [3] Y. Meng, S. Yu, J. Zhang, J. Qin, Z. Dong, G. Lu, H. Pang, Hybrid modeling based on mechanistic and data-driven approaches for cane sugar crystallization, J. Food Eng. 257 (2019) 44-55. doi:10.1016/j.jfoodeng.2019.03.026. [4] P. K. Akkisetty, U. Lee, G. V. Reklaitis, V. Venkatasubramanian, Population balance model-based hybrid neural network for a pharmaceutical milling process, J. Pharm. Innov. 5 (2010) 161-168. doi:10.1007/s12247-010-9090-2. [5] N. Nazemzadeh, L. W. Sillesen, R. F. Nielsen, M. N. Jones, K. V. Gernaey, M. P. Andersson, S. S. Mansouri, Integration of Computational Chemistry and Artificial Intelligence for Multi-scale Modeling of Bioprocesses, Accepted in 30th European Symposium on Computer Aided Process Engineering, 2020.",
+    "presenting_author": "Rasmus Fjordbak Nielsen | Technical University of Denmark, Kgs. Lyngby",
+    "authors": [
+      "Rasmus Fjordbak Nielsen | Technical University of Denmark, Kgs. Lyngby",
+      "Nima Nazemzadeh | Technical University of Denmark, Kgs. Lyngby",
+      "Martin Peter Andersson | Technical University of Denmark, Kgs. Lyngby",
+      "Krist V. Gernaey | Technical University of Denmark, Kgs. Lyngby",
+      "Seyed Soheil Mansouri | Technical University of Denmark, 2800 Kgs. Lyngby"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rasmus Fjordbak Nielsen",
+        "affiliation": "Technical University of Denmark, Kgs. Lyngby",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nima Nazemzadeh",
+        "affiliation": "Technical University of Denmark, Kgs. Lyngby",
+        "designation": "Author"
+      },
+      {
+        "name": "Martin Peter Andersson",
+        "affiliation": "Technical University of Denmark, Kgs. Lyngby",
+        "designation": "Author"
+      },
+      {
+        "name": "Krist V. Gernaey",
+        "affiliation": "Technical University of Denmark, Kgs. Lyngby",
+        "designation": "Author"
+      },
+      {
+        "name": "Seyed Soheil Mansouri",
+        "affiliation": "Technical University of Denmark, 2800 Kgs. Lyngby",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "522e",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/606814"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/609201",
+    "paper_endpoint": "Paper/609201",
+    "paper_id": "609201",
+    "topic": "Integration of Control with Process Operation through Reinforcement Learning",
+    "title": "Integration of Control with Process Operation through Reinforcement Learning",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45776",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Increased market volatility, sustainability concerns and process flexibility are a few of the main challenges contemporary process industries are facing. At the same time major manufacturing areas, like the pharmaceutical industry, have started to investigate the continuous processing paradigm as more profitable and efficient. Moving in these directions, integration of control with operations has received increasing attention over the last decade [1,2]. Integrated planning, scheduling and control (iPSC) aims to exploit the inherent reciprocal information flow among the three problems so as to enhance feasibility, robustness and profitability of the operations in the process industries. The resulting problem tends to be computationally intensive and so far has been studied mostly under deterministic assumptions [3,4] with few exceptions who can be employed under restrictive assumptions [5]. As far as the incorporation of control considerations within these problems, the use of model predictive control [2,3], multi-parametric programming [6,7] as well as surrogate-based and data-driven approaches have been proposed [8,9]. Despite the research effort in this area the development of systematic, computationally efficient and data-driven methods remains an open challenge. On top of that, the underlying dynamic optimization of the control problem suffers from three conditions: (i) there is no precise known model for most industrial-scale processes (plant model mismatch), leading to inaccurate predictions and convergence to suboptimal solutions; (ii) the process is affected by endogenous uncertainty (i.e. the system is stochastic) & (iii) state constraints must be satisfied due to operational and safety concerns. Therefore constraint violation can be detrimental. To solve the above problems, Reinforcement Learning (RL) Policy Gradient method is proposed, which satisfies chance constraints with probabilistic guarantees [10]. The resulting optimal policy is a neural network designed to satisfy the optimality conditions, and the optimal control actions can be evaluated fast as the policy requires only function evaluations. In this work, a novel framework for closed-loop integration iPSC under dynamic disturbances and uncertainty is proposed. The key elements are the integration of novel RL-based optimal policy for the control task of an uncertain dynamic physical system with the optimization-based algorithm for the efficient rescheduling that mitigates the impact of exogenous disturbances on the real-time implementation. Finally, the proposed framework is tested on the iPSC of a nonlinear industrial process illustrating its merits and providing key insights about the interdependence of the iPSC decisions and the importance of RL for its real-time implementation. Grossmann, I. E. (2012). Advances in mathematical programming models for enterprise-wide optimization. Comput. Chem. Eng., 47, 2-18. Chu, Y., and F. You. (2015) Model based integration of control and operations: Overview, challenges, advances, and opportunities. Comput. Chem. Eng. , 83, 2-20. Dias, L. S., & Ierapetritou, M. G. (2016). Integration of scheduling and control under uncertainties: Review and challenges. Chem. Eng. Res. Des., 116, 98-113. Georgiadis, G.P., Elekidis, A.P. and Georgiadis, M.C. (2019). Optimization-Based Scheduling for the Process Industries: From Theory to Real-Life Industrial Applications. Processes, 7, 438. Charitopoulos, V. M., Aguirre, A. M., Papageorgiou, L. G., & Dua, V. (2018). Uncertainty aware integration of planning, scheduling and multi-parametric control. Comput. Aid. Chem. Eng. 44, 1171-1176. Charitopoulos, V. M., Papageorgiou, L. G., & Dua, V. (2019). Closed-loop integration of planning, scheduling and multi-parametric nonlinear control. Comput. Chem. Eng. , 122 , 172-192. Burnak, B., Katz, J., Diangelakis, N. A., & Pistikopoulos, E. N. (2018). Simultaneous process scheduling and control: a multiparametric programming-based approach. Ind. Eng. Chem. Res. , 57 (11), 3963-3976. Du, J., Park, J., Harjunkoski, I., & Baldea, M. (2015). A time scale-bridging approach for integrating production scheduling and process control. Comput. Chem. Eng. , 79 , 59-69. Dias, L. S., & Ierapetritou, M. G. (2019). Data-driven feasibility analysis for the integration of planning and scheduling problems. Optim. Eng. , 20 (4), 1029-1066. Petsagkourakis, P., Sandoval, I. O., Bradford E., Zhang, D. & del Rio-Chanona, E. A. (2020). Constrained Reinforcement Learning for Dynamic Optimization under Uncertainty. Accepted for publication in 21st IFAC World Congress",
+    "presenting_author": "Panagiotis Petsagkourakis | University College of London, United Kingdom",
+    "authors": [
+      "Panagiotis Petsagkourakis | University College of London, United Kingdom",
+      "Vassilis Charitopoulos | University College London, WC1E 7JE, United Kingdom",
+      "Federico Galvanin | University College London, London WC1E 7JE, United Kingdom",
+      "Antonio del Rio Chanona | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Panagiotis Petsagkourakis",
+        "affiliation": "University College of London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Vassilis Charitopoulos",
+        "affiliation": "University College London, WC1E 7JE, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Federico Galvanin",
+        "affiliation": "University College London, London WC1E 7JE, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "522f",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/609201"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/596264",
+    "paper_endpoint": "Paper/596264",
+    "paper_id": "596264",
+    "topic": "Control Lyapunov-Barrier Function-Based Predictive Control of Nonlinear Processes Using Real-Time Machine Learning Modeling",
+    "title": "Control Lyapunov-Barrier Function-Based Predictive Control of Nonlinear Processes Using Real-Time Machine Learning Modeling",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45776",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Safety considerations have been integrated into feedback control system design to yield cooperative actions to ensure both operational safety and economic performance of system operation via control Lyapunov-barrier functions (CLBF) [1,2]. Specifically, in [2] a CLBF-based model predictive control scheme was proposed to optimize process performance accounting for process stability and safety requirements. While MPC systems implemented in an industrial setting often utilize linear data-based empirical models to compute control actions to maintain optimal process operation while accounting for process and control actuator constraints, chemical processes are inherently nonlinear and often require nonlinear models in order to be controlled efficiently. Modern machine learning modeling tools provide an efficient way to nonlinear process modeling, taking advantage of advances in training, efficient coding and computational power [3, 4, 5]. In this work, we develop a machine-learning-based CLBF-MPC based on an ensemble of recurrent neural network (RNN) models that are widely-used to model nonlinear dynamic systems for prediction to control an input-constrained nonlinear process accounting for stability and safety considerations. Specifically, RNN models are first developed to model a general class of nonlinear systems using process operating data, and sufficient conditions that account for bounded modeling error between the RNN model and the actual nonlinear process are provided to achieve closed-loop stability and safety for the nonlinear process under CLBF-MPC. Additionally, following the design of machine-learning-based CLBF-MPC, the CLBF-based economic MPC using RNN models is proposed to optimize process economic benefits as well. Moreover, to handle model uncertainty issue in real-time implementation of controllers, on-line learning of RNN models is also employed within CLBF-MPC and CLBF-EMPC to update process models in the presence of time-varying disturbances. [1] Romdlony, M. Z., and Jayawardhana, B. Stabilization with guaranteed safety using control Lyapunov–barrier function. Automatica, 66, 39-47, 2016. [2] Wu, Z., F. Albalawi, Z. Zhang, J. Zhang, H. Durand and P. D. Christofides, \"Control Lyapunov-Barrier Function-Based Model Predictive Control of Nonlinear Systems,'' Automatica, 109, 108508, 2019. [3] Kosmatopoulos, E. B., Polycarpou, M. M., Christodoulou, M. A., and Ioannou, P. A. High-order neural network structures for identification of dynamical systems. IEEE transactions on Neural Networks, 6, 422-431, 1995 [4] Mohanty, S. Artificial neural network based system identification and model predictive control of a flotation column. J. Process Control, 2009, 19, 991−999. [5] Wu, Z., A. Tran, D. Rincon and P. D. Christofides, \"Machine Learning-Based Predictive Control of Nonlinear Processes. Part I: Theory,'' AIChE J., 65, e16729, 2019.",
+    "presenting_author": "Zhe Wu | University of California, Los Angeles",
+    "authors": [
+      "Zhe Wu | University of California, Los Angeles",
+      "David Rincon | University of California, Los Angeles",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zhe Wu",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "David Rincon",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "522g",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/596264"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/608985",
+    "paper_endpoint": "Paper/608985",
+    "paper_id": "608985",
+    "topic": "Constrained Reinforcement Learning for Process Optimization and Control",
+    "title": "Constrained Reinforcement Learning for Process Optimization and Control",
+    "date_time": "2020-11-18_08:00:00_09:00:00",
+    "session_id": "45776",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "522",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "The optimization of chemical processes presents distinctive challenges to the stochastic systems community given that they suffer from three conditions: There is no precise known model for most industrial scale processes (plant model mismatch), leading to inaccurate predictions and convergence to suboptimal solutions. The process is affected by disturbances (i.e. it is stochastic). State constraints must be satisfied due to operational and safety concerns, therefore constraint violation can be detrimental or even dangerous. To solve the above problems, we propose a Reinforcement Learning (RL) Policy Gradient method, which satisfies chance constraints with probabilistic guarantees. Machine learning is helping to address complex problems in the chemical and process industries, such as process optimal control [1,2], estimation and online monitoring [3,4]. However, less studies have been conducted to investigate the applicability and efficiency of RL in process engineering, and none include the efficient handling of constraints. RL would be a natural choice to address nonlinear, uncertain and stochastic process control problems as it effectively addresses stochastic environments [5]. Unfortunately, present RL algorithms fail to reliably satisfy state constraints even when initialized with feasible initial policies [6]. Various approaches have been proposed in the litera-ture, where usually penalties are applied for the constraints.Such approaches can be very problematic, easily losing op-timality or feasibility [7] especially in the case of a fixed penalty. The main approaches to incor-porate constraints in this way make use of trust-region and fixed penalties [9],as well as cross entropy [7]. As it is observed in [8], when penalty methods are ap-plied in policy optimization, depending on the value of the penalty parameter the behaviour of the policy may change. We propose a constrained RL algorithm which guarantees the satisfaction of joint chance constraints. To accomplish this, we propose the introduction of backoffs, which are computed simultaneously with the feedback policy. Backoffs are adjusted with Bayesian optimization using the empirical cumulative distribution function, which can, therefore, guarantee the satisfaction of joint chance constraints. [1] Bradford, E.; Schweidtmann, A. M.; Zhang, D.; Jing, K. and del Rio-Chanona, E. A., Dynamic modeling and optimization of sustainable algal production with uncertainty using multivariate Gaussian processes, 118, 143-158, 2018 [2] del Rio-Chanona, E. A.; Fiorelli, F.; Zhang, D.; rashid Ahmed, N.; Jing, K.; and Shah, N, An efficient model construction strategy to simulate microalgal lutein photo-production dynamic process, 114(11), 2518-2527, 2017 [3] do Carmo Nicoletti, M. and Jain, L. C., Computational Intelligence Techniques for Bioprocess Modelling, Supervision and Control, Volume 218 of Studies in Computational Intelligence, Springer Science & Business Media, 29 Jun 2009 [4] Xiong, Z. and Zhang, J., Modelling and optimal control of fed-batch processes using a novel control affine feedforward neural network, Neurocomputing, 61, 317-337, 2004 [5] Petsagkourakis, P.; Sandoval, I. O.; Bradford E.; Zhang, D. and del Rio-Chanona, E. A., Reinforcement Learning for Batch Bioprocess Optimization, 133, 2020 [6] Wen, M., Constrained Cross-Entropy Method for Safe Reinforcement Learning, Neural Information Processing Systems (NeurIPS), 2018 [7] Ray, A.; Achiam, J. and Amodei, D., Benchmarking Safe Exploration in Deep Reinforcement Learning, Deep RL Workshop NeurIPS 2019, arXiv:1910.01708, 2019 [8] Achiam, J; Held, D.; Tamar, A. and Abbeel, P., Constrained Policy Optimization, International Conference on Machine Learning (ICML) 2017 [9] Tessler, C.; Mankowitz, D. J.; and Mannor, S.; Reward Constrained Policy Optimization, International Conference on Learning Representations (ICLR) 2019",
+    "presenting_author": "Antonio del Rio Chanona | Imperial College London, United Kingdom",
+    "authors": [
+      "Panagiotis Petsagkourakis | University College of London, United Kingdom",
+      "Eric Bradford | NTNU, Trondheim, Norway",
+      "Ilya Orson Sandoval Cardenas | Imperial College London, United Kingdom",
+      "Dongda Zhang | The University of Manchester, United Kingdom",
+      "Federico Galvanin | University College London, London WC1E 7JE, United Kingdom",
+      "Antonio del Rio Chanona | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Panagiotis Petsagkourakis",
+        "affiliation": "University College of London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Eric Bradford",
+        "affiliation": "NTNU, Trondheim, Norway",
+        "designation": "Author"
+      },
+      {
+        "name": "Ilya Orson Sandoval Cardenas",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Dongda Zhang",
+        "affiliation": "The University of Manchester, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Federico Galvanin",
+        "affiliation": "University College London, London WC1E 7JE, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "522h",
+    "sortable_time": "2020-11-18_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/608985"
+  }
+]

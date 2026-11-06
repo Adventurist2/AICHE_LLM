@@ -1,0 +1,188 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648192",
+    "paper_endpoint": "Paper/648192",
+    "paper_id": "648192",
+    "topic": "Embedding Stereoelectronic Effects into Molecular Representations for Machine Learning",
+    "title": "Embedding Stereoelectronic Effects into Molecular Representations for Machine Learning",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "49679",
+    "session_title": "Spotlights in Thermodynamics and Computational Molecular Science (Invited Talks)",
+    "session_number": "297",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Molecular representation learning lies at the intersection of machine learning and chemistry, being crucial for property prediction tasks. To date, many representation methods have been developed, ranging from simple physicochemical descriptors to sophisticated geometrical modeling. However, existing approaches typically ignore non-bonding electronic information, and are limited to capturing covalent interactions. To address this problem, we propose a novel molecular representation that generalizes to other interactions by incorporating stereoelectronic effects. We accomplished this goal by taking advantage of a well-known method that captures complex electronic interactions, Natural Bond Orbital (NBO) analysis. To limit the scope of this work to organic molecules, we applied NBO analyses for the structures from the QM9 dataset. Subsequently, we created a graph neural network method capable of predicting these interactions in a supervised learning fashion. The method yields a heterogeneous graph with representations for atom, bond, and lone pair orbitals while adding atom-specific orbitals and second-order interaction information. Our method also suggests a more general way to represent molecular structures, which supplements the use of nodes for atoms and edges for chemical bonds with the addition of bond orbital nodes and second-order interaction edges. We developed an end-to-end pipeline that takes a molecular geometry input and returns a representation with stereoelectronic information. The first step was to enrich the standard molecular graphs with lone pairs (predicted by a separate network) and bond orbital nodes, which are solved analytically for a given geometry. Second, we developed a multi-task approach that learns all the interaction values provided by the NBO analysis. Finally, we use the resulting representations with infused stereoelectronic information for downstream tasks, with experiments showing the approach’s applicability to increase performance. Our approach is uniquely suited for optimal learning with limited datasets, with strong applicability to catalysis and reaction design.",
+    "presenting_author": "Gabe Gomes | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Gabe Gomes | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gabe Gomes",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "297a",
+    "sortable_time": "2022-11-15_12:30:00_12:53:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648192"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645950",
+    "paper_endpoint": "Paper/645950",
+    "paper_id": "645950",
+    "topic": "Predicting Solubility Limits of Organic Solutes for a Wide Range of Solvents and Temperatures Using Machine Learning and Thermodynamics",
+    "title": "Predicting Solubility Limits of Organic Solutes for a Wide Range of Solvents and Temperatures Using Machine Learning and Thermodynamics",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "49679",
+    "session_title": "Spotlights in Thermodynamics and Computational Molecular Science (Invited Talks)",
+    "session_number": "297",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "The solubility of organic molecules is crucial in organic synthesis and industrial chemistry, it is important in the design of many phase separation and purification units, and it controls the migration of many species into the environment. Despite its importance, no tool exists to predict the solubility of solids in different organic solvents at various temperatures. Here we present a fast and convenient computational method for estimating the solubility of solid neutral organic molecules in water and many organic solvents for a broad range of temperatures. We provide a method, software package, and on-line tool for the prediction of the solubility based on only the molecule identifiers (SMILES or InChI) of the solute and solvent. Specific to the pharmaceutical industry, the solubility of active pharmaceutical ingredients (API) in a variety of organic solvents is an important property in the development of new drugs. Many curated databases are available for the aqueous solid solubility of API's as this property is of interest in the initial screening process of potential drugs. Further in the drug development chain during lab-scale synthesis, purification, crystallization, and scale-up from batch to continuous processes, information on the solubility of the API's in organic solvents other than water is required. Despite of the tremendous progress made in machine learning for molecular and material science, for the direct prediction of solid solubility in organic solvents at different temperatures, the application of data driven methods is limited by data abundance. For this reason, data-driven machine learning methods are combined with computational chemistry and thermodynamics for the accurate prediction of solid solubility. The method uses machine learning for the fast prediction of important properties and thermodynamics to relate those properties to the solid solubility. The machine learning models are used to predict solvation free energy 1 , solvation enthalpy, Abraham solute parameters 2 , and aqueous solid solubility at 298K. A transfer learning method combines quantum chemistry and experimental data for the prediction of solvation free energy and enthalpy to broaden the application range of the models to solutes with a higher molar mass 1 . The Abraham solute parameters are used to calculate the sublimation enthalpy, and the gas and solid phase heat capacities at 298K with correlations recently published by Abraham and Acree 3, 4 . For temperatures up to 350K, no empirical data is required for the prediction of solid solubility limits. At higher temperatures, the temperature dependence of the dissolution enthalpy has to be accounted for through the temperature dependence of the solvation free energy. To calculate the solvation free energy at higher temperatures we rely on our previously published method 5 , for which the solvent's critical properties are required. To train the machine learning submodels and to assess the accuracy and robustness of the new method, several quantum chemical and experimental datasets were constructed or compiled in this work. They are all collected in the SolProp data collection, which is made publicly available on Zenodo (https://zenodo.org/record/5970538). In the new CombiSolu-Exp and CombiSolu-HighT-Exp databases, experimental solid solubility data in pure organic solvents at different temperatures are collected from over 170 different literature sources. They are used to validate the new method for predicting solid solubility limits for more than 6000 datapoints including more than 115 solutes, 95 organic solvents, and temperatures up to 593K. Data from different sources are compared to assess the experimental uncertainty in published solid solubility data. For aqueous solid solubility, the mean-absolute-error (MAE) between different data sources goes up to 0.17 log10(mol/L), while for the solid solubility in organic solvents more than 12% of the duplicated data has an absolute deviation higher than 0.2 log10(mol/L). It should be noted that this rather high experimental uncertainty can significantly affect the perceived performance of the new method and machine learning models. First, the solid solubility at 298K in different organic solvents is predicted by the proposed model. For 1051 datapoints in the CombiSolu-Exp database (98 solutes and 87 solvents), using only molecular identifiers of the solute and solvent, the solid solubility is predicted with a MAE equal to 0.62 log10(mol/L). This method uses machine learning models to predict the aqueous solid solubility, which is used as a reference to relate the solubility in water to the solubility in other solvents through thermodynamic relationships. Using the experimental solid solubility in ethanol as a reference improves the predictions to a MAE of 0.16 log10(mol/L). However, the experimental measurements in ethanol often originate from the same source as the experimental data measured in other solvents for the same solute. As a result, it is expected that some consistent errors specific to the experimental apparatus or procedure are compensated for and the model performance might be overestimated. Alternatively, we used the experimental aqueous solid solubility from different sources as a reference which led to a MAE of 0.35 log10(mol/L) for the prediction of solid solubility in different organic solvents at 298K. To relate the solid solubility at 298K with the solid solubility at different temperatures, the model uses the dissolution enthalpy. This value is calculated through thermodynamic relations with the solvation enthalpy and sublimation enthalpy at 298K. Up to 350K, the temperature dependence of the dissolution enthalpy can be neglected and the solvation enthalpy at 298K, predicted by a transfer learning model, can be used for its calculation. The 4922 solid solubility datapoints in the CombiSolu-Exp database (115 solutes and 95 solvents between 243 and 364K) are predicted using only molecular identifiers of the solute and solvent with a MAE equal to 0.99 log10(mol/L). Using experimental solid solubility measured in ethanol as a reference - if available - improves the MAE to 0.29 log10(mol/L). At higher temperatures (>350K), the temperature dependence of the dissolution enthalpy has to be accounted for. This value can be calculated using the temperature dependent solvation enthalpy and the sublimation enthalpy at 298K. The temperature dependent solvation enthalpy can be calculated with our previously published method 5 and the solvent’s critical properties. This method is validated with experimental solid solubility data from the CombiSolu-HighT-Exp database for 1306 datapoints, including 67 solutes and 15 solvents. The solubility trend as a function of temperature is captured well for temperatures up to 593K. The developed model has an excellent performance in predicting solubility trends in different solvents at 298K and as a function of temperature. The performance can be seen in the attached figure for different solutes. Even though the absolute solid solubility prediction can be off in some cases, the ability to predict solubility trends has tremendous applications. With additional user information on the solubility of the solute in one organic solvent at room temperature (298K), the accuracy of the method can be improved. The newly developed method can be accessed through our conda package (https://anaconda.org/fhvermei/solprop_ml) and through our user-friendly web interface (https://rmg.mit.edu/database/solvation/searchSolubility/). [1] Vermeire, F. H.; Green, W. H., Transfer learning for solvation free energies: From quantum chemistry to experiments . Chemical Engineering Journal 2021, 418, 129307. [2] Chung, Y.; Vermeire, F. H., et al., Group Contribution and Machine Learning Approaches to Predict Abraham Solute Parameters, Solvation Free Energy, and Solvation Enthalpy . Journal of Chemical Information and Modeling 2022, 62, (3), 433-446. [3] Abraham, M. H.; Acree, W. E., Estimation of heat capacities of gases, liquids and solids, and heat capacities of vaporization and of sublimation of organic chemicals at 298.15 K . Journal of Molecular Liquids 2020, 317, 113969. [4] Abraham, M. H.; Acree, W. E., Estimation of enthalpies of sublimation of organic, organometallic and inorganic compounds . Fluid Phase Equilibria 2020, 515, 112575. [5] Chung, Y.; Gillis, R. J., et al., Temperature-dependent vapor–liquid equilibria and solvation free energy estimation from minimal data . AIChE Journal 2020, 66, (6), e16976.",
+    "presenting_author": "Florence Vermeire | KU Leuven, Belgium",
+    "authors": [
+      "Florence Vermeire | KU Leuven, Belgium",
+      "Yunsie Chung | Massachusetts Institute of Technology, Cambridge",
+      "William Green | Massachusetts Institute of Technology, Cambridge"
+    ],
+    "authors_structured": [
+      {
+        "name": "Florence Vermeire",
+        "affiliation": "KU Leuven, Belgium",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yunsie Chung",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "William Green",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "297b",
+    "sortable_time": "2022-11-15_12:53:00_13:16:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645950"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645096",
+    "paper_endpoint": "Paper/645096",
+    "paper_id": "645096",
+    "topic": "Towards a Universal Adsorption Model Using Machine Learning: Motivation, Progress and Challenges",
+    "title": "Towards a Universal Adsorption Model Using Machine Learning: Motivation, Progress and Challenges",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "49679",
+    "session_title": "Spotlights in Thermodynamics and Computational Molecular Science (Invited Talks)",
+    "session_number": "297",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Adsorption is central to innumerable processes of biological, physical and chemical nature. Hence, adsorption has concerned scientists for long. Perhaps more notably in the first half of the 20 th century, when efforts to develop models to the predict the adsorption isotherm (the “heart” of adsorption studies) flourished. Some consider the Brunauer-Emmet-Teller (BET) model as the first attempt to create a universal adsorption theory, followed by models such as the Dubinin-Radushkievich (DR) model. However, it quickly became clear that an analytical equation including all factors affecting adsorption would have such complexity that it would be impractical, given the mathematical tools of the time. More than 70 years later, adsorption continues to be critical in a diversity of applications. For example, for chemical separations, adsorption predictions are required to accelerate the discovery of adsorbents among a “search space” currently spanning millions of adsorbents, including “new age” materials such as metal-organic frameworks (MOFs). Although molecular simulation have helped navigate the above search space, the cost of adsorption predictions with this method has limited the “bandwidth” of the research community to a very limited number of chemical separations at specific conditions, while only considering limited points in the adsorption isotherm to estimate relative performance among adsorbents. A fast universal model to predict adsorption isotherms would enable i) searching for suitable adsorbents for the ~80% of current chemical separations that could potentially see their energy cost reduced 10-fold by switching from a thermal method to an adsorptive method, and ii) coupling adsorbent and process optimization, as well as facilitating process modeling-based screening for the top adsorbents. Here it is proposed that now it is the time to retake the development of universal adsorption models by leveraging the mathematical tools of the “age of data.” As a first step, it was demonstrated that the same deep neural network (DNN) trained with molecular simulation data for 200 alchemical molecules in 2,000 MOFs can predict individual full adsorption isotherms in the 0.01 to 100 bar range for CH 4 , Ar, Xe, Kr, H 2 , N 2 , O 2 , C 2 H 6 in 400 MOFs. Moreover, the DNN model was found to have good transferability when tested on MOFs of a separate database previously unknown to the model. To illustrate the screening possibilities that a universal DNN-based adsorption model opens, the model predictions were combined with ideal adsorption solution theory (IAST) to screen a ~50,000 MOF database for their capability to separate four industrially relevant mixtures (Xe/Kr, CH4/CH6, N2/CH4, and Ar/Kr) at multiple compositions and pressures. For this framework to work with sufficient accuracy, it was found critical for the DNN to make accurate predictions at low pressures (0.01–0.1 bar). After training a model with this capability, it was found that MOFs in the 95th and 90th percentiles of separation performance determined from DNN+IAST calculations were 65% and 87%, respectively, the same as MOFs in the simulation-predicted 95th percentile across several mixtures at diverse conditions (on average). Finally we discuss currently pursued strategies and related challenges in extending prediction capabilities of machine learning-based towards more diverse types of molecules.",
+    "presenting_author": "Diego Gomez Gualdron | Colorado School of Mines, Golden",
+    "authors": [
+      "Diego Gomez Gualdron | Colorado School of Mines, Golden"
+    ],
+    "authors_structured": [
+      {
+        "name": "Diego Gomez Gualdron",
+        "affiliation": "Colorado School of Mines, Golden",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "297c",
+    "sortable_time": "2022-11-15_13:16:00_13:39:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645096"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645233",
+    "paper_endpoint": "Paper/645233",
+    "paper_id": "645233",
+    "topic": "Atomistic Simulations of RNA Folding in Bulk Aqueous Solutions and under Confinement",
+    "title": "Atomistic Simulations of RNA Folding in Bulk Aqueous Solutions and under Confinement",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "49679",
+    "session_title": "Spotlights in Thermodynamics and Computational Molecular Science (Invited Talks)",
+    "session_number": "297",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "RNA is an essential molecule of life and is a promising agent to base drug and vaccine formulations. RNA is often encapsulated for pharmaceutical formulations, synthetic biology applications, and also for studying its evolution in the context of the origins of life. Encapsulation fundamentally alters thermodynamic conditions by reducing the available volume and modifying the chemistry of the surroundings. To investigate the effects of encapsulation on RNA folding, here we performed advanced sampling simulations of folding an explicitly solvated, all-atom GAGA tetraloop (10-nucleotides) encapsulated in model surfaces. We systematically modified the surface attractiveness and sizes of encapsulating sphere. We found that folded state is destabilized in the encapsulated RNA (with respect to the RNA in bulk aqueous solution) regardless of the attractiveness of the encapsulating surface or the size of encapsulation within the range we tested.",
+    "presenting_author": "Gül Zerze | University of Houston, TX",
+    "authors": [
+      "Gül Zerze | University of Houston, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gül Zerze",
+        "affiliation": "University of Houston, TX",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "297d",
+    "sortable_time": "2022-11-15_13:39:00_14:02:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645233"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/642427",
+    "paper_endpoint": "Paper/642427",
+    "paper_id": "642427",
+    "topic": "Thermodynamic Stability of Multimetallic Nanoparticles",
+    "title": "Thermodynamic Stability of Multimetallic Nanoparticles",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "49679",
+    "session_title": "Spotlights in Thermodynamics and Computational Molecular Science (Invited Talks)",
+    "session_number": "297",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Metal nanoparticles find tremendous application in modern technology, ranging from catalysis to medicine. However, how different metals mix at the nanoscale and their exact thermodynamically preferred chemical ordering (positioning of different metal atoms on the nanoparticle lattice) is unknown. In this presentation, I will highlight recent computational advances on accurately describing the thermodynamic stability of bimetallic nanoparticles of any size, shape, metal composition and chemical ordering, by combining Density Functional Theory calculations with machine learning. The developed models can be extended to multimetallic nanoparticles, as well as used for the description of chemical adsorption on the nanoparticle surface, thus, connecting nanoparticle stability with application properties (sensing, catalysis, etc.).",
+    "presenting_author": "Giannis Mpourmpakis | University of Pittsburgh, PA",
+    "authors": [
+      "Giannis Mpourmpakis | University of Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Giannis Mpourmpakis",
+        "affiliation": "University of Pittsburgh, PA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "297e",
+    "sortable_time": "2022-11-15_14:02:00_14:25:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/642427"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/642414",
+    "paper_endpoint": "Paper/642414",
+    "paper_id": "642414",
+    "topic": "Probing Realistic Water-2D Material Interfaces Via Combined Quantum and Classical Simulations",
+    "title": "Probing Realistic Water-2D Material Interfaces Via Combined Quantum and Classical Simulations",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "49679",
+    "session_title": "Spotlights in Thermodynamics and Computational Molecular Science (Invited Talks)",
+    "session_number": "297",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Two-dimensional (2D) materials are gaining increasing attention for use in seawater desalination, osmotic power harvesting, and biological sensing devices. Because water comes into close contact with 2D material surfaces in these applications, it is important to understand water-2D material interactions at the molecular level. At the same time, 2D materials often have defects, such as vacancies and grain boundaries in them, and thus understanding their effect on interfacial properties is crucial to model such interfaces realistically. In this talk, I will highlight our recent work on the combined use of quantum-mechanical density functional theory (DFT) calculations, classical molecular dynamics (MD) simulations, and kinetic Monte Carlo (KMC) simulations to probe water-2D material interfaces. While DFT calculations can be used to predict the distribution of charge inside defective 2D materials, MD simulations can be used to simulate the thermodynamic and transport properties of interfacial water. Moreover, KMC simulations can be combined with DFT and graph-theoretic algorithms to predict the shapes of vacancy defects in 2D materials. First, I will briefly outline how the combined application of KMC simulations, DFT calculations, and chemical graph theory has enabled the solution of the isomer cataloging problem for vacancy defects in 2D materials. I will demonstrate the excellent agreement of simulated vacancy defect shapes in two prototypical 2D materials – graphene and hexagonal boron nitride (hBN) – with experimental transmission electron microscopy images. Not only that, I will also briefly discuss the use of machine learning to develop structure-formation relationships for vacancy defects in graphene. Second, I will discuss the effect of vacancy defects and surface roughness on the wettability and slip length of water on hBN. Indeed, at the molecular level, the no-slip boundary condition is violated, as quantified by the slip length of water on the surface. I will show that vacancies at a lower concentration of 0.082 nm -2 do not affect the wettability of hBN, although they still affect the water slip length. On the other hand, vacancies at a larger concentration of 0.32 nm -2 affect interfacial properties significantly. In fact, nitrogen vacancies at such concentrations can increase the slip length of water on hBN threefold to around 18 nm, presenting hBN as an alternative high-slip surface to graphene. I will also explain how surface roughness in hBN can explain the water contact angle of 66° and water slip length of 1 nm measured experimentally, simultaneously highlighting the prominent role played by electrostatic interactions in the interfacial properties of water on realistic hBN surfaces. Third, I will present a study on the role of grain boundaries and interfacial electrostatic interactions in modulating water and ion transport via bicrystalline nanoporous hBN. I will discuss how grain boundaries alter the areas and shapes of nanopores in bicrystalline hBN, as compared to the nanopores in monocrystalline hBN. Although bicrystalline nanoporous hBN with a lower misorientation angle shows an improved water flow rate by ~30%, it demonstrates reduced Na + ion rejection by ∼6%, as compared to monocrystalline hBN. I will also explain the role of the nanopore shape in water desalination, demonstrating that more elongated pores with smaller sizes can match water permeation through less elongated pores of slightly larger sizes, with a concomitant ~3–4% decrease in Na + rejection. Finally, I will discuss how the water flow rate is affected by interfacial electrostatic interactions. In this regard, the water flow rate is the highest when altered partial charges on B and N atoms are determined using DFT calculations, as compared to when no partial charges or bulk partial charges (i.e., charged hBN) are considered. Overall, these multi-scale investigations of thermodynamic and transport properties offer new insights into the wettability of defective 2D material surfaces and water flow on them, as well as into water and ion transport through nanopores in realistic 2D materials.",
+    "presenting_author": "Ananth Govind Rajan | Indian Institute of Science, Bengaluru",
+    "authors": [
+      "Ananth Govind Rajan | Indian Institute of Science, Bengaluru"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ananth Govind Rajan",
+        "affiliation": "Indian Institute of Science, Bengaluru",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "297f",
+    "sortable_time": "2022-11-15_14:25:00_14:48:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/642414"
+  }
+]

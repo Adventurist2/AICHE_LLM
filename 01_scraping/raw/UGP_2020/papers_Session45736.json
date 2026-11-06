@@ -1,0 +1,496 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/599372",
+    "paper_endpoint": "Paper/599372",
+    "paper_id": "599372",
+    "topic": "Shifting Paradigms: Using Molecular Dynamics with Machine Learning for the Calculation of Thermodynamic Properties of Fluids",
+    "title": "Shifting Paradigms: Using Molecular Dynamics with Machine Learning for the Calculation of Thermodynamic Properties of Fluids",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45736",
+    "session_title": "Applications of Data Science in Molecular Sciences II",
+    "session_number": "356",
+    "program_title": "Topical Conference: Applications of Data Science to Molecules and Materials",
+    "symposium_title": "Applications of Data Science to Molecules and Materials",
+    "abstract": "The accurate prediction of fluid properties holds an essential role for chemical engineering, with ubiquitous applications in many areas from process design, reaction engineering to fluid dynamics. For this purpose, the current chemical engineering folklore employs empirical and/or theory-based correlations based on a very reduced number of experimental observations. The limitations are obvious, particularly when extrapolating to unknown compounds and/or thermodynamic conditions remote from those represented by the experiments. We propose a new workflow, where we strive to combine molecular simulations (validated against experiments) to deliver an extensive and reasonably accurate database of thermodynamic properties with machine learning (ML) algorithms to provide for the synthesis and correlation of the information. We suggest that this new paradigm can, in some instances, take over the classical experiment/equation of state tools currently in use in the field. As a proof-of-concept we explore the use of the SAFT- Mie force field 1 to generate critical properties, vapor pressures and saturated densities of a representative family of common fluids and correlate them with ML techniques. In this work, we employ machine learning algorithms such as artificial neural networks (ANN) and Gaussian process regression (GPR). The pros and cons of the models created by each technique are analysed, considering the amount of data required, the accuracy of the model and other further applications and drawbacks of each technique. With prior knowledge of the underlying theory relating these thermodynamic properties, hybrid models are created in the sense of using suitable data transformations with theoretical basis. Using the SAFT- Mie coarse-grained force field, molecules can be described as chains of identical spherical segments employing four key molecular descriptors . A key aspect of the model is that there is an existing equation of state (EoS) 2 that can reproduce the outputs of the molecular simulations with quantitative accuracy. By generating pseudo-experimental data for a range of these parameters, as a proof-of-concept, we attempt to replicate the SAFT-VR Mie equation of state with machine learning, to predict critical properties , vapour-liquid phase equilibrium properties and supercritical densities from these molecular descriptors and state properties. The comparison of PvT properties between the EoS and the ML model provides a benchmark to the viability of different machine learned models in predicting fluid phase properties. Different properties present different complexity of machine-learned model, with critical properties taking zero state properties as input being the simplest model, while supercritical properties requiring two state properties (temperature and pressure). While both ANN and GPR models are able to correlate with high degree of statistical performance with R 2 values above 0.99, the selection of activation functions and data transformation methods is essential. For a vapour pressure machine-learned model, the direct correlation between and results in a model that appears to give good R 2 score, but corresponds to extremely large average absolute deviation (AAD), as pressure varies across different orders of magnitude. Alternatively, although the use of the Clausius-Clapeyron relationship and training a model to correlate and might appear worse near the critical point, the overall performance in AAD improves significantly. Similarly, selecting the correct activation function improves the curves of the VLE envelope. Looking at individual saturated density curves, models with less smooth activation functions (such as the Matern kernel for GPR, or the ELU function for ANN) presents irregular shapes despite giving a statistically acceptable performance. This is because the machine is “informed” of the general shape of the model through the activation functions, which is essential to produce a good correlation. We show how the ideal activation function in this case for ANN would be the tanh activation function, while similarly the radial basis function is the ideal kernel for GPR. A pathway towards the correlation of fluid properties from molecular dynamics simulated data to a machine-learned model is being drawn out, with applications from both machine learning techniques. Comparing the two machine learning algorithms used, GPR requires much less data to achieve quantitative accuracy, and it is a more sophisticated technique as it calculates the variance of the predicted model which is useful for error analysis. However, it becomes increasingly expensive, from a computational point of view, as the complexity of the problem escalates with more input dimensions. In this sense, ANN is a more robust and flexible technique but requires a much larger set of data to be generated. Discussion along these lines is included in the presentation. References: [1] Müller, E. A.; Jackson, G. (2014). Force-field parameters from the SAFT-equation of state for use in coarse-grained molecular simulations. Annu. Rev. Chem. Biomolec. Eng ., 5(1), 405–427. [2] Lafitte, T., Apostolakou, A., Avendaño, C., Galindo, A., Adjiman, C.S., Müller, E.A., Jackson, G. (2013). Accurate statistical associating fluid theory for chain molecules formed from Mie segments. J Chem. Phys ., 139(15), 154504.",
+    "presenting_author": "Erich Muller | Imperial College London, United Kingdom",
+    "authors": [
+      "Kezheng Zhu | Imperial College London, United Kingdom",
+      "Erich Muller | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kezheng Zhu",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Erich Muller",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "356a",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/599372"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/599712",
+    "paper_endpoint": "Paper/599712",
+    "paper_id": "599712",
+    "topic": "Combining Molecular Dynamics and Machine Learning to Predict Interfacial Properties",
+    "title": "Combining Molecular Dynamics and Machine Learning to Predict Interfacial Properties",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45736",
+    "session_title": "Applications of Data Science in Molecular Sciences II",
+    "session_number": "356",
+    "program_title": "Topical Conference: Applications of Data Science to Molecules and Materials",
+    "symposium_title": "Applications of Data Science to Molecules and Materials",
+    "abstract": "Molecular dynamics (MD) simulations are a powerful tool for analyzing the properties and behavior of materials in solvent environments by explicitly representing atomistic degrees of freedom and accounting for intermolecular interactions. However, MD simulations can require lengthy runtimes that limit the high-throughput screening of system properties. Moreover, the analysis of MD simulation output typically requires the implementation of techniques that rely on human insight to relate the properties of a statistical ensemble to relevant macroscopic properties. Alternatively, machine learning has emerged as a valuable tool to interpret molecular simulation data. Here, we present computational techniques that use machine learning to analyze molecular simulations of complex solvent environments. We focus on quantifying the hydrophobicity of functionalized interfaces by utilizing deep learning to analyze MD-derived interfacial water configurations. By selecting an appropriate representation of the MD output data, we demonstrate that a 2-dimensional convolutional neural network (2D CNN) can infer spatial correlations between solvent molecules and map these features to thermodynamic observables. We systematically vary the representation of the MD input data to determine the impact on the accuracy of the ML predictions. Once trained, we find that the 2D CNN can predict dewetting free energies with minimal simulation input, facilitating the rapid screening of interfacial hydrophobicity for a range of surface compositions. We further compare the accuracy of alternative ML architectures, including 3D CNNs that incorporate temporal correlations in our deep learning framework and graph neural networks that incorporate the network connectivity of water hydrogen bonds. Together, these methodologies demonstrate that ML analysis of spatial and temporal correlations that are encoded within the solvent environment can rapidly predict interfacial hydrophobicity to guide materials design.",
+    "presenting_author": "Atharva Kelkar | University of Wisconsin-Madison",
+    "authors": [
+      "Atharva Kelkar | University of Wisconsin-Madison",
+      "Bradley C. Dallin | University of Wisconsin-Madison",
+      "Reid Van Lehn | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Atharva Kelkar",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Bradley C. Dallin",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Reid Van Lehn",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "356b",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/599712"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/609813",
+    "paper_endpoint": "Paper/609813",
+    "paper_id": "609813",
+    "topic": "Data Science Based Electrolyte Design for Organic Redox Flow Batteries",
+    "title": "Data Science Based Electrolyte Design for Organic Redox Flow Batteries",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45736",
+    "session_title": "Applications of Data Science in Molecular Sciences II",
+    "session_number": "356",
+    "program_title": "Topical Conference: Applications of Data Science to Molecules and Materials",
+    "symposium_title": "Applications of Data Science to Molecules and Materials",
+    "abstract": "Ability to design materials for targeted functionality rather than traditional intuitive and trial-by-error based methods can bring enormous societal and technological progress. In this context, exploring the large space of potential materials for energy storage device is computationally intractable. In particular, the discovery of organic redox active species - which dictates the energy density, specific capacity and cycle life is critical step in realizing viable redox flow battery (RFB) technology - will be taunting challenge considering billions of organic structural possibilities. Traditional methodology relies on combinatorial approach of additives, functional groups and solvent composition to achieve higher solubility and stability of the specific redox molecule. However, considering the wide range of materials selection, it is imperative to build an artificial intelligence-based design formulation that will help us bottom up design of RFB electrolytes. In recent years, our team has been building database and scientific framework for electrolyte design formulations based on chemistry informed (e.g. solvate structure and inherent properties) machine learning approach. This framework helps us in solvent and functional group selection process, and ultimately enhance the solubility and stability through inverse molecular design. We will discuss our efforts and achievements related to the data science-based framework of electrolyte design formulations applicable for organic molecule based redox flow battery systems. Ability to design materials for targeted functionality rather than traditional intuitive and trial-by-error based methods can bring enormous societal and technological progress. In this context, exploring the large space of potential materials for energy storage device is computationally intractable. In particular, the discovery of organic redox active species - which dictates the energy density, specific capacity and cycle life is critical step in realizing viable redox flow battery (RFB) technology - will be taunting challenge considering billions of organic structural possibilities. Traditional methodology relies on combinatorial approach of additives, functional groups and solvent composition to achieve higher solubility and stability of the specific redox molecule. However, considering the wide range of materials selection, it is imperative to build an artificial intelligence-based design formulation that will help us bottom up design of RFB electrolytes. In recent years, our team has been building database and scientific framework for electrolyte design formulations based on chemistry informed (e.g. solvate structure and inherent properties) machine learning approach. This framework helps us in solvent and functional group selection process, and ultimately enhance the solubility and stability through inverse molecular design. We will discuss our efforts and recent results related to the data science-based framework of electrolyte design formulations applicable for organic molecule based redox flow battery systems.",
+    "presenting_author": "Vijayakumar Murugesan | Pacific Northwest National Laboratory, Richland, WA",
+    "authors": [
+      "Vijayakumar Murugesan | Pacific Northwest National Laboratory, Richland, WA",
+      "Emily Saldanha | Pacific Northwest National Laboratory, Richland, WA",
+      "Peiyuan Gao | Pacific Northwest National Laboratory, Richland, WA",
+      "Aaron Hollas | Pacific Northwest National Laboratory, Richland, WA",
+      "Wei Wang | Pacific Northwest National Laboratory, Richland, WA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Vijayakumar Murugesan",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Emily Saldanha",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      },
+      {
+        "name": "Peiyuan Gao",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      },
+      {
+        "name": "Aaron Hollas",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      },
+      {
+        "name": "Wei Wang",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "356c",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/609813"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/610519",
+    "paper_endpoint": "Paper/610519",
+    "paper_id": "610519",
+    "topic": "Development of an Artificial Neural Network Model to Predict Electrical Conductivity of Pure Ionic Liquids and Ionic Liquid-Ionic Liquid Mixtures",
+    "title": "Development of an Artificial Neural Network Model to Predict Electrical Conductivity of Pure Ionic Liquids and Ionic Liquid-Ionic Liquid Mixtures",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45736",
+    "session_title": "Applications of Data Science in Molecular Sciences II",
+    "session_number": "356",
+    "program_title": "Topical Conference: Applications of Data Science to Molecules and Materials",
+    "symposium_title": "Applications of Data Science to Molecules and Materials",
+    "abstract": "Ionic liquids are room temperature ionic solvents characterized by low volatility, designer tunability, high thermal and electrochemical stability. These properties make ionic liquids ideal candidates for the replacement of organic solvents as electrolytes in Li-ion batteries. Despite their favorable attributes, high viscosity of many ionic liquids is a hindrance to exploiting their full potential for battery applications. One way to tackle this challenge is to develop novel ionic liquids by altering the identity of the cation, anion, or substituents on the ions. The enormous chemical space for such a manipulation is extremely difficult, if not impossible, to navigate efficiently via experimental or molecular simulation-based approaches. In such instances, machine learning techniques offer an exciting alternative, if sufficient data is available to train a model. In this presentation, we will describe our efforts at developing a machine learning model based on the ionic conductivity data obtained from the NIST ILThermo Database. A feed forward artificial neural network (FFAAN) comprised of an input layer, a hidden layer and an output layer is obtained from the data on ~100 ionic liquids. We will demonstrate that the FFAAN is able to capture the data with a high degree of accuracy over five orders of magnitude. The machine learning model is then used to predict the ionic conductivity data for ~1200 pure ionic liquids obtained by combining the unique cations and anions in the database. We will also show how the machine learning model can be employed to predict the ionic conductivity for ~840,000 ionic liquids. The validity of such predictions will be demonstrated by comparing the ionic conductivity of those binary ionic liquids for which experimental data is available. Furthermore, we will report on 5000 potential binary ionic liquid-ionic liquid mixtures for which there exists a possibility for obtaining ionic conductivity higher than those of the pure ionic liquids making up the binary ionic liquid mixtures.",
+    "presenting_author": "Pratik Dhakal | Oklahoma State University, Stillwater",
+    "authors": [
+      "Pratik Dhakal | Oklahoma State University, Stillwater",
+      "Jindal K. Shah | Oklahoma State University, Stillwater"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pratik Dhakal",
+        "affiliation": "Oklahoma State University, Stillwater",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jindal K. Shah",
+        "affiliation": "Oklahoma State University, Stillwater",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "356d",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/610519"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/598191",
+    "paper_endpoint": "Paper/598191",
+    "paper_id": "598191",
+    "topic": "Incorporating Long-Range Interactions in Machine Learning Models of Water and Aqueous Electrolyte Solutions",
+    "title": "Incorporating Long-Range Interactions in Machine Learning Models of Water and Aqueous Electrolyte Solutions",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45736",
+    "session_title": "Applications of Data Science in Molecular Sciences II",
+    "session_number": "356",
+    "program_title": "Topical Conference: Applications of Data Science to Molecules and Materials",
+    "symposium_title": "Applications of Data Science to Molecules and Materials",
+    "abstract": "In recent years, atomistic machine learning models have become increasingly popular in molecular simulations, given their ability to combine the accuracy of quantum mechanical representations with the speed and efficiency of classical potentials. These models are capable of learning highly complex and multi-dimensional interactions within a local environment but face challenges in capturing long-range behavior. In this work, we train deep neural networks to interatomic Potential Energy Surfaces to construct many-body classical potentials that accurately represent the structure and dynamics of water and electrolyte systems. We introduce a formalism to represent long-range electrostatics by decomposition of the Coulombic Ewald energy from the local environment representation. We demonstrate the effectiveness of this approach by predicting electrolyte solution properties and vapor-liquid coexistence behavior, which highlights the versatility of our models in representing heterogeneous and charged systems.",
+    "presenting_author": "Shuwen Yue | Princeton University, NJ",
+    "authors": [
+      "Shuwen Yue | Princeton University, NJ",
+      "Maria Carolina Nicola Barbosa Muniz | Princeton University, NJ",
+      "Marcos Andrade | Princeton University, NJ",
+      "Linfeng Zhang | Princeton University, NJ",
+      "Roberto Car | Princeton University, NJ",
+      "Athanassios Panagiotopoulos | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shuwen Yue",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Maria Carolina Nicola Barbosa Muniz",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Marcos Andrade",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Linfeng Zhang",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Roberto Car",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Athanassios Panagiotopoulos",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "356f",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/598191"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/600934",
+    "paper_endpoint": "Paper/600934",
+    "paper_id": "600934",
+    "topic": "Fully Convolutional Neural Network Models for Materials Science Applications",
+    "title": "Fully Convolutional Neural Network Models for Materials Science Applications",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45736",
+    "session_title": "Applications of Data Science in Molecular Sciences II",
+    "session_number": "356",
+    "program_title": "Topical Conference: Applications of Data Science to Molecules and Materials",
+    "symposium_title": "Applications of Data Science to Molecules and Materials",
+    "abstract": "In silico design can be an efficient and cost effective method for discovering new materials. Traditionally, quantum mechanics, classical approaches, and quantitative structure property relationships (QSAR) are used to design materials using the structure of the materials as an input. Although these methods are helpful in designing materials, they all suffer from a common drawback: they estimate properties from an input structure which usually necessitates iteration between synthesis and modeling to achieve the desired performance metric. Moreover, that process is also dependent on the ingenuity of design team to identify potential materials for computational evaluation which may be very different structurally from the benchmark material. Here we describe a generative deep learning approach to address some of these drawbacks: a fully convolutional neural network (FCNN) molecular generative model. The efficiency and reconstruction accuracy of this method was found to be comparable with Junction Tree variational autoencoder (JT-VAE) and superior to a SMILES-based variational autoencoder (CVAE). Furthermore, this approach (p-FCNN) is tuned to generate molecules which incorporate a larger fraction of heteroatoms (heavy atoms other than C’s) compared to those from CVAE. Detailed analysis will be provided to understand the relative distribution of the newly generated molecules vs. the training set. In addition, the latent space generated from FC-NN will be organized according to ALogP and the response surface will be smoothed using a Gaussian process model. Gradient search will be performed on the organized latent space to extract molecules near the optimal value of ALogP. In conclusion, FCNN and p-FCNN can be considered as an efficient generative deep learning approach to discover materials with an optimized performance metric.",
+    "presenting_author": "Jonathan Moore | Dow, Midland, MI",
+    "authors": [
+      "Jonathan Moore | Dow, Midland, MI",
+      "Ellen Du | The Dow Chemical Company, Lake Jackson, TX",
+      "Dave Magley | The Dow Chemical Company, Midland",
+      "Ryan L. Marson | The Dow Chemical Company, Midland",
+      "Sukrit Mukhopadhyay | The Dow Chemical Company, Midland",
+      "Bart Rijksen | Dow Benelux BV, Terneuzen, Netherlands",
+      "Christopher Roth | The Dow Chemical Company, Midland",
+      "Joey Storer | The Dow Chemical Company, Midland",
+      "Abraham C. Stern | NVIDIA Corporation, Santa Clara, CA",
+      "Michelle Gill | NVIDIA Corporation, Santa Clara, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jonathan Moore",
+        "affiliation": "Dow, Midland, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ellen Du",
+        "affiliation": "The Dow Chemical Company, Lake Jackson, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Dave Magley",
+        "affiliation": "The Dow Chemical Company, Midland",
+        "designation": "Author"
+      },
+      {
+        "name": "Ryan L. Marson",
+        "affiliation": "The Dow Chemical Company, Midland",
+        "designation": "Author"
+      },
+      {
+        "name": "Sukrit Mukhopadhyay",
+        "affiliation": "The Dow Chemical Company, Midland",
+        "designation": "Author"
+      },
+      {
+        "name": "Bart Rijksen",
+        "affiliation": "Dow Benelux BV, Terneuzen, Netherlands",
+        "designation": "Author"
+      },
+      {
+        "name": "Christopher Roth",
+        "affiliation": "The Dow Chemical Company, Midland",
+        "designation": "Author"
+      },
+      {
+        "name": "Joey Storer",
+        "affiliation": "The Dow Chemical Company, Midland",
+        "designation": "Author"
+      },
+      {
+        "name": "Abraham C. Stern",
+        "affiliation": "NVIDIA Corporation, Santa Clara, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Michelle Gill",
+        "affiliation": "NVIDIA Corporation, Santa Clara, CA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "356g",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/600934"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/599439",
+    "paper_endpoint": "Paper/599439",
+    "paper_id": "599439",
+    "topic": "Deep Learning for Characterizing and Modeling the Dynamics of Complex Colloidal Self-Assembly Systems",
+    "title": "Deep Learning for Characterizing and Modeling the Dynamics of Complex Colloidal Self-Assembly Systems",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45736",
+    "session_title": "Applications of Data Science in Molecular Sciences II",
+    "session_number": "356",
+    "program_title": "Topical Conference: Applications of Data Science to Molecules and Materials",
+    "symposium_title": "Applications of Data Science to Molecules and Materials",
+    "abstract": "Self-assembly (SA) is the process by which discrete components (e.g., nanoparticles in solution) spontaneously organize into an ordered structure [1]. The spontaneous self-organization central to SA enables “bottom-up” materials synthesis, which allows for manufacturing advanced, highly ordered crystalline structures in an inherently parallelizable and cost-effective manner. Thus, SA can create new avenues for highly scalable, economical manufacturing of novel metamaterials with unique optical, electrical, or mechanical properties [2-4]. SA is an inherently stochastic (i.e., random) process prone to kinetic arrest [2]. This leads to variability in materials manufacturing and possibly high defect rates, which can severely compromise the viability of using SA to reproducibly manufacture advanced materials. However, creating a systematic methodology to characterize and understand the highly nonlinear and stochastic SA dynamics responsible for kinetic arrest remains an open grand challenge. Previous attempts to characterize kinetically arrested states have either relied on physics-based order parameters that cannot accurately resolve structures in the face of thermal fluctuations or unsupervised learning techniques based on diffusion maps that provide incomplete physical interpretations of the underlying kinetics [5-7]. Moreover, all attempts to model SA dynamics either involve physics-based strategies based on the chemical master equation or parameter estimation strategies based on Bayesian Inference, neither of which are computationally tractable for practically sized SA systems [7-8]. Due to their strong adaptability and generalization properties in learning, strong noise tolerance, and ability to solve exceptionally large problems, deep neural networks (DNNs) are ideal candidates for investigating the complex, stochastic, nonlinear dynamics of SA systems [9]. In this work, we develop a type of DNN called a variational autoencoder [10] to translate the positions of individual SA particles into an easily interpretable low-dimensional space. The autoencoder provides an explicit mapping between the particle positions and the low-dimensional space. We extrapolate the knowledge from this mapping to understand the relevant symmetries that distinguish the different environments possibly present in the system and determine a rigorous physical interpretation of the low-dimensional space. We calculate low-dimensional free energy landscapes from SA trajectory data and use the relative free energies to identify the kinetically arrested states into which the system may assemble. We leverage a second DNN to model the evolution of the SA over time and predict the likelihood that SA systems avoid kinetic traps or reach target states under certain external conditions (e.g., temperature). The main contribution of this work is the development of a systematic framework to not only fully characterize kinetic traps, but also analyze exactly how these kinetic traps can be avoided in order to reproducibly reach high-value structures. We demonstrate the efficacy of the proposed framework on an in-silico three-dimensional system of self-assembling DNA functionalized colloids that have shown enormous promise for sensing and photonics applications [11,12]. The system is especially prone to kinetic arrest due to the complexity of its underlying (and often competing) free energy surface, which includes repulsive interactions among the underlying silica particles, repulsive interactions due to ssDNA chain overlap, and attractive interactions due to ssDNA hybridization. We characterize and analyze the relative importance of these kinetic traps and demonstrate how changes in temperature (which turn ssDNA bonds “on” or “off”) can be used to avoid kinetic traps and reach target structures. References [1] Whitesides, G. M., & Grzybowski, B. (2002). Self-assembly at all scales. Science , 295 (5564), 2418-2421. [2] Paulson, J. A., Mesbah, A., Zhu, X., Molaro, M. C., & Braatz, R. D. (2015). Control of self-assembly in micro-and nano-scale systems. Journal of Process Control , 27 , 38-49. [3] Grzelczak, M., Vermant, J., Furst, E. M., & Liz-Marzán, L. M. (2010). Directed self-assembly of nanoparticles. ACS nano , 4 (7), 3591-3605. [4] Liddle, J. A., & Gallatin, G. M. (2016). Nanomanufacturing: a perspective. ACS nano , 10 (3), 2995-3014. [5] Long, A. W., & Ferguson, A. L. (2019). Landmark diffusion maps (L-dMaps): Accelerated manifold learning out-of-sample extension. Applied and Computational Harmonic Analysis , 47 (1), 190-211. [6] Reinhart, W. F., & Panagiotopoulos, A. Z. (2018). Automated crystal characterization with a fast neighborhood graph analysis method. Soft matter , 14 (29), 6083-6089. [7] Tang, X., Rupp, B., Yang, Y., Edwards, T. D., Grover, M. A., & Bevan, M. A. (2016). Optimal feedback-controlled assembly of perfect crystals. ACS nano , 10 (7), 6791-6798. [8] Lakerveld, R., Stephanopoulos, G., & Barton, P. I. (2012). A master-equation approach to simulate kinetic traps during directed self-assembly. The Journal of chemical physics , 136 (18), 184109. [9] Jain, A. K., Mao, J., & Mohiuddin, K. M. (1996). Artificial neural networks: A tutorial. Computer , 29 (3), 31-44. [10] Ohno, H. (2019). Auto-encoder-based generative models for data augmentation on regression problems. Soft Computing , 1-11. [11] Pretti, E., Zerze, H., Song, M., Ding, Y., Mahynski, N. A., Hatch, H. W., ... & Mittal, J. (2018). Assembly of three-dimensional binary superlattices from multi-flavored particles. Soft matter , 14 (30), 6303-6312. [12] Pretti, E., Mao, R., & Mittal, J. (2019). Modelling and simulation of DNA-mediated self-assembly for superlattice design. Molecular Simulation , 45 (14-15), 1203-1210.",
+    "presenting_author": "Jared O'Leary | University of California, Berkeley",
+    "authors": [
+      "Jared O'Leary | University of California, Berkeley",
+      "Runfang Mao | Lehigh University, Bethlehem, PA",
+      "Evan Pretti | Lehigh University, Bethlehem, PA",
+      "Jeetain Mittal | Lehigh University, Bethlehem, PA",
+      "Ali Mesbah | University of California, Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jared O'Leary",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Runfang Mao",
+        "affiliation": "Lehigh University, Bethlehem, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Evan Pretti",
+        "affiliation": "Lehigh University, Bethlehem, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jeetain Mittal",
+        "affiliation": "Lehigh University, Bethlehem, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "356h",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/599439"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/606830",
+    "paper_endpoint": "Paper/606830",
+    "paper_id": "606830",
+    "topic": "AI Based Analysis for Graphene Synthesis - from Size Measurement to SEM Image Generation",
+    "title": "AI Based Analysis for Graphene Synthesis - from Size Measurement to SEM Image Generation",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45736",
+    "session_title": "Applications of Data Science in Molecular Sciences II",
+    "session_number": "356",
+    "program_title": "Topical Conference: Applications of Data Science to Molecules and Materials",
+    "symposium_title": "Applications of Data Science to Molecules and Materials",
+    "abstract": "Graphene is a single atomic layer compound made up of pi (π) bonded carbon atoms. It is an excellent material used in the production of electronic and photonic components such as flexible transparent electrodes and field-effect transistors, due to its high mechanical strength, electrical conductivity, and mobility [1]. In this study, to synthesize high-quality graphene, a chemical vapor deposition experiment was conducted by using CH 4 as a precursor on Cu substrate at high temperatures [2]. The size of graphene, coverage, domain density and aspect ratio, which vary depending on the synthesis conditions including temperature, annealing time, growth time, and hydrogen supply were measured and analyzed. Owing to the variations in the shapes of graphene grains, a manual measuring technique is often used to calculate the size. Not only is this method laborious but also inefficient and resource intensive. As such, a faster, efficient, inexpensive, and standard measuring method was developed by employing Region-proposal Convolutional Neural Network(R-CNN): an objective detection algorithm [3]. In this strategy, the graphene grains were assumed to be hexagonally shaped. Consequently, the aspect ratio was also estimated by the model. Monochrome processed graphene imprinted SEM images were used as inputs by k-means clustering for the R-CNN training [4]. The R-CNN predicted size and aspect ratio were in the error margin of about 0-10% when validated against experimental data. Subsequently, to ascertain the relationship between the process variables and the size, coverage, and domain density, an Artificial Neural Network (ANN) algorithm was modelled [5]. A Support Vector Machine (SVM) was further developed to investigate the effect of the process conditions on graphene shapes using the aspect ratio as target variable [6]. Finally, by developing a Generative Adversarial Network (GAN) [7], hexagonally shaped graphene grains were generated as black and white monochrome images with the same domain density as in the experimental data. A complete network of all the developed algorithms (R-CNN, ANN, SVM, GAN) was created to generate the graphene images. To obtain the same image color and outlook just as in the experimental SEM images, a Pix2Pix model was developed to transform the monochrome images into colored real SEM images [8]. By comparison, the ANN predicted images showed high agreement with the experimentally generated ones. As a result, we were able to find optimum experimental condition efficiently using this newly developed model, having a deeper insight into graphene CVD synthesis and predicting results in the form of images. Literature cited: [1] Phaedon Avouris and Fengniam Xia, “Graphene applications in electronics and photonics” ,MRS Bulletin,vol.37,pp. 1225-1234, 2012. [2] Xuesong Li, Wei Wei Cai, Jinho An, Dongxing Yang,Richard Piner, Aruna Veamakanni, Inhwa Jung, Rodney S.Ruoff “Large-Area Synthesis of High Quality and Uniform Graphene Films on Copper Foils”, Science , vol. 324, pp. 1312-1314, 2009. [3] Ross Girshick, Jeff Donahue, Trevor Darrel, Jitendra Malik “Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation”, The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 580-587, 2014 [4] Ray Siddheswar, Turi R.H. “Determination of number of clusters in k-means clustering and application in colour image segmentation”, Proceedings of the 4th international conference on advances in pattern recognition and digital techniques, pp.137-143, 1999 [5] Kenji Suzuki, “Artificial Neural Networks - Methodological Advances and Biomedical Applications”, ISBN 978-953-307-243-2, pp. 2-14, 2011 [6] Hsu, C.-W., Chang, C.-C., and Lin, C.-J. “A practical guide to support vector classification. Tech. rep., Department of Computer Science”, National Taiwan University, 2003 [7] Goodfellow, Ian J, Pouget-Abadie “Generative adversarial nets”, Advances in Neural InformatiProcessing Systems, pp.2672-2680, 2014 [8] P. sola, Phillipzhu, Jun Yan Zhou “mage-to-Image Translation with Conditional Adversarial Networks”, Proceedings - 30th IEEE Conference on Computer Vision and Pattern Recognition, pp. 5967-5976, 2017",
+    "presenting_author": "Sungwon Hwang | Inha University, Incheon, Korea, Republic of (South)",
+    "authors": [
+      "Sungwon Hwang | Inha University, Incheon, Korea, Republic of (South)",
+      "Gyuyeong Hwang | Inha universitiy, Incheon, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sungwon Hwang",
+        "affiliation": "Inha University, Incheon, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Gyuyeong Hwang",
+        "affiliation": "Inha universitiy, Incheon, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "356i",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/606830"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/602682",
+    "paper_endpoint": "Paper/602682",
+    "paper_id": "602682",
+    "topic": "Infrared Spectra Prediction with Machine Learning",
+    "title": "Infrared Spectra Prediction with Machine Learning",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45736",
+    "session_title": "Applications of Data Science in Molecular Sciences II",
+    "session_number": "356",
+    "program_title": "Topical Conference: Applications of Data Science to Molecules and Materials",
+    "symposium_title": "Applications of Data Science to Molecules and Materials",
+    "abstract": "Spectroscopy is an important tool for manufacturing for ascertaining purity in biological systems and drug manufacturing. Prediction of unknown spectra would be a powerful tool for extending existing spectral identification databases and evaluating novel molecules for which there exist no standards. Machine learning algorithms using deep neural networks have been used for the interpretation of spectra in microbiology and food production for the last ten years. The prediction of the spectra themselves is a more recent area of research, with new efforts to predict IR spectra, proton NMR spectra, and mass spectra. It is the purpose of this present effort to use machine learning to predict IR spectra for novel molecules, improving on previous such work by including effects beyond calculated harmonic frequencies and using learned molecular fingerprints. A model for IR spectral prediction has been developed, requiring only the input of a molecular graph structure provided in the form of a SMILES code. The chemical representation is processed through a message passing neural network followed by a feed forward neural network for prediction of IR spectra, an adaptation of the Chemprop code for molecular property prediction. The model is pre-trained using quantum chemistry calculations for molecules sampled from the PubChem database to learn the molecular harmonic vibration modes. During pretraining, active learning is used to explore the chemical space more efficiently and prioritize molecules which will most improve the model. Further training is performed using experimentally collected spectra available in open-access databases from the National Institute of Standards and Technology (NIST) and the National Institute of Advanced Industrial Science and Technology (AIST). The model allows for predictions of spectra in the gas phase and in supported condensed phases.",
+    "presenting_author": "Charles McGill | Massachusetts Institute of Technology, Cambridge",
+    "authors": [
+      "Charles McGill | Massachusetts Institute of Technology, Cambridge",
+      "Yanfei Guan | Massachusetts Institute of Technology, Cambridge",
+      "Michael Forsuelo | Massachusetts Institute of Technology, Cambridge",
+      "William Green | Massachusetts Institute of Technology, Cambridge"
+    ],
+    "authors_structured": [
+      {
+        "name": "Charles McGill",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yanfei Guan",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Forsuelo",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "William Green",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "356j",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/602682"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/607833",
+    "paper_endpoint": "Paper/607833",
+    "paper_id": "607833",
+    "topic": "Optimization of Thermal Conductivity at Interfaces Using Learning Algorithms",
+    "title": "Optimization of Thermal Conductivity at Interfaces Using Learning Algorithms",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45736",
+    "session_title": "Applications of Data Science in Molecular Sciences II",
+    "session_number": "356",
+    "program_title": "Topical Conference: Applications of Data Science to Molecules and Materials",
+    "symposium_title": "Applications of Data Science to Molecules and Materials",
+    "abstract": "In material science, we are frequently interested in understanding the properties and design implications of material at interfaces. These interfaces can be manipulated to improve the desired characteristics of the bulk material. Optimization of thermal transport across the interface of two different materials is critical to micro/nanoscale electronic, photonic, and phononic devices. However, interfacial thermal conductivity optimization is a high-dimensional problem due to the number of factors affecting it. Non-equilibrium molecular dynamics (NEMD) has been used to investigate the thermal transport across a solid-solid interface between different materials. Despite NEMD being an effective approach to this problem, scanning the large parameter space is unrealistic due to high computational cost. Alternatively, machine learning is a cost-effective and time-efficient method that can investigate this interfacial thermal transport phenomenon. In this talk, we describe our efforts to understand and optimize the impact of interfacial atomic defects and intermixing on the thermal transport across an Al/Si junction. We developed a learning-based framework to optimize over a parameter space that would be prohibitively large in the brute force approach. Using this technique allows us to accumulate knowledge of the system of a given type of atoms and store this information into a neural network. A scalable framework was built to allow utilization of the available high-performance computing resources, thereby accelerating the learning by directly interfacing with the LAMMPS molecular dynamics simulation package. We found that mixing 3-4 monolayer of atoms near the interface can significantly increase the thermal conductance. However, when inter atomic mixing layers get thicker, it induces a negative effect on the thermal conductance due to phonon scattering. The model is able to find the optimal mixing length and mixing fraction relatively fast. This work can be extended to more systems by inclusion of descriptors and a high-fidelity surrogate model.",
+    "presenting_author": "Sabiha Rustam | University of Washington, Seattle",
+    "authors": [
+      "Sabiha Rustam | University of Washington, Seattle",
+      "Malachi Schram | Pacific Northwest National Laboratory",
+      "Zexi Lu | Pacific Northwest National Laboratory",
+      "Anne Chaka | Pacific Northwest National Laboratory",
+      "Jim Pfaendtner | North Carolina State University, Raleigh, NC"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sabiha Rustam",
+        "affiliation": "University of Washington, Seattle",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Malachi Schram",
+        "affiliation": "Pacific Northwest National Laboratory",
+        "designation": "Author"
+      },
+      {
+        "name": "Zexi Lu",
+        "affiliation": "Pacific Northwest National Laboratory",
+        "designation": "Author"
+      },
+      {
+        "name": "Anne Chaka",
+        "affiliation": "Pacific Northwest National Laboratory",
+        "designation": "Author"
+      },
+      {
+        "name": "Jim Pfaendtner",
+        "affiliation": "North Carolina State University, Raleigh, NC",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "356k",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/607833"
+  }
+]

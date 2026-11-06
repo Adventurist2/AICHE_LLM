@@ -1,0 +1,390 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646968",
+    "paper_endpoint": "Paper/646968",
+    "paper_id": "646968",
+    "topic": "Data Fusion and Feature Selection for Process Monitoring at Hanford",
+    "title": "Data Fusion and Feature Selection for Process Monitoring at Hanford",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49205",
+    "session_title": "Data Science/Analytics for Process Applications",
+    "session_number": "185",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "In this work, Raman and ATR-FTIR spectroscopies are combined for more accurate measurements of nuclear waste simulants. This combination of information is referred to as data fusion. In addition to the combination of these spectroscopies, feature selection is applied to improve monitoring accuracy and resilience to “non-target” species that are not included in model training. Combining feature selection and data fusion allowed for improvement of prediction error by a factor of 2.8 over the use of a single sensor alone. These results show how process monitoring can be improved by case-specific data processing strategies. The application in this work is the complex waste streams present in nuclear waste remediation, particularly at the Hanford Site in Washington State. The effective utilization of data has become more important as processes are providing more information with Industry 4.0 initiatives [1]. One such application is real-time monitoring in a vitrification process plant in Hanford in Washington State. This site removes water and radionuclides from radioactive waste, before vitrifying it for long term storage. The process will have inconsistent feed streams, leading to the need for real-time process monitoring. However, a single in-line instrument has limited ability to measure the 25 chemical constituents and 46 radionuclides expected in the process [2]. A preprocessing strategy is necessary that is able to combine information from multiple sensors and distinguish components in the complex spectra. There are two on-line sensors investigated in this study. Raman and Attenuated Total Reflectance – Fourier Transform Infrared (ATR-FTIR) spectroscopy. These molecular measurement techniques provide a high dimensional space of 1472 wavenumbers to monitor the process for decision-making. In addition to the high-dimensional space, there are spectral components that may appear under actual process conditions that were not included in model training. The high dimensionality and possible process noise motivate the use of feature selection to reduce dimensionality prior to model input. The feature selection method used is a general forward selection wrapper method [3]. A wrapper method selects important features using the quantification model, in this case Partial Least Squares Regression (PLSR), to determine the most important subset of features. The general forward selection method used in this study has two distinct steps. Two steps are necessitated by the high dimensionality of the problem. Testing every possible subset of features is an NP-hard problem resulting in 2 1472 possible combinations [3]. Therefore, a feature ranking will be established based on heuristics and then the optimum number of these ordered features will be determined. This reduces the number of possible feature subsets from 2­ 1472 to 1472. The first step is ranking the features (wavenumbers) based on spectral intensity in the training set. This follows the intuition that (after baseline correction) features with high intensities correspond to useful spectral information, based on signal-to-noise ratio arguments. The second step is determining how many of these ordered features give optimum performance on test spectra via cross validation. Root Mean Squared Error was used as the primary error metric for evaluating performance. In summary, the features are ranked on the training data and then the optimum number of features are chosen on test spectra with species not included in model training. A similar established wrapper method, the Successive Projections Algorithm (SPA), was compared for performance and determined to underperform the more general forward selection method. SPA’s worse performance is attributed to its performance on the highly collinear information present in the spectra. As part of the SPA algorithm, mutual information from the already chosen features is subtracted. Since wavenumbers in spectral peaks share much mutual information with adjacent wavenumbers, subtraction of mutual information quickly leads the algorithm to select wavenumbers based on noise rather than information (noise is the primary information left after several iterations of the SPA algorithm). Data fusion is implemented to combine the information from the Raman and ATR-FTIR sensors after the feature selection is applied. There are multiple levels of data fusion, as shown by Borras et al [4]. In this work, data-level fusion is used through concatenation. Concatenation is applied because it includes all information from both instruments (after feature selection is applied). Standard scaling, in addition to dimensional reduction in the model (PLSR), removes the physical differences between the spectra. This allows the information to be input simultaneously into a single model. To conduct the study, simulants of nuclear waste mixtures are used. These simulants consist of water as a solvent with seven dissolved sodium salts. These salts are sodium: nitrate, nitrite, sulfate, carbonate, oxalate, phosphate, and acetate. Of the seven salts, four (nitrate, nitrite, sulfate, and carbonate) are considered “target species” and are included in the training dataset. The “non-target” species are the remaining three salts (oxalate, phosphate, and acetate). The non-target salts are used to simulate unanticipated feed conditions expected at the Hanford vitrification process. The quantification model used is Partial Least Squares Regression. This model is chosen because of its documented success for quantifying spectra [5]. Our results show that feature selection combined with data fusion of Raman and ATR-FTIR provides more accurate analysis of nuclear waste mixtures than either instrument alone. We are able to reduce mean percent errors from 43.2% (Raman) and 15.8% (ATR-FTIR) to 5.6% error for a method utilizing forward selection and data fusion. This improvement is due to the processing strategies used on the data since the data since the same measurements were used. This work has the potential to improve real-time monitoring at the Hanford Site in Washington State. Better data processing strategies can improve process monitoring and decrease process downtime. The approach in this work can be applied to other processes outside the domain of nuclear waste treatment. Application-specific data processing strategies are often necessitated by the challenges faced in modern processing plants. References: [1] I. A. Udugama et al. , “The Role of Big Data in Industrial (Bio)chemical Process Operations,” Ind. Eng. Chem. Res. , vol. 59, no. 34, pp. 15283–15297, 2020, doi: 10.1021/acs.iecr.0c01872. [2] S. Kocevska, G. M. Maggioni, R. W. Rousseau, and M. A. Grover, “Spectroscopic Quantification of Target Species in a Complex Mixture Using Blind Source Separation and Partial Least-Squares Regression: A Case Study on Hanford Waste,” Ind. Eng. Chem. Res. , vol. 60, no. 27, pp. 9885–9896, 2021, doi: 10.1021/acs.iecr.1c01387. [3] G. Chandrashekar and F. Sahin, “A survey on feature selection methods,” Comput. Electr. Eng. , vol. 40, no. 1, pp. 16–28, 2014, doi: 10.1016/j.compeleceng.2013.11.024. [4] E. Borras, J. Ferre, R. Boque, M. Mestres, L. Acena, and O. Busto, “Data fusion methodologies for food and beverage authentication and quality assessment - A review,” Anal. Chim. Acta , vol. 891, 2015, doi: 10.1016/j.aca.2015.04.042. [5] P. Tse, J. Shafer, S. A. Bryan, and A. M. Lines, “Quantification of Raman-Interfering Polyoxoanions for Process Analysis: Comparison of Different Chemometric Models and a Demonstration on Real Hanford Waste,” Environ. Sci. Technol. , 2021, doi: 10.1021/acs.est.1c02512.",
+    "presenting_author": "Steven Crouse | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Steven Crouse | Georgia Institute of Technology, Atlanta, GA",
+      "Rupanjali Gurprasad | Georgia Institute of Technology, Atlanta, GA",
+      "Stefani Kocevska | Georgia Institute of Technology, ATLANTA, GA",
+      "Ronald Rousseau | Georgia Institute of Technology, Atlanta, GA",
+      "Martha Grover | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Steven Crouse",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Rupanjali Gurprasad",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Stefani Kocevska",
+        "affiliation": "Georgia Institute of Technology, ATLANTA, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Ronald Rousseau",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Martha Grover",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "185a",
+    "sortable_time": "2022-11-14_15:30:00_15:49:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646968"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648699",
+    "paper_endpoint": "Paper/648699",
+    "paper_id": "648699",
+    "topic": "A Comprehensive Causation Prediction Model of Pipeline Incidents Using Artificial Neural Network",
+    "title": "A Comprehensive Causation Prediction Model of Pipeline Incidents Using Artificial Neural Network",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49205",
+    "session_title": "Data Science/Analytics for Process Applications",
+    "session_number": "185",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Failure of oil pipelines results in pipeline incidents that potentially pose significant hazards to people, property, and the environment [1]. The causes of oil pipeline incidents can be broadly classified into five categories: corrosion, equipment failure, incorrect operation, natural forces, and excavation, and each of these causes can be further divided into several sub-causes [2]. To predict the cause and sub-cause of HL pipeline incidents, several data-driven models based on neural networks, regression techniques, and Bayesian method have been developed [3, 4]. However, these approaches utilize only a few data fields from a wide pipeline incident database for the causation prediction of pipeline incidents. Additionally, the existing models are capable of causation prediction for pipeline incidents resulting from only a particular cause. Using cause-specific models, the causation prediction of an impending pipeline incident becomes difficult since the cause is not known in advance. Therefore, there is a need for a comprehensive model which can be utilized for the causation prediction of generic pipeline incidents (i.e., resulting from any cause). In this work, a comprehensive model for causation prediction of pipeline incidents is presented which leverages the rich pipeline incident database. Specifically, from the pipeline incident data collected by the Pipeline Hazardous Material Safety Administration (PHMSA) in the USA for 2010-2019, 108 data fields have been selected due to their significance for pipeline incidents. These data fields are selected based on domain knowledge to increase the generalizability of the proposed approach. Among the selected data fields, there are two types of data fields: generic data fields that are significant to pipeline incidents resulting from all causes, and data fields specific to a cause that are significant to pipeline incidents resulting from a particular cause. Utilizing the generic data fields, an artificial neural network (ANN) model has been developed to predict the cause of a pipeline incident. Next, for each category of cause, an ANN model has been developed to predict the sub-cause of the pipeline incident utilizing the generic data fields and data fields specific to the cause. Here, although the sub-cause prediction models are specific to a particular cause, the causation prediction model including the cause and sub-cause prediction models is not specific to a particular cause and is applicable to all causes. The effectiveness of the comprehensive model including the cause and sub-cause prediction models in predicting the causation of pipeline incidents is demonstrated using the PHMSA incident database. Keywords: pipeline incidents; causation prediction; artificial neural network; PHMSA incident database References: Guo, X. Meng, D. Wang, T. Meng, S. Liu, and R. He, Comprehensive risk evaluation of long-distance oil and gas transportation pipelines using a fuzzy Petri net model, Journal of Natural Gas Science and Engineering, 33, 18 - 29, 2016. S. El-Abbasy, A. Senouci, T. Zayed, F. Mirahadi, and L. Parvizsedghy, Artificial neural network models for predicting condition of offshore oil and gas pipelines, Automation in Construction, 45, 50 - 65, 2014. Senouci, M. Elabbasy, E. Elwakil, B. Abdrabou, and T. Zayed, A model for predicting failure of oil pipelines, Structure and Infrastructure Engineering, 10, 3, 375 - 387, 2014. Breton, J. Sanchez-Gheno, J. Alamilla, and J. Alvarez-Ramirez, Identification of failure type in corroded pipelines: A Bayesian probabilistic approach, Journal of Hazardous Materials, 179, 1, 628 -634, 2010.",
+    "presenting_author": "Pallavi Kumari | Texas A&M University, Bryan, TX",
+    "authors": [
+      "Pallavi Kumari | Texas A&M University, Bryan, TX",
+      "Qingsheng Wang | Texas A&M University, College Station, TX",
+      "Faisal Khan | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pallavi Kumari",
+        "affiliation": "Texas A&M University, Bryan, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Qingsheng Wang",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Faisal Khan",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "185b",
+    "sortable_time": "2022-11-14_15:49:00_16:08:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648699"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648993",
+    "paper_endpoint": "Paper/648993",
+    "paper_id": "648993",
+    "topic": "Data-Driven Feasibility and Performance Prediction of Production Scheduling MIP Models",
+    "title": "Data-Driven Feasibility and Performance Prediction of Production Scheduling MIP Models",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49205",
+    "session_title": "Data Science/Analytics for Process Applications",
+    "session_number": "185",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Scheduling is an important decision-making function in manufacturing. In chemical production scheduling, the main goal is to find a schedule that meets production targets and all resource constraints at minimum cost/makespan or maximum profit. Since the incumbent schedule can become suboptimal or even infeasible with disruptions or arrival of new information, there is a need for online scheduling, where prompt re-optimization with updated information can lead to high-quality closed-loop performance (Gupta et al., 2016; Gupta & Maravelias, 2019). However, finding good, and even feasible in some cases, solutions can become challenging when the re-optimization time-step is too short. Moreover, state-of-the-art algorithms for mixed-integer progamming (MIP) models exhibit high, often unexplainable, runtime variation while problem size is held costant (Hutter et al., 2014; Leyton-Brown et al., 2009). Therefore, there is a need for developing methods that would allow us to predict whether a given instance is feasible and what is the runtime to solve a feasible instance. Accordingly, we employ supervised learning techniques to develop feasibility and performance prediction models for scheduling MIP models. We address the problem of short-term scheduling in single-stage multiple-unit batch plants and consider two objective functions, i.e., makespan minimization and cost minimization. We gather solution quality and runtime data of a large number of instances generated considering a wide range of instance characteristics. One of the important challenges in supervised learning is identifying a set of significant instance features (Smith-Miles & Lopes, 2012). To achieve this, we introduce domain-specific features (related to, for example, problem size, and processing times and costs) for each objective function. Then, we train a logistic regression model that classifies the feasibility of scheduling MIP instances, and a random forest model that predicts the computational requirement for a feasible instance. The trained classifiers and regressors show good predictive performances: F1 score ~0.90 and AUC ~0.98 for the feasibility classification, and MSE ~0.7 for the runtime prediction. For makespan minimization, load, representing how much units would be utilized in terms of time for processing all given batches, is the most significant feature of the trained classifier; the batch-to-unit ratio is also selected as a significant feature for both the classifier and regressor; and a number of other features have significant but smaller impact. For cost minimization, due date-related features are shown to be significant. The developed models can support the decisions in online scheduling, such as deciding re-optimization time step and horizon length. Finally, we discuss how the obtained insights into what features make a scheduling MIP instance computationally expensive can be used to guide the development of a range of problem-specific solution algorithms. Reference Gupta, D., & Maravelias, C. T. (2019). On the design of online production scheduling algorithms. Computers and Chemical Engineering , 129 . https://doi.org/10.1016/j.compchemeng.2019.106517 Gupta, D., Maravelias, C. T., & Wassick, J. M. (2016). From rescheduling to online scheduling. Chemical Engineering Research and Design , 116 , 83–97. https://doi.org/10.1016/j.cherd.2016.10.035 Hutter, F., Xu, L., Hoos, H. H., & Leyton-Brown, K. (2014). Algorithm runtime prediction: Methods & evaluation. Artificial Intelligence , 206 (1), 79–111. https://doi.org/10.1016/j.artint.2013.10.003 Leyton-Brown, K., Nudelman, E., & Shoham, Y. (2009). Empirical hardness models: Methodology and a case study on combinatorial auctions. Journal of the ACM , 56 (4). https://doi.org/10.1145/1538902.1538906 Smith-Miles, K., & Lopes, L. (2012). Measuring instance difficulty for combinatorial optimization problems. Computers and Operations Research , 39 (5), 875–889. https://doi.org/10.1016/j.cor.2011.07.006",
+    "presenting_author": "Boeun Kim | Princeton University, NJ",
+    "authors": [
+      "Boeun Kim | Princeton University, NJ",
+      "Christos Maravelias | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Boeun Kim",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christos Maravelias",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "185c",
+    "sortable_time": "2022-11-14_16:08:00_16:27:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648993"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643256",
+    "paper_endpoint": "Paper/643256",
+    "paper_id": "643256",
+    "topic": "Machine Learning-Based Operational Modeling of an Electrochemical Reactor: Handling Data Variability and Improving Empirical Models",
+    "title": "Machine Learning-Based Operational Modeling of an Electrochemical Reactor: Handling Data Variability and Improving Empirical Models",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49205",
+    "session_title": "Data Science/Analytics for Process Applications",
+    "session_number": "185",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "The electrochemical transformation of carbon dioxide (CO 2 ) into carbon-based fuels and chemicals has received growing interest in this century because of its potential to reduce CO 2 emissions and restore the energy produced from renewable resources [1]. The biggest challenge for research in this area is the difficulty in determining and quantifying the products that result from the reduction of CO 2 . Specifically, the CO 2 reduction pathways constitute a complex web of reactions that result in the production of various alkanes, alkenes, and oxygenate species [2]. The complexity of the reaction mechanism and the stochastic nature of electrochemical reactions make it challenging to derive an explicit model, such as the first-principal model, to describe the underlying physical-chemical phenomena of the electrochemical reactor. With the development of open-source programming libraries and availability of advanced data storage technology, data-hungry methods such as machine learning (ML) and deep learning (DL) rose in popularity for chemical engineering research due to their superior agility that allows capturing the complex input-output relation of universal chemical process [3]. For example, in [4, 5, 6], various artificial neural network (ANN) models have demonstrated their ability to address regression and classification problems in chemical engineering. However, recent small-scale experiments on the electrochemical reactor show varying levels of experimental uncertainty, due to the minimum measurable limit of the sensors and other inevitable experimental errors, that can introduce a level of uncertainty into the data and increase the probability of over-fitting. This work proposes a methodology to develop a feed-forward neural network (FNN) model to capture the input-output relationship of an experimental electrochemical reactor from experimental data that are obtained from easy-to-implement sensors. This FNN model is computationally efficient and can be used in real-time to determine energy-optimal reactor operating conditions. To further account for the uncertainty of the experimental data, the maximum likelihood estimation (MLE) method is adopted to construct a statistical FNN, which is demonstrated to be able to relieve the over-fitting problem. Additionally, by comparing the neural network with an empirical, first-principles (EFP) model, it is demonstrated that the neural network model achieves improved prediction accuracy with respect to experimentally-determined input-output operating conditions. Finally, the insights obtained from the FNN model, and the limitations identified of the EFP model are used to propose specific modifications to the EFP model to improve its prediction capability. References: [1] Morales-Guio, C.; Cave, E.; Nitopi, S.; Feaster, J.; Wang, L.; Kuhl, K.; Jackson, A.; John- son, N.; Abram, D.; Hatsukade, T.; et al. Improved CO 2 reduction activity towards C 2+ alcohols on a tandem gold on copper electrocatalyst. Nature Catalysis 2018, 1, 764–771. [2] Nitopi, S.; Bertheussen, E.; Scott, S.; Liu, X.; Engstfeld, A.; Horch, S.; Seger, B.; Stephens, I.; Chan, K.; Hahn, C.; et al., Progress and perspectives of electrochemical CO 2 reduction on copper in aqueous electrolyte. Chemical reviews 2019, 119, 7610–7672. [3] Lu, L.; Jin, P.; Karniadakis, G.; Deeponet: Learning nonlinear operators for identifying differential equations based on the universal approximation theorem of operators. arXiv preprint arXiv: 1910.03193. [4] Shen, Q.; Jiang, B.; Shi, P.; Lim, C. Novel neural networks-based fault tolerant control scheme with fault alarm. IEEE Trans . Cybernetics 2014, 44, 2190−2201. [5] Raccuglia, P.; Elbert, K.; Adler, P.; Falk, C.; Wenny, M.; Mollo, A.; Zeller, M.; Friedler, S.; Schrier, J.; Norquist, A. Machine-learning-assisted materials discovery using failed experiments. Nature 2016, 533, 73−76. [6] Malek, A.; Wang, Q.; Baumann, S.; Guillon, O.; Eikerling, M.; Malek, K. A Data-Driven Framework for the Accelerated Discovery of CO 2 Reduction Electrocatalysts. Front. Energy Res . 2021, 9, 52.",
+    "presenting_author": "Junwei Luo | University of California, Los Angeles",
+    "authors": [
+      "Junwei Luo | University of California, Los Angeles",
+      "Vito Canuso | University of California, Los Angeles",
+      "Joonbaek Jang | University of California, Los Angeles",
+      "Zhe Wu | National University of Singapore",
+      "Carlos Morales-Guio | University of California, Los Angeles",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Junwei Luo",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Vito Canuso",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Joonbaek Jang",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Zhe Wu",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Carlos Morales-Guio",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "185d",
+    "sortable_time": "2022-11-14_16:27:00_16:46:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643256"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643737",
+    "paper_endpoint": "Paper/643737",
+    "paper_id": "643737",
+    "topic": "A Graph-Based Software Framework for Data Science",
+    "title": "A Graph-Based Software Framework for Data Science",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49205",
+    "session_title": "Data Science/Analytics for Process Applications",
+    "session_number": "185",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Graphs are mathematical representations that that can be used to model a wide range of systems arising in science and engineering. Simply stated, graphs are models that capture connectivity in systems by using sets of nodes and edges (links between nodes) and data embedded in such nodes and edges. For example, graphs have been used to represent chemical processes (collections of interconnected unit operations) [1] and molecules (collections of interconnected atoms) [2,3]. By creating graph representations for systems of interest, researchers have also enabled a variety of descriptors that are useful for analysis and graph quantification such as spanning trees, number of nodes or edges, number of connected components, and topological descriptors (e.g., Euler Characteristic) [4,5,6,7,8]. These and other tools have been applied in analyzing networks in different fields, including chemical processes [6], biological systems [9], brain networks [10], or geomorphology [11]. Many datasets encountered in science and engineering can also be represented as graphs, and doing so can unravel unique insights. For example, a data matrix can be represented as a graph where each entry is a weighted node with weight corresponding to the entry value and with edges that capture adjacency between matrix entries (form a perfect mesh). Furthermore, any symmetric matrix (e.g., a covariance matrix or a Euclidean distance matrix) can be represented an edge weighted graph where the rows and columns of the matrix correspond to nodes and each matrix entry corresponds to a weighted edge between the row node and the column node corresponding to that entry. Graph data representations can be manipulated through operations such as filtration, aggregation, or partitioning and analyzed using topological descriptors [6]. This approach differs from standard matrix analysis techniques (e.g., eigenvalue analysis). Graph analysis tools can also be applied to high-dimensional representations; for example, molecules contain large amounts of data within each atom node (multiple attributes) [2,3]. In this work, we present a Julia-based software framework for the modeling analysis of graph-based data representations. The framework provides user-friendly capabilities to automatically manipulate diverse raw data types (e.g., matrices and time-series) to obtain different graph representations. The graph representations can then be analyzed using filtration and aggregation functions and summarized using a wide range of graph descriptors. Moreover, our framework facilitates the partitioning and visualization of graph objects to gain deeper analysis. We also present examples of applications for these tools and show how these tools simplify some data analysis. References [1] Yue Shao, and Victor M Zavala. Modularity measures: concepts, computation, and applications to manufacturing systems. AIChE Journal, 66(6):e16965. 2020. [2] Zhenqin Wu, Bharath Ramsundar, Evan N Feinberg, Joseph Gomes, Caleb Geniesse, Aneesh S Pappu, Karl Leswing, and Vijay Pande. MoelculeNet: a benchmark for molecular machine learning. Chemical Science, 9(2):513-530. 2018. [3] Shiyi Qin, Tianyi Jin, Reid C Van Lehn, and Victor M Zavala. Predicting critical micelle concentrations for surfactants using graph convolutional neural networks. Journal of Physical Chemistry B 125(37): 10610-10620. 2021. [4] Frank Harary. Graph Theory . Addison-Wesley Pub. Co. 1969 [5] Mark Newman. Networks: An Introduction . Oxford University Press, 2010. [6] Alexander Smith and Victor M Zavala. The Euler characteristic: a general topological descriptor for complex data. Computers & Chemical Engineering, 154:107463. 2021. [7] Alexander D Smith Paweł Dłotko, and Victor M Zavala. Topological data anlaysis: concepts, computation, and applications in chemical engineering. Computers & Chemical Engineering, 146:107202. 2021. [8] Elizabeth Munch. A user’s guide to topological data analysis. Journal of Learning Analytics, 4(2): 47-61. 2017. [9] Georgios A Pavlopoulos, Maria Secrier, Charalampos N Moschopoulos, Theodoros G Soldatos, Sophia Kossida, Jan Aerts, Reinhard Schneider, and Pantelis G Bagos. Using graph theory to analyze biological networks. BioData Mining, 4:10. 2011. [10] Karen Caeyenberghs, Helena Verhelst, Adam Clemente, and Peter H Wilson. Mapping the functional connectome in traumatic brain injury: what can graph metrics tell us. NeuroImage 160:113-123. 2017. [11] Tobias Heckmann, Wolfgang Schwanghart, and Jonathan D Phillips. Graph theory—recent developments of its application in geomorphology. Geomorphology, 243:130-146. 2015.",
+    "presenting_author": "David Cole | University of Wisconsin-Madison",
+    "authors": [
+      "David Cole | University of Wisconsin-Madison",
+      "Victor Zavala | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "David Cole",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Victor Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "185e",
+    "sortable_time": "2022-11-14_16:46:00_17:05:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643737"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643774",
+    "paper_endpoint": "Paper/643774",
+    "paper_id": "643774",
+    "topic": "Machine Learning-Based Ethylene Concentration Estimation, Real-Time Optimization and Feedback Control of an Experimental Electrochemical Reactor",
+    "title": "Machine Learning-Based Ethylene Concentration Estimation, Real-Time Optimization and Feedback Control of an Experimental Electrochemical Reactor",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49205",
+    "session_title": "Data Science/Analytics for Process Applications",
+    "session_number": "185",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "With the increase in electricity supply from clean energy sources, electrochemical reduction of carbon dioxide (CO 2 ) has received increasing attention as an alternative source of carbon-based fuels [1, 2]. As CO 2 reduction is becoming a stronger alternative for the clean production of chemicals, the necessity to model, optimize and control the electrochemical reduction of CO 2 process is becoming inevitable. However, on the one hand, a first-principles model to represent the electrochemical CO 2 reduction has not been fully developed yet because of the complexity of its reaction mechanism [3], which makes it challenging to define a precise state-space model for the control system. On the other hand, the unavailability of efficient concentration measurement sensors continues to challenge our ability to develop feedback control systems. Gas chromatography (GC) is the most common equipment to monitor the product composition, but it requires a period of time to analyze the sample, which means the GC can only provide delayed, real-time measurements during the operation. Also, the electrochemical CO 2 reduction process is catalyzed by a fast-decaying copper catalyst and undergoes a selectivity shift from the product-of-interest at the later stages of experiments, challenging conventional control methods. To this end, machine learning (ML) techniques provide a potential approach to overcome those difficulties due to their demonstrated capability to capture the dynamic behavior of a chemical process from data [5]. Motivated by the above considerations, this work proposes a machine-learning-based modeling methodology that integrates support vector regression and first-principles modeling to capture the dynamics behavior of an experimental electrochemical reactor; this model, together with limited gas chromatography measurements, is employed to predict the evolution of gas-phase ethylene concentration. The model prediction is directly used in a proportional-integral controller that manipulates the applied potential to regulate the gas-phase ethylene concentration at energy-optimal set-point values computed by a real-time process optimizer (RTO). Specifically, the RTO optimizes the operation set-point by solving an optimization problem to maximize the economic benefit of the reactor. Lastly, suitable compensation methods are introduced to further account for the experimental uncertainties and handle catalyst de-activation. The performance of the proposed modeling, optimization and control approaches are demonstrated by results from a series of experiments. References: [1] Morales-Guio, C.G.; Cave, E.R.; Nitopi, S.A.; et al. Improved CO2 reduction activity towards C2+ alcohols on a tandem gold on copper electrocatalyst. Nat Catal 1, 764–771 (2018). [2] Jang, J.; Shen, K.; Morales-Guio, C.G.; Electrochemical direct partial oxidation of methane to methanol. Joule . 2019, 3(11), 2589-93. [3] Nitopi, S.; Bertheussen, E.; Scott, S.; Liu, X.; Engstfeld, A.; Horch, S.; Seger, B.; Stephens, I.; Chan, K.; Hahn, C.; et al., Progress and perspectives of electrochemical CO2 reduction on copper in aqueous electrolyte. Chemical reviews 2019, 119, 7610–7672. [4] Wu, Z.; Tran, A.; Rincon, D.; Christofides, P. D. Machine learning-based predictive control of nonlinear processes. Part I: Theory. AIChE J . 2019, 65, e16729 [5] Luo, J.; Canuso, V.; Jang, J.; Wu, Z.; Morales-Guio, G.C.; Christofides, P. D. Machine Learning-Based Operational Modeling of an Electrochemical Reactor: Handling Data Variability and Improving Empirical Models. Ind. Eng. Chem. Res. 2022, Accepted.",
+    "presenting_author": "Berkay Citmaci | University of California, Los Angeles",
+    "authors": [
+      "Berkay Citmaci | University of California, Los Angeles",
+      "Junwei Luo | University of California, Los Angeles",
+      "Joonbaek Jang | University of California, Los Angeles",
+      "Vito Canuso | University of California, Los Angeles",
+      "Derek Richard | University of California, Los Angeles",
+      "Yi Ming Ren | University of California, Los Angeles",
+      "Carlos Morales-Guio | University of California, Los Angeles",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Berkay Citmaci",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Junwei Luo",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Joonbaek Jang",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Vito Canuso",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Derek Richard",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Yi Ming Ren",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Carlos Morales-Guio",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "185f",
+    "sortable_time": "2022-11-14_17:05:00_17:24:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643774"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/644144",
+    "paper_endpoint": "Paper/644144",
+    "paper_id": "644144",
+    "topic": "Optimization Methods for Exploring Accuracy Versus Robustness of a Regression Prediction in Process Analytical Technology",
+    "title": "Optimization Methods for Exploring Accuracy Versus Robustness of a Regression Prediction in Process Analytical Technology",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49205",
+    "session_title": "Data Science/Analytics for Process Applications",
+    "session_number": "185",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "In process analytical technology applications, there is a conflict between accuracy of a regression prediction and robustness of that prediction to sources of variability, e.g., size of the plant [1,2]. Yet, both concepts are crucial for developing useful regression models [3-5]. We explore a trade-off between accuracy, in terms of root mean squared error of the prediction, and robustness, in terms of moment-matching of the first and second sample moments of the predictions across all different realizations of a known variability source. Our mathematical definition of robustness is based on the method of moments from statistics and enables insensitivity of the prediction to variations of a known source. The development of the regression model is data-dependent, and thus the trade-off between the two objectives is not known a priori . The trade-off between accuracy versus robustness can be posed with optimization. We explore both multi-objective optimization and hierarchical programming, as ways of representation. Multi-objective formulations illustrate this trade-off by obtaining Pareto-optimal solutions. Yet, when investigating conflicting objectives Pareto-optimal solutions are not necessarily bilevel optimal. We utilize examples from multivariate calibration to quantify the performance between the different methods. The optimization problems are solved in a Bayesian optimization framework, i.e., an asymptotically complete method [6], using ENTMOOT [7]. We observe that the robustness metric leads in general to simpler models, i.e., with a smaller number of latent variables, but gives weaker predictions in the training data. The accuracy metric predicts better in the known data, but may lead to overparametrized models, the performance of which can deteriorate in new samples. This accuracy/robustness trade-off is in accordance with what previous literature [2,8] describes as a critical topic of investigation. The combination of the two metrics shows high potential in generating regression models with high predictive ability that are not overparametrized, and therefore are less amenable to degradation in time. References: [1] Igne, B., Shi, Z., Drennen III, J. K., & Anderson, C. A. (2014). Effects and detection of raw material variability on the performance of near-infrared calibration models for pharmaceutical products. Journal of Pharmaceutical Sciences , 103 (2), 545-556. [2] Li, Y., Anderson, C. A., Drennen III, J. K., Airiau, C., & Igne, B. (2019). Development of an in-line near-infrared method for blend content uniformity assessment in a tablet feed frame. Applied Spectroscopy , 73 (9), 1028-1040. [3] De Leersnyder, F., Peeters, E., Djalabi, H., Vanhoorne, V., Van Snick, B., Hong, K., Hammond, S., Liu, A. Y., Ziemons, E., Vervaet, C., & De Beer, T. (2018). Development and validation of an in-line NIR spectroscopic method for continuous blend potency determination in the feed frame of a tablet press. Journal of Pharmaceutical and Biomedical Analysis , 151 , 274-283. [4] Rato, T. J., & Reis, M. S. (2019). SS-DAC: a systematic framework for selecting the best modeling approach and pre-processing for spectroscopic data. Computers & Chemical Engineering , 128 , 437-449. [5] Alam, M. A., Liu, Y. A., Dolph, S., Pawliczek, M., Peeters, E., & Palm, A. (2021). Benchtop NIR method development for continuous manufacturing scale to enable efficient PAT application for solid oral dosage form. International Journal of Pharmaceutics , 601 , 120581. [6] Neumaier, A. (2004). Complete search in continuous global optimization and constraint satisfaction. Acta Numerica , 13 , 271-369. [7] Thebelt, A., Kronqvist, J., Mistry, M., Lee, R. M., Sudermann-Merx, N., & Misener, R. (2021). ENTMOOT: a framework for optimization over ensemble tree models. Computers & Chemical Engineering , 151 , 107343. [8] Wise, B. M., & Roginski, R. T. (2015). A calibration model maintenance roadmap. IFAC-PapersOnLine , 48 (8), 260-265.",
+    "presenting_author": "Chrysoula Kappatou | Imperial College London, United Kingdom",
+    "authors": [
+      "Chrysoula Kappatou | Imperial College London, United Kingdom",
+      "James Odgers | Imperial College London, United Kingdom",
+      "Salvador Garcia Munoz | Eli Lilly and Company, Indianapolis, IN",
+      "Ruth Misener | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Chrysoula Kappatou",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "James Odgers",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Salvador Garcia Munoz",
+        "affiliation": "Eli Lilly and Company, Indianapolis, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Ruth Misener",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "185g",
+    "sortable_time": "2022-11-14_17:24:00_17:43:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/644144"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643094",
+    "paper_endpoint": "Paper/643094",
+    "paper_id": "643094",
+    "topic": "Data-Driven Techniques Towards the Efficient Integration of Planning, Scheduling and Control",
+    "title": "Data-Driven Techniques Towards the Efficient Integration of Planning, Scheduling and Control",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49205",
+    "session_title": "Data Science/Analytics for Process Applications",
+    "session_number": "185",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Enterprise-wide optimization (EWO) aims to coordinate all decision-making within companies and thus increase their competitiveness [1]. Mathematical optimization is key to the hierarchical integration of process operations - a key aspect of EWO - ranging from process and supply chain design down to planning, scheduling, and control. Traditionally, upper-level decisions are taken while disregarding lower-level considerations, and then fed as setpoints to the lower levels. Ensuring lower-level feasibility or optimality however leads to large-scale, potentially multilevel, formulations which are not just computationally intractable, but also mathematically difficult [2]. We present data-driven methods that address these computational shortcomings, and how mathematical and organisational considerations inform the choice of which technique to use. There are two main options to decrease the computational burden: We can exploit 1) the mathematical structure of the optimization problem in decomposition or distributed optimization schemes, or 2) specific surrogate modelling schemes (i.e. trust region frameworks) that do not need to sacrifice solution accuracy if given enough time. While there is some research into the intersection of data-driven techniques and decomposition algorithms [3], the problem of surrogate modelling is inherently 'data-driven’, and as such has been studied widely across many fields under different names [4-8]. The potential of Gaussian processes, neural networks, and decision trees in particular have been thoroughly investigated in EWO and process systems engineering (PSE) as a whole [9,10]. To integrate hierarchical levels of decision-making, we can leverage data-driven techniques in a bottom-up or top-down approach. In the bottom-up approach, we could for example construct surrogates that map a certain combination of upper-level scheduling decisions to a feasibility or optimality evaluation of the control problem [11,12]. Derivative-free optimization (DFO), also known as black-box or data-driven optimization, can be used when gradient expressions cannot be cheaply obtained and exploited in traditional gradient-based optimization solvers. DFO algorithms have been benchmarked on PSE applications [13] and in the data-driven coordination of EWO subproblems [14]. DFO has also been introduced to solve multilevel problems in a top-down approach by finding the upper-level planning variables that optimize an upper-level objective while treating the lower-level optimization problem as a black-box constraint [15]. While there are numerous examples of how data-driven techniques can be used in EWO, the literature is missing an exposition into how operational considerations affect mathematical optimization structure, and how this informs the ideal choice of how data-driven techniques can be efficiently exploited for the task at hand. To this end, we present variations on a multi-agent, stochastic integrated planning, scheduling, and control case study, which is difficult to solve tractably by traditional means without sacrificing solution accuracy. We then show how we can combine DFO and surrogate modelling techniques to find a tractable solution to the tri-level optimization problem. We construct feasibility and optimality surrogates for the lower-level control problem offline which are included as constraints in the middle scheduling problem. As such, we have collapsed the two lower levels of scheduling and control into a single level. Then, we use derivative-free optimization to find the upper-level planning variables. DFO iteratively proposes a set of planning-level variables which are fixed and fed to the lower-level integrated scheduling-control problem. The lower-level is then solved using traditional optimization software (Pyomo) and returns the corresponding upper-level objective to be optimized by the upper-level DFO. As such, we manage to find a tractable solution with little optimality gap to an otherwise intractable trilevel integrated planning, scheduling, and control problem. We argue that DFO stands out as a data-driven alternative to using decomposition schemes like Benders decomposition that solve for complicating variables in the outer problem, and discuss how this relates to the treatment of considerations such as stochasticity and privacy. Finally, we illustrate how DFO and surrogate modelling can adaptively leverage data in practice to efficiently solve the integrated problem on a monthly basis. References C. E. Gounaris, I. E. Grossmann, 2019, A preface to the special issue on enterprise-wide optimization, Optimization and Engineering 20(4), 965–968 Y. Chu, F. You, 2015, Model-based integration of control and operations: Overview, challenges, advances, and opportunities, Computers & Chemical Engineering 83, 2–20 Y. Bengio, A. Lodi, A. Prouvost, 2021, Machine learning for combinatorial optimization: A methodological tour d’horizon, European Journal of Operational Research 290(2), 405–421 J. P.Eason, L. T. Biegler, 2016, A trust region filter method for glass box/black box optimization, AIChE Journal 62(9), 3124–3136 R. R. Barton, M. Meckesheimer, 2006, Chapter 18 Metamodel-Based Simulation Optimization, Simulation L. Ljung, 2008, Perspectives on System Identification, IFAC Proceedings Volumes 41(2), 7172–7184 A. Chiuso, G. Pillonetto, 2019, System Identification: A Machine Learning Perspective, Annual Review of Control, Robotics, and Autonomous Systems 2(1), 281–304 S. Amaran, N. V. Sahinidis, B. Sharda, S. J. Bury, 2014, Simulation optimization: a review of algorithms and applications, 4OR 12(4), 301–333 Savage, T., Zhang, D., Mowbray, M., & Río Chanona, E. A. D. (2021). Model-free safe reinforcement learning for chemical processes using Gaussian processes. IFAC-PapersOnLine, 54(3), 504–509 F. Ceccon, J. Jalving, J. Haddad, A. Thebelt, C. Tsay, C. D. Laird, R. Misener, 2022, OMLT: Optimization & Machine Learning Toolkit. ArXiv, abs/2202.02414 A. Bhosekar, M. Ierapetritou, 2018, Advances in surrogate based modeling, feasibility analysis, and optimization: A review, Computers & Chemical Engineering 108, 250–267 S. Avraamidou, E. N. Pistikopoulos, 2019, A Bi-Level Formulation And Solution Method For The Integration Of Process Design And Scheduling. Proceedings of the 9th International Conference on Foundations of Computer-Aided Process Design 47, 17-22 D. van de Berg, T. Savage, P. Petsagkourakis, D. Zhang, N. Shah, E. A. del Rio-Chanona, 2022, Data-driven optimization for process systems engineering applications. Chemical Engineering Science 248, 117135 D. van de Berg, P. Petsagkourakis, N. Shah, E. A. del Rio-Chanona, 2022, Data-driven distributed optimization for systems consisting of expensive black-box subproblems, 14th International Symposium on Process Systems Engineering (accepted) B. Beykal, S. Avraamidou, E. N. Pistikopoulos, 2022, Data-driven optimization of mixed-integer bi-level multi-follower integrated planning and scheduling problems under demand uncertainty, Computers & Chemical Engineering 156, 107551",
+    "presenting_author": "Damien van de Berg | Imperial College London, United Kingdom",
+    "authors": [
+      "Damien van de Berg | Imperial College London, United Kingdom",
+      "Nilay Shah | Imperial College London, United Kingdom",
+      "Antonio del Rio Chanona | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Damien van de Berg",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nilay Shah",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "185h",
+    "sortable_time": "2022-11-14_17:43:00_18:02:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643094"
+  }
+]

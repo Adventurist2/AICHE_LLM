@@ -1,0 +1,453 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper427980.html",
+    "topic": "Simulation of an Tablet-Coating Process on Industrial Scale",
+    "date_time": "Monday, November 9, 2015: 4:55 PM",
+    "abstract": "Introduction Tablet coating is a widely used unit operation in the pharmaceutical industry and is used to coat the tablet core with with one or more polymer layers that have a certain function, such as enteric coating to protect the tablet core from the acidic content of the stomach. Sometimes, the layer can contain an active pharmaceutical ingredient (API). Inter tablet coating mass variation (CoV) has to be low when coating an API onto a tablet to achieve a consistent high product quality. Therefore, a good understanding of the process is needed. Experiments focus mostly on the laboratory scale, due to costs. Thus, for large-scale optimization simulation is a promising tool. So far, numerical simulations focused on laboratory scale equipment due to computational limitations [1], [2]. However, it is now possible to simulate millions of particles using massive parallelization capabilities of graphical processing units (GPU). This presentation demonstrates the capabilities of DEM simulations executed on GPUs using the example of an industrial tablet coating process with more than one million tablets. Objective This work is based on an active coating process for the production of tablets that contain two APIs: one in the core and one in the coating. Gastrointestinal therapeutic systems (GITS) were used as starting material (Bayer Pharma AG, Leverkusen, Germany). GITS are round-shaped biconvex tablets with a diameter of 9 mm and a height of 5 mm. In the modeled process, an aqueous coating solution containing an API is added. The central aim of this study was to reduce the inter tablet coating variability (CoV) by comparing different process settings, e.g., drum load, rotation velocity, number of nozzles. Material and methods Drum Coater Coating runs were performed in a high-performance Bohle Film Coater (BFC 400, L.B Bohle Maschinen + Verfahren GmbH, Ennigerloh, Germany), which �is a commercially available production scale coater . During the coating process the tablets are flowing in the rotating drum of the coater and are mixed axially and radially by baffles integrated into the coater design, allowing efficient mixing. Simulation software ��eXtended Particle System� (XPS) is an in-house developed Discrete Element Method algorithm written in CUDA [3]. CUDA is a C extension developed by nVidia, specifically designed for GPU computing. Modern GPU architecture allows parallel computing on over 2000 so-called CUDA cores. Parallelizing the DEM algorithm allows the simulation in the range of several 10 million spheres on a single GPU. To calculate the interaction of non-spherical particles such as tablets, a glued sphere approach is used. The simulated particle consists of eight single spheres glued together. These spheres are allowed to overlap to approximate the real shape of a particle. In Figure 1, the filled drum is shown as seen during the simulation. The material properties were determined experimentally as described in [4]. The results, e.g. the CoV , were calculated via post processing routines. CoV results received from 90 seconds simulated time were extrapolated and compared to experimental measurements. Figure 1: Filled drum coater with the position of the spray nozzles from the side. The drum is filled with 290 kg (1,028,369 tablets) and is rotated with 8 rpm Summary and Conclusion The goal of this work was to simulate the tablet coating process in an industrial scale drum coater, filled with up to 290 kg (1,028,369� tablets), using the Discrete Element Method. Simulations were done to investigate the influence different process parameters on the process outcome. The parameters studied were the drum load, ranging from 230 kg to 290 kg and the rotation velocity, ranging from 8 to 10 rpm. The spray rate and number of nozzles was varied as well and showed a significant impact on the CoV. The CoV (Figure 2) results from the simulation match results from experiments closely. This work shows that simulation can be used to get more insight into the tablet coating process on the industrial scale based on state-of-the-art simulation tools. Figure 2: CoV for experiments and simulations in a bar chart [Load, Rotation velocity, Spray Rate, Process Time] (A: [260kg, 9rpm, 160 g/min, 172 min] B: [240kg, 9rpm, 360 g/min, 248 min] C: [250 kg, 9rpm, 360 g/min, 368 min]� D: [250 kg, 9 rpm, 160 g/min, 345 min] E:[250 kg, 9 rpm, 240g/min, 522 min]) References [1]����� W. R. Ketterhagen, M. T. am Ende, and B. C. Hancock, �Process modeling in the pharmaceutical industry using the discrete element method,� J. Pharm. Sci. , vol. 98, pp. 442�470, 2009. [2]����� G. Toschkoff, S. Just, K. Knop, P. Kleinebudde, A. Funke, A. Altmeyer, D. Djuric, and G. Scharrer, �Design-of-Experiment based DEM simulation of an active tablet coating process .� [3]����� C.. Radeke, B. J. Glasser, and J. G. Khinast, �Large-scale powder mixer simulations using massively parallel GPUarchitectures,� Chem. Eng. Sci. , vol. 65, no. 24, pp. 6435�6442, Dec. 2010. [4]����� S. Just, G. Toschkoff, A. Funke, D. Djuric, G. Scharrer, J. G. Khinast, K. Knop, and P. Kleinebudde, �Experimental Analysis of Tablet Properties for Discrete Element Modeling of an Active Coating Process,� AAPS PharmSciTech , vol. 14, no. 1, pp. 402�411, 2013.",
+    "presenting_author": "Peter Boehling | Area 1 Modeling and Predicition, Research Center Pharmaceutical Engineering, Graz, Austria",
+    "authors": [
+      "Johannes G. Khinast | Research Center Pharmaceutical Engineering (RCPE), Graz, Austria",
+      "Rok Dreu | Department of Pharmaceutical Technology, University of Ljubljana, Ljubljana, Slovenia",
+      "Klaus Knop | Institute of Pharmaceutics and Biopharmaceutics, Heinrich Heine University, D�sseldorf, Germany",
+      "Peter Kleinebudde | Institute of Pharmaceutics and Biopharmaceutics, Heinrich Heine University, D�sseldorf, Germany",
+      "Adrian Funke | Global Chemical and Pharmaceutical Development, Bayer Pharma AG, Berlin, Germany",
+      "Pavol Rajniak | Research Center Pharmaceutical Engineering, Graz, Austria",
+      "Hubertus Rehbaum | L.B.Bohle Maschinen + Verfahren GmbH, Ennigerloh, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Peter Boehling",
+        "affiliation": "Area 1 Modeling and Predicition, Research Center Pharmaceutical Engineering, Graz, Austria",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Johannes G. Khinast",
+        "affiliation": "Research Center Pharmaceutical Engineering (RCPE), Graz, Austria",
+        "designation": "Author"
+      },
+      {
+        "name": "Rok Dreu",
+        "affiliation": "Department of Pharmaceutical Technology, University of Ljubljana, Ljubljana, Slovenia",
+        "designation": "Author"
+      },
+      {
+        "name": "Klaus Knop",
+        "affiliation": "Institute of Pharmaceutics and Biopharmaceutics, Heinrich Heine University, D�sseldorf, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Peter Kleinebudde",
+        "affiliation": "Institute of Pharmaceutics and Biopharmaceutics, Heinrich Heine University, D�sseldorf, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Adrian Funke",
+        "affiliation": "Global Chemical and Pharmaceutical Development, Bayer Pharma AG, Berlin, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Pavol Rajniak",
+        "affiliation": "Research Center Pharmaceutical Engineering, Graz, Austria",
+        "designation": "Author"
+      },
+      {
+        "name": "Hubertus Rehbaum",
+        "affiliation": "L.B.Bohle Maschinen + Verfahren GmbH, Ennigerloh, Germany",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper406828.html",
+    "topic": "Fingerprinting Microemulsions Using Solvent NMR Relaxation and Diffusion Measurements",
+    "date_time": "Monday, November 9, 2015: 3:33 PM",
+    "abstract": "In part owing to their ease of formation and stability, the effective use of microemulsions has increased dramatically as major industrial applications have expanded in a variety of fields. Two important examples are enhanced oil recovery and drug carrier systems (for oral, topical, and parenteral administration). In the former, microemulsions are the key to efficient extraction of crude oil by dramatically reducing the interfacial tension (”chemical flooding”). In the latter, they offer the advantage of ease of manufacturing and scale-up, and improved drug solubilization and bioavailability. Thorough characterization of any colloidal system is essential but presents distinctive problems in the case of microemulsions because they are clear and, further, since microemulsion domains exist at fairly specific concentrations of the three basic components, dilution is almost never an option. Hence, investigation by conventional light scattering is difficult, if not impossible. X-ray and neutron scattering and dielectric measurements have been used to provide insight to the structure and dynamics of such systems but such measurements are not routine and, certainly, are not suited to normal laboratory analysis. Solvent NMR relaxation and diffusion measurements are non-invasive and non-destructive. Not only (micro)emulsions but also swollen micelles can be measured without dilution, stored under thermally controlled conditions (e.g. ICH guidelines) and re-analyzed to understand thermodynamic stability. Emulsion and micellar microstructure can be investigated with exquisite clarity via NMR. Further, with no moving parts, samples can readily be measured under under stop-flow conditions. With the advent of small bench-top low field NMR devices, the technique has become very useful as a routine aid in formulation of suspensions and emulsion. Using a 13MHz device, will present data obtained on a model microemulsion system to illustrate both the utility and simplicity of the technique in fingerprinting not only the composition of both the preparatory oil and water phases but also the microemulsion system so-formed from them.",
+    "presenting_author": "David Fairhurst | Colloid Consultants Ltd, Aiken, SC",
+    "authors": [
+      "Sean Race | XiGo Nanotools Inc, East Brunswick, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "David Fairhurst",
+        "affiliation": "Colloid Consultants Ltd, Aiken, SC",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sean Race",
+        "affiliation": "XiGo Nanotools Inc, East Brunswick, NJ",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper443411.html",
+    "topic": "Title Not Found",
+    "date_time": "November 2015",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper435360.html",
+    "topic": "Foam for CO2 Mobility Control for EOR Applications",
+    "date_time": "Monday, November 9, 2015: 4:27 PM",
+    "abstract": "The efficiency of the CO 2 in trapped oil mobilization process is severely effects by many problems including gravity override, viscous fingering, and early breakthrough. The said problems can efficiently be reduced by foam. A study has been conducted to evaluate CO 2 philic surfactants which have exhibited more practical advantages over conventional surfactants. The interfacial tension (IFT) between neat CO 2 and the newly produced surfactant solution was examined and is reported. By using the surfactant in 0.5 % concentration It was observed that the CO 2 / water IFT appreciably decreased from 30 mN/m to 2.41 mN/m.The static foam durability experiments in 1000 ml cylinder and by using foam analyzer at high temperature (95 0 C) in the presence and absence of the Dulang crude oil were conducted and are reported. The adsorption of surfactant formulation was investigated and was found 0.91 mg/g. The Coreflood experiment were also conducted to measure the mobility reduction factor (MRF) and was found 3.3. In addition, 94 % oil recovery was achieved by conducting high pressure high temperature (HPHT) coreflood experiments by using Berea core sample by using the new CO 2 philic surfactant. Coreflood results showed that as compared to conventional surfactants, CO 2 philic surfactants significantly reduce the mobility of the injected CO 2 and can recover additional trapped oil at the same time helpful in CO 2 sequestration.",
+    "presenting_author": "Muhammad Sagir | Chemical engineering, University Of Gujrat, Gujrat, Pakistan, Muhammad Suleman Tahir, Chemical engineering, University of Gujrat, University of Gujrat, Gujrat, Pakistan",
+    "authors": [
+      "Muhammad Mushtaq | Chemical engineering, Petroleum institute Abudhabi, Abudhabi, United Arab Emirates"
+    ],
+    "authors_structured": [
+      {
+        "name": "Muhammad Sagir",
+        "affiliation": "Chemical engineering, University Of Gujrat, Gujrat, Pakistan, Muhammad Suleman Tahir, Chemical engineering, University of Gujrat, University of Gujrat, Gujrat, Pakistan",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Muhammad Mushtaq",
+        "affiliation": "Chemical engineering, Petroleum institute Abudhabi, Abudhabi, United Arab Emirates",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper432102.html",
+    "topic": "Capillary Foams: A New Material Class Formed through the Synergistic Action of Particles and an Immiscible Liquid",
+    "date_time": "Monday, November 9, 2015: 5:03 PM",
+    "abstract": "Liquid foams are two-phase systems in which a large volume of gas is dispersed as bubbles in a continuous liquid phase. These foams are ubiquitous in nature. In addition, they are found in industrial applications, such as pharmaceutical formulation, food processing, wastewater treatment, construction, and cosmetics. Here a new class of foams is reported, obtained by frothing a suspension of colloidal particles in the presence of a small amount of an immiscible secondary liquid. A unique aspect of these foams, termed capillary foams, is the particle-mediated spreading of the minority liquid around the gas bubbles. The resulting mixed particle/liquid coating can stabilize bubbles against coalescence even when the particles alone cannot. The coated bubbles are further immobilized by entrapment in a network of excess particles connected by bridges of the minority liquid. Capillary foams were prepared with a diverse set of particle/liquid combinations to demonstrate the generality of the phenomenon. The observed foam stability correlates with the particle affinity for the liquid interface formed by spreading the minority liquid at the bubble surface. To illustrate some of the potential applications, we create vividly colored wet and dried foams, which are difficult to prepare using traditional methods, and load-bearing porous solids. The combined action of particles and immiscible secondary fluid confers exceptional stability to capillary foams and many options for functionalization, suggesting a wide range of possible applications.",
+    "presenting_author": "Yi Zhang | School of Chemical & Biomolecular Engineering, Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "J. Carson Meredith | School of Chemical & Biomolecular Engineering, Georgia Institute of Technology, Atlanta, GA",
+      "Sven H. Behrens | School of Chemical & Biomolecular Engineering, Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yi Zhang",
+        "affiliation": "School of Chemical & Biomolecular Engineering, Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "J. Carson Meredith",
+        "affiliation": "School of Chemical & Biomolecular Engineering, Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Sven H. Behrens",
+        "affiliation": "School of Chemical & Biomolecular Engineering, Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper427952.html",
+    "topic": "Enhanced Post-Deposition Dispersal of Aerosolized Medicine By Marangoni Flows",
+    "date_time": "Monday, November 9, 2015: 3:15 PM",
+    "abstract": "Gradients in the surface excess concentration of surfactants adsorbed at a liquid/vapor interface create surface tension gradients that drive Marangoni flows. This phenomenon may be used to enhance the uniformity of aerosol drug delivery in the lungs of patients with obstructive pulmonary diseases, such as cystic fibrosis (CF). CF is associated with the accumulation of dehydrated mucus in the lung airways. This alters ventilation and creates droplet deposition patterns that severely limit aerosolized medication access to peripheral regions of the lungs. We are investigating the potential to develop self-dispersing aerosol medications to improve uniformity of drug delivery in obstructed lungs. The strategy exploits surface flows that occur after aerosol deposition and carry drug significantly further than the hindered aerosol delivery would otherwise allow. For liquid aerosol, an active agent is formulated with aqueous surfactant solutions to enhance the dispersal of aerosol droplets after deposition on the airway surface liquid (ASL). We use physically entangled aqueous solutions of poly(acrylamide) or porcine gastric mucin as in vitro ASL mimics. Formulations are prepared using aqueous solutions of hydrogenated or fluorinated nonionic surfactants, and fluorescein dye is used as a tracer and model “drug” to visualize the extent of post-deposition spreading. Our work with deposition of surfactant-laden aerosol droplets has shown that the resulting Marangoni flows not only cause greater spreading of individual aerosol droplets on the liquid subphase surface but more importantly drive a large scale convective expansion of the entire field of deposited droplets across the subphase. The distances spanned by the aerosolized surfactant droplet field expansion are comparable to the lengths of airways deep in the lung where sub-monolayer droplet deposition is expected during aerosol inhalation. Preliminary animal studies with fluorosurfactant-laden-aerosols also show enhanced spreading in lungs as compared to surfactant-free control aerosols. This presentation will conclude with a discussion of enhanced dispersal of dry powder medications by surfactant-induced Marangoni flow. We find that a comingled mixture of surfactant and a model drug powder also disperses much further than the surfactant free powder on the same ASL mimics. A fundamental understanding of the forces acting on an adsorbed particle being transported under the influence of Marangoni flows is essential to design inhaled powder therapies with maximized post-deposition spreading. We investigate the forces acting on a particle by depositing microliter drops of soluble (sodium dodecyl sulfate) or insoluble (oleic acid) surfactants on water films and track the trajectories of individual solid particles, with a variety of diameters and wettabilities, at a water/vapor interface. We observe that the spreading surfactant front, initiates particle motion but then moves beyond the particle. The particle velocity evolves over time in two regimes: Regime 1, a period of rapid particle acceleration to its maximum velocity and Regime 2, a more prolonged period of particle deceleration. We find that the velocity of fluid being transported with the surfactant front is always greater than the particle velocity, and it is the viscous force of the fluid on the particle that is transporting it. In Regime 1, the force acting on the particle decreases with increasing distance from the drop deposition point, whereas in Regime 2, the force on the particle is independent of its position. The spatial and temporal evolution of the particle velocity depend on the surfactant solubility, as desorption and dissolution of soluble surfactants provide additional mechanisms not available to insoluble surfactants to relieve surface tension gradients. These in vitro spreading results and preliminary results from animal studies with liquid aerosols suggest that surfactants can play an important role in enhancing aerosol delivery to maximize the extent of post-deposition spreading in lungs.",
+    "presenting_author": "Ramankur Sharma | Department of Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Timothy Corcor | Division of Pulmonary, Allergy, and Critical Care Medicine, University of Pittsburgh, Pittsburgh, PA",
+      "Stephen Garoff | Department of Physics, Carnegie Mellon University, Pittsburgh, PA",
+      "Todd Przybycie | Center for Vaccine Research, University of Pittsburgh, Pittsburgh, PA",
+      "Doug Ree | Center for Vaccine Research, University of Pittsburgh, Pittsburgh, PA",
+      "Robert D. Tilto | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Ramankur Sharma",
+        "affiliation": "Department of Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Timothy Corcor",
+        "affiliation": "Division of Pulmonary, Allergy, and Critical Care Medicine, University of Pittsburgh, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephen Garoff",
+        "affiliation": "Department of Physics, Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Todd Przybycie",
+        "affiliation": "Center for Vaccine Research, University of Pittsburgh, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Doug Ree",
+        "affiliation": "Center for Vaccine Research, University of Pittsburgh, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Robert D. Tilto",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper430387.html",
+    "topic": "The Dependence of the Effective Gas-Solid Drag in Filtered Two-Fluid Models on the Sub-Filter Solid Turbulence",
+    "date_time": "Monday, November 9, 2015: 3:15 PM",
+    "abstract": "We present a new approach for the closure of the effective drag force appearing in the filtered two-fluid model (TFM) for gas-solid flow. In particular, we show that the effective drag can be systematically described by using the filtered volume fraction and the kinetic energy of the meso-scale velocity fluctuations, k s . Characterizing the effective drag as a function of these two markers appears insensitive to the actual configuration of the fine grid simulation as well as to the particle diameter. In addition, the fractional correction, which is a measure for the sub-filter heterogeneities and thus, determines the effective drag, can be easily collapsed to a single band for a wide range of filtered solid volume fractions. This collapse can be simply modeled by the logarithm of k s . We will further show that this special form of the fractional correction is an intrinsic property of the microscopic drag employed in this study by theoretical considerations. However, employing these findings to coarse grid simulations requires closures for k s . Our analysis demonstrates that in a first step k s can modeled by Smagorinsky type closure. Nevertheless, the presented constitutive relation for the kinetic energy of the cluster fluctuations requires a modification of its single phase counterpart to include the considerable impact of the sub-filter generation of k s (due to microscopic right hand side of the microscopic solids momentum equation) as well as the transport of k s at low macroscopic scalar shear rates. At large macroscopic scalar shear rates the presented model approaches the original form of the single phase Smagorinsky model.",
+    "presenting_author": "Simon Schneiderbauer | Department of Particulate Flow Modelling, Johannes Kepler University, Linz, Austria, Stefan Pirker, Department of Particluate Flow Modelling, Johannes Kepler University, Linz, Austria",
+    "authors": [
+      "Sankaran Sundaresan | Department of Chemical and Biological Engineering, Princeton University, Princeton, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Simon Schneiderbauer",
+        "affiliation": "Department of Particulate Flow Modelling, Johannes Kepler University, Linz, Austria, Stefan Pirker, Department of Particluate Flow Modelling, Johannes Kepler University, Linz, Austria",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sankaran Sundaresan",
+        "affiliation": "Department of Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper422452.html",
+    "topic": "Optimization and Scale up of Dry Impregnation Using DEM Simulations",
+    "date_time": "Monday, November 9, 2015: 5:20 PM",
+    "abstract": "Dry impregnation of active metals onto a porous catalyst support is an important step in the preparation of catalyst. In a typical dry impregnation process, metal solutions are sprayed over a particulate bed in a mixing vessel until the pore volume is reached. The inter-particle variability of the impregnated liquids inside the particles and metal content may significantly affect the activity and selectivity of the resulting catalyst. Current scale-up practices lead to poor fluid distribution and inhomogeneity in metal content. The aim of this work is to understand the dynamic behavior of the particles under the spray nozzle, which is essential for desired content uniformity, and to develop a scale-up model for the dry impregnation process. DEM simulations were conducted in a full length cylinder vessel of 30cm long and 20cm in diameter to study the effect of several parameters: rotation speed, particle size and shape. Identical experiments were done under the same conditions: 2 rotation speeds (9 rpm and 25 rpm) and spray rate of 1 L/hr. Axial water distribution is compared and good agreement is found between experiments and simulations. High water content is observed in the center due to insufficient mixing. Using DEM simulations we predict a more homogeneous axial water distribution at higher rotation speeds (50 rpm). The calculation of axial dispersion coefficient shows that particle dispersion is faster along the axis at higher rotation speeds, resulting a more uniform water distribution. Two dimensionless numbers are used to characterize the scale up of the system: Froude number (Fr) and Spray Flux number (Ψ). The Froude number is defined as the ratio of inertial force to gravitational force. The calculation of Fr gives the correlation between rotation speed (ω) and vessel size (R). Spray Flux number measures the density of spray droplet in the spray zone. The location and area of spray zone can significantly affect the overall content uniformity. Results in the cylindrical vessel show that a homogeneous liquid distribution with optimal particle mixing is obtained by minimizing the spray rate and Ψ for an optimal Fr number. The rules are further examined in the double cone geometry, where three different rotation speeds (7rpm, 15rpm, and 25rpm) are compared with three different spray rates (1.5L/hr, 3L/hr, and 5L/hr). It is found that keeping Fr number at the optimal value and lower spray rates increase the content uniformity of the resulting particles. Using the cylindrical vessel, the effect of particle size on the overall mixing and metal content uniformity was also studied. The optimal conditions previously ascertained (7rpm of rotation speed and 0.3 L/hr of flow rate) were used as a baseline for comparing different particle sizes (4.7mm, 3mm, and 2.4mm). Results show that in the smaller particle system, mixing is slower, which leads to a poor content uniformity. Furthermore, mixing and content uniformity are studied for mixtures of different particle sizes. The binary system is composed of 50% of small particles (2.4mm) and 50% of large particles (4.7mm). Tertiary system has 1/3 of each of the three particle sizes. In the particle mixtures, small particles tend to pass through the interstices of the large particles when they are flowing, and heavy particles tend to roll down the sloped bed surface, resulting in particle segregation and poor content uniformity.",
+    "presenting_author": "Yangyang Shen | Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+    "authors": [
+      "William G. Borghar | Department of Chemical & Biochemical Engineering, Rutgers, the State University of New Jersey, Piscataway, NJ",
+      "Arthur W. Chester | Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+      "M. Silvina Tomassone | Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yangyang Shen",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "William G. Borghar",
+        "affiliation": "Department of Chemical & Biochemical Engineering, Rutgers, the State University of New Jersey, Piscataway, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Arthur W. Chester",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "M. Silvina Tomassone",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper420366.html",
+    "topic": "Ab Initio Emulsion ATRP Assisted By Surfactant Ligand Design",
+    "date_time": "Monday, November 9, 2015: 3:51 PM",
+    "abstract": "Ab initio Emulsion ATRP Assisted by Surfactant Ligand Design Yipeng Wei 1 , Yanyu Jia 1 , Wen-Jun Wang, 1 Bo-Geng Li 1 and Shiping Zhu 2 1 College of Chemical & Biochemical Engineering, State Key Laboratory of Chemical Engineering, Zhejiang University, Hangzhou P.R. China 310017; 2 Department of Chemical Engineering, McMaster University, Hamilton, Canada L8S 4L7 wenjunwang@zju.edu.cn Abstract The main challenge of conducting an ab initio emulsion ATRP lies in the design of the catalyst-ligand complex structure. In emulsion ATRP, highly hydrophobic ligands such as dNbpy and BPMODA are commonly used to retain Cu catalyst in the oil phase, resulting in good control over the polymerization. However, a careful examination revealed that these systems cannot be classified as ab initio emulsion ATRP. The highly hydrophobic ligands remain in the monomer droplets, which generate osmotic pressure between particles. This in turn prevents the migration of monomer from the droplets into the micelles/particles, causing majority of the polymerization to occur inside the monomer droplets. Therefore, these systems behave more or less like miniemulsion ATRP or so-called aqueous dispersed ATRP, but not the ab initio emulsion polymerization based on micellar nucleation mechanism. In ab initio emulsion ATRP, the ligand molecules are ideally hydrophobic and stay in oil phase but do not mainly reside in the monomer droplets. The persistent ligand in monomer droplets generate osmotic pressure that could prevent monomer transfer across the aqueous phase. In order to solve this challenge, we introduced a new concept of \"surfactant-ligand\" (SL), which is a molecule that has both surfactant and ligand functionalities. As the name suggests, SLs molecules play dual roles in the ab initio ATRP, as a ligand and as a surfactant. These molecules form micelles and stabilize polymer particles, and they also help to stabilize the monomer droplets. The ligand groups of SL reside inside micelles/particles and could not come out to aqueous phase. The SL chemical structure is illustrated in Scheme 1. The experiment results showed the micelles were converted to polymer particles with both water-soluble and oil-soluble initiators. The micellar nucleation mechanism was confirmed by the growth of polymer particles during polymerization, in comparison to a control experiment without the addition of SL. It was also found that diffusion-controlled deactivation inside particles occurred (Scheme 1), which broadened the polymer molecular weight distribution (PDI>2). Adding a small amount of free ligand (dNbpy at a 1:10 mole ratio of dNbpy to SL) was found to improve the polymerization control. [i] Scheme 1 A) SL chemical structure and B) the concept of SL-mediated emulsion ATRP This work was published on Macromolecules 2014, 47, 7701-7706. And it was supported by the National Natural Science Foundation of China (Grant 20936006) and the Chinese State Key Laboratory of Chemical Engineering at Zhejiang University (Grant s SKL-ChE-12T05 and SKL-ChE-14D01).",
+    "presenting_author": "Yipeng Wei | Department of Chemical & Biological Engineering, Zhejiang University, Hangzhou, China, Yanyu Jia, College of Chemical & Biochemical Engineering, Zhejiang University, Hangzhou, China, Wen-Jun Wang, State Key Laboratory of Chemical Engineering, Zhejiang University, Hangzhou, China, Bo-Geng Li, College of Chemical and Biological Engineering, Zhejiang University, Hangzhou, China",
+    "authors": [
+      "Shiping Zhu | Department of Chemical Engineering, McMaster University, Hamilton, ON, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yipeng Wei",
+        "affiliation": "Department of Chemical & Biological Engineering, Zhejiang University, Hangzhou, China, Yanyu Jia, College of Chemical & Biochemical Engineering, Zhejiang University, Hangzhou, China, Wen-Jun Wang, State Key Laboratory of Chemical Engineering, Zhejiang University, Hangzhou, China, Bo-Geng Li, College of Chemical and Biological Engineering, Zhejiang University, Hangzhou, China",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Shiping Zhu",
+        "affiliation": "Department of Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425885.html",
+    "topic": "Influence of Interfacial Rheology on the Volume of Liquid Entrained in a Foam Film",
+    "date_time": "Monday, November 9, 2015: 4:45 PM",
+    "abstract": "Bubble columns that produce foam are commonly found in waste water treatment and other industrial processes. The head on a glass of beer is another familiar example of foam formed by bubbles rising through a liquid and collecting on the surface. The characteristics of the foam that is formed in these systems such as the foam height, density and lifetime are all dependent on the properties of the surface-active compounds that are present in the liquid. In the present work, a fundamental study of single bubble interactions at a planar air-liquid interface is performed. When a single bubble moves upward and reaches the interface, a thin film of liquid is formed that drains and eventually ruptures. The volume of liquid entrained in this film is important in determining the properties of the resulting foam. For example, thicker films will tend to produce “wetter”, more dense foams. A thicker film may also take longer to drain and therefore result in taller foam heights and/or more stable foams. Using interferometry, the volume of liquid entrained in the film is measured for several different surfactant systems. The properties of the surfactants, including interfacial rheological properties, are then related to the volume of fluid entrained in the film.",
+    "presenting_author": "John Frostad | Chemical Engineering, Stanford University, Stanford, CA",
+    "authors": [
+      "Daniele Tammaro | Chemical Engineering, Stanford University, Stanford, CA",
+      "Luciano Santollani | Chemical Engineering, Stanford University, Stanford, CA",
+      "Simone Bochner de Araujo | Chemical Engineering, Stanford University, Stanford, CA",
+      "Gerald G. Fuller | Chemical Engineering, Stanford University, Stanford, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "John Frostad",
+        "affiliation": "Chemical Engineering, Stanford University, Stanford, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Daniele Tammaro",
+        "affiliation": "Chemical Engineering, Stanford University, Stanford, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Luciano Santollani",
+        "affiliation": "Chemical Engineering, Stanford University, Stanford, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Simone Bochner de Araujo",
+        "affiliation": "Chemical Engineering, Stanford University, Stanford, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Gerald G. Fuller",
+        "affiliation": "Chemical Engineering, Stanford University, Stanford, CA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425699.html",
+    "topic": "Supramolecular Structural Forces in Stratifying Foam Films and Micelle Aggregation Number",
+    "date_time": "Monday, November 9, 2015: 4:09 PM",
+    "abstract": "Liquid foams are complex fluids, mostly formed by gas bubbles dispersed within a surfactant solution. The lifetime of foams depends critically on stability and drainage of thin liquid films that separate gas bubbles. It is well-established that the monotonic decrease in film thickness observed experimentally can be qualitatively described using lubrication approximation, where pressure is contributed by capillary and DLVO forces (electrostatic plus dispersion). However, foam films containing micelles, colloidal particles or polyelectrolyte-surfactant mixtures exhibit step-wise thinning or stratification. In this study, we use experiments and theory to investigate the influence of non-DLVO forces, including supramolecular oscillatory structural forces, on drainage and stratification of thin foam films (<100 nm). Using a Scheludko-type cell, we experimentally study the stratification kinetics of horizontal foam films formed by aqueous sodium dodecyl sulfate (SDS) solutions, and carefully determine how the concentration of surfactants influences the stepwise thinning process for micellar solutions. We elucidate how quantitative characterization of stratification provides a method for measuring dynamic disjoining pressure, as well as for estimating micelle size and interactions. The concentration-dependent aggregation number extracted from our experiments match-up reasonably well with values obtained by other techniques including scattering and fluorescence.",
+    "presenting_author": "Vivek Sharma | Chemical Engineering, University of Illinois at Chicago, Chicago, IL",
+    "authors": [
+      "Subinuer Yilixiati | Chemical Engineering, University of Illinois at Chicago, Chicago, IL",
+      "Yiran Zhang | Chemical Engineering, University of Illinois at Chicago, Chicago, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Subinuer Yilixiati",
+        "affiliation": "Chemical Engineering, University of Illinois at Chicago, Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Yiran Zhang",
+        "affiliation": "Chemical Engineering, University of Illinois at Chicago, Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Vivek Sharma",
+        "affiliation": "Chemical Engineering, University of Illinois at Chicago, Chicago, IL",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper413352.html",
+    "topic": "Validation of a Macro-Scale CFD-PBE Model for the Polyurethane Foaming Process",
+    "date_time": "Monday, November 9, 2015: 5:21 PM",
+    "abstract": "Validation of a macro-scale CFD-PBE model for the Polyurethane foaming process Mohsen Karimi (mohsen.karimi@polito.it), Daniele Marchisio (daniele.marchisio@polito.it). Department of Applied Science and Technology (DISAT), Politecnico di Torino Corso, Duca degli Abruzzi 24, 10129 Torino, Italy. Polyurethane (PU) foams are widely used in a variety of applications such as soft cushioning foam, thermal insulation material, car dashboard and many other applications. Because of the wide usage and good mechanical and thermal properties of the PU foams, there exists a steady increase in its commercial interest. Thus, the transition of the modeling methods from the empirical-based models to the numerical ones receives a lot of attentions, recently. This class of material forms from the exothermic reaction of isocyanate groups with active groups (e.g. alcohol, amines, and water). The reaction comprises two steps of development, including the gelling reaction, between polyols and isocyanates, and the blowing reaction, between water and isocyanate. Additives such as blowing agents and surfactants can also be incorporated to adjust the reaction rate and the mechanical properties of the final product. The second reaction (i.e., the blowing reaction) produces carbon dioxide gas which triggers the foaming process, together with the addition of a volatile substance, known as physical blowing agent. Furthermore, the characteristics of the final product depend on the size of the gas bubbles or cells. The foaming process begins with mixing of the two components and proceeds with the generation of small gas nuclei. The diffusion of gas from the blowing reaction an the evaporation of the physical blowing agent into the liquid phase results in the continuous grow of bubbles leading to the bubble growth and coalescence. The final morphology of the foam is determined by the size distribution of the gas bubbles or cells [1]. A typical foaming process is shown in Figure 1. Figure 1. Foaming process: including mixing the components, stirring for nucleation, bubble growth and coalescence and final foam, adopted from BASF Polyurethanes [2]. As mentioned above the final bubble size distribution within the foam can significantly alter the properties of the PU foams. Therefore, the main objective is to formulate a macro-scale computational model for the foaming process capable of predicting the evolution of the bubble size distribution during the process. This work is funded by the European Commission under the grant agreement number 604271 (project name: Modena; project identifier: FP7-NMP-2013-SMALL). Computational Fluid Dynamics (CFD) is utilized to simulate the behavior of the polymer mixture. This complex multiphase systems is considered to be constituted by two immiscible fluids. One phase is air, which fills the majority of the computational domain at time zero. As the time progresses the expansion of the PU foam, treated as a pseudo-continuous phase, replaces the air phase and the interface between the two phases is captured by using the Volume of Fluid (VOF) method. It is also worth pointing out that the varying properties of the PU foam/mixture, such as the density and viscosity of the foam, are modeled using sub-models that will be developed within the project via multiscale modeling. Both OpenFOAM and Fluent CFD solvers are compared for solving the governing equations. In addition, a population balance equation (PBE) is incorporated in the CFD framework to assess how the size distribution of the disperse gas bubbles in the PU foam varies in time and space. Appropriate source terms are included in the PBE to take into account the influence of the continuous and discontinuous phenomena such as bubble growth and coalescence. The Quadrature-Based Method of Moment (QBMM) is used to solve the PBE. In this method the number density function, representing the expected number of bubbles with certain size, is approximated with simple basis functions [3], and the evolution of the system is done by tracking some moments of the bubble size distribution. The time efficiency and accuracy of this approach is demonstrated by Marchisio et al. [4-5]. The model is currently under the validation stage. Twelve different test cases found in the literature in which different recipes (i.e. different polyols, isocyanates and blowing agent concentrations) are being used to validate our model predictions. These twelve cases correspond to simple mixing-cup experiments (such as the one depicted in Fig. 1) in which the time evolution of the foam temperature and foam density is monitored. Figure 2 reports an example of this validation work and contains the comparison between experimental measurements and model predictions concerning the time evolution of temperature and foam density [6]. As it case be seen satisfactory agreement is found. Future research efforts will focus on the development of better sub-models for bubble growth and coalescence, kinetics and rheological behavior of the foam. Figure 2. Foam density (left) and temperature (right) time evolution; continuous line: model predictions; symbols: experimental data. References : [1] S. Cohen-Addad, R. Hohler, O. Pitios, 2013. \"Flow in foams and flowing foams\", The Annual Review of Fluid Mechanics, (45), 241-267. [2] R . Leppkes, 2012. \"Polyurethanes, a versatile specialty plastic\" BASF Polyurethanes, Sellier Druck GmbH, 85354 Freising, Germany. [3] Marchisio, D., Fox, R.O., 2013. Computational Models for Polydisperse Particulate and Multiphase Systems. Cambridge Series in Chemical Engineering, Cambridge University Press, Cambridge, UK. [4] Marchisio, D.L., Dennis Vigil, R., O. Fox, R., 2003. Implementation of the quadrature method of moments in CFD codes for aggregation--breakage problems. Chemical Engineering Science 58, 3337--3351. [5] Marchisio, D.L., Fox, R.O., 2005. Solution of population balance equations using the direct quadrature method of moments. Journal of Aerosol Science 36, 43--73. [6] Karimi, M. Marchisio, D.L., 2015, A baseline model for the simulation of polyurethane foams via the population balance equation, Macromolecular theory and modelling, in press. 3",
+    "presenting_author": "Daniele Marchisio | Department of Applied Science and Technology, Polytechnic University of Turin, Turin, Italy",
+    "authors": [
+      "DISAT | Department of Applied Science and Technology, Polytechnic University of Turin, Turin, Italy",
+      "Politecnico di Torino | Department of Applied Science and Technology, Polytechnic University of Turin, Turin, Italy",
+      "Torino | Department of Applied Science and Technology, Polytechnic University of Turin, Turin, Italy",
+      "Italy | Department of Applied Science and Technology, Polytechnic University of Turin, Turin, Italy",
+      "Mohsen Karimi | Department of Applied Science and Technology, Polytechnic University of Turin, Turin, Italy"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daniele Marchisio",
+        "affiliation": "Department of Applied Science and Technology, Polytechnic University of Turin, Turin, Italy",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "DISAT",
+        "affiliation": "Department of Applied Science and Technology, Polytechnic University of Turin, Turin, Italy",
+        "designation": "Author"
+      },
+      {
+        "name": "Politecnico di Torino",
+        "affiliation": "Department of Applied Science and Technology, Polytechnic University of Turin, Turin, Italy",
+        "designation": "Author"
+      },
+      {
+        "name": "Torino",
+        "affiliation": "Department of Applied Science and Technology, Polytechnic University of Turin, Turin, Italy",
+        "designation": "Author"
+      },
+      {
+        "name": "Italy",
+        "affiliation": "Department of Applied Science and Technology, Polytechnic University of Turin, Turin, Italy",
+        "designation": "Author"
+      },
+      {
+        "name": "Mohsen Karimi",
+        "affiliation": "Department of Applied Science and Technology, Polytechnic University of Turin, Turin, Italy",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper435284.html",
+    "topic": "Quantitative Assessment of Fine-Grid Kinetic-Theory-Based Predictions of Mean-Flow Properties in Unbounded Fluidization",
+    "date_time": "Monday, November 9, 2015: 3:40 PM",
+    "abstract": "For several decades, it has been well known that kinetic-theory-based continuum models are qualitatively able to capture dynamic particle clustering in high-velocity, gas-solid flows. The quantitative accuracy of such descriptions, however, remains unclear mostly due to the computational requirements involved in such simulations. In particular, these particle clusters - regions where the local solids concentration exceeds the mean - occur at the so-called meso-scale, a length scale intermediate to the particle size and the system size. Numerical grids on the order of 1 to 20 particle diameters are typically required to fully resolve these heterogeneous structures. Such an approach is very computationally expensive, precluding its use in most industrial and pilot-scale applications. Therefore strategies to model, rather than directly simulate, the full range of meso-scale structures currently remains a highly active area of research. At present, the approach taken most frequently uses fine-grid continuum simulations to constitute additional closure models for coarse-grid filtered models. However, assessing the quantitative accuracy of these underlying kinetic-theory-based continuum models, which have many simplifying assumptions of their own, has not received the same amount of attention. Recent high-resolution CFD-DEM simulations (Radl and Sundarsean, 2014) of an unbounded sedimenting (or fluidization) system is used as ideal data to validate mean flow properties predicted by a new two-fluid model of Garzo, Tenneti, Subramaniam, and Hrenya (2012). Overall the comparisons are quite good both qualitatively and quantitatively, which is a bit surprising given the low-gradient assumption inherent in kinetic-theory models and the high concentration gradients present at the interface between clustered and dilute regions. Small differences at the highest concentrations are noted, and discussed in terms of the assumptions inherent in kinetic theory.",
+    "presenting_author": "William Fullmer | Chemical and Biological Engineering, University of Colorado, Boulder, CO",
+    "authors": [
+      "Christine M. Hrenya | Chemical and Biological Engineering, University of Colorado at Boulder, Boulder, CO"
+    ],
+    "authors_structured": [
+      {
+        "name": "William Fullmer",
+        "affiliation": "Chemical and Biological Engineering, University of Colorado, Boulder, CO",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christine M. Hrenya",
+        "affiliation": "Chemical and Biological Engineering, University of Colorado at Boulder, Boulder, CO",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper422913.html",
+    "topic": "Discrete Element Modeling of High Shear Wet Granulation: Effect of Process Parameters and Equipment Scale on Particle Level Mechanisms",
+    "date_time": "Monday, November 9, 2015: 4:30 PM",
+    "abstract": "Wet granulation is a commonly employed unit operation in the pharmaceutical manufacturing of many oral solid dosage products. Wet granulation affords processing robustness by preventing segregation of materials, improving flow, and reducing the sensitivity to input material variability. Several mechanisms are at play during wet granulation. These include wetting and nucleation, growth and consolidation, and breakage/attrition. Particle level mechanisms influence the resulting granule properties, and thus the final quality attributes of the drug product. While particle level mechanisms strongly influence process performance, these quantities are challenging to measure experimentally. Numerical tools, such as the Discrete Element Method (DEM), can be used in conjunction with experiments to elucidate how particle level processes affect resulting granule properties. In this work, the DEM technique was employed to study the effect of process parameters and equipment scale on particle-level physics involved in wet granulation. Material calibration was performed to ensure that the computational elements represent a typical pharmaceutical material (microcrystalline cellulose). Particle velocity and localized forces were calculated from DEM simulations. These quantities were verified experimentally using advanced real-time analytic tools. The studies provide a quantitative relationship between the process variables (impeller tip speed, granulator fill level, granulator blade design and equipment scale) and measurable properties (velocity profiles, normal, and shear stress distributions) in the radial, tangential and axial directions. The DEM simulations showed that impeller tip speed had the most significant effect on resulting particle velocities while fill level, granulator blade design and equipment scale had minimal impact on particle velocities. Normal and shear stress distribution were affected by impeller tip speed, fill level, and equipment scale while blade design had minimal impact within the space studied. By numerical calculations of pressure, velocity, and shear stress in different regions of the granulator, this study provides guidelines on achieving reproducible particle environment with changes in scale, granulator design, fill level, and impeller speed.",
+    "presenting_author": "Brenda Remy | Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+    "authors": [
+      "Atul Dubey | Tridiagonal Solutions Inc., San Antonio, TX",
+      "Stephen Cole | DEM Solutions Ltd., Edinburgh, United Kingdom",
+      "Richard D. LaRoche | DEM Solutions USA Inc., Lebanon, NH",
+      "Preetanshu Pandey | Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+      "Ajit Narang | Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+      "Dilbir Bindr | Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Brenda Remy",
+        "affiliation": "Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Atul Dubey",
+        "affiliation": "Tridiagonal Solutions Inc., San Antonio, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephen Cole",
+        "affiliation": "DEM Solutions Ltd., Edinburgh, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Richard D. LaRoche",
+        "affiliation": "DEM Solutions USA Inc., Lebanon, NH",
+        "designation": "Author"
+      },
+      {
+        "name": "Preetanshu Pandey",
+        "affiliation": "Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Ajit Narang",
+        "affiliation": "Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Dilbir Bindr",
+        "affiliation": "Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+        "designation": "Author"
+      }
+    ]
+  }
+]

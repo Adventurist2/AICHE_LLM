@@ -1,0 +1,324 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632544",
+    "paper_endpoint": "Paper/632544",
+    "paper_id": "632544",
+    "topic": "Dual Adaptive Model Predictive Control with Disturbances",
+    "title": "Dual Adaptive Model Predictive Control with Disturbances",
+    "date_time": "2021-11-11_15:30:00_18:00:00",
+    "session_id": "46668",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "644",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Over the past few decades, model predictive control (MPC) has become one of the most effective tools in handling industrial control problems. MPC exploits and optimizes trajectories of a plant given a model that simulates the plant dynamics. In many industrial applications, approximate linear models are employed and control performance can deteriorate over time if the model is not updated to take into account varying operation conditions. Model-based control requires good accuracy of model parameters to achieve high performance. Therefore, control design under parametric uncertainties is a challenging topic in control system engineering. One well-known control design for uncertain systems is adaptive control. An indirect adaptive control system, which consists of a conventional model-based control law with adjustable parameters and a model adaptation loop, is an effective method to handle such problems. Online parameter adaptation commonly utilizes recursive parametric estimation methods such as the gradient algorithm and the recursive least square (RLS) algorithm. A necessary condition for parameter convergence is persistent excitation (PE), which is satisfied when the input signals have rich information. Controllers with active learning components aim to generate more informative signals to satisfy the PE condition. However, the most common goal in control engineering is set point regulation and the degree of excitation is usually not sufficient under normal operating conditions. If external signals are applied to generate PE, control performance is compromised when the signals become excessive. Dual control theory focuses on the two seemingly conflicting aspects of adaptive control: trajectory regulation and parameter estimation. Since active learning with excessive or insufficient excitation compromises performance, a dual adaptive controller aims to improve parameter estimation while maintaining control performance. Adaptive model predictive control (AMPC) draws increasing attention from researchers but many challenges remain open. The majority of adaptive MPC algorithms treat control and learning as separate tasks. This approach, called certainty equivalence (CE) adaptive control, generates input signals that cannot be guaranteed to be rich enough for good parameter estimation. One way of approaching this issue is to design a dual controller, which actively explores the system by ensuring a certain level of excitation, either constantly or when needed. In this work, the parameter adaptation algorithm is RLS, which uses the empirical parameter estimation uncertainties to adjust the adaptation gain for parameter updates. The dual MPC controller we propose is based on the CE-MPC formulation and incorporates the parameter adaptation mechanism in the prediction horizon. We show that the dual formulation is equivalent to optimizing the expectation of the squared error signals in the MPC objective function. The optimization problem becomes nonconvex because of the addition of parameter adaptation rules in the constraint set and we propose to verify the optimality property of the dual formulation with global optimization solvers. The algorithm is implemented and tested on a simulated SISO system to compare the performance of dual MPC and CE MPC. References Feldbaum, A. (1960). Dual control theory. i. Avtomatika i Telemekhanika , 21(9), 1240-1249. Polderman, J.W., 1989. Adaptive control & identification: conflict or conflux?. CWI Tracts , (67). Heirung, T. A. N., Ydstie, B. E., & Foss, B. (2017). Dual adaptive model predictive control. Automatica , 80, 340-348.",
+    "presenting_author": "Zicheng Cai | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Zicheng Cai | Carnegie Mellon University, Pittsburgh, PA",
+      "Birger Ydstie | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zicheng Cai",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Birger Ydstie",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "644a",
+    "sortable_time": "2021-11-11_15:30:00_15:49:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632544"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/630733",
+    "paper_endpoint": "Paper/630733",
+    "paper_id": "630733",
+    "topic": "Development of Offset-Free MPC Framework for Hydraulic Fracturing Process Using Sindy",
+    "title": "Development of Offset-Free MPC Framework for Hydraulic Fracturing Process Using Sindy",
+    "date_time": "2021-11-11_15:30:00_18:00:00",
+    "session_id": "46668",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "644",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Data-fueled modeling and control of complex systems are currently undergoing a revolution, driven by the confluence of big data, advanced algorithms in machine learning, and modern computational hardware [1]. Model-based control strategies, such as model predictive control (MPC), rely on accurate and efficient models that capture the relevant dynamics for a given system. In this regard, technical advancement in data-driven modeling provides a tremendous opportunity to extend the reach of model predictive control (MPC) [2]. Moreover, since plant-model mismatch and un-measured disturbance always exist in real systems, MPC usually cannot achieve optimal closed-loop performance. Although these data-driven models show promise and are successful, many leading modern techniques such as neural networks rely on access to large amounts of data, may not be interpretable, and do not incorporate known constraints. Hence, in this work, we use the sparse identification of nonlinear dynamics (SINDy) modeling procedure and demonstrate its ability to identify the fewest terms needed to explain the plant-model mismatch, making the model interpretable and generalizable [3]. Specifically, SINDy is combined with MPC for enhanced data-driven control of a hydraulic fracturing process, improving the prediction accuracy and control performance. Hydraulic fracturing is a highly complicated process where many vital characteristics are not considered when developing a mathematical model [4]. In the proposed framework, we use SINDy to identify a model that captures the offset between plant measurements and first-principles model predictions of a fracturing process, namely fracture width, width at the wellbore, and fracture length. The resulting sparse model, which describes the offset, is considered as a disturbance term in the offset-free MPC formulation. Thus, the disturbance model in the framework represents the nonlinear dynamics of the offset which in this case represents the structural uncertainty. Structural uncertainty is a term in the offset-free MPC that describes the model bias which comes from the underlying knowledge of the process. This disturbance model is then augmented to the state-space model, and the states are driven to their set points using the modeled structural uncertainty. These state and disturbance estimates are used to initialize the MPC problem [5]. Generally speaking, offset free control is guaranteed when there are no constraints or when the disturbance is either a constant or linear in nature [6,7]. Here, we apply the identified plant-model mismatch to the shrinking horizon optimal control problem to improve the prediction accuracy and closed-loop performance of the MPC [8]. The disturbance estimates from the SINDy model strengthen the prediction accuracy in the shrinking horizon problem as the offset-free framework captures the system's nonlinear dynamics well. The proposed SINDy-based offset-free MPC framework has high reference tracking performance, requires significantly lesser data to cope with rapid system changes by representing the offset's nonlinear nature. The framework is computationally more efficient and robust to noise than the nominal MPC models that use either neural networks for plant model mismatch or complex high-fidelity models. Furthermore, the closed-loop simulation results demonstrate that the proposed framework can efficiently model the intrinsic plant-model mismatch that should be handled for the performance of offset-free MPC. Thus, the proposed method is effective in enhancing the performance of offset-free MPC for real-time applications. References: Kutz, J. Nathan, et al. Dynamic mode decomposition: data-driven modeling of complex systems. Society for Industrial and Applied Mathematics, 2016. Kaiser, Eurika, J. Nathan Kutz, and Steven L. Brunton. \"Sparse identification of nonlinear dynamics for model predictive control in the low-data limit.\" Proceedings of the Royal Society A 474.2219 (2018): 20180335. Brunton, Steven L., Joshua L. Proctor, and J. Nathan Kutz. \"Discovering governing equations from data by sparse identification of nonlinear dynamical systems.\" Proceedings of the national academy of sciences 113.15 (2016): 3932-3937. Siddhamshetty, Prashanth, Seeyub Yang, and Joseph Sang-Il Kwon. \"Modeling of hydraulic fracturing and designing of online pumping schedules to achieve uniform proppant concentration in conventional oil reservoirs.\" Computers & Chemical Engineering 114 (2018): 306-317. Maeder, Urban, Francesco Borrelli, and Manfred Morari. \"Linear offset-free model predictive control.\" Automatica 45.10 (2009): 2214-2222. Pannocchia, Gabriele, and James B. Rawlings. \"Disturbance models for offset‐free model‐predictive control.\" AIChE journal 49.2 (2003): 426-437. Badgwell, Thomas A., and Kenneth R. Muske. \"Disturbance model design for linear model predictive control.\" Proceedings of the 2002 American Control Conference (IEEE Cat. No. CH37301). Vol. 2. IEEE, 2002. Das, Buddhadeva, and Prashant Mhaskar. \"Lyapunov‐based offset‐free model predictive control of nonlinear process systems.\" The Canadian Journal of Chemical Engineering 93.3 (2015): 471-478.",
+    "presenting_author": "Parth Shah | Texas A&M University, College Station, TX",
+    "authors": [
+      "Parth Shah | Texas A&M University, College Station, TX",
+      "Sang Hwan Son | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Parth Shah",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sang Hwan Son",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "644b",
+    "sortable_time": "2021-11-11_15:49:00_16:08:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/630733"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/626428",
+    "paper_endpoint": "Paper/626428",
+    "paper_id": "626428",
+    "topic": "Deep Learning-Based Approximate Economic Model Predictive Control with Offset-Free Asymptotic Performance Guarantees Using a Modifier-Adaptation Scheme",
+    "title": "Deep Learning-Based Approximate Economic Model Predictive Control with Offset-Free Asymptotic Performance Guarantees Using a Modifier-Adaptation Scheme",
+    "date_time": "2021-11-11_15:30:00_18:00:00",
+    "session_id": "46668",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "644",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Model predictive control (MPC) is a popular optimization-based control strategy due to its ability to directly account for multivariable dynamics and constraints [1]. Since MPC can be flexibly adapted by modifying the objective and/or constraints in the underlying dynamic optimization problem, it has been increasingly used in settings that go beyond traditional setpoint tracking such as nonlinear and economic control tasks [2]. An important challenge in nonlinear forms of MPC is the potentially large computational (and memory) burden associated with repeatedly solving a generally non-convex optimal control problem in real-time. Explicit MPC is an alternative to this real-time optimization approach wherein the solution to the optimal control problem is determined offline for all feasible measured state values [3]. However, not only does the size of the mapping grow exponentially with problem size (in the worst-case), but explicit MPC is not easily extended to nonlinear problems due to increased complexity in the optimality conditions [4]. To overcome the challenges with online optimization and explicit MPC, there is increasing interest in “approximate” MPC policies that learn an explicit representation using any of the readily available function approximation techniques such as polynomials [5], radial basis functions [6], and neural networks [7-11]. The basic idea behind approximate MPC is as follows. First, the optimal control problem is solved offline for a large number of state realizations to obtain the corresponding optimal control input. Then, using this as training data, a parametric function is trained, which can then be used online to cheaply evaluate the control action. This process can be interpreted as a form of expert-based supervised learning or imitation learning [12]. Although good performance has been obtained with approximate MPC in several applications [13,14], errors in the approximation are inevitable due to the choice of “hyperparameters” that specify the functional form of the policy and insufficient training data in certain regions of the state space leading to poor generalization. These approximation errors lead to asymptotic losses in closed-loop performance. In this presentation, we first propose a closed-loop training procedure for approximating economic MPC using deep neural networks (DNNs) in which the training samples are generated from a control-oriented representation of the state-space that is defined in terms of a tube of closed-loop trajectories. To account for the closed-loop asymptotic performance losses using the approximate policy, we then propose a Karush-Kuhn-Tucker (KKT)-derived online adaptive correction scheme, where the main idea is to add a corrective term to the approximate policy that ensures that the limit point of closed-loop system satisfies the KKT conditions of the corresponding steady-state optimization problem. Finally, to ensure convergence of the online adaptive correction scheme that is not guaranteed in the design of the DNN, we propose an offline performance verification method. The scenario-based performance verification scheme provides probabilistic guarantees that the closed-loop control system converges to a stable equilibrium point. The performance of the proposed approach is demonstrated using a benchmark Williams-Otto reactor example. References [1] D.Q. Mayne, “Model predictive control: Recent developments and future promise,” Automatica , vol. 50, no. 12, pp. 2967–2986, 2014. [2] M. Diehl, H. G. Bock, J. P. Schloder, R. Findeisen, Z. Nagy, and F. Allgower, “Real-time optimization and nonlinear model predictive control of processes governed by differential-algebraic equations,” Journal of Process Control , vol. 12, pp. 577–585, 2002. [3] A. Bemporad, M. Morari, V. Dua, and E. N. Pistikopoulos, “The explicit linear quadratic regulator for constrained systems,” Automatica , vol. 38, no. 1, pp. 3–20, 2002. [4] A. Alessio, and A. Bemporad. \"A survey on explicit model predictive control.\" Nonlinear model predictive control. Springer, Berlin, Heidelberg, 2009. 345-369. [5] A. Chakrabarty, V. Dinh, M. J. Corless, A. E. Rundell, S. H. Z ̇ak, and G. T. Buzzard, “Support vector machine informed explicit nonlinear model predictive control using low-discrepancy sequences,” IEEE Transactions on Automatic Control , vol. 62, pp. 135–148, 2017. [6] L. H. Cseko ̋, M. Kvasnica, and B. Lantos, “Explicit MPC-based RBF neural network controller design with discrete-time actual Kalman filter for semiactive suspension,” IEEE Transactions on Control Systems Technology , vol. 23, no. 5, pp. 1736–1753, 2015. [7] S. Chen, K. Saulnier, N. Atanasov, D. D. Lee, V. Kumar, G. J. Pappas, and M. Morari, “Approximating explicit model predictive control using constrained neural networks,” in Proceedings of the American Control Conference, (Milwaukee), pp. 1520–1527, 2018. [8] B. Karg, and S. Lucia. “Efficient representation and approximation of model predictive control laws via deep learning.” IEEE Transactions on Cybernetics , vol. 50, no. 9, pp. 3866-3878, 2020. [9] J. A. Paulson and A. Mesbah. “Approximate closed-loop robust model predictive control with guaranteed stability and constraint satisfaction,” IEEE Control Systems Letters , vol. 4, no. 3, pp. 719–724, 2020. [10] A.D. Bonzanini, J. A. Paulson, G. Makrygiorgos, and A. Mesbah. “Fast approximate learning-based multistage nonlinear model predictive control using Gaussian processes and deep neural networks,” Computers & Chemical Engineering , vol. 145, pp. 107174. [11] R.J. Lovelett, F. Dietrich, S. Lee, and I.G. Kevrekidis. “Some manifold learning considerations toward explicit model predictive control,” AIChE Journal , vol. 66, pp. e16881. [12] D.P. Bertsekas, “Reinforcement learning and optimal control,” Athena Scientific Belmont, MA., 2019 [13] A.D. Bonzanini, J. A. Paulson, D.B. Graves, and A. Mesbah. “Toward safe dose delivery in plasma medicine using projected neural network-based fast approximate NMPC,” In Proceedings of the IFAC World Congress, 5353-5359, 2020, Berlin, Germany. [14] J. Drgona, D. Picard, M. Kvasnica, and L. Helsen. “Approximate model predictive building control via machine learning,” Applied Energy , vol. 218, pp. 199–216, 2018.",
+    "presenting_author": "Dinesh Krishnamoorthy | Harvard John A. Paulson School of Engineering and, Allston, MA",
+    "authors": [
+      "Dinesh Krishnamoorthy | Harvard John A. Paulson School of Engineering and, Allston, MA",
+      "Ali Mesbah | University of California, Berkeley",
+      "Joel Paulson | The Ohio State University, Columbus"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dinesh Krishnamoorthy",
+        "affiliation": "Harvard John A. Paulson School of Engineering and, Allston, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "644c",
+    "sortable_time": "2021-11-11_16:08:00_16:27:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/626428"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/623930",
+    "paper_endpoint": "Paper/623930",
+    "paper_id": "623930",
+    "topic": "Machine-Learning-Based Construction of Barrier Functions and Models for Safe Model Predictive Control",
+    "title": "Machine-Learning-Based Construction of Barrier Functions and Models for Safe Model Predictive Control",
+    "date_time": "2021-11-11_15:30:00_18:00:00",
+    "session_id": "46668",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "644",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Process safety is one of the most critical priorities to industrial production and operation. As such, advanced control techniques such as Model Predictive Control (MPC) have been proposed to ensure smooth operation and to handle intricate multi-variable interactions, nonlinearities, and constraints on process variables and actuators. Moreover, Control Lyapunov-Barrier Function-based (CLBF) controllers have shown success in ensuring the stability and safety of a nonlinear system for all times ([1]). A Control Lyapunov-Barrier Function can be included as a part of the MPC formulation, where the predictive model within the MPC is either modeled using first-principles in the form of nonlinear ODE's ([2]), or modeled using machine-learning-based methods such as recurrent neural networks ([3]). CLBFs can be developed from the linear combination of Control Lyapunov Function (CLF) and Control Barrier Function (CBF), both of which satisfying certain stabilizability and safety properties ([1, 4]). Characterizing a CBF that satisfies its required properties for the unsafe and the safe operating regions distinctively still remains a difficult task especially for nonlinear processes with complex unsafe operating conditions which cannot be readily described with common explicit functions. We propose a Control Lyapunov-Barrier Function-based Model Predictive Control method utilizing a feed-forward neural network specified Barrier Function and a recurrent neural network predictive model to stabilize the nonlinear systems with input constraints and to guarantee that safety requirements are met for all times. The nonlinear system is first modeled using recurrent neural network (RNN) techniques, and a Control Barrier Function is characterized by constructing a feed-forward neural network model (FNN) with unique structures and properties. The FNN is then trained based on discretized data within user-defined safe and unsafe operating regions. Given sufficiently small bounded modeling errors with the two NN models, the proposed control system is able to ensure closed-loop stability while preventing closed-loop states from entering any unsafe regions in the state-space under sample-and-hold control action implementation. We demonstrate the effectiveness of the proposed control strategy using a nonlinear chemical process example with a bounded unsafe region. References: [1] M. Z. Romdlony and B. Jayawardhana. Stabilization with guaranteed safety using control Lyapunov–barrier function. Automatica , 66:39–47, 2016. [2] Z. Wu, F. Albalawi, Z. Zhang, J. Zhang, H. Durand, and P. D. Christofides. Control lyapunov-barrier function-based model predictive control of nonlinear systems. Automatica , 109:108508, 2019. [3] Z. Wu and P. D. Christofides. Control lyapunov-barrier function-based predictive control of nonlinear processes using machine learning modeling. Computers & Chemical Engineering , 134:106706, 2020. [4] M. Jankovic. Combining control Lyapunov and barrier functions for constrained stabilization of nonlinear systems. In Proceedings of the American Control Conference , pages 1916–1922, Seattle, Washington, 2017.",
+    "presenting_author": "Scarlett (Siyao) Chen | University of California, Los Angeles",
+    "authors": [
+      "Scarlett (Siyao) Chen | University of California, Los Angeles",
+      "Zhe Wu | National University of Singapore",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Scarlett (Siyao) Chen",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhe Wu",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "644d",
+    "sortable_time": "2021-11-11_16:27:00_16:46:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/623930"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/624904",
+    "paper_endpoint": "Paper/624904",
+    "paper_id": "624904",
+    "topic": "Efficient Coordination of Plantwide Distributed MPC: The Lyapunov Envelope Algorithm",
+    "title": "Efficient Coordination of Plantwide Distributed MPC: The Lyapunov Envelope Algorithm",
+    "date_time": "2021-11-11_15:30:00_18:00:00",
+    "session_id": "46668",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "644",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In model predictive control (MPC), control decisions are determined by solving the optimal control problems at sampling times associated with the predicted trajectories of the system, which can become challenging for large-scale integrated processes. Distributed MPC [1], which adopts a decomposition of the entire process into subsystems and a coordination algorithm to update subsystem controllers’ decisions through information exchange, offers a structured and flexible paradigm of optimally controlling large-scale systems. Methods of automatically generating suitable decompositions based on network theory [2] and distributed optimization algorithms (primal-dual iterative algorithms that aims at an optimal solution of the monolithic problem based on subproblem solutions) [3] have been extensively investigated in the recent years. However, for iterative distributed optimization algorithms, the computation time for the iterations to converge will usually occupy a considerable proportion of the sampling interval (one or a few minutes) and hence result in a prohibitive delay. In other words, distributed optimization is usually difficult to implement in real time. To overcome this limitation, in this work, we propose a Lyapunov envelope algorithm that is real-time implementable under tight computational time restrictions without sacrificing the closed-loop stability under distributed MPC. Specifically, in the proposed algorithm: The interconnecting relations among the subsystems in the predicted horizon are not required to be satisfied exactly but only considered as soft constraints, i.e., the violations to these equalities are penalized in the objective function. Under this penalization, a primal iterative algorithm analogous to forward-backward splitting [4] is adopted and allowed to be early-terminated before full convergence. The violations to the interconnecting relations are regarded as perturbations. The effect of perturbations originating from the early-terminated algorithm on the closed-loop stability of the entire system, as characterized by the Lyapunov function value difference between the realized and the predicted trajectories, is analyzed based on incremental dissipativity of the interconnected subsystems. Such a dissipativity analysis establishes that the objective function with penalty, under proper assumptions, acts as a plantwide Lyapunov function, called the Lyapunov envelope . An arbitrary number of iterations result in a monotonically decreasing Lyapunov envelope, hence maintaining the closed-loop stability of the plantwide process. Naturally, larger numbers of iterations allow larger decrease and thus improve the resulting control performance. We apply the Lyapunov envelope to the distributed MPC of a plantwide benchmark process, namely the vinyl acetate monomer plant [5], whose optimal control problems at each sampling time have numbers of variables and constraints on the order of 10 4 . Our simulation studies demonstrate a significant improvement of computational performance and real-time implementability compared to centralized MPC. To our best knowledge, there has not been any other work to apply distributed MPC on a comparable scale. References [1] Christofides, P. D., et al. (2013). Distributed model predictive control: A tutorial review and future research directions. Comput. Chem. Eng. , 51 , 21-41. [2] Daoutidis, P., et al. (2019). Optimal decomposition of control and optimization problems by network structure: Concepts, methods and inspirations from biology. AIChE J. , 65 (10), e16708. [3] Tang, W., & Daoutidis, P. (2021). Fast and stable nonconvex constrained distributed optimization: the ELLADA algorithm. Optim. Eng. , doi:10.1007/s11081-020-09585-w [4] Chen, G. H., & Rockafellar, R. T. (1997). Convergence rates in forward-backward splitting. SIAM J. Optim. , 7(2), 421-444. [5] Chen, R., Dave, K., McAvoy, T. J., & Luyben, M. (2003). A nonlinear dynamic model of a vinyl acetate process. Ind. Eng. Chem. Res. , 42(20), 4478-4487.",
+    "presenting_author": "Wentao Tang | Shell Global Solutions (US), Houston, TX",
+    "authors": [
+      "Wentao Tang | Shell Global Solutions (US), Houston, TX",
+      "Prodromos Daoutidis | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Wentao Tang",
+        "affiliation": "Shell Global Solutions (US), Houston, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "644e",
+    "sortable_time": "2021-11-11_16:46:00_17:05:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/624904"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/625119",
+    "paper_endpoint": "Paper/625119",
+    "paper_id": "625119",
+    "topic": "Robust Explicit Model Predictive Control Via Robust Optimization",
+    "title": "Robust Explicit Model Predictive Control Via Robust Optimization",
+    "date_time": "2021-11-11_15:30:00_18:00:00",
+    "session_id": "46668",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "644",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Process control applications ubiquitously involve uncertainty due to the modeling mismatch between the real process and its digital twin, variations of process characteristics which are assumed constant, and the presence of unmeasured process disturbances. Hence, the implementation of an uncertainty-unaware control strategy could lead to significant deviations from the desired operational goal or unavoidably result in infeasibility. To address this challenge, robust model predictive control strategies have been proposed to handle these uncertainties and guarantee the satisfaction of constraints [1]. In the context of robust multiparametric/explicit model predictive control, contributions have focused on additive process disturbances and linear constraints [2], min-max approaches for additive [3] and multiplicative uncertainties [4] or employed dynamic programming and robust optimization techniques [5]. However, an open question remains the calculation of a robust explicit process control law for linear quadratic regulator problems with multiplicative uncertainty, that avoids the computational cost of dynamic programming [6]. In this work, we present an algorithm that solves the aforementioned challenge by calculating a feedback control law using multiparametric programming and robust optimization techniques. Firstly, considering box model uncertainty intervals, and a discrete time-invariant linear state space model, we construct an appropriate terminal set constraint [7], and we reformulate the original problem to its robust counterpart with a single step [8,9]. Subsequently, linear transformations are applied that preserve the linearity of the constraints and express the feasible space in terms of the initial states and the decision variables of the system. As the last step of the approach, we solve the multiparametric quadratic programming problem to derive the robust explicit solution that guarantees that satisfaction of constraints in the presence of the uncertainty [10]. We apply these findings to a process control problem and show that the approach can be extended to the case where binary decisions are part of the problem formulation. References [1] Kouvaritakis, B., & Cannon, M. (2016). Model predictive control. Switzerland: Springer International Publishing, 38. [2] Olaru, S., & Ayerbe, P. R. (2006, December). Robustification of explicit predictive control laws. In Proceedings of the 45th IEEE Conference on Decision and Control (pp. 4556-4561). IEEE. [3] Sakizlis, V., Kakalis, N. M., Dua, V., Perkins, J. D., & Pistikopoulos, E. N. (2004). Design of robust model-based controllers via parametric programming. Automatica, 40(2), 189-201. [4] Bemporad, A., Borrelli, F., & Morari, M. (2003). Min-max control of constrained uncertain discrete-time linear systems. IEEE Transactions on Automatic Control, 48(9), 1600-1606. [5] Kouramas, K. I., Panos, C., Faísca, N. P., & Pistikopoulos, E. N. (2013). An algorithm for robust explicit/multi-parametric model predictive control. Automatica, 49(2), 381-389. [6] Pappas, I., Kenefake, D., Burnak, B., Avraamidou, S., Ganesh, H. S., Katz, J., Diangelakis, N.A., & Pistikopoulos, E. N. (2021). Multiparametric Programming in Process Systems Engineering: Recent Developments and Path Forward. Frontiers in Chemical Engineering, 2. [7] Blanchini, F. (1999). Set invariance in control. Automatica, 35(11), 1747-1767. [8] Ben-Tal, A., & Nemirovski, A. (2000). Robust solutions of linear programming problems contaminated with uncertain data. Mathematical programming, 88(3), 411-424. [9] Dantzig, G.B., Eaves, B.C. (1973). Fourier-Motzkin elimination and its dual. Journal of Combinatorial Theory Series A, 14(3), 288-297. [10] Oberdieck, R., Diangelakis, N. A., & Pistikopoulos, E. N. (2017). Explicit model predictive control: A connected-graph approach. Automatica, 76, 103-112.",
+    "presenting_author": "Iosif Pappas | Texas A&M University, College Station, TX",
+    "authors": [
+      "Iosif Pappas | Texas A&M University, College Station, TX",
+      "Nikolaos A. Diangelakis | Texas A&M University, College Station, TX",
+      "Richard Oberdieck | Gurobi Optimization, LLC, Beaverton, OR",
+      "Efstratios Pistikopoulos | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Iosif Pappas",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nikolaos A. Diangelakis",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Richard Oberdieck",
+        "affiliation": "Gurobi Optimization, LLC, Beaverton, OR",
+        "designation": "Author"
+      },
+      {
+        "name": "Efstratios Pistikopoulos",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "644f",
+    "sortable_time": "2021-11-11_17:05:00_17:24:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/625119"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/627089",
+    "paper_endpoint": "Paper/627089",
+    "paper_id": "627089",
+    "topic": "Integration of Scheduling and Optimal Control for Multi-Product Processes Using a Switched Dynamic System Formulation",
+    "title": "Integration of Scheduling and Optimal Control for Multi-Product Processes Using a Switched Dynamic System Formulation",
+    "date_time": "2021-11-11_15:30:00_18:00:00",
+    "session_id": "46668",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "644",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In the process industry, decision making involves supply chain management, planning, scheduling and process control. Traditionally, these layers have been addressed individually and solved sequentially. This strategy may lead to sub-optimal or even infeasible solutions when decisions made at upper (long-term) levels do not take into consideration information from lower (short-term) levels [1]. There are well known benefits from integration of scheduling and control, e.g., sequences that prevent costly changeovers and reduce transition times and off-spec products; scheduling programs that minimize operational problems (e.g., aggressive control actions); and the use of more precise and timely information in scheduling [2]. As a result, there is an increasing interest in a tighter coordination and collaboration across multiple decision-making scales. Studies have proposed strategies to integrate a dynamic model of the continuous system into the scheduling framework following a so called top-down approach [3,4,5]. Despite these efforts, most of the integrated methods face difficulties introduced by the presence of binary/logic variables, differential algebraic equations, multiple time scales and performance criteria [6,7]. Typical integrated formulations involving scheduling and control layers consist of Mixed-Integer Dynamic Optimization (MIDO) models that pose computational challenges [8]. Often, these models describe process scheduling as a static system whereas the production process is considered dynamic over certain time periods (e.g., transition periods). Several initialization, reformulation and decomposition techniques have been developed to overcome the computational burden [9,10,11]. However, alternatives to MIDO formulations have not been thoroughly explored in the open literature. In this work, we propose a novel integrated model that circumvents the need to deal with integer decision variables. The key idea is to formulate an optimal control problem of a switched system [12], which is obtained by coupling the dynamic models of both scheduling and production decisions along the entire horizon. We focus on multi-product continuous processes where one product is manufactured at a time following a cyclic production time. Multiple products can be obtained by manipulating one or more variables to switch between different operating conditions associated with each product. Time-scaling transformation is used to handle variable switching times [13]. A binary function with an associated penalty term is added and transformed into a set of parameters to model the sequencing of the multi-product unit. Due dates are also considered in the present framework. Unlike previous works, the proposed formulation does not assume that once a desired value is attained, the transition is complete and the system remains at that steady state until the next transition. Instead, the framework enforces this behavior by parameterizing the control variables and applying interior constraints preventing potential instabilities. The optimal control problem is then converted into a Nonlinear Programming (NLP) model by applying an efficient discretization scheme that allows to find transitions for stable and unstable systems. An iterative procedure to improve transition times and computational costs is provided. Multiple case studies involving multi-product continuous processes have been used to test the performance of the proposed framework. The goal was to find an optimal switching sequence and manipulated variables profiles such that the total profit is maximized with and without due dates. The solutions obtained by the present approach are similar to those obtained with Mixed-Integer Nonlinear Programing (MINLP) problems that come from the classical MIDO formulations, but with more compact models and less computational effort. Unlike previous works, solutions provide a simultaneous dynamic description of the integrated scheduling and production, and due dates are readily accommodated. The proposed framework can be considered as an efficient alternative to mixed-integer models involving scheduling and control decisions. Motivated by the performance of the proposed switched system formulation, future works in this research aims to extend the framework to a closed-loop implementation using Model Predictive Control (MPC) and more complex scenarios emerging in chemical manufacturing plants. References L. S. Dias, M. G. Ierapetritou, From process control to supply chain management: An overview of integrated decision making strategies, Computers & Chemical Engineering 106 (2017) 826–835. S. Engell, I. Harjunkoski, Optimal operation: Scheduling, advanced control and their integration, Computers & Chemical Engineering 47 (2012) 121–133. A. Flores-Tlacuahuac, I. E. Grossmann, Simultaneous cyclic scheduling and control of a multiproduct cstr, Industrial & Engineering Chemistry Research 45 (2006) 6698–6712. M. Baldea, I. Harjunkoski, Integrated production scheduling and process control: A systematic review, Computers & Chemical Engineering 71 (2014) 377 – 390. M. A. Gutirrez-Limn, A. Flores-Tlacuahuac, I. E. Grossmann, Minlp formulation for simultaneous planning, scheduling, and control of short-period single-unit processing systems, Industrial & Engineering Chemistry Research 53 (2014) 14679–14694. Y. Chu, F. You, Model-based integration of control and operations: Overview, challenges, advances, and opportunities, Computers & Chemical Engineering 83 (2015) 2–20. M. Rafiei, L. A. Ricardez-Sandoval, New frontiers, challenges, and opportunities in integration of design and control for enterprise-wide sustainability, Computers & Chemical Engineering 132 (2020) 106610. R. W. Koller, L. A. Ricardez-Sandoval, A dynamic optimization framework for integration of design, control and scheduling of multi-product chemical processes under disturbance and uncertainty, Computers & Chemical Engineering 106 (2017) 147–159. J. Zhuge, M. G. Ierapetritou, A decomposition approach for the solution of scheduling including process dynamics of continuous processes, Industrial & Engineering Chemistry Research 55 (2016) 1266–1280. Y. Chu, F. You, Integration of production scheduling and dynamic optimization for multi-product cstrs: Generalized benders decomposition coupled with global mixed-integer fractional programming, Computers & Chemical Engineering 58 (2013) 315–333. I. Mitrai, P. Daoutidis, Decomposition of integrated scheduling and dynamic optimization problems using community detection, Journal of Process Control 90 (2020) 63 – 74. S. C. Bengea, R. A. DeCarlo, Optimal control of switching systems, Automatica 41 (2005) 11 – 27. K. L. Teo, L. S. Jennings, H. W. J. Lee, V. Rehbock, The control parameterization enhancing transform for constrained optimal control problems, The Journal of the Australian Mathematical Society. Series B. Applied Mathematics 40 (1999) 314335.",
+    "presenting_author": "Luis Ricardez-Sandoval | University of Waterloo, Canada",
+    "authors": [
+      "Oswaldo Andrés-Martínez | University of Waterloo, Canada",
+      "Luis Ricardez-Sandoval | University of Waterloo, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Oswaldo Andrés-Martínez",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Luis Ricardez-Sandoval",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "644g",
+    "sortable_time": "2021-11-11_17:24:00_17:43:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/627089"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/630188",
+    "paper_endpoint": "Paper/630188",
+    "paper_id": "630188",
+    "topic": "Offset-Free Koopman-Based Model Predictive Control of a Batch Pulp Digester",
+    "title": "Offset-Free Koopman-Based Model Predictive Control of a Batch Pulp Digester",
+    "date_time": "2021-11-11_15:30:00_18:00:00",
+    "session_id": "46668",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "644",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Kraft pulping is a dominant pulp manufacturing process where lignin, a highly branched polymer that links cellulose microfibrils in wood chips, is removed by an alkaline solution known as white liquor at elevated temperature. Since the amount of residual lignin in the pulp significantly affects the physical and mechanical properties of final products, previous studies have been carried out to describe the degree of delignification, which is indicated as Kappa number, by developing the first principle and empirical models [1,2]. Subsequently, model-based controllers have been developed to efficiently attain the desired Kappa number during the pulping process [3,4]. Meanwhile, recent studies have revealed that microscopic characteristics of fibers such as porosity, cell wall thickness (CWT), and fiber length considerably affect the properties of paper products. Hence, a multiscale modeling framework, which integrates the extended Purdue model and the kinetic Monte Carlo (kMC) model, has been suggested to capture the evolution of both macroscopic and microscopic characteristics during the pulping process [5]. Based on this framework, futher studies have been carried out to consider the influence of fiber collapse and breakage phenomena, and fiber-to-fiber heterogeneity on delignification rate and fiber attributes [6-8]. However, due to the high computational cost, it is challenging to directly implement these high-fidelity multiscale models to the model-based controller to regulate desired pulp properties. To this end, a reduced-order model was derived via extended dynamic mode decomposition (EDMD), which is one of the most commonly used Koopman operator-based data-driven model identification methods for controlled systems [9,10] due to its capability of providing a reliable linear representation for nonlinear systems that enables the utilization of established control methods for linear systems. However, the inherent plant-model mismatch in EDMD due to the finite-dimensional approximation of the infinite-dimensional Koopman operator degrades the closed-loop performance of model-based control systems. To overcome such limitation, an offset-free control framework that compensates for the influence of plant-model mismatch and disturbances using the disturbance model was designed [11,12]. Subsequently, the designed offset-free Koopman-based model predictive control system was implemented to a batch pulp digester to obtain the desired Kappa number and the CWT value. Consequently, the closed-loop numerical experiment demonstrated that the developed control system is able to drive the Kappa number and CWT to the set-points under plant-model mismatch and additional disturbance. REFERENCES [1] Wisnewski, P. A., Doyle III, F. J., & Kayihan, F. (1997). Fundamental continuous‐pulp‐digester model for simulation and control. AIChE journal , 43 (12), 3175-3192. [2] Bhartiya, S., Dufour, P., & Doyle III, F. J. (2003). Fundamental thermal‐hydraulic pulp digester model with grade transition. AIChE journal , 49 (2), 411-425. [3] Lee, J. H., & Datta, A. K. (1994). Nonlinear inferential control of pulp digesters. AIChE journal , 40 (1), 50-64. [4] Kesavan, P., Lee, J. H., Saucedo, V., & Krishnagopalan, G. A. (2000). Partial least squares (PLS) based monitoring and control of batch digesters. Journal of Process Control , 10 (2-3), 229-236. [5] Choi, H. K., & Kwon, J. S. I. (2019). Multiscale modeling and control of Kappa number and porosity in a batch‐type pulp digester. AIChE Journal , 65 (6), e16589. [6] Choi, H. K., & Kwon, J. S. I. (2019). Modeling and control of cell wall thickness in batch delignification. Computers & Chemical Engineering , 128 , 512-523. [7] Choi, H. K., & Kwon, J. S. I. (2020). Multiscale modeling and multiobjective control of wood fiber morphology in batch pulp digester. AIChE Journal , 66 (7), e16972. [8] Son, S. H., Choi, H. K., & Kwon, J. S. I. (2020). Multiscale modeling and control of pulp digester under fiber-to-fiber heterogeneity. Computers & Chemical Engineering , 143 , 107117. [9] Williams, M. O., Kevrekidis, I. G., & Rowley, C. W. (2015). A data–driven approximation of the koopman operator: Extending dynamic mode decomposition. Journal of Nonlinear Science , 25 (6), 1307-1346. [10] Korda, M., & Mezić, I. (2018). Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control. Automatica , 93 , 149-160. [11] Pannocchia, G., & Bemporad, A. (2007). Combined design of disturbance model and observer for offset-free model predictive control. IEEE Transactions on Automatic Control , 52 (6), 1048-1053. [12] Maeder, U., Borrelli, F., & Morari, M. (2009). Linear offset-free model predictive control. Automatica , 45 (10), 2214-2222.",
+    "presenting_author": "Sang Hwan Son | Texas A&M University, College Station, TX",
+    "authors": [
+      "Sang Hwan Son | Texas A&M University, College Station, TX",
+      "Hyun-Kyu Choi | Texas A&M University, College Station, TX",
+      "Jiyoung Moon | Inha University, Incheon, South Korea",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sang Hwan Son",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Hyun-Kyu Choi",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Jiyoung Moon",
+        "affiliation": "Inha University, Incheon, South Korea",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "644h",
+    "sortable_time": "2021-11-11_17:43:00_18:02:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/630188"
+  }
+]

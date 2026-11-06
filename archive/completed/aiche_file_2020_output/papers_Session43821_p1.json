@@ -1,0 +1,355 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/604369",
+    "paper_endpoint": "Paper/604369",
+    "paper_id": "604369",
+    "topic": "Trend-Based Assessment of Industrial Rotating Equipment Health",
+    "title": "Trend-Based Assessment of Industrial Rotating Equipment Health",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43821",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "719",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Motivation and need: Rotating equipment is widespread throughout the process industry, where pumps, compressors, and turbines are commonly used to drive continuous manufacturing lines. Unplanned downtime due to equipment failure is an acute problem in the process industry, where any break in a continuous manufacturing operation can halt production across an entire plant. To prevent these kinds of interruptions, manufacturing plants often carry out maintenance procedures according to pre-defined schedules while keeping backup equipment at the ready in case of unexpected failures. This approach to maintenance is inherently reactive and can be costly for manufacturing facilities. Consequently, there is a need for strategies to diagnose rotating equipment health and make predictions about future machine states. This information can be used to schedule equipment maintenance in a manner that prevents unexpected failures from occurring while avoiding unnecessary maintenance procedures. Related work: Predictive maintenance (PdM) is a growing topic of research that aims to decrease the cost and redundancy associated with maintaining industrial equipment. A critical aspect of PdM is equipment health diagnosis, a process that involves using features extracted from machine signals to estimate the current health state of equipment. In industry, a common approach to equipment health diagnosis involves using subject matter expertise to establish process control regions for individual signal features. Deviations from a baseline healthy region can act as a trigger for maintenance actions. This approach is transparent and easily scalable for large fleets of industrial rotating equipment, but can be ineffective for complex equipment failures that can only be detected by monitoring multiple features simultaneously. Recent literature has focused on using experimental data to build equipment health models for the purpose of diagnosis. A number of high-performance models have been developed for individual machines in highly-controlled testing environments, but there has been little work to demonstrate the effectiveness of these methods for industrial rotating equipment [1, 2, 3]. Data-driven frameworks have also been proposed to facilitate the diagnosis of machines in industrial equipment fleets. Models in these frameworks are often structured as statistical thresholds [4], neural networks [5], or support vector machines [6], and are trained to distinguish between healthy equipment behavior and various modes of faulty equipment behavior. These classifiers can make diagnoses using features extracted from individual snapshots of machine signals, but are unable to analyze a time-series sequence of features, which is necessary to reliably identify the onset of equipment degradation in real-time. Building these models also requires training data from experiments conducted with healthy and degraded equipment, which may be infeasible for fleets of process manufacturing equipment. Approach: This work presents a novel approach for modeling the life of industrial rotating equipment that is designed to facilitate equipment health diagnosis. The equipment health timeline depicted in Figure 1 represents a typical life cycle, in which a machine operates in a healthy state for some period of time, until it encounters a degradation onset event, after which it operates in degraded state that can culminate in failure, if left unrepaired. Using this modeling approach, the process of equipment health diagnosis is equivalent to determining whether a machine is operating in a healthy or degrading state. The determination that it is in a degrading state can be used to predict a future failure event, thereby avoiding unscheduled downtime, but also to identify an ineffective repair operation, thereby reducing the occurrence of frequent consecutive downtime events. It should be noted that [7] presents a similar model of equipment health for the purpose of optimizing maintenance inspections and backup equipment placement. Their approach makes the assumption that degrading behavior can always diagnosed through inspection within a constant delay period preceding failure. This work does not assume that machines exhibit a constant delay period and is concerned with the methodology behind equipment health diagnosis. A trend-based diagnosis strategy that is well-suited to identify time-series behaviors associated with equipment degradation is presented here. Additionally, the models used to diagnosis equipment health are built using unlabeled historical data collected between repair and failure events, eliminating the need for experimental training data. A series of offline processes: feature selection, state labeling, and model building, along with an online diagnosis process, are included in this strategy. To account for differences in rotating equipment and sensing capabilities across manufacturing facilities, the proposed strategy incorporates subject matter expertise into the feature selection process. This process involves specifying a selector function that maps the available signal features to a single, scalar health index that will be monitored for the purpose of health diagnosis. An appropriate function can be as simple as selecting a single feature that is known to show dynamic behavior during equipment degradation, or it may draw from historical data to combine the available features into a multivariate health index. Historical data for a piece of rotating equipment is then condensed into a time series of health index measurements, punctuated by instantaneous repair and failure events. Data in this form has traditionally been difficult to analyze because health state labels are not readily available. The proposed state labeling process makes the assumption that post-repair measurements can be considered “healthy” while pre-shutdown measurements can be labeled “degrading” and iterates over all possible subsets to select the series of measurements that adheres most closely to a linear degradation trend. The beginning of this optimal subset is an estimate of when the transition from a “healthy” state to a “degrading” state has occurred, and the index measurements before and after this transition can be labeled accordingly. These labeled data sets are then used to build a novel, trend-based equipment health model. A hidden Markov model structure is used here to represent two health states (healthy and degrading) via a Markov chain. To capture the time-series behavior that characterizes healthy and degrading states, observations in this hidden Markov health model are the slopes of regression lines fit to a set of windowed health index measurements. The observation probability distribution in each state is assumed to be Gaussian and can be characterized by windowing the historical health index measurements for each state. Characterizing health index trends results in an equipment health model that is more robust to signal offsets, which are common in manufacturing environments, and presents an opportunity to detect faults and failures that could not be identified by purely value-based classifiers. The online diagnosis process uses the previously-defined selector function to collect health index measurements from rotating equipment in real-time. These indices can be windowed to extract the regression slope values that are inputs to a Viterbi algorithm, a well-defined method for using a hidden Markov model to infer the most likely state sequence given a series of unlabeled observations. The health diagnosis at any given time is simply the final state in this sequence. Case study: The proposed diagnosis strategy has been tested using data from a pump system operated by Dow Chemical Company. In the data set, three equipment failures were not identified until their later stages because the existing control region strategy did not provide a complete representation of equipment health. This trend-based diagnosis strategy was used to retroactively build a health model using historical vibration measurements, collected prior to the first failure, and then diagnose the equipment health state after each failure event, as shown in Figure 2. In all three cases, the estimated health state converges to the true health state specified by maintenance logs for this piece of equipment. References: [1] L. Guo, N. Li, F. Jia, Y. Lei, and J. Lin, “A recurrent neural network based health indicator for remaining useful life prediction of bearings,” Neurocomputing, vol. 240, pp. 98-109, May 2017. [2] P. Li, X. Jia, J. Feng, H. Davari, G. Qiao, Y. Hwang, and J. Lee, “Prognosability study of ball screw degradation using systematic methodology,” Mechanical Systems and Signal Processing, vol. 109, pp. 45-57, Sept. 2018. [3] W. Ahmad, S. A. Khan, and J. Kim, “A hybrid prognostics technique for rolling element bearings using adaptive predictive models,” IEEE Transactions on Industrial Electronics, vol. 65, no. 2, pp. 1577-1584, Feb. 2018. [4] W. Yu, T. Dillon, F. Mostafa, W. Rahayu, and Y. Liu, “A global manufacturing big data ecosystem for fault detection in predictive maintenance,” IEEE Transactions on Industrial Informatics, vol. 16, no. 1, pp. 183-192, Jan. 2020. [5] Y. Lei, F. Jia, J. Lin, S. Xing, S. X. Ding, “An Intelligent Fault Diagnosis Method Using Unsupervised Feature Learning Towards Mechanical Big Data,” IEEE Transactions on Industrial Electronics , vol. 63, no. 5, pp. 3137-3147, May 2016. [6] J. Wang, L. Zhang, L. Duan, and R. X. Gao, “A new paradigm of cloud-based predictive maintenance for intelligent manufacturing,” Journal of Intelligent Manufacturing , vol. 28, pp. 1125-1137, 2017. [7] Y. Ye, I. Grossman, J. Pinto, and S. Ramaswamy, “Modeling for reliability optimization of system design and maintenance based on Markov chain theory,” Computers & Chemical Engineering, vol. 124, pp. 381-404, May 2019.",
+    "presenting_author": "Maxwell Toothman | University of Michigan, Ann Arbor",
+    "authors": [
+      "Maxwell Toothman | University of Michigan, Ann Arbor",
+      "Kira Barton | University of Michigan, Ann Arbor",
+      "Birgit Braun | The Dow Chemical Company, Freeport, TX",
+      "Scott Bury | Dow, Midland, MI",
+      "Michael Dessauer | Dow Chemical Company, Deer Park, TX",
+      "Kaytlin Henderson | The Dow Chemical Company, Deer Park, TX",
+      "James Moyne | Applied Materials, Santa Clara, CA",
+      "Ray Wright | Dow Inc., Midland, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Maxwell Toothman",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Kira Barton",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      },
+      {
+        "name": "Birgit Braun",
+        "affiliation": "The Dow Chemical Company, Freeport, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Scott Bury",
+        "affiliation": "Dow, Midland, MI",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Dessauer",
+        "affiliation": "Dow Chemical Company, Deer Park, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Kaytlin Henderson",
+        "affiliation": "The Dow Chemical Company, Deer Park, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "James Moyne",
+        "affiliation": "Applied Materials, Santa Clara, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Ray Wright",
+        "affiliation": "Dow Inc., Midland, MI",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "719a",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/604369"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/602530",
+    "paper_endpoint": "Paper/602530",
+    "paper_id": "602530",
+    "topic": "Dynamic Risk Assessment in Chemical Processes Using Sparse Identification and Deep Learning.",
+    "title": "Dynamic Risk Assessment in Chemical Processes Using Sparse Identification and Deep Learning.",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43821",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "719",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "The increasing technological advancements in chemical and petrochemical industries require a monitoring system that maintains both product quality and process safety. Moreover, failure in implementing a robust monitoring system can significantly impact the process reliability and lead to human and economic losses. Therefore, to promote the optimal and safe operation of the process, developing reliable fault detection and diagnosis schemes has received significant attention in the last few years. Recently, several model-based techniques have been widely used such as observer-based [1], parity equations [2], and parameter estimation [3] methods. However, these methods require mathematical models that describe the process accurately. Also, most of these methods have been developed for a particular class of nonlinear systems. On the other hand, data-driven approaches such as principal component analysis (PCA) [4] and partial least squares (PLS) [5] have been successfully used for fault detection and diagnosis. One important limitation of these approaches is that the models are trained offline and are not updated on-the-fly. Therefore, they cannot respond to frequently changing process dynamics. Another limitation is that they do not systematically evaluate the potential risk caused by the fault. It is important to have a risk-based fault detection framework that considers the probable hazards and consequences that occur due to a fault. This guides in eliminating the non-hazardous faults and taking appropriate action in the case of severe faults [6]. Specifically, quantifying risk in real-time helps in monitoring and managing operational risk. Motivated by the above considerations, we propose a robust dynamic risk assessment -based fault detection scheme that uses online adaptive sparse identification of systems (OASIS) framework [7]. The OASIS is an adaptive system identification method developed based on sparse identification of nonlinear dynamics (SINDy) [8] and deep learning. The SINDy algorithm solves a sparse regression problem to identify an interpretable and sparse model of the process using the historical data offline. But it is not feasible to directly implement SINDy for process monitoring as it is computationally expensive to solve a sparse regression problem online. Hence, a deep neural network (DNN) is trained to facilitate the applicability of SINDy for online monitoring. For offline training, we consider multiple trajectories of input-output data that represent a wide range of operating conditions and obtain multiple sparse models. Next, we train a DNN using these models identified by SINDy and their corresponding training inputs. Later, the trained DNN is used online to predict and update the process models using measurement data. At every sampling time, we estimate the process states using the model obtained from the DNN. For fault detection, we compute the residuals between model prediction and measurement values. At any time instant, if the evaluated residual exceeds the threshold, a fault is observed in the process. After fault detection, we perform risk assessment by computing the probability and severity of the detected faults. By doing so, we quantify the process risk associated at each sampling time. If the calculated risk exceeds the threshold, the fault detected is regarded to be severe. The proposed OASIS-based dynamic risk assessment method has the following advantages: 1) offering an adaptive framework for fault detection and dynamic risk assessment, 2) applicable to nonlinear systems with uncertain parameters, and 3) providing interpretable models that aid in understanding the relationship between process variables, which is useful in analyzing the propagation of faults. We demonstrate the proposed method for fault identification and risk assessment through the simulation of a floating liquefied natural gas tank and a non-isothermal continuous stirred tank reactor. Literature cited: [1] Isermann R. Model-based fault-detection and diagnosis–status and applications. Annual Reviews in control. 2005; 29(1):71–85. [2] Blesa J, Jim´enez P, Rotondo D, Nejjari F, Puig V. An interval NLPV parity equations approach for fault detection and isolation of a wind farm. IEEE Transactions on Industrial Electronics. 2014; 62(6):3794–3805. [3] Rahimi A, Kumar KD, Alighanbari H. Fault estimation of satellite reaction wheels using covariance based adaptive unscented Kalman filter. Acta Astronautica. 2017; 134:159–169. [4] Bakdi A, Kouadri A. A new adaptive PCA based thresholding scheme for fault detection in complex systems. Chemometrics and Intelligent Laboratory Systems. 2017; 162:83–93. [5] Madakyaru M, Harrou F, Sun Y. Monitoring distillation column systems using improved nonlinear partial least squares-based strategies. IEEE Sensors Journal. 2019; 19(23):11697–11705. [6] Zadakbar O, Khan F, Imtiaz S. Dynamic risk assessment of a nonlinear non Gaussian system using a particle filter and detailed consequence analysis. The Canadian Journal of Chemical Engineering. 2015; 93(7):1201-1211. [7] Bhadriraju B, Narasingam A, Kwon JSI. Machine learning-based adaptive model identification of systems: Application to a chemical process. Chemical Engineering Research and Design. 2019; 152:372–383. [8] Brunton SL, Proctor JL, Kutz JN. Discovering governing equations from data by sparse identification of nonlinear dynamical systems. Proceedings of the National Academy of Sciences. 2016; 113(15):3932-3937.",
+    "presenting_author": "Bhavana Bhadriraju | Texas A&M University, College Station, TX",
+    "authors": [
+      "Bhavana Bhadriraju | Texas A&M University, College Station, TX",
+      "Faisal Khan | Memorial University of Newfoundland, St. John's, Canada",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bhavana Bhadriraju",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Faisal Khan",
+        "affiliation": "Memorial University of Newfoundland, St. John's, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "719b",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/602530"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/598952",
+    "paper_endpoint": "Paper/598952",
+    "paper_id": "598952",
+    "topic": "Process and Controller Performance Monitoring Using Machine Learning Methods",
+    "title": "Process and Controller Performance Monitoring Using Machine Learning Methods",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43821",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "719",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Process monitoring systems have been playing an important role in maintaining safe, efficient and sustainable operation of industrial chemical processes. While traditional process monitoring methods rely heavily on human intervention and classical statistical techniques, recent works have demonstrated the possibility of using machine learning techniques for process monitoring and decision making to minimize human participation in routine tasks of the manufacturing process [1, 2, 3]. Compared to the statistical process monitoring approaches such as cumulative sum and exponential weighted moving average [4], which may not be effective for nonlinear processes due to the “curse of dimensionality”, machine learning, a method of data analysis that has been successfully applied to address classification and nonlinear regression problems in classical engineering fields, provides a powerful toolkit for process and controller performance monitoring when a large number of data samples covering all possible process outcomes are available and the process behavior is nonlinear. At this stage, how to incorporate machine learning methods in performance monitoring of advanced process control systems, e.g., model predictive controllers (MPC), for (large-scale) nonlinear systems has not been investigated. In this work, we will focus on exploring the use of deep-learning neural networks (NN) and data dimensionality reduction techniques like nonlinear principal component analysis methods (e.g., [5]) to exploit high-dimensional data collected using in-situ and ex-situ sensing to study and model the relationship between the process control inputs/operational parameters and the process outputs. As a result, we will determine what operational parameters (or linear/nonlinear functions of the original operational parameters) included in the data sets have the strongest effect on the process outputs (and in turn on the product properties), and therefore decide what are the critical data sets that can be analyzed on the edge or to upload on the cloud for further analysis. We will then use the data sets at the cloud level collected from different processes and our machine learning tools to monitor entire plant behavior and plant-wide control performance to reduce energy consumption, reduce product waste and optimize product quality. Additionally, a deep feed-forward NN will be developed for MPC performance monitoring where we train the NN for many different controller performance scenarios/examples and then use it in real-time with process real-time measurements to monitor controller performance. [1] Amini, M., & Chang, S. (2018). A review of machine learning approaches for high dimensional process monitoring. In Proceedings of the 2018 Industrial and Systems Engineering Research Conference, Orlando, FL. [2] Qin, S. J. (2012). Survey on data-driven industrial process monitoring and diagnosis. Annual reviews in control, 36(2), 220-234. [3] Aldrich, C., & Auret, L. (2013). Unsupervised process monitoring and fault diagnosis with machine learning methods. London: Springer. [4] Ellis, M., & Christofides, P. D. (2014). Performance monitoring of economic model predictive control systems. Industrial & Engineering Chemistry Research, 53(40), 15406-15413. [5] Dong, D., & McAvoy, T. J. (1996). Nonlinear principal component analysis—based on principal curves and neural networks. Computers & Chemical Engineering, 20(1), 65-78.",
+    "presenting_author": "Fahim Abdullah | University of California, Los Angeles",
+    "authors": [
+      "Fahim Abdullah | University of California, Los Angeles",
+      "Zhe Wu | University of California, Los Angeles",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Fahim Abdullah",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhe Wu",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "719c",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/598952"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/601269",
+    "paper_endpoint": "Paper/601269",
+    "paper_id": "601269",
+    "topic": "Optimal Actions Prescribed By Model-Predictive Safety",
+    "title": "Optimal Actions Prescribed By Model-Predictive Safety",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43821",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "719",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "In 2016 [1] we introduced the concept of model-predictive safety (MPS), and in 2017-2020 [2-5] we proposed a computationally-efficient method for the online implementation of MPS, which requires solving min-max optimization problems offline. MPS [1, 4] generates alarm signals that are predictive and systematically account for process nonlinearities and interactions, while typical existing functional safety systems generate reactive, non-interacting alarm signal(s) when a process variable exceeds a threshold. MPS allows for a systematic utilization of dynamic process models to generate predictive alarm signals (alerts) that allow for preventing and mitigating operation hazards proactively in real time. In this paper, we expand the concept of MPS so that MPS can prescribe optimal, time-invariant, control actions (through overriding controllers) as well as safety actions that prevent imminent and potential (current and future) operation hazards. Min-max optimization problems are formulated and solved to calculate the optimal actions. A nested particle swarm optimization (PSO) parallel algorithm that solves the min-max optimization problems on computers with parallel processors is presented and implemented. The application and performance of the min-max optimization formulations, the PSO algorithm, and MPS, are shown through numerical simulations of a chemical reactor. References [1] T.M. Ahooyi, M. Soroush, J.E. Arbogast, W.D. Seider, U.G. Oktem, Model‐predictive safety system for proactive detection of operation hazards, AIChE Journal, 62 (2016) 2024-2042. [2] Soroush, M., J.E. Arbogast, and W.D. Seider, “Model-Predictive Safety System for Predictive Detection of Operation Hazards: Off-Line Calculation of Most Aggressive Control Actions and Worst-Case Uncertainties,” CAST Division 10 Plenary Session at the 2017 AIChE Annual Meeting, Minneapolis, MN (2017). [3] Soroush, M., A.A. Shamsabadi, W.D. Seider, and J.E. Arbogast, \"Implementation of Model-Predictive Safety Systems to Detect Predictively Operation Hazards in Non-Minimum-Phase Processes,\" 2018 AIChE Annual Meeting, Pittsburgh, PA (2018). [4] M. Soroush, L.S. Masooleh, W.D. Seider, U. Oktem, J.E. Arbogast, Model‐predictive safety optimal actions to detect and handle process operation hazards, AIChE Journal, (2020) e16932. [5] Soroush, M., Samandari Masooleh, L., Oktem, U., Seider, W.D., Arbogast, J.E. “Model-Predictive Safety: Min-Max Optimization to Calculate the Most Aggressive Control Actions and the Worst-Case Uncertainties,” AIChE Annual Meeting, Orlando, FL, November (2019).",
+    "presenting_author": "Masoud Soroush | Drexel University, Philadelphia, PA",
+    "authors": [
+      "Masoud Soroush | Drexel University, Philadelphia, PA",
+      "Leila Samandari Masooleh | Drexel University, Philadelphia, PA",
+      "Ulku Oktem | Near-Miss Management LLC, Philadelphia, PA",
+      "Warren Seider | University of Pennsylvania, Philadelphia, PA",
+      "Jeffrey E. Arbogast | Air Liquide, Paris, France"
+    ],
+    "authors_structured": [
+      {
+        "name": "Masoud Soroush",
+        "affiliation": "Drexel University, Philadelphia, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Leila Samandari Masooleh",
+        "affiliation": "Drexel University, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Ulku Oktem",
+        "affiliation": "Near-Miss Management LLC, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Warren Seider",
+        "affiliation": "University of Pennsylvania, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jeffrey E. Arbogast",
+        "affiliation": "Air Liquide, Paris, France",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "719d",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/601269"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/602291",
+    "paper_endpoint": "Paper/602291",
+    "paper_id": "602291",
+    "topic": "Root Cause Analysis of Process Faults Using Penalized Piecewise Linear Multiple Birth Support Vector Machine (pPWL-MBSVM)",
+    "title": "Root Cause Analysis of Process Faults Using Penalized Piecewise Linear Multiple Birth Support Vector Machine (pPWL-MBSVM)",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43821",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "719",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Early and accurate root cause diagnosis of faults in chemical processes is crucial in reducing process downtime, improving safety and reducing manufacturing costs [1]. The difficulty to develop accurate first principle models and the overwhelming amount of stored data have made data-based techniques one of the most successfully applied tools for root cause diagnosis in chemical industry. One of the most widely used data-based method for root cause diagnosis is support vector machine (SVM) [2, 3]. SVM is a data-based binary classification method which builds a hyperplane between two classes to distinguish between two root causes. In order to perform diagnosis in presence of multiple root causes, SVM has been extended for multiclass classification as multiple birth SVM (MBSVM). It builds nonparallel hyperplanes such that the constructed hyperplane for a class is farthest to points in that class but proximal to rest of the classes [4]. However, training of MBSVM suffers from data imbalance as the number of data points in a class is much less than the combined number of data points in the rest of classes. Additionally, nonlinearity between classes in SVM is handled by using kernel transformations which leads to exponential computational load in the presence of high number of classes [5]. The poor training of MBSVM due to data imbalance and high complexity (due to nonlinear relationships) leads to misclassification error, that is, ineffective root cause analysis. In order to handle the disadvantages of MBSVM, this work proposes penalized piecewise linear multiple birth support vector machine (pPWL-MBSVM) which simultaneously incorporates a penalty factor and the piecewise linear (PWL) classifiers to the MBSVM framework to account for data imbalance in training and high complexity, respectively. First, the classification model builds a hyperplane for a class by weighing the data point for the rest of classes by a penalty factor, which is the ratio of the number of data points in the particular class to that in the rest of classes. Hence, the penalty factor balances the datapoints on both sides of the hyperplane. Second, instead of using kernel transformation for nonlinear classes, a PWL hyperplane is built with an optimal number of planes to avoid overfitting. The effectiveness of the proposed method, pPWL-MBSVM, has been demonstrated with a case study of the Tennessee Eastman process. Hence, this work presents a novel methodology for root cause analysis involving multiple root causes while handling data imbalance in model training and high complexity due to nonlinear relationships between classes. Keywords: support vector machine, piecewise linear classifier, data imbalance References: R. Maurya, R. Rengaswamy, V. Venkatasubramanian, A signed directed graph and qualitative trend analysis-based framework for incipient fault diagnosis, Chemical Engineering Research and Design, 85, 10, 2007, pp. 1407 - 1422 Onel, C. A. Kieslich, Y. A. Guzman, C. A. Floudas, E. N. Pistikopoulos, Big data approach to batch process monitoring: Simultaneous fault detection and diagnosis using nonlinear support vector machine-based feature selection, Computers & Chemical Engineering, 116, 2018, pp. 503 - 520 Ding, X. Zhao, J. Zhang, A review on multi-class TWSVM, Artificial Intelligence, 52, 2019, pp. 775 - 801 Zhang, S. Ding, Y. Xue. An improved multiple birth support vector machine for pattern classification, Neurocomputing, 225, 2017, pp. 119 - 128 Chen, B. Tang, T. Song, L. Li, Multi-fault diagnosis study on roller bearing based on multi-kernel support vector machine with chaotic particle swarm optimization, Measurement, 47, 2014, pp. 576 - 590",
+    "presenting_author": "Pallavi Kumari | Texas A&M University, College Station, TX",
+    "authors": [
+      "Pallavi Kumari | Texas A&M University, College Station, TX",
+      "Qingsheng Wang | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pallavi Kumari",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Qingsheng Wang",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "719e",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/602291"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/602282",
+    "paper_endpoint": "Paper/602282",
+    "paper_id": "602282",
+    "topic": "Monitoring the Stress and Oxide Layer Evolution Profile in a Supercritical Pulverized Coal Boiler",
+    "title": "Monitoring the Stress and Oxide Layer Evolution Profile in a Supercritical Pulverized Coal Boiler",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43821",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "719",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "With renewable sources of energy becoming a larger contributor to the U.S. power grid, traditional sources of power generation such as supercritical pulverized coal-fired (SCPC) power plants are forced to cycle their load in response to the availability of these intermittent renewable power sources. These frequent load changes can greatly upset processes within SCPC power plants that are designed to be operated primarily at base load. The boiler, specifically, undergoes drastic shifts in its thermal profile such that some heat exchange components can experience large temperature swings, causing fatigue damage, or much higher temperatures than they were designed for, leading to creep damage. Increased damage to the boiler can lead to more unplanned shutdowns, therefore, the health of the boiler under load-following conditions must be monitored to avoid such damaging operation. Work has been done in this area to monitor the degree of fouling in the superheaters of coal boilers,[1], [2] which can cause hotspots. Estimation of the stresses on the boiler tubes based on the measured tube temperatures has been documented[3]. However, these data-driven models still rely on having temperature measurements at the location where the stresses are being calculated, which means that any local effects of hotspots on the stress profile can be missed in the analysis. On the other hand, first-principle computational fluid dynamics (CFD) models provide enough detail to identify local effects,[4], [5] but are typically too computationally expensive to be applied to dynamic on-line monitoring. To accurately monitor boiler tube health, very detailed knowledge of the overall state of the boiler must be available at many points along the boiler. This includes determination of the process conditions on both the inner (steam) and outer (gas) sides of the tube, tube inner and outer wall temperatures, and the through-wall thermal profile of the tube. Even in highly-instrumented boilers, many of these variables are unmeasurable or sparingly measured due to the extreme operating conditions of SCPC boilers. While first-principles dynamic modeling of the entire boiler can be used to estimate these variables, the current condition of the tubes is also important to consider. If fouling has accumulated on either the inside (from oxide scaling) or outside (from slag and/or ash deposits) of the tubes, it can affect the dynamic thermal profile of the tube walls or create localized heating that can lead to further creep damage. If the tubes have any corrosion, it can also have a large impact on the dynamics of the tube temperatures both from decreased heat transfer efficiency and thinner tube thickness, which can also make the tubes far more likely to fail. Thus, the ability to capture the impact of these different factors is vital to monitoring the overall boiler health. In this work, a dynamic, distributed-parameter, first-principles process model of an SCPC boiler has been developed for the model-based condition monitoring. The model accounts for the drastic change in the transport and physical properties as the boiler transitions from the supercritical to subcritical regime and vice-versa during load following. The boiler model also includes a 1-D model for the superheater tubes accounting for the effects of fouling on the inner and outer tube surfaces so that the transient impact of this fouling on the tube stresses can be determined. In addition to its impact of added heat transfer resistance, oxide layer formation inside the tubes due to reaction between the tube metal and the steam leads to tube thinning and eventual spalling as well as loss of material structural properties, which has a large effect on the stress threshold that can be withstood by the tubes. Thus a more detailed model for oxide layer formation and its impact on the thermal profile is included. The thermal profiles of the tubes are used to calculate the thermal and mechanical stresses in the tangential, radial, and axial directions as well as the equivalent stress. Tube life consumption due to cycling operation is based on the European standard EN 12952-3 for the design and calculation of water-tube boilers, [7] while the tube rupture time is estimated based on the material properties[8]. One difficulty in monitoring the stress and oxide layer growth profiles in boiler tubes is that they cannot be measured online. Stress is not likely to affect any variable that is measured, and the impact of the oxide layer on any measured variable may not be reflected in any of the measured variables below a threshold, thus leading to lack of observability. Since a minimum error covariance estimate of the entire system is not possible, observable and unobservable modes are extracted and partitioned. As measurements of oxide layers may be available during plant shut down (i.e. offline), earlier estimates of state variables as well as stress and oxide layer growth profiles can be improved. This is similar to fixed-point smoothing problems but with missing measurements of the system. A surrogate model based optimization approach is developed for improved estimation of the system during load changes. The estimation’s sensitivity to the process and measurement model discrepancies is evaluated. References [1] M. Trojan, D. Taler, and S. Wielgus, “On-line monitoring of the fouling of the boiler heating surfaces,” Thermal Science , vol. 23, pp. 1289–1300, Jan. 2019, doi: 10.2298/TSCI19S4289T. [2] D. Taler, M. Trojan, P. Dzierwa, K. Kaczmarski, and J. Taler, “Numerical simulation of convective superheaters in steam boilers,” International Journal of Thermal Sciences , vol. 129, pp. 320–333, Jul. 2018, doi: 10.1016/j.ijthermalsci.2018.03.005. [3] T. Sobota, “Improving Steam Boiler Operation by On-Line Monitoring of the Strength and Thermal Performance,” Heat Transfer Engineering , vol. 39, no. 13/14, pp. 1260–1271, Sep. 2018, doi: 10.1080/01457632.2017.1363641. [4] P. Madejski and D. Taler, “Analysis of temperature and stress distribution of superheater tubes after attemperation or sootblower activation,” Energy Conversion and Management , vol. 71, pp. 131–137, Jul. 2013, doi: 10.1016/j.enconman.2013.03.025. [5] L. Pang, S. Yi, L. Duan, W. Li, and Y. Yang, “Thermal Stress and Cyclic Stress Analysis of a Vertical Water-Cooled Wall at a Utility Boiler under Flexible Operation,” Energies , vol. 12, p. 1170, Mar. 2019, doi: 10.3390/en12061170. [6] “Water-tube boilers and auxiliary installations - Part 3: Design and calculation of pressure parts,” British Standards Institution, London, UK, BS EN 12952-3:2001, May 2002. [7] ECCC, “ECCC Data Sheets 2005.” D G Robertson & S R Holdsworth ETD Ltd., Sep. 02, 2005.",
+    "presenting_author": "Katherine Reynolds | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Katherine Reynolds | West Virginia University, Morgantown, WV",
+      "Elijah Hedrick | West Virginia University, Morgantown, WV",
+      "Benjamin P. Omell | National Energy Technology Laboratory, Pittsburgh, PA",
+      "Stephen Zitney | National Energy Technology Laboratory, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Katherine Reynolds",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Elijah Hedrick",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Benjamin P. Omell",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephen Zitney",
+        "affiliation": "National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "719g",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/602282"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/610681",
+    "paper_endpoint": "Paper/610681",
+    "paper_id": "610681",
+    "topic": "Statistics Pattern Analysis Based k-Nearest Neighbors (SPA-kNN) Fault Detection for Pressure Swing Adsorption Processes",
+    "title": "Statistics Pattern Analysis Based k-Nearest Neighbors (SPA-kNN) Fault Detection for Pressure Swing Adsorption Processes",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43821",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "719",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Over the past few decades, process monitoring and fault diagnosis methods have played an important role in the improvement of product quality and operation safety in a variety of industries. Most of these approaches are data-driven multivariate statistical process monitoring (MSPM) methods that are developed for batch or continuous processes. In recent years, periodic operations, such as pressure swing adsorption (PSA) and simulated moving bed (SMB), have gained wider applications in industries. For example, there has been widespread development of PSA systems, with their applications expanding from traditional bulk gas separation and drying, to CO2 sequestration, trace contaminant removal, and many others. Compared to continuous processes operating at steady-state, there are several unique characteristics of PSA processes, which pose significant challenges to process monitoring: (1) it is operated in a periodic or cyclic fashion, which lead to unsteady-state, or highly dynamic process behavior; (2) One cycle consists of many different steps with different operation conditions, which lead to highly complex nonlinear behavior; (3) cycle time is frequently adjusted to meet demand fluctuations, which lead to multimodal operations of the process. As a result, applying traditional MSMP methods, such as principal component analysis (PCA), to the PSA process can lead to high false alarms and/or missed faults. To address the challenges, we previously proposed a data-driven feature space monitoring (FSM) approach based on statistics pattern analysis (SPA). In the SPA framework, we extract the statistics/features that explain process characteristics of each step from original process data. Since these features can better capture process characteristics than the raw process variables, features are used for monitoring the process instead of process variables. In addition, SPA can address the challenges from PSA process, such as unequal step and/or cycle time that requires preprocessing steps (e.g., trajectory alignment or synchronization) for the conventional MSMP methods. In this study, we propose to enhance SPA by integrating it with k nearest neighbor (kNN) rule. The proposed SPA-kNN method has three advantages for the periodic processes. First, SPA-kNN method is well suited for multimodal data set as the models are built locally. Second, SPA-kNN method makes no assumption about the linearity of the data set. When data set has strong nonlinearity, the method can perform efficient process monitoring while the linear MSMP methods such as PCA can lead to high false alarm and/or missed faults. Finally, the proposed method is simple and practical. It can be used in periodic processes as well as batch and/or continuous processes. In addition, we propose a new pipeline or workflow for fault diagnosis using SPA-kNN method. In addition, different strategies for splitting PSA cycles into steps and extracting various features from each step are studied, and guidance of how to select the features based on process characteristics is suggested. Finally, different strategies for reducing false alarms are investigated and their performances are compared.",
+    "presenting_author": "Jangwon Lee | Auburn University, AL",
+    "authors": [
+      "Jangwon Lee | Auburn University, AL",
+      "Ankur Kumar | Praxair Technology Center, Tonawanda, NY",
+      "Jesus Flores-Cerrillo | Linde PLC, Tonawanda, NY",
+      "Jin Wang | Auburn University, AL",
+      "Peter He | Auburn University, AL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jangwon Lee",
+        "affiliation": "Auburn University, AL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ankur Kumar",
+        "affiliation": "Praxair Technology Center, Tonawanda, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Jesus Flores-Cerrillo",
+        "affiliation": "Linde PLC, Tonawanda, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Jin Wang",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      },
+      {
+        "name": "Peter He",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "719h",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/610681"
+  }
+]

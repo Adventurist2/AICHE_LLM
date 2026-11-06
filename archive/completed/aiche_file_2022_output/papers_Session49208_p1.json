@@ -1,0 +1,306 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648498",
+    "paper_endpoint": "Paper/648498",
+    "paper_id": "648498",
+    "topic": "Active Deep Learning for Scalable Approximation of Reachable and Invariant Sets for Mixed-Integer Nonlinear Systems",
+    "title": "Active Deep Learning for Scalable Approximation of Reachable and Invariant Sets for Mixed-Integer Nonlinear Systems",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49208",
+    "session_title": "Data-Driven Dynamic Modeling, Estimation and Control I",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Set invariance theory is fundamental to the design and control of constrained systems [1]. Since system constraints can be satisfied at all times if and only if the initial state of a system lies inside an invariant set, set invariance is essential for ensuring safe evolution of a dynamical system under some admissible input. Recently, there has been renewed interest in the theory and application of set invariance in the areas of predictive control and learning-based control of uncertain systems to guarantee feasibility and constraint satisfaction and, thus, guarantee safe learning and control (see, e.g., [2,3]). For linear time-invariant systems subject to linear inequality constraints, methods for constructing invariant sets based on set operations are well-established [4,5]. Algorithms have also been developed for constructing reachable sets and control invariant sets, which are generally harder to compute, for certain classes of nonlinear, such as piecewise affine and hybrid systems (e.g., [6-8]). Nonetheless, construction of these sets for general dynamical systems that exhibit complex forms of nonlinearities and/or a mixture of continuous and discrete behavior, as commonly observed in hybrid and switched systems, remains an open problem. Not only is the construction of robust and/or invariant sets using set-theoretic methods strongly dependent on the structure and accuracy of a system model, the scalability of these methods is also an important limitation since set-based operations can quickly become prohibitively expensive for high-dimensional state and input spaces. These challenges have motivated learning-based methods for data-driven approximation of reachable and invariant sets [9,10]. The fundamental idea in such methods is to generate admissible state and input trajectories (those that satisfy constraints) by solving an underlying optimization problem for a fixed initial state value. These samples can then be used to estimate reachable and/or invariant sets using the state-of-the-art machine learning approaches. A key advantage of learning-based methods for set construction is that they can even be applied when the underlying system dynamics are completely unknown; for example, when only a black-box or high-fidelity system model is available. However, their performance strongly depends on how efficiently one can sample the state space. In this talk, we will present a sample-efficient, learning-based approach for estimating reachable/invariant sets for general constrained nonlinear systems with mixtures of discrete states, inputs, and/or operating modes. The proposed approach circumvents the need for making any assumptions about the structure or complexity of the system dynamics. It relies on the notion of learning the decision boundary of a feasibility oracle (that can be queried by solving the aforementioned optimization problem) for different initial state values. This allows us to effectively transform the set-based reachability problem into a binary classification problem that can tackled with deep learning methods. The use of deep learning is critical in this application since the reachable/invariant sets in the problems of interest can be arbitrarily complex, i.e., the set boundary can be highly non-convex and/or disjoint. To enhance the sample efficiency of deep learning-based oracle estimation, we present an active learning algorithm, based on information-theoretic criteria, to sequentially enrich training data in an efficient and information-optimal manner. Active learning allows us to drastically mitigate the computational cost of invoking the oracle repeatedly on randomly-selected initial state samples, which can be prohibitive when the feasibility test for control invariance involves solving mixed-integer nonlinear programs. Randomized verification methods [11] are used to provide a probabilistic guarantee on the likelihood that a state within a learned invariant set boundary is truly invariant. We will demonstrate the proposed approach on a benchmark two-tank system that exhibits switching behavior. References [1] F. Blanchini and S. Miani, Set-theoretic methods in control. Springer, Switzerland, 2008. [2] K. P. Wabersich, L. Hewing, A. Carron, and M. N. Zeilinger,“Probabilistic model predictive safety certification for learning-based control,” IEEE Transactions on Automatic Control, vol. 67, no. 1, pp. 176–188, 2021. [3] A. D. Bonzanini, J. A. Paulson, and A. Mesbah, “Safe learning-based model predictive control under state-and input-dependent uncertainty using scenario trees,” in Proceedings of the 59th IEEE Conference on Decision and Control, Jeju Island, Republic of Korea, 2020, pp. 2448–2454. [4] F. Blanchini, “Set invariance in control,” Automatica, vol. 35, no. 11, pp. 1747–1767, 1999. [5] E. C. Kerrigan, “Robust constraint satisfaction: Invariant sets and predictive control,” Ph.D. dissertation, University of Cambridge, 2001. [6] S. Rakovic, P. Grieder, M. Kvasnica, D. Mayne, and M. Morari, “Computation of invariant sets for piecewise affine discrete time systems subject to bounded disturbances,” in Proceedings of the 43 rd IEEE Conference on Decision and Control, Atlantis, Bahamas, 2004, pp. 1418–1423. [7] J. M. Bravo, D. Limon, T. Alamo, and E. F. Camacho, “On the computation of invariant sets for constrained nonlinear systems: An interval arithmetic approach,” Automatica, vol. 41, no. 9, pp. 1583–1589, 2005. [8] W. Esterhuizen, T. Aschenbruck, and S. Streif, “On maximal robust positively invariant sets in constrained nonlinear systems,” Automatica, vol. 119, p. 109044, 2020. [9] A. Chakrabarty, A. Raghunathan, S. Di Cairano, and C. Danielson, “Data-driven estimation of backward reachable and invariant sets for unmodeled systems via active learning,” in Proceedings of the IEEE Conference on Decision and Control, Miami, 2018, pp. 372–377. [10] S. Bansal and C. J. Tomlin, “Deepreach: A deep learning approach to high-dimensional reachability,” in Proceedings of the IEEE International Conference on Robotics and Automation, Xi’an, China, 2021, pp. 1817–1824. [11] R. Tempo, G. Calafiore, and F. Dabbene, Randomized algorithms for analysis and control of uncertain systems: with applications. London, UK: Springer Science & Business Media, 2012.",
+    "presenting_author": "Joel Paulson | The Ohio State University, Columbus",
+    "authors": [
+      "Joel Paulson | The Ohio State University, Columbus",
+      "Angelo D. Bonzanini | University of California Berkeley",
+      "Georgios Makrygiorgos | University of California, Berkeley",
+      "Ali Mesbah | University of California, Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joel Paulson",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Angelo D. Bonzanini",
+        "affiliation": "University of California Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Georgios Makrygiorgos",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12a",
+    "sortable_time": "2022-11-13_15:30:00_15:49:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648498"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648700",
+    "paper_endpoint": "Paper/648700",
+    "paper_id": "648700",
+    "topic": "Development of Mass and Energy Constrained Neural Networks",
+    "title": "Development of Mass and Energy Constrained Neural Networks",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49208",
+    "session_title": "Data-Driven Dynamic Modeling, Estimation and Control I",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "First-principles models can provide very good prediction even for cases when there are no or limited data or for cases where data collection is infeasible. However, constructing accurate first-principles models for complex nonlinear dynamic systems may be computationally expensive, time consuming, and intractable for online adaptation. On the contrary, artificial intelligence (AI) or black-box models are relatively easier to develop, simulate, and adapt online 1 . Although various types of AI modeling techniques such as neural networks (NN), deep learning, expert systems and fuzzy logic have been widely employed for process synthesis, design and modeling 2 , the development of such models requires large amount of data so can be infeasible where data acquisition is prohibitive or collection of certain type of data is practically impossible given the current state of the measurement technology. Moreover, the measurement data available for training the neural networks for any chemical engineering process may not necessarily satisfy mass and energy balances and other physics of the system. If such physics constraints are not considered during machine learning, model predictions can violate the conservation laws and therefore may not be meaningful. This work develops an approach where irrespective of whether the training data follows the basic conservation laws, the outputs from the neural network satisfy the mass and energy balance equations at steady state. The typical approach considered in the development of physics-constrained neural networks (PCNN) is to include an additional penalty term in the objective function in terms of specific parameterization or loss criteria 3 . Such hybrid first-principles AI modeling approaches can suffer from excessive computational expense and slow convergence rates depending on the complexities of the first-principles model. Moreover, most data-driven modeling of complex nonlinear dynamic systems with respect to available measurements may not provide any information about the ‘true’ data. Though a lot of different implementations of PCNN have been found in solving systems of partial differential equations or theoretical modeling examples in the electrical 4 , metallurgical 5 and computational fluid dynamics 6,7 fields, no example can be traced in existing literature specific to modeling a chemical process system by constraining the laws of conservation of mass and energy. In this work, a novel class of network models is proposed, namely the Mass and Energy Constrained Neural Networks (MECNN), which guarantees that the neural network outputs satisfy the mass and energy balance (first-principles) equations for the system at steady state, even if the training data violates the same. Efficient training algorithms are also developed for optimal synthesis of the network and estimation of parameters. This approach can be further extended to include other thermodynamic constraints specific to the system. The proposed network structures are applied to train three nonlinear dynamic processes, namely the nonisothermal Van de Vusse reactor system, a pilot plant for post-combustion CO 2 capture using the monoethanolamine solvent 8 as well as a supercritical boiler system. It is observed that the outputs from MECNN satisfy the first-principles equations, even if the measurements used for training the network violates the mass and energy balance. References 1. Su, H.-T., Bhat, N., Minderman, P. A. & McAvoy, T. J. Integrating Neural Networks With First Principles Models for Dynamic Modeling . Dynamics and Control of Chemical Reactors, Distillation Columns and Batch Processes (IFAC, 1993). doi:10.1016/b978-0-08-041711-0.50054-4. 2. Venkatasubramanian, V. The promise of artificial intelligence in chemical engineering: Is it here, finally? AIChE J. 65 , 466–478 (2019). 3. Raissi, M., Perdikaris, P. & Karniadakis, G. E. Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. J. Comput. Phys. 378 , 686–707 (2019). 4. He, Q., Stinis, P. & Tartakovsky, A. Physics-constrained deep neural network method for estimating parameters in a redox flow battery. (2021) doi:10.1016/j.jpowsour.2022.231147. 5. Ghaderi, A., Morovati, V. & Dargazany, R. A physics-informed assembly of feed-forward neural network engines to predict inelasticity in cross-linked polymers. Polymers (Basel). 12 , 1–20 (2020). 6. Zheng, H., Huang, Z. & Lin, G. PCNN: A physics-constrained neural network for multiphase flows. 1–21 (2021). 7. Kumar, A., Ridha, S., Narahari, M. & Ilyas, S. U. Physics-guided deep neural network to characterize non-Newtonian fluid flow for optimal use of energy resources. Expert Syst. Appl. 183 , 115409 (2021). 8. Chinen, A. S., Morgan, J. C., Omell, B., Bhattacharyya, D. & Miller, D. C. Dynamic Data Reconciliation and Validation of a Dynamic Model for Solvent-Based CO 2 Capture Using Pilot-Plant Data. Ind. Eng. Chem. Res. 58 , 1978–1993 (2019).",
+    "presenting_author": "Angan Mukherjee | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Angan Mukherjee | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Angan Mukherjee",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12b",
+    "sortable_time": "2022-11-13_15:49:00_16:08:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648700"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/642786",
+    "paper_endpoint": "Paper/642786",
+    "paper_id": "642786",
+    "topic": "Data-Driven Controller Synthesis through the Learning of Integral Quadratic Constraints",
+    "title": "Data-Driven Controller Synthesis through the Learning of Integral Quadratic Constraints",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49208",
+    "session_title": "Data-Driven Dynamic Modeling, Estimation and Control I",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Data-driven control, through the incorporation of statistical and machine learning into control theory, provides complementary strength to classical model-based control. We are especially interested in model-free control, where the identification of governing equations can be avoided and only essential control-relevant information is learned from data. In our previous works, we have developed the Dissipativity Learning Control (DLC) framework, where the dissipative property of the system is the control-relevant information to be learned from input and output trajectories [1,2]. This is motivated by the fact that process systems, obeying thermodynamic laws and transport kinetics, must be dissipative, i.e., there exists a storage function whose rate of change is bounded by an input- and output-dependent supply rate [3]. However, the existing DLC framework is restricted to quadratic supply rate functions, based on which the controller can only be obtained in P/PI/PID forms. To accommodate more complex process dynamics and also to improve control performance, methods for data-driven, model-free synthesis of more generic forms of controllers are needed. To this end, we generalize the quadratic dissipativity form to the concept of integral quadratic constraints (IQC). In IQC, dynamic multipliers are allowed to transform the input and output signals into augmented dimensions and define dissipativity on the transformed variables. IQC was first proposed as a unifying approach for uncertainty characterization in robust stability and performance analysis [4], and theoretical connections between its frequency-domain or time-domain forms have been established [5], allowing the expression of IQC conditions as linear matrix inequalities (LMIs) according to the Kalman-Yakubovich-Popov (KYP) Lemma. In this talk, we present the framework of IQC Learning Control as follows. 1. With a given matrix of dynamic multipliers, the IQC is parameterized by a matrix of dissipativity parameters . Its range (called the dissipativity set ) is the dual cone of another set (called the dual d issipativity set ) that can be characterized using trajectory samples. 2. The transfer function matrix of the controller is optimized by minimizing an upper bound on the L 2 -gain from disturbances to inputs and outputs. The controller synthesis problem is formulated as semidefinite programming (SDP) through the KYP Lemma. We also perform a case study on a reactive distillation column example. By comparing the performance of the obtained controllers based on IQC learning, PID controllers based on dissipativity learning, and model identification-based LQG controller, we demonstrate the advantage of this proposed generic, input-output data-driven, model-free controller synthesis approach. References 1. Tang, W., & Daoutidis, P. (2019). Dissipativity learning control (DLC): A framework of input–output data-driven control. Comput. Chem. Eng. , 130 , 106576. 2. Tang, W., & Daoutidis, P. (2021). Dissipativity learning control (DLC): Theoretical foundations of input–output data-driven model-free process control. Syst. Control Lett. , 147, 104831. 3. Alonso, A. A., & Ydstie, B. E. (1996). Process systems, passivity and the second law of thermodynamics. Comput. Chem. Eng. , 20, S1119–S1124. 4. Megretski, A., & Rantzer, A. (1997). System analysis via integral quadratic constraints. IEEE Trans. Autom. Control , 42, 819–830. 5. Seiler, P. (2014). Stability analysis with dissipation inequalities and integral quadratic constraints. IEEE Trans. Autom. Control , 60, 1704-1709.",
+    "presenting_author": "Wentao Tang | NC State University, Raleigh",
+    "authors": [
+      "Wentao Tang | NC State University, Raleigh",
+      "Prodromos Daoutidis | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Wentao Tang",
+        "affiliation": "NC State University, Raleigh",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12c",
+    "sortable_time": "2022-11-13_16:08:00_16:27:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/642786"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/642187",
+    "paper_endpoint": "Paper/642187",
+    "paper_id": "642187",
+    "topic": "Nonlinear Model Predictive Control Using Statistical Machine-Learning-Based Control Lyapunov Barrier Functions",
+    "title": "Nonlinear Model Predictive Control Using Statistical Machine-Learning-Based Control Lyapunov Barrier Functions",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49208",
+    "session_title": "Data-Driven Dynamic Modeling, Estimation and Control I",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Safety-critical systems exist in many application domains, and safety-related constraints must be strictly met in order to prevent harm on process stability, economic gains, and/or operational safety. There has been extensive research on providing safety verification of a system as well as synthesizing control laws with provable safety properties. Control Barrier Functions (CBFs) are proposed as a tool to characterize the safety of dynamical systems by certifying whether a control law achieves forward invariance of a safe set, similar to the utility of Control Lyapunov Function (CLF) in certifying stability properties [1-2]. CBFs can be incorporated in the design of control laws for multi-objective control of safety-critical systems, e.g., controllers designed based on Control Lyapunov Barrier Functions (CLBF), where a CLF is used to characterize a stability region and ensure stability properties, and a CBF is used to characterize an unsafe region where state trajectory under the CLBF-based control law will not enter at all times. This approach has been further explored for nonlinear systems subject to constrained inputs, where CLBF-based control laws are used as contractive constraints in the design of a model predictive controller (MPC) to provide closed-loop stability and safety guarantees for nonlinear processes with embedded bounded and unbounded unsafe regions [3]. Designing a valid CBF to be used in safety-critical control systems is a challenge faced by many; as such, we proposed a machine-learning method to construct a CBF from data points. There has been some research into probabilistic safety certification of barrier functions, but not in the sense of analyzing the generalization error of the modeling method. In this work, we provide statistical analysis on the CBF construction method proposed in our previous work in [4] and model the CBF using a feed-forward neural network, which will be used to design a CLBF-based model predictive control system. Using statistical machine learning, an upper bound for the generalization error or expected error of a neural network model can be derived [5]. We first develop the generalization error bound on the FNN-CBF, and derive probablistic safety and stability guarantees for the control law designed using a CLBF with FNN-CBF under sufficient conditions. The sampling, modeling, and verification procedures of the FNN are discussed. Then, we extend the probablistic stability and safety properties to the FNN-CLBF MPC, and demonstrate that with high probability, the FNN-CLBF MPC is able to maintain the closed-loop state of a nonlinear process within a safe set and ultimately bounded within a terminal set around the origin. [1] A. D. Ames, X. Xu, J. W. Grizzle, and P. Tabuada. Control barrier function based quadratic programs for safety critical systems. IEEE Transactions on Automatic Control, 62:3861–3876, 2017 [2] X. Xu, P. Tabuada, J. W. Grizzle, and A. D. Ames. Robustness of control barrier functions for safety critical control. IFAC-PapersOnLine, 48(27):54–61, 2015. [3] Z. Wu, F. Albalawi, Z. Zhang, H. Zhang, J.and Durand, and P. D. Christofides. Control lyapunov-barrier function-based model predictive control of nonlinear systems. Automatica,109:108508, 2019 [4] S. Chen, Z. Wu, and P. D. Christofides. Machine-learning-based construction of barrier functions and models for safe model predictive control. AIChE Journal e17456, 2021. [5] N. Golowich, A. Rakhlin, and O. Shamir. Size-independent sample complexity of neural net works. In Proceedings of the Conference On Learning Theory , pages 297–299, Stockholm, Sweden, 2018",
+    "presenting_author": "Scarlett (Siyao) Chen | University of California, Los Angeles",
+    "authors": [
+      "Scarlett (Siyao) Chen | University of California, Los Angeles",
+      "Zhe Wu | National University of Singapore",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Scarlett (Siyao) Chen",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhe Wu",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12d",
+    "sortable_time": "2022-11-13_16:27:00_16:46:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/642187"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648055",
+    "paper_endpoint": "Paper/648055",
+    "paper_id": "648055",
+    "topic": "Efficient Training of Machine-Learning Enhanced Building Models with Noisy Data",
+    "title": "Efficient Training of Machine-Learning Enhanced Building Models with Noisy Data",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49208",
+    "session_title": "Data-Driven Dynamic Modeling, Estimation and Control I",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In 2020, the combined energy consumption of the residential and commercial building sectors in the United States was around 20 quadrillion Btu [1]. The residential and commercial sectors consumed around 22% and 18%, respectively [1]. With surging energy prices and rising demand [2], efficient building operations are more critical than ever. Model predictive control (MPC) is a potential game-changing control and optimization approach for buildings, and numerous studies have analyzed the potential positive impacts of MPC on building operations [3]. However, MPC has not been widely adopted in buildings, and scalable building model identification has been recognized as the main challenge preventing the widespread adoption of MPC [4]. Model identification is particularly challenging in buildings because of inadequate sensing. Specifically, building spaces have time-varying heat gains, resulting from solar radiation, occupants, lighting, and other electrical equipment, that evolve on similar time scales as that of the relevant building dynamics. The heat gains are difficult to measure. This coupled with a lack of full state measurements results in a coupled state/disturbance estimation and model parameter identification problem. A few approaches have been proposed for addressing the coupled estimation and identification problem for buildings (e.g., [5], [6], [7]). For example, an output integrating disturbance model was included when identifying the parameters of a physics-based building thermal dynamic model [5]. A simultaneous model parameter and disturbance estimation procedure was proposed [6]. Both modeling approaches result in a building thermal dynamic model and a model or estimator for estimating the unmeasured time-varying heat disturbance. However, the modeling goal for MPC is to obtain a model for predicting the building thermal dynamics over time. Accurately forecasting the time-varying heat disturbance is critical for achieving adequate closed-loop performance under MPC. Thus, as an alternative, a hybrid modeling framework consisting of a simplified physics-based model used to capture the indoor air and building mass thermal dynamics and a machine learning model used to capture the time-varying heat disturbances was proposed [7]. The two underlying models that make up the hybrid model were trained with a simultaneous approach. With noise-free data, the method accurately identified the physics-based model parameters and a machine learning model that could forecast the heat disturbance. A preliminary training strategy was proposed for performing model training. This work considers the training computational efficiency associated with hybrid model parameter identification using noisy data for buildings. The proposed hybrid model consists of a physics-based model describing the building's thermal dynamics and a neural network model that can forecast the building's unmeasured time-varying heat gains. In the proposed hybrid model, the parameters of the underlying physics-based model and machine learning-based models are trained simultaneously to prevent biased estimates of the physics-based parameters caused by the unmeasured heat gains. The training strategy is formalized, and improvements that address computational efficiency are investigated. To this end, a hybrid training strategy involving gradient descent with BFGS methods is proposed to solve the parameter estimation problem. Parameter regularization and training drop-out are considered to address noisy data. Considering data collected from a building zone, model training results employing the various training strategies proposed in this work are used to evaluate the accuracy of the resulting models and computational efficiency. References: [1] D. R. Dunn, J. Zaidi, M. Kopalek, G. Long, R. Berry, G. McGrath, T. Shear, M. Klein, M. Kopalek, A. Gorski, E. Harrison, L. Jamison, K. Nakolan, “Monthly energy review: March 2022”, Technical Report, U.S. Energy Information Administration, 2022. [2] C. F. Alvarez, G. Molnar, “What is behind soaring energy prices and what happens next?”, Technical Report, International Energy Agency, 2021. [3] A. Afram, F. Janabi-Sharifi, A. S. Fung, and K. Raahemifar, “Artificial neural network (ANN) based model predictive control (MPC) and optimization of HVAC systems: A state of the art review and case study of a residential HVAC system”, Energy and Buildings 141 (2017), pp. 96–113. [4] G. P. Henze, “Model predictive control for buildings: a quantum leap?”, Journal of Building Performance Simulation 6 (3) (2013), pp. 157–158. [5] D. Kim, J. Cai, J. Braun and K. Ariyura, “System identification for building thermal systems under the presence of unmeasured disturbances in closed loop operation: Theoretical analysis and application”, Energy and Buildings 167 (2018), pp. 359–369. [6] A. R. Coffman and P. Barooah, “Simultaneous identification of dynamic model and occupant-induced disturbance for commercial buildings”, Building and Environment 128 (2018), pp. 153–160. [7] M. J. Ellis, “ Machine Learning Enhanced Grey-Box Modeling for Building Thermal Modeling, ” In Proceedings of the American Control Conference, New Orleans LA USA, pp. 3927-3932, 25-28 May, 2021 .",
+    "presenting_author": "Pranav Krishna | University of California, Davis",
+    "authors": [
+      "Pranav Krishna | University of California, Davis",
+      "Matthew Ellis | University of California, Davis"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pranav Krishna",
+        "affiliation": "University of California, Davis",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Matthew Ellis",
+        "affiliation": "University of California, Davis",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12e",
+    "sortable_time": "2022-11-13_16:46:00_17:05:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648055"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649943",
+    "paper_endpoint": "Paper/649943",
+    "paper_id": "649943",
+    "topic": "A Deep Learning-Based Model Reduction and Control of an Ammonia Synthesis Process",
+    "title": "A Deep Learning-Based Model Reduction and Control of an Ammonia Synthesis Process",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49208",
+    "session_title": "Data-Driven Dynamic Modeling, Estimation and Control I",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The large-scale production of ammonia from nitrogen and hydrogen through the Haber-Bosch process is one of the most significant achievements in the chemical process industry. Ammonia is the primary precursor of fertilizers, a refrigerant gas, and is used to produce plastics, explosives, textiles, pesticides, and dyes [1, 2]. Furthermore, ammonia is considered an advantageous chemical-energy currency in integrated and sustainable polygeneration systems due to its easy storage, transportation, and conversion to other value-added chemicals [3,4]. In ammonia synthesis, the nitrogen and hydrogen are combined on the surface of a metal-based catalyst in a high-pressure-temperature reactor [5-8]. Managing such a reactor operation hinges on accurate descriptions of the elementary steps involved in the reaction and control approaches to direct reactions toward lower energy and more selective pathways. Due to the much larger gradients in fluid flow, temperature, and concentration fields at the macroscopic reactor scale compared to the spatial heterogeneity of the properties at the microscale of catalysts, the reaction rates computed at the smaller length scales are only applicable over a specific discretization size. Therefore, the rates need to be re-evaluated at different regions of the macroscopic domain to account for changes in temperature and species concentration. The macroscopic behavior is then determined by integrating the transport-reaction spatiotemporal dynamics over the processes domain. Consequently, only an actual multiscale model can predict such intimate phenomena by linking microscopic properties to macroscopic process variables that can be measured and readily manipulated. Furthermore, a multiscale interpretation of transport-catalytic ammonia synthesis entails developing high-fidelity and computationally tractable fundamental models that can accurately predict the spatiotemporal dynamics of the system, enabling mutual information exchange through different scales. While the multiscale model improves the understanding of the ammonia synthesis process and the accuracy of the predictions, it poses various challenges, from complexity to computational efficiency, which significantly affects its applicability for real-time simulation and decision-making purposes. In this work, we develop a multiscale model for catalytic synthesis of ammonia in an industry-scale packed bed reactor and utilize it for a model predictive control (MPC) design to regulate the temperature and ammonia concentration dynamics at optimal spatiotemporal profiles. Our proposed approach integrates ammonia synthesis rate data [5-8] with a detailed macroscale reactor model (momentum, mass, and energy balances closed through appropriate constitutive expressions over the three-dimensional reactor and one-dimensional catalyst particle geometry) to describe the spatiotemporal dynamics of the reaction mixture’s pressure, temperature, and concentrations. The resulting model comprises integrated nonlinear partial differential equations that must be solved simultaneously to obtain distributions of the system properties in time. However, the MPC solution hinges on the real-time solvability of its underlying dynamic optimization problem, which is challenging for the proposed high-fidelity model. Therefore, a deep-learning-based reduced-order model representation of the system is used to approximate its spatiotemporal dynamics to address this problem. The high-fidelity multiscale simulations are performed offline over various operating conditions to collect sufficient simulation data required for deep learning model training. Finally, the resulting reduced-order model is analyzed and used as the basis for the MPC design. The controller performance is evaluated on temperature and concentration regulation problems in different operating conditions. References: [1] V. Babu, R. Angira. Optimal design of an auto-thermal ammonia synthesis reactor. Computers and Chemical Engineering, 29, 1041-1045 , 2005. [2] J. Humphreys, R. Lan, S. Tao. Development and Recent Progress on Ammonia Synthesis Catalysts for Haber–Bosch Process. Adv. Energy Sustainability Res., 2, 2000043, 2021. [3] D. Mukelabai, J.M. Gillard, K. Patchigolla. A novel integration of a green power-to-ammonia to power system: Reversible solid oxide fuel cell for hydrogen and power production coupled with an ammonia synthesis unit. International Journal of Hydrogen Energy, 46, 18546-18556, 2021. [4] H.M. Al-Hamed, I. Dincer. A novel ammonia solid oxide fuel cell-based powering system with on-board hydrogen production for clean locomotives. Energy, 220, 119771, 2021. [5] M. Aparicio, J.A. Dumesic. Ammonia synthesis kinetics: surface chemistry, rate expressions and kinetic analysis. Topic in Catalysis, 1, 233-252, 1994. [6] M. Malmali, Y. Wei, A. McCormick, E.L. Cussler. Ammonia Synthesis at Reduced Pressure via Reactive Separation. Ind. Eng. Chem., Res. 55, 8922-8932, 2016. [7] J. Qian, Q. An, A. Fortunelli, R.J. Nielsen, W.A. Goddard III. Reaction Mechanism and Kinetics for Ammonia Synthesis on the Fe(111) Surface. J. Am. Chem. Soc., 140, 6288-6297, 2018. [8] A. Dumesic, A.A. Trevino. Kinetic simulation of ammonia synthesis catalysis. Journal of Catalysis, 1, 119-129, 1989.",
+    "presenting_author": "Thiago Oliveira Cabral | Kansas State University, Manhattan, KS",
+    "authors": [
+      "Thiago Oliveira Cabral | Kansas State University, Manhattan, KS",
+      "Amirsalar Bagheri | Kansas State University, Manhattan, KS",
+      "Davood Pourkargar | Kansas State University, Manhattan, KS"
+    ],
+    "authors_structured": [
+      {
+        "name": "Thiago Oliveira Cabral",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Amirsalar Bagheri",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Author"
+      },
+      {
+        "name": "Davood Pourkargar",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12f",
+    "sortable_time": "2022-11-13_17:05:00_17:24:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649943"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648573",
+    "paper_endpoint": "Paper/648573",
+    "paper_id": "648573",
+    "topic": "State Space Model Predictive Control Using Quality Variables for Batch Polymethyl Methacrylate Production",
+    "title": "State Space Model Predictive Control Using Quality Variables for Batch Polymethyl Methacrylate Production",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49208",
+    "session_title": "Data-Driven Dynamic Modeling, Estimation and Control I",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Polymethyl methacrylate (PMMA) is an important industrial polymer with widespread applications ranging from plastics to electronics. PMMA production occurs via a specific recipe in a batch process in order to ensure the optimal product quality. The key parameter to determining product quality is the molecular weight distribution of PMMA. However, measuring the entire molecular weight is a long, complex procedure, therefore the number and weight average molecular weights are used as outcome measures instead. These quality variables are measured at the end of the batch and, as such, must be controlled tightly. To achieve good quality control of the PMMA process, it is important to develop a process model capable of handling batch data. Batch processes are unique in that they tend towards the low volume production of high value products, as this allows for poor quality batches to be discarded. Each discarded batch represents a significant loss in revenue, motivating the need for advanced batch control approaches and, fundamentally, the development of accurate quality models. Recent advances in computing technology have led to increased amounts of historical data being available, making data-driven modeling a viable choice for model identification. Developing an accurate process model is the key to good quality control. This work focuses on quality modeling in batch process data using a missing data subspace algorithm that adapts nonlinear iterative partial least squares (NIPALS) algorithms from both partial least squares (PLS) and principal component analysis (PCA) to build a data driven model. The next consideration is to utilize this model in a state space model predictive controller to get improved batch quality for a polymethyl methacrylate (PMMA) process. Traditional PMMA control is done with a proportional-integral controller and setpoint tracking from optimal batches using output variables to indirectly control temperature. By identifying a model with quality variables this work utilizes MPC to directly control the quality of the batch throughout the process. This MPC is then able to show improved performance compared to traditional control.",
+    "presenting_author": "Nikesh Patel | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Nikesh Patel | McMaster University, Hamilton, Canada",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nikesh Patel",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12g",
+    "sortable_time": "2022-11-13_17:24:00_17:43:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648573"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649662",
+    "paper_endpoint": "Paper/649662",
+    "paper_id": "649662",
+    "topic": "Latent State Space Modeling of High-Dimensional Data in Chemical Systems",
+    "title": "Latent State Space Modeling of High-Dimensional Data in Chemical Systems",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49208",
+    "session_title": "Data-Driven Dynamic Modeling, Estimation and Control I",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Data from chemical processes are usually in high-dimensional time series forms. With the fast development of process industries, the high-dimensional, collinear, and dynamic characteristics in industrial time series are more pronounced for autonomous systems (Esptein and Pojman, 1998), where sensor redundancy is necessary to be foolproof and tolerant to failures. The redundancy can make the dimension of the observed features much larger than that of the dynamics, which poses challenges to traditional time series and system identification methods that assume full-dimensional dynamic excitation in the process data. It is therefore critical to develop new methods to develop reduced-dimensional dynamic models for monitoring, control, and decision making in chemical plants (Qin et al., 2020). Principal component analysis (PCA), partial least squares (PLS), and canonical correlation analysis (CCA) are classical reduced-dimensional latent space models that have been widely used for data analytics in chemical processes (Jolliffe and Cadima, 2002, Krämer and Sugiyama, 2011, Negiz and Çlinar, 1997). These linear models project data from the original space into a reduced-dimensional latent space such that the projected latent variables capture the maximum variance, covariance, or correlations, but they do not focus on the predictability of the extracted latent variables. In multivariate time series analysis, some linear combinations of the variables were first recognized could be serially uncorrelated, even though each individual variable is serially correlated (Box and Tiao, 1977). They further applied canonical analysis to decompose the time series residuals into dynamic and static latent factors. Pena and Box (Pena and Box, 1987) illustrated that the serially uncorrelated factors and dynamic factors co-exist in latent system structure with multivariate time series data. Dynamic factor models (DFM) have been studied extensively in high-dimensional time series to extract reduced-dimensional dynamic factors based on time-lagged auto-covariance matrices of the multivariate time series (Lam and Yao, 2012). An improved time-domain approach enforces causal relations (Peña et al., 2019), where only past and current data are used in the model. One limitation of these methods is that they correspond to covariance-based objective functions that yield consistent estimates, but not necessarily efficient ones. Further, these methods do not automatically lead to an explicit dynamic latent variable (DLV) model; a follow-up step has to be employed to build vector auto-regressive DLV models. The above DFM methods are related to subspace identification methods (SIM). However, SIMs extract state variables rather than latent variables with reduced dimensional dynamics. SIMs utilize state space models as a compact representation of multivariate time series data (Akaike, 1975). Canonical variate analysis (CVA) (Larimore, 1990) and subsequent methods such as N4SID extended the work of Akaike to include exogenous variables (Van Overschee and De Moor, 1994). Russell, Chiang, and Braatz (2000) further utilized the canonical variates for process monitoring and fault detection. To extract predictable DLVs, dynamic inner PCA (DiPCA) algorithm (Dong and Qin, 2018) was introduced to maximize the covariance between the DLVs and their predictions. Later, a dynamic inner canonical correlation analysis (DiCCA) algorithm (Dong et al., 2018) that maximizes the canonical correlations of the DLVs and their predictions is proposed. However, these methods build univariate AR models that extract self-predicting DLVs without interactions among the DLVs. In other words, the latent models are restrictive when interactions exist among the DLVs. Therefore, a recent work is proposed to extract the interacting DLVs through a vector AR model with a CCA objective (LaVAR-CCA) (Qin, 2022). Nevertheless, the latent dynamics are modeled via higher-order AR, which requires many parameters. While subspace identification methods can be interpreted as latent variable methods for the case of first order dynamics with the number of state variables less than the measurement variables, there is little effort in the literature that focuses on reduced dimensional DLVs with high order dynamics for the DLVs. In this paper, we develop a new algorithm to estimate the latent dynamics with parsimonious latent state space (LaSS) models with general noise dynamics. Dimension reduction and fully interactive DLVs are modeled simultaneously. The LaSS model is estimated via an iterative optimization procedure between the estimation of latent dynamics and the projection for dimension reduction. The latent state dynamics are estimated via a subspace identification method, which is more general than the autoregressive models. The proposed LaSS algorithm is tested on a chemical process under real operation and compared with the LaVAR algorithm in terms of model accuracy and number of model parameters. The mean squared prediction error (MSPE) of both methods on the test dataset are plotted in the attached figure. LaSS generally outperforms LaVAR with fewer DLVs, which makes the model more concise and efficient in capturing latent dynamics for high dimensional data in chemical processes. References Epstein, I. R., & Pojman, J. A. (1998). An introduction to nonlinear chemical dynamics: oscillations, waves, patterns, and chaos. Oxford university press. Qin, S. J., Dong, Y., Zhu, Q., Wang, J., & Liu, Q. (2020). Bridging systems theory and data science: A unifying review of dynamic latent variable analytics and process monitoring. Annual Reviews in Control, 50, 29-48. Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 374(2065), 20150202. Krämer, N., & Sugiyama, M. (2011). The degrees of freedom of partial least squares regression. Journal of the American Statistical Association, 106(494), 697-705. Negiz, A., & Çlinar, A. (1997). Statistical monitoring of multivariable dynamic processes with state‐space models. AIChE Journal, 43(8), 2002-2020. Box, G. E., & Tiao, G. C. (1977). A canonical analysis of multiple time series. Biometrika, 64(2), 355-365. Lam, C., & Yao, Q. (2012). Factor modeling for high-dimensional time series: inference for the number of factors. The Annals of Statistics, 694-726. Peña, D., Smucler, E., & Yohai, V. J. (2019). Forecasting multiple time series with one-sided dynamic principal components. Journal of the American Statistical Association. Akaike, H. (1975). Markovian representation of stochastic processes by canonical variables. SIAM journal on control, 13(1), 162-173. Larimore, W. E. (1990). Canonical variate analysis in identification, filtering, and adaptive control. In 29th IEEE Conference on Decision and control (pp. 596-604). IEEE. Van Overschee, P., & De Moor, B. (1994). N4SID: Subspace algorithms for the identification of combined deterministic-stochastic systems. Automatica, 30(1), 75-93. Evan L. Russell, Leo H. Chiang, Richard D. Braatz (2000), Fault detection in industrial processes using canonical variate analysis and dynamic principal component analysis, Chemometrics and Intelligent Laboratory Systems, 51(1), 81-93. Dong, Y., & Qin, S. J. (2018). Dynamic latent variable analytics for process operations and control. Computers & Chemical Engineering, 114, 69-80. Dong, Y., Qin, S. J., & Boyd, S. P. (2021). Extracting a low-dimensional predictable time series. Optimization and Engineering, 1-26. Qin, S. J. Latent Vector Autoregressive Modeling and Feature Analysis of High Dimensional and Noisy Data from Dynamic Systems. AIChE Journal, e17703.",
+    "presenting_author": "S. Joe Qin | City University of Hong Kong, China",
+    "authors": [
+      "Jiaxin Yu | City University of Hong Kong",
+      "S. Joe Qin | City University of Hong Kong, China"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jiaxin Yu",
+        "affiliation": "City University of Hong Kong",
+        "designation": "Author"
+      },
+      {
+        "name": "S. Joe Qin",
+        "affiliation": "City University of Hong Kong, China",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "12h",
+    "sortable_time": "2022-11-13_17:43:00_18:02:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649662"
+  }
+]

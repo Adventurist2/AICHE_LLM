@@ -1,0 +1,393 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper426881.html",
+    "topic": "A New Framework for Dynamic Parameter Estimation and Optimization of Batch Distillation Columns",
+    "date_time": "Thursday, November 12, 2015: 4:55 PM",
+    "abstract": "Approximately 40,000 distillation columns are used in different industries in the US that account for 6% of the yearly US energy consumption [1]. Continuous distillation columns are generally used in large scale production facilities; optimization of these large-scale units has been considered widely in the literature. Smaller-use items are often processed in batch distillation columns. Optimization of batch distillation columns has gained less attention in the literature, mainly because of the transient nature of both the columns themselves and the market for smaller-use items [2]. Recently, more research studies have considered optimization of the batch distillation columns [3]–[6]. The first step in optimization of batch distillation columns is to develop a model. Several research studies have considered model development for batch distillation columns. The models studied in the literature are generally categorized as rigorous [7]–[9] or shortcut methods [10]–[12]. Rigorous models generally include detailed descriptions of mass transfer, energy transfer and thermodynamics, and are therefore able to account for system non-idealities. While these methods are more accurate, they have high computational costs. In shortcut models, several simplifying assumptions have been considered that decrease the computational time. However, lack of experimental results makes it difficult to determine the accuracy of these models, restricting their use to ideal systems. In this study, a third approach is used to develop a model that incorporates some of the non-idealities of the process not seen in the typical shortcut methods without increasing the computational cost. In this approach, a model is developed by fitting parameters to simplified forms of shortcut models. The use of fitting parameters incorporates system non-idealities into the model but requires experimental data to determine parameter values. Dynamic parameter estimation is used to reduce the experimental load. The accuracy of the parameters is then determined by implementing nonlinear statistics calculations as well as a sensitivity analysis. These calculations help analyze the number of parameters that can be estimated from the experimental data and return an acceptable range for those parameters. The framework used in this study is developed in a general approach that is applicable to other batch processes. The framework includes the use of ℓ1-norm dynamic parameter estimation, nonlinear statistics, parameter sensitivity analysis, and dynamic optimization. These techniques have not been applied together to batch distillation columns before in a holistic approach to dynamic optimization. The results obtained from dynamic optimization are also validated in this study. The batch column used to collect data is a 38 tray, 2 inch, vacuum-jacketed and silvered Oldershaw column. A constant heat input is supplied from a reboiler heater. The reboiler is initially charged with 1.5 L of a 50/50 wt% mixture of methanol and ethanol for each run, with the goal being a product of 99 wt% methanol. The manipulated variable is the reflux ratio. A doublet test is implemented to collect data for model validation. Initially four parameters are assumed for fitting data to the model. These parameters are heater efficiency, vaporization efficiency, condenser molar holdup, and tray molar holdup. The maximum error observed between the model prediction and experimental data for the instantaneous distillate is 10%. For all but four measurements the model prediction is within 2%. The error between the prediction and measurement for the cumulative number of methanol is negligible. Although the fit between the model and experimental data is excellent, a glance at the confidence interval reveals a wide region for all parameters except the heater efficiency. This might be because of the over-parametrization of the problem. A sensitivity analysis is therefore used to determine the number of the parameters that best represent the model. The singular value decomposition of the sensitivity matrix is implemented and it is found that there is one principle parameter (heater efficiency) that can be used to match the production data (number of moles of methanol). The singular value analysis also reveals that only one other parameter is required to estimate the composition of methanol. In this study, vaporization efficiency is selected as the second parameter and the other two parameters (condenser and tray holdups) are assumed fixed for further analysis. Implementing the confidence interval calculations for the model with two parameters shows a narrow confidence interval that confirms the results obtained from the sensitivity analysis. The model prediction with two parameters also match the experimental results. The validated model is then used to maximize the amount of methanol production for a 90 minute batch time. The non-optimized base case production over a 90 minute run is 9.5 moles of 99.2 mol% methanol at a constant reflux ratio of 4. To optimize methanol production, reflux ratio is varied every 5 minutes by the optimizer. Optimization results show that the reflux ratio starts low, then increases in a nominally linear pattern. This is done to take advantage of the high methanol concentration at the top of the column after the startup period. The model prediction for the optimization case is 9.75 moles of 99.0 mol% methanol. Implementing the optimized reflux ratio in the batch column resulted in 10.8 moles of 99.8 mol% methanol obtained in the experiment. The difference between model prediction and experiment is 10% and 0.8% for overall production and product composition, respectively. The agreement between model and experiment is excellent and reflects the work done to validate the model. Methanol production using the optimized reflux ratio represents a 14% increase in column production over the base case with a reflux ratio of 4. The increase in the productivity of the column highlights the potential benefits in applying the proposed framework in larger batch distillation columns as well as other batch processes. [1] A. Lucia and B. R. McCallum, “Energy targeting and minimum energy distillation column sequences,” Comput. Chem. Eng. , vol. 34, no. 6, pp. 931–942, 2010. [2] S. Ulas, U. M. Diwekar, and M. A. Stadtherr, “Uncertainties in parameter estimation and optimal control in batch distillation,” Comput. Chem. Eng. , vol. 29, no. 8, pp. 1805–1814, 2005. [3] Y.-S. Kim, “Optimal Control of Time-Dependent Processes (Design, Batch Distillation, Catalyst Deactivation),” 1985. [4] U. Diwekar, Batch Distillation: Simulation, Optimal Design, and Control . CRC Press, 1995. [5] B. T. Safrit and A. W. Westerberg, “Improved Operational Policies for Batch Extractive Distillation Columns,” Ind. Eng. Chem. Res. , vol. 36, no. 2, pp. 436–443, 1997. [6] K. H. Low and E. Sørensen, “Simultaneous optimal configuration, design and operation of batch distillation,” AIChE J. , vol. 51, no. 6, pp. 1700–1713, 2005. [7] M. Barolo and G. B. Guarise, “Batch Distillation of Multicomponent Systems with Constant Relative Volatilities,” Chem. Eng. Res. Des. , vol. 74, no. 8, pp. 863–871, 1996. [8] Y. H. Kim, “Optimal design and operation of a multi-product batch distillation column using dynamic model,” Chem. Eng. Process. Process Intensif. , vol. 38, no. 1, pp. 61–72, 1999. [9] I. M. Mujtaba and M. A. Hussain, “Optimal operation of dynamic processes under process-model mismatches: Application to batch distillation,” Comput. Chem. Eng. , vol. 22, Supple, pp. S621 – S624, 1998. [10] M. Barolo and F. Botteon, “Calculation of parametric sensitivity in binary batch distillation,” Chem. Eng. Sci. , vol. 53, no. 10, pp. 1819–1834, 1998. [11] A. O. Converse and G. D. Gross, “Optimal Distillate-Rate Policy in Batch Distillation,” Ind. Eng. Chem. Fundam. , vol. 2, no. 3, pp. 217–221, 1963. [12] M. M. Lopes and T. W. Song, “Batch distillation: Better at constant or variable reflux?,” Chem. Eng. Process. Process Intensif. , vol. 49, no. 12, pp. 1298–1304, 2010.",
+    "presenting_author": "Seyed Mostafa Safdarnejad | Chemical Engineering, Brigham Young University, Provo, UT",
+    "authors": [
+      "Jonathan Gallacher | Chemical Engineering, Brigham Young University, Provo, UT",
+      "John D. Hedengren | Chemical Engineering, Brigham Young University, Provo, UT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Seyed Mostafa Safdarnejad",
+        "affiliation": "Chemical Engineering, Brigham Young University, Provo, UT",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jonathan Gallacher",
+        "affiliation": "Chemical Engineering, Brigham Young University, Provo, UT",
+        "designation": "Author"
+      },
+      {
+        "name": "John D. Hedengren",
+        "affiliation": "Chemical Engineering, Brigham Young University, Provo, UT",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper428824.html",
+    "topic": "Similarity Between Statistical Mechanical Systems and Its Application to Molecular and Coarse-Grained Model Development",
+    "date_time": "Thursday, November 12, 2015: 3:30 PM",
+    "abstract": "We use the concept of the statistical distance to develop a general theoretical framework for the design of molecular and coarse-grained models. 1 The methodology is evaluated in comparison with other currently used techniques, such as force matching, 2 relative entropy minimization, 3 and Boltzmann inversion fitting 4 to show that the newly proposed approach is more general and leads to more accurate and robust models. An efficient implementation of the force field optimization algorithm is achieved by using the thermodynamic perturbation relations. 5,6 The resulting methodology can utilize a combination of experimental and quantum chemical data as a reference, and is capable of finding globally optimal model parameters with minimal computational expenses. References [1] L. Vlcek and A.A. Chialvo “Similarity between Statistical Mechanical Systems and Its Application in Molecular Model Development” in preparatioin . [2] F. Ercolessi and J. B. Adams “Interatomic Potentials from 1st-Principles Calculations - the Force-Matching Method” Europhysics Letters 1994 , 26 , 583-588. [3] M. S. Shell “Systematic Coarse-Graining of Potential Energy Landscapes and Dynamics in Liquids” J. Chem. Phys. 2012 , 137 , 13. [4] D. Reith, M. Putz, and F. Muller-Plathe “Deriving Effective Mesoscale Potentials from Atomistic Simulations” J. Comput. Chem. 2003 , 24, 1624-1636. [5] A. A. Chialvo “Excess Properties of Liquid-Mixtures from Computer-Simulation - a Coupling-Parameter Approach to the Determination of Their Dependence on Molecular Asymmetry” Mol. Phys. 1991 , 73 , 127-140. [6] L. Vlcek, A.A. Chialvo, and D.R. Cole “Optimized Unlike-Pair Interactions for Water-Carbon Dioxide Mixtures Described by the SPC/E and EPM2 Models” J. Phys. Chem. B 2011 , 115 , 8775-8784.",
+    "presenting_author": "Lukas Vlcek | Chemical Sciences Division, Oak Ridge National Laboratory, Oak Ridge, TN",
+    "authors": [
+      "Ariel A. Chialvo | Chemical Science Division, Oak Ridge National Laboratory, Oak Ridge, TN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Lukas Vlcek",
+        "affiliation": "Chemical Sciences Division, Oak Ridge National Laboratory, Oak Ridge, TN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ariel A. Chialvo",
+        "affiliation": "Chemical Science Division, Oak Ridge National Laboratory, Oak Ridge, TN",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper424555.html",
+    "topic": "A Statistical Analysis of the Propagation of Error Associated with the Intermolecular Potential Model When Simulating Large Compounds",
+    "date_time": "Thursday, November 12, 2015: 4:30 PM",
+    "abstract": "Abstracts: - Abstract Text",
+    "presenting_author": "Richard A. Messerly | W. Vincent Wilding and Thomas A. Knotts IV, Chemical Engineering, Brigham Young University, Provo, UT",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Richard A. Messerly",
+        "affiliation": "W. Vincent Wilding and Thomas A. Knotts IV, Chemical Engineering, Brigham Young University, Provo, UT",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper426281.html",
+    "topic": "Hexaboride Pair Potentials from Density Functional Theory and Molecular Dynamics",
+    "date_time": "Thursday, November 12, 2015: 4:00 PM",
+    "abstract": "Alkaline earth hexaborides are thermoelectric materials with unique thermophysical properties that have a broad variety of applications with great potential for new uses in fields such as lightweight armor development, gas storage, n -type thermoelectrics. In this work, we introduce a modeling framework to obtain basic interatomic pair potentials and to simulate the basic mechanical behavior of these materials with molecular dynamics. We use a combination of density functional theory (DFT), lattice inversion methods, molecular dynamics (MD), and optimization methods to produce a set of interatomic potentials, which can describe accurately the equilibrium energetics, and mean-square displacements of atoms within these bulk hexaborides. The model works particularly well for hexaborides with large cations. DFT methods are used to generate energetics data for multiple configurations of these materials. Interatomic potentials are obtained by inversion methods, which further optimized using MD to reproduce dynamic behavior such as mean-square displacements obtained from the quantum harmonic approximation at the MD level. We present results for lanthanum, calcium, barium, and strontium hexaborides.",
+    "presenting_author": "Kevin Schmidt | Chemical and Materials Engineering Dept., University of Nevada, Reno, Reno, NV",
+    "authors": [
+      "Victor R. Vasquez | Chemical and Materials Engineering, University of Nevada, Reno, Reno, NV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kevin Schmidt",
+        "affiliation": "Chemical and Materials Engineering Dept., University of Nevada, Reno, Reno, NV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Victor R. Vasquez",
+        "affiliation": "Chemical and Materials Engineering, University of Nevada, Reno, Reno, NV",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper428396.html",
+    "topic": "New Methods for Combining Experimental Data and Molecular Simulations into Hybrid Models",
+    "date_time": "Thursday, November 12, 2015: 5:15 PM",
+    "abstract": "Creating models that are consistent with experimental data is an essential task in computational modeling. This is generally done by iteratively tuning the input parameters of a simulation to match experimental data. A new, alternative method is to bias a simulation to match experimental data leading to a hybrid model composed of the original model and biasing terms derived from experimental data. This second approach has been shown to be the unique minimal bias and I will describe methods to achieve this in molecular simulation. It can be done by modifying average values of collective variables or morphing the PMF of a simulation into a desired target. This new approach has been designed for cases where experimental data provides partial information but can be integrated with simulations for a more complete picture. The example systems considered in this talk are Lennard-Jones fluids, electrolyte solutions, and DFT simulations of water with solvated protons. The sources of experimental data for these systems comes from quantum chemistry calculations, bioinformatics data, and experiments.",
+    "presenting_author": "Andrew White | Chemical Engineering, University of Rochester, Rochester, NY",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Andrew White",
+        "affiliation": "Chemical Engineering, University of Rochester, Rochester, NY",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper431359.html",
+    "topic": "The Trappe Validation Database",
+    "date_time": "Thursday, November 12, 2015: 5:30 PM",
+    "abstract": "The Transferable Potentials for Phase Equilibria (TraPPE) force field is known for being accurate, computationally efficient, and applicable to a wide range of chemical compounds, state points and thermophysical properties. TraPPE now encompasses five different families of force fields representing multiple levels of complexity and accuracy. In order to provide a central point of access and an information repository for all of the TraPPE families, we have developed a website and online database for TraPPE parameters and properties ( http://www.chem.umn.edu/groups/siepmann/trappe/ ) [1]. Recently, the website was redesigned to create more effective search tools and to allow users to assemble models for compounds not previously simulated. As part of this effort, we have made original simulation data available to assist users in implementing the TraPPE force field in their chosen simulation program. For older United Atom models, we also offer new vapour–liquid equilibrium data that validate model performance using updated simulation protocols (i.e., larger system sizes and additional temperatures). Here we present details for this validation process and highlight new results for several important molecules. [1] B.L. Eggimann, A.J. Sunnarborg, H.D. Stern, A.P. Bliss, and J.I. Siepmann, An online parameter and property database for the TraPPE force field, Molec. Simul. , 40 , 101-105 (2014).",
+    "presenting_author": "Becky Eggimann | Chemistry Department, Wheaton College, Wheaton, IL",
+    "authors": [
+      "J. Ilja Siepmann | Department of Chemistry and Chemical Theory Center, University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Becky Eggimann",
+        "affiliation": "Chemistry Department, Wheaton College, Wheaton, IL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "J. Ilja Siepmann",
+        "affiliation": "Department of Chemistry and Chemical Theory Center, University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper423306.html",
+    "topic": "Predictive Power of Embedded-Atom Method (EAM) Force Fields for Lithium",
+    "date_time": "Thursday, November 12, 2015: 3:45 PM",
+    "abstract": "Predictive Power of Embedded-Atom Method (EAM) Force Fields for Lithium Joseph R. Vella 1 , Mohan Chen 2 , Emily A. Carter 2,3 , Frank H. Stillinger 4 , Athanassios Z. Panagiotopoulos 1 , and Pablo G. Debenedetti 1 1 Department of Chemical and Biological Engineering, Princeton University, Princeton, NJ, 08544, USA 2 Department of Mechanical and Aerospace Engineering, Princeton University, Princeton, NJ, 08544, USA 3 Andlinger Center for Energy and the Environment and Program in Applied and Computational Mathematics, Princeton University, Princeton, NJ, 08544, USA 4 Department of Chemistry, Princeton University, Princeton, NJ, 08544, USA ABSTRACT Six classical lithium potentials are evaluated by testing their ability to predict coexistence properties and liquid-phase radial distribution functions. All potentials are of the embedded-atom method (EAM) type.� Experimental data are used to assess the predictive ability of each potential.� It is concluded that the force field developed by Cui et al. 1 is the most reliable and robust force field, because it yields reasonable agreement for most of the properties examined. �For example, the zero-pressure melting point of this force field is shown to be approximately 443 K, while it is experimentally known to be 454 K. �This force field also gives good agreement with saturated liquid densities and liquid-phase radial distribution functions, despite the fact that no liquid-phase data were used during the fitting procedure.� Next, we used this potential to calculate the viscosity, self-diffusion coefficient, and structural properties of liquid lithium.� Our results are compared to experimental data and first-principles simulations (which utilize orbital-free density functional theory).� Both classical and first-principles simulations have their respective strengths and weaknesses.� With respect to transport properties, both simulation methods agree well with each other and yield good agreement with experimental results.� This study demonstrates the importance of force field validation as well as the benefits of using both first-principles and classical simulation methods to study a variety of materials.� The cooperation of classical and first-principles techniques can be used to study systems with limited experimental data. References [1] Z. Cui, F. Gao, Z. Cui and J. Qu, �Developing a Second Nearest-Neighbor Modified Embedded Atom Method Interatomic Potential for Lithium�, Modelling and Simulation in Materials Science and Engineering, 2012 , 20, 015014. [2] J. R. Vella, F. H. Stillinger, A. Z. Panagiotopoulos and P. G. Debenedetti, �A Comparison of the Predictive Capabilities of the Embedded-Atom Method and Modified Embedded-Atom Method Potentials for Lithium�, The Journal of Physical Chemistry B, 2014 , DOI: 10.1021/jp5077752 . [3] M. Chen, J. R. Vella, F. H. Stillinger, E. A. Carter, A. Z. Panagiotopoulos and P. G. Debenedetti, �Liquid Li Structure and Dynamics: A Comparison Between OFDFT and Second Nearest-Neighbor Embedded-Atom Method�, AIChE Journal, 2015 , DOI: 10.1002/aic.14795",
+    "presenting_author": "Joseph R. Vella | Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+    "authors": [
+      "Mohan Che | Mechanical and Aerospace Engineering, Princeton University, Princeton",
+      "Emily A. Carter | Department of Mechanical and Aerospace Engineering, Program in Applied and Computational Mathematics, and Andlinger Center for Energy and the Environment, Princeton University, Princeton, NJ",
+      "Frank H. Stillinger | Department of Chemistry, Princeton University, Princeton, NJ",
+      "Athanassios Z. Panagiotopoulos | Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+      "Pablo G. Debenedetti | Chemical and Biological Engineering, Princeton University, Princeton, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joseph R. Vella",
+        "affiliation": "Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mohan Che",
+        "affiliation": "Mechanical and Aerospace Engineering, Princeton University, Princeton",
+        "designation": "Author"
+      },
+      {
+        "name": "Emily A. Carter",
+        "affiliation": "Department of Mechanical and Aerospace Engineering, Program in Applied and Computational Mathematics, and Andlinger Center for Energy and the Environment, Princeton University, Princeton, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Frank H. Stillinger",
+        "affiliation": "Department of Chemistry, Princeton University, Princeton, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Athanassios Z. Panagiotopoulos",
+        "affiliation": "Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Pablo G. Debenedetti",
+        "affiliation": "Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper430628.html",
+    "topic": "Beyond Lennard-Jones: Global Optimization of Force Fields for Organic Compounds",
+    "date_time": "Thursday, November 12, 2015: 4:45 PM",
+    "abstract": "Vapor pressure, critical properties, saturated liquid density, and compressed fluid density are used to characterize step potentials for n-alkanes, alcohols and noble gases. Several potential models were tested to identify the most accurate. These include the Mie potential, the 14-12-8-6 potential, the exp-6, and the two-fluids Yukawa models. Data for the n-alkanes and noble gases include high temperature compressed fluid data that are sensitive to the softness of the potential, which turns out to be an important distinguishing factor. Optimization is facilitated by thermodynamic perturbation theory (TPT) combined with molecular dynamics of continuous potential models (CMD) using the LAMMPS simulator and Monte Carlo simulations (CMC) using GOMC and CASSANDRA. Reference fluid simulations can be performed for a range of potential parameters, with special attention to the repulsive characteristic (e.g. “m” in the m-6 Mie potential). Reference simulations are supplemented with limited simulations of the full potential with “draft” candidates for the optimal potential model, permitting the characterization of complete equations of state that permit variable values of the potential parameters. The methodology follows the publications of Ghobadi and Elliott (J. Chem. Phys., 141:094708, 141:024708, 140:234104). The potential parameters can then be optimized without further simulation. The optimized potentials are tested with full potential simulations. Vapor pressure deviations average near 5% for n-alkanes modeled with transferable united atom models, and 3% for noble gases. Saturated liquid density deviations average near 0.5% below a reduced temperature of 0.9. Compressed fluid densities deviations average near 0.3% for the better potential models. Critical temperatures are matched to within 1K. Critical pressures are matched to within 0.1MPa and critical densities are matched to within 0.01 g/cm3. These results establish a firm foundation for optimal force field development going forward to encompass branches, rings, amines, etc.",
+    "presenting_author": "S. Mostafa Razavi | Chemical and Biomolecular Engineering, The University of Akron, Akron, OH and J. Richard Elliott Jr., Chemical and Biomolecular Engineering, The Univeristy of Akron, Akron, OH",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "S. Mostafa Razavi",
+        "affiliation": "Chemical and Biomolecular Engineering, The University of Akron, Akron, OH and J. Richard Elliott Jr., Chemical and Biomolecular Engineering, The Univeristy of Akron, Akron, OH",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper414957.html",
+    "topic": "Molecular Modeling of Aqueous Electrolytes Based on the Gaussian Charge Polarizable Approach: Gaussian Charge-on-Spring Versus Dipole Self-Consistent Field Strategies to Induced Polarization",
+    "date_time": "Thursday, November 12, 2015: 4:15 PM",
+    "abstract": "We present the derivation of the expressions required for the implementation of an Ewald summation approach to handle the long-range electrostatic interactions of polar and ionic model systems involving Gaussian charges and induced dipole moments [ 1 ] with a particular application to the isobaric-isothermal molecular dynamics simulation of our Gaussian Charge Polarizable (GCP) water model [ 2 , 3 ] and its extension to aqueous electrolytes solutions. We also show how the derived expressions converge to known point-based electrostatic counterparts when the parameters, defining the Gaussian charge and induced-dipole distributions, are extrapolated to their limiting point values. Then, we developed the Gaussian charge-on-spring (GCOS) version [ 4 ] of the original self-consistent field (SCF) implementation of the GCP water model and test its accuracy to represent the polarization behavior of the original model involving smeared charges and induced dipole moments. Finally, we test the simulation outcomes from the Ewald implementation against the corresponding reaction-field (RF) approach for the SCF implementation at three contrasting hydrogen-bonded water environments, including thermodynamic quantities, polarization behavior and microstructural properties, where the simulated microstructures are compared with the newest available neutron scattering and x-ray diffraction data. Moreover, we assessed the accuracy of the GCOS representation by a direct comparison of the resulting vapor-liquid phase envelope, microstructure, and relevant microscopic descriptors of water polarization along the orthobaric curve against the corresponding quantities from the corresponding SCF counterpart [ 1 ]. Cited References: 1. Chialvo, A.A. and L. Vlcek, Ewald Summation Approach to Potential Models of Aqueous Electrolytes Involving Gaussian Charges and Induced Dipoles: Formal and Simulation Results. The Journal of Physical Chemistry B, 2014. 118 (47): p. 13658-13670. 2. Chialvo, A.A. and P.T. Cummings, Simple Transferable Intermolecular Potential for the Molecular Simulation of Water over Wide Ranges of State Conditions. Fluid Phase Equilibria, 1998. 150-151 : p. 73-81. 3. Paricaud, P., et al., From dimer to condensed phases at extreme conditions: Accurate predictions of the properties of water by a Gaussian charge polarizable model. Journal Of Chemical Physics, 2005. 122 (24). 4. Chialvo, A.A., et al., Vapor–Liquid Equilibrium and Polarization Behavior of the GCP Water Model: Gaussian Charge-on-Spring versus Dipole Self-Consistent Field Approaches to Induced Polarization. The Journal of Physical Chemistry B, 2015. 119 (15): p. 5010-5019.",
+    "presenting_author": "Ariel A. Chialvo | Chemical Science Division, Oak Ridge National Laboratory, Oak Ridge, TN",
+    "authors": [
+      "Lukas Vlcek | Chemical Sciences Division, Oak Ridge National Laboratory, Oak Ridge, TN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ariel A. Chialvo",
+        "affiliation": "Chemical Science Division, Oak Ridge National Laboratory, Oak Ridge, TN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Lukas Vlcek",
+        "affiliation": "Chemical Sciences Division, Oak Ridge National Laboratory, Oak Ridge, TN",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper433757.html",
+    "topic": "Determination of Bonded Potentials for Complex Molecules Using a Monte Carlo Approach Combining Configurational-Bias Sampling and Simulated Annealing",
+    "date_time": "Thursday, November 12, 2015: 5:00 PM",
+    "abstract": "It is widely accepted that bonded parameters for molecular mechanics force fields can be fit to quantum-mechanically derived potential energy surfaces (PES). Performing these fits for small molecules is a straightforward task because fits can be made directly to PES scans for each unique conformational degree of freedom. This is not the case, however, in complex molecules. For example, highly branched structures are plagued with interdependent degrees of freedom; torsional displacement can lead to significant changes in nearby angles and bond lengths. Additionally, these molecules tend to have a large number of unique bond length, bending angle, and dihedral types. For these reasons, the best approach for bonded parameter fitting it is not immediately obvious. In this work, an iterative configurational-bias simulated annealing (ICBSA) approach is proposed wherein (i) a large number of molecular conformations is generated through loose configurational-bias Monte Carlo (CBMC) sampling of the molecules of interest, (ii) the bonded parameters are optimized via simulating annealing to the energy differences between conformations obtained from the full quantum-mechanically derived energies corrected by the non-bonded molecular mechanics energies, and (iii) the new set of bonded parameters is used for a subsequent round of CBMC sampling and simulating annealing. This approach is then used to re-fit bonded parameters for the Transferable Potentials for Phase Equilibra (TraPPE) force field for linear and branched alkanes, allowing for extension to heavily branched alkanes and introduction of flexible bonds.",
+    "presenting_author": "Rebecca K. Lindsey | Department of Chemistry and Chemical Theory Center, University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "J. Ilja Siepmann | Department of Chemistry and Chemical Theory Center, University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rebecca K. Lindsey",
+        "affiliation": "Department of Chemistry and Chemical Theory Center, University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "J. Ilja Siepmann",
+        "affiliation": "Department of Chemistry and Chemical Theory Center, University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper424544.html",
+    "topic": "Computationally Efficient Economic Model Predictive Control: Stability, Performance, Convergence",
+    "date_time": "Thursday, November 12, 2015: 3:40 PM",
+    "abstract": "Traditionally, in the operation of chemical processes, economic optimization and process control are carried out in two different layers in a hierarchical system. Economic optimization is performed in the upper real-time optimization (RTO) layer based on steady-state process models according to certain economic metrics reflecting operation profits or costs. The outputs of the RTO layer are optimal operating points of the process which are sent to a lower layer -- the advanced process control layer. Model predictive control (MPC) is often used in the advanced process control layer. This hierarchical approach has been successful and has been widely used. However, in many processes (for example, the oilsand separation process), the dynamic performance is crucial and the optimization-control separation is either inefficient or inappropriate. Economic model predictive control (EMPC) removes the separation between optimization and control and addresses both in one single layer in the framework of model predictive control. Motivated by the lack of an easy-to-implement approach for the construction of terminal cost for EMPC, in our previous work [1], we developed an approach to construct the terminal cost for EMPC and proposed two EMPC algorithms for both infinite-time and finite-time operations. In the approach for the terminal cost construction, an auxiliary nonlinear controller which renders the desired optimal steady state asymptotically stable is taken advantage of. The idea is to take the auxiliary nonlinear controller as a benchmark control system and to design EMPC algorithms that gives better economic performance than the auxiliary nonlinear controller. Two EMPC algorithms for infinite-time and finite-time operations were designed. The two EMPC algorithms give provable (practically) improved economic performance. Because of the terminal cost, there is no requirement on the length of the prediction horizon of the EMPC which means that the developed EMPC algorithms could be very computationally efficient. In this work, we focus on the rigorous analysis of the stability, performance and convergence properties of the computationally efficient EMPC. We show that for strictly dissipative systems, the proposed economic MPC scheme achieves practical stability and near optimal asymptotic performance. Moreover, we show that exponential stability of the optimal steady state can be achieved if the auxiliary controller is exponentially stabilizing in a strong sense. This condition can be relaxed if the storage function satisfies further assumptions. Achievable performance under exponential stability is also characterized. These results will be demonstrated via numerical examples. [1] Liu, S.; Zhang, J. & Liu, J. Economic MPC with Terminal Cost and Application to an Oilsand Primary Separation Vessel, Chemical Engineering Science, 2015.",
+    "presenting_author": "Su Liu | Department of Chemical and Materials Engineering, University of Alberta, Edmonton, AB, Canada",
+    "authors": [
+      "Jinfeng Liu | Department of Chemical and Materials Engineering, University of Alberta, Edmonton, AB, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Su Liu",
+        "affiliation": "Department of Chemical and Materials Engineering, University of Alberta, Edmonton, AB, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jinfeng Liu",
+        "affiliation": "Department of Chemical and Materials Engineering, University of Alberta, Edmonton, AB, Canada",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper429856.html",
+    "topic": "Integrated Real-Time Optimization and Control of Multiunit Batch Processes",
+    "date_time": "Thursday, November 12, 2015: 4:30 PM",
+    "abstract": "Integrated real-time optimization and control of multiunit batch processes Francesco Rossi, a,b,* Daniel Casas Orozco, c Gintaras Reklaitis, a Flavio Manenti b a Purdue University, School of Chemical Engineering, Forney Hall of Chemical Engineering, 480 Stadium Mall Drive, West Lafayette, IN 47907-2100, United States b Politecnico di Milano, Dipartimento Chimica, Materiali e Ingegneria Chimica “Giulio Natta”, Piazza Leonardo da Vinci 32, Milano 20123, Italy c Universidad de Antioquia UdeA, Engineering Faculty, Chemical Engineering Department, Environmental Catalysis Research Group, Calle 70 No. 52-21, Medellín, Colombia frossi@purdue.edu Despite the historical tendency for conversion of batch operations to their continuous processing equivalents, batch manufacturing remains in widespread use in a number of CPI sectors, such as pharmaceuticals and fine chemicals, fermentations and bio-chemical products, and special polymers. Indeed batch processing remains important on the industrial landscape and is likely to remain significant for the foreseeable future. Many processes operating in the batch mode produce high added-value products, are characterized by intrinsic non-ideal thermodynamic behavior and exhibit strongly non-linear dynamics, features which provide challenges for design and in operation. To address these challenges, there continues to be an ongoing body of research seeking safe and economical ways to design, optimize and control batch operations. Several papers in the literature describe how to (efficiently) apply model-based online optimization and control strategies to batch units, but typically the focus is on a single process unit: a single reactor (Smets et al., 2004), distillation column (Greaves et al., 2003), crystallizer (Acevedo et al., 2015) or more specialized, unconventional equipment. There is limited literature on approaches to simultaneously consider multiple units or even an entire batch plant. For this reason, the authors of this contribution propose the development of integrated online optimization and optimal control methods for treating an entire integrated batch production line. Specifically, we propose to: (I) model the entire batch process as a whole, also including design choices as independent variables (activation/deactivation of entire units, unit feeds & draws, unit to unit internal material/thermal streams, etc.); (II) specify a suitable performance function for the entire plant (either economic or performance based); and (III) apply an online optimization & control algorithm to the framework described in (I) and (II). Depending on the perspective taken, the methodology proposed can be considered either as an online batch process design method or as an online model-based optimal control/optimization strategy. From a design perspective, the approach dynamically and optimally allows: (I) deciding when to stop/activate a unit and how long to keep it inactive; (II) choosing how to manage interconnections among units; (III) selecting optimal values for product draws and feeds (for fed-batch units only); (IV) determining the batch cycles in which the multiunit batch process will operate. From an operational perspective the online optimization/optimal control approach should promote: (I) the effective compensation of disturbances at the entire plant scale; (II) the selection of the optimal production levels based on the market demand; etc. All of these aspects need to be optimized together, accounting for their interactions. Therefore, the proposed integrated real-time optimal design and optimization/optimal control strategy seeks to guarantee improved performance compared to the conventional sequential approach, which combines offline plant optimal design with individual units online control/management developed separately. The methodology discussed is validated and tested on a novel batch process for the production of β-pinene (Bauer et al., 1988), which includes a (catalytic) batch reaction followed by filtration and distillation steps. It is applied to all the batch plant units simultaneously and its performance is compared to the conventional sequential (offline optimal design & online optimization/optimal control) approach. Based on the cases presented, lessons will be drawn regarding the situations in which the simultaneous and sequential approaches have advantages. References: Acevedo, D., T. Yanssen, and Z.K. Nagy. \"Multiobjective Optimization of an Unseeded Batch Cooling Crystallizer for Shape and Size Manipulation.\" Industrial & Engineering Chemistry Research 54 (2015): 2156-2166. Greaves, M.A., I.M. Mujtaba, M. Barolo, A. Trotta, and M.A. Hussain. \"Neural-network approach to dynamic optimization of batch distillation-Application to a middle-vessel column.\" Chemical Engineering Research and Design 81 (2003): 393-401. Smets, I.Y., J.E. Claes, E.J. November, G.P. Bastin, and J.F. Van Impe. \"Optimal adaptive control of (bio) chemical reactors: past, present and future.\" Journal of process control 14 (2004): 795-805. Bauer, K., D. Garbe, and H. Surburg. \"Ullmann’s encyclopedia of industrial chemistry.\" Ullmann's Encyclopedia of Industrial Chemistry 11 (1988).",
+    "presenting_author": "Francesco Rossi | Chemical Engineering, Universidad de Antioquia, Medell�n, Colombia",
+    "authors": [
+      "Daniel Casas Orozco | Chemical Engineering, Universidad de Antioquia, Medell�n, Colombia",
+      "Gintaras Reklaitis | School of Chemical Engineering, Purdue University, West Lafayette, IN",
+      "Flavio Manenti | Dipartimento di Chimica, Materiali e Ingegneria Chimica, Politecnico di Milano, Milano, Italy"
+    ],
+    "authors_structured": [
+      {
+        "name": "Francesco Rossi",
+        "affiliation": "Chemical Engineering, Universidad de Antioquia, Medell�n, Colombia",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Daniel Casas Orozco",
+        "affiliation": "Chemical Engineering, Universidad de Antioquia, Medell�n, Colombia",
+        "designation": "Author"
+      },
+      {
+        "name": "Gintaras Reklaitis",
+        "affiliation": "School of Chemical Engineering, Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Flavio Manenti",
+        "affiliation": "Dipartimento di Chimica, Materiali e Ingegneria Chimica, Politecnico di Milano, Milano, Italy",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper430115.html",
+    "topic": "Moving Horizon Based Real Time Optimization and Advanced Hybrid Model Predictive Control of Continuous Pharmaceutical Manufacturing Process",
+    "date_time": "Thursday, November 12, 2015: 5:20 PM",
+    "abstract": "The pharmaceutical company is still largely a batch process industry. The strict regularity requirements from the regulatory agencies and different level of complexities involved with pharmaceutical processing has prevented the transition towards continuous manufacturing. However, Quality by Design (QbD), a novel initiative proposed by regulatory agencies, is a big leap in making this transition successful. QbD involves the use of process analytical technology (PAT) tools to monitor the process with a real time feedback system to provide a control strategy suitable for continuous manufacturing. Traditional control strategies such as proportional-integral-derivative (PID) and model predictive control (MPC) have been widely used in chemical and petrochemical industries in the past decades. However, pharmaceutical industries have been slow in adapting this technology in the traditional quality-by-testing (QbT) approach largely due to strict regulatory requirements. In this work, a moving horizon based real time optimization (MH-RTO) technique has been integrated with a hybrid model predictive control (MPC) system. The integrated system has been applied in a continuous downstream API separation and purification process as well as tablet manufacturing process. The API separation and purification process consist of four continuous downstream unit operations (Crystallization, filtration, drying and mixing) while the continuous direct compaction tablet manufacturing process consist of four unit operations (feeders, co-mill, blender, tablet press). In the proposed approach, the integrated MH-RTO provides the optimal operational set points for the total production rate in real time. The MH-RTO takes into consideration the capital and operating cost, the market fluctuations, the product inventory, the product quality assurance strategy, the regulatory constraints, and the product rejections. An advanced hybrid model predictive control system then ensures that required production rate with desired quality is met with minimum resources and time. A robust optimization strategy and an efficient control system have been integrated to achieve the maximum profit. The MH-RTO integrated with a hybrid control strategy ensures the maximum possible profit irrespective of the market demand fluctuations. The basic advantage of the MH-RTO framework is that it takes into consideration the future demand and thus can lead to increased profit compared to a standard Real Time Optimization approach. The objective of this presentation is two-fold. First to highlight the moving horizon based real time optimization technique and MPC-PID hybrid control architecture, and second to demonstrate its applications through two case studies: downstream API separation and purification process and tablet manufacturing process.",
+    "presenting_author": "Ravendra Singh | Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+    "authors": [
+      "Ashish Shah | Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+      "Rohit Ramachandran | Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ashish Shah",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Rohit Ramachandran",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Ravendra Singh",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper434372.html",
+    "topic": "Interaction Potentials from Arbitrary Multi-Particle Trajectory Data",
+    "date_time": "Thursday, November 12, 2015: 3:15 PM",
+    "abstract": "Understanding the complex physics of particle-based systems at the nanoscale and mesoscale increasingly relies on simulation methods, empowered by exponential advances in computing speed. A major impediment to progress lies in reliably obtaining the interaction potential functions that control system behavior – which are key inputs for any simulation approach – and which are often difficult or impossible to obtain directly using traditional experimental methods. Here, we present a straightforward methodology for generating pair potential functions from large multi-particle trajectory datasets, with no operational constraints regarding their state of equilibration, degree of damping, or presence of hydrodynamic interactions. In essence, particle trajectories are used to compute numerical estimates of positional derivatives, i.e., velocities and/or accelerations, which are then used to infer forces as a function of inter-particle separation. The approach described here shares some important aspects with, and differs in key ways from, the force-matching (FM) technique originally proposed by Ercolessi and Adams [1] for the parametrization of empirical potentials using ab initio data, and later generalized into a powerful coarse-graining framework by Voth and coworkers [2]. Essentially, both the present approach and the numerous FM variants seek to fit a pairwise force field using information obtained from some reference system. However, while the FM technique uses forces computed from configurations obtained from simulations performed with a reference (known) force-field to fit a simpler one, the present approach numerically estimates forces from trajectories of particles that are subject to some unknown interparticle interaction force-field. Moreover, we consider the possibility that the particle trajectories used to approximate forces maybe additionally be impacted by thermal fluctuations, measurement uncertainty and hydrodynamic effects. Using simulated datasets, we demonstrate that the method is highly robust against trajectory perturbations from Brownian motion and common errors introduced by particle tracking algorithms. 1. F. Ercolessi and J. B. Adams, \"Interatomic potentials from first-principles calculations: the force-matching method,\" EPL (Europhysics Letters) 26 , 583 (1994). 2. S. Izvekov and G. A. Voth, \"Multiscale coarse graining of liquid-state systems,\" The Journal of Chemical Physics 123 , 134105 (2005).",
+    "presenting_author": "Ian Jenkins | Chemical and Biomolecular Engineering, University of Pennsylvania, Philadelphia, PA",
+    "authors": [
+      "James T. McGinley III | Chemical and Biomolecular Engineering, University of Pennsylvania, Philadelphia, PA",
+      "John C. Crocker | Chemical and Biomolecular Engineering, University of Pennsylvania, Philadelphia, PA",
+      "Talid Sinno | Chemical and Biomolecular Engineering, University of Pennsylvania, Philadelphia, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ian Jenkins",
+        "affiliation": "Chemical and Biomolecular Engineering, University of Pennsylvania, Philadelphia, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "James T. McGinley III",
+        "affiliation": "Chemical and Biomolecular Engineering, University of Pennsylvania, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "John C. Crocker",
+        "affiliation": "Chemical and Biomolecular Engineering, University of Pennsylvania, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Talid Sinno",
+        "affiliation": "Chemical and Biomolecular Engineering, University of Pennsylvania, Philadelphia, PA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper420816.html",
+    "topic": "Closed-Loop Average Economic Performance Under Real-Time Economic Model Predictive Control",
+    "date_time": "Thursday, November 12, 2015: 3:15 PM",
+    "abstract": "Economic model predictive control (EMPC), an optimal control-based feedback control methodology, unites process control and economic process optimization into an integrated framework (e.g., [1]-[5]). The main objective of applying EMPC to control a chemical process over tracking model predictive control (TMPC) is to achieve improved closed-loop economic performance. It is well-known that closed-loop performance under EMPC without specific terminal conditions is not ensured in general. To address this problem, terminal conditions may be used. In [1], the asymptotic average economic performance under EMPC formulated with an equality terminal constraint was shown to be at least as good as the economic performance at the economically optimal steady-state. Other EMPC system have been proposed utilizing an equality terminal constraint or terminal region constraint which are designed on the basis of the optimal steady-state (e.g., [2]). Nevertheless, when terminal constraints are imposed in the EMPC optimization problem, recursive feasibility for systems with plant-model mismatch may not be ensured. On the other hand, when no terminal conditions are imposed in the EMPC problem, a sufficiently long prediction horizon is typically required for some guarantees on closed-loop performance under EMPC [3]. The use of a long prediction horizon may make EMPC computationally intractable for use in real-time operation. Moreover, an important issue from a practical stand-point for EMPC is real-time computation time. When the computation time is significant, closed-loop operation and/or performance degradation may occur. In this work, a Lyapunov-based EMPC (LEMPC) scheme for nonlinear process systems is designed leveraging an auxiliary stabilizing control law and addressing real-time computation delay through an event-triggered implementation strategy. In particular, an auxiliary control law (e.g., TMPC or Lyapunov-based control law) is designed to stabilize a process at the economically optimal steady-state. The process model with the auxiliary control law are used to predict the solution of the system under the auxiliary control law over a finite-time horizon. Motivated by the desire to ensure economic performance improvement under EMPC compared to under the auxiliary control law, the computed solution is utilized in the LEMPC scheme as a terminal constraint. This type of terminal constraint is similar to that proposed in [4] for use in EMPC. To account for real-time computational time, the real-time implementation strategy for LEMPC proposed in [5] is extended to the proposed LEMPC with the terminal constraint designed on the basis of the solution of the system under the auxiliary control law. Recursive feasibility of the proposed LEMPC scheme, closed-loop stability, and finite-time and asymptotic average economic closed-loop performance are analyzed. The scheme is applied to a chemical process example to demonstrate the theoretical properties of the proposed LEMPC scheme. [1] Angeli D, Amrit R, Rawlings JB. On average performance and stability of economic model predictive control. IEEE Transactions on Automatic Control. 2012;57:1615-1626. [2] Amrit R, Rawlings JB, Angeli D. Economic optimization using model predictive control with a terminal cost. Annual Reviews in Control. 2011;35:178-186. [3] Grune L. Economic receding horizon control without terminal constraints. Automatica. 2013;49:725--734. [4] Ellis M, Christofides PD. On finite-time and infinite-time cost improvement of economic model predictive control for nonlinear systems. Automatica. 2014;50:2561--2569. [5] Ellis M, Christofides PD. Real-time economic model predictive control of nonlinear process systems. AIChE Journal. 2015;61:555--571.",
+    "presenting_author": "Matthew Ellis | Chemical and Biomolecular Engineering, University of California, Los Angeles, Los Angeles, CA",
+    "authors": [
+      "Panagiotis D. Christofides | Department of Chemical and Biomolecular Engineering and Department of Electrical Engineering, University of California, Los Angeles, Los Angeles, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Matthew Ellis",
+        "affiliation": "Chemical and Biomolecular Engineering, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Panagiotis D. Christofides",
+        "affiliation": "Department of Chemical and Biomolecular Engineering and Department of Electrical Engineering, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper435191.html",
+    "topic": "Application of Approximate Infinite Horizon Economic MPC to Electric Power Networks with Energy Storage",
+    "date_time": "Thursday, November 12, 2015: 4:05 PM",
+    "abstract": "The method of Economic Model Predictive Control (EMPC) is conceptually attractive in that it replaces the traditional quadratic objective function of MPC with an economic based objective function. However, many have indicated concerns about the trade-off between stability and economic / computational performance of EMPC. In a previous effort the notion of approximate infinite-horizon EMPC (AIH-EMPC) was introduced and shown to improve all of the above properties when applied to an exceedingly simple reaction system. In the current effort, the proposed AIH-EMPC method is applied to an electric power network system. In addition to being a much more complicated system (in terms of size as well as the inclusion of integer variables to address unit commitment aspect of grid operation), this example possess an economic based quadratic objective function. (This objective is distinct from that of a regulation type quadratic objective function.) The resulting controller is shown to possess much improved characteristics with respect to computational effort while sacrificing very little in terms of economic performance.",
+    "presenting_author": "Oluwasanmi Adeodu | Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+    "authors": [
+      "Donald J. Chmielewski | Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Oluwasanmi Adeodu",
+        "affiliation": "Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Donald J. Chmielewski",
+        "affiliation": "Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+        "designation": "Author"
+      }
+    ]
+  }
+]

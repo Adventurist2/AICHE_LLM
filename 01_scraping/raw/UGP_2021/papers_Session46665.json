@@ -1,0 +1,330 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/626578",
+    "paper_endpoint": "Paper/626578",
+    "paper_id": "626578",
+    "topic": "Dynamic Discrepancy Reduced-Order Modeling and Advanced Control of a Fischer-Tropsch Slurry Bubble Column Reactor",
+    "title": "Dynamic Discrepancy Reduced-Order Modeling and Advanced Control of a Fischer-Tropsch Slurry Bubble Column Reactor",
+    "date_time": "2021-11-07_15:30:00_18:00:00",
+    "session_id": "46665",
+    "session_title": "Estimation and Control under uncertainty",
+    "session_number": "16",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "High-fidelity first-principles models have been widely used in industrial process applications due to their ability to forecast dynamic behavior based on the underlying process physics. However, solving these models is computationally expensive, and thus, they may not be suitable for online model predictive control (MPC) applications. To reduce the MPC computational burden, the dynamic system model developed can be represented using a reduced-order model with a discrepancy function, and the model mismatch errors minimized by formulating and solving a parameter estimation problem. However, under stochastic disturbances, the output probability distribution of a reduced-order model can be different from the distribution of the respective high-fidelity model, which can lead to inaccurate predictions and suboptimal controller performance. To address the challenge of reduced-order models in advanced control under uncertainty, a novel grey-box model identification algorithm for process control is developed by integrating dynamic operability mapping [1] and Bayesian calibration. In the developed framework, the plant is represented by a high-fidelity model, and the reduced-order model dynamic discrepancy function is added to reduce the output dimensions of the dynamic calibration problem [2]. The dynamic discrepancy terms are in the form of Gaussian processes with Bayesian smoothing spline, so the uncertainty propagation can be decomposed into independent discrepancy terms [3]. The reduced-order model is calibrated using a Markov Chain Monte Carlo algorithm, and a Bayesian model selection criterion is implemented to avoid model underfit/overfit. For the application in focus, a setpoint tracking and disturbance rejection MPC is implemented for a Fischer-Tropsch synthesis process that takes place in a slurry bubble column reactor. The Fischer-Tropsch process is a collection of reactions that process syngas to produce higher-valued hydrocarbons in the liquid products. Because the products of this process include a wide range of hydrocarbons from C1 to C50+ and the product distribution is influenced by the reactor pressure and temperature, controlling such process conditions simultaneously and accurately is crucial to yield the product with desired specifications. The high-fidelity dynamic model is developed based on a hydrodynamic model from the literature [4] and extended to paraffin and olefins products in the slurry phase. The proposed reduced-order model predictive controller is compared to traditional and nonlinear MPC formulations to evaluate its performance, considering different scenarios of setpoint tracking and disturbance rejection. References: [1] V. Gazzaneo, J. C. Carrasco, D. R. Vinson, and F. V. Lima, “Process Operability Algorithms: Past, Present, and Future Developments,” Ind. Eng. Chem. Res. , vol. 59, no. 6, pp. 2457–2470, Feb. 2020, doi: 10.1021/acs.iecr.9b05181. [2] K. S. Bhat, D. S. Mebane, P. Mahapatra, and C. B. Storlie, “Upscaling Uncertainty with Dynamic Discrepancy for a Multi-Scale Carbon Capture System,” Journal of the American Statistical Association , vol. 112, no. 520, pp. 1453–1467, Oct. 2017, doi: 10.1080/01621459.2017.1295863. [3] B. J. Reich, C. B. Storlie, and H. D. Bondell, “Variable Selection in Bayesian Smoothing Spline ANOVA Models: Application to Deterministic Computer Codes,” Technometrics , vol. 51, no. 2, pp. 110–120, May 2009, doi: 10.1198/TECH.2009.0013. [4] C. Maretto and R. Krishna, “Modelling of a Bubble Column Slurry Reactor for Fischer–Tropsch Synthesis,” Catalysis Today , vol. 52, no. 2–3, pp. 279–289, Sep. 1999, doi: 10.1016/S0920-5861(99)00082-6.",
+    "presenting_author": "San Dinh | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "San Dinh | Carnegie Mellon University, Pittsburgh, PA",
+      "Jose Bohorquez | West Virginia University, Morgantown, WV",
+      "David S. Mebane | West Virginia University, Morgantown, WV",
+      "Fernando Lima | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "San Dinh",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jose Bohorquez",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "David S. Mebane",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Fernando Lima",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "16a",
+    "sortable_time": "2021-11-07_15:30:00_15:49:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/626578"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/627586",
+    "paper_endpoint": "Paper/627586",
+    "paper_id": "627586",
+    "topic": "The Inherent Robustness of Model Predictive Control: Discrete and Infrequent Disturbances",
+    "title": "The Inherent Robustness of Model Predictive Control: Discrete and Infrequent Disturbances",
+    "date_time": "2021-11-07_15:30:00_18:00:00",
+    "session_id": "46665",
+    "session_title": "Estimation and Control under uncertainty",
+    "session_number": "16",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "To ensure successful industrial implementation, control algorithms must be robust to disturbances. In robust or stochastic MPC formulations, disturbances are explicitly addressed in optimization problem. However, characterizing the set and probability distribution for a disturbance is difficult and solving a stochastic or min-max optimization problem is computationally expensive. Fortunately, the inherent robustness of nominal MPC, i.e., the robustness obtained solely through feedback, is often sufficient in industrial applications. Typically, inherent robustness is characterized by robust asymptotic (or exponential) stability of the closed-loop system (Allan et al., 2017). However, this definition applies only for disturbances that can be characterized as \"sufficiently small\". This characterization is reasonable for most process control applications in which disturbances arise from measure noise, modeling errors, and small perturbations. Furthermore, these results extend to MPC implementations with integrality constraints on the input, i.e., discrete-valued decisions, and discontinuous optimal cost functions (Allan et al., 2017). Theoretical advances and improvements in optimization algorithms have led to a growing interest in applying MPC to higher-level planning and scheduling problems that include many discrete-valued decision variables (Risbeck et al., 2019). In these scheduling problems, however, relevant disturbances such as equipment breakdowns and delays are not small. These disturbances are discrete-valued and typically large, i.e., the effect of the disturbance often exceeds the effect of the control action. Thus, constructing a bound for the worst deterministic performance possible, e.g., the entire facility is broken, results in an excessively conservative bound that offers little insight into the true behavior of the underlying system. In fact, we may even consider disturbances that are sufficiently large such that they preclude any deterministic upper bound on the closed-loop system. Although the main application of these results is to address disturbances in planning and scheduling applications of MPC, these theoretical results also apply to large and infrequent disturbances such as faults or communication failures that occur in other MPC applications. Although discrete-valued and large, we exploit the infrequent nature of these disturbances, e.g., the probability that we experience a breakdown is small, to define a stochastic form of robustness. To define this stochastic form of robustness, we leverage the concept of stochastic stability for nonlinear systems, originally developed by Kushner (1967). Analogous to input-to-state stability (ISS) for deterministic systems, stochastic input-to-state stability (SISS) has been used to characterize the robustness of stochastic nonlinear systems (Krstic and Deng, 1998). Using these results as a foundation, we define the term robust exponential stability in expectation (RESiE) for (large) discrete and infrequent disturbances and discuss the implications of this definition through a motivating example. Although we use the term 'large' to classify the disturbance of interest, we cannot permit any type of disturbance and nonlinear system. Specifically, we require that the effect of the disturbance, defined as the distance between the state evolution with and without the disturbance, is bounded by an affine function of the current state of the system. This bound permits additive disturbances as well as certain types of multiplicative disturbances. In addition, we require the same basic stability assumptions used to ensure that MPC is exponentially stable for the nominal closed-loop system. Subject to these assumptions, and provided that the optimization problem remains feasible, we can establish that MPC is RESiE to discrete and infrequent disturbances. We conclude with an example to illustrate the implications of this analysis and its application to planning and scheduling problems. Works Cited ------------ Allan, D.A., Bates, C.N., Risbeck, M.J., and Rawlings, J.B. (2017). On the inherent robustness of optimal and suboptimal nonlinear MPC. Sys. Cont. Let. , 106, 68-78. doi:10.1016/j.sysconle.2017.03.005. M. J. Risbeck, C. T. Maravelias, and J. B. Rawlings. (2019). Unification of closed-loop scheduling and control: State-space formulations, terminal constraints, and nominal theoretical properties. Comput. Chem. Eng. , 129:106496. Krstic, M. and Deng, H. (1998). Stabilization of nonlinear uncertain systems . Springer-Verlag. Kushner, H.J. (1967). Stochastic Stability and Control, volume 33 of Mathematics in Science and Engineering . Academic Press, New York.",
+    "presenting_author": "Robert McAllister | University of California - Santa Barbara, Isla Vista",
+    "authors": [
+      "Robert McAllister | University of California - Santa Barbara, Isla Vista",
+      "James Rawlings | University of California, Santa Barbara"
+    ],
+    "authors_structured": [
+      {
+        "name": "Robert McAllister",
+        "affiliation": "University of California - Santa Barbara, Isla Vista",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "James Rawlings",
+        "affiliation": "University of California, Santa Barbara",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "16b",
+    "sortable_time": "2021-11-07_15:49:00_16:08:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/627586"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/627905",
+    "paper_endpoint": "Paper/627905",
+    "paper_id": "627905",
+    "topic": "Fault Detection in Uncertain Nonlinear Chemical Systems: A Comparison of Advanced Set-Based Methods with Conventional Data-Driven and Observer-Based Methods",
+    "title": "Fault Detection in Uncertain Nonlinear Chemical Systems: A Comparison of Advanced Set-Based Methods with Conventional Data-Driven and Observer-Based Methods",
+    "date_time": "2021-11-07_15:30:00_18:00:00",
+    "session_id": "46665",
+    "session_title": "Estimation and Control under uncertainty",
+    "session_number": "16",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Modern chemical plants suffer from frequent component malfunctions, control system errors, and other abnormal events, collectively termed faults. When faults are not quickly detected and addressed, they can have serious deleterious effects on process economics, emissions, and safety. To address this challenge, many researchers are pursuing fault detection methods with the ability to detect faults early and accurately. Within this broad literature, at least three distinct approaches have been developed based on quite different ideas. We refer to these as the data-driven methods, observer-based methods, and set-based methods, as described in more detail below. Although each of these approaches has distinct advantages and disadvantages, there are very few published comparisons of these different paradigms. In this talk, we will present a comprehensive comparison of representative methods from these three categories for several challenging examples of nonlinear and uncertain chemical processes. Data-driven fault detection methods, which have been widely implemented in large-scale industrial processes, work by comparing measured plant data with historical datasets in real time. A fault is indicated whenever the current data is inconsistent with the historical data as measured by certain statistical tests. While these methods are simple and broadly applicable, they require a large amount of historical data, and may suffer from frequent false alarms if the current operating point differs from the operating points represented in historical data. In contrast, observer-based methods use a detailed mathematical model of the system rather than using historical data, and indicate a fault whenever the difference between the model predictions and measurements exceeds an empirical threshold. Using a model eliminates many of the difficulties caused by using insufficient or inappropriate historical data. However, both data-driven and observer-based methods often struggle to effectively distinguish faults from disturbances, primarily because both depend on empirical thresholds that are difficult to tune. This issue is rigorously addressed by set-based fault detection methods. In these methods, all disturbances and measurement noises are assumed to be bounded within compact sets. Then, set-based arithmetics are used to compute an enclosure of all possible measurements consistent with the system model, the past measurements, and the disturbances and measurement noises each step. A fault is indicated whenever a real measurement lies outside this set. These methods guarantee zero false alarm rates, but they often fail to detect faults quickly or at all if the computed enclosures are too conservative. In this presentation, we select a representative data-driven method based on principle component analysis (PCA) [1] and a representative observer-based method based on the extended Kalman filter (EKF) [2] and compare them against different set-based fault detection methods for several simulated nonlinear chemical systems under uncertainty. The compared set-based methods include a standard interval method [3], two methods based on zonotopic enclosures [4,5], and a recent method developed in our research group based on discrete-time differential inequalities (DI) [6]. To the best of our knowledge, no comprehensive comparison between these three distinct approaches has previously been presented. The performance of these methods is compared in several fault-free and faulty scenarios and quantified in terms of false alarm rate, detection speed, missed fault rate, and robustness to different uncertainty distributions. Our results elucidate several key advantages and disadvantages of each method and have clear implications for when and why each class of method should be applied. In particular, we demonstrate that recent advances in set-based methods have made this approach competitive with, and in some respects superior to, the classical data-driven and observer-based approaches. Moreover, our results suggest several important areas of future research that could address key limitations of methods in each category. References Cited [1] Qin, J. , J. Chemom , 17 , pp. 480–502 (2003). [2] Fathi, Z., et al., AIChE J., 26, pp. 42–56 (1993) [3] Moore E. , et al., SIAM, (2009) [4] Combastel, C. , Proc. IEEE Conf. Decis. Control, pp. 7228–7234 (2005). [5] Alamo, T., et al., Automatica , 41, pp. 1035–1043 (2005). [6] Yang, X. and Scott, J. K., 2018 Conf. Decis. Control, pp. 680-685 (2018).",
+    "presenting_author": "Bowen Mu | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Bowen Mu | Georgia Institute of Technology, Atlanta, GA",
+      "Xuejiao Yang | Georgia Institute of Technology, Atlanta, GA",
+      "Joseph Scott | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bowen Mu",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Xuejiao Yang",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Scott",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "16c",
+    "sortable_time": "2021-11-07_16:08:00_16:27:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/627905"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/628224",
+    "paper_endpoint": "Paper/628224",
+    "paper_id": "628224",
+    "topic": "Data-Driven Online Scenario Selection for Multistage NMPC",
+    "title": "Data-Driven Online Scenario Selection for Multistage NMPC",
+    "date_time": "2021-11-07_15:30:00_18:00:00",
+    "session_id": "46665",
+    "session_title": "Estimation and Control under uncertainty",
+    "session_number": "16",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Nonlinear model predictive control (NMPC) is a model-based dynamic control strategy that reoptimizes a process system with respect to a control objective subject to relevant constraints at every sample time. The NMPC controller offers flexibility to include constraints in online decision making, and a good control performance even when the system drifts far from the desired operating point. Although NMPC has inherent robustness against uncertainty, the property may break when there are significant disturbances leading to infeasibility. As a result, Lucia et al. (2013) proposed a robust NMPC controller known as the multistage NMPC. Multistage NMPC formulates an optimization problem by explicitly considering all possible scenarios along the prediction horizon. The scenarios are determined by propagating a finite set of uncertain parameter realizations using a scenario tree representation. While multistage NMPC ensures no constraint violations, it is very conservative resulting into a loss in performance in the objective. Another drawback is the huge computational effort required to solve a typically larger optimization problem resulting from the exponential growth of the scenario tree. In order to speed up computation, the sensitivity assisted multistage NMPC (samNMPC) was proposed by Yu (2019). The samNMPC controller strategy is to reduce the size of the scenario tree by only selecting scenarios that are most likely to violate constraints, plus the nominal case. These constraints are termed critical constraints and are determined by cheap sensitivity calculations. Online selection of critical constraints is trivial only when the constraints are monotonically changing, which holds for most process systems having state interval bounds (Holtorf et al., 2019). While the method successfully speeds up the multistage NMPC, has good stability properties, and creates a parallelizable linear structure as shown by Thombre et al. (2021), it remains to be seen how its conservativeness can be reduced. We present a robust control framework that reduces the conservativeness of the sensitivity assisted multistage NMPC (samNMPC). Process systems may often exhibit strong correlations among the uncertain model parameters. In this case, modeling scenarios independently using the vertices of the hyperrectangle results in a needlessly high conservative controller. Therefore, we propose a way of mitigating conservativeness by mining information from historical operational data of the process system. We use principal component analysis (PCA) to determine new orthogonal unit directions of maximum variance. The approach had been previously proposed by Krishnamoorthy et al. (2018) for multistage NMPC and applied to control thermal energy storage for district-heating by Thombre et al. (2020). We combine data mining and samNMPC employing a trick to retain the monotonicity property of the constraints, vital for critical scenario detection. In order to retain the validity of the monotonicity assumption on the constraints, all the uncertain parameters in the optimal control problem are projected into the new space using linear transformations from the PCA. Then, the critical scenarios are built using the extremes that lie on the axes of the new unit directions and the new origin. The data-driven samNMPC was tested on an example problem for reference tracking and its control performance benchmarked against samNMPC, ideal multistage NMPC and standard NMPC controllers. The data-driven samNMPC controller exhibited zero constraint violations as the samNMPC but had less conservativeness. That is, the loss (integral tracking error) was significantly reduced in the data-driven samNMPC compared to the original samNMPC. The improvement in the controller tracking performance while enforcing constraint adherence in operation justify the method’s advantage. On top of that, we have found a way to incorporate historical information and retain the online scenario selection heuristic present in the original samNMPC. References Holtorf, F., Mitsos, A., & Biegler, L. T. (2019). Multistage NMPC with on-line generated scenario trees: Application to a semi-batch polymerization process. Journal of Process Control, 80 , 167-179. Krishnamoorthy, D., Thombre, M., Skogestad, S., & J ä schke, J. (2018). Data-driven scenario selection for multistage robust model predictive control. IFAC-PapersOnLine, 51 (20), 462-468. Lucia, S., Finkler, T., & Engell, S. (2013). Multi-stage nonlinear model predictive control applied to a semi-batch polymerization reactor under uncertainty. Journal of process control, 23 (9), 1306-1319. Thombre, M., Mdoe, Z., & J ä schke, J. (2020). Data-Driven Robust Optimal Operation of Thermal Energy Storage in Industrial Clusters. Processes, 8 (2), 194. Thombre, M., Yu, Z. J., J ä schke, J., & Biegler, L. T. (2021). Sensitivity-Assisted multistage nonlinear model predictive control: Robustness, stability and computational efficiency. Computers & Chemical Engineering (148), 107269. Yu, Z. J. (2019). Advances in Decision-making Under Uncertainty with Nonlinear Model Predictive Control. (Doctoral Dissertation, Carnegie Mellon University).",
+    "presenting_author": "Zawadi Mdoe | NTNU, Trondheim, Norway",
+    "authors": [
+      "Zawadi Mdoe | NTNU, Trondheim, Norway",
+      "Mandar Thombre | Equinor Research Center, Oslo, Norway",
+      "Johannes Jäschke | Norwegian University of Science and Technology, Trondheim, Norway"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zawadi Mdoe",
+        "affiliation": "NTNU, Trondheim, Norway",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mandar Thombre",
+        "affiliation": "Equinor Research Center, Oslo, Norway",
+        "designation": "Author"
+      },
+      {
+        "name": "Johannes Jäschke",
+        "affiliation": "Norwegian University of Science and Technology, Trondheim, Norway",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "16d",
+    "sortable_time": "2021-11-07_16:27:00_16:46:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/628224"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/630490",
+    "paper_endpoint": "Paper/630490",
+    "paper_id": "630490",
+    "topic": "State Observer Design and Model Predictive Control of an Industrial-Scale Biochemical Fermenter",
+    "title": "State Observer Design and Model Predictive Control of an Industrial-Scale Biochemical Fermenter",
+    "date_time": "2021-11-07_15:30:00_18:00:00",
+    "session_id": "46665",
+    "session_title": "Estimation and Control under uncertainty",
+    "session_number": "16",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Knowledge of process states is crucial to implement control loops, perform troubleshooting, monitor critical tasks, and minimize the process cost. In many cases, not all measurements are available at the desired frequency or are measured online due to the unavailability of sensors, time delays, the high cost of sensor devices, or the environmental conditions where the measurement is taken [1]. For bioreactors, precise knowledge of the state variables is vital due to the high sensitivity of microorganisms to slight changes in the culture medium. In such reactor systems, many state variables like substrate and biomass are challenging to measure; hence, development of soft sensors is needed [2]. Motivated by this, we designed a state observer that accurately estimated the process states, including the substrate and the product concentrations. The observer was developed for both the batch and fed-batch operations [3]. For designing an observer, we need a mathematical model that can predict states' behaviors for both batch and fed-batch fermentation [4]. A hybrid model was developed for modeling the bioreactor [5], which combined the first principles model and neural networks technique using the available experimental data. This model was able to capture the uncertainties of the process and provide a reasonable prediction for the states. However, due to batch-to-batch variability and infrequent measurements being collected at different rates either online or offline, traditional Kalman filters [6] were unable to estimate well, thus requiring a multi-rate observer [7]. Hence, we designed a multi-rate observer where the process states were re-initialized with a new set of measurement values when they became available. The hybrid model estimates the states in the time-intervals between these measurements enabling the state observer to track even those internal states like biomass, substrate, and product which are either un-measured or are measured in irregular time-intervals. This method is computationally inexpensive, can account for batch-to-batch variation and for time-varying intervals of process measurements, and can give a good prediction for both the batch and fed-batch fermentation processes. This method is also helpful in tracking the concentration of the undesired product in the fermentation process. We then validated the developed observer against a new set of process data, and the results showed that the observer was able to track both the measured and un-measured process states reasonably well. Once the observer was developed, optimal conditions were determined for the fermenter to maximize the product and profitability while maintaining the temperature and flow rate constraints and ensuring the safety of the operation. A model predictive control (MPC) algorithm was developed to maintain the process at optimal operating conditions via manipulation of temperature and catalyst concentration. The algorithm was able to effectively control and achieve the target states, considering all the practical constraints. As a case study, we implemented the observer model and optimal control algorithm on an industry-scale fermentation plant and demonstrated the proposed framework's performance with real-time monitoring. References: De Assis, Adilson José, and Rubens Maciel Filho. \"Soft sensors development for on-line bioreactor state estimation.\" Computers & Chemical Engineering 24.2-7 (2000): 1099-1103. Villeros, Pablo De, Héctor Botero, and Hernán Alvarez. \"State observer design for biomass and ethanol estimation in bioreactors using cybernetic models.\" Dyna 83.198 (2016): 119-127. Pan, Xinghua, et al. \"Estimation of unmeasured states in a bioreactor under unknown disturbances.\" Industrial & Engineering Chemistry Research 58.6 (2019): 2235-2245. Raftery, Jonathan Patrick. Continuous Biochemical Processing: Investigating Novel Strategies to Produce Sustainable Fuels and Pharmaceuticals. Diss. 2017. Shah, P. J., Sheriff, M. Z., Kwon, J. S.-I., & Kravaris, C. (2020, November 16–20). Developing a Hybrid Model of a Biochemical Fermentation Process [Oral Presentation]. 2020 Virtual AIChE Annual Meeting. Grewal, Mohinder S., and Angus P. Andrews. Kalman filtering: Theory and Practice with MATLAB. John Wiley & Sons, 2014. Ling, Chen, and Costas Kravaris. \"Multirate sampled-data observer design based on a continuous-time design.\" IEEE Transactions on Automatic Control 64.12 (2019): 5265-5272.",
+    "presenting_author": "Parth Shah | Texas A&M University, College Station, TX",
+    "authors": [
+      "Parth Shah | Texas A&M University, College Station, TX",
+      "M. Ziyan Sheriff | Purdue University, West Lafayette, IN",
+      "Mohammed Saad Faizan Bangi | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX",
+      "Costas Kravaris | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Parth Shah",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "M. Ziyan Sheriff",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Mohammed Saad Faizan Bangi",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Costas Kravaris",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "16e",
+    "sortable_time": "2021-11-07_16:46:00_17:05:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/630490"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/630755",
+    "paper_endpoint": "Paper/630755",
+    "paper_id": "630755",
+    "topic": "Robust Model Predictive Control for Large-Scale Distributed Parameter Systems Under Uncertainty",
+    "title": "Robust Model Predictive Control for Large-Scale Distributed Parameter Systems Under Uncertainty",
+    "date_time": "2021-11-07_15:30:00_18:00:00",
+    "session_id": "46665",
+    "session_title": "Estimation and Control under uncertainty",
+    "session_number": "16",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Spatiotemporal distributed parameter systems (DPS) exist widely in engineering and science. Complex DPS usually exhibit uncertainty due to inherent stochastic and/or incomplete knowledge of the process [1]. Efficient control strategy for large-scale DPS under uncertainty could speed up process production and ensure process safety [2]. However, both intrinsic uncertainty and high dimensionality would require intensive computations while non-convexity could lead to global optima issues for upper-level control [3]. Moreover, black-box characteristics of high-fidelity commercial simulators make the computational models intractable. So far, control of DPS under uncertainty is still challenging in industrial engineering. In this work, polynomial chaos expansion (PCE) was used to account for the uncertainties in quantities of interest [4]. Then the proper orthogonal decomposition (POD) method was adopted to project the high-dimensional nonlinear dynamics onto a low-dimensional subspace through a systematic data collection from the high-fidelity simulator. The corresponding time coefficients are captured by recurrent neural networks (RNNs). Finally, model predictive control (MPC) with the reduced RNN model [5] was used to generate sequential optimization problems, which were globally solved using reformulation techniques [6]. The effectiveness of the proposed framework is demonstrated through two case studies: a chemical tubular reactor and a cell-immobilization packed-bed biochemical reactor for the bioproduction of succinic acid. References [1] Sullivan, T. J., 2015. Introduction to uncertainty quantification (Vol. 63). Springer. [2] Stephanopoulos, G., & Han, C., 1996. Intelligent systems in process engineering: A review. Computers & Chemical Engineering, 20(6-7), 743-791. [3] Theodoropoulos, C., 2011. Optimisation and linear control of large scale nonlinear systems: a review and a suite of model reduction-based techniques. In Coping with Complexity: Model Reduction and Data Analysis (pp. 37-61).Springer, Berlin, Heidelberg. [4] Xiu, D., & Karniadakis, G. E., 2002. The Wiener--Askey polynomial chaos for stochastic differential equations. SIAM journal on scientific computing, 24(2), 619-644. [5] Xie, W., Bonis, I., & Theodoropoulos, C., 2015. Data-driven model reduction-based nonlinear MPC for large-scale distributed parameter systems. Journal of Process Control, 35, 50-58. [6] Tao, M., & Theodoropoulos, C., 2019. Model Reduction-Based Global Optimisation for Large-Scale Steady State Nonlinear Systems. In 2019 AIChE Annual Meeting.",
+    "presenting_author": "Min Tao | The University of Manchester, United Kingdom",
+    "authors": [
+      "Min Tao | The University of Manchester, United Kingdom",
+      "Constantinos Theodoropoulos | University of Manchester, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Min Tao",
+        "affiliation": "The University of Manchester, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Constantinos Theodoropoulos",
+        "affiliation": "University of Manchester, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "16f",
+    "sortable_time": "2021-11-07_17:05:00_17:24:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/630755"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632158",
+    "paper_endpoint": "Paper/632158",
+    "paper_id": "632158",
+    "topic": "Stochastic Optimal Control of Polynomial Jump-Diffusion Processes Via Local Occupation Measures",
+    "title": "Stochastic Optimal Control of Polynomial Jump-Diffusion Processes Via Local Occupation Measures",
+    "date_time": "2021-11-07_15:30:00_18:00:00",
+    "session_id": "46665",
+    "session_title": "Estimation and Control under uncertainty",
+    "session_number": "16",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The optimal control of stochastic processes is arguably one of the most fundamental problems in the context of decision-making under uncertainty. While a wide range of decision-making problems in engineering lend themselves to be naturally modeled as stochastic optimal control problems, only a small subset of such problems allows for a globally optimal control policy to be identified in a tractable manner. As a consequence, engineers are often forced to resort to one of many available heuristic or approximate techniques for the construction of control policies in practice. While such approximations and heuristics are frequently found to perform remarkably well, they seldom come with certificates of optimality or mechanisms to quantify or bound the degree of suboptimality they induce. The study of nonlinear stochastic processes and control problems through the lens of occupation measures [1,2,3] offers a general theoretical and computational framework to close this gap. Specifically, it enables the systematic construction of (tight) convex relaxations in the form of generalized moment problems derived from a weak formulation of the underlying stochastic optimal control problem [4,5,6]. In particular in the case of optimal control of jump-diffusion processes with polynomial data (i.e., polynomial drift and diffusion coefficients, arrival rates, etc.), these generalized moment problems further admit a tractable approximation by a hierarchy of semidefinite programs (SDP) [7], which enables a practical computation of rigorous bounds on the degree of suboptimality of any given control policy. A critical limitation of this approach, however, remains in its poor scalability, which is further amplified by the challenges associated with the solution of large SDPs. In this work, we address this limitation by introducing the concept of local occupation measures. Local occupation measures are obtained by restriction of the state-action occupation measure associated with a stochastic control system to a subset of the time domain. This straightforward generalization allows to bridge the gap between the weak and strong formulation of the associated optimal control problem by discretizing the time domain and imposing constraints on the system trajectories in a weak form over the resultant collection of time intervals instead of over the entire time horizon as a whole (as is done traditionally). As a consequence, the generalized moment problems and associated SDP relaxations generated this way are not only tighter but explicitly reflect the causal temporal structure that is inherent to optimal control problems - a feature that is absent from the traditional formulation. From a practical perspective, this structure can crucially be exploited by distributed optimization algorithms offering the potential to improve scalability. Moreover, the use of local occupation measures provides a new mechanism to tighten the generated SDP relaxations via refinement of the time discretization at the cost of only a linear increase in problem size. This is in stark contrast to the traditionally used tightening mechanism which relies on increasing the truncation order of moment sequences associated with multivariate measures, hence suffers from combinatorial scaling. As an aside, we note that the proposed approach inherits key properties of the original occupation measure framework; most notably, convergence of the optimal value of the SDP relaxations to the true optimal value of the stochastic control problem can be established under mild regularity conditions and the dual SDPs furnish piecewise polynomial subsolutions to the Hamilton-Jacobi-Bellman equations, providing useful information for controller design [4,8]. We demonstrate the effectiveness and versatility of the proposed framework with examples from systems biology and population control. [1] Wendell H. Fleming and Domokos Vermes. Convex duality approach to the optimal control of diffusions. SIAM Journal on Control and Optimization, 27(5):1136–1155, 1989 [2] Abhay G. Bhatt and Vivek S. Borkar. Occupation Measures for Controlled Markov Processes: Characterization and Optimality. The Annals of Probability, 24(3):1531–1562, 1996 [3] Thomas G. Kurtz and Richard H. Stockbridge. Existence of Markov Controls and Characterization of Optimal Markov Controls. SIAM Journal on Control and Optimization, 36(2):609–653, 1998 [4] Jean B. Lasserre, Didier Henrion, Christophe Prieur, and Emmanuel Trélat. Nonlinear Optimal Control via Occupation Measures and LMI-Relaxations. SIAM Journal on Control and Optimization, 47(4):1643–1666, 2008. [5] Carlo Savorgnan, Jean B. Lasserre, and Moritz Diehl. Discrete-time stochastic optimal control via occupation measures and moment relaxations. Proceedings of the IEEE Conference on Decision and Control, pages 519–524,2009. [6] Milan Korda, Didier Henrion, and Jean B. Lasserre. Moments and Convex Optimization for Analysis and Control of Nonlinear Partial Differential Equations. arXiv preprint arXiv:1804.07565, 2018 [7] Jean B. Lasserre. Moments, Positive Polynomials and Their Applications, volume 1. World Scientific, 2010. [8] Milan Korda, Didier Henrion, and Colin N. Jones. Controller design and value function approximation for nonlinear dynamical systems. Automatica,67:54–66, 2016.",
+    "presenting_author": "Flemming Holtorf | MIT, Cambridge, MA",
+    "authors": [
+      "Flemming Holtorf | MIT, Cambridge, MA",
+      "Paul I. Barton | Massachusetts Institute of Technology, Cambridge"
+    ],
+    "authors_structured": [
+      {
+        "name": "Flemming Holtorf",
+        "affiliation": "MIT, Cambridge, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Paul I. Barton",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "16g",
+    "sortable_time": "2021-11-07_17:24:00_17:43:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632158"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/621385",
+    "paper_endpoint": "Paper/621385",
+    "paper_id": "621385",
+    "topic": "Optimal Control of Dose Delivery in Atmospheric Pressure Plasma Jets",
+    "title": "Optimal Control of Dose Delivery in Atmospheric Pressure Plasma Jets",
+    "date_time": "2021-11-07_15:30:00_18:00:00",
+    "session_id": "46665",
+    "session_title": "Estimation and Control under uncertainty",
+    "session_number": "16",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Atmospheric Pressure Plasma Jets (APPJs) have been shown to be uniquely promising for treatment of pressure- and heat-sensitive (bio)materials. This is due to the non-equilibrium nature of the generated plasma (i.e., the electron temperature is 1-5 keV, while the gas temperature is close to room temperature), which is a highly reactive medium [1]. Although the generated plasma is difficult to model, it needs to be operated in a safe, effective, and time-efficient way, otherwise surface damage may occur due to the cumulative and nondecreasing effects of the APPJ, or the treatment time may be too long. This so-called dose delivery problem is challenging because the operation is sensitive to changes in the surface properties, tip-to-surface distance, ambient gas conditions, and plasma behavior [2]. Recent work has shown that model predictive control (MPC) facilitates reproducible and effective operation of APPJs. However, MPC generally requires solving an optimization problem at each sampling instant, which can restrict its application [3]. Fast MPC strategies address this problem, but they either provide no guarantee of constraint satisfaction or require offline computation of robust control invariant sets [4,5]. Moreover, despite the receding-horizon nature of MPC, it does not guarantee convergence to an optimal solution for the true system. This talk will present an approach for the dose delivery problem that does not require solving any optimization problem online and converges to an optimal solution for the true system. The key contribution is the proposed combination of adaptive control and optimization methods that enables effective handling of structural plant-model mismatch in this application to APPJs, for which accurate models are typically unavailable. The APPJ and its thermal effect are described by a system where the dose in cumulative equivalent minutes (CEM) and the surface temperature are the states, the temperature is the output, and the applied power is the input. It is assumed that a generic first-principles model of the APPJ is known, but a part of the temperature model is subject to uncertainty due to its unknown structure. One can then formulate the dose delivery problem in terms of a generic optimal control problem (OCP) for this system, which includes a terminal cost, terminal constraints, and input and state path constraints. By using the necessary conditions of optimality given by Pontryagin's maximum principle, we can show that singular arcs are not possible, independently of the model uncertainty. The optimal input is then composed of a sequence of arcs where each arc can be 1) input constraint-seeking, such that it is determined by an input bound, or 2) state constraint-seeking, such that a state constraint remains active [6]. Hence, there is a finite number of arc types from which arc sequences can be formed. It follows that the number of plausible sequences is also finite. For a given plausible arc sequence, the input is defined by the following decision variables: the switching times to input constraint-seeking arcs and the final time. The switching to state constraint-seeking arcs cannot occur at arbitrary times since it depends on the states. Consequently, the OCP reduces to determining the optimal arc sequence and the optimal decision variables. For a given arc sequence, the OCP can be reformulated in terms of a few decision variables, which is convenient for numerical optimization. However, the explicit form of the time derivatives of the state constraints is not exactly known due to model uncertainty. Thus, to implement a state-constraint seeking arc, one needs to track a constraint via feedback control. In particular, we consider a single state constraint that consists in an upper bound for the temperature. Moreover, the model in the OCP formulation is not an exact representation of the true APPJ due to plant-model mismatch, thus the solution to that OCP is not the true optimal solution. Hence, we propose a control strategy via feedback linearization and derivative estimation for constraint tracking and an adaptive algorithm based on modifier adaptation to compute the optimal solution to the OCP for the true system despite the presence of plant-model mismatch. We control the temperature at a setpoint that equals the upper bound minus a back-off parameter by manipulating the applied power, even though a part of the temperature model is unknown and the input and output are subject to disturbances. We use input-output feedback linearization and estimate the time derivative of the temperature to set the rate of temperature variation. For this estimation, we apply a filter that provides deadbeat estimation and minimizes the effect of measurement noise. The proposed control strategy eliminates steady-state error and rejects constant input disturbances without any integral term and ensures fast convergence of the temperature to the setpoint [7]. We also propose an adaptive approach to dealing with the structural mismatch between the true APPJ and its model. To this end, we use modifier adaptation to describe this mismatch using measurements of the cost and constraint functions of the OCP for the true system [8]. This method is used to obtain estimates of the cost and constraint functions for the true system. Hence, at each iteration of the adaptive algorithm, a modified version of the original OCP is solved. If the modified OCPs are such that their solutions are in the basin of attraction of a global optimum of the OCP for the true system, the true system converges to its global optimum. For simulation studies and experiments, we consider an OCP that consists in the minimization of the final time needed to reach a dose in CEM and a temperature that ensures no dose accumulation after the final time. In addition, the applied power is subject to lower and upper bounds, while the temperature is subject to an upper bound to ensure that the surface is not subject to excessive temperatures. In our studies, the temperature model is subject to structural mismatch and inaccurate model parameters. Also, the true applied power is not known due to input disturbances, and the temperature measurements are noisy. The optimal arc sequence is composed of three arcs: in the first arc, the maximum power is applied so that the temperature increases as quickly as possible until the path constraint for the temperature becomes active; in the second arc, the temperature is kept constant so that the path constraint remains active; in the third arc, the minimum power is applied so that the temperature decreases as quickly as possible. This sequence is optimal independently of the temperature model. Switching from the first arc to the second arc cannot occur at an arbitrary time since it depends on the temperature. Since the explicit form of the time derivative of the temperature is not exactly known, control via feedback linearization and derivative estimation is used to track the constraint in the second arc. Hence, the OCP reduces to determining the optimal switching time from the second arc to the third arc and the optimal final time. Modifier adaptation is used to perform this task due to the presence of plant-model mismatch. By using the proposed adaptive algorithm, the cost for the true system approaches its optimal value after few iterations while the constraints become active, which indicates convergence to the optimal solution to the dose delivery problem. For each point evaluated by the algorithm, the proposed control strategy successfully tracks the constraint in the second arc. Hence, despite the existence of disturbances and structural plant-model mismatch, the combination of the adaptive algorithm with a control strategy for constraint tracking enforces convergence to the true optimal solution. In summary, the proposed approach is a relatively simple way to optimize the dose delivery in APPJs and overcomes the aforementioned challenges faced by MPC strategies. Future work may extend the proposed approach to more complex models, nonthermal effects, and uniform dose delivery on two-dimensional surfaces. [1] M. Laroussi, M. Kong, G. Morfill, and W. Stolz, Plasma Medicine. New York: Cambridge University Press, 2012. [2] D. Gidon, D. B. Graves, and A. Mesbah. Effective dose delivery in atmospheric pressure plasma jets for plasma medicine: a model predictive control approach, Plasma Sources Sci. Technol. , 26(8):085005, 2017. [3] D. Gidon, B. Curtis, J. A. Paulson, D. B. Graves, and A. Mesbah. Model-based feedback control of a kHz-excited atmospheric pressure plasma jet, IEEE Trans. Radiat. Plasma Med. Sci. , 2(2):129–137, 2018. [4] A. D. Bonzanini, J. A. Paulson, D. B. Graves, and A. Mesbah. Toward safe dose delivery in plasma medicine using projected neural network-based fast approximate NMPC. In Proceedings of the 21st IFAC World Congress , 5353-5359, Berlin, Germany, 2020. [5] A. D. Bonzanini, J. A. Paulson, G. Makrygiorgos, and A. Mesbah. Fast approximate learning-based multistage nonlinear model predictive control using Gaussian processes and deep neural networks, Comput. Chem. Eng. , 145:107174, 2021. [6] D. Rodrigues and D. Bonvin. On reducing the number of decision variables for dynamic optimization, Optim. Control Appl. Meth. , 41(1):292-311, 2020. [7] D. Rodrigues and H. Hjalmarsson. Stability and performance analysis of control based on incomplete models, IFAC-PapersOnLine , 52(1):874–879, 2019. [8] A. Marchetti, B. Chachuat, and D. Bonvin. Modifier-adaptation methodology for real-time optimization, Ind. Eng. Chem. Res. , 48(13):6022–6033, 2009.",
+    "presenting_author": "Diogo Rodrigues | University of California, Berkeley",
+    "authors": [
+      "Diogo Rodrigues | University of California, Berkeley",
+      "Kimberly Chan | University of California, Berkeley",
+      "Ali Mesbah | University of California, Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Diogo Rodrigues",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Kimberly Chan",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "16h",
+    "sortable_time": "2021-11-07_17:43:00_18:02:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/621385"
+  }
+]

@@ -1,0 +1,316 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper424740.html",
+    "topic": "Sensor Fault Estimation and Accommodation in Networked Distributed Processes",
+    "date_time": "Wednesday, November 11, 2015: 3:33 PM",
+    "abstract": "The problems of fault identification and fault accommodation have been the subject of considerable interest in the control research community in response to the ever increasing requirements on the reliable and safe operation of automatic control systems. At present, however, only relatively few studies have been devoted to the development of systematic methods for the diagnosis and handling of faults in spatially distributed processes. This is an important problem given that many industrial processes are characterized by spatial variations and are modeled by Partial Differential Equations (PDEs) (e.g., [1], [2]). The focus of existing results in this direction has been on the detection and compensation of either actuator (e.g., [3]–[6]) or component faults (e.g., see [7]). By contrast, the problem of sensor fault-tolerant control has not attracted as much attention despite the common occurrence of sensor faults in practice and the detrimental effect they can have on the monitoring capability and overall control quality of the closed-loop system. An effort to tackle this problem was made in [8] where a sensor fault detection and reconfiguration strategy was developed to reduce the performance deterioration associated with sensor faults in highly dissipative distributed processes. Fault detection was achieved by means of a residual generation approach in which the residual was compared against a suitably designed fault-free alarm threshold. In this study, however, the faults considered were assumed not to jeopardize closed-loop stability. The detection approach was stability-based and thus could leave partial faults that do not compromise closed-loop stability go undetected. Furthermore, the problems of identifying the location and the magnitude of the sensor faults were not addressed. It was assumed instead that a suitable mechanism for fault identification was already built into the system and able to determine the size and location of the fault. Finally, and similar to other existing methods for fault-tolerant control of distributed parameter systems, the fault-tolerant control structure was designed within a conventional feedback control setting with continuous and flawless sensor-controller communication.With the increased integration of communication networks in control systems, the impact of sensor-controller communication constraints (e.g., resource limitations, communication delays) on closed-loop stability can no longer be ignored and needs to be explicitly accounted for (e.g., see [9]). Motivated by these considerations, we present in this work an integrated approach for data-based fault identification and accommodation of sensor faults in a class of spatially distributed processes with low-order dynamics, and sensor-controller communication constraints. The main idea is to synthesize a model-based networked output feedback controller based on an appropriate reduced-order system obtained via model order reduction of the highly-dissipative PDE. By analyzing the fault-free behavior of the networked closed-loop state, the closed-loop stability region is characterized in terms of the sensor-controller communication rate, the communication delay size, the model uncertainty, the control actuator placement and the controller and estimator design parameters. The fault identification mechanism is then implemented by solving a moving-horizon optimization problem, which is embedded in the sensors, to estimate the size of the faults using the historical sampled output and input data. Once the faults are identified, estimates of the fault magnitudes are sent to the controller at the next sensor transmission time. These estimates, together with the characterization of the networked closed-loop stability region, are used to determine the suitable measures for fault accommodation, which include updating the control model parameters, adjusting the control actuator placement, and/or switching to a new stabilizing feedback gain. The proposed methodology is illustrated using a simulated diffusionreaction process subject to both abrupt and gradual sensor faults. References : [1] P. D. Christofides, Nonlinear and Robust Control of PDE Systems: Methods and Applications to Transport-Reaction Processes . Boston: Birkhauser, 2001. [2] A. Smyshlyaev and M. Krstic, Adaptive Control of Parabolic PDEs . Princeton University Press, 2010. [3] M. Demetriou, “A model-based fault detection and diagnosis scheme for distributed parameter systems: A learning systems approach,” ESAIM-Control Optimisation and Calculus of Variations , vol. 7, pp. 43–67, 2002. [4] S. Ghantasala and N. H. El-Farra, “Robust actuator fault isolation and management in constrained uncertain parabolic PDE systems,” Automatica , vol. 45, pp. 2368–2373, 2009. [5] Z. Yao and N. H. El-Farra, “Robust fault detection and reconfigurable control of uncertain sampled-data distributed processes,” in Proceedings of 50th IEEE Conference on Decision and Control , Orlando, FL, 2011, pp. 4925–4930. [6] A. Baniamerian and K. Khorasani, “Fault detection and isolation of dissipative parabolic PDEs: Finite-dimensional geometric approach,” in Proceedings of American Control Conference , Montreal, Canada, 2012, pp. 5894–5899. [7] A. Armaou and M. Demetriou, “Robust detection and accommodation of incipient component faults in nonlinear distributed processes,” AIChE J. , vol. 54, pp. 2651–2662, 2008. [8] Z. Yao and N. H. El-Farra, “Performance-based sensor reconfiguration for fault-tolerant control of uncertain spatially distributed processes,” in Proceedings of 19th IFAC World Congress , Cape Town, South Africa, 2014, pp. 5193–5198. [9] Y. Sun, S. Ghantasala, and N. H. El-Farra, “Networked control of spatially distributed processes with sensor-controller communication constraints,” in Proceedings of American Control Conference , St. Louis, MO, 2009, pp. 2489–2494.",
+    "presenting_author": "Nael H. El-Farra | Department of Chemical Engineering & Materials Science, University of California, Davis, Davis, CA",
+    "authors": [
+      "Di Peng | Chemical Engineering and Materials Science, University of California, Davis, Davis, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nael H. El-Farra",
+        "affiliation": "Department of Chemical Engineering & Materials Science, University of California, Davis, Davis, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Di Peng",
+        "affiliation": "Chemical Engineering and Materials Science, University of California, Davis, Davis, CA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper408791.html",
+    "topic": "Estimation of Spatially Distributed Processes Via Adaptive Model Reduction Using Mobile Sensors Network",
+    "date_time": "Wednesday, November 11, 2015: 3:15 PM",
+    "abstract": "Even though the state estimation and monitoring problems have reached certain maturity for lumped dynamic processes described by ordinary differential equations (ODEs), they remain challenging tasks for spatially distributed processes (SDPs). SDPs can be mathematically modeled by a set of partial differential equations (PDEs), frequently arise in chemical and advanced materials industries can be exemplified by packed and fluidized bed reactors, polymerization and crystallization processes, chemical vapor deposition processes, plasma discharge systems and microelectronic fabrication processes. The infinite dimensional representation of such systems can be approximated by a finite number of ODEs because a time-scale separation can in practice be identified between the finite-dimensional slow (and possibly unstable) and infinite-dimensional fast (and stable) subsystems [1]. The resulting system approximations in the form of low-dimensional ODEs can be applied as the basis for Luenberger-type dynamic observer designs. Practically, such set of ODEs are constructed by discretizing governing PDEs using Galerkin’s method. However, in general the required basis functions by Galerkin’s method cannot be computed by analytical methods, specifically when the describing PDEs are nonlinear and/or the process operates over irregular domains. To extend the applicability of model reduction approaches to general SDPs, statistical approaches such as proper orthogonal decomposition (POD) may be applied to compute an optimal set of empirical basis functions. The essential requirement of the POD-like approaches is the a-priori availability of solution profiles of the governing PDEs which present the global spatiotemporal dynamics of the studied system. To overcome such vital requirement we employ adaptive proper orthogonal decomposition (APOD) to recursively compute this set of required empirical basis functions as needed during the process evolution [2, 3]. An unavoidable assumption of previously developed methodologies for dynamic observer synthesis that employ data driven model reduction techniques like APOD is that the complete snapshots which span the whole process domain are accessible as time evolves. Obtaining such information might not be feasible owing to high sensor costs and limited availability of sensors which sample all the regions of the process domain. We propose two methods to estimate the required snapshots as a demarcation point to develop process estimation methodologies which relax both the complete snapshot assumption and the representative ensemble requirement; (1) using a PDE-based Luenberger-type dynamic observer which employs moving sensors information, (2) a combination of scanning sensor networks and APOD methodology. To extend the applicability of APOD to situations when the availability of distributed sensing is limited, we base the proposed work on Gappy-APOD [4]. A small numbers of moving sensors that provide continuous local measurements are employed to recursively construct the approximate reduced order model. The basic premise of the proposed method is that a set of mobile sensors achieve better estimation performance than a set of immobile sensors [5]. To enhance the performance of the state estimator, a network of sensors that are capable of moving within the spatial domain is utilized. The objective is to provide mobile sensor control policies that aim to improve the state estimate. The metric for such an estimate improvement is taken to be the expected state estimation error. The effectiveness of the proposed estimation approaches are then successfully implemented on temperature estimation in a tubular reactor where the thermal spatiotemporal dynamics can be mathematically modeled by a PDE. Beyond the obvious savings on communication costs and sensor network size, the study of this problem rovides a tool for the assessment of the robustness of the synthesized dynamic observers and will allow us to identify the fundamental limits on the monitoring structure tolerance to communication suspension. [1] P.D. CHRISTOFIDES, Nonlinear and robust control of PDE systems, Birkhauser, New York, 2000. [2] D. BABAEI POURKARGAR, A. ARMAOU, Design of APOD-based switching dynamic observers and output feedback control for a class of nonlinear distributed parameter systems, Chem. Eng. Sci., DOI:10.1016/j.ces.2015.02.032, 2015. [3] D. BABAEI POURKARGAR, A. ARMAOU, Modification to adaptive model reduction for regulation of distributed parameter systems with fast transients, AIChE J., 59(12): 4595–4611, 2013. [4] S. PITCHAIAH, A. ARMAOU, Output feedback control of dissipative PDE systems with partial sensor information based on adaptive model reduction, AIChE J., 59(3), 747–760, 2013. [5] M.A. DEMETRIOU, I.I. HUSSEIN, Estimation of spatially distributed processes using mobile spatially distributed sensor network. SIAM J. Control Optim., 48(1):266-291, 2009.",
+    "presenting_author": "Davood Babaei Pourkargar | Chemical Engineering, The Pennsylvania State University, University Park, PA",
+    "authors": [
+      "Antonios Armaou | Chemical Engineering, The Pennsylvania State University, University Park, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Davood Babaei Pourkargar",
+        "affiliation": "Chemical Engineering, The Pennsylvania State University, University Park, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Antonios Armaou",
+        "affiliation": "Chemical Engineering, The Pennsylvania State University, University Park, PA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper435504.html",
+    "topic": "Preparation of Geopolymers from Wastes",
+    "date_time": "Wednesday, November 11, 2015: 4:15 PM",
+    "abstract": "Geopolymers, an inorganic polymer composed of alumina and silica network with alkali metal ions, were prepared from wastes, such as incinerated ash of sewage sludge or fly ash from power plants. We have examined the effect of the initial compositions of the raw materials controlling the ratio of alumina, silica, and alkali in addition to the solid / liquid (water) ratios on the polymerization reactions of the geopolymer. In some cases, meta-kaolin and silica powder were added to adjust the target composition. We demonstrated the region where geopolymer is formed in a ternary diagram of which the three axes are fraction of silica, alumina, and alkali under a fixed solid /water ratio. The formation of geopolymers was confirmed by checking the hardening of the mixtures, and the solid product was characterized with XRD and BET measurements in addition to the strength tests. The surface area and the pore size distribution of the geopolymers greatly depended on the initial composition of the raw materials. In some cases, zeolites are formed: under the ambient temperature and pressure conditions. The surface area varied in the range of about 8.6 m 2 /g to 460 m 2 /g. We have found the surface areas of the geopolymers can be well correlated with the two ratios of silica / alkali and alumina / alkali.",
+    "presenting_author": "Miyuki Noguchi | Materials and Life Sciences, Seikei University, Musashino, Japan",
+    "authors": [
+      "Motoki Inoue | Materials and Life Sciences, Seikei University, Musashino, Japan",
+      "Akihiro Yamasaki | Department of Materials and Life Science, Seikei University, Musashino, Japan"
+    ],
+    "authors_structured": [
+      {
+        "name": "Miyuki Noguchi",
+        "affiliation": "Materials and Life Sciences, Seikei University, Musashino, Japan",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Motoki Inoue",
+        "affiliation": "Materials and Life Sciences, Seikei University, Musashino, Japan",
+        "designation": "Author"
+      },
+      {
+        "name": "Akihiro Yamasaki",
+        "affiliation": "Department of Materials and Life Science, Seikei University, Musashino, Japan",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper431568.html",
+    "topic": "Single-Step Formulation of Feedback Control for an Exothermic Plug-Flow Reactor",
+    "date_time": "Wednesday, November 11, 2015: 3:51 PM",
+    "abstract": "This work proposes a single-step full state feedback control design of first order non-linear hyperbolic partial differential equations which model an exothermic plug-flow reactor. Optimal heat exchanger temperature profile of exothermic tubular reactor is determined by plug-flow characteristics at the steady-state of interest. A cost criterion is defined to enable a trade-off between process performance and heat loss. An analytical solution is obtained according to the minimum principle of Pontryagin optimal control theory. However, it is shown by numerical simulation that the optimal temperature and reactant concentration profiles of interest are unstable steady-states. Therefore, linear and quadratic full state feedback control design are proposed by single-step linearization and simultaneous coordinate transformation for first order hyperbolic transport reaction system. The control is obtained by single step state nonlinear transformation and feedback control law with prescribed closed loop dynamics. The solution is guaranteed by the Lyapunov's auxiliary theorem and is realized in one step, avoiding the restrictions existing in other approaches. The temperature and reactant concentration of open-loop system can be successfully stabilized at optimal steady-states of interest with linear and non-linear control. The results are illustrated by numerical simulations.",
+    "presenting_author": "Qingqing Xu | Department of Chemical and Material Engineering, University of Alberta, Edmonton, AB, Canada",
+    "authors": [
+      "Stevan Dubljevic | Department of Chemical and Materials Engineering, University of Alberta, Edmonton, AB, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Qingqing Xu",
+        "affiliation": "Department of Chemical and Material Engineering, University of Alberta, Edmonton, AB, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Stevan Dubljevic",
+        "affiliation": "Department of Chemical and Materials Engineering, University of Alberta, Edmonton, AB, Canada",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper431368.html",
+    "topic": "Technical Bases for the DWPF Melter Off-gas Flammability Control under the Glycolic-Acid Flowsheet",
+    "date_time": "Wednesday, November 11, 2015: 4:45 PM",
+    "abstract": "The Defense Waste Processing Facility (DWPF) at the Department of Energy’s (DOE) Savannah River Site (SRS) will undergo a flowsheet change in 2016 by replacing formic acid with glycolic acid as the baseline reductant for the high-level waste (HLW) melter feed. Prior to implementation, the processability of the new flowsheet feeds through a melter was demonstrated during the Cold-cap Evaluation Furnace (CEF) test, which lasted for 24 days with round-the-clock feeding and pouring. Concurrently with the melter demonstration, the required data for the development of the DWPF melter off-gas flammability safety basis for the new flowsheet were also collected: (1) steady state off-gas data with the melter vapor space temperature held constant for two hours each at 700, 600, 500, 400, 350, and <300 °C, (2) off-gas surge data for both condensable and non-condensable flows, and (3) additional steady state data using feeds spiked with excess antifoam. Some of the key results from these runs are presented along with subsequent data analysis and theoretical treatment performed in order to develop the technical bases for the melter off-gas flammability control under the new flowsheet.",
+    "presenting_author": "Alexander S. Choi | Savannah River National Laboratory, Aiken, SC, John R. Zamecnik, Process Technology Programs, Savannah River National Laboratory, Aiken, SC",
+    "authors": [
+      "CPT | Savannah River National Laboratory, Aiken, SC, John R. Zamecnik, Process Technology Programs, Savannah River National Laboratory, Aiken, SC",
+      "Fabienne Johnson | Savannah River National Laboratory, Aiken, SC"
+    ],
+    "authors_structured": [
+      {
+        "name": "Alexander S. Choi",
+        "affiliation": "Savannah River National Laboratory, Aiken, SC, John R. Zamecnik, Process Technology Programs, Savannah River National Laboratory, Aiken, SC",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "CPT",
+        "affiliation": "Savannah River National Laboratory, Aiken, SC, John R. Zamecnik, Process Technology Programs, Savannah River National Laboratory, Aiken, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Fabienne Johnson",
+        "affiliation": "Savannah River National Laboratory, Aiken, SC",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper433582.html",
+    "topic": "Simulation and Development of an Estimation Technique for a Bi-Component Aggregation Systems",
+    "date_time": "Wednesday, November 11, 2015: 4:45 PM",
+    "abstract": "In chemical engineering, material science and biology there are many systems that require modeling the evolution of particle population. Modeling efforts usually result in deriving integro-differential equations. The particles in these systems, depending on the system, are characterized by one or more properties such as type, size or composition. However, the governing equation obtained from the population balance is not easy to solve especially for multivariate systems. One of the simplest examples with a bivariate distribution function is coagulation in pharmaceutical applications. In such systems, an excipient (solvent) binds the drug particles (solute) to make larger granules. We would like to estimate the output’s unmeasurable properties i.e. statistical information, for control purposes. This work focuses on two-component coagulation processes and estimates the output distribution of particles in time. The rate of coagulation is quantified by a kernel. In literature, there are analytical solutions for population balance equations in which the kernels are constant or additive [1-4]. However, the dynamic of agglomeration is more complicated and its rate is described by a Brownian kernel. Constant-number Monte Carlo (cNMC) is an algorithm to simulate these more complicated processes [5,6]. In this work, we modified this algorithm for a continuous coagulation process. Although extremely useful, Monte Carlo simulations are computationally demanding and impractical in online applications. The computations are necessary for real-time state estimation during the evolution process. The method of moments is an approach to reduce the original integro-differential equation to a set of ordinary differential equations (ODEs). The state variables of these ODEs are the moments of particles’ distribution. To ensure moment closure, we use Taylor expansion to approximate some moments with fractional index with respect to the considered ones. This approach has already been employed but only for single variable distribution functions [7]. However, to the best knowledge of authors, there is no effort in the literature for reduction of the original integro-differential equations in multivariate systems. The results show the probabilistic moments obtained by method of moments in time are in agreement with cNMC simulation results. The measurement of number of particles in the outflow stream is possible, whereas measuring the other output properties online which specify the further moments is not easy. The goal in this work is to estimate these probabilistic moments by measuring the output population of particles. In addition, we assume the feed flow concentration is affected by a white uniformly distributed noise signal. As a result, to obtain the statistical information, we need to employ an estimator which deals with uncertainties in the system. Moving Horizon Estimation (MHE) is a successful estimation technique for unmeasurable states in presence of noise in dynamics or output measurements. Although this method has many advantages over other alternative methods, it needs to solve a dynamic optimization at every sampling time which makes it slow. To deal with this issue, we use a new design proposed in our previous work [8,9]. This approach exploits Carleman linearization to give a more accurate approximation compared to the traditional linearization. This approach not only provides the analytical solution of the system, but also derives the KKT matrix which decreases the dynamic optimization computations significantly. Simulation results show this approach reduces the simulation running time significantly while the performance is at the same level as using the traditional MHE. References: [1] Lushinkov AA. Evolution of coagulation systems: III. Coagulating mixtures. J of Colloid & interface Sci . 1976;54:94-101. [2] Gelbard FM, Seinfeld JH. Coagulation and growth of a multicomponent aerosol. J of Colloid & Interface Sci . 1978;63:472-479. [3] Krapivsky PL, Ben-Naim E. Aggregation with multiple conservation laws. Phys. Rev. E. 1996;53:291-298. [4] Vigil RD, Zi RM. On the scaling theory of two-component aggregation. Chem Eng Sci . 1998;53:1725-1729. [5] Matsoukas T, Lee K, & Kim T. Mixing of components in two-component aggregation, American Institute of Chemical Engineers . 2006;52, 3088-3099. [6] Marshall Jr. C. L, Rajniak P, & Matsoukas T. Multi-component population balance modeling of granulation with continuous addition of binder, Powder Technology . 2013; 236, 211-220. [7] Yu M, Lin J & Chan T. A new moment method for solving the coagulation equation for particles in Brownian motion. Aerosol Sci. & Technol . 2008;42:705-713. [8] Hashemian N & Armaou, A. Fast moving horizon estimation of nonlinear processes via Carleman linearization. American Control Conference , Chicago, IL, 2015. [9] Hashemian N & Armaou A. Moving horizon estimation using Carleman linearization and sensitivity analysis. Annual AIChE Meeting, Atlanta, GA, 2014.",
+    "presenting_author": "Negar Hashemian | Chemical Engineering, Pennsylvania State University, State College, PA",
+    "authors": [
+      "Antonios Armaou | Chemical Engineering, Pennsylvania State University, State College, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Negar Hashemian",
+        "affiliation": "Chemical Engineering, Pennsylvania State University, State College, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Antonios Armaou",
+        "affiliation": "Chemical Engineering, Pennsylvania State University, State College, PA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper427760.html",
+    "topic": "Prediction of Radiolytic Benzene Generation in a Waste Tank at the Savannah River Site",
+    "date_time": "Wednesday, November 11, 2015: 3:15 PM",
+    "abstract": "Back in the 1990s, an in-tank precipitation process at the Savannah River Site (SRS) was designed to remove radioactive cesium and strontium from aqueous high-activity waste. The process begins when saltcake stored in the SRS Tank Farms is dissolved in water and transferred to the processing tank. Dilution water is added to adjust the salt concentration. Sodium tetraphenylborate and sodium titanate slurry are added to the salt solution. Cs-137 is removed by precipitation with sodium tetraphenylborate, and Sr-90 is removed by adsorption on sodium titanate particles. The tank dilute slurry is concentrated by filtration. The resulting decontaminated filtrate salt solution is processed as a low-activity waste. The concentrated precipitate remaining in Tank 48 is ultimately processed as high-activity waste in the Defense Waste Processing Facility (DWPF) vitrification plant. The radiolytic generation of benzene in soluble and solid tetraphenylborate (TPB) compounds raised safety concerns. Benzene, when released from solution, may exceed the lower flammable limit if adequate purge air flow through the tank gas space is not maintained. Benzene reaches the vapor space by the following mechanisms: (1) formation of dissolved (“free”) benzene by radiolysis of slurries containing TPB compounds; (2) formation of “trapped” benzene by radiolysis of solid TPB compounds; (3) release of “trapped” benzene during dissolution of the solids; (4) adsorption of “free” benzene on the surface of the solids; and (5) evaporation of benzene into the gas space. To predict benzene emissions, a FORTRAN dynamic model was first developed, and later converted into Aspen Custom Modeler (ACM). Due to safety issues, the in-tank precipitation process was replaced by other processes (i.e., Actinide Removal Process (ARP) to remove strontium, Modular Caustic Side Cesium Extraction Unit (MCU) to remove cesium). The processing tank has remained idle since 2000. This paper discusses the model development and presents the computational results for the designed in-tank precipitation process and for the current processing tank waste content.",
+    "presenting_author": "Thong Hang | Savannah River National Laboratory, Aiken, SC",
+    "authors": [
+      "Thomas B. Peters | Savannah River National Laboratory, Aiken, SC"
+    ],
+    "authors_structured": [
+      {
+        "name": "Thong Hang",
+        "affiliation": "Savannah River National Laboratory, Aiken, SC",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Thomas B. Peters",
+        "affiliation": "Savannah River National Laboratory, Aiken, SC",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper433088.html",
+    "topic": "Slow-Manifold Order Reduction of Reaction-Diffusion Equations with Dirichlet Boundary Conditions",
+    "date_time": "Wednesday, November 11, 2015: 4:27 PM",
+    "abstract": "The derivation of low-dimensional averaged models of reaction-diffusion equations greatly facilitates the analysis, optimization and control of dynamic reactive systems. Examples of systems where order reduction has been successful are catalyst pores, wall coated reactors, single phase tubular reactors, catalytic solid slabs etc. In most past studies of these systems, the boundaries are either impermeable (no-flux conditions) or admit a slow flux, such that the boundary condition may be considered as a small deviation from a no-flux condition. In the limit of very fast diffusion, these systems admit a manifold of equilibria which have a zero eigenvalue, corresponding to the null-space of the diffusion operator. This manifold of equilibria is the set of constant concentration modes without transverse variations. Application of slow (center) manifold reduction (SMR) results in a reduced model in terms of the transverse average concentration. However, if the same problem is analyzed with Dirichlet boundary conditions (homogeneous or non-homogeneous), as in cases when the concentration at the boundary is fixed, then the equilibria of zero eigenvalues do not exist. This occurs because the diffusion operator with Dirichlet boundary conditions does not have a null space. Therefore the reduction techniques used on no-flux problems cannot be applied to problems with Dirichlet boundary conditions. In this work, we devise techniques for applying SMR to Dirichlet problems. The key idea is to embed the Dirichlet problem within a larger family of problems by the introduction of a suitable parameter ( α ). This embedding is carried out such that a manifold of equilibria with zero eigenvalues exists in the limit of a critical value of the parameter α . We use the model system of reaction-diffusion in a 1-D slab to demonstrate two different order reduction techniques. We examine the validity and accuracy of the reduced order models for the averaged concentration. Finally, we apply the reduced models to analyze the dynamics of some systems with Dirichlet boundary conditions commonly encountered in reaction engineering. Keywords: center manifold reduction, averaging, reaction-diffusion, Dirichlet boundary conditions",
+    "presenting_author": "Jason R. Picardo | Chemical Engineering, Indian Institute of Technology Madras, Chennai, India",
+    "authors": [
+      "S. Pushpavanam | Chemical Engineering, Indian Institute of Technology Madras, Chennai, India"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jason R. Picardo",
+        "affiliation": "Chemical Engineering, Indian Institute of Technology Madras, Chennai, India",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "S. Pushpavanam",
+        "affiliation": "Chemical Engineering, Indian Institute of Technology Madras, Chennai, India",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper434357.html",
+    "topic": "Nonlinear Observer Design for a Class of Hyperbolic PDE Systems",
+    "date_time": "Wednesday, November 11, 2015: 5:21 PM",
+    "abstract": "Transport processes are essential in many chemical plants, which are usually described by partial differential equations [1], [2]. When diffusive transport is negligible and convective transport is dominant, processes can be described by first-order hyperbolic PDEs. The class of such processes includes tubular reactors, heat exchangers and chromatographic columns, in which the knowledge of the state of the systems is of paramount importance for the operating monitoring and/or subsequent control law synthesis. Significant research efforts have been focused on the development of observer design methods for PDE systems. In order to respect the distributed nature of these systems, many approaches have been developed, where an important class of observers are back-stepping type observers [3]. In this work, a general observer design method for the first-order hyperbolic nonlinear partial differential equation systems is presented. In order to deal with the nonlinearity of the system, the equilibrium profile is calculated firstly. Then, the system is linearized around the equilibrium profile and is represented as an infinite-dimensional Hilbert state-space system with infinite-dimensional (distributed) input and output. Based on the infinite-dimensional state-space representation, the formulation of the observer design problem is realized, where our target is to find a state transformation such that the observer to be designed possesses a specific form. Motivated by the Luenberger observer design ideas, the proposed approach in this work is constructed based on the so-called Lyapunov's auxiliary theorem [4] and single-step approach that achieves desired observer convergence. Taking advantage of the state transformation, the target observer is obtained. Finally, an easily implementable proposed observer is derived and realized, via simulation, in a fixed-bed chemical reactor, where one elementary reaction takes place. [1] Christodes, P. D. (2001). Nonlinear and robust control of partial differential equation systems:Methods and application to transport-reaction processes. Birkhauser. [2] Dochain, D. (1994). Contribution to the analysis and control of distributed parameter systems with application to (bio)chemical processes and robotics. Thse d'Agrgation de l'Enseignement Suprieur. Universit Catholique de Louvain, Belgium. [3] Smyshlyaev, Andrey, and Miroslav Krstic. (2005) Backstepping observers for a class of parabolic PDEs. Systems & Control Letters 54.7: 613-625. [4] Kazantzis, Nikolaos, and Costas Kravaris. (1998) Nonlinear observer design using Lyapunov’s auxiliary theorem. Systems & Control Letters 34.5 : 241-247.",
+    "presenting_author": "Xiaodong Xu | Chemical and Materials Engineering, University of Alberta, Edmonton, AB, Canada",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Xiaodong Xu",
+        "affiliation": "Chemical and Materials Engineering, University of Alberta, Edmonton, AB, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Stevan Dubljevic",
+        "affiliation": "Department of Chemical and Materials Engineering, University of Alberta, Edmonton, AB, Canada",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper422515.html",
+    "topic": "A Better Understanding for Cold-Cap Reactions of Nuclear Waste Feeds through Quantitative Evolved Gas Analysis",
+    "date_time": "Wednesday, November 11, 2015: 5:15 PM",
+    "abstract": "In the vitrification of nuclear wastes, waste slurry mixed with glass former chemicals (melter feed) is charged into an electrical glass-melting furnace (a melter) where it becomes a cold-cap, a layer of reacting melter feed floating on a pool of molten glass. Within the cold cap, the feed experiences multiple gas-evolving reactions. Understanding these reactions is critical because the reaction enthalpy and the generation of foam significantly influence the mass and heat transfer within the cold-cap, thus affecting the melting rate. A kinetic model based on thermogravimetric analysis (TGA) provides invaluable insight into the cold-cap reactions, but it does not identify their chemistry. We employed the thermogravimetry-gas chromatography–mass spectrometry (TGA-GC–MS) combination to perform qualitative and quantitative evolved gas analysis (EGA) for the cold-cap reactions. By adding the ‘chemical identity’ to the TGA-based kinetic model, the EGA allows us to recognize possible reactions/reactants over the temperature range of the feed-to-glass conversion. The quantitative analysis was achieved by relating the weighted sum of intensities of individual gases in linear proportion with the differential thermogravimetry. The proportionality coefficients were obtained by three methods based on the stoichiometry, least squares, and calibration. The linearity was shown to be a good first-order approximation, in spite of the complicated overlapping reactions.",
+    "presenting_author": "Jaehun Chun | Pacific Northwest National Laboratory, Richland, WA",
+    "authors": [
+      "Carmen Rodriguez | Pacific Northwest National Laboratory, Richland, WA",
+      "Michael Schweiger | Pacific Northwest National Laboratory, Richland, WA",
+      "Albert A. Kruger | Department of Energy�s Waste Treatment and Immobilization Plant Federal Project Office, Richland, WA",
+      "Pavel Hrm | Pacific Northwest National Laboratory, Richland, WA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jaehun Chun",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Carmen Rodriguez",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Schweiger",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      },
+      {
+        "name": "Albert A. Kruger",
+        "affiliation": "Department of Energy�s Waste Treatment and Immobilization Plant Federal Project Office, Richland, WA",
+        "designation": "Author"
+      },
+      {
+        "name": "Pavel Hrm",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper427536.html",
+    "topic": "Pilot-Scale Filter Testing of a Process to Treat Radioactive Liquid Waste",
+    "date_time": "Wednesday, November 11, 2015: 3:45 PM",
+    "abstract": "P The Savannah River Site is developing processes to treat radioactive liquid waste. One of these processes is the actinide removal process. This process adds monosodium titanate (MST) to the waste to sorb strontium and select actinides. The MST and entrained sludge (i.e., insoluble metal oxides) are removed from the waste by a crossflow filter. Since start up, filter fouling has limited the throughput of the process. The authors constructed a pilot-scale crossflow filtration apparatus to perform tests to understand the causes of the filter fouling and to improve the filter flux. This presentation will discuss the construction of the pilot-scale filter and the filter testing results.",
+    "presenting_author": "Michael Poirier | Savannah River National Laboratory, Aiken, SC",
+    "authors": [
+      "P. R. Burket | Savannah River National Laboratory, Aiken, SC"
+    ],
+    "authors_structured": [
+      {
+        "name": "Michael Poirier",
+        "affiliation": "Savannah River National Laboratory, Aiken, SC",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "P. R. Burket",
+        "affiliation": "Savannah River National Laboratory, Aiken, SC",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper423455.html",
+    "topic": "A New Computationally Efficient Data Assimilation Approach for Finite Element Models",
+    "date_time": "Wednesday, November 11, 2015: 5:03 PM",
+    "abstract": "Recent advancements in the field of echocardiography have introduced various methods to image blood flow in the heart [1]. Our particular interest is in the left ventricle (LV) of the heart, which pumps oxygenated blood from the lungs out through the aorta. One method for imaging blood flow is injecting FDA-approved micro-bubbles into the left ventricle, and then, using the motion of the micro-bubbles and the frame rate of the ultrasound scan (i.e., using Particle Imagining Velocimetry or echo-PIV), the blood velocity can be calculated. In addition to blood velocity, echocardiologists are also interested in calculating pressure gradients and other flow properties, but this is not currently possible because the velocity data obtained is two-dimensional and noisy. Our goal is to assimilate two-dimensional velocity data from micro-bubble ultrasound experiments into a three-dimensional computer model. In order to achieve this objective a numerical method is needed that can approximate the solution of a system of differential equation and assimilate an arbitrary number of noisy experimental data points at arbitrary locations within the domain of interests to provide a ‘most probable’ approximate solution that is properly influenced by the experimental data [2]. We propose a new numerical method for combing two-dimensional noisy echo-PIV data, which is more computationally efficient than previous approaches [3]. The approximate solution is calculated using continuous interior penalty finite element method (IPFEM) coupled with a least-squares finite element method (LSFEM) for integrating the noisy echo-PIV data. This framework allows the flexibility of using any existing numerical approaches for the differential equations that model the original problem, and then complement the solution using a weighted LSFEM framework for data assimilation. The choice of LSFEM approach is due the flexibility when assimilating noisy echo-PIV data since the method can strongly weight more accurate echo-PIV data and use a lower weight for less accurate data. The new numerical approach have been used to predict the 3-dimensional LV blood flow. Results from the current method show the impact of assimilating echo-PIV data combining the data with a full 3-dimensional simulation result. REFERENCES 1. Borazjani, I., et al., Left ventricular flow analysis: recent advances in numerical methods and applications in cardiac ultrasound. Computational and mathematical methods in medicine, 2013. 2013. 2. Heys, J.J., et al., Weighted least-squares finite elements based on particle imaging velocimetry data. Journal of Computational Physics, 2010. 229(1): p. 107-118. 3. Rajaraman, P.K., et al., Echocardiographic particle imaging velocimetry data assimilation with least square finite element methods. Computers & Mathematics with Applications, 2014. 68(11): p. 1569-1580.",
+    "presenting_author": "Prathish Rajaraman | Chemical and Biological Engineering, Montana State University, Bozeman, MT",
+    "authors": [
+      "Jeffrey J. Heys | Chemical and Biological Engineering, Montana State University, Bozeman, MT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jeffrey J. Heys",
+        "affiliation": "Chemical and Biological Engineering, Montana State University, Bozeman, MT",
+        "designation": "Author"
+      },
+      {
+        "name": "Prathish Rajaraman",
+        "affiliation": "Chemical and Biological Engineering, Montana State University, Bozeman, MT",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper428544.html",
+    "topic": "Observations and Analysis of Index Infinity Dae Systems Describing Reactors and Reacting Flows",
+    "date_time": "Wednesday, November 11, 2015: 4:09 PM",
+    "abstract": "Mathematical models that describe the steady-state behavior of chemical reactors and reacting flows in which volumetric and/or wall reactions occur can be generally classified as elliptic or parabolic. The behavior of elliptic models is well studied in the literature and they are known to display a variety of solutions and bifurcations (e.g. multiple homogeneous solutions and various types of patterned/asymmetric solutions). In the literature, the so called “boundary layer models (in which axial diffusion/conduction is neglected) used to describe these systems are treated as parabolic equations and having a unique solution. Such a solution is usually obtained by discretization of the transverse coordinate and integration in the axial direction. However, it was shown in our earlier work that these are index infinity differential-algebraic equation (DAE) systems, and could have an infinite number of solutions. Further, the integration of such models along the flow direction (forward) and against the flow direction (backward) could lead to different solutions. In this work, we present further observations and analytical as well as numerical methods for determining the various solutions of such index infinity DAE systems. We consider three specific systems to illustrate the main ideas and techniques : (i) a DAE system consisting of one differential equation (in axial coordinate) and one algebraic equation, having infinite number of solutions (such a system is obtained by transverse averaging of the partial differential equation models) (ii) a parabolic equation in two variables (axial and transverse) that has nonlinearity in the boundary conditions (iii) a parabolic equation in two variables with linear boundary conditions but a nonlinear source term. For these cases, we present bifurcation analysis as well as numerical methods for determining all the solutions with particular emphasis on how to eliminate the Gibbs’ phenomenon (that arises due to discontinuous solutions) and numerical diffusion (that can lead to spurious solutions).",
+    "presenting_author": "Vemuri Balakotaiah | Department of Chemical and Biomolecular Engineering, University of Houston, Houston, TX",
+    "authors": [
+      "Ram R. Ratnakar | Shell International Exploration and Production Inc., Houston, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Vemuri Balakotaiah",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, University of Houston, Houston, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ram R. Ratnakar",
+        "affiliation": "Shell International Exploration and Production Inc., Houston, TX",
+        "designation": "Author"
+      }
+    ]
+  }
+]

@@ -1,5 +1,50 @@
 # AIChE Abstract Analysis: Keyword & Geo-Extraction Pipeline
 
+## Current application and datasets
+
+The current pipeline is organized into `01_scraping/`, `02_extraction/`,
+`03_grouping/`, `04_clustering/`, and `05_webapp/`. Raw papers, extraction outputs,
+aggregated keywords, clustering snapshots, prepared web indices, historical
+archives, and validation reports are included. See [context/current.md](context/current.md)
+for the current implementation and [05_webapp/README.md](05_webapp/README.md)
+for application methods, validation, and limitations. The roadmap below describes
+the earlier experiments.
+
+### Clone and run
+
+Install Python 3.12 and Git LFS, then run in PowerShell:
+
+```powershell
+git lfs install
+git clone --branch chandan https://github.com/Adventurist2/AICHE_LLM.git
+cd AICHE_LLM
+git lfs pull
+py -3.12 -m venv .venv
+& .\.venv\Scripts\python.exe -m pip install -r .\05_webapp\requirements.txt
+& .\.venv\Scripts\python.exe -m streamlit run .\05_webapp\app.py
+```
+
+Open http://localhost:8501. The five pages are Explorer, Trends, Geography,
+Institutes, and About & metrics. The prepared indices allow the app to start
+without rebuilding the Ward tree. Semantic search may download its embedding
+model on first use. API credentials are only needed for the extraction services;
+keep them in a local `.env` file, which is excluded from Git.
+
+Large aggregate JSON files and NumPy arrays use Git LFS. A source ZIP or a clone
+without LFS downloads contains pointer files in their place. Local environments,
+model caches, editor state, and credentials are excluded; the code and datasets
+are retained.
+
+### Snapshot status at upload (November 6, 2026)
+
+The installed explorer snapshot contains 173,438 keywords and 313,858 mentions
+at five clustering heights. The newer frozen input contains 183,489 keywords
+and 331,849 mentions, with partial 2017 extraction coverage, under
+`reports/keyword_refresh_2026-11-04/`. Its Ward rebuild stopped on November 4
+before producing a completed new tree. The failure status and inputs are
+preserved; the newer twelve-height results are not installed. See the saved
+`refresh_status.json` files for the status of each run.
+
 ## 1. Project Overview
 
 This repository contains an end-to-end pipeline designed to automate the extraction of high-value technical keywords and author metadata from chemical engineering research abstracts. The primary objective is to move beyond generic academic terminology (e.g., "results," "methodology") to identify specific domain concepts (e.g., "ionic liquids," "metal-organic frameworks") and visualize global research trends.

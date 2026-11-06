@@ -1,0 +1,462 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper417299.html",
+    "topic": "Multi-Scale Optimization Methods for Oxycombustion Power System Design",
+    "date_time": "Wednesday, November 11, 2015: 8:30 AM",
+    "abstract": "Motivated by the threat of climate change, engineers are developing new power system technologies with increased efficiencies and reduced CO 2 emissions. Flowsheet optimization methods help reduce technology deployment times and carbon capture cost by systematically exploring different design configurations and manipulating operating conditions to improve one or more performance metrics (e.g., cost of electricity). However, applying traditional flowsheet optimization tools to power systems requires new methodologies for embedded multi-scale models of complex subsystems, such as reactors or boilers. In this paper, we present recent work on a trust region optimization algorithm and its application to oxycombustion system design, in which the fuel (e.g., coal, biomass, etc.) is combusted in a N 2 lean environment, producing a flue gas rich in CO 2 (70 – 85%) for economical sequestration. In contrast to previous systems analysis of the oxycombustion system, we are modeling the entire system in an equation-based framework. First and second derivative calculations from the algebraic model allow the use of efficient large-scale nonlinear programming algorithms. With these methods, sensitivity information is easily obtained from the multipliers at the optimum rather than having to perturb design parameters. In addition, the framework allows simultaneous optimization of the oxycombustion subsystems (e.g., air separation unit, steam cycle, CO 2 processing unit and compression train, etc.) rather than analyzing the subsystems in isolation. We have demonstrated this approach by optimizing the sub-ambient separations and their accompanying multistream heat exchangers for oxycombustion power systems 1,2 . Optimization of the steam cycle in an oxycombustion process requires special care. Flue gas recycle is used to replace N 2 in air by mainly CO 2 and H 2 O to regulate the flame temperature and the heat transfer profile. As a consequence, boiler performance correlations for air fired (N 2 atmosphere) boilers are not applicable, and discretized partial differential equation based numerical models are preferred. This presents a challenge for optimization with state-of-the-art nonlinear programming algorithms, which assume that accurate derivative information is cheaply available. In this work, we use a hybrid zonal boiler model that considers detailed 3D radiation behavior 3 . A common approach for including computationally expensive black box functions/simulations in nonlinear programming algorithms is through surrogate models. However, experience has shown that no matter how much care is placed into constructing these models, the optimizer is very good at exploiting the error to artificially improve the objective. We are developing a trust region algorithm 4 that is capable of adaptively managing surrogate model error, with provable convergence to critical points of the true problem (with the full, detailed model). The trust region filter algorithm has been applied to both air-fired and oxy-fired steam cycle case studies to integrate the boiler model as well as external function calls to obtain steam table based thermodynamics. The air fired results confirm that our methodology matches with expected designs from the literature, while the oxy-fired results provide insight on key oxycombustion design decisions. References: Dowling, A. W., & Biegler, L. T. (2015). A framework for efficient large scale equation-oriented flowsheet optimization. Computers & Chemical Engineering , 72 , 3–20. Dowling, A. W., Balwani, C., Gao, Q., Biegler, L.T. (2015), Optimization of Sub-ambient Separation Systems with Embedded Cubic Equation of State Thermodynamic Models and Complementarity Constraints. Computers & Chemical Engineering (in press). Ma, J., Dowling, A., Eason, J., Biegler, L., & Miller, D. (2014). Development of First Principle Boiler Model and Its Reduced Order Model for the Optimization of Oxy-combustion Power Generation System. In 39th International Technical Conference on Clean Coal & Fuel Systems . Eason, J. P., and Biegler, L. T. 2015. Reduced model trust region methods for embedding complex simulations in optimization problems. In 12th International Symposium on Process Systems Engineering and 25th European Symposium on Computer Aided Process Engineering .",
+    "presenting_author": "John P. Eason | Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Alexander W. Dowling | Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+      "Jinliang M | URS Corp., National Energy Technology Laboratory, Morgantown, WV",
+      "David C. Miller | U.S. Department Of Energy, National Energy Technology Laboratory, Pittsburgh, PA",
+      "Lorenz T. Biegler | Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "John P. Eason",
+        "affiliation": "Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Alexander W. Dowling",
+        "affiliation": "Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jinliang M",
+        "affiliation": "URS Corp., National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "David C. Miller",
+        "affiliation": "U.S. Department Of Energy, National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Lorenz T. Biegler",
+        "affiliation": "Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper418883.html",
+    "topic": "Optimization of Chemical-Looping Combustion Fixed-Bed Reactors in Natural Gas-Fired Combined Cycle Power Plants",
+    "date_time": "Wednesday, November 11, 2015: 9:27 AM",
+    "abstract": "The increasing rate of emissions of carbon dioxide (CO 2 ) from combustion of fossil fuels is widely accepted as the cause of global warming. The power generation sector alone is responsible for 40% of the total anthropogenic CO 2 emissions. 1 Therefore, interest exists in controling the CO 2 emissions through carbon capture and sequestration technologies. The available methods entail the separation of the CO 2 from flue gases (post-combustion), de-carbonization of the fuel (pre-combustion), or use of pure oxygen for combustion (oxy-fuel combustion). 2 One of the greatest barriers facing the implementation of power generation technologies with CO 2 capture is the high capital cost and high energy penalty associated with gas separation. 3 Thus, considerable research and investment are aimed at developing new strategies that enable CO 2 separation to be accomplished at low-cost. Chemical-looping combustion (CLC) has been identified as one of the most promising strategies to reduce CO 2 emissions from power plants. The principle of CLC is that combustion of a hydrocarbon fuel is carried out in two stages, so that the fuel and air streams are not mixed. Thus, CLC intrinsically eliminates the need for additional CO 2 separation equipment and the associated energy penalty. Fixed-bed reactors are one possible option for CLC, because it can operate at high pressures (10-20 bar), which is a requirement for the modern combined cycle-based power plants. To implement CLC in the fixed-bed reactor, the gas flows dynamically alternate between reducing, oxidizing, and purge conditions. This concept takes advantage of the different reaction and heat fronts moving along the axial direction of the bed. After the oxidation cycle, the heat stored in the bed is used to produce a high temperature gas stream, which can be effectively converted into mechanical work in a combined cycle. The gas turbine, however, poses strict constraints to the variability of the purge gas temperature, which is challenging for CLC because of its transient, batch-type cyclic operation. In this work, an optimal design of the CLC reactor system based on dynamically operated fixed-bed reactors is proposed. An optimization problem is formulated to maximize the efficiency of the power plant. The fluctuations of the exhaust gas stream of the CLC reactor are minimized to satisfy the standard operating conditions of commercial gas turbines. The set of manipulated variables consists of the cycle configuration ( i.e. , time interval and mass flows), number of reactors, and properties of the CLC oxygen carrier. Additionally, the CLC reactor needs to operate at a high conversion of the fuel (<98%), high CO 2 capture efficiency (>90%), and low pressure drop (<8%). 4–6 The temperature inside the reactor must always be below the melting point of the CLC oxygen carrier. Thus, the design of the CLC reactor system presents a challenging, heavily constrained non-linear mixed integer problem (MINLP). In this work, we show that at the optimal process conditions, the fixed-bed reactor performs significantly better than the conventional configuration, with minimal transient impact on the gas turbines downstream the reactor. Furthermore, we demonstrate the feasibility of the integrated CLC power plant for continuous operation at different loads, despite the inherent batch-type operation of the CLC reactor. Acknowledgement This material is based upon work supported by the National Science Foundation under Grant No. 1054718. References (1) Department of Energy and Environmental Protection Agency, Carbon dioxide emssions from the generation of electric power in the United States ; 2000. (2) Hossain, M. M.; de Lasa, H. I. Chem. Eng. Sci. 2008 , 63 (18), 4433–4451. (3) Adanez, J.; Abad, A.; Garcia-Labiano, F.; Gayan, P.; De Diego, L. F. Prog. Energy Combust. Sci. 2012 , 38 (2), 215–282. (4) Lawal, A.; Wang, M.; Stephenson, P.; Obi, O. Fuel 2012 , 101 , 115–128. (5) Woods, M. C.; Capicotto, P. J.; Haslbeck, J. L.; Kuehn, N. J.; Matuszewski, M.; Pinkerton, L. L.; Rutkowski, M. D.; Schoff, R. L.; Vaysman, V.; DOE/NETL; Klara, J. M. Cost and Performance Baseline for Fossil Energy Plants ; DOE/NETL, 2007; Vol. 1. (6) Erlach, B.; Schmidt, M.; Tsatsaronis, G. Energy 2011 , 36 (6), 3804–3815.",
+    "presenting_author": "George M. Bollas | Department of Chemical and Biomolecular Engineering, University of Connecticut, Storrs, CT",
+    "authors": [
+      "Lu H | Department of Chemical and Biomolecular Engineering, University of Connecticut, Storrs, CT",
+      "Chen Che | Department of Chemical and Biomolecular Engineering, University of Connecticut, Storrs, CT",
+      "Zhiquan Zhou | Department of Chemical & Biomolecular Engineering, University of Connecticut, Storrs, CT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Lu H",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, University of Connecticut, Storrs, CT",
+        "designation": "Author"
+      },
+      {
+        "name": "Chen Che",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, University of Connecticut, Storrs, CT",
+        "designation": "Author"
+      },
+      {
+        "name": "Zhiquan Zhou",
+        "affiliation": "Department of Chemical & Biomolecular Engineering, University of Connecticut, Storrs, CT",
+        "designation": "Author"
+      },
+      {
+        "name": "George M. Bollas",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, University of Connecticut, Storrs, CT",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper431214.html",
+    "topic": "Fundamental Mechanistic Studies of Formic Acid Decomposition on Pd: Structure Sensitivity and Surface Coverage Effects",
+    "date_time": "Wednesday, November 11, 2015: 9:10 AM",
+    "abstract": "Fundamental Mechanistic Studies of Formic Acid Decomposition on Pd: Structure Sensitivity and Surface Coverage Effects Sha Li, Srinivas Rangarajan, Jessica Scaranto, Suyash Singh, Brandon O’ Neill, James A. Dumesic, Manos Mavrikakis Department of Chemical & Biological Engineering University of Wisconsin-Madison The catalytic decomposition of formic acid is of great importance not only because formic acid is a by-product derived with high concentrations in biomass reforming 1 , but also because it can be used effectively as a fuel in fuel cells 2-3 or as a hydrogen donor in catalytic transfer hydrogenation reactions 4 . Pd represents one of the most active catalysts for formic acid decomposition and it is widely employed as anode in direct formic acid fuel cells. In this work, we studied the gas-phase decomposition of formic acid on Pd(111) and Pd(100) surfaces using first-principles density functional theory (DFT) calculations. Minimum energy paths for HCOOH decomposition into CO 2 and H 2 (dehydrogenation products) or CO and H 2 O (dehydration products) were analyzed and compared on the two Pd facets. As there is clear experimental evidence that CO is accumulated on Pd surfaces during the reaction, we also studied this reaction on CO covered Pd(111) and Pd(100) surfaces. The presence of CO not only changed the reaction energetics but also changed the minimum energy pathways for formic acid decomposition on both facets. Compared with clean surfaces, formic acid decomposition is more difficult in the presence of CO on both facets. The DFT obtained results were then compared with the experimental results in a microkinetic model, shedding light on the reaction pathway and the active site for formic acid decomposition reaction on Pd catalysts. References: (1) J.Q. Bond, D.M. Alonso, D. Wang, R.M. West, J.A. Dumesic, Science 327 (2010) 1110. (2) C. Fellay, P.J. Dyson, G. Laurenczy, Angew. Chem.-Int. Ed. 47 (2008) 3966. (3) S. Ha, R. Larsen, R.I. Masel, J. Power Sources 144 (2005) 28. (4) D.A. Bulushev, J.R.H. Ross, Catal. Today 163 (2011) 42.",
+    "presenting_author": "Sha Li | Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+    "authors": [
+      "Srinivas Rangarajan | Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+      "Jessica Scaranto | Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+      "Suyash Singh | Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+      "Brandon J. O'Neill | Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+      "James Dumesic | Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+      "Manos Mavrikakis | Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sha Li",
+        "affiliation": "Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Srinivas Rangarajan",
+        "affiliation": "Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+        "designation": "Author"
+      },
+      {
+        "name": "Jessica Scaranto",
+        "affiliation": "Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+        "designation": "Author"
+      },
+      {
+        "name": "Suyash Singh",
+        "affiliation": "Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+        "designation": "Author"
+      },
+      {
+        "name": "Brandon J. O'Neill",
+        "affiliation": "Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+        "designation": "Author"
+      },
+      {
+        "name": "James Dumesic",
+        "affiliation": "Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+        "designation": "Author"
+      },
+      {
+        "name": "Manos Mavrikakis",
+        "affiliation": "Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper436808.html",
+    "topic": "Quantum Chemical Analysis of Mechanisms for Rotep By Aluminum Catalysts",
+    "date_time": "Wednesday, November 11, 2015: 10:10 AM",
+    "abstract": "Conversion of cyclic esters by ring-opening transesterification polymeration (ROTEP) allows for transformation into aliphatic polyesters. A major class of catalysts utilized are the aluminum-salen catalysts. Two Al-salen catalysts (either with two- or three-carbon length backbones) are investigated to understand the operative mechanism. Additionally, the impact of steric (through inclusion of tert -butyl and methyl groups) and electronic (addition of OMe, Br or NO 2 groups on the aromatic ring) features of the catalyst are used to gain insight into the thermodynamics of the reaction mechanism. Inclusion of the steric features in the two-carbon catalyst structure lead to an overall increase of 1.8 kcal/mol (mean unsigned difference) for the various stationary points along the pathways considered. Further modification to the electronic characteristics of the catalyst by switching from (OMe to Br to NO ­2 ), led to a decrease in the activation energy relative to OMe of -1.2 and -2.8 kcal/mol (Br and NO­ 2 respectively). According to experimental results, the three-carbon catalyst shows a 100-fold rate enhancement over the original two-carbon catalyst. Investigation into the structural difference between the two catalyst structures has shown the two-carbon catalyst to have a more square pyramidal structure (t = 0.389) while the three-carbon catalyst is more trigonal bipyramidal (t = 0.799). Further work will aid in understanding the origin of the enhanced rate of the three-carbon catalyst.",
+    "presenting_author": "Daniel Marell | Chemistry, University of Minnesota, Minneapolis, MN",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Daniel Marell",
+        "affiliation": "Chemistry, University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper434518.html",
+    "topic": "Parallel Solution of the Contingency-Constrained Acopf Problem",
+    "date_time": "Wednesday, November 11, 2015: 10:24 AM",
+    "abstract": "Efficient operation of an interconnected, multi-source power network is challenging. The alternating current optimal power flow (ACOPF) problem can be solved to determine the optimal generator setpoints that minimize the total operating cost across an electrical transmission network under nominal conditions. However, to guarantee the electrical system reliability and resiliency to failure, many possible contingencies, such as transmission line outages, must be taken into consideration. It is possible to formulate a two-stage stochastic programming problem that solves the ACOPF problem while including all possible single-line outage scenarios. In this paper, the N-1 contingency-constrained ACOPF problem is formulated as a nonlinear stochastic programming problem within Pyomo, a flexible, Python-based mathematical modeling language. This problem uses a variant of the rectangular current-voltage (IV) formulation within a two-stage stochastic programming formulation whose extensive form includes instances of the ACOPF for nominal operation and each valid N-1 contingency. In this formulation, each scenario is a complete two-stage ACOPF formulation with one of the transmission lines broken. While the nonlinear ACOPF problem itself is solvable to local optimality using off-the-shelf NLP solvers, when considering realistic network sizes and all N-1 contingencies, the resulting nonlinear extensive form outstrips the capabilities of existing serial solvers. For example, in the well-known example case2383wp the single-scenario ACOPF problem has over 60,000 variables, while the N-1 contingency-constrained problem has tens of millions of variables. We present the N-1 contingency-constrained problem formulation, two parallel decomposition approaches, and computational timing results that demonstrate efficient solution of this problem on realistic network sizes.",
+    "presenting_author": "Jianfeng Liu | School of Chemical Engineering, Purdue University, West Lafayette, IN",
+    "authors": [
+      "Jia Kang | Department of Chemical Engineering, Texas A&M University, College Station, TX",
+      "Jean-Paul Watso | Discrete Math & Optimization, Sandia National Laboratories, Albuquerque, NM",
+      "Carl Lair | School of Chemical Engineering, Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jianfeng Liu",
+        "affiliation": "School of Chemical Engineering, Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jia Kang",
+        "affiliation": "Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Jean-Paul Watso",
+        "affiliation": "Discrete Math & Optimization, Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Carl Lair",
+        "affiliation": "School of Chemical Engineering, Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper431195.html",
+    "topic": "Computational Insight into the Effect of Sn-Beta Na Exchange and Solvent on Glucose Isomerization and Epimerization",
+    "date_time": "Wednesday, November 11, 2015: 9:30 AM",
+    "abstract": "Sn-substituted zeolite Beta (Sn-Beta) is a promising catalyst for efficient aldose to ketose isomerization, a key step in the conversion of biomass into platform chemicals such as 5-(hydroxymethyl)furan and furfural. However, aldose epimerization is also catalyzed at Sn-Beta active sites and competes with isomerization, and understanding the mechanism for both processes is important for informing further improvements. Recent experimental studies probing the mechanism and active site for glucose isomerization (to fructose) and epimerization (to mannose) have found that isomerization proceeds via a 1,2 intramolecular hydride transfer (HT) and epimerization by either two subsequent HT steps (on pure Sn-Beta; water and methanol) or one 1,2 intramolecular carbon shift (CS) step (on Na-exchanged Sn-Beta; water and methanol). Additionally, glucose conversion, along with corresponding fructose and mannose yields, were increased in methanol compared to in water. In order to address the atomic-level mechanistic questions raised by this data, we investigate the various pathways with computational methods using several sizes of cluster models of Sn-Beta and density functional theory. We conclude that mannose formation via two subsequent HT steps is feasible, that Na exchange influences the mechanism by electrostatic stabilization of CS relative to HT, and that the solvent effect on conversion can be explained by the difference in solvation of the hydrophobic pores.",
+    "presenting_author": "Stavros Caratzoulas | Catalysis Center for Energy Innovation, Department of Chemical and Biomolecular Engineering, University of Delaware, Newark, DE",
+    "authors": [
+      "Jeffrey R. Christianson | Catalysis Center for Energy Innovation, Department of Chemical and Biomolecular Engineering, University of Delaware, Newark, DE",
+      "Dionisios G. Vlachos | Catalysis Center for Energy Innovation, Department of Chemical and Biomolecular Engineering, University of Delaware, Newark, DE"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jeffrey R. Christianson",
+        "affiliation": "Catalysis Center for Energy Innovation, Department of Chemical and Biomolecular Engineering, University of Delaware, Newark, DE",
+        "designation": "Author"
+      },
+      {
+        "name": "Stavros Caratzoulas",
+        "affiliation": "Catalysis Center for Energy Innovation, Department of Chemical and Biomolecular Engineering, University of Delaware, Newark, DE",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Dionisios G. Vlachos",
+        "affiliation": "Catalysis Center for Energy Innovation, Department of Chemical and Biomolecular Engineering, University of Delaware, Newark, DE",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper424259.html",
+    "topic": "Integrated Process Design for Efficient Solar Thermal Hydrogen and Power Production",
+    "date_time": "Wednesday, November 11, 2015: 9:46 AM",
+    "abstract": "For the past century, energy sector has been predominantly dependent on fossil energy resources. However, concerns regarding limited fossil fuel reserves and increasing greenhouse gas (GHG) emissions from fossil fuels accelerate advancements and implementation of renewable energy conversion processes such as wind turbines, photovoltaic devices, and concentrated solar power plants. Among these alternatives, solar energy conversion processes are particularly prominent since solar energy is the only energy source that can alone meet all human energy needs with its tremendous potential. Yet intermittencies and land availability constraints for solar energy collection are the grand challenges for solar energy conversion technologies and demand high conversion efficiency and synergistically integrated energy storage solutions. Recently, it has been shown that chemical energy storage cycles that utilizes solar heat and electricity to synthesize a carbonaceous material, provides efficient and energy dense storage options for uninterrupted large scale energy supply to the grid [1-2]. Furthermore, the potential of solar energy usage in biofuel production has been investigated [3]. The common aspect of these studies is the dependence on the production of solar hydrogen. Analysis of theoretical and achievable sun-to-hydrogen efficiency for solar thermal hydrogen production revealed that the solar thermal hydrogen production has a great potential to efficiently produce hydrogen [4]. Here, we introduce a novel integration strategy for the coproduction of hydrogen and electricity from concentrated solar thermal energy [5]. The integration of solar thermal power production and solar thermal hydrogen production techniques reduces the exergy losses associated with either of the systems and thus provide an efficient solution. Solar power production processes are evaluated based on the process exergy efficiency that refers to the fraction of incident solar exergy that is directly recovered as the net exergy output, which is defined as the sum of electricity and the hydrogen exergy output. Process simulations for the proposed integration are performed in an integrated Matlab and Aspen Plus platform. The operating conditions of various units and topological structure of the integrated process are determined via sensitivity analysis and optimization using genetic algorithm in Matlab. The integrated coproduction process provides a synergistic process that minimizes exergetic losses and increases production efficiency. The novel features of the integrated process and the modeling approach are presented. Two solar thermal hydrogen production techniques: (i) single step membrane, and (ii) two-step metal oxide cycle are presented as a case study to demonstrate the benefit of the proposed integration strategy. Efficient coproduction of hydrogen and electricity presents a continuous power supply solution that can achieve high sun-to-electricity efficiencies when combined with the proper hydrogen power cycle and also creates other opportunities since hydrogen has numerous uses in chemical industry, biofuel production, and transportation sector. [1] Al-musleh EI, Mallapragada DS, Agrawal R. Continuous power supply from a baseload renewable power plant. Applied Energy, 122, 83-93, 2014. [2] Gençer E, Al-musleh E, Mallapragada D, Agrawal R. Uninterrupted Renewable Power through Chemical Storage Cycles. Current Opinion in Chemical Engineering, 5, 29-36, 2014. [3] Mallapragada DS, Tawarmalani M, Agrawal R. Synthesis of augmented biofuel processes using solar energy. AIChE Journal, 60(7), 2533-2545, 2014. [4] Mallapragada DS, Agrawal R. Limiting and achievable efficiencies for solar thermal hydrogen production. International Journal of Hydrogen Energy, 39(1), 62-75, 2014. [5] Gençer E, Tawarmalani M, Agrawal R, Integrated solar thermal hydrogen and power coproduction process for continuous power supply and production of chemicals, Computer Aided Chemical Engineering, 37, 2291-2296, 2015.",
+    "presenting_author": "Emre Gen�er | School of Chemical Engineering, Purdue University, West Lafayette, IN",
+    "authors": [
+      "Mohit Tawarmalani | Krannert School of Management, Purdue University, West Lafayette, IN",
+      "Rakesh Agrawal | School of Chemical Engineering, Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Emre Gen�er",
+        "affiliation": "School of Chemical Engineering, Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mohit Tawarmalani",
+        "affiliation": "Krannert School of Management, Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Rakesh Agrawal",
+        "affiliation": "School of Chemical Engineering, Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper428776.html",
+    "topic": "DFT Analysis on Structure-Property Relationship of Metal Substituted Bec and BEA Zeolites",
+    "date_time": "Wednesday, November 11, 2015: 8:50 AM",
+    "abstract": "Solid Lewis acids materials are effective catalysts for various important reactions involving biomass. A notorious example is the Sn substituted Beta zeolite (Sn-BEA), which has recently been used for the glucose isomerization to fructose. BEC zeolite is the polymorphism C of Beta zeolite that has three dimensional pore topology, all three with twelve-membered ring channels. Previous works by Corma and coworkers have demonstrated that Ti-BEC is a better catalyst than Ti-BEA for epoxidation reactions involving aromatic molecules. 1 Thus, we hypothesize that metal substituted BEC catalysts could outperform BEA zeolites in other Lewis-acid catalyzed reactions involving biomass derived molecules. This study aims at obtaining a fundamental understanding on the relationship between structure and catalytic properties of BEC and BEA zeolites substituted with different metal atoms (Ge, Sn, Ti, V, Nb, Ta). A combination of quantum mechanical calculations and integrated quantum mechanics−molecular mechanics along with a polarizable continuum model were used to determine the preferred substitution site of the metals in zeolites and to quantify how the electronic properties of the metal atoms change upon hydrolysis. Our results demonstrate: (1) the most favorable substitution of Ge, Sn, Ti, V, Nb and Ta in BEC is in the T1 site; (2) the most favorable substitution of Ti in BEA is in the T2 site; (3) Ti-BEC has a Lewis acidity similar to that of Sn-BEA; 2 (4) the hydrolysis of Ge-BEC is energetically favorable only when the Ge/Si ratio is higher than 1/32; and (5) among the elements of the VB group analyzed in this study (V, Nb and Ta), V-BEC exhibits a higher Lewis Acidity than the well-known Sn-BEA. References (1) Moliner, M.; Corma, A. Advances in the Synthesis of Titanosilicates: From the Medium Pore TS-1 Zeolite to Highly-Accessible Ordered Materials. Microporous Mesoporous Mater. 2014 , 189 , 31–40. (2) Montejo-Valencia, B. D.; Curet-Arana, M. C. DFT Study of the Lewis Acidities and Relative Hydrothermal Stabilities of BEC and BEA Zeolites Substituted with Ti, Sn, and Ge. J. Phys. Chem. C 2015 , 119 , 4148–4157.",
+    "presenting_author": "Brian Montejo | Chemical Engineering, University of Puerto Rico, Mayaguez, Mayag�ez, PR, Angel Agrinsoni, Chemical Engineering, University of Puerto Rico, Mayaguez, PR and Mar�a C. Curet, Chemical Engineering, University of Puerto Rico, Mayag�ez, PR",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Brian Montejo",
+        "affiliation": "Chemical Engineering, University of Puerto Rico, Mayaguez, Mayag�ez, PR, Angel Agrinsoni, Chemical Engineering, University of Puerto Rico, Mayaguez, PR and Mar�a C. Curet, Chemical Engineering, University of Puerto Rico, Mayag�ez, PR",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper433291.html",
+    "topic": "Exploring the Nature of Active Sites in Cu-Exchanged SSZ-13 Under Realistic Conditions",
+    "date_time": "Wednesday, November 11, 2015: 8:30 AM",
+    "abstract": "Cu exchanged SSZ-13 is one of the most promising catalysts in the selective catalytic reduction of NOx using ammonia. However, the true nature of the active sites under realistic conditions (i.e. finite temperature and presence of water) is still not fully understood. In this work we explore these effects using ab-initio molecular dynamics calculations and thermodynamic analysis. A key technique in understanding the chemical activity of transition metal centers in zeolites is infrared spectroscopy of adsorbed tracer molecules. In this work we model vibrational spectra of CO adsorbed to Cu(I) sites and NO adsorbed to Cu(II) sites in SSZ-13 using molecular dynamics calculations. For both cases finite temperature induces a movement of the cation. For NO, changes in the Cu-N-O angle lead to additional accessible local minima. A combination of those two phenomena leads to complex multi-peak vibrational spectra for one molecule adsorbed to one active site, which then allows a clear assignment of experiment and the identification of the distribution of active sites present in realistic systems. Linking this distribution to experimental activity measurements furthermore allows the identification of active and inactive species for the given reaction. Under realistic conditions also water is present, which leads to a reconstruction of the active sites. We use thermodynamic analysis to imitate realistic conditions. Interestingly not all active sites reconstruct similarly, i.e. not the same amount of water molecules are adsorbed to them under the same conditions. This allows closely reproducing experimentally observed Cu-O vibrations and their variation with hydration. The results in this work suggest that under reaction conditions Cu cations are hydrated and finite temperature leads to regular changes of coordination. We expect that these two effects lead to significant changes for reaction paths and barriers, which explains the experimentally observed catalytic behavior.",
+    "presenting_author": "Florian G�ltl | Chemistry, UW Madison, Madison, WI",
+    "authors": [
+      "Alyssa Love | Chemistry, UW Madison, Madison, WI",
+      "Phillippe Sautet | Laboratoire de Chimie, Universit� de Lyon, Lyon, France",
+      "Ive Hermans | Department of Chemistry, University of Wisconsin-Madison, Madison, WI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Florian G�ltl",
+        "affiliation": "Chemistry, UW Madison, Madison, WI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Alyssa Love",
+        "affiliation": "Chemistry, UW Madison, Madison, WI",
+        "designation": "Author"
+      },
+      {
+        "name": "Phillippe Sautet",
+        "affiliation": "Laboratoire de Chimie, Universit� de Lyon, Lyon, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Ive Hermans",
+        "affiliation": "Department of Chemistry, University of Wisconsin-Madison, Madison, WI",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper418347.html",
+    "topic": "Stochastic Scheduling for Microgrid Power Systems with Constrained External Power Exchange",
+    "date_time": "Wednesday, November 11, 2015: 9:08 AM",
+    "abstract": "Microgrid power systems are of interest as a potential avenue for increasing the penetration of distributed renewables, increasing resiliency, decreasing the carbon intensity of energy supply, and facilitating the liberalization of the power market [1]. Existing literature on microgrids has covered topics such as the optimal sizing and technology selection [2-3], the effect of stochasticity on microgrid design [4], real-time control to maintain internal power quality [5], and scheduling to ensure robust power supply and minimal operating expenses [6-8]. An aspect that has received little attention in microgrid scheduling is the nature of the power exchange with the surrounding macrogrid. Due to the stochastic nature of renewable power and load, power exchange at this interface may be erratic which could lead to macrogrid instability and place undue stress on utility-scale plants [1]. In this work, we propose a novel formulation of the scheduling problem in which we ensure that power exchange with the macrogrid is well behaved. Specifically, commitments for power exchange with the macrogrid are made in a day-ahead fashion and have a limited ramp rate so that the microgrid operates as a “good citizen” of the grid. Thus, from an external perspective, the microgrid has limited stochasticity (realized power exchange must lie close to the commitments made) and mild ramping (which is conducive to tracking by large power plants). A case study is carried out for a prototype microgrid consisting of photovoltaics, microturbines, a battery bank, and a bi-directional connection to the macrogrid. Measured residential load and rooftop PV production data over a 1-year period is used. The unit commitment problem is formulated as a chance-constrained mixed integer linear program over a 48 hour receding horizon. The chance constraints ensure that the first-stage variables (discrete unit states and day-ahead power exchange commitment) are able to adequately satisfy the power balance subject to the inherent stochasticity. Using forecasts for power demand and renewable availability, the chance-constrained power balance is transformed into a set of linear inequalities. The schedule resulting from this optimization is compared to two alternative formulations: the deterministic unit commitment (where only the nominal power balance is considered) and the naïve unit commitment (where only the nominal power balance is considered and grid exchange is not scheduled ahead of time). The performance is analyzed with respect to the operational cost, amount of PV power curtailed, the probability of maintaining the power balance without violating power exchange commitments, and accuracy of predicted second-stage variables (e.g. unit setpoints and storage levels). Computation time is also considered since this unit commitment is intended to be one layer of an on-line hierarchical control system. Finally, additional benefits of this method are discussed such as the intelligent determination of reserve capacity via the chance constrained power balance (as opposed to determining reserve margins a priori as in traditional power systems scheduling). [1] Colson, C. M., and M. H. Nehrir. \"A review of challenges to real-time power management of microgrids.\" Power & Energy Society General Meeting, 2009. PES'09. IEEE . IEEE, 2009. [2] Liu, P., M. C. Georgiadis, and E. N. Pistikopoulos. \"An energy systems engineering approach for the design and operation of microgrids in residential applications.\" Chemical Engineering Research and Design 91.10 (2013): 2054-2069. [3] Koutroulis, E., et al. \"Methodology for optimal sizing of stand-alone photovoltaic/wind-generator systems using genetic algorithms.\" Solar energy 80.9 (2006): 1072-1088. [4] Zhou, Z., et al. \"A two-stage stochastic programming model for the optimal design of distributed energy systems.\" Applied Energy 103 (2013): 135-144. [5] Piagi, P., and R. H. Lasseter. \"Autonomous control of microgrids.\" IEEE Power Engineering Society General Meeting, 2006 . [6] Khodaei, A. \"Resiliency-oriented microgrid optimal scheduling.\" IEEE Transactions on Smart Grid 5.4 (2014): 1584-1591. [7] Zhang, Y., N. Gatsis, and G. B. Giannakis. \"Robust energy management for microgrids with high-penetration renewables.\" IEEE Transactions on Sustainable Energy 4.4 (2013): 944-953. [8] Trifkovic, M., et al. \"Dynamic real‐time optimization and control of a hybrid energy system.\" AIChE Journal 60.7 (2014): 2546-2556.",
+    "presenting_author": "Michael Zachar | Chemical Engineering and Materials Science, University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "Prodromos Daoutidis | Chemical Engineering and Materials Science, University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Michael Zachar",
+        "affiliation": "Chemical Engineering and Materials Science, University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "Chemical Engineering and Materials Science, University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper417893.html",
+    "topic": "Wet Vs. Dry Cooling for the Operation of Concentrated Solar Plants",
+    "date_time": "Wednesday, November 11, 2015: 8:49 AM",
+    "abstract": "Energy consumption has increased over the last decades and more sustainable sources such as biomass, solar and wind are being evaluated. Together with it, a recent concern is water consumption since, according to recent reports, two thirds of the plant will suffer water stress in the next decade (Rosengrant et al., 2002). There is a strong connection between energy production and water consumption that is well established for fossil based sources of energy (Water in the West, 2013). While thermal power plants and biomass based facilities have the luxury of being allocated in areas with access to freshwater, solar based thermal facilities present another challenge. Typically regions where the solar incidence is high present low water availability. Therefore, the production of power from concentrated solar power, in spite of the plentiful source of energy, is limited by the cooling capabilities. There are two main systems, wet cooling using a cooling tower and dry cooling, using typically an A-frame. The first one has the drawback of the water consumed. The second one does not require water for its operation, but it consumes a fraction of the produced power to operate the fans. In this work we present the year-round optimization of the operation of a concentrated solar power facility. Such plants comprise a solar field, a molten salts storage system, the power block consisting of a regenerative Rankine cycle and a cooling system, using either an A-frame or a cooling tower. The salts are heated up using solar energy and stored so that day operation of the facility is secured. A system of three heat exchangers is used to heat up water to saturation, evaporate and superheat it. Only a fraction of the salts are directly used to superheat the steam, that is sent to the high pressure section of the turbine. The rest is used to reheat up the steam leaving the first body of the turbine before it is fed to the second section. The entire flow of salts is then used to heat up the recycled water and evaporate it. In the second body of the turbine, part of the steam is extracted at a medium pressure and it is used to heat up the condensate. The rest of the steam is finally expanded to an exhaust pressure, condensed and recycled. The condensation of the low pressure steam is performed either using a heat exchanger, cooled with water that is next cool down using a cooling tower, or directly using an A-frame system. The aim is to analyze the tradeoffs between the savings in water using dry cooling versus the power consumed due to the operation of the fans. We locate the plant in the south of Europe, Almería (Spain), where high solar radiation is available. The operation of the plant is a function of the solar incidence as well as the climate and atmospheric conditions. The optimization of the system is formulated as a multiperiod Non-linear Programming problem (NLP) that is solved for the optimal production of electricity over a year defining the main operating variables of the thermal and cooling cycles, the operating pressures and temperatures at the different bodies of the turbine, the fraction of salts used for reheating up the steam before feeding it to the second body of the turbine, the fraction of steam extracted to reheat up the liquid, the wet cooling tower operation (air flow and water losses by evaporation) or the A-frame air cooler performance (number of fans and units needed, the fans power consumption and the air inlet and outlet temperatures). Finally, both systems are compared based on the mitigated CO 2 emissions due to the production of power from renewable sources The operation of the wet cooled facility produces a maximum of 25 MW in summer and a minimum of 9.5 MW in winter with an annual production cost of electricity of 0.15 €/kWh consuming an average of 2.1 L warter /kWh. The investment for the plant is 260 M€, close to that of a similar plant already in operation. For the dry cooled facility, the cooling system consumes an average of 5% of the energy produced, increasing the production cost of energy up to 0.16 €/kWh and the investment to 265 M€. The advantage is the negligible water consumption. In terms of CO 2 mitigation, it turns out that, for the particular allocation, using the wet system is 5% better. Finally, scale up studies reveal that the production cost can decrease by half while the investment per unit of power should become competitive with current coal based power plants if solar and coal facilities present similar production capacities. References Rosegrant, M. W.; Cai, X.; Cline, S. A. (2002) Food Policy Report; Global Water Outlook to 2025 (A V erting an Impending Crisis) ; International Food Policy Research Institute: Washington, DC, 2002. Water in the West (2013) Water and Energy Nexus: A literature Review. http://waterinthewest.stanford.edu/sites/default/files/Water-Energy_Lit_Review.pdf",
+    "presenting_author": "Mariano Mart�n | Department of Chemical Engineering, University of Salamanca, Salamanca, Spain",
+    "authors": [
+      "Lidia Martin | Department of Chemical Engineering, University of Salamanca, Salamanca, Spain"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mariano Mart�n",
+        "affiliation": "Department of Chemical Engineering, University of Salamanca, Salamanca, Spain",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Lidia Martin",
+        "affiliation": "Department of Chemical Engineering, University of Salamanca, Salamanca, Spain",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper430768.html",
+    "topic": "A Systematic Sensitivity Analysis Approach for the Design of Organic Rankine Cycles and the Selection of Efficient Working Fluids Under Operational Variability",
+    "date_time": "Wednesday, November 11, 2015: 10:05 AM",
+    "abstract": "Organic Rankine Cycles (ORCs) have received increased attention in recent years, spanning a wide range of applications including power generation from industrial waste heat recovery, geothermal energy and solar irradiation, to name but a few. Their operation is based on the extraction of heat, which is used to evaporate an appropriate organic working fluid subsequently expanded in a turbine to produce work. ORC process flowsheets involve various complex options including multiple pressure loops, expansion stages etc. to increase the energetic and exergetic efficiencies and improve economics. Their use with intermittent heat sources implies that ORCs are often required to operate under variable heat input conditions, while as in every other process system internal variability is always important due to leaks, malfunctions, fouling and so forth. Unless such variability is accounted for, the ORC ability to perform satisfactorily under conditions different from the nominal design settings, namely on the ORC operability, will be significantly jeopardized. This is because potential unexpected changes in the system operation may result in deviations from the performance for which the system was initially designed. To ensure efficient operability, ORC systems need to be designed so that they are sufficiently capable to handle operating variations. Working fluids are inherent components of ORC operation performance, hence their impact on operability should also be accounted for together with ORC design decisions for a wide range of operating conditions. Whereas some working fluids or ORC system designs and operating characteristics may be less sensitive to such changes, others may significantly deviate from their expected performance, eventually failing to meet the desired operating specifications. Published research considers such issues as an afterthought to the selection of working fluids and determination of optimum ORC features under nominal operating conditions. The employed methods are often heuristic as design or operating system parameters are selected within an arbitrarily defined range and with very limited consideration of their combined effects into the system performance. Such approaches fail to provide assurances regarding the validity of the resulting insights or that they will not be affected by the consideration of additional parameters or more extensive design and operating ranges. In our current work, we propose a systematic method which explicitly considers the impacts of working fluid and ORC design/operating decisions on ORC operability. The proposed method is based on a systematic sensitivity analysis procedure aiming to identify working fluids and ORC operating/design characteristics that optimize the overall performance under nominal operation while simultaneously minimizing the system sensitivity under variability. The method facilitates a) the identification of design parameters with high influence on the overall ORC-working fluid performance, b) the quantification of the overall system sensitivity with respect to these parameters and c) the incorporation of sensitivity metrics to the decision-making process of optimum working fluid and ORC design characteristics. It is based on the development of a sensitivity matrix that incorporates the impact of ORC operating conditions and working fluids on a set of relevant ORC performance measures (e.g., energetic or exergetic efficiencies, irreversibility and so forth). The singular value decomposition of the sensitivity matrix enables the calculation of the major directions in the operating condition space that cause the largest variability in the performance indicators. The entries in such dominant directions determine the impact of each operational condition in these directions. It is therefore possible to explore the behavior of the ORC system along a small number of directions of variability that encompass the combined effect of multiple operating conditions and obtain clear knowledge about the system behavior under perturbed conditions. The variation is not limited to small in magnitude variations but allows a comprehensive outlook of the system attitude for large deviations from the nominal operating point. The investigation is capable of identifying critical process constraint violations and performance features for a wide range around the region where the system exhibits the greatest sensitivity. Through such a procedure a quick but efficient screening and rank-ordering of alternative ORC-working fluid systems can be achieved utilizing steady-state simulations. The proposed aggregate sensitivity metric encapsulates the system variability and acts as an additional objective function in the multicriteria assessment problem, along with all performance indices calculated under nominal operation. The proposed method is presented within a formal mathematical analysis framework which avoids arbitrary assumptions regarding the effects of the selected design and operating parameters and subjective interpretations of the obtained results. It also remains generic and independent of the proposed application. The proposed developments are illustrated considering solar collectors connected with a storage tank to provide the necessary heat for ORC operation. Multiple working fluid mixtures [1] are evaluated together with several operating and design parameters (e.g., mass flowrates and temperatures, collector area, tank volume and so forth) considering multiple performance indices (e.g., net work output, energetic efficiency, irreversibility, volume ratio across the turbine and so forth). Mixtures are considered as working media because they facilitate increased exergy efficiency while maintaining relatively high energy efficiency due to the thermodynamic characteristics of phase change, but result in a decision making problem of increased complexity due to the need to assess different types of molecules at various concentrations [2]. The obtained results indicate that in order to avoid significant performance losses, variability should be systematically considered as part of the working fluid and ORC design and selection process. Cited References [1] Papadopoulos, A.I., Stijepovic, M., Linke, P., Seferlis, P., Voutetakis, S., Toward optimum working fluid mixtures for Organic Rankine Cycles using molecular design and sensitivity analysis, Industrial and Engineering Chemistry Research 52 (34) (2013) 12116-12133. [2] P. Mavrou, A. I. Papadopoulos, M. Z. Stijepovic, P. Seferlis, P. Linke, S. Voutetakis, Novel and conventional working fluid mixtures for solar Rankine cycles: Performance assessment and multi-criteria selection, Applied Thermal Engineering 75 (2015) 384-396.",
+    "presenting_author": "Athanasios I. Papadopoulos | Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece",
+    "authors": [
+      "Paschalia Mavrou | Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece",
+      "Panos Seferlis | Chemical Engineering Department, Texas A&M University at Qatar, Doha, Qatar",
+      "Patrick Linke | Chemical Engineering Department, Texas A&M University at Qatar, Doha, Qatar",
+      "Spyros S. Voutetakis | Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece"
+    ],
+    "authors_structured": [
+      {
+        "name": "Paschalia Mavrou",
+        "affiliation": "Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Athanasios I. Papadopoulos",
+        "affiliation": "Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Panos Seferlis",
+        "affiliation": "Chemical Engineering Department, Texas A&M University at Qatar, Doha, Qatar",
+        "designation": "Author"
+      },
+      {
+        "name": "Patrick Linke",
+        "affiliation": "Chemical Engineering Department, Texas A&M University at Qatar, Doha, Qatar",
+        "designation": "Author"
+      },
+      {
+        "name": "Spyros S. Voutetakis",
+        "affiliation": "Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper417881.html",
+    "topic": "First-Principles Investigation of the Contribution of Electronic and Geometric Effects and Collision Dynamics to the Dissociation and Coupling of Methane on Small Copper Clusters",
+    "date_time": "Wednesday, November 11, 2015: 10:30 AM",
+    "abstract": "Small transition metal clusters like those of copper exhibit unique size and morphology dependent catalytic activity. 1-4 Abundant potentially exploitable reserves of methane exists on the earth and thus, its conversion to fuels, useful chemicals and materials is a pertinent challenge. 5 The search for alternate minimum energy pathways and catalysts to transform methane to useful chemicals and carbon nanomaterials led us to investigate Collision Induced Dissociation (CID) 6,7 of methane on small Cu clusters. Car Parrinello molecular dynamics 8 and metadynamics 9 simulations were performed to investigate the collision induced dissociation and coupling of methane on small Cu clusters (Cu n where n=2 to 12) and the free energy barriers were computed. The collision induced activation of the stretching and bending vibrations of methane significantly reduces the free energy barrier for its dissociation. Electron Localisation Function (ELF) 10 topology analysis 11 suggests that increase in the copper cluster size and order of dimension, increases the delocalisation of electron density within the cluster and makes more number of sites available for the chemisorption of CH 3 and H upon dissociation. The formation of a collision complex, which we refer to as ‘precursor’, allows methane and the cluster to sample relevant vibrational states of methane and lattice configurations of the cluster. This enables higher probability of favourable alignment of the C-H stretching vibration of methane towards regions of high electron density within the cluster. These characteristics contribute in lowering the free energy barrier for dissociation of methane. Severe distortion of the cluster geometry and lattice reorganisation due to high temperature collision dynamics disturbs electron delocalisation within them and increases the barrier for dissociation. Complete dehydrogenation of methane to carbon on these clusters has extremely high barriers and the barrier increases with increase in cluster size. Coupling reactions of CH x ( x =1 to3) species and recombination of H with CH x have free energy barriers significantly lower than complete dehydrogenation of methane. Thus, competition favours the coupling and recombination reactions at high hydrogen saturation on the clusters. References 1. Kabir, M., Mookerjee, A. & Bhattacharya, A. K. Copper clusters: Electronic effect dominates over geometric effect. European Physical Journal D 31 , 477-485 (2004). 2. Guvelioglu, G. H., Ma, P., He, X., Forrey, R. C. & Cheng, H. Evolution of small copper clusters and dissociative chemisorption of hydrogen. Physical Review Letters 94, 026103 (2005). 3. Forrey, R. C., Guvelioglu, G. H., Ma, P., He, X. & Cheng, H. Rate constants for dissociative chemisorption of hydrogen molecules on copper clusters. Physical Review B - Condensed Matter and Materials Physics 73, 155436 (2006). 4. Yuan, X. et al. Theoretical investigation of adsorption of molecular oxygen on small copper clusters. Journal of Physical Chemistry A 115 , 8705-8712 (2011). 5. Lunsford, J. H. Catalytic conversion of methane to more useful chemicals and fuels: A challenge for the 21st century. Catalysis Today 63 , 165-174 (2000). 6. Rettner, C. T., Pfn̈r, H. E. & Auerbach, D. J. Dissociative chemisorption of CH4 on W(110): Dramatic activation by initial kinetic energy. Physical Review Letters 54 , 2716-2719 (1985). 7. Beckerle, J. D., Yang, Q. Y., Johnson, A. D. & Ceyer, S. T. Collision-induced dissociative chemisorption of adsorbates: Chemistry with a hammer. The Journal of Chemical Physics 86 , 7236-7237 (1986). 8. Car, R. & Parrinello, M. Unified approach for molecular dynamics and density-functional theory. Physical Review Letters 55 , 2471-2474 (1985). 9. Laio, A. & Parrinello, M. Escaping free-energy minima. Proceedings of the National Academy of Sciences of the United States of America 99 , 12562-12566 (2002). 10. Becke, A. D. & Edgecombe, K. E. A simple measure of electron localization in atomic and molecular systems. The Journal of Chemical Physics 92 , 5397-5403 (1990). 11. Silvi, B. & Savin, A. Classification of chemical bonds based on topological analysis of electron localization functions. Nature 371 , 683-686, (1994).",
+    "presenting_author": "Jithin John Varghese | School of Chemical and Biomedical Engineering, Nanyang Technological University, Singapore, Singapore",
+    "authors": [
+      "Samir H. Mushrif | School of Chemical and Biomedical Engineering, Nanyang Technological University, Singapore, Singapore"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jithin John Varghese",
+        "affiliation": "School of Chemical and Biomedical Engineering, Nanyang Technological University, Singapore, Singapore",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Samir H. Mushrif",
+        "affiliation": "School of Chemical and Biomedical Engineering, Nanyang Technological University, Singapore, Singapore",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper435440.html",
+    "topic": "Electrothermal Electricity Storage Using Organic Rankine Cycles",
+    "date_time": "Wednesday, November 11, 2015: 10:43 AM",
+    "abstract": "An electrothermal electricity storage based on thermal energy storage combined with a heat pump and thermal engine utilizing organic rankine cycles is presented herein. During periods of excess electricity generation, a heat pump is used to transform heat to a higher temperature level, effectively storing the electricity in the thermal storage system. When required, the stored thermal energy is reconverted to electricity using an organic rankine cycle. The concept of reversible heat pump and heat engine operation for energy storage is not novel. The idea has however gained renewed interest in the context of load management issues introduced through the increasing share of fluctuating renewable electricity generation. Several implementations utilizing e.g. steam or supercritical CO 2 cycles have been proposed as an alternative to pumped hydro-storage and CAES. The particular realization investigated herein is based on an organic Rankine working fluid and uses water as the thermal storage medium. Charging and discharging operation were modelled in Aspen Plus for a kW scale configuration. The performance and the influence of important thermodynamic parameters on the latter is discussed in detail. Through the integration of low grade waste heat, efficiencies comparable to CAES solutions can be reached. Combined with possibly attractive capital costs due to the lower operating temperature and pressure, electrothermal electricity storage systems hold a potential to become a cost-effective electricity storage technology. Through heat extraction from the high temperature storage, the electrothermal electricity storage further has the potential to reduce the costs associated with high temperatue applications, such as heating and cooking.",
+    "presenting_author": "Annelies Vandersickel | Institute for Energy Systems, Technical University Munich, Garching, Germany",
+    "authors": [
+      "Amir Aboueldahab | Institute for Energy Systems, Technical University Munich, Garching, Germany",
+      "Martin Schade | Institute for Energy Systems, Technical University Munich, Garching, Germany",
+      "Hartmut Spliethoff | Institute for Energy Systems, Technical University Munich, Garching, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Annelies Vandersickel",
+        "affiliation": "Institute for Energy Systems, Technical University Munich, Garching, Germany",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Amir Aboueldahab",
+        "affiliation": "Institute for Energy Systems, Technical University Munich, Garching, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Martin Schade",
+        "affiliation": "Institute for Energy Systems, Technical University Munich, Garching, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Hartmut Spliethoff",
+        "affiliation": "Institute for Energy Systems, Technical University Munich, Garching, Germany",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper429674.html",
+    "topic": "Ring-Opening and Hydrogenation of Furanic Compounds on a Metal Surface",
+    "date_time": "Wednesday, November 11, 2015: 9:50 AM",
+    "abstract": "The catalytic upgrading of bio-oil, which is generated through fast pyrolysis of biomass, to liquid fuel is an attractive process with significant economic potential. Furfural, γ-Valerolactone and their derivatives are important platform chemicals in the bio-oil refinery. Our experimental results show high selectivity towards alcohol products from aqueous phase catalytic reactions of furfural and γ-Valerolactone on a ruthenium surface. Here, density functional theory (DFT) calculations are performed to investigate adsorption of furanic compounds on a ruthenium surface as well as study the reaction barriers of the ring opening through O-C hydrogenolysis and the subsequent decarbonylation and hydrogenation of furfural and γ-Valerolactone. In addition, we compare the adsorption and reaction of furanics on ruthenium and different metal surfaces, such as the Pd(111) surface, at different molecular coverage, through which the effect of the electronic structure of the metal on the catalytic properties will be demonstrated. Moreover, we show that the aqueous phase affects significantly the molecular adsorption and reaction.",
+    "presenting_author": "Bin Wang | School of Chemical, Biological and Materials Engineering and Center for Interfacial Reaction Engineering (CIRE), The University of Oklahoma, Norman, OK",
+    "authors": [
+      "Mohammed Reda Bababrik | School of Chemical, Biological and Materials Engineering and Center for Interfacial Reaction Engineering (CIRE), The University of Oklahoma, Norman, OK",
+      "Zheng Zhao | School of Chemical, Biological and Materials Engineering and Center for Interfacial Reaction Engineering (CIRE), The University of Oklahoma, Norman, OK",
+      "Adam Avoian | School of Chemical, Biological and Materials Engineering and Center for Interfacial Reaction Engineering (CIRE), The University of Oklahoma, Norman, OK",
+      "Daniel E. Resasco | School of Chemical, Biological and Materials Engineering and Center for Interfacial Reaction Engineering (CIRE), The University of Oklahoma, Norman, OK"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mohammed Reda Bababrik",
+        "affiliation": "School of Chemical, Biological and Materials Engineering and Center for Interfacial Reaction Engineering (CIRE), The University of Oklahoma, Norman, OK",
+        "designation": "Author"
+      },
+      {
+        "name": "Zheng Zhao",
+        "affiliation": "School of Chemical, Biological and Materials Engineering and Center for Interfacial Reaction Engineering (CIRE), The University of Oklahoma, Norman, OK",
+        "designation": "Author"
+      },
+      {
+        "name": "Adam Avoian",
+        "affiliation": "School of Chemical, Biological and Materials Engineering and Center for Interfacial Reaction Engineering (CIRE), The University of Oklahoma, Norman, OK",
+        "designation": "Author"
+      },
+      {
+        "name": "Bin Wang",
+        "affiliation": "School of Chemical, Biological and Materials Engineering and Center for Interfacial Reaction Engineering (CIRE), The University of Oklahoma, Norman, OK",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Daniel E. Resasco",
+        "affiliation": "School of Chemical, Biological and Materials Engineering and Center for Interfacial Reaction Engineering (CIRE), The University of Oklahoma, Norman, OK",
+        "designation": "Author"
+      }
+    ]
+  }
+]

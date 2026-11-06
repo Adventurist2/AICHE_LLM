@@ -1,0 +1,338 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/598017",
+    "paper_endpoint": "Paper/598017",
+    "paper_id": "598017",
+    "topic": "Multiscale Modeling and Optimization of Wet Flue Gas Desulfurization",
+    "title": "Multiscale Modeling and Optimization of Wet Flue Gas Desulfurization",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "44433",
+    "session_title": "Design and Optimization of Environmentally Sustainable Advanced Fossil Energy Systems",
+    "session_number": "181",
+    "program_title": "Environmental Division",
+    "symposium_title": "Fossil Energy",
+    "abstract": "Sulfur dioxide (SO 2 ) emissions are known to not only cause health issues, but also have an adverse effect on the environment in various ways. SO 2 is known to be a precursor of acid rain and plays a major role in the surface reactions that lead to the depletion of the ozone layer. The primary source of SO 2 emissions is flue gas from fossil fuels-based power plants. Several Flue Gas Desulfurization (FGD) technologies have been incorporated in power plants. These include Limestone Scrubbing, Lime Scrubbing Sodium Carbonate Scrubbing, Magnesia Scrubbing and a few others. Of these, the most popular technology is the limestone slurry system called Wet Limestone FGD (WFGD), primarily because of its high SO 2 removal capacity and low capital and operating costs. Several types of scrubbers such as spray scrubbers, venturi scrubbers and packed beds are used for limestone scrubbing. The most widely used system is the counter-current spray scrubber. In this system, flue gas enters from the bottom and the limestone slurry in the form of droplets is introduced from the top through nozzles distributed over several spray headers. SO 2 from the flue gas reacts with limestone to form calcium sulfite, which is oxidized at the bottom of the scrubber to form the byproduct gypsum. Due to fast cycling of power plants and variabilities in the sulfur content in the coal, it can be very difficult to satisfy SO 2 emission standards at the outlet of FGD units. Furthermore, specifications of gypsum must also be satisfied during load following operation. In addition, efficiency of the FGD units should be maximized. A rigorous dynamic model of the FGD unit can be helpful in satisfying these challenging performance conditions. A number of rate-limiting mechanisms occur in the limestone droplets while the mechanisms at the scrubber bulk also play a critical role. For instance, the instantaneous reactions comprise of dissociation of species (e.g. SO 2 , sulfites, bisulfites, bicarbonates etc.) and finite rate processes involve limestone dissolution, sulfite oxidation and crystallization. These processes have to be coupled with the scrubber bulk hydrodynamics and considered simultaneously. Therefore, a multi-scale dynamic model is required to capture the large number of ions and complex thermodynamic and chemistry. Due to the fast ionic reactions in the limestone droplet and presence of many ionic and molecular species, the system of equations is stiff, highly nonlinear, and not well posed. Therefore, they can be challenging to solve reliably during dynamic simulation. In this work, we present an implementation of FGD simulation for the limestone scrubbing unit. It is a multiscale model. At the slurry droplet scale, we solve a two-point boundary value problem (BVP) to characterize the absorption of SO 2 in a slurry droplet. This is a Differential-Algebraic Equations (DAE) model based on penetration theory and, as such, requires rigorous analysis and reformulation to obtain and solve a so-called index-1 DAE model. At the scrubber bulk scale, the physical processes include complex factors such as velocity, size distribution, collision and coalescence between the slurry droplets which play a significant role in the SO 2 absorption at the droplet scale. We use Pyomo, an open source framework for modeling and optimization, to implement the spray scrubber model. We demonstrate the performance of this multiscale model for the limestone WFGD system. First, we show that the BVP associated with SO 2 absorption is an ill-posed, high-index DAE model and present a systematic reformulation procedure to obtain a well-posed, index-1 DAE model that lends to a tractable numerical solution. Second, we simulate SO 2 scrubbing operations for the base line loadings of a coal-fired power plant. Using multi-level spray flowrates as decision variables we also demonstrate the optimization of operating costs and efficiency. Finally, using the Pyomo framework with IPOPT, we demonstrate the dynamic optimization of the FGD operation, such as maximizing efficiency, under transient plant conditions such as ramping up and down in response to varying SO 2 loadings.",
+    "presenting_author": "Vibhav Dabadghao | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Vibhav Dabadghao | Carnegie Mellon University, Pittsburgh, PA",
+      "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Vibhav Dabadghao",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Lorenz Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "181a",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/598017"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/606190",
+    "paper_endpoint": "Paper/606190",
+    "paper_id": "606190",
+    "topic": "Optimal Load-Following Operation of Natural Gas Combined Cycle (NGCC) Power Plants with Quantified Uncertainty of Equipment Health",
+    "title": "Optimal Load-Following Operation of Natural Gas Combined Cycle (NGCC) Power Plants with Quantified Uncertainty of Equipment Health",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "44433",
+    "session_title": "Design and Optimization of Environmentally Sustainable Advanced Fossil Energy Systems",
+    "session_number": "181",
+    "program_title": "Environmental Division",
+    "symposium_title": "Fossil Energy",
+    "abstract": "Due to the rapid penetration of renewables into the electrical grid, natural gas combined cycle (NGCC) plants are being forced to cycle their loads more frequently and aggressively. However, impacts of load-following operations on plant efficiency and equipment health are still poorly understood. This work focuses on the optimal operation of NGCC plants by quantifying the impact of load-following on plant efficiency and equipment health. Under load-following operation, the high pressure (HP) drum and superheater (SH)/reheater (RH) headers that have thick walls suffer from fatigue damage due to the large thermal stress [1, 2]. The SH/RH also experience creep damage caused by high steam temperature excursion in addition to the fatigue damage [3]. At low-load operation of NGCC power plants, efficiency of the gas turbine (GT) decreases leading to an increase in the inlet temperature of the flue gas to the heat recovery steam generator (HRSG). At low load, steam flowrate through the SH/RH also decreases. These two combined effects can lead to an increase in the superheated/reheated steam temperature. To control the steam temperature, the addition of significant water spray may be required in the SH and/or RH attemperators for certain configurations of NGCC plants eventually leading to two-phase flow at the inlet of SH and/or RH [4]. The two-phase flow can cause considerable damage to the RH/SH tube banks. These adverse phenomena are interactive and can trade-off with each other. For example, a lower attemperators spray flowrate can cause creep damage in the exit section of the SH/RH section while a higher attemperator spray can lead to large thermal and mechanical stress in the SH/RH inlet header and/or the inlet sections of the SH/RH tube banks. An optimal load-following operation needs to take these tradeoffs into account while maximizing the plant efficiency. In the existing literature on optimal operation of NGCC plants, the thermal gradient, instead of creep/fatigue, is considered as an operational constraint [1, 2]. However, the thermal gradient does not provide a true estimate of the resulting overall stress due to complex interaction between mechanical and thermal stress as the thermal stress can be compressive or tensile but the mechanical stress is always tensile and thus they can add to each other or partially negate each other. In addition, the stress amplitude rather than the stress magnitude affects the fatigue damage. One difficulty in developing models of creep/fatigue is the uncertainty in material properties such as Young’s modulus and thermal diffusivity [5]. Furthermore, uncertainties in the creep rupture data would affect the creep damage assessment [3]. Therefore, equipment failure probability should be computed with due consideration of uncertainties in material properties. In this work, a dynamic model of an NGCC plant is developed. It consists mainly of the GT, HRSG and steam turbine (ST). A parallel SH/RH configuration with two-stage attemperation is considered for the main steam and reheat steam temperature control. For the equipment damage model, through-wall temperature transients of critical components are calculated with consideration of detailed geometries and configurations. Spatial and temporal thermo-mechanical stress evolutions are calculated based on classic elasticity theory. In addition, stress concentrations caused by the discontinuities at the drum-downcomer junction and header-tube junction are considered. The creep damage is assessed on the basis of the material rupture data [3] and the fatigue evaluation is computed according to the UNI EN 12952 standards [6]. Load-following operation of the NGCC plant under various operational constraints is optimized while accounting for the probability of failure of various components of the HRSG. [1] Kim, T. S., Lee, D. K., and Ro, S. T. (2000). Analysis of thermal stress evolution in the steam drum during start-up of a heat recovery steam generator. Applied Thermal Engineering, 20(11), 977-992. [2] Rúa, J., and Nord, L. O. (2020). Optimal control of flexible natural gas combined cycles with stress monitoring: Linear vs nonlinear model predictive control. Applied Energy, 265, 114820. [3] Bendick, W., Cipolla, L., Gabrel, J., and Hald, J. (2010). New ECCC assessment of creep rupture strength for steel grade X10CrMoVNb9-1 (Grade 91). International Journal of Pressure Vessels and Piping, 87(6), 304-309. [4] Wang, Y., Bhattacharyya, D., and Turton, R. (2019). Evaluation of Novel Configurations of Natural Gas Combined Cycle (NGCC) Power Plants for Load-Following Operation using Dynamic Modeling and Optimization. Energy and Fuels, 34(1), 1053-1070. [5] Harris, D. O., Wells, C. H., Grunloh, H. J., Ryder, R. H., Bloom, J. M., Schultz, C. C., and Viswanathan, R. (1993). Bless-boiler life evaluation and simulation system: A computer code for reliability analysis of headers and piping. ASME-PUBLICATIONS-PVP, 251, 17-17. [6] UNI – Ente Nazionale di Normazione. UNI EN 12952-5:2011. Water-tube Boilers Standards; 2011.",
+    "presenting_author": "Yifan Wang | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Yifan Wang | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV",
+      "Richard Turton | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yifan Wang",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Richard Turton",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "181b",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/606190"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/611634",
+    "paper_endpoint": "Paper/611634",
+    "paper_id": "611634",
+    "topic": "A Decision Framework for Integrating Energy Storage with Power Plants: Technology Selection, Design and Optimization",
+    "title": "A Decision Framework for Integrating Energy Storage with Power Plants: Technology Selection, Design and Optimization",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "44433",
+    "session_title": "Design and Optimization of Environmentally Sustainable Advanced Fossil Energy Systems",
+    "session_number": "181",
+    "program_title": "Environmental Division",
+    "symposium_title": "Fossil Energy",
+    "abstract": "The power grids experience significant daily and seasonal variabilities due to fluctuating electricity demands and prices, integration of intermittent renewables, and changing fuel supply and costs. The conventional fossil power plants frequently vary their operations to meet the highly fluctuating demands while compensating for the variabilities. Such cycling operation leads to significant damage of the critical components and reduces the efficiency of a power plant [1,2]. Energy storage systems can not only help to reduce these adverse impacts of load-following, but can greatly increase the grid flexibility in case of large and rapid discrepancy between the supply and demand. However, most of the previous works have considered large-scale storage at the grid level, resulting in conservative estimates of storage capacities and costs [3-5]. For a seamless integration of renewable energy to the grid, challenges arising from intermittency and spatio-temporal variability need to be addressed at the power plant level. Moreover, the grid-scale integration greatly limits the choice of potential storage technologies. To counter the aforementioned challenges, this work considers a decentralized scheme for energy storage that can be integrated with individual power plants. Decentralized storage requires less capital investment and can reduce the ramp rates in fossil-fueled power plants. Moreover, the operational synergies that exist between the power generation and storage systems provide additional flexibility and cost savings. A variety of electrochemical, thermal and/or mechanical technologies can be considered for energy storage. These technologies, however, exhibit trade-offs among several characteristics such as efficiency, useful lifespan, availability, cost, environmental footprint and safety. We present an optimization-based framework that accounts for these trade-offs and the dynamic interactions between the different energy generation, storage and distribution components for the downselection of viable storage alternatives. The problem is formulated as a mixed-integer nonlinear programming (MINLP) model with the objective of maximizing the total profit of an integrated power generation and storage system over a time-horizon of operation. The profit includes revenues earned by the system in the spot market, operational costs of power plant, investment and operating costs of energy storage, and costs from cycling operation. The model involves discrete decisions to select from a variety of storage options such as thermal, mechanical, chemical and electrochemical storage. The presence of many discrete and continuous decisions, the dynamic operations of the power plant and storage, and the interactions between the various systems components result in a highly complex and large-scale model. To solve this discrete and dynamic optimization problem, we employ surrogate models for both power plant and storage, which are developed based on high-fidelity models. The framework will be illustrated using a case study on storage technology selection for natural gas combined cycle (NGCC) power plants. To ensure that the system meets a time-varying grid demand, detailed dynamic models of the NGCC plant , sodium sulfur (NaS) battery-based electrochemical storage, molten salt and/or phase change material-based thermal energy storage, and compressed air energy storage (CAES) are used where these candidate technologies are synergistically integrated with the NGCC plant [6,7]. Initial results suggest that the optimal storage technologies and their design capacity strongly depend on the candidate technologies considered, their operating constraints, and cost. It was also observed that an optimal synergistic integration can improve the power plant efficiency during load-following while reducing the ramp rate in the power plant considerably. References: [1] Lefton SA, Besuner PM, Grimsrud GP. Managing utility power plant assets to economically optimize power plant cycling costs, life, and reliability. In: Proceedings of International Conference on Control Applications. ; 1995:195-208. [2] Mechleri E, Fennell PS, Mac Dowell N. Optimisation and evaluation of flexible operation strategies for coal-and gas-CCS power stations with a multi-period design approach. Int J Greenh Gas Control. 2017;59:24-39. [3] Denholm P, Ela E, Kirby B, Milligan M. Role of Energy Storage with Renewable Electricity Generation.; 2010. [4] Trifkovic M, Marvin WA, Daoutidis P, Sheikhzadeh M. Dynamic real-time optimization and control of a hybrid energy system. AIChE J. 2014;60(7):2546-2556. [5] Heuberger CF, Staffell I, Shah N, Mac Dowell N. A systems approach to quantifying the value of power generation and energy storage technologies in future electricity networks. Comput Chem Eng. 2017;107:247-256. [6] Wang Y, Bhattacharyya D, Turton R. Dynamic Modeling And Control Of A Natural Gas Combined Cycle Power Plant For Load-Following Operation. In: Computer Aided Chemical Engineering. Vol 47. Elsevier; 2019:101-106. [7] Vudata SP, Bhattacharyya D, Turton R. Optimal Thermal Management of a High-Temperature Sodium Sulphur Battery. In: 2018 AIChE Annual Meeting. ; 2018.",
+    "presenting_author": "Manali S. Zantye | Texas A&M University, College Station, TX",
+    "authors": [
+      "Manali S. Zantye | Texas A&M University, College Station, TX",
+      "Mengdi Li | Texas A&M University, College Station, TX",
+      "Yifan Wang | West Virginia University, Morgantown, WV",
+      "Sai Pushpitha Vudata | West Virginia University, Morgantown, WV",
+      "Pavitra Senthamilselvan Sengalani | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV",
+      "Faruque Hasan | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Manali S. Zantye",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mengdi Li",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Yifan Wang",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Sai Pushpitha Vudata",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Pavitra Senthamilselvan Sengalani",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Faruque Hasan",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "181c",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/611634"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/609293",
+    "paper_endpoint": "Paper/609293",
+    "paper_id": "609293",
+    "topic": "Economic Optimization of Supercritical Pulverized Coal Power Plant with CO 2 Capture By CO 2 -Binding Organic Liquid (CO 2 BOL) Solvent System",
+    "title": "Economic Optimization of Supercritical Pulverized Coal Power Plant with CO 2 Capture By CO 2 -Binding Organic Liquid (CO 2 BOL) Solvent System",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "44433",
+    "session_title": "Design and Optimization of Environmentally Sustainable Advanced Fossil Energy Systems",
+    "session_number": "181",
+    "program_title": "Environmental Division",
+    "symposium_title": "Fossil Energy",
+    "abstract": "The U.S. Department of Energy’s Carbon Capture Simulation for Industry Impact (CCSI 2 ) is focused on development and applications of computational tools and models for accelerating the development, scale-up, and deployment of carbon capture technologies. One of these tools is the Framework for Optimization, Quantification of Uncertainty, and Surrogates (FOQUS), a Python-based platform with the ability to connect with Aspen Plus ® process models to enable advanced capabilities including mathematical optimization (including optimization under uncertainty), surrogate modeling, stochastic parameter estimation, and design of experiments. A framework for power plant economic evaluation has been implemented in FOQUS, incorporating a baseline costing methodology for fossil energy plants developed by the National Energy Technology Laboratory (NETL), 1 which accounts for all capital and operating costs associated with the power plant. This tool enables direct comparison of solvent-based CO 2 capture systems, including variation in solvent type and configuration of the CO 2 capture unit. In this work, the FOQUS tool is used to optimize a 550 MWe supercritical pulverized coal power plant coupled with a CO 2 -Binding Organic Liquid (CO 2 BOL) solvent system used to capture 90% of the CO 2 in the flue gas generated in the plant. CO 2 BOL is a class of water-lean solvents developed in Pacific Northwest National Laboratory, which shows promise to reduce energy consumption and allows the use of less expensive construction materials due to its water-lean feature and unique properties. A derivative-free solver is used to determine the process conditions (e.g. absorber and stripper height and diameter, CO 2 loading in solvent, amount of steam extracted for solvent regeneration) required to minimize the cost of CO 2 capture associated with the construction and operation of the power plant. Finally, this work also includes consideration of the effects of process model and economic uncertainty on the optimal design and operation of the plant. References Fout, T., Zoelle, A., Keairns, D., Turner, M., Woods, M., Kuehn, N., Shah, V., Chou, V., Pinkerton, L., 2015. Cost and performance baseline for fossil energy plants. Volume 1a: Bituminous coal (PC) and natural gas to electricity. Revision 3. U.S. Department of Energy. National Energy Technology Laboratory. Acknowledgement Team KeyLogic’s contributions to this work were funded by the National Energy Technology Laboratory under the Mission Execution and Strategic Analysis contract (DE-FE0025912) for support services. Disclaimer This report was prepared as an account of work sponsored by an agency of the United States Government. Neither the United States Government nor any agency thereof, nor any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof.",
+    "presenting_author": "Joshua C. Morgan | KeyLogic Systems, Contractor to National Energy Technology Laboratory, Pittsburgh, PA",
+    "authors": [
+      "Joshua C. Morgan | KeyLogic Systems, Contractor to National Energy Technology Laboratory, Pittsburgh, PA",
+      "Anuja Deshpande | National Energy Technology Laboratory Support Contractor, Pittsburgh, PA",
+      "Yuan Jiang | Pacific Northwest National Laboratory, Richland, WA",
+      "Charles J. Freeman | Pacific Northwest National Laboratory, Richland, WA",
+      "Zhijie Xu | Pacific Northwest National Laboratory",
+      "David Heldebrant | Pacific Northwest National Laboratory, Richland, WA",
+      "Benjamin P. Omell | National Energy Technology Laboratory, Pittsburgh, PA",
+      "Michael S. Matuszewski | AristoSys, LLC, Contractor to National Energy Technology Laboratory, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joshua C. Morgan",
+        "affiliation": "KeyLogic Systems, Contractor to National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Anuja Deshpande",
+        "affiliation": "National Energy Technology Laboratory Support Contractor, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Yuan Jiang",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      },
+      {
+        "name": "Charles J. Freeman",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      },
+      {
+        "name": "Zhijie Xu",
+        "affiliation": "Pacific Northwest National Laboratory",
+        "designation": "Author"
+      },
+      {
+        "name": "David Heldebrant",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      },
+      {
+        "name": "Benjamin P. Omell",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael S. Matuszewski",
+        "affiliation": "AristoSys, LLC, Contractor to National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "181d",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/609293"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/604858",
+    "paper_endpoint": "Paper/604858",
+    "paper_id": "604858",
+    "topic": "Economic Optimization of the Advanced Flash Stripper Using the Framework for Optimization, Quantification of Uncertainty and Surrogates",
+    "title": "Economic Optimization of the Advanced Flash Stripper Using the Framework for Optimization, Quantification of Uncertainty and Surrogates",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "44433",
+    "session_title": "Design and Optimization of Environmentally Sustainable Advanced Fossil Energy Systems",
+    "session_number": "181",
+    "program_title": "Environmental Division",
+    "symposium_title": "Fossil Energy",
+    "abstract": "Conventional solvent-based carbon capture systems are considered highly energy-intensive in large part due to the evaporation of water when CO 2 is desorbed in regular strippers. While solvent discovery and design can serve as a promising strategy for decreasing stripper heat requirements, process level improvements are another complementary option. One process modification with potential for improvements is the Advanced Flash Stripper (AFS) 1 configuration. Due to the improved stripper heat recovery (by means of two bypass solvent streams and two extra economizers) in the AFS configuration, process simulation and sensitivity studies demonstrate that the regeneration cost can be reduced by around 10-15% compared to a more conventional Simple Stripper (SS) configuration 1-2 . In search of ideal equipment sizes and operating conditions, rigorous optimization for the AFS is needed to evaluate its full techno-economic potential. In this work, the Framework for Optimization, Quantification of Uncertainty and Surrogates (FOQUS) 3 , a part of the Carbon Capture Simulation Initiative (CCSI) Toolset 4 , is applied to build a general optimization framework for integrating the process model with the cost spreadsheet and optimizing the techno-economic performances of different types of CO 2 absorbents (MEA, Piperazine) in the AFS configuration and Simple Stripper (SS) configuration. This AFS optimization framework contains a rigorous rate-based Aspen process model and an Excel cost spreadsheet (consistent with the baseline report 5 ) for translating the Aspen model outputs (column sizes, energy consumption etc.) to Cost of Electricity (COE). As FOQUS relies on derivative free solvers for optimization, the convergence rate of the AFS flowsheet needs to be robust. The convergence issues of AFS process simulation resulted from its multi-recycle streams has been mitigated by using the customized tearing orders, allowing for the optimization of seven decision variables simultaneously (absorber and stripper heights, stripper pressure, lean loading, cold and warm bypass ratio, minimum temperature approach). The optimization results suggest that the AFS configuration can reduce the stripper heat by 14.7% and 9.3% for 5m PZ and 7m MEA, respectively, compared to their optimized SS counterparts. However, the COE’s are only reduced by 0.8% and 0.7% due to the higher capital costs resulting from the additional process complexity of the AFS configuration. Reference Lin, Y.J. and Rochelle, G.T., 2014. Optimization of advanced flash stripper for CO 2 capture using piperazine. Energy Procedia, 63, pp.1504-1513. Rezazadeh, F., Gale, W.F., Lin, Y.J. and Rochelle, G.T., 2016. Energy performance of advanced reboiled and flash stripper configurations for CO 2 capture using monoethanolamine. Industrial & Engineering Chemistry Research, 55(16), pp.4622-4631. Miller, D.C., 2015. FOQUS: A framework for organizational and quantification of uncertainty (No. NETL-PUB-1212). National Energy Technology Lab.(NETL), Pittsburgh, PA, and Morgantown, WV (United States). In-house Research; National Energy Technology Lab.(NETL), Pittsburgh, PA, and Morgantown, WV (United States). Miller, D.C., Syamlal, M., Mebane, D.S., Storlie, C., Bhattacharyya, D., Sahinidis, N.V., Agarwal, D., Tong, C., Zitney, S.E., Sarkar, A. and Sun, X., 2014. Carbon capture simulation initiative: a case study in multiscale modeling and new challenges. Annual review of chemical and biomolecular engineering, 5, pp.301-323. Haslbeck, J.L., Kuehn, N.J., Lewis, E.G., Pinkerton, L.L., Simpson, J., Turner, M.J., Varghese, E. and Woods, M.C., 2010. Cost and performance baseline for fossil energy plants volume 1: Bituminous coal and natural gas to electricity. DOE/NETL",
+    "presenting_author": "Bo Hong | National Energy Technology Laboratory, Pittsburgh, PA",
+    "authors": [
+      "Bo Hong | National Energy Technology Laboratory, Pittsburgh, PA",
+      "Joshua C. Morgan | KeyLogic Systems, Contractor to National Energy Technology Laboratory, Pittsburgh, PA",
+      "Koteswara Rao Putta | Norges Teknisk-Naturvitenskaplige Universitet, Trondheim, Norway",
+      "Athreya Suresh Babu | The University of Texas at Austin, TX",
+      "Tianyu Gao | The University of Texas at Austin, TX",
+      "Michael S. Matuszewski | AristoSys, LLC, Contractor to National Energy Technology Laboratory, Pittsburgh, PA",
+      "Benjamin P. Omell | National Energy Technology Laboratory, Pittsburgh, PA",
+      "Gary T. Rochelle | The University of Texas at Austin, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bo Hong",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joshua C. Morgan",
+        "affiliation": "KeyLogic Systems, Contractor to National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Koteswara Rao Putta",
+        "affiliation": "Norges Teknisk-Naturvitenskaplige Universitet, Trondheim, Norway",
+        "designation": "Author"
+      },
+      {
+        "name": "Athreya Suresh Babu",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Tianyu Gao",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael S. Matuszewski",
+        "affiliation": "AristoSys, LLC, Contractor to National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Benjamin P. Omell",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Gary T. Rochelle",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "181e",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/604858"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/607460",
+    "paper_endpoint": "Paper/607460",
+    "paper_id": "607460",
+    "topic": "Dynamic Modeling, Validation and Optimization of a Solvent-Based CO 2 Capture Process Under Flexible Operation",
+    "title": "Dynamic Modeling, Validation and Optimization of a Solvent-Based CO 2 Capture Process Under Flexible Operation",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "44433",
+    "session_title": "Design and Optimization of Environmentally Sustainable Advanced Fossil Energy Systems",
+    "session_number": "181",
+    "program_title": "Environmental Division",
+    "symposium_title": "Fossil Energy",
+    "abstract": "Amines-based CO 2 capture technology is the most matured technology for post combustion CO 2 (PCC) capture. However, the parasitic loss in the capture plant and its dynamics can adversely affect the efficiency and load-following capability of the host plant. One way of mitigating these problems is flexible capture in the PCC unit where the extent of CO 2 capture can be considered as a degree of freedom. However, during load-following operation of the host power plant, the CO 2 capture unit is subjected to significant variability due to changing flue gas flowrate and composition. Flexible capture in the PCC unit under load-following operation requires excellent tracking control performance along with good disturbance rejection while maximizing the efficiency. Optimal design and operation of the capture plant using an accurate dynamic model is the key to satisfying such challenging operational requirements. Development of dynamic models of the amine-based capture units including model validation with limited industrial data has been reported by various authors. 1-5 However, a rate-based dynamic model with an accurate two-film model and electrolyte NRTL-based thermodynamic model is still missing in the literature. In this talk, development of such a rigorous dynamic model and its validation with large amount of industrial data will be presented. The dynamic model is developed using the Institute for Design of Advanced Energy Systems (IDAES) Process System Engineering (PSE) computation platform. 6 The tower model includes mass and heat transfer between the liquid and gas phases using a two-film model. Extended Fick’s law and Maxwell-Stefan equations are applied to describe the transport in the films. An electrolyte-NRTL model is developed for modeling the vapor-liquid equilibrium at the interface of the two films. The models are developed considering the ion-ion, ion-molecule and molecule-molecule interactions. 7-9 The reaction kinetics are modeled so that the complex equilibrium behavior of these electrolyte systems can be captured in a thermodynamically consistent manner. The enthalpy model is developed so that it remains consistent with the thermodynamic model. A rigorous dynamic reboiler model is also developed. The tower models are validated with the dynamic test run data collected from the National Carbon Capture Center (NCCC) located in Wilsonville, Alabama, USA. These data sets are generated under considerable variation of solvent flowrate, gas flow rate, CO 2 concentration in the gas, and steam flowrate to the reboiler as would be expected under the part-load operation of the host power plant. As the plant data are noisy and do not satisfy the mass and energy balances, a dynamic data reconciliation problem is solved. The validated dynamic model is used for optimal design and operation considering various flexible operation scenarios. References Bui, M.; Flø, N. E.; de Cazenove, T.; Mac Dowell, N., Demonstrating flexible operation of the Technology Centre Mongstad (TCM) CO2 capture plant. International Journal of Greenhouse Gas Control 2020, 93 , 102879. Bui, M.; Tait, P.; Lucquiaud, M.; Mac Dowell, N., Dynamic operation and modelling of amine-based CO2 capture at pilot scale. International Journal of Greenhouse Gas Control 2018, 79 , 134-153. Biliyok, C.; Lawal, A.; Wang, M.; Seibert, F., Dynamic modelling, validation and analysis of post-combustion chemical absorption CO2 capture plant. International Journal of Greenhouse Gas Control 2012, 9 , 428-445. Montañés, R. M.; Flø, N. E.; Nord, L. O., Experimental results of transient testing at the amine plant at Technology Centre Mongstad: Open-loop responses and performance of decentralized control structures for load changes. International Journal of Greenhouse Gas Control 2018, 73 , 42-59. Flø, N. E.; Knuutila, H.; Kvamsdal, H. M.; Hillestad, M., Dynamic model validation of the post-combustion CO 2 absorption process. International Journal of Greenhouse Gas Control 2015, 41 , 127-141. Miller, D. C.; Siirola, J. D.; Agarwal, D.; Burgard, A. P.; Lee, A.; Eslick, J. C.; Nicholson, B.; Laird, C.; Biegler, L. T.; Bhattacharyya, D., Next Generation Multi-Scale Process Systems Engineering Framework. In Computer Aided Chemical Engineering , Elsevier: 2018; Vol. 44, pp 2209-2214. Chen, C. C.; Evans, L. B., A local composition model for the excess Gibbs energy of aqueous electrolyte systems. AIChE Journal 1986, 32 (3), 444-454. Morgan, J. C.; Chinen, A. S.; Omell, B.; Bhattacharyya, D.; Tong, C.; Miller, D. C., Thermodynamic modeling and uncertainty quantification of CO2-loaded aqueous MEA solutions. Chemical Engineering Science 2017, 168 , 309-324. Zhang, Y.; Que, H.; Chen, C.-C., Thermodynamic modeling for CO2 absorption in aqueous MEA solution with electrolyte NRTL model. Fluid Phase Equilibria 2011, 311 , 67-75.",
+    "presenting_author": "Paul Akula | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Paul Akula | West Virginia University, Morgantown, WV",
+      "John C. Eslick | National Energy Technology Laboratory, Pittsburgh, PA",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV",
+      "David Miller | National Energy Technology Laboratory, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Paul Akula",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "John C. Eslick",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "David Miller",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "181f",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/607460"
+  }
+]

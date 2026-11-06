@@ -1,0 +1,312 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649125",
+    "paper_endpoint": "Paper/649125",
+    "paper_id": "649125",
+    "topic": "End-to-End Design and Implementation of Robust MPC on Resource-Limited Hardware Using Multi-Objective Bayesian Optimization and Deep Learning",
+    "title": "End-to-End Design and Implementation of Robust MPC on Resource-Limited Hardware Using Multi-Objective Bayesian Optimization and Deep Learning",
+    "date_time": "2022-11-16_08:00:00_10:30:00",
+    "session_id": "49211",
+    "session_title": "Estimation and Control under Uncertainty",
+    "session_number": "434",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The increasing need for optimal control of complex and safety-critical systems has been a driving force for the development of robust and stochastic model predictive control (MPC) strategies [1]–[3], which can systematically account for uncertainties within the system and its environment. Despite their development, there remains a crucial hurdle in their ultimate implementation, in particular for fast-sampling systems. Inevitably, such robust strategies add a layer of complexity to the optimal control problem, increasing the computational requirements of the controller. On the other hand, the desire to implement such controllers on embedded hardware poses a unique challenge in controller design that involves a trade-off between performance and robustness and/or physical hardware restrictions. In particular, expansion of the processing power of modern hardware relies on the use of so-called hardware accelerators (e.g., graphics processing units (GPUs), field programmable gate arrays (FPGAs), etc.), which must be programmed specifically to speed up particular portions of computational algorithms [4]. Thus, to take full advantage of the speedup offered by these hardware accelerators, the hardware-software co-design process should be simultaneously optimized with respect to performance, robustness, and hardware utilization. In this work, we propose a framework for the automated generation of approximated robust MPCs on FPGAs for advanced control of constrained, nonlinear systems. This framework provides an automatic means to efficiently select parameters that affect the performance, robustness, and embeddability of a controller on resource-restricted hardware. Our framework includes the use of approximate controllers to replace the online evaluation of MPC [5]–[8], the use of the high-level synthesis workflow to automatically generate hardware-ready code [9], and the use of multi-objective Bayesian optimization [10], [11], which balances the trade-off between performance, robustness, and embeddability, to optimally select controller design and implementation parameters. We use deep learning to approximate a robust MPC [6], [12], which offers two key advantages: (i) an explicit approximation of the complex robust MPC structure that can be quickly evaluated and (ii) a predefined structure for which the hardware design can be tailored for easier deployment. Once an approximate controller has be generated, embedded implementation on a FPGA requires the translation of the software-based algorithm to the hardware level. Here, we rely on the high-level synthesis workflow, which is a two-step process that takes in a high level description of the controller algorithm which should be sped up and converts it to a hardware description language (HDL) [9]. Then, the HDL code can be used to program the FPGA device. As opposed to a completely software-driven approach, the inclusion of a hardware accelerator allows for the use of more complex algorithms without significant loss of computational speed. Furthermore, the combination of prescribing a computational architecture with deep neural networks (DNNs) and the hardware synthesis provides an end-to-end controller design workflow, of which allows for fully automated optimization of the implemented controller. Finally, within this design process, we encounter many controller design parameters related to the algorithm development, including robust MPC tuning parameters, data generation for the DNN approximation, DNN structure, DNN training, and hardware-specific design parameters, including numerical representation and parallelization of computations. The choice of such parameters is not trivial since each can affect each of the competing metrics (i.e., performance, robustness, and ultimate embeddability) in differing, implicit, and non-intuitive ways. Furthermore, the entire design process (from software-based controller synthesis to hardware implementation) can take an extended period of time to complete, making the systematic selection of design parameters highly valuable. For this purpose, we use Bayesian optimization (BO) [13], which is a data-driven optimization strategy to handle black-box and expensive-to-evaluate metrics. Recently, BO has been used for a variety of tuning functions in this framework, particularly in hyperparameter selection for deep learning [14] and auto-tuning of controllers [15]. Furthermore, to highlight the trade-off between each of the controller design metrics, we use a multi-objective approach to directly compute the Pareto frontier [10]. In this manner, we find the set optimal configurations and the ultimate decision between performance, robustness, and embeddability of a particular controller can be determined based on the system requirements. We demonstrate the utility of this framework with closed-loop simulations and real-time experiments on an atmospheric pressure plasma jet (APPJ) for safety-critical plasma applications (e.g., plasma medicine). For closed-loop simulations, we target biomedical applications where a desired amount of thermal effect is delivered to a substrate. In simulation, we determined a Pareto frontier of optimal control implementations with respect to controller performance and constraint satisfaction. In computing the Pareto frontier for the controller design, we systematically realize trade-offs between the performance and robustness of the hardware controller for various configurations. The proposed framework for the end-to-end design and implementation of hardware controller is general. As such, it can be readily adapted for any control design method irrespective of its complexity. [1] A. Bemporad and M. Morari, “Robust model predictive control: A survey,” in Robustness in Identification and Control . Springer, 1999, pp. 207–226. [2] D. Q. Mayne, “Model predictive control: Recent developments and future promise,” Automatica , vol. 50, no. 12, pp. 2967–2986, 2014. [3] A. Mesbah, “Stochastic model predictive control: An overview and perspectives for future research,” IEEE Control Systems Magazine , vol. 36, no. 6, pp. 30–44, 2016. [4] S. Lucia, D. Navarro, O . Lucia, P. Zometa, and R. Findeisen, “Optimized FPGA implementation of model predictive control for embedded systems using high-level synthesis tool,” IEEE Transactions on Industrial Informatics , vol. 14, no. 1, pp. 137–145, 2017. [5] S. Chen, K. Saulnier, N. Atanasov, D. D. Lee, V. Kumar, G. J. Pappas, and M. Morari, “Approximating explicit model predictive control using constrained neural networks,” in American Control Conference , Milwaukee, 2018, pp. 1520–1527. [6] B. Karg and S. Lucia, “Efficient representation and approximation of model predictive control laws via deep learning,” arXiv preprint arXiv:1806.10644 , 2018. [7] A. D. Bonzanini, J. A. Paulson, D. B. Graves, and A. Mesbah, “Toward safe dose delivery in plasma medicine using projected neural network-based fast approximate NMPC,” IFAC-PapersOnLine , vol. 53, no. 2, pp. 5279–5285, 2020. [8] J. A. Paulson and A. Mesbah, “Approximate closed-loop robust model predictive control with guaranteed stability and constraint satisfaction,” IEEE Control Systems Letters , vol. 4, pp. 719–724, 2020. [9] M. H. Ghasemi, O.Lucia, and S.Lucia, “Computing in the blink of an eye: Current possibilities for edge computing and hardware-agnostic programming,” IEEE Access , 2020. [10] N. Khan, D. E. Goldberg, and M. Pelikan, “Multi-objective Bayesian optimization algorithm,” in Proceedings of the 4th Annual Conference on Genetic and Evolutionary Computation . Citeseer, 2002, pp. 684–684. [11] S. Daulton, M. Balandat, and E. Bakshy,“Differentiable expected hypervolume improvement for parallel multi-objective Bayesian optimization,” Advances in Neural Information Processing Systems , vol. 33, pp. 9851–9864, 2020. [12] A. D. Bonzanini, J. A. Paulson, G. Makrygiorgos, and A. Mesbah, “Fast approximate learning-based multistage nonlinear model predictive control using Gaussian processes and deep neural networks,” Computers & Chemical Engineering , vol. 145, p. 107174, 2021. [13] B. Shahriari, K. Swersky, Z. Wang, R. P. Adams, and N. DeFreitas, “Taking the human out of the loop: A review of Bayesian optimization,” Proceedings of the IEEE , vol. 104, pp. 148–175, 2015. [14] J. Snoek, H. Larochelle, and R. P. Adams, “Practical Bayesian optimization of machine learning algorithms,” in Advances in Neural Information Processing Systems , 2012, pp. 2951–2959. [15] F. Sorourifar, G. Makrygirgos, A. Mesbah, and J. A. Paulson, “A data-driven automatic tuning method for MPC under uncertainty using constrained Bayesian optimization,” IFAC-PapersOnLine , vol. 54, no. 3, pp. 243–250, 2021.",
+    "presenting_author": "Kimberly Chan | University of California, Berkeley",
+    "authors": [
+      "Kimberly Chan | University of California, Berkeley",
+      "Joel Paulson | The Ohio State University, Columbus",
+      "Ali Mesbah | University of California, Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kimberly Chan",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "434a",
+    "sortable_time": "2022-11-16_08:00:00_08:19:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649125"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643450",
+    "paper_endpoint": "Paper/643450",
+    "paper_id": "643450",
+    "topic": "On the Performance of Stochastic Predictive Control",
+    "title": "On the Performance of Stochastic Predictive Control",
+    "date_time": "2022-11-16_08:00:00_10:30:00",
+    "session_id": "49211",
+    "session_title": "Estimation and Control under Uncertainty",
+    "session_number": "434",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The computation of optimal decision policies for sequential decision-making under uncertainty has been recognized as a challenging problem [1]. Unless there exists a certain desired structure (e.g., [2]), the decision-making problem needs to explicitly account for every possible realization of uncertainty, which is typically expressed in the form of scenario trees. This gives rise to multi-stage stochastic programs [3,4], which become quickly intractable as the horizon length is extended due to the exponentially growing size of the scenario tree. In the context of online control, the intractability of multi-stage stochastic programs is typically addressed by a stochastic predictive control framework (SPC; also called rolling-horizon heuristics in the operations research literature) [5,6]. In SPC, the full multi-stage problem is sought to be approximately solved by using a sequence of multi-stage stochastic programs with truncated prediction horizons. In each time stage, a truncated multi-stage problem is solved and the solution is actuated in a receding-horizon fashion. In this way, we attempt to mimic the behavior of optimal decision policy using a sequence of truncated-horizon decision policies. This method is becoming increasingly popular in different control applications, such as battery storage control [7], HVAC system control [8], and microgrids [9]. The SPC framework is designed based on the belief that the control policy implicitly defined by truncated stochastic control problems closely approximates the optimal decision policy. This belief perhaps originates from the empirical observation for deterministic model predictive control that the performance loss caused by truncation vanishes as the prediction horizon is extended [10]. However, such a belief is not adequately substantiated by means of rigorous analysis. Even for deterministic settings, it has only been recently proved to be true [11]. This motivates an important open question: What is the price of truncating the prediction horizon in SPC? We aim to address this question by analyzing the dynamic regret of SPC for linear systems with quadratic performance index and additive and multiplicative uncertainty. In particular, we characterize the relationship between the performance loss caused by truncation and the prediction horizon length. Under robust stabilizability and detectability assumptions, we show that the performance loss compared to the optimal policy decays exponentially in the prediction horizon length. This result rigorously substantiates the belief that an SPC scheme with a sufficiently long prediction horizon closely approximates the optimal policy. That is, SPC can provide a near-optimal control policy, in the sense that one can make its performance arbitrarily close to that of the optimal policy. The technical results are built on the recently established property of graph-structured optimization problems called exponential decay of sensitivity [12,13]. [1] Birge, J. R. (1985). Decomposition and partitioning methods for multistage stochastic linear programs. Operations research, 33(5), 989-1007. [2] Theil, H. (1957). A note on certainty equivalence in dynamic planning. Econometrica: Journal of the Econometric Society, 346-349. [3] Pereira, M. V., & Pinto, L. M. (1991). Multi-stage stochastic optimization applied to energy planning. Mathematical programming, 52(1), 359-375. [4] Shapiro, A. (2006). On complexity of multistage stochastic programs. Operations Research Letters, 34(1), 1-8. [5] Lucia, S., Finkler, T., & Engell, S. (2013). Multi-stage nonlinear model predictive control applied to a semi-batch polymerization reactor under uncertainty. Journal of process control, 23(9), 1306-1319. [6] Bernardini, D., & Bemporad, A. (2011). Stabilizing model predictive control of stochastic constrained linear systems. IEEE Transactions on Automatic Control, 57(6), 1468-1480. [7] Kumar, R., Wenzel, M. J., ElBsat, M. N., Risbeck, M. J., Drees, K. H., & Zavala, V. M. (2020). Stochastic model predictive control for central HVAC plants. Journal of Process Control, 90, 1-17. [8] Kumar, R., Wenzel, M. J., Ellis, M. J., ElBsat, M. N., Drees, K. H., & Zavala, V. M. (2018). A stochastic model predictive control framework for stationary battery systems. IEEE Transactions on Power Systems, 33(4), 4397-4406. [9] Hans, C. A., Sopasakis, P., Bemporad, A., Raisch, J., & Reincke-Collon, C. (2015, December). Scenario-based model predictive operation control of islanded microgrids. In 2015 54th IEEE conference on decision and control (CDC) (pp. 3272-3277). IEEE. [10] Morari, M., & Lee, J. H. (1999). Model predictive control: past, present and future. Computers & Chemical Engineering, 23(4-5), 667-682. [11] Lin, Y., Hu, Y., Shi, G., Sun, H., Qu, G., & Wierman, A. (2021). Perturbation-based regret analysis of predictive control in linear time varying systems. Advances in Neural Information Processing Systems, 34. [12] Shin, S., Anitescu, M., & Zavala, V. M. (2021). Exponential decay of sensitivity in graph-structured nonlinear programs. SIAM Journal on Optimization (in press). [13] Shin, S., & Zavala, V. M. (2021). Controllability and observability imply exponential decay of sensitivity in dynamic optimization. IFAC-PapersOnLine, 54(6), 179-184.",
+    "presenting_author": "Sungho Shin | Argonne National Laboratory, Lemont, IL",
+    "authors": [
+      "Sungho Shin | Argonne National Laboratory, Lemont, IL",
+      "Sen Na | University of California-Berkeley",
+      "Victor Zavala | University of Wisconsin-Madison",
+      "Mihai Anitescu | Argonne National Laboratory, Lemont, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sungho Shin",
+        "affiliation": "Argonne National Laboratory, Lemont, IL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sen Na",
+        "affiliation": "University of California-Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Victor Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Mihai Anitescu",
+        "affiliation": "Argonne National Laboratory, Lemont, IL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "434b",
+    "sortable_time": "2022-11-16_08:19:00_08:38:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643450"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/642762",
+    "paper_endpoint": "Paper/642762",
+    "paper_id": "642762",
+    "topic": "Sparse-Identification-Based Predictive Control of Nonlinear Processes Using Noisy Process Data",
+    "title": "Sparse-Identification-Based Predictive Control of Nonlinear Processes Using Noisy Process Data",
+    "date_time": "2022-11-16_08:00:00_10:30:00",
+    "session_id": "49211",
+    "session_title": "Estimation and Control under Uncertainty",
+    "session_number": "434",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Chemical process systems consist of numerous control loops to ensure operational stability and maximize yield. In industrial settings, advanced process control techniques such as model predictive control (MPC) are utilized to maintain stable operation and optimal process conditions. However, chemical processes such as catalytic reactors and distillation columns exhibit highly complex process dynamics such as severe nonlinearities and sensor noise in measurements [1,2]. Hence, modeling such processes involves a number of challenges. As MPC requires an accurate process model to predict the process states over a defined prediction horizon in order to optimize a cost function, a well-conditioned model must first be obtained. As large-scale process networks generally cannot be modeled adequately using first-principles analyses, data-driven modeling has attracted much attention, especially in the recent literature, due to the advances in machine learning and computational resources [3]. The results of machine learning techniques such as neural networks, support vector machines, sparse identification, etc. have largely been excellent due to their ability to capture most nonlinearities via extensive hyper-parameter tuning. However, the handling of noise in the application of machine learning techniques is a major challenge where significant room for improvement exists. This is because “noisy data” in the context of machine learning typically refers to miscategorized labels in classification problems rather than regression problems [4]. Hence, the aforementioned accuracies are not necessarily observed when the methods are applied to chemical processes with high sensor noise. Based on an extensive literature review, this limitation holds for sparse identification, which is the method primarily studied and developed in this work. In this work, a nonlinear process model is obtained for a chemical process from noisy industrial data using sparse identification, a recent method that models nonlinear dynamical systems as nonlinear first-order ordinary differential equations [5]. A high-fidelity process simulator, Aspen Plus Dynamics, is used to simulate a chemical plant, and the measured data is then taken as the industrial data. Gaussian noise is added to the data set to generate a noisy industrial data set, which is used to identify a process model using sparse identification. However, due to the combined challenges of modeling the industrial data set and noise, the sparse identification algorithm is modified to produce multiple models with each model dropping out a number of library terms during model identification. This is similar to a regularization term to prevent overfitting. It is found that the model identified without dropout exhibits poor long-term predictions and does not reach the correct steady-state value, while the best model identified with dropout is able to predict the steady-state correctly and capture most of the transient behavior fairly correctly as well, leading to a controller with lower convergence time and energy. References: [1] Chang, H.-C., Aluko, M., 1984. Multi-scale analysis of exotic dynamics in surface catalyzed reactions-I: justification and preliminary model discriminations. Chem. Eng. Sci. 39 (1), 37–50. [2] Lévine, J., Rouchon, P., 1991. Quality control of binary distillation columns via nonlinear aggregated models. Automatica . 27 (3), 463–480. [3] Wu, Z., Tran, A., Rincon, D., Christofides, P.D., 2019. Machine-learning-based predictive control of nonlinear processes. Part II: Computational implementation. AIChE Journal . 65:e16734. [4] Han, B. , Yao, Q. , Yu, X. , Niu, G. , Xu, M. , Hu, W. , Tsang, I.W. , Sugiyama, M. , 2018. Co-teaching: Robust training of deep neural networks with extremely noisy labels. In: Advances in Neural Information Processing Systems 31: Annual Conference on Neural Information Processing Systems , pp. 8536–8546 [5] Brunton, S.L., Proctor, J.L., Kutz, J.N., 2016. Discovering governing equations from data by sparse identification of nonlinear dynamical systems. Proc. Natl. Acad. Sci. 113 (15), 3932–3937.",
+    "presenting_author": "Fahim Abdullah | University of California, Los Angeles",
+    "authors": [
+      "Fahim Abdullah | University of California, Los Angeles",
+      "Zhe Wu | National University of Singapore",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Fahim Abdullah",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhe Wu",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "434c",
+    "sortable_time": "2022-11-16_08:38:00_08:57:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/642762"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648665",
+    "paper_endpoint": "Paper/648665",
+    "paper_id": "648665",
+    "topic": "Partial Modifier Adaptation for Economic Optimization of Process Systems Under Frequent Disturbances and Structural Model Uncertainty",
+    "title": "Partial Modifier Adaptation for Economic Optimization of Process Systems Under Frequent Disturbances and Structural Model Uncertainty",
+    "date_time": "2022-11-16_08:00:00_10:30:00",
+    "session_id": "49211",
+    "session_title": "Estimation and Control under Uncertainty",
+    "session_number": "434",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Uncertainty is inherent to process models because of unmodelled phenomena and modelling assumptions. This is especially the case for industrial models, where parsimony and computational efficiency are prioritized over fidelity. Owing to this uncertainty, the use of process models for economic optimization techniques can be ineffective as the model is an inaccurate representation of the true plant. To this end, various schemes aimed to address the effects of uncertainty for process economic optimization have been proposed in the literature including robust optimization [1], stochastic optimization [2], and model adaptation [3]. Model adaptation is particularly appealing as it attempts to remove the model uncertainty rather than sacrificing performance for robust solutions (i.e., those that work well for all potential uncertainty realizations). Models are commonly adapted via their parameters but can also be adapted through their constraints and objective function when performing model-based optimization. The latter approach, which is commonly referred to as modifier adaptation [4], is superior to parameter adaptation in models with significant plant-model mismatch. This method has been proven to match the Karush-Kuhn-Tucker (KKT) conditions of the plant and the model [4], thereby ensuring that both the plant and the process model optimum matches and resulting in truly optimal decisions. The modifiers used for adaptation are computed by using plant measurements and model predictions of the process cost and constraints, whereby the difference between the model and plant are reconciled using bias terms and gradient corrections with respect to the model inputs. While the bias terms are relatively easy to estimate assuming that the plant is measurable, the gradient terms are considerably harder to estimate. Plant gradients are commonly acquired by perturbing the plant inputs and waiting for the desired variables to reach their new perturbed state [4]. However, this perturbation process can be computationally costly as transient times in processes may be lengthy [5]. This issue is further amplified for multiple-input systems whereby many perturbations must be imposed on the system. Owing to the nonlinearity of most real chemical plants, gradients obtained before a disturbance occurs are no longer accurate in a post-disturbance state, thus the gradient-acquisition process can be interrupted if disturbance are high-frequency. In this work, we present a modifier adaptation methodology whereby speed is prioritized in the gradient-computation framework such that the system may reach an operating point in the neighbourhood of the true optimum despite the presence of high-frequency disturbances. This is achieved through adaptation of gradients only with respect to some (as opposed to all) process inputs. The proposed work includes an algorithm to choose which inputs to use for gradient adaptation such that they will have the most significant effect on the plant-model mismatch. This is achieved by comparing the cost predictions under different partial adaptations assumptions and choosing the input adaptations that results in the most favourable predicted economics. In this way, the partial modifiers are continually refined and can be activated/disactivated such that the optimization decisions lead to both quick and economic actions. The change between partial adaptation is resolved using first-order filters, such that the scheme switches operating conditions smoothly. This study presents the first “fast” modifier adaptation approach whereby the traditional perturbation methods can be used for gradient calculation under high-frequency disturbances. The proposed scheme is tested against the traditional modifier adaptation scheme for the Williams-Otto plant [6] as well as a 5x5 synthetic system, both subject to high disturbance frequencies. Through these cases, the proposed scheme is shown to reduce the gradient-computation time by up to 50% and 80%, respectively. In doing so, the proposed scheme enables quick operating point changes to occur before the systems are disturbed resulting in up to 25% economic improvement (i.e., increased profits or abated losses). This novelty broadens the applicability of modifier adaptation to systems with slow dynamics (thus, slow gradient-computation) and frequent disturbances. References [1] Mulvey JM, Vanderbei RJ, Zenios SA. Robust optimization of large scale systems. Oper. Res. 1995; 43(2): 264–281. https://doi.org/10.1287/opre.43.2.264 . [2] Zhang Y, Monder D, Forbes FJ. Real-time optimization under parametric uncertainty: a probability constrained approach. J. Process Control. 2002; 12: 373–389. https://doi.org/10.1016/S0959-1524(01)00047-6 . [3] Chachuat B, Srinivasan B, Bonvin D. Adaptation strategies for real-time optimization. Comput. Chem. Eng. 2009; 33(10): 1557–1567. https://doi.org/10.1016/j.compchemeng.2009.04.014 . [4] Marchetti A, Chachuat B, Bonvin D. Modifier-Adaptation Methodology for Real-Time Optimization. Ind. Eng. Chem. Res. 2009; 48(13): 6022–6033. https://doi.org/10.1021/ie801352x . [5] Marchetti AG, François G, Faulwasser T, Bonvin D. Modifier Adaptation for Real-Time Optimization–Methods and Applications. Processes. 2016; 4(4): 55. https://doi.org/10.3390/pr4040055 . [6] Williams TJ, Otto RE. A generalized chemical process model for the investigation of computer control. IEEE Trans. Commun . 1960; 79(5): 458–473. 10.1109/TCE.1960.6367296 .",
+    "presenting_author": "Gabriel Patron | University of Waterloo, Canada",
+    "authors": [
+      "Gabriel Patron | University of Waterloo, Canada",
+      "Luis Ricardez-Sandoval | University of Waterloo, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gabriel Patron",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Luis Ricardez-Sandoval",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "434d",
+    "sortable_time": "2022-11-16_08:57:00_09:16:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648665"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647334",
+    "paper_endpoint": "Paper/647334",
+    "paper_id": "647334",
+    "topic": "Machinelearning and Adaptive Model Predictive Control: Conflict or Conflux",
+    "title": "Machinelearning and Adaptive Model Predictive Control: Conflict or Conflux",
+    "date_time": "2022-11-16_08:00:00_10:30:00",
+    "session_id": "49211",
+    "session_title": "Estimation and Control under Uncertainty",
+    "session_number": "434",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Adaptive and machine learning controllers perform tracking and regulation tasks by tuning control parameters. In the case of RL/Q-Learning, the control function is adapted directly in such a way that the performance improves over time. In the case of adaptive model predictive control (aMPC) a model is updated and then MPC controller is updated using optimization. The purpose of the current paper is to compare and contrast the direct and indirect control methods using a linear system with a quadratic performance objective as an example. The system to be controlled and the control objectives can now be made equivalent and it is possible to compare the two approaches in simulation and Lyapunov type stability-theory. In either case we will apply the same recursive least square (RLS) algorithm to tune control parameters. The control design methods are quite different however; and the performance and stability properties two approaches also turn out to be quite different. To compare the methods, we will say that a conflux exists if the parameter tuning and control algorithms exhibit coinciding and unique fixed points. In such a case we can guarantee optimality of the algorithm if it is stable and converges. Otherwise, tuning and control are said to be in conflict and optimality cannot be guaranteed if when the algorithm converges. Certainty equivalence aMPC treats control and learning as separate tasks. This approach does not generate input signals that are rich enough for good parameter estimation. It is known that stability can be guaranteed while optimality cannot be guaranteed unless additional excitation is provided. In this paper we show that the RL/Q-Learning approach provides neither stability nor optimality unless the signals are excited. Moreover, the excitation requirements are stringent and to make matters worse, RL/Q-Learning has to use slow learning to be stable. This requirement is not paralleled in aMPC. Thus, the same asymptotic properties optimality properties hold direct and indirect learning as long as excitation holds; but the convergence rate of RL/Q-Learning is much slower. Dual control theory [4] discusses the trade-off between two tasks: trajectory and parameter convergence. A dual adaptive controller is designed to optimally improve the learning while maintaining robust control performance. The ideas go back to the original work of Feldbaum [1]. However, algorithms and theory for application in non-trivial examples have been developed only recently [2]. In the current paper we explore the application of dual control as a vehicle to improve the performance of aMPC and RL/Q-Learning. In particular we want to address the issue Polderman [3] described as the “conflux or conflict” between estimation and control as described above. In his seminal work he showed that the conflux existed between and estimation and control for minimum variance and pole-placement control, however it does not exist for infinite horizon aMPC. Instead there is conflict resulting in stable, but sub-optimal controls. Bradke et al. [4] demonstrated a similar conflict between estimation and control in RL/Q-learning. The purpose of our presentation is to reviews these results very briefly and explore the possibility of using dual control to stabilize learning controllers and provide asymptotic optimality, thus resolving the above-mentioned conflict that exist in both the direct and indirect approaches to learning control. References Feldbaum, A. (1960). Dual control theory. i. Avtomatika i Telemekhanika , 21(9), 1240– 1249. Heirung, T. A. N., Ydstie, B. E., & Foss, B. (2017). Dual adaptive model predictive control. Automatica , 80, 340–348. Polderman, J.W., 1989. Adaptive control & identification: conflict or conflux?. CWI Tracts , (67). Bradtke, S.J., Ydstie, B.E. and Barto, A.G., 1994, June. Adaptive linear quadratic control using policy iteration. In Proceedings of 1994 American Control Conference-ACC'94 (Vol. 3, pp. 3475-3479). IEEE",
+    "presenting_author": "Erik Ydstie | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Zicheng Cai | Carnegie Mellon University, Pittsburgh, PA",
+      "Erik Ydstie | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zicheng Cai",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Erik Ydstie",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "434e",
+    "sortable_time": "2022-11-16_09:16:00_09:35:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647334"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649018",
+    "paper_endpoint": "Paper/649018",
+    "paper_id": "649018",
+    "topic": "Chromate Control in an Ion Exchange Process Under Uncertainty",
+    "title": "Chromate Control in an Ion Exchange Process Under Uncertainty",
+    "date_time": "2022-11-16_08:00:00_10:30:00",
+    "session_id": "49211",
+    "session_title": "Estimation and Control under Uncertainty",
+    "session_number": "434",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Problem ( background/scope/motivation) : Single use anion exchange resins are standard tools to reduce hazardous chemicals such as chromates to low parts per billion concentrations in drinking water. Most processes monitor effluent concentrations when applying control strategies to their process. But when small leakages of chromates are detected, it is usually too late to make corrective measures. Therefore, process engineers use predictive modeling[1] to make the appropriate decisions before experiencing premature breakthrough of such chemicals leading to inefficient use of the ion exchange resin capacity or the contamination of the water supply. When the inlet chromate concentration increases, flow rate control is delayed until an increase of the effluent chromate concentration is detected. Therefore, better control is expected via monitoring influent concentrations to maximize the resin life. The objective of this work is to apply optimal control on the ion exchange process via inlet flow rate control based on inlet concentration. Methods: Optimal control is applied on a dynamic model, such as the Thomas model[2], via inlet flow rate control. This is accomplished via the application of the Pontryagin’s maximum principle[3] through the following steps: (i) integrate the Thomas model with the method of moments to generate an ordinary differential equation model (ii) determine the dynamic influent flow rate profile to achieve maximum chromate removal, and (iii) capture uncertainty within the system using the Ito’s stochastic differential equation and (iv) apply stochastic optimal control to predict a robust operating policy. We used an improved version of the Thomas model[4], as the sigmoidal function predicting the characteristics of the chromate removal. The first 4 temporal moments[5] are formulated to represent the dynamic ion exchange process model in the form of Ordinary Differential Equations (ODEs), such as the zeroth moment or concentration, the first normalized moment ore residence time, the second central normalized moment or variance, and the third normalized moment or skewness, The optimal control strategy to predict the operating policy of the ion exchange system is conducted via the Pontryagin’s Maximum Principle (PMP). While the moments represent the state variables describing the ion exchange process, PMP requires the introduction of adjoint variables which complement the state variables. The optimal control objective function in then rewritten as the Hamiltonian function which is a combination of state and adjoint variables[6]. The objective to maximize the chromate removal is achieved when the Hamiltonian function deviation with flow rate changes is minimized. The overall flowchart of the steps taken are summarized in the figure. Results: Both deterministic and stochastic optimal control were applied to the chromate removal system. While both control strategies achieved the desired results, the stochastic process was able to initiate flow rate changes earlier than the deterministic allowing for more gradual adjustments. The main reason for this difference is that the stochastic process considers the uncertainty of the measurements. Therefore, the stochastic optimal control becomes the weighted average of a multitude of deterministic optimal control problems and will mirror the results of a real life system. Implications: Since single use anion exchange resins are applied in the removal of chromate, it is critical to maximize the capacity of such resins to minimize the disposal waste. While using lower flow rate can maximize such capacity, it can also add unnecessary processing cost in case of low inlet chromate concentration. Therefore, the use of optimal control based on the inlet conditions becomes economically necessary for the efficient use of the anion exchange resin and to prevent the toxic compounds from contaminating our water supply. Such strategy can also be applied with various other contaminants such as lead, arsenic, PFAS, etc. References: [1] A. Ghorbani, R. Karimzadeh, and M. Mofarahi, “Mathematical Modeling of Fixed Bed Adsorption: Influence of Main Parameters on Breakthrough Curve,” J. Chem. Pet. Eng. , vol. 52, no. 2, Dec. 2018, doi: 10.22059/jchpe.2018.255078.1226. [2] S. H. Lin and C. D. Kiang, “Chromic acid recovery from waste acid solution by an ion exchange process: equilibrium and column ion exchange modeling,” Chem. Eng. J. , vol. 92, no. 1–3, pp. 193–199, Apr. 2003, doi: 10.1016/S1385-8947(02)00140-7. [3] Z. Artstein, “Pontryagin Maximum Principle Revisited with Feedbacks,” Eur. J. Control , vol. 1, pp. 46–54, 2011. [4] F. Ghanem, S. S. Jerpoth, and K. M. Yenkie, “Improved Models for Chromate Removal Using Ion Exchangers in Drinking Water Applications,” J. Environ. Eng. , vol. 148, no. 5, p. 04022015, 2022, doi: 10.1061/(ASCE)EE.1943-7870.0001997. [5] M. N. Goltz and P. V. Roberts, “Using the method of moments to analyze three‐dimensional diffusion‐limited solute transport from temporal and spatial perspectives,” p. 11. [6] K. M. Yenkie and U. Diwekar, “Stochastic Optimal Control of Seeded Batch Crystallizer Applying the Ito Process,” Ind. Eng. Chem. Res. , p. 120604103933002, Jun. 2012, doi: 10.1021/ie300491v. [7] P. T. Benavides and U. Diwekar, “Optimal control of biodiesel production in a batch reactor,” Fuel , vol. 94, pp. 218–226, Apr. 2012, doi: 10.1016/j.fuel.2011.08.033. [8] J. harmand, C. Lobry, A. Rapaport, and T. Sari, Optimal Control in Bioprocesses: Pontryagin’s Maximum Principle in Practice , First., vol. 3. Wiley, 2019.",
+    "presenting_author": "Fadi Ghanem | Rowan University, Glassboro, NJ",
+    "authors": [
+      "Fadi Ghanem | Rowan University, Glassboro, NJ",
+      "Kirti Yenkie | Rowan University, Glassboro, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Fadi Ghanem",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Kirti Yenkie",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "434f",
+    "sortable_time": "2022-11-16_09:35:00_09:54:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649018"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648624",
+    "paper_endpoint": "Paper/648624",
+    "paper_id": "648624",
+    "topic": "Parameter Estimation for Real-Time Optimization Under Model Uncertainty and Measurement Noise",
+    "title": "Parameter Estimation for Real-Time Optimization Under Model Uncertainty and Measurement Noise",
+    "date_time": "2022-11-16_08:00:00_10:30:00",
+    "session_id": "49211",
+    "session_title": "Estimation and Control under Uncertainty",
+    "session_number": "434",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The increasing competitiveness of processing industries has prompted the emergence of model-based steady-state optimization to gain an economic edge. Accordingly, real-time optimization (RTO) has emerged as a commonly used method to optimize process systems. While high-fidelity models are typically used for RTO, they generally do not capture the full range of phenomena that a process may exhibit, thus resulting in model uncertainty. This uncertainty is typically addressed through the so-called two-step scheme [1]. The two-step RTO scheme pairs a parameter estimation (PE) step with the economic optimization (RTO) step. Typically, the PE step uses time-averaged steady-state plant measurements and a least-squares formulation to estimate uncertain model parameters. These updated parameters are provided to the RTO such that it can compute plant set points. In turn, the set points are provided to a control layer, which aims to drive the plant towards the RTO-dictated steady state. This set point update process is repeated at set intervals (i.e., once every RTO “period”). The typical two-step RTO approach works well if the measurement noise is relatively low such that the PE problem will result in accurate/precise estimates over time. However, this is not always the case as measurement error owed to instrumentation is unavoidable and can result in set point suboptimality and large variation in the RTO decisions [2]. Through large noisy variations in steady-state measurements, the PE problem can become ill-conditioned, causing the propagation of measurement noise to the parameter estimates [2]. This can have the unwanted effect of producing erroneous set points and putting undue burden on the control layer through frequently varying set points. In this work, we present a low-variance (lv) PE approach that is suited to noisy measurement environments. The approach proposed herein works in a twofold manner. In the first step, the information content (IC) metric [3] is used to quantify the PE problem’s variability by assessing PE sample standard deviations under different measurement assumptions. The IC for different measurements is acquired by performing “challenger” PE problems and comparing them to “benchmark” PE problems, whereby neither problems’ solution is implemented in the RTO. The challenger problem is a version of the benchmark problem with a measurement omitted; this way the effect of the inclusion of a given measurement can be assessed using IC. Depending on the IC of a given measurement, it can be removed from the PE formulation, and the challenger problem becomes the benchmark problem. This procedure is repeated for various measurements such that the best subset is chosen for the actual PE problem (i.e., the one given to the RTO and implemented in the plant). In the second step, parameter bounds are introduced to filter poor estimates and avoid large suboptimalities in the RTO. These bounds are computed using the sample standard deviations and updated upon changes in operating conditions; the computation of these bounds is enabled by parameter data collected during the IC procedure. The standard deviation of the best benchmark problem is used as a parameter filter; henceforth, estimates outside those bounds are not provided to the plant. Together, these two novelties result in more precise and accurate RTO decisions when compared to the standard two-step RTO scheme. A detailed algorithm describing the procedure outlined above is presented in this work. The benefit of this scheme with respect to previously proposed approaches [2,4] is practicality, as it does not require additional decision layers (e.g., state estimation or sensitivity estimation) and is relatively straightforward to implement (i.e., uses the existing process layers in a novel way). The lv-PE scheme has been tested against the traditional PE scheme in the Williams-Otto plant [5] and a post-combustion carbon capture plant [6], which have significantly different timescales and model sizes. The benefits of the scheme manifest in lower process costs/higher profits over time, including up to ~90% improvement in some cases. This study shows that the proposed scheme is both beneficial (in terms of cost improvements) and practical (in terms of implementation), warranting further investigation of its application on industrial systems. References [1] Darby ML, Nikolaou M, Jones J, Nicholson D. RTO: An overview and assessment of current practice. J. Process Control . 2011; 21(6): 874–884. https://doi.org/10.1016/j.jprocont.2011.03.009 . [2] Bhat SA, Saraf DN. Steady-State Identification, Gross Error Detection, and Data Reconciliation for Industrial Process Units. Ind. Eng. Chem. Res . 2004; 43: 4323–4336. https://doi.org/10.1021/ie030563u . [3] Vrugt JA, Bouten W, Weerts AH. Information Content of Data for Identifying Soil Hydraulic Parameters from Outflow Experiments. Soil Sci. Soc. Am. J . 2001; 65(1): 19–27. https://doi.org/10.2136/sssaj2001.65119x . [4] Miletic IP, Marlin TE. On-line Statistical Results Analysis in Real-Time Operations Optimization. Ind. Eng. Chem. Res . 1998; 37(9): 3670–3684. https://doi.org/10.1021/ie9707376 . [5] Williams TJ, Otto RE. A generalized chemical process model for the investigation of computer control. IEEE Trans. Commun . 1960; 79(5): 458–473. 10.1109/TCE.1960.6367296 . [6] Patrón GD, Ricardez-Sandoval L. An integrated real-time optimization, control, and estimation scheme for post-combustion CO 2 capture. Appl. Energy . 2022; 308: 118302. https://doi.org/10.1016/j.apenergy.2021.118302 .",
+    "presenting_author": "Gabriel Patron | University of Waterloo, Canada",
+    "authors": [
+      "Gabriel Patron | University of Waterloo, Canada",
+      "Luis Ricardez-Sandoval | University of Waterloo, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gabriel Patron",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Luis Ricardez-Sandoval",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "434g",
+    "sortable_time": "2022-11-16_09:54:00_10:13:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648624"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646141",
+    "paper_endpoint": "Paper/646141",
+    "paper_id": "646141",
+    "topic": "Improving Computational Efficiency of Multi-Stage NMPC Using an Adaptive Horizon",
+    "title": "Improving Computational Efficiency of Multi-Stage NMPC Using an Adaptive Horizon",
+    "date_time": "2022-11-16_08:00:00_10:30:00",
+    "session_id": "49211",
+    "session_title": "Estimation and Control under Uncertainty",
+    "session_number": "434",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Model predictive control (MPC) is a model-based control strategy that re-optimizes over future state predictions using current state information to obtain optimal control actions (Rawlings and Mayne, 2009). In the case where we have a nonlinear model with respect to the states and control input variables, then it becomes nonlinear MPC (NMPC). This requires at every re-optimization step to solve a nonlinear program with an increased complexity that may cost a significant computational effort. Furthermore, the nonlinear models are built from several parameters that may have some associated uncertainty. A nominal NMPC will exhibit a reduced control performance especially with constraint violations if there exists a significant plant-model mismatch. As a result, robust NMPC approaches have been studied to formulate robust optimization problems that handle multiple scenarios of parameter realizations (Campo and Morari, 1987). One such approach is the multi-stage NMPC. The multi-stage NMPC represents an optimization with uncertainty problem based on a scenario tree evolution of the uncertain parameter realizations into the prediction horizon (Lucia et al., 2013). At each NMPC iteration, a multi-scenario nonlinear program is formulated that minimizes the expected cost subject to model equations, state, and input bounds for each scenario. The problem allows recourse actions justified by presence of feedback, by enforcing non-anticipativity constraints. The multi-stage problem is robust against plant-model mismatch, but it increases the problem size significantly since the number of scenarios is dependent on the number of parameter realizations, and the prediction horizon. This robustness is at the expense of an increased computational cost, hence increased computational delay. A strategy to limit the growth of the scenario tree and the problem size is to implement a robust horizon where branching stops (Sergio Lucia et al., 2013). Further, to minimize the number of scenarios and limit computational cost, a common heuristic of selecting three realizations {max, nominal, min} for each parameter has been implemented (S. Lucia et al., 2013; Martí et al., 2015; Lucia et al., 2016; Jang et al., 2016). However, selecting a few parameter realizations may not be a good representative of the uncertainty set leading to unnecessary conservativeness. This work is an extension of Mdoe et al. (2021) but is motivated by the possibility of obtaining the uncertain parameter realizations from statistical analysis of historical data (Krishnamoorthy et al., 2018; Thombre et al., 2020). The uncertain parameter set contains discrete points corresponding to the most critical parameter realizations inside a convex hull that the multi-stage NMPC must satisfy. Therefore, the aim of this work is to reduce the problem size further by rather investigating on limiting the prediction horizon. We aim at automatically updating the prediction horizon at each multi-stage NMPC iteration such that the closed loop system is stabilizing, hence improving the computational efficiency. The adaptive horizon algorithm will continuously update the minimum possible prediction horizon that is stabilizing in all possible scenarios, thus minimizing computational delay (Mdoe et al., 2021). This control strategy is termed as the adaptive horizon multi-stage NMPC. Previously in Mdoe et al. (2021), where the idea of adaptive multi-stage NMPC was first introduced, a brief sketch on its closed-loop stability property was presented. Another contribution of this work is to rigorously establish stability and recursive feasibility properties of the adaptive horizon multi-stage NMPC. Under assumptions of availability full state feedback information and relaxed formulation of multi-stage NMPC with a robust horizon, the adaptive horizon multi-stage NMPC was found to be recursively feasible and input-to-state practically (ISpS) stable for all possible cases of horizon update. The closed loop performance of the controller was tested on two numerical problems: a cooled CSTR system (Klatt and Engell, 1998), and a quad-tank system (Raff et al., 2006). It was found that the proposed controller had a reduced computational cost per iteration without any loss of robustness when compared to the original multi-stage NMPC with a robust horizon. References Campo, P.J., Morari, M., 1987. Robust Model Predictive Control, in: 1987 American Control Conference. Presented at the 1987 American Control Conference, pp. 1021–1026. https://doi.org/10.23919/ACC.1987.4789462 Jang, H., Lee, J.H., Biegler, L.T., 2016. A robust NMPC scheme for semi-batch polymerization reactors. IFAC-PapersOnLine, 11th IFAC Symposium on Dynamics and Control of Process SystemsIncluding Biosystems DYCOPS-CAB 2016 49, 37–42. https://doi.org/10.1016/j.ifacol.2016.07.213 Klatt, K.-U., Engell, S., 1998. Gain-scheduling trajectory control of a continuous stirred tank reactor. Computers & Chemical Engineering 22, 491–502. https://doi.org/10.1016/S0098-1354(97)00261-5 Krishnamoorthy, D., Thombre, M., Skogestad, S., Jäschke, J., 2018. Data-driven Scenario Selection for Multistage Robust Model Predictive Control. IFAC-PapersOnLine, 6th IFAC Conference on Nonlinear Model Predictive Control NMPC 2018 51, 462–468. https://doi.org/10.1016/j.ifacol.2018.11.046 Lucia, Sergio, Finkler, T., Engell, S., 2013. Multi-stage nonlinear model predictive control applied to a semi-batch polymerization reactor under uncertainty. Journal of Process Control 23, 1306–1319. https://doi.org/10.1016/j.jprocont.2013.08.008 Lucia, S., Schliemann-Bullinger, M., Findeisen, R., Bullinger, E., 2016. A Set-Based Optimal Control Approach for Pharmacokinetic/Pharmacodynamic Drug Dosage Design. IFAC-PapersOnLine, 11th IFAC Symposium on Dynamics and Control of Process SystemsIncluding Biosystems DYCOPS-CAB 2016 49, 797–802. https://doi.org/10.1016/j.ifacol.2016.07.286 Lucia, S., Subramanian, S., Engell, S., 2013. Non-conservative robust Nonlinear Model Predictive Control via scenario decomposition, in: 2013 IEEE International Conference on Control Applications (CCA). Presented at the 2013 IEEE International Conference on Control Applications (CCA), pp. 586–591. https://doi.org/10.1109/CCA.2013.6662813 Martí, R., Lucia, S., Sarabia, D., Paulen, R., Engell, S., de Prada, C., 2015. Improving scenario decomposition algorithms for robust nonlinear model predictive control. Computers & Chemical Engineering 79, 30–45. https://doi.org/10.1016/j.compchemeng.2015.04.024 Mdoe, Z., Krishnamoorthy, D., Jaschke, J., 2021. Adaptive Horizon Multistage Nonlinear Model Predictive Control, in: 2021 American Control Conference (ACC). Presented at the 2021 American Control Conference (ACC), pp. 2088–2093. https://doi.org/10.23919/ACC50511.2021.9483183 Raff, T., Huber, S., Nagy, Z.K., Allgower, F., 2006. Nonlinear model predictive control of a four tank system: An experimental stability study, in: 2006 IEEE Conference on Computer Aided Control System Design, 2006 IEEE International Conference on Control Applications, 2006 IEEE International Symposium on Intelligent Control. Presented at the 2006 IEEE Conference on Computer Aided Control System Design, 2006 IEEE International Conference on Control Applications, 2006 IEEE International Symposium on Intelligent Control, pp. 237–242. https://doi.org/10.1109/CACSD-CCA-ISIC.2006.4776652 Rawlings, J.B., Mayne, D.Q., 2009. Model Predictive Control Theory and Design. Nob Hill Pub, Llc, Madison, Wis. Thombre, M., Mdoe, Z., Jäschke, J., 2020. Data-Driven Robust Optimal Operation of Thermal Energy Storage in Industrial Clusters. Processes 8, 194.",
+    "presenting_author": "Zawadi Mdoe | NTNU, Trondheim, Norway",
+    "authors": [
+      "Zawadi Mdoe | NTNU, Trondheim, Norway",
+      "Dinesh Krishnamoorthy | Harvard John A. Paulson School of Engineering and, Allston, MA",
+      "Johannes Jäschke | Norwegian University of Science and Technology, Trondheim, Norway"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zawadi Mdoe",
+        "affiliation": "NTNU, Trondheim, Norway",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Dinesh Krishnamoorthy",
+        "affiliation": "Harvard John A. Paulson School of Engineering and, Allston, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Johannes Jäschke",
+        "affiliation": "Norwegian University of Science and Technology, Trondheim, Norway",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "434h",
+    "sortable_time": "2022-11-16_10:13:00_10:32:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646141"
+  }
+]

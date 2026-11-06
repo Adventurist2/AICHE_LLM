@@ -1,0 +1,342 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/493368",
+    "paper_endpoint": "Paper/493368",
+    "paper_id": "493368",
+    "topic": "Accounting for Safety System Activation within Economic Model Predictive Control",
+    "title": "Accounting for Safety System Activation within Economic Model Predictive Control",
+    "date_time": "2017-10-29_15:30:00_18:00:00",
+    "session_id": "35660",
+    "session_title": "Advances in Process Control",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Chemical plants utilize a set of barriers against process accidents consisting of the control system and the safety system (e.g., the alarm, emergency shut-down, and safety relief systems) [1]. Recent advances in chemical process safety utilizing a systems engineering perspective [2] have sought to incorporate safety considerations within economic model predictive control (EMPC) [3] through safety-based constraints (either Lyapunov level set-based constraints [4] or constraints based on a safety metric termed the Safeness Index [5]). These designs have assumed that the process model does not change throughout the prediction horizon, meaning that no actions of the safety system (which are typically on/off-type actions such as bringing a valve from its fully open to fully closed position) are considered to be taken during process operation. However, the activation of the safety system should be accounted for within EMPC design because the actions of the safety system change the process dynamics and potentially the input availability (e.g., in the case that a valve actuated by the safety system is in series with a valve actuated by the control system), and thus the state predictions from the EMPC should account for activation of the safety system to avoid significant plant-model mismatch throughout the prediction horizon that may cause the EMPC to choose less suitable control actions (from both an economics viewpoint and a safety viewpoint) than it would choose if it was aware of the change in the plant due to safety system activation. Motivated by the above considerations, we develop an EMPC design that accounts for the activation conditions of the safety system and changes the process model when the safety system is predicted to be activated at any time throughout the prediction horizon to reflect the dynamics of the process after safety system activation. We consider modeling of the automated actions of both the emergency shutdown system and the safety relief system within the EMPC. We investigate the impact that the foreknowledge of the safety system activation has on the state and input trajectories of a chemical process under such a control design compared to the case that the EMPC is unaware of the safety system activation. We discuss the impact of the plant-model mismatch that may occur due to disturbances if the state predictions utilized for choosing the control actions indicate activation of the safety system but it does not activate for the process with disturbances (similarly, we discuss the impact of the safety system activating when it was not predicted within the EMPC to do so). We investigate the addition of constraints to the EMPC as the state predictions approach the safety system activation levels to encourage it to choose control actions that will prevent the safety system activation. The closed-loop modeling strategy developed that includes the safety system activation conditions may also provide a systematic methodology for identifying safety system triggers and thus for coordinating the control and safety systems. [1] Marlin T. Operability in Process Design: Achieving Safe, Profitable, and Robust Process Operations. McMaster University in Ontario, Canada, 2012. [2] Leveson NG, Stephanopoulos G. A system-theoretic, control-inspired view and approach to process safety. AIChE Journal. 2014;60:2-14. [3] Ellis M, Durand H, Christofides PD. A tutorial review of economic model predictive control methods. Journal of Process Control. 2014;24:1156-1178. [4] Albalawi F, Alanqar A, Durand H, Christofides PD. A feedback control framework for safe and economically-optimal operation of nonlinear processes. AIChE Journal. 2016;62:2391-2409. [5] Albalawi F, Durand H, Christofides PD. Process operational safety using model predictive control based on a process Safeness Index. Computers & Chemical Engineering. in press.",
+    "presenting_author": "Fahad Albalawi | University of California, Los Angeles",
+    "authors": [
+      "Fahad Albalawi | University of California, Los Angeles",
+      "Zhe Wu | University of California, Los Angeles",
+      "Zhihao Zhang | University of California, Los Angeles",
+      "Helen Durand | University of California, Los Angeles",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Fahad Albalawi",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhe Wu",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Zhihao Zhang",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Helen Durand",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12a",
+    "sortable_time": "2017-10-29_15:30:00_15:49:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/493368"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/502118",
+    "paper_endpoint": "Paper/502118",
+    "paper_id": "502118",
+    "topic": "A Novel Biomimetic Approach to Process Control By Exploiting Memory and Cognition",
+    "title": "A Novel Biomimetic Approach to Process Control By Exploiting Memory and Cognition",
+    "date_time": "2017-10-29_15:30:00_18:00:00",
+    "session_id": "35660",
+    "session_title": "Advances in Process Control",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Typical learning algorithms used in the area of process control utilize the ‘experiences’ in the immediate past. However, for uncertain cyclic systems or for systems that ‘revisit’ the same or similar transients due to inherent evolution of the system, occurrence of certain disturbances, and/or desired control trajectory, experiences learnt in the ‘distant’ past can be exploited to achieve superior control performance. The main challenges in utilizing past experiences are in identifying the similarity of the current problem with one or more previous control problem(s), and then in calculating the optimal control moves based on the evaluation of ‘dissimilarity’ measure. In this work, we propose a novel biomimetic control system that mimics human memory and cognition system by drawing from the past experiences to achieve superior performance for the current control problem. In this work, a dynamic sparse coding (DSC) algorithm is developed to identify the features of a non-linear time-varying system for the purpose of estimating the similarity to previous control scenarios. Each experience is stored in a compact cluster of “memories” by using a subtractive clustering technique for unsupervised learning of unique, or “core”, control problems. Cores are automatically updated to improve future performance based on the new ‘experience’ gathered while solving the current control problem. When there is an acceptable similarity to a past control problem, then the experience from the past controller is delivered in the form of updated controller parameters. Overall, the control system automatically evolves to an optimal system with continued improvement as new ‘experiences’ are gathered. Recognizing that it is unlikely for a controller to experience all possible forms of control scenarios upfront, or even after long exposure, an algorithm is developed that mimics the human cognitive decision support system. By integrating the memory base with a fuzzy cognitive map (FCM), informed decisions can be made on how to optimally proceed against a large array of un-encountered control scenarios. Overall, it is desired that a seamless independent operation of the control system be achieved. The algorithms and approaches are validated on an acid gas removal unit as part of an integrated gasification combined cycle plant. This unit consists of large number of equipment items, is highly nonlinear, and involves significant mass and heat integration along with considerable time delay. It is observed that even if the controller performance is poor to start with, repeated use of past experiences leads to superior control performance. Performance of the control system is also studied under various un-encountered control scenarios.",
+    "presenting_author": "Jacob Albright | National Energy Technology Laboratory, Morgantown, WV",
+    "authors": [
+      "Jacob Albright | National Energy Technology Laboratory, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jacob Albright",
+        "affiliation": "National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12b",
+    "sortable_time": "2017-10-29_15:49:00_16:08:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/502118"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/497642",
+    "paper_endpoint": "Paper/497642",
+    "paper_id": "497642",
+    "topic": "Control with Soft Feedback in Social Systems: Mathematical Principles, Empirical Evidence, and Applications",
+    "title": "Control with Soft Feedback in Social Systems: Mathematical Principles, Empirical Evidence, and Applications",
+    "date_time": "2017-10-29_15:30:00_18:00:00",
+    "session_id": "35660",
+    "session_title": "Advances in Process Control",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Feedback control has long been regarded as essential in engineering, biological, and ecological systems. Control in social systems, a recent addition, reflects further advances of this discipline. Feedback here includes opinions, consensus, polling results, market signals, rumors, product ratings, etc. Compared with the same concept in process control, feedback in social systems is “soft” and need not be followed. This unique property makes control in social systems challenging and interesting. To quantify the extent to which individuals adopt feedback, we introduce a new quantity—degree of social influence: It critically determines the closed-loop dynamics of a social control system. In this presentation, we will first describe a social system with multiple intelligent agents. Each agent has an optimization problem to solve. That problem, for instance, can be improving one’s health or finding the optimal state-wise taxation depending on the context. Our objective is to understand whether soft feedback makes the problem-solving process more efficient for the multi-agent system. If so, what is the optimal degree of social influence to achieve the most improvement? How can we make intelligent crowds even smarter? We will show via mathematical proofs and empirical evidence that it is indeed possible to make crowds smarter. Our work has a diverse set of potential applications in areas such as healthcare, revenue management, and policy-making.",
+    "presenting_author": "Yu Luo | Columbia University, New York, NY",
+    "authors": [
+      "Yu Luo | Columbia University, New York, NY",
+      "Garud Iyengar | Columbia University, New York, NY",
+      "Venkat Venkatasubramanian | Columbia University, New York, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yu Luo",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Garud Iyengar",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Venkat Venkatasubramanian",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12c",
+    "sortable_time": "2017-10-29_16:08:00_16:27:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/497642"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/497473",
+    "paper_endpoint": "Paper/497473",
+    "paper_id": "497473",
+    "topic": "A Novel, Biomimetic Approach to Self-Organizing, Optimal Control Structure Design",
+    "title": "A Novel, Biomimetic Approach to Self-Organizing, Optimal Control Structure Design",
+    "date_time": "2017-10-29_15:30:00_18:00:00",
+    "session_id": "35660",
+    "session_title": "Advances in Process Control",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "While there are numerous works on controller design, research in the area of optimal control structure design is nascent. Traditionally, heuristics and process knowledge have been employed for control structure design. More recently, methodical approaches have been proposed (Halvorsen et al., 2003) based on economics. Optimal selection of the primary controlled variables (CVs) by considering plant economics as well as controllability in presence of closed loop dynamics and time delay has been recently proposed by some of the co-authors of this work (Jones et al., 2014a, 2014b). Due to large number of candidate variables that lead to significant number of combinatorial possibilities even for small plants, online selection of primary CVs is computationally prohibitive. Additionally, as process dynamics, operational constraints and operational objectives change, it is expected that optimal controlled variables would change. This necessitates online selection of CVs leading to a self-organizing optimal control structure. However, the large scale combinatorial problem that is undertaken for CV selection is computationally prohibitive for online application. Therefore, we propose a novel biomimetic approach that exploits the structural connectivity of the plant, similar to the self-organization of the cortical/sub-cortical areas in human brain, to decompose the large-scale problem into smaller subsets called ‘islands’. This approach makes parallel solution of the controlled variable selection problem feasible thus achieving solution within the target execution time. Secondly, within each island, a metaheuristic multiagent optimizer, that mimics the human nervous system, is deployed to obtain optimal CVs subject to the time constraints for online applications. The biomimetic approach addresses the problem of sub-optimality of controlled variables due to system changes and render the computational time tractable for online deployment. Firstly, for determining the change in the connectivity among plant sections, we draw from the neuroscience literature where the connectivity among cortical/sub-cortical areas are determined using the fMRI responses (Friston et al., 2003). At a cortical level, the neuronal populations can be modelled as states that dynamically evoke brain responses as a function of inputs. Thus, by modeling islands of sub processes in a chemical plant as cortical/sub-cortical areas, the effective connectivity of these islands of sub processes can be extracted. In this approach, a bilinear model of the process is developed where the model parameters represent intrinsic coupling among the states, describe the influence of extrinsic inputs on the states and as well as capture the effect of inputs on coupling. These parameters are identified using a Bayesian framework. These connectivity matrices can then be employed as a basis for controlled variable selection. Secondly, for each identified island, controlled variables are selected via multi-agent optimization techniques that employ various probabilistic and mathematical programming algorithms. In particular, a metaheuristic heterogeneous multiagent optimization framework is deployed. This approach embodies novel features of an intelligent system, similar to the human central nervous system, by exhibiting coordination and information sharing amongst several agents. The algorithms developed are implemented on a model of an integrated gasification combined cycle (IGCC) plant with CO 2 capture. This plant includes significant mass and energy interactions with strong change in the coupling as the inputs are changed which renders it a prefect test case for the developed algorithm. References Friston, K. J., Harrison, L., & Penny, W. (2003). Dynamic causal modelling. NeuroImage, 1273-1302. Halvorsen, I. J., Skogestad, S., Morud, J. C., & Alstad, V. (2003). Optimal selection of controlled variables. Industrial & Engineering Chemistry Research , 42, 3273-3284. Jones, D., Bhattacharyya, D., Turton, R., & Zitney. (2014a). Plant-wide control system design: Primary controlled variable selection. Computers & Chemical Engineering, 220-234. Jones, D., Bhattacharyya, D., Turton, R., & Zitney. (2014b). Plant-wide control system design: Secondary controlled variable selection. Computers & Chemical Engineering, 71, 253-262.",
+    "presenting_author": "Temitayo Bankole | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Temitayo Bankole | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV",
+      "Berhane Gebreslassie | Vishwamitra Research Institute, Clarendon Hills, IL",
+      "Urmila Diwekar | Vishwamitra Research Institute, Crystal Lake, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Temitayo Bankole",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Berhane Gebreslassie",
+        "affiliation": "Vishwamitra Research Institute, Clarendon Hills, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Urmila Diwekar",
+        "affiliation": "Vishwamitra Research Institute, Crystal Lake, IL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12d",
+    "sortable_time": "2017-10-29_16:27:00_16:46:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/497473"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/495206",
+    "paper_endpoint": "Paper/495206",
+    "paper_id": "495206",
+    "topic": "Closed-Loop Active Fault Diagnosis for Uncertain Nonlinear Systems",
+    "title": "Closed-Loop Active Fault Diagnosis for Uncertain Nonlinear Systems",
+    "date_time": "2017-10-29_15:30:00_18:00:00",
+    "session_id": "35660",
+    "session_title": "Advances in Process Control",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Fault detection and diagnosis allows for maintaining stable, reliable, and profitable operation of complex systems in the presence of component malfunctions, drifting system parameters, and other abnormal events [1]. However, nonlinear dynamics, system uncertainty, disturbances, and measurement noise often render fault diagnosis a challenging task in many applications. The problem of fault diagnosis is further complicated by the increasingly stringent requirements on the high-performance operation of practical systems, which necessitate retaining the system within admissible operational constraints during fault diagnosis. To address these challenges, a wide range of methods have been developed including residual- and observer-based [2], set-based [3], and data-based [1] approaches. The vast majority of these methods are passive , where the status of the system is deduced by comparing measurements with model predictions or historical data. However, system uncertainties and/or corrective actions of the control system can often obscure faulty behavior to an extent that impairs reliable diagnosis of faults. In these cases, auxiliary input signals can be applied to the system to enhance the detectability and isolability of faults in the system measurements [4]. This notion has led to the development of active fault diagnosis (AFD) methods in which an input sequence is designed to diagnose the system faults within a given time window in the presence of uncertainty. Worst-case “robust” AFD methods have been reported for designing input sequences that account for the worst-case values of the uncertainty. These approaches, largely developed for linear systems, look to minimize the energy of the input sequence while guaranteeing separation of the reachable output sets for all model hypotheses [4,5]. When probabilistic descriptions of the system uncertainty are available, a more natural approach is to account for probability distribution of the model outputs in place of deterministic sets. By accounting for distributional information, the input sequences can be designed in a (possibly) less conservative manner when compared to worst-case approaches. Recently, a model predictive control approach with active model discrimination is presented to account for not only the uncertainty but also the presence of control in active fault diagnosis [6]. This talk addresses the problem of AFD for nonlinear systems subject to stochastic disturbances and measurement noise as well as probabilistic model uncertainty in parameters and initial conditions (representing our incomplete knowledge of the system). The talk further discusses the challenges of integrating the AFD and control problems for improved diagnosability without adversely affecting the average control performance. The natural choice of the AFD objective function is the Bayes risk , which represents the probability of misclassifying the model; however, the Bayes risk in known to be an intractable optimization criterion as discussed in [7]. Therefore, we instead minimize an upper bound on the Bayes risk that can be defined in terms of the Bhattacharyya coefficient, which has a closed-form solution for Gaussian random variables [8]. Input and state constraints are enforced to guarantee safe system operation that is minimally intrusive during the fault diagnosis period. State constraints are enforced as chance constraints to provide flexibility and minimal conservatism. A key challenge in solving this stochastic AFD problem is propagation of uncertainties through the nonlinear system dynamics since there is no closed-form expression for the probability distribution of the predicted state evolution. This work explores two methods for efficient uncertainty propagation (including linearization and the unscented transform) to determine the evolution of the moments of the predicted states. The proposed AFD method can be used to compute an input trajectory once offline or it can be implemented in an online (i.e., receding-horizon) fashion. Online AFD allows for re-planning the inputs (i.e., fault diagnosis experiment) at each measurement sampling time based on new system observations/measurements. This online procedure involves solving a nonlinear state estimation problem to recursively update the model probabilities using Bayes’ rule. The effectiveness of the proposed tractable approach for offline and online AFD is demonstrated on a continuous bioreactor with multiple fault scenarios including operational and structural changes to the process. Simulation results indicate that the designed input trajectories achieve a correct fault diagnosis in all considered cases despite the presence of uncertainty. For this case, online AFD shows superior performance compared to an offline implementation and the AFD optimization problem can be solved sufficiently fast for real-time implementation. When integrating control and AFD, the simulation results show that AFD can be performed with minimal loss of control performance and that adding AFD to the predictive control algorithm improves average control performance for certain fault scenarios. References [1] L. H. Chiang, E. L. Russell, R. D. Braatz. Fault Detection and Diagnosis in Industrial Systems . Springer, 2000. [2] R. J. Patton, J. Chen. Observer-based fault detection and isolation: Robustness and applications. Control Engineering Practice , 5, 671–682, 1997. [3] R. Nikoukhah. Guaranteed active failure detection and isolation for linear dynamical systems. Automatica , 34, 1345–1358, 1998. [4] A. E. Ashari, R. Nikoukhah, S. L. Campbell. Auxiliary signal design for robust active fault detection of linear discrete-time systems. Automatica, 47, 1887–1895, 2011. [5] J. K. Scott, R. Findeisen, R. D. Braatz, D. M. Raimondo. Input design for guaranteed fault diagnosis using zonotopes. Automatica , 50, 1580–1589, 2014. [6] Heirung, T. A. N., Mesbah, A. Stochastic nonlinear model predictive control with active model discrimination: a closed-loop fault diagnosis application. In Proceedings of the IFAC World Congress , 2017, Toulouse. [7] T. Cover, P. Hart. Nearest neighbor pattern classification. IEEE Transactions on InformationTheory , 13, 21–27, 1967. [8] L. Blackmore, B. Williams. Finite horizon control design for optimal discrimination between several models. In Proceedings of the 45 th IEEE Conference on Decision and Control , pp 1147–1152, 2006, San Diego.",
+    "presenting_author": "Joel Paulson | University of California, Berkeley",
+    "authors": [
+      "Joel Paulson | University of California, Berkeley",
+      "Tor Aksel N. Heirung | University of California - Berkeley",
+      "Marc Martin-Casas | University of California - Berkeley",
+      "Ali Mesbah | University of California, Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joel Paulson",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Tor Aksel N. Heirung",
+        "affiliation": "University of California - Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Marc Martin-Casas",
+        "affiliation": "University of California - Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12e",
+    "sortable_time": "2017-10-29_16:46:00_17:05:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/495206"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/493488",
+    "paper_endpoint": "Paper/493488",
+    "paper_id": "493488",
+    "topic": "Development of a Biologically-Inspired Approach for Advanced Adaptive Control of Clean Energy Systems",
+    "title": "Development of a Biologically-Inspired Approach for Advanced Adaptive Control of Clean Energy Systems",
+    "date_time": "2017-10-29_15:30:00_18:00:00",
+    "session_id": "35660",
+    "session_title": "Advances in Process Control",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Over the last decades, biologically-inspired control techniques have emerged as attractive alternatives for process control applications. For example, a Biologically-Inspired Optimal Control Strategy (BIO-CS) has been recently proposed and illustrated via examples including a nonlinear fermentation process 1-3 and a hybrid energy system that integrates different process components 4 . Also, a low-dimensional system associated with the Acid Gas Removal (AGR) unit of an Integrated Gasification Combined Cycle (IGCC) plant was controlled using BIO-CS considering setpoint tracking cases 5 . Specifically, BIO-CS is an agent-based control strategy that is inspired by the ant’s rule of pursuit idea in combination with gradient-based optimal control concepts 1-5 . In previous applications of BIO-CS, the multi-agent aspects of the algorithm were studied in detail and different termination criteria were analyzed to accommodate computational time limitations. However, the existence of plant-model mismatches as well as multiple disturbances in the control of high-dimensional systems has not yet been addressed using BIO-CS. To fill these gaps, in this presentation, BIO-CS is further extended to incorporate an adaptive component based on an Artificial Neural Network (ANN) method into the controller formulation. The proposed framework is then implemented for tackling high-dimensional control structures of the IGCC-AGR process simulation considering more realistic scenarios that could be encountered in practice. For this study, a Multi-Input-Multi-Output (MIMO) system from the IGCC-AGR process in DYNSIM (software used for dynamic simulations of chemical processes) is chosen. In particular, CO 2 /H 2 S absorption units of the IGCC-AGR process are analyzed for the control structure selection. Simplified dynamic models are derived for BIO-CS employing system identification techniques, such as the autoregressive model with exogenous inputs (ARX). The optimal control trajectories are then computed by BIO-CS using the simplified model to maintain multiple outputs at their desired setpoints. The controlled/output variables considered in this implementation are the compositions of the outgoing stream and the temperature of the incoming solvent related to the CO 2 absorption unit. The manipulated/input variables are the flowrates of the recycled solvent and the refrigerant associated with the same unit. Similar variables are selected for the H 2 S absorption system, thus resulting in an overall high-dimensional system with multiple control islands. The proposed controller framework is designed in MATLAB and the control laws are communicated to the IGCC-AGR process simulation in DYNSIM by employing a MATLAB-DYNSIM link. This application represents the realistic scenario of the inherent mismatch between the plant and the model used by the controller. To mitigate this mismatch, an ANN-based adaptive component that has online learning capabilities is incorporated into the BIO-CS formulation. Using the information of the tracking errors, outputs, and available states, the adaptive BIO-CS brings the system back to the desired operating point. Preliminary results on the implementation of the proposed framework for the CO 2 capture island show promising capabilities in terms of maintaining the system at the required level of carbon capture. In addition, these results demonstrate the potential of the BIO-CS with adaptive component framework to tackle multiple challenges, such as nonlinearities, high dimensionality and plant-model mismatches that are commonly encountered in the process control industries. References: Lima F. V., Li S., Mirlekar G. V., Sridhar L. N. and Ruiz-Mercado G. J., “Modeling and advanced control for sustainable process systems”. Sustainability in the Analysis, Synthesis and Design of Chemical Engineering Processes, G. Ruiz-Mercado and H. Cabezas (eds.), Elsevier, 2016. Li S., Mirlekar G. V., Ruiz-Mercado G. J. and Lima F. V., “Development of chemical process design and control for sustainability”. Processes, 4(3):23, 2016. Mirlekar G. V., Li S. and Lima F. V., “Design and implementation of a Biologically-Inspired Optimal Control Strategy (BIO-CS) for chemical process control”. Submitted for publication. Mirlekar G. V., Pezzini P., Bryden M., Tucker D. and Lima F. V., “A Biologically-Inspired Optimal Control Strategy (BIO-CS) for hybrid energy systems”. To appear in Proceedings of 2017 American Control Conference. Mirlekar G. V. and Lima F. V., “Design and implementation of a Biologically-Inspired Optimal Control Strategy (BIO-CS) for advanced energy systems”. In AIChE Annual Meeting, San Francisco, CA, 2016.",
+    "presenting_author": "Gaurav V. Mirlekar | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Gaurav V. Mirlekar | West Virginia University, Morgantown, WV",
+      "Ghassan Al-Sinbol | West Virginia University, Morgantown, WV",
+      "Mario Perhinschi | West Virginia University, Morgantown, WV",
+      "Fernando Lima | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gaurav V. Mirlekar",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ghassan Al-Sinbol",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Mario Perhinschi",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Fernando Lima",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12f",
+    "sortable_time": "2017-10-29_17:05:00_17:24:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/493488"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/488222",
+    "paper_endpoint": "Paper/488222",
+    "paper_id": "488222",
+    "topic": "A New Dynamic Response Surface Methodology for Modeling the Dynamics of Nonlinear Processes",
+    "title": "A New Dynamic Response Surface Methodology for Modeling the Dynamics of Nonlinear Processes",
+    "date_time": "2017-10-29_15:30:00_18:00:00",
+    "session_id": "35660",
+    "session_title": "Advances in Process Control",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In the era of Big Data, there is an ever-increasing amount of measured process variables that have been collected and stored. However, such data have not yet resulted in accurate models for process optimization and control purposes. Often the information that might be extracted from them, a challenging task, might not be sufficient 1 . In addition, most of the proposed modeling methodologies for extracting such information, such as PCA and PLS, are linear and static. However, the fact remains that both the input and output variables are time-varying and their true interrelationship is nonlinear. Our research group has recently introduced two data-driven modeling methodologies that account for the nonlinearities and process dynamics. They generalize the classical Design of Experiments (DoE) 2,3 framework by considering dynamic input as well as dynamic output variables. They also accurately model nonlinear dependencies among the variables. The Design of Dynamic Experiments (DoDE) 4 approach addresses the issue of dynamic inputs and the Dynamic Response Surface Methodology (DRSM) 5 models time-varying outputs. These novel data-driven methodologies have been successfully applied to the modeling, optimization and control many batch processes 6-10 . In this paper, we present a new and more promising version of the DRSM methodology in order to accurately model dynamic data over the semi-infinite time horizon. The novelty of the new method rests on a nonlinear transformation of time, the independent variable. The new method has the following advantages in comparison with the previous DRSM approach. It is capable of: 1) Modeling both continuous as well as batch processes, handling semi-infinite as easily as finite time domains 2) Using data that are not equidistant in time 3) Using data segments that are of varied durations due to possible strong nonlinearities in dynamics We have examined the accuracy of the new approach in two representative processes: a complex continuous polymerization process 11 and a semi-batch penicillin fermentation 12 . In both cases, statistical measures prove the obtained DRSM model to be very accurate. We will also discuss how such DRSM models can be used for control and optimization purposes. Reference 1. Reis MS, Braatz RD, Chiang LH. Big Data: Challenges and Future Research Directions. Chemical Engineering Progress. 2016;112(3):46-50. 2. Box GEP, Wilson KB. ON THE EXPERIMENTAL ATTAINMENT OF OPTIMUM CONDITIONS. Journal of the Royal Statistical Society Series B-Statistical Methodology. 1951;13(1):1-45. 3. Montgomery DC. Design and Analysis of Experiments. 8th ed. New York: Wiley; 2013. 4. Georgakis C. Design of Dynamic Experiments: A Data-Driven Methodology for the Optimization of Time-Varying Processes. Industrial & Engineering Chemistry Research. 2013;52(35):12369-12382. 5. Klebanov N, Georgakis C. Dynamic Response Surface Models: A Data-Driven Approach for the Analysis of Time-Varying Process Outputs. Industrial & Engineering Chemistry Research. 2016;55(14):4022-4034. 6. Fiordalis A, Georgakis C. Data-driven, Using Design of Dynamic Experiments, versus Model-driven Optimization of Batch Crystallization Processes. Journal Of Process Control. 2013;23(2):179-188. 7. Georgakis C, Chin S, Hayot P, Wassick J, Chiang LH. Optimizing an Industrial Batch Process Using the Design of Dynamic Experiments Methodology. Paper presented at: AICHE Spring Meeting; April 10-14, 2016; Houston,TX. 8. Wang Z, Klebanov N, Georgakis C. DRSM Model for the Optimization and Control of Batch Processes. Paper presented at: Dynamics and Control of Process Systems, including Biosystems/IFAC2016; Trondhelm,Norway. 9. Wang Z, Georgakis C. Data-Driven Optimization Using an Evolutionary Design of Dynamic Experiments for Biopharmaceutical Processes. Paper presented at: AICHE Annual Meeting; Nov 13-18, 2016; San Francisco, CA. 10. Troup GM, Georgakis C. Process systems engineering tools in the pharmaceutical industry. Computers & Chemical Engineering. 2013;51:157-171. 11. Zacca JJ, Ray WH. Modeling of the liquid-phase polymerization of olefins in loop reactors. Chem. Eng. Sci. 1993;48(22):3743-3765. 12. Bajpai RK, Reuss M. A Mechanistic Model for Penicillin Production. J. Chem. Technol. Biotechnol. 1980;30(6):332-344.",
+    "presenting_author": "Zhenyu Wang | Tufts University, Medford, MA",
+    "authors": [
+      "Zhenyu Wang | Tufts University, Medford, MA",
+      "Christos Georgakis | Tufts University, Medford, MA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zhenyu Wang",
+        "affiliation": "Tufts University, Medford, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christos Georgakis",
+        "affiliation": "Tufts University, Medford, MA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12g",
+    "sortable_time": "2017-10-29_17:24:00_17:43:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/488222"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/486920",
+    "paper_endpoint": "Paper/486920",
+    "paper_id": "486920",
+    "topic": "The Stabilization of Input-Constrained Nonlinear Systems with Maximal Region of Attraction",
+    "title": "The Stabilization of Input-Constrained Nonlinear Systems with Maximal Region of Attraction",
+    "date_time": "2017-10-29_15:30:00_18:00:00",
+    "session_id": "35660",
+    "session_title": "Advances in Process Control",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "All physical control systems exhibit input constraints: all real motors have finite torque and valves can only open so wide. However, many control system fail to incorporate this limitation into their design, resulting in potential loss of stability. Regardless of the control law, input constraints often limit the set of initial conditions from where stabilization is achievable to the so- called null controllable region (NCR). For linear control systems, it was shown in [2] that the boundary of the NCR is formed from certain trajectories of the time-reversed system. These trajectories can be shown to be solutions to a time-optimal control problem [3]. There currently do not exist any methods to determine the NCR for general nonlinear systems. In this work, we will introduce a new, computationally efficient algorithm to determine the NCR for any nonlinear system. The method consists of expanding a quadrative Lyapunov-function based estimate of the NCR with successive estimations of the NCR. By simulating trajectories just outside estimated NCR, the set of ‘stable’ states grows by adding states that can reach the current region. This can be seen as exploiting the positive invariance property of the NCR. We next use knowledge of the NCR to design a stabilizing control law. This design is the first to be demonstrated which can guarantee stabilization from everywhere in the NCR (it is impossible to stabilize the system outside of the NCR) for nonlinear systems, and is similar to the ‘Constrained control Lyapunov function’-based design which was first reported in [5] for linear systems. The design can be summarized as driving the states away from the boundary of the NCR. Before online implementation, we compute several NCR “shells” corresponding to various input constraints. Then, we implement a model predictive controller that drives the states into successively smaller shells, which results in asymptotic stabilization to the origin. The versatility and efficacy of our results are illustrated with several linear and nonlinear examples in various dimensions. References [1] P. Mhaskar, N. El-Farra, P. Christofides (2006). Stabilization of nonlinear systems with state and control constraints using Lyapunov-based predictive control. Systems & Control Letters, 55, 650-659. [2] T. Hu, Z. L. and Qiu, L. (2002). An explicit description of null controllable regions of linear systems with saturating actuators. Systems & Control Letters, 47, 65-78. [3] Lewis, A. (2006). The Maximum Principle of Pontryagin in Control and in Optimal Control. Department of Mathematics and Statistics, Queen's University, Kingston, Canada. [4] Mahmood, M. and Mhaskar, P. (2014). Constrained control Lyapunov function based model predictive control design. Int. J. Robust Nonlinear Control, 24, 374-388",
+    "presenting_author": "Tyler Homer | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Tyler Homer | McMaster University, Hamilton, Canada",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Tyler Homer",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12h",
+    "sortable_time": "2017-10-29_17:43:00_18:02:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/486920"
+  }
+]
