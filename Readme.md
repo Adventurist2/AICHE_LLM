@@ -4,8 +4,9 @@
 
 The current pipeline is organized into `01_scraping/`, `02_extraction/`,
 `03_grouping/`, `04_clustering/`, and `05_webapp/`. Raw papers, extraction outputs,
-aggregated keywords, clustering snapshots, prepared web indices, historical
-archives, and validation reports are included. See [context/current.md](context/current.md)
+aggregated keywords, clustering snapshots, prepared web indices, and historical
+archives are included. Analysis reports and manuscript drafts are kept locally
+and excluded from Git. See [context/current.md](context/current.md)
 for the current implementation and [05_webapp/README.md](05_webapp/README.md)
 for application methods, validation, and limitations. The roadmap below describes
 the earlier experiments.
@@ -38,12 +39,11 @@ are retained.
 ### Snapshot status at upload (November 6, 2026)
 
 The installed explorer snapshot contains 173,438 keywords and 313,858 mentions
-at five clustering heights. The newer frozen input contains 183,489 keywords
-and 331,849 mentions, with partial 2017 extraction coverage, under
-`reports/keyword_refresh_2026-11-04/`. Its Ward rebuild stopped on November 4
-before producing a completed new tree. The failure status and inputs are
-preserved; the newer twelve-height results are not installed. See the saved
-`refresh_status.json` files for the status of each run.
+at five clustering heights. A newer local input contains 183,489 keywords
+and 331,849 mentions, with partial 2017 extraction coverage. Its Ward rebuild
+stopped on November 4 before producing a completed new tree. Its saved status
+and frozen inputs remain in the excluded local reports directory; the newer
+twelve-height results are not installed in the published explorer snapshot.
 
 ## 1. Project Overview
 
