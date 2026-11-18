@@ -1,0 +1,80 @@
+==============================================================================
+WARD LINKAGE vs. HDBSCAN vs. K-MEANS
+Same 2136-keyword test slice, same all-MiniLM-L6-v2 embeddings
+==============================================================================
+
+                                      Ward       HDBSCAN       K-Means
+Clusters found                       1,110           454         1,110
+Unclustered (noise)                      0           824             0
+Noise %                               0.0%         38.6%          0.0%
+Runtime (s)                           1.28          1.83          3.91
+Cluster count needed upfront?            no            no  YES (k=1110)
+
+Note on K-Means's k: copied directly from Ward's own result at the same
+threshold, so this is the best case for K-Means - it was TOLD the answer.
+K-Means has no way to derive that number independently for a new dataset.
+
+K-Means/Ward structural agreement: 85.9% average cluster purity
+(despite being given the same k, K-Means and Ward do not converge on the
+same groupings - centroid-distance assignment differs from variance-minimizing
+hierarchical merging even at matched granularity)
+
+------------------------------------------------------------------------------
+TOP 8 LARGEST WARD CLUSTERS
+------------------------------------------------------------------------------
+[ 11] ['brønsted acidic zeolites', 'metal-exchanged zeolite', 'nanoscale mfi zeolite', 'proton-exchanged zeolite', 'solid lewis acid zeolite beta', 'zeolite catalysts', 'zeolite confinement effects', 'zeolite cracking', 'zeolite decarboxylation', 'zeolite membrane separation', 'zeolites']
+[  9] ['catalyst characterization', 'catalyst design', 'catalyst development', 'catalyst material screening', 'catalyst performance prediction', 'catalyst spatial organization', 'catalyst stability', 'rational catalyst design', 'theoretical catalyst modeling']
+[  8] ['colloid chemistry', 'colloidal crystals', 'colloidal mixtures', 'colloidal nanocrystals', 'colloidal phenomena', 'colloidal synthesis', 'colloidal systems', 'open colloidal crystals']
+[  8] ['renewable chemicals', 'renewable diesel', 'renewable electricity integration', 'renewable energy', 'renewable energy sources', 'renewable energy technologies', 'renewable fuels', 'sustainable energy technologies']
+[  7] ['bi-functional catalysts', 'bifunctional catalysts', 'bimetallic catalyst', 'bimetallic catalysts', 'bimetallic hydrogenation catalysts', 'pt-bi bimetallic catalysts', 'single-site bimetallic alloy catalysts']
+[  7] ['biocompatible photocatalysts', 'photo-electrocatalytic reduction', 'photocatalysis', 'photocatalyst', 'photocatalytic and photovoltaic applications', 'photocatalytic cycle', 'visible-light organic photocatalysis']
+[  7] ['bionanocomposite hydrogels', 'elastin-like protein hydrogels', 'hydrogel degradability', 'hydrogel scaffolds', 'magneto-responsive hydrogels', 'nanoporous hydrogels', 'peg crosslinked hydrogels']
+[  7] ['block copolymer micellization', 'block copolymer self-assembly', 'block copolymer templating', 'block copolymers', 'fatty-acid derived block copolymers', 'polyethylene block copolymers', 'triblock copolymer morphology']
+
+------------------------------------------------------------------------------
+TOP 8 LARGEST HDBSCAN CLUSTERS
+------------------------------------------------------------------------------
+[ 17] ['composite membranes', 'helical hollow fiber membranes', 'hollow fibre ultrafiltration', 'membrane confinement', 'membrane microstructure control', 'membrane structural properties', 'membrane-embedded nanoparticles', 'mof hollow-fiber membranes', 'nanofibrous membranes', 'nanofiltration membranes', 'nanoparticle-induced membrane disruption', 'nanoparticle-membrane electrostatic interaction', 'novel membrane structures', 'polyetherimide (pei) ultrafiltration support', 'scalable membrane fabrication', 'self-assembled membranes', 'sustainable mof membrane fabrication']
+[ 13] ['alginate gel spots', 'alginate hydrogel beads', 'bionanocomposite hydrogels', 'elastin-like protein hydrogels', 'hydrogel degradability', 'hydrogel scaffolds', 'injectable microgels', 'injectable scaffolds', 'magneto-responsive hydrogels', 'nanoporous hydrogels', 'peg crosslinked hydrogels', 'protein scaffolds', 'tissue scaffolds']
+[ 10] ['api granule drying', 'dry granulation', 'granule densification', 'granule drying model', 'high shear wet granulation', 'mechanistic drying model', 'pilot-scale drying prediction', 'spray drying', 'two-stage phenomenological drying', 'wet granulation']
+[ 10] ['block copolymer micellization', 'block copolymer phase separation', 'block copolymer self-assembly', 'block copolymer templating', 'block copolymers', 'block polymer phase behavior', 'fatty-acid derived block copolymers', 'polyethylene block copolymers', 'tetrablock terpolymer', 'triblock copolymer morphology']
+[ 10] ['diy microfluidic experiments', 'droplet microfluidics', 'droplet microstructure', 'microfluidic flow resistors', 'microfluidic loop device', 'microfluidic methods', 'microfluidic synthesis', 'microfluidic velocity scaling', 'microfluidics', 'short-channel microfluidics']
+[  9] ['biological self-assembly', 'directed self-assembly', 'interfacial assembly', 'ordered self-assembly', 'protein folding', 'protein self-assembly', 'self-assembly', 'self-assembly techniques', 'self-assembly thermodynamics']
+[  8] ['apparent diffusion coefficient', 'back diffusion', 'coupled reaction-diffusion systems', 'diffusion activation energy', 'diffusion activation entropy', 'diffusion control', 'diffusion selectivity engineering', 'double-diffusion method']
+[  8] ['crumpled graphene nanosheets', 'graphene oxide', 'graphene oxide membranes', 'graphene oxide porous network', 'nanoporous graphene', 'nanoporous material synthesis', 'pdms/graphene oxide composite', 'reduced graphene oxide']
+
+------------------------------------------------------------------------------
+TOP 8 LARGEST K-MEANS CLUSTERS
+------------------------------------------------------------------------------
+[ 13] ['catalyst characterization', 'catalyst design', 'catalyst development', 'catalyst material screening', 'catalyst performance prediction', 'catalyst spatial organization', 'heterogeneous catalyst design', 'microlith catalyst', 'multicomponent catalyst design', 'non-precious metal catalyst design', 'platinum group catalysts', 'rational catalyst design', 'theoretical catalyst modeling']
+[ 12] ['carbon nanotube electron tunneling', 'carbon nanotube fibers', 'carbon nanotube liquid crystal', 'carbon nanotube nanofluidics', 'carbon nanotube porin', 'carbon nanotube stabilization', 'carbon nanotube stabilizers', 'carbon nanotubes', 'single-walled carbon nanotube nanosensors', 'single-walled carbon nanotubes', 'single-walled nanotubes', 'sulfur-doped carbon nanodots']
+[ 11] ['cobalt nanoparticle electrocatalyst', 'electrocatalysis', 'electrocatalyst activity descriptors', 'electrocatalytic activity', 'electrocatalytic analysis', 'electrocatalytic applications', 'electrocatalytic materials', 'electrocatalytic oxidation', 'electrochemical oxidation', 'electrochemical properties', 'photo-electrocatalytic reduction']
+[ 10] ['atomically dispersed metal catalysts', 'cobalt catalysts', 'metal oxide catalysts', 'metal-based catalysts', 'noble metal catalysts', 'transition metal additives', 'transition metal alloy surfaces', 'transition metal catalysts', 'transition metal oxide catalysts', 'transition metal oxides']
+[ 10] ['chemical kinetics', 'electrochemical kinetics', 'heterogeneous reaction kinetics', 'hydrolysis kinetics', 'kinetic arrest', 'kinetic theory', 'phase transformation kinetics', 'reaction engineering kinetics', 'reaction kinetics', 'reaction kinetics optimization']
+[ 10] ['direct methanol fuel cell', 'enzymatic fuel cells', 'fuel cell', 'fuel cell applications', 'fuel cell durability', 'fuel cell power', 'fuel cells', 'hydrogen fuel cell', 'hydrogen fuel cell vehicles', 'water management in fuel cells']
+[ 10] ['diy microfluidic experiments', 'droplet microfluidics', 'microfluidic flow resistors', 'microfluidic loop device', 'microfluidic nucleic acid sensor', 'microfluidic pd/pdhx electrodes', 'microfluidic pressure loss correlation', 'microfluidic velocity scaling', 'microfluidics', 'short-channel microfluidics']
+[ 10] ['domestic fuel production', 'green hydrogen production', 'high purity hydrogen', 'hydrogen consumption', 'hydrogen economy', 'hydrogen generation', 'hydrogen production', 'hydrogen transport infrastructure', 'solar-driven hydrogen production', 'solar-to-hydrogen efficiency']
+
+------------------------------------------------------------------------------
+SAMPLE OF HDBSCAN-UNCLUSTERED KEYWORDS (824 total, 20 shown)
+------------------------------------------------------------------------------
+  'enhanced oil recovery'
+  'polyethylene oxide'
+  'ovalbumin'
+  'chromophore'
+  'interparticle interactions'
+  'porous coordination polymers'
+  'mos2 passivation'
+  'proton‑conducting cnt porin'
+  'plasma treatment'
+  'biological and gate'
+  'pourbaix diagram prediction'
+  'adsorption energy prediction'
+  'molecular electronic devices'
+  'fiber debundling'
+  'parametric studies'
+  'elutriation'
+  'dielectric permittivity'
+  'supersaturation control'
+  'molecular property prediction'
+  'oriented crystal texture (010 axis)'

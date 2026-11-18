@@ -1,0 +1,101 @@
+/* Keep the native widgets and keyboard interactions; style their surroundings. */
+
+[data-testid="stAppViewContainer"] { background: var(--atlas-bg); }
+[data-testid="stHeader"] { background: var(--atlas-bg); }
+[data-testid="stAppDeployButton"] { display: none; }
+[data-testid="stMainBlockContainer"] {
+    max-width: 1220px; padding: 4.6rem 2.4rem 3rem;
+}
+h1 { font-size: 2.7rem !important; font-weight: 650 !important;
+     letter-spacing: -.085rem; color: var(--atlas-text); padding-bottom: .25rem !important; }
+h2 { font-size: 1.6rem !important; font-weight: 600 !important; letter-spacing: -.035rem; }
+h3 { font-size: 1.08rem !important; font-weight: 600 !important; }
+h1 { scroll-margin-top: 120px; }
+h2, h3 { scroll-margin-top: 80px; }
+[data-testid="stCaptionContainer"] { color: var(--atlas-muted); opacity: 1; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--atlas-accent);
+         font-size: .71rem; font-weight: 650; letter-spacing: .15rem; }
+.brand-mark { width: 24px; height: 24px; border: 1px solid var(--atlas-accent); border-radius: 7px;
+              display: inline-grid; place-items: center; letter-spacing: 0; font-size: .85rem; }
+.overview { display: flex; flex-wrap: wrap; gap: 9px 24px; color: var(--atlas-muted);
+            font-size: .82rem; margin: 8px 0 12px; }
+.overview strong { color: var(--atlas-text); font-weight: 600; }
+.st-key-explorer_controls { background: var(--atlas-surface); border-color: var(--atlas-border) !important;
+                           border-radius: 14px !important; padding: 20px 22px !important; }
+.st-key-trend_chart, .st-key-geography_chart {
+    background: var(--atlas-surface); border-color: var(--atlas-border) !important; border-radius: 12px !important;
+}
+[data-testid="stVerticalBlockBorderWrapper"] > div { border-color: var(--atlas-border); }
+[data-testid="stMetric"] { background: var(--atlas-surface); padding: 16px 19px; border: 1px solid var(--atlas-border);
+                          border-radius: 12px; }
+[data-testid="stMetricLabel"] { color: var(--atlas-muted); font-size: .8rem; }
+[data-testid="stMetricValue"] { color: var(--atlas-text); font-size: 1.7rem; letter-spacing: -.035rem; }
+[data-testid="stDataFrame"] { border-radius: 10px; overflow: hidden; }
+[data-testid="stExpander"] { border-radius: 10px; border-color: var(--atlas-border); }
+[data-testid="stExpander"] details { background: var(--atlas-surface); }
+[data-testid="stDownloadButton"] button, [data-testid="stButton"] button {
+    border-radius: 8px; font-size: .82rem; border-color: var(--atlas-border);
+}
+[data-testid="stDownloadButton"] button:hover, [data-testid="stButton"] button:hover {
+    border-color: var(--atlas-accent); color: var(--atlas-accent);
+}
+[data-testid="stTabs"] [role="tablist"] { gap: 24px; border-bottom: 1px solid var(--atlas-border); }
+[data-testid="stTabs"] [role="tab"] { padding: 12px 0; font-weight: 500; }
+[data-testid="stTabs"] [aria-selected="true"] { color: var(--atlas-accent); }
+hr { border-color: var(--atlas-border) !important; margin: 1.5rem 0 !important; }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--atlas-accent) !important; outline-offset: 3px; }
+.quiet-footer { color: var(--atlas-muted); font-size: .75rem; padding-top: 16px; }
+@media (max-width: 760px) {
+    [data-testid="stMainBlockContainer"] { padding: 4.4rem 1rem 2rem; }
+    h1 { font-size: 2.15rem !important; }
+    [data-testid="stHorizontalBlock"] { flex-wrap: wrap; gap: 1rem; }
+    [data-testid="stColumn"] { flex: 1 1 100% !important; width: 100% !important; min-width: 0 !important; }
+    .st-key-selection_metrics [data-testid="stColumn"] {
+        flex: 1 1 calc(50% - 1rem) !important; width: calc(50% - 1rem) !important;
+    }
+    .st-key-explorer_controls { padding: 16px !important; }
+    [data-testid="stTabs"] [role="tablist"] { gap: 18px; overflow-x: auto; }
+}
+
+/* The switch changes presentation only; search and download data stay intact. */
+.stApp, [data-testid="stMarkdownContainer"], [data-testid="stWidgetLabel"] { color: var(--atlas-text); }
+[data-testid="stCaptionContainer"] [data-testid="stMarkdownContainer"] { color: var(--atlas-muted); }
+[data-testid="stMetricLabel"] [data-testid="stMarkdownContainer"] { color: var(--atlas-muted); }
+[data-testid="stMain"] { background: var(--atlas-bg); }
+input, textarea { color: var(--atlas-text) !important; background: var(--atlas-field) !important; }
+[data-baseweb="select"] > div, [data-baseweb="input"] { background: var(--atlas-field) !important; border-color: var(--atlas-border) !important; }
+[data-baseweb="select"] { color: var(--atlas-text) !important; }
+[data-baseweb="select"] span, [data-baseweb="select"] input { color: var(--atlas-text) !important; }
+[data-baseweb="select"] button, [data-baseweb="select"] [role="button"] {
+    color: var(--atlas-text) !important; background: var(--atlas-field) !important;
+}
+[data-baseweb="select"] svg { fill: var(--atlas-muted); }
+[role="listbox"], [role="option"] { background: var(--atlas-surface) !important; color: var(--atlas-text) !important; }
+[role="option"]:hover, [role="option"][aria-selected="true"] { background: var(--atlas-field) !important; }
+[data-testid="stDownloadButton"] button, [data-testid="stButton"] button,
+[data-testid="stExpander"] summary { color: var(--atlas-text); background: var(--atlas-surface); }
+[data-testid="stTabs"] [role="tab"] { color: var(--atlas-muted); }
+[data-testid="stTabs"] [aria-selected="true"] { color: var(--atlas-accent); }
+[data-testid="stTabs"] [role="tab"] [data-testid="stMarkdownContainer"] { color: inherit; }
+/* Streamlit draws its neutral data grids on canvas, outside CSS text styling. */
+[data-testid="stDataFrame"] { filter: var(--atlas-table-filter); }
+[data-testid="stSlider"] [role="slider"] { background: var(--atlas-accent) !important; }
+/* Native top navigation becomes a drawer on narrow screens. */
+[data-testid="stSidebar"] { background: var(--atlas-surface) !important; color: var(--atlas-text); }
+[data-testid="stSidebar"] a, [data-testid="stSidebar"] a span,
+[data-testid="stSidebar"] a p { color: var(--atlas-text) !important; }
+[data-testid="stSidebar"] button, [data-testid="stSidebar"] button span {
+    color: var(--atlas-accent) !important;
+}
+[data-testid="stExpandSidebarButton"], [data-testid="stCollapseSidebarButton"] {
+    color: var(--atlas-accent) !important; background: var(--atlas-surface) !important;
+}
+[data-testid="stExpandSidebarButton"] span, [data-testid="stCollapseSidebarButton"] span {
+    color: inherit !important; opacity: 1;
+}
+button[aria-label="Scroll tabs right"], button[aria-label="Scroll tabs left"] {
+    color: var(--atlas-accent) !important; background: var(--atlas-surface) !important;
+}
+@media (max-width:760px) {
+ .st-key-page_header [data-testid="stColumn"] { flex: 1 1 auto !important; width: auto !important; }
+}
