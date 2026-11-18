@@ -1,0 +1,769 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper465373.html",
+    "topic": "465373Coarse Modeling of Circadian Rhythms in Heterogeneous Neural Networks",
+    "date_time": "November 2016",
+    "abstract": "The suprachiasmatic nucleus (SCN) of the hypothalamus contains about 15,000 neurons in mammals, and is the source of a light-independent 24-hour rhythm which serves as a central clock governing daily rhythms throughout the rest of the body. This rhythm is the result of a set of gene repression/promotion feedback loops occurring in each neuron. Though, in isolation, cells exhibit a range of free-running periods distributed around 24 hours, their coupling in a complex network allows for synchronization, and entrainment to an external zeitgeber.Our work on coarse-graining the dynamics of synchronized populations uses the emergent smooth dependence of cells’ states in this synchronized group on the particular parameters of each cell--such as natural period. Such parameters are heterogeneous across the population, but unchanging with time. Under the assumption that this dependence is smooth (and that the cells synchronize at least partially in frequency), this coarse-graining constitutes a significant dimensionality reduction of our description of the system state.We use this reduced-dimension representation to perform optimizations of drug dosing schedules to treat non-24-hour sleep/wake disorders or to aid with entrainment to an industrial non-24-hour shift schedule.",
+    "presenting_author": "Tom S. Bertalan | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Tom S. Bertalan",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Department of Chemical and Biological Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Princeton University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Princeton",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "NJ and Ioannis G. Kevrekidis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Program in Applied and Computational Mathematics",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "and Chemical and Biological Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Princeton University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Princeton",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "NJ",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper465373.html",
+    "paper_id": "465373"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper469960.html",
+    "topic": "469960Dynamic Real-Time Optimization of Distributed MPC Systems",
+    "date_time": "November 2016",
+    "abstract": "Real-time optimization (RTO) is a supervisory control algorithm that provides set-points to an underlying regulatory control system based on optimizing the plant economics. Industrial RTO systems typically utilize a steady-state model of the process, and are executed every few hours in order to track the economic optimum, as parameters affecting the plant conditions and process economics change (Marlin and Hrymak, 1997; Darby et al., 2011). The limited execution frequency of steady-state RTO systems poses a drawback for applications to processes that exhibit frequent transitions or slowly varying dynamics, which has prompted the development of dynamic RTO strategies. Two key control architectures for addressing plant economics within a dynamic setting are (i) a hierarchical structure, similar to way that current industrial RTO systems are implemented, but with a dynamic model used instead of a steady-state model, and (ii) a single-level control structure in which the economic objective is incorporated within the MPC controller formulation (Engell, 2007; Rawlings and Amrit, 2009; Ellis et al., 2014). The present work follows the former approach due to its compatibility with existing industrial control systems, and builds on recent advances that have considered DRTO in conjunction with a single MPC system.Previously proposed DRTO strategies that follow a two-layer architecture typically perform economic optimization in an open-loop fashion without taking into account the presence of the plant control system. In this open-loop DRTO approach, the set-points prescribed to the underlying control system are based on the optimal open-loop trajectories under an expectation that the closed-loop response dynamics at the plant level will follow the economically optimal trajectories obtained at the DRTO level. In Tosukhowong et al. (2004), the DRTO framework is designed based on a linear(ized) process model, while Würth et al. (2011) utilize a nonlinear dynamic model. In an earlier study, we proposed the use of a dynamic model at the DRTO level that predicts the effects of the underlying MPC system on the plant dynamics (Jamaludin and Swartz, 2014). Neglecting the effect of the control system in the DRTO optimization tacitly assumes perfect control, which is not achievable in practice and leads to suboptimal economic performance. However, this new formulation results in a more complex problem, since each MPC control calculation over the future prediction horizon is itself defined by an optimization problem. This is handled by replacing the MPC optimization subproblems by their equivalent first-order optimality conditions, and including the resulting algebraic equations as equality constraints in the DRTO economic optimization problem. In Jamaludin and Swartz (2015), the closed-loop prediction problem was approximated as a bi-level rather than a multi-level problem, resulting in significantly reduced computation times with modest loss in economic performance.An overall optimal process operation can be achieved via utilization of a centralized model predictive control (MPC) system in which all control inputs are computed simultaneously from a single optimization problem. However, large scale systems, such as refineries, manufacturing plants and power generation networks, typically have a collection of MPC controllers, with each controlling a subset of process units (Qin and Badgwell, 2003). Key considerations in the selection of distributed MPC systems are process scale and complexity, computational tractability, and geographic footprint. Distributed MPC architectures are designed to meet performance specifications that are relatively equivalent to the centralized MPC system, but retaining the modularity, reliability and maintainability of each controller (Pannochia, 2014). A variety of approaches to coordination of distributed MPC systems has been proposed in the literature. Camponogara et al. (2002) and Stewart et al. (2010) present cooperative control strategies in which the MPC modules compute control actions taking into account the actions of the other MPC controllers. Cheng et al. (2008) apply Dantzig-Wolfe decomposition to the calculation of steady-state targets for the MPC controllers based on a linear objective function. In Chen et al. (2012), steady-state optimization is performed, with distributed Lyapunov-based MPC controllers executed sequentially to drive the system to the steady-state optimum.In this study, the closed-loop DRTO formulation is extended to economic coordination of a distributed MPC system. The DRTO formulation determines optimal set-point trajectories for all MPC controllers simultaneously, based on plant economics. The DRTO plant model represents the overall process dynamics whereas the MPC models represent the local unit dynamics. The plant model used within the DRTO module is consistent with the dynamic models used in the MPC controllers, but with the interactions between the process subsystems captured through appropriate linking relationships, such as material flows. The response of the plant under the action of the MPC subsystems is computed by taking into account the actions of all the controllers, as well as the process interactions between the subsystems. Interaction between local controllers is addressed via output feedback from the DRTO plant model to the MPC model predictions. The MPC optimization subproblems to be used in the DRTO closed-loop response prediction are again be replaced by their first-order optimality conditions to yield a single-level economic optimization problem. The performance of the proposed approach is assessed via case study simulations.ReferencesCamponogara, E., Jia D., Krogh, B.H. and Talukdar, S. (2002). Distributed model predictive control, IEEE Control Systems Magazine, Feb 2002, 44-52.Chen, X., Heidarinejad, M., Liu, J., and Christofides, P.D. (2012). Distributed economic MPC: Application to a nonlinear chemical process network. J. Proc. Contr., 22, 689-699.Cheng, R., Forbes, J.F. and Yip, W.S. (2008). Dantzig-Wolfe decomposition and plant-wide MPC coordination. Comp. Chem. Eng., 32, 1507-1522.Darby, M.L., Nikolaou, H., Jones, J. and Nicholson, D. (2011). RTO: An overview and assessment of current practice. J. Proc. Contr., 21(6), 874-884.Ellis, M., Durand, H. and Christofides, P.D. (2014). A tutorial review of economic model predictive control methods. J. Proc. Contr., 24(8), 1156-1178Engell, S. (2007). Feedback control for optimal process operation. J. Proc. Contr., 17(3), 203-219.Jamaludin, M.Z. and Swartz, C.L.E. (2014). Effects of closed-Loop dynamics in dynamic real-time optimization. Paper 721f, AIChE Annual Meeting, Atlanta.Jamaludin, M.Z. and Swartz, C.L.E. (2015). A bilevel programming formulation for dynamic real-time optimization. In Int. Symp. on Advanced Control of Chemical Processes (ADCHEM), Whistler, BC, Canada, 907-912.Marlin, T.E. and Hrymak, A.N. (1997). Real-time operations optimization of continuous processes. In Kantor, J.C., Garcia, C.E., Carnahan, B. (eds.), Proc. 5thInt. Conf. on Chemical Process Control, AIChE and CACHE, 156-164.Qin, S.J. and Badgwell, T.A. (2003). A survey of industrial model predictive control technology. Control Engineering Practice, 11, 733-764.Rawlings, J.B. and Amrit, R. (2009). Optimizing process economic performance using model predictive control. In Magni, L., Raimondo, D., Allgower, F., eds., Nonlinear Model Predictive Control, Lecture Notes in Control and Information Sciences, vol. 384, Springer, 119-138.Pannocchia, G. (2014). Distributed model predictive control. Encyclopedia of Systems and Control, 1-9.Stewart, B.T., Venkat, A.N., Rawlings, J.B. and Wright, S.J. (2010). Cooperative distributed model predictive control. Systems & Control Letters, 59, 460-469.Tosukhowong, T., Lee, J.M., Lee, J.H., and Lu, J. (2004). An introduction to a dynamic plant-wide optimization strategy for an integrated plant. Comp. Chem. Eng., 29(1), 199-208.Würth, L., Hannemann, R. and Marquardt, W. (2011). A two-layer architecture for economically optimal process control and operation. J. Proc. Contr., 21(3), 311-321.",
+    "presenting_author": "Mohammad Z. Jamaludin and Christopher L. E. Swartz | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Mohammad Z. Jamaludin and Christopher L. E. Swartz",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "McMaster University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Hamilton",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "ON",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Canada",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper469960.html",
+    "paper_id": "469960"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper465380.html",
+    "topic": "465380Combining Density Functional Theory Calculations, Supercomputing, and Data-Driven Methods to Design New Thermoelectric Materials",
+    "date_time": "November 2016",
+    "abstract": "Density functional theory (DFT) simulations solve for the electronic structure of materials starting from the Schrödinger equation. Many case studies have now demonstrated that researchers can often use DFT to design new compounds in the computer (e.g., for batteries, catalysts, and hydrogen storage) before synthesis and characterization in the lab. In this talk, I will focus on how DFT calculations can be executed on large supercomputing resources in order to generate very large data sets on new materials for functional applications. First, I will briefly describe the Materials Project, an effort at LBNL that has virtually characterized over 60,000 materials using DFT and has shared the results with over 17,000 registered users. Next, I will talk about how such data can help discover new materials, describing how preliminary computational screening led to the identification and confirmation of a new family of bulk AMX2 thermoelectric compounds with measured zT reaching 0.8. I will outline future plans for how such data-driven methods can be used to better understand the factors that control thermoelectric behavior, e.g., for the rational design of electronic band structures, in ways that are different from conventional approaches.",
+    "presenting_author": "Anubhav Jain | Lawrence Berkeley Lab, Berkeley, CA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Anubhav Jain",
+        "affiliation": "Lawrence Berkeley Lab, Berkeley, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Umut Aydemir",
+        "affiliation": "Northwestern University, Evanston, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Hong Zhu",
+        "affiliation": "Shanghai Jiao Tong University, Shanghai, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Jan Pohls",
+        "affiliation": "Dalhousie University, Halifax, NS, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Zachary Gibbs",
+        "affiliation": "California Institute of Technology, Pasadena, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Wei Chen",
+        "affiliation": "Illinois Institute of Technology, Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Saneyuki Ohno",
+        "affiliation": "Northwestern University, Evanston, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Geoffroy Hautier",
+        "affiliation": "Universite Catholique de Louvain, Louvain-la-Neuve, Belgium",
+        "designation": "Author"
+      },
+      {
+        "name": "Gerbrand Ceder",
+        "affiliation": "Materials Science and Engineering, University of California Berkeley, Berkeley, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Kristin Persson",
+        "affiliation": "Lawrence Berkeley Lab, Berkeley, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Mary Anne White",
+        "affiliation": "Dalhousie University, Halifax, NS, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "G. Jeffrey Snyder",
+        "affiliation": "Northwestern University, Evanston, IL",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper465380.html",
+    "paper_id": "465380"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper450621.html",
+    "topic": "450621Phase Diagram, Microstructure and Thermoelectric Properties",
+    "date_time": "November 2016",
+    "abstract": "Thermoelectric materials and devices have attracted intensive research and development interests due to their ability to convert waste heat directly into electricity. Energy usage efficiency could then be improved which is a very critical concern nowadays. Good thermoelectric properties require low thermal conductance but good electrical conductance. Phonon scattering caused by nanoprecipitates has been reported to be an efficient mechanism to enhance the thermal resistance but causing no significant hindrance on electrical conductance. Microstructures of thermoelectric materials are essential for their thermoelectric properties. Phase diagrams provide information of phase equilibria, and are fundamentally important for processing routes selection and understanding of materials microstructures.Ternary thermoelectric materials systems, Bi-Te-In, Ag-Pb-Te and Co-Sb-Ga, are used as examples to illustrate the relationships between phase diagrams, microstructures and thermoelectric properties. Two kinds of ternary alloys were prepared. Ternary alloys of one kind were equilibrated at pre-determined temperatures, and the equilibrium phases were determined. Alloys of the other kind were quenched, and their primary solidification alloys were determined. Isothermal sections of ternary phase equilibria were proposed based on the results of determined ternary equilibrium phases together with the information obtained from their constituent binary phase diagrams, while the liquidus projections were determined based on results of the primary solidification phases.According to the determined liquidus projections, ternary alloys with compositions at the ternary eutectics in the Bi-Te-In and Ag-Sb-Te systems, L (Bi- 13.0at%In-77.0at%Te)=Bi2Te3+Te+In2Te5, and L (Ag-40.at%Sb-36.at%Te)=AgSbTe2+Ag2Te+δ-Sb2Te, were prepared. Their microstructures were determined, and their thermoelectric properties were measured. Nanoprecipitates of Ag2Te phase were observed. This ternary eutectic Ag-Pb-Te alloy has very low thermal conductivity (0.3w/mK at 415K), presumably due to the nano-sized lamellar structure and the nanoprecipitates enhancing phonon scattering. Very fine microstructures with nano- whisker-type precipitates were observed in the as-solidified ternary Bi-Te-In eutectic. These nanoprecipitates contribute to the alloys’ thermoelectric properties.Ternary alloys in the Bi-Te-In and Co-Sb-Ga systems with compositions close to the ternary solubility limits of Bi2Te3and CoSb3phases were also prepared. The thermoelectric properties of the Ga-doped CoSb3alloys were improved with the concentration of Ga doping and the figure of merit increased to 0.7 with a 0.1at% Ga doping. Similar results were observed in the In-doped Bi2Te3alloys. A small amount alloying would enhance the phonon scattering and reduce lattice thermal conductivity.       However, secondary phases would form if the doping concentrations are higher than the solubility limits. Since the secondary phase might not have good thermoelectric properties, its existence would deteriorate the thermoelectric properties of the alloys. The phase diagrams are thus fundamentally important.",
+    "presenting_author": "Sinn-wen Chen | Department of Chemical Engineering, National Tsing Hua University",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Sinn-wen Chen",
+        "affiliation": "Department of Chemical Engineering, National Tsing Hua University",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Shi-Ting Lu",
+        "affiliation": "Department of Chemical Engineering, National Tsing Hua University",
+        "designation": "Author"
+      },
+      {
+        "name": "Hsin-jay Wu",
+        "affiliation": "Department of Materials and Optoelectronic Science, National Sun Yat-Sen University",
+        "designation": "Author"
+      },
+      {
+        "name": "Jui-shen Chang",
+        "affiliation": "Department of Chemical Engineering, National Tsing Hua University",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper450621.html",
+    "paper_id": "450621"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460871.html",
+    "topic": "460871Forming Distributed Estimator Networks from Decentralized Estimators",
+    "date_time": "November 2016",
+    "abstract": "Complex, tightly integrated chemical process networks become more and more common in the modern process industry due to their economic efficiency. Such a process network usually consists of several unit operations (subsystems), which are connected together through material, energy and information flows. Because of the significant interaction between different subsystems, it poses great challenges in the design of automatic control systems. Process networks are traditionally controlled in the decentralized framework. During the past decade, much attention has been given to development of distributed process control systems (in particular, distributed model predictive control). In a distributed control framework, local controllers communicate to exchange information to collaborate their actions. The distributed framework has been demonstrated to be a promising framework for handling the scale and the interaction of these integrated chemical processes. Compared to distributed process control, its dual problem – distributed state estimation – has received relatively less attention within process control. In this work, we focus on distributed state estimation.In the literature, the existing algorithms on distributed state estimation are primarily developed in three frameworks: the deterministic observer framework, the Kalman filter (KF) framework and the moving horizon estimation (MHE) framework. Most of these algorithms are developed for linear systems and few for nonlinear systems. A prominent feature of all these algorithms is that they all require the local observers/estimators to be of the same type (e.g., all the local estimators should be MHEs) and each of the developed algorithm can be only applied to a specific type of local observers/estimators (e.g., distributed KF algorithms cannot be used to coordinate distributed MHEs). It is desirable to develop a more general method that is capable of connecting observers/estimators of different types together while ensures overall convergence of the estimates. The motivation of this kind of method can be seen when a process includes subsystems of different types (e.g., linear and nonlinear subsystems) or subsystems posing different process/numerical constraints (e.g., estimation constraints need to be considered in some of the subsystem).Another feature of the existing distributed state estimation algorithms is that in the design of these algorithms, no consideration is given to the potentially existing (decentralized) implementation of control/estimation algorithms in a process. If a decentralized state estimation algorithm has already been implemented in a process, the above distributed algorithms essentially require a completely redesign of the existing implementation which means high capital investment. This also motivates us to develop a general method that is capable of connecting (decentralized) observers/estimators together to improve the overall estimation performance.Motivated by above considerations, in this work, we propose a method to connect decentralized observers/estimators (which can be of different types) to form distributed state estimation schemes. One key idea of proposed method is to develop a local compensator for each subsystem, which is used to compensate for the interactions between a subsystem and its neighbor subsystems. Each compensator is connected to the corresponding subsystem observer/estimator designed without considering interaction to form a complete local estimator. Within the proposed framework, the local estimation algorithms for different subsystems can be independently selected and each local estimator can be more easily maintained without deteriorate the structure of the entire estimation system. The proposed method is demonstrated to be effective via the application to a simulated chemical process. It is also demonstrated that the proposed method has the potential to be used in distributed output feedback control which is an issue that has not been addressed in the research of distributed model predictive control.",
+    "presenting_author": "Xunyuan Yin and Jinfeng Liu | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Xunyuan Yin and Jinfeng Liu",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Department of Chemical and Materials Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Alberta",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Edmonton",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "AB",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Canada",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460871.html",
+    "paper_id": "460871"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468413.html",
+    "topic": "468413Thermal and Thermoelectric Transport Coefficients in Graphene",
+    "date_time": "November 2016",
+    "abstract": "Thermal and thermoelectric transport coefficientsin grapheneEnriqueMuñoz, Physics Institute, Pontificia Universidad Católica de Chile, Vicuña Mackenna 4860, Santiago, Chile.AbstractThermal, electronic and thermoelectric transport coefficients in graphene were studied. The effect of electron-phonon scattering processes, as well as the presence of C13isotopes over the thermoelectric properties of extrinsic graphene were considered. Electron-phonon interaction is described within the deformation potential approximation. Electrical and thermal resistivity, as well as the thermopower, were calculated within the Bloch theory approximations. Analytical expressions for the different transport coefficients were obtained from a variational solution of the Boltzmann transport equation. The phonon-limited electrical resistivityρe−phshows a linear in temperature dependence at high temperatures, and follows aρe−ph∼T4at low temperatures, in agreement with experiments. The phonon-limited thermal resistivity at low temperatures exhibits a∼Tdependence and achieves a nearly constant value at high temperatures. The predicted Seebeck coefficient at very low temperature isQ(T)∼π2kBT/(3eEF), which shows an−1/2dependence with the carrier densityn, in agreement with experiments. On the other hand, the presence of a random distribution of C13isotopes at fixed concentrations was studied as an strategy to reduce the lattice thermal conductivity, with the corresponding enhancement of the figure of merit for thermoelectric applications.[3][1] E. Muñoz, Journal of Physics: Condensed Matter 24 (2012), 195302.[2] E. Muñoz, J. Lu and B. I. Yakobson, Nano Letters 10 (2010), 1652.[3] E. Muñoz, submitted (2016).",
+    "presenting_author": "Enrique Munoz | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Enrique Munoz",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Physics Institute",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Pontificia Universidad Catolica de Chile",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Santiago",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Chile",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468413.html",
+    "paper_id": "468413"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460407.html",
+    "topic": "460407Distributed Lyapunov-Based Model Predictive Control with Safety-Based Constraints",
+    "date_time": "November 2016",
+    "abstract": "Control system designs must ensure process safety. In [1], a control design was proposed that includes explicit constraints on process safety to shrink the region of process operation when required to a smaller region (safety region) around the operating steady-state when a safety logic unit indicates that certain regions of state-space away from the steady-state may lead to process safety concerns due to process disturbances or actuator faults. The safety-based controller design was developed with a centralized model predictive control (MPC) structure; thus, computation time limitations within a sampling period may reduce the effectiveness of such a controller design for promoting process safety. An alternative MPC architecture that is intended to improve the computation time of the MPC algorithm is a distributed model predictive control (DMPC) architecture [2]-[3]. This MPC architecture has been investigated for computation time benefits since it can reduce the number of decision variables in each of the distributed optimization problems and may be able to terminate the optimization problems before the optimal solution is found while maintaining feasibility and closed-loop stability of the controller [4]-[5].In this work, we propose the integration of a distributed model predictive control architecture with Lyapunov-based model predictive control (LMPC) and Lyapunov-based economic model predictive control (LEMPC) formulated with safety-based constraints. We consider both iterative and sequential distributed control architectures, and the partitioning of inputs between the various optimization problems in the distributed structure based on their impact on process safety. In addition, we investigate the conditions required for guaranteed feasibility and closed-loop stability of the algorithm, and discuss the termination of the algorithm and computation time benefits. Through a chemical process example, we demonstrate the proposed controller design and the effects of the control architecture on process safety considerations, and compare the time required to reach the safety level set and the computation time of the algorithm with that which can be achieved under a centralized safety-based model predictive control scheme.[1] Albalawi F, Alanqar A, Durand H, Christofides PD. A feedback control framework for safe and economically-optimal operation of nonlinear processes. AIChE Journal. 2016; in press.[2] Christofides PD, Liu J, Muñoz de la Peña D. Networked and Distributed Predictive Control: Methods and Nonlinear Process Network Applications. London, England: Springer, 2011.[3] Scattolini R. Architectures for distributed and hierarchical model predictive control- A review. Journal of Process Control. 2009;19:723-731.[4] Anderson TL, Ellis M, Christofides PD. Distributed economic model predictive control of a catalytic reactor: Evaluation of sequential and iterative architectures. In: Proceedings of the IFAC International Symposium on Advanced Control of Chemical Processes. Whistler, Canada, 2015;26-31.[5] Venkat AN, Hiskens IA, Rawlings JB, Wright SJ. Distributed MPC strategies with application to power system automatic generation control. IEEE Transactions on Control Systems Technology. 2008;16:1192-1206.",
+    "presenting_author": "Fahad Albalawi | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Fahad Albalawi",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Electrical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of California",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Los Angeles",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Los Angeles",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "CA",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Helen Durand",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Chemical and Biomolecular Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of California",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Los Angeles",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Los Angeles",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "CA and Panagiotis D. Christofides",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical and Biomolecular Engineering and Department of Electrical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of California",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Los Angeles",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Los Angeles",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "CA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460407.html",
+    "paper_id": "460407"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper459963.html",
+    "topic": "459963Power Management in Microgrids with Controllable Loads and Energy Exchange Commitments",
+    "date_time": "November 2016",
+    "abstract": "Microgrids are local energy systems which contain a variety of dispatchable units (e.g. microturbines, batteries), non-dispatchable units (e.g. rooftop photovoltaics), and stochastic loads (e.g. power, space cooling, and hot water demands). The primary operational goal in these systems is to ensure that local energy demands are met in a robust and cost-effective manner. Due to the inherently stochastic nature of this problem, power exchange with the macrogrid is typically used to correct any local power imbalance. However, microgrid operators may want to actively regulate this energy exchange due to demand charges, unappealing real-time prices, or energy exchange commitments [1]. This leads to a challenging control problem since one cannot rely on the grid connection to mitigate stochasticity in renewables and local demands. Previous authors have used approaches like dynamic programming [2], robust optimization [3], bidding on the day-ahead market [4,5], and coordinating intra-microgrid energy transfers [6] to address this challenge.In this work, we focus on the dispatch of a microgrid given a unit commitment and energy exchange schedule (i.e. energy exchange should lie between some upper and lower bound in each hour). In particular, a case study is considered for a prototype microgrid consisting of a bi-directional connection to the macrogrid, photovoltaics, microturbines, a battery bank, flexible air conditioning, and an auxiliary electric boiler. We propose and formulate a nonlinear economic model predictive control (E-MPC) problem for this system to regulate indoor air temperature, supply electricity and hot water demands, and satisfy the scheduled energy exchange bounds. This E-MPC problem can be resolved frequently so that disturbances due to weather and load forecasting errors are rejected.Then, a dynamic microgrid and building thermal model is built in the Simulink software environment to test this control approach. We analyze the performance in terms of operational cost, utilization of available PV power, satisfaction of energy exchange bounds, and thermal comfort for occupants. Particular attention is paid to the ability to capture the important nonlinear dynamics in the E-MPC while maintaining a practical solution time. The benefit of incorporating flexible loads (i.e. the AC unit and auxiliary boiler) and leveraging the natural thermal inertia of building elements is also addressed.[1] Zachar, M. & Daoutidis, P. Microgrid/Macrogrid Energy Exchange: A Novel Market Structure and Stochastic Scheduling.IEEE Transactions on Smart Grid, submitted.[2] Riffonneau, Y., Bacha, S., Barruel, F., & Ploix, S. (2011). Optimal Power Flow Management for Grid Connected PV Systems with Batteries.IEEE Transactions on Sustainable Energy, 2(3), 309–320.[3] Zhang, Y., Gatsis, N., & Giannakis, G. B. (2013). Robust Energy Management for Microgrids With High-Penetration Renewables.IEEE Transactions on Sustainable Energy, 4(4), 944–953.[4] Nguyen, D. T., & Le, L. B. (2015). Risk-Constrained Profit Maximization for Microgrid Aggregators with Demand Response.IEEE Transactions on Smart Grid, 6(1), 135–146.[5] Liu, G., Xu, Y., & Tomsovic, K. (2016). Bidding Strategy for Microgrid in Day-Ahead Market Based on Hybrid Stochastic/Robust Optimization.IEEE Transactions on Smart Grid, 7(1), 227–237.[6] Kuznetsova, E., Li, Y.-F., Ruiz, C., & Zio, E. (2014). An Integrated Framework of Agent-Based Modelling and Robust Optimization for Microgrid Energy Management.Applied Energy,129, 70–88.",
+    "presenting_author": "Michael Zachar | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Michael Zachar",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chemical Engineering and Materials Science",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Minnesota",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Minneapolis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "MN and Prodromos Daoutidis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical Engineering and Materials Science",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Minnesota",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Minneapolis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "MN",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper459963.html",
+    "paper_id": "459963"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464669.html",
+    "topic": "464669Supervisory Event-Based Control of Networked Process Systems with Limited State Measurements",
+    "date_time": "November 2016",
+    "abstract": "The design of distributed and supervisory control systems for chemical process networks is a problem of significant and growing interest in both the academic and industrial communities in process control research (e.g., [1]-[5]). Beyond handling the dynamic coupling and interactions between the constituent subsystems in controller design, the management of information flow and communication between the individual subsystems has recently emerged as another important consideration, which is receiving increased attention in light of the growing calls for moving towards smart plant operations [6]-[7]. In this direction, a quasi-decentralized model-based networked control structure that enforces closed-loop stability with minimal periodic communication was developed in [8]. Within each local control system, predictive models of the dynamics of the rest of the plant are used, together with local state measurements, to generate the local control action at times when communication between the plant subsystems is suspended, and the states of these models are updated when communication is permitted at discrete times. Using a time-triggered communication strategy with a fixed communication rate, an explicit characterization of the minimum allowable communication rate necessary for closed-loop stability was obtained. In subsequent work [9], an adaptive event-based communication strategy was used to manage the information flow in the quasi-decentralized control structure. A key idea was for each unit to monitor its local state and prompt the other units to transmit their data to update their models when the local unit is on the verge of instability. The local instability thresholds were obtained with the aid of appropriate local control Lyapunov functions. While this approach provides greater flexibility in responding to unexpected disturbances in plant operations, it could potentially increase the network load and cause delays and data losses when multiple units attempt to access the network at the same time.An alternative event-based approach is the broadcast-based communication strategy considered in [10], where the local model estimation error is monitored continuously and the local unit transmits its data to the rest of the plant when this error breaches a certain threshold. The communication threshold is determined using a composite control Lyapunov function for the overall system. This approach avoids the need for simultaneous access to the network; however, it focuses only on stability considerations, without taking the performance of the individual subsystems into account. For example, in the event of a transient local disturbance causing the local Lyapunov function to grow for some time – but without causing growth in the composite Lyapunov function and therefore triggering no communication – the deterioration in local performance will go undetected and uncompensated for. The reduction in network load in this approach comes at the expense of sacrificing local process performance.This limitation was addressed in [11] where a higher-level supervisor was introduced into the control structure to balance the overall plant stability requirement with the local performance needs of the component subsystems, while simultaneously optimizing the extent of information transfer between the distributed control systems. The supervisor kept track of the alarm signals reported by the local control systems in response to the local events, and decided accordingly the time and direction of information flow between the individual subsystems. The supervisory logic took into account the evolution of both the local and global control Lyapunov functions so as to meet both the stability and performance requirements. The supervisory control structure was developed for systems with full-state measurements. In practice, however, and due to problems such as installation difficulty, equipment cost, and slow sampling, only incomplete state measurements are typically available. The lack of full-state measurements poses a difficulty in the implementation of traditional event-triggered control and communication strategies which typically rely on monitoring and evaluating state-dependent thresholds. Moreover, handling the lack of full-state measurements is a more challenging problem in the context of controlling networked process systems due to the interactions between the component subsystems.In this work, we develop a framework for supervisory event-based control of process networks with uncertain nonlinear dynamics, discrete communication between the local control systems and incomplete state measurements. Initially, a set of quasi-decentralized model-based control systems that can exchange information at discrete times over the network are designed. Each local controller relies on model-estimated states of the local and neighboring units to generate the local control action. To overcome the problem of incomplete state measurements, a suitable high-gain observer is designed and included within each local control system to generate an estimate of the local state based on the available real-time output measurements. The observer-estimated states are used to monitor and assess the stability of the local subsystems, and are also broadcast over the network to update the model estimates used by the local controllers at times when communication is triggered. The choice of a high-gain observer design is motivated by the need to decouple the local observer state estimation error from the influence of the interactions between the plant subsystems. A closed-loop stability analysis taking into account model uncertainties, model and observer estimation errors, is conducted to derive appropriate stability thresholds on both the local model estimation errors and control Lyapunov functions in terms of the local observer states. Each control system continuously monitors the discrepancy between the model-estimated and observer-estimated states, as well as the estimated evolution of the local Lyapunov function using the observer state. Alarm signals are sent to the upper-level supervisor when either threshold is breached. The supervisor collects the alarm signals, and then coordinates based on logic operations the dispatch of data transmissions between the plant subsystems. Finally, the proposed methodology is illustrated using a representative chemical process example, and compared with conventional event-triggered control approaches.References:[1] J. Lunze,Feedback Control of Large Scale Systems. U.K.: Prentice Hall, 1992.[2] K. R. Jillson and B. E. Ydsite, “Process networks with decentralized inventory and flow control,”J. Proc. Contr., vol. 17, pp. 399–413, 2007.[3] S. Jogwar, M. Baldea, and P. Daoutidis, “Dynamics and control of process networks with large energy recycle,”Ind. Eng. Chem. Res., vol. 48, pp. 6087–6097, 2009.[4] J. B. Rawlings and B. T. Stewart, “Coordinating multiple optimization-based controllers: New opportunities and challenges,” J. Proc. Contr., vol. 18, pp. 839–845, 2008.[5] P. D. Christofides, J. Liu, and D. M. de la Pena,Networked and Distributed Predictive Control: Methods and Nonlinear Process NetworkApplications. London: Springer-Verlag, 2011.[6] P. D. Christofides, J. Davis, N. H. El-Farra, D. Clark, K. Harris, and J. Gipson, “Smart plant operations: Vision, progress and challenges,”AIChE Journal, vol. 53, no. 11, pp. 2734–2741, 2007.[7] N. H. El-Farra and P. D. Christofides, “Special issue on control and optimization of smart plant operations,”Chem. Eng. Sci., vol. 136, pp. 1–176, 2015.[8] Y. Sun and N. H. El-Farra, “Quasi-decentralized model-based networked control of process systems,”Comp. & Chem. Eng., vol. 32, no. 9, pp. 2016–2029, 2008.[9] Y. Sun and N. H. El-Farra, “Quasi-decentralized networked process control using an adaptive communication policy,”Proceedings of American ControlConference, pp. 2841–2846, 2010.[10] E. Garcia, Y. Cao, H. Yu, P. Antsaklis, and D. Casbeer, “Decentralised event-triggered cooperative control with limited communication,”Inter.J. Contr., vol. 86, no. 9, pp. 1479–1488, 2013.[11] D. Xue and N. H. El-Farra, “Supervisory logic for control of networked process systems with event-based communication,”Proceedings of American Control Conference, to appear, 2016.",
+    "presenting_author": "Da Xue and Nael H. El-Farra | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Da Xue and Nael H. El-Farra",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Department of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of California",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Davis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Davis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "CA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464669.html",
+    "paper_id": "464669"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460852.html",
+    "topic": "460852Engineering Macroscale Thermoelectric Transport By Chemical Modulation of Nanoscale Interfaces",
+    "date_time": "November 2016",
+    "abstract": "Optimizing the performance of thermoelectric materials has historically proven difficult as their essential transport parameters are cross-coupled in bulk transport equations. However, new classes of hybrid inorganic/organic materials are emerging which present exciting opportunities as their transport behavior can strongly deviate from classical models. In this talk, I will present recent achievements in demonstrating new, interface-driven mechanisms for enhancing and modulating thermoelectric transport in nanoscale hybrid systems. Highlighted research will include p- to n-type conversion of transport type in Tellurium nanowires, subphase alloy scattering to boost power factor in Tellurium nanowires, phase transition anomalies in Cu2Se nanocrystal arrays, and unexpectedly low thermal conductivity in hybrid perovskite nanowires.",
+    "presenting_author": "Jeffrey Urban | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Jeffrey Urban",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Molecular Foundry",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Lawrence Berkeley National Laboratory",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Berkeley",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "CA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460852.html",
+    "paper_id": "460852"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466885.html",
+    "topic": "466885Distributed Extremum Seeking Control over Unknown Network",
+    "date_time": "November 2016",
+    "abstract": "When it comes to solving large-scale real-time optimization problems involving multi-agents, control approaches employed could either be centralized or distributed (decentralized).In a centralized approach, the individual agents that make up a system are controlled by a single decision maker. This decision maker monitors, receives and processes the information from all agents, it also sends processed results back to the agents. The main advantage of this control approach is that the decision maker has full knowledge of the state of the system at any given time and can make useful decision(s) that help meet global objective(s). As the number of agents increases, it becomes difficult for the decision maker to perform its task due to increase in computational complexity. This phenomenon could result in the transmission of inaccurate information, loss of information and increase in computation time. In addition, centralized approaches are complex and most importantly lack system robustness as failure of the decision maker could mean failure of the entire system.Most of the challenges highlighted above can be effectively avoided if one adopts a distributed approach. In a distributed environment, multiple decision makers can be utilized. Each subsystem or agent is controlled by a local decision maker. With the help of the decision maker, each agent's task can be limited to the solution of a simpler local problem. Each local problem can be solved with or without the cooperation of neighbouring agents. In a cooperative environment, agents work with other agents through local communication to find the best solution that meets global objective(s) of the system. Some of the advantages of distributed control include but are not limited to effectiveness, flexibility, scalability and adaptiveness. The greatest advantage of distributed control is system robustness. This implies that the failure of a decision maker does not necessarily mean overall system failure as the system can absorb the effect of a failure and quickly recover through the help of other decision makers.In this paper, the solution of large-scale real-time optimization problems in the absence of precise knowledge of network connectivity in a distributed environment is considered. The knowledge of the communication network is assumed to be unknown and the agents are faced with the task of ensuring that the system's unknown overall cost (i.e., the sum of the local cost of all the agents) is minimized. Each agent has access to the measurement of two unknown cost functions referred to as the local cost and the local disagreement cost respectively. The minimization of the system's unknown overall cost to its unknown optimum depends on the minimization of the local disagreement cost of all the agents. For the local disagreement cost of the agents to be minimized, dynamic consensus estimation is required. This ensures that the agents reach agreement on their inputs (the decision variables). To help tackle this challenging problem, a distributed proportional-integral extremum seeking control technique is proposed, one that solves both problems simultaneously. A two-time scale approach is employed where consensus is achieved at a faster time-scale than the minimization of the overall cost. Included are two simulation examples, they show the effectiveness and robustness of this technique.",
+    "presenting_author": "Judith Ebegbulem | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Judith Ebegbulem",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Queen's University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Kingston",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "ON",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Canada and Martin Guay",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Queens University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Kingston",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "ON",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Canada",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466885.html",
+    "paper_id": "466885"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper463547.html",
+    "topic": "463547Carrier Scattering at Alloy Nanointerfaces Enhances Power Factor in PEDOT:PSS Hybrid Thermoelectrics",
+    "date_time": "November 2016",
+    "abstract": "This work demonstrates the first method for controlled growth of heterostructures within hybrid organic/inorganic nanocomposite thermoelectrics. Using a facile, aqueous technique, semimetal-alloy nanointerfaces are patterned within a hybrid thermoelectric system consisting of tellurium (Te) nanowires and the conducting polymer poly(3,4-ethylenedioxythiophene): poly(styrene-sulfonate) (PEDOT:PSS). Specifically, this method is used to grow nanoscale islands of Cu1.75Te alloy subphases within hybrid PEDOT:PSS-Te nanowires. This technique is shown to provide tunability of thermoelectric and electronic properties, providing up to 22% enhancement of the system’s power factor in the low-doping regime, consistent with preferential scattering of low energy carriers. This work provides an exciting platform for rational design of multiphase nanocomposites and highlights the potential for engineering of carrier filtering within hybrid thermoelectrics via introduction of interfaces with controlled structural and energetic properties.",
+    "presenting_author": "Edmond W. Zaia ** 1,2 , Ayaskanta Sahu | Molecular Foundry, Lawrence Berkeley National Laboratory, Berkeley, CA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Edmond W. Zaia ** 1,2 , Ayaskanta Sahu",
+        "affiliation": "Molecular Foundry, Lawrence Berkeley National Laboratory, Berkeley, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Preston Zhou",
+        "affiliation": "Molecular Foundry, Lawrence Berkeley National Laboratory, Berkeley, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Madeleine P. Gordon",
+        "affiliation": "Molecular Foundry, Lawrence Berkeley National Laboratory, Berkeley, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jason Forster",
+        "affiliation": "Molecular Foundry, Lawrence Berkeley National Laboratory, Berkeley, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Shaul Aloni",
+        "affiliation": "Molecular Foundry, Lawrence Berkeley National Laboratory, Berkeley, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Yi-Sheng Liu",
+        "affiliation": "Advanced Light Source, Lawrence Berkeley National Laboratory, Berkeley, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jinghua Guo",
+        "affiliation": "Advanced Light Source, Lawrence Berkeley National Laboratory, Berkeley, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jeffrey Urban",
+        "affiliation": "Molecular Foundry, Lawrence Berkeley National Laboratory, Berkeley, CA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper463547.html",
+    "paper_id": "463547"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472306.html",
+    "topic": "472306Doped Semiconducting Polymers As Solution-Processable Thermoelectric Materials",
+    "date_time": "November 2016",
+    "abstract": "Due to inherently low thermal conductivity and tunable electronic properties, semiconducting polymers are very promising solution-processable-materials for thermoelectric applications. Polymeric semiconductors are insulators in its pristine state, but are rendered conductive through chemical doping. Here, we studied the thermoelectric properties of poly(2,5-bis(3-tetradecylthiophen-2-yl)thieno[3,2-b]thiophene (PBTTT-C14) doped either from solution or from the vapor phase. Overall, vapor doped films yield large Seebeck coefficients at high electrical conductivity (Power Factors ~ 100 μWm-1K-2). It important to note that the introduction of the chemical dopants can perturb the molecular packing and the morphology relative to the neat film. By leveraging various synchrotron X-ray scattering techniques that probe both the local and long range order, we discovered key structural features that can be correlated to the enhancement in the Seebeck coefficient and electrical conductivity for vapor doped films. Specifically, the introduction of the chemical dopant must limit the structural perturbation at small length scales while maintaining long-range correlation of polymer chains essential to efficient macroscopic charge transport. Lastly, to further elucidate the charge transport mechanism driving the thermoelectric properties, we report on the temperature-dependent measurements of both the Seebeck coefficient and electrical conductivity.",
+    "presenting_author": "Shrayesh N. Patel | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Shrayesh N. Patel",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Materials Research Lab",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of California",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Santa Barbara",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Santa Barbara",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "CA",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Anne M. Glaudell",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Materials",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of California",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Santa Barbara",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Santa Barbara and Michael L. Chabinyc",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Electronic Materials and Device Laboratory",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "PARC",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Palo Alto",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "CA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472306.html",
+    "paper_id": "472306"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper459105.html",
+    "topic": "459105Shaping the Spectrum of Thermal Radiation Using Nanostructured Materials for Efficient Thermophotovoltaic Power Generation",
+    "date_time": "November 2016",
+    "abstract": "By manipulating the structure of materials at the nanoscale, we can tune the spectrum of thermal radiation. In doing so, we can selectively enhance or suppress certain modes linked to either desirable or undesirable properties. Such spectrally-selective transport holds promise for more efficient solar and thermal power generation.Here, we enhance spectrally-selective radiative transport using nanostructured materials to improve the efficiency of thermophotovoltaics (TPVs). TPVs are solid-state heat engines that convert energy from a high temperature radiant source—the emitter—into excited charge carriers in a semiconductor diode—the cell. TPVs are a promising technology for applications in concentrated solar power and distributed combined heat and power because they are solid-state, scalable and compatible with a variety of high-temperature heat sources. To achieve high efficiencies, it is well known that spectral control over thermal radiation is critical. Nevertheless, several questions remain: 1)What spectral features are most important in TPVs when accounting for parasitic losses and non-idealities?, and 2) How can nanostructured materials be designed to meet the stringent spectral and thermal requirements in TPVs?To address these questions, we developed radiative transport and energy conversion models to identify the most important spectral features in realistic TPVs. Based on these models, we show that suppressing radiative exchange between the emitter and the cell at energies below the bandgap of the cell (i.e., at long wavelengths) is critical for high efficiency. This is explained by the fact that, at the optimal operating temperature, the emissive power below bandgap is much higher than above the bandgap. Operation at higher temperatures is undesirable because of the increased high-temperature radiative losses and excited charge carrier thermalization in the cell.Based on these insights, we developed thin-film and nanostructured materials for TPV applications where spectrally-selective transport is based on the interaction of thermal radiation with wavelength-scale structures. The structures are chosen to minimize radiative transport at energies below the bandgap and then optimized to achieve high efficiencies in the presence of realistic losses. By suppressing radiative exchange at low energies, we demonstrate a solar TPV device that is an order of magnitude more efficient than previous solar TPVs and has the potential to exceed the limit of single-junction solar cells. Further, we show how a scalable and thin-film cell design promotes spectral selectivity using a back-side surface reflector to return sub-bandgap radiation back to the hot emitter. Spectroscopy measurements confirm that the reflectance below the bandgap for these thin-film cells is significantly higher than for cells on bulk substrates. Based on these spectral properties we show that the heat engine efficiency can be significantly higher than the state-of-the-art, exceeding 30%.This work provides a detailed understanding of the relative importance of spectral features in TPVs and offers strategies for how to best engineer thin-film and nanostructured surfaces to shape the spectrum of thermal radiation for TPVs. With integration of thermal storage, TPVs can become an important part of distributed energy systems and may lead to increased adoption of intermittent renewables.",
+    "presenting_author": "Andrej Lenert | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Andrej Lenert",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "University of Michigan",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Ann Arbor",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "MI",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper459105.html",
+    "paper_id": "459105"
+  }
+]

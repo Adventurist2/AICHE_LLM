@@ -1,0 +1,727 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470108.html",
+    "topic": "470108Hydrodynamics and Mass Transfer Effects in Mini Vessel Dissolution Testing Systems",
+    "date_time": "November 2016",
+    "abstract": "In the pharmaceutical industry, dissolution testing is routinely conducted to evaluate thein vitroperformance of solid dosage forms in pharmaceutical development, determine the dissolution behavior of formulations and provide an optimization of drug release dosage forms, and as a quality control tool to insure that solid dosage forms have consistent dissolution properties. The USP Dissolution Testing Apparatus 2 is the device most commonly used for this purpose. In a typical test, a tablet is added to the vessel and samples are manually withdrawn from the vessels over time and analyzed for their drug content.The USP 2 drug dissolution testing method is not always appropriate, especially for dissolution testing involving very small tablets or when not enough drug substance may be available for proper dissolution testing in the USP 2 Apparatus, especially during the initial stage of drug development. Small-volume dissolution testing apparatuses (mini vessel systems) can be advantageously used instead of the standard USP 2 system to overcome these limitations. The most common of these mini vessel systems is similar in shape and operation to the USP 2 apparatus, but it only requires a small volume vessel (200 mL) and a mini paddle impeller.Before mini vessel systems can gain wide acceptance in industry, their hydrodynamics needs to be studied, and their operating conditions must be defined in order to compare the velocity distribution and mass transfer coefficient in a mini vessel system with those in the standard USP2 system. Very few studies on mini vessel systems are available. Therefore, the objective of this work was to quantify the hydrodynamics and drug mass transfer rates in mini vessel systems, and determine the operating conditions under which mini vessel systems can be reliably used instead of USP 2 system for dissolution testing purposes.The velocity distribution in a minivessel was obtained here using Computational Fluid Dynamics (CFD) at different agitation speeds. The predictions were compared to the velocity vector maps obtained using Particle Image Velocimetry (PIV). Four horizontal iso-surfaces were selected to be studied in detail. The CFC predicted and PIV measured flow patterns were found to be in good agreement. As expected, the 3D flow velocity magnitude increased as the agitation speed increased. However, the velocity in the inner core region below the impeller always remained very low.The tablet-medium mass transfer process was additionally modeled, and the mass transfer coefficients at four different agitation speeds were obtained and compared to the standard system. The mini vessel system has a flow pattern similar to that of the standard USP 2 system. It was found that similar velocities at the tablet surface (on the iso-surface at y=7mm, i.e., at the vessel bottom) in the mini vessel system and in the USP 2 system were obtained when the mini vessel was operated a 100 mL, 125 rpm and the USP 2 system was operated at 900rpm and 100rpm, indicating that these two systems should result in similar dissolution profiles when operated under these conditions.",
+    "presenting_author": "Bing Wang | Otto H. York Department of Chemical, Biological and Pharmaceutical Engineering, New Jersey Institute of Technology, Newark, NJ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Bing Wang",
+        "affiliation": "Otto H. York Department of Chemical, Biological and Pharmaceutical Engineering, New Jersey Institute of Technology, Newark, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "** Piero M. Armenante",
+        "affiliation": "Otto H. York Department of Chemical, Biological and Pharmaceutical Engineering, New Jersey Institute of Technology, Newark, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Gerard Bredael",
+        "affiliation": "Merck & Co., Inc. , Summit",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470108.html",
+    "paper_id": "470108"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467629.html",
+    "topic": "467629Biologically Consistent Annotation for Metabolite Identification from Metabolomics Data",
+    "date_time": "November 2016",
+    "abstract": "Research on biological systems increasingly relies on analytical techniques that generate large datasets which can be difficult to process. Metabolomics, which deals with the global analysis of low molecular weight metabolites in a biological system, has emerged as a key “omics” field that can provide detailed information about cellular reactions. Metabolite analysis has become increasingly relevant for diverse applications, including process intensification in bioprocess development, identifying diagnostic biomarkers, and understanding cell-cell interactions in complex microbial consortia, to name a few.Advances in detection technology have greatly expanded the number and type of metabolites that can be detected. Coupled with appropriate chromatographic separation methods, high-resolution mass spectrometry (MS) can be used to perform sophisticated untargeted experiments to achieve broad coverage of the chemical species in a sample, while also obtaining rich information on the species’ molecular structure through their fragmentation patterns and corresponding MS/MS spectra. On the other hand, datasets resulting from untargeted experiments are very complex, and can contain 103~104spectral signatures or “features.” Analyzing such datasets to obtain meaningful biological information depends on reliably and efficiently resolving the chemical identities of the detected features.Despite progress, the identification of metabolites from spectral data remains a major bottleneck. In untargeted metabolomics, the objective is to characterize as many compounds as possible. The gold standard is to annotate the data by referencing a high-purity chemical standards library generated using the same analytical method as the samples. However, this is often intractable, since the sample could contain thousands of unknown metabolites. A common alternative is to search publicly available spectral libraries for entries that match the observed MS/MS spectra. However, the number of pure chemical standards covered by spectral MS/MS libraries is very small compared to the number of metabolites occurring in nature. Two commonly used libraries, METLIN and HMDB, contain MS/MS data for only ~16% of metabolites catalogued in KEGG.In recent years, a number of computational tools have been developed that utilizein silicofragmentation, molecular fingerprinting, and machine learning. While these tools can greatly increase the number of features that can be assigned a putative identity, difficulties remain in functionally annotating the data. Given that many compounds share the same chemical formula (and hence mass) and fragment similarly, associating a spectral signature with a chemical identity can be ambiguous. This is also reflected in the outputs ofin silicofragmentation tools, which typically suggest many possible matches for a given experimentally observed MS/MS spectrum.This paper describes a novel computational workflow that utilizes the biological context of a sample to annotate and interpret the metabolomics data. The basis for this context-driven approach is that the metabolites present in a sample reflect enzyme-catalyzed biochemical reactions active in the corresponding biological system. We develop this workflow to specifically address the comparison or differential analysis of samples representing two or more different experimental conditions, a typical problem in metabolomics.The major steps in the workflow are as follows. First, a metabolic model is constructed from genome annotation data in KEGG to define a set of metabolic reactions that could be expressed in the biological system of interest. Second, the detected features are mapped to candidate compounds in the model, creating a graph that connects the candidate compounds via edges representing reactions. The nodes in this graph are weighted by scores reflecting the confidence in the mapping of detected features to candidate compounds. These scores are calculated based on matches of features to MS/MS spectra in databases and predicted spectra generated usingin silicofragmentation tools. The edges in the graph are weighted by the confidence that the corresponding reactions are expressed in the biological system. Third, a local neighborhood analysis is performed on the weighed graph to further refine the confidence calculations. If a large fraction of connected metabolites in a subset of the graph, or neighborhood, consists of high confidence metabolites, this increases confidence in the assigned identities of all metabolites in the neighborhood. Features associated with multiple candidate metabolites are preferentially mapped to such high confidence neighborhoods, since there is a greater likelihood that the reactions are actively engaged. The results of this analysis also inform pathway engagement, as pathways covering many high confidence neighborhoods are also likely engaged.We validate the workflow using experimental data from two case studies. The first case deals with metabolomic data collected on a single, well-characterized cell type, whereas the second case deals with data on a complex microbial community harboring only partially characterized member species. Untargeted metabolomics experiments were run using multiple chromatography methods in combination with both positive and negative ionization modes, which broadened coverage of unique masses by >50%. Use of an accurate metabolic model is critical; up to 90% of the candidate compounds that match to KEGG compounds based on mass (precursor m/z) could be eliminated as likely false matches by considering only compounds present in the model.The annotation generated using our workflow was compared against annotation results collected from available databases (METLIN and HMDB) and recently publishedin silicoprediction tools (CFM-ID and MetFrag). For selected metabolites with available chemical standards, the predicted annotation was also confirmed experimentally. Our results to date indicate that all three steps in the workflow greatly contribute to improving the annotation yield and accuracy.",
+    "presenting_author": "Nicholas Alden | Department of Chemical and Biological Engineering, Tufts University, Medford, MA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Nicholas Alden",
+        "affiliation": "Department of Chemical and Biological Engineering, Tufts University, Medford, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sara Manteiga",
+        "affiliation": "Department of Chemical and Biological Engineering, Tufts University, Medford, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Rani Menon",
+        "affiliation": "Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Smitha Krishnan",
+        "affiliation": "Department of Chemical and Biological Engineering, Tufts University, Medford, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Avita Sharma",
+        "affiliation": "Computer Science, Tufts University, Medford, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Vladimir Porokhin",
+        "affiliation": "Computer Science, Tufts University, Medford, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Elena Cokova",
+        "affiliation": "Computer Science, Tufts University, Medford, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jeremy Colebrook-Soucie",
+        "affiliation": "Computer Science, Tufts University, Medford, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Arul Jayaraman",
+        "affiliation": "Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Soha Hassoun",
+        "affiliation": "Computer Science, Tufts University, Medford, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Kyongbum Lee",
+        "affiliation": "Department of Chemical and Biological Engineering, Tufts University, Medford, MA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467629.html",
+    "paper_id": "467629"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper463044.html",
+    "topic": "463044Real-Time Monitoring and Modeling of Milling in a Continuous Tableting Line Via Dry Granulation",
+    "date_time": "November 2016",
+    "abstract": "In the Pharmaceutical Industry, batch operation is the traditional mode of manufacture. During batch production, the quality of the batch usually is subject to batch-to-batch variability and thus quality is controlled by statistical sampling and if necessary rejection of the entire batch. Conversion to the continuous processing mode offers the potential for quality improvement as well as potential cost savings. However, continuous processing requires on-line measurements and active process control and thus the development of Process Analytical Technology (PAT) tools is crucial [1].In the continuous dry granulation tableting line there are a number of variables that relate to the final product quality. For instance, composition and tablet hardness are among the CQAs in this process. In the dry granulation line, the roller compactor serves as a granulation method. In this unit, the powders are fed into a hopper and then conveyed by the feed screw to two counter rotating rolls. The powder is gripped by the rolls and pulled into the nip area of the compacting rolls before being compacted into a ribbon. Then the ribbon is milled into granules by a hammer mill [2]; generating a granular feed for the tablet press, which has favorable flow and compaction properties.The milling step is an important unit operation because the granules particle size distribution (PSD) will affect compaction properties and subsequently the tablet hardness. Therefore, the granules PSD is also a CQA. In the roller compaction process, an increase in roll pressure will translate to an increase in ribbon density. The ribbon density has a relation to granule PSD [3]. As a consequence, the ribbon density can be considered an intermediate CQA. The relationship between ribbon density and granule PSD is difficult to establish from first principles, but a correlation can be established by conducting a series of experiments. In this design of experiments, the roll pressure is varied, the ribbon is milled at different speeds and the PSD measured through either off-line means such as sieve analysis or else on-line using laser based methods.In continuous operations, it is desirable to measure all of the CQAs online, so as to permit the implementation of appropriate process control logic. In the tableting line installed at Purdue University, the roller compacted (RC) ribbon properties such as density and composition can be measured online using either a microwave (MW) and/or a Near-Infrared (NIR) sensor [4]. The PAT tool for online PSD measurement that we have adopted in our work is a high speed imaging camera (Innopharma Eyecon Camera), with which our team has had some previously experience in wet granulation applications [5]. This equipment counts and images particles with a sampling time of 2s and has a scanning rate of 10m.s-1.The milling unit operation is commonly modeled using a population balance model [6]. The key model component of the population balance model (PBM) is the breakage kernel. This component represents the process of creation of smaller particles, as larger particles are impacted by the mill hammers or pins which causes the fracture. A wide range of breakage kernels have been proposed, most of purely empirical or semi-empirical nature. Each of these models requires the estimation of model specific parameters which will depend on feed material properties as well as mill operating variables [7].This project has three objectives. The first one is to calibrate the Innopharma Eyecon camera. The second objective is to establish the parameters of the breakage kernel and thus the PBM model and the third objective is to develop the empirical relation between the ribbon density and granules PSD both measured using the on-line PAT tools. The first objective is achieved by generating samples of granules prepared under different conditions then relating the Innopharma Eyecon Camera output to the sieve analysis results. Since the sieve analysis measures fractions mass while the camera measures particle size, there is a conversion required which depends on particle density. The data for meeting the needs of the second and third objectives is determined through a series of experiments in which the mill speed, the composition of the powder and the density of the ribbon in the roller compactor and PSD are measured on-line. This data is gathered in runs when the process reaches steady state.The results of this three-part study enable the capability for on-line monitoring of the combined compactor-mill subsystem. The PBM model and ribbon density-PSD relationship are important components of a data reconciliation model for the entire line. In this paper we report the results of these studies and demonstrate their utility in data reconciliation.References[1] S. L. Lee, T. F. O. Connor, X. Yang, C. N. Cruz, L. X. Yu, and J. Woodcock, “Modernizing Pharmaceutical Manufacturing : from Batch to Continuous Production,” no. 1, pp. 1–25, 2015.[2] R. W. Miller and P. J. Sheskey, “Roller Compaction Technology for Pharmaceutical Industry.” Marcel Dekker Inc., 2003.[3] S. Yu, “Roll Compaction Of Pharmaceutical Excipients,” University of Birmingham, 2012.[4] A. Gupta, J. Austin, S. Davis, M. Harris, and G. Reklaitis, “A novel microwave sensor for real-time online monitoring of roll compacts of pharmaceutical powders online - A comparative case study with NIR,”J. Pharm. Sci., vol. 104, no. 5, pp. 1787–1794, 2015.[5] A. S. El Hagrasy, P. Cruise, I. Jones, and J. D. Litster, “In-line size monitoring of a twin screw granulation process using high-speed imaging,”J. Pharm. Innov., vol. 8, no. 2, pp. 90–98, 2013.[6] E. B. Litster, J. D.,The Science and Engineering of Granulation Processes, vol. 53, no. 9. 2013.[7] J. K. Pettersen and K. L. Sandvik, “Estimating the breakage and selection functions for a continuous mill,”Int. J. Miner. Process., vol. 35, no. 3–4, pp. 149–158, Aug. 1992.",
+    "presenting_author": "Mariana Moreno | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Mariana Moreno",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Qinglin Su",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Zoltan K. Nagy and Gintaras Reklaitis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "School of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Purdue University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "West Lafayette",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "IN",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper463044.html",
+    "paper_id": "463044"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467852.html",
+    "topic": "467852‘Omics Profiling of a Continuous Manufacturing CHO Production Platform for Monoclonal Antibodies",
+    "date_time": "November 2016",
+    "abstract": "The manufacturing of biotherapeutics such as recombinant proteins is usually performed in fed-batch mode using Chinese hamster ovary (CHO) cell lines as main expression system. Currently, continuous manufacturing is only preferred if the protein is unstable and prone to chemical or enzymatic degradation. Nevertheless, using perfusion reactors is beneficial for the reduction of quality inconsistencies due to the short residence and steady operation, which is equally favourable for more stable products as monoclonal antibodies (mAbs). Realizing process and product steady-state by systematic process development instead of using empirically driven approaches is one of the key points within the Quality by design (QbD) concept. Thereby, the increase in knowledge about cell physiology is a cornerstone within this development strategy, where ‘omics technologies can be helpful to address the regulatory behaviour of the used cell lines.In this work, transcriptome and proteome profiling of a CHO cell line producing a mAb was performed to investigate the intracellular variability during steady-state of a perfusion reactor. Daily samples were analysed by high-throughput methods depicting the time evolution of several thousand transcripts and proteins. Data mining by different clustering methods allowed the analysis of each individual ‘omics study. Furthermore up- and down regulated intracellular processes and pathways responsible for the quality of the secreted mAb were investigated. By the use of bioinformatics databases the biological function was assigned and moreover key functions were characterized by functional annotation. Additionally, to identify differences between the mRNA and protein expression in time, an integrated data analysis of both datasets was completed, as the correlation of the proteomic and transcriptomic expression response is not necessarily given for every regulatory cell process. In conclusion, useful insights into cellular behaviour can be gained by the joint application of ‘omics technologies to address the intracellular process consistency of perfusion cell culture.",
+    "presenting_author": "Vania Bertrand | Institute for Chemical and Bioengineering, ETH Zurich, Zurich, Switzerland",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Vania Bertrand",
+        "affiliation": "Institute for Chemical and Bioengineering, ETH Zurich, Zurich, Switzerland",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Daniel Karst",
+        "affiliation": "Institute for Chemical and Bioengineering, ETH Zurich, Zurich, Switzerland",
+        "designation": "Author"
+      },
+      {
+        "name": "Miroslav Soos",
+        "affiliation": "Department of Chemical Engineering, University of Chemistry and Technology Prague, Prague 6, Czech Republic",
+        "designation": "Author"
+      },
+      {
+        "name": "Massimo Morbidelli",
+        "affiliation": "Institute for Chemical and Bioengineering, ETH Zurich, Zurich, Switzerland",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467852.html",
+    "paper_id": "467852"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram//data/abstract/aiche/2016/Paper_461535_abstract_88849_0.png",
+    "topic": "Not Found",
+    "date_time": "November 2016",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468862.html",
+    "topic": "468862Raman Spectroscopy- Towards the Prediction of Quality Attributes and Application in Cell Culture Process Development",
+    "date_time": "November 2016",
+    "abstract": "In recent years, the United States Food and Drug Administration (FDA) and the European Medicines Agency (EMA) have stressed the need of improved process understanding and control in the area of pharmaceutical development, manufacturing and quality assurance, summarized in the Process Analytical Technology (PAT) initiative. Lately, Raman spectroscopy has emerged as a promising online monitoring and control tool in bioprocesses. The advantages of this technology are the invasive and nondestructive operations, the simultaneously detection of multiple process variables, as well as the online operation mode and real-time information release.Raman spectroscopy is mainly used for monitoring purposes at production stage, where variations are small and the process is already well defined. However, the exploitation of Raman technology for process development, where different process conditions, media, products or cell lines are tested resulting in a large variability and few experiments at similar conditions, could bring very important benefits, in terms of process understanding, speed and cost reduction. This work presents several ideas, experimental results and recommendations to overcome those challenges in process development.Different fed-batch cultures, varying in cell lines, products and platform media, were monitored online. In addition, diverse spiking strategies were performed to artificially increase the calibration range as well as the quality of the prediction models. The evaluation of advanced modeling techniques to derive optimal results from the obtained spectral data plays a central role in this work. Those techniques included an in-depth analysis of the pretreatment procedure, wavelength selection and outlier elimination with regards to robust calibration and prediction of the components of interest.Besides classical parameters such as glucose, lactate, titer and viable cell density, all 20 amino acids could be very well predicted. More than that, even the prediction of quality attributes like aggregates and glycans showed promising results. In addition, the potential of generic models, which can be applied independently of the cell line, process platform and medium, could be proven. This enables the Raman spectroscopy as an online monitoring tool of multiple process variables and its implementation into a supervisory control of a continuous integrated bioprocess to ensure consistent process efficiency and shaping the product qualities.",
+    "presenting_author": "Fabian Feidl | Institute for Chemical and Bioengineering, ETH Zurich, Zurich, Switzerland",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Fabian Feidl",
+        "affiliation": "Institute for Chemical and Bioengineering, ETH Zurich, Zurich, Switzerland",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Michael Sokolov",
+        "affiliation": "Institute for Chemical and Bioengineering, ETH Zurich, Zurich, Switzerland",
+        "designation": "Author"
+      },
+      {
+        "name": "Ines Da Silva Costa",
+        "affiliation": "Institute for Chemical and Bioengineering, ETH Zurich, Zurich, Switzerland",
+        "designation": "Author"
+      },
+      {
+        "name": "Jean-Marc Bielser",
+        "affiliation": "Biotech Process Sciences, Merck Serono S.A., Fenil-sur-Corsier, Switzerland",
+        "designation": "Author"
+      },
+      {
+        "name": "Jonathan Souquet",
+        "affiliation": "Biotech Process Sciences, Merck Serono S.A., Fenil-sur-Corsier, Switzerland",
+        "designation": "Author"
+      },
+      {
+        "name": "Hervé Broly",
+        "affiliation": "Biotech Process Sciences, Merck Serono S.A., Fenil-sur-Corsier, Switzerland",
+        "designation": "Author"
+      },
+      {
+        "name": "Carsten Uerpmann",
+        "affiliation": "Kaiser Optical Systems Inc., Ann Arbor, MI",
+        "designation": "Author"
+      },
+      {
+        "name": "Massimo Morbidelli",
+        "affiliation": "Institute for Chemical and Bioengineering, ETH Zurich, Zurich, Switzerland",
+        "designation": "Author"
+      },
+      {
+        "name": "Alessandro Butté",
+        "affiliation": "Institute for Chemical and Bioengineering, ETH Zurich, Zurich, Switzerland",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468862.html",
+    "paper_id": "468862"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram//data/abstract/aiche/2016/Paper_467846_abstract_92933_0.jpg",
+    "topic": "Not Found",
+    "date_time": "November 2016",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460310.html",
+    "topic": "460310Recurrent Patterns of DNA Copy Number Alterations in Tumors Reflect Metabolic Selection Pressures",
+    "date_time": "November 2016",
+    "abstract": "Human tumors exhibit recurrent patterns of DNA amplifications and deletions across diverse cancer types. These patterns are suggestive of conserved selection pressures during tumor evolution but cannot be fully explained by known oncogenes and tumor suppressor genes. Applying principal component analysis (PCA) to genome-wide DNA copy number alteration (CNA) from 17 tumor types, we identified previously unreported CNA genomic sub-signatures. Combining these human signatures in a cross-species comparison with signatures from mouse models of cancer allowed for synteny-based elimination of passenger genes. Examination of the cross-species refined CNA signatures revealed coordinate enrichment of copy number alterations in core glycolysis enzymes. Notably, these PCA-defined CNA signatures are predictive of glycolytic phenotypes, including FDG-avidity of patient tumors. Using an experimental immortalization system, we show that exogenous expression of metabolic enzymes alters the copy number status of the corresponding endogenous loci, supporting the hypothesis that these metabolic genes act as drivers within the conserved CNA amplification regions. Finally, using mass spectrometry-based metabolomics, we demonstrate that cells with glycolytic CNA signatures channel an increased proportion of glucose-derived carbon into pentose phosphate-associated biosynthetic pathways including nucleotide synthesis. Taken together, our experimental and computational data support a model in which glycolysis-linked selective pressures encountered during tumorigenesis (eg, redox stress and senescence) shape the highly recurrent DNA copy number alterations found in aneuploid human tumors.",
+    "presenting_author": "Nicholas Graham** 1,2 , Aspram Minasyan | Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Nicholas Graham** 1,2 , Aspram Minasyan",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Anastasia Lomova",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Ashley Cass",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Nikolas Balanis",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Friedman",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Shawna Chan",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Sophie Zhao",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Adrian Delgado",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Lillie Beck",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Christian Hurtz",
+        "affiliation": "University of California, San Francisco, San Francisco, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Carina Ng",
+        "affiliation": "University of California, San Francisco, San Francisco, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Rong Qiao",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Johanna ten Hoeve",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Nicolaos Palaskas",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Hong Wu",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Markus Müschen",
+        "affiliation": "University of California, San Francisco, San Francisco, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Asha Multani",
+        "affiliation": "M. D. Anderson Cancer Center, Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Elisa Port",
+        "affiliation": "Mount Sinai Medical Center, New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Steven Larson",
+        "affiliation": "Memorial Sloan-Kettering Cancer Center, New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Nikolaus Schultz",
+        "affiliation": "Memorial Sloan-Kettering Cancer Center, New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Daniel Braas",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Heather Christofk",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Ingo Mellinghoff",
+        "affiliation": "Memorial Sloan-Kettering Cancer Center, New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Thomas Graeber",
+        "affiliation": "Molecular and Medical Pharmacology, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460310.html",
+    "paper_id": "460310"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467602.html",
+    "topic": "467602Deductive Determination of Dynamic Cellular Objectives from Biological Data",
+    "date_time": "November 2016",
+    "abstract": "Cybernetic models describe metabolic changes by means of simplifying intricate cellular regulation mechanisms with the concept of “dynamic metabolic goals.” In prior work, these goals have taken the form of inductive assumptions about the nature of metabolism and are explicitly stated in forms like “maximization of growth rate” or “maximization of the rate of carbon uptake.” Also, often cellular phenotypes resulting from specific stimulus can serve as context-specific objective functions. For instance, in the case of macrophage metabolism in response to stimulation by LPS, the inflammation phenotype represented by cytokine readout profiles can serve as an objective function. These inductively determined metabolic goals have yielded numerous predictions of metabolic phenomena, but a procedure to determine the most descriptive cybernetic objective function for a given system has yet to be proposed. To address this, we develop a method to deductively resolve metabolic objectives from a combination of metabolomic and transcriptomic data.This analysis simultaneously relates dynamic metabolic changes with the regulation of enzymes that influence those metabolic changes. It provides objective functions that take the form of optimal weightings which represent the return on investment for various metabolic pathways that are competing for same pool of resources. To give biological context to these returns on investment, a method to mine gene expression data and explain the objective function using pathway enrichment analysis is proposed. We use this approach to analyze three systems: two diauxic growth scenarios and prostaglandin metabolism in a mammalian cell line. Pathway enrichment analysis of the genes mined using this procedure provides objective functions that show agreement with already established experimental knowledge related to the behavior of these systems in their respective conditions. The ability to determine objective functions deductively from the data allows for the formulation of robust cybernetic descriptions of systems where objective functions are difficult to determine inductively. This approach has applications in specifying objective functions for more complicated metabolic systems in multi-cellular organisms.",
+    "presenting_author": "Frank T. DeVilbiss | School of Chemical Engineering, Purdue University, West Lafayette, IN",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Frank T. DeVilbiss",
+        "affiliation": "School of Chemical Engineering, Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mano R. Maurya 2,3 , Shakti Gupta 2,3 , Shankar Subramaniam",
+        "affiliation": "San Diego Supercomputer Center, Department of Bioengineering, Department of Chemistry & Biochemistry, University of California San Diego, La Jolla, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Doraiswami Ramkrishna",
+        "affiliation": "School of Chemical Engineering, Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467602.html",
+    "paper_id": "467602"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper457484.html",
+    "topic": "457484CFD MODEL Based Near-Infrared Spectroscopy Implementation for in-LINE ASSAY Monitoring of a Pharmaceutical Suspension",
+    "date_time": "November 2016",
+    "abstract": "INTRODUCTION AND PURPOSEDuring bottle filling of a pharmaceutical suspension formulation, a decreasing trend in assay is observed at the end of the batch. This leads to approximately 17% of the batch content which cannot be commercialized. The root cause can most likely be found in foam present in the top layer of the suspension in the holding tank which contains less API. The aim in this study is to implement a PAT solution for establishing a batch-dependent endpoint (I.e. assay ≤ 95%) determination while reducing in-process sampling drastically.MATERIALS AND METHODSMaterialsTests were performed with a high-dose (i.e. 100 mg/mL) pharmaceutical suspension formulation. Lab scale samples were prepared in a 10L mixing vessel. Full scale batches are manufactured in a 150L compounding vessel following a one-pan process. After the transfer to a holding tank, the full scale batches are gradually discharged to a specific bottle filling system with the help of a peristaltic pump. During this process step, the suspension is stirred continuously.MethodsNIR spectra were recorded using a Fourier-transform Near-Infrared (NIR) spectrometer (Bruker Matrix-F Duplex) equipped with a TE-InGaAs detector, a quartz halogen lamp and a fiber-optic non-contact probe. Every 30 seconds, a spectrum was acquired in the 12000-4000 cm-1region with a resolution of 8 cm-1, averaged over 64 scans. Ultra Performance Liquid Chromatography (UPLC) was selected as reference technique for API content determination. All UPLC measurements were performed at Janssen Pharmaceutica, Beerse, Belgium, using their developed and validated method (confidential).RESULTS AND DISCUSSIONSamples in a range of 85-115% target concentration were analyzed with both NIR spectroscopy and UPLC. A lab-scale calibration model was developed which shows acceptable feasibility for NIR spectroscopy as potential PAT tool for the API assay determination in suspension.For approaching the production measurement setup as good as possible, the calibration model was optimized by using a circular system with a similar flow as in production (i.e. 800 mL/min) with the help of a customized T-piece. Samples with concentrations varying between 90-103% were measured and included in the prediction model.At production scale however, the developed model showed a weak performance with an unexpected variation in NIR assay results. It was assumed that the signal variation was created by disturbed flow patterns/turbulence in front of the lens due to possible back pulse formation at the system output. A Computational Fluid Dynamics (CFD) simulation of the flow pattern of the suspension inside the measuring interface confirmed this assumption.CFD simulations demonstrated that an extension of the original T-piece could optimize the measurements by transferring the back pulse formation further away from the lens. This mechanical solution allowed a constant sample volume per time unit in front of the NIR laser. This was confirmed with additional lab-scale tests and the follow-up of several production scale batches.CONCLUSIONSDespite the dominantly present water absorption bands, NIR spectroscopy is feasible to establish good API assay predictions of this high solid-load suspension formulation.Experiments indicated that a fine-tuning of the interfacing device is crucial to achieve adequate in-line NIR measurements. Therefore, sufficient process knowledge, including fluidum mechanics, is desired to rationalize the choice for an optimal measurement setup.CHALLENGES AND FUTURE WORKIn the future it is aimed to investigate if NIR spectroscopy in combination with this specific interfacing device is applicable for other liquid pharmaceutical formulations.",
+    "presenting_author": "Maxim Verstraeten and Thomas De Beer | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Maxim Verstraeten and Thomas De Beer",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Laboratory of Pharmaceutical Process Analytical Technology",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Ghent University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Ghent",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Belgium",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper457484.html",
+    "paper_id": "457484"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper471592.html",
+    "topic": "4715923D Raman Spectroscopy – a Method for Mapping Ingredient Distribution throughout a Tablet Volume",
+    "date_time": "November 2016",
+    "abstract": "Blending of powders can often result in agglomeration when one or more raw materials in a blend are cohesive, hydrophilic or have the tendency of acquiring electrostatic charges. Agglomeration often leads to failure modes in pharmaceutical tablets, particularly “low dose” formulation tablets where the active pharmaceutical ingredient (API) is present in small amounts. When powders agglomerate, the uniformity of the final tablet is adversely affected, leading to variation in the tablet potency and dissolution profiles, which are usually undesirable. New technology enables the quantitative examination of the microstructure within tablets to determine the extent of agglomeration and to assess its effects on product performance. This can be useful as a means for understanding how the process causes agglomeration. If process parameters can be correlated to the tablet microstructure, this knowledge can assist in designing tablets of desirable quality thereby reducing product failure drastically.Raman imaging is a powerful tool for studying tablet structure. It has higher chemical specificity than NIR and is also less affected by physical characteristics of the sample. The main disadvantage of Raman, its low quantum yield, requiring long integration times, is vanishing quickly, due to vast advances made recently in laser and detector technology. This is causing a significant renewed interest in using chemical mapping to examine the microstructure of pharmaceutical tablets.This talk will focus on the use of a new Raman imaging platform, the mPAT system from H2Optx, which is equipped with a 10x10 micron 2D spatial resolution along with the ability to shave layers off a tablet for depth analysis. This level of spatial resolution enables the user to extract detailed structural data that reveals the relationships between process, product structure, and product performance. This technique has the ability to do a quantitative content determination within a sample and, combining this for each pixel, generate 3D maps w.r.t. the individual constituents.Tablets manufactured from traditional batch processing methods and continuous manufacturing methods were examined, including tablets made via Direct Compaction (DC), Wet Granulation (WG) and Roller Compaction (RC). Tablets using several formulations for each of the three methods were made with various levels of induced agglomeration and were analyzed using the mPAT system. The effects of the different processing conditions on agglomeration were characterized and their effect on tablet microstructure and dissolution were quantified. These observations will be discussed in this presentation.",
+    "presenting_author": "Savitha Panikar | Chemical and Biochemical Engineering, Rutgers, the State University of New Jersey, Piscataway, NJ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Savitha Panikar",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers, the State University of New Jersey, Piscataway, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Wei Meng",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers, the State University of New Jersey, Piscataway, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Pallavi Pawar",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Sarang Oka",
+        "affiliation": "Department of Chemical and Biochemical Engineering, Rutgers, The State University of New Jersey, Piscataway, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Rudy Hofmeister",
+        "affiliation": "H2Optx Inc, San Jose, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Fernando Muzzio",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper471592.html",
+    "paper_id": "471592"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466854.html",
+    "topic": "466854Using Optical Coherence Tomography (OCT) to Analyze in Real-Time the Tablet Coating Variability of a Continuous Drum Coating Process",
+    "date_time": "November 2016",
+    "abstract": "This study demonstrates an in-line measurement system used in a continuous drum coater (Driaconti-T lab, Driam Anlagenbau GmbH). Process monitoring is performed by an optical coherence tomography (OCT) sensor (OCT Pharma 1D, Phyllon GmbH) providing cross-sectional images of film-coatings in a non-destructive and contactless manner.The continuous coater has three chambers, each with a product volume of around 2 liters of tablets. In continuous operation mode, the tablets are inserted in chamber 1 and transported to chamber 3, while being coated in each of them. Thus, the product is handled in small batches, without exchange of product between the chambers, resulting in a defined residence time for each tablet.OCT measurement and subsequent automatic data analysis is a method to determine the coating thickness from OCT images without the need of chemometric calibration models, based on a known refractive index of the coating materials. OCT was used to obtain the temporal evolution of the quality parameters, i.e., mean coating thickness, inter-tablet coating variability and intra-tablet coating variability during the coating process. Thereby, the influence of spray rate, air temperature and spray pattern pressure on the quality parameters was studied based on a full-factorial DoE. Additionally, the variability of single drum segments of an extended period of time was studied.Continuous coating, here in the form of small batches, is an important enabler for continuous manufacturing of solid dosage forms. In combination with an in-line OCT system the coating process can be monitored and actively controlled.",
+    "presenting_author": "Patrick R. Wahl | RCPE GmbH, Graz, Austria",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Patrick R. Wahl",
+        "affiliation": "RCPE GmbH, Graz, Austria",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Manuel Zettl",
+        "affiliation": "RCPE GmbH, Graz, Austria",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephan Sacher",
+        "affiliation": "Research Center, Graz, Austria",
+        "designation": "Author"
+      },
+      {
+        "name": "Rainer Bastian",
+        "affiliation": "Driam Anlagenbau GmbH, Eriskirch, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Thomas Fränkel",
+        "affiliation": "Driam Anlagenbau GmbH, Eriskirch, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Johannes G. Khinast 1,4 and **Matthias Wolfgang",
+        "affiliation": "RCPE GmbH, Graz, Austria",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466854.html",
+    "paper_id": "466854"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper451812.html",
+    "topic": "451812Comparative Mapping of Dengue Virus-Host Interactions Using Global Proteomics",
+    "date_time": "November 2016",
+    "abstract": "Introduction:Dengue virus (DENV) is transmitted by mosquitoes and infects nearly 400 million people annually. Like other viruses, DENV interacts with the host to orchestrate myriad biochemical processes required for replication. A unique characteristic of vector-borne viruses such as DENV is that they use cellular machinery in two very different hosts to successfully replicate. This raises the question, how does DENV hijack cellular processes for replication in two hosts that have diverged over hundreds of millions of years.Materials and Methods:We investigated this question using complementary systems biology techniques. We first sought to systematically identify DENV-human and DENV-mosquito protein interactions for all 10 DENV proteins using affinity purification/mass spectrometry (AP/MS). To identify DENV-human and DENV-mosquito protein interactions, individual Strep-tagged DENV proteins were over-expressed in human HEK293T orA. aegyptiAag2 cells, and subjected to AP/MS. High confidence interactions were determined using a statistical algorithm called MS Interaction STatistics (MiST) to filter the resulting MS data based on specificity, reproducibility and abundance of the identified peptides. We then sought to systematically link physical interactions to functional outcomes during DENV replication using RNAi knockdown and a reporter virus system in human Huh7 cells.Results and Discussion:From our proteomic work, we recovered many previously reported physical interactions, included interactions between NS1 and Complement C4, NS5 and FAM192A, and NS5 and Importin-a/b. We also found a significant enrichment for orthologous interactions that are shared between the human and mosquito hosts, potentially providing conserved physical interfaces by which functional modules can be manipulated during replication. The functional genetic characterization of 349 DENV-interacting human factors identified 95 genes that significantly impacted viral replication, including previously reported replication factors SEC61G and UBE3A. To further understand how shared interactions facilitate replication in mosquitoes, we are testing the impact DENV-interacting insect factors on DENV replication in the mosquitoA. aegyptiAag2 cells. This comparative approach will elucidate how conserved functional modules are manipulated by a virus to facilitate replication two evolutionarily distant hosts. Upon integration of the proteomic and genetic data, we identified several nuclear human factors that impact viral replication and physically interact with DENV. We are currently investigating how these DENV-host interactions impact global gene expression using ChIP-seq and RNA-seq. Our preliminary data suggest that DENV inhibits the expression of antiviral interferon stimulated genes through a protein interaction between the viral polymerase and transcription elongation machinery.Conclusions:Using proteomics and genetics, we identified DENV-host protein interactions in both human and mosquito systems. We further determined the impact of these host factors on viral replication, and identified interactions between DENV proteins and host nuclear factors involved in the regulation of gene expression. Our data support a model in which a physical interaction between the DENV polymerase and transcription elongation machinery inhibits the antiviral innate immune response.Acknowledgements:We thank Dr. Michel Tassetto and Dr. Jason Wojcechowski for feedback. This work was supported by DARPA 10-93-Prophecy-PA-008 to RA and NJK, and NIH F32AI112262-01A1 to PSS.",
+    "presenting_author": "Priya Shah ** 1,2 , Gwen Jang | Cellular and Molecular Pharmacology, UCSF, San Francisco, CA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Priya Shah ** 1,2 , Gwen Jang",
+        "affiliation": "Cellular and Molecular Pharmacology, UCSF, San Francisco, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jeff Johnson",
+        "affiliation": "Cellular and Molecular Pharmacology, UCSF, San Francisco, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "John Von Dollen",
+        "affiliation": "Cellular and Molecular Pharmacology, UCSF, San Francisco, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Billy Newton",
+        "affiliation": "Cellular and Molecular Pharmacology, UCSF, San Francisco, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Laura Satkamp",
+        "affiliation": "Cellular and Molecular Pharmacology, UCSF, San Francisco, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Mark Kunitomi",
+        "affiliation": "Microbiology and Immunology, UCSF, San Francisco, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Federico de Maio",
+        "affiliation": "Leloir Institute, Buenos Aires, Argentina",
+        "designation": "Author"
+      },
+      {
+        "name": "Ana Fernandez-Sesma",
+        "affiliation": "Mount Sinai School of Medicine, New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Andrea Gamarnik",
+        "affiliation": "Leloir Institute, Buenos Aires, Argentina",
+        "designation": "Author"
+      },
+      {
+        "name": "Raul Andino",
+        "affiliation": "Microbiology and Immunology, UCSF, San Francisco, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Nevan Krogan",
+        "affiliation": "Cellular and Molecular Pharmacology, UCSF, San Francisco, CA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper451812.html",
+    "paper_id": "451812"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper453622.html",
+    "topic": "453622Ultrasensitive Microfluidic Assay for Genome-Wide DNA Methylation Analysis and Precision Medicine",
+    "date_time": "November 2016",
+    "abstract": "Epigenetics refer to any process that alters gene activities without changing the DNA sequence. Previous studies have demonstrated that epigenetic regulation, such as DNA methylation, plays a critical role in many biological procedures, such as embryo development and learning process. Genome-wide study of dynamics of DNA methylation at single-base resolution provides a comprehensive understanding of methylome configuration. Bisulfite sequencing is regarded as the gold-standard technology for analyzing DNA methylation. This technology is based on the different consequences after cytosine and 5-methycytosine (5-mC) treated with sodium bisulfite. However, conventional protocols required more than 300 ng DNA due to the significant sample loss during bisulfite treatment (up to 98%1, 2). This limits its application for studying precious samples and understanding the underlying heterogeneity of clinic samples. To broaden the applications of bisulfite sequencing, it is necessary to develop ultrasensitive tools for epigenomic study, particularly DNA methylation analysis.We reported the first microfluidic DNA methylation assay at genome-wide scale and single-base resolution with >3 orders of magnitude higher sensitivity than conventional protocols.To improve the sensitivity of the assay for studying subsets of neurons, we developed a diffusion-based microfluidic assay that preserved significantly more DNA than conventional assays. There were two main factors contributing to the DNA preservation: 1) Taking advantage of manipulating solution with extremely small volume (<1 µl), bisulfite treatment (e.g. dosing, temperature and time) were well controlled. 2) Column-based DNA desalting in conventional assay was replaced by diffusion purification3. The diffusion scheme also increased the concentration of bisulfite mix which shortened the reaction time from 4~16 hours to 1-2 hours.We used our microfluidic protocol to perform reduced representative bisulfite sequencing (RRBS) with various amounts of genomic DNA extracted from GM12878 cells. For all 4 sample sizes, replicate experiments were highly correlated (r = 0.995, 0.992, 0.979 and 0.912 for 300, 10, 1 and 0.3 ng, respectively). With similar sequencing depth, we identified averagely 1.82 million CpGs with 5x coverage using 0.3ng DNA, compared to 0.94 million in ENCODE data (deposited standard data using 1-2 µg DNA). When 300 ng samples were used as a reference, 92.1, 83.8, and 57.9% of methylation was observed in 10, 1, and 0.3 ng samples, respectively. This indicates that >50% of the genome was covered when the amount of starting DNA was decreased by 3 orders of magnitude.References1.         M. Ehrich, S. Zoll, S. Sur and D. van den Boom,Nucleic Acids Res., 2007,35, e29-e29.2.         C. Grunau, S. J. Clark and A. Rosenthal,Nucleic Acids Res., 2001,29, E65-65.3.         S. Ma, D. N. Loufakis, Z. Cao, Y. Chang, L. E. K. Achenie and C. Lu,Lab Chip, 2014,14, 2905-2909.",
+    "presenting_author": "Sai Ma | School of Biomedical Engineering and Sciences, Virginia Tech, Blacksburg, VA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Sai Ma",
+        "affiliation": "School of Biomedical Engineering and Sciences, Virginia Tech, Blacksburg, VA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhixiong Sun",
+        "affiliation": "Virginia Bioinformatics Institute, Virginia Tech, Blacksburg, VA, Virginia Tech, Blacksburg, VA",
+        "designation": "Author"
+      },
+      {
+        "name": "Hehuang Xie",
+        "affiliation": "Virginia Bioinformatics Institute, Virginia Tech, Blacksburg, VA, Virginia Tech, Blacksburg, VA",
+        "designation": "Author"
+      },
+      {
+        "name": "Chen Sun",
+        "affiliation": "School of Biomedical Engineering and Sciences, Virginia Tech, Blacksburg, VA",
+        "designation": "Author"
+      },
+      {
+        "name": "Travis Murphy",
+        "affiliation": "Chemical Engineering, Virginia Tech, Blacksburg, VA, Virginia Tech, Blacksburg, VA",
+        "designation": "Author"
+      },
+      {
+        "name": "Chang Lu",
+        "affiliation": "Chemical Engineering, Virginia Tech, Blacksburg, VA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper453622.html",
+    "paper_id": "453622"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462527.html",
+    "topic": "462527A Capture-Based Technique for Enhancing RNA-Seq Analysis of Bacterial Transcriptomes during in Vitro and In Vivo Infections",
+    "date_time": "November 2016",
+    "abstract": "To fully understand the dynamic spatial and temporal interactions of a pathogen with its host, it is necessary to analyze the transcriptomes of both the host and the pathogen throughout the course of an infection. Even using massively parallel techniques such as microarrays or RNA-Seq, analysis of the pathogen transcriptome is complicated by the overwhelming amount of host RNA (>99.9%) associated with an infected sample.We have developed a solution-phase hybridization-based capture approach to bind specifically to pathogen transcripts, followed by a spin column-based chromatography step to recover the bound transcripts. This protocol dramatically increases the number of reads mapping to pathogen genes by >100-fold. We demonstrate application of the technique to in vitro tissue culture infections with a multi-drug resistant isolate of Klebsiella pneumomiae, and demonstrate high-level constitutive expression of numerous drug resistance genes even in the absence of antimicrobial drugs. We further detect expression of putative virulence-associated genes throughout the course of the infection. We also present preliminary investigations into in vivo infections with Klebsiella pneumoniae or Pseudomonas aeruginosa in the murine lung, demonstrating the capability of the technique for simultaneous host and pathogen expression profiling. Further, we are developing consumables and automation to increase the throughput of the capture technique, in an attempt to reduce the hands-on time and improve the reproducibility of the technique. We discuss possible applications of the technique to targeted drug discovery, as well as potential applications to other (non-infectious disease) systems where RNA of a species of interest is greatly outnumbered in a background of non-informative RNA.",
+    "presenting_author": "Robert J. Meagher | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Robert J. Meagher",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zachary W. Bent",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Annette E. LaBauve and Kunal Poorey",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Sandia National Laboratories",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Livermore",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "CA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462527.html",
+    "paper_id": "462527"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467352.html",
+    "topic": "467352Advanced Flexible Control System Implementation into Direct Compaction Continuous Pharmaceutical Manufacturing Pilot-Plant",
+    "date_time": "November 2016",
+    "abstract": "Currently, pharmaceutical companies are going under paradigm shift from batch to continuous manufacturing. Real time monitoring and supervisory control system are necessary part of efficient continuous manufacturing. However, the minimum level of control necessary to produce the product with desired critical quality attributes depends on several factors including drug content (low dose, high dose), formulation properties (e.g. flowability, segregation), and product properties. Nevertheless, different control strategies such as feedforward (FF), feedback (FB), or combined FF/FB1as well as different control algorithms such as PID, MPC, or hybrid MPC-PID can be potentially used. Selection of a right control strategy and algorithm is mandatory task both for efficient manufacturing as well as regulatory point of view. However, because of different levels of complexities and unavailability of systematic method and tools, the identification of required level of control, type of control strategy and control algorithm are still a challenging task.In this work, a flexible control system has been implemented into a direct compaction continuous tablet manufacturing pilot-plant. The flexible control system consists of three control strategies (FF, FB, combined FF/FB1) and three control algorithms (PID, MPC, hybrid MPC-PID) giving options for multiple control schemes. The flexible control system is designed in such a way that any control scheme can be easily selected. The control system is also modular in nature that can be easily transferred to any other control platform and manufacturing plant. The continuous tablet manufacturing pilot-plant runs under each control scheme and their performance are evaluated using standardized performance indicators. Based on the results obtained, a systematic methodology is proposed to assist the selection of control strategy and algorithm for continuous pharmaceutical manufacturing process.Direct compaction continuous tablet manufacturing process is considered to demonstrate the implementation of flexible control strategy. The flexible control strategy consist of the five supervisory feedback control loops and three supervisory forward control loops among which the required number of control loops can be selected. Feedback loops are for drug concentration, powder level in chute, main compression force, tablet weight and hardenss control while the feedforward loops are for proactively mitigate the effects of process and raw materials variabilities. For example, measured powder bulk density is considered in real time in tablet press to proactively mitigate the effect of powder bulk density on tablet weight and hardness via changing the fill depth. Similarly, the feed forward loop to mitigate the effects of lubricant concentration variability on tablet hardness and thereby on tablet dissolution is added. As well as a feed forward control loop to mitigate the effects variation on blend composition on tablet potency. All feedforward control loops can not be used simultaneously because of limitations of number of actuators and therefore the methodology plays an important role to identify the appropriate control loops for a particular pharmaceutical product. The flexible control system are implemented using industry standard control platform (e.g. DeltaV), PAT data management tool (synTQ), OPC communication protocol, fieldbus devises, chemometric tools and real time monitoring tools.ReferenceSingh, R., Muzzio, F., Ierapetritou, M., Ramachandran, R.(2015). A combined feed-forward/feed-back control system for a QbD based continuous tablet manufacturing process. PROCESSES Journal, 3, 339-356.",
+    "presenting_author": "Ravendra Singh | Department of Chemical and Biochemical Engineering, Rutgers, The State University of New Jersey, Piscataway, NJ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Ravendra Singh",
+        "affiliation": "Department of Chemical and Biochemical Engineering, Rutgers, The State University of New Jersey, Piscataway, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Fernando J. Muzzio",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Rohit Ramachandran",
+        "affiliation": "Department of Chemical and Biochemical Engineering, Rutgers, The State University of New Jersey, Piscataway, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Marianthi Ierapetritou",
+        "affiliation": "Department of Chemical and Biochemical Engineering, Rutgers, The State University of New Jersey, Piscataway, NJ",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467352.html",
+    "paper_id": "467352"
+  }
+]

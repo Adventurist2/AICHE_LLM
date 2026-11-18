@@ -1,0 +1,350 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713871",
+    "paper_endpoint": "Paper/713871",
+    "paper_id": "713871",
+    "topic": "Universal Fundamental Relations for the Prediction of Thermophysical Properties",
+    "title": "Universal Fundamental Relations for the Prediction of Thermophysical Properties",
+    "date_time": "2025-11-06_08:00:00_10:30:00",
+    "session_id": "57159",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "649",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "Phase behavior and thermodynamic property prediction are foundational tasks across Chemical Engineering, from designing more efficient separations to the discovery of battery materials to food engineering. The value of these predictions has motivated large efforts at both data collection and modeling, leading to the advanced prediction software that we use today. However, classical thermodynamic models must be regressed to data for the property of interest, making prediction in new systems challenging. The widespread adoption of machine learning offers the potential for improved accuracy, but models generally do not extrapolate from one data type to another and are also incapable of predicting unseen mixtures or properties. Inspired by universal differential equations (UDEs) from fluid mechanics that combine the underlying physics-based symmetries of systems with coefficient training on a diversity of data sets, we propose universal fundamental relations (UFRs) as a method for thermodynamic property prediction. We demonstrate how UFRs can be composed from classical, parsimonious mathematical forms for activity relationships, and thermodynamic data is then used to train a molecular embedding analogous to the Hansen solubility parameters that enables computation of activity from these relationships. Since this thermodynamic data can be conceptualized as a network in D-dimensional space, overfitting is easily avoided by requiring sufficient data to over specify this network for each individual node. Because the molecular embeddings are single-molecule properties, UFRs can easily extrapolate from a set of known mixtures to unknown mixtures as long as both molecules were represented within the overall training data. We demonstrate that the UFR approach allows prediction of infinite dilution activity coefficients (IDACs) with state-of-the-art accuracy. More impressively, the UFRs fit to only IDAC data can accurately predict vapor-liquid equilibrium (VLE) data and can semi-quantitatively predict liquid-liquid equilibrium (LLE) data without any additional measurements. Therefore, UFRs provide an accurate and extrapolatable method for thermodynamic property prediction that can be trained on sparse data to yield a single molecule-based parameterization, yielding an easily applied model for chemical engineering design.",
+    "presenting_author": "Bradley Olsen | Massachusetts Institute of Technology, Cambridge",
+    "authors": [
+      "Bradley Olsen | Massachusetts Institute of Technology, Cambridge",
+      "Oliver Xie | Massachusetts Institute of Technology, Cambridge"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bradley Olsen",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Oliver Xie",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "649a",
+    "sortable_time": "2025-11-06_08:00:00_08:15:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713871"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712699",
+    "paper_endpoint": "Paper/712699",
+    "paper_id": "712699",
+    "topic": "Accelerating Multicomponent Phase-Coexistence Calculations with Physics-Informed Neural Networks",
+    "title": "Accelerating Multicomponent Phase-Coexistence Calculations with Physics-Informed Neural Networks",
+    "date_time": "2025-11-06_08:00:00_10:30:00",
+    "session_id": "57159",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "649",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "Phase separation in multicomponent mixtures is of significant interest in both fundamental research and technology [1-2]. Although the thermodynamic principles governing phase equilibria are straightforward, practical determination of equilibrium phases and their constituent compositions for multicomponent systems remains computationally intensive. Current multiphase calculation schemes often require prior knowledge of the number of equilibrium phases, are sensitive to initial guesses, and can converge to spurious solutions if not properly constrained [3-5]. While machine learning techniques have shown promise for phase-coexistence calculations, existing approaches largely address only phase stability without determining phase compositions or remain limited to binary systems with minimal demonstration in more complex mixtures [6-8]. In this talk, I will present a data-driven workflow to characterize phase behavior in multicomponent systems [9]. Using Flory–Huggins theory as a representative free-energy model, we generate ternary phase diagrams across parameter space and train a theory-aware machine learning model to predict the number, composition, and relative abundance of equilibrium phases from model parameters and total system composition. The model encodes fundamental physical laws (e.g., chemical potential equality, mass balance, and free energy minimization) into the architecture, enabling predictions that serve as initial guesses to warm-start subsequent numerical optimization. This hybrid approach, which combines physics-informed machine learning predictions with targeted optimization, matches the accuracy of traditional methods at significantly reduced computational cost. The framework is extensible beyond ternary systems and applicable to other free-energy models, offering a promising pathway to accelerate chemical process simulations and drive innovations in multi-phase separation technologies. [1] Guillen, G. R., Pan, Y., Li, M. & Hoek, E. M. V. Preparation and Characterization of Membranes Formed by Nonsolvent Induced Phase Separation: A Review. Ind. Eng. Chem. Res. 50 , 3798–3817 (2011). [2] Molliex, A. et al. Phase Separation by Low Complexity Domains Promotes Stress Granule Assembly and Drives Pathological Fibrillization. Cell 163 , 123–133 (2015). [3] Peng, D.-Y. & Robinson, D. B. A New Two-Constant Equation of State. Ind. Eng. Chem. Fundam. 15 , 59–64 (1976). [4] Jindrová, T. & Mikyška, J. Fast and robust algorithm for calculation of two-phase equilibria at given volume, temperature, and moles. Fluid Phase Equilibria 353 , 101–114 (2013). [5] Tong, W., Xiong, W. & Zhan, Y. An initial value insensitive constrained linear predictive evolution algorithm for gas–liquid phase equilibrium calculation problems. Phys. Fluids 36 , 083351 (2024). [6] Terayama, K. et al. Acceleration of phase diagram construction by machine learning incorporating Gibbs’ phase rule. Scr. Mater. 208 , 114335 (2022). [7] Deffrennes, G., Terayama, K., Abe, T. & Tamura, R. A machine learning–based classification approach for phase diagram prediction. Mater. Des. 215 , 110497 (2022). [8] Thacker, J. C. R., Bray, D. J., Warren, P. B. & Anderson, R. L. Can Machine Learning Predict the Phase Behavior of Surfactants? J. Phys. Chem. B 127 , 3711–3727 (2023). [9] Dhamankar, S., Jiang, S. & Webb, M. A. Accelerating multicomponent phase-coexistence calculations with physics-informed neural networks. Mol. Syst. Des. Eng. 10 , 89–101 (2024).",
+    "presenting_author": "Shengli Jiang | Princeton University, NJ",
+    "authors": [
+      "Shengli Jiang | Princeton University, NJ",
+      "Satyen Dhamankar | Princeton University, NJ",
+      "Michael Webb | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shengli Jiang",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Satyen Dhamankar",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Webb",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "649b",
+    "sortable_time": "2025-11-06_08:15:00_08:30:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712699"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717207",
+    "paper_endpoint": "Paper/717207",
+    "paper_id": "717207",
+    "topic": "Application of Machine Learning Methods to Infer Virial Coefficients from Experimental Data",
+    "title": "Application of Machine Learning Methods to Infer Virial Coefficients from Experimental Data",
+    "date_time": "2025-11-06_08:00:00_10:30:00",
+    "session_id": "57159",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "649",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "The virial equation of state (VEOS) relates the pressure to the thermodynamic state via a power series in density, with temperature- and mole-fraction-dependent coefficients. Among thermodynamic equations of state, the VEOS is unique in that its compound-specific modeling parameters, B n , can be rigorously expressed in terms of the intermolecular potential-energy surface (PES). Consequently, the VEOS can play an important role in connecting molecular and thermodynamic modeling. The value of the VEOS has grown in recent years with advances in computational chemistry and the advent of machine-learning methods to represent the PES. Because the thermodynamic equation of state can be measured experimentally, comparison of the VEOS to experimental data can provide an assessment of the molecular model used to compute the B n . An effective way to do this is to infer values of the virial coefficients from the experimental data, and compare them to corresponding values computed from the PES. In this manner the VEOS can be applied systematically to pinpoint specific weaknesses in the PES. A key requirement for the application of the VEOS to assess the PES is the availability of accurate values of the virial coefficients as obtained from experiment. While it may be possible to fit a polynomial to experimental PV data for a given temperature, the coefficients of the fit are not guaranteed to equal the true virial coefficients B n , even considering experimental uncertainty. The correct values are given via a limiting process, considering the behavior as the density goes to zero. However, experimental data are necessarily recorded at finite density, so the limit must be obtained by extrapolation. Furthermore, a full characterization of the virial coefficients must consider their temperature dependence. This dependence is non-trivial, and would not be well characterized by a simple polynomial. Given the central role of experimentally-derived B n in any project to assess the PES through comparison to experiment, it is worthwhile to examine methods to estimate the virial coefficients from experimental PVT data. This presentation examines and develops methods for doing so, considering new approaches made possible by recent advances in machine learning.",
+    "presenting_author": "David A. Kofke | University at Buffalo, The State University of New York, NY",
+    "authors": [
+      "Raghavendran Suresh | University at Buffalo, The State University of New York, NY",
+      "Andrew J. Schultz | University at Buffalo, NY",
+      "David A. Kofke | University at Buffalo, The State University of New York, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Raghavendran Suresh",
+        "affiliation": "University at Buffalo, The State University of New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Andrew J. Schultz",
+        "affiliation": "University at Buffalo, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "David A. Kofke",
+        "affiliation": "University at Buffalo, The State University of New York, NY",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "649c",
+    "sortable_time": "2025-11-06_08:30:00_08:45:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717207"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713480",
+    "paper_endpoint": "Paper/713480",
+    "paper_id": "713480",
+    "topic": "Equivariant Machine Learning Models for Predicting VLE, Vapor Pressure, and Azeotropes",
+    "title": "Equivariant Machine Learning Models for Predicting VLE, Vapor Pressure, and Azeotropes",
+    "date_time": "2025-11-06_08:00:00_10:30:00",
+    "session_id": "57159",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "649",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "Industry relies on accurate models to predict the behavior of gas and liquid mixtures in separation processes. Traditional solution activity models like NRTL require regression on specific data, limiting their applicability to novel systems. Existing alternatives like UNIFAC use group additivity to predict behavior in novel systems, but they struggle with uncommon mixtures and fail to capture interactions between nearby functional groups. In this study, we introduce a novel equivariant machine learning architecture, used to train generalizable VLE models. These models are trained on diverse VLE datasets, including binary VLE compositions, pure component vapor pressures, and infinite dilution activity coefficient data using a dataset of over 500,000 datapoints. Our model enables internal prediction of pure-component vapor pressures, extending applicability to include components where pure component vapor pressure is unavailable. Equivariance ensures predictions remain consistent regardless of component order and improves data efficiency. By using thermodynamically consistent architectures, we output model forms aligned with traditional equations, ensuring realistic model predictions. We benchmark our model performance against UNIFAC. We also demonstrate predictions for extended datasets where VLE compositions are known but tabulated pure component vapor pressures are unavailable. The model shows improved generalization to novel and extended mixture conditions and accurately predicts azeotrope locations. All models are hosted on a publicly available website for community use.",
+    "presenting_author": "Zaher Alam | Virginia Commonwealth University, Richmond, VA",
+    "authors": [
+      "Zaher Alam | Virginia Commonwealth University, Richmond, VA",
+      "Charles McGill | Virginia Commonwealth University"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zaher Alam",
+        "affiliation": "Virginia Commonwealth University, Richmond, VA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Charles McGill",
+        "affiliation": "Virginia Commonwealth University",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "649d",
+    "sortable_time": "2025-11-06_08:45:00_09:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713480"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/711187",
+    "paper_endpoint": "Paper/711187",
+    "paper_id": "711187",
+    "topic": "A New Method for Isenthalpic Phase Equilibrium Calculations By Direct Maximization of Entropy Using a Combined SSI-Modified Newton Algorithm",
+    "title": "A New Method for Isenthalpic Phase Equilibrium Calculations By Direct Maximization of Entropy Using a Combined SSI-Modified Newton Algorithm",
+    "date_time": "2025-11-06_08:00:00_10:30:00",
+    "session_id": "57159",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "649",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "Phase equilibrium calculation at pressure, enthalpy and moles specifications (PHN) is one of the most important phase equilibrium calculation problems, beyond the widely used conventional calculations at pressure and temperature (PT) specifications. The applications range from compositional simulation for certain enhanced oil recovery methods to carbon dioxide storage and geothermal energy. In this work, a new method for PHN phase equilibrium calculations is presented. The problem is formulated as an unconstrained maximization of the entropy with respect to mole numbers. Enthalpy is a dependent variable and its dependence on mole numbers is taken into account by solving a nonlinear equation (the enthalpy balance equation) for temperature at each iteration level. The calculation framework is similar to that in PT flash. A combined successive substitution - Newton method is used, with mole numbers or natural logarithms of equilibrium constants as independent variables. The iterations in the PHN flash are “PT-like” (for a sequence of temperatures converging to the final equilibrium temperature). A new successive substitution iteration (SSI) method is proposed for PHN flash calculations. The iterative sequence consists of two inner loops, in which the Rachford-Rice equation is solved first (using convex transformations and narrow solution windows) for the vapor phase fraction and then the enthalpy constraint equation is solved (using Brent’s method) for temperature. The equilibrium constants are updated in the outer loop. An ascent direction is guaranteed in the SSI method and an efficient line search procedure ensures an increase in entropy at each iteration. If non-feasible conditions are encountered at the initial guess or during iterations, a transition temperature is calculated, and the sub-phase method is used; one of the equilibrium phases is artificially split into two sub-phases having the same composition, in such a way that the enthalpy constraint is honored. As a result, a pseudo-surface of the entropy is constructed in the non-feasible domain, allowing the iterative method to advance and eventually reach the feasible domain closer to the solution. The new SSI method is much simpler than various versions of the so-called direct substitution (DS) method. However, the SSI method in PHN phase equilibrium is not as robust as its PT counterpart (this feature was recognized to be common to other major specifications, such as VTN or UVN) and its limitations are discussed. Several unfavorable convergence behavior patterns are identified; i.e., the SSI method is not able to reduce the gradient norm below a certain (usually low) value to the desired accuracy or exhibit slow oscillating convergence. In fact, fortunately, SSI does not need to be effectively converged in practice; the purpose is to bridge between a potentially poor initial guess and the domain near the solution where Newton iterations exhibit unproblematic quadratic convergence. In the second-order Newton method, a modified Cholesky factorization is used (with a diagonal correction of the Hessian matrix when it becomes indefinite), with a line search procedure to guarantee an increase in entropy at each iteration. Analyses of the block structure of the Hessian matrices for different choices of independent variables (natural variables, mole numbers and temperature, mole numbers in PHN and PT flashes) reveal the relation between all these methods and suggest how to easily modify existing codes to incorporate the new procedures. The elements of the Hessian matrix in the proposed method are related to those of the Hessian in the conventional PT flash by a rank-one term, containing first-order partial derivatives of enthalpy with respect to mole numbers and temperature. Criteria adapted to PHN flash are used for switching from SSI to Newton iterations. The proposed method is tested for several mixtures of various complexities, including binary mixtures, synthetic mixtures, and reservoir fluids, with emphasis on near-critical, narrow boiling cases and low-temperature conditions and proved to be rapid and robust. A detailed convergence analysis is provided for both SSI and Newton methods. In the binary case, contour plots of entropy in the plane defined by mole numbers allow examination of the convergence paths of different methods. Several domains in the P-H plane are identified where the DS method and/or starting directly with Newton method (or after some partial Newton iterations) struggle to converge or diverge, while the proposed SSI-Newton converges, with only a few Newton iterations required after switching. In this work, it is the first time that i) successive substitution iterations are formulated in PHN flash calculations, similar to the widely used SSI method in conventional PT flashes and ii) the direct maximization of entropy using a Newton method with mole numbers as independent variables is presented and analyzed in detail. The proposed PHN phase equilibrium calculation method is currently being implemented in a compositional reservoir simulator for thermal enhanced oil recovery and carbon dioxide storage.",
+    "presenting_author": "Dan Vladimir Nichita | University of Pau, France",
+    "authors": [
+      "Juan Heringer | University of Pau, France",
+      "Lingfei Xu | University of Pau, France",
+      "Arthur Moncorgé | TotalEnergies CSTJF, Pau, France",
+      "Dan Vladimir Nichita | University of Pau, France"
+    ],
+    "authors_structured": [
+      {
+        "name": "Juan Heringer",
+        "affiliation": "University of Pau, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Lingfei Xu",
+        "affiliation": "University of Pau, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Arthur Moncorgé",
+        "affiliation": "TotalEnergies CSTJF, Pau, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Dan Vladimir Nichita",
+        "affiliation": "University of Pau, France",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "649e",
+    "sortable_time": "2025-11-06_09:00:00_09:15:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/711187"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/709113",
+    "paper_endpoint": "Paper/709113",
+    "paper_id": "709113",
+    "topic": "Quantum Corrections to the Kinetic Energy and the Thermodynamic Properties of Cryogenic Fluids",
+    "title": "Quantum Corrections to the Kinetic Energy and the Thermodynamic Properties of Cryogenic Fluids",
+    "date_time": "2025-11-06_08:00:00_10:30:00",
+    "session_id": "57159",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "649",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "Traditionally the approach to improving the prediction of fluids has focused on obtaining an improved representation of the intermolecular contributions to the potential energy [1]. This has involved developing specialized intermolecular potentials [2] that capture the aspects of interactions arising from such considerations as two-body, three-body forces etc. When used in conjunction with molecular simulations [3], differences in the intermolecular potential are reflected in the calculated thermodynamic properties. This approach is reasonable for normal fluids. However, at cryogenic conditions, some fluids such as hydrogen and neon exhibit a quantum influence on the contribution to the kinetic energy [4], which also affects the caloric thermodynamic properties such as enthalpy, heat capacity, isothermal compressibility, isochoric pressure coefficient and isobaric thermal expansion coefficient. This kinetic energy effect has been largely overlooked in molecular simulations. We have recently observed [5, 6] that accounting for such quantum corrections to the kinetic energy (QCKE) results in predictions that are close in accuracy to reference data. In this talk, we discuss the influence of QCKE on the thermodynamic properties of hydrogen and neon (see example in the figure below) from simulations that use an intermolecular potential that combines ab initio two-body, three-body and quantum terms. [1] A. J. Stone, The Theory of Intermolecular Forces (Clarendon Press, Oxford, 1996). [2] U. K. Deiters and R. J. Sadus, J. Chem. Phys. 150, 134504 (2019). [3] R. J. Sadus, Molecular Simulation of Fluids: Theory, Algorithms, Object-Orientation and Parallel Computing, 2nd Ed. (Elsevier, Amsterdam, 2024). [4] E. Wigner, Phys. Rev. 40, 749-759 (1932). [5] U. K. Deiters and R. J. Sadus, J. Chem. Phys. 162, (2025), in press. [6] U. K. Deiters and R. J. Sadus, (2025), submitted.",
+    "presenting_author": "Richard Sadus | Swinburne Univ of Technology, Hawthorn, Australia",
+    "authors": [
+      "Ulrich K. Deiters | University of Cologne, Germany",
+      "Richard Sadus | Swinburne Univ of Technology, Hawthorn, Australia"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ulrich K. Deiters",
+        "affiliation": "University of Cologne, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Richard Sadus",
+        "affiliation": "Swinburne Univ of Technology, Hawthorn, Australia",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "649f",
+    "sortable_time": "2025-11-06_09:15:00_09:30:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/709113"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/722503",
+    "paper_endpoint": "Paper/722503",
+    "paper_id": "722503",
+    "topic": "Break",
+    "title": "Break",
+    "date_time": "2025-11-06_08:00:00_10:30:00",
+    "session_id": "57159",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "649",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "",
+    "presenting_author": "",
+    "authors": [],
+    "authors_structured": [],
+    "sortable_time": "2025-11-06_09:30:00_10:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/722503"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713153",
+    "paper_endpoint": "Paper/713153",
+    "paper_id": "713153",
+    "topic": "Association Thermodynamic Models in Aspen Process Simulators",
+    "title": "Association Thermodynamic Models in Aspen Process Simulators",
+    "date_time": "2025-11-06_08:00:00_10:30:00",
+    "session_id": "57159",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "649",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "Accurate thermophysical property prediction is essential for the design, optimization, and scale-up of chemical processes, particularly those involving complex associating systems such as water, alcohols, glycols, and organic acids. These systems exhibit strong hydrogen bonding and non-ideal behavior, making conventional equation-of-state and activity coefficient models inadequate for reliable phase equilibrium and property estimation. To address these challenges, this work presents a methodology within Aspen process simulators to accurately model associating systems using the Cubic-Plus-Association (CPA) and Association Non-Random Two-Liquid (aNRTL) models. The CPA model combines the Soave-Redlich-Kwong (SRK) cubic equation of state with an association term derived from SAFT theory to account for hydrogen bonding. Similarly, the aNRTL model enhances the classical NRTL framework by incorporating Wertheim's perturbation theory, blending physical interaction parameters with molecule-specific association strengths. The use of CPA and aNRTL significantly improves the prediction of phase behavior in associating systems, capturing both vapor–liquid and liquid–liquid equilibria with a unique set of parameters. This study further demonstrates the modeling of several associating and non-associating systems to highlight the importance of accurate thermodynamic modeling and its impact on process simulation.",
+    "presenting_author": "Usman Hamid | Aspen Technology, Inc., Bedford, MA",
+    "authors": [
+      "Usman Hamid | Aspen Technology, Inc., Bedford, MA",
+      "Selim Anavi | Aspen Technology, Inc., Bedford, MA",
+      "Shu Wang | Aspen Technology, Inc., Bedford, MA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Usman Hamid",
+        "affiliation": "Aspen Technology, Inc., Bedford, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Selim Anavi",
+        "affiliation": "Aspen Technology, Inc., Bedford, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Shu Wang",
+        "affiliation": "Aspen Technology, Inc., Bedford, MA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "649i",
+    "sortable_time": "2025-11-06_10:00:00_10:15:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713153"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716523",
+    "paper_endpoint": "Paper/716523",
+    "paper_id": "716523",
+    "topic": "Replacement of the Ostwald Rule of Stages to Predict the Sequence of Appearance of Crystal Polymorphs",
+    "title": "Replacement of the Ostwald Rule of Stages to Predict the Sequence of Appearance of Crystal Polymorphs",
+    "date_time": "2025-11-06_08:00:00_10:30:00",
+    "session_id": "57159",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "649",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "Polymorphism is a fundamental property of crystals whereby a single compound may adopt numerous crystal structures with distinct properties. This structure multiplicity leads to materials with distinct physical properties (e.g., solubility, catalytic activity) that impact their performance in numerous applications. About 75% of the compounds deposited in the Cambridge Structural Database (CSD) crystallize in more than one structure. Crystal structure polymorphism manifests a free energy landscape, which, in contrast to that for protein folding, has not been optimized by evolution and contains not one minimum, but multiple local minima with similar free energies. Crystal structure multiplicity is magnified by the propensity of crystals to incorporate solvent molecules, creating solvates. Crystal polymorphs appear and transform via pathways that are not fully dictated by their stabilities. Observed trends often contradict the Ostwald rule of stages, according to which less stable polymorphs appear first, emphasizing how current state-of-the-art theories of crystallization cannot predict stable crystal structures and the transitions between them. We rely on the premise that the polymorph to appear first is the one with the fastest rate of nucleation. In turn, the main parameter, which determines the nucleation barrier and the nucleation rate, is the surface free energy of the interface between the nucleus and the crystallization medium. We present an analytical model for the scaling of the nucleation barrier with the crystallization enthalpy . Preliminary results with mefenamic acid support these scaling relations. We experimentally measure the nucleation rates of the individual crystal forms and evaluate . As a measure of their relative stabilities we use their solubilities to evaluate the crystallization free energies . The crystallization enthalpies of the individual crystal forms are measured from the temperature correlation of their solubilities. This model represents an innovative strategy to predict and control intercrystalline transformations. Filling this gap in current state-of-the-art models will significantly impact the pharmaceutical and chemical industries.",
+    "presenting_author": "Peter Vekilov | University of Houston, TX",
+    "authors": [
+      "Peter Vekilov | University of Houston, TX",
+      "Manasa Yerragunta | University of Houston, TX",
+      "Rohith Pulluri | University of Houston, TX",
+      "Monika Warzecha | Strathclyde Institute Of Pharmacy and Biomedical Sciences, Glasgow, United Kingdom",
+      "Alastair Florence | University of Strathclyde, Glasgow, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Peter Vekilov",
+        "affiliation": "University of Houston, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Manasa Yerragunta",
+        "affiliation": "University of Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Rohith Pulluri",
+        "affiliation": "University of Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Monika Warzecha",
+        "affiliation": "Strathclyde Institute Of Pharmacy and Biomedical Sciences, Glasgow, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Alastair Florence",
+        "affiliation": "University of Strathclyde, Glasgow, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "649j",
+    "sortable_time": "2025-11-06_10:15:00_10:30:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716523"
+  }
+]

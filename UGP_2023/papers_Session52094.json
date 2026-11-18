@@ -1,0 +1,273 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/662390",
+    "paper_endpoint": "Paper/662390",
+    "paper_id": "662390",
+    "topic": "Real-Time Optimization with Changing Active Constraints Solved through Decentralized Feedback Control",
+    "title": "Real-Time Optimization with Changing Active Constraints Solved through Decentralized Feedback Control",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "52094",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "491",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In spite of the potential economic benefits, real-time optimization (RTO) is less used in industry than one may expect. There are several reasons for this, and one is that standard RTO applications operate on a slow time scale, such that for cases with frequent disturbances, optimal operation is not satisfactorily achieved. An appealing solution is to move some of the optimization problem into the control layer design, which operates on a much faster time scale. This means that one should find controlled variables (CVs) that, when controlled to constant setpoints, result in minimal economic loss. This is the idea of self-optimizing control (Skogestad, 2000), which consists of obtaining these CVs as a combination of the available measurements. Another class of feedback optimizing strategies aim to estimate the plant cost gradients in order to control them to zero (Krishnamoorthy et al., 2018). One of the main challenges that such approaches face is the presence of changing active constraints (Jäschke et al., 2017), which may drastically change the operation mode of the system. For example, if a constraint becomes active due to a disturbance, not taking its control into account leads to infeasible operation. Similarly, if a constraint becomes optimally inactive, the control of such constraint should be given up. For a given set of active constraints, if the cost gradient is measured, it is known that the control of the active constraints together with the control of a projection of the cost gradient over the nullspace of the active constraints’ gradient leads to optimal operation (Jäschke and Skogestad, 2012). However, the existence of several active constraint regions may deem necessary the use of several independent control structures, each of them being able to provide near-optimal operation for their respective region of design. The switching between such control structures would also become an issue since the lack of a feedback-based switching strategy could lead to improper operation. In practical applications of process systems, logic elements have been extensively used for reconfiguring control loops, which is often needed for attaining optimal operation (Reyes-Lúa et al., 2018). In particular, selectors have been successfully applied as a tool for automatic detection of active constraint switching for single input systems (Krishnamoorthy and Skogestad, 2020). In this work, we extend this analysis for multivariable systems, proposing a simple framework for decentralized optimal operation under changing active constraints, with the use of PID controllers and selectors. This shifts a bigger part of the RTO problem to the control layer, since the switching is to be optimally attained with the selector blocks. The main idea in the framework proposal is to design a generic decentralized control structure over every possible active constraint region of the steady-state optimization problem, where the control objectives can be locally changed to account for region switches. It is proposed that the logic for switching between controllers can be performed using selectors, such that the control structure is kept simple. If we assume that the number of constraints is smaller than the number of available degrees of freedom, and the gradient matrix of the constraints with relation to the inputs is always full row rank, it can be proven that we can propose a decentralized set of CVs as described in Figure 1. The proof of optimality follows similar steps to the one in Jäschke and Skogestad (2012), but we proceed to specify an ideal pairing between CVs such that the handling of region switching is done in a decentralized fashion, avoiding changes in the rest of the control structure. The control structure resulting of this proposal is illustrated in Figure 2. The proposed framework is applied to a simulated case of optimal operation of the Williams-Otto reactor (Williams and Otto, 1960), which has two degrees of freedom and two constraints. The active constraints change according to the disturbance values as shown in Figure 3. The simulations were performed in CasADi (Andersson et al., 2019), which allowed for the calculation of analytic gradients through automatic differentiation. The projection matrices that result from the framework, which depend on the gradient of the constraints, are assumed constant, resulting in a simple control structure. In the closed-loop simulations, the system was disturbed through all possible active constraint regions, in order to check for steady-state economic performance, and the corresponding results are shown in Figure 4. Due to the assumption of the cost gradient being a directly available measurement, operation of the system at the fully unconstrained region was verified to be optimal at steady state. In addition, as the constraints are also measured, the same logic can be applied to the operation at the fully constrained region. In the remaining partly constrained regions, the system did not converge exactly to the steady-state optimum but operated with low economic loss, which is attributed to the use of constant projection matrices. The switches in control objectives are automatically performed by the selectors, preventing constraint violation, and controlling the unconstrained degrees of freedom when the corresponding constraints are not violated. The control structure resulting from the framework proposed in this work makes use of selectors as simple elements for switching between operating regions. These elements are frequently used in practice for coordinating conflicting control objectives. We show in this work how these elements can be used for the optimal operation of systems under changing active constraints in a systematic manner. The min/max nature of the selectors is ultimately related to the nature of the constraint with respect to the input (Krishnamoorthy and Skogestad, 2020). The approach proposed in this work is based on the analysis of the partly constrained regions, where we find gradient projections that can be optimally controlled. These projected gradients are also the optimal CVs of other regions, which minimizes the number of control loops that are necessary to account for all regions. Moreover, the proposed switching operates independently for each plant input, which means that the detection of each constraint is done independently, and feasible operation is safely achieved. However, the reconfiguring of CVs done by the selectors may significantly change the interactions between loops, and therefore careful tuning of the controllers is necessary, such that a good performance is achieved regardless of which loops are active. In the present work, we propose a framework for decentralized optimal operation under changing active constraints, applicable to a class of multivariable problems. Even though the approach is based on the linearization of the constraints, and therefore the quality of the linearization plays a relevant role in the economic performance, the strategy proved to be successful in a nonlinear case study, which encourages its use in other relevant problems of process systems engineering, especially when the gains from the inputs to the constraints do not change greatly in the operating range. The use of adaptive cost gradient projections would also be beneficial for improving economic performance. References J.A. Andersson, J. Gillis, G. Horn, J.B. Rawlings, M. Diehl, 2019. CasADi: a software framework for nonlinear optimization and optimal control. Mathematical Programming Computation, 11, pp.1-36. J. Jäschke, Y. Cao, V. Kariwala, 2017. Self-optimizing control–A survey. Annual Reviews in Control, 43, pp.199-223. J. Jäschke, S. Skogestad, 2012. Optimal controlled variables for polynomial systems. Journal of Process Control, 22, 1, pp.167-179. D. Krishnamoorthy, E. Jahanshahi, S. Skogestad, 2018. Feedback real-time optimization strategy using a novel steady-state gradient estimate and transient measurements. Industrial & Engineering Chemistry Research, 58, 1, pp.207-216. D. Krishnamoorthy, S. Skogestad, 2020. Systematic design of active constraint switching using selectors. Computers & Chemical Engineering, 143, p.107106. A. Reyes-Lúa, C. Zotică, S. Skogestad, 2018. Optimal operation with changing active constraint regions using classical advanced control. IFAC-PapersOnLine, 51, 18, pp.440-445. S. Skogestad, 2000. Plantwide control: The search for the self-optimizing control structure. Journal of process control, 10, 5, pp.487-507. T.J. Williams, R.E. Otto, 1960. A generalized chemical processing model for the investigation of computer control. Transactions of the American Institute of Electrical Engineers, Part I: Communication and Electronics, 79, 5, pp.458-473.",
+    "presenting_author": "Lucas Ferreira Bernardino | Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+    "authors": [
+      "Lucas Ferreira Bernardino | Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+      "Sigurd Skogestad | Norwegian University of Science and Technology (NTNU), Trondheim, Norway"
+    ],
+    "authors_structured": [
+      {
+        "name": "Lucas Ferreira Bernardino",
+        "affiliation": "Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sigurd Skogestad",
+        "affiliation": "Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "491a",
+    "sortable_time": "2023-11-05_15:30:00_15:48:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/662390"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/662594",
+    "paper_endpoint": "Paper/662594",
+    "paper_id": "662594",
+    "topic": "Neural Ordinary Differential Equation Modeling for Predictive Control of Nonlinear Processes",
+    "title": "Neural Ordinary Differential Equation Modeling for Predictive Control of Nonlinear Processes",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "52094",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "491",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The Neural Ordinary Differential Equation (NODE) is a recent family of deep learning models that combines neural network models with ordinary differential equation solvers to create a continuous approximation of the output [1]. In the field of chemical engineering, accurate modeling of process systems is a critical component of process optimization and control. With the development of machine learning modeling techniques, neural network-based modeling and control of process systems has evolved into a popular research area due to the strong performance of neural network models and the increased accessibility to developing such models. Recurrent neural networks (RNNs) have been demonstrated to be an effective black-box approach, particularly in the case of regressing time-series data, and have been utilized in the design of model predictive control (MPC) systems in various research works [2, 3]. However, RNNs are usually interpreted as a discrete-time model that approximates a continuous process with a finite number of intermediate steps. This discrete structure requires a consistent step size between data sequence within the training data set of RNN-based model, which makes the RNN models less robust when operating with irregularly sampled data, such as missing points due to sensor failure or other types of errors. The NODE model, which computes its output with an ODE solver and only needs a single data point as the initial state to compute its prediction, can be an alternative neural network model for time-series processes without the discrete and uniform step limitation of RNN models. Moreover, the NODE model is developed with an integrated ODE solver using the adjoint sensitivity method, which does not require a uniform step-size data sequence to train. Therefore, the NODE model will be a more robust alternative to the RNN model in terms of the format of the data structure for both training and implementation. This paper aims to investigate the development of the NODE-based MPC. The development of the NODE model and the establishment of an MPC based on this continuous neural network model will be demonstrated. Furthermore, noisy data is a critical challenge to deal with in practical scenarios, and the performance of the NODE model under the effect of Gaussian and non-Gaussian types of noise will be investigated. The subsampling method is applied in this study to account for noise corruption and is found to be an effective method of suppressing non-Gaussian noise. Finally, a chemical process example is used to demonstrate the implementation of NODE-based MPC using the subsampling method to account for noisy data. References: [1] Chen, R.T., Rubanova, Y., Bettencourt, J., Duvenaud, D.K., Neural ordinary differential equations. Advances in neural information processing systems, 2018, 31. [2] Wu, Z.; Tran, A.; Rincon, D.; Christofides, P. D. Machine learning-based predictive control of nonlinear processes. Part II: Computational implementation. AIChE J . 2019, 65, e16734. [3] Wong W.C., Chee E., Li J., Wang X. Recurrent neural network-based model predictive control for continuous pharmaceutical manufacturing. Mathematics. 2018 Nov 7;6(11):242.",
+    "presenting_author": "Junwei Luo | University of California, Los Angeles",
+    "authors": [
+      "Junwei Luo | University of California, Los Angeles",
+      "Fahim Abdullah | University of California, Los Angeles",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Junwei Luo",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Fahim Abdullah",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "491b",
+    "sortable_time": "2023-11-05_15:48:00_16:06:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/662594"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/679767",
+    "paper_endpoint": "Paper/679767",
+    "paper_id": "679767",
+    "topic": "Break",
+    "title": "Break",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "52094",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "491",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "",
+    "presenting_author": "",
+    "authors": [],
+    "authors_structured": [],
+    "sortable_time": "2023-11-05_16:06:00_16:24:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/679767"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666402",
+    "paper_endpoint": "Paper/666402",
+    "paper_id": "666402",
+    "topic": "Efficient Solution of Mixed Integer Model Predictive Control Problems Via Benders Decomposition",
+    "title": "Efficient Solution of Mixed Integer Model Predictive Control Problems Via Benders Decomposition",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "52094",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "491",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Mixed integer model predictive control (MPC) is a natural strategy for controlling systems where discrete and continuous decisions are taken simultaneously. The discrete nature of these problems can arise either due to discrete system dynamics (e.g., piece-wise affine) or the presence of discrete variables related to the operation of the system [1-3]. In these cases, the resulting optimization problem is a Mixed Integer Programming (MIP) problem that must be solved repeatedly online. The online solution of such MIP problems is a daunting task that limits the implementation of mixed integer MPC. The standard solution approach for MIP problems is the branch and bound one [4,5], which although can solve the problem to global optimality, is slow for online applications. Another approach is to compute the solution of the MIP problem for every value of the problem's parameters offline using multiparametric programming [6,7]. However, this is computationally expensive for discrete nonlinear systems with many states. Finally, one can exploit the underlying structure of the problem and use decomposition-based solution methods such as Generalized Benders Decomposition (GBD) [10,11]. GBD is based on the observation that if a subset of the variables, called complicating variables, is fixed, the problem can be solved faster. In GBD, the original problem is decomposed into a master problem, which considers the binary variables, and a subproblem which is a continuous optimization problem. The master problem and subproblem are solved iteratively and coordinated via Benders cuts, which inform the former about the effect of the complicating variables on the latter. Although GBD has been applied for the solution of mixed integer MPC problems, its convergence can be slower than a given computational budget. Recently, Machine Learning (ML) has been used to reduce the solution time of MIP problems that arise in mixed integer MPC applications by approximating the values of the binary variables and active constraints, thus reducing the MIP problem to a continuous optimization problem, or by warm-starting the solver [12-14]. In this paper, we aim to reduce the computational time related to the solution of the master problem and subproblem, thus enabling the efficient online solution of mixed integer MPC problems using GBD. We propose an ML-based branch and check GBD algorithm, where the master problem is solved once using branch and check, and machine learning is used to approximate online the necessary information for constructing the Benders cuts whenever an integer feasible solution is found during branch and check. This approach alleviates the need to solve the master problem and subproblem multiple times online. The proposed algorithm can be applied to a broad class of problems that arise in mixed integer MPC applications, such as Mixed Integer Linear (MILP), Quadratic (MIQP), and Nonlinear (MINLP) programming problems. The proposed approach is applied to an economic mixed integer MPC problem. Specifically, we consider an isothermal CSTR where five products are manufactured, and an economic MPC problem is formulated to determine the production sequence while considering the dynamic behavior of the system, given the price, demand, and production cost for every product. We generate 20 random instances of the problem, assuming that the price and demand follow a uniform distribution, and compare the proposed algorithm with the standard application of GBD as proposed in [13]. The numerical results show that the proposed algorithm leads to a 94 % reduction in solution time, compared to standard GBD, while the percentage error, due to the approximation of the Benders cut, is less than 0.04%. References: [1]. Deng, Kun, Yu Sun, Sisi Li, Yan Lu, Jack Brouwer, Prashant G. Mehta, MengChu Zhou, and Amit Chakraborty. \"Model predictive control of central chiller plant with thermal energy storage via dynamic programming and mixed-integer linear programming.\" IEEE Transactions on Automation Science and Engineering 12, no. 2 (2014): 565-579. [2]. Daoutidis, P., Lee, J.H., Harjunkoski, I., Skogestad, S., Baldea, M. and Georgakis, C., 2018. Integrating operations and control: A perspective and roadmap for future research. Computers & Chemical Engineering , 115 , pp.179-184. [3]. McAllister, R.D. and Rawlings, J.B., 2022, June. Advances in mixed-integer model predictive control. In 2022 American Control Conference (ACC) (pp. 364-369). IEEE. [4]. Hespanhol, P., Quirynen, R. and Di Cairano, S., 2019, June. A structure exploiting branch-and-bound algorithm for mixed-integer model predictive control. In 2019 18th European Control Conference (ECC) (pp. 2763-2768). IEEE. [5]. Tawarmalani, M. and Sahinidis, N.V., 2005. A polyhedral branch-and-cut approach to global optimization. Mathematical programming , 103 (2), pp.225-249. [6]. Oberdieck, R. and Pistikopoulos, E.N., 2015. Explicit hybrid model-predictive control: The exact solution. Automatica , 58 , pp.152-159. [7]. Axehill, D., Besselmann, T., Raimondo, D.M. and Morari, M., 2014. A parametric branch and bound approach to suboptimal explicit hybrid MPC. Automatica , 50 (1), pp.240-246. [8]. Mohideen, M.J., Perkins, J.D. and Pistikopoulos, E.N., 1997. Towards an efficient numerical procedure for mixed integer optimal control. Computers & Chemical Engineering , 21 , pp.S457-S462. [9]. Mitrai, I. and Daoutidis, P., 2022. An adaptive multi-cut decomposition based algorithm for integrated closed loop scheduling and control. In Computer Aided Chemical Engineering (Vol. 49, pp. 475-480). Elsevier. [10]. Masti, D., Pippia, T., Bemporad, A. and De Schutter, B., 2020. Learning approximate semi-explicit hybrid MPC with an application to microgrids. IFAC-PapersOnLine , 53 (2), pp.5207-5212. [11]. Cauligi, A., Culbertson, P., Schmerling, E., Schwager, M., Stellato, B. and Pavone, M., 2021. Coco: Online mixed-integer control via supervised learning. IEEE Robotics and Automation Letters , 7 (2), pp.1447-1454. [12]. Mitrai, I., and Daoutidis, P., “Learning to initialize generalized benders decomposition via active learning,” in FOCAPO/CPC, San Antonio, Texas, 2023 [13]. Mitrai, I. and Daoutidis, P., 2022. A multicut generalized benders decomposition approach for the integration of process operations and dynamic optimization for continuous systems. Computers & Chemical Engineering , 164 , p.107859.",
+    "presenting_author": "Ilias Mitrai | The University of Texas at Austin, TX",
+    "authors": [
+      "Ilias Mitrai | The University of Texas at Austin, TX",
+      "Prodromos Daoutidis | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ilias Mitrai",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "491d",
+    "sortable_time": "2023-11-05_16:24:00_16:42:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666402"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667993",
+    "paper_endpoint": "Paper/667993",
+    "paper_id": "667993",
+    "topic": "A Closed-Loop Integrated Scheduling and Control Formulation for Processes Controlled By Distributed MPC Systems",
+    "title": "A Closed-Loop Integrated Scheduling and Control Formulation for Processes Controlled By Distributed MPC Systems",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "52094",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "491",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Historically, scheduling and control have evolved largely independently from one another. However, chemical industries are currently required to operate in an increasingly dynamic market environment and are expected to respond to market changes ever more efficiently and rapidly [1]. This includes rapid adjustments of operating set-points and production targets, as well as utilities and raw material consumption. The adjustment of electricity consumption based on the power grid load falls within this category. Providing energy intensive plants with the operating flexibility required to rapidly and safely adjust their electricity consumption would enable their participation in demand-side management programs [2] and potentially ease the integration of intermittent energy sources (e.g. renewables) to the power grid. In this context, the integration of scheduling and control has often been suggested as a pathway to improve the operating flexibility of chemical processes [3,4]. In recent years, open [5] and closed-loop [6,7,8] formulations have been proposed for the integrated scheduling and control problem. Closed-loop formulations either use a dynamic process model that is representative of the closed-loop plant behavior, or account for the controller action via an explicit or implicit control law. Open-loop formulations neglect the presence of the controller and consider the open-loop process response. Because of the popularity of model predictive control (MPC) [9], a number of studies have proposed integrated scheduling and control formulations for processes controlled by centralized MPC [7,8]. PI controllers have also been considered in some studies [6]. Distributed MPC systems, however, have received very little attention from the perspective of integration of scheduling and control. Nevertheless, distributed MPC is sometimes favored over a centralized MPC approach for reliability, maintenance, and computational purposes [10, 11]. In this study, we propose an integrated scheduling and control formulation that accounts for the action of distributed MPC systems. Given that the integrated problem is an optimization problem and the MPC problem is also an optimization problem, this results in a multilevel optimization formulation with multiple MPC problems in the constraints. To solve this problem, we replace the MPC subproblems by their first-order Karush-Kuhn-Tucker (KKT) conditions which, for convex problems (e.g. linear MPC), are necessary and sufficient for optimality. This approach has been successfully adopted in a number of studies with [7,8,14] and without [12,13] scheduling considerations. In the present work, we use binary variables to capture discrete scheduling decisions, and to linearize the KKT-complementarity conditions. This leads to a mixed-integer linear programming (MILP) problem. The MPC-KKT reformulation, and scheduling constraints are linear, and we assume that a linear model coupled with a bias update mechanism is able to capture the true process dynamics sufficiently well. This closed-loop integrated scheduling and control problem is solved in real-time at the dynamic real-time optimization (DRTO) level to compute the input and output set-points assigned to the lower-level MPC systems. Production sequencing is also communicated to the plant via the set-points assigned to the MPCs. Due to that, one of the advantages of the proposed approach is that no changes are required to the existing control architecture (i.e. the MPC formulation is kept intact). A schematic representation of the integrated scheduling and control framework proposed in this study is presented in Figure 1. We consider application of the proposed closed-loop integrated scheduling and control formulation to a process where two CSTRs are operated in parallel to meet the demand of distinct product grades. Each production line is assumed to be controlled by a distinct MPC subsystem. We investigate the economic gains and computational burden derived from accounting for the control action in the proposed formulation under closed-loop operation. Our results suggest that beyond a certain horizon, much shorter than the scheduling horizon, there is little economic benefit in rigorously accounting for the control action. We also observe a large variation in the time taken to solve the integrated scheduling and control problem, likely due to changes in the demand profile. However, the maximum observed solution times decrease sharply with the number of time-steps for which a rigorous approach is used to model the distributed MPC system action. In a second case study, we consider a nonlinear process. We show that the proposed formulation with a linear process model (i.e. there is plant-model mismatch) is able to drive the nonlinear plant to meet the quality specifications of three different product grades even before steady-state operation is reached. The proposed framework also adjusts the operating conditions based on the raw material costs. In conclusion, we propose a closed-loop integrated scheduling and control formulation for plants operated by distributed MPC systems, and demonstrate its performance under conditions of perfect model knowledge and plant-model mismatch. We show that the proposed framework can coordinate the MPC subsystems and also drive the plant to produce product that meets the quality specifications before steady-state operation is reached. The ability to produce valuable product during transient periods has the potential to largely decrease operating costs, and may be essential for efficient market driven operation of processes with large time constants. REFERENCES [1] Backx, Ton, Okko Bosgra, and Wolfgang Marquardt. \"Integration of model predictive control and optimization of processes: enabling technology for market driven process operation.\" IFAC Proceedings Volumes 33, no. 10 (2000): 249-260. [2] Xenos, D.P., Noor, I.M., Matloubi, M., Cicciotti, M., Haugen, T. and Thornhill, N.F., 2016. Demand-side management and optimal operation of industrial electricity consumers: An example of an energy-intensive chemical plant. Applied Energy , 182 , pp.418-433. [3] Baldea, Michael, and Iiro Harjunkoski. \"Integrated production scheduling and process control: A systematic review.\" Computers & Chemical Engineering 71 (2014): 377-390. [4] Caspari, Adrian, Calvin Tsay, Adel Mhamdi, Michael Baldea, and Alexander Mitsos. \"The integration of scheduling and control: Top-down vs. bottom-up.\" Journal of Process Control 91 (2020): 50-62. [5] Flores-Tlacuahuac, Antonio, and Ignacio E. Grossmann. \"Simultaneous cyclic scheduling and control of a multiproduct CSTR.\" Industrial & engineering chemistry research 45, no. 20 (2006): 6698-6712. [6] Chu, Yunfei, and Fengqi You. \"Integration of scheduling and control with online closed-loop implementation: Fast computational strategy and large-scale global optimization algorithm.\" Computers & Chemical Engineering 47 (2012): 248-268. [7] Simkoff, J. M., & Baldea, M. (2019). Production scheduling and linear MPC: Complete integration via complementarity conditions. Computers & Chemical Engineering , 125 , 287-305. [8] Remigio, Jerome EJ, and Christopher LE Swartz. \"Production scheduling in dynamic real-time optimization with closed-loop prediction.\" Journal of Process Control 89 (2020): 95-107. [9] Qin, S. Joe, and Thomas A. Badgwell. \"A survey of industrial model predictive control technology.\" Control engineering practice 11, no. 7 (2003): 733-764. [10] Scattolini, Riccardo. \"Architectures for distributed and hierarchical model predictive control–a review.\" Journal of process control 19, no. 5 (2009): 723-731. [11] Pannocchia, Gabriele. \"Distributed Model Predictive Control.\" In: Baillieul, John, and Tariq Samad, eds. Encyclopedia of systems and control . Cham: Springer London, (2015): 301-308. [12] Jamaludin, Mohammad Zamry, and Christopher LE Swartz. \"Dynamic real‐time optimization with closed‐loop prediction.\" AIChE Journal 63, no. 9 (2017): 3896-3911. [13] Li, Hao, and Christopher LE Swartz. \"Dynamic real-time optimization of distributed MPC systems using rigorous closed-loop prediction.\" Computers & Chemical Engineering 122 (2019): 356-371. [14] Dering, Daniela, and Christopher LE Swartz. \"A stochastic optimization framework for integrated scheduling and control under demand uncertainty.\" Computers & Chemical Engineering 165 (2022): 107931.",
+    "presenting_author": "Daniela Dering De Lima Silva | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Daniela Dering De Lima Silva | McMaster University, Hamilton, Canada",
+      "Christopher Swartz | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daniela Dering De Lima Silva",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christopher Swartz",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "491e",
+    "sortable_time": "2023-11-05_16:42:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667993"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669109",
+    "paper_endpoint": "Paper/669109",
+    "paper_id": "669109",
+    "topic": "Multi-Time-Scale Model Predictive Quality Control Via Multi-Parametric Programming",
+    "title": "Multi-Time-Scale Model Predictive Quality Control Via Multi-Parametric Programming",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "52094",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "491",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Featuring highly interactive cyber-physical systems, the modern manufacturing industry poses grand challenges and opportunities for advanced control techniques to achieve automated prescriptive decision making. One of the central research areas is the end-point quality control in non-continuous batch processes widely applied for value-added pharmaceuticals, chemicals, etc. [1] Theoretical approaches have developed using mechanistic model for batch quality control with mathematical descriptions over the entire batch trajectory [2-3]. Data-driven multivariate statistics-based inferential quality control provides another promising strategy which can circumvent process-specific model development [4-6]. Despite these advances, key research challenges remain on: (i) how to achieve good product quality prediction during initial operation given small amount of data? (ii) how to optimize operation over multiple time scales, not only taking optimal action to now but also forecasting to future trajectory over substantially large time span? and (iii) how to ensure the online computation efficacy? To address these challenges, in this work, we present a two-level model predictive control and optimization strategy to integrate short-term and long-term decision making for batch quality control. It features a short-term controller which responds by seconds or minutes using model predictive control for disturbance rejection and setpoint tracking and a long-term control-aware optimizer which responds by hours with large time steps to oversee and predict the entire batch operation using moving horizon strategy. The optimizer generates optimal input trajectory setpoints for the controller, readjusted by an offline surrogate model [7] to bridge the time scale gap. The controller, optimizer, and surrogate model are all solved via multi-parametric programming [8], with a distinguished feature to generate offline explicit control/optimization laws as an affine function of process variables prior to online real-time implementation, thus substantially reducing online computational load. The controller and optimizer are also built on a unified mechanistic process model to underpin the consistency for multi-scale decision making. To ensure the accurate monitoring of real-time batch operation, incremental measured data are utilized to iteratively train the physical model parameters to address modeling uncertainty and to enhance process-specific features (e.g., reaction kinetics, mixing efficiency). The extension of this batch quality control strategy for safety-critical process systems will also be discussed by incorporating dynamic risk considerations [9]. A T2 batch reactor case study [10] will be utilized to showcase the potential and efficacy of the proposed approach to systematically account for interactions and trade-offs of multiple decision layers toward improving process efficiency and safety. References [1] Yabuki, Y., Nagasawa, T., & MacGregor, J. F. (2002). Industrial experiences with product quality control in semi-batch processes. Computers & chemical engineering, 26(2), 205-212. [2] Mesbah, A., Landlust, J., Huesman, A. E. M., Kramer, H. J. M., Jansens, P. J., & Van den Hof, P. M. J. (2010). A model-based control framework for industrial batch crystallization processes. Chemical Engineering Research and Design, 88(9), 1223-1233. [3] Choi, S. W., Morris, J., & Lee, I. B. (2008). Dynamic model-based batch process monitoring. Chemical Engineering Science, 63(3), 622-636. [4] Rendall, R., Chiang, L. H., & Reis, M. S. (2019). Data-driven methods for batch data analysis–A critical overview and mapping on the complexity scale. Computers & Chemical Engineering, 124, 1-13. [5] Jiang, Q., Yan, X., Yi, H., & Gao, F. (2019). Data-driven batch-end quality modeling and monitoring based on optimized sparse partial least squares. IEEE Transactions on Industrial Electronics, 67(5), 4098-4107. [6] Kay, S., Kay, H., Mowbray, M., Lane, A., Mendoza, C., Martin, P., & Zhang, D. (2022). Integrating Autoencoder and Heteroscedastic Noise Neural Networks for the Batch Process Soft-Sensor Design. Industrial & Engineering Chemistry Research, 61(36), 13559-13569. [7] Burnak, B., Diangelakis, N. A., Katz, J., & Pistikopoulos, E. N. (2019). Integrated process design, scheduling, and control using multiparametric programming. Computers & Chemical Engineering, 125, 164-184. [8] Pistikopoulos, E. N., Diangelakis, N. A., & Oberdieck, R. (2020). Multi-parametric optimization and control. John Wiley & Sons. [9] Ali, M., Cai, X., Khan, F., Pistikopoulos, E. N., & Tian, Y. Dynamic Risk-based Process Design and Operational Optimization via Multi-Parametric Programming. Under Review. [10] Chemical Safety Board, T2 laboratories inc. reactive chemical explosion. https://www.csb.gov/t2-laboratories-inc-reactive-chemical-explosion/",
+    "presenting_author": "Austin Braniff | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Austin Braniff | West Virginia University, Morgantown, WV",
+      "Yuhe Tian | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Austin Braniff",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yuhe Tian",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "491f",
+    "sortable_time": "2023-11-05_17:00:00_17:18:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669109"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670160",
+    "paper_endpoint": "Paper/670160",
+    "paper_id": "670160",
+    "topic": "Advancing Digital Twins in Chemical Systems: A Novel Time-Series Transformer (TST)-Based Hybrid Modeling Approach",
+    "title": "Advancing Digital Twins in Chemical Systems: A Novel Time-Series Transformer (TST)-Based Hybrid Modeling Approach",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "52094",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "491",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Recent years have seen a tremendous push toward the development of digital twins for different chemical systems that facilitate better online process monitoring, control, and real-time process optimization [1, 2]. Although the majority of these digital twins rely on fully data-driven approaches such as deep neural networks (DNNs) and a few examples of recurrent neural networks (RNNs) to account for the time-series dynamics of chemical systems, the hesitance to deploy black-box tools in practice due to safety and operational concerns has hindered their widespread adoption. To tackle this conundrum, hybrid models combining first-principles physics-based dynamics with data-driven components have gained popularity as a ‘best of both the worlds’ approach [3]. The first-principle module typically includes mass and energy balance equations, rate kinetics, and population dynamics (if applicable), while the data-driven component estimates system-specific parameters (e.g., kinetic rate constant, selectivity, separation coefficient)that serve as inputs to the first-principle module [4,5]. However, existing hybrid models, predominantly based on DNNs, require a priori information of kinetic equations to be combined with the estimated parameters. This presents a major implementation hurdle, as obtaining precise kinetic information for complex systems (e.g., crystallization, fermentation, heterogenous catalysis) is often difficult. Furthermore, DNN-based hybrid models struggle to make accurate time-series predictions, a crucial aspect of an accurate digital twin for process monitoring or control application. To resolve these two challenges, an alternative hybrid modeling paradigm is needed that can (a) utilize process data to approximate the underlying kinetic function, and (b) accurately capture short and long-term system state evolutions. In recent years, there has been significant progress in the development and online implementation of transformer-based large-language models (LLMs) such as ChatGPT, CodeGPT, Jarvis, and others for various applications. These models, powered by a multiheaded attention mechanism (MAM), excel at understanding contextual information and short and long-term dependencies in natural language processing (NLP) tasks due to their remarkable ability to learn a language’s underlying syntax [6-8]. However, directly applying these approaches to hybrid modeling of chemical systems is a non-trivial task. To address these challenges, we propose a first-of-a-kind hybrid time-series transformer model for chemical systems, with a focus on crystallization. Specifically, the first-principle module incorporates system-agnostic dynamics (i.e., mass-energy balance and population balance equations), while a data-driven transformer model approximates the system-specific functional form of growth and nucleation dynamics, enabling dynamic coupling with the first-principle module. Since the existing vanilla transformer architecture utilizes a DNN for approximating the nonlinearities between static input and output variables [8], it is not well-suited for providing multivariate time-series predictions. Therefore, we integrate long-short-term-memory networks with the TST architecture to create a novel TST-LSTM framework that combines transformers’ remarkable ability to learn underlying system dynamics and functionality with LSTM’s superior performance in time-series predictions. The resulting hybrid-TST-LSTM model consists of a first-principles module containing generalized mass, energy, and population balance equations (PBE), and a TST-LSTM model that uses state information (i.e., concentration, temperature, crystal moments, etc.) to estimate the functional form of growth and nucleation. The developed hybrid model is trained, tested, and validated for simulating a batch crystallization system, using a high-fidelity model and experimental observations. Furthermore, the hybrid-TST-LSTM model is integrated within a model predictive controller (MPC) for set-point tracking of crystal size distribution. Overall, the combination of transformers’ unique ability to learn complex system dynamics and functions, LSTM’s superior temporal prediction capabilities, and first-principle modeling offers exciting opportunities for the development of accurate hybrid model-based digital twins for various chemical systems. Moreover, the developed framework can be extended to various chemical systems, including fermentation, reaction engineering, and catalysis. Given the promising prospects, the future holds immense potential, and indeed bright, and we look forward to seeing the transformative impact of transformer-based hybrid models within the chemical industry. Literature Cited: Ogumerem, Gerald S., and Efstratios N. Pistikopoulos. \"Parametric optimization and control toward the design of a smart metal hydride refueling system.\" AIChE Journal 65.10 (2019): e16680. Chen, Yingjie, and Marianthi Ierapetritou. \"A framework of hybrid model development with identification of plant‐model mismatch.\" AIChE Journal 66.10 (2020): e16996. Wang, Chang, et al. \"Deeppipe: A hybrid model for multi-product pipeline condition recognition based on process and data coupling.\" Computers & Chemical Engineering 160 (2022): 107733. Shah, Parth, et al. \"Deep neural network-based hybrid modeling and experimental validation for an industry-scale fermentation process: Identification of time-varying dependencies among parameters.\" Chemical Engineering Journal 441 (2022): 135643. Bangi, Mohammed Saad Faizan, and Joseph Sang-Il Kwon. \"Deep hybrid modeling of a chemical process: Application to hydraulic fracturing.\" Computers & Chemical Engineering 134 (2020): 106696. Brown, Tom, et al. \"Language models are few-shot learners.\" Advances in neural information processing systems 33 (2020): 1877-1901. Devlin, Jacob, et al. \"Bert: Pre-training of deep bidirectional transformers for language understanding.\" arXiv preprint arXiv:1810.04805 (2018). Vaswani, Ashish, et al. \"Attention is all you need.\" Advances in neural information processing systems 30 (2017).",
+    "presenting_author": "Joseph Kwon | Texas A&M University, College Station, TX",
+    "authors": [
+      "Niranjan Sitapure | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Niranjan Sitapure",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "491g",
+    "sortable_time": "2023-11-05_17:18:00_17:36:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670160"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669427",
+    "paper_endpoint": "Paper/669427",
+    "paper_id": "669427",
+    "topic": "Solving a Robust Multi-Scenario Dynamic Real-Time Optimization with Closed-Loop Prediction Via Generalized Benders Decomposition",
+    "title": "Solving a Robust Multi-Scenario Dynamic Real-Time Optimization with Closed-Loop Prediction Via Generalized Benders Decomposition",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "52094",
+    "session_title": "Predictive Control and Optimization",
+    "session_number": "491",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In the traditional Dynamic Real-time Optimization approach [1], the economic optimization problem is decomposed into two layers. On the upper layer, a dynamic optimization problem is solved to obtain the optimal process variables trajectories that minimize/maximize an economic criterion while satisfying all the process constraints. Then, a model predictive controller (MPC) tracks the computed process variables trajectories on the lower layer. A variant of the traditional approach, called Closed-loop Dynamic Real-time Optimization (CL-DRTO) [2], includes the MPC behavior in the upper layer problem to consider the control performance when making economic decisions. This approach performs better than the traditional “open-loop” version, particularly in situations where the controller is detuned (for instance, due to system dead time); however, the computational cost is higher because of the CL-DRTO solution method. It consists of transforming the MPC problem into complementary constraints using its conditions of optimality, which are then moved to the constraint set of the upper layer dynamic optimization problem resulting in a single-level mathematical program with complementarity constraints (MPCC). To further increase the computational burden of the CL-DRTO solution, including uncertainty in the economic optimization has become a key tool to ensure competitive chemical plant operation [3]. Typically, a stochastic programming framework is used, where the uncertainty is approximated by discrete realizations of the uncertain parameters. Each realization is then defined as a scenario with a given probability. Since the objective of the stochastic programming is to optimize the expected value of the objective function over all the parameter realizations, this robust CL-DRTO formulation requires the solution of an MPCC for each scenario, which then are coupled by the nonanticipativity constraints. This work seeks to obtain the solution of the robust CL-DRTO via a decomposition strategy based on generalized Benders decomposition (BD). Here, the problem is recast such that the variables involved in the nonanticipativity constraints are designated as complicating variables. Then, the monolithic problem is reduced to a series of independent scenario subproblems. The proposed solution strategy is applied to two case studies, a linear system and a system containing several CSTRs in parallel. It is shown that the proposed strategy outperforms the solution of the monolithic problem when either the number of scenario or the size of the subproblem increases. Another interesting result is that, although convergence cannot be proved since the MPCC problem is not guaranteed to be convex, we show experimentally that we are able to obtain the same process variables trajectories via the decomposed and monolithic solution strategies. [1] Kadam, J., Marquardt, W., Schlegel, M., Backx, T., Bosgra, O., Brouwer, P.J., Dünnebier, G., Van Hessem, D., Tiagounov, A. and De Wolf, S., 2003. Towards integrated dynamic real-time optimization and control of industrial processes. Proceedings foundations of computer-aided process operations (FOCAPO2003), pp.593-596. [2] Jamaludin, M.Z. and Swartz, C.L., 2017. Dynamic real‐time optimization with closed‐loop prediction. AIChE Journal, 63(9), pp.3896-3911. [3] Grossmann, I.E., Apap, R.M., Calfa, B.A., García-Herreros, P. and Zhang, Q., 2016. Recent advances in mathematical programming techniques for the optimization of process systems under uncertainty. Computers & Chemical Engineering, 91, pp.3-14.",
+    "presenting_author": "Christopher Swartz | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Jose Matias | McMaster University, Hamilton, Canada",
+      "Christopher Swartz | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jose Matias",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Christopher Swartz",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "491h",
+    "sortable_time": "2023-11-05_17:36:00_17:54:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669427"
+  }
+]

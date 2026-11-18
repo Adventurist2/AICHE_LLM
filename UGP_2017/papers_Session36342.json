@@ -1,0 +1,413 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/487181",
+    "paper_endpoint": "Paper/487181",
+    "paper_id": "487181",
+    "topic": "Distributed Fault Diagnosis for Networked Nonlinear Uncertain Systems",
+    "title": "Distributed Fault Diagnosis for Networked Nonlinear Uncertain Systems",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "36342",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "625",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Data and Information Systems",
+    "abstract": "The last decades have witnessed increasing drive to economic efficiency leading to material and energy integration, and in turn, to increasing complexity. The complexity can be due to nonlinearities, uncertainties, strong interconnections between subsystems and high dimensionality (see e.g., [1]). Where possible, the resultant large scale process systems are often modeled as a set of interconnected subsystems and are termed networked systems. While advances in automation have led to process efficiencies, it has also driven the need to provide automated safeguards against actuator and sensor faults. Thus, monitoring schemes are required to avoid failures in the networked systems by diagnosing faulty equipments as soon as possible. Designing a centralized FDI scheme for this problem may not be the best solution due to computational limitations or reliability issues. In particular, a failure in a centralized FDI can lead to interruption in monitoring of all of the subsystems. If the interconnections are weak, a decentralized FDI scheme composed of an independent local FDI scheme for each subsystem can handle the situation. However, there are cases that interconnections between subsystems are not negligible, such as power systems or chemical plants, that results in poor performance of a decentralized FDI scheme. In this case, viable solution is designing an FDI scheme with distributed architecture. In the distributed architecture a local FDI scheme is designed for each subsystem while the local FDI schemes can communicate to exchange information. The exchanged information can be information about recently diagnosed faults in the other subsystems or any other information required by the other local FDI schemes. These realizations have motivated the design of FDI schemes with distributed architecture for networked systems. There exist a plethora of research in designing fault detection and isolation framework for monitoring of engineering systems (see e.g., [2], [3], [4], [5], [6], [7], [8], [9], [10] and [11]). However, most of the existing results in the literature present a centralized FDI scheme that might not be applicable to networked systems due to computational capa- bilities, communication infrastructure and reliability issues as discussed above. There also exist several results for FDI design in networked systems. In [12], a distributed data based actuator fault identification scheme is presented for linear networked process systems. To this end, local FDI agents are designed for each subsystem using moving horizon estimator (MHE)s to identify the fault. In [13], a distributed actuators FDI scheme is proposed for a class of interconnected uncertain nonlinear systems. To this end, a local FDI framework is designed for each subsystem. In each local FDI scheme, first a fault detection scheme is designed which simply uses output estimation error as residual. Then, a bank of fault isolation estimators is designed using adaptive estimation techniques. In [14], a distributed actuators fault detection and isolation framework is presented for nonlinear uncertain large-scale discrete-time dynamical systems. To overcome the scalabil- ity issues, the large scale system under considerations is modeled as several interconnected subsystems. For each subsystem a local FDI scheme is designed using adaptive estimation techniques. Decisions made by the local fault diagnoser are gathered by a higher level global fault diagnoser to determine health of the overall system. A consensus-based estimator is designed to enhance the ability of FDI schemes in detection and isolation of faulty shared information between the subsystems. In [15], a distributed sensor fault diagnosis for a network of interconnected cyber-physicalsystem (CPS)s (see e.g., [16]) is presented. The FDI module consists of two layers. The first layer is built using local FDI schemes to isolate multiple local sensor faults. The detection is carried out using adaptive estimation techniques while the isolation is done using logic rules. The second layer is realized by applying a global decision logic designed to isolate multiple sensor faults that may propagate in the network. However, none of the existing results have addressed the problem of isolation of multiple actuator faults or simultaneous actuator and sensor faults in uncertain nonlinear networked systems. Also, the results addressing actuator faults are based on the assumption that full state measurements are available. Motivated by the above considerations, in this work, we present a distributed fault diag- nosis framework for a generalized class of networked uncertain nonlinear systems. The idea is to design a bank of FDI schemes based on the robust FDI methodology presented in [11] in a distributed manner. In particular, the nature of the interconnection is first determined and appropriate FDI schemes are developed. To this end, at first boundedness of estima- tion error in the presence of uncertainty and exchange of information is established. Then a bank of residuals is designed for each subsystem using an appropriate subset of the available measurements (and associated state observers), to determine the expected behavior of the system and compare with the observed evolution, where each residual is sensitive to a subset of faults and insensitive to the rest, in the absence of uncertainty. To achieve FDI in the presence of uncertainty, thresholds are defined in a way that they account for the impact of the uncertainty on the estimation error and the prediction of the expected system behavior. In this way, each residual is still insensitive to a subset of faults in the presence of uncertainty and sensitive to the rest if the fault functionality satisfies a detectability condition. Then the detectability and isolability conditions for single and simultaneous faults are derived, when the detectability analysis establishes that the sensitive property of residuals is retained in the presence of uncertainty (see [11] for more on this). The local FDI schemes communi- cate to diagnose the faults in the shared interconnections between subsystems. Results are demonstrated using a networked CSTR example. References: [1] Xing-Gang Yan and Christopher Edwards. Robust decentralized actuator fault detection and estimation for large-scale systems using a sliding mode observer. International Journal of control, 81(4):591–606, 2008. [2] Paul M Frank. Fault diagnosis in dynamic systems using analytical and knowledge-based redundancy: A survey and some new results. Automatica, 26(3):459–474, 1990. [3] Mogens Blanke, Michel Kinnaert, Jan Lunze, Marcel Staroswiecki, and J Schr¨oder. Diagnosis and fault-tolerant control, volume 2. Springer, 2006. [4] Claudio De Persis and Alberto Isidori. A geometric approach to nonlinear fault detection and isolation. Automatic Control, IEEE Transactions on, 46(6):853–865, 2001. [5] Xing-Gang Yan and Christopher Edwards. Nonlinear robust fault reconstruction and estimation using a sliding mode observer. Automatica, 43(9):1605–1614, 2007. [6] Prashant Mhaskar, Charles McFall, Adiwinata Gani, Panagiotis D Christofides, and James F Davis. Isolation and handling of actuator faults in nonlinear systems. Auto- matica,44(1):53–62,2008. [7] Xiaodong Zhang, Marios M Polycarpou, and Thomas Parisini. Fault diagnosis of a class of nonlinear uncertain systems with lipschitz nonlinearities using adaptive estimation. Automatica, 46(2):290–299, 2010. [8] Xiaodong Zhang, Qi Zhang, and Niharika Sonti. Diagnosis of process faults and sensor faults in a class of nonlinear uncertain systems. Systems Engineering and Electronics, Journal of, 22(1):22–32, 2011. [9] Miao Du and Prashant Mhaskar. Isolation and handling of sensor faults in nonlinear systems. Automatica, 50(4):1066–1074, 2014. [10] Miao Du, James Scott, and Prashant Mhaskar. Actuator and sensor fault isolation of nonlinear process systems. Chemical Engineering Science, 104:294–303, 2013. [11] Hadi Shahnazari and Prashant Mhaskar. Simultaneous actuator and sensor fault isola- tion of nonlinear systems subject to uncertainty. In 2016 American Control Conference (ACC), pages 6857–6862. IEEE, 2016. [12] Di Peng, Nael H El-Farra, Zhiqiang Geng, and Qunxiong Zhu. Distributed data-based fault identification and accommodation in networked process systems. Chemical Engi- neering Science, 136:88–105, 2015. [13] Xiaodong Zhang and Qi Zhang. Distributed fault diagnosis in a class of interconnected nonlinear uncertain systems. International Journal of Control, 85(11):1644–1662, 2012. [14] Riccardo MG Ferrari, Thomas Parisini, and Marios M Polycarpou. Distributed fault detection and isolation of large-scale discrete-time nonlinear systems: An adaptive ap- proximation approach. IEEE Transactions on Automatic Control, 57(2):275–290, 2012. [15] Vasso Reppa, Marios M Polycarpou, and Christos G Panayiotou. Distributed sensor fault diagnosis for a network of interconnected cyberphysical systems. IEEE Transactions on Control of Network Systems, 2(1):11–23, 2015. [16] Panos J Antsaklis, Bill Goodwine, Vijay Gupta, Michael J McCourt, Yue Wang, Po Wu, Meng Xia, Han Yu, and Feng Zhu. Control of cyberphysical systems using passivity and dissipativity based methods. European Journal of Control, 19(5):379–388, 2013.",
+    "presenting_author": "Hadi Shahnazari | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Hadi Shahnazari | McMaster University, Hamilton, Canada",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hadi Shahnazari",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "625a",
+    "sortable_time": "2017-11-01_15:15:00_15:32:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/487181"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/489063",
+    "paper_endpoint": "Paper/489063",
+    "paper_id": "489063",
+    "topic": "A Multi-Sensor Error Detection and Functional Redundancy Algorithm for Dynamic Systems",
+    "title": "A Multi-Sensor Error Detection and Functional Redundancy Algorithm for Dynamic Systems",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "36342",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "625",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Data and Information Systems",
+    "abstract": "A Multi-Sensor Error Detection and Functional Redundancy Algorithm for Dynamic Systems Jianyuan Feng (1) , Iman Hajizadeh (1) , Sediqeh Samadi (1) , Mert Sevil (2) , Nicole Frantz (2) , Rachel Brandt (2) , Caterina Lazaro (3) , Zacharie Maloney (3) , Xia Yu (4) , Elizabeth Littlejohn (5) , Laurie Quinn (6) , Ali Cinar (1,2) (1) Department of Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL , USA (2) Department of Biomedical Engineering, Illinois Institute of Technology, Chicago, IL, USA (3) Department of Computer Engineering, Illinois Institute of Technology, Chicago, IL, USA (4) Department of Control Theory and Control Engineering, Northeastern University, Shenyang, Liaoning China (5) Department of Pediatrics, University of Chicago, Chicago, IL, USA (6) College of Nursing, University of Illinois at Chicago, Chicago, IL, USA Abstract: Sensor errors degrade the performance of supervision and control systems. Sensor accuracy can be affected by many factors such as extreme working conditions, sensor deteriorations and interferences from other devices. Sensor error such as missing signals may disrupt system operation and signal bias may cause inaccurate manipulate variable calculation by the controller that may threaten the productivity and safety of the system. For a dynamic system, it may be difficult to distinguish between some sensor errors and real dynamic changes in the system. Many systems may have multiple sensors and the signals from those sensors may be correlated with each other. This offers the opportunity for using the redundancy to detect sensor errors and reconcile erroneous signals. A hybrid online multi-sensor error detection and functional redundancy (SED&FR) system is developed to monitor the performance of multiple sensors and reconcile the erroneous signal values. The SED&FR system relies on two technologies, outlier-robust Kalman filter (ORKF) and a locally-weighted partial least squares (LW-PLS) regression model. The two methods have their unique way of using data, ORKF is comparing current signal samples with signal trace indicated by previous samples and LW-PLS is comparing previous samples with the samples from a database and use the most similar samples to build a model to predict current signal values. Sensor errors such as outliers can be detected more easily by ORKF. Long-duration sensor error detection and reconciliation can be handled by LW-PLS which relies on the prediction ability based on historical data sets. SED&FR leverages the advantages of automatic measurement error elimination with ORKF and data-driven prediction with LW-PLS. The performance of this system is illustrated with a clinical case study which collects data from a continuous glucose monitoring (CGM) system and a wearable device that provides energy expenditure (EE) and Galvanic Skin Response (GSR) information from people with type 1 diabetes. More than 10,000 signal sets are used for testing. The results indicate that the proposed system can successfully detect most of the erroneous signals and substitute them with reasonable estimated values computed by functional redundancy system.",
+    "presenting_author": "Jianyuan Feng | Illinois Institute of Technology, Chicago",
+    "authors": [
+      "Jianyuan Feng | Illinois Institute of Technology, Chicago",
+      "Iman Hajizadeh | Illinois Institute of Technology, Chicago",
+      "Sediqeh Samadi | Illinois Institute of Technology, Chicago",
+      "Mert Sevil | Illinois Institute of Technology, Chicago",
+      "Nicole Frantz | Illinois Institute of Technology, Chicago",
+      "Caterina Lazaro | Illinois Institute of Technology, Chicago",
+      "Zacharie Maloney | Illinois Institute of Technology, Chicago",
+      "Xia Yu | Northeastern University, Shenyang, China",
+      "Elizabeth Littlejohn | University of Chicago, IL",
+      "Laurie Quinn | University of Illinois at Chicago",
+      "Ali Cinar | Illinois Institute of Technology, Chicago"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jianyuan Feng",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Iman Hajizadeh",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      },
+      {
+        "name": "Sediqeh Samadi",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      },
+      {
+        "name": "Mert Sevil",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      },
+      {
+        "name": "Nicole Frantz",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      },
+      {
+        "name": "Caterina Lazaro",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      },
+      {
+        "name": "Zacharie Maloney",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      },
+      {
+        "name": "Xia Yu",
+        "affiliation": "Northeastern University, Shenyang, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Elizabeth Littlejohn",
+        "affiliation": "University of Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Laurie Quinn",
+        "affiliation": "University of Illinois at Chicago",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Cinar",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "625b",
+    "sortable_time": "2017-11-01_15:32:00_15:49:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/489063"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/495005",
+    "paper_endpoint": "Paper/495005",
+    "paper_id": "495005",
+    "topic": "Model-Based Fault Detection for Nonlinear Process Systems Using Multiparametric Programing for Parameter Estimation",
+    "title": "Model-Based Fault Detection for Nonlinear Process Systems Using Multiparametric Programing for Parameter Estimation",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "36342",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "625",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Data and Information Systems",
+    "abstract": "Early detection and diagnosis of faults are essential to minimise the economic losses and fatal damage of the operators and the equipment. Several techniques have been developed to detect and localize the fault. With the aid of process models, estimation and decision methods, faults can be detected and monitored by process states, model parameters and characteristic quantities [1]. Model-based fault detection techniques can be categorised into observer-based, parity relation and parameter estimation methods. The observed-based uses the outputs of the system from the measurements by using some type of observer, and then constructs the residual by an output estimate error and the parity relation approach uses the parity check on the consistency of parity equation to generate residuals (parity vector). The inconsistency in the parity relations indicates the presence of faults. On the other hand, in the parameter estimation approach, the model parameters of the actual process are repeatedly estimated on-line and the results are compared with the reference model [2-7]. The key limitation however is that it requires solving an optimization problem online at regular time interval. The key issue with solving an online optimization problem is not only that it is time consuming, but also that the solution may not converge in a reasonable time. Thus, this work presents a model based fault detection and diagnosis approach using parameter estimation for process systems using multiparametric programming. Multiparametric programming provides the optimization variables as an explicit function of the parameter [8]. In this work, a square system of parametric nonlinear algebraic equations is obtained by formulating optimality condition. These equations are then solved symbolically using Mathematica to obtain model parameters as an explicit function of measurement [9]. This allows computation of parameter estimates by simple function evaluation. The diagnosis of fault is carried out by monitoring the changes of the residual of model parameters. The estimated parameters should be close to observed parameters when no fault is present. Any substantial discrepancy between estimated model parameters and the observed model parameters may be interpreted as a fault, i.e., if the discrepancy goes above a certain threshold. Case studies of fault detection and diagnosis for single stage evaporator system [10] and quadruple tank system [11] are presented. A number of faulty and fault free scenarios are considered to show the effectiveness of the presented approach of parameter estimate and faults can be detected by monitoring the residual of model parameters. The proposed approach successfully estimates the model parameters and detects the faults in the systems [1] Isermann, R. Process Fault Detection Based on Modeling and Estimation Methods - A Survey. Automatica 1984 , 20 (4), 387. [2] Dai, X.; Gao, Z. From Model, Signal to Knowledge: A Data-Driven Perspective of Fault Detection and Diagnosis. IEEE Trans. Ind. Informatics 2013 , 9 (4), 2226. [3] Venkatasubramanian, V.; Rengaswamy, R.; Yin, K.; Kavuri, S. N. A Review of Process Fault Detection and Diagnosis Part I: Quantitative Model-Based Methods. Comput. Chem. Eng. 2003 , 27 (3), 293. [4] Mhaskar, P.; McFall, C.; Gani, A.; Christofides, P. D.; Davis, J. F. Isolation and Handling of Actuator Faults in Nonlinear Systems. Automatica 2008 , 44 (1), 53. [5] Du, M.; Mhaskar, P. Isolation and Handling of Sensor Faults in Nonlinear Systems. Automatica 2014 , 50 (4), 1066. [6] Gertler, J. Fault Detection and Isolation Using Parity Relations. Control Eng. Pract. 1997 , 5 (5), 653. [7] Isermann, R. Fault Diagnosis of Machines via Parameter Estimation and Knowledge processing—Tutorial Paper. Automatica 1993 , 29 (4), 815. [8] Pistikopoulos, E. N. Perspectives in multiparametric programming and explicit model predictive control. AIChE Journal 2009 , 55 (8), 1918-1925. [9] Dua, V. Mixed Integer Polynomial Programming. Comput. Chem. Eng. 2015 , 72 , 387. [10] Dalle Molle, D. T.; Himmelblau, D. M. Fault Detection in a Single-Stage Evaporator via Parameter Estimation Using the Kalman Filter. Ind. Eng. Chem. Res. 1987 , 26 (12), 2482. [11] Johansson, K. H. The Quadruple-Tank Process: A Multivariable Laboratory Process with an Adjustable Zero. IEEE Trans. Control Syst. Technol. 2000 , 8 (3), 456.",
+    "presenting_author": "Ernie Che Mid | University College London, United Kingdom",
+    "authors": [
+      "Ernie Che Mid | University College London, United Kingdom",
+      "Vivek Dua | University College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ernie Che Mid",
+        "affiliation": "University College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Vivek Dua",
+        "affiliation": "University College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "625c",
+    "sortable_time": "2017-11-01_15:49:00_16:06:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/495005"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/493549",
+    "paper_endpoint": "Paper/493549",
+    "paper_id": "493549",
+    "topic": "Event Detection and Estimation of Its Influence Based on Fuzzy Qualitative Representation of Measurements and Fuzzy Logic Estimator",
+    "title": "Event Detection and Estimation of Its Influence Based on Fuzzy Qualitative Representation of Measurements and Fuzzy Logic Estimator",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "36342",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "625",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Data and Information Systems",
+    "abstract": "Event Detection and Estimation of its Influence Based on Fuzzy Qualitative Representation of Measurements and Fuzzy Logic Estimator Sediqeh Samadi * , Kamuran Turksoy ** , Iman Hajizadeh * , Jianyuan Feng * , Mert Sevil ** , Ali Cinar * * Department of Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL, USA (Corresponding author: cinar@iit.edu ). ** Department of Biomedical Engineering, Illinois Institute of Technology, Chicago, IL, USA. Detection of underlying (temporal) events in chemical and biological systems is important in order to respond them by taking the appropriate control actions. The reflection of such events on the measured variables is employed to extract features for detection algorithms [1]. In this study, quantitative change of measured variable(s) over moving specified length time window (episode) is translated to the qualitative variables (shapes). Combination of first and second derivative (or difference) signs of every shape is distinct. We introduce fuzziness in qualitative variables where more than one shape can describe an episode. Fuzzy qualitative variables can be used to create the features for detection of the events. In addition to detection of the events, the estimation of their influence of is crucial for control purpose. Using the proposed fuzzy qualitative representation of measurements, we define a detection feature named “increase of glucose trend index” to identify the occurrence of the meal. Detection of the meals based on continuously measured glucose is of interest for development of artificial pancreas (AP) control systems for people with type 1 diabetes mellitus (T1DM). The algorithm can be incorporated with the AP systems without manual meal announcements, or as a safety feature for people who may forget entering meal information manually. Using qualitative representation of the continuously measured glucose, a time period labeled as meal flag is identified. The criteria for activation and deactivation of meal flag described based on the numerical value of detection feature (increase of glucose trend index) computed every sampling time [2]. Following the detection of the occurrence of the meal, a fuzzy logic based estimator estimates the carbohydrate (CHO) content of the meal to determine the appropriate dose of insulin bolus for a meal. At every sampling time during active meal flag, a fuzzy system with two proposed input variables estimates the absorbed CHO and computes insulin meal bolus dose accordingly. The first input of fuzzy estimator is the ratio of glucose increase with respect to its increase at the detection time and the second input is the absorbed insulin modeled by a normalized finite impulse response (FIR) function [3]. To assess the performance of the algorithm, we used the academic version of UVa/Padova simulator [4] that contains 30 in silico patients (10 adults, 10 adolescents, 10 children). Basal insulin and CHO to insulin ratio for each patient are equal to their default values in the simulator. The proposed algorithm computes the time and dose of bolus insulin. For the evaluation data set, rates of sensitivity of meal detection are 87%, 94%, and 93% and false detection rates are 21%, 4%, and 3% for adults, adolescents and children, respectively. The absolute error in CHO estimation is 23.1%. The mean glucose concentration and the percentages in target range (70-180 mg/dl) are 135 mg/dl, 147 mg/dl, 145 mg/dl and 86.5%, 75%, 74.8% for adults, adolescents, and children, respectively. [1] B. R. Bakshi and G. Stephanopoulos, “Representation of process trends-III. multiscale extraction of trends from process data,” Comput. Chem. Eng. , vol. 18, no. 4, pp. 267–302, 1994. [2] S. Samadi, K. Turksoy, I. Hajizadeh, J. Feng, M. Sevil, and A. Cinar, “Meal Detection and Carbohydrate Estimation Using Continuous Glucose Sensor Data ,” IEEE J. Biomed. Heal. Informatics , doi: 10.1109/JBHI.2017.2677953, 2017. [3] Q. Wang, P. Molenaar, S. Harsh, K. Freeman, J. Xie, C. Gold, M. Rovine, and J. Ulbrecht, “Personalized state-space modeling of glucose dynamics for Type 1 diabetes using continuously monitored glucose, insulin dose, and meal intake an extended Kalman filter approach,” J. Diabetes Sci. Technol. , vol. 8, no. 2, pp. 331–345, 2014. [4] C. D. Man, F. Micheletto, D. Lv, M. Breton, B. Kovatchev, and C. Cobelli, “The UVA/PADOVA type 1 diabetes simulator: new features.,” J. Diabetes Sci. Technol. , vol. 8, no. 1, pp. 26–34, 2014.",
+    "presenting_author": "Sediqeh Samadi | Illinois Institute of Technology, Chicago",
+    "authors": [
+      "Sediqeh Samadi | Illinois Institute of Technology, Chicago",
+      "Kamuran Turksoy | Illinois Institute of Technology, Chicago",
+      "Iman Hajizadeh | Illinois Institute of Technology, Chicago",
+      "Jianyuan Feng | Illinois Institute of Technology, Chicago",
+      "Mert Sevil | Illinois Institute of Technology, Chicago",
+      "Ali Cinar | Illinois Institute of Technology, Chicago"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sediqeh Samadi",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Kamuran Turksoy",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      },
+      {
+        "name": "Iman Hajizadeh",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      },
+      {
+        "name": "Jianyuan Feng",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      },
+      {
+        "name": "Mert Sevil",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Cinar",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "625d",
+    "sortable_time": "2017-11-01_16:06:00_16:23:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/493549"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/497855",
+    "paper_endpoint": "Paper/497855",
+    "paper_id": "497855",
+    "topic": "Fault Detection and Diagnosis of Continuous Processes Via Non-Linear Support Vector Machine Based Feature Selection",
+    "title": "Fault Detection and Diagnosis of Continuous Processes Via Non-Linear Support Vector Machine Based Feature Selection",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "36342",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "625",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Data and Information Systems",
+    "abstract": "Advances in sensor and data collection technologies has valorized data-driven modeling approaches in process monitoring and fault detection in process systems engineering [1]. Today, machine learning and pattern recognition techniques play a significant role in attaining actionable insights and decision-making from the vast amounts of available process data by building accurate and robust data-driven models. One of the most popular machine learning techniques is Support Vector Machines (SVMs) [2-6] which allows the use of high dimensional feature sets for learning problems such as classification and regression. Yet reducing the dimensionality of the feature space in data-driven modeling, known as dimensionality reduction and feature selection, is still a key task in improving model accuracy as well as decreasing a priori data collection, which in turn yields enhanced efficiency in chemical processes. In this work, we present the application of a novel non-linear (kernel-dependent) SVM-based feature selection algorithm [7-8] to process monitoring and fault detection of continuous processes. The developed methodology is derived from sensitivity analysis of the dual SVM objective and utilizes existing and novel greedy algorithms to rank features that also guides fault diagnosis. Specifically, we train two-class SVM models to detect known faults and use one-class support vector data descriptors to characterize normal operations. Here, the manipulated and measured variables of the process constitute the input feature space, and instances of normal and faulty operation yield training samples for our SVM models. The feature selection algorithm is used to improve the accuracy of fault detection models and perform fault diagnosis. We present results for the Tennessee Eastman process [9] as a case study and compare our approach to existing approaches for fault detection and diagnosis. References [1] Chiang, L. H., Braatz, R. D., & Russell, E. L. (2001). Fault Detection and Diagnosis in Industrial Systems. Springer Science & Business Media. [2] Vapnik, V. (1995). The Nature of Statistical Learning Theory. Springer. [3] Cortes, C., & Vapnik, V. (1995). Support-vector networks. Machine Learning, 20(3), 273-297. [4] Schölkopf, B., Smola, A. J., Williamson, R. C., & Bartlett, P. L. (2000). New support vector algorithms. Neural Computation, 12(5), 1207-1245. [5] Schölkopf, B., Platt, J. C., Shawe-Taylor, J., Smola, A. J., & Williamson, R. C. (2001). Estimating the support of a high-dimensional distribution. Neural Computation, 13(7), 1443-1471. [6] Tax, D. M., & Duin, R. P. (2004). Support vector data description. Machine Learning, 54(1), 45-66. [7] Guzman, Y.A., Kieslich, C.A., Floudas, C.A. (Submitted). A global optimization framework for feature selection with Support Vector Machines. [8] Kieslich, C. A., Tamamis, P., Guzman, Y. A., Onel, M., Floudas, C. A. (2016). Highly Accurate Structure-Based Prediction of HIV-1 Coreceptor Usage Suggests Intermolecular Interactions Driving Tropism. PloS one,11(2), e0148974. [9] Downs, J. J., & Vogel, E. F. (1993). A plant-wide industrial process control problem. Computers & chemical engineering, 17(3), 245-255.",
+    "presenting_author": "Melis Onel | Texas A&M Energy Institute, Texas A&M University, College Station, TX",
+    "authors": [
+      "Melis Onel | Texas A&M Energy Institute, Texas A&M University, College Station, TX",
+      "Chris A. Kieslich | Georgia Institute of Technology, Atlanta, GA",
+      "Yannis A. Guzman | Princeton University, NJ",
+      "Christodoulos A. Floudas | Texas A&M University, College Station, TX",
+      "Efstratios Pistikopoulos | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Melis Onel",
+        "affiliation": "Texas A&M Energy Institute, Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chris A. Kieslich",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Yannis A. Guzman",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Christodoulos A. Floudas",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Efstratios Pistikopoulos",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "625e",
+    "sortable_time": "2017-11-01_16:23:00_16:40:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/497855"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/499254",
+    "paper_endpoint": "Paper/499254",
+    "paper_id": "499254",
+    "topic": "Optimal Test Design Framework for Model-Based Active Fault Detection and Isolation",
+    "title": "Optimal Test Design Framework for Model-Based Active Fault Detection and Isolation",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "36342",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "625",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Data and Information Systems",
+    "abstract": "The complexity and widely variable operating envelope of modern cyber-physical systems yields a need for advanced fault detection and isolation (FDI) algorithms. Efficient and accurate FDI tests can reduce maintenance cost, and improve system reliability and performance, 1,2 which are becoming increasingly significant in the aerospace and automotive industries. Recent advances in the field of active FDI 3,4 allow for better detectability and isolatability of faults by implementing advanced control logic for the Built-In Tests deploying FDI. 5,6 In this presentation, we will outline a comprehensive workflow that improves FDI robustness and accuracy through an optimal selection of input settings prior to FDI test execution. Figure 1. Outline of framework for improving active FDI test designs In the proposed workflow, model-based, active fault detection and isolation is accomplished by solving a set of optimization problems, constrained within the system operating space. Figure 1 presents an overview of this framework for test design selection. Models that accurately represent the system (especially the steady state and transient system responses to faults) are used to generate output forecasts with and without the anticipated fault(s) present. Modelling error and uncertainty in the form of environment variability are minimized, in terms of their impact on the FDI test. The improvement in fault identifiability is accomplished with two different optimal test design criteria, both using the output sensitivities, Q i , of i - th outputs at a predetermined number of sampling points with respect to the targeted faults and uncertainty, ξ . The first criterion designs tests satisfying D-optimality, which minimizes the correlation of all the elements in ξ . 7–9 The second approach maximizes the information with respect to the faults and minimizes the impact of uncertainty, using the so-called Ds-optimality criterion. 10 Sensitivities are compiled into modified formulations of the Fisher Information Matrix, H ξ , which is a function of the parameters representing faults and uncertainty in the system model and the test design vector. As shown in Eq.(1), H ξ is partitioned into submatrices corresponding to ( ξ 1 … ξ f ) and ( ξ f +1 … ξ u ) that contain the correlations between faults ( H ff ), uncertainty ( H uu ), and that between faults and uncertainty, ( H uf , H fu ): where σ ij is the estimated measurement variance between the i - th and j - th outputs. The optimal test design vector for each criterion is formulated for differential algebraic equations describing dynamic systems as shown in Eqs . (2) and (3) of Table 1. Table 1. Mathematical formulation of the FDI test optimization for steady-state and dynamic test designs Execution of the optimal FDI tests designed, leads to data that need to be analyzed in terms false alarm rates (FAR) and non-detection rates (NDR). First, the space of uncertain parameters and boundaries is explored to determine if similar output trajectories can be generated for faulty and fault-free systems at the chosen design of admissible inputs. The mathematical formulation of this search is based on practical identifiability of model parameters (not shown in this abstract). Thereafter, thresholds are designed to minimize the FARs and NDRs. We evaluate the residuals generated from an FDI test through a positive definite function (e.g. normalized root mean square). We iterate this calculation at various fault and uncertain parameter values, and then compare the results with fault thresholds to determine if the test satisfies FAR and NDR requirements. Threshold designs are analyzed in the form of receiver operating characteristic (ROC) plots. An example of a ROC curve is shown in Figure 2, where the optimal test design obtained using this framework significantly improves the overall quality of the FDI test in one of the systems studied. Figure 2. Example ROC plot of a fouled heat exchanger at various fault detection thresholds for particulate fouling at nominal and optimal test designs. Several case studies comparing the FDI effectiveness (in terms of FAR and NDR) at nominal and optimal test designs will be presented. The first case study will focus on built-in tests for a plate-fin heat exchanger from an aircraft environmental control system (ECS) that is prone to particulate fouling, which extends prior work on fouling quantification. 9 The second case study will also focus on particulate fouling in the integrated ECS, to illustrate the impact of increased system complexity of FDI, when multiple sources of uncertainty are present. False alarms and non-detections at nominal test conditions, and their improvement through the proposed framework will be presented. Lastly, the application of the proposed framework on the three-tank benchmark system will be presented. This analysis shows how the design of an active FDI test using the proposed framework compares to more computationally intensive methods proposed in the literature. Acknowledgment This work was sponsored by the UTC Institute for Advanced Systems Engineering (UTC-IASE) of the University of Connecticut and the United Technologies Corporation. Any opinions expressed herein are those of the authors and do not represent those of the sponsor. Help and guidance by Modelon and Modelon -AB are gratefully acknowledged. References 1. Hwang, I., Kim, S., Kim, Y. & Seah , C. E. A Survey of Fault Detection, Isolation, and Reconfiguration Methods. IEEE Transactions on Control Systems Technology 18, 636–653 (2010). 2. Isermann , R. Model-based fault-detection and diagnosis - Status and applications. Annual Reviews in Control 29, 71–85 (2005). 3. Venkatasubramanian , V., Rengaswamy , R., Yin, K. & Kavuri , S. N. A review of process fault detection and diagnosis: Part I: Quantitative model-based methods. Computers & Chemical Engineering 27, 293–311 (2003). 4. Venkatasubramanian , V. A review of process fault detection and diagnosis: Part III: Process history based methods. Computers & chemical … 27, 293–311 (2003). 5. Henrik Niemann . A Setup for Active Fault Diagnosis. Automatic Control, IEEE Transactions on 51, 1572–1578 (2006). 6. Gao, Z., Cecati , C. & Ding, S. X. A survey of fault diagnosis and fault-tolerant techniques-part II: Fault diagnosis with knowledge-based and hybrid/active approaches. IEEE Transactions on Industrial Electronics 62, 3768–3774 (2015). 7. Han, L., Zhou, Z. & Bollas, G. M. Model-based analysis of chemical-looping combustion experiments. Part I: Structural identifiability of kinetic models for NiO reduction. AIChE Journal 62, 2419–2431 (2016). 8. Han, L., Zhou, Z. & Bollas, G. M. Model-based analysis of chemical-looping combustion experiments. Part II: Optimal design of CH4 - NiO reduction experiments. AIChE Journal 62, 2432–2446 (2016). 9. Palmer, K. A., Hale, W. T., Such, K. D., Shea , B. R. & Bollas, G. M. Optimal design of tests for heat exchanger fouling identification. Applied Thermal Engineering 95, 382–393 (2016). 10. Bruwer , M.-J. & MacGregor, J. F. Robust multi-variable identification: Optimal experimental design with constraints. Journal of Process Control 16, 581–600 (2006).",
+    "presenting_author": "Kyle A. Palmer | University of Connecticut, Storrs Mansfield",
+    "authors": [
+      "Kyle A. Palmer | University of Connecticut, Storrs Mansfield",
+      "George Bollas | University of Connecticut, Storrs"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kyle A. Palmer",
+        "affiliation": "University of Connecticut, Storrs Mansfield",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "George Bollas",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "625f",
+    "sortable_time": "2017-11-01_16:40:00_16:57:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/499254"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/500900",
+    "paper_endpoint": "Paper/500900",
+    "paper_id": "500900",
+    "topic": "Verification of Control Systems with Discrete and Continuous Dynamics",
+    "title": "Verification of Control Systems with Discrete and Continuous Dynamics",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "36342",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "625",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Data and Information Systems",
+    "abstract": "The need for automated and safe control of chemical processes requires the analysis of dynamical systems with interdependencies between continuous controls and discrete switches. The continuous variables result from the application of classical controllers, such as PID and feedforward and more advanced controllers such as MPC. The discrete dynamics can be due to batch operation, mode switches during start-up and shut down of continuous processes, operator intervention or hardware or software failures. Systems that have integrated discrete and continuous dynamics are said to be hybrid. The design of hybrid control systems remains an unsolved and potentially unsolvable problem (as shown by Prof. P. Varaiya). The design and testing of process automation systems therefore remains heuristic in nature and very much dependent on the knowledge, experience and the creativity of the personnel involved. Many tools, such as HAZOP, LOPA, Fault Trees etc exist. But these are are not exhaustive and the potential for errors persists. Increased process automation demands that ever more complex chemical process control systems with hybrid dynamics must be evaluated and faults in the control logic continue to occur and cause accidents. The aim of this work is to examine the application of model checking to aid the testing of process automation systems that integrate discrete logic and continuous controls. For a given set of specifications, the system dynamics are modeled by representing the desired behavior as transitions between discrete states. These specifications are written as computation tree logic (CTL) formulas, and model checking is applied to the discrete abstraction of the continuous system. Current software systems such as nuSMV is capable of handling systems with well over 10E20 states in reasonable time. So very large logic systems can be checked. It is the abstraction (over-approximation) of the continuous dynamics rather than the discrete controls themselves that lead to combinatorial explosion. Making the abstract coarse makes the problem tractable However, if the abstraction is too coarse, or the specifications are too broad, then model checking mail fail to verify the specifications even though the system is actually correct. To address the concern of inadequate specifications, this work relates the discrete states like alarms, trips and interlock to the continuous variables they rely on. This allows the verifier to build CTL formulas for the specifications based on the values of continuous variables in discrete time. A CTL specification may look like AG(SAFE) where SAFE is a discrete variable that depends on a combination of continuous and discrete variables. The specification checks whether SAFE is false at any point in the execution of the discrete model, either due to faulty logic, too coarse of a discrete abstraction, or inadequate specifications. If false returns then the system provides a path that lead to failure. It may be a faulty measurement, as in the BP Texas City explosion, a low level alarm that is stuck or some other event that makes the system unobservable or uncontrallable. The problem with coarse over approximations is solved by applying the SAFE condition to material and energy balances. Checking such balances lead to a tractable problem since mass and energy balances can be represented as integrators and can be solved with explicit integration. This approach theroefore presents a first step towards developing a comprehensive methodology for checking automation code in the chemical process industry. A Liquid Holding Tank model formulation is included to demonstrate application of the model-checking solver NuSMV, highlighting that (1) A model can be faulty and yet adhere to all logic and operational specifications at the same time. (2) A fault in logic, combined with instrumentation failure, may lead to a critical state. (3) Combination of instruments and safety logics can be suggested to ensure reliability of a unit even in the case of multiple failures. The discrete state model is augmented with a continuous model in SIMULINK to verify the results of SMV. The concept developed in this paper can be applied to test automation systems for chemical plants in a modular fashion. In some specific cases it will be possible to prove that the model satisfies the system specifications and that the specifications themselves are rich enough to account for all possible failures.",
+    "presenting_author": "Birger Ydstie | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Chintan Bhomia | Carnegie Mellon University, Pittsburgh, PA",
+      "Blake C. Rawlings | Carnegie Mellon University, Pittsburgh, PA",
+      "Birger Ydstie | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Chintan Bhomia",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Blake C. Rawlings",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Birger Ydstie",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "625g",
+    "sortable_time": "2017-11-01_16:57:00_17:14:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/500900"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/494094",
+    "paper_endpoint": "Paper/494094",
+    "paper_id": "494094",
+    "topic": "Multi-Rate Sampled-Data Observer Design for Nonlinear Systems with Multiple Measurement Delays",
+    "title": "Multi-Rate Sampled-Data Observer Design for Nonlinear Systems with Multiple Measurement Delays",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "36342",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "625",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Data and Information Systems",
+    "abstract": "The problem of nonlinear observer design has been intensively studied for systems under fast sampling [1-3], which can be potentially applied to estimation, process control, and fault detection and identification. Motivated by practical implementation needs, however, one of the biggest challenges is to design an observer for general multi-rate sampled-data systems with multiple measurement delays (e.g., chemical processes, biological systems, networked control systems). In the monitoring of polymerization processes, for instance, the slow-sampled measurements with significant output delay often provide important quality information on the products, and hence must be incorporated in an intelligent manner together with the fast-sampled measurements, to make the entire system observable as well as improve the estimation accuracy. Different sampling rates and different sizes of measurement delays, caused by sample preparation, analysis and calculation, need to be accommodated in the observer design framework. Furthermore, the presence of possible perturbations in the sampling schedule as well as in the size of measurement delay makes the real-time monitoring even more challenging. The observer design for linear multi-rate systems was recently investigated in [4]. The proposed multi-rate observer adopts the idea in [5] of using a state predictor to approximate the inter-sample behavior, and moreover, multiple, asynchronous inter-sample predictors are used for the multi-rate system as a generalization. The proposed multi-rate observer is based on an available continuous-time Luenberger observer design coupled with asynchronous inter-sample predictors. Each predictor generates an estimate of a sampled output in between consecutive measurements, and will get reinitialized once the associated, most-recent measurement becomes available. Sufficient and explicit conditions in terms of maximum sampling period were established to guarantee exponential stability of the error dynamics. Although the presence of possible measurement delays was not considered, it would be straightforward to incorporate multiple output delays by using the algorithm of dead time compensation as will be mentioned later. In this paper, a nonlinear multi-rate sampled-data observer design is developed as a starting point before taking multiple output delays into account. In the same spirit as in [4], the proposed multi-rate sampled-data observer is based on an available continuous-time design coupled with asynchronous inter-sample predictors for the sampled measurements [6]. The sampled-data system with the multi-rate observer forms a hybrid system and it is shown that the error dynamics of the overall system is input-to-output stable with respect to measurement errors by applying the vector small-gain theorem [6-7]. This sampled-data design also offers robustness with respect to perturbations in the sampling schedule. To handle the possible measurement delays, a dead time compensation algorithm is developed, which preserves the stability property of the multi-rate sampled-data observer, no matter how large the size of each delay is. Once a delayed measurement is obtained, the state estimates at its sampling instant can be re-calculated by using the multi-rate sampled-data observer. Then the process model can be utilized to predict the state at current time, given the delayed estimates, in the same spirit as in Smith-predictor methods. During the compensation, any available measurement can be treated as a delay-free output and the compensator will get reinitialized at every sampling instant where the measurement is available. This algorithm inherits all the nice properties (i.e., stability and robustness) of a multi-rate sampled-data observer. Moreover, it provides robustness with respect to the perturbations in the size of each measurement delay. In the present work, we revisit the example of an industrial gas-phase polyethylene reactor in [4], which aims at monitoring the amount of active catalyst sites. The only fast-sampled output without delay is the temperature of the reactor. The gas concentrations in the reactor are measured on line by using gas chromatography, where the sampling normally occurs every 20 min with 8 min measurement delay. Cumulative melt index and density of polyethylene are measured off line in a quality control lab, where the sampling normally occurs every 40 min with 60 min measurement delay. However, perturbations in the sampling schedule as well as in the size of delay have been considered. A continuous-time nonlinear observer is first designed to cope with the nonlinearity of the process [3,8]. With the proposed framework of multi-rate multi-delay observer, we can obtain a continuous estimate of the unmeasured state with a satisfactory convergence rate. In addition, the output behavior between two consecutive samples can be estimated as well by using inter-sample predictors. References: [1] Krener, A. J., & Isidori, A. (1983). Linearization by output injection and nonlinear observers. Systems & Control Letters , 3(1), 47-52. [2] Gauthier, J. P., Hammouri, H., & Othman, S. (1992). A simple observer for nonlinear systems applications to bioreactors. IEEE Transactions on Automatic Control , 37(6), 875-880. [3] Kazantzis, N., & Kravaris, C. (1998). Nonlinear observer design using Lyapunov’s auxiliary theorem. Systems & Control Letters , 34(5), 241-247. [4] Ling, C., & Kravaris, C. (2017). Multi-rate observer design for process monitoring using asynchronous inter-sample output predictions. AIChE Journal . DOI: 10.1002/aic.15707. [5] Karafyllis, I., & Kravaris, C. (2009). From continuous-time design to sampled-data design of observers. IEEE Transactions on Automatic Control , 54(9), 2169-2174. [6] Ling, C., & Kravaris, C. Multi-rate sampled-data observers based on a continuous-time design. Submitted to the 56th Conference on Decision and Control . [7] Karafyllis, I., & Jiang, Z. P. (2011). A vector small-gain theorem for general non-linear control systems. IMA Journal of Mathematical Control and Information , 28(3), 309-344. [8] Kazantzis, N., Kravaris, C., & Wright, R. A. (2000). Nonlinear observer design for process monitoring. Industrial & Engineering Chemistry Research , 39(2), 408-419.",
+    "presenting_author": "Chen Ling | Texas A&M University, College Station, TX",
+    "authors": [
+      "Chen Ling | Texas A&M University, College Station, TX",
+      "Costas Kravaris | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Chen Ling",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Costas Kravaris",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "625h",
+    "sortable_time": "2017-11-01_17:14:00_17:31:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/494094"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/487195",
+    "paper_endpoint": "Paper/487195",
+    "paper_id": "487195",
+    "topic": "Data Reconciliation with Inequality Constraints Induces Bias: A Cause for Concern?",
+    "title": "Data Reconciliation with Inequality Constraints Induces Bias: A Cause for Concern?",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "36342",
+    "session_title": "Process Monitoring & Fault Detection",
+    "session_number": "625",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Data and Information Systems",
+    "abstract": "1. Introduction Data reconciliation comprises an important set of tools for data quality improvement. By removing always-present random measurement noise, one seeks to process the data so that the transformed data are an improved representation of the measured variables. Most often, this involves projection, filtering, or smoothing steps (e.g., Narasimhan & Jordache, 1999; Vachhani et al., 2005, 2006). Data reconciliation can be based on mechanistic models (white box, Venkatasubramanian et al., 2003a), empirical models (black box, Venkatasubramanian et al., 2003b, or a combination of both (gray box). This work is focused on data reconciliation methods that rely on mechanistic process understanding (white box data reconciliation). A majority of the data reconciliation literature is concerned with the application of equality constraints as a way to improve the accuracy of the available measurements. In this case, data reconciliation is interpreted geometrically as a projection to a plane or manifold. The application of linear and nonlinear equality constraints for data reconciliation has been studied in great detail already (Tamhane & Mah, 1985; Crowe, 1996; Veverka & Madron, 1997; Romagnoli & Sanchez, 1999). The application of inequality constraints has been studied as well. An early example is found in Narasimhan & Harikumar (1993) where knowledge about the feasible range of values for a measured process state is accounted for. Vachhani et al. (2006) proposed a method for dynamic data reconciliation based on the unscented Kalman filter, thereby enabling the application of inequality constraints into an online data reconciliation method. More recently, special attention has been given to the incorporation of prior knowledge about function and signal shapes to optimally describe or reconcile time series data (Villez et al., 2013; Villez & Habermacher, 2016; Derlon et al., 2017; Vertis et al., 2017; Masic et al, 2017; Srinivasan et al., 2017). Most typical is that the data analysis is enhanced by incorporation of prior knowledge about the signs of the first and second derivative of the fitted function or the data series. The application of inequality constraints offers several advantages. For instance, in Narasimhan & Harikumar (1993) and Srinivasan et al. (2017) the improved accuracy of the reconciled data is the principal motivation to consider inequality constraints. In Villez & Habermacher (2016), shape constraints lead to the formulation of a lack-of-fit statistic. Vertis et al. (2016) mainly motivate the application of shape constraints as a way to differentiate time series data without risk of noise amplification (Bhatt et al., 2012) in turn enabling a reasonable guess of parameter values in kinetic models. A similar strategy to initialize parameter estimation is deployed in Masic et al. (2017). The data reconciliation literature implicitly incorporates the idea that any prior knowledge should be applied during the data reconciliation process. This is based on the observation that application of knowledge-based equality and inequality constraints invariably improves the accuracy of the reconciled data as long as the applied constraints are correctly assumed for the data-generating process. The impact of using reconciled data, e.g. during model parameter estimation, has not been studied in detail yet. In this work it is demonstrated that data reconciliation with inequality constraints can induce significant bias during model parameter estimation. 2. Methods The utility of data reconciliation is studied by means of a simple model parameter estimation problem. To this end, a batch experiment involving a single equilibrium reaction with two species, A and B, is repeatedly simulated. The simulated rate laws are linear in the consumed species concentrations for both directions of the reaction. Consequentially, the net reaction can be described by a kinetic rate law which exhibits two parameters: the reaction rate coefficient (k1=1 mol/L.h) and the equilibrium parameter (k2=0.2). The concentration of A is measured at regular intervals. The data collected in each experiment are first reconciled based on a monotonicity constraint and then used for parameter estimation. In parallel, the same data are also used for parameter estimation without any data reconciliation. In both cases, the initial process conditions and the kinetic rate law structure are assumed known. This complete procedure is repeated 10000 times to investigate the effects of data reconciliation in the parameter estimates. 3. Results 3.1 Simulation Figure 1 displays the simulation results for a single batch experiment. One can see that the concentration of species A decreases with time from its initial value (1 mol/L) towards its equilibrium value (0.2 mol/L). Noisy measurements of the concentration of species A are obtained every 5 minutes during the 7-hour experiment. Figure 1: A single batch experiment – Black line: simulated concentration; Blue circles: Measurements before data reconciliation; Red crosses: Measurements after data reconciliation. 3.2 Data reconciliation Reconciled measurements are obtained by computing concentrations that are close as possible to the original measurements in the least-squares (WLS) sense while satisfying isotonicity (non-strictly increasing). This monotonicity constraint is implemented as a positivity constraint for the point-wise differences between consecutive concentration measurements. Thus, the data reconciliation problem is a convex quadratic program with linear inequality constraints. Figure 1 displays the reconciled concentration measurements of species A. One observes that the reconciled measurements are generally closer to their true values and that –as expected- they increase with time. Figure 2 shows the cumulative density of the obtained root mean squared error (RMSE) with error defined as the deviation between a measurement and its true noise-free value. As one can see, data reconciliation improves the obtained accuracy. Figure 2: Accuracy of the measurements – Empirical cumulative density of the RMSE before and after data reconciliation. 3.3 Parameter estimation Both kinetic rate law parameters are estimated simultaneously with both the unreconciled and reconciled measurements and for each simulated experiment separately. To this end, the parameter estimates are adjusted so that the simulated concentrations are as close as possible to the (unreconciled or reconciled) measurements in the least-squares sense. The results of this can be seen in Figure 3. Individual parameter estimates are shown for the first 250 experiments. The results of the complete Monte Carlo simulation are summarized by the mean parameter vector and the variance-covariance matrix computed from all parameter estimates. Figure 3 shows the 99% confidence ellipsoids according to an assumed multivariate normal distribution for the parameter estimates. Most importantly, one can see that the application of data reconciliation leads to a shift of the parameter estimates away from their ground truth values. In contrast, fitting the model to the unreconciled data directly does not induce such an effect and delivers parameters that are practically unbiased, i.e. their average is very close to the true parameter values. Figure 3: Accuracy of the parameter estimates – Blue circles: Parameter estimates with raw data; Blue dashed lines: mean and 99% confidence region for the parameter estimates with raw data; Red crosses: Parameter estimates obtained with reconciled data; Red full lines: mean and 99% confidence region for the parameter estimates obtained with reconciled data. 4. Conclusions Data reconciliation with inequality constraints has been advocated as a generally applicable method to improve the accuracy of experimental data. In this study, it is shown with a simple simulation study that improved accuracy can come at a price when using the reconciled data for their ultimate purpose. Indeed, the parameter estimation study show that data reconciliation induces a biasing effect during parameter estimation. This is explained by the fact that (i) the reconciled data are distributed according to truncated multivariate normal distribution and (ii) the least-squares parameter estimation procedure assumes a multivariate normal distribution. So far, no data reconciliation method has been proposed that automatically accounts for this discrepancy. This, in part, explains why using the unreconciled data during parameter estimations leads to the best parameter estimates. References Bhatt N, Kerimoglu N, Amrhein M, Marquardt W, Bonvin D. Chemical Engineering Science. 2012;83:24-38. Crowe C M. Journal of Process Control. 1996;6:89-98. Derlon N, Thürlimann C M, Dürrenmatt D J, Villez K. Water Research. 2017;114:327-337. Masic A, Srinivasan S, Billeter J, Bonvin D, Villez K. Computers & Chemical Engineering. 2017;99:96-105. Narasimhan S, Harikumar P. Computers & Chemical Engineering. 1993;17:1115-1120. Narasimhan S, Jordache C. Data reconciliation and gross error detection: An intelligent use of process data Gulf Professional Publishing. 1999. Noorman H J, Romein B, Luyben K Ch A M, Heijnen J J. Biotechnology and Bioengineering. 1996;49:364-376. Romagnoli J A, Sanchez M C. Data processing and reconciliation for chemical process operations (Vol. 2). Academic Press 1999. Srinivasan S, Billeter J, Narasimhan S, Bonvin D. Computers & Chemical Engineering. 2017;101:44-58. Tamhane A C, Mah R S. Technometrics. 1985;27:409-422. Vachhani P, Rengaswamy R, Gangwal V, Narasimhan S. AIChE Journal. 2005;51:946-959. Vachhani P, Narasimhan S, Rengaswamy R. Journal of Process Control. 2006;16:1075-1086. Venkatasubramanian V, Rengaswamy R, Yin K, Kavuri S N. Computers & Chemical Engineering. 2003a;27:293-311. Venkatasubramanian V, Rengaswamy R, Kavuri S N, Yin K. Computers & Chemical Engineering. 2003b;27:327-346. Vertis C S, Oliveira N M C, Bernardo F P. Computer Aided Chemical Engineering. 2016;38:2121-2126. Veverka V V, Madron F. Material and energy balancing in the process industries: From microscopic balances to large plants (Vol. 7). Elsevier 1997. Villez K, Venkatasubramanian V, Rengaswamy R. Computers & Chemical Engineering. 2013;58:116-134.",
+    "presenting_author": "Kris Villez | Eawag, Dübendorf, Switzerland",
+    "authors": [
+      "Kris Villez | Eawag, Dübendorf, Switzerland"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kris Villez",
+        "affiliation": "Eawag, Dübendorf, Switzerland",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "625i",
+    "sortable_time": "2017-11-01_17:31:00_17:48:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/487195"
+  }
+]

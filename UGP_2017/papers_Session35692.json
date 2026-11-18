@@ -1,0 +1,378 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/491768",
+    "paper_endpoint": "Paper/491768",
+    "paper_id": "491768",
+    "topic": "Nonlinear Distributed Model Predictive Control of Gas Sweetening Processes",
+    "title": "Nonlinear Distributed Model Predictive Control of Gas Sweetening Processes",
+    "date_time": "2017-10-30_12:30:00_15:00:00",
+    "session_id": "35692",
+    "session_title": "Process Control Applications",
+    "session_number": "170",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Gas sweetening is one of the key processes in the production train of liquefied natural gas and in the post-combustion flue gas treatment, where acid gases like CO 2 and H 2 S are removed through selective absorption in solvents (e.g., diethanolamine, potassium carbonate, etc.) to reduce their release into the environment [1, 2]. A typical gas sweetening plant comprises single or multi-stage absorber columns for the absorption of acid gases into the solvent, and stripper units to regenerate the spent solvent for recycle. Material recycles and heat integration in the plant are essential for minimization of energy and utility waste. Many efforts have been made to design, model and optimize the gas sweetening plants, but fewer research efforts have been dedicated to controlling the process. Single stage absorption-regeneration has been widely studied from the control viewpoint, e.g. control under feed flow rate fluctuations [3], decentralized control of the absorber and stripper column under disturbances [4, 5], self-optimizing control for determining the control configuration [6], and single-input-single-output PID control [7, 8]. In these studies, the interaction effects due to integration between process units have not been considered [9]. These become important in the context of transient operation of such plants. In addition, the gas sweetening plants are frequently subject to disturbances in the form of fluctuations in the mass flow rate of the acid gas or the acid content of the feed. These disturbances can propagate through the integrated plant, making its control challenging. Motivated by these, this work addresses the nonlinear optimization-based control of such plants. The optimization-based control of gas sweetening process units and their interconnections, which can be described by a set of algebraic and differential equations (ODEs and PDEs), requires solving a large-scale constrained nonlinear dynamic optimization in real-time [10], which is computationally expensive. In this work, we implement a distributed model predictive control (DMPC) architecture comprising local controllers with some level of cooperation and communication [11, 12]. A prerequisite for the application of such a strategy is the decomposition of the large-scale system into the corresponding subsystems. To this end, we adopt a recently developed framework that determines optimal decompositions based on community detection methods [13-15]. The resulting decompositions maximize the modularity of the corresponding subsystems, thereby minimizing the interactions among them. Specifically we implement an iterative DMPC architecture to address the output regulation problem. The sweetening process consists of two absorbers, two regenerator columns, and two heat exchangers which are tightly integrated. The optimal decomposition separates the first-stage absorption and regeneration columns from those in the second stage, recommending a distributed control structure of two local controllers which can communicate over the network. The local controllers are developed based on the corresponding ODE systems and coarse discretizations of the PDEs describing the absorber/stripper columns. The closed-loop performance and the average computation time are evaluated using the detailed process model implemented in gPROMS. We additionally compare the results with those of centralized and fully decentralized MPC synthesis. [1] A. Bedelbayev, T. Greer, B. Lie, Model based control of absorption tower for CO 2 capturing, Proceedings, 49th International Conference of Scandinavian Simulation Society (SIMS 2008), October 7th-8th 2008, Oslo University College, Oslo, Norway. ISBN-13: 978-82-579-4632-6, 2008. [2] M. Abu-Zahra, J. Niederer, P. Feron, G. Versteeg, CO 2 capture from power plants Part II: A parametric study of the economical performance based on mono-ethanolamine, International Journal of Greenhouse Gas Control, 1, 135–142, 2007. [3] A. Lawal, M. Wang, P. Stephenson, G. Koumpouras, H. Yeung, Dynamic modelling and analysis of post-combustion CO 2 chemical absorption process for coal-fired power plants, Fuel , 89(10), 2791–2801, 2010. [4] S. Ziaii, G. Rochelle, T. Edgar, Dynamic modeling to minimize energy use for CO 2 capture in power plants by aqueous monoethanolamine, Industrial & Engineering Chemistry Research, 48 (13), 6105–6111, 2009. [5] H. Kvamsdal, J. Jakobsen, K. Hoff, Dynamic modeling and simulation of a CO 2 absorber column for post-combustion CO2 capture, Chemical Engineering Process, 48 (1), 135–144, 2009. [6] M. Schach, R. Schneider, H. Schramm and J. Repke, Control structure design for CO 2 absorption processes with large operating ranges, Energy Technology, 1, 233 – 244, 2013. [7] C. Biliyoka, A. Lawal, M. Wanga, F. Seibert, Dynamic modelling, validation and analysis of post-combustion chemical absorption CO 2 capture plant, International Journal of Greenhouse Gas Control, 9, 428–445, 2012. [8] Y. Lin, T. Pan, D. Wong, S. Jang, Y. Chi, C. Yeh, Plantwide control of CO 2 capture by absorption and stripping using monoethanolamine solution, Industrial & Engineering Chemistry Research, 50, 1338 – 1345, 2011. [9] M. Wang, A. Lawal, P. Stephenson, J. Sidders, C. Ramshawa, Post-combustion CO 2 capture with chemical absorption: A state-of-the-art review, Chemical Engineering Research and Design, 89, 1609–1624, 2011. [10] R. Lopez-Negrete, F.J. Damato, L.T. Biegler, and A. Kumar. Fast nonlinear model predictive control: Formulation and industrial process applications, Computers & Chemical Engineering, 51, 55–64, 2013. [11] D.Q. Mayne, Model predictive control: Recent developments and future promise, Automatica, 50(12), 2967–2986, 2014. [12] P.D. Christofides, R. Scattolini, D. Munoz de la Pena, and J. Liu. Distributed model predictive control: A tutorial review and future research directions, Computers & Chemical Engineering, 51, 21–41, 2013. [13] S. Heo and P. Daoutidis. Control-relevant decomposition of process networks via optimization-based hierarchical clustering, AIChE Journal, 62(9), 3177–3188, 2016. [14] S. Heo, W.A. Marvin, and P. Daoutidis. Automated synthesis of control configurations for process networks based on structural coupling, Chemical Engineering Science, 136, 76–87, 2015. [15] M. Moharir, L. Kang, A. Almansoori, and P. Daoutidis. Control relevant network decomposition of distributed parameter system networks, Computers & Chemical Engineering, 2017, submitted.",
+    "presenting_author": "Davood Babaei Pourkargar | University of Minnesota, Twin Cities, Minneapolis, MN",
+    "authors": [
+      "Davood Babaei Pourkargar | University of Minnesota, Twin Cities, Minneapolis, MN",
+      "Manjiri Moharir | University of Minnesota, Minneapolis, MN",
+      "Wentao Tang | University of Minnesota, Twin Cities, Minneapolis, MN",
+      "Ali Almansoori | The Petroleum Institute, Abu Dhabi, United Arab Emirates",
+      "Prodromos Daoutidis | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Davood Babaei Pourkargar",
+        "affiliation": "University of Minnesota, Twin Cities, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Manjiri Moharir",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      },
+      {
+        "name": "Wentao Tang",
+        "affiliation": "University of Minnesota, Twin Cities, Minneapolis, MN",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Almansoori",
+        "affiliation": "The Petroleum Institute, Abu Dhabi, United Arab Emirates",
+        "designation": "Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "170a",
+    "sortable_time": "2017-10-30_12:30:00_12:49:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/491768"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/493356",
+    "paper_endpoint": "Paper/493356",
+    "paper_id": "493356",
+    "topic": "Dynamic Modeling and Explicit Model Predictive Control of Absorption of Hydrogen in a LaNi 5 Bed",
+    "title": "Dynamic Modeling and Explicit Model Predictive Control of Absorption of Hydrogen in a LaNi 5 Bed",
+    "date_time": "2017-10-30_12:30:00_15:00:00",
+    "session_id": "35692",
+    "session_title": "Process Control Applications",
+    "session_number": "170",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Hydrogen is an important energy carrier that is pivotal to the evolution of the energy sector. Compounds containing hydrogen absorption energy from the environment to produce hydrogen gas, which has higher gravimetric energy density. Hydrogen is stored in solids by adsorption - where hydrogen physically or chemically adheres to the surface of a material with high affinity and surface area (ex. Nanomaterial like carbon nanotubes) or by absorption – when hydrogen percolates into the lattice of a material consequently forming a different material (ex. Metal hydrides). Technologies have been developed for storing compressed hydrogen in specialized cylinder at high pressure (~ 10,000 psi) onboard a light duty fuel Cell Vehicle (FCV). However, Metal Hydride (MH) hydrogen storage remain an inherently safer storage medium for onboard storage. Two of the performance target areas listed by DOE [1] is the cooling capacity and thermal management of the MH. The temperature surge and plummet during the hydriding and dehydriding processe respectively are inherent properties of the MH. Design and control are basic considerations for performance improvement of the operation of MH systems. Here we design an explicit model predictive controller for the absorption of hydrogen into the MH bed using the PAROC framework. The schematic of the proposed framework can be found in [2]. First, we present a detailed high-fidelity dynamic model of the processes based on first principles. Several studies have investigated the various aspect of metal hydride processes [3-7]. Optimization and controls can play an important role in the thermal management of the MH process[7]. Several studies have appeared in the open literature describing the optimization and design but only a few studies address the control of adsorption and desorption processes of the metal hydride. Panos et al [8] presented a robust explicit model predictive control of hydrogen storage in MH tanks focusing on the desorption of hydrogen. The high-fidelity dynamic model described in this work is based on first principles according to [7, 9] and accounts for the spatial variations of some thermodynamic properties. The model makes the following assumptions; the ideal gas law holds in the gas phase, the solid and fluid temperatures are essentially equal, axial and radial dispersion are included in the mass balances for the interstitial fluid, the axial and radial pressure drops in the bed depend linearly on the superficial velocity through Darcy's law. The model is developed in gPROMS software and it is used to simulate the absorption process. It is subsequently validated with experimental data. An optimization procedure is implemented on the model to determine optimal operation condition and results of the optimization will be used to determine appropriate constraints for the control design. The optimization strategy minimizes the storing time and the output pressure while satisfying, a number of operating and safety constraints. In the second part of this work, we develop a reduced order approximate model suitable for multi-parametric model predictive control (mp-MPC) based on prior analysis. The reduced order state-space (SS) model (usually linear) is developed using model identification. The SS model is developed such that it can approximate the high fidelity model. The main contribution is the design of a multi-parametric/explicit model predictive controller to regulate the absorption of hydrogen in the LaNi 5 bed. Unlike the MPC the mp-MPC[10] MPC avoids the online optimization procedure. The optimization is done offline to determine the control action at every state obtained while simultaneously accounting for physical and operational constraints. For system with faster dynamics (like the MH), mp-MPC is ideal. The explicit controller is designed in MATLAB and it is linked to gPROMS through gO:MATLAB. Reference 1. Satyapal, S., J. Petrovic, C. Read, G. Thomas, and G. Ordaz, The U.S. Department of Energy's National Hydrogen Storage Project: Progress towards meeting hydrogen-powered vehicle requirements. Catalysis Today, 2007. 120 (3–4): p. 246-256. 2. Pistikopoulos, E.N., N.A. Diangelakis, R. Oberdieck, M.M. Papathanasiou, I. Nascu, and M. Sun, PAROC—An integrated framework and software platform for the optimisation and advanced model-based control of process systems. Chemical Engineering Science, 2015. 136 : p. 115-138. 3. Silin, N. and M. Melnichuk, A case study of a hydride container performance applying non dimensional parameters. International Journal of Hydrogen Energy, 2014. 39 (36): p. 21060-21067. 4. Choi, H. and A.F. Mills, Heat and mass transfer in metal hydride beds for heat pump applications. International Journal of Heat and Mass Transfer, 1990. 33 (6): p. 1281-1288. 5. Askri, F., A. Jemni, and S. Ben Nasrallah, Study of two-dimensional and dynamic heat and mass transfer in a metal–hydrogen reactor. International Journal of Hydrogen Energy, 2003. 28 (5): p. 537-557. 6. Demircan, A., M. Demiralp, Y. Kaplan, M.D. Mat, and T.N. Veziroglu, Experimental and theoretical analysis of hydrogen absorption in – reactors. International Journal of Hydrogen Energy, 2005. 30 (13–14): p. 1437-1446. 7. Kikkinides, E.S., M.C. Georgiadis, and A.K. Stubos, On the optimization of hydrogen storage in metal hydride beds. International Journal of Hydrogen Energy, 2006. 31 (6): p. 737-751. 8. Panos, C., K.I. Kouramas, M.C. Georgiadis, and E.N. Pistikopoulos, Dynamic optimization and robust explicit model predictive control of hydrogen storage tank. Computers & Chemical Engineering, 2010. 34 (9): p. 1341-1347. 9. Jemni, A. and S.B. Nasrallah, Study of two-dimensional heat and mass transfer during absorption in a metal-hydrogen reactor. International Journal of Hydrogen Energy, 1995. 20 (1): p. 43-52. 10. Pistikopoulos, E.N., V. Dua, N.A. Bozinis, A. Bemporad, and M. Morari, On-line optimization via off-line parametric optimization tools. Computers & Chemical Engineering, 2002. 26 (2): p. 175-185.",
+    "presenting_author": "Gerald S. Ogumerem | Texas A&M University, College Station, TX",
+    "authors": [
+      "Gerald S. Ogumerem | Texas A&M University, College Station, TX",
+      "Efstratios Pistikopoulos | Texas A&M University, College Station, TX",
+      "Iordanis Kesisoglou | Texas A&M University"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gerald S. Ogumerem",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Efstratios Pistikopoulos",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Iordanis Kesisoglou",
+        "affiliation": "Texas A&M University",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "170b",
+    "sortable_time": "2017-10-30_12:49:00_13:08:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/493356"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/495141",
+    "paper_endpoint": "Paper/495141",
+    "paper_id": "495141",
+    "topic": "Effective Dose Delivery in Plasma Medicine Using a Robust MPC Approach for Mixed Stochastic and Deterministic Uncertainty",
+    "title": "Effective Dose Delivery in Plasma Medicine Using a Robust MPC Approach for Mixed Stochastic and Deterministic Uncertainty",
+    "date_time": "2017-10-30_12:30:00_15:00:00",
+    "session_id": "35692",
+    "session_title": "Process Control Applications",
+    "session_number": "170",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Cold atmospheric plasma (CAP) is a weakly ionized gas generated in ambient conditions via application of modulated electric field to gases such as helium, argon, and air. CAPs have recently gained increasing attention for treatment of heat and pressure sensitive (bio)materials in surface etching/functionalization, environmental, and biomedical applications [1,2]. An attractive feature of CAPs is that they are non-thermal plasma discharges, that is, the electrons have a high temperature (∼10,000 K) while the temperature of the background gas remains near to room temperature. The high-temperature, energetic electrons in a CAP discharge can generate reactive chemical species through a plethora of excitation and chemical reactions with the background gas and species diffusing in from the ambient air. The reactive chemical species, along with other plasma effects such as UV photons, thermal energy, and electric fields have been postulated to induce therapeutic effects such as tissue disinfection, healing of chronic wounds, shrinkage of cancerous tumors, and regulation of multidrug resistant bacteria [2]. The notion of plasma medicine generally relies on evoking a desired response in a living system through the delivery of a multitude of plasma effects. The highly nonlinear, spatially distributed dynamics of CAP discharges, the cumulative (i.e., “non-retractable”) response of a living system to plasma effects, and the development of instabilities and plasma mode transitions to arc or spark due to variations in plasma properties are some of the key challenges to safe, consistent, and effective dose delivery in plasma medicine. Recently, we have demonstrated the promise of model predictive control (MPC) for effective dose delivery in atmospheric pressure plasma jets (APPJs) [3,4]. APPJs have been identified as a promising class of CAP discharges for plasma medicine due to their operational flexibility and versatile discharge chemistry [2]. A key challenge in applying MPC to APPJs arises from uncertain knowledge of the plasma behavior, which is intrinsically stochastic. Incomplete representations of the complex plasma dynamics can lead to inadequate system models for the use in MPC, possibly affecting the MPC performance for dose delivery. In addition, unmeasured system disturbances, which are typically ubiquitous in APPJ applications, cannot be systematically handled in the standard MPC framework, possibly compromising the safety, consistency, and efficacy of the plasma dose delivery. In this work, we will first present a robust MPC method for offset-free tracking of piece-wise constant references in the presence of bounded deterministic and stochastic uncertainty [5]. The deterministic uncertainty source accounts for the unknown structural/parametric plant-model mismatch (i.e., incomplete knowledge of the plasma dynamics), whereas the stochastic uncertainty source represents exogenous system disturbances (e.g., random variations in properties of the target substrate in an APPJ application). Concepts from robust tube-based and stochastic tube-based MPC [6,7] will be used to derive a tractable MPC formulation, with computational complexity comparable to that of nominal MPC. We will then adopt the proposed robust MPC method for plasma dose delivery in a kilo-hertz APPJ in helium, which is a prototypical medical therapy device. The performance of the robust MPC method for consistent and effective dose delivery in the presence of plant-model mismatch and disturbances will be demonstrated using extensive simulation results performed on a nonlinear APPJ simulator developed in COMSOL. References [1] P. Chu, J. Chen, L. Wang, and N. Huang, Plasma-surface modification of biomaterials, Materials Science and Engineering: Reports , 36,143-206, 2002. [2] M. Laroussi, M. Kong, G. Morfill, and W. Stolz, Plasma Medicine. New York, NY: Cambridge University Press, 2012. [3] D. Gidon, D.B. Graves, and A. Mesbah, Model predictive control of thermal effects of an atmospheric pressure plasma jet for biomedical applications, In Proc. ACC , 4889-4894, 2016. [4] D. Gidon, D.B. Graves, and A. Mesbah, Effective dose delivery in atmospheric pressure plasma jets for plasma medicine: A model predictive control approach, Plasma Sources Science and Technology , Under review, 2017. [5] J.A. Paulson, L. Xie, and A. Mesbah, Robust offset-free MPC of systems with mixed stochastic and deterministic uncertainty. In Proceedings of the IFAC World Congress , 2017, Toulouse. [6] D.Q. Mayne, M.M. Seron, and S.V. Rakovic, Robust MPC of constrained linear systems with bounded disturbances. Automatica , 41, 219–224, 2005. [7] B. Kouvaritakis, M. Cannon, S.V. Rakovic, and Q. Cheng, Explicit use of probabilistic distributions in linear predictive control. Automatica , 46, 1719–1724, 2010.",
+    "presenting_author": "Ali Mesbah | University of California, Berkeley",
+    "authors": [
+      "Ali Mesbah | University of California, Berkeley",
+      "Joel Paulson | University of California, Berkeley",
+      "Dogan Gidon | University of California - Berkeley",
+      "David B. Graves | University of California - Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Dogan Gidon",
+        "affiliation": "University of California - Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "David B. Graves",
+        "affiliation": "University of California - Berkeley",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "170c",
+    "sortable_time": "2017-10-30_13:08:00_13:27:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/495141"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/495172",
+    "paper_endpoint": "Paper/495172",
+    "paper_id": "495172",
+    "topic": "A Model Reduction and Decomposition Approach for Economic MPC of Wastewater Treatment Plants",
+    "title": "A Model Reduction and Decomposition Approach for Economic MPC of Wastewater Treatment Plants",
+    "date_time": "2017-10-30_12:30:00_15:00:00",
+    "session_id": "35692",
+    "session_title": "Process Control Applications",
+    "session_number": "170",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "To minimize the environmental impacts of wastewater and to recycle the water, complex wastewater treatment plants (WWTPs) have been widely used for the treatment of wastewater. A typical WWTP is a large-scale nonlinear process comprised of several interconnected biological reactors and a settler. All the components involved in a WWTP are required to be well monitored and regulated to meet the strict environmental regulations. On the other hand, significant variability of the inlet flow rates to WWTPs and unexpectable perturbations to the wastewater composition lead to complex dynamics of the plant models. Therefore, great challenges are posed to the design of advanced control/monitoring schemes for WWTPs. In the literature, several control approaches have been proposed for WWTPs. One commonly adopted solution is to design a proportional-integral (PI) regulator. Another regulating approach is based on the combination of feedforward control and PI control. Despite the simple structures, the above approaches may not handle system constraints and provide optimal control actions. To address these shortcomings, more and more research attention has been given to model predictive control (MPC) algorithms during the last decade. However, the computational complexity of these algorithms is non-negligible. In our previous work [1], an economic MPC algorithm was developed for the control of WWTPs. It was demonstrated that economic MPC can improve the effluent quality while reducing the operational costs compared with the classical set-point tracking MPC. While economic MPC has the potential to improve the control of WWTPs, one critical issue is its high computational complexity. Note that in the implementation of set-point tracking MPC, the computational issue may be overcome by using identified linear input-output models around the set-point. However, these input-output models may not be suitable for economic MPC if the objective function in the economic MPC is a function of the entire process state (instead of the outputs) and the process exhibits time-varying (instead of steady-state) operation like in WWTPs. In this work, we present an objective-oriented model reduction and subsystem decomposition approach for the control of WWTPs. A benchmark simulation model for a WWTP of five activated sludge reactors and a secondary reactor is used. In the proposed approach, the nonlinear model is reduced and simplified through a few steps. First, the model is reduced by considering the time-scale multiplicity in the process dynamics; second, the dynamic sensitivities of the objective function (effluent quality and operational cost) with respect to all the process states are evaluated along typical operating trajectories and the most important states are determined according to the dynamic sensitivities; third, a hybrid model is developed based on linearizing those not so important states around a steady-state and piecewise linearizing those important states (with high dynamic sensitivities). Based on the simplified hybrid model, we also illustrate how recent results on input-output pairing [2] and subsystem decomposition [3] may be applied to the WWTP. Simulation results are also provided to demonstrate the effectiveness of the proposed approach. [1] J. Zeng and J. Liu. Economic model predictive control of wastewater treatment processes. Industrial & Engineering Chemistry Research, 54:5710-5721, 2015. [2] X. Yin and J. Liu. Input-output paring accounting for both structure and strength in coupling. AIChE Journal, 63:1226-1235, 2017. [3] X. Yin, K. Arulmaran, J. Liu and J. Zeng. Subsystem decomposition and configuration for distributed state estimation. AIChE Journal, 62:1995-2003, 2016.",
+    "presenting_author": "Xunyuan Yin | University of Alberta, Edmonton, Canada",
+    "authors": [
+      "An Zhang | University of Alberta, Edmonton, Canada",
+      "Xunyuan Yin | University of Alberta, Edmonton, Canada",
+      "Jing Zeng | Shenyang University of Chemical Technology, China",
+      "Jinfeng Liu | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "An Zhang",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Xunyuan Yin",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jing Zeng",
+        "affiliation": "Shenyang University of Chemical Technology, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Jinfeng Liu",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "170d",
+    "sortable_time": "2017-10-30_13:27:00_13:46:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/495172"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/499498",
+    "paper_endpoint": "Paper/499498",
+    "paper_id": "499498",
+    "topic": "Real-Time Energy Management for Electric Arc Furnace Operation",
+    "title": "Real-Time Energy Management for Electric Arc Furnace Operation",
+    "date_time": "2017-10-30_12:30:00_15:00:00",
+    "session_id": "35692",
+    "session_title": "Process Control Applications",
+    "session_number": "170",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Electric arc furnaces (EAFs) are extensively employed by steel production companies to produce steel from scrap metal. The energy intensive batch operation involves melting of the scrap using electrical and chemical energy, and modifying its chemistry. Electrical energy is added via electrodes, while combustion reactions provide chemical energy. The melting continues and a flat bath of molten metal is achieved. Oxygen lancing leads to the formation of metal oxides due to oxidation, which floats on the top as slag. The slag chemistry is altered by flux additions (carbon, lime and dolomite), carbon and oxygen lancing. The amount and timing of input additions are determined mainly by the operators. Since EAFs are operated under very harsh conditions with limited measurements available during the heat, process automation is a challenging task. The composition of offgas is the only set of measurements generally available at a regular frequency. With electricity contributing approximately 60% of the energy requirement [1], external variations in electricity price needs to be considered for optimal energy usage. An energy-efficient control strategy is envisaged to generate significant savings due to an optimal use of electrical power, natural gas, oxygen, carbon and the fluxes in response to electricity price changes. Control strategies have been developed in the past for the EAF electrode system [2], with linear model predictive control (MPC) for the offgas system [3]. The use of a first-principles model for nonlinear MPC assuming full state feedback was reported in [4]. Economic model predictive control, on the other hand, has become popular due to its straightforward handling of an economic target. The traditional set-point tracking and input move suppression objectives are either replaced by, or used in conjunction with, an economic objective [5, 6]. A time-varying stage cost in EMPC [7] is suitable for incorporating a changing electricity price profile. EMPC for continuous processes has been extended to include demand response (DR) [8]. Literature in which DR is considered for batch operation of EAFs is sparse. Real-time control applications require state estimation to work in tandem with MPC. Multi-rate moving horizon estimation (MHE) has been used for EAFs to reconstruct the states using both the fast and slow measurements [9]. A decision support tool for EAF operators based on a combined application of shrinking horizon dynamic optimization and multi-rate MHE was proposed in [10]. The study is extended here to employ a coupled EMPC-MHE implementation for EAFs to utilize time varying electricity cost for optimal control. In this work, we aim to develop an EAF control strategy that effectively reduces the energy costs in real-time while exploiting the electricity price profile. A shrinking horizon EMPC is coupled with a multi-rate MHE to develop an integrated decision-making framework. The EMPC objective function comprises time-varying cost coefficients to handle a volatile wholesale electricity market. The control structure employs a modified first-principles differential-algebraic equation (DAE) model proposed in [11, 12]. The model divides the furnace into four zones (solid scrap, molten metal, slag-metal, gas) with mass transfer limitations across the zone interfaces. Chemical equilibrium is considered for the slag-metal and the gas zone through an embedded Gibbs free energy minimization. The complex DAE model is discretized and used within a simultaneous solution framework for solving the dynamic optimization problems. Online solve times of EMPC-MHE problems are critical for a real-time implementation of the control strategy. We introduce a novel initialization scheme to obtain fast solutions of EMPC-MHE optimization problems. To evaluate the proposed strategy, we conduct case studies to investigate the performance of EMPC under various Day Ahead Market conditions, in which the electricity price changes every hour. The case studies are chosen based on a detailed analysis of actual and forecasted 2016-2017 prices for the Ontario (Canada) wholesale market. The EMPC is shown to balance the electrical and chemical energy consumption in an optimal way to generate cost savings. Moreover, the peak electricity demand during the batch operation is reduced when a time-varying electricity price profile is used. The multi-rate MHE demonstrates a strong tracking ability to support the EMPC. Finally, the computational results show a significant reduction in EMPC-MHE solve times when the proposed initialization scheme is used. In summary, an EMPC-MHE based strategy is presented for curtailing the energy costs in real-time. Current work includes formulations for emission reduction through constraints or a carbon credit-based approach. As a future work, we intend to study stochastic formulations for differentiating forecasts from actual prices. Additionally, the strategy will be tested and compared for 15 minute and 5 minute electricity markets. References [1] R. J. Fruehan, The Making, Shaping, and Treating of Steel: Ironmaking volume, vol. 2, AISE Steel Foundation, 1999. [2] B. Boulet, G. Lalli and M. Ajersch, \"Modeling and control of an electric arc furnace,\" in American Control Conference (ACC) , 2003. [3] J. G. Bekker, I. K. Craig and P. C. Pistorius, \"Model predictive control of an electric arc furnace off-gas process,\" Control Engineering Practice, vol. 8, no. 4, pp. 445-455, 2000. [4] R. D. M. MacRosty and C. L. E. Swartz, \"Nonlinear predictive control of an electric arc furnace,\" IFAC Proceedings Volumes, vol. 40, no. 11, pp. 285-290, 2007. [5] R. Amrit, J. B. Rawlings and D. Angeli, \"Economic optimization using model predictive control with a terminal cost,\" Annual Reviews in Control, vol. 35, no. 2, pp. 178-186, 2011. [6] M. Ellis, H. Durand and P. D. Christofides, \"A tutorial review of economic model predictive control methods,\" Journal of Process Control, vol. 24, no. 8, pp. 1156-1178, 2014. [7] D. Angeli, A. Casavola and F. Tedesco, \"Theoretical advances on Economic Model Predictive Control with time-varying costs,\" Annual Reviews in Control, vol. 41, pp. 218-224, 2016. [8] J. Feng, A. Brown, D. O'Brien and D. J. Chmielewski, \"Smart grid coordination of a chemical processing plant,\" Chemical Engineering Science, vol. 136, pp. 168-176, 2015. [9] S. Shyamal and C. L. E. Swartz, \"A Multi-rate Moving Horizon Estimation Framework for Electric Arc Furnace Operation,\" IFAC-PapersOnLine, vol. 49, no. 7, pp. 1175-1180, 2016. [10] S. Shyamal and C. L. E. Swartz, \"Optimization-based Online Decision Support Tool for Electric Arc Furnace Operation,\" in IFAC World Congress , Toulouse, France, 2017 (accepted). [11] R. D. MacRosty and C. L. E. Swartz, \"Dynamic modeling of an industrial electric arc furnace,\" Ind.Eng.Chem.Res., vol. 44, pp. 8067-8083, 2005. [12] Y. Ghobara, \"Modeling, Optimization and Estimation in Electric Arc Furnace,\" Master's thesis, no. McMaster University, 2013.",
+    "presenting_author": "Smriti Shyamal | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Smriti Shyamal | McMaster University, Hamilton, Canada",
+      "Christopher Swartz | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Smriti Shyamal",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christopher Swartz",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "170e",
+    "sortable_time": "2017-10-30_13:46:00_14:05:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/499498"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/498219",
+    "paper_endpoint": "Paper/498219",
+    "paper_id": "498219",
+    "topic": "Multi Variable Model Predictive Control to Improve Oil Production for Steam-Assisted Gravity Drainage (SAGD)",
+    "title": "Multi Variable Model Predictive Control to Improve Oil Production for Steam-Assisted Gravity Drainage (SAGD)",
+    "date_time": "2017-10-30_12:30:00_15:00:00",
+    "session_id": "35692",
+    "session_title": "Process Control Applications",
+    "session_number": "170",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Steam-Assisted Gravity Drainage (SAGD) is a major thermal recovery technique in Western Canada. It involves injection of superheated steam through an upper injection well to mobilize and drain the highly viscous bitumen to form a liquid pool above a bottom producer well before its subsequent production. Existing research has shown that controlling the temperature difference between the injected steam and the produced oil-water emulsion, which is also called the subcool temperature difference, can regulate the height of the liquid pool such that it is favorable for production. This technique, called steam trap control, prevents the production of live steam and also protects the formation from fracturing, by keeping the steam injection rates within allowable limits. However, major drawbacks of this technique are the absence of a method to optimally control the production of the fluids from the liquid pool and the lack of guidelines to determine the ideal subcool temperature difference setpoint. In this study, we address these issues through the development of a multi input multi output (MIMO) model predictive controller (MPC) that incorporates adaptive oil rate and steam trap controls. The addition of the adaptive oil rate control helps improve the oil production rate from the liquid pool and drainage rate of oil into the liquid pool. Furthermore, the steam trap control setpoint was turned into an optimization variable, such that the optimizer determined the optimal subcool setpoint to satisfy the adaptive oil rate constraints. It should be noted that oil rate control by itself leads to formation damage due to high injection rates of steam and live steam production due to high production rates of the oil-water emulsion from the liquid pool. Therefore, it was used in conjunction with steam trap control, which not only reduces the live steam production, but also protects the formation from fracturing. The novel MIMO control strategy was compared with a multi input single output (MISO) MPC steam trap control strategy. The real time control study for both strategies were enabled using a bidirectional communication that was established between CMG STARS (virtual oil reservoir) and MATLAB (onsite controller) software. The results show a 171% improvement of oil recovery for the novel MIMO controller as compared to the MISO controller over a period of 6 simulated years. Moreover, there was a 35% improvement in the cumulative steam-to-oil ratio (a performance metric for SAGD) for the MIMO controller over the MISO controller.",
+    "presenting_author": "Sagar N Purkayastha | University of Calgary, Canada",
+    "authors": [
+      "Sagar N Purkayastha | University of Calgary, Canada",
+      "Ian D. Gates | University of Calgary, Canada",
+      "Milana Trifkovic | University of Calgary, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sagar N Purkayastha",
+        "affiliation": "University of Calgary, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ian D. Gates",
+        "affiliation": "University of Calgary, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Milana Trifkovic",
+        "affiliation": "University of Calgary, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "170f",
+    "sortable_time": "2017-10-30_14:05:00_14:24:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/498219"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/494399",
+    "paper_endpoint": "Paper/494399",
+    "paper_id": "494399",
+    "topic": "Real-Time Adaptive Model Predictive Control Framework of Plasma Process",
+    "title": "Real-Time Adaptive Model Predictive Control Framework of Plasma Process",
+    "date_time": "2017-10-30_12:30:00_15:00:00",
+    "session_id": "35692",
+    "session_title": "Process Control Applications",
+    "session_number": "170",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Plasma process is one of the most critical process in semiconductor manufacturing. Since it determines the dimension of entire processes, it has a decisive effect on the performance of devices. With the continually evolving process technologies that require high quality constraint, semiconductor industry has been imperatively considering real-time control over current run-to-run based control. They have been to use recipe that is terminology indicating optimal process inputs which produce maximal yields. The recipe is obtained from several experiments by trial-and-error and is applied to consecutive processes with run-to-run adjustment. However, even with this recipe , the process may not reproduce the desired results especially when the required dimension gets smaller. This is because the process is essentially driven by the plasma formed by the recipe and can be disturbed by external factors. Thus, it is necessary to implement a real-time cascade control to include the plasma as a control variable [1] and to reject the disturbance fast. The biggest obstacle to real-time control is the nature of the plasma. Plasma is generated by applying power at nearly vacuum pressure of 1.3 Pa (0.00001 bar). Hence this sparse system of multi-physics can be intrinsically affected even if there are small disturbances. The key considerations in controlling such systems are: the use of sensors that do not affect the system, the control of highly nonlinear system, and the way to dealt with inter- and intra- system variability. In this work, we used optical emission spectroscope (OES), since it is not only having no concern about invasiveness toward process, but also a default plasma diagnostic tool for every plasma etcher in production line. We calibrated it with Langmuir probe and calculated the core plasma variables such as electron density and electron temperature from the intensity data [2,3]. To cope with nonlinearities in system gain, the response surface was piecewise linearized and structured as a linear parameter varying (LPV) system [4,5]. The other system dynamic parameters related to time were identified through the design of experiment, since the dynamics is very fast nearly as the minimal sampling rate. Inter- and intra- system variability are known to be caused by the difference in equipment/recipes, discrete events between unit processes, and history of precedent processes. Due to the nature of the semi-batch process, the process is more likely to be exposed to these effects than other conventional processes. Therefore, deterioration of control performance coming from the model-plant-mismatch is inevitable. Even in the case of process drift, it is difficult to model it because the information is distributed over multiple nonlinear signals. Therefore, we utilized recurrent neural network (RNN) to track process state variables and drawn initial values for operating condition. Consequently, an adaptive model predictive control (AMPC) is constructed. The objective function was formulated with a mixed-integer quadratic programming (MIQP) since only integer inputs are applicable to the equipment as a practical restriction. The developed controller was implemented on the field equipment with 100ms of sampling rate and proved it can enhance the reproducibility of process results. This novel framework is expected to deal with the major challenges in real-time control of plasma systems. [1] Ringwood, J. V., Lynn, S., Bacelli, G., Ma, B., Ragnoli, E., & McLoone, S. (2010). Estimation and control in semiconductor etch: Practice and possibilities. IEEE Transactions on Semiconductor Manufacturing, 23(1), 87-98. [2] Boffard, J. B., Lin, C. C., & DeJoseph Jr., C. A. (2004). Application of excitation cross sections to optical plasma diagnostics. J. Phys. D: Appl. Phys. 37, R143-R161. [3] Zhu, X.-M., Pu, Y.-K., (2010). Optical emission spectroscopy in low-temperature plasmas containing argon and nitrogen: determination of the electron temperature and density by the line-ratio method. J. Phys. D: Appl. Phys. 43, 403001. [4] Keville, B., Zhang, Y., Gaman, C., Holohan, A. M., Daniels, S., & Turner, M. M. (2013). Real-time control of electron density in a capacitively coupled plasma. Journal of Vacuum Science & Technology A, 31(3), 031302. [5] White, A. P., Zhu, G., & Choi, J. (2013). Linear parameter-varying control for engineering applications. New York: Springer.",
+    "presenting_author": "Damdae Park | Seoul National University, Korea, Republic of (South)",
+    "authors": [
+      "Damdae Park | Seoul National University, Korea, Republic of (South)",
+      "Junmo Koo | Seoul National University, Korea, Republic of (South)",
+      "Solji Choi | Seoul National University, Korea, Republic of (South)",
+      "Sangwon Ryu | Seoul National University, Korea, Republic of (South)",
+      "Gon-Ho Kim | Seoul National University, Korea, Republic of (South)",
+      "Chonghun Han | Seoul National University, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Damdae Park",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Junmo Koo",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Solji Choi",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Sangwon Ryu",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Gon-Ho Kim",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Chonghun Han",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "170g",
+    "sortable_time": "2017-10-30_14:24:00_14:43:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/494399"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/502123",
+    "paper_endpoint": "Paper/502123",
+    "paper_id": "502123",
+    "topic": "Load-Following Control for a 10 MWe Supercritical CO 2 Recompression Brayton Power Cycle",
+    "title": "Load-Following Control for a 10 MWe Supercritical CO 2 Recompression Brayton Power Cycle",
+    "date_time": "2017-10-30_12:30:00_15:00:00",
+    "session_id": "35692",
+    "session_title": "Process Control Applications",
+    "session_number": "170",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Supercritical carbon dioxide (sCO 2 ) Brayton power cycles have recently gained attention as an attractive alternative to the more conventional Brayton and Rankine cycles. The high density of the sCO 2 working fluid allows for equipment with a more compact design and a power cycle with potentially higher thermal efficiencies and lower overall cost of electricity. Due to these advantages over traditional systems, the U.S. Department of Energy, under its Supercritical Transformational Electric Power Program, is currently in the process of building a nominal 10 MWe (net) sCO 2 Brayton cycle test facility to accelerate scale-up, development, and commercial deployment. In this work, a previously designed dynamic process model of a 10MWe indirect recuperated sCO 2 recompression Brayton cycle is used to develop traditional as well as advanced controllers for efficient load-following performance. Temperature control at various strategic locations is critical for achieving high efficiency in the sCO 2 cycle while ensuring stable operation during load-following. Critical locations where temperature must be controlled within a narrow window at the face of disturbances include: turbine, main compressor, main and bypass fluid mixing point, and the sCO 2 cooler. Temperature control at the turbine, main compressor, and mixing point is integral to efficient cycle operation, while the main compressor inlet temperature is also critical to avoid transition to the sub-critical phase. Since the main compressor inlet temperature remains very close to the critical point, only a narrow temperature margin is affordable to avoid phase transition. Since the cooling water temperature in the sCO 2 cooler at the main compressor inlet should not exceed certain value to avoid scale formation and the compressor surge must be avoided under all circumstances, controlling the main compressor inlet temperature becomes challenging. Furthermore, critical temperatures mentioned earlier are tightly coupled leading to a highly interacting system. Configurational changes along with novel control structures are developed to address this control problem. Performance of the control system is evaluated under nominal and multiple off-design scenarios under various load ramp rates. For the turbine inlet temperature control, two approaches are considered. The first approach uses inventory control, whereby CO 2 is removed from the closed cycle to maintain the turbine inlet temperature during cycle heat input disturbances. The second approach uses heat input adjustments (natural gas and/or air flow to an external combustor) to maintain this temperature. Studies on load following performance will also be presented when using the first control approach for variations in cycle heat input and the second control approach for fluctuations in inventory. For the main compressor inlet temperature control, configurational changes include recycling a portion of the cooling water from the outlet of the main compressor inlet cooler. The presentation will include critical analysis of trade-offs between systems efficiency and control system performance under the constraints of process operating window at the face of various load ramp rates.",
+    "presenting_author": "Jacob Albright | National Energy Technology Laboratory, Morgantown, WV",
+    "authors": [
+      "Jacob Albright | National Energy Technology Laboratory, Morgantown, WV",
+      "Eric A. Liese | National Energy Technology Laboratory, Morgantown, WV",
+      "Stephen Zitney | National Energy Technology Laboratory, U.S. Department of Energy, Morgantown, WV",
+      "Priyadarshi Mahapatra | National Energy Technology Laboratory, Pittsburgh, PA",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jacob Albright",
+        "affiliation": "National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Eric A. Liese",
+        "affiliation": "National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephen Zitney",
+        "affiliation": "National Energy Technology Laboratory, U.S. Department of Energy, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Priyadarshi Mahapatra",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "170h",
+    "sortable_time": "2017-10-30_14:43:00_15:02:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/502123"
+  }
+]

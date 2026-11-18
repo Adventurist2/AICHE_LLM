@@ -1,0 +1,294 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713059",
+    "paper_endpoint": "Paper/713059",
+    "paper_id": "713059",
+    "topic": "Infinite Horizon NMPC for Systems with a Cyclic Steady State",
+    "title": "Infinite Horizon NMPC for Systems with a Cyclic Steady State",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "58524",
+    "session_title": "10B: Advances in Process Control II",
+    "session_number": "594",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Fast non-linear solvers have enabled online implementation of advanced optimal control techniques such as nonlinear model predictive control (NMPC). An NMPC controller solves a non-linear dynamic optimization problem to determine the optimal control actions that drive the plant to optimal operation. Traditional NMPC has a finite control horizon length, mainly to limit the size of the optimization problem for faster online computation. On the other hand, the performance of the controller improves with a longer control horizon and therefore ideally, a control horizon of infinite length is desired. Infinite horizon NMPC has been introduced in the past through a time transformation in the final sampling time, which approximates the dynamics and the stage costs of an infinite horizon length. Würth and Marquardt [1] presented an infinite horizon NMPC formulation for open loop stable systems without a terminal constraint set. This was recently extended to infinite horizon NMPC for a system that has a steady state equality terminal constraint [2]. In this work we extend the infinite horizon NMPC to dynamic systems with a cyclic steady state, commonly found in periodic processes and scheduling operations. This talk also includes a rigorous stability analysis for the infinite horizon NMPC formulation for systems with cyclic steady states. We describe the implementation of the infinite horizon NMPC approach, presenting case study results obtained using PyomoDAE [3] and IPOPT. Here, we show that the optimization problem represented with an infinite horizon NMPC, has improved performance and better computational efficiency than with finite horizon NMPC. The efficacy of the approach is validated on two case studies - a Continuous Stirred Tank Reactor (CSTR) and a dynamic gas pipeline network with cyclic demands [4]. References [1] L. Würth and W. Marquardt, \"Infinite-Horizon Continuous-Time NMPC via Time Transformation,\" in IEEE Transactions on Automatic Control , vol. 59, no. 9, pp. 2543-2548, (2014) [2] S. Dinh, Y. Tong, Z.Y. Wei, O. Gerdes and L. T. Biegler, ``Nonlinear Model Predictive Control with an Infinite Horizon Approximation,\" submitted for publication (2025) [3] Nicholson, B., Siirola, J.D., Watson, JP. et al. pyomo.dae: a modeling and automatic discretization framework for optimization with differential and algebraic equations. Math. Prog. Comp. 10 , 187–223 (2018). [4] L. Ghilardi, S. Naik, E. Martelli, F. Casella, L. T. Biegler, “Economic Nonlinear Model Predictive Control for cyclic gas pipeline operation”, Computers and Chemical Engineering, Volume 196, 2025",
+    "presenting_author": "Sakshi Naik | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Sakshi Naik | Carnegie Mellon University, Pittsburgh, PA",
+      "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sakshi Naik",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Lorenz Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "594a",
+    "sortable_time": "2025-11-05_15:30:00_15:48:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713059"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713320",
+    "paper_endpoint": "Paper/713320",
+    "paper_id": "713320",
+    "topic": "Online Data-Enabled Predictive Control Using Deep Learning",
+    "title": "Online Data-Enabled Predictive Control Using Deep Learning",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "58524",
+    "session_title": "10B: Advances in Process Control II",
+    "session_number": "594",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Complex industrial processes have been widely adopted across various industries to enhance operational safety, efficiency, and product. To obtain these advantages, it is important to employ effective advanced control strategies to regulate the process operation in real-time. Model predictive control (MPC) is one of the most widely recognized advanced control solutions [2,3]. The development of MPC typically requires an accurate dynamic model to characterize the process behaviors. However, with the increasing complexity of the industrial processes, it is challenging to derive a high-fidelity model for the underlying system. Alternatively, direct data-driven control has the potential to regulate the process using only data information without establishing a dynamic model [4]. In recent years, data-enabled predictive control (DeePC) has gained increasing attention as a promising direct data-driven control approach that relies solely on input and output data [5,6]. Based on Willems’ fundamental lemma [7], DeePC establishes a non-parametric representation of the system using a Hankel matrix constructed from historical input and output trajectories. However, the fundamental lemma is applicable only to linear time-invariant systems. For other types of systems, such as nonlinear systems, stochastic systems, and time-varying systems, the Hankel matrix may not adequately capture the system dynamics, which may result in poor control performance [8]. In the existing literature, several techniques and approaches have been proposed to address the limitations and enhance performance for the nonlinear systems and stochastic systems [5,9,10]. Furthermore, online DeePC approaches have been developed for time-varying systems [8,11,12]. In [11], an online updating approach for the Hankel matrix was proposed by replacing the old data with the most recent real-time input and output data. However, the persistently exciting condition of the fundamental lemma may not be satisfied. In [12], a recursive DeePC was proposed by continuously adding real-time input and output trajectories into the Hankel matrix. In [8], singular value decomposition was applied to select informative data during online implementation, and the Hankel matrix was updated by adding input and output trajectories discontinuously. However, continuously expanding the Hankel matrix without removing any data information can lead to significantly high computational complexity and pose challenges for solving the optimization problem during online implementation. Based on the above observations, this study aims to integrate deep learning methods with DeePC to propose a computationally efficient updating approach for the Hankel matrix to better describe the varying dynamic behaviors of the system. By leveraging a deep neural network, we learn to extract features from input and output trajectories. During online implementation, the trained neural network captures the features from the most recent data and combines them with the preserved features obtained from the historical data and online data in the previous steps. The proposed approach is applied to a time-varying chemical process to evaluate its effectiveness. References [1] P. Daoutidis, J. H. Lee, I. Harjunkoski, S. Skogestad, M. Baldea, and C. Georgakis. Integrating operations and control: A perspective and roadmap for future research. Computers & Chemical Engineering, 115:179–184, 2018. [2] M. Morari and L. J. Lee. Model predictive control: past, present and future. Computers & Chemical Engineering, 23(4-5):667–682, 1999. [3] C. E. Garcia, D. M. Prett, and M. Morari. Model predictive control: Theory and practice—A survey. Automatica, 25(3):335–348, 1989. [4] W. Tang and P. Daoutidis. Data-driven control: Overview and perspectives. American Control Conference, 1048–1064, 2022. [5] J. Coulson, J. Lygeros, and F. Dörfler. Data-enabled predictive control: In the shallows of the DeePC. European Control Conference, 307–312, 2019. [6] L. Huang, J. Zhen, J. Lygeros, and F. Dörfler. Robust data-enabled predictive control: Tractable formulations and performance guarantees. IEEE Transactions on Automatic Control, 68(5):3163–3170, 2023. [7] J. C. Willems, P. Rapisarda, I. Markovsky, and B. L. De Moor. A note on persistency of excitation. Systems & Control Letters, 54(4):325–329, 2005. [8] A. Vahidi-Moghaddam, K. Zhang, X. Yin, V. Srivastava, and Z. Li. Online reduced-order data-enabled predictive control. arXiv preprint arXiv:2407.16066, 2024. [9] E. Elokda, J. Coulson, P. N. Beuchat, J. Lygeros, and F. Dörfler. Data-enabled predictive control for quadcopters. International Journal of Robust and Nonlinear Control, 31(18):8916–8936, 2021. [10] J. Berberich, J. Köhler, M. A. Müller, and F. Allgöwer. Data-driven model predictive control: closed-loop guarantees and experimental results. at-Automatisierungstechnik, 69(7):608–618, 2021. [11] S. Baros, C. Y. Chang, G. E. Colon-Reyes, and A. Bernstein. Online data-enabled predictive control. Automatica, 138:109926, 2022. [12] J. Shi and C. N. Jones. Efficient recursive data-enabled predictive control: an application to consistent predictors. arXiv preprint arXiv:2309.13755, 2023.",
+    "presenting_author": "Xuewen Zhang | Nanyang Technological University, Singapore",
+    "authors": [
+      "Xuewen Zhang | Nanyang Technological University, Singapore",
+      "Xunyuan Yin | Nanyang Technological University, Singapore"
+    ],
+    "authors_structured": [
+      {
+        "name": "Xuewen Zhang",
+        "affiliation": "Nanyang Technological University, Singapore",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Xunyuan Yin",
+        "affiliation": "Nanyang Technological University, Singapore",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "594b",
+    "sortable_time": "2025-11-05_15:48:00_16:06:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713320"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716673",
+    "paper_endpoint": "Paper/716673",
+    "paper_id": "716673",
+    "topic": "Offline Reinforcement Learning for Grade Change Operations in Chemical Process Plants",
+    "title": "Offline Reinforcement Learning for Grade Change Operations in Chemical Process Plants",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "58524",
+    "session_title": "10B: Advances in Process Control II",
+    "session_number": "594",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Offline Reinforcement Learning for Grade Change Operations in Chemical Process Plants Alex Durkin and Mehmet Mercangöz Imperial College London Abstract: Grade change operations arise in multiproduct chemical manufacturing processes where the system must transition from producing one product specification to another. These transitions are typically planned based on customer demand, production scheduling, or inventory levels and can occur in polymerization, refining, and specialty chemical processes. The challenge lies in achieving the new product specifications quickly and efficiently, while minimizing the production of off-spec material, energy usage, and wear on equipment. Unlike steady-state operation, grade changes involve highly dynamic behaviour and often require coordinated manipulation of multiple process variables. Due to their complexity, such transitions are traditionally managed by experienced operators using heuristics or partially automated procedures. The operational strategies applied during grade changes can significantly impact economic performance and product quality, making them a crucial aspect of plantwide optimization and advanced control [1]. With digitalization now well established across many industrial sectors, process plants increasingly collect detailed operational data, including process measurements and operator actions during grade changes. These datasets offer a valuable opportunity for data-driven control approaches that can learn from historical decisions. In this context, offline reinforcement learning (offline RL) has emerged as a promising framework. Unlike imitation learning or behavioural cloning, which simply attempt to replicate historical operator behaviour, offline RL seeks to improve upon historical strategies by learning optimal policies from offline datasets—while ensuring constraint-aware and safe operation. This is particularly relevant for grade change problems, where past operator trajectories may be suboptimal or vary in effectiveness [2,3]. In this study, we investigate the application of offline RL to a benchmark multi-product reactor system, where the task is to transition the system to a target concentration profile corresponding to a new product grade. To generate a realistic training dataset, we simulate numerous grade change scenarios using a suite of hand-designed and randomly parameterized control strategies that reflect the variability observed in operator behaviours. These synthetic transitions are initiated from a range of initial conditions and differ in performance, with some trajectories exhibiting overshoots or undershoots leading to constraint violations. We design a reward function that penalizes deviations from the target profile and incorporates constraints directly, labelling certain transitions as undesirable both in the reward structure and in the form of constraint indicators. Using this dataset, we train and compare several offline RL agents, focusing on algorithms capable of handling constraints, such as Conservative Q-Learning (CQL) [2], Implicit Q-Learning (IQL) [3], Offline Constrained Policy Optimization (OCPO) [4], and COptiDICE [5] — a recent algorithm that learns cost-conservative policies through stationary distribution correction estimation. COptiDICE has shown particular promise in learning safe policies in offline settings while ensuring constraint satisfaction. We evaluate the performance of these agents across multiple metrics, including transition time, constraint satisfaction, and robustness across initial conditions. In addition, we study the sensitivity of the learning process to dataset size and quality, providing insight into the data efficiency and practical viability of offline RL in this domain. Our results demonstrate the potential of offline RL to improve the performance of grade change operations in chemical process plants while maintaining safety and constraint satisfaction — even when only historical or simulated operational data is available. This work lays the foundation for safer, more efficient, and data-driven operation of process transitions in modern industrial systems. References MacGregor, J. F., & Kourti, T. (1992). Statistical process control of multivariate processes. Computers & Chemical Engineering , 16 (4), 489–500. https://doi.org/10.1016/0098-1354(92)80066-6 Kumar, A., Zhou, A., Tucker, G., & Levine, S. (2020). Conservative Q-learning for offline reinforcement learning. In Advances in Neural Information Processing Systems (Vol. 33, pp. 1179–1191). https://arxiv.org/abs/2006.04779 Kostrikov, I., Nair, A., & Levine, S. (2022). Offline reinforcement learning with implicit Q-learning. In International Conference on Learning Representations (ICLR) . https://arxiv.org/abs/2110.06169 Polosky, N., da Silva, B. C., Fiterau, M., & Jagannath, J. (2022). Constrained offline policy optimization. In Proceedings of the 39th International Conference on Machine Learning (ICML) (pp. 17761–17784). https://proceedings.mlr.press/v162/polosky22a.html Lee, J., Paduraru, C., Mankowitz, D. J., Heess, N., Precup, D., Kim, K.-E., & Guez, A. (2022). COptiDICE: Offline constrained reinforcement learning via stationary distribution correction estimation. In International Conference on Learning Representations (ICLR) . https://arxiv.org/abs/2204.08957",
+    "presenting_author": "Mehmet Mercangöz | ABB, London, United Kingdom",
+    "authors": [
+      "Alex Durkin | Imperial College London, United Kingdom",
+      "Mehmet Mercangöz | ABB, London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Alex Durkin",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Mehmet Mercangöz",
+        "affiliation": "ABB, London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "594c",
+    "sortable_time": "2025-11-05_16:06:00_16:24:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716673"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717873",
+    "paper_endpoint": "Paper/717873",
+    "paper_id": "717873",
+    "topic": "Application of Unsupervised Machine Learning Methods to Reinforcement Learning Actor-Critic Structures for Training and Online Implementation",
+    "title": "Application of Unsupervised Machine Learning Methods to Reinforcement Learning Actor-Critic Structures for Training and Online Implementation",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "58524",
+    "session_title": "10B: Advances in Process Control II",
+    "session_number": "594",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "One of the fundamental obstacles for the implementation of reinforcement learning (RL) in an online setting is the sample inefficiency which plagues training when the environment is continuous as in chemical process systems. This problem is two-fold in that both the quality of data as well as the selection for training is often difficult to determine quantitatively. Standard procedure for common actor-critic structures during the update procedure is essentially an arbitrary selection of a given batch size, while exploration is often focused on a reward-based approach with an arbitrary exploration noise [1], [2]. While these are sufficient for learning in many circumstances, they leave much room for improvement, especially for continuous and time-varying systems. When considering the nature of exploration with RL there are many differing approaches, but they can broadly be classified as reward-based or reward-free and memory-based or memory-free. With these classifications in hand, it is possible to evaluate the nature of exploration at a given timestep in a quantitative manner beyond those basic approaches that evaluate the simplest quantities available, such as a greedy policy [3], or the predicted output of the value function[4]. This is what defines the exploration policy and differentiates it from the policy being learned, if the algorithm is off-policy. Within standard deterministic actor-critic structures, such as deep deterministic policy gradient (DDPG) or its derivatives (TD3, D4G, etc.), exploration is dictated by a reward-based action yielded from the actor neural network with a level of gaussian noise added [1], [2]. In this way, the action follows essentially a greedy policy with some distribution around the optimal action that tightens as the actor is refined. Other structures such as soft-actor critic (SAC) follow an entropy maximization policy for exploration [5]. Neither of these possess prediction capability to minimize the possibility of performance degradation, nor do they adapt learning to suit the quality of data received. The goal of this work is to leverage unsupervised learning tools, such as gaussian mixture models (GMMs) to help contribute to both the exploration policy and the training/learning done by the algorithm. The use of such algorithms is often considered for use in defining the quality of exploration in terms of density of visited data points [4], or in the uncertainty presented when used as a value function. However in this work, because of the availability of data over the course of the training period, it is desired to use such ML algorithms to evaluate the data in order to both form a prediction for the current state of the system, as well as sort data for quality in learning. Such a method would allow the screening of potentially risky/unsafe/undesired actions, without the need for an internal prediction model for the RL algorithm. In addition, high-reward samples can be reinforced during the update by a similar GMM that accounts for the output of the action-value function. This allows for more nuanced clusters of data to be sampled than a simple spatial density approach. In summary the main contributions of this work are: The proposal to use unsupervised machine learning methods, such as gaussian mixture models, as a form of prediction when selecting exploratory actions. The goal is to minimize the risk of selecting a poor action that could result in increased error or performance degradation or safety violations or other undesired state evolution, while also prioritizing exploration for more informative learning. The use of clustering to identify regions of high performing data to accelerate learning. Thus, high-reward data is reinforced more often than data that is low performing. The algorithm is split into both the training aspect and prediction aspect and tested independently as well as in conjunction for comparison to traditional RL exploration methods. This is applied to a selective catalytic reduction (SCR) unit model, representing a non-square system [1] T. P. Lillicrap et al. , “Continuous control with deep reinforcement learning,” 4th Int. Conf. Learn. Represent. ICLR 2016 - Conf. Track Proc. , Sep. 2016, [Online]. Available: http://arxiv.org/abs/1509.02971 [2] S. Fujimoto, H. Van Hoof, and D. Meger, “Addressing Function Approximation Error in Actor-Critic Methods,” in 35th International Conference on Machine Learning, ICML 2018 , Feb. 2018, pp. 2587–2601. [Online]. Available: http://arxiv.org/abs/1802.09477 [3] R. S. Sutton and A. G. Barto, Reinforcement Learning: An Introduction , 2nd ed., no. 1. Cambridge, MA: The MIT Press, 2020. [4] S. Amin, M. Gomrokchi, H. Satija, H. van Hoof, and D. Precup, “A Survey of Exploration Methods in Reinforcement Learning,” Aug. 2021, [Online]. Available: http://arxiv.org/abs/2109.00157 [5] T. Haarnoja, A. Zhou, P. Abbeel, and S. Levine, “Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor,” 35th Int. Conf. Mach. Learn. ICML 2018 , vol. 5, pp. 2976–2989, Jan. 2018, [Online]. Available: http://arxiv.org/abs/1801.01290",
+    "presenting_author": "Daniel Beahr | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Daniel Beahr | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daniel Beahr",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "594d",
+    "sortable_time": "2025-11-05_16:24:00_16:42:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717873"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714830",
+    "paper_endpoint": "Paper/714830",
+    "paper_id": "714830",
+    "topic": "Learning-Based Economic Deepc of Wastewater Treatment Plants",
+    "title": "Learning-Based Economic Deepc of Wastewater Treatment Plants",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "58524",
+    "session_title": "10B: Advances in Process Control II",
+    "session_number": "594",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Wastewater treatment plays a vital role in sustainable development and the protection of human health, as it removes hazardous components from used water and converts it into a less infective form [1]. A wastewater treatment plant (WWTP) typically comprises several interconnected units in which complex biological and chemical processes take place. Its dynamic behavior is described by a large-scale nonlinear system influenced by considerable external disturbances. Improving effluent quality while optimizing the operating cost through advanced control methods is one of the primary objectives in wastewater treatment [2]. Economic model predictive control (EMPC) is a promising approach for optimizing the operational performance of industrial processes [3,4]. By explicitly considering economic costs, EMPC can help reduce the energy and chemical consumption in wastewater treatment while ensuring satisfactory effluent quality [2]. While EMPC provides an effective control solution for WWTPs, its performance is sensitive to the accuracy of the first-principles model. Incomplete or inaccurate models may lead to the failure of the EMPC approach. Meanwhile, most of the existing EMPC methods rely on full-state measurements for online control, which is usually impractical since not all key state variables are available for real-time measurement in real-world applications [5]. The data-enabled predictive control (DeePC) scheme offers a potential approach that bypasses the need for system modeling and full-state measurements [6]. It is an input-output control framework that achieves setpoint tracking for linear time-invariant systems by leveraging historical input and output data, where the input trajectories satisfy the condition of persistent excitation [6,7]. Existing studies have demonstrated the potential of applying the DeePC framework to nonlinear systems [8,9]. Xie et al. extended DeePC to an economic version by adopting an economic cost function as the optimization objective [10]. However, applying this design to WWTPs may face challenges. Due to the nonlinearity of the designed economic cost function, a non-convex optimization problem needs to be solved in real time, leading to increased computational complexity. Building on these considerations, we aim to propose a reinforcement learning-based economic DeePC approach for wastewater treatment processes with improved computational efficiency. During the training of the proposed computationally efficient economic DeePC framework, the DeePC operator is modeled as a random variable with time-varying parameters generated by neural networks to enable sufficient exploration. By interacting with the environment, the probability of obtaining control actions that optimize process operation performance is increased gradually. In online implementation, the distribution of the DeePC operator is determined by the output of neural networks at each sampling instant, allowing faster computation of control inputs. References [1] K. S. Naik and M. K. Stenstrom. Evidence of the influence of wastewater treatment on improved public health. Water Science and Technology , 66(3):644–652, 2012. [2] J. Zeng and J. Liu. Economic model predictive control of wastewater treatment processes. Industrial & Engineering Chemistry Research , 54(21):5710–5721, 2015. [3] M. Ellis, H. Durand, and P. D. Christofides. A tutorial review of economic model predictive control methods. Journal of Process Control , 24(8):1156–1178, 2014. [4] M. Ellis, J. Liu, and P. D. Christofides. Economic model predictive control . Springer, 5(7):65, 2017. [5] X. Yin and J. Liu. Subsystem decomposition of process networks for simultaneous distributed state estimation and control. AIChE Journal , 65(3):904–914, 2019. [6] J. Coulson, J. Lygeros, and F. Dörfler. Data-enabled predictive control: In the shallows of the DeePC. European Control Conference , 307–312, 2019. [7] J. C. Willems, P. Rapisarda, I. Markovsky, and B. L. De Moor. A note on persistency of excitation. Systems & Control Letters , 54(4):325–329, 2005. [8] Y. Lian, R. Wang, and C. N. Jones. Koopman based data-driven predictive control. arXiv preprint arXiv:2102.05122, 2021. [9] X. Zhang, K. Zhang, Z. Li, and X. Yin. Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning. AIChE Journal , 71(3):e18644, 2025. [10] Y. Xie, J. Berberich, and F. Allgöwer. Linear Data-Driven Economic MPC with Generalized Terminal Constraint. IFAC-PapersOnLine , 56(2):5512–5517, 2023.",
+    "presenting_author": "Mingxue Yan | Nanyang Technological University, Singapore",
+    "authors": [
+      "Mingxue Yan | Nanyang Technological University, Singapore",
+      "Xunyuan Yin | Nanyang Technological University, Singapore"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mingxue Yan",
+        "affiliation": "Nanyang Technological University, Singapore",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Xunyuan Yin",
+        "affiliation": "Nanyang Technological University, Singapore",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "594e",
+    "sortable_time": "2025-11-05_16:42:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714830"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/709034",
+    "paper_endpoint": "Paper/709034",
+    "paper_id": "709034",
+    "topic": "Koopman Operators in Weighted Function Spaces for the Estimation of Lyapunov Functions and Domain of Attraction",
+    "title": "Koopman Operators in Weighted Function Spaces for the Estimation of Lyapunov Functions and Domain of Attraction",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "58524",
+    "session_title": "10B: Advances in Process Control II",
+    "session_number": "594",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "It is commonly known that for the control of chemical processes, which have nonlinear dynamics, a common type of treatment is to perform linearization. Recently, with data-driven control concentrating the attention of control researchers, the Koopman operator [1] has become a main concept for linearization. For a system with discrete-time dynamics f , its Koopman operator refers to such a composition operator K on a suitably defined function space (whose elements are called observables), such that Kg = g ⸰ f . While the Koopman operator is in principle infinite-rank and its analytical description of the is usually not accessible, given a sufficient amount of data, the Koopman operator can be well approximated as a finite-rank operator (namely a matrix) on a finite-dimensional function subspace with dictionary or kernel basis. Such a Koopman operator learning problem can be formulated an efficiently solvable interpolation or convex optimization problem [2, 3]. Alternatively, deep learning of the embedding to a linear dynamics [4] provides a general training approach. From a control point-of-view, what is needed to achieve by the linearization of the nonlinear dynamics is more than just an approximate prediction of the observable value in one time step ahead. Instead, when the system model is transformed from its original underlying nonlinear one to a Koopman linearized form and estimated from data, the stability properties of the system must be approximately preserved and recoverable. This work therefore consider two major properties – (i) Lyapunov functions , assuming that the dynamics is globally asymptotically stable, and (ii) Zubov functions that are related to the domain of attraction, assuming that the dynamics is locally attractive. In the latter case, the Koopman operator is modified as the so-called Zubov-Koopman operators [5]. Essentially, the estimation of Lyapunov and Zubov functions require that the data-based estimation of the Koopman dynamics can be used for predictions over arbitrarily long time horizons . Key to such estimation is the guarantee of the Koopman operator, or the linearizing operator in scope, to be strictly contractive . Otherwise, the prediction error cannot be bounded uniformly over time. Existing methods to impose contraction restrictions is to allow the finite-rank approximation of the Koopman operator to be chosen only within Schur-Hurwitz matrices [6]. In this work, we instead use a notion of a space of weighted continuous functions and a corresponding weighted reproducing kernel Hilbert space (wRKHS), referring to the class of functions in the form of w · g where g belongs to the continuous class or RKHS and w is the weighting function. The weighting function is assigned according to the side information (prior knowledge) on the convergence rate of the system to the origin. This requires neither an accurate first-principles model nor detailed calculation of the local linearization (e.g., the eigenvalues of the Jacobian [7]), and hence is easily attainable. We define the Koopman or Zubov-Koopman operator on the weighted RKHS, which is dense in the weighted continuous function space. Then we consider the learning problem of the Koopman operator formulated as a convex optimization one. The routine of this learning is the same as that of [3], but only interpreting the norm and inner product in the newly defined weighted spaces. Using the existing statistical learning theory, we establish a generalization error bound of the learned Koopman or Zubov-Koopman operator in the weighted RKHS. Hence, we rewrite the Lyapunov function as a solution to a kernel-based algebraic Lyapunov equation, which has a solution in an infinite series form involving the Koopman operator and the canonical features of the states. Due to the contractiveness of the Koopman operator in the weighted space, canonical features decay exponentially. Thus, with a data-based estimation whose error is statistically bounded, the Lyapunov function is estimated with a bounded error. The same technical treatment is performed on the Zubov-Koopman operator for Zubov function estimation, yielding a restricted error in the estimation in the domain of attraction. References [1] S. L. Brunton, M. Budišić, E. Kaiser, and J. N. Kutz, “Modern Koopman theory for dynamical systems,” SIAM Rev., vol. 64, no. 2, 229–340. [2] M. O. Williams, I. G. Kevrekidis, and C. W. Rowley, “A data-driven approximation of the Koopman operator: Extending dynamic mode decomposition,” J. Nonlin. Sci., vol. 25, pp. 1307–1346, 2015. [3] V. Kostic, P. Novelli, A. Maurer, C. Ciliberto, L. Rosasco, and M. Pontil, “Learning dynamical systems via Koopman operator regression in reproducing kernel Hilbert spaces,” Adv. Neur. Inform. Proc. Syst., vol. 35, pp. 4017–4031, 2022. [4] B. Lusch, J. N. Kutz, and S. L. Brunton, “Deep learning for universal linear embeddings of nonlinear dynamics,” Nat. Commun., vol. 9, no. 1, p. 4950, 2018. [5] Y. Meng, R. Zhou, and J. Liu, “Learning regions of attraction in unknown dynamical systems via Zubov-Koopman lifting: Regularities and convergence,” arXiv preprint, 2023. arXiv:2311.15119. [6] F. Fan, B. Yi, D. Rye, G. Shi, and I. R. Manchester, “Learning stable Koopman embeddings,” in American Control Conference (ACC), pp. 2742–2747, IEEE, 2022. [7] W. Tang, “Data-driven bifurcation analysis via learning of homeomorphism,” in 6th Annual Learning for Dynamics & Control Conference, pp. 1149–1160, PMLR, 2024.",
+    "presenting_author": "Wentao Tang | NC State University, Raleigh",
+    "authors": [
+      "Wentao Tang | NC State University, Raleigh"
+    ],
+    "authors_structured": [
+      {
+        "name": "Wentao Tang",
+        "affiliation": "NC State University, Raleigh",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "594f",
+    "sortable_time": "2025-11-05_17:00:00_17:18:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/709034"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717942",
+    "paper_endpoint": "Paper/717942",
+    "paper_id": "717942",
+    "topic": "Hybrid Quantum Algorithm Strategies to Stabilize Process Systems Susceptible to Quantum Noise",
+    "title": "Hybrid Quantum Algorithm Strategies to Stabilize Process Systems Susceptible to Quantum Noise",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "58524",
+    "session_title": "10B: Advances in Process Control II",
+    "session_number": "594",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Modern industries, influenced by cyber-physical systems (CPS), have increased the integration of physical processes with various computer, control and networking components. This has increased the importance of data processing to achieve improvements in process efficiency. Currently available (classical) computer chips and algorithms are struggling to meet these increasing demands in data processing and storage, which is not unique to only chemical industries but applies to multiple other fields as well. Quantum computation is receiving interest in a variety of fields [1] , including process systems engineering [2] because it may have the capacity to handle some of these higher processing requirements. From the perspective of its use in control engineering, however, quantum computing remains relatively unexplored. This motivated prior research [3,4,5] from our group to investigate quantum computing from a controls perspective by controlling a single-input/single-output linear system using a proportional (P) controller implemented in a hybrid quantum-classical fashion [3] using Quantum Fourier Transform-based [6] addition and multiplication algorithms on quantum simulators provided by IBM’s quantum experience SDK, Qiskit. The simulations were pivotal in demonstrating the relationship between the impact of quantum noise and factors, such as the magnitude of the process state, number of shots, quantum register size used to represent the process states, and sampling period length, to mitigate the impact of quantum noise on a chemical process under a control law implemented on a noisy quantum simulator [7] . While these heuristic approaches demonstrate some of these relationships between steady-state tracking and control heuristics, they do not provide a theoretical framework for investigating the impacts of quantum noise models on closed-loop stability. Quantum noise models are represented within the context of Kraus operators and density matrices and mitigating their influence in quantum devices remains an open area of research across multiple fields [8,9] . Therefore, we must rigorously characterize the closed-loop behavior of a process under a controller implemented using a noisy quantum device by developing a strategy that correlates the predictions of quantum computations (in the presence of a noise model) with their impact on closed-loop stability. By incorporating models of quantum noise affecting quantum devices within closed-loop system dynamics, we can extend heuristic approaches for improving closed-loop performance and quantitatively evaluate the probability with which control actions computed by noisy quantum devices can ensure process stability (at least some percentage of the time). The goal of this work is to develop a deeper understanding of how quantum computing can be integrated into control theory, enabling the design of next-generation control algorithms that exploit quantum properties to improve efficiency and performance. References: [1] Deng, Z., Wang, X., & Dong, B. (2023). Quantum computing for future real-time building HVAC controls. Applied Energy, 334, 120621. [2] Ajagekar, A., & You, F. (2020). Quantum computing assisted deep learning for fault detection and diagnosis in industrial process systems. Computers & Chemical Engineering , 143 , 107119. [3] Kasturi Rangan, K ., Abou Halloun, J., Oyama, H., Cherney, S., Assoumani, I.A., Jairazbhoy, N., Durand, H. and Ng, S.K. Quantum computing and resilient design perspectives for cybersecurity of feedback systems. IFAC-PapersOnLine , 55 (7), 703-708 (2022). [4] Nieman, K., Kasturi Rangan, K., & Durand, H. Control Implemented on Quantum Computers: Effects of Noise, Nondeterminism, and Entanglement. Industrial & Engineering Chemistry Research, 61(28), 10133-10155 (2022). [5] Kasturi Rangan, K., Oyama, H., Azali Assoumani, I., Durand, H., & Ng, K. Y. S. Cyberphysical Systems and Energy: A Discussion with Reference to an Enhanced Geothermal Process. In Energy Systems and Processes: Recent Advances in Design and Control (pp. 8-1). Melville, New York: AIP Publishing LLC (2023). [6] Ruiz-Perez, L., & Garcia-Escartin, J. C. Quantum arithmetic with the quantum Fourier transform. Quantum Information Processing, 16(6), 1-14 (2017). [7] Kasturi Rangan, K., and Durand, H. Investigating Quantum Algorithm and Control Design Intersections through a Proportional Control Law. Proceedings of the American Control Conference, Denver, Colorado, (in print). [8] Roffe, J. Quantum error correction: an introductory guide. Contemporary Physics, 60(3), 226-245 (2019). [9] Google Quantum AI Research. Suppressing quantum errors by scaling a surface code logical qubit. Nature 614, no. 7949: 676-681 (2023).",
+    "presenting_author": "Keshav Kasturi Rangan | Wayne State University, Detroit, MI",
+    "authors": [
+      "Keshav Kasturi Rangan | Wayne State University, Detroit, MI",
+      "Helen Durand | Wayne State University, Detroit, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Keshav Kasturi Rangan",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Helen Durand",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "594g",
+    "sortable_time": "2025-11-05_17:18:00_17:36:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717942"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/715859",
+    "paper_endpoint": "Paper/715859",
+    "paper_id": "715859",
+    "topic": "Integrating Ontologies with Large Language Models for Enhanced Control Systems in Chemical Engineering",
+    "title": "Integrating Ontologies with Large Language Models for Enhanced Control Systems in Chemical Engineering",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "58524",
+    "session_title": "10B: Advances in Process Control II",
+    "session_number": "594",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Chemical engineering students and practitioners often ask questions using informal, non-standard language, complicating the accurate retrieval of precise, ontology-based technical information. Traditional keyword-based retrieval systems frequently fail to accurately map these informal queries to structured domain knowledge, leading to inaccuracies and inefficiencies. This research introduces a pioneering approach that integrates advanced large language models (LLMs), such as GPT-3.5, with structured chemical engineering ontologies within Neo4j graph databases to accurately interpret and answer complex domain-specific queries expressed in informal language. This synergy uniquely leverages the semantic intuition and linguistic adaptability of LLMs combined with the rigor and precision of curated chemical engineering knowledge graphs. The developed framework begins by employing LLM-driven entity recognition to interpret and extract chemical engineering entities from natural-language queries. Extracted entities are precisely linked to ontology terms using enhanced lexical similarity and synonym-based mapping. Contextual knowledge retrieved from the ontology then informs a sophisticated retrieval-augmented generation (RAG) process, where the LLM generates context-grounded, evidence-backed answers with explicit ontology citations. This method ensures transparency, accountability, and factual accuracy. The framework significantly advances chemical engineering knowledge retrieval by dramatically reducing common LLM inaccuracies, such as hallucinations or misinformation, through stringent ontology-backed validation. This approach ensures responses are reliable, traceable, and aligned with established chemical engineering standards, profoundly enhancing educational outcomes and operational safety practices. Recognizing existing limitations, such as incomplete synonym recognition and the absence of embedding-based retrieval, ongoing developments include integrating comprehensive synonym lexicons, ontology-informed embedding techniques, and advanced NLP tools (e.g., SciSpaCy, domain-specific BERT entity linkers). Future expansions aim to incorporate multimodal data, iterative validation loops, and hybrid knowledge graph/text retrieval to further strengthen the accuracy, comprehensiveness, and robustness of the question-answering system. This work aligns closely with themes in Computing and Systems Engineering, as it applies advanced computational methods to process understanding and semantic mapping. Its relevance to Process Design & Development lies in its potential to support engineers in synthesizing insights from complex technical data. Additionally, it contributes to Instrumentation by improving interpretability and diagnostics in control environments through ontology-grounded AI assistance.",
+    "presenting_author": "Crystal Su | Columbia University, New York, NY",
+    "authors": [
+      "Crystal Su | Columbia University, New York, NY",
+      "Kuai Yu | Columbia University, New York, NY",
+      "Mingyuan Shao | Columbia University, New York, NY",
+      "Jingrui Zhang | University of Wisconsin, Madison",
+      "Daniel Bauer | Columbia University, New York, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Crystal Su",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Kuai Yu",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Mingyuan Shao",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jingrui Zhang",
+        "affiliation": "University of Wisconsin, Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Daniel Bauer",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391h",
+    "sortable_time": "2025-11-05_17:36:00_17:54:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/715859"
+  }
+]

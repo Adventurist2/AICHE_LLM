@@ -1,0 +1,479 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464492.html",
+    "topic": "Multiperiod Inventory Pinch Algorithm for Integrated Planning and Scheduling of Oil Refineries",
+    "date_time": "Tuesday, November 15, 2016: 1:08 PM",
+    "abstract": "A petroleum refinery plant transforms raw crude oils into more valuable products that can be found almost anywhere such as liquid fuels, plastics, oils, solvents, asphalt, and many chemicals used in production processes across different industries. Oil refineries involve several intertwined complex physical and chemical processes, and they operate in a highly competitive and dynamic market under strict safety, environmental, and governmental regulations. For these reasons, planning and scheduling of refinery operations are very important tasks. Moreover, in order to obtain high quality solutions, integration of planning and scheduling decisions is necessary 1 . Commercial software found in industrial practice to compute production plans for a refinery employ multiperiod models and solve them using linear programming or successive linear programming techniques, e.g. Aspen PIMS, Haverly GRTMPS, and Honeywell RPMS. Nonlinear programming (NLP) algorithms can be found as well, e.g. Aspen PIMS AO. However, in order to avoid intractable problems, such software often use simplified process unit-operation models 2 . Refinery scheduling is usually carried out via interactive simulation (e.g. Aspen Petroleum Scheduler and Haverly H/Sched) with the production plan targets used as constraints. Mixed-integer linear programming (MILP) optimization techniques to solve the scheduling problem represent an opportunity for companies to improve their operations and profits; however, more efficient and reliable MILP models and solution algorithms are required to be developed in order to be applied in practice. Regarding planning models, current trend is to increase their accuracy by considering their nonlinear nature and developing formulations that can be tractable 2,3,4 . For the scheduling problem, several MILP models have been published in the literature for the entire refinery or some of its subsystems 5,6,7 . Maravelias and Sung 1 reviewed different strategies to integrate planning and scheduling levels. They discussed the importance of developing more computationally effective models and improving decomposition and iterative algorithms, as well as hybrid methods. Several researchers have formulated full-space models (i.e. simultaneous planning and scheduling), usually as mixed-integer nonlinear programming (MINLP) models, and proposed algorithms to solve them 8,9,10 . In general, these models can be solved directly only for a small number of time periods. Various bi-level decomposition algorithms for MILP and MINLP models have been proposed 11,12,13 . Castillo-Castillo and Mahalec 14 developed a three-level decomposition approach based on the inventory pinch concept to integrate planning and scheduling decisions in gasoline blending operations, which reduces the number of blend recipes and can handle nonlinear blending rules. Based on the work by Castillo-Castillo and Mahalec 14 , we present a multiperiod inventory pinch algorithm, denoted as “extended MPIP-C algorithm”, to integrate planning and scheduling decisions of an oil-refinery (not only for the gasoline blending section). The original full-space problem is decomposed into three levels: 1) optimization of operating conditions, 2) derivation of an approximate schedule, and 3) computation of a detailed schedule. At the 1 st level, a multiperiod NLP model is formulated, where periods are delineated initially by inventory pinch points of various product pools (e.g. gasoline and diesel). This reduces the number of periods and number of different blend recipes. Various formulations for the processing unit models can be utilized (e.g. fixed yield, multi-mode, or nonlinear). A global optimization algorithm is employed to solve the 1 st level if such model is nonconvex. The 2 nd level is solved via multiperiod MILP model, where periods are delineated by scheduler based on the demand and supply data, and the minimum time requirements to complete major tasks (i.e. blend runs, product tank service). The 3 rd level uses a continuous-time MILP model to determine the exact times to carry out the necessary tasks to meet the targets imposed by the 2 nd and 3 rd level solutions. The 2 nd and 3 rd levels are MILP models since the nonlinear constraints associated with the operating conditions are solved at the 1 st level, and the optimal conditions found at the 1 st level are fixed at the other levels. The algorithm minimizes the total cost comprised by the crude oil cost, production cost, switching cost, and demurrage cost. Switching cost involves blend runs, delivery runs, product changeovers in the swing tanks, and mode transitions in the processing units. The algorithm eliminates infeasibilities found at the 2 nd and 3 rd levels by re-optimizing operating conditions at the 1 st level. For our case studies, the refinery system consists of a crude distillation unit, a catalytic reformer, a hydrocracker, a fluid catalytic cracking unit, five hydrotreaters, three blenders, and various mixers and splitters. We consider five products and eight quality properties under specification, as well as different demand and supply scenarios. Results show that the extended MPIP-C algorithm computes solutions close to the optimum and in relative shorter execution times than solving the full-space model. Most of the computational time is spent at the 1 st and 3 rd level models. Future work will be to test mathematical decomposition strategies to solve the 3 rd level model (detailed scheduling) more efficiently. References Maravelias CT, Sung C. Integration of production planning and scheduling: Overview, challenges and opportunities. Comput Chem Eng. 2009; 33(12): 1919-1930. Menezes BC, Kelly JD, Grossmann IE. Improved swing-cut modeling for planning and scheduling of oil-refinery distillation units. Ind Eng Chem Res. 2013; 52(51): 18324-18333. Fu G, Sanchez Y, Mahalec V. Hybrid model for optimization of crude oil distillation units. AIChE J. 2016; 62: 1065-1078. Li J, Boukouvala F, Xiao X, Floudas CA, Zhao B, Du G, Su X, Liu H. Data‐driven mathematical modeling and global optimization framework for entire petrochemical planning operations. AIChE J. 2016. DOI: 10.1002/aic.15220 Shah NK, Ierapetritou MG. Short‐term scheduling of a large‐scale oil‐refinery operations: Incorporating logistics details. AIChE J. 2011; 57(6): 1570-1584. Shi L, Jiang Y, Wang L, Huang D. Refinery production scheduling involving operational transitions of mode switching under predictive control system. Ind Eng Chem Res. 2014; 53(19): 8155-8170. Castillo-Castillo PA, Mahalec V. Improved continuous-time model for gasoline blend scheduling. Comput Chem Eng. 2016; 84: 627-646. Kopanos GM, Puigjaner L, Maravelias CT. Production planning and scheduling of parallel continuous processes with product families. Ind Eng Chem Res. 2010; 50(3): 1369-1378. Yue D, You F. Planning and scheduling of flexible process networks under uncertainty with stochastic inventory: MINLP models and algorithm. AIChE J. 2013; 59(5): 1511-1532. Gutiérrez-Limón MA, Flores-Tlacuahuac A, Grossmann IE. MINLP formulation for simultaneous planning, scheduling, and control of short-period single-unit processing systems. Ind Eng Chem Res. 2014; 53(38): 14679-14694. Dogan ME, Grossmann IE. A decomposition method for the simultaneous planning and scheduling of single-stage continuous multiproduct plants. Ind Eng Chem Res. 2006; 45(1): 299-315. Li Z, Ierapetritou MG. Integrated production planning and scheduling using a decomposition framework. Chem Eng Sci. 2009; 64(16): 3585-3597. Chu Y, You F, Wassick JM, Agarwal A. Integrated planning and scheduling under production uncertainties: Bi-level model formulation and hybrid solution method. Comput Chem Eng. 2015; 72: 255-272. Castillo-Castillo, PA, Mahalec V. Inventory pinch gasoline blend scheduling algorithm combining discrete-and continuous-time models. Comput Chem Eng. 2016; 84: 611-626.",
+    "presenting_author": "Pedro Castillo Castillo | McMaster University, Hamilton, ON, Canada, Pedro M. Castro, Centro de Matemática Aplicações Fundamentais e Investigação Operacional, Faculdade de Ciências, Universidade de Lisboa, Lisbon, Portugal and Vladimir Mahalec, Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+    "authors": [
+      "Chemical Egineering | McMaster University, Hamilton, ON, Canada, Pedro M. Castro, Centro de Matemática Aplicações Fundamentais e Investigação Operacional, Faculdade de Ciências, Universidade de Lisboa, Lisbon, Portugal and Vladimir Mahalec, Chemical Engineering, McMaster University, Hamilton, ON, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pedro Castillo Castillo",
+        "affiliation": "McMaster University, Hamilton, ON, Canada, Pedro M. Castro, Centro de Matemática Aplicações Fundamentais e Investigação Operacional, Faculdade de Ciências, Universidade de Lisboa, Lisbon, Portugal and Vladimir Mahalec, Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chemical Egineering",
+        "affiliation": "McMaster University, Hamilton, ON, Canada, Pedro M. Castro, Centro de Matemática Aplicações Fundamentais e Investigação Operacional, Faculdade de Ciências, Universidade de Lisboa, Lisbon, Portugal and Vladimir Mahalec, Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468067.html",
+    "topic": "Development of a High Fidelity and Reduced Order Data-Driven Model of Hydrogen Plant",
+    "date_time": "Tuesday, November 15, 2016: 2:24 PM",
+    "abstract": "Hydrogen is one of the most indispensable chemical components extensively used in petroleum and chemical industries. An economic way to commercially produce hydrogen is to utilize steam methane reforming [1]. The process consists of a number of material and heat flows, resulting in an intricate network of material and energy. Natural gas (NG) and superheated steam are fed to a chemical reactor called reformer, which consists of catalyst tubes filled with nickel reforming catalyst. Here, majority of the hydrogen is produced. The gas out of the reformer is then processed through another reactor to further produce hydrogen. Finally, the hydrogen flow is purified in a pressure swing adsorber (PSA), where high purity hydrogen is produced. The reformer exit temperature is an important process variable for this process and is expected to be kept at a desired level by heating the reformer. This heat is provided by burning the off-gas from the PSA and NG fuel stream. A fan is used to supply air to the burners and another one draws the combustion products, termed as flue gas, out of the reformer box. This process presents various constraints and challenges during the start-up as well as nominal operation of the plant such as, the reformer exit temperature should be maintained at a desirable level. Further, the firebox pressure should not breach its lower and upper limits for safety. If the pressure is too low, the fire can be extinguished. If it is too high, it may impose safety hazards to facility and personnel [2]. A typical startup procedure consists of series of events that take place over a period of time based on a predefined recipe. Startup can broadly be categorized as cold startup and warm startup based on the initial state of the plant from which the plant is required to be driven to nominal operation. The focus of this work will be on cold startup where the plant is started from completely shutdown conditions. Typical steps involve ramping the natural gas fuel to reach a sufficient reformer exit temperature, circulation of natural gas feed and steam, regulation of nitrogen flow in the reactor tubes. The startup also involves making discrete decisions such as starting up the PSA, recirculating the tail gas from the PSA and ramping up to full capacity in several stages. Thus, the startup time is not fixed and varies based on the decisions taken at various stages. Existing startup recipes have been built heuristically from past successful startups, with the possibility of optimizing the startup procedure remaining unexplored. One key recognition that we make is that due to the nature of startup/shutdown phase, they can be treated as a batch like operation with variable lengths, where the objective is to drive the process from one state to the other. For modeling and control of batch processes, a variety of a data-driven modeling techniques exist. One of the most widely used approach is partial least squares (PLS), which models the process in a projected latent space [3]. These models are essentially time-varying linear models, linearized around mean past trajectories, and therefore require the batches to be of same length, or to recognize an appropriate alignment variable. To account for these limitations, a multi-model approach was proposed in [4]. These models were based on the 'current measurements' of the process instead of the 'time'. These developments were followed by contributions in the area of integration of these data-driven models with the advanced control formulations [4-5]. More recently a subspace identification based batch control approach was proposed in [6] where a LTI state-space model of the batch process is estimated, and does not require the training batches to be of equal length. The existing formulations have, however, not been applied to startup/shutdown operations in general, and for standard operating procedure (SOP) synthesis/optimization problem for the hydrogen plant in particular. Motivated by these considerations, in this work we address the problem of determining a data driven model for the startup of a hydrogen plant. To this end, first a high fidelity test bed model of the entire plant is developed in UniSim, capable of simulating the startup and shutdown phase, with appropriate adaptation of the plant SOP. Several simulated startups are performed to generate the training data. Then, an LTI data-driven model (higher order) of the process using subspace identification based method [6-7] is estimated. Simulation results are presented that illustrate the prediction capabilities of the identified model and its suitability for deployment in an optimization framework. Note that the development of a good model that can handle variable batch times paves the way for application of optimization algorithms that can improve not just the process economics along the startup/shutdown but also the operating time of the startup/shutdown procedure. From an optimization standpoint, the problem is quite different compared to existing application of data driven models for control of lumped parameter (such as in [6]) or distributed parameter process [7], where the objective was to reach a certain quality requirement in a given, predetermined batch length. The optimization problem for the present application is an optimal control problem where the objective is to reach the desired terminal state in minimum time, while adhering to various constraints, and also making discrete decisions along the way. The data driven model developed in the present work will subsequently be utilized within such an optimization framework to synthesize the startup SOP. [1] JL Lynn and BH Bory. Kirk-othmer encyclopedia of chemical technology, 2000. [2] Miao Du, Prashant Mhaskar, Yu Zhu, and Jesus Flores-Cerrillo (2014). Safe-Parking of a Hydrogen Production Unit. Industrial & Engineering Chemistry Research, 53 (19), 8147-8154. [3] J. Flores-Cerrillo, J. F. MacGregor, Control of particle size distributions in emulsion semibatch polymerization using mid-course correction policies, Industrial and Engineering Chemistry Research 41 (7) (2002) 1805-1814. [4] S. Aumi, B. Corbett, P. Mhaskar, and T. Clarke-Pringle. Data-based modeling and control of nylon-6, 6 batch polymerization. IEEE Transactions on Control Systems Technology, 21(1):94-106, Jan 2013. [5] S. Aumi, P. Mhaskar, Integrating Data-Based Modeling and Nonlinear Control Tools For Batch Process Control, AIChE Journal 58 (2012) 2105-2119. [6] B. Corbett, P. Mhaskar, Subspace identification for data-driven modelling and quality control of batch processes, AIChE Journal (2016) n/a-n/a. [7] Abhinav Garg, P. Mhaskar, Data-Driven Model Predictive Control of Crystal Size Distribution in a Seeded Batch Crystallization Process, Chemical Engineering Science (2016) Submitted.",
+    "presenting_author": "Abhinav Garg | Department of Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+    "authors": [
+      "Brandon Corbett | Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+      "Prashant Mhaskar | Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+      "Gangshi Hu | Praxair",
+      "Jesus Flores-Cerrillo | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Abhinav Garg",
+        "affiliation": "Department of Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Brandon Corbett",
+        "affiliation": "Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Gangshi Hu",
+        "affiliation": "Praxair",
+        "designation": "Author"
+      },
+      {
+        "name": "Jesus Flores-Cerrillo",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464333.html",
+    "topic": "A Molecular Dynamics Study of the Influence of Charge on the Transport of Water and Ions through Carbon Nanotubes",
+    "date_time": "Tuesday, November 15, 2016: 12:46 PM",
+    "abstract": "Carbon nanotubes (CNTs) are known to possess smooth hydrophobic walls, can\nbe easily chemically functionalized, and have high surface to volume ratio, thus\noffering a possibility of unconventionally high flow rates and ion selectivity\nthat makes them potential candidates for \nnanofluidic and biomimetic applications. However, it is difficult to\nmeasure transport processes at nanometer scales and thus much of the\nexperimental data on water and ion transport through nanotubes available so far\nis limited to larger diameter nanotubes where a predominantly bulk-like\nbehavior is observed. Motivated by the need to understand the superior\ntransport properties of these extremely narrow pores, we perform long time (100\nns) classical MD simulations to investigate in atomic detail the intriguing\nstructural and dynamical features of a NaCl solution under confinement in sub-3\nnm diameter carbon nanotubes. Additionally, we assess if Donnan equilibrium\ntheory can be used to ascribe a relation between membrane fixed charges and the\nconcentration of ions within the nanotube. In this study, the spatial distribution of water and ions and their\ntransport properties in terms of their apparent diffusion coefficients are\ninvestigated through uncharged and charged armchair carbon nanotubes (d = 0.8\nnm – 3.0 nm) embedded between two reservoirs of a 1M NaCl solution. The\ninfluence of charges applied to the surface of the CNT on ion-exclusion/screening\nphenomena is quite apparent and its impact is evident when the pore sizes are\ncomparable to the Debye lengthscale . This can be\nattributed to the fact that at nanoscopic length scales, because of the large\nsurface to volume ratio as compared with macro and microscopic length scales,\nsurface charge has a pronounced effect on fluid volume in the hydrophobic\ncavity leading to rejection of ions. We obtain and compare the apparent\ndiffusion coefficients of water and ions in bulk phase to that under\nconfinement and in the vicinity of charges. \nWe find that while the pore sizes that we study are permeable to ions,\nthe axial diffusion coefficient of water and ions decreases under confinement\nand its effect is most prominent in the smallest diameter charged tube. We also\nobtain measurements of ion occupancy in the nanotube, coordination numbers of\nions, water and ion flux, and ion rejection rates for the various cases\nconsidered. The cases studied give a broad account of ion and water transport properties\nthrough uncharged and charged CNTs. The goal is to integrate fast water flow\nwith ion selectivity through modulation of pore sizes, surface charges, and\nelectric fields with potential applications in desalination, as molecular gates\nfor separation of biomolecules, and other nanofluidic devices.",
+    "presenting_author": "Michelle Aranha  and Brian J Edwards | Department of Chemical and Biomolecular Engineering, The University of Tennessee, Knoxville, TN",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Michelle Aranha  and Brian J Edwards",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, The University of Tennessee, Knoxville, TN",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper458657.html",
+    "topic": "Understanding the Intrinsic Water Wettability of Graphitic Carbon",
+    "date_time": "Tuesday, November 15, 2016: 2:22 PM",
+    "abstract": "Understanding the intrinsic water wettability of graphitic carbon Andrew Kozbial and Lei Li Department of Chemical and Petroleum Engineering, University of Pittsburgh, 3700 O’Hara Street, Pittsburgh, PA 15261 The intrinsic water wettability of graphitic carbon, e.g., graphite, graphene and carbon nanotube, has attracted a lot of research interests in the past three years due to the recent finding that the long-established hydrophobicity of graphitic surfaces actually results from airborne hydrocarbon contamination. Due to the existence of defects, determining intrinsic water wettability of pristine graphitic carbon remains challenging. In the current study, water wettability of freshly exfoliated graphite of varying quality was studied using static, advancing, and receding water contact angle (WCA) measurements. The defect densities were characterized by Raman spectroscopy, XPS and AFM. A qualitative model is proposed to explain the effect of defects on measuring the advancing, static, and receding contact angles. Based on the model and the experimental results, the pristine graphitic carbon is mildly hydrophilic.",
+    "presenting_author": "Andrew Kozbial | Department of Chemical and Petroleum Engineering, University of Pittsburgh, Pittsburgh, PA and  Lei Li, University of Pittsburgh, Pittsburgh, PA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Andrew Kozbial",
+        "affiliation": "Department of Chemical and Petroleum Engineering, University of Pittsburgh, Pittsburgh, PA and  Lei Li, University of Pittsburgh, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466503.html",
+    "topic": "Evaluation of Smart Manufacturing (SM) Benefits in Industrial Steam-Methane Reformers (SMR)",
+    "date_time": "Tuesday, November 15, 2016: 1:46 PM",
+    "abstract": "Steam methane reformers (SMRs) provide the bulk of the hydrogen consumed in refineries and for production of important chemicals such as ammonia and methanol. Consequently, these are large scale systems, with modern hydrogen plants producing above 100 million standard cubic feet hydrogen per day (MMSCFD) 1 . In this context, energy efficient operation is an imperative necessity for long-term economic viability. Mathematical modeling of SMRs becomes a crucial tool for achieving high energy efficiency. The models can be either high-fidelity (e.g., using computational fluid dynamics), data-driven (and typically low-order) empirical models, or a combination of both. 2,3 Furthermore, the development of mathematical models should be accompanied by online deployment. The latter must be supported by a smart manufacturing framework, that includes, i) capabilities for acquiring appropriate process data via systematically placed sensors, ii) adequate high-performance computational resources for just-in-time computations, and, iii) a user-friendly visualization interface for operator use. The model-based computations are themselves a sequence/workflow of calculations being executed in series or parallel. Seamless interactions between these different layers require an appropriate IT infrastructure that allows the intensive computations to be performed on cloud and intercommunications between various components of the workflow, and provides appropriate database management capabilities. Moreover, rapid adoption of such practices demand that such an IT infrastructure should be easy to use and deploy. These requirements constitute the natural and essential form of ‘Smart manufacturing’ 4 (SM). In this work, we present an example application of SM concepts to an industrial scale steam methane reformer along with the benefits obtained. The reforming process studied in this work takes place in a large scale, high-temperature SMR, where the endothermic reforming reactions are carried out in hundreds of catalyst-filled tubes placed in a gas-fired furnace. The overall productivity (energy consumed per unit H 2 produced) of the plant is strongly dependent on how efficiently the SMR is operated, which further depends on the spatial temperature distribution inside the furnace, where a more uniform distribution paves the way for reduced plant-wide energy use. An integrated framework comprising of state-of-the-art infrared cameras, kepler-based workflow for Matlab and Ansys Fluent-based calculations, PI OSI-based database system, and Tableau-based visualization interface assisted by a novel open-source IT platform/wireframe was deployed for the furnace temperature homogenization leading to ~ 44% improvement in the furnace operation. 5 The cloud-based SM Platform provides on demand scalability and reusability of resources which opens the possibility of scaling IT infrastructure and deploying similar systems much faster with significantly lower costs and reduced staff resources at remote plants and facilities around the globe. Specifically, we demonstrate how the SM approach rendered itself further useful by allowing reusability of the integrated framework for quick deployment at other SMR facilities as well as other similar furnace-based manufacturing processes leading to reduction in deployment costs. References: 1 Latham, D. A., McAuley, K. B., Peppley, B. A., & Raybold, T. M. (2011). Mathematical modeling of an industrial steam-methane reformer for on-line deployment. Fuel Process. Technol ., 92 , 1574-1586. 2 Kumar, A., Baldea, M., Edgar, T. F., & Ezekoye, O. A. (2015). Smart Manufacturing Approach for Efficient Operation of Industrial Steam-Methane Reformers. Industrial & Engineering Chemistry Research, 54 (16), 4360-4370. 3 Kumar, A., Baldea, M., Edgar, T. F. Real-time optimization of an industrial steam-methane reformer under distributed sensing. Control Engineering Practice [Submitted, Jan 2016]. 4 Korambath, P., Wang, J., Kumar, A., Hochstein, L., Schott, B., Graybill, R., Baldea, M., & Davis, J. (2014). Deploying Kepler Workflows as Services on a Cloud Infrastructure for Smart Manufacturing. Procedia Computer Science , 29 , 2254-2259. 5 Korambath, P., Wang, J., Kumar, A., Davis, J., Graybill, R., Schott, B., & Baldea, M. (2016). A smart manufacturing use case: Furnace temperature balancing in steam methane reforming process via Kepler workflows. Procedia Computer Science [Accepted, April 2016].",
+    "presenting_author": "Ankur Kumar | McKetta Department of Chemical Engineering, The University of Texas at Austin, Austin, TX",
+    "authors": [
+      "Michael Baldea and Thomas F. Edgar | McKetta Department of Chemical Engineering, The University of Texas at Austin, Austin, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ankur Kumar",
+        "affiliation": "McKetta Department of Chemical Engineering, The University of Texas at Austin, Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Michael Baldea and Thomas F. Edgar",
+        "affiliation": "McKetta Department of Chemical Engineering, The University of Texas at Austin, Austin, TX",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464036.html",
+    "topic": "Observation of Extreme Phase Transition Temperatures of Water Confined inside Isolated Carbon Nanotube Nanopores",
+    "date_time": "Tuesday, November 15, 2016: 12:30 PM",
+    "abstract": "Fluid phase transitions inside single, isolated carbon nanotubes (CNT) are predicted to deviate substantially from classical thermodynamics and also allow the study of ice nanotube (ice-NT) properties. Herein, we measure, using two different techniques, the diameter dependent phase boundaries of ice-NTs within 6 isolated CNTs 1.05, 1.06, 1.15, 1.24, 1.44 and 1.52 nm in diameter using Raman spectroscopy. The results reveal both an exquisite sensitivity to diameter and substantially larger temperature elevations of the melting transition than theoretically predicted by as much as 100 °C. Dynamic water filling and reversible freezing transitions were marked by 2 to 5 cm -1 shifts in the radial breathing mode (RBM) frequency, revealing reversible melting at 138 and 102 °C for 1.05 and 1.06 nm single and double-walled CNTs, respectively. A near-ambient phase change at 31 and 15 °C was observed for 1.44 and 1.52 nm CNTs, respectively, whereas freezing inside 1.15 nm tube was suppressed at -35 °C. We find that the interior aqueous phase also decreases the axial thermal conductivity of the CNT reversibly by as much as 500%, allowing digital control of the heat flux. These extreme phase transitions enable the study of ice-NT at high temperatures and their potential utilization as novel phase-change materials.",
+    "presenting_author": "Kumar Varoon Agrawal | Department of Chemical Engineering and Materials Science, University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "Steven Shimizu | Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA",
+      "Lee Drahushuk | Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA",
+      "Michael S. Strano | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Kumar Varoon Agrawal",
+        "affiliation": "Department of Chemical Engineering and Materials Science, University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Steven Shimizu",
+        "affiliation": "Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Lee Drahushuk",
+        "affiliation": "Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael S. Strano",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468942.html",
+    "topic": "Scaling the Separation of Single-Wall Carbon Nanotubes through Countercurrent Chromatography",
+    "date_time": "Tuesday, November 15, 2016: 1:34 PM",
+    "abstract": "Aqueous two-phase extraction (ATPE) is a technique recently demonstrated to successfully separate both surfactant-coated and DNA-wrapped single-wall carbon nanotubes (SWCNTs) by electronic structure, diameter and helical handedness. The differential partitioning of the carbon nanotubes between the two aqueous polymer phases is governed by structure-dependent solvation free energy and can readily be tuned by a number of parameters including polymer composition, surfactant structure, and the presence of salts. Additionally, ATPE is robust, cost-effective and does not require complicated instrumentation. Recent progress will be presented on the improvement, scalability, and automation of the ATPE method for SWCNT separation through the use of countercurrent chromatography.",
+    "presenting_author": "Jason K. Streit | National Institute of Standards and Technology, Gaithersberg, MD",
+    "authors": [
+      "Jeffrey A. Fag | ",
+      "Ming Zheng | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Jason K. Streit",
+        "affiliation": "National Institute of Standards and Technology, Gaithersberg, MD",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jeffrey A. Fag",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Ming Zheng",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper456011.html",
+    "topic": "Process Systems Engineering Beyond Chemical Plants: Signed Digraph As a Modeling Tool for Analyzing Systemic Risk in Financial Networks",
+    "date_time": "Tuesday, November 15, 2016: 12:30 PM",
+    "abstract": "Process systems engineering (PSE) has been an active and important research area in chemical engineering for more than half a century. It encompasses the control, optimization, and risk management of large-scale chemical engineering systems. Complex sociotechnical systems, such as modern financial systems, are characterized by the same interdependencies and a large number of units one often observe in a chemical plant. Systemic disasters, such as ’08 financial crisis and ’10 BP Deepwater Horizon oil spill, share alarming similarities. The commonalities naturally lead to the question: Can we use PSE to understand and, more ambitiously, design complex sociotechnical systems? Human factors such as self-interest and cognitive limitation are critical in the course of a systemic event. They are also the biggest challenges of applying PSE to such systems. Without a central planner and being subject to the limited information, each individual (person or institution) tends to maximize its own utility and oversee the local stability only. This myopia might lead to system-wide failures as we have seen in the financial crisis and other systemic disasters. In this talk, we apply the signed digraph (SDG) technique used in fault diagnosis to modeling systemic risk in a financial system. This approach helps us identify whether and how a causal pathway in the financial network could potentially lead to a systemic risk outcome. The framework is capable of recreating known runaway situations and discovering potential vulnerabilities. More importantly, since each causal relationship is derived from underlying economic principles and rational individual behaviors, one would expect global stability for the overall system. Quite the contrary, we identified systemic runaway events such as fire sale and funding run from the diagnosis despite individual institutions being conservative. Actions that dampen risk on a local level can contribute positive feedback and cascades on the global level, leading to large-scale unintended consequences. Automation plays an important role in such fault diagnosis. In the case study, one can perhaps manually identify and enumerate all the feedback loops. However, for a more realistic version of the network, where there are multiple interacting subsystems, it is virtually impossible to analyze such loops manually. The SDG framework can be automated to handle larger systems via artificial intelligence and optimization techniques. The end-goal of this framework is providing a systematic method to detect potential threats and design such complex systems.",
+    "presenting_author": "Yu Luo | ",
+    "authors": [
+      "\n\t\n\t\tRichard Bookstaber | Office of Financial Research, Washington, DC",
+      "Paul Glasserm | Columbia Business School, New York, NY",
+      "Garud Iyengar | Department of Industrial Engineering and Operations Research, Columbia University, New York, NY",
+      "Venkat Venkatasubramani | ",
+      "Zhizun Zhang | "
+    ],
+    "authors_structured": [
+      {
+        "name": "\n\t\n\t\tRichard Bookstaber",
+        "affiliation": "Office of Financial Research, Washington, DC",
+        "designation": "Author"
+      },
+      {
+        "name": "Paul Glasserm",
+        "affiliation": "Columbia Business School, New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Garud Iyengar",
+        "affiliation": "Department of Industrial Engineering and Operations Research, Columbia University, New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Yu Luo",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Venkat Venkatasubramani",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Zhizun Zhang",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464707.html",
+    "topic": "Improved Data-Driven Mathematical Modeling and Global Optimization Framework: An Application in Refinery Planning Operations",
+    "date_time": "Tuesday, November 15, 2016: 1:27 PM",
+    "abstract": "Improving the planning and scheduling operations is one of the major challenges in the petrochemical industry considering the tight competition, environmental regulations, and lower profit margins [1]. A recent work of our group developed a data-driven modeling and global optimization-based planning formulation for highly integrated refinery-petrochemical complexes [2]. In this work, an improved and more generalized framework for planning operations is applied to an actual refinery operated by Hyundai Oilbank and located in Korea. The refinery planning problem has received considerable attention since the introduction of linear programming in 1950’s. Planning is a topic of special interest for many process systems engineers and in this respect, nonlinear models and specialized algorithms have been proposed for refinery operation but global optimality was not guaranteed in any method [3]. Integration and interaction between refineries and chemical plants is another level of complexity that is addressed only by few researchers [2,4]. Although there are commercially available highly detailed mathematical models for simulation of processing units, such detailed models cannot be used in enterprise-wide operations due to computational expense. Data-driven modeling offers a promising way to obtain inexpensive nonlinear models [5,6], which can relate relevant inputs to relevant outputs to describe planning operations. The first step of this work consists of organizing, analyzing, and processing the raw data provided by the industrial partner. In order to reduce the variability in the daily data, weekly averages are calculated and used. A detailed outlier analysis is carried out and missing points in the data set are imputed. Having decided on the functional relationship between inputs and outputs, data-based nonlinear models are developed for the processing units. The primary approach is to use quadratic, polynomial, signomial, exponential, and logarithmic models to predict product yields and properties for all of the production units. The parameters of the postulated models are globally optimized using the state-of-the-art, commercial deterministic global optimization solver ANTIGONE [7], based on a large data set of daily production and property measurements. All the models are created in a generalized and an automated fashion, which improved the applicability of the framework. The second step of the work is creating a superstructure containing all possible connections and operating modes in the refinery. The resulting single-period planning model is a large-scale non-convex mixed integer nonlinear optimization model, which is solved to ε-global optimality using ANTIGONE [7]. Several case studies with candidate months of operation are chosen and the profit calculated by the formulation is compared with actual plant profit. All the outlier analysis, data processing, and planning are done with close collaboration with our industrial partner. Results of the case studies are provided to illustrate the efficiency of our proposed model and global optimization approach. References: CA Floudas, AM Niziolek, O Onel, LR Matthews, Multi-Scale Systems Engineering for Energy and the Environment: Challenges and Oppurtunities, AIChE Journal, 62 (3) (2016), pp. 602-623 J Lie, X Xiao, F Boukouvala, B Zhao, G Du, X Su, H Liu, CA Floudas, Data-Driven Mathematical Modeling and Global Optimization Framework for Entire Petrochemical Planning Operations, AIChE Journal, 2016, DOI: 10.1002/aic.15220 NK Shah, Z Li, MG Ierapetritou, Petroleum refining operations: key issues, advances, and opportunities. Industrial and Engineering Chemisty Research, 50 (3) (2011), pp. 1161-1170 K Al-Qahtani, A Elkamel, Multisite refinery and petrochemical network design: optimal integration and coordination, Industrial and Engineering Chemisty Research, 48 (2) (2009), pp. 814-826 P Guyonnet, FH Grant, MJ Bagajewicz, Integrated model for refinery planning, oil procuring, and product distribution, Industrial and Engineering Chemisty Research, 48 (1) (2009), pp. 463-482 SJ Qin, Process data analytics in the era of big data, AIChE Journal, 60 (9) (2014), pp.3092-3100 R Misener, CA Floudas, ANTIGONE: Algorithms for coNTinuous Integer Global Optimization of Nonlinear Equations, Journal of Global Optimization, 59 (2–3) (2014), pp. 503–526",
+    "presenting_author": "C. Doga Demirhan | ",
+    "authors": [
+      "Fani Boukouval | ",
+      "Kyungwon Kim | Process Optimization Team, Hyundai Oilbank, Seosan, South Korea",
+      "Hyeju Song | ",
+      "Christodoulos A. Floudas | "
+    ],
+    "authors_structured": [
+      {
+        "name": "C. Doga Demirhan",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Fani Boukouval",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Kyungwon Kim",
+        "affiliation": "Process Optimization Team, Hyundai Oilbank, Seosan, South Korea",
+        "designation": "Author"
+      },
+      {
+        "name": "Hyeju Song",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Christodoulos A. Floudas",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472038.html",
+    "topic": "Ultra-Breathable Carbon Nanotube Pores",
+    "date_time": "Tuesday, November 15, 2016: 1:50 PM",
+    "abstract": "Previous reports for pressure-driven transport through CNT membranes demonstrated CNT permeability values that were orders of magnitude larger than those predicted by Knudsen diffusion theory for gases (~10 2 fold enhancement) and by Hagen-Poiseuille equation for liquids (10 3 -10 5 fold). While these results spurred great interest in CNTs for efficient membrane separations, it remains an open question if driving forces other than pressure could result in similar transport rate enhancements. A positive answer would greatly extend the promises and application space of CNTs as fluidic channels. In this work, we provide the first experimental evidence of enhanced gas transport in CNTs driven by a concentration rather than a pressure gradient. We fabricated cm 2 , free-standing, flexible, 1-5 nm SWNT/parylene membranes with well-aligned nanotubes as only transporting pores, and we measured the water vapor diffusion rate through the membrane when each surface is exposed to a different relative humidity. Our measurements demonstrate that these membranes exhibit rates of water vapor transport (~8000 gr/m 2 day) that surpass those of commercial breathable fabrics, even though the CNT pores are only a few nm wide and the overall porosity is less than 5.5%. Measured permeability of our CNT channels is 24 times larger than Knudsen diffusion prediction, and this flow enhancement is close to that measured for pressure-driven transport of nitrogen. [ 1 ] Membranes made from 1-3 nm SWNT forests with higher number densities (> 10 12 /cm 2 ) display even larger gas-transport enhancements. This ultrafast rate of water vapor transport in CNTs suggests that CNT membranes hold great potential for pervaporation, membrane distillation, and as building block of breathable and protective fabrics. For the last application, a membrane shall be able to block dangerous components while permitting perspiration. By demonstrating complete rejection of 3-nm charged dyes, 5-nm uncharged gold (Au) nanoparticles, and ~40-60-nm Dengue virus from aqueous solutions during filtration tests, we provide evidence that, in addition to outstanding breathability, our CNT membranes provide a high degree of protection from bio-threats by size exclusion. [ 1 ] This work was supported by the Defense Threat Reduction Agency (DTRA) D[MS] 2 project under Contract No. BA12PHM123 and was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344. [1] N. Bui, E. R. Meshot, S. Kim, J. Pena, P. W. Gibson, K. J. Wu, F. Fornasiero, Adv. Mater. 2016 , accepted .",
+    "presenting_author": "Francesco Fornasiero | Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA",
+    "authors": [
+      "\n\t\n\t\tNgoc Bui | Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA",
+      "Eric Meshot | Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA",
+      "Sangil Kim | Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA",
+      "Jose Pe | Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA",
+      "Chiatai Che | Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA",
+      "Phillip Gibso | ",
+      "Kuang Jen Wu | Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "\n\t\n\t\tNgoc Bui",
+        "affiliation": "Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Eric Meshot",
+        "affiliation": "Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Sangil Kim",
+        "affiliation": "Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jose Pe",
+        "affiliation": "Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Chiatai Che",
+        "affiliation": "Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Phillip Gibso",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Kuang Jen Wu",
+        "affiliation": "Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Francesco Fornasiero",
+        "affiliation": "Physical and Life Sciences, Lawrence Livermore National Laboratory, Livermore, CA",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper471634.html",
+    "topic": "Wrapped up in Nanotubes: Probing Photoluminescence Dynamics of Wrapped Single-Walled Carbon Nanotubes (SWCNTs) for Sensing Applications",
+    "date_time": "Tuesday, November 15, 2016: 2:38 PM",
+    "abstract": "The last decade has realized an onset of novel optical, SWCNT-based sensors that have been crucial in shaping a distinct generation of unconventional analytical tools. These optical nanosensors exploit the advantageous fluorescence properties of semiconducting SWCNTs, which benefit from stable and sensitive near-infrared emissions capable of deep-tissue sensing and imaging applications. SWCNTs are non-covalently wrapped in a variety of chemical moeities, including DNA, polymers, and proteins, that impart the SWCNT with selectivity towards specific analytes of interest. Recent research endeavors have largely focused on designing wrappings that control the sensor's selectivity by modulating the surface coverage of the nanotube in the presence of an analyte. In addition to selectivity, these wrappings also modulate fluorescence properties such as emission intensity; properties that play an integral role in determining the sensitivity limits of these sensors. We have developed a model that explores the perturbations of SWCNT fluorescence emissions in the presence of a wrapping by de-coupling the structural and chemical contributions of the wrapping. The results of this model have been corroborated by experimental measurements and extended to explore the development of unprecented biohybrid sensors. Taken together, the compoutational and experimental contributions of this work enable a comparative approach towards achieving design rules for the rational engineering of sensor wrappings.",
+    "presenting_author": "Ardemis A. Boghossian | Institute of Chemical Sciences and Engineering (ISIC), Ecole Polytechnique Federale de Lausanne (EPFL), Lausanne, Switzerland",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Ardemis A. Boghossian",
+        "affiliation": "Institute of Chemical Sciences and Engineering (ISIC), Ecole Polytechnique Federale de Lausanne (EPFL), Lausanne, Switzerland",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper463511.html",
+    "topic": "Electrical Transport and Network Percolation in Graphene and Boron Nitride Mixed-Platelet Structures",
+    "date_time": "Tuesday, November 15, 2016: 1:02 PM",
+    "abstract": "Percolating network of mixed 2D nanomaterials (2DNs) can potentially leverage the unique electronic structures of different 2DNs, their interfacial doping, manipulable conduction pathways and local traps. Here, we present the percolation mechanism and electro-capacitive transport pathways of mixed-platelet network of hexagonal boron nitride (hBN) and reduced graphene oxide (rGO) – two isostructural and isoelectronic 2DNs. The transport mechanism is explained in terms of electron hopping through isolated hBN defect traps between rGO (possibly via electron ‘funneling’). With optical bandgaps of 4.57 eV and 4.08 eV for the hBN-domains and 2.18 eV for the rGO domains, the network of hBN with rGO exhibits Poole-Frenkel emission based transport with mean hopping gap of 1.12 nm (~hBN trilayer) and an activation barrier of ~15 ± 0.7 meV. Further, hBN (1.7 pF) has 6 folds lower capacitance than 1:1 hBN:rGO, which has two orders of magnitude higher resistance than rGO (1.46 MΩ). These carrier transport results can be applied to other multi-2DN networks for development of next-generation functional 2D-devices.",
+    "presenting_author": "Vikas Berry | Chemical Engineering, University of Illinois at Chicago, Chicago, IL",
+    "authors": [
+      "\n\t\n\t\tRousan Debbarm | Chemical Engineering, University of Illinois at Chicago, Chicago, IL",
+      "Sanjay Behur | Chemical Engineering, University of Illinois at Chicago, Chicago, IL",
+      "Phong Nguye | Chemical Engineering, University of Illinois at Chicago, Chicago, IL",
+      "Sreeprasad Sreenivas | "
+    ],
+    "authors_structured": [
+      {
+        "name": "\n\t\n\t\tRousan Debbarm",
+        "affiliation": "Chemical Engineering, University of Illinois at Chicago, Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Sanjay Behur",
+        "affiliation": "Chemical Engineering, University of Illinois at Chicago, Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Phong Nguye",
+        "affiliation": "Chemical Engineering, University of Illinois at Chicago, Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Sreeprasad Sreenivas",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Vikas Berry",
+        "affiliation": "Chemical Engineering, University of Illinois at Chicago, Chicago, IL",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472915.html",
+    "topic": "Computation and Analysis of Optimal Operating Strategies for Air Separation Units Using High Fidelity Dynamic Models",
+    "date_time": "Tuesday, November 15, 2016: 2:43 PM",
+    "abstract": "Manufacturing operations are frequently motivated and shaped by external environmental factors, such as raw material availability, demand level and government regulations. The traditional interpretation of such external variations as disturbances and the practice of decoupling a plant from its environment are not suitable for today’s transient and competitive global market. This means that such plants need to switch from largely steady-state operations to more intentionally dynamic ones in response to the time-varying environment [1] . Cryogenic air separation units (ASUs) based on distillation technology are an example of such manufacturing plants. Due to the high degree of heat and material integration of the process, ASUs typically have limited agility and low flexibility, which make process transitions challenging. Notwithstanding, the current market environment creates a significant incentive for dynamic operation of ASUs. Although the raw material, namely ambient air, is free and plentiful, ASUs consume large amounts of electricity, with industrial gas producers in the U.S. consuming in excess of $ 1 billion dollars of electricity per year [2] . Since electricity price deregulation, energy providers introduced dynamic electricity pricing strategies, such as use-of-time and real-time policies. These changes in the utility market may further amplify variations on the demand side, as now the ASU’s customers may also practice demand response operations. Studies on the operations of ASUs have focused mainly on transition agility [3] , short-term planning [4] and long-term scheduling [5] . It is demonstrated in several studies that when an ASU adjusts its production loads in response to the electricity price, improvements in the plant’s economic performance can be achieved. However, most of the studies focused on electricity price induced operation changes. Except for the work done by Pattison and co-workers [6] , most of the planning and scheduling studies do not include accurate representations of the process dynamics, despite its importance in determining the actual feasibility of required transitions. In these studies, one of the commonly practiced strategies is to use liquid inventory to buffer the effects of electricity price variations. In this paper, we conduct a more comprehensive analysis on optimal operation strategies for air separation systems through a multi-tiered dynamic optimization framework. Here, the response of the integrated plant is captured using collocation-based reduced order dynamic models that are shown to be highly accurate. The overall objective is to improve the plant’s economic performance under electricity price or demand variation. One of the operational issues assessed is the economic incentive for practicing a storage and evaporation strategy in response to time-varying electricity price/demand. The trade-off between profitability and feasibility (i.e. due to process dynamics) and the resulting selection of collection methods (i.e. collecting liquid product or liquefying over-produced gas product) and utilization mechanisms (i.e. vaporizing to meet gas demand or introducing as additional reflux) are systematically explored. Another issue investigated is the benefit of having cooperative supply chain subsystems. With information on the upcoming demand change, the air separation plant could potentially take pre-emptive action so that the demand of the customer can be satisfied, while also maximizing the profitability of the plant. All these optimization problems are solved using the commercially available software package, gPROMS 4.1.0. References [1] T. Backx, O. Bosgra and W. Marquardt, \"Towards intentional dynamics in supply chain conscious process operations,\" in Foundations of Computer Aided Process Operations Conference , 1998. [2] Z. Chen, M. Henson, P. Belanger and L. Megan, \"Nonlinear model predictive control of high purity distillation columns for cryogenic air separation,\" IEEE Transactions on Control Systems Technology, vol. 18, no. 4, p. 811 –821, 2010. [3] Y. Cao, S. C.L.E., M. Baldea and S. Blouin, \"Optimization-based assessment of design limitations to air separation plant agility in demand response scenarios,\" Journal of Process Control, vol. 33, pp. 37-48, 2015. [4] Y. Zhu, S. Legg and L. C.D., \"A multiperiod nonlinear programming approach for operation of air separation plants with variable power pricing,\" AIChE Journal, vol. 57, no. 9, pp. 2421-2430, 2011. [5] S. Mitra, J. Pinto and I. Grossmann, \"Optimal multi-scale capacity planning for power-intensive continuous processes under time-sensitive electricity prices and demand uncertainty. Part I: Modeling,\" Computers & Chemical Engineering, vol. 65, pp. 89-101, 2014. [6] R. Pattison, C. Touretzky, T. Johansson, I. Harjunkoski and M. Baldea, \"Optimal Process Operations in Fast-Changing Energy Markets: Framework for Scheduling with Low-Order Dynamic Models and an Air Separation Application,\" Industrial and Engineering Chemistry Research, vol. 55, no. 16, pp. 4562-4584, 2016.",
+    "presenting_author": "Christopher L. E. Swartz | Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+    "authors": [
+      "\n\t\n\t\tYanan Cao | Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+      "Jesus Flores-Cerrillo | "
+    ],
+    "authors_structured": [
+      {
+        "name": "\n\t\n\t\tYanan Cao",
+        "affiliation": "Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Christopher L. E. Swartz",
+        "affiliation": "Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jesus Flores-Cerrillo",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472343.html",
+    "topic": "Nucleation and Growth of Spontaneously Aligned Regions in Carbon Nanotube Thin Films: A Morphological Analysis",
+    "date_time": "Tuesday, November 15, 2016: 2:06 PM",
+    "abstract": "In the ongoing search for scalable organization of carbon nanotubes, deposition of dispersed nanotubes on a filter membrane via pressure-driven flow has long been a promising candidate. Thin films of uniform thickness, from sparse sub-percolation networks to thick freestanding buckypapers, can be fabricated by this method. Minimal apparatus is required and the films can be readily transferred to various substrates. The films constructed by this method do not generally exhibit any organization or ordering (aside from uniform thickness). However, recent work [1-4] has shown that under specific process conditions, short and long-range ordering of the nanotubes does occur. As fluid moves across the membrane, the dispersed nanotubes are unable to pass. This results in elevated concentration of tubes near the membrane surface. Furthermore, the velocity of the fluid medium presumably confines the tubes to orient themselves parallel to the plane of the membrane. Tubes near the membrane eventually form domains of uniform local alignment. While the fluid velocity and concentration of the nanotube dispersion are important factors for the emergence of aligned domains, it seems that formation time (time required for the entire volume of fluid to pass through the membrane, leaving dry nanotube membrane behind) is the critical parameter, with organization in the films increasing for longer formation times. We prepared films with a uniform nanotube density of 0.46 µg/mm2 – approximately enough to form a monolayer of nanotubes on the membrane. Formation times were varied by altering fluid velocity, and by altering the sample concentration. In the first case, the solution volume was held constant at 100 mL and vacuum pressure was varied. In the second, vacuum pressure was held constant (near the maximum level used in constant volume series) and the sample was diluted to volumes of 100 to 800 mL. Domains – regions of uniform nanotube orientation – were identified from SEM images by a two-step algorithm. SEM images of the sample were converted to orientation maps, then k-means segmentation was applied to the maps, and continuous regions of the clusters which met threshold criteria for shape and coherency were identified as domains. Visual inspection of the images and trends in domains identified by the algorithm show that in all cases, the film morphology transitions from many small domains to fewer, and larger domains. However, the effect is more pronounced in the constant fluid velocity case. Nearest neighbor statistics of the domains show that, for the constant fluid velocity samples, increasing formation time causes the film morphology to transition from one with small domains which are relatively different from their neighbors in terms of orientation angle and size, to films of larger domains, more similar to their neighbors. The same trends in nearest neighbor statistics were not present in the samples of varying fluid velocity, though average domain area did still increase. Thus it appears that the formation of films with large domains is in part due to the reconciliation of orientation vectors among the small domains which occur when the process is first initiated. This effect was present in the constant fluid velocity samples, but absent in the long formation-time samples with very low fluid velocities. Further investigation with these methods into other factors such as surfactant concentration will help pinpoint the driving forces behind organization of the nanotubes and guide development of large-scale aligned nanotube films. References 1. Dan, B., Ma, A. W. K., Hároz, E. H., Kono, J., & Pasquali, M. (2012). Nematic-Like Alignment in SWNT Thin Films from Aqueous Colloidal Suspensions. Industrial & Engineering Chemistry Research, 51(30), 10232–10237. doi:10.1021/ie3001925 2. King, B., & Panchapakesan, B. (2014). Vacuum filtration based formation of liquid crystal films of semiconducting carbon nanotubes and high performance transistor devices. Nanotechnology, 25(17), 175201. doi:10.1088/0957-4484/25/17/175201 3. Oh, J. Y., Yang, S. J., Park, J. Y., Kim, T., Lee, K., Kim, Y. S., … Park, C. R. (2015). Easy preparation of self-assembled high-density buckypaper with enhanced mechanical properties. Nano Letters, 15(1), 190–197. doi:10.1021/nl5033588 4. He, X., Gao, W., Xie, L., Zhang, Q., Lei, S., Li, B., … Adams, W. W. (2016). Wafer-scale monodomain films of spontaneously-aligned single-wall carbon nanotubes, (April). doi:10.1038/nnano.2016.44",
+    "presenting_author": "Benjamin King | Mechanical Engineering, University of Louisville, Louisville, KY",
+    "authors": [
+      "Robert W. Coh | ElectoOptics Research Institute and Nanotechnology Center, University of Louisville, Louisville, KY",
+      "Balaji Panchapakes | ",
+      "Stuart J. Williams | Mechanical Engineering, University of Louisville, Louisville, KY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Benjamin King",
+        "affiliation": "Mechanical Engineering, University of Louisville, Louisville, KY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Robert W. Coh",
+        "affiliation": "ElectoOptics Research Institute and Nanotechnology Center, University of Louisville, Louisville, KY",
+        "designation": "Author"
+      },
+      {
+        "name": "Balaji Panchapakes",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Stuart J. Williams",
+        "affiliation": "Mechanical Engineering, University of Louisville, Louisville, KY",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper465130.html",
+    "topic": "Modulation of Thermodynamically-Stable Surfactant Structures for Selective Desorption of Single Wall Carbon Nanotubes",
+    "date_time": "Tuesday, November 15, 2016: 1:18 PM",
+    "abstract": "Over the past decade, the post-synthetic separation of single wall carbon nanotubes (SWCNTs) has been studied with great interest. The most promising techniques include the selective adsorption of SWCNTs onto hydrogel stationary phases and aqueous two-phase extraction. While several researchers have successfully achieved separation of the semiconducting fractions by ( n , m ) type by manipulating the selective adsorption of the nanotubes, these processes often require multiple columns or experimental conditions that are difficult to control. However, the high-fidelity desorption of SWCNTs would provide a simpler approach that minimizes dilution and provides higher yields. Here we report the selective desorption of a wide range of single-chirality ( n , m ) fractions in a single column packed with agarose gel. High-purity fractions of ( n , m ) nanotubes are obtained with high yield once a specific ratio of sodium dodecyl sulfate (SDS)/sodium deoxycholate (DOC) co-surfactant solution is used. In the selective desorption from hydrogels, the co-surfactant structure surrounding the SWCNTs has been shown to play an important role in the separation. The elution of only one ( n , m ) type at a specific co-surfactant ratio while other types are exposed to more surfactant suggests that each ( n , m ) type forms a thermodynamically-stable surfactant structure in the co-surfactant solution. These thermodynamic equilibrium states result in entropy-driven desorption at specific co-surfactant ratios, enabling high-fidelity separations of a single ( n , m ) type in a single column. Moreover, the differences between the co-surfactant ratios needed to separate two ( n , m ) species can sometime be very small. The separation can be obtained under a wide variety of co-surfactant background concentrations. An improved separation sensitivity can be achieved at higher background concentrations.",
+    "presenting_author": "Yang Zhao | Chemical Engineering, University of Florida, Gainesville, FL",
+    "authors": [
+      "Justin G. Clar | Chemical Engineering, University of Florida, Gainesville, FL",
+      "Jia Xu | Department of Materials Science and Engineering, University of Florida, Gainesville, FL",
+      "Jean-Claude J. Bonzongo | Department of Environmental Engineering Sciences, University of Florida, Gainesville, FL",
+      "Kirk J. Ziegler | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Yang Zhao",
+        "affiliation": "Chemical Engineering, University of Florida, Gainesville, FL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Justin G. Clar",
+        "affiliation": "Chemical Engineering, University of Florida, Gainesville, FL",
+        "designation": "Author"
+      },
+      {
+        "name": "Jia Xu",
+        "affiliation": "Department of Materials Science and Engineering, University of Florida, Gainesville, FL",
+        "designation": "Author"
+      },
+      {
+        "name": "Jean-Claude J. Bonzongo",
+        "affiliation": "Department of Environmental Engineering Sciences, University of Florida, Gainesville, FL",
+        "designation": "Author"
+      },
+      {
+        "name": "Kirk J. Ziegler",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  }
+]

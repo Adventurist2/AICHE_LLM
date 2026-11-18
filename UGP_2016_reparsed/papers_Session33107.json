@@ -1,0 +1,677 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper458111.html",
+    "topic": "458111Economic Nonlinear Model Predictive Control of an Integrated Solid-Sorbent Carbon Capture System",
+    "date_time": "November 2016",
+    "abstract": "Post-combustion carbon capture is a practical technique to remove CO2 emission from coal-fired power plants. A major bottleneck for the commercial application of the carbon capture system is the high energy consumption required for plant operation such as CO2 separation and solvent/sorbent regeneration. The operation of the plant also needs to satisfy environmental regulations such as maintaining a certain CO2 capture fraction, under frequent disturbances resulting from the fast load changes in the power plants. Therefore, advanced control strategies are required to enhance the economic efficiency and control performance of the carbon capture system. In this study, we develop economic nonlinear model predictive control (NMPC) strategies for a solid-sorbent carbon capture system to reduce the operational cost while satisfying process constraints in the face of process disturbances. The computational cost of economic NMPC problem is greatly reduced by using an efficient NMPC formulation and a dynamic reduced model. A fast NMPC algorithm is then utilized to enable the online control of the carbon capture system.The major components of the solid-based carbon capture system are bubbling fluidized bed (BFB) adsorber and regenerator, which are described by a one-dimensional, three-region, non-isothermal and spatially distributed model. The reactor’s hydrodynamic behavior is described by partial differential and algebraic equations (PDAEs), constructed from mass and heat conservation and hydrodynamic correlations. The complete description of the BFB model can be found in [1, 2]. After spatial discretization, the BFB model becomes a highly nonlinear and large scale differential and algebraic equation (DAE) system which consists of 2000 differential equations and over 10000 algebraic equations. It is difficult to directly apply this rigorous model for time-critical applications such as NMPC. Therefore, we developed dynamic reduced models to reduce computational cost while maintaining accurate prediction capacity of the rigorous model.Physics-based model reduction of the rigorous BFB model was conducted for both spatial and temporal aspects [3]. Orthogonal collocation on finite elements (OCFE) was applied to discretize the partial differential equations in space. Since OCFE is high order, it requires fewer discretization points to achieve the accuracy of the finite difference method. Further model reduction is due to unevenly distributed finite elements in space. For the temporal reduction, eigenvalue analysis was used to assess overall time scale differences in the rigorous BFB model. Then a quasi-steady state approximation replaced differential equations with algebraic states. In addition, a null space projection method eliminated reversible reactions for CO2 adsorption and led to a simplified kinetic model. The resulting reduced system therefore has essentially the same general behavior, but becomes much less stiff.To maintain high CO2 capture under unsteady operation we develop a dynamic optimization strategy that discretizes the differential-algebraic equations in time and solves the corresponding nonlinear programming (NLP) problem. Moreover, we extend this approach to on-line optimization through NMPC. For a sufficiently long predictive horizon, the corresponding NLP problem raises a computational challenge, which we address through input and state blocking which significantly reduces the size of NLP subproblems for economic NMPC and maintains Lyapunov stability [4]. Based on the process dynamics, these nonuniform discretizations for state and control profiles also capture multiple time scales of the system and lead to control performance that is essentially the same as using uniform grids.In this talk, we compare this approach with traditional setpoint-tracking NMPC, and we demonstrate that economic NMPC achieves significant reduction in the operational cost of the integrated carbon capture system, by directly considering process economics in the objective function. With reduced model and blocking strategies, we obtain a much smaller optimization problem and achieve one order of magnitude reduction in the solution time for economic NMPC problems. Moreover, advanced step NMPC (asNMPC) [5] is then applied to take these optimization calculations off-line in order to enable fast online control of the integrated carbon capture system. In addition, we apply the robust problem reformulation in [6] and relax inequality constraints with l1 penalty terms, with sufficiently large penalty parameters, to guarantee stability and improve NMPC robustness under process disturbance/uncertainty.References[1] Lee, Andrew, and David C. Miller. \"A one-dimensional (1-d) three-region model for a bubbling fluidized-bed adsorber.\" Industrial & Engineering Chemistry Research 52.1 (2012): 469-484.[2] Modekurti, Srinivasarao, Debangsu Bhattacharyya, and Stephen E. Zitney. \"Dynamic Modeling and Control Studies of a Two-Stage Bubbling Fluidized Bed Adsorber-Reactor for Solid–Sorbent CO2 Capture.\" Industrial & Engineering Chemistry Research 52.30 (2013): 10250-10260.[3] Yu, Mingzhao, David C. Miller, and Lorenz T. Biegler. \"Dynamic reduced order models for simulating bubbling fluidized bed adsorbers.\" Industrial & Engineering Chemistry Research 54.27 (2015): 6959-6974.[4] Yu, Mingzhao and Lorenz T. Biegler. A Stable and Robust NMPC Strategy with Reduced Models and Nonuniform Grids, the 11th IFAC Symposium on Dynamics and Control of Process Systems, 2016[5] Zavala, Victor M., and Lorenz T. Biegler. \"The advanced-step NMPC controller: Optimality, stability and robustness.\" Automatica 45.1 (2009): 86-93.[6] Yang, Xue, Devin W. Griffith, and Lorenz T. Biegler. \"Nonlinear Programming Properties for Stable and Robust NMPC.\" IFAC-PapersOnLine 48.23 (2015): 388-397.",
+    "presenting_author": "Mingzhao Yu | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Mingzhao Yu",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Pittsburgh",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "PA and Lorenz T. Biegler",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Pittsburgh",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "PA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper458111.html",
+    "paper_id": "458111"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464629.html",
+    "topic": "464629A Supervisory Control Framework for Fault-Tolerant Dispatch of Distributed Energy Resources",
+    "date_time": "November 2016",
+    "abstract": "The convergence of competition in the power industry with the arrival of environmentally friendly micro-turbines, fuel cells, photovoltaics, small wind turbines, and other advanced distributed power technologies has sparked strong interest in distributed power generation [1]. This convergence of policy and technology promises to transform the electric power system from one relying primarily on central generation to one in which Distributed Energy Resources (DERs) provide most of the power needed. The resulting major improvement in power reliability, quality and efficiency; and the greater flexibility to respond to changing energy needs could save billions of dollars now lost each year because of power disruptions. These considerations have motivated a significant and growing body of research work on the modeling, analysis and control of DERs (e.g., see [2]-[6] for some results and references).An important challenge with the evolution from central to distributed generation -- especially in light of the increasing number and diversity of DERs spread over the grid -- is the development of integrated monitoring, control and coordination strategies that would ensure optimal dispatch of the energy resources to provide highly reliable services under various disturbance and failure scenarios. This is significant given the fact that the distributed power market is driven by the need for reliable high-quality power, and the substantial impact that local disruptions in power flow can have when the DERs are integrated to support grid operations. In this context, process control and monitoring are critical tools for ensuring that the supply of DER networks matches demand whilst ensuring the stable and sustainable operation of each DER unit. However, the stability of DER networks and how they perform in the presence of local unit faults and failures has not been rigorously assessed. The need for these networks to function in the presence of faults is critical as to be a viable option for electricity generation, and these DER networks must be able to perform at the same standards of quality, stability, and robustness as current electrical generation. Meeting this challenge calls for a hierarchical monitoring and fault-tolerant control architecture where distributed monitoring and fault-tolerant control systems that perform timely fault identification and control system reconfiguration at the local level are integrated with a higher-level supervisor that optimally coordinates power generation in the event that local fault rectification is not possible. This hierarchy enables the timely mitigation of faults with supervisory oversight.In prior work, fault-tolerant control of DERs has been studied in the context of a small-scale network of solid oxide fuel cells, where the focus has been on the detection and recovery from faults at the local level without supervisory oversight [7]. DER health monitoring was conducted through use of an alarm threshold on a properly designed observer-based output residual. Exploiting inherent actuator redundancy in the component subsystems, a number of stabilizing controller configurations were designed, and a methodology for active switching between the configurations in the event of a threshold breach was developed. The results were subsequently extended in [8] to include explicit fault estimation and performance-based fault accommodation capabilities in the local fault-tolerant control system design. In both studies, the system under consideration was only looked at from the local level with no supervisory communication. This negated the need for any logic or control at anything other than the local level which would be necessary in the event of a severe local unit fault in order to bring the local unit to an adequate safe parking state or initiate a safe unit shutdown. When all locally feasible corrective measures cannot rectify the local fault, an intervention by the supervisor becomes necessary. The local fault diagnosis information in this case must be communicated to the supervisor to be able to reconfigure the power load distribution for the entire network and compensate for the loss in power supply caused by the local failures.The objective of this contribution is to develop an optimization-based supervisory control framework for fault-tolerant dispatch of DERs at the network level, which builds on the local fault identification and accommodation strategies developed earlier. The proposed framework extends the previous results in two important directions. One direction is incorporating logic on the local unit side to communicate unit fault scenarios at the local level with the supervisory controller. This would be in the case of a unit being hindered to the point where operation at a level deemed necessary by the supervisor is no longer a feasible option. The other direction is incorporating a supervisory controller to optimally allocate load to each unit on the network with logic in place to handle fault situations at the local level. The supervisory controller is designed using model predictive control (MPC) techniques which allow optimization of resource dispatch in the control action while incorporating various operational constraints on the local units. In the event of a local unit fault, the supervisor would communicate with the local unit to determine a sustainable operating condition, whether that be complete unit shut down or some diminished safe parking state. At that time, the supervisor would need to reallocate the load deficit caused by the faulted unit in an optimal way across the remaining units of the system. To this end, a finite-horizon constrained optimization problem is solved on-line to determine the optimal future power references for the functional DERs. Only the first part of the reference trajectories are transmitted to the local control systems, and the optimization is repeated when new measurements are sent to the supervisor. The receding horizon implementation strategy provides robustness against intrinsic uncertainties in the power generation capacity of certain DERs (e.g., renewables subject to environmental variations and intermittencies), as well as the uncertainty associated with long-term future power demand. The proposed framework is illustrated using a multi-source hybrid renewable DER system consisting of a photovoltaic energy conversion system, a wind energy conversion system, a fuel cell, an electrolyzer and a battery bank.References:[1] R. H. Lasseter, \"Microgrids and distributed generation\",Journal of Energy Engineering,133, 144–149, 2007.[2] M. Deshmukh and S. Deshmukh, “Modeling of hybrid renewable energy systems”,Renewable and Sustainable Energy Reviews,12, 235 –249, 2008.[3] S. Barsali, M. Ceraolo, P. Pelacchi, and D. Poli, “Control techniques of dispersed generators to improve the continuity of electricity supply,”Proceedings of IEEE Power Engineering Society Winter Meeting, pp. 789–794, 2002.[4] M. Marei, E. El-Saadany, and M. Salama, “A novel control algorithm for the DG interface to mitigate power quality problems,”IEEE Transactions on Power Delivery,19, 1384-1392, 2004.[5] Y. Sun, S. Ghantasala and N. H. El-Farra, ``Networked Control of Distributed Energy Resources: Application to Solid Oxide Fuel Cells,\"Industrial Engineering and Chemistry Research,48, 9590-9602, 2009.[6] W. Qi, J. Liu, X. Chen, and P. D. Christofides, “Supervisory predictive control of stand-alone wind/solar energy generation systems,”IEEE Transactions on Control Systems Technology,19, 199 – 207, 2011.[7] Y. Sun, S. Ghantasala and N. H. El-Farra, “Monitoring and fault-tolerant control of distributed power generation: Application to solid oxide fuel cells,”Proceedings of American Control Conference, pp.448-453, 2010.[8] J. T. Allen and N. H. El-Farra, “A model-based framework for fault estimation and accommodation applied to distributed energy resources,”Renewable Energy,in press.",
+    "presenting_author": "James Allen and Nael H. El-Farra | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "James Allen and Nael H. El-Farra",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Department of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of California",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Davis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Davis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "CA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464629.html",
+    "paper_id": "464629"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470736.html",
+    "topic": "470736From Batch- to Continuous Flow Synthesis of Noble Metal Patches on Supports from Colloidal Particles up to Porous Bulk Materials",
+    "date_time": "November 2016",
+    "abstract": "The preparation of nanoparticles of gold, silver or platinum have subject of intense study for several decades. A wide range of potential applications can be found e.g. in the fields of biomedicine, plasmonics, sensors or catalysis. Achieving controlled and scalable fabrication of asymmetrical particle morphologies by simple methods is a major hurdled to exploiting such materials, which are expected to have enhanced functionality. In the special case of patchy particles, the surface shows an inhomogeneous distribution of chemical and physical properties. Such situations might be achieved by depositing a material like gold, silver or platinum asymmetrically onto an initially homogenous surface. A well-known example of these relatively new types of particles are Janus particles which show a 50% surface contribution of different material and/-or functionality. Most of the fabrication methods for combining noble metals and non-metallic co-particles are based on the immobilization of spherical core particles onto a substrate to shadow a desired fraction of the particles surface against further chemical or physical treatments. Such approaches include several steps which lead to a high complexity and a limited scalability. In contrast, in our group we have developed a facile route to produce patchy particles which is based on the cooperative interaction of metal precursors and other reagents with a core particle’s surface. We have shown that this leads to a strong preference for heterogeneous nucleation and surface diffusion, leading to the surface conformal growth of noble metal patches. This general method can be applied to several patch- and co-particle combinations like Au@PS (polystyrene particles), Pt@PS and Ag@SiO2. In this presentation it will be shown how this method has been introduced on the small scale in batch processes and further developed into a T-mixer based continuous flow process at different scales. Our results show that the mixing of the educts plays an essential role in the final particles properties like the distribution of metal loading at the co-particles surface – measured by analytical ultra-centrifugation (AUC), morphology and related plasmonic properties in the UV-VIS-NIR spectrum. By an increase of the core particle complexity by an increase of size and porosity as in case of catalyst support materials like porous glass particles, the limits of continuous flow synthesis at lab scale are given by the colloidal instability of the corresponding suspensions. We will show how these limits can be expanded by the use of a CSTR based process which allows the dispersion of the stock- and reactive suspensions by stirring. In addition, by the use of a mixing chamber where substrates can be immobilized, our general method allows the synthesis of novel metal patches on macroscopic porous materials such as silver patches on bio glass scaffolds in the millimeter scale.",
+    "presenting_author": "Thomas Meincke and Robin N. Klupp Taylor | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Thomas Meincke and Robin N. Klupp Taylor",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Institute of Particle Technology",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Erlangen-Nuremberg",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Erlangen",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Germany",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470736.html",
+    "paper_id": "470736"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468004.html",
+    "topic": "468004Development of a New Molecular Dynamics Force Field to Model Intermolecular Interactions at MoS2Interfaces: Application to Liquid-Phase Exfoliation",
+    "date_time": "November 2016",
+    "abstract": "The controlled synthesis of molybdenum disulfide (MoS2) using liquid-phase exfoliation, as well as several of its proposed applications, involve liquids coming into intimate contact with MoS2surfaces. Molecular dynamics (MD) simulations offer a robust methodology to investigate nanomaterial/liquid interactions involving weak van der Waals forces. However, MD force fields for MoS2currently available in the literature incorrectly describe not only the cohesive interactions between layers of MoS2, but also the adhesive interactions of MoS2with liquids such as water. Here, we develop a set of force-field parameters that reproduce the properties of bulk 2-H molybdenite, with special attention to the distinction between the covalent, intra-layer terms and the non-covalent, inter-layer Coulombic and van der Waals interactions. The resulting model is compatible with MD force fields for organic compounds, and can correctly describe the interactions of MoS2with liquids, yielding excellent agreement with experimental contact angles for water and diiodomethane. Potential of mean force (PMF) calculations using various solvents, including isopropanol (IPA), water (H2O), dimethyl sulfoxide (DMSO), dimethylformamide (DMF), and N-methyl-2-pyrrolidone (NMP), demonstrate that the use of our force field can explain the current selection of solvents used in experimental studies of the liquid-phase exfoliation of MoS2flakes, as well as the observed colloidal stability of the resulting dispersion. Our new force field enables an accurate description of MoS2interfaces, and will pave the way for the simulation-aided design of solvent media for the exfoliation of MoS2,as well as its applications in applications including membranes, microfluidic devices, and sensors.",
+    "presenting_author": "Ananth Govind Rajan | Department of Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Ananth Govind Rajan",
+        "affiliation": "Department of Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Vishnu Sresht",
+        "affiliation": "Department of Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Emilie Bordes 1,2 , Michael S. Strano",
+        "affiliation": "Department of Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Agilio A. H. Pádua 1,2 and Daniel Blankschtein",
+        "affiliation": "Department of Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468004.html",
+    "paper_id": "468004"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper458219.html",
+    "topic": "458219Gold Nanoplate-Based 3D Hierarchical Microparticles with High SERS Enhancement",
+    "date_time": "November 2016",
+    "abstract": "Formation of intended nano- and micro-structures with regular building blocks has attracted much attention due to their potential applications in the fields of optic, electronic and catalysis. Herein, we report a novel strategy to spontaneously grow individual Au nanoplates into three-dimensional (3D) hierarchical cabbage-like microparticles (CLMPs). By reducing gold precursor to gold atoms, N-(3-amidino)-aniline (NAAN) itself was oxidized to form poly (N-(3-amidino)-aniline) (PNAAN), which specifically binds on Au (111) facet as capping agent and led to the formation of gold nanoplates. Due to the incomplete coverage of Au (111) facet, new gold nanoplate growth sites were spontaneously generated from the crystal plane of existing Au nanoplates for the growth of other nanoplates. This process continued until the nanoplate density reached its maximum range, eventually resulting in CLMPs with well-controlled structures. It opens a new avenue to utilize the imperfection during nanoparticle (NP) growth for the construction of microstructures. The individual CLMP shows excellent surface-enhance Raman scattering (SERS) performance with high enhancement factor (EF) and good reproducibility as it integrates the SERS enhancement effects of individual Au nanoplate and the nanogaps formed by the uniform and hierarchical structures.",
+    "presenting_author": "Lin Yue Lanry Yung | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Lin Yue Lanry Yung",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Department of Chemical and Biomolecular Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "National University of Singapore",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Singapore",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Singapore and Ying Ma",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "National University of Singapore",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Singapore",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Singapore",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper458219.html",
+    "paper_id": "458219"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464284.html",
+    "topic": "464284Grid-Relevant Demand Response Modeling of Chemical Processes",
+    "date_time": "November 2016",
+    "abstract": "Manufacturing industries constitute a significant consumer of electricity ranging from about thirty three percent in developed countries[1]to twelve percent in developing countries[2]. In light of the fact that the world jointly seeks ways to improve energy efficiency, mitigate climate change, and optimize the efficiency of the grid[3]; it is beneficial that manufacturing industries, especially chemical industries, contribute to meeting this need. Several chemical processes have been identified as potential candidates owing to their high electricity consumption; including cement, pulp and paper, aluminum, and air separation. These industries can make modifications to their production schedules by increasing production during off-peak periods (i.e., times when total grid load and time-of-use prices are low) and storing excess product to satisfy customer demand during peak times when production rates are lowered. This way, the chemical industry can serve as a grid-level “storage battery.”While intuitive, this strategy – referred to as demand response (DR) – requires a shift in the established operating paradigm of chemical plants which is predicated on running at steady state as much as possible. In contrast, synchronizing chemical process operations with the state of the power grid calls for frequent changes in production rate and/or product grade. From an operational point of view, this requires that production scheduling decisions become not only aware of the steady state characteristics of the process (i.e. what products can be made and at what cost) but also of the process dynamics (i.e. how long it takes to quickly switch between products, and the transient levels of critical operating constraints).In our previous work[4]we focused precisely on developing such a scheduling framework. Specifically, we proposed the use scale-bridging models (SBMs) to represent the process dynamics in the DR scheduling calculation. SBMs are a set of low-order representations of the closed-loop dynamic behavior of a process that is relevant to scheduling calculations (including, e.g., the evolution production rate and product quality following changes in production targets). We showed that the use of SBMs presents distinct advantages compared to embedding a detailed process model in scheduling calculations, namely, leading to significant reductions in computation time and providing an incentive for real-time implementation.Increased participation of industrial players in DR initiatives is expected to have an impact on the operation of the electric grid and, as a consequence, developing representations of DR entities that can be incorporated in power system models is highly desirable. Most existing efforts in this direction focus, however, on thermal loads[5,6]. As a consequence, in this work we propose a new representation of the dynamics of DR operations for chemical processes that is relevant from the grid perspective. Starting with the premise that the aforementioned SBMs are not amenable to sharing with grid operators due to, e.g., business confidentiality concerns related to explicitly representing the performance of a process, we propose a new representation of process dynamics as a grid-level battery. We define a specific set of states (e.g., state of charge) and constraints (e.g., rate of charge) that are meaningful both from the point of view of plant operations and from the point of view of the grid. We demonstrate that such models can be expressed in terms of linear equations (with both continuous and binary variables), and are as such readily embeddable in the existing frameworks for modeling power systems. Finally, we illustrate our results with a case study.ReferenceLevin, K., Cashore, B., Bernstein, S., & Auld, G. (2008). Worldwide Trends in Energy Use and Efficiency: Key Insights from IEA Indicator Analysis.Prasad V.S.N. T (2009). Nigeria’s Electricity Sector- Electricity and Gas Pricing Barriers. International Association for Energy Economics Journal, 1stQuarter, Pg. 29 – 34.G8 Gleaneagles (2005). Gleneagles Plan of Action: Climate Change, Clean Energy and Sustainable Development. Available onlinehttp://www.mofa.go.jp/policy/economy/summit/2005/ccc_a.pdfR. C. Pattison, C. R. Touretzky, T. Johansson, I. Harjunkoski, and M. Baldea. Optimal process operations in fast-changing electricity markets: Framework for scheduling with low-order dynamic models and an air separation application. Ind. Eng. Chem. Res., 55(16):4562–4584, 2016.L. Goransson, J. Goop, T. Unger, M. Odenberger, and F. Johnsson. Linkages between demand-side management and congestion in the European electricity transmission system. Energy, 69:860–872,2014.A. Zerrahn and W. P. Schill. On the representation of demand-side management in power system models. Energy, 84:840–845, 2015.",
+    "presenting_author": "Joannah Otashu | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Joannah Otashu",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Cara Touretzky and Michael Baldea",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "McKetta Department of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "The University of Texas at Austin",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Austin",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "TX",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464284.html",
+    "paper_id": "464284"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466207.html",
+    "topic": "466207A Model-Based Feedback Optimization Method for Solar Dish Facets Alignment",
+    "date_time": "November 2016",
+    "abstract": "The solar dish is a point-focusing concentrator with a very high concentration ratio ranging from hundreds to thousands, it is one of the most critical components of a solar thermal power generation system which governs the overall energy captured. However, large scale solar dishes are hard to assemble because they typically consist of hundreds of mirror facets, which reduce the complexity for manufacturing but greatly increase the difficulty to assemble, specially to align hundreds of facets to optimal positions. As a result, the alignment optimization of large scale dishes typically take months to years, which substantially contributes to the high cost of dish-type solar thermal power generation systems.This work attempts to provide a systematic model-based feedback optimization method to align mirror facets instead of trial-and-error or empirical methods which has long information cycle and inefficient use of data obtained through alignment. The proposed method uses as projected light flux density data in front of the focus point to guide the alignment of the mirror facet in real-time without any special light patterns or complex equipment. The method first build a rigid body model of the entire solar dish assembly as if it is perfectly aligned, then based on the model predicted flux density distribution off focus and observed flux density distribution to identify a series of off-focus hot spots sorted by size. Then for each hot spot, flux density distributions at different distances are used to locate the misaligned mirror facet(s) primarily responsible for the hot spot and compute adjustments needed, adjustments on the targeted facet(s) is then adjust accordingly to remove the hot spot. The procedures are then repeated until all hot spots are resolved, which ensure near perfect alignment of the entire solar dish assembly. A three layer solar dish consists of inner, middle, and outer ring is investigated as an example, simulation showed successful alignment of solar dish facets to parabolic shape following this method and experimental study also confirm the effectiveness of the proposed strategy under realistic gravity induced shape deform.",
+    "presenting_author": "Zhenyu Yi and Dong Ni | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Zhenyu Yi and Dong Ni",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "College of Control Science and Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Zhejiang University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Hangzhou",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "China",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466207.html",
+    "paper_id": "466207"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper469055.html",
+    "topic": "469055State Estimation of Energy Integrated Systems with Time-Scale Multiplicity",
+    "date_time": "November 2016",
+    "abstract": "Energy integration requires dynamic interactions between different process systems units that give rise to challenges associated with the process operation. In particular, process integration results in models with time-scale multiplicity that are characterized by stiff systems of differential equations [1, 2]. For example, networks with large energy recycle, when compared to input/output energy flows, result in a system in which the individual units operate in a fast time scale as opposed to the whole network that operates in a slow one [3]. In the past, control strategies to address time-scale multiplicity have been studied and applied to several process systems [1-3]. However, state estimation approaches for systems with time-scale multiplicity are scarce [4]. In this presentation, we introduce a state estimation framework for energy integrated systems with multiple time scales. The developed framework relies on the time-scale separation of the system, in which state estimators are implemented to match the system dynamics associated with each of the time scales. For example, recursive and optimization-based estimators are investigated for the fast and slow time scales, respectively.To demonstrate the effectiveness of the proposed framework, two case studies with time-scale multiplicity are addressed: (i) a chemical reactor system [5] as a motivating example. In particular, this example illustrates the challenges on the implementation of previously proposed state estimation techniques for low-dimensional systems with time-scale multiplicity; and (ii) an energy-integrated system that corresponds to a reactor-feed effluent heat exchanger (FEHE) network [2]. In addition to the presence of multiple time scales, the FEHE system is also high dimensional with more than 2,000 state variables, which introduces additional challenges to the proposed approach. To address these challenges, a framework with multiple extended Kalman filters (EKFs) for different time scales will be initially presented. Then, an implementation strategy with extended EKFs for the fast time scale and moving horizon estimators (MHEs) [6,7] for the slow time scale will be discussed.References[1] S. S. Jogwar and P. Daoutidis. Dynamics and control of vapor recompression distillation. J. Proc. Cont., 19(10):1737–1750, 2009.[2] S. S. Jogwar, M. Baldea, and P. Daoutidis. Dynamics and control of process networks with large energy recycle. Ind. Eng. Chem. Res., 48(13):6087–6097, 2009.[3] S. S. Jogwar, M. Baldea, and P. Daoutidis. Tight energy integration: Dynamic impact and control advantages. Comput. Chem. Eng., 34(9):1457–1466, 2010.[4] S. C. Patwardhan, S. Narasimhan, P. Jagadeesan, B. Gopaluni, and S. L. Shah. Nonlinear Bayesian state estimation: A review of recent developments. Control Eng. Prac., 20(10): 933–953, 2012.[5] C. Pantea, A. Gupta, J. B. Rawlings, and G. Craciun. The QSSA in chemical kinetics: As taught and as practiced. In N. Jonoska and M. Saito, editors, Discrete and Topological Models in Molecular Biology. Springer, 2013.[6] F. V. Lima and J. B. Rawlings. Nonlinear stochastic modeling to improve state estimation in process monitoring and control. AIChE J., 57(4):996–1007, 2011.[7] F. D. Rincón, G.C. Le Roux, F.V. Lima. The autocovariance least-squares method for batch processes: Application to experimental chemical systems. Ind. Eng. Chem. Res., 53(46):18005-15, 2014.",
+    "presenting_author": "Franklin D. Rincón and Fernando V. Lima | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Franklin D. Rincón and Fernando V. Lima",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Department of Chemical and Biomedical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "West Virginia University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Morgantown",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "WV",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper469055.html",
+    "paper_id": "469055"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470009.html",
+    "topic": "470009High Throughput Block Copolymer Micelle Assembly Methods and Morphologies",
+    "date_time": "November 2016",
+    "abstract": "Block copolymer micelles hold tremendous potential in the biomedical and materials science fields, with uses ranging from drug delivery to new methods of lithography. Micelles are an attractive technology for these applications because of their ease of assembly and tunable properties. Typical micelles are nanoscale structures with hydrophobic cores and hydrophilic coronae. Smaller nanomaterials can be loaded in the core, thus allowing aqueous delivery of otherwise hydrophobic payloads. To date, most micellar research has focused on bench-scale development, rather than translation of this technology to industrial processes. Flexible, high throughput manufacturing strategies for micellar production are necessary for commercialization.Here, we describe and compare two promising semi-continuous methods for synthesis of inorganic-polymer composite micelle nanoparticles. The first combines a scalable electrospray technique with an interfacial instability process to form micellar structures. The second is an adaptation of a flash nanoprecipitation technique originally developed by Prud’homme and colleagues as a way to more rapidly generate polymer aggregates.In the electrospray method, separate and immiscible aqueous and polymer-in-organic solutions flow through a thin coaxial needle assembly, and voltage is applied until a cone-jet spray forms. Aerosol particles are ejected from the spray, travel through the air, and are collected in water as emulsion droplets that undergo transient interfacial surface tension changes, resulting in micelle formation. Here, we explored the limits of the coaxial electrospray process by varying operational parameters to achieve higher polymer processing and throughput, thus accessing greater nanoparticle yields. We independently evaluated the influence of electrospray volumetric flow rates, organic block copolymer loading, and system processing temperature on micelle formation and processing rates for the polymer polystyrene-block-poly(ethylene oxide) (PS-b-PEO). Using this approach, we increased production rates by a factor of 40 over previous reports and accessed different assembly morphologies.We compared this process to the flash nanoprecipitation method. In this method, water is rapidly mixed with block copolymers in a water miscible solvent (i.e., tetrahydrofuran). We studied polymer nanoparticle formation for both PS-b-PEO and poly(ethylene glycol)-block-polycaprolactone (PEG-PCL), and demonstrated micelle production at different mixing speeds, allowing flexibility of production at rates higher than observed using micellar electrospray.Both micelle production techniques hold promise for the formation of empty and loaded micelles of different morphologies. Micellar electrospray is preferred for use with longer block copolymers because of the high mixing rates required in flash nanoprecipitation. However, flash nanoprecipitation is a faster method for appropriate molecules. Each synthesis system has potential application in drug delivery, imaging, diagnostics, and separations.",
+    "presenting_author": "Matthew S. Souva | William G. Lowrie Department of Chemical and Biomolecular Engineering, The Ohio State University, Columbus, OH",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Matthew S. Souva",
+        "affiliation": "William G. Lowrie Department of Chemical and Biomolecular Engineering, The Ohio State University, Columbus, OH",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Gauri M. Nabar",
+        "affiliation": "William G. Lowrie Department of Chemical and Biomolecular Engineering, The Ohio State University, Columbus, OH",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470009.html",
+    "paper_id": "470009"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468296.html",
+    "topic": "468296Surface and Structural-Modified Pyroxene Nanoparticles for Adsorption and Catalytic Thermal Decomposition of Visbroken Residue Asphaltenes",
+    "date_time": "November 2016",
+    "abstract": "The energy demand is growing worldwide due to the increase in population and quality of life. Oil will continue to be a major source of current and future non-renewable energy. However, the current upgrading and recovery technologies are energy and water intensive. Hence new cost-effective technologies for enhancing upgrading and recovery of conventional and unconventional oils are needed and of paramount importance.Asphaltenes are the largest, densest, most polar and surface-active compounds present in crude oil. Asphaltene association and destabilizing problems affect the utilization and recovery of oil from reservoirs, resulting in major complications in the pipelines and wellbores. Consequently, operational costs will be vastly increased and the production rates will be adversely influenced. Various techniques are currently used for removing asphaltenes after deposition. These methods involve production scheme alteration techniques, chemical treatment, mechanical methods, thermal and biological methods. These treatment techniques are expensive and may cause many environmental problems.To this end, nanotechnology, in the form of nanoparticles, has emerged as an attractive area for the oil industry. The unique physical and chemical properties of the nanoparticles promote their adsorptive and catalytic behaviors towards heavy hydrocarbons. Thus, nanoparticles could be employed as adsorbents and catalysts “nanosorbcats” for in-situ and ex-situ application processes.This study presents a new environmentally sound and low-cost, yet highly efficient surface and structural-modified pyroxene (PY) nanoparticles. Low temperature hydrothermal synthesis route was used to prepare PY nanoparticles, which were characterized by different characterization techniques like XRD, BET, TGA, TPD-CO2, TPD-NH3, and XPS. The prepared nanoparticles were employed for the adsorptive removal of visbroken residue asphaltenes (VR-C5), and the solid-liquid-equilibrium (SLE) model was used to describe the adsorption isotherms. The catalytic thermo-oxidative decomposition of adsorbed VR-C5asphaltenes was investigated using TGA coupled with mass spectrometry. The catalytic behavior of the nanoparticles was compared based on the significant shift of the oxidation temperature, CO2evolution profiles, and the kinetic triplets of the oxidation reaction (i.e., Eα, Aα and f(α)). The isoconversional corrected method of Ozawa, Flynn, and Wall (OFW) was used to describe the reaction mechanism and estimate the kinetic triplets. After that the transitional thermodynamic parameters, such as ∆S‡, ∆H‡, and ∆G‡were investigated to get rise to the meaningful kinetic prediction.",
+    "presenting_author": "Maryam Hmoudah | Chemical Engineering, University of Calgary, Calgary, AB, Canada",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Maryam Hmoudah",
+        "affiliation": "Chemical Engineering, University of Calgary, Calgary, AB, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nashaat N. Nassar",
+        "affiliation": "Department of Chemical and Petroleum Engineering, University of Calgary, Calgary, AB, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Amjad El-Qanni",
+        "affiliation": "Department of Chemical and Petroleum Engineering, University of Calgary, Calgary, AB, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Nedal N. Marei",
+        "affiliation": "Department of Chemical and Petroleum Engineering, University of Calgary, Calgary, AB, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Gerardo Vitale",
+        "affiliation": "Department of Chemical and Petroleum Engineering, Schulich School of Engineering, University of Calgary, Calgary, AB, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Azfar Hassan",
+        "affiliation": "Schulich School of Engineering / AICISE, University of Calgary, Calgary, AB, Canada",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468296.html",
+    "paper_id": "468296"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472220.html",
+    "topic": "472220Single-Molecule Localization and Orientation for Super-Resolution Microscopy",
+    "date_time": "November 2016",
+    "abstract": "Structural characterization by super-resolution microscopy has become increasingly widespread, particularly in the biological community. The technique is powerful because it can produce real-space images with resolutions of tens of nanometers, while sample preparation is relatively non-invasive. Previous studies have applied these techniques to important scientific problems in the life sciences, but relatively little work has explored the attainable limit of resolution using samples of known structure. In this work, we apply photo-activated localization microscopy (PALM) to polymer films that have been nanopatterned using electron-beam lithography. Trace amounts of a rhodamine spiroamide dye are dispersed into nanostructured poly(methyl methacrylate), and UV-induced switching of the fluorophores enables nanoscale localization of single molecules to generate a final composite super-resolution image. Features as small as 25 nm half-pitch are clearly resolvable.We also explore the effect of molecular orientation of fluorophores, which can be used to report nanoscale chemical environment and dynamics in materials. Fluorophore orientation alters the single-molecule point-spread function, which can introduce systematic mislocalizations in imaging. Here, we avoid these phenomena by simultaneously determining single-molecule position and orientation. Distributions of orientations are then collected in response to illumination polarization, as well as mechanical stress and deformation.",
+    "presenting_author": "Muzhou Wang | Materials Science and Engineering Division, National Institute of Standards and Technology, Gaithersburg, MD",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Muzhou Wang",
+        "affiliation": "Materials Science and Engineering Division, National Institute of Standards and Technology, Gaithersburg, MD",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Marcelo Davanco",
+        "affiliation": "Center for Nanoscale Science and Technology, National Institute of Standards and Technology, Gaithersburg, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "James M. Marr",
+        "affiliation": "Center for Nanoscale Science and Technology, National Institute of Standards and Technology, Gaithersburg, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Jeffrey W. Gilman",
+        "affiliation": "Materials Science and Engineering Division, National Institute of Standards and Technology, Gaithersburg, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "J. Alexander Liddle",
+        "affiliation": "Center for Nanoscale Science and Technology, National Institute of Standards and Technology, Gaithersburg, MD",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472220.html",
+    "paper_id": "472220"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467179.html",
+    "topic": "467179Shrinking Anodized Aluminum Oxide Pores Beyond 10 Nanometers",
+    "date_time": "November 2016",
+    "abstract": "Anodization of aluminum has piqued research interest because of the self-ordering porous nanostructure created during anodization. This porous structure can be tuned to be a specific diameter and packing density based on macroscopic properties, such as voltage, acid type, and concentration. Recent work has achieved smaller pore sizes with the addition of an organic solvent that enables a reduction of temperature. Another study demonstrated rapid fabrication of 10 nm pores by utilizing selenic acid as the electrolyte. However, no study has successfully fabricated sub-10 nanometer pores through anodization. Shrinking the pore diameter below 10 nanometers is problematic because the driving force for oxidation is insufficient at lower anodization potentials. In this work, we report a novel, self-ordering method that produces sub-10 nanometer pores during anodization in selenic acid/ethylene glycol. The pores fabricated in this method have a mean pore size of five nanometers, half the size of those reported from previous approaches. These sub-10 nm pores have the potential to be used in a variety of applications, including photonics, membranes for gas separations, and as templates for fabricating nanowires.",
+    "presenting_author": "Matthias Trujillo | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Matthias Trujillo",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Evan M. Forman",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Justin C. Wong",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Sergey Vasenkov and Kirk J. Ziegler",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Florida",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Gainesville",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "FL",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467179.html",
+    "paper_id": "467179"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468436.html",
+    "topic": "468436Model-Guided Optimization of Polymer-Electrolyte Dye Sensitized Solar Cells",
+    "date_time": "November 2016",
+    "abstract": "Dye sensitized solar cells (DSSCs) have several appealing attributes. Their components and fabrication are inexpensive, are easy to fabricate, have tunable optical properties such as color and transparency, and can be integrated in unique ways into buildings and apparels. A DSSC is composed of three main components: (1) a photosensitive dye which converts solar light into electrons, (2) a mesoporous TiO2photoanode which provides a large surface area for dye adsorption and a pathway for electron transport, and (3) a liquid electrolyte comprised of a I-/I-3redox couple which is used to regenerate the dye and acts as a hole transport medium. These components have been studied over the past two decades but the conversion efficiency of the cells has increased only by ~2% to 13%. Most of the research to design and optimize DSSCs during this timeframe has been based on scientific intuition and trial-and-error experimentation, a slow and inefficient process. However, there have been a few computational/theoretical optimization studies.First-principles-model-guideddesign and optimization can lead to improved design and operation of DSSCs through systematically calculating optimal design specification and operating conditions.First-principles modeling combined with experimental knowledge can provides a deeper understanding into DSSC material properties and processes than experimental knowledge alone. For example, Mathew et al. [1] used quantum chemical calculations to design a dye molecule that led to a record DSSC efficiency. This work showed that a rational, model-guided design of DSSC materials can improve the DSSC performance substantially. In our previous work, we used first-principles macroscopic mathematical models to theoretically and experimentally investigate the effects of polymer-electrolyte chemistry on the performance of polymer-electrolyte DSSCs [2]. We determined how the polymer chemistry affects DSSC interfacial processes and subsequent affected device performance. Polymer electrolytes can reduce interfacial recombination and allow for addressing the disadvantages of liquid electrolytes such as being prone to leakage and evaporation which hinder DSSC applications.In this work, we first conduct DSSC optimization based on a first-principles DSSC mathematical model to calculate optimal design specifications for a polymer-electrolyte DSSC and then fabricate and test the optimal cell to validate the optimality of the cell. Optimal values of DSSC design variables such as photoanode thickness, dye absorption coefficient, iodide and triiodide diffusion coefficient, irradiation intensity, and polymer chemistry are will be calculated. The mathematical model includes Bulter-Volmer kinetics along with time-dependent continuity and transport equations for all charged species—including electrons, iodide, triiodide, and lithium (the cation)— to describe the cell and to predict cell conversion efficiency and current-voltage behavior. The optimal design specifications that maximize the conversion efficiency are calculated by solving a constrained nonlinear optimization problem using a Nelder-Mead algorithm. Optimization validation will be conducted with two sets of DSSC experiments: (1) a DSSC is fabricated based on the predicted optimal design specifications, and the conversion efficiency of the fabricated cell is compared to the conversion prediction predicted by the model. (2) Cells with design specifications that are perturbed values of the theoretically-calculated optimal design specifications are fabricated and tested for conversion efficiency to investigate the true optimality of the design specifications.[1] S. Mathew, A. Yella, P. Gao, R. Humphry-Baker, F. E. CurchodBasile, N. Ashari-Astani, I. Tavernelli, U. Rothlisberger, K. NazeeruddinMd, M. Grätzel, Nat Chem 2014, 6, 242.[2] Y. Y. Smolin, S. Nejati, M. Bavarian, D. Lee, K. K. S. Lau, M. Soroush, Journal of Power Sources 2015, 274, 156.",
+    "presenting_author": "Yuriy Y. Smolin | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Yuriy Y. Smolin",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Kenneth K.S. Lau and Masoud Soroush",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical and Biological Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Drexel University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Philadelphia",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "PA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468436.html",
+    "paper_id": "468436"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper458861.html",
+    "topic": "458861Model Predictive Control of Solar Thermal System with Borehole Seasonal Storage",
+    "date_time": "November 2016",
+    "abstract": "This work addresses the model predictive controller design for a complex solar boreal-thermal storage system. A solar thermal power plant is used for heating dis- trict houses with bore- hole seasonal energy storage. The modelling of the overall system is inspired by the Drake Landing Solar Community in Okotoks, Alberta, Canada [1]. In this work, the discrete model of the integrated energy system is ob- tained by using energy preserving Cayley-Tustin discretization [2]. As the energy output from the solar thermal plant with borehole seasonal storage varies, the control system maintains the system achieving a desired thermal comfort level and energy savings. The model predictive control is designed by utilizing standard constrained optimization obtained control law which leads to quadratic regulator design account- ing for input or/and state/output constraints [3]. Finally, the controller performance is assessed by a numerical simulation with consideration of various possible scenarios. In addition, the proposed model development and constrained optimization regula- tion successful without approximations can account for the long range behaviour and variability in environmental and/or economic conditions associated with the overall operational costs of entire solar thermal community.Highlights1. Solar Thermal System with Borehole Seasonal Storage2. Cayley-Tustin Discretization3. Model Predictive ControlReferences[1] B. Sibbitt, D. McClenahan, R. Djebbar, J. Thornton, B. Wong, J. Carriere, J. Kokko, The performance of a high solar fraction seasonal storage district heat- ing system–five years of operation, Energy Procedia 30 (2012) 856–865.[2] V. Havu, J. Malinen, The Cayley transform as a time discretization scheme, Nu- merical Functional Analysis and Optimization 28 (7-8) (2007) 825–851.[3] K. R. Muske, J. B. Rawlings, Model predictive control with linear models, AIChE Journal 39 (2) (1993) 262–287.Extended Abstract:File Not UploadedSee more of this Session:Modeling, Control, and Optimization of Energy SystemsSee more of this Group/Topical:Computing and Systems Technology Division",
+    "presenting_author": "Qingqing Xu | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Qingqing Xu",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Department of Chemical and Material Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Alberta",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Edmonton",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "AB",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Canada and Stevan Dubljevic",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Chemical and Materials Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Alberta",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Edmonton",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "AB",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Canada",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper458861.html",
+    "paper_id": "458861"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462447.html",
+    "topic": "462447Biomass-Based Production of Benzene, Toluene, and Xylenes Via Methanol: Process Synthesis and Deterministic Global Optimization",
+    "date_time": "November 2016",
+    "abstract": "The pursuit towards an environmentally sustainable energy economy requires the development of economically competitive renewable processes, as discussed in a recent perspective article on multi-scale systems engineering for energy and the environment. [1] Of particular interest are biomass-based processes, which have the potential to significantly reduce well-to-wheel greenhouse gas (GHG) emissions. [2] Recent emphasis from academia, industry, and government agencies has solely focused on the production of electricity and liquid transportation fuels from biomass – such energy processes using single and hybrid feedstocks are reviewed in [3]. It is remarkable that very few studies in the literature have investigated the technical and economic feasibility of producing high-value aromatics from biomass. [4-6] Aromatics represent a significant portion (one-third) of the market for commodity petrochemicals, and a large portion (approximately 70 percent) of the world’s benzene, toluene, and xylenes supply comes from petroleum naphtha. [6,7] Biomass-based aromatics production additionally offsets import requirements for petrochemicals, crude oil, or naphtha, thus aiding in energy independence objectives set by the U.S. government. [2] Therefore, we propose novel methods of producing aromatics from biomass via methanol.In this work, we present a comprehensive process synthesis superstructure consisting of several novel, commercial, and/or competing technologies that produce aromatics from biomass via methanol. [2] The optimal processes will be determined using our novel branch-and-bound global optimization framework. [2,9] We quantify the effect that biomass type has on the overall profit of the refinery by investigating forest residues, agricultural residues, and perennial crops as potential feedstocks. [2] Multiple case studies that investigate the effect of biomass moisture content, refinery capacity, and product distribution are discussed. The major topological decisions, as well as the overall profit of the biomass-based aromatics refinery, are presented.[1] Floudas, C. A.; Niziolek, A. M.; Onel, O.; Matthews, L. R. Multi-Scale Systems Engineering for Energy and the Environment: Challenges and Opportunities. AIChE Journal 2016, 62, 602-623.[2] Niziolek, A. M.; Onel, O.; Guzman, Y. A.; Floudas, C. A. Biomass-Based Production of Benzene, Toluene, and Xylenes via Methanol: Process Synthesis and Deterministic Global Optimization. Energy & Fuels 2016, DOI:10.1021/acs.energyfuels.6b00619.[3] Floudas, C. A.; Elia, J. A.; Baliban, R. C. Hybrid and Single Feedstock Energy Processes for Liquid Transportation Fuels. Computers and Chemical Engineering 2012, 41, 24-51.[4] Lin, Z.; Ierapetritou, M.; Nikolakis, V. Aromatics from Lignocellulosic Biomass: Economic Analysis of the Production of p-Xylene from 5-Hydroxymethylfurfural. AIChE Journal 2013, 59, 2079-2087.[5] Lin, Z.; Nikolakis, V.; Ierapetritou, M. Alternative approaches for p-xylene production from starch: Techno-economic analysis. Industrial & Engineering Chemistry Research 2014, 53, 10688-10699.[6] Niziolek, A. M.; Onel, O.; Elia, J. A.; Baliban R. C.; Floudas, C. A. Coproduction of Liquid Transportation Fuels and C6_C8 Aromatics from Biomass and Natural Gas. AIChE Journal 2015, 61, 831-856.[7] de Klerk, A. Fischer-Tropsch Refining; Wiley-VCH Verlag & Co. KgaA: Weinheim 2011.[8] Meyers, R. A. Handbook of petroleum refining processes, Volume 3; McGraw-Hill New York, 2014.[9] Niziolek, A. M.; Onel, O.; Floudas, C. A. Production of Benzene, Toluene, and Xylenes from Natural Gas via Methanol: Process Synthesis and Global Optimization. AIChE Journal 2016, 62 (5), 1531 – 1556.",
+    "presenting_author": "Alexander M. Niziolek 1 | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Alexander M. Niziolek 1",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "3",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Onur Onel 1",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "3",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Yannis A. Guzman 1",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "3 and Christodoulos A. Floudas 1",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "2",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462447.html",
+    "paper_id": "462447"
+  }
+]

@@ -1,0 +1,300 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper308197.html",
+    "paper_id": "308197",
+    "paper_number": "288a",
+    "topic": "Antigone: Algorithms for Continuous / Integer Global Optimization of Nonlinear Equations",
+    "title": "Antigone: Algorithms for Continuous / Integer Global Optimization of Nonlinear Equations",
+    "date_time": "Tuesday, November 5, 2013: 12:30 PM | 12:30 PM",
+    "session_id": "25140",
+    "session_title": "Advances in Optimization I",
+    "session_number": "288",
+    "authors_text": "Ruth Misener and Christodoulos A. Floudas",
+    "abstract": "Deterministic global optimization of mixed-integer nonlinear programs (MINLP) is broadly applicable in diverse domains ranging from molecular biology to refinery operations to computational chemistry to synthesizing sustainable processes. Our recent work developed solution strategies for two classes of deterministic global optimization problems: mixed-integer quadratically constrained quadratic programs (MIQCQP) and mixed-integer signomial optimization problems (MISO) [4, 5, 6, 7]. A software implementation illustrated and validated the proposed MIQCQP and MISO computational frameworks; we further collaborated with the GAMS Development Corporation to publicly release the MIQCQP framework as the Global Mixed-Integer Quadratic Optimizer (GloMIQO; first available in GAMS 23.8). GloMIQO has been subsequently used for applications including multiperiod blend scheduling [2, 3] and water-using network design [1]. This presentation introduces ANTIGONE (Algorithms for coNTinuous / Integer Global Optimization of Nonlinear Expressions), a computational framework and associated software implementation for globally optimizing nonconvex MINLP. ANTIGONE integrates our previous MIQCQP [4, 5, 7] and MISO [6] work into a cohesive whole; ANTIGONE further generalizes the computational framework to include exponential and logarithmic functions. The structure of the ANTIGONE framework includes: reformulating input; finding special mathematical structure; branch-and-cut global optimization. The types of special structure that ANTIGONE considers are: reformulation-linearization technique (RLT) equations; convexity/concavity; edge-convexity/edge-concavity; αBB relaxations; term-specific underestimators. The purpose of this presentation is to show how the extensible structure of ANTIGONE realizes the MIQCQP and MISO computational frameworks [4, 5, 6, 7]; We develop ANTIGONE as a global optimization framework exploiting an array of special mathematical structure components. After defining a test suite of 1705 optimization problems from standard libraries and the open literature, we present extensive computational results demonstrating the capacity of ANTIGONE. References [1] P. M. Castro and J. P. Teles. Comparison of global optimization algorithms for the design of water-using networks. Comput. Chem. Eng ., 52(0):249 – 261, 2013. [2] S. P. Kolodziej, P. M. Castro, and I. E. Grossmann. Global optimization of bilinear programs with a multiparametric disaggregation technique. J. Glob. Optim. , 2013. In Press. [3] S. P. Kolodziej, I. E. Grossmann, K. C. Furman, and N. W. Sawaya. A discretization-based approach for the optimization of the multiperiod blend scheduling problem. Comput. Chem. Eng. , 2013. In Press. [4] R. Misener and C. A. Floudas. Global optimization of mixed-integer quadratically-constrained quadratic programs (MIQCQP) through piecewise-linear and edge-concave relaxations. Math. Program. B , 136:155–182, 2012. [5] R. Misener and C. A. Floudas. GloMIQO: Global Mixed-Integer Quadratic Optimizer. J. Glob. Optim. , 2012. In Press; DOI: 10.1007/s10898-012-9874-7. [6] R. Misener and C. A. Floudas. A framework for globally optimizing mixed-integer signomial programs. 2013. Submitted for Publication. [7] R. Misener, J. B. Smadbeck, and C. A. Floudas. Dynamically-generated cutting planes for mixed-integer quadratically-constrained quadratic programs and their incorporation into GloMIQO 2.0. 2012. Submitted for Publication.",
+    "presenting_author": "Ruth Misener | Imperial College London, United Kingdom",
+    "authors": [
+      "Ruth Misener | Imperial College London, United Kingdom",
+      "Christodoulos A. Floudas | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ruth Misener",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christodoulos A. Floudas",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "sortable_time": "2013-11-05_12:30:00_12:49:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/308197"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper313936.html",
+    "paper_id": "313936",
+    "paper_number": "288b",
+    "topic": "A Spatial Branch & Bound Global Optimization Algorithm Featuring Multiparametric Disaggregation in the Relaxation Steps",
+    "title": "A Spatial Branch & Bound Global Optimization Algorithm Featuring Multiparametric Disaggregation in the Relaxation Steps",
+    "date_time": "Tuesday, November 5, 2013: 12:30 PM | 12:49 PM",
+    "session_id": "25140",
+    "session_title": "Advances in Optimization I",
+    "session_number": "288",
+    "authors_text": "Pedro M. Castro and Ignacio E. Grossmann",
+    "abstract": "We consider non-convex mixed-integer bilinear programs where binary variables appear linearly in the constraints. The global optimization of such problem is important in areas such as power systems, petroleum blending operations and process networks. Example of bilinear functions are: (i) the production cost term in the objective function of the thermal unit commitment problem [1]; (ii) the power output in hydro energy systems, related to water discharge and water storage [2]; (iii) the properties of a product resulting from a mix of materials, which can be estimated as weighted sums by concentration of their individual properties [3]. The binary variables in the formulation may have different origins: (a) accounting for system operation in multiple consecutive time periods, as in the power systems scheduling problems for the day-ahead electricity markets or in multiperiod blending operations [4]; (b) allowing for connections between units only if the flowrate exceeds a certain minimum value, as in generalized pooling [5-6] or water network design problems [7-8]; (c) choosing between alternative technologies for treatment units [9-10]. Most global optimization approaches for bilinear programs rely on the convex McCormick [11] envelopes, which provide a relaxation of the original problem. The quality of the relaxation is highly dependent on the lower and upper bounds of the variables involved in the bilinear terms, improving as their domain is partitioned. This can be done iteratively, as in spatial branch & bound frameworks [12-13] or simultaneously, using piecewise McCormick envelopes [6,9,14-15] or univariate parameterization techniques [16-17] (e.g. multiparametric disaggregation [18]). One important property of multiparametric disaggregation is that the number of binary variables in the mixed-integer linear relaxation grows logarithmically with the number of discretization points, leading to an improved computational performance when compared to piecewise McCormick envelopes for an equivalent number of partitions [16]. However, increasing the quality of the relaxation by a ten-fold increase in the number of discretization points (from level p to p-1) may increase the complexity too much so that no reduction in the optimality gap is observed within a reasonable computational time. Provided that modest computational time is required to solve the problem for level p, one can still solve multiple instances of the problem for that same level in a reasonable time. We thus propose to use multiparametric disaggregation in the bound contraction procedure to further reduce the domain of the variables when compared to the traditional way of using McCormick envelopes. This will precede the solution of the lower bounding formulations that are a relaxation of the original minimization problem, allowing us to achieve smaller optimality gaps. A spatial branch & bound algorithm also relying on multiparametric disaggregation then further reduces the gap. The variable selected for branching is the one leading to the largest error of the bilinear term, with range reduction being done through bisection. Taking short-term scheduling problems of hydro power systems (MINLP) together with water-using network design problems (NLP) as case studies, we show that the proposed global optimization solver performs better than commercial global optimization solvers. References: [1]- Carrión M, Arroyo JM. A Computationally Efficient Mixed-Integer Linear Formulation for the Thermal Unit Commitment Problem. IEEE Transactions on Power Systems 2006; 21 (3), 1371-1378. [2] Catalão JPS, Pousinho HMI, Mendes VMF. Hydro energy systems management in Portugal: Profit-based evaluation of a mixed-integer nonlinear approach. Energy 2011; 36: 500-507. [3] Quesada I, Grossmann IE. Global optimization of bilinear process networks with multicomponent flows. Computers & Chemical Engineering 1995; 19, 1219-1242. [4] Kolodziek SP, Grossmann IE, Furman KC, Sawaya NW. A Discretization-based Approach for the Optimization of the Multiperiod Blend Scheduling Problem. Computers and Chemical Engineering 2013. Doi: 10.1016/j.compchemeng.2013.01.016. [5] Meyer CA, Floudas CA. Global Optimization of a Combinatorially Complex Generalized Pooling Problem. AIChE Journal 2006; 52 (2), 1027-1037. [6] Misener R, Thompson JP, Floudas CA. APOGEE: Global Optimization of Standard, Generalized, and Extended Pooling Problems via Linear and Logarithmic Partitioning Schemes. Computers & Chemical Engineering 2011; 35, 876-892. [7] Jezowski J. Review of water network design methods with literature annotations. Industrial & Engineering Chemistry Research 2010; 49, 4475-4516. [8] Faria DC, Bagajewicz MJ. A New Approach for Global Optimization of a Class of MINLP Problems with Applications to Water Management and Pooling Problems. [9] Karuppiah R, Grossmann IE. Global optimization for the synthesis of integrated water systems in chemical processes. Computers and Chemical Engineering 2006; 30, 650-673. [10] Nápoles-Rivera F, Ponce-Ortega JM, El-Halwagi MM, Jiménez-Gutiérrez A. Global Optimization of Mass and Property Integration Networks with In-Plant Property Interceptors. Chemical Engineering Science 2010; 65, 4363-4377. [11] McCormick GP. Computability of global solutions to factorable nonconvex programs. Part I. Convex underestimating problems. Mathematical Programming 1976; 10, 147-175. [12] Ryoo HS, Sahinidis NV. A branch-and-reduce approach to global optimization. Journal of Global Optimization 1996; 8, 201-205. [13] Misener R, Floudas CA. GloMIQO: Global Mixed-Integer Quadratic Optimizer. Journal of Global Optimization, doi:10.1007/s10898-012-9874-7. [14] Bergamini ML, Aguirre P, Grossmann IE. Logic-based outer approximation for globally optimal synthesis of process networks. Computers and Chemical Engineering 2005; 29, 1914-1933. [15] Wicaksono DN, Karimi IA. Piecewise MILP Under- and Overestimators for Global Optimization of Bilinear Programs. AIChE Journal 2008; 54, 991-1008. [16] Kolodziej S, Castro PM, Grossmann IE. Global Optimization of Bilinear Programs with a Multiparametric Disaggregation Technique. Journal of Global Optimization 2013. doi: 10.1007/s10898-012-0022-1. [17] Teles JP, Castro PM, Matos HA. Univariate Parameterization for Global Optimization of Mixed-Integer Polynomial Problems. European Journal of Operation Research. htpp://dx.doi.org/10.1016/j.ejor.2013.03.042. [18] Teles JP, Castro PM, Matos HA. Multiparametric disaggregation technique for global optimization of polynomial programming problems. Journal of Global Optimization 2013; 55, 227-251",
+    "presenting_author": "Pedro M. Castro | LNEG, Lisbon, Portugal",
+    "authors": [
+      "Pedro M. Castro | LNEG, Lisbon, Portugal",
+      "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pedro M. Castro",
+        "affiliation": "LNEG, Lisbon, Portugal",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ignacio Grossmann",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "sortable_time": "2013-11-05_12:49:00_13:08:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/313936"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper326033.html",
+    "paper_id": "326033",
+    "paper_number": "288c",
+    "topic": "Reformulations and Branching Methods for Mixed-Integer Programming Models in Chemical Production Scheduling",
+    "title": "Reformulations and Branching Methods for Mixed-Integer Programming Models in Chemical Production Scheduling",
+    "date_time": "Tuesday, November 5, 2013: 12:30 PM | 1:08 PM",
+    "session_id": "25140",
+    "session_title": "Advances in Optimization I",
+    "session_number": "288",
+    "authors_text": "Christos T. Maravelias, Andres F. Merchan and Sara Velez",
+    "abstract": "In a broad sense, scheduling can be defined as the problem of allocating a set of limited resources to a set of tasks over time. In chemical production, these tasks involve the transformation of a set of materials into finished goods. The main approach that has been followed in order to model and solve the scheduling problem is the use of mixed-integer programming (MIP) techniques, which often result in challenging formulations that are hard to solve. Thus, improving the computational efficiency of such formulations has been a major research goal in recent years. An especially challenging feature of time-indexed material-based MIP scheduling models for chemical production scheduling is the existence of many solutions with identical objective function values, but with different variable values. Specifically, schedules that have the same number of batches in each task and unit have the same or similar objective values. Equivalent solutions can be generated by shifting tasks that use idle resources forward or backward. Similarly, many nodes in the branch-and-bound tree will have the same relaxed objective function value even when many of the binary variables are fractional. Branching on individual binary variables often leads to solutions with the same objective, but with different values for individual variables. The algorithm must search through a large number of equivalent solutions before improving the bound. A natural way to improve computational performance is to incorporate intrinsic problem characteristics into the MIP solution algorithm. In particular, a proper reformulation can induce a particular branching scheme that leads to smaller branch-and-bound trees, improved bounds and faster solution times. To that end, we propose to reformulate the MIP scheduling model to branch on solution characteristics instead of just binary variables. The number of batches in each task and unit is a major solution characteristic because solutions with the same number of batches are expected to have similar or identical objective function values. In this work we introduce a reformulation strategy for the scheduling problem based on the definition and upper bounding of the number of times (batches) a task runs in a particular unit within a given horizon. Branching on this new variable quickly eliminates solutions with fractional numbers of batches without searching through thousands or even millions of solutions with the same number of batches for each task. In addition, these branching methods lead to fast improvements in the bounds on the objective. We study and compare different branching strategies and variable selection rules and their interaction with different problem characteristics. We explore various methods to account for the number of batches of a particular task. On one hand, we explicitly define an integer variable that corresponds to the number of batches. On the other hand, we use the equivalence between general-integer and binary-integer programming to implicitly define such a number. For the latter, we also explore branching schemes for special-ordered sets (SOS) and formulations with logarithmic number of binary variables and/or constraints that have been recently proved to improve the computational performance of general disjunctive formulations [1]. This study includes different types of time-indexed models. Primarily we apply the proposed reformulations to both discrete-time and continuous-time models and compare their computational performance. In order to define the number of batches of a given task, the former uses the standard assignment binary variable, whereas for the latter we introduce variants of each method, depending on the whether the binary variable assigns the starting or the end of a task. We also explore a third variant that uses the two types of binary variables simultaneously and show that it introduces significant enhancements over the individual variables. We test the proposed reformulations using a large collection of instances that include different models, objective functions, networks, and problem features. For the continuous-time framework we use the models developed by Maravelias and Grossmann [2], Sundaramoorthy and Karimi [3] and Gimenez et al. [4], whereas for the discrete-time representation we use the model proposed by Shah et al. [5]. We evaluate the performance of the proposed methods/variants when used in makespan and cost minimization as well as in profit and sales maximization. We present several networks that vary in complexity and size. We include different horizon values and discuss different problem features; in particular, we study variable processing times for the continuous-time models. Our methodologies can readily be extended to other type of models and to include other features that appear in chemical production scheduling. The proposed reformulations have the advantage of keeping the relative size of the MIP model (variables and constraints), while drastically improving the computational efficiency. For continuous time formulations we obtain an average factor of two for the reduction in computational time, with some instances exhibiting one to two orders of magnitude in speed-up. For discrete-time formulations the results are even more dramatic, with an average improvement of two orders of magnitude in solution time, with some instances achieving reductions of up to four orders of magnitude. The overall percentage of instances solved to optimality is increased and the optimality gap is also decreased for the instances that are not solved within the time limit. References [1] Vielma, J.; Nemhauser, G., Modeling disjunctive constraints with a logarithmic number of binary variables and constraints. Math. Program. 2011 , 128, 49-72. [2] Maravelias, C.T.; Grosmann, I., New General Continuous-Time State-Task Network Formulation for Short-Term Scheduling of Multipurpose Batch Plants. Ind. Eng. Chem. Res. 2003 , 42, 3056-3074. [3] Sundaramoorthy, A.; Karimi, I., A simpler better slot-based continuous-time formulation for short-term scheduling in multipurpose batch plants. Chem. Eng. Sci. 2005 , 60, 2679-2702. [4] Gimenez, D.; Henning, G.; Maravelias, C.T., A novel network-based continuous-time representation for process scheduling: Part I. Main concepts and mathematical formulation. Comput. Chem. Eng. 2009 , 1511-1528. [5] Shah, N.; Pantelides, C.; Sargent, R., A general algorithm for short-term scheduling of batch operations –II; computational issues. Comput. Chem. Eng. 1993 , 17(2), 229-244.",
+    "presenting_author": "Christos T. Maravelias | University of Wisconsin-Madison",
+    "authors": [
+      "Christos T. Maravelias | University of Wisconsin-Madison",
+      "Andres F. Merchan | University of Wisconsin-Madison",
+      "Sara Velez | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Christos T. Maravelias",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Andres F. Merchan",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Sara Velez",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "sortable_time": "2013-11-05_13:08:00_13:27:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/326033"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper328898.html",
+    "paper_id": "328898",
+    "paper_number": "288d",
+    "topic": "A Hybrid LP/NLP Paradigm for Global Optimization Relaxations",
+    "title": "A Hybrid LP/NLP Paradigm for Global Optimization Relaxations",
+    "date_time": "Tuesday, November 5, 2013: 12:30 PM | 1:27 PM",
+    "session_id": "25140",
+    "session_title": "Advances in Optimization I",
+    "session_number": "288",
+    "authors_text": "Nick Sahinidis and Aida Khajavirad",
+    "abstract": "After their introduction in global optimization by Tawarmalani and Sahinidis over a decade ago, polyhedral relaxations have been incorporated in a variety of solvers for the global optimization of nonconvex nonlinear programs and mixed-integer nonlinear programs. Currently, these relaxations constitute the dominant approach in global optimization practice. In this paper, we introduce a new relaxation paradigm for global optimization. The proposed framework combines polyhedral and convex nonlinear relaxations, along with fail-safe techniques, convexity identification at each node of the search tree, and learning heuristics for automatic sub-problem algorithm selection. We report computational experiments with these relaxations on widely-used test problem collections from the literature, including 369 problems from GlobalLib, 250 problems from MINLPLib and 980 problems from PrincetonLib. Results show that incorporating the proposed techniques in the BARON software leads to significant improvements in execution time, and increases the number of problems that are solvable to global optimality by 30%.",
+    "presenting_author": "Nikolaos Sahinidis | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Nikolaos Sahinidis | Carnegie Mellon University, Pittsburgh, PA",
+      "Aida Khajavirad | IBM TJ Watson Research Center, Yorktown Heights, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nikolaos Sahinidis",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Aida Khajavirad",
+        "affiliation": "IBM TJ Watson Research Center, Yorktown Heights, NY",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "sortable_time": "2013-11-05_13:27:00_13:46:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/328898"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper327375.html",
+    "paper_id": "327375",
+    "paper_number": "288e",
+    "topic": "Global Optimization of Generalized Semi-Infinite Programs Via Restriction of the Right Hand Side",
+    "title": "Global Optimization of Generalized Semi-Infinite Programs Via Restriction of the Right Hand Side",
+    "date_time": "Tuesday, November 5, 2013: 12:30 PM | 1:46 PM",
+    "session_id": "25140",
+    "session_title": "Advances in Optimization I",
+    "session_number": "288",
+    "authors_text": "Alexander Mitsos and Angelos Tsoukalas",
+    "abstract": "An algorithm is proposed for the global solution of generalized semi-infinite programs (GSIPs) without convexity assumptions. It is an extension of the algorithm in [A. Mitsos. Global optimization of semi-infinite programs via restriction of the right hand side. Optimization, 60(10-11):1291--1308, 2011] which in turn can be seen as a feasible-point adaptation of [J. W. Blankenship and J. E. Falk. Infinitely constrained optimization problems. Journal of Optimization Theory and Applications, 19(2):261--281, 1976.]. Under mild assumptions compared to alternative algorithms, the algorithm terminates finitely with a guaranteed feasible point, and a certificate of epsilon f -optimality. It is based on solving a series of regular nonlinear programs (NLP), thus shifting the nonconvexity to the global NLP solver. The main idea of generating feasible points is a restriction of the constraints right-hand-side by progressively smaller epsilon g and a successively finer discretization of the parameter set. The theoretical properties are discussed, illustrative examples presented and numerical results given.",
+    "presenting_author": "Alexander Mitsos | RWTH Aachen University, Germany",
+    "authors": [
+      "Alexander Mitsos | RWTH Aachen University, Germany",
+      "Angelos Tsoukalas | MIT, Cambridge, MA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Alexander Mitsos",
+        "affiliation": "RWTH Aachen University, Germany",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Angelos Tsoukalas",
+        "affiliation": "MIT, Cambridge, MA",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "sortable_time": "2013-11-05_13:46:00_14:05:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/327375"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper321466.html",
+    "paper_id": "321466",
+    "paper_number": "288f",
+    "topic": "Global Optimization of Grey-Box Constrained Models",
+    "title": "Global Optimization of Grey-Box Constrained Models",
+    "date_time": "Tuesday, November 5, 2013: 12:30 PM | 2:05 PM",
+    "session_id": "25140",
+    "session_title": "Advances in Optimization I",
+    "session_number": "288",
+    "authors_text": "Fani Boukouvala, M. M. Faruque Hasan and Christodoulos A. Floudas",
+    "abstract": "Grey-box optimization methods have a wide range of applicability in various fields which rely on expensive simulations or solely input-output data [1]. Consequently, there has been great interest in the development of methods for the optimization of models for which derivative information is either not available or prohibitively costly, such as expensive finite-element or partial-differential equation systems, flowsheet simulations, mechanical engineering design and molecular geometry design problems, to name a few [2, 3]. Most of the existing methodologies have been developed for unconstrained or bound constrained problems, while extensions to constrained cases have been performed through heuristic or penalty-type methods [3]. There are many opportunities in the development of global derivative-free optimization methods which can rigorously handle general non-linear constraints of unknown closed-form, with a limited number of samples. Motivated by our recent work for the constrained optimization of a complex, non-linear partial differential equation system for pressure swing adsorption [4], this work aims to introduce a general grey-box optimization algorithm which is suitable for a wide range of applications with multiple constraints. The novel features of the presented methodology include: (a) rigorous selection of the sample data for model development and model updating though optimization of the probabilistic distance of the samples in both the input and the output spaces [5], (b) exploration of a diverse set of both interpolating and non-interpolating functional forms (quadratic, kriging, radial-basis functions) for representing the objective function and each of the constraints individually, (c) global optimization of both the surrogate-model parameters and the formulated surrogate problem though deterministic global optimization [6, 7], and finally (d) initial global search strategy followed by partitioning of the input space using clustering techniques. Results are presented for a set of test problems for constrained global optimization as well as for a real application of a pressure swing adsorption system for a large set of materials, in order to illustrate the performance of the method for problems with increasing complexity in feasibility. Comparative analysis of the developed method with commercially available software for this class of problems is also presented. Finally, the effect of the variability in the initial sampling on the consistency of the method will be discussed, while a new approach for exploiting information from simplified physics or mesh coarsening of the original expensive simulation to reduce this effect will be presented. References: 1. Forrester, A.I.J., A. Sóbester, and A.J. Keane, Engineering Design via Surrogate Modelling - A Practical Guide . 2008, John Wiley & Sons. 2. Conn, A.R., K. Scheinberg, and L.N. Vicente, Introduction to derivative-free optimization . MPS-SIAM Series on Optimization. 2009, Philadelphia: SIAM. 3. Rios, L. and N. Sahinidis, Derivative-free optimization: a review of algorithms and comparison of software implementations. Journal of Global Optimization, 2012: p. 1-47.DOI 10.1007/s10898-012-9951-y 4. Hasan, M.M.F., et al., Modeling, Simulation, and Optimization of Postcombustion CO2 Capture for Variable Feed Concentration and Flow Rate. 2. Pressure Swing Adsorption and Vacuum Swing Adsorption Processes. Industrial & Engineering Chemistry Research. 51 (48): p. 15665-15682 5. Zukui Li and C.A. Floudas, Optimal Scenario Reduction Framework based on Distance of Uncertainty Distribution and Output Performance: I. Single Reduction via Mixed Integer Linear Optimization. In Preparation 6. Misener, R. and C. Floudas, GloMIQO: Global mixed-integer quadratic optimizer. Journal of Global Optimization, 2012: p. 1-48.DOI:10.1007/s10898-012-9874-7 7. Misener, R. and C. Floudas, ANTIGONE: Algorithms for coNTinuous/ Integer Global Optimization of Nonlinear Equations. Submitted, 2013",
+    "presenting_author": "Fani Boukouvala | Princeton University, NJ",
+    "authors": [
+      "Fani Boukouvala | Princeton University, NJ",
+      "M. M. Faruque Hasan | Princeton University, NJ",
+      "Christodoulos A. Floudas | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Fani Boukouvala",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "M. M. Faruque Hasan",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Christodoulos A. Floudas",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "sortable_time": "2013-11-05_14:05:00_14:24:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/321466"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper336866.html",
+    "paper_id": "336866",
+    "paper_number": "288g",
+    "topic": "Global Dynamic Optimization: Convergence Order of Relaxations",
+    "title": "Global Dynamic Optimization: Convergence Order of Relaxations",
+    "date_time": "Tuesday, November 5, 2013: 12:30 PM | 2:24 PM",
+    "session_id": "25140",
+    "session_title": "Advances in Optimization I",
+    "session_number": "288",
+    "authors_text": "Spencer D. Schaber, Joseph K. Scott and Paul I. Barton",
+    "abstract": "Chemical engineering processes are routinely modeled using ordinary differential equations (ODEs). Two examples are (i) processes run in batch mode, whose time-varying behavior can be simulated using ODEs and (ii) plug-flow reactors, which obey ODEs at steady state. So-called dynamic optimization is used to solve optimization problems with an underlying ODE model. In chemical engineering, estimating model parameters (such as rate constants) and maximizing the performance of dynamic processes are two of the most common modes in which dynamic optimization is used. Dynamic optimization problems typically have many suboptimal local minima; global minima are often very difficult to locate using local optimization methods. Global dynamic optimization (GDO) techniques can rigorously guarantee finding one of the best possible solutions within some user-specified tolerance. The GDO approach studied here generates lower and upper bounds [1,2], as well as convex and concave relaxations [3,4], of the solutions of parameterized ODEs for ranges of initial conditions and parameters. It employs a shooting , or partial discretization , approach in which an auxiliary ODE system is numerically integrated to yield bounds and relaxations of the solutions of the parameterized ODEs. In the present work, we derive convergence order results for the aforementioned bounds and relaxations, following the work of [5,6]. More specifically, we show how their tightness depends on the time horizon and the size of the decision space. We use these convergence order results to explain why two relaxation methods [3,4] both obey a second-order convergence bound yet can have vastly different computational costs in practice. Looking forward, this framework informs the design of new bounding and relaxation methods. By enabling analysis of shooting-based bounding and relaxation methods for dynamic optimization problems, it sheds light on the design of next-generation methods for better convergence properties and computational efficiency. [1] Singer, A.B.; Barton, P.I., “Bounding the solutions of parameter dependent nonlinear ordinary differential equations,” SIAM Journal on Scientific Computing 27(6), 2167-2182, 2006. [2] Scott, J.K.; Barton, P.I., “Bounds on the reachable sets of nonlinear control systems,” Automatica 49(1), 93-100, 2013. [3] Scott, J.K.; Chachuat, B.; Barton, P.I., “Nonlinear convex and concave relaxations for the solutions of parametric ODEs,” Optimal Control Applications and Methods 34(2), 145-163, 2013. [4] Scott, J.K.; Barton, P.I., “Improved relaxations for the parametric solutions of ODEs using differential inequalities,” Journal of Global Optimization, published online 2012, DOI: 10.1007/s10898-012-9909-0. [5] Bompadre, A; Mitsos, A. \"Convergence rate of McCormick relaxations,\" Journal of Global Optimization 52, 1-28, 2012. [6] Bompadre, A; Mitsos, A; Chachuat, B. \"Convergence analysis of Taylor models and McCormick-Taylor models,\" Journal of Global Optimization, published online 2012, DOI: 10.1007/s10898-012-9998-9.",
+    "presenting_author": "Spencer D. Schaber | Massachusetts Institute of Technology, Cambridge",
+    "authors": [
+      "Spencer D. Schaber | Massachusetts Institute of Technology, Cambridge",
+      "Joseph K. Scott | Massachusetts Institute of Technology, Cambridge",
+      "Paul I. Barton | Massachusetts Institute of Technology, Cambridge"
+    ],
+    "authors_structured": [
+      {
+        "name": "Spencer D. Schaber",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joseph K. Scott",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "Paul I. Barton",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "sortable_time": "2013-11-05_14:24:00_14:43:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/336866"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper333655.html",
+    "paper_id": "333655",
+    "paper_number": "288h",
+    "topic": "Branch-and-Lift Algorithm for Deterministic Global Optimization in Nonlinear Optimal Control",
+    "title": "Branch-and-Lift Algorithm for Deterministic Global Optimization in Nonlinear Optimal Control",
+    "date_time": "Tuesday, November 5, 2013: 12:30 PM | 2:43 PM",
+    "session_id": "25140",
+    "session_title": "Advances in Optimization I",
+    "session_number": "288",
+    "authors_text": "Boris Houska and Benoit Chachuat",
+    "abstract": "Finding globally optimal solutions to nonlinear optimal control problems is a practically relevant, but challenging task. Although nonlinear optimal control methods and tools based on local optimization are satisfactory for many practical purposes, they can get trapped into local optima, possibly suboptimal by a large margin. Such situations can occur in the field of control of chemical and biochemical processes, as these processes can present complex and highly nonlinear behavior leading for instance to steady-state multiplicity. For such problems, it is often unclear how to initialize a local solver in order to find a control input leading to the best possible performance. Moreover, there are important classes of problems for which obtaining a certificate of global optimality is paramount, for instance in the field of robust or scenario-integrated optimization [1]. Existing global optimal control algorithms based on dynamic programming have run-times that scale exponentially with the number of differential states [2]. Global optimization algorithms based on direct methods, on the other hand, present worst-case run-times that scale exponentially with the number of optimization variables in the discretized NLP problem approximating the solution of the original optimal control problem [3-6]. Moreover, a priori parameterization of the control functions in direct methods does not allow control over the accuracy of a given parameterization, and therefore this approach is not suitable for rigorous search of globally optimal solutions in optimal control problems. We present a branch-and-lift algorithm for solving optimal control problems with smooth nonlinear dynamics and potentially nonconvex objective and constraint functionals to guaranteed global optimality. This algorithm features a direct sequential method and builds upon a spatial branch-and-bound algorithm in order to eliminate control subregions that are either infeasible or that provably cannot contain any global optima. A new operation, called lifting, is introduced, which enables systematic branching in the infinite-dimensional space of control functions by refining the control parameterization via a Gram-Schmidt orthogonalization process. We discuss conditions under which the image of the control parameterization error in the state space contracts exponentially as the parameterization order is increased, thereby making the lifting operation efficient, and we present a computational technique based on ellipsoidal calculus that satisfies these conditions. We also analyze the convergence properties of the branch-and-lift algorithm. Finally, we illustrate the practical applicability of branch-and-lift with numerical examples. References: A. Mitsos, B. Chachuat, P.I. Barton, Towards global bilevel dynamic optimization, Journal of Global Optimization, 45:63-93, 2009. L. Grune, and W. Semmler, Using dynamic programming with adaptive grid scheme to solve nonlinear dynamic models in economics, Computing in Economics and Finance, 99, 2002. W.R. Esposito, and C.A. Floudas, Deterministic global optimization in nonlinear optimal control problems, Journal of Global Optimization, 17:97-126, 2000. B. Chachuat, A.B. Singer, and P.I. Barton, Global methods for dynamic optimization and mixed-integer dynamic optimization, Industrial & Engineering Chemistry Research, 45(25):8373-8392, 2006. Y. Lin, and M.A. Stadtherr, Deterministic global optimization of nonlinear dynamic systems, AIChE Journal, 53:866-875, 2007. A.M. Sahlodin, Global Optimization of Dynamic Process Systems using Complete Search Methods, Ph.D. Thesis, McMaster University, December 2012.",
+    "presenting_author": "Benoit Chachuat | Imperial College of Science, Technology and Medicine, London, United Kingdom",
+    "authors": [
+      "Boris Houska | Shanghai Jiao Tong University, China",
+      "Benoit Chachuat | Imperial College of Science, Technology and Medicine, London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Boris Houska",
+        "affiliation": "Shanghai Jiao Tong University, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Benoit Chachuat",
+        "affiliation": "Imperial College of Science, Technology and Medicine, London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "sortable_time": "2013-11-05_14:43:00_15:02:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/333655"
+  }
+]

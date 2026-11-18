@@ -1,0 +1,660 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper465321.html",
+    "topic": "465321Optimization of a Transferable Shifted Force Field for Interfaces and Inhomogeneous Fluids",
+    "date_time": "November 2016",
+    "abstract": "Many commonly applied force fields have been developed based on the assumption of spherical symmetry and tail corrections to compute the thermodynamic properties. Unfortunately, many common applications involve inhomogeneous fluids where this assumption breaks down. For example, symmetry breaks down at the vapor-liquid interface because the liquid phase is roughly 500 times denser than the vapor phase, leading to very different forces for sites at various positions in the interface. In our experience, this necessitates a cutoff distance of roughly triple what is usually assumed in order to achieve self-consistent results for vapor pressure and surface tension. As another example, virtually all biological simulations involve some degree of inhomogeneity. Furthermore, a fundamental issue arises in the context of molecular dynamics because the discontinuity in the force field undermines the conservation of energy, leading to a range of possible compensating treatments, and poor consistency from one implementation to the next.In this work, we review our progress in the development of a Transferable Shifted Force Field based on the United Atom perspective (TranSFF-UA). We consider a number of candidate potential models, taking the TraPPE-UA as a starting point. We universally apply a cut and shift of 3σ, where σ is the position where the potential initially crosses zero. Candidates to date include the LJ, 14-12-8-6, and Mie potential models. Point charges of polar molecules are adapted directly from the TraPPE-UA model, except in the case of water. For water, we consider the TIP4P(2005) model. This modification permits accentuation of the steepness of the potential, while considering the efficiency and parallelization of the Lennard-Jones (LJ) model, particularly in GPU systems. The simulation methodology involves LAMMPS in combination with GOMC, a relatively new open source Monte Carlo simulation platform. Particular attention is paid to consistency between the two methods and regions of phase space where each method performs best. All tabulated results are based on direct simulation, whereas thermodynamic perturbation theory is used as a meta-model to suggest prospective optimal potential parameters.To demonstrate this methodology, vapor pressure, critical properties, saturated liquid density, and compressed fluid density are used to characterize potential models for n-alkanes, branched alkanes, ethers, olefins, naphthenics and aromatic compounds, and water. Vapor pressure deviations average near 9% for hydrocarbons. Saturated liquid density deviations average near 1% below a reduced temperature of 0.9. Compressed fluid densities exhibit deviations near 0.5% for the better potential models. Simply applying the shifted force to water significantly improves the vapor pressure correlation for the TIP4P model.This work is supported in part by the Scientific and Technological Research Council of Turkey (TUBITAK) through the grant no. 114M178.",
+    "presenting_author": "J Richard Elliott | Chemical and Biomolecular Engineering, The University of Akron, Akron, OH",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "J Richard Elliott",
+        "affiliation": "Chemical and Biomolecular Engineering, The University of Akron, Akron, OH",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "S. Mostafa Razavi",
+        "affiliation": "Chemical and Biomolecular Engineering, The University of Akron, Akron, OH",
+        "designation": "Author"
+      },
+      {
+        "name": "M. Göktug Ahunbay",
+        "affiliation": "Department of Chemical Engineering, Istanbul Technical University, Istanbul, Turkey",
+        "designation": "Author"
+      },
+      {
+        "name": "Marcel Balçik",
+        "affiliation": "Department of Chemical Engineering, Istanbul Technical University, Istanbul, Turkey",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper465321.html",
+    "paper_id": "465321"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466214.html",
+    "topic": "466214Introducing an Individualized Transferable Anisotropic Mie Force Field",
+    "date_time": "November 2016",
+    "abstract": "Transferable force fields allow predicting physical properties and phase equilibria of pure substances and mixtures that are weakly described by experimental data. However, for well-known substances transferable force fields lead to higher deviations than desired and necessary. Well-characterized substances could be described better if an individually optimized force field would be used. In this study we introduce the concept of individualized transferable force fields that leads to accurate representations of well-characterized substances.Parameters of the transferable anisotropic Mie (TAMie) force field are obtained iteratively from Monte Carlo simulations in grand canonical ensemble and doing histogram reweighting in a post processing step to calculate the phase coexistence curve. New parameters are generated by utilizing a physically based equation of state (PC-SAFT EOS) to speed up the iteration procedure. The objective function for optimizing the force field parameters contains several substances of the same group where we mainly focus on vapor pressure and liquid density data. For non-polar substances, like alkanes, the approach leads to excellent results. However, describing polar substances like esters with a transferable set of parameters necessitates further trade-offs. If, what we prefer, the point charge model is applied and the point charges are assumed to be the same for the entire substance group, the overall optimal set of parameters might be outside the range defined through individual optimization of pure substances. The trade-off in parameterizing a transferable force field to several substances manifests mainly in deviations in vapor pressure: the vapor pressure data of some substances are too high whereas for other substances they are too low. This error can easily be corrected for. We introduce a correction parameter ψεwhich affects all energy parameters ε of a pure substance. As a result, we obtain a transferable force field for weakly-characterized substances and an accurate force field for substances which are well described by experimental data. Applying these correction parameters ψεopens the opportunity to simulate binary mixtures at different temperatures without introducing significant errors caused by deficiencies in vapor pressure of the pure substances. The results for binary mixtures containing ketones and alkanes show good agreement with experimental data.Our study shows on the one hand the benefit of individualized transferable force fields for the description of pure substances and for the predicting of mixture phase equilibria, and on the other hand we demonstrate the transferability of binary interaction corrections kij(with respect to Lorentz-Berthelot combining rules) defined for united atom groups.",
+    "presenting_author": "Dominik Weidler and Joachim Gross | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Dominik Weidler and Joachim Gross",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Institute of Thermodynamics and Thermal Process Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Stuttgart",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Stuttgart",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Germany",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466214.html",
+    "paper_id": "466214"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472245.html",
+    "topic": "472245Alginate/Chitosan Microparticles for Gastric Passage and Intestinal Release of Therapeutic Protein Nanoparticles",
+    "date_time": "November 2016",
+    "abstract": "Proteins have significant potential to treat diseases due to their specific mechanisms of action compared to small molecule drugs. Protein nanoparticles offer a means to turn soluble protein, which has very low cellular uptake, into a colloidal protein carrier capable of enhanced uptake and subsequent intracellular activity. Previous work produced a stable therapeutic nanoparticle formulation encapsulating a bacterial effector protein, AvrA, which is capable of modulating inflammatory signals in an in vivo inflammatory bowel disease (IBD) mouse model. A major drawback is that these nanoparticles are instilled transrectally, limiting delivery to lower regions of the colon. To implement our protein nanoparticles as a clinically viable treatment for IBD with access to the entire intestinal tract and improved patient compliance, an oral formulation must be designed.Localized intestinal delivery of protein therapeutics via the oral route is a highly attractive approach, however, the harsh acidic and enzymatic conditions in the gastrointestinal tract challenge retention of protein function. The approach is to deliver protein nanoparticles within gastro-protective microparticles made from alginate and chitosan that would release the nanoparticles in the intestine. A flow focusing microfluidic device was used to control alginate droplet diameters by tuning the continuous and dispersed phase flow rates. Alginate droplets encapsulating protein nanoparticles were then simultaneously crosslinked with calcium and layered with chitosan to form uniform, coated microparticles with high loading efficiency. Protein nanoparticles encapsulated within crosslinked alginate/chitosan microparticles retained approximately 50% of their activity after 1 hr incubation in simulated gastric fluid (SGF). Subsequent incubation in simulated intestinal fluid (SIF) released all remaining active protein within 3 hrs. Alginate vs. chitosan droplets, chitosan concentration, alginate concentration, number of layers, and crosslinker type were tuned to optimize protein protection in SGF and controlled release in SIF. Altogether, these hydrogel microparticles could serve as a potential oral delivery vehicle for protein therapeutics.",
+    "presenting_author": "Kevin Ling and Julie A. Champion | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Kevin Ling and Julie A. Champion",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chemical and Biomolecular Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Georgia Institute of Technology",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Atlanta",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "GA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472245.html",
+    "paper_id": "472245"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472639.html",
+    "topic": "472639A New Generation Reactive Force Field Based on Valence Bond Concepts with Polarized Charge Distributions, Fundamental Concepts and Application to Hydrogen Systems",
+    "date_time": "November 2016",
+    "abstract": "Critical to the development and manufacturing of new generations of functional materials is the design of the nonequilibrium dynamical processing to achieve desired microstructures and transport properties. This requires methods forin silicodesigning and simulating the non-equilibrium dynamical processes required to manufacture complex functional materials to achieve novel functional and transport properties. Such non-equilibrium phenomena determine the behavior of materials for practical applications, and understanding them is critical to optimize material synthesizability, characterization, and design trade-offs.We need methods that provide the accuracy of Quantum Mechanics (QM) for Reactive non-equilibrium dynamics simulations of extremely large spatial scales (1 billion atoms to describe a system 100 nm on a side) and time scales (milliseconds to seconds) to characterize the non-equilibrium dynamical processes required to synthesize complex chemical and material systems. Then we must match to the continuum simulations required for developing manufacturing processes. This work is the first step toward this goal.A great deal of progress toward this goal has been achieved with the development of the ReaxFF reactive force by our group at Caltech. ReaxFF has proved capable of accurate descriptions of complex reaction barriers. It has proved that it is possible to construct a generic force field capable of describing complex reaction dynamics at nearly the accuracy of QM on systems that are many orders of magnitude too large for QM. However, optimizing the parameters of ReaxFF to fit QM is complex so that it can be difficult to rapidly achieve the desired accuracy for all aspects of a system.We propose to build a new formulation of reactive force fields building on these successes but with the goal of matching the highest level QM while making it more systematic so that the transferable reactive force fields will be attainable that will enable non-equilibrium, adiabatic and non-adiabatic, reactive dynamics of large-scale functional material systems.In this work we outline the new strategy which we illustrate for the case of hydrogen systems. Here we want to describe exactly the H2 dissociation, the H3 reaction surface, and the hydrogen equation of state from the best available QM computations and validate with experiment. Our new approach is modeled after valence bond concepts to understand bonding, showing that the chemical bond arises from the decrease in kinetic energy (contragradience) from overlapping orbitals.",
+    "presenting_author": "Saber Naserifar | Division of Chemistry and Chemical Engineering, California Institute of Technology, Pasadena, CA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Saber Naserifar",
+        "affiliation": "Division of Chemistry and Chemical Engineering, California Institute of Technology, Pasadena, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "William A. Goddard III",
+        "affiliation": "Chemistry and Chemical Engineering Division, California Institute of Technology, Pasadena, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Sergey Zybin",
+        "affiliation": "Division of Chemistry and Chemical Engineering, California Institute of Technology, Pasadena, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Andres Jaramillo-Botero",
+        "affiliation": "California Institute of Technology, Pasadena, CA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472639.html",
+    "paper_id": "472639"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466720.html",
+    "topic": "466720Enzyme Replacement Therapy Extended to the Brain through Nano-Polymersomes",
+    "date_time": "November 2016",
+    "abstract": "Approximately 1 in 5,000 to 8,000 children are born annually with a lysosomal storage disease (LSD). Current treatment of LSDs, called enzyme replacement therapy (ERT), involves weekly to monthly intravenous(IV) infusions of missing endogenous enzymes. While ERT has proven effective in LSDs without central nervous system (CNS) involvement, the brain has remained untreatable due to the presence of the blood-brain barrier (BBB). The BBB is made up of endothelial cells with tight junctions, possessing a width between connections of 0.2 nm in size, which prevents passage of 98% of small molecule drugs, including enzymes, from the blood into the brain. Patients with neuropathic LSDs, which account for 50-70% of diseases in this category, present with severe CNS degeneration, ataxia, and premature death, with no treatment available on the market. The disease of focus, GM1 gangliosidosis, causes premature death between the ages of two and four with no hope available for parents of patients. Encapsulating enzyme into polymeric vesicles, called polymersomes, facilitates the transport of this missing enzyme into the brain through IV injections, effectively extending ERT therapy to the brain for the first time.Polyethylene glycol-b-poly(lactic acid) (PEGPLA) has been proven to self-assemble into vesicles via both passive mixing and the solvent injection, using dimethyl sulfoxide (DMSO) and water. The mixing enzyme in GM1 gangliosidosis, β-galactosidase (βgal), is fluorescently tagged with reactive Alexa Fluor 488 at an efficiency of 13 dye molecules per mole of protein, with a finally protein concentration of 0.35 mg/mL attainable. Fluorescently tagged βgal is dissolved in stirring water prior to injection of DMSO and PEGPLA. Apolipoprotein E (ApoE) and CF350 attachment is facilitated through the introduction of homobifunctional PEG during injection. Polymersome diameter is characterized by dynamic light scattering (DLS). Self-assembly was stopped by freezing prior to lyophilization, with mannitol as a lyoprotectant. βgal loaded polymersomes were releasedin vitroin buffers of pH 7.4 and 4.8. Attachment was confirmed with DLS and Lowry assays. An immortalized feline fibroblast line, GM1/SV3, was used inin vitrostudies to confirm particle uptake and treatment efficacy.Previous studies indicated that incorporating 2 wt%/v mannitol during formation led to PSDs 54 ± 0.8% smaller after lyophilization. Therefore, 2 wt%/v mannitol was used to aid in the formation of brain-deliverable polymersomes encapsulated with βgal. PEGPLA polymersomes loaded βgal at 0.08 ± 0.03 mg βgal/mg polymersome with activity maintained at a value of 452 ± 82 a.u. DLS data indicates that polymersomes with βgal had diameters statistically similar to control. Release of βgal was doubled over 6 hours when loaded polymersomes are placed into citrate buffer (pH=4.1) when compared to tris buffer (pH=7.4), indicating increased enzyme release expected in the lysosome. First order kinetics of release were followed for three hours when βgal was released from polymersomes in acidic buffer prior to a plateau in mass released, indicating the potential for sustained long term release from polymeresomes. Activity of βgal was maintained after release. CF350 Amine was attached to polymersome surface, with an increase in diameter from 147.2 ± 24 nm to 210.5 ± 8.6 nm (Fig 1A). Fluorescence microscopy confirmed attachment (Fig 1C), with 79 ± 21% of polymersomes labeled with blue fluorescence. Furthermore, our carriers were capable of both encapsulating Alexa Fluor 488 and attaching CF350 at a high efficiency, with 87 ±12% of polymersomes presenting with both colors in flow cytometry. Attachment of ApoE was confirmed with an increase in polymersome diameter to 194.4 ± 3.5 nm and an increase in protein content from 0.06 ± 0.11 mg/mL to 1.03 ± 0.71 mg/mL. GM1SV3 cells, an immortalized cell line from felines with GM1 gangliosidosis, present low density lipoprotein receptors (LDLR) on the surface, as shown in confocal microscopy, indicating that they are a good model for ApoE mediated delivery through the BBB. ApoE increases the uptake of polymersomes into GM1/SV3 fibroblasts when compared to unlabeled control polymersomes.This work highlights our ability to create polymersomes capable of protecting βgal in the blood stream, shown by limited release in a pH 7.4 environment, targeting the nanocarrier to the BBB, shown by the facilitated attachment of ApoE, and after transcytosis, releasing βgal in the lysosome of neural cells, shown by extended release in a pH 4.1 enviornment and cell studies in GM1SV3 cells. This combination of ERTand nanotechnology, demonstrating the capability of our carrier to transport enzymes to the brain while maintaining their activity, will create a paradigm shift in the treatment of CNS disease, providing treatment for currently untreatable and fatal diseases like GM1 gangliosidosis.",
+    "presenting_author": "Jessica Kelly 1 | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Jessica Kelly 1",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "3",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Doug Martin 1",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "2 and Mark Byrne 1",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "4",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "5",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466720.html",
+    "paper_id": "466720"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper459815.html",
+    "topic": "459815An Embedded Atom Method Potential for Bimetallic Alloys",
+    "date_time": "November 2016",
+    "abstract": "The embedded atom method (EAM) remains the interatomic potential of choice for transition metals for the last three decades. In EAM, the total energy of the system is written as a sum of pairwise interaction terms and many-body embedding energy terms. Typically EAM parameters are fitted to thermochemical properties of pure metals like cohesive energy, defect formation energy as well as elastic constants. For metal alloys, additional terms involving pair interactions between the different metal species are included. Our studies show that the potentials available in literature for large number of metal alloys are quite approximate. In many cases properties of metal alloys predicted by EAM can be dramatically improved by adding a correction parameter to existing formulations. A derivation for the correction term will be provided. Our approach can be useful in establishing more accurate EAM potentials for multicomponent alloy systems.",
+    "presenting_author": "Srikanth Divi and Abhijit Chatterjee | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Srikanth Divi and Abhijit Chatterjee",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Department of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Indian Institute of Technology Bombay",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Mumbai",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "India",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper459815.html",
+    "paper_id": "459815"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper453347.html",
+    "topic": "453347Uncertainty Quantification of Intermolecular Parameters with a Transferable Potential Model forN-Alkanes",
+    "date_time": "November 2016",
+    "abstract": "Abstracts:- Abstract Text",
+    "presenting_author": "Richard A. Messerly | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Richard A. Messerly",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Thomas A. Knotts IV and W. Vincent Wilding",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Brigham Young University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Provo",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "UT",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper453347.html",
+    "paper_id": "453347"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460403.html",
+    "topic": "460403Interstitial Release of Cisplatin from Triggerable Liposomes Enhances Efficacy Against Triple Negative Breast Cancer Solid Tumor Analogues",
+    "date_time": "November 2016",
+    "abstract": "In solid tumors, including Triple Negative Breast Cancer (TNBC), limited penetration of therapeutics leads to heterogeneous intratumoral distributions reducing efficacy. Liposomal cisplatin decreases toxicities associated with free cisplatin. However, the heterogeneous intratumoral distributions of liposomes combined with limited release of cisplatin from liposomes may also reduce efficacy. This study uses pH-responsive liposomes designed to release cisplatin within the acidic tumor interstitium (7.0 < pH ≤ 6.0) with the aim (1) to improve the penetration of the free drug within tumors on the assumption of greater diffusivities based on the free drug's much smaller size and (2) to increase the availability of the free agent near cancer cells.Introduction: In advanced solid tumors, including Triple Negative Breast Cancer (TNBC) solid tumors, the limited penetration of therapeutics results in limited therapeutic effects. TNBC is a subgroup of breast cancer associated with a high chance of cancer reoccurrence outside the breast and has been found to exhibit sensitivity to DNA-damaging platinum-based compounds, which is the basis for increased clinical use of platinum-derived agents. To enable selective and effective treatment of TNBC solid tumors, we study a drug delivery carrier of CDDP that is expected to result in potentially deep penetration and homogeneous distribution of the drug within the tumor interstitium. The carrier is a tunable (pH-releasing) liposome encapsulating CDDP. Tumor selectivity by these liposomes is mediated by the EPR effect. Efficacy is mediated by the pH-triggered release of contents within the tumor interstitium (7.0 < pH < 6.5) by extravasated liposomes. The small size of CDDP relative to its nanometer-sized carrier should exhibit greater diffusivities and deeper tumor penetration.Methods:To study the efficacy of these liposomes on TNBC cells two different TNBC cell lines were studied: MDA-MB-231 and MDA-MB-468. The efficacy of pH-releasing liposomes (LD50) loaded with CDDP was compared to the efficacy of other constructs including conventional (non-p-releasing) liposomes, empty liposomes, and free cisplatin. Following incubation of 6 and 24 hours, in addition to cell viability, cisplatin per cell, cisplatin intercalated to DNA and (if applicable) retention of cisplatin within the liposomes, were measured. In multicellular spheroids exhibiting intracellular pH gradients measured in situ by confocal microscopy using a membrane impermeant pH-indicator, we evaluated the spatiotemporal distributions of liposomes and contents. In dose-response studies, upon completion of incubation with all constructs, spheroids were washed and their volume change (volume at time t/volume at initiation of treatment x100%) was monitored in time followed by an outgrowth assay.Results:On MDA-MB-231 and MDA-MB-468 cell monolayers, extracellular acidification resulted in lower LD50values only for pH-releasing liposomal cisplatin (101.9 ± 24.1 and 14.5 ± 3.6 µg/mL, respectively) which were significantly less than for non-pH-releasing liposomal cisplatin (374.2 ± 20.0 and 33.7 ± 5.0 µg/mL, respectively). In contrast, at neutral pH, the LD50values of both liposome types were comparable. Killing efficacies correlated strongly with the nuclear DNA-associated cisplatin independent of the delivery modality or the extracellular pH. pH-releasing liposomal cisplatin decreased the volumes of multicellular spheroids by 46.4-70.0 % more than non-pH-releasing liposomal cisplatin. pH-releasing liposomes resulted in improved penetration and more homogeneous profiles within spheroids of a cisplatin-surrogate cell-permeant fluorophore compared to non-pH-releasing liposomes.Conclusions:These findings demonstrate the potential of intratumorally CDDP-releasing nanometer-sized carriers to selectively and effectively control TNBC solid tumors.Funding Sources:American Cancer Society (ACS): RSG-12-044-01National Science Foundation (NSF): DMR-1207022AAUP-AFT Professional Development Fund",
+    "presenting_author": "Sally Stras | Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Sally Stras",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Tim Holleran",
+        "affiliation": "Biomedical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Alaina Howe",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460403.html",
+    "paper_id": "460403"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper457602.html",
+    "topic": "457602Bioresponsive Polymer Coating on Targeted Drug Nanorods",
+    "date_time": "November 2016",
+    "abstract": "Non-specific delivery and ineffective drug release at the target site are among the top challenges to effective treatment. The first challenge reflects the fact that interactions with carriers (i.e., nanoparticles) can denature the active ingredients of drugs by shear stress. The second challenge is low affinity for specific receptor proteins overexpressed on the target cell surface. The third challenge of ineffective drug release can be overcome by exploiting the disease microenvironment. Here, we report a one-step process to prepare bioresponsive polymer coated drug nanorods (NRs) from liquid precursors using the solvent diffusion method. A thin layer (10.3 ± 1.4 nm) of poly(e-caprolactone) (PCL) polymer coating was deposited on the surface of camptothecin (CPT) anti-cancer drug NRs. The mean size of PCL-coated CPT NRs was 500.9 ± 91.3 nm length x 122.7 ± 10.1 nm width. The PCL polymer coating was biodegradable at acidic pH 6 as determined by Fourier Transform Infrared (FT-IR) spectroscopy. CPT drugs were released up to 51.5% when PCL coating dissolved into non-toxic carboxyl and hydroxyl groups. Trastuzumab (TTZ), a humanized IgG monoclonal antibody, was conjugated to the NR surface for breast cancer cell targeting. Combination treatments using CPT and TTZ decreased the HER-2 positive BT-474 breast cancer cells by 66.9 ± 5.3 %in vitro. These results suggest highly effective combination treatments of breast cancer cells using bioresponsive polymer coated specific drug delivery.",
+    "presenting_author": "Tunyaboon Laemthong | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Tunyaboon Laemthong",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Caitlin Brocker",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Dipak Barua",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Daniel Forciniti and Sutapa Barua",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Chemical and Biochemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Missouri University of Science and Technology",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Rolla",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "MO",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper457602.html",
+    "paper_id": "457602"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper461201.html",
+    "topic": "461201A Gaussian-Charge Polarizable Model for Water",
+    "date_time": "November 2016",
+    "abstract": "Force fields for water that explicitly account for polarization effects are expected to provide reasonable estimates of water properties for wide range of conditions. Such models are, among others, the BK3 [1], GCPM [2] and SWM4-NDP [3] models. These polarizable force fields generally show better performance compared to non-polarizable ones in description of properties for pure water and aqueous electrolyte solutions. [4] However, for the water and carbon dioxide mixture, which is of great significance to the design of carbon dioxide geologic sequestration, the calculation of its equilibrium phase compositions using existing polarizable water models are far from satisfactory, even when the carbon dioxide/water cross interaction was optimized. In this study, a polarizable force field was developed for water with the aim of improving the prediction of thermophysical properties for carbon dioxide/water mixture. The proposed water force field has a rigid geometry with bond angle and length setting to their experimental values. The van der Waals interaction is represented by the Buckingham Exponential-6 potential assigned on the oxygen atom. The electrostatic interactions are represented by Gaussian charge instead of point charge for its greater numerical stability. The polarization of water molecule is handled via classical Drude oscillator by attaching a single negative Gaussian charge to the oxygen atom with a harmonic spring, and the spring constant is set to reproduce the experimental molecular polarizability of water. An explicit and analytical hydrogen bond term is used in the model to account for possible charge transfer effects happening in water hydrogen bonds. The model was parameterized to the properties of water at ambient conditions, including configuration energy, density, partial pair correlation functions, dielectric constant, as well as the minimum energy and geometry of water dimer. The proposed model was tested against a variety of properties including temperature of maximum density, heat capacity, compressibility, second virial coefficient, saturated vapor-liquid phase densities, vapor pressure, enthalpy of vaporization, vapor-liquid interfacial tension, melting point, viscosity and diffusion coefficient. With the proposed polarizable water model, the phase equilibrium properties of the carbon dioxide/water mixture were studied.[1] Kiss, P.; Baranyai, A.J. Chem. Phys.2013, 138, 204507.[2] Paricaud, P.; Predota, M.; Chialvo, A. A.; Cummings, P. T.J. Chem. Phys.2005, 122, 244511.[3] Lamoureux, G.; Harder, E.; Vorobyov, I. V.; Roux, B.; MacKerell, A. D.Chem. Phys. Lett.2006, 418, 245.[4] Jiang, H.; Mester, Z.; Moultos, O. A.; Economou, I. G.; Panagiotopoulos, A. Z.J. Chem. Theory. Comput.2015, 11, 3802.",
+    "presenting_author": "Hao Jiang | Department of Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Hao Jiang",
+        "affiliation": "Department of Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Othonas A. Moultos",
+        "affiliation": "Chemical Engineering Program, Texas A&M University at Qatar, Doha, Qatar",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis G. Economou",
+        "affiliation": "Chemical Engineering Program, Texas A&M University at Qatar, Doha, Qatar",
+        "designation": "Author"
+      },
+      {
+        "name": "Athanassios Z. Panagiotopoulos",
+        "affiliation": "Department of Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper461201.html",
+    "paper_id": "461201"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper469302.html",
+    "topic": "469302Coarse Grained Parameterization of Gram-Negative Bacterial Outer Membrane",
+    "date_time": "November 2016",
+    "abstract": "The cell envelope of Gram-negative bacteria contains a lipopolysaccharide (LPS) rich outer membrane that acts as the first line of defense for bacterial cells in adverse physical and chemical environments. The LPS macromolecule has a negatively charged oligosaccharide domain that acts as an ionic brush, limiting the permeability of charged chemical agents through the membrane. Besides the LPS, the outer membrane has radially extending O-antigen polysaccharide chains and β-barrel membrane proteins that make the bacterial membrane physiologically unique compared to phospholipid cell membranes. Elucidating the interplay of these contributing macromolecular components and their role in the integrity of the bacterial outer membrane remains a challenge. To bridge the gap in our current understanding of the Gram-negative bacterial membrane, we have developed a coarse grained force field for outer membrane that is computationally affordable for simulating dynamical process over physiologically relevant time scales. The force field was benchmarked against available experimental and atomistic simulations data for properties such as membrane thickness, density profiles of the residues, area per lipid, gel to liquid-crystalline phase transition temperatures, and order parameters.",
+    "presenting_author": "Huilin Ma and Shikha Nangia | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Huilin Ma and Shikha Nangia",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Department of Biomedical and Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Syracuse University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Syracuse",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "NY",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper469302.html",
+    "paper_id": "469302"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472474.html",
+    "topic": "472474Fabrication and Characterization of PLGA Nanoparticle-Bacteria Conjugate Nanobeads for Increased Tumor Penetration",
+    "date_time": "November 2016",
+    "abstract": "Cancer is the second cause of overall mortality in the world and systemic chemotherapy is a major therapeutic approach for nearly all types and stages of cancer. Grand challenges of limited efficacy and systemic toxicity of existing chemotherapeutic treatments can be addressed through better drug carrier targeting and enhanced penetration of drug carriers. Attenuated strainsSalmonellaTyphimuriumhave previously been shown to have the ability to preferentially colonize tumor tissues. However, clinical success in immunocompetent hosts has been rare due to insufficient tumor colonization by bacteria1–3. We hypothesize that a combinatorial therapy approach based on integrating bacteria with chemotherapeutics-loaded nanoparticles will amplify both forms of therapy. Thus, we have developed aNanoscaleBacteria-EnabledDrugDeliverySystem (NanoBEADS)4in which the functional capabilities of bacteria are interfaced with and augmented by chemotherapeutic-loaded nanoparticles. Each NanoBEADS agent is constructed by interfacing aSalmonellaTyphimurium VNP20009 (i.e. a live engineered tumor-targeting bacterium) with an ensemble of poly(lactic-co-glycolic acid) nanoparticles loaded with chemotherapeutics for the purpose of using the bacterium to transport the particle deep into the tumor. To create the NanoBEADS,S.Typhimurium VNP20009 bacteria were cultured in Luria-Bertani broth (1% tryptone, 0.5% yeast extract and 0.5% sodium chloride) and coated with biotin-conjugated rabbit polyclonal anti-S. Typhimurium antibody. The nanoparticles were fabricated using a modified nanoprecipitation method5and fluorescently tagged with 6,13-Bis(triisopropylsylylethynyl)pentacene (TIPS pentacene). With a size of approximately 110 nm in diameter and a zeta potential of about -30 mV, the carboxyl end groups allow for EDC coupling to streptavidin. The biotin-coated bacteria were then mixed with streptavidin coated nanoparticles for 30 minutes at room temperature to promote self-assembly of the particles to bacteria. Scanning electron microscopy (SEM) images of NanoBEADS show the average number of nanoparticles attached to each bacterium to be 35. In-vitro assays were carried out to compare the penetration of passively diffusing PLGA nanoparticles and NanoNBEADS in multicellular tumor spheroids.1. Heimann, D. M. & Rosenberg, S. A. Continuous intravenous administration of live genetically modified salmonella typhimurium in patients with metastatic melanoma.J. Immunother.26,179–80 (2003).2. Toso Gill, V., Hwu, P., Marincola, F., Restifo, N, Schwartzentruber, D, Sherry, R, Topalian, S, Yang, J., Stock, F., Freezer, L., Morton, K., Seipp, C., Haworth, L., Mavroukakis, S., White, D., MacDonald, S., Mao, J., Sznol, M., and Rosenberg, S., J. & Toso, J. Gill, V., Hwu, P., Marincola, F., Restifo, N, Schwartzentruber, D, Sherry, R, Topalian, S, Yang, J., Stock, F., Freezer, L., Morton, K., Seipp, C., Haworth, L., Mavroukakis, S., White, D., MacDonald, S., Mao, J., Sznol, M., and Rosenberg, S. Phase I study of the intravenous administration of attenuated Salmonella typhimurium to patients with metastatic melanoma.J Clin Oncol.20,142–152 (2002).3. Pawelek, J. M., Low, K. B., Bermudes, D. & Pawelek, J. M., Low, K. B., Bermudes, D. Bacteria as tumour-targeting vectors.Lancet Oncol.4,548–556 (2003).4. Traore, M. A., Damico, C. M. & Behkam, B. Biomanufacturing and self-propulsion dynamics of nanoscale bacteria-enabled autonomous delivery systems.Appl. Phys. Lett.105,173702 (2014).5. Niu, X., Zou, W., Liu, C., Zhang, N. & Fu, C. Modified nanoprecipitation method to fabricate DNA-loaded PLGA nanoparticles.Drug Dev. Ind. Pharm.35,1375–83 (2009).",
+    "presenting_author": "Richey M. Davis | Chemical Engineering, Virginia Tech, Blacksburg, VA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Richey M. Davis",
+        "affiliation": "Chemical Engineering, Virginia Tech, Blacksburg, VA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "SeungBeum Suh",
+        "affiliation": "Mechanical Engineering, Virginia Tech, Blacksburg, VA",
+        "designation": "Author"
+      },
+      {
+        "name": "Ami Jo",
+        "affiliation": "Chemical Engineering, Virginia Tech, Blacksburg, VA",
+        "designation": "Author"
+      },
+      {
+        "name": "Bahareh Behkam",
+        "affiliation": "Mechanical Engineering, Virginia Tech, Blacksburg, VA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472474.html",
+    "paper_id": "472474"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper458095.html",
+    "topic": "458095Photodynamic Enhancement of Drug Delivery to Tumors",
+    "date_time": "November 2016",
+    "abstract": "Pancreatic cancer is associated with one of the poorest prognosis of all malignancies, with an unchanged five- year survival rate of 5% or less. The complex desmoplastic microenvironment impeding effective drug delivery to pancreatic tumors and the compensatory ability of cancer cells to adapt alternative survival pathways suggest that treatments will need to attack several targets. Photodynamic therapy (PDT) may have a specific role in enhancing drug delivery to pancreatic tumors and ameliorating drug resistance mechanisms by the targeted destruction of specific pathways. We have developed a bi-directionally cooperative combination regimen of PDT and irinotecan for pancreatic cancer using two clinically approved, nanotechnology-enabled therapies with a clear molecular basis. In an orthotopic pancreatic cancer mouse model, a combination of photodynamic therapy (PDT) and FDA-approved liposomal irinotecan (nal-IRI, MM-398) synergistically reduced the primary and metastatic tumor burden, and prolonged animal survival. This presentation will discuss how PDT increases tumor permeability and irinotecan transport by several mechanisms including disruption of efflux pumps, vascular and stromal integrity. Our findings provide a framework for the translation of mechanistic insights into rational new therapies for several cancers. This study is supported by the following NIH grants: 1K99CA194269 (HH); 5K99CA175292/ 4R00CA175292 (IR); 4R01CA15841505, 5R01CA16099805 5P01CA08420312 (TH). JL was supported by the Herchel Smith fellowship and Harvard College Research Program.",
+    "presenting_author": "Huang-Chiao Huang | Wellman Center for Photomedicine, Massachusetts General Hospital, Harvard Medical School, Boston, MA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Huang-Chiao Huang",
+        "affiliation": "Wellman Center for Photomedicine, Massachusetts General Hospital, Harvard Medical School, Boston, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Imran Rizvi",
+        "affiliation": "Wellman Center for Photomedicine, Massachusetts General Hospital, Harvard Medical School, Boston, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Joyce Liu",
+        "affiliation": "Wellman Center for Photomedicine, Massachusetts General Hospital, Harvard Medical School, Boston, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Ashish Kalra",
+        "affiliation": "Merrimack Pharmaceuticals, Inc., Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Helen Lee",
+        "affiliation": "Merrimack Pharmaceuticals, Inc., Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jaeyeon Kim",
+        "affiliation": "Merrimack Pharmaceuticals, Inc., Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jonathan Fitzgerald",
+        "affiliation": "Merrimack Pharmaceuticals, Inc., Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Tayyaba Hasan",
+        "affiliation": "Wellman Center for Photomedicine, Massachusetts General Hospital, Harvard Medical School, Boston, MA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper458095.html",
+    "paper_id": "458095"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467155.html",
+    "topic": "467155Modeling of DNA-Mediated Pair Interactions Between Nanoparticles",
+    "date_time": "November 2016",
+    "abstract": "Highly selective and thermally responsive binding of DNA-strands is transferable to nanoparticle systems through covalently tethering these biomolecules onto the particle surfaces. A reliable understanding of how these DNA-functionalized particle (DFP) systems self-assemble requires a deep understanding of inter-particle pair-interactions as a function of molecular-level details of the system such as strand length, the size of the sticky part, the sequence of the DNA-strands and grafting density. In this work, we use a previously developed coarse-grained model [1] of DNA to construct a temperature dependent inter-particle pair-potential model that is parameterized so as to reflect the molecular description of the DFPs. Umbrella Sampling in combination with Replica-Exchange Molecular Dynamics (REMD) simulations were performed to examine two-particle systems by estimating the potential of mean force (PMF) between nanoparticles at different physical conditions. Eventually, this implicit formulation of the system obtained from a bottom-up approach can efficiently be used to study self-assembly of large DFP systems that would otherwise be computationally infeasible in a simulation with molecular level details.[1] Y. Ding, J. MittalJ. Chem. Phys.141, 184901 (2014).",
+    "presenting_author": "Hasan Zerze | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Hasan Zerze",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Department of Chemical and Biomolecular Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Lehigh University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Bethelehem",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "PA and Jeetain Mittal",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical and Biomolecular Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Lehigh University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Bethlehem",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "PA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467155.html",
+    "paper_id": "467155"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466655.html",
+    "topic": "466655Internalization of Nanoparticles Functionalized with Low Molecular Weight Protamine into Erythrocytes",
+    "date_time": "November 2016",
+    "abstract": "Erythrocytes have been exploited extensively for their potential applications as delivery vehicles due to their remarkable biocompatibility, biodegradability and prolonged life-span in circulation. The mature human erythrocyte is a terminally differentiated cell that does not possess an endocytic uptake mechanism. As a result, the efficient migration of bioactive molecular cargos such as large macromolecular drugs, genetic material, or proteins through the plasma membrane of erythrocytes remains as a major challenge for intracellular delivery applications. A variety of techniques have been successfully developed to entrap proteins, drugs, and enzymes within erythrocytes. The majority of these techniques, however, require disruption of the cell membrane to create large pores or perturbations through which biomolecules can diffuse. These techniques include chemical methods such as drug-induced endocytosis, mechanical methods such as hypotonic osmosis/dialysis, and electrical methods such as electroporation. The main disadvantages associated with these methods are the loss of structural integrity and cellular components of the cells due to weakened cell membranes. As a consequence, these modified erythrocytes are easily recognized by the host immune system. To achieve the benefits associated with erythrocytes as a drug delivery vehicle it is vital to maintain complete structural and functional integrity of erythrocytes.Toward this goal, we introduced a novel method for transporting nanoparticles (NPs) into intact erythrocytes by combining the advantages of both cell-penetrating and targeting peptides. The method employs an ERY1 (WMVLPWLPGTLDGGSGCR) peptide that has a high affinity for the erythrocyte membrane protein glycophorin A and a low molecular weight protamine (LMWP) peptide that has been shown to transport proteins and small molecules into erythrocytes. These peptides are conjugated to a NP formed between fluorescently-labeled bovine serum albumin and a grafted copolymer of poly(ethylene) glycol and poly-L-lysine.The formation of nanoparticles was observed using SEM, TEM, and dynamic light scattering. The nanoparticles had a core/shell structure and their size ranged from approximately 20-100 nm. Confocal microscopy and flow cytometry data confirmed that uptake of LMWP functionalized NPs was significantly higher (approximately > 3-5 fold) than that of other NPs at 6 h. Under these conditions, synthesized NPs were not toxic to the erythrocytes and no significant hemolysis was observed. Catalytic activity of the encapsulated protein was not negatively affected upon encapsulation or crosslinking. In conclusion, NPs were efficiently internalized into RBCs without adversely affecting cellular function and this method has the advantage over existing methods in that it does not appear to alter the structural integrity of the cell. The above approach of utilizing a surface modified NP architecture to improve internalization into erythrocytes may serve as a universal platform to deliver therapeutic proteins/drugs into RBCs in future. Furthermore, this nanoparticle system capable of entering red blood cells and extending circulation time has enormously broad potential, including improved treatment of blood-specific diseases such as malaria as well as treatment of acute lymphoblastic leukemia.",
+    "presenting_author": "Rangika Hikkaduwa Koralege | School of Chemical Engineering, Oklahoma State University, Stillwater, OK",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Rangika Hikkaduwa Koralege",
+        "affiliation": "School of Chemical Engineering, Oklahoma State University, Stillwater, OK",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Kaustuv Sahoo",
+        "affiliation": "Department of Physiological Sciences, Oklahoma State University, Stillwater, OK",
+        "designation": "Author"
+      },
+      {
+        "name": "Nicholas Flynn",
+        "affiliation": "School of Chemical Engineering, Oklahoma State University, Stillwater, OK",
+        "designation": "Author"
+      },
+      {
+        "name": "Steven Hartson",
+        "affiliation": "Department of Biochemistry and Molecular Biology, Oklahoma State University, Stillwater, OK",
+        "designation": "Author"
+      },
+      {
+        "name": "Jing Pope",
+        "affiliation": "Department of Physiological Sciences, Oklahoma State University, Stillwater, OK",
+        "designation": "Author"
+      },
+      {
+        "name": "Ashish Ranjan",
+        "affiliation": "Department of Physiological Sciences, Oklahoma State University, Stillwater, OK",
+        "designation": "Author"
+      },
+      {
+        "name": "Carey Pope",
+        "affiliation": "Department of Physiological Sciences, Oklahoma State University, Stillwater, OK",
+        "designation": "Author"
+      },
+      {
+        "name": "Joshua Ramsey",
+        "affiliation": "School of Chemical Engineering, Oklahoma State University, Stillwater, OK",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466655.html",
+    "paper_id": "466655"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper471199.html",
+    "topic": "471199Highly Efficient Encapsulation of Small-Molecule N-Acetylcysteine within PLGA Nanoparticles to Restore Redox Balance in Oxidant-Stressed Environments",
+    "date_time": "November 2016",
+    "abstract": "Introduction:Overproduction of reactive oxygen species (ROS) is a major factor in the pathogenesis of multiple sclerosis1. Localized antioxidant delivery is therapeutically relevant to counteract and neutralize ROS in such oxidant-stressed systems. Poly(lactic-co-glycolic acid) (PLGA) nanoparticles can provide a localized, controlled release of encapsulant, though reported encapsulation efficiencies of small-molecule therapeutics have been low: 12%2and 16%3for dopamine and N-acetylcysteine (NAC), respectively. Here we investigate how modifying the traditional double-emulsion, solvent evaporation method by doping external water phases with the small-molecule drug affects encapsulation efficiency, temporal release profiles, released drug activity, and released drug protective effect on oligodendrocyte progenitor cell (OPC) viability after H2O2stress. We aim to deliver NAC, a potent, cheap, FDA-approved antioxidant, with high efficiency and temporal control.Materials and Methods:NAC-loaded PLGA nanoparticles with varying lactide:glycolide (L:G) ratios and inherent viscosities were prepared by the double-emulsion, solvent evaporation method. The solvent for all water phases was deionized water. Briefly, the internal water phase (10% w/v NAC) was dispersed via sonication within the oil phase (15% PLGA in dichloromethane). The primary emulsion was dispersed in the outer water phase (1% PVA with or without 2.5% NAC) via sonication. The secondary emulsion was stirred in 0.3% PVA with or without 5% NAC for 4 hours. Particles were washed 3x in either DI water or 2.5% NAC and lyophilized. Release was determined by incubating particles at 37°C in phosphate-buffered saline and measuring supernatant NAC via Ellman’s Reagent. LAP photoinitiator radical concentrations were measured via luminol to determine the dose response of NAC radical scavenging. OPC viability in response to oxidative conditions with and without the NAC antioxidant was measured via the CellGlo reagent.Results and Discussion:Encapsulation efficiencies (relative to theoretical load without doped external phases) for NAC-loaded PLGA nanoparticles were greatest with external phase doping – reading greater than 300% of the case when undoped. With the doped particles, NAC was released for 14 days. NAC ranging from 0.5-1000 µM (the particle supernatant concentration range for each sample time) scavenged photoinitiated LAP radicals in a dose-dependent manner, with 0.5 µM and 1000 µM NAC scavenging 6.82% and 95.5% of radicals, respectively. Ongoing experiments show NAC-loaded nanoparticle antioxidant activity and protective effect on OPC viability.Conclusions:Drug-doping of external water phases during the double emulsion, solvent evaporation method gave NAC-loaded PLGA nanoparticles with significantly higher encapsulation efficiencies than without doping, and up to 20-fold higher than previously reported values. NAC scavenged LAP radicals in a dose-dependent manner and was released from PLGA nanoparticles for at least two weeks. This indicates that these particles will provide a larger and more continuous small molecule dose longer than previously reported methods. Efficiently loaded antioxidant nanoparticles capable of controlled and localized delivery could have therapeutic potential in oxidant-stressed systems and bias progenitor cells such as OPCs toward a self-renewing fate.References:1Lehnardt S.J. Neurosci,2002.22:2478-86.2Pahuja R.ACS Nano,2015.9:4850-71.3Lancheros R.Univ. Sci.,2014. 19:161-168",
+    "presenting_author": "Nick P. Murphy and Kyle Lampe | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Nick P. Murphy and Kyle Lampe",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Virginia",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Charlottesville",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "VA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper471199.html",
+    "paper_id": "471199"
+  }
+]

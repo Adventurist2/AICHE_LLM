@@ -1,0 +1,324 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663824",
+    "paper_endpoint": "Paper/663824",
+    "paper_id": "663824",
+    "topic": "Offline Reinforcement Learning for Control of Complex Chemical Processes",
+    "title": "Offline Reinforcement Learning for Control of Complex Chemical Processes",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52069",
+    "session_title": "Advances in Process Control I",
+    "session_number": "207",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In recent years, Reinforcement Learning (RL) has made remarkable progress in control application areas. The majority of RL research has centered on online learning, as it allows for real-time adaptation to changes in the environment and can provide better control performance under uncertainty, which is particularly useful when supported by precisely modeled simulators. In the case of chemical processes, however, the disadvantages of ‘online RL’ often outweigh its benefits. Online learning requires significant computational resources and time to derive a ‘stable’ policy. Moreover, the exploration process may involve unnecessarily aggressive actions, making it challenging to apply online RL to chemical processes, where a single wrong action could result in significant economic loss or physical damage [1]. Despite the potential of online RL, many chemical plants continue to rely on simple PID control or model predictive control (MPC). Since they require models of complex chemical systems, we first conduct as precise modeling as possible. However, in addition to requiring a substantial amount of time and effort, it is also difficult to account for the diverse stochastic behaviors observed in real plants. Additionally, system identification based on historical operation data may result in biased modeling and control results due to limited data availability, as chemical plants typically operate only within a specific range of desired conditions [2-4]. We propose the application of offline RL to chemical processes to circumvent the aforementioned issues. Offline RL is a type of RL in which learning relies solely on pre-collected data and does not require real-time interaction with the environment. By utilizing the available data directly for agent learning, we can eliminate the need for searching background knowledge, a complex modeling process, and the use of an imperfect, biased, and uncertain environment model. In addition, offline RL enables us to inspect potentially hazardous or undesirable actions before they are introduced into the learning phase and guarantees its performance is no less than a bound with a high probability, making it more suitable for chemical processes with stringent safety requirements [5]. To maximize the benefits of offline RL, we utilize the Conservative Q Learning (CQL) and Soft Actor-Critic (SAC) algorithms. To address the common issue of overestimated Q values for unseen (out-of-distribution) actions, the update rule of the Q function was modified to include a term that minimizes Q value estimates for such actions. The SAC algorithm enables the agent to perform balanced exploration within a limited dataset and learn a stochastic policy for a complex chemical system [5, 6]. We evaluated our approach on various chemical systems, from simple Van De Vusse CSTR to highly complex systems with complex reactions, kinetics, and time-varying dynamics. The plant was represented by a rigorous first-principles model, and operation data were obtained by numerically solving the model. We compared the control performance of offline RL to that of MPC, which was performed using the same operation data following system identification. The results show that offline RL not only offers a computationally efficient implementation but also improves control performance. This suggests that offline RL can be a promising approach for controlling unknown and highly complex chemical processes with limited data. References [1] T. Mannucci, E. J. van Kampen, C. De Visser, Q. Chu, \"Safe exploration algorithms for reinforcement learning controllers.\" IEEE transactions on neural networks and learning systems 29.4 (2017): 1069-1081. [2] J. Deng, S. Sierla, J. Sun, V. Vyatkin, \"Offline reinforcement learning for industrial process control: a case study from steel industry.\" Information Sciences (2023). [3] S. Sharifian, R. Sotudeh-Gharebagh, R. Zarghami, P. Tanguy, N. Mostoufi, \"Uncertainty in chemical process systems engineering: a critical review.\" Reviews in Chemical Engineering 37.6 (2021): 687-714. [4] A. S. Badwe, R. S. Patwardhan, S. L. Shah, S. C. Patwardhan, R. D. Gudi, “Quantifying the impact of model-plant mismatch on controller performance.” Journal of Process Control 20.4 (2010): 408-425. [5] S. Levine, A. Kumar, G. Tucker, J. Fu, \"Offline reinforcement learning: Tutorial, review, and perspectives on open problems.\" arXiv preprint arXiv:2005.01643 (2020). [6] A. Kumar, A. Zhou, G. Tucker, S. Levine, \"Conservative q-learning for offline reinforcement learning.\" Advances in Neural Information Processing Systems 33 (2020): 1179-1191.",
+    "presenting_author": "Junseop Shin | Seoul National University, Korea, Republic of (South)",
+    "authors": [
+      "Junseop Shin | Seoul National University, Korea, Republic of (South)",
+      "Joon Soo Park | Seoul National University, Korea, Republic of (South)",
+      "Jaehyun Shim | Seoul National University, Korea, Republic of (South)",
+      "Jong Min Lee | Seoul National University, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Junseop Shin",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joon Soo Park",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Jaehyun Shim",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Jong Min Lee",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "207a",
+    "sortable_time": "2023-11-07_08:00:00_08:18:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663824"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666235",
+    "paper_endpoint": "Paper/666235",
+    "paper_id": "666235",
+    "topic": "Entropy-Maximizing TD3-Based Reinforcement Learning for Controlling and Optimizing Complex Dynamical Systems",
+    "title": "Entropy-Maximizing TD3-Based Reinforcement Learning for Controlling and Optimizing Complex Dynamical Systems",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52069",
+    "session_title": "Advances in Process Control I",
+    "session_number": "207",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Deep reinforcement learning (DRL) has become increasingly popular in the automatic control and optimization of complex dynamical systems in recent years [1, 2]. Model-free DRL is a powerful data-driven approach that can learn from experience without explicit knowledge of the environment, handle large and continuous state and action spaces, adapt to changing environments, and learn optimal policies. Among different DRL algorithms, the actor-critic methods have low variance in the Q-value estimate, high stability, and fast convergence [3]. However, the stochastic actor-critic methods, such as proximal policy optimization, often have poor sample efficiency due to the integral over the large state and action [4-6]. On the contrary, the deterministic actor-critic methods, such as the twin-delayed deep deterministic policy gradient algorithm (TD3), are sample-efficient but suffer from under-exploration due to the lack of uncertainty in the policy. This inherent under-exploration of TD3 and deterministic methods can lead to sub-optimal solutions. In this work, we present an entropy-maximizing TD3 method (EMTD3) to address the challenges associated with the stochastic and deterministic actor-critic methods discussed above [7]. In our proposed method, a stochastic actor with an entropy-maximizing term in the objective function is deployed at the beginning to ensure sufficient explorations. This entropy-maximizing term adds uncertainty to the policy and facilitates the systematic exploration of the action space, leading to better learning performance than deterministic methods. Afterward, a deterministic actor is employed to focus on local exploitation and discover the optimal solution. The proposed method combines the advantages of stochastic actor-critic methods in exploring the space and those of deterministic methods in fast convergence. As a result, the proposed EMTD3 method can outperform existing TD3 and other DRL approaches in terms of sample efficiency and fast convergence to the global optimum for continuous state-action space. Finally, the effectiveness of the proposed EMTD3 method is verified through two case studies. In the first case study, our proposed method is employed to facilitate the tuning of a proportional-integral-derivation (PID) control for regulating the temperature of a non-linear continuous stirred tank reactor (CSTR) system. Simulation results show that our approach can significantly improve the sample efficiency by almost 45% compared with other DRL (e.g., TD3 and DDPG) methods in discovering the global solution. For the second case study, we applied the proposed EMTD3 method to design superior fast-charging protocols for Lithium-ion batteries. Results show that with our method, the optimal charging strategy can be rapidly discovered with much less episodes compared with other DRL methods. References : [1] Spielberg, S., Tulsyan, A., Lawrence, N.P., Loewen, P., Gopaluni, B., Deep reinforcement learning for process control: A primer for beginners. arXiv preprint arXiv:2004.05490, 2020. [2] Paternina-Arboleda, C.D., J.R. Montoya-Torres, and A. Fabregas-Ariza. Simulation-optimization using a reinforcement learning approach. in 2008 Winter Simulation Conference. 2008. IEEE. [3] Grondman, I., et al., A survey of actor-critic reinforcement learning: Standard and natural policy gradients. IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews), 2012. 42(6): p. 1291-1307. [4] Fujimoto, S., H. Hoof, and D. Meger. Addressing function approximation error in actor-critic methods. in International conference on machine learning. 2018. PMLR. [5] Silver, D., Lever, G., Heess, N., Degris, T., Wierstra, D., Riedmiller, M., Deterministic policy gradient algorithms. in International Conference on Machine Learning. 2014. [6] Haarnoja, T., et al. Soft actor-critic: Off-policy maximum entropy deep reinforcement learning with a stochastic actor. in International Conference on Machine Learning. 2018. PMLR. [7] Chowdhury, M.A. and Q. Lu, A novel entropy-maximizing TD3-based reinforcement learning for automatic PID tuning. arXiv preprint arXiv:2210.02381, 2022.",
+    "presenting_author": "Qiugang (Jay) Lu | Texas Tech University, Lubbock, TX",
+    "authors": [
+      "Myisha Ahmed Chowdhury | Texas Tech University, Lubbock, TX",
+      "Qiugang (Jay) Lu | Texas Tech University, Lubbock, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Myisha Ahmed Chowdhury",
+        "affiliation": "Texas Tech University, Lubbock, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Qiugang (Jay) Lu",
+        "affiliation": "Texas Tech University, Lubbock, TX",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "207b",
+    "sortable_time": "2023-11-07_08:18:00_08:36:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666235"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668371",
+    "paper_endpoint": "Paper/668371",
+    "paper_id": "668371",
+    "topic": "Necessary Optimality-Constrained Bayesian Optimization (NOBO) for Efficiently Learning Complex Control Policies from Closed-Loop Data",
+    "title": "Necessary Optimality-Constrained Bayesian Optimization (NOBO) for Efficiently Learning Complex Control Policies from Closed-Loop Data",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52069",
+    "session_title": "Advances in Process Control I",
+    "session_number": "207",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The control of complex systems involves several challenges due to the unknown (black-box) relationship between control policy parameters and the reward function that can only be observed through expensive and noisy simulations or experiments. Bayesian optimization (BO) has recently gained popularity for globally optimizing expensive black-box functions, which is a problem frequently encountered in learning-based control applications, thanks to its data efficiency [1,2]. Traditional BO methods construct a probabilistic surrogate model of the performance function and employ an acquisition function that approximates the value of information for future sample points, effectively balancing the exploration-exploitation tradeoff inherent in searching the design space [3]. Recent studies have shown that BO's convergence performance can be improved by incorporating additional information, such as derivative observations [4]. First-order BO methods mainly focus on standard acquisition functions and indirectly incorporate derivative measurements into the probabilistic surrogate model to enhance local predictions [5]. Nevertheless, these methods can exhibit drawbacks, such as potentially significant increases in training and optimization costs due to greater model complexity, and may fail if gradient observations are heavily obscured by noise [6]. In this talk, we propose a computationally efficient approach to simultaneously utilize performance (zero-order) and derivative (first-order) data within a single acquisition optimization subproblem. Our core idea involves imposing a series of black-box constraints that mimic the necessary optimality conditions for the original global optimization problem at each iteration. The proposed necessary-optimality BO (NOBO) method [7] employs Gaussian process surrogates for the objective's partial derivatives to approximately enforce first-order optimality conditions as black-box constraints in the acquisition function. These constraints establish a feasible set that explicitly accounts for the uncertainty in estimating partial gradients from data, which is updated as new data is observed. Consequently, the feasible set allows for narrowing down the design space search to regions that are jointly informative concerning both zeroth- and first-order information. We examine the theoretical performance and regret bounds associated with the proposed algorithm and demonstrate in practice that incorporating these constraints, which restrict the allowable search space, leads to faster convergence rates compared to conventional BO. We further validate these performance enhancements on a reinforcement learning (RL) benchmark problem based on the linear quadratic regulator (LQR) problem [8], where the reward function's derivatives can be estimated directly from closed-loop data using the policy gradient theorem. References: [1] Shahriari, Bobak, et al. \"Taking the human out of the loop: A review of Bayesian optimization.\" Proceedings of the IEEE 104.1 (2015): 148-175. [2] Paulson, Joel A., Georgios Makrygiorgos, and Ali Mesbah. \"Adversarially robust Bayesian optimization for efficient auto‐tuning of generic control structures under uncertainty.\" AIChE Journal 68.6 (2022): e17591. [3] Frazier, Peter I. \"A tutorial on Bayesian optimization.\" arXiv preprint arXiv:1807.02811 (2018). [4] Shekhar, Shubhanshu, and Tara Javidi. \"Significance of gradient information in bayesian optimization.\" International Conference on Artificial Intelligence and Statistics. PMLR, 2021. [5] Wu, Jian, et al. \"Bayesian optimization with gradients.\" Advances in neural information processing systems 30 (2017). [6] Penubothula, Santosh, Chandramouli Kamanchi, and Shalabh Bhatnagar. \"Novel first order bayesian optimization with an application to reinforcement learning.\" Applied Intelligence 51 (2021): 1565-1579. [7] Makrygiorgos, Georgios, Joel A. Paulson, and Ali Mesbah. \" No-Regret Bayesian Optimization with Gradients using Local Optimality-based Constraints: Application to Closed-loop Policy Search\", 62nd IEEE Conference on Decision and Control (CDC). IEEE, 2023 [8] Recht, Benjamin. \"A tour of reinforcement learning: The view from continuous control.\" Annual Review of Control, Robotics, and Autonomous Systems 2 (2019): 253-279.",
+    "presenting_author": "Georgios Makrygiorgos | University of California, Berkeley",
+    "authors": [
+      "Georgios Makrygiorgos | University of California, Berkeley",
+      "Joel Paulson | The Ohio State University, Columbus",
+      "Ali Mesbah | University of California, Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Georgios Makrygiorgos",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "207c",
+    "sortable_time": "2023-11-07_08:36:00_08:54:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668371"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669523",
+    "paper_endpoint": "Paper/669523",
+    "paper_id": "669523",
+    "topic": "Moving Horizon Estimation for Diffusion-Transport-Reaction Systems: A Late-Lumping Approach",
+    "title": "Moving Horizon Estimation for Diffusion-Transport-Reaction Systems: A Late-Lumping Approach",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52069",
+    "session_title": "Advances in Process Control I",
+    "session_number": "207",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Diffusion-transport-reaction systems are widely present in chemical engineering practice, e.g., chemical tubular reactors, fluid transportation systems, heat transfer processes, and so on [1-2]. These types of systems, often known as distributed parameter systems (DPS), naturally have spatial-temporal dynamics, and the corresponding modeling, estimation, control, and regulation are theoretically challenging and practically complex. Based on a reasonable understanding of the first principle behind such systems, such as mass, momentum, and energy balance laws, their governing equations can be derived in the form of partial differential equations (PDE) or partial integral differential equations (PIDE). Compared to lumped parameter systems modeled by ordinary differential equations (ODE), the state and output estimation of DPS are often more demanding since spatially distributed sensors are prohibitively expensive and sometimes even impossible to install (e.g., implementing a spatially distributed concentration analyzer when a chemical tubular reactor is installed and being operated). Furthermore, the infinite-dimensionality nature of DPS makes the corresponding estimator algorithms design mathematically difficult. The fundamental state reconstruction and estimation techniques can be mainly traced back to two categories, namely, the Luenberger observer and Kalman filter, depending on that if the considered underlying dynamical model is deterministic or stochastic [3]. However, in practice, the ubiquitous physical constraints in chemical engineering processes make the classic Luenberger observer and Kalman filter not directly applicable to state estimation. On the other hand, moving horizon estimation, as an optimization-based technique, has been actively studied and applied over the past decades, especially for lumped parameter systems [4-6]. Technically, direct extension of MHE to DPS is not straightforward due to the spatial-temporal dynamics nature of DPS. Most existing works that addressed MHE design for DPS are based on spatial discretization or order reduction, which belongs to the early lumping design and might face stability inconsistency issues when implementing the estimation results back to the original distributed parameter system. To address this issue, we propose a late lumping approach for the MHE design of state and output estimation of diffusion-transport-reaction systems. The proposed design relies on a novel model time-discretization approach which does not perform any spatial discretization nor model-order reduction [7-8]. In this presentation, we show that the important system properties including approximate observability are invariant under the transformation. Based on that, the optimality and stability analyses of the proposed design are presented. Finally, we provide several typical diffusion-transport-reaction examples to verify the effectiveness and applicability of the proposed design. The proposed theoretical results can be applicable to other classes of distributed parameter systems in chemical, mechanical, and energy systems. References [1]. W. H. Ray, Advanced Process Control, McGraw-Hill, New York 1981. [2]. Christofides, P.D. and Chow, J., 2002. Nonlinear and robust control of PDE systems: Methods and applications to transport-reaction processes. Appl. Mech. Rev., 55(2), pp.B29-B30. [3]. D. Simon, 2006. Optimal state estimation: Kalman, H infinity, and nonlinear approaches. John Wiley & Sons. [4]. C. V. Rao, J. B. Rawlings, and J. H. Lee, Constrained linear state estimation—A moving horizon approach, Automatica, vol. 37, no. 10, 614 pp. 1619-1628, 2001. [5]. C. V. Rao, J. B. Rawlings, and D. Q. Mayne, Constrained state estimation for nonlinear discrete-time systems: Stability and moving horizon approximations, IEEE Trans. Autom. Control, vol. 48, no. 2, pp. 246-258, 618 Feb. 2003. [6]. A. Alessandri, M. Baglietto, and G. Battistelli, Moving-horizon state estimation for nonlinear discrete-time systems: New stability results and approximation schemes, Automatica, vol. 44, no. 7, pp. 1753-1765, 2008. [7]. V. Havu and J. Malinen, The Cayley transform as a time discretization 640 scheme, Numer. Funct. Anal. Opt., vol. 28, no. 7-8, pp. 825-851, 2007. [8]. J. Xie, J.P. Humaloja, C.R. Koch, and S. Dubljevic, 2022. Constrained Receding Horizon Output Estimation of Linear Distributed Parameter Systems. IEEE Trans. Autom. Control. 1-8.",
+    "presenting_author": "Junyao Xie | University of Alberta, Edmonton, Canada",
+    "authors": [
+      "Junyao Xie | University of Alberta, Edmonton, Canada",
+      "Stevan Dubljevic | University of Alberta, Edmonton, Canada",
+      "Biao Huang | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Junyao Xie",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Stevan Dubljevic",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Biao Huang",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "207d",
+    "sortable_time": "2023-11-07_08:54:00_09:12:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669523"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670087",
+    "paper_endpoint": "Paper/670087",
+    "paper_id": "670087",
+    "topic": "A Systematic Approach for Controlling Processes Outside the Training Region of Data-Driven Models",
+    "title": "A Systematic Approach for Controlling Processes Outside the Training Region of Data-Driven Models",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52069",
+    "session_title": "Advances in Process Control I",
+    "session_number": "207",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Data-driven models are increasingly being used to design controllers due to their ability to handle complex systems with many interacting variables, their lack of requirement for explicit knowledge, their computational efficiency, and their adaptability and flexibility [1-3]. However, it is important to note that data-driven models have limitations, such as their inability to accurately predict beyond their training domains. This can limit their applicability to only their training regions [4-5]. This can pose a major challenge when implementing data-driven process control in new operating settings outside the training region. To address this challenge, we have developed a systematic approach to control a process outside the training region of its data-driven model. Our approach utilizes the operable adaptive sparse identification of systems (OASIS) algorithm, an online, adaptive version of the well-known SINDy developed by Dr. Kwon and his colleagues, to identify a model from the available historical process data [6]. We then use offline support vector machine analysis to identify the domain of applicability (DA) within the training region of the obtained OASIS model. Additionally, we evaluate the performance of the OASIS-based controller with multiple random initial conditions at different distances from the DA to identify the margin (𝜹) within which the model can effectively control the process. In real-time control, the OASIS-based controller can effectively control the process within the identified DA+𝜹. However, when the process has to be operated outside the training region, the regular OASIS-based controller may not be able to control the process beyond the DA+𝜹 due to the activation functions inside hidden neurons. These functions are important for achieving model accuracy within the training range, but they eventually saturate to constant values as the neural network inputs go far beyond the training range. This results in the neural network being unable to accurately extrapolate the tendency of the original problem. To address this issue, we propose evaluating only the hidden neurons related to a particular direction beyond their limit, which we call the γ-boundaries. For the hidden neuron whose γ-value is outside the corresponding γ-boundary, we perform linear extrapolation at its γ-boundary. For the other neurons whose γ-values are inside their γ-boundaries, we use the standard neuron activation function. This approach improves the overall prediction accuracy of OASIS and aids in controlling the process outside the training region [7]. We demonstrate the effectiveness of our developed method on a non-isothermal continuous stirred tank reactor (CSTR). Literature cited: Laurí, D., Rossiter, J.A., Sanchis, J. and Martínez, M., 2010. Data-driven latent-variable model-based predictive control for continuous processes. Journal of Process Control, 20(10), pp.1207-1219. Hosen, M.A., Hussain, M.A. and Mjalli, F.S., 2011. Control of polystyrene batch reactors using neural network based model predictive control (NNMPC): An experimental investigation. Control Engineering Practice, 19(5), pp.454-467. Wu, Z., Tran, A., Rincon, D. and Christofides, P.D., 2019. Machine‐learning‐based predictive control of nonlinear processes. Part II: Computational implementation. AIChE Journal, 65(11), p.e16734. Na, W., Liu, W., Zhu, L., Feng, F., Ma, J. and Zhang, Q.J., 2018. Advanced extrapolation technique for neural-based microwave modeling and design. IEEE Transactions on Microwave Theory and Techniques, 66(10), pp.4397-4418. Bangi, M.S.F. and Kwon, J.S.I., 2022. Deep hybrid model‐based predictive control with guarantees on domain of applicability. AIChE Journal, p.e18012. Bhadriraju, B., Bangi, M.S.F., Narasingam, A. and Kwon, J.S.I., 2020. Operable adaptive sparse identification of systems: Application to chemical processes. AIChE Journal, 66(11), p.e16980. Zhang, L. and Zhang, Q.J., 2010. Simple and effective extrapolation technique for neural-based microwave modeling. IEEE Microwave and Wireless Components Letters, 20(6), pp.301-303.",
+    "presenting_author": "Bhavana Bhadriraju | Texas A&M University, College Station, TX",
+    "authors": [
+      "Bhavana Bhadriraju | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX",
+      "Faisal Khan | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bhavana Bhadriraju",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Faisal Khan",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "207e",
+    "sortable_time": "2023-11-07_09:12:00_09:30:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670087"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/671458",
+    "paper_endpoint": "Paper/671458",
+    "paper_id": "671458",
+    "topic": "Model Predictive-Based Detection of Cyberattacks on Actuators Controlling Nonlinear Systems with Changing Process Dynamics",
+    "title": "Model Predictive-Based Detection of Cyberattacks on Actuators Controlling Nonlinear Systems with Changing Process Dynamics",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52069",
+    "session_title": "Advances in Process Control I",
+    "session_number": "207",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The implementation of advanced control algorithms is dependent on regular data updates from sensors in order to guarantee sufficient recursive feasibility and stability of real-world processes. A majority of these processes especially in the field of chemical engineering not only display nonlinear characteristics but also have dynamics that change with time for various reasons ranging from inherent dynamics to faults and disturbances affecting the system. The decision of industries to incorporate standards associated with Industry 4.0 by integrating physical processes with communication and control systems [1] are critical to not only increase production efficiency and improve transparency of production lines but also ensure better control of processes using advanced control strategies. However, this integration also opens these processes and associated components to cyberattacks which can affect process safety compromising not only profits but also endangering human lives. Prior research from our group investigated various strategies to detect cyberattacks on process sensors [2][3][4] and actuators [5][6] to provide explicit guarantees of stability and feasibility in this environment. Initial detection strategies developed guaranteed stability only for limited time periods in the presence of cyberattacks, or made assumptions on how many sensors could be attacked. These short-comings motivated the detection strategy that will be discussed in this work, called the Directed Randomization Method [7] , to attempt to gain stability and detect attacks over extended periods of time. In this strategy, one of two control actions is randomly selected at every sampling time such that the state of the process is maintained within a certain region determined a-priori over the subsequent sampling period. The goal is to make it challenging for an attacker to guess the correct next state measurement that will not identify the system as being under attack when this randomness exists in the control action selection, even if both options are known to an attacker. The objective of this work is to extend the Directed Randomization Method to the case that process dynamics can change. When this occurs, if an unexpected state measurement is obtained, it may not be clear whether the process dynamics changed or whether an attack on the sensors occurred. We discuss how to extend the Directed Randomization Method to this case. References: [1] Lezzi, M., Lazoi, M., Corallo, A. Cybersecurity for industry 4.0 in the current literature: A reference framework. Computers in Industry 103, 97-110 (2018). [2] Rangan, K. K., Oyama, H., & Durand, H. Integrated Cyberattack Detection and Handling for Nonlinear Systems with Evolving Process Dynamics under Lyapunov-based Economic Model Predictive Control. Chemical Engineering Research and Design (2021). [3] Oyama, H. and H. Durand. Integrated Cyberattack Detection and Resilient Control Strategies Using Lyapunov-Based Economic Model Predictive Control, AIChE Journal, 66 (\"Futures\" issue), ee17084 (2020). [4] Liu, S., Wei, G., Song, Y., Liu, Y. Extended kalman filtering for stochastic nonlinear systems with randomly occurring cyber attacks. Neurocomputing 207, 708-716 (2016). [5] Li, Y., Voos, H., Rosich, A., Darouach, M. A stochastic cyber-attack detection scheme for stochastic control systems based on frequency-domain transformation technique, in: International Conference on Network and System Security, Springer, 209-222 (2015). [6] Huang, K., Zhou, C., Tian, Y.-C., Yang, S., & Qin, Y. Assessing the Physical Impact of Cyberattacks on Industrial Cyber-Physical Systems. IEEE Transactions on Industrial Electronics, 65(10), 8153–8162 (2018). [7] Oyama, H., Messina, D., Rangan, K.K., Leonard, A.F., Nieman, K., Durand, H., Tyrrell, K., Hinzman, K. and Williamson, M. Development of directed randomization for discussing a minimal security architecture. Digital Chemical Engineering 6, 100065 (2023).",
+    "presenting_author": "Keshav Kasturi Rangan | Wayne State University, Detroit, MI",
+    "authors": [
+      "Keshav Kasturi Rangan | Wayne State University, Detroit, MI",
+      "Henrique Oyama | Wayne State University, Detroit, MI",
+      "Helen Durand | Wayne State University, Detroit, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Keshav Kasturi Rangan",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Henrique Oyama",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      },
+      {
+        "name": "Helen Durand",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "207f",
+    "sortable_time": "2023-11-07_09:30:00_09:48:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/671458"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/671548",
+    "paper_endpoint": "Paper/671548",
+    "paper_id": "671548",
+    "topic": "Learning-Based Data Reconstruction and Predictive Modeling of an Ammonia Synthesis Process for State Estimation and Control Applications",
+    "title": "Learning-Based Data Reconstruction and Predictive Modeling of an Ammonia Synthesis Process for State Estimation and Control Applications",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52069",
+    "session_title": "Advances in Process Control I",
+    "session_number": "207",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Ammonia is essential for producing fertilizers and is the second most-generated synthetic chemical worldwide [1, 2]. In addition, ammonia is used as a refrigerant gas, to produce plastics, explosives, pesticides, textiles, dyes, and has recently been considered a promising carbon-free hydrogen carrier for energy storage and transportation [3-5]. The industrial-scale production of ammonia is via thermochemical synthesis with the well-known Haber-Bosch process [6]. Nitrogen and hydrogen are mixed on the surface of a metal-based catalyst in a high-pressure, high-temperature reactor to produce ammonia [7]. Controlling the functioning of such a reactor requires precise descriptions of the reaction mechanism, as well as control methods that drive reactions into lower energy and more selective paths. The first step toward controlling ammonia synthesis is to develop a reliable model that predicts the reactor's complex nonlinear dynamics. Reaction rates computed at smaller length scales are only applicable over a specific discretization size due to the much larger gradients in momentum, energy, and mass transport fields at the macroscopic reactor scale compared to the spatial heterogeneity of catalyst properties at the microscale. To account for temperature and species concentration variations, rates must be re-evaluated at various macroscopic domains. Integrating transport-reaction spatiotemporal dynamics across the process domain then determines macroscopic behavior. Hence, only a multiscale model that links microscopic features to macroscopic process variables that can be monitored and changed can predict such intimate events. A multiscale interpretation of transport-catalytic ammonia synthesis requires high-fidelity and computationally tractable fundamental models that can reliably anticipate the system's spatiotemporal dynamics, allowing information transmission across scales. In this work, we employ a high-fidelity multiscale model of catalytic ammonia synthesis in an industrial-scale packed-bed reactor. Integrating ammonia reaction kinetics [7, 8] with a comprehensive transport model of the reactor results in a set of nonlinear algebraic and partial differential equations that must be solved simultaneously to predict the spatiotemporal dynamics of the pressure, temperature, and species concentrations. The multiscale model increases ammonia synthesis understanding and prediction accuracy. However, its complexity and computational inefficiency limit its use for real-time simulation, analysis, and model-based estimation and control approaches such as model predictive control (MPC) and moving horizon estimation (MHE). In MPC and MHE, the control and estimation problems are formulated as constrained dynamic optimization problems that must be solved repeatedly at each process sampling time to get the current values of the manipulated inputs and estimating the unmeasured state variables [9]. Hence, the applicability of MPC and MHE relies on the real-time solvability of the underlying dynamic optimization problem subject to the process model and constraints. The computational intensity of the proposed high-fidelity multiscale model makes it incompatible with optimization-based state estimation and control. Therefore, a Long-Short Term Memory (LSTM)-based reduced-order model is used to approximate the dynamic behavior described by the high-fidelity model. COMCOL Multiphysics is used to run offline high-fidelity simulations under different operating conditions to get the data needed to build the reduced-order model. This non-uniform resolution of the simulation data and the complexity of the solution trends cause bimodality behavior in the training dataset, which may lead to inconsistently trained reduced-order models, making the LSTM network be trained only based on the dominant mode and ignoring the rest of the nonlinear patterns. We apply a feedforward neural network (FNN) to address the bimodality problem by increasing the resolution of the offline simulated data. The offline simulated data is used to train the FNN and reconstruct the dataset at a higher resolution, leading to a normal distribution. Furthermore, the reconstructed dataset is used to train the LSTM network in a multivariate time-series forecast manner. The reduced-order model is examined and utilized as the basis for the MPC and MHE designs. The resulting closed-loop performance in regulating the reactor's temperature and concentration is evaluated under various operating conditions. References: [1] Erisman, J. W.; Sutton, M. A.; Galloway, J.; Klimont, Z.; Winiwarter, W. How a Century of Ammonia Synthesis Changed the World. Nat. Geosci. 2008, 1(10), 636–639. [2] FAO. World Fertilizer Trends and Outlook to 2022; 2020. https://doi.org/10.4060/ca6746en. [3] V. Babu, R. Angira. Optimal design of an auto-thermal ammonia synthesis reactor. Comput. Chem. Eng. 2005, 29, 1041-1045 . [4] J. Humphreys, R. Lan, S. Tao. Development and Recent Progress on Ammonia Synthesis Catalysts for Haber–Bosch Process. Adv. Energy Sustainability Res. 2021, 2, 2000043. [5] MacFarlane, D. R.; Cherepanov, P. V.; Choi, J.; Suryanto, B. H. R.; Hodgetts, R. Y.; Bakker, J. M.; Ferrero Vallana, F. M.; Simonov, A. N. A Roadmap to the Ammonia Economy. Joule, 2020, 4(6), 1186–1205. [6] Schlögl, R. Catalytic Synthesis of Ammonia - A “Never-Ending Story”? Angew. Chemie - Int. Ed. 2003, 42 (18), 2004–2008. [7] M. Aparicio, J.A. Dumesic. Ammonia synthesis kinetics: surface chemistry, rate expressions and kinetic analysis. Top. Catal. 1994, 1, 233-252. [8] Qian, Q. An, A. Fortunelli, R.J. Nielsen, W.A. Goddard III. Reaction Mechanism and Kinetics for Ammonia Synthesis on the Fe(111) Surface. J. Am. Chem. Soc. 2018, 140, 6288-6297. [9] Rawlings, J. B.; Mayne, D. Q.; Diehl, M. M. Model Predictive Control: Theory, Computation, and Design 2nd Edition; 2019.",
+    "presenting_author": "Amirsalar Bagheri | Kansas State University, Manhattan, KS",
+    "authors": [
+      "Amirsalar Bagheri | Kansas State University, Manhattan, KS",
+      "Thiago Oliveira Cabral | Kansas State University, Manhattan, KS",
+      "Davood Pourkargar | Kansas State University, Manhattan, KS"
+    ],
+    "authors_structured": [
+      {
+        "name": "Amirsalar Bagheri",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Thiago Oliveira Cabral",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Author"
+      },
+      {
+        "name": "Davood Pourkargar",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "207g",
+    "sortable_time": "2023-11-07_09:48:00_10:06:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/671548"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/671208",
+    "paper_endpoint": "Paper/671208",
+    "paper_id": "671208",
+    "topic": "Simulated Greenhouse Lighting Control Test Bed Utilizing Ray Tracing and Image Detection to Study Control and Modeling Considerations Using Classical and Quantum Computing",
+    "title": "Simulated Greenhouse Lighting Control Test Bed Utilizing Ray Tracing and Image Detection to Study Control and Modeling Considerations Using Classical and Quantum Computing",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52069",
+    "session_title": "Advances in Process Control I",
+    "session_number": "207",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Energy-efficient greenhouses are desirable to reduce carbon dioxide emissions, cut expenditures, and increase crop yields. Lighting costs constitute a significant portion of the budgets of greenhouses [1, 2], motivating the application of new lighting control method to limit energy consumption. Many control architectures have been proposed. This includes, for example, methods of manipulating LEDs to track a desired energy flux set points [3, 4] or though modeling and tracking aggregate properties such as the dry weight per area [5], utilizing a variety of control algorithms such as model predictive control or machine learning [3]. Modern sensing methods such as image-based sensing could also be desirable to incorporate. One of the challenges for a control engineering research in attempting to evaluate advanced control for applications such as these could be the lack of a greenhouse to experiment with. Recent work in our group has been exploring the potential of the computer graphics software Blender for applications involving image-based control (e.g., [6]). Blender includes a 3D modeling interface, as well as capabilities for rendering and for coding in a Python interface. It therefore is a potentially interesting test bed for a variety of applications, including cases such as evaluating advanced control of systems such as greenhouses, where physics-only simulations such as are common in process systems engineering (e.g., modeling only temperatures, pressures, or concentrations which are not required to be visualized and where the physics are well-characterized) may not be suitable. It could allow, for example, testing of an algorithm for controlling greenhouse lighting for a variety of different plant growth models, to enable understanding of how the algorithms might behave for a variety of different scenarios even if the plant growth model is not fully known. For these reasons, in this work we create a test bed for control of a greenhouse lighting system. The test bed is implemented in Blender using the Python programming language. Blender is used to generate the structure of leaves in the 3D modeling interface. The leaves represent plants in the ‘actual’ greenhouse. The positions of the leaves are part of the feedback received by the controller that manipulates the LEDs to promote the plant growth. The leaf positions are read using a method of processing a point cloud representation of the object (as in [7]) obtained from the image of the plant rendered using Blender into a 3D reconstruction of the object. Next, a model predictive controller equipped with a simplified ray tracing model is used to selectively manipulate individual LEDs to minimize energy costs while ensuring each leaf maintains a desired energy flux. Additionally, the models consider sunlight and plant growth which act as disturbances. Closed-loop simulation results are presented to demonstrate the performance of the model and optimization-based controller, and we discuss methods that can be applied to improve controller performance. Next, we demonstrate how the test bed can be used to analyze the application of hybrid classical-quantum algorithms that could be of interest for future applications of the greenhouse test bed to better understand how quantum computation [8] might interact with it. To do this, we describe the potential use of algorithms such as the quantum random walk for applications in representing stochastic plant growth in greenhouses. The quantum random walk has the potential to find the optimal path in a graph of vertices and edges, where the edges represent a probability of moving from one vertex to the next [9]. Stochastic growth models represent the growth of the geometry of a plant based on a set of probabilistic rules [10, 11]. We represent a stochastic growth model as a graph of vertices and edges, and then determine the optimal path using a quantum random walk algorithm, for use in determining the direction of plant growth. The results of this analysis are then compared to the implementation of a purely classical test bed. Through these simulations, we demonstrate the capabilities of Blender for a variety of non-traditional advanced control applications where test beds may otherwise be difficult to find without an experimental greenhouse system. [1]. van Iersel, Marc W., and David Gianino. \"An adaptive control approach for light-emitting diode lights can reduce the energy costs of supplemental lighting in greenhouses.\" HortScience 52.1 (2017): 72-77. [2]. Katzin, David, Leo FM Marcelis, and Simon van Mourik. \"Energy savings in greenhouses by transition from high-pressure sodium to LED lighting.\" Applied Energy 281 (2021): 116019. [3]. Mohagheghi, Afagh, and Mehrdad Moallem. \"An Energy-Efficient PAR-Based Horticultural Lighting System for Greenhouse Cultivation of Lettuce.\" IEEE Access (2023). [4]. Jiang, Jun, Afagh Mohagheghi, and Mehrdad Moallem. \"Energy-efficient supplemental LED lighting control for a proof-of-concept greenhouse system.\" IEEE Transactions on industrial electronics 67.4 (2019): 3033-3042. [5]. van Mourik, Simon, Bert van'T. Ooster, and Michel Vellekoop. \"Plant Performance in Precision Horticulture: Optimal climate control under stochastic uncertainty.\" arXiv preprint arXiv:2303.14678 (2023). [6] Oyama, Henrique, Dominic Messina, Keshav Kasturi Rangan, Akkarakaran Francis Leonard, Kip Nieman, Helen Durand, Katie Tyrrell, Katrina Hinzman, and Michael Williamson. \"Development of directed randomization for discussing a minimal security architecture.\" Digital Chemical Engineering 6 (2023): 100065. [7]. Berger, Matthew, et al. \"A survey of surface reconstruction from point clouds.\" Computer graphics forum. Vol. 36. No. 1. 2017. [8]. Yanofsky, Noson S., and Mirco A. Mannucci. Quantum computing for computer scientists. Cambridge University Press, 2008. [9]. Koch, Daniel, and Mark Hillery. \"Finding paths in tree graphs with a quantum walk.\" Physical Review A 97.1 (2018): 012308. [10]. Kang, Meng-Zhen, et al. \"Analytical study of a stochastic plant growth model: Application to the GreenLab model.\" Mathematics and Computers in Simulation 78.1 (2008): 57-75. [11]. Kang, Mengzhen, et al. \"Parameter identification of plant growth models with stochastic development.\" 2016 IEEE International Conference on Functional-Structural Plant Growth Modeling, Simulation, Visualization and Applications (FSPMA). IEEE, 2016.",
+    "presenting_author": "Kip Nieman | Wayne State University, Detroit, MI",
+    "authors": [
+      "Kip Nieman | Wayne State University, Detroit, MI",
+      "Helen Durand | Wayne State University, Detroit, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kip Nieman",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Helen Durand",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "207h",
+    "sortable_time": "2023-11-07_10:06:00_10:24:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/671208"
+  }
+]

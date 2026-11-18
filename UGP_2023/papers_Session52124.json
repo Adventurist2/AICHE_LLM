@@ -1,0 +1,261 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666806",
+    "paper_endpoint": "Paper/666806",
+    "paper_id": "666806",
+    "topic": "Direct Numerical Simulation of an Alternative Smx Element Orientation for Laminar Liquid-Liquid Mixing",
+    "title": "Direct Numerical Simulation of an Alternative Smx Element Orientation for Laminar Liquid-Liquid Mixing",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52124",
+    "session_title": "Mixing in Multiphase Systems: Computational Modeling",
+    "session_number": "371",
+    "program_title": "North American Mixing Forum",
+    "symposium_title": "North American Mixing Forum",
+    "abstract": "Emulsions and liquid-liquid (L-L) mixing processes are of central importance in a broad range of industrial sectors, ranging from food and cosmetics to polymer and mineral processing, biotechnology, and pharmaceuticals ( Valdes et al. , 2022 ). Despite the fact that conventional high-energy methods, which involve the use of stirred vessels, remain the most common choice for liquid-liquid mixing, static mixers have proven to be a viable alternative; this is because they can retain, or even improve, the performance obtained through traditional methods at a lower capital and operational cost ( Thakur et al. , 2003 ). In particular, the SMX family of mixers has been successfully implemented in numerous industrial applications, handling highly viscous fluids and substantially large viscosity ratios (r vis ∼ O(10^6)) ( Hirschberg et al. , 2009 ). Many former studies have explored the impact of varying the SMX’s geometrical features in pursuit of an optimal or enhanced configuration ( Liu et al. , 2006 ; Singh et al. , 2009 ; Heniche et al. , 2005 ; Hirschberg et al. , 2009 ; Meijer et al. , 2012 ). Nonetheless, performance metrics targeted in such studies mostly focus around pressure drop/energy consumption vs. miscible mixing criteria (e.g., concentration profiles and interfacial stretch) and flow streamline analysis, excluding relevant metrics for multiphase systems (e.g., droplet size distribution, DSD). In this sense, proposed modifications for the SMX (e.g., SMX+ design with reduced bar width) have essentially been conceived and tested for miscible mixing applications and are intrinsically expected to improve two-phase mixing performance as well. Hirschberg et al. ( 2009 ) explicitly tested a L-L dispersion scenario and verified that Sauter mean diameter correlations for the SMX are also applicable for the SMX+, but no further research followed on the dispersion performance. Furthermore, additional effects relevant in L-L mixing, such as the presence of surfactants, have been seldom included in performance studies given the extra layers of complexity that must be handled by the numerical framework. Despite this, the role of surfactants is of critical interest when dealing with L-L systems since the properties and stability of most structured goods (i.e., emulsion-based products) are heavily correlated with the manipulation of the interfacial tension between phases ( Wong et al. , 2015 ; Leal-Calderon et al. , 2007 ; Valdes et al. , 2022 ). In addition, previous studies have pointed out the deficiencies behind assuming a constant equilibrium interfacial tension and disregarding key interfacial and bulk mass transfer dynamics for the surfactant species ( Haas , 1987 ; Lobry et al. , 2011 ; Das et al. , 2013 ). Based on the above, we consider pertinent to carry out a comprehensive mixing performance analysis with two-phase dispersion metrics as target objectives, where extra complexities (i.e., surfactants) are included in the computations to provide a more realistic, and industrially-relevant, depiction of the mixing operation. We have utilized a high-fidelity, 3D direct numerical simulation (DNS) framework coupled with a state-of-the-art interface capturing algorithm based on a hybrid front-tracking level-set methodology, mounted on a massively parallelized computer architecture ( Shin et al. , 2017 , 2018 ). Our code solves explicitly the unsteady dynamics of the free-interface, providing a wealth of information on the interfacial dynamics which are inaccessible via experiments or volume-averaged numerical approaches. In addition, our numerical framework resolves surfactant transport for both the interface and bulk phase through a set of convection-diffusion equations, and couples it to the interfacial tension via a Langmuir equation of state, as described thoroughly by Shin et al. ( 2018 ). An alternative orientation (90 ◦ rotation) for the SMX element pair was tested (see Fig. 1), inspired by the spacer sections between elements trialed for similar static mixers ( Abdolkarimi and Ganji , 2014 ). This rather simple modification is based on the premise that a considerable amount of daughter droplets and satellite structures are generated via hydrodynamically-driven breakage and capillary instabilities ( Valdes et al. , 2023 ). Even though geometrically-induced deformation strongly drives the formation of unstable ligaments and structures in the SMX, hydrodynamically-driven breakups frequently spawn numerous daughter droplets from a single unstable ligament, thus heavily contributing to the number of small and medium-sized droplets. These events are mostly independent of the flow field imposed by the SMX element ( Valdes et al. , 2023 ). In this study, the alternative SMX arrangement is contrasted against the dispersion performance of a standard 2-element SMX mixer, for both clean and surfactant-laden scenarios, varying relevant physicochemical parameters (elasticity and adsorption-desorption kinetics). As expected by design, a lower pressure drop (thus lower power consumption) is obtained for the alternative configuration with a substantially different longitudinal velocity profile (due to the fewer crossbars in the second element). Results for the clean case with a multi-drop inlet set-up (see Valdes et al. ( 2023 )) show that both configurations produce a comparable DSD but for a significantly lower pressure drop with the alternative mixer design. The latter is also associated with a slightly skewed shape towards larger sizes for the alternative SMX due to elongated but unbroken ligaments in the spacer section. In contrast, surfactant-laden simulations for a 3-drop inlet show a massive disparity in performance between the standard and alternative mixer configurations in terms of the DSD and number of drops when modelling soluble, highly desorptive surfactants. In such scenarios, the alternative SMX generates substantially wider distributions, skewed towards larger sizes, and a droplet count close to the clean case at high desorptive coefficients. Interestingly, poorly desorptive surfactants exhibit the least DSD variability for the alternative SMX, unlike the standard SMX where the least variable DSDs are achieved by the highly desorptive surfactants. Such a disparity is significantly reduced when assuming fully-insoluble surfactants, particularly at higher surfactant elasticities, where the droplet count and DSDs are seen to agree to a much higher degree. Acknowledgements This work is supported by the Engineering and Physical Sciences Research Council, United Kingdom, through the EPSRC PREMIERE (EP/T000414/1) Programme Grant. This work is also supported by the Colombian Ministry of Science, Technology and Innovation MINCIENCIAS, through a doctoral studentship for JV. O.K.M. acknowledges the Royal Academy of Engineering for a Research Chair in Multiphase Fluid Dynamics. We also acknowledge the HPC facilities provided by the Research Computing Service (RCS) of Imperial College London. D.J. and J.C. acknowledge support through computing time at the Institut du Developpement et des Ressources en Informatique Scientifique (IDRIS) of the Centre National de la Recherche Scientifique (CNRS), coordinated by GENCI (Grand Equipement National de Calcul Intensif) Grant 2022 A0122B06721. References J. P. ValdÅLes, L. Kahouadji, and O. K. Matar, “Current advances in liquid–liquid mixing in static mixers: A review,” Chemical Engineering Research and Design, vol. 177, 1 2022. R. K. Thakur, C. Vial, K. D. Nigam, E. B. Nauman, and G. Djelveh, “Static mixers in the process industries - a review,” Chemical Engineering Research and Design, vol. 81, no. 7, pp. 787–826, 2003. S. Hirschberg, R. Koubek, F.Moser, and J. SchÅNock, “An improvement of the Sulzer SMX™ static mixer significantly reducing the pressure drop,” Chemical Engineering Research and Design, 2009. S. Liu, A. N. Hrymak, and P. E. Wood, “Design modifications to SMX static mixer for improving mixing,” AIChE Journal, 2006. M. K. Singh, P. D. Anderson, and H. E. Meijer, “Understanding and optimizing the SMX static mixer,” Macromolecular Rapid Communications, 2009. M. Heniche, P. A. Tanguy, M. F. Reeder, and J. B. Fasano, “Numerical investigation of blade shape in static mixing,” AIChE Journal, vol. 51, no. 1, 1 2005. H. E. Meijer, M. K. Singh, and P. D. Anderson, “On the performance of static mixers: A quantitative comparison,” Progress in Polymer Science, vol. 37, pp. 1333–1349, 2012. S. F. Wong, J. S. Lim, and S. S. Dol, “Crude oil emulsion: A review on formation, classification and stability of water-in-oil emulsions,” Journal of Petroleum Science and Engineering, vol. 135, pp. 498–504, 2015. F. Leal-Calderon, J. Bibette, and V. Schmitt, Emulsion science: Basic principles, 2nd ed. Springer, 2007. P. A. Haas, “Turbulent dispersion of aqueous drops in organic liquids,” AIChE Journal, 1987. E. Lobry, F. Theron, C. Gourdon, N. Le Sauze, C. Xuereb, and T. Lasuye, “Turbulent liquid-liquid dispersion in SMV static mixer at high dispersed phase concentration,” Chemical Engineering Science, 2011. M. D. Das, A. N. Hrymak, and M. H. Baird, “Laminar liquid-liquid dispersion in the SMX static mixer,” Chemical Engineering Science, 2013. S. Shin, J. Chergui, and D. Juric, “A solver for massively parallel direct numerical simulation of three-dimensional multiphase flows,” Journal of Mechanical Science and Technology, vol. 31, no. 4, 4 2017. S. Shin, J. Chergui, D. Juric, L. Kahouadji, O. K. Matar, and R. V. Craster, “A hybrid interface tracking – level set technique for multiphase flow with soluble surfactant,” Journal of Computational Physics, vol. 359, pp. 409–435, 4 2018. V. Abdolkarimi and H. Ganji, “CFD modeling of two immiscible fluids mixing in a commercial scale static mixer,” Brazilian Journal of Chemical Engineering, vol. 31, no. 4, 12 2014. J. P. Valdes, L. Kahouadji, F. Liang, S. Shin, J. Chergui, D. Juric, and O. K. Matar, “Direct numerical simulations of liquid–liquid dispersions in a SMX mixer under different inlet conditions,” Chemical Engineering Journal, vol. 462, p. 142248, 4 2023.",
+    "presenting_author": "Juan Valdes | Imperial College London, United Kingdom",
+    "authors": [
+      "Juan Valdes | Imperial College London, United Kingdom",
+      "Fuyue Liang | Imperial College London, United Kingdom",
+      "Lyes Kahouadji | Imperial College London, United Kingdom",
+      "Seungwon Shin | Hongik University, Seoul, Korea, Republic of (South)",
+      "Jalel Chergui | LISN CNRS, Orsay, France",
+      "Damir Juric | LISN CNRS, Orsay, France",
+      "Omar Matar | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Juan Valdes",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Fuyue Liang",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Lyes Kahouadji",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Seungwon Shin",
+        "affiliation": "Hongik University, Seoul, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Jalel Chergui",
+        "affiliation": "LISN CNRS, Orsay, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Damir Juric",
+        "affiliation": "LISN CNRS, Orsay, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Omar Matar",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "371a",
+    "sortable_time": "2023-11-07_08:00:00_08:30:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666806"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663622",
+    "paper_endpoint": "Paper/663622",
+    "paper_id": "663622",
+    "topic": "Liquid-Liquid Dispersions: Modeling across Length Scales Using Eulerian-Lagrangian Conversion",
+    "title": "Liquid-Liquid Dispersions: Modeling across Length Scales Using Eulerian-Lagrangian Conversion",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52124",
+    "session_title": "Mixing in Multiphase Systems: Computational Modeling",
+    "session_number": "371",
+    "program_title": "North American Mixing Forum",
+    "symposium_title": "North American Mixing Forum",
+    "abstract": "Liquid-liquid dispersions are abundant across many industries; these include food emulsions, cosmetic creams, pharmaceutical products, and many more. Many systems that produce these dispersions receive two separate immiscible liquids as input, then use mechanical energy to break up one phase into small droplets. Modeling these systems using CFD can aid in optimization, but the large range of scales involved is challenging to model. The system can initially be modeled with an Eulerian approach as the interface between the immiscible phases is on the macroscopic scale. At the end of the process, Lagrangian particles best capture the state of the system since the dispersed phase has been broken up into microscopic droplets. During the process, the system will have both macroscopic and microscopic regions meaning the model must be able to represent both and convert between them. Here we present and validate an algorithm for converting the dispersed phase between Eulerian and Lagrangian representations. Macroscopic regions are converted to particles as the dispersed phase is broken up. Meanwhile, particles are converted to macroscopic regions as they coalesce. First, we apply the model to turbulent jet breakup, a well-characterized system, comparing against published data. Next, it is validated against static mixers and agitated tanks, comparing to experimental results. Finally, performance is analyzed, demonstrating the acceleration gained by using GPU hardware.",
+    "presenting_author": "John Thomas | M-Star Simulations, West Friendship, MD",
+    "authors": [
+      "Brian DeVincentis | M-Star Simulations, Owings Mills, MD",
+      "John Thomas | M-Star Simulations, West Friendship, MD",
+      "Christopher Tyler | Cargill, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Brian DeVincentis",
+        "affiliation": "M-Star Simulations, Owings Mills, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "John Thomas",
+        "affiliation": "M-Star Simulations, West Friendship, MD",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christopher Tyler",
+        "affiliation": "Cargill, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "371b",
+    "sortable_time": "2023-11-07_08:30:00_09:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663622"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666921",
+    "paper_endpoint": "Paper/666921",
+    "paper_id": "666921",
+    "topic": "Machine Learning for Prediction and Optimization in Surfactant-Laden Liquid Dispersions",
+    "title": "Machine Learning for Prediction and Optimization in Surfactant-Laden Liquid Dispersions",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52124",
+    "session_title": "Mixing in Multiphase Systems: Computational Modeling",
+    "session_number": "371",
+    "program_title": "North American Mixing Forum",
+    "symposium_title": "North American Mixing Forum",
+    "abstract": "Drop size and its distribution are of central importance to a broad range of industrial applications where liquid-liquid dispersion is heavily involved: from food and cosmetics to drug development and biotechnology. Numerous studies have been dedicated to the establishment of predictive correlations regarding (mean and maximum) drop size by considering various flow conditions and physical properties of the liquid phases [ Calabrese et al. , 1986 , Zhou and Kresta , 1998a , Kraume et al. , 2004 , Zainal Abidin et al. , 2015 ]. Moreover, studies have investigated the effect of design of commonly-used mixers on the drop size, covering various types of agitated mixers [ Zhou and Kresta , 1998b , Pacek et al. , 1999 , Giapos et al. , 2005 , Sechremeli et al. , 2006 , Ghotli et al. , 2019 ]. The case of static mixers, however, has enjoyed comparatively far less attention in the literature. In any case, it is challenging to exhaustively explore the effect of physical properties and mixer design on the drop size given the sensitivity of the latter to a slight change in these factors. In addition, the prevalent scenario in industry, wherein surface active agents (surfactants) are present as contaminants or additives, elevates the complexity of predicting the surfactant-covered drop size (distribution). It is unsurprising, therefore, that no correlation thus far has been established to predict the drop size in the presence of surfactant. Fortunately, the rapid development of Artificial Intelligence (AI), data science, and machine learning provides a powerful toolkit to address the complexities described above in the field of multi-phase flow [ Zhu et al. , 2022 ]. Inspired by prior work, machine learning techniques are applied herein for the development of predictive models of the drop size given either the surfactant properties or mixer configurations. In this study, high-fidelity simulations of surfactant-laden liquid dispersions obtained via use of static and agitated mixers are carried out to thoroughly investigate the underlying physical mechanisms governing the mixing dynamics ( Figure 1 ). Our state-of-the-art numerical framework comprises a robust hybrid interface-tracking algorithm, along with a well-validated solver for surfactant transport in multi-phase flow field [ Shin et al. , 2018 ]. This grants us access to an unprecedented level of detail of the interfacial evolution in the presence of surfactants. Taking advantage of the drop size tracking and corresponding interfacial surfactant concentration profiles, the present work seeks to exploit supervised learning methods (i.e., Random Forest, XGBoost) to explore how the drop size is modulated dynamically by the interfacial tension, which is dependent on the concentration and physicochemical nature of the surfactant present. Our results show that, for both mixers, the drop size is strongly correlated to the average interfacial surfactant concentration while physicochemical properties and initial conditions (i.e., desorption coefficient, initial interfacial and bulk concentration) exert a relatively weak influence. Furthermore, semi-empirical drop size correlations from previous work in the literature are encoded into our machine learning algorithms with the aim of identifying the deviation between clean and surfactant-laden drop size predictions. Finally, coarse simulations of mixers with various configurations are on-going to generate data to train a surrogate model for rapid prediction of mixer performance and thereby leading to mixer design optimization. More specifically, take agitated mixer as an example, effort is made on the pitched blade turbine, one of the most commonly used impeller type in industrial applications, where the effect of multiple design parameters (namely pitch angle, blade width, blade length, blade number, and clearance) will be studied. The surrogate model to be developed is expected to either predict drop size (or interfacial area) when certain mixer configuration is known, or provide guidance on mixer design given a specific metric, say, drop size distribution. Acknowledgement This work is supported by the Engineering and Physical Sciences Research Council, United Kingdom, through the EPSRC MEMPHIS (EP/K003976/1) and PREMIERE (EP/T000414/1) Programme Grants. O.K.M. acknowledges funding from PETRONAS and the Royal Academy of Engineering for a Research Chair in Multiphase Fluid Dynamics. We acknowledge HPC facilities provided by the Research Computing Service (RCS) of Imperial College London for the computing time. D.J. and J.C. acknowledge support through HPC/AI computing time at the Institut du Developpement et des Ressources en Informatique Scientifique (IDRIS) of the Centre National de la Recherche Scientifique (CNRS), coordinated by GENCI (Grand Equipement National de Calcul Intensif) Grant 2022 A0122B06721. References Richard V Calabrese, TPK Chang, and PT Dang. Drop breakup in turbulent stirred-tank contactors. part i: Effect of dispersed-phase viscosity. AIChE Journal , 32(4):657–666, 1986. Reza Afshar Ghotli, Mohammad Reza Abbasi, AmirHossein Bagheri, Abdul Aziz Abdul Raman, Shaliza Ibrahim, and Huseyin Bostanci. Experimental and modeling evaluation of droplet size in immiscible liquid-liquid stirred vessel using various impeller designs. Journal of the Taiwan Institute of Chemical Engineers , 100:26–36, 2019. A Giapos, Chrysostomos Pachatouridis, and Michael Stamatoudis. Effect of the number of impeller blades on the drop sizes in agitated dispersions. Chemical Engineering Research and Design , 83(12):1425–1430, 2005. Matthias Kraume, Ansor G ̈abler, and Kai Schulze. Influence of physical properties on drop size distribution of stirred liquid-liquid dispersions. Chemical Engineering & Technol- ogy: Industrial Chemistry-Plant Equipment-Process Engineering-Biotechnology , 27(3): 330–334, 2004. AW Pacek, S Chamsart, AW Nienow, and A Bakker. The influence of impeller type on mean drop size and drop size distribution in an agitated vessel. Chemical Engineering Science , 54(19):4211–4222, 1999. D Sechremeli, A Stampouli, and M Stamatoudis. Comparison of mean drop sizes and drop size distributions in agitated liquid–liquid dispersions produced by disk and open type impellers. Chemical Engineering Journal , 117(2):117–122, 2006. Seungwon Shin, Jalel Chergui, Damir Juric, Lyes Kahouadji, Omar K Matar, and Richard V Craster. A hybrid interface tracking–level set technique for multiphase flow with soluble surfactant. Journal of Computational Physics , 359:409–435, 2018. Mohd Izzudin Izzat Zainal Abidin, Abdul Aziz Abdul Raman, and Mohamad Iskandr Mohamad Nor. Mean drop size correlations and population balance models for liq- uid—liquid dispersion. AIChE Journal , 61(4):1129–1145, 2015. Genwen Zhou and Suzanne M Kresta. Correlation of mean drop size and minimum drop size with the turbulence energy dissipation and the flow in an agitated tank. Chemical Engineering Science , 53(11):2063–2079, 1998a. Genwen Zhou and Suzanne M Kresta. Evolution of drop size distribution in liquid–liquid dispersions for various impellers. Chemical Engineering Science , 53(11):2099–2113, 1998b. Li-Tao Zhu, Xi-Zhong Chen, Bo Ouyang, Wei-Cheng Yan, He Lei, Zhe Chen, and Zheng- Hong Luo. Review of machine learning for hydrodynamics, transport, and reactions in multiphase flows and reactors. Industrial & Engineering Chemistry Research , 61(28): 9901–9949, 2022.",
+    "presenting_author": "Fuyue Liang | Imperial College London, United Kingdom",
+    "authors": [
+      "Fuyue Liang | Imperial College London, United Kingdom",
+      "Juan Valdes | Imperial College London, United Kingdom",
+      "Sibo Cheng | Imperial College London, United Kingdom",
+      "Lyes Kahouadji | Imperial College London, United Kingdom",
+      "Seungwon Shin | Hongik University, Seoul, Korea, Republic of (South)",
+      "Damir Juric | LISN CNRS, Orsay, France",
+      "Jalel Chergui | LISN CNRS, Orsay, France",
+      "Omar Matar | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Fuyue Liang",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Juan Valdes",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Sibo Cheng",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Lyes Kahouadji",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Seungwon Shin",
+        "affiliation": "Hongik University, Seoul, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Damir Juric",
+        "affiliation": "LISN CNRS, Orsay, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Jalel Chergui",
+        "affiliation": "LISN CNRS, Orsay, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Omar Matar",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "371c",
+    "sortable_time": "2023-11-07_09:00:00_09:30:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666921"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668808",
+    "paper_endpoint": "Paper/668808",
+    "paper_id": "668808",
+    "topic": "CFD Characterization of a Vertically Stacked 7-Stage Continuous Crystallizer Cascade",
+    "title": "CFD Characterization of a Vertically Stacked 7-Stage Continuous Crystallizer Cascade",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52124",
+    "session_title": "Mixing in Multiphase Systems: Computational Modeling",
+    "session_number": "371",
+    "program_title": "North American Mixing Forum",
+    "symposium_title": "North American Mixing Forum",
+    "abstract": "Mixing plays a crucial role in crystallization processes to obtain e.g., a homogeneous supersaturation profile and a better control on the particle size distribution. Parameters such as the impeller type, size, position, and speed can heavily influence the mixing in Mixed Suspension Mixed Product Removal (MSMPR) crystallizer, the most widely adopted type among the continuous crystallizers. In the presented work, a novel stacked 7-tank MSMPR cascade is studied where the slurry is displaced vertically, by intervention of two periodically inflating diaphragms, in the first and last stage. It is of fundamental importance to understand and optimize the impact of the impeller configuration on the hydrodynamics inside the spherical tanks of the novel crystallizer aimed at minimizing the settling of solids and ensuring swift micromixing of antisolvent. Therefore, Computational Fluid Dynamics (CFD) was used to numerically study different impeller configurations (type, size, position) to map out the crystallizers mixing characteristic and identify the optimized setting (lowest impeller speed to minimize crystal breakage). Simulations were conducted utilizing Ansys Fluent software with an unstructured computational grid employing the RNG k-ε model. The results in this work represent the first CFD study for the novel crystallizer design. It also addresses the demand of the scientific community to investigate the hydrodynamics in crystallizers.",
+    "presenting_author": "Jody Albertazzi | Politecnico di Milano, Italy",
+    "authors": [
+      "Jody Albertazzi | Politecnico di Milano, Italy",
+      "Ajinkya Pandit | Massachusetts Institute of Technology, Cambridge",
+      "Giovanni Aprile | Technical University of Denmark, Kongens Lyngby",
+      "Torsten Stelzer | University of Puerto Rico Medical Science Campus, San Juan, PR",
+      "Allan Myerson | Massachusetts Institute of Technology, Cambridge"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jody Albertazzi",
+        "affiliation": "Politecnico di Milano, Italy",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ajinkya Pandit",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "Giovanni Aprile",
+        "affiliation": "Technical University of Denmark, Kongens Lyngby",
+        "designation": "Author"
+      },
+      {
+        "name": "Torsten Stelzer",
+        "affiliation": "University of Puerto Rico Medical Science Campus, San Juan, PR",
+        "designation": "Author"
+      },
+      {
+        "name": "Allan Myerson",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "371d",
+    "sortable_time": "2023-11-07_09:30:00_10:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668808"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/679153",
+    "paper_endpoint": "Paper/679153",
+    "paper_id": "679153",
+    "topic": "Scale-Down and Scale-up of a Slurry Mixing Process",
+    "title": "Scale-Down and Scale-up of a Slurry Mixing Process",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52124",
+    "session_title": "Mixing in Multiphase Systems: Computational Modeling",
+    "session_number": "371",
+    "program_title": "North American Mixing Forum",
+    "symposium_title": "North American Mixing Forum",
+    "abstract": "Scale-up is a common activity in process development. The goal is to develop the understanding of how a particular unit operation affects the outcome of the process in small scale equipment and then design equipment for the full-scale plant based on this understanding. If a piece of equipment in a plant is not operating as designed, the operation can be scaled down, recreating the problem at small scale to develop an understanding of its causes. Then further tests can be carried out to develop a solution to the problem at small scale followed by the design of equipment to implement at plant scale. A case study will be presented which will discuss how mixing issues were created, due to changes in the operating procedures, in the production of a viscous, non-Newtonian, high solids concentration slurry. The changes resulted in the slurry being more viscous and shear-thinning. The agitator was not capable of moving the slurry in regions far from the impeller blades and severe stagnation and fouling was observed. The process would have to be shut down on a regular basis so that the vessel could be cleaned. Scale-down studies were carried out in a combined stirred tank / viscometer developed for the project enabling a mixing test to be performed identifying the degree of agitator required to eliminate stagnant regions and, at the same time, to measure the slurries rheology. The results were scaled-up and the new agitator has been working as specified for nearly five years. Finally, some of the considerations that must be taken into account when making rheology measurements, especially for high concentration slurries, will be addressed.",
+    "presenting_author": "Richard Grenville | RKGMixes LLC, Wilmington, DE",
+    "authors": [
+      "Richard Grenville | RKGMixes LLC, Wilmington, DE"
+    ],
+    "authors_structured": [
+      {
+        "name": "Richard Grenville",
+        "affiliation": "RKGMixes LLC, Wilmington, DE",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "371f",
+    "sortable_time": "2023-11-07_10:00:00_10:30:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/679153"
+  }
+]

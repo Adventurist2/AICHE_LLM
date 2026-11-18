@@ -1,0 +1,357 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716722",
+    "paper_endpoint": "Paper/716722",
+    "paper_id": "716722",
+    "topic": "Composite Trust Region Bayesian Optimization for High-Dimensional Agroecosystem Model Calibration and Local Sensitivity Analysis",
+    "title": "Composite Trust Region Bayesian Optimization for High-Dimensional Agroecosystem Model Calibration and Local Sensitivity Analysis",
+    "date_time": "2025-11-05_12:30:00_15:00:00",
+    "session_id": "57098",
+    "session_title": "10D: Computational Advances for Sustainability",
+    "session_number": "530",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Environmental and agroecosystem models are essential tools for understanding and predicting the impact of land management and climate on soil, water, and crop dynamics. These process-based simulators capture complex, nonlinear biogeochemical interactions, but parameter calibration remains a key bottleneck due to their high dimensionality, nonlinear structure, and computational expense. Compounding the challenge, these simulation models are often closed-source or legacy codebases, meaning that internal gradients are inaccessible (necessitating derivative-free optimization strategies). Accurate calibration is critical for producing reliable predictions, yet many models are still tuned via trial-and-error or inverse modeling routines that can be slow, fragile, or sensitive to initial guesses. Scalable and robust calibration methods are increasingly needed to support data-driven decision-making in agriculture, environmental policy, and climate resilience. Several approaches have been developed to address this challenge. Gradient-based methods, such as finite-difference approximations, are widely used but require many model evaluations and are prone to numerical instability in high-dimensional or noisy settings [1]. The widely adopted PEST software [2] uses a Gauss-Marquardt-Levenberg algorithm with a linearized Jacobian to minimize a weighted sum-of-squares loss. While effective in many cases, PEST is restricted to differentiable, squared-error objectives and can struggle with nonconvex or ill-conditioned problems. Evolutionary algorithms and genetic methods [3, 4] offer more flexibility but are often prohibitively sample-inefficient. Bayesian optimization (BO) has emerged as a more sample-efficient alternative, particularly in expensive black-box settings [5]. Recent work, such as the BOA framework [6], applies SAASBO to agroecosystem model calibration and shows promising results – but assumes the existence of sparse, axis-aligned structure and incurs high computational overhead from hyperparameter inference via Hamiltonian Monte Carlo. To overcome these limitations, we propose TuRBO-C, a composite trust-region Bayesian optimization algorithm for simulation-based model calibration. TuRBO-C extends the TuRBO method [7], which improves the scalability of BO by using multiple local Gaussian process (GP) surrogates constrained within trust regions. Our key innovation is to generalize TuRBO to composite objectives, where each component of the loss function corresponds to a different class of observations or sensor types (such as nutrient leaching, gas fluxes, or yield measurements), each modeled with a separate GP surrogate. These models are aggregated using a flexible composite loss function, allowing users to tailor the objective to the characteristics of each measurement (e.g., squared loss, quantile loss). The trust region is then adapted using a weighted average of the GPs’ lengthscales, effectively balancing exploration across heterogeneous outputs with different sensitivities. We also introduce a simple yet effective local sensitivity analysis method based on surrogate-based Sobol index estimation within the trust region surrounding the best-found parameter set, enabling interpretable insights into parameter relevance. We demonstrate the effectiveness of TuRBO-C on a real-world calibration task using the DeNitrification-DeComposition (DNDC) model, a biogeochemical simulator widely applied to assess greenhouse gas emissions, nutrient cycling, and agroecosystem performance. We use field-scale data from an agricultural site in Ohio [8], incorporating time-series observations from multiple output types to calibrate DNDC’s high-dimensional parameter space. TuRBO-C outperforms traditional and modern baseline methods in both predictive accuracy and evaluation efficiency. Moreover, the composite surrogate models and sensitivity analysis provide actionable insight into how different parameter subsets influence specific outputs, highlighting the value of this approach for both model calibration and interpretability in complex environmental systems. References: [1] Bard, Y. (1970). Comparison of gradient methods for the solution of nonlinear parameter estimation problems. SIAM Journal on Numerical Analysis, 7(1), 157-186. [2] Doherty, J. (1994). PEST: a unique computer program for model-independent parameter optimisation. In Water Down Under 94: Groundwater/Surface Hydrology Common Interest Papers; Preprints of Papers (pp. 551-554). Barton, ACT: Institution of Engineers, Australia. [3] Cao, H., Recknagel, F., & Orr, P. T. (2013). Parameter optimization algorithms for evolving rule models applied to freshwater ecosystems. IEEE Transactions on Evolutionary Computation, 18(6), 793-806. [4] Wang, Q. J. (1997). Using genetic algorithms to optimise model parameters. Environmental Modelling & Software, 12(1), 27-34. [5] Frazier, P. I. (2018). A tutorial on Bayesian optimization. arXiv preprint arXiv:1807.02811. [6] Scyphers, M. E., Missik, J. E., Kujawa, H., Paulson, J. A., & Bohrer, G. (2024). Bayesian Optimization for Anything (BOA): An open-source framework for accessible, user-friendly Bayesian optimization. Environmental Modelling & Software, 182, 106191. [7] Eriksson, D., Pearce, M., Gardner, J., Turner, R. D., & Poloczek, M. (2019). Scalable global optimization via local Bayesian optimization. Advances in neural information processing systems, 32. [8] Bhattarai, A., Steinbeck, G., Grant, B. B., Kalcic, M., King, K., Smith, W., ... & Khanal, S. (2022). Development of a calibration approach using DNDC and PEST for improving estimates of management impacts on water and nutrient dynamics in an agricultural system. Environmental Modelling & Software, 157, 105494.",
+    "presenting_author": "Kevin B. Donnelly | The Ohio State University, Columbus",
+    "authors": [
+      "Kevin B. Donnelly | The Ohio State University, Columbus",
+      "Wei-Ting Tang | The Ohio State University, Columbus",
+      "Akshay Kudva | The Ohio State University, Columbus",
+      "Noah Bevers | The Ohio State University, Columbus",
+      "Amit Timilsina | The Ohio State University, Columbus",
+      "Sami Khanal | The Ohio State University, Columbus",
+      "Joel Paulson | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kevin B. Donnelly",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Wei-Ting Tang",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Akshay Kudva",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Noah Bevers",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Amit Timilsina",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Sami Khanal",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "530a",
+    "sortable_time": "2025-11-05_12:30:00_12:48:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716722"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712507",
+    "paper_endpoint": "Paper/712507",
+    "paper_id": "712507",
+    "topic": "Automated Symbolic Thermodynamic Modeling and Global Parameter Estimation for Brine Electrolyte Systems",
+    "title": "Automated Symbolic Thermodynamic Modeling and Global Parameter Estimation for Brine Electrolyte Systems",
+    "date_time": "2025-11-05_12:30:00_15:00:00",
+    "session_id": "57098",
+    "session_title": "10D: Computational Advances for Sustainability",
+    "session_number": "530",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Accurate modeling of high-concentration brine systems is essential for desalination and resource recovery, yet remains a significant challenge due to the lack of accessible, general-purpose tools for implementing complex thermodynamic models like r-eNRTL [1]. While models like the electrolyte non-random two-liquid model (eNRTL [2]), and the refined eNRTL (r-eNRTL [1]) offer excellent predictive accuracy, their mathematical complexity poses major barriers for implementation. Deriving and coding the numerous thermodynamic property expressions by hand becomes impractical as model complexity scales. Although some academic groups have developed open-source implementations of these state-of-the-art models, such efforts are often system-specific and difficult to generalize or reuse. Recent developments--such as our integration of r-eNRTL [1] into the IDAES [3] platform--reflect a growing need for more transparent, extensible, and reusable thermodynamic modeling frameworks. Our work addresses this need along two closely connected directions: implementing complex models like r-eNRTL at the code level and enabling their seamless reuse across platforms beyond IDAES [3]. In our prior work [4], we developed and demonstrated a symbolic computation framework to automate the implementation of complex electrolyte thermodynamic models, focusing on the r-eNRTL [1] model. By leveraging symbolic algebra and source-code transformation packages Symbolics.jl [5] and SymbolicUtils.jl [6] in the Julia programming language [7], the framework removed the need to manually derive and code activity coefficient expressions. In turn, this enabled reliable and scalable expression generation for global parameter estimation. One shortcoming is that this approach is limited to single-electrolyte systems. However, it serves as a foundation for extensions to more complex models, including multi-electrolyte and temperature-dependent systems. In this work, we extend our previous framework [4] to enable symbolic derivation of a wide range of thermodynamic properties beyond activity coefficients. From a user-defined activity coefficient model, closed-form symbolic expressions for enthalpy, heat capacity, osmotic coefficients, and partial molar properties can now be automatically generated. These expressions are obtained through automatic differentiation (AD [8]) within a symbolic computing context and compiled into efficient numerical functions. This enhancement improves modeling flexibility and enables streamlined integration of accurate property models into process simulations. It significantly reduces the manual effort in building thermodynamic models for desalination and other applications. With a symbolic representation of thermodynamic properties established, we next address the challenge of global parameter estimation for the r-eNRTL model. We fit multiple single-electrolyte datasets within a unified optimization framework, which leads to a nonlinear, high dimensional parameter estimation problem. To ensure that we identify parameter values corresponding to the best-possible fit of the model to the experimental data, we require deterministic global optimization (DGO). However, DGO is often computationally prohibitive due to the curse of dimensionality, which is compounded by the need to evaluate and relax computationally expensive symbolic expressions and their derivatives. The complexity of these symbolic expressions further increases when including more datasets, resulting in significantly longer function (and corresponding relaxations) evaluation times. The high computational burden is further exacerbated by the large symbolic expression generated by this AD approach [9]. To address this, we introduce an auxiliary variable substitution scheme that dramatically and automatically reduces the size and complexity of the symbolic expressions enabling faster overall computational efficiency---particularly for DGO solvers such as EAGO.jl [10–12]. We validate our framework through case studies on binary electrolyte mixture systems relevant to brine desalination, implemented using the Julia-based equation-oriented/acausal modeling platform ModelingToolkit.jl [13]. Symbolic expressions for thermodynamic properties are derived from user-defined activity coefficient models and seamlessly integrated into process modeling and optimization workflows. These examples demonstrate the feasibility of using symbolic tools to automate the implementation of complex models. In addition, to further demonstrate the cross-platform applicability of our symbolic framework, we will show how we have successfully migrated the generated r-eNRTL activity coefficient expressions into the Python-based IDAES-PSE [3] modeling platform. This enables direct integration of complex thermodynamic models into established process systems engineering workflows built on Pyomo [14], broadening the accessibility and utility of our approach for the energy and desalination modeling communities. These efforts serve the broader purpose of reducing the community’s dependence on inaccessible commercial software by enabling reusable, open-source model implementations across platforms. References [1] Bollas, G. M., Chau-Chyun Chen, and P. I. Barton. \"Refined electrolyte‐NRTL model: Activity coefficient expressions for application to multi‐electrolyte systems.\" AIChE Journal 54, no. 6 (2008): 1608-1624. [2] Song, Yuhua, and Chau-Chyun Chen. \"Symmetric electrolyte nonrandom two-liquid activity coefficient model.\" Industrial & Engineering Chemistry Research 48, no. 16 (2009): 7788-7797. [3] Lee, Andrew, Jaffer H. Ghouse, Qi Chen, John C. Eslick, John D. Siirola, Ignacio E. Grossman, and David C. Miller. \"A flexible framework and model library for process simulation, optimization and control.\" In Computer Aided Chemical Engineering, vol. 44, pp. 937-942. Elsevier, 2018. [4] Xu, Pengfei, Robert Gottlieb, and Matthew Stuber. \"Parameter Estimation of Complicated Thermodynamic Models for Accurate Brine Separation.\" In 2023 AIChE Annual Meeting. AIChE, 2023. [5] Gowda, Shashi, Yingbo Ma, Alessandro Cheli, Maja Gwóźzdź, Viral B. Shah, Alan Edelman, and Christopher Rackauckas. \"High-performance symbolic-numerics via multiple dispatch.\" ACM Communications in Computer Algebra 55, no. 3 (2022): 92-96. [6] Shashi Gowda, Yingbo Ma, Mason Protter, Julia Computing, JuliaSymbolics/SymbolicUtils.jl, (2020). URL: https://github.com/JuliaSymbolics/SymbolicUtils.jl [7] Bezanson, Jeff, Alan Edelman, Stefan Karpinski, and Viral B. Shah. \"Julia: A fresh approach to numerical computing.\" SIAM review 59, no. 1 (2017): 65-98. [8] Corliss, George, Christele Faure, Andreas Griewank, Laurent Hascoet, and Uwe Naumann, eds. Automatic differentiation of algorithms: from simulation to optimization. Springer Science & Business Media (2002). [9] Laue, Soeren. \"On the equivalence of automatic and symbolic differentiation.\" arXiv preprint arXiv:1904.02990 (2019). [10] Wilhelm, Matthew E., and Matthew D. Stuber. \"EAGO.jl: easy advanced global optimization in Julia.\" Optimization Methods and Software 37, no. 2 (2022): 425-450. [11] Matthew E. Wilhelm, Robert X. Gottlieb, and Matthew D. Stuber. PSORLab/McCormick.jl, (2020). URL: https://github.com/PSORLab/McCormick.jl. [12] Matthew E. Wilhelm and Matthew D. Stuber. Easy advanced global optimization (EAGO): An open-source platform for robust and global optimization in Julia. In AIChE Annual Meeting. AIChE (2017). [13] Ma, Yingbo, Shashi Gowda, Ranjan Anantharaman, Chris Laughman, Viral Shah, and Chris Rackauckas. \"ModelingToolkit: A composable graph transformation system for equation-based modeling.\" arXiv preprint arXiv:2103.05244 (2021). [14] Hart, William E., Carl D. Laird, Jean-Paul Watson, David L. Woodruff, Gabriel A. Hackebeil, Bethany L. Nicholson, and John D. Siirola. Pyomo-optimization modeling in python. Vol. 67. Berlin: Springer, 2017.",
+    "presenting_author": "Pengfei Xu | University of Connecticut, Storrs",
+    "authors": [
+      "Pengfei Xu | University of Connecticut, Storrs",
+      "Robert Gottlieb | University of Connecticut, Storrs",
+      "Wajeha Tauqir | University of Connecticut, Storrs",
+      "George Bollas | University of Connecticut, Storrs",
+      "Matthew Stuber | University of Connecticut, Storrs"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pengfei Xu",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Robert Gottlieb",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      },
+      {
+        "name": "Wajeha Tauqir",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      },
+      {
+        "name": "George Bollas",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew Stuber",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "530b",
+    "sortable_time": "2025-11-05_12:48:00_13:06:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712507"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713376",
+    "paper_endpoint": "Paper/713376",
+    "paper_id": "713376",
+    "topic": "Optimization-Based Membrane Design for Selective Nutrient Recovery from Wastewater",
+    "title": "Optimization-Based Membrane Design for Selective Nutrient Recovery from Wastewater",
+    "date_time": "2025-11-05_12:30:00_15:00:00",
+    "session_id": "57098",
+    "session_title": "10D: Computational Advances for Sustainability",
+    "session_number": "530",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "The release of ammonium and potassium from wastewater treatment plants is a major driver of nutrient pollution, resulting in eutrophication and harmful algal blooms in freshwater ecosystems [1, 2]. To address this issue, innovative approaches are required to recover these valuable nutrients from wastewater for fertilizer use while simultaneously minimizing environmental impact. Recent work has demonstrated that polyelectrolyte modified membranes facilitate selective recovery of these critical nutrients while rejecting the organics. Moreover, optimum tuning of the membrane properties further facilitate the partitioning of these nutrients in two separate streams - an ammonium rich permeate stream and a potassium rich retentate stream. This, in principle, enables recovering these nutrients in tailored proportions which could be used for a range of fertilizers with different N:P:K ratios. However, despite growing interest, significant challenges remain in modeling and optimizing membrane systems for nutrient recovery. These include: (i) the lack of detailed mechanistic models for membrane manufacturing processes, (ii) limited systems-level optimization studies, and (iii) the lack of software tools that enable comprehensive design and performance evaluation of nutrient-selective membranes. This study introduces a novel membrane optimization framework and software prototype for the selective recovery of ammonium and potassium ions from anaerobic digestate. We first characterize the nonlinear relationships governing membrane behavior using an experimental dataset, encompassing membrane properties, process conditions, and performance metrics. The experimental investigations involved the use of nanofiltration membranes coated with polyelectrolyte solutions consisting of polyallylamine hydrochloride and polyacrylic acid, with glutaraldehyde (GA) as a cross-linking agent to modulate ammonium-potassium selectivity. Given the absence of mechanistic models for the layer-by-layer membrane fabrication process, data-driven regression models are employed to relate membrane permeability and selectivity to GA concentration and other fabrication parameters. A superstructure optimization approach is employed to design an efficient membrane separation system for nutrient recovery by considering the physical and structural configurations of membrane modules, including all possible interconnections (parallel, sequential, and hybrid) to achieve the desired separation performance. A mixed-integer nonlinear programming (MINLP) model is formulated to minimize membrane costs while ensuring compliance with mass balance, transport constraints, and purity specifications. The optimization framework determines the optimal GA concentration, membrane surface area, module interconnections, and overall system configuration for cost-effective nutrient recovery. To enhance accessibility and usability, a software prototype is also developed using the Tkinter Python package [3]. The graphical user interface (GUI) enables users to specify feed conditions, membrane properties, and product specifications. Key input parameters include feed flow rates of ammonium and potassium ions, operating pressure across the membrane, and GA concentration (wt.%). The GUI automatically processes experimental data to fit nonlinear regression models and allows users to specify target recovery and purity levels for ammonium ions in the final permeate. The proposed approach provides a robust methodology for tuning membrane selectivity and optimizing system performance to achieve desired ammonium to potassium recovery, which can be tailored to meet the specific nutrient profiles of local agricultural or industrial wastewater sources. These findings have significant implications for sustainable wastewater management and fertilizer production, integrating scientific innovation with economic feasibility to mitigate nutrient pollution and promote circular economy practices in wastewater treatment. Reference: [1] Chislock, M. F., Doster, E., Zitomer, R. A., & Wilson, A. E. (2013). Eutrophication: causes, consequences, and controls in aquatic ecosystems. Nature Education Knowledge , 4 (4), 10. [2] Piash, K. P. S., Sprouse, N., Hodges, C., Lin, L. S., & Sanyal, O. (2025). Elucidating organic and nutrient transport mechanisms in polyelectrolyte modified membranes for selective nutrient recovery. Journal of Membrane Science , 715 , 123438. [3] Vedant, S., Atencio, M. R., Tian, Y., Meduri, V., & Pistikopoulos, E. N. (2021). Towards a software prototype for synthesis of operable process intensification systems. In Computer Aided Chemical Engineering (Vol. 50, pp. 767-772). Elsevier.",
+    "presenting_author": "Md Masud | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Md Masud | West Virginia University, Morgantown, WV",
+      "Km Prottoy Shariar Piash | West Virginia University, Morgantown, WV",
+      "Oishi Sanyal | West Virginia University, Morgantown, WV",
+      "Yuhe Tian | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Md Masud",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Km Prottoy Shariar Piash",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Oishi Sanyal",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Yuhe Tian",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "530c",
+    "sortable_time": "2025-11-05_13:06:00_13:24:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713376"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714021",
+    "paper_endpoint": "Paper/714021",
+    "paper_id": "714021",
+    "topic": "An Integrated Approach Towards Utilizing Bittern for Chemicals Recovery: Technoeconomic and Sustainability Analysis",
+    "title": "An Integrated Approach Towards Utilizing Bittern for Chemicals Recovery: Technoeconomic and Sustainability Analysis",
+    "date_time": "2025-11-05_12:30:00_15:00:00",
+    "session_id": "57098",
+    "session_title": "10D: Computational Advances for Sustainability",
+    "session_number": "530",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Resource recovery is a fundamental pillar of sustainability and the circular economy, involving the systematic extraction of valuable materials or energy from waste streams for reuse in industrial and commercial applications. This concept encompasses a wide range of resources, including water, energy, minerals, and organic matter. Among these, mineral resource recovery has gained significant attention due to the increasing global demand for critical minerals such as magnesium, potassium, lithium, and sodium, which are essential for modern technologies and industries [1], [2]. One of the most promising yet underutilized sources of mineral recovery is brine: the concentrated waste stream generated by desalination plants, sea salt production, mineral processing etc. Conventional desalination processes produce two primary output streams: freshwater and brine concentrate. While freshwater is the intended product, brine concentrate is often discarded as waste, despite being rich in dissolved salts and valuable minerals. Sea bittern, a specific type of concentrated brine obtained from solar evaporation during sea salt production, contains high concentrations of sodium, magnesium, and potassium salts [3], [4], making it a potential resource for recovery. Several studies have explored methods to extract these salts; however, existing approaches treat each recovery process as a separate problem, leading to a lack of a unified and systematic framework for mineral extraction from brine. This study addresses this gap by developing a comprehensive and optimized framework for the separation and recovery of valuable marine chemicals from bittern. The proposed framework employs a combination of process optimization and superstructure optimization techniques to systematically evaluate and determine the most efficient separation pathways. A mixed-integer nonlinear programming (MINLP) model is implemented to explore a broad set of separation technologies, allowing for an in-depth evaluation of various process configurations. The use of superstructure optimization facilitates the identification of the most cost-effective and environmentally sustainable pathways for mineral recovery. To assess the viability of the proposed separation processes, a techno-economic analysis (TEA) is conducted, considering key economic factors such as capital investment, operational costs, and revenue potential. Additionally, a life cycle assessment (LCA) is integrated into the framework to evaluate the environmental performance of different feasible pathways, examining metrics such as global warming potential, human health impacts, ecosystem quality, and resource utilization. The findings of this study highlight the significant potential of employing integrated process optimization techniques to develop efficient, cost-effective, and environmentally sustainable strategies for the recovery of valuable compounds from the bittern. By incorporating TEA and LCA into the framework, this research provides a holistic understanding of both the economic and environmental implications of different recovery pathways. The proposed approach serves as a decision-making tool to guide the selection of optimal separation technologies, ultimately contributing to the sustainable utilization of saline resources and reducing waste in related operations. References [1] O. Ogunbiyi et al. , “Sustainable brine management from the perspectives of water, energy and mineral recovery: A comprehensive review,” Desalination , vol. 513, p. 115055, Oct. 2021, doi: 10.1016/j.desal.2021.115055. [2] A. Panagopoulos, “Water-energy nexus: desalination technologies and renewable energy sources,” Environ. Sci. Pollut. Res. , vol. 28, no. 17, pp. 21009–21022, May 2021, doi: 10.1007/s11356-021-13332-8. [3] P. Sahu, B. Gao, S. Bhatti, G. Capellades, and K. M. Yenkie, “Process Design Framework for Inorganic Salt Recovery Using Antisolvent Crystallization (ASC),” ACS Sustain. Chem. Eng. , Dec. 2023, doi: 10.1021/acssuschemeng.3c05243. [4] P. Sahu, “A comprehensive review of saline effluent disposal and treatment: conventional practices, emerging technologies, and future potential,” Water Reuse , vol. 11, no. 1, pp. 33–65, Oct. 2020, doi: 10.2166/wrd.2020.065.",
+    "presenting_author": "Barnabas Gao | Rowan University, Glassboro, NJ",
+    "authors": [
+      "Barnabas Gao | Rowan University, Glassboro, NJ",
+      "Parul Sahu | CSIR - Central Salt and Marine Chemicals Research Institute, Bhavnagar, India",
+      "Kirti Yenkie | Rowan University, Glassboro, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Barnabas Gao",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Parul Sahu",
+        "affiliation": "CSIR - Central Salt and Marine Chemicals Research Institute, Bhavnagar, India",
+        "designation": "Author"
+      },
+      {
+        "name": "Kirti Yenkie",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "530d",
+    "sortable_time": "2025-11-05_13:24:00_13:42:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714021"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716268",
+    "paper_endpoint": "Paper/716268",
+    "paper_id": "716268",
+    "topic": "Food-Energy-Water Nexus: A Multi-Level Optimization Approach",
+    "title": "Food-Energy-Water Nexus: A Multi-Level Optimization Approach",
+    "date_time": "2025-11-05_12:30:00_15:00:00",
+    "session_id": "57098",
+    "session_title": "10D: Computational Advances for Sustainability",
+    "session_number": "530",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "The food-energy-water nexus strives to address concerns faced by the supply of food, energy, and water amid rising population growth and industrialization. The interdependence and interconnectedness of its constituent resource supply systems intrinsically adds a layer of complexity to the nexus system [1]. In response to navigating this challenge, the nexus leverages holistic approaches that consider all three resources and their systems simultaneously when establishing decisions pertaining to their design and operation. Conventionally, these decisions are made by a single decision-maker with complete access to information related to each of the components that form the nexus. However, in a more realistic milieu, decisions are often made by various decision-makers in a decentralized fashion at several levels of hierarchy [2]. In other words, a more accurate representation of the nexus would incorporate three levels of decision-making, one for each of the resource supply systems of the food-energy-water nexus, as opposed to the sole presence of a central nexus authority. From a process systems perspective, tri-level programming can be employed to facilitate decision-making across three levels of hierarchy within the food-energy-water nexus. The formulation for tri-level programming consists of three optimization problems, referred to as the first-, second-, and third-level problems, nested within one another [3]. At its essence, each of these problems corresponds to a distinct level of decision-making. As such, the food, energy, and water supply systems within the nexus are respectively modeled at the three levels under consideration. The sequence or designation of these supply systems reflects the order of priority their decision or they themselves hold in the overall system. Multiple configurations can be analyzed in this manner to determine the hierarchical decision sequences for achieving sustainable objectives in these nexus systems. While valuable insights of this nature can be derived from tri-level optimization frameworks, their computational and mathematical complexities must be addressed. Towards this effort, the tri-level framework presented in this work combines relaxation techniques to tackle modeling complexities [4] and multi-parametric programming to handle the tri-level nature of the problem [5]. Accordingly, variables of the upper-level problems are set as parameters in the lower-level problems and solved using multi-parametric algorithms. The solution to these problems yields explicit functions of the lower-level variables in terms of upper-level parameters. The upper-level problems are subsequently modified by incorporating these obtained functions and then solved to derive the optimal solutions for the overall nexus system. References [1] C´esar Ram´ırez-M´arquez and Jos´e M Ponce-Ortega. Process systems engineering tools for the water–energy–food nexus: Challenges and opportunities. Current Opinion in Chemical Engineering, 42:100980, 2023. [2] Elizabeth J Abraham, Marcello Di Martino, Dustin Kenefake, Dhabia M Al-Mohannadi, and Efstratios N Pistikopoulos. A multi-parametric optimization approach for bi-level decision-making strategies in energy-water nexus supply systems. In Computer Aided Chemical Engineering, volume 53, pages 2395–2400. Elsevier, 2024. [3] Athanasios Migdalas, Panos M Pardalos, and Peter V¨arbrand. Multilevel optimization: algorithms and applications, volume 20. Springer Science & Business Media, 2013. [4] Marcello Di Martino, Patrick Linke, and Efstratios N Pistikopoulos. Overcoming modeling and computational complexity challenges in food-energy-water nexus optimization. Computers & Chemical Engineering, page 108902, 2024. [5] Styliani Avraamidou and Efstratios Pistikopoulos. Multi-level Mixed-Integer Optimization: Parametric Programming Approach. Walter de Gruyter GmbH & Co KG, 2022.",
+    "presenting_author": "Elizabeth J. Abraham | Texas A&M University, College Station, TX",
+    "authors": [
+      "Elizabeth J. Abraham | Texas A&M University, College Station, TX",
+      "Dustin Kenefake | Texas A&M University, College Station, TX",
+      "Marcello Di Martino | Aspen Technology, Inc., Houston, TX",
+      "Efstratios Pistikopoulos | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Elizabeth J. Abraham",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Dustin Kenefake",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Marcello Di Martino",
+        "affiliation": "Aspen Technology, Inc., Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Efstratios Pistikopoulos",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "530e",
+    "sortable_time": "2025-11-05_13:42:00_14:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716268"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/722643",
+    "paper_endpoint": "Paper/722643",
+    "paper_id": "722643",
+    "topic": "Break",
+    "title": "Break",
+    "date_time": "2025-11-05_12:30:00_15:00:00",
+    "session_id": "57098",
+    "session_title": "10D: Computational Advances for Sustainability",
+    "session_number": "530",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "",
+    "presenting_author": "",
+    "authors": [],
+    "authors_structured": [],
+    "sortable_time": "2025-11-05_14:00:00_14:18:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/722643"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716047",
+    "paper_endpoint": "Paper/716047",
+    "paper_id": "716047",
+    "topic": "Graph-Based Spatiotemporal Attention Network for Lithium-Ion Battery Capacity Prediction",
+    "title": "Graph-Based Spatiotemporal Attention Network for Lithium-Ion Battery Capacity Prediction",
+    "date_time": "2025-11-05_12:30:00_15:00:00",
+    "session_id": "57098",
+    "session_title": "10D: Computational Advances for Sustainability",
+    "session_number": "530",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Lithium-ion batteries have emerged as a cornerstone technology in modern energy systems, powering a wide range of applications from portable electronics to electric vehicles and large-scale energy storage solutions. The widespread adoption of lithium-ion batteries is driven by their high energy density, long cycle life, and excellent efficiency [1-2]. As the demand for reliable and sustainable energy storage continues to grow, ensuring the long-term health and performance of lithium-ion batteries has become increasingly important. Hence, one of the key challenges in battery management is how to accurately predict the future capacity. This can ensure the reliability, safety, and operational planning of battery-powered systems [3-4]. However, achieving accurate long-term capacity prediction remains highly challenging due to the complex and nonlinear degradation mechanisms that govern battery aging. As a result, traditional data-driven methods often struggle with capturing the intricate patterns associated with this task, especially over extended periods. To address this challenge, we propose a graph-based spatiotemporal feature extraction method using multi-attention mechanism. Graph neural networks (GNNs) are particularly powerful for modeling complex data structures where relationships between nodes (features) are crucial [5]. By capturing both local and global dependencies through the graph structure, GNNs enable more accurate and flexible representations of the intricate interactions taking place during battery degradation [6]. Furthermore, the attention mechanism enhances the model’s ability to focus on the most relevant features and time steps, improving the interpretability and predictive accuracy of the capacity prediction process [7-8]. In the proposed approach, the spatial attention is applied to voltage, current, and temperature measurements collected from each charging cycle. This module dynamically learns the relationships and dependencies among these features. In parallel, the temporal attention is applied across different timesteps within the data to enable the model to capture long-term dependencies and variations over the battery's operational history. The outputs from the spatial and temporal attention modules are then passed through a gated fusion mechanism. This ensures that the model can effectively balance the contributions from spatial feature correlations and temporal dynamics. Finally, the fused feature representations are passed through a series of fully connected layers to perform the final capacity prediction. Our proposed method is validated using public benchmark datasets to demonstrate its robustness and effectiveness. Specifically, we employ the benchmark NASA battery dataset (Cells B5, B6, B7, and B18). To create different test scenarios, we use the last 80 cycles of each battery cell alternately as the test data while the cycling data of the other cells are used for training. Simulation results show that our model can consistently outperform traditional deep learning-based capacity prediction methods. The averaged RMSE (root mean squared error) values for capacity prediction of these cells, with similar model complexity of the proposed GNN, long short-term memory, and convolutional neural networks, are 0.0294, 0.1111, and 0.1810, respectively. These results confirm that our graph-based spatiotemporal attention framework can enhance the accuracy and reliability for the long-term lithium-ion battery capacity prediction. References [1] Koech, A. K., Mwandila, G., Mulolani, F., & Mwaanga, P. (2024). Lithium-ion battery fundamentals and exploration of cathode materials: A review. South African Journal of Chemical Engineering . [2] Modekwe, G., Al-Wahaibi, S., & Lu, Q. (2024). Transformer-based Capacity Prediction for Lithium-ion Batteries with Data Augmentation. IFAC-PapersOnLine . [3] Zhu, J. et al., (2022). Data-driven capacity estimation of commercial lithium-ion batteries from voltage relaxation. Nature Communications . [4] Shi, Q., Zhao, L., Zhang, E., Xia, J., Li, H., Wang, K., & Jiang, K. (2023). The future capacity prediction using a hybrid data-driven approach and aging analysis of liquid metal batteries. Journal of Energy Storage . [5] Wu, Z., Pan, S., Chen, F., Long, G., Zhang, C., & Yu, P. S. (2020). A comprehensive survey on graph neural networks. IEEE Transactions on Neural Networks and Learning Systems . [6] Zhou, K. Q., Qin, Y., & Yuen, C. (2024). Graph neural network-based lithium-ion battery state of health estimation using partial discharging curve. Journal of Energy Storage . [7] Zheng, C., Fan, X., Wang, C., & Qi, J. (2020, April). Gman: A graph multi-attention network for traffic prediction. Proceedings of the AAAI Conference on Artificial Intelligence . [8] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., & Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems .",
+    "presenting_author": "Gift Modekwe | Texas Tech University, Lubbock, TX",
+    "authors": [
+      "Gift Modekwe | Texas Tech University, Lubbock, TX",
+      "Qiugang (Jay) Lu | Texas Tech University, Lubbock, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gift Modekwe",
+        "affiliation": "Texas Tech University, Lubbock, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Qiugang (Jay) Lu",
+        "affiliation": "Texas Tech University, Lubbock, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "530g",
+    "sortable_time": "2025-11-05_14:18:00_14:39:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716047"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714728",
+    "paper_endpoint": "Paper/714728",
+    "paper_id": "714728",
+    "topic": "Using Deep Learning to Predict the Permeability of Porous Media",
+    "title": "Using Deep Learning to Predict the Permeability of Porous Media",
+    "date_time": "2025-11-05_12:30:00_15:00:00",
+    "session_id": "57098",
+    "session_title": "10D: Computational Advances for Sustainability",
+    "session_number": "530",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Introduction Understanding of the properties of porous media is beneficial to a range of applications including fuel cells [1] and automotive exhaust treatment [2]. Determining porous media properties, such as permeability or effective diffusivity, typically require some type of pore-scale fluid simulation. Common approaches include finite volume Computational Fluid Dynamics (CFD) [2] or the Lattice Boltzmann Method (LBM) [3]. Both methods have their benefits, but they can be computationally expensive and often require High Performance Computing (HPC) clusters, especially when considering porous media that are of Representative Elementary Volume (REV) scale. Therefore, the use of deep learning to predict porous media properties has become a popular area of research. By far the most common architecture choice for porous media property prediction is the Convolutional Neural Network (CNN) [4–6]. Porous media are often represented as images, in either 2D or 3D, which makes the CNN an ideal choice for porous media deep learning models. However, they can become computationally expensive when using 3D convolutional layers for 3D porous media, which is a problem because properties of 3D porous media are not necessarily represented by their 2D projections. An alternative approach to the CNN is the Graph Neural Network (GNN) [7]. The GNN architecture allows for graph data to be input into a neural network which then predicts some desired property. This is well suited to porous media research because the pore networks extracted from porous media images can be represented as graphs. Regardless of the architecture choice, training a deep learning model on porous media samples that are of the REV-scale requires large and complex models. This work describes the process for training a GNN to predict the permeability of both industrially relevant manufactured materials and rock samples using multiple GPUs on a HPC cluster. The inference time of the model was then compared with the LBM. Methods Deep learning models for porous media property prediction typically require thousands of training samples. This is due to the inherent complexity of the input data for the models – representative porous media samples can quickly become large. Obtaining a dataset of real porous media samples is expensive due to the imaging requirements, with methods such as X-ray tomography often taking hours per sample [2]. Similarly, obtaining the ground truth for the property of interest is often time consuming with both experimental techniques and pore-scale simulations. This presents difficulties for preparing a suitably large and varied dataset, which is essential for an accurate and generalisable model. Dataset Preparation A set of porous media samples was obtained, comprising both real and non-real porous media. Following this, a REV-scale study was performed to determine whether the samples were large enough, then a sampling data augmentation approach was used to extract a dataset of smaller, representative sub-samples from the set of parent structures. This allowed a large and varied dataset of both real and non-real porous media to be generated. The LBM was used to simulate flow through each sample to determine the permeability, the target property for the GNN, which was validated against experimental permeability data. As with any machine learning model, data leakage can cause a model to appear to have high accuracy but can often lead to a model that is unable to generalise to new, unseen structures. To remove the risk of data leakage in the model, three independent sets of parent structures were generated: one for training, one for validation during hyperparameter tuning and one completely unseen set for testing purposes. Sub-samples were extracted from each unique parent structure after partition, removing the risk of data leakage during data augmentation. Graph Neural Network A GNN was developed using PyTorch Geometric [8] and PyTorch [9] which allowed for large and complex models to be trained using distributed training with multiple GPUs. The GNN required the pore network to be encoded into a feature matrix, comprising pore features and an adjacency matrix, which encodes the connectivity of the pore network. The adjacency matrix was weighted with the length of the pore connections. The GNN is split into two main sections: a set of message-passing layers and a set of fully connected layers. Figure 1 shows how the two layers and input features are connected. The purpose of the message passing layers are to encode node features and the adjacency matrix into a set of updated node features and the fully connected layers relate the updated features to the permeability. An optimal set of hyperparameters was selected using Optuna [10], using the Mean Squared Error (MSE) on the validation dataset to optimise the model. Finally, a model was trained using the optimal hyperparameters and tested on the unseen testing dataset. Results Three independent datasets, each comprising a mix of non-real fractal noise structures, some sandstone samples from the Digital Rock Portal [11] and some anonymised porous media samples were generated. The permeability of each parent structure was obtained using a C++ LBM library, Palabos [12]. The sub-sampling data augmentation approach yielded between 500-1000 representative samples from each of the porous structures in the datasets. In total, there were 115,000 training samples, 33,000 validation samples and 31,000 testing samples. Most of the samples in each dataset were fractal noise, with around 10-20% in each dataset being real samples. Once the optimal set of hyperparameters had been found, a new model was trained and tested on the third, unseen testing dataset. The GNN showed a good agreement with the permeability calculated from the LBM simulations, which was trained to predict the natural logarithm of the permeability. This was to ensure the high permeability samples were weighted equally with low permeability samples. The GNN had an MSE of 0.0179, which is significantly better than the Carman-Kozeny equation [13] with a MSE of 6.45. Figure 2 shows the parity plot for the LBM permeability (true) and the GNN permeability (predicted) in lattice units. The LBM is inherently dimensionless with the use of conversion factors to switch between physical units and lattice units. Physical length scale has been omitted from this work to anonymise the samples. Given the model is trained to predict the lattice unit values without the need for conversion factors, it allows the model to be independent of the resolution of the input porous media samples. If the voxel size of a sample is known, the lattice unit permeability can be converted to physical units. The GNN was also able to make permeability predictions in near real-time, providing the pore network is available, whereas the LBM simulations typically required hours of simulation time to complete. Even with pore network extraction times included, the LBM was over 10 times slower. Conclusions In this work, a GNN was trained to predict the permeability of both non-real and real, representative porous media samples. This method allows for rapid prediction of the permeability based on the pore networks extracted from the samples. The GNN was able to significantly out-perform the commonly used Carmen-Kozeny equation when comparing to the LBM ground truth, while making the predictions significantly faster than the LBM. References [1] Z. Niu, V. J. Pinfield, B. Wu, H. Wang, K. Jiao, D. Y. C. Leung, and J. Xuan, Energy Environ. Sci. 14 , 2549 (2021). [2] P. Kočí, M. Isoz, M. Plachá, A. Arvajová, M. Václavík, M. Svoboda, E. Price, V. Novák, and D. Thompsett, Catal. Today 320 , 165 (2019). [3] A. Eshghinejadfard, L. Daróczy, G. Janiga, and D. Thévenin, Int. J. Heat Fluid Flow 62 , 93 (2016). [4] H. Wang, Y. Yin, X. Y. Hui, J. Q. Bai, and Z. G. Qu, Energy AI 2 , 100035 (2020). [5] H. Wu, W.-Z. Fang, Q. Kang, W.-Q. Tao, and R. Qiao, Sci. Rep. 9 , 20387 (2019). [6] A. Rabbani, M. Babaei, R. Shams, Y. D. Wang, and T. Chung, Adv. Water Resour. 146 , 103787 (2020). [7] C. Cai, N. Vlassis, L. Magee, R. Ma, Z. Xiong, B. Bahmani, T.-F. Wong, Y. Wang, and W. Sun, Int. J. Multiscale Comput. Eng. (2021). [8] M. Fey and J. E. Lenssen, in ICLR Workshop on Representation Learning on Graphs and Manifolds (2019). [9] A. Paszke, S. Gross, F. Massa, A. Lerer, J. Bradbury, G. Chanan, T. Killeen, Z. Lin, N. Gimelshein, L. Antiga, A. Desmaison, A. Köpf, E. Yang, Z. DeVito, M. Raison, A. Tejani, S. Chilamkurthy, B. Steiner, L. Fang, J. Bai, and S. Chintala, ArXiv191201703 Cs Stat (2019). [10] T. Akiba, S. Sano, T. Yanase, T. Ohta, and M. Koyama, . [11] M. Prodanovic, M. Esteva, M. Hanlon, G. Nanda, and P. Agarwal, (2015). [12] J. Latt, O. Malaspinas, D. Kontaxakis, A. Parmigiani, D. Lagrava, F. Brogi, M. B. Belgacem, Y. Thorimbert, S. Leclaire, S. Li, F. Marson, J. Lemus, C. Kotsalos, R. Conradin, C. Coreixas, R. Petkantchin, F. Raynaud, J. Beny, and B. Chopard, Comput. Math. Appl. 81 , 334 (2021). [13] P. C. Carman, Chem. Eng. Res. Des. 75 , S32 (1997).",
+    "presenting_author": "Jack I'Anson | University of Birmingham, United Kingdom",
+    "authors": [
+      "Jack I'Anson | University of Birmingham, United Kingdom",
+      "Mark J. H. Simmons | University of Birmingham, United Kingdom",
+      "E. Hugh Stitt | Johnson Matthey, Billingham, United Kingdom",
+      "Robert Gallen | Johnson Matthey, Sonning Common, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jack I'Anson",
+        "affiliation": "University of Birmingham, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mark J. H. Simmons",
+        "affiliation": "University of Birmingham, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "E. Hugh Stitt",
+        "affiliation": "Johnson Matthey, Billingham, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Robert Gallen",
+        "affiliation": "Johnson Matthey, Sonning Common, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "530h",
+    "sortable_time": "2025-11-05_14:39:00_14:57:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714728"
+  }
+]

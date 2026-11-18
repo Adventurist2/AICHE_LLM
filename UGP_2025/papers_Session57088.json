@@ -1,0 +1,635 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/711666",
+    "paper_endpoint": "Paper/711666",
+    "paper_id": "711666",
+    "topic": "Dynamic Simulation and Control of a Dry Reforming Plant for Methanol Production: Dual Effects of Feedstock Variability and Operational Turndown",
+    "title": "Dynamic Simulation and Control of a Dry Reforming Plant for Methanol Production: Dual Effects of Feedstock Variability and Operational Turndown",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: AI/ML and Data-Driven Estimation and Optimization for Control",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Methanol is a critical platform chemical and clean fuel, playing a pivotal role in reducing greenhouse gas emissions through applications in transportation, energy storage, and synthetic hydrocarbon production. Dry reforming of methane (DRM) offers a sustainable pathway to methanol synthesis by utilizing CO₂ and methane, two potent greenhouse gases, to produce syngas (H₂/CO), a precursor for methanol. While DRM is thermodynamically challenging, its potential for carbon-neutral methanol production has driven significant research interest. However, existing studies predominantly focus on steady-state optimization, neglecting dynamic operational challenges such as feedstock variability and flowrate fluctuations, which are critical for industrial scalability. The objectives of this study are to (1) develop a dynamic simulation framework for a DRM-methanol plant integrating a novel microwave reactor and (2) propose advanced control strategies to mitigate disturbances caused by feedstock composition and flowrate variability. The process begins with natural gas feedstock (primarily methane), which undergoes desulfurization to remove contaminants like H₂S and organic sulfur compounds, protecting downstream catalysts. The purified methane is mixed with recycled CO₂ and fed into a microwave reactor operating at 800°C and 1 bar, where DRM converts CH₄ and CO₂ into syngas. Supplemental hydrogen is introduced to optimize the H₂/CO ratio, and the syngas is compressed to 76 bar for methanol synthesis. Two adiabatic reactors operate at 255°C and 220°C, respectively, to maximize conversion efficiency. The product stream is distilled to separate methanol (target: 14,200 lbmol/h, matching industrial benchmarks from unreacted gases, with CO₂ recycled to the microwave reactor. Dynamic simulations in Aspen Dynamics evaluate the system’s response to feedstock disturbances, including ±20% fluctuations in natural gas flowrate and composition. A hierarchical control strategy is proposed: (1) a ratio controller adjusts supplemental H₂ flow to maintain the syngas H₂/CO ratio at 2.1, and (2) a composition controller manipulates the distillation column’s side-draw flowrate to stabilize methanol purity (>99.5 wt%). Model predictive control (MPC) is tested against traditional PID controllers to assess robustness. This work advances DRM-methanol technology by demonstrating how dynamic simulation and advanced control strategies can stabilize production under real-world variability. By integrating a novel microwave reactor and automated control loops, the study provides a template for scalable, carbon-neutral methanol synthesis.",
+    "presenting_author": "Omar Almaraz | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Omar Almaraz | West Virginia University, Morgantown, WV",
+      "Md Mizanur Rahman | West Virginia University, Morgantown, WV",
+      "Srinivas Palanki | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Omar Almaraz",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Md Mizanur Rahman",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Srinivas Palanki",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "391a",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/711666"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713052",
+    "paper_endpoint": "Paper/713052",
+    "paper_id": "713052",
+    "topic": "An Accelerated Reinforcement Learning Algorithm for Process Control Via Y-Wise Affine Neural Networks",
+    "title": "An Accelerated Reinforcement Learning Algorithm for Process Control Via Y-Wise Affine Neural Networks",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: AI/ML and Data-Driven Modeling for Control II",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Reinforcement Learning (RL) has significantly expanded the field of control in the past decade, enabling the optimal operation of highly complex dynamic systems. This expansion has largely been driven by the rapid developments in machine learning (ML), which enables the use of neural networks (NNs) as function approximators [1]. RL has been exceptionally useful in situations where it is challenging to create a mechanistic model or develop a high-fidelity surrogate representation which often relies on large amounts of data. This provides an alternative approach when advanced model-based control techniques (e.g., model predictive control (MPC)) may not be practical [2-3]. RL has proven to be instrumental in the areas of robotics [4], game-playing [5], and hierarchical decision-making [6], but has been difficult to implement in the direct control of chemical and energy systems [7]. This is due to the inherent challenges and concerns regarding safety and stability and the large amount of time needed to develop acceptable results which often arise in the exploration phases of RL algorithms [8]. Several recent works have been proposed to address these issues, but they often rely on a system model [9], require a control invariant set [10], or are only applicable for linear systems [11]. This adds to the difficulty for their execution in practice when little to no information about the true dynamics is available. To this end, there is an essential need to develop a systematic RL algorithm that can eliminate unsafe and time-consuming exploration while providing control actions with confidence during the entire training process without relying on a complex system model. Toward this direction, we present a novel transfer-learned RL algorithm that leverages Y-wise Affine Neural Networks (YANNs) in initializing actor-critic networks. YANNs are a specialized NN architecture that we have developed, which can exactly represent the explicit control policy from multi-parametric MPC (mp-MPC) via targeted weight and bias selection. This serves as a hot start and transfers the mp-MPC knowledge to the RL controller. We also show that the critic network can be formulated equivalently to the MPC objective function for a one-step control and operating horizon. These initializations accelerate the learning process and eliminate the need for early exploration in both actor and critic networks. To obtain the initial mp-MPC control laws, a linear approximated system model can be developed using a few measurement data, e.g. via system identification, to enable the use in model-free environments. Identified models are used to develop an initialized policy network with desired guarantees such as recursive feasibility and stability for the linear approximation. This feature is enabled by YANNs because they are functionally equivalent to the mp-MPC policy and thus maintain these desired mathematical properties. This gives a higher level of confidence when it comes to system safety and stability in the learning process. The optimal control policy for the nonlinear dynamics is learned through the accelerated RL algorithm which updates the actor-critic networks based on interactions with the environment. This guides the policy from the suboptimal explicit solution to the true optimal. We demonstrate the computational and practical advantages of the proposed methodology through comparisons with existing RL algorithms on two case studies for the control of model-free dynamic systems. Of particular interest, we select one of the case studies concerning a safety-critical process conceptualized from a real-world incident [12]. We show that this technique accelerates the learning of an optimal control policy, provides better intermediate control action trajectories throughout the learning process, and eliminates unsafe exploration. This work provides promising results for employing YANNs in RL for control and presents a state-of-the-art algorithm that learns optimal policies much quicker and more safely than existing approaches. References: [1] Silver, D., Huang, A., Maddison, C. J., Guez, A., Sifre, L., van den Driessche, G., Schrittwieser, J., Antonoglou, I., Panneershelvam, V., Lanctot, M., Dieleman, S., Grewe, D., Nham, J., Kalchbrenner, N., Sutskever, I., Lillicrap, T., Leach, M., Kavukcuoglu, K., Graepel, T., & Hassabis, D. (2016). Mastering the game of Go with deep neural networks and tree search. Nature, 529(7587), 484–489. [2] Faria, R. de R., Capron, B. D. O., Secchi, A. R., & de Souza, M. B. (2022). Where Reinforcement Learning Meets Process Control: Review and Guidelines. Processes, 10(11), Article 11. [3] P. Petsagkourakis, I.O. Sandoval, E. Bradford, D. Zhang, E.A. del Rio-Chanona. (2020), Reinforcement learning for batch bioprocess optimization. Computers & Chemical Engineering, 133, 106649. [4] Kaufmann, E., Bauersfeld, L., Loquercio, A., Müller, M., Koltun, V., & Scaramuzza, D. (2023). Champion-level drone racing using deep reinforcement learning. Nature, 620(7976), 982–987. [5] Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A. A., Veness, J., Bellemare, M. G., Graves, A., Riedmiller, M., Fidjeland, A. K., Ostrovski, G., Petersen, S., Beattie, C., Sadik, A., Antonoglou, I., King, H., Kumaran, D., Wierstra, D., Legg, S., & Hassabis, D. (2015). Human-level control through deep reinforcement learning. Nature, 518(7540), 529–533. [6] Dogru, O., Velswamy, K., Ibrahim, F., Wu, Y., Sundaramoorthy, A. S., Huang, B., Xu, S., Nixon, M., Bell, N. Reinforcement learning approach to autonomous PID tuning. (2022). Computers & Chemical Engineering, 161, 107760. [7] Shin, J., Badgwell, T. A., Liu, A., Lee., J. H. (2019). Reinforcement Learning – Overview of recent progress and implications for process control. Computers & Chemical Engineering, 127, 282–294. [8] Nian, R., Liu, J., & Huang, B. (2020). A review On reinforcement learning: Introduction and applications in industrial process control. Computers & Chemical Engineering, 139, 106886. [9] Wang, Y., Zhu, X., Wu, Z. (2025). A tutorial review of policy iteration methods in reinforcement learning for nonlinear optimal control. Digital Chemical Engineering, 15, 100231, [10] Marvi, Z., & Kiumarsi, B. (2022). Reinforcement Learning With Safety and Stability Guarantees During Exploration For Linear Systems. IEEE Open Journal of Control Systems, 1, 322–334. [11] Bo, S., Agyeman, B. T., Yin, X., Liu, J. (2023). Control invariant set enhanced safe reinforcement learning: Improved sampling efficiency, guaranteed stability and robustness. Computers & Chemical Engineering, 179, 108413. [12] Chemical Safety Board, T2 Laboratories Inc. reactive chemical explosion. www.csb.gov/t2-laboratories-inc-reactive-chemical-explosion/.",
+    "presenting_author": "Austin Braniff | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Austin Braniff | West Virginia University, Morgantown, WV",
+      "Yuhe Tian | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Austin Braniff",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yuhe Tian",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391b",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713052"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/715841",
+    "paper_endpoint": "Paper/715841",
+    "paper_id": "715841",
+    "topic": "Enhancing Dynamic Operability Mapping Computations",
+    "title": "Enhancing Dynamic Operability Mapping Computations",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: Interactive Session: Systems and Process Control",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Dynamic operability is an attractive method to study the inherent feasibility and controllability of a dynamic process. Dynamic operability analysis can be performed by forward input-output mapping from an initial state and analyzing snapshots of the output spaces at discrete time intervals. For an asymptotically stable process, considering all input set combinations, the output set grows in terms of area/volume/hypervolume, developing a scenario tree until it becomes invariant when the final steady state is achieved. Such a terminal state is desired to be identified to obtain a complete set of dynamic solutions. Extensive simulation methods considering state transitions for all possible inputs to obtain the output snapshots have proved intractable due to the curse of dimensionality. This has been verified in this work by considering a two-input-two-output mixed tank process, where the extensive method fails to calculate and geometrically map the output spaces beyond five discrete time intervals. To overcome this challenge, a novel approach is proposed in this work to map a subset of data points by considering only the set of states corresponding to the geometric boundaries of the output spaces, which can be identified using computational geometry techniques. Considering this state-space subset allows us to perform forward mapping in a computationally efficient manner until the terminal steady state is reached, which is identified by checking for time invariance of the hypervolume of the output sets at subsequent time intervals.",
+    "presenting_author": "Venkata Srikar Devarakonda | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Venkata Srikar Devarakonda | West Virginia University, Morgantown, WV",
+      "Chrysanthos Gounaris | Carnegie Mellon University, Pittsburgh, PA",
+      "Fernando Lima | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Venkata Srikar Devarakonda",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chrysanthos Gounaris",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Fernando Lima",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391c",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/715841"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717712",
+    "paper_endpoint": "Paper/717712",
+    "paper_id": "717712",
+    "topic": "Nonlinear Model Predictive Control of Ammonia Synthesis and Separation Process Using Integrated Surrogate Modeling",
+    "title": "Nonlinear Model Predictive Control of Ammonia Synthesis and Separation Process Using Integrated Surrogate Modeling",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: Interactive Session: Systems and Process Control",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Ammonia is the second most produced chemical globally, playing a critical role in agriculture and emerging as a carbon-free hydrogen carrier and energy storage vector. Conventional production of ammonia—primarily the high-pressure Haber-Bosch process followed by absorption-based separation—remains highly energy-intensive [1-4]. As industrial sectors transition toward energy efficiency and integration, the demand for real-time optimization and control strategies continues to grow [5]. This work presents a nonlinear model predictive control (NMPC) framework for integrated ammonia synthesis and adsorption. Although high-fidelity multiscale and multiphysics models accurately describe the thermochemical behavior of the system, their computational complexity renders them impractical for real-time control applications. An integrated surrogate modeling approach is developed using time-series deep learning to enable tractable and data-efficient optimization. The framework comprises two interconnected surrogate models: one for the ammonia synthesis reactor and another for the adsorption-based separation unit. Each model is built using long short-term memory networks, trained on data generated through high-resolution multiphysics simulations using COMSOL [5,6]. The reactor model predicts key dynamics such as temperature, pressure, and ammonia composition, while the absorption model captures separation performance under varying inlet conditions. A critical component of this approach is the coupling mechanism between the two subsystems. Outputs from the synthesis reactor model serve as inputs to the absorption model. This integration maintains the interdependence between subsystems and enables the absorption model to reflect the real-time influence of upstream variations, preserving multiscale and cross-unit interactions. The integrated surrogate system is the foundation for the NMPC strategy, which dynamically regulates operating conditions across both synthesis and absorption stages. By leveraging data-driven models trained on physics-based simulations, the proposed control framework enables the regulation of the ammonia synthesis and separation dynamics with significantly reduced computational overhead. References: [1] M. Elbaz, S. Wang, T. F. Guiberti, and W. L. Roberts. Review on the recent advances on ammonia combustion from the fundamentals to the applications. Fuel Communications, 10:100053, 2022. [2] R. MacFarlane, P. V. Cherepanov, J. Choi, B. H. R. Suryanto, R. Y. Hodgetts, J. M. Bakker, F. M. Ferrero Vallana, and A. N. Simonov. A roadmap to the ammonia economy. Joule, 4(6):1186-1205, 2020. [3] Humphreys, R. Lan, and S. Tao. Development and recent progress on ammonia synthesis catalysts for Haber–Bosch process. Advanced Energy and Sustainability Research, 2:2000043, 2021. [4] Aparicio and J. A. Dumesic, Ammonia synthesis kinetics: Surface chemistry, rate expressions and kinetic analysis. Topics in Catalysis, 1:233–252,1994. [5] O. Cabral, A. Bagheri, and D. B. Pourkargar. Learning-based model reduction and predictive control of an ammonia synthesis process. Industrial and Engineering Chemistry Research, 63(23):10325-10342, 2024. [6] Bagheri, T. O. Cabral, and D. B. Pourkargar. Integrated learning‐based estimation and nonlinear predictive control of an ammonia synthesis reactor. AIChE Journal, 71(5): e18732, 2024.",
+    "presenting_author": "Amirsalar Bagheri | Kansas State University, Manhattan, KS",
+    "authors": [
+      "Amirsalar Bagheri | Kansas State University, Manhattan, KS",
+      "Thiago Oliveira Cabral | Kansas State University, Manhattan, KS",
+      "Davood Pourkargar | Kansas State University, Manhattan, KS"
+    ],
+    "authors_structured": [
+      {
+        "name": "Amirsalar Bagheri",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Thiago Oliveira Cabral",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Author"
+      },
+      {
+        "name": "Davood Pourkargar",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391d",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717712"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714372",
+    "paper_endpoint": "Paper/714372",
+    "paper_id": "714372",
+    "topic": "Predictive Process Control of a Geothermal–Solar Hybrid Cooling System for Sustainable Greenhouse Operation in Desert Climates",
+    "title": "Predictive Process Control of a Geothermal–Solar Hybrid Cooling System for Sustainable Greenhouse Operation in Desert Climates",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: Interactive Session: Systems and Process Control",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Maintaining optimal climate conditions in greenhouses located in harsh desert environments poses significant energy and operational challenges. In the Middle East, for example, geothermal resources at shallow depths exhibit relatively stable temperatures of approximately 30 °C throughout the year. While this geothermal cooling is energy-efficient and sustainable, it alone cannot consistently meet the minimum greenhouse temperature requirement of 25 °C, especially during peak summer periods where ambient air temperatures can exceed 50 °C. To address this, we propose a novel hybrid cooling strategy that combines a geothermal heat pump system with an intermittent, solar-driven auxiliary cooler. The key innovation lies in the development of a Model Predictive Control (MPC) framework that dynamically optimizes climate control by prioritizing geothermal cooling and only activating the solar subsystem when necessary. The MPC system leverages real-time sensor data and meteorological forecasts to predict upcoming thermal loads and the expected performance of the geothermal system. This enables preemptive and optimized activation of the solar-assisted cooler during periods of thermal stress or degraded geothermal efficiency. Importantly, the solar cooler is designed for intermittent operation, providing strategic bursts of cooling during critical conditions without adding significant energy overhead. The adaptive nature of the controller ensures minimal energy use, reduced cycling of components, and stable internal greenhouse temperatures year-round. This predictive and robust control approach demonstrates strong potential for sustainable agriculture in energy-constrained desert regions.",
+    "presenting_author": "Mohammed AL - Azba | Hamad Bin Khalifa University, Doha, Qatar",
+    "authors": [
+      "Mohammed AL - Azba | Hamad Bin Khalifa University, Doha, Qatar",
+      "Ahmed Abotaleb | Qatar Environment and Energy Research Institute, Hamad Bin Khalifa University, Qatar Foundation. P.O. Box 34110, Doha"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mohammed AL - Azba",
+        "affiliation": "Hamad Bin Khalifa University, Doha, Qatar",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ahmed Abotaleb",
+        "affiliation": "Qatar Environment and Energy Research Institute, Hamad Bin Khalifa University, Qatar Foundation. P.O. Box 34110, Doha",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391e",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714372"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713427",
+    "paper_endpoint": "Paper/713427",
+    "paper_id": "713427",
+    "topic": "Development of a Troubleshooting Model for the Operation and Control of Industrial Hydropurification Reaction Systems",
+    "title": "Development of a Troubleshooting Model for the Operation and Control of Industrial Hydropurification Reaction Systems",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: Interactive Session: Systems and Process Control",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Improper process control can lead to significant increase in the process operation cost. Industrial processes control incorporates various types of control systems (e.g., supervisory control and data acquisition (SCADA) systems and distributed control systems (DCS) in petrochemical plants). Troubleshooting of industrial processes is critical for maintaining product quality, safe operation, and efficiency. The complication of petrochemical plants troubleshooting increases with intensifying plant problem. When there is a delay to make an appropriate decision to deal with the process trouble, outstanding detriments and adverse influences might take place for both plant operations and human considerations. The establishment of a self-regulating and routine control to operate a complex plant safely and economically is required to accurately and effectively identify the defects of the plant. Fuzzy logic is a convenient approach to manage the ill-defined information quality and the vagueness of human decision making. This research focuses on the development of a fuzzy logic model to improve the hydropurification reaction systems operation. The main objective of the study is to determine the leading operational parameters of the system and give solutions and systematic procedures to cope with the raised problem through fuzzy inference approach. The developed fuzzy rule-based expert system model is applied to the hydropurification reaction process/system of purified terephthalic acid (PTA) production plant. Hydropurification reaction system of PTA production is the most influential unit of crude terephthalic acid purification process, which crucially determines the final product quality. Its proper control and operational optimization can achieve significant economic benefits since the system deals with slurry phase at high pressure and temperature. This system consists of many pieces of equipment including a fixed-bed reactor, heat exchangers, hydrogen compressors, a high-pressure steam production boiler, and crystallizers. The model is established by selecting the vital controlling parameters which affect the product quality, palladium supported on carbon (Pd/C) catalyst deactivation, the equipment lifetime, and the process safety. The model is able to give proper actions relevant to each operating parameter fluctuation. The program outputs give information on the effects of any controlling parameter on the system and the final decision in cases of different types of alarms. The troubleshooting model is incorporated in a computer program coded into MATLAB software environment with detailed explanation. The model is evaluated and validated using the data of an industrial PTA hydropurification plant. The developed computer program can be used in parallel with the control system (e.g., DCS) of the process. Therefore, the model can be considered as a valuable training tool for the field and DCS room operators and engineers. The implementation of the model into the actual process can reduce the number of shutdowns, decrease the consumption of the chemicals (e.g., caustic), decline the maintenance time, increase the lifetime of equipment, lengthen the expensive catalyst lifetime, lessen the operation cost, and rectify the safety concerns of the process. The developed model can be effectively employed/used for similar processes dealing with the costly hydropurification processes.",
+    "presenting_author": "Abbas Azarpour | Southern Arkansas University, Magnolia",
+    "authors": [
+      "Abbas Azarpour | Southern Arkansas University, Magnolia"
+    ],
+    "authors_structured": [
+      {
+        "name": "Abbas Azarpour",
+        "affiliation": "Southern Arkansas University, Magnolia",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "391j",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713427"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714629",
+    "paper_endpoint": "Paper/714629",
+    "paper_id": "714629",
+    "topic": "Using Machine Learning for Wet Gas Flow Metering in an Actual Production Site: Detailed Methodology and Case Study",
+    "title": "Using Machine Learning for Wet Gas Flow Metering in an Actual Production Site: Detailed Methodology and Case Study",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: Interactive Session: Systems and Process Control",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Offshore oil and gas production involves multiple wells operating simultaneously, but only total platform flowrates are typically measured [1,2]. However, for regulatory, environmental, safety and optimization purposes, oil, gas and water flowrates obtained from each well must be determined [2]. Multiphase flow metering is a growing technology that enables individual well monitoring and that has gained acceptance as an alternative to laborious and less representative periodic well tests (periodical evaluation of a well) [1]. In this context, wet gas flow metering (WGFM) devices combine different sensors with advanced data processing techniques to allow the assessment of individual streams in wet gas flows [3], that is, streams with over 95% volume of gas, but that also present liquids [4]. The primary WGFM sensor estimates total flowrate based commonly on pressure drop, but the presence of liquid(s) causes over-reading, which depends on the fraction of liquid(s), composition, and operational conditions such as temperature and pressure. Additional sensors are required to measure liquid flowrates and correct over-reading through advanced data processing [3,4,5]. Research on WGFM has focused on developing phenomenological and empirical modeling for accurate data processing. Machine learning (ML) techniques emerge as valuable tools for identifying complex variable relationships and providing fast model-based monitoring and control solutions. However, most studies combining ML and WGFM rely on well-behaved laboratory data. The present study presents for the first time the detailed evaluation of data preprocessing (to mitigate real-world data measurement errors [6]), feature selection, and data- driven models using data from a real Petrobras’ gas production site in Brazil. These are key steps for improving WGFM technologies, as virtual sensors can address hard-sensor failures, filter random errors, replace gross-error measurements, and be applied on data reconciliation. Such developments can enhance the technical and economic feasibility of WGFM at plant sites. A two-year dataset from the operation of a WGFM (model Roxar Subsea Wetgas Meters, manufacturer Emerson) in a Petrobras production well is considered to develop ML approaches for accurate flowrate estimation. The evaluated WGFM provides individual gas, water and condensate flowrates by combining measurements of differential pressure, resonance frequency, amplitude and Q-factor of microwaves interacting with the flow, pressure and temperature [7]. The manufacture’s data processing is a black-box for users. Both a model based (MBF) and a data driven (DDF) approach are implemented as pre-processing steps before training multi-output neural networks to predict the three flowrates. One network is developed for each approach, which are compared. The model-based approach considers physics, phenomenology, and operational aspects. First, only data from active well operation is selected using an ON-OFF variable. The first 30 samples after (re)opening are excluded due to transient oscillations, unrepresentative of normal operation. Once relevant data windows are identified, gross error detection is performed by means of filtering. A physics-based filter removes physically impossible values (e.g., negative flowrates or pressure drops). Then, a phenomenological model requires gas flowrate to be proportional to the square root of the pressure drop [8]. The gas stream is the primary focus, and is assumed to reflect potential issues in other flowrates, a hypothesis that proves itself valid. In the data-driven approach, each flowrate is analyzed separately. First, the most extreme 2% of data is trimmed to reduce outlier influence. A 30-day moving median captures long-term trends, and deviations from this trend undergo another 2% trimming. The minimum and maximum deviations are then used to filter data with a 3-day moving median. Samples where any flowrate is discarded are removed from the final dataset. The dataset, filtered by either approach, is split into independent (13) and depend variables (3). The independent variables include differential pressure, moving average and instant measures of amplitude, frequency and Q-factor of the microwaves, phase densities, pressure, temperature, and choke valve opening, which dictates the production. The independent variables were the gas, water and condensate flowrates. Values were normalized. Traditional z-score was applied to independent variables, while a robust z-score was applied to dependent variables, where mean and standard deviation are computed using data within first and third quartiles. This approach mitigates the impact of outliers or faulty data, ensuring all data remains, in fact, within the same order of magnitude Before model development, a third filter is applied on normalized dependent variables; discarding samples where any value exceeds 20 standard deviations, an inspection-based threshold. The data is randomly split (80% for training and 20% for testing) for development of neural networks to simultaneously predict the flowrates of gas, water and condensate. Neural networks with one hidden layer then have their hyperparameters optimized by performing cross validation. The number of neurons in the hidden layer (3-30), alpha regularization (0.0001-0.01), and the activation function (ReLU or logistic) are optimized. Final models are evaluated considering the determination coefficient (R2) between observed and predicted values, and relative prediction error. Both data pre-treatments filtered about 8% of data, as detailed in Tables 1 and 2. In particular, it should be highlighted that both approaches effectively filtered samples whose flowrates were up to two orders of magnitude away from the range were most of the flowrates were concentrated. A comparative analysis of the final datasets when applying the two procedures evidences that MBF allows some data away from the range where gas flowrates are mostly concentrated to be kept on the dataset, while DDF does not. In light of the steps in each filtering, that would mean that, although more distant in terms of flowrate, the relationship between gas flowrate and pressure drop is approximately the same. A variety of more distinct, while still expected, operational conditions could then be kept in the MBF dataset in comparison to the DDF, which favors the range where most data lie. However, one should note that MBF requires data to follow a model. Although a good fit was obtained for the entire two-year data set (95% of fitting errors below 5% of actual values), it is still a simple model and only takes two variables into account. Great neural networks were obtained for both final datasets, as shown by the metrics in Table 3. For both developments, the determination coefficient (R2) between measured and estimated values was higher than 0.99 for gas and condensate, while water presented smaller R2, although higher than 0.94. The predicted values were in good agreement with measured values for all flowrates; for the gas stream, in particular, both developments led to 95% of errors (E95) below 0.4% of the measured values. The development with the DDF dataset led to an overall smaller error for predictions. Finally, Figures 1 and 2 present measured and estimated gas flowrates for the test sets in each of the developments; in both cases, a good tracking of the temporal trends were accurately followed. In summary, in the present study, methodologies to develop neural networks for individual flowrate estimation in wet gas flow metering applications are proposed. In particular, the methodologies are applied with a two-year dataset from an offshore well operated by Petrobras in Brazil. The procedures effectively filter possible faults or measurement error on data prior to development of Machine Learning models by either considering physics and phenomenology of the wet gas metering application or by a purely data driven approach. The trained neural networks were able to accurately estimate, simultaneously, the flowrates of gas, oil condensate and water to with relative errors as low as 0.5%. The provided framework may be replicated to other wells, helping to handle hard sensor malfunctions and providing efficient models to be used in back allocation and data reconciliation schemes. References [1] M. Niblett and I. Robertson, “A solution to measure the flow rate of wet gas”, Meas. control., 44/2 (2011) 49–52 [2] T. Bikmukhametov, J. Jäschke, “First principles and machine learning virtual flow metering: a literature review”. J. Pet. Sci. Eng. 184 (2020) 106487. [3] M. Meribout, A. Azzi, N. Ghendour, N. Kharoua, L. Khezzar, E. Alhosani, “Multiphase flow meters targeting oil & gas industries”, Meas. 165 (2020) 108111. [4] S. M. Salehi, L. Lao, L., L. Xing, N. Simms, W. Drahm, “Devices and methods for wet gas flow metering: A comprehensive review”, Flow Meas. Instrum. 4 (2023) 102518. [5] S. Adenubi, D. Appah, E. Okafor, V. Aimikhe, W. Okologume, “A review of wet gas flow metering correlation”. In: Society of Petroleum Engineers - SPE Nigeria Annual International Conference and Exhibition 2021. [6] J.A. Romagnoli, M.C. Sánchez, “Data Processing and Reconciliation for Chemical Process Operations”. 1.ed. San Diego: Academic Press, 1999. [7] A. Hellestø, B. Djoric, G. Farah, S.E. Monge, E. Undheim, L.A. Ruden, “How Shell is Tackling Hydrate/Scale Formation and Optimizing Well Allocation and Production on the Ormen Lange Subsea Field Development”. In: 38th International North Sea Flow Measurement Workshop, 2020. [8] F.M. White, “Fluid Mechanics”. McGraw-Hill, 2011.",
+    "presenting_author": "Marcelo Alves | Universidade Federal do Rio de Janeiro, Brazil",
+    "authors": [
+      "Marcelo Alves | Universidade Federal do Rio de Janeiro, Brazil",
+      "Gildeir Rabello | Universidade Federal do Rio de Janeiro, Brazil",
+      "Bruno Manhães | Universidade Federal do Rio de Janeiro, Brazil",
+      "Rafael Soares | Universidade Federal do Rio de Janeiro, Brazil",
+      "Diego de Menezes | Universidade Federal do Rio de Janeiro, Brazil",
+      "Luiz Octavio Pereira | Petrobras - Petróleo Brasileiro SA, Rio de Janeiro, Brazil",
+      "José Carlos Pinto | Universidade Federal do Rio de Janeiro, Brazil"
+    ],
+    "authors_structured": [
+      {
+        "name": "Marcelo Alves",
+        "affiliation": "Universidade Federal do Rio de Janeiro, Brazil",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Gildeir Rabello",
+        "affiliation": "Universidade Federal do Rio de Janeiro, Brazil",
+        "designation": "Author"
+      },
+      {
+        "name": "Bruno Manhães",
+        "affiliation": "Universidade Federal do Rio de Janeiro, Brazil",
+        "designation": "Author"
+      },
+      {
+        "name": "Rafael Soares",
+        "affiliation": "Universidade Federal do Rio de Janeiro, Brazil",
+        "designation": "Author"
+      },
+      {
+        "name": "Diego de Menezes",
+        "affiliation": "Universidade Federal do Rio de Janeiro, Brazil",
+        "designation": "Author"
+      },
+      {
+        "name": "Luiz Octavio Pereira",
+        "affiliation": "Petrobras - Petróleo Brasileiro SA, Rio de Janeiro, Brazil",
+        "designation": "Author"
+      },
+      {
+        "name": "José Carlos Pinto",
+        "affiliation": "Universidade Federal do Rio de Janeiro, Brazil",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391k",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714629"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/709894",
+    "paper_endpoint": "Paper/709894",
+    "paper_id": "709894",
+    "topic": "Modeling and Simulation of Batch Distillation in a Copper Still: Economic Assessment for Pisco Production",
+    "title": "Modeling and Simulation of Batch Distillation in a Copper Still: Economic Assessment for Pisco Production",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: Modeling, Control, and Optimization of Energy Systems",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Pisco, a traditional Peruvian spirit, is produced in artisanal wineries following empirical methods, leading to variability in distillate quality. In particular, the determination of head cuts during batch distillation influences the concentration of volatile compounds, impacting regulatory compliance. This study presents a mathematical model to simulate the batch distillation of a fermented must in a copper still, integrating mass and energy balances, phase equilibrium relations, and heat transfer dynamics. The system is modeled as a mixture of water, ethanol, methanol, and acetaldehyde, key components influencing distillate quality. The model incorporates non-ideal phase behavior using activity coefficient-based thermodynamic correlations to more accurately represent component volatilities. Differential equations governing vapor-liquid equilibrium and component separation are numerically solved in MATLAB, enabling the evaluation of how head cut strategies affect distillate composition. The model is qualitatively validated by comparing predicted trends with experimental data from the literature. Furthermore, a sensitivity analysis is performed by varying the ambient temperature and the heat flux supplied to the still. Additionally, an economic analysis compares the traditional distillation method, which employs a 1% v/v head cut, with the proposed approach, where the head percentage is determined through the model's analysis. This model not only describes the distillation process but also enables the refinement of the head cut strategy based on the initial composition of the must. The ability to predict distillate evolution could be integrated with real-time control systems to enhance process efficiency. By adjusting cut points dynamically, the model provides a foundation for automation and process optimization, reducing variability and improving regulatory compliance. The results demonstrate that head cut requirements depend on must composition. At low levels, methanol and acetaldehyde remain within regulatory limits without a head cut, maximizing efficiency. At intermediate levels, a 0.5% v/v head cut ensures compliance while increasing Pisco yield by 3.4%. However, at high concentrations, even extensive head cuts fail to meet regulatory alignment, underscoring the need for fermentation control. The model accurately predicts the evolution of key compounds according to experimental data from the literature, with high acetaldehyde concentration in early fractions and methanol content increasing in later ones. Additionally, the results suggest that adjusting the heat flux can enhance process efficiency without compromising Pisco quality, while environmental factors such as ambient temperature have no significant impact on the distillation process or the final product composition. Beyond describing the process, this model establishes a framework for refining batch distillation through real-time adaptive control. By regulating distillation cuts, it ensures product consistency, reduces losses, and strengthens regulatory compliance. The proposed strategy boosts net present value (NPV) by 30.32%, highlighting its potential to increase the profitability and efficiency of artisanal Pisco production.",
+    "presenting_author": "Karol Palomino Rodriguez | AIChE UTEC, Lima, Peru",
+    "authors": [
+      "Karol Palomino Rodriguez | AIChE UTEC, Lima, Peru",
+      "Valeria S. Arias Corzo | AIChE UTEC, Lima, Peru",
+      "Francisco Tarazona-Vasquez | Universidad de Ingenieria y Tecnologia – UTEC, Lima, Peru"
+    ],
+    "authors_structured": [
+      {
+        "name": "Karol Palomino Rodriguez",
+        "affiliation": "AIChE UTEC, Lima, Peru",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Valeria S. Arias Corzo",
+        "affiliation": "AIChE UTEC, Lima, Peru",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Francisco Tarazona-Vasquez",
+        "affiliation": "Universidad de Ingenieria y Tecnologia – UTEC, Lima, Peru",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391l",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/709894"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/718680",
+    "paper_endpoint": "Paper/718680",
+    "paper_id": "718680",
+    "topic": "Clustering-Based Filtering for Variable Definition Equivalence Judgment Task",
+    "title": "Clustering-Based Filtering for Variable Definition Equivalence Judgment Task",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: Interactive Session: Systems and Process Control",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Introduction Physical models are fundamental to simulation, optimization, and control tasks across many domains; however, constructing accurate models remains labor-intensive and reliant on expert knowledge. This circumstance has motivated the development of automated modeling techniques, such as symbolic regression [1] and information extraction from literature using natural language processing (NLP) methods [2]. Building on this direction, we have aimed to realize Automated Physical Model Builder (AutoPMoB) [3], a system that automates literature retrieval, information extraction, and model generation from literature sources. A key challenge in this pipeline is the semantic unification of variable definitions since the same physical concept may be described differently across documents (e.g., \"feed stream\" vs. \"feed flow rate to the reactor\"). Judging whether two variable definitions are semantically equivalent, termed the variable definition equivalence judgment (VDEJ) task, is difficult due to linguistic variability and limited annotated data, especially equivalent samples. This study addresses the class imbalance in the VDEJ task. We propose a clustering-based filtering method that leverages dense vector embeddings of variable definitions to eliminate trivial non-equivalent pairs. This enables classifiers in the following task to focus on semantically similar and ambiguous cases. We also evaluate the effects of input design and embedding model choice on clustering effectiveness. Methods Our approach combines dense vector classification with clustering-based filtering. The method comprises (1) definition vectorization, (2) dimensionality reduction and clustering, and (3) non-equivalent sample filtering. Unsupervised clustering identifies trivially dissimilar pairs, allowing the classifier to target more challenging examples. Embedding Generation Each definition is encoded into a dense vector using the all-MiniLM-L6-v2 [4] or SciBERT [5] models. The former is a general-purpose lightweight model trained on a diverse corpus, and the latter is a BERT-based model pre-trained on scientific texts. To investigate the effect of contextual information, we consider four input formats: D: Definition only (e.g., \"feed stream\"), D+S: Definition with Symbol (e.g., \"feed stream (F^e)\"), D+C: Definition with its sentence context (e.g., \"feed stream. The ... heat, respectively.\"), and D+S+C: Combination of definition, symbol, and context (e.g., \"feed stream (F^e). The ... heat, respectively.\"). Each input text is tokenized and passed through a language model, and the final sentence embedding is obtained by applying mean pooling over the token embeddings. Dimensionality Reduction and Clustering To identify semantically similar definitions, we apply UMAP [6] for projection and HDBSCAN [7] for clustering. This strategy mimics that used for BERTopic [8]. UMAP projects high-dimensional embeddings into a two-dimensional space with a characteristic of more effective clustering while preserving local structure. HDBSCAN identifies clusters based on density, where definitions assigned to different clusters are considered trivially dissimilar. Definitions assigned to different clusters are considered non-equivalent; unclustered points (classified as noise) are handled separately. Hyperparameters are selected via grid search using one-paper-out cross-validation. Filtering and Classification Pairs across clusters are labeled non-equivalent, while those within clusters are marked \"unknown\" and retained for further classification. Noisy pairs, which include one unclustered point, are handled using two strategies: labeling them as non-equivalent or postponing judgment by assigning them \"unknown.\" Experiments Dataset Preparation We prepared a dataset from five papers on a continuous stirred tank reactor (CSTR). For each paper, variable symbols and their corresponding definitions were annotated with the full sentence in which each definition appeared [9]. We created all possible pairs from the annotated definitions and manually labeled each as equivalent or non-equivalent based on the semantic equivalence of the definitions, regardless of differences in symbols. For instance, the definitions \"feed stream\" and \"feed flow rate to the reactor\" were labeled as equivalent despite having different symbols (e.g., \"F^e\" and \"F\"). 1,696 definition pairs were made, with 42 labeled as equivalent. All five papers were used as test data one by one: for each test paper, the remaining four served as training and validation data in a one-paper-out cross-validation scheme. This condition ensures that the model is evaluated on unseen definitions from a different source, which simulates a realistic scenario. The hyperparameters were tuned based on validation performance, and the final clustering model was evaluated on the test pairs. Results and Discussion Our method achieved high precision and recall in identifying non-equivalent pairs. When noisy pairs were treated as \"unknown, \" precision and recall reached 0.969 and 0.647, respectively, offering a better balance than treating them as non-equivalent (0.982 and 0.531). For example, with the paper by Poyton et al. [10] as test data, recall improved from 0.228 to 0.745 by judging noisy pairs as \"unknown,\" while the exclusion rate of test pairs dropped from 78% to 25%. In addition, the findings that the D+C input format outperformed D+S demonstrated the benefit of contextual embeddings. Figure 1 shows two examples of clustering results when the test paper is the one by Poyton et al. In Figure 1(a), where noisy pairs are treated as \"unknown \" and D+C is used as input, clusters are compact and test points (square plots) are distributed across them. In contrast, Figure 1(b), where noisy pairs are judged as non-equivalent and the D+S is input, shows less coherent clusters and a higher number of isolated or ambiguously placed test points. This UMAP visualization confirms that contextual input and careful noise handling can produce tighter, more meaningful clusters and increase the likelihood that potentially equivalent definitions will hold. This approach improves quantitative performance and can mitigate annotation and computation costs by filtering only informative candidate pairs. Conclusion We proposed a clustering-based approach to filter non-equivalent samples in the VDEJ task. The method reduces the burden on classifiers by identifying and removing trivially dissimilar pairs using UMAP and HDBSCAN. Experimental results demonstrated that this approach improved both the precision-recall balance and the overall robustness of equivalence filtering. In addition, noise-aware filtering and context-rich embeddings enhanced recall without sacrificing precision. This strategy could support scalable annotation and model development for scientific text understanding. Future work will expand the dataset and integrate this filtering method with classifier architectures, including transformer-based and large language models, toward automated and accurate model construction from the scientific literature. Acknowledgment This work was supported by JST, ACT-X Grant Number JPMJAX23C5, Japan. References [1] M. Á. de Carvalho Servia et al., The automated discovery of kinetic rate models – methodological frameworks, Digital Discovery, 2024, 3, 954–968. [2] M. S.-Wilhelmi et al., 2025. LLM-based data extraction in chemistry, Chemical Society Reviews, 54, 1125–1150. [3] S. Kato and M. Kano, 2024. Prototype of Automated Physical Model Builder: Challenges and Opportunities, Computer Aided Chemical Engineering, 53, 2839–2844. [4] N. Reimers and I. Gurevych, 2019. Sentence-BERT: Sentence embeddings using Siamese BERT-networks, EMNLP-IJCNLP, 3982–3992. [5] I. Beltagy, K. Lo, and A. Cohan, 2019. SciBERT: A Pretrained Language Model for Scientific Text, EMNLP-IJCNLP, 3615–3620. [6] L. McInnes, J. Healy, and J. Melville, 2018. UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction, arXiv preprint arXiv:1802.03426. [7] R.J.G.B. Campello et al., 2015. Hierarchical density estimates for data clustering, visualization, and outlier detection, ACM transactions on knowledge discovery from data, 10, 1, 1–51. [8] M. Grootendorst, 2022. BERTopic: Neural topic modeling with a class-based TF-IDF procedure, arXiv preprint arXiv:2203.05794. [9] S. Kato and M. Kano, 2025. VARAT: Variable Annotation Tool for Documents on Manufacturing Processes, Journal of Chemical Engineering of Japan, 58, 1. [10] A. A. Poyton et al., 2006. Parameter estimation in continuous-time dynamic models using principal differential analysis, Computers & Chemical Engineering, 30, 4, 698–708.",
+    "presenting_author": "Shota Kato | Kyoto University, Japan",
+    "authors": [
+      "Shota Kato | Kyoto University, Japan",
+      "Manabu Kano | Kyoto University, Japan"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shota Kato",
+        "affiliation": "Kyoto University, Japan",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Manabu Kano",
+        "affiliation": "Kyoto University, Japan",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391m",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/718680"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714423",
+    "paper_endpoint": "Paper/714423",
+    "paper_id": "714423",
+    "topic": "Hybrid Modeling of Distillation Process Via Integration of First-Principle and Data-Driven Approaches",
+    "title": "Hybrid Modeling of Distillation Process Via Integration of First-Principle and Data-Driven Approaches",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: Interactive Session: Systems and Process Control",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Distillation is a fundamental unit operation in the chemical process industry, and accurate modeling is essential for process optimization and control 1 . Conventional modeling approaches include data-driven models 2 , which are computationally efficient and easy to develop, and first-principle models, which are based on fundamental physical and chemical laws 3 . However, data-driven models are limited by data availability and quality 4 , while first-principle models are often computationally intensive and difficult to parameterize due to complex variable interactions. To address these challenges, this study proposes a hybrid modeling framework that integrates the strengths of both approaches. The model is grounded in first-principle equations, while a deep neural network (DNN) is employed to estimate parameters that are difficult to calculate analytically. The hybrid model was validated using real process data from an industrial distillation system. Results demonstrate that the proposed hybrid model enhances predictive accuracy while reducing computational burden. This approach provides a practical and scalable solution for simulating and optimizing distillation processes and holds potential for broader applications in complex chemical systems.",
+    "presenting_author": "Hyukwon Kwon | Korea Institute of Industrial Technology, Ulsan, Korea, Republic of (South)",
+    "authors": [
+      "Hyukwon Kwon | Korea Institute of Industrial Technology, Ulsan, Korea, Republic of (South)",
+      "Seunggwan Yun | Yonsei University, Seoul, Korea, Republic of (South)",
+      "Hyunjin Kang | Korea Institute of Industrial Technology, Ulsan, Korea, Republic of (South)",
+      "Jaeho Baek | Korea Institute of Industrial Technology, Ulsan, Korea, Republic of (South)",
+      "Hyungtae Cho | Kyung Hee University, Yongin, Korea, Republic of (South)",
+      "Jaewon Lee | Hanyang University, Ansan, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hyukwon Kwon",
+        "affiliation": "Korea Institute of Industrial Technology, Ulsan, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Seunggwan Yun",
+        "affiliation": "Yonsei University, Seoul, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Hyunjin Kang",
+        "affiliation": "Korea Institute of Industrial Technology, Ulsan, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Jaeho Baek",
+        "affiliation": "Korea Institute of Industrial Technology, Ulsan, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Hyungtae Cho",
+        "affiliation": "Kyung Hee University, Yongin, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Jaewon Lee",
+        "affiliation": "Hanyang University, Ansan, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391n",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714423"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712730",
+    "paper_endpoint": "Paper/712730",
+    "paper_id": "712730",
+    "topic": "Prompt-Based Equivalence Judgment of Manufacturing Process Models with Unknown Variables",
+    "title": "Prompt-Based Equivalence Judgment of Manufacturing Process Models with Unknown Variables",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: Interactive Session: Systems and Process Control",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Introduction In process industries, physical models play a crucial role in optimizing process control and operational conditions. These models are constructed by extracting and combining relevant variables and equations from the literature. However, the exponential growth of scientific literature has significantly increased the time and effort required for literature review. To address this issue, Kato and Kano have aimed to develop Automated Physical Model Builder (AutoPMoB), a system that automatically extracts information from literature databases and organizes it to build physical models [1]. AutoPMoB operates through five steps: 1) searching relevant literature, 2) standardizing document formats, 3) extracting essential information, 4) unifying terminology, and 5) constructing the desired model. Since variables and equations often differ in notation across sources, determining equivalence between equation groups is essential in Step 4. Two equation groups are considered equivalent if their relationships are algebraically identical and their variables denote the same physical quantities. Kato et al. proposed an algorithm that determines the equivalence of equation groups based on two conditions: 1) the same variables are used, and 2) solving for any term yields the same result [2]. This algorithm accurately judged equivalence among 50 equation groups consisting of basic arithmetic operations, elementary functions, and derivatives. However, it assumes that all variable definitions are known and unified, which limits its applicability when variable definitions are unknown or inconsistent. To overcome this limitation, this study proposes a method that uses a large language model (LLM) to simultaneously unify variable notations and assess the equivalence of equation groups. The LLM is prompted to evaluate equation group equivalence; this approach allows the model not only to determine whether the groups are equivalent but also to highlight their differences when present. The proposed method's effectiveness is evaluated using equation groups derived from documents on chemical processes. Methods We denote the two equation groups to be compared as A and B. Each comprises a variable set (V A1 and V B1 ) and an equation set (E A1 and E B1 ). A and B are judged equivalent if both V A1 and V B1 are equivalent and E A1 and E B1 are equivalent; otherwise, they are judged not equivalent. The proposed method takes two equation groups (A and B) as input and produces the following outputs: 1. Whether the equation groups are equivalent (true) or not (false), 2. The magnitude of the differences between the equation groups, and 3. The differences if the magnitude is small. This study defines the magnitude of the differences as the ratio of differing equations to the total number of equations in both groups. A difference is considered small when the value is less than or equal to 1/3. Therefore, the output depends on this ratio when the two equation groups are not equivalent: if it is 1/3 or less, the differences are output; otherwise, only \"false\" is output. This condition avoids an excessively long output when the differences are significant. The prompt given to the LLM consists of four components: a problem description, a step-by-step procedure for judging the equivalence of equation groups, a few-shot prompt consisting of example tasks and their expected outputs, and the target equation groups to be judged. The problem description contains the target process name to support the judgment of equivalence between variables described using different expressions. The second component includes three instructions: unify the notation of equivalent variables, eliminate redundant variables and equations, and output the judgment result. In addition, few-shot prompting [3] is used to improve the model's performance and to specify the desired output format. Figure 1 shows the prompt used in this study. Experiments In this study, 37 pairs of equation groups were prepared based on a book on process control [4], papers on biodiesel production, and papers on a semiconductor raw material manufacturing process known as the Czochralski process. Among these, 12 pairs were equivalent, and 25 were not equivalent. The equations and variables were represented in LaTeX. For variables with unknown definitions, placeholders such as missing_1 and missing_2 were assigned according to the number of unknown variables in equation groups. Since the equation groups subjected to equivalence judgment in AutoPMoB are extracted from literature related to the target process, cases involving two models of entirely different processes were not considered. We used OpenAI's gpt-4o-2024-11-20 as the LLM and set its temperature parameter to zero. The outputs generated by the LLM were compared with the correct answers for each pair of equation groups to verify whether they matched. Additionally, because the outputs include the process of handling variable and equation sets, we also evaluated whether these operations were performed correctly. Results and Discussion Table 1 summarizes the equivalence judgement results based on the presence of unknown variables and variable notation differences. Among the 37 pairs of equation groups, 28 pairs were correctly judged by the proposed method. All 12 equivalent pairs were correctly identified. The proposed method successfully unified the notation of equivalent variables when their variable definitions were written in similar words (e.g., \"liquid density\" and \"density of liquid\"). In some cases, the method also correctly judged the equivalence of equation groups that included unknown variables. Nevertheless, the proposed method exhibited some errors: it failed to eliminate equivalent variables, eliminated unknown variables incorrectly, and miscounted the number of equations. These errors mainly occurred when equation groups contained unknown variables and variable notation variations, particularly when two unknown variables were present. Moreover, the method could not deal with certain types of notation differences that require more detailed information on the target process to determine equivalence between variables (e.g., \"heat flux from the melt to the interface\" and \"heat flux from the melt and meniscus to the interface\"). Such variables can be distinguished by referring to figures and tables related to the target process; thus, incorporating this information from the literature into the prompt may improve the accuracy of the judgment. Conclusion This study proposed a method for judging the equivalence of equation groups that include unknown variables and variation in variable notation. The proposed method successfully unified the notation of equivalent variables when their definitions were expressed using similar words. However, it exhibited errors in processing equation groups and was unable to handle certain types of notation differences that require more detailed information about the target process. Future work will focus on addressing these limitations by utilizing additional contextual information extracted from the literature. Acknowledgment This work was supported by JSPS KAKENHI Grant Number JP23K13595. References [1] Shota Kato and Manabu Kano. (2024). Prototype of Automated Physical Model Builder: Challenges and Opportunities. Computer Aided Chemical Engineering , Vol. 53, pp. 2839-2844. [2] Shota Kato, Chunpu Zhang, and Manabu Kano. (2023). Simple algorithm for judging equivalence of differential-algebraic equation systems. Scientific Reports , Vol. 13, No. 11534. [3] Tom B. Brown, et al. (2020). Language Models are Few-Shot Learners. arXiv:2005.14165. [4] Dale E. Seborg, Thomas F. Edgar, Duncan A. Mellichamp, and Francis J. Doyle III. (2010). Process Dynamics and Control. Jhon Wiley & Sons, Inc.",
+    "presenting_author": "Takahiro Sakashita | Kyoto University, Japan",
+    "authors": [
+      "Takahiro Sakashita | Kyoto University, Japan",
+      "Shota Kato | Kyoto University, Japan",
+      "Manabu Kano | Kyoto University, Japan"
+    ],
+    "authors_structured": [
+      {
+        "name": "Takahiro Sakashita",
+        "affiliation": "Kyoto University, Japan",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Shota Kato",
+        "affiliation": "Kyoto University, Japan",
+        "designation": "Author"
+      },
+      {
+        "name": "Manabu Kano",
+        "affiliation": "Kyoto University, Japan",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391o",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712730"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713947",
+    "paper_endpoint": "Paper/713947",
+    "paper_id": "713947",
+    "topic": "A Unified Framework for Total Variation Regularized Optimization in Fluid Dynamics and Related Physical Systems",
+    "title": "A Unified Framework for Total Variation Regularized Optimization in Fluid Dynamics and Related Physical Systems",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: Interactive Session: Systems and Process Control",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "An optimization framework is presented for minimizing the energy functional developed around a generalized equation governing physical systems such as fluid dynamics, particle transport, phase transition, and other related systems. The convexity of the energy functional is investigated to derive the necessary conditions for a smooth and global optimum solution. Furthermore, the Total Variation (TV) regularization term is introduced to gain insights into the solution space and convergence analysis of convection-dominated problems. We demonstrate the practical application of our method by applying it to some selected examples such as the Boltzmann, Navier-Stokes, and Maxwell equations.",
+    "presenting_author": "Varsha Gupta | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Varsha Gupta | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Varsha Gupta",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "391p",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713947"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713264",
+    "paper_endpoint": "Paper/713264",
+    "paper_id": "713264",
+    "topic": "Catalytic Pyrolysis of Light Hydrocarbons to Light Olefin: Process Modelling Method for Predictive and Optimization",
+    "title": "Catalytic Pyrolysis of Light Hydrocarbons to Light Olefin: Process Modelling Method for Predictive and Optimization",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: Interactive Session: Systems and Process Control",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The catalytic pyrolysis of light hydrocarbons to produce light olefins represents an efficient dual-benefit pathway for achieving both \"enhanced light olefin output\" and \"oil-to-chemicals conversion.\" Addressing the demands of future intelligent refinery operations within the carbon-neutral context, this study focuses on developing predictive modeling methodologies to optimize product composition and catalyst properties for maximizing light olefin production during catalytic pyrolysis. To tackle the complexity of light hydrocarbon catalytic pyrolysis systems, this research investigates the interplay between alkane and naphthene cracking mechanisms via first-order reaction kinetics, establishing a quantitative correlation between cracking activity and the average carbon number of hydrocarbon components as well as naphthene content. A stoichiometric coefficient database for cracking products under various catalytic systems was constructed by incorporating stoichiometric coefficients to describe evolving product distributions. Furthermore, a quantitative relationship between cracking product stoichiometric coefficients and catalyst acid properties was established based on their empirical correlations. Finally, the stoichiometric reaction was used to describe the reaction process, and the stoichiometric coefficient was used to describe the distribution of pyrolysis products, coupled with the catalyst property parameters. This model enables accurate predictions of molecular-level cracking product distributions (<2 wt% absolute error) across diverse catalytic systems and identifies optimal catalyst acid property ranges for maximizing light olefin yields. By achieving bidirectional control from feedstock to products and from products to catalysts, this methodology broadens the application of catalytic pyrolysis models in catalyst design and selection, offering a model-based approach for intelligent process control.",
+    "presenting_author": "Dongyang Liu | China University of Petroleum (Beijing), Beijing",
+    "authors": [
+      "Dongyang Liu | China University of Petroleum (Beijing), Beijing",
+      "Liang Zhao | China University of Petroleum (Beijing), Beijing",
+      "Jinsen Gao | China University of Petroleum, Beijing",
+      "Chunming Xu | China University of Petroleum, Beijing"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dongyang Liu",
+        "affiliation": "China University of Petroleum (Beijing), Beijing",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Liang Zhao",
+        "affiliation": "China University of Petroleum (Beijing), Beijing",
+        "designation": "Author"
+      },
+      {
+        "name": "Jinsen Gao",
+        "affiliation": "China University of Petroleum, Beijing",
+        "designation": "Author"
+      },
+      {
+        "name": "Chunming Xu",
+        "affiliation": "China University of Petroleum, Beijing",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391q",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713264"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/709296",
+    "paper_endpoint": "Paper/709296",
+    "paper_id": "709296",
+    "topic": "Control Lyapunov Barrier Function Based Predictive Control of Nonlinear Systems Using Physics-Informed Recurrent Neural Networks",
+    "title": "Control Lyapunov Barrier Function Based Predictive Control of Nonlinear Systems Using Physics-Informed Recurrent Neural Networks",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: Interactive Session: Systems and Process Control",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In various fields, safety-critical systems require rigorous adherence to safety constraints to avoid compromising process stability, economic performance, or operational safety. Significant research has focused on verifying system safety and developing control laws with guaranteed safety properties. In this context, Control Barrier Functions (CBFs) have been introduced as a means to assess the safety of dynamical systems by confirming that a control law maintains the forward invariance of a designated safe set—much like Control Lyapunov Functions (CLFs) are used to verify stability [1-2]. CBFs can be integrated into control designs for systems with multiple objectives. For instance, in controllers based on Control Lyapunov Barrier Functions (CLBF), a CLF delineates a region of stability while a CBF identifies an unsafe region that the system’s state is prevented from entering at any time. This strategy has been further applied to nonlinear systems with input constraints, where CLBF-based control laws act as contractive constraints within a model predictive controller (MPC) framework, ensuring both closed-loop stability and safety for nonlinear processes featuring regions of both bounded and unbounded risk. Recent ML advancements have significantly improved MPC strategies by enabling data-driven models to capture complex nonlinear dynamics more accurately. While traditional ML-based MPC approaches typically use RNNs and transformers for sequence predictions, recent trends have shifted toward physics-informed neural networks. By integrating physical laws into the model structure, physics-informed RNNs (PIRNNs) have been shown to outperform RNNs that neglect any physical constraints [3]. The model training itself has also been shown to improve when incorporating knowledge of the sequence of process units into the training in [4]. However, despite these advances, to the best of our knowledge, the integration of PIRNNs within a CLBF-MPC framework for ensuring process safety has not been investigated yet. In this work, we propose a novel CLBF-MPC approach that employs a PIRNN as the process model, demonstrating its effectiveness in preventing state trajectories from entering unsafe regions while maintaining robust performance. We develop the PIRNN-based CLBF-MPC and apply it to a two-CSTR process, wherein the traditional MPC causes the process to enter the unsafe region. References [1] Ames, A. D., Xu, X., Grizzle, J. W., & Tabuada, P. (2016). Control barrier function based quadratic programs for safety critical systems. IEEE Transactions on Automatic Control , 62 (8), 3861-3876. [2] Xu, X., Tabuada, P., Grizzle, J. W., & Ames, A. D. (2015). Robustness of control barrier functions for safety critical control. IFAC-PapersOnLine , 48 (27), 54-61. [3] Alhajeri, M. S., Abdullah, F., Wu, Z., & Christofides, P. D. (2022). Physics-informed machine learning modeling for predictive control using noisy data. Chemical Engineering Research and Design , 186 , 34-49. [4] Alhajeri, M. S., Ren, Y. M., Ou, F., Abdullah, F., & Christofides, P. D. (2024). Model predictive control of nonlinear processes using transfer learning-based recurrent neural networks. Chemical Engineering Research and Design , 205 , 1-12.",
+    "presenting_author": "Mohammed Alhajeri | Kuwait University",
+    "authors": [
+      "Mohammed Alhajeri | Kuwait University",
+      "Fahim Abdullah | Oak Ridge National Laboratory, TN",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mohammed Alhajeri",
+        "affiliation": "Kuwait University",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Fahim Abdullah",
+        "affiliation": "Oak Ridge National Laboratory, TN",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391r",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/709296"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714226",
+    "paper_endpoint": "Paper/714226",
+    "paper_id": "714226",
+    "topic": "Simulation Study of Bayesian Optimization for Pressure Swing Adsorption Processes Incorporating Prior Knowledge",
+    "title": "Simulation Study of Bayesian Optimization for Pressure Swing Adsorption Processes Incorporating Prior Knowledge",
+    "date_time": "2025-11-04_15:30:00_17:00:00",
+    "session_id": "57088",
+    "session_title": "10B: Interactive Session: Systems and Process Control",
+    "session_number": "391",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Bayesian optimization (BO) is a strategic and iterative method for identifying optimal solutions in problems where evaluations are costly. Owing to its efficiency, BO has been successfully applied to various fields, including hyperparameter tuning, design of experiments, and process optimization. Adsorption processes, widely used in gas separation and carbon capture, require precise tuning of multiple operating parameters, including adsorption and desorption conditions, step times, and feed conditions, to achieve optimal performance in terms of energy consumption, productivity, or product purity. Dynamic simulations of adsorption systems, such as those used in pressure swing adsorption (PSA) or temperature swing adsorption (TSA), are particularly resource-intensive due to frequent changes in boundary conditions, and the need to reach cyclic steady-state, making optimization especially challenging. BO could be an effective solution for determining the optimal operating parameters in adsorption system. However, as the number of decision variables increases, the efficiency of BO may suffer from the curse of dimensionality, leading to increased number of required iterations and computational costs. We propose an efficient BO approach to accelerate convergence by leveraging prior knowledge derived from thermodynamic data. In this study, BO is applied to optimize PSA processes by systematically tuning operating parameters while incorporating prior information from isotherm data and shortcut models. Although shortcut models cannot provide fully accurate predictions due to their inherent equilibrium assumptions, such prior knowledge significantly enhances the efficiency of Bayesian inference, dramatically reducing the number of BO iterations to reach the optimal solution.",
+    "presenting_author": "Howoun Jung | Korea Institute of Energy Research, Daejeon, Korea, Republic of (South)",
+    "authors": [
+      "Howoun Jung | Korea Institute of Energy Research, Daejeon, Korea, Republic of (South)",
+      "Sun Hyung Kim | Korea Institute of Energy Research, Daejeon, Korea, Republic of (South)",
+      "Hee-Tae Beum | Korea Institute of Energy Research, Daejeon, Korea, Republic of (South)",
+      "Hyung Chul Yoon | Korea Institute of Energy Research, Daejeon, Korea, Republic of (South)",
+      "Jay Hyung Lee | University of Southern California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Howoun Jung",
+        "affiliation": "Korea Institute of Energy Research, Daejeon, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sun Hyung Kim",
+        "affiliation": "Korea Institute of Energy Research, Daejeon, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Hee-Tae Beum",
+        "affiliation": "Korea Institute of Energy Research, Daejeon, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Hyung Chul Yoon",
+        "affiliation": "Korea Institute of Energy Research, Daejeon, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Jay Hyung Lee",
+        "affiliation": "University of Southern California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391s",
+    "sortable_time": "2025-11-04_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714226"
+  }
+]

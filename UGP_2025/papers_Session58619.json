@@ -1,0 +1,331 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712174",
+    "paper_endpoint": "Paper/712174",
+    "paper_id": "712174",
+    "topic": "Data-Driven Dynamic Modeling and Uncertainty Quantification Using Variational Inference: Applications to Microkinetic Modeling",
+    "title": "Data-Driven Dynamic Modeling and Uncertainty Quantification Using Variational Inference: Applications to Microkinetic Modeling",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "58619",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making II",
+    "session_number": "261",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Variational inference (VI) has emerged as a powerful framework for scalable Bayesian inference. This approach enables efficient probabilistic modeling and uncertainty quantification of complex dynamical systems [1]. Unlike traditional Markov Chain Monte Carlo (MCMC) approaches, which can lead to significant computational overhead for high dimensional systems, VI formulates the estimation of the posterior parameter density as an optimization problem, thus making the approach scalable and flexible [2]. VI has been applied in deep learning, reinforcement learning, and probabilistic programming, but its application to physics-constrained machine learning (PCML) remains underexplored, particularly for dynamic chemical processes where predictive uncertainty and physical consistency is ndeed. In this work, we propose a VI-PCML framework for dynamic data-driven modeling and uncertainty quantification. We focus our developments to applications to microkinetic modeling (MKM), which is a widely used modeling technique used in heterogeneous catalysis. Specifically, MKM aims to elucidate detailed reaction mechanisms from data, which is essential for catalyst design [3]. However, MKM often involves large sets of kinetic parameters, which can introduce significant model uncertainty due to data sparsity. By leveraging VI, we reformulate the kinetic parameters as probability distributions rather than fixed values [4], thus improving model reliability, interpretability, and robustness. The approach integrates neural ordinary differential equations (NODEs) with VI to approximate the posterior distribution of kinetic parameters while incorporating observational data to generate physically consistent predictions. This formulation also accommodates hybrid modeling approaches [5] to capture the dynamics of process variables that are either partially observed or inaccurately modeled by the mechanistic model. A key advantage of the proposed VI-PCML framework is its ability to account for unknown phenomena such as catalyst degradation, mass transfer limitations, and other latent effects that traditional MKM approaches fail to capture explicitly. By learning optimal parameters from data while satisfying physical constraints, we show that our approach enhances both generalizability and predictive reliability. We demonstrate that the proposed framework significantly reduces predictive uncertainty compared to standard ML models that lack physical constraints. This work highlights the potential of VI as a key enabler for PCML, paving the way for robust, interpretable data-driven dynamic modeling and uncertainty quantification in chemical process systems. References 1. Bacsa, K., Lai, Z., Liu, W., Todd, M. & Chatzi, E. Symplectic encoders for physics-constrained variational dynamics inference. Sci Rep 13, 2643 (2023). 2. Glyn-Davies, A., Vadeboncoeur, A., Akyildiz, O. D., Kazlauskaite, I. & Girolami, M. A Primer on Variational Inference for Physics-Informed Deep Generative Modelling. arXiv preprint arXiv: 2409.06560 (2024). 3. Motagamwala, A. H. & Dumesic, J. A. Microkinetic Modeling: A Tool for Rational Catalyst Design. Chem Rev 121, 1049–1076 (2021). 4. Thompson, J. C., Zavala, V. M. & Venturelli, O. S. Integrating a tailored recurrent neural network with Bayesian experimental design to optimize microbial community functions. PLoS Comput Biol 19, e1011436 (2023). 5. Mukherjee, A. et al. Development of hybrid first principles – artificial intelligence models for transient modeling of power plant superheaters under load-following operation. Appl Therm Eng 262, 124795 (2025).",
+    "presenting_author": "Angan Mukherjee | University of Wisconsin-Madison",
+    "authors": [
+      "Angan Mukherjee | University of Wisconsin-Madison",
+      "Jaron Thompson | University of Wisconsin-Madison",
+      "Victor M. Zavala | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Angan Mukherjee",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jaron Thompson",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Victor M. Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "261a",
+    "sortable_time": "2025-11-04_08:00:00_08:21:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712174"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716776",
+    "paper_endpoint": "Paper/716776",
+    "paper_id": "716776",
+    "topic": "Hybrid Modeling Employing Neural Differential Algebraic System of Equations (DAEs) for Enhanced Monoclonal Antibody Production in Fed-Batch Reactors",
+    "title": "Hybrid Modeling Employing Neural Differential Algebraic System of Equations (DAEs) for Enhanced Monoclonal Antibody Production in Fed-Batch Reactors",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "58619",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making II",
+    "session_number": "261",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Monoclonal antibodies (mAb) are an essential asset for treating a wide range of diseases including certain types of cancers, autoimmune disorders, and infectious diseases, with an expected market of US$ 300 billion in 2025 [1] and to surpass US$ 700 billion by 2033 [2]. The manufacture of mAbs is mainly performed using Chinese hamster ovary (CHO) cell lines with fed-batch processes, corresponding to around 70% of all mAb production [3]. This process has complex dynamics associated with cell growth, metabolism, and production of mAbs. Nutrients (e.g., glucose, amino acids) are fed regularly in boluses, and undesired byproducts such as ammonia and lactate are also produced, which inhibit cell growth and decrease mAb productivity. Such complex dynamics make it challenging to model this process and require a differential algebraic system of equations (DAE) with nontrivial solution techniques. While modeling of CHO-based mAb production from a mechanistic perspective is present in the literature [4], [5], [6], there is a critical need to embed machine learning and model predictions beyond the capabilities of purely mechanistic approaches. To achieve this goal, we developed a hybrid model that embeds both mechanistic model equations, which incorporates domain knowledge, with neural network components trained based on experimental data. We aim to generate a model that is both interpretable and able to capture the complexity of mAb production processes. Inspired by recent hybrid modeling approaches such as neural ordinary differential equations (ODEs) and universal differential equations (UDEs) [7], [8] we generated a novel system of so-called neural DAEs [9]. This hybrid formulation is built leveraging the Pyomo.DAE framework [10], which allows for the algebraic modeling and optimization of DAE systems. The training and simulation of the CHO-based mAb production hybrid model is performed using state-of-the art nonlinear programming algorithms, such as Ipopt [11] and dynamic optimization techniques, namely the simultaneous approach [12]. The Pyomo [13] framework can accurately model a non-smooth process that is interrupted by feeding and sampling events based on experimental data available. We train the neural DAE system using data from experiments at small and large scales and evaluate the hybrid model performance across scales. The hybrid model offers enhanced prediction capabilities while still maintaining domain knowledge. This approach can mitigate extrapolation issues often observed in purely data-driven models and reduce data needed to train the embedded neural networks. In this presentation, we highlight the potential of hybrid modeling enabled by nonlinear programming as a new venue for enhancing biopharmaceutical manufacturing. References [1] R.-M. Lu et al., “Development of therapeutic antibodies for the treatment of diseases,” J. Biomed. Sci., vol. 27, no. 1, p. 1, Jan. 2020, doi: 10.1186/s12929-019-0592-z. [2] “Monoclonal Antibodies Market Size To Worth USD 729.43 Bn By 2033.” Accessed: Apr. 03, 2025. [Online]. Available: https://www.precedenceresearch.com/monoclonal-antibodies-market [3] K. Liang, H. Luo, and Q. Li, “Enhancing and stabilizing monoclonal antibody production by Chinese hamster ovary (CHO) cells with optimized perfusion culture strategies,” Front. Bioeng. Biotechnol., vol. 11, Jan. 2023, doi: 10.3389/fbioe.2023.1112349. [4] Y. Luo, V. Kurian, L. Song, E. A. Wells, A. S. Robinson, and B. A. Ogunnaike, “Model-based control of titer and glycosylation in fed-batch mAb production: Modeling and control system development,” AIChE J., vol. 69, no. 4, p. e18075, 2023, doi: 10.1002/aic.18075. [5] C. Kontoravdi, E. N. Pistikopoulos, and A. Mantalaris, “Systematic development of predictive mathematical models for animal cell cultures,” Comput. Chem. Eng., vol. 34, no. 8, pp. 1192–1198, Aug. 2010, doi: 10.1016/j.compchemeng.2010.03.012. [6] C. Kontoravdi and I. Jimenez del Val, “Computational tools for predicting and controlling the glycosylation of biopharmaceuticals,” Curr. Opin. Chem. Eng., vol. 22, pp. 89–97, Dec. 2018, doi: 10.1016/j.coche.2018.08.007. [7] R. T. Q. Chen, Y. Rubanova, J. Bettencourt, and D. Duvenaud, “Neural Ordinary Differential Equations,” Dec. 13, 2019, arXiv: arXiv:1806.07366. doi: 10.48550/arXiv.1806.07366. [8] C. Rackauckas et al., “Universal Differential Equations for Scientific Machine Learning,” Nov. 02, 2021, arXiv: arXiv:2001.04385. doi: 10.48550/arXiv.2001.04385. [9] L. R. Lueg, V. Alves, D. Schicksnus, J. R. Kitchin, C. D. Laird, and L. T. Biegler, “A Simultaneous Approach for Training Neural Differential-Algebraic Systems of Equations,” Apr. 07, 2025, arXiv: arXiv:2504.04665. doi: 10.48550/arXiv.2504.04665. [10] B. Nicholson, J. D. Siirola, J.-P. Watson, V. M. Zavala, and L. T. Biegler, “pyomo.dae: a modeling and automatic discretization framework for optimization with differential and algebraic equations,” Math. Program. Comput., vol. 10, no. 2, pp. 187–223, Jun. 2018, doi: 10.1007/s12532-017-0127-0. [11] A. Wächter and L. T. Biegler, “On the implementation of an interior-point filter line-search algorithm for large-scale nonlinear programming,” Math. Program., vol. 106, no. 1, pp. 25–57, Mar. 2006, doi: 10.1007/s10107-004-0559-y. [12] L. T. Biegler, “An overview of simultaneous strategies for dynamic optimization,” Chem. Eng. Process. Process Intensif., vol. 46, no. 11, pp. 1043–1053, Nov. 2007, doi: 10.1016/j.cep.2006.06.021. [13] M. L. Bynum et al., Pyomo - optimization modeling in Python, Third edition. in Springer Optimization and it’s applications, no. volume 67. Cham, Switzerland: Springer, 2021.",
+    "presenting_author": "Victor Alves | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Victor Alves | Carnegie Mellon University, Pittsburgh, PA",
+      "Yu Luo | GSK, King of Prussia, PA",
+      "Gregory Nierode | GlaxoSmithKline, Upper Merion, PA",
+      "Sameer Talwar | GSK, King of Prussia, PA",
+      "Anne Robinson | Carnegie Mellon University, Pittsburgh, PA",
+      "Carl Laird | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Victor Alves",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yu Luo",
+        "affiliation": "GSK, King of Prussia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Gregory Nierode",
+        "affiliation": "GlaxoSmithKline, Upper Merion, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Sameer Talwar",
+        "affiliation": "GSK, King of Prussia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Anne Robinson",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Carl Laird",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "261b",
+    "sortable_time": "2025-11-04_08:21:00_08:42:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716776"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717189",
+    "paper_endpoint": "Paper/717189",
+    "paper_id": "717189",
+    "topic": "Deeponet-Driven Surrogate Model for Enhanced Rwgs Membrane Reactor Performance",
+    "title": "Deeponet-Driven Surrogate Model for Enhanced Rwgs Membrane Reactor Performance",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "58619",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making II",
+    "session_number": "261",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Atmospheric CO 2 concentrations have reached alarming levels – now exceeding 420 ppm – creating urgent demand for technologies that can both reduce emissions and transform CO₂ into valuable chemical feedstocks [1,2]. The reverse water-gas shift (RWGS) reaction, which converts CO₂ and hydrogen into carbon monoxide (CO) and water vapor, plays a central role in this effort. CO is a key precursor for fuels and chemicals and can be produced more efficiently using water-selective membranes in RWGS reactors that remove water continuously. This removal shifts the reaction equilibrium toward higher CO₂ conversion and improved CO yield at lower temperatures. For this purpose, we study a reactor design that employs a packed-bed tubular and concentric membrane configuration where the catalyst bed is housed in the annular chamber, receiving the feed as the retentate, while a co-current sweeping stream flows through the tubular chamber within the membrane. This arrangement promotes effective interaction between flow, reaction kinetics, and membrane transport, with the governing differential equations capturing the spatial evolution of species and overall reactor performance. However, the design and optimization of this system require multiple simulation runs with varied parameters which can be computationally expensive. Hybrid models like traditional physics-informed neural networks (PINNs) can alleviate this computational burden and model the spatial dynamics with high accuracy for fixed design parameters. Yet, from a data-driven optimization perspective, PINNs would require the retraining for each design parameter set, highlighting the need for more flexible physics-informed modeling approaches that can handle varying spatial and initial temporal conditions [3]. To efficiently model this intricate system, we propose a surrogate based on physics-informed deep neural operator networks (DeepONet) [4,5]. The proposed model leverages DeepONet to learn the nonlinear mapping from operating parameters to the flow rates of key species. By embedding the governing physical laws directly into its architecture, the network approximates the solution operator of the underlying differential equations. Unlike PINNs that require retraining when boundary conditions or parameters change, DeepONet learns the operator mapping between function spaces, allowing it to generalize across different conditions without repetitive and time-consuming retraining. Trained offline using data from detailed mechanistic simulations, the model accurately predicts reactor behavior under diverse operating conditions while delivering substantial computational savings. Integrating this surrogate model within an optimization framework enables rapid identification of reactor conditions that maximize reaction yield and overall process efficiency, offering a robust and scalable tool for reactor design and control in advanced carbon capture and utilization applications [6-9]. References [1] Tans, P., Dlugokencky, E. and Miller, B., 2020. The power of greenhouse gases. [2] NOAA Global Monitoring Laboratory. “Trends in atmospheric carbon dioxide”, https://gml.noaa.gov/ccgg/trends/gl_trend.html (accessed 04/01/2025). [3] Raissi, M., Perdikaris, P. and Karniadakis, G.E., 2019. Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. Journal of Computational physics , 378, pp.686-707. [4] Goswami, S., Bora, A., Yu, Y. and Karniadakis, G.E., 2023. Physics-informed deep neural operator networks. In Machine learning in modeling and simulation: methods and applications (pp. 219-254). Cham: Springer International Publishing. [5] Lu, L., Jin, P., Pang, G., Zhang, Z. and Karniadakis, G.E., 2021. Learning nonlinear operators via DeepONet based on the universal approximation theorem of operators. Nature machine intelligence , 3 (3), pp.218-229. [6] Beykal, B. and Pistikopoulos, E.N., 2024. Data-driven optimization algorithms. In Artificial Intelligence in Manufacturing (pp. 135-180). Academic Press. [7] Beykal, B., Aghayev, Z., Onel, O., Onel, M. and Pistikopoulos, E.N., 2022. Data-driven Stochastic Optimization of Numerically Infeasible Differential Algebraic Equations: An Application to the Steam Cracking Process. In Computer Aided Chemical Engineering (Vol. 49, pp. 1579-1584). Elsevier. [8] Aghayev Z., Voulanas D., Gildin E. and Beykal B., 2025. Surrogate-assisted optimization of highly constrained oil recovery processes using classification-based constraint modeling. Industrial & Engineering Chemistry Research . [9] Boukouvala, F. and Floudas, C.A., 2017. ARGONAUT: AlgoRithms for Global Optimization of coNstrAined grey-box compUTational problems. Optimization Letters , 11, pp.895-913.",
+    "presenting_author": "Zahir Aghayev | University of Connecticut, Storrs",
+    "authors": [
+      "Zahir Aghayev | University of Connecticut, Storrs",
+      "Zhaofeng Li | Technion Israel Institute of Technology, Haifa",
+      "Michael Patrascu | Technion Israel Institute of Technology, Haifa",
+      "Burcu Beykal | University of Connecticut, Storrs"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zahir Aghayev",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhaofeng Li",
+        "affiliation": "Technion Israel Institute of Technology, Haifa",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Patrascu",
+        "affiliation": "Technion Israel Institute of Technology, Haifa",
+        "designation": "Author"
+      },
+      {
+        "name": "Burcu Beykal",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "261c",
+    "sortable_time": "2025-11-04_08:42:00_09:03:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717189"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/708922",
+    "paper_endpoint": "Paper/708922",
+    "paper_id": "708922",
+    "topic": "A Superstructure Optimization Approach for Interpretable Reaction Kinetic Modeling with Small Datasets",
+    "title": "A Superstructure Optimization Approach for Interpretable Reaction Kinetic Modeling with Small Datasets",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "58619",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making II",
+    "session_number": "261",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "This study proposes a novel approach for constructing interpretable reaction kinetic models from a small amount of data in multicomponent systems unlike ordinary machine learning methods. The approach utilizes the superstructure of all possible reaction pathways, constrained nonlinear programming, and sensitivity-based pruning method. The superstructure-based approach with the pruning method enables the identification of meaningful reaction pathways. The constrained nonlinear programming allows the incorporation of additional constraints based on prior knowledge, facilitating the training of models with small datasets. The sensitivity-based pruning method extracts key reactions by evaluating their importance that is calculated using the Hessian of the loss function in the training of models. The effectiveness of the proposed approach is demonstrated with complex reaction systems such as chlorination of ethylene and pyrolysis reaction of hydrocarbons. The method successfully modeled these intricate systems using significantly fewer data points compared to conventional approaches. Kinetic modeling of chemical reactions is essential for understanding reaction characteristics, designing manufacturing processes, and optimizing operating conditions. In traditional kinetic modeling approach, chemists first hypothesize reaction mechanisms. Engineers then construct kinetic models and fit these models to experimental data. The process is typically repeated in a trial-and-error manner until a desired level of prediction accuracy is achieved. This approach, however, becomes impractical as the number of reactions increases. In contrast to the traditional first-principles approaches, Machine learning (ML) offers data-driven modeling techniques that do not require prior chemical knowledge. ML models, however, often lack interpretability because their parameters (e.g., weights and biases) have no physical meaning. To address this problem, Explainable AI (XAI) approaches [1] (e.g., SHAP, LIME, and Grad-CAM) are often used. While these methods provide the information of input-output relationship in ML models, they do not elucidate reaction pathways, which are essential for understanding the underlying chemical mechanisms. Recent advances, such as Chemical Reaction Neural Networks (CRNNs [2]), address the issue by embedding reaction rate equations into ML models. This method allows parameters to have physical meanings, such as stoichiometric coefficients and rate constants. Despite these advancements, challenges persist in terms of data availability and model interpretability. For example, CRNNs sometimes produce reaction pathways that violate material balance, fail to yield stoichiometric coefficients as integers, and often require large datasets such as 3,000 data points even for a simple system which are difficult to obtain in real-world experiments due to time and cost constraints. In this work, we propose a novel approach for constructing interpretable reaction kinetic models for multicomponent systems using small datasets. This approach integrates data-driven techniques with first-principles methods. The proposed framework comprises the following three steps. Superstructure construction: The first step constructs the superstructure of all possible reaction pathways that satisfy atomic balance. In this step, we provide information on the molecular species considered to present in the system. Using this information, all possible reaction pathways that satisfy atomic balance are exhaustively enumerated up to a given reaction order. Constrained nonlinear optimization: The second step solves a constrained nonlinear optimization problem that incorporates the kinetic models of the superstructural reaction pathways and prior knowledge to handle small datasets. The objective of the optimization is to minimize the mean square error (MSE) between experimental data and model predictions. The optimization is performed using Pyomo.DAE [3], which allows the inclusion of differential algebraic equations (DAEs) in the optimization problem. Besides the physics-based reaction kinetic models, knowledge-based constraints are introduced to supplement the limited data and enable robust modeling. For instance, constraints can be the monotonicity of temporal concentration changes or the sequence of experimental data points. Sensitivity-based pruning: The third step prunes unnecessary reaction pathways using a sensitivity-based pruning method. Unlike magnitude-based methods that consider small parameter values as insignificant, the sensitivity-based approach determines the importance of parameters based on the sensitivity of the objective function to the rate constant. This approach is inspired by pruning methods in ML, such as Optimal Brain Surgeon (OBS [4]), which utilizes the Hessian of the objective function. In our method, we project the Hessian of Lagrangian of the constrained nonlinear problem onto the parameter space. The diagonal elements of the inverse Hessian matrix provide information of the uncertainty of the kinetic parameters. Finally, 2 nd and 3 rd steps are repeated iteratively until the MSE increases to obtain a meaningful reaction set without sacrificing the prediction accuracy. The proposed approach is demonstrated with the following two case studies. Firstly, we applied this method to time-series data of ethylene chlorination, which was generated based on simulations using the model of [5] and confirmed that the method can identify the predefined reactions and reproduce the original reaction rate constants. The reaction system involves six components [C 2 H 4 , C 2 H 3 Cl, C 2 H 4 Cl 2 , C 2 H 3 Cl 3 , HCl, Cl 2 ] and consists of four reactions. The reaction rate constants for each reaction were arbitrarily set. Two datasets were generated with differing initial Cl 2 mole fractions, resulting in a total of 90 data points. Gaussian noise with a mean of 0 and a standard deviation of 0.01 was added to the data, and HCl was masked during data analysis to simulate realistic experimental conditions. In the first step of our framework, the maximum reaction order was restricted to 3 or less to reduce computational cost, resulting in the generation of 46 kinetic reactions. By performing 2 nd and 3 rd steps, we successfully extracted 4 correct reactions from this set and the rate constants for each reaction were correctly determined. The second case study involves the pyrolysis reaction of hydrocarbons. The reaction system consists of 11 components. Five datasets were obtained from experiments by varying the amount of reagent added to the mixture. Fitting this data is particularly challenging because the total number of data points is only 56, while the reaction system includes 11 components. Furthermore, only 8 of these components can be observed, as 3 components are masked. To address this challenging problem, we employed a “no-overtaking constraint”. This constraint assumes that the concentration of each component increases or decreases monotonically with respect to the amount of reagent added, meaning that the order of the components does not change or \"overtake\" one another in the observed time window. In the first step, a total of 550 reaction pathways were generated. From this set, only the 40 pathways that fit the experimental data were selected automatically. While conventional CRNN required around 3,000 data points to model a reaction system with 5 components, the proposed method successfully modeled a system with 56 data points with 11 components even with three components are masked. In conclusion, we have demonstrated an innovative method for constructing interpretable kinetic models from sparse experimental datasets in multicomponent systems. Our approach integrates the superstructure of all possible reaction pathways, constrained nonlinear optimization with chemical knowledge, and sensitivity-based pruning to construct models from limited data. We applied this method to the chlorination of ethylene as well as the pyrolysis reaction of hydrocarbons, successfully identifying key reactions and rate constants with significantly fewer data points compared to conventional ML approaches. The proposed reaction modeling framework enables efficient modeling and enhances the understanding of reaction systems, even in data-scarce situations, which are often caused by experimental constraints such as time, cost, technical limitations, safety concerns, and selective data collection. 【References】 [1] Barredo Arrieta, A.; Díaz-Rodríguez, N.; Del Ser, J.; Bennetot, A.; Tabik, S.; Barbado, A.; Garcia, S.; Gil-Lopez, S.; Molina, D.; Benjamins, R.; Chatila, R.; Herrera, F. Explainable Artificial Intelligence (XAI): Concepts, Taxonomies, Opportunities and Challenges toward Responsible AI. Inf Fusion 2020, 58 (1), 82–115. [2] Ji, W.; Deng, S. Autonomous Discovery of Unknown Reaction Pathways from Data by Chemical Reaction Neural Network. J. Phys. Chem. A 2021, 125 (5), 1082–1092. [3] Nicholson, B. L.; John Daniel Siirola; Watson, J.-P.; Zavala, V. M.; Biegler, L. T. Pyomo.dae: A Modeling and Automatic Discretization Framework for Optimization with Differential and Algebraic Equations. 2017, 10 (2), 187–223. [4] Hassibi, B.; Stork, D. G. Second Order Derivatives for Network Pruning: Optimal Brain Surgeon. Adv. Neural Inf. Process. Syst. 1993, 5, 164–171. [5] Shokrollahi Yancheshmeh, M. S.; Seifzadeh Haghighi, S.; Gholipour, M. R.; Dehghani, O.; Rahimpour, M. R.; Raeissi, S. Modeling of Ethane Pyrolysis Process: A Study on Effects of Steam and Carbon Dioxide on Ethylene and Hydrogen Productions. Chem. Eng. J. 2013, 215-216, 550–560.",
+    "presenting_author": "Daisuke Miyata | Kureha Corporation, Iwaki City, Japan",
+    "authors": [
+      "Daisuke Miyata | Kureha Corporation, Iwaki City, Japan",
+      "Noriyuki Yoshio | Kureha Corporation, Iwaki City, Japan"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daisuke Miyata",
+        "affiliation": "Kureha Corporation, Iwaki City, Japan",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Noriyuki Yoshio",
+        "affiliation": "Kureha Corporation, Iwaki City, Japan",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "261d",
+    "sortable_time": "2025-11-04_09:03:00_09:24:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/708922"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714308",
+    "paper_endpoint": "Paper/714308",
+    "paper_id": "714308",
+    "topic": "A Meta-Learning Approach for Few-Shot Bayesian Optimization of Batch Chemical Processes",
+    "title": "A Meta-Learning Approach for Few-Shot Bayesian Optimization of Batch Chemical Processes",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "58619",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making II",
+    "session_number": "261",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Bayesian Optimisation (BayesOpt) is a powerful tool for global optimisation of expensive-to-measure functions and has found increasing applications in chemical engineering, including design of experiments and optimal process and material design [1-2]. Traditional BayesOpt typically harnesses Gaussian Processes (GPs) as surrogate models to approximate and determine how to sample these complex black-box functions. However, GPs have limited interpretability and lack model structure inherent to time-varying chemical processes. Moreover, GPs face challenges in forecasting when training data do not fully span the test space and struggle to generalize across tasks where the underlying task parameters change but remain unobserved. This work considers the optimisation of fed-batch processes, an expensive endeavour made difficult by the inherent, expensive-to-measure fluctuations from batch to batch [3]. These fluctuations are driven by changes in the stochastic underlying parameters driving the reaction such as biological growth rates or saturation constants. Parameter estimation techniques can evaluate these parameter values within batch, assuming a given ODE structure, but this evaluation can be expensive, and these methods require new data for each batch [4]. On the other hand, recent advancements in ML can mitigate these issues for dynamical systems. Neural processes, or NPs, are a class of neural latent variable models which meta-learn a distribution over functions to generalise across unobserved task information [5]. Like many meta-learning models, performance on individual tasks can be hindered by underfitting issues, for which various adaptations have been proposed, e.g., TNPs, CNPs [6-7]. Additionally, these models are domain-agnostic and do not incorporate structure inherent to the problem. Neural ODE Processes, or NODEPs, introduce and learn a dual encoding, representing initial conditions and dynamic parameters, and evolve the latent space to incorporate the desired ODE structure [8]. More recently, we introduce System-Aware Neural ODE Processes, or SANODEPs, which adapt NODEPs’ context structure and training process to learn the necessary trajectory-aware tasks; forecasting and interpolation alongside a novel acquisition function for BayesOpt [9]. For tasks such as fed-batch processes, SANODEPs can explicitly learn dynamics, including batch-to-batch variations using its trajectory-aware structure. In this work, we investigate few-shot BO on fed-batch penicillin production; comparing SANODEP to traditional (problem-agnostic) GP implementations. A representative model is selected from the literature, with stochastic parameters identified and assigned a uniform prior distribution centred on nominal values [10]. Trajectories spanning this distribution are used to train SANODEP. At test time, BayesOpt is performed on a randomly sampled ‘ground truth’ task, i.e., a specific set of stochastic parameters, comparing SANODEP’s and GP’s performance as the surrogate model for few-shot and global optimisation. This approach highlights the ability of SANODEP to learn a broad distribution of ODEs, leading to superior performance in few-shot optimisation. As expected, GPs perform better in global optimisation due to the underfitting issues inherent in meta-learning methods. Further study is done on the impact of the width the prior and the impact of test data falling outside the prior. This work highlights the need for thoughtful design of the surrogate model and BayesOpt strategy, as well as the potential for meta-learning, to achieve efficient and reliable optimisation in dynamic chemical processes. References: [1] Shahriari B, Swersky K, Wang Z, Adams RP, de Freitas N. Taking the Human Out of the Loop: A Review of Bayesian Optimization. Proceedings of the IEEE. 2016;104(1):148-175. [2] Paulson, J. A., & Tsay, C. (2024). Bayesian optimization as a flexible and efficient design framework for sustainable process systems. Current Opinion in Green and Sustainable Chemistry, 100983 [3] Shokry, A., Vicente, P., Escudero, G., Pérez-Moya, M., Graells, M., & Espuña, A. (2018). Data-driven soft-sensors for online monitoring of batch processes with different initial conditions. Computers & Chemical Engineering, 118, 159-179. [4] Zavala, V. M., Laird, C. D., & Biegler, L. T. (2008). Interior-point decomposition approaches for parallel solution of large-scale nonlinear parameter estimation problems. Chemical Engineering Science, 63(19), 4834-4845. [5] Garnelo, M., Schwarz, J., Rosenbaum, D., Viola, F., Rezende, D. J., Eslami, S. M., & Teh, Y. W. (2018). Neural processes. arXiv preprint arXiv:1807.01622. [6] Garnelo, M., Rosenbaum, D., Maddison, C., Ramalho, T., Saxton, D., Shanahan, M., Teh, Y. W., Rezende, D., & Eslami, S. A. (2018, July). Conditional neural processes. In International conference on machine learning (pp. 1704-1713). PMLR [7] Nguyen, T., & Grover, A. (2022). Transformer neural processes: Uncertainty-aware meta learning via sequence modeling. arXiv preprint arXiv:2207.04179. [8] Norcliffe, A., Bodnar, C., Day, B., Moss, J., & Liò, P. (2021). Neural ode processes. arXiv preprint arXiv:2103.12413. [9] Qing, J., Langdon, B. D., Lee, R. M., Shafei, B., van der Wilk, M., Tsay, C., & Misener, R. (2024). System-Aware Neural ODE Processes for Few-Shot Bayesian Optimization. arXiv preprint arXiv:2406.02352. [10] Bajpai, R. K., & Reuss, M. (1980). A mechanistic model for penicillin production. Journal of Chemical Technology and Biotechnology, 30(1), 332-344.",
+    "presenting_author": "Becky Langdon | Imperial College London, United Kingdom",
+    "authors": [
+      "Becky Langdon | Imperial College London, United Kingdom",
+      "Gabriel Patron | Imperial College London, United Kingdom",
+      "Jixiang Qing | Imperial College London, United Kingdom",
+      "Chrysoula Kappatou | BASF, Ludwigshafen, Germany",
+      "Robert M. Lee | BASF, Ludwigshafen, Germany",
+      "Behrang Shafei | BASF, Ludwigshafen, Germany",
+      "Ruth Misener | Imperial College London, United Kingdom",
+      "Mark van der Wilk | University of Oxford, United Kingdom",
+      "Calvin Tsay | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Becky Langdon",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Gabriel Patron",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Jixiang Qing",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Chrysoula Kappatou",
+        "affiliation": "BASF, Ludwigshafen, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Robert M. Lee",
+        "affiliation": "BASF, Ludwigshafen, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Behrang Shafei",
+        "affiliation": "BASF, Ludwigshafen, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Ruth Misener",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Mark van der Wilk",
+        "affiliation": "University of Oxford, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Calvin Tsay",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "261e",
+    "sortable_time": "2025-11-04_09:24:00_09:45:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714308"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/715254",
+    "paper_endpoint": "Paper/715254",
+    "paper_id": "715254",
+    "topic": "Monitoring and Control of Semi-Continuous Separation Systems: A Toolkit from White to Black Box Approaches",
+    "title": "Monitoring and Control of Semi-Continuous Separation Systems: A Toolkit from White to Black Box Approaches",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "58619",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making II",
+    "session_number": "261",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Monitoring and control of semi-continuous separation systems remain open challenges due to their nonlinear, periodic dynamics and complex operating spaces defined by multiple time-dependent control variables (Engell & Toumi, 2004; Kawajiri, 2021; Baldea et al., 2025). These characteristics lead to high-dimensional, computationally intensive optimisation problems and impose trade-offs between model fidelity, computational tractability, and control responsiveness (Kumar et al., 2021; Kawajiri & Biegler, 2006). Compounding this complexity, online measurement availability is often limited, both in frequency and scope, hindering observability and constraining the implementation of real-time digital decision frameworks (Rüdt et al., 2017; Ündey et al., 2010). While first-principles models offer mechanistic understanding and can serve as digital shadows in online sensor-scarce environments, their computational burden can render them impractical for online optimisation and control (Papathanasiou et al., 2016). This further challenges the implementation of established model-based strategies in real-time applications (Armstrong et al., 2021). To address these challenges, in this work, we develop and propose a suite of digital tools (Figure 1) designed to support different stages of process development, from design and optimisation to real-time control. We focus on the case study of semi-continuous chromatography used for the purification of monoclonal antibodies (mAbs), a system characterised by stringent purity constraints, limited online sensing, and dynamic operation (Aumann & Morbidelli, 2007). The proposed framework integrates data-driven (black-box) models, hybrid (grey-box) models, and reinforcement learning (RL) control, each developed and purposed to align with distinct operating constraints. Building on previously published modelling architectures, we develop and deploy a suite of data-driven and hybrid models of the separation process. The former uses Artificial Neural Networks (ANNs) trained on simulated cycles from a validated first-principles model, mapping pseudo-dynamic, measurable inputs to time-resolved elution profiles (Michalopoulou & Papathanasiou, 2024). The hybrid formulation embeds domain knowledge by retaining the separation isotherm to describe the underlying separation mechanism, while an ANN approximates the system’s dynamic response (Michalopoulou & Papathanasiou, 2025). The two modelling structures differ in their training requirements, predictive capabilities, and computational overhead, making them suitable for different deployment strategies. The developed models are embedded within a Bayesian Optimisation (BO) framework to evaluate their effectiveness for time-constrained process optimisation. All optimisation results are benchmarked against the validated first-principles model, which serves as the ground truth for process behaviour. BO is used to iteratively explore the operating space, maximising yield while enforcing predefined purity thresholds. In scenarios where computational time is unconstrained, such as offline process design, the first-principles model achieves the highest process yield. However, when online optimisation is required within a single cycle time for cycle-to-cycle decision-making, the hybrid model offers a superior trade-off between accuracy and tractability. For real-time decision-making within seconds, only the black-box surrogate achieves sufficiently rapid exploration to generate viable control actions. The digital framework is extended to closed-loop control using RL. A Proximal Policy Optimisation (PPO) agent is trained directly on the first-principles model from process start-up, learning adaptive policies to adjust flowrates and switching times in real-time. The agent optimises a multi-objective reward function incorporating yield, purity, and process duration, and demonstrates strong generalisation under disturbances in feed composition. This work introduces a versatile and scalable digital framework for monitoring, optimisation, and control of semi-continuous separation systems. The framework employs data-driven modelling, suitable for rapid online decisions, isotherm-informed hybrid models, which support cycle-to-cycle optimisation with physical consistency, and RL for adaptive closed-loop control, each tailored to a distinct optimisation or control task. Together, these tools address fundamental limitations surrounding model scalability, generalisation, and autonomous operation across complex separation processes. Acknowledgements Funding from the UK Engineering & Physical Sciences Research Council (EPSRC) for the i-PREDICT: Integrated adaPtive pRocEss DesIgn and ConTrol (Grant reference: EP/W035006/1) and the IAA: Impact Acceleration Account (Grant reference: EP/X52556X/1) is gratefully acknowledged. The authors gratefully acknowledge the support of Dr. Emmanouil Papadakis (Novo Nordisk A/S) for his valuable input and industry expertise. References Armstrong, A., Horry, K., Cui, T., Hulley, M., Turner, R., Farid, S.S., Goldrick, S. & Bracewell, D.G. (2021) Advanced control strategies for bioprocess chromatography: Challenges and opportunities for intensified processes and next generation products. Journal of Chromatography A . 1639, 461914. Aumann, L. & Morbidelli, M. (2007) A continuous multicolumn countercurrent solvent gradient purification (MCSGP) process. Biotechnology and Bioengineering . 98 (5), 1043–1055. Baldea, M., Georgiou, A.T., Gopaluni, B., Mercangöz, M., Pantelides, C.C., Sheth, K., Zavala, V.M. & Georgakis, C. (2025) From automated to autonomous process operations. Computers & Chemical Engineering . 196, 109064. Engell, S. & Toumi, A. (2004) Optimization and control of chromatography. Computer Aided Chemical Engineering . 18 (C), 9–22. Kawajiri, Y. (2021) Model-based optimization strategies for chromatographic processes: a review. Adsorption . 27 (1), 1–26. Kawajiri, Y. & Biegler, L.T. (2006) Large scale nonlinear optimization for asymmetric operation and design of Simulated Moving Beds. Journal of Chromatography A . 1133 (1–2), 226–240. Kumar, V., Leweke, S., Heymann, W., von Lieres, E., Schlegel, F., Westerberg, K. & Lenhoff, A.M. (2021) Robust mechanistic modeling of protein ion-exchange chromatography. Journal of Chromatography A . 1660, 462669. Michalopoulou, F. & Papathanasiou, M.M. (2025) An approach to hybrid modelling in chromatographic separation processes. Digital Chemical Engineering . 14, 100215. Michalopoulou, F. & Papathanasiou, M.M. (2024) Assessment of data-driven modeling approaches for chromatographic separation processes. AIChE Journal . e18600. Papathanasiou, M.M., Avraamidou, S., Oberdieck, R., Mantalaris, A., Steinebach, F., Morbidelli, M., Mueller-Spaeth, T. & Pistikopoulos, E.N. (2016) Advanced control strategies for the multicolumn countercurrent solvent gradient purification process. AIChE Journal . 62 (7), 2341–2357. Rüdt, M., Brestrich, N., Rolinger, L. & Hubbuch, J. (2017) Real-time monitoring and control of the load phase of a protein A capture step. Biotechnology and Bioengineering . 114 (2), 368–373. Ündey, C., Ertun, S., Mistretta, T. & Looze, B. (2010) Applied advanced process analytics in biopharmaceutical manufacturing: Challenges and prospects in real-time monitoring and control. Journal of Process Control . 20 (9), 1009–1018.",
+    "presenting_author": "Foteini Michalopoulou | Imperial College London, United Kingdom",
+    "authors": [
+      "Foteini Michalopoulou | Imperial College London, United Kingdom",
+      "Maria M. Papathanasiou | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Foteini Michalopoulou",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Maria M. Papathanasiou",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "261f",
+    "sortable_time": "2025-11-04_09:45:00_10:06:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/715254"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/715661",
+    "paper_endpoint": "Paper/715661",
+    "paper_id": "715661",
+    "topic": "Hybrid Modeling and Model Predictive Control for Reboiler Fouling Management in Distillation Processes",
+    "title": "Hybrid Modeling and Model Predictive Control for Reboiler Fouling Management in Distillation Processes",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "58619",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making II",
+    "session_number": "261",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Fouling in distillation column reboilers – the accumulation of unwanted deposits on heat-transfer surfaces – is a persistent challenge that imposes significant economic and environmental penalties on the global refining industry by reducing heat transfer efficiency, increasing energy consumption, degrading product quality, and causing unplanned shutdowns. Moreover, reliability issues caused by fouling can cost on the order of $1–10 million per day in lost production [1]. Despite its importance, fouling management in industry remains largely reactive, often based on conservative heuristics or offline pressure drop thresholds, which may not effectively prevent unplanned outages. Traditionally, fouling is managed through design allowances and periodic shutdowns for cleaning, but real-time control systems typically do not compensate for fouling, leading to suboptimal operation. Development of the accurate and robust modelling has been challenging due to the high variability of the processes and the complex and time-varying nature of the fouling phenomena. Various approaches have been proposed and studied to detect and monitor fouling in reboilers. For example, empirical correlations have shown to model fouling resistance or film coefficients, dimensional analysis has been used to predict clean-surface performance, and combined thermal-hydraulic indicators have proven to signal fouling onset [2, 3, 4]. However, these methods focus on monitoring and detection rather than actively mitigating fouling effects, and they often require extensive data or fail to isolate fouling dynamics completely. Previous studies using pure ML methods (e.g., Artificial Neural Networks and Gaussian Process Regression) have improved fouling prediction accuracy over empirical models [5], but often suffered from limited interpretability and robustness under variable conditions [6, 7, 8]. These limitations also include difficulties in generalizing beyond training conditions and dependency on extensive, high-quality data, which is often scarce in industrial contexts. As a result, such purely data-driven models frequently lack robustness, limiting their practical implementation in industrial process environments. To address these limitations, we propose a hybrid modeling framework that integrates physics-based kinetic models with machine learning to predict and capture the dynamic behavior of fouling under varying operational conditions. In the proposed integrated model, fouling kinetics are characterized using the Ebert–Panchal framework, which predicts deposit accumulation by relating key variables such as fluid temperature, flow rate, foulant concentration, and thermal gradients under the assumption of steady-state, uniform deposition with first-order kinetics. However, while kinetic models like Ebert–Panchal provide a solid theoretical foundation, they often fall short in capturing complex, time-varying behaviors and latent features inherent in real-world operations. These models typically assume steady conditions and uniform deposition, overlooking transient phenomena, process variability, and other nuanced factors that can significantly influence fouling evolution. To overcome these shortcomings, a neural network is trained on historical plant data—including temperature profiles, flow rates, heat transfer coefficients, and reboiler duty variations—to capture the dynamic behavior of fouling. This hybrid approach merges the rigor of physics-based kinetics with the adaptability of machine learning, ensuring that predictions remain grounded in fundamental mechanisms while capturing transient features that traditional models miss. which is subsequently integrated into a model predictive control (MPC) scheme. The MPC leverages real-time predictions of fouling evolution to adjust process variables — actively optimizing reboiler operation (e.g., reboiler duty or reflux ratio) — to prevent excessive fouling while ensuring that separation performance and product quality remain optimal. By continuously balancing energy efficiency with fouling mitigation, the controller maximizes uptime and prolongs reboiler runtime, thereby reducing unplanned shutdowns. This integrated framework bridges the gap between predictive maintenance and real-time process optimization, offering a practical, interpretable solution for industrial fouling control. In conclusion, our integrated framework combines fouling kinetics from the Ebert–Panchal model with data-driven predictions and model predictive control, enabling real-time optimization of key parameters such as reboiler duty and reflux ratio. This integrated approach mitigates fouling, enhances energy efficiency, and ensures consistent process performance, significantly reducing downtime and operational costs. References: McKinsey & Company. \"The case for doubling down on refinery reliability now.\" McKinsey & Company, June 10, 2024. Accessed 4 Apr. 2025. Ebert, W. A.; Panchal, C. B. \"Analysis of Exxon crude-oil fouling data.\" In Fouling Mitigation of Industrial Heat Exchangers, edited by C. B. Panchal, Begell House, New York, 1995, pp. 451–460. Müller-Steinhagen, H.; “Heat Transfer Fouling: 50 Years After the Kern and Seaton Model”, Heat Transfer Engineering, 32:1, 2011 pp. 1-13. Kuwahara, T.; Wibowo, C.; Kuboyama, A.; Nakamura, M.; Yamane, Y. \"Fouling Monitoring in Thermosiphon Reboiler.\" In Proceedings of the International Conference on Heat Exchanger Fouling and Cleaning, Budapest, Hungary, June 2013, pp. 121–125. Yamashita, Y. \"Model-based Monitoring of Fouling in a Heat Exchanger.\" Proceedings of the 6th International Symposium on Advanced Control of Industrial Processes (AdCONIP), May 28–31, 2017, Taipei, Taiwan. Shin, Y.; Smith, R.; Hwang, S. \"Development of model predictive control system using an artificial neural network: A case study with a distillation column.\" Journal of Cleaner Production, vol. 277, 2020, Article 124124. Aminian, J.; Shahhosseini, S. \"Neural network approach for predicting fouling behavior in crude oil heat exchangers.\" Applied Thermal Engineering, vol. 29, no. 4, 2009, pp. 961–968. Sansana, J.; Joshi, R.; Srinivasan, R.; Macchietto, S. \"A hybrid approach for advanced monitoring and forecasting of fouling with application to an ethylene oxide plant.\" Computers & Chemical Engineering, vol. 170, 2023, Article 108238. Negri, F.; Galeazzi, A.; Gallo, F.; Manenti, F. \"Reshaping Industrial Maintenance with Machine Learning: Fouling Control Using Optimized Gaussian Process Regression.\" Industrial & Engineering Chemistry Research, vol. 64, no. 13, 2025, pp. 5123–5135.",
+    "presenting_author": "Mansur Alimbayev | Texas A&M, College Station, TX",
+    "authors": [
+      "Mansur Alimbayev | Texas A&M, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mansur Alimbayev",
+        "affiliation": "Texas A&M, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "261g",
+    "sortable_time": "2025-11-04_10:06:00_10:27:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/715661"
+  }
+]

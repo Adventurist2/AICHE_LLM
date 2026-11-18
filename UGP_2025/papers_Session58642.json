@@ -1,0 +1,277 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714651",
+    "paper_endpoint": "Paper/714651",
+    "paper_id": "714651",
+    "topic": "Large Language Model Agents for User-Friendly Chemical Process Simulations",
+    "title": "Large Language Model Agents for User-Friendly Chemical Process Simulations",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "58642",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering II",
+    "session_number": "679",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "In modern chemical engineering, process simulations are crucial for process design, optimization, safety assessments, and operational decision-making. Traditional simulation methods, however, demand significant expertise and manual intervention, which restricts their accessibility to non-specialists [1]. Our work introduces a novel framework that leverages Large Language Model (LLM) agents to translate natural language commands into actionable simulation tasks. This framework not only facilitates simulation access for educational purposes but also enables the automatic generation of extensive simulation datasets, a critical resource for advancing digital twins, developing fault diagnosis algorithms, and fine-tuning LLMs with domain-specific knowledge for chemical processes. Our approach is built upon a Python-based interface encapsuling the core simulation functionalities as discrete tools. Using the Autogen package [2], the LLM agent is programmed to understand user-provided tasks and decide which tool to employ based on the natural language description. For instance, the agent interprets the simulation requirements, calls the appropriate Python function linked to the AVEVA Process Simulation software, and retrieves key process variables for analysis. Further, a visualization agent could be employed to process the data and generate informative plots, enhancing the user's comprehension of the simulation outcomes. This proof-of-concept was validated through different case studies, one targeting a water-methanol distillation column. For instance, the LLM agent was ordered to change the inlet stream temperature. The system correctly interpreted the instruction, sequentially invoked the proper Python functions to simulate and obtain data, and ultimately provided a clear summary of the resulting changes, including an interpretation. In another example, we mandate optimizing the distillation column by adjusting the boil-up and reflux ratios. The objective was to minimize the heating demand in the reboiler while achieving a molar composition of at least 0.99 of water in the bottom and at least 0.95 of methanol in the distillate. The framework autonomously ran multiple simulations, identified optimal parameter combinations, and explained the simulation outcomes. In our case studies, we evaluated cloud-based and locally deployed LLM models, ensuring that sensitive data can be processed securely on local systems while utilizing cloud APIs for non-sensitive tasks. In addition to demonstrating technical feasibility, our work addresses the responsible use of LLM agents in process simulation. We discuss strategies for evaluating the trustworthiness and accuracy of LLM-generated interpretations, emphasizing the need for expert validation when assessing simulation outcomes for critical decisions. To further enhance the reliability of the interpretation process, we propose integrating a knowledge database and leveraging retrieval augmented generation (RAG) techniques [3]. These enhancements aim to refine the LLM’s performance and ensure that its outputs support safe and effective decision-making. Overall, our framework shows promising potential to boost productivity, facilitate educational engagement, and supply high-quality datasets for advanced model training in chemical engineering, including applications in digital twins development, fault diagnosis, and LLM fine-tuning. References: [1] Ghasem, Nayef. Computer methods in chemical engineering . CRC Press, 2021. [2] Wu, Qingyun, et al. \"Autogen: Enabling next-gen llm applications via multi-agent conversation.\" arXiv preprint arXiv:2308.08155 (2023). [3] Li, Jiarui, Ye Yuan, and Zehua Zhang. \"Enhancing llm factual accuracy with rag to counter hallucinations: A case study on domain-specific queries in private knowledge-bases.\" arXiv preprint arXiv:2403.10446 (2024).",
+    "presenting_author": "Jingkang Liang | Technical University of Denmark, Kongens Lyngby",
+    "authors": [
+      "Niklas Groll | Technical University of Denmark, 2800 Kgs. Lyngby",
+      "Jingkang Liang | Technical University of Denmark, Kongens Lyngby",
+      "Gurkan Sin | Technical University of Denmark, 2800 Kgs. Lyngby"
+    ],
+    "authors_structured": [
+      {
+        "name": "Niklas Groll",
+        "affiliation": "Technical University of Denmark, 2800 Kgs. Lyngby",
+        "designation": "Author"
+      },
+      {
+        "name": "Jingkang Liang",
+        "affiliation": "Technical University of Denmark, Kongens Lyngby",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Gurkan Sin",
+        "affiliation": "Technical University of Denmark, 2800 Kgs. Lyngby",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "679a",
+    "sortable_time": "2025-11-06_11:30:00_11:51:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714651"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717950",
+    "paper_endpoint": "Paper/717950",
+    "paper_id": "717950",
+    "topic": "Mpax: Mathematical Programming in Jax",
+    "title": "Mpax: Mathematical Programming in Jax",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "58642",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering II",
+    "session_number": "679",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Mathematical programming is a cornerstone of process system engineering, underpinning critical applications such as process control, production scheduling, supply chain optimization and process synthesis 1,2 . While modern solvers like GUROBI, IPOPT 3 and BARON 4 have achieved strong performance and reliability, they remain fundamentally constrained by traditional CPU-based solution paradigms. Core algorithms such as the simplex and interior-point methods rely on solving large linear systems using direct methods like Cholesky factorization. These computations are inherently sequential and thus difficult to parallelize, which in turn limits the scalability of solvers to shared-memory, CPU-based architectures. As problem sizes grow, these limitations lead to increasing memory bottlenecks and reduced computational efficiency. To address these challenges, this work presents MPAX (Mathematical Programming in JAX), a versatile and efficient solver designed for modern hardware. MPAX is built on two key pillars: recent advancements in first-order methods for solving mathematical programming problems, and the rapid progress of modern programming languages on contemporary computational platforms. From an algorithmic perspective, MPAX has implemented the state-of-the-art first-order methods, restarted average primal-dual hybrid gradient 5,6 and reflected restarted Halpern primal-dual hybrid gradient 7 methods, whose primary computational bottleneck is merely matrix-vector multiplication. Currently, MPAX supports both linear programming and quadratic programming. Future developments will extend it capability to more general mathematical programming problems and specialized modules. Implemented in JAX, MPAX offers a unified and high-performance framework with several valuable features, including native support for CPUs, GPUs, and TPUs, batched solving of multiple instances, auto-differentiation, and efficient device parallelism. More importantly, it enables the seamless integration with machine learning pipelines, simplifying downstream applications and enhancing both flexibility and performance. Extensive numerical experiments demonstrate the advantages of MPAX over existing solvers. The solver is available at https://github.com/MIT-Lu-Lab/MPAX. Reference: [1] Grossmann, I. (2005). Enterprise‐wide optimization: A new frontier in process systems engineering. AIChE Journal , 51 (7), 1846-1857. [2] Grossmann, I. E. (2012). Advances in mathematical programming models for enterprise-wide optimization. Computers & Chemical Engineering , 47 , 2-18. [3] Wächter, A., & Biegler, L. T. (2006). On the implementation of an interior-point filter line-search algorithm for large-scale nonlinear programming. Mathematical programming , 106 , 25-57. [4] Tawarmalani, M., & Sahinidis, N. V. (2005). A polyhedral branch-and-cut approach to global optimization. Mathematical programming , 103 (2), 225-249. [5] Applegate, D., Díaz, M., Hinder, O., Lu, H., Lubin, M., O'Donoghue, B., & Schudy, W. (2021). Practical large-scale linear programming using primal-dual hybrid gradient. Advances in Neural Information Processing Systems , 34 , 20243-20257. [6] Lu, H., & Yang, J. (2023). cuPDLP. jl: A GPU implementation of restarted primal-dual hybrid gradient for linear programming in Julia. arXiv preprint arXiv:2311.12180 . [7] Lu, H., & Yang, J. (2024). Restarted Halpern PDHG for linear programming. arXiv preprint arXiv:2407.16144 .",
+    "presenting_author": "Zedong Peng | MIT, Cambridge, MA",
+    "authors": [
+      "Haihao Lu | MIT, Cambridge, MA",
+      "Zedong Peng | MIT, Cambridge, MA",
+      "Jinwen Yang | University of Chicago, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Haihao Lu",
+        "affiliation": "MIT, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Zedong Peng",
+        "affiliation": "MIT, Cambridge, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jinwen Yang",
+        "affiliation": "University of Chicago, IL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "679b",
+    "sortable_time": "2025-11-06_11:51:00_12:12:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717950"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/715594",
+    "paper_endpoint": "Paper/715594",
+    "paper_id": "715594",
+    "topic": "Qubo.Jl: A Julia Ecosystem to Equip Proces Systems Engineering with Novel Optimization Paradigms",
+    "title": "Qubo.Jl: A Julia Ecosystem to Equip Proces Systems Engineering with Novel Optimization Paradigms",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "58642",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering II",
+    "session_number": "679",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Quantum algorithms and devices are being developed by multiple participants in a diverse scientific environment [1]. Much of this research effort is oriented towards Quantum Optimization [2], as it is regarded as one of the most relevant applications of quantum computing for industrial activities such as Process Systems Engineering, alongside Quantum Chemistry and Quantum Machine Learning [3]. Quantum and other physics-inspired optimization algorithms, however, are often limited to handling problems that fit the Quadratic Unconstrained Binary Optimization (QUBO) framework or one of its equivalent formulations, such as the Ising Spin model. Moreover, from an infrastructure standpoint, access to these resources is usually granted through each vendor's specific interface. Together, these aspects pose a barrier for incoming practitioners to experiment with new methods and compare platforms within a common practical scenario [4]. With this in mind, QUBO.jl[5, 6] was developed to bridge the gap between emerging optimization methods and critical industrial applications. In this talk, we would like to show how QUBO.jl makes Quantum Optimization accessible to Process System Engineering practitioners as it integrates a heterogeneous hardware and software landscape under a standard interface, providing users with a smooth modeling experience. By leveraging JuMP's extension capabilities, QUBO.jl makes it simple to access quantum and other novel devices as if they were regular optimization solvers. This makes it the ideal environment to try and explore potential applications. QUBO.jl extends the JuMP (Julia Mathematical Programming) algebraic modeling language to provide a universal interface for multiple types of quantum and other physics-inspired solution methods in the same way that regular solvers are made available. This was made possible by the development of the QUBODrivers.jl [7] package, which provides a set of tools for rapidly integrating heterogeneous QUBO solver interfaces into the JuMP ecosystem. This common interface exempts interested experts from adapting to the specificities of each platform, especially if one considers that many PSE specialists already use JuMP daily. On the other hand, ToQUBO.jl [8] provides an extensive set of tools for automatically reformulating mathematical models into Quadratic Unconstrained Binary Optimization (QUBO). It allows users to send more complex models they already use and are familiar with directly to quantum devices. ToQUBO performs all necessary transformations, including variable encoding, constraint penalization, and polynomial degree reduction, and maps results back to the original model, offering users a transparent interface to quantum optimization. Its interface was integrated with DisjunctiveProgramming.jl [9], another JuMP-compatible package, to provide support for Generalized Disjunctive Programming (GDP) models [10]. This was a fundamental step in making existing models from the PSE literature automatically translatable to QUBO. References [1] https://arxiv.org/pdf/2310.03011 [2] https://arxiv.org/abs/2312.02279 [3] https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.17651 [4] https://arxiv.org/pdf/2409.06919v1 [5] https://github.com/JuliaQUBO/QUBO.jl [6] https://arxiv.org/abs/2307.02577 [7] https://github.com/JuliaQUBO/QUBODrivers.jl [8] https://github.com/JuliaQUBO/ToQUBO.jl [9] https://github.com/hdavid16/DisjunctiveProgramming.jl [10] https://www.sciencedirect.com/science/article/pii/B9780443288241505731",
+    "presenting_author": "Pedro Maciel Xavier | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Pedro Maciel Xavier | Purdue University, West Lafayette, IN",
+      "David E. Bernal Neira | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pedro Maciel Xavier",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "David E. Bernal Neira",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "679c",
+    "sortable_time": "2025-11-06_12:12:00_12:33:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/715594"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716572",
+    "paper_endpoint": "Paper/716572",
+    "paper_id": "716572",
+    "topic": "Optimization with Piecewise-Linear Functions Using Generalized Disjunctive Programming",
+    "title": "Optimization with Piecewise-Linear Functions Using Generalized Disjunctive Programming",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "58642",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering II",
+    "session_number": "679",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Piecewise-linear functions and their computational performance as surrogate models within optimization problems continue to attract attention within the engineering and operations research communities. Formulating piecewise-linear functions as mixed-integer programs (MIPs) is useful across several application spaces, especially approximating nonconvex functions to convert mixed-integer nonlinear programs to mixed-integer linear programs. Additionally, several recent papers propose formulations for embedding machine learning models that are in fact piecewise-linear functions into optimization problems. These include neural networks with rectified-linear unit activation functions (Fischetti & Jo, 2018), gradient-boosted decision trees (Mistry et al., 2021), and linear model decision trees (Ammari et al., 2023). The broad applicability of piecewise-linear surrogates justifies additional investigation into the best formulations for including piecewise-linear functions in optimization problems. The literature contains several different MIP formulations for piecewise-linear functions. Vielma et al. (2008, 2010), Vielma (2015, 2018) and Huchette and Vielma (2023) present the multiple-choice, disaggregated convex-combination, convex-combination, disaggregated logarithmic, logarithmic, binary zigzag, general integer zigzag, and incremental models. They comment on the properties of these formulations and compare their computational performance for univariate and bivariate piecewise-linear functions embedded within optimization problems. In this work, we present generalized disjunctive programming (GDP) formulations for piecewise-linear functions and show that we can recover many of the well-known MIP formulations in the literature by applying standard big-M, convex-hull, and multiple big-M transformations. In addition to well-known formulations, we show that systematic application of GDP transformations yields formulations that were previously unconsidered. We demonstrate the contrib.piecewise package in Pyomo as a tool for generating these formulations automatically, and we run computational comparisons of these formulations for multivariate piecewise-linear functions. We import nonlinear model instances from MINLPLib (Bussieck et al., 2003) and replace the nonlinear expressions in these instances with piecewise-linear approximations using the contrib.piecewise package. We then generate the different GDP representations of these piecewise-linear functions and transform the GDPs into MIPs by applying the big-M, convex-hull, and multiple big-M transformations. We report the time to solve these MIPs using Gurobi. Results show that the formulation of multivariate piecewise-linear functions corresponding to the convex-combination model performs well across many instances from MINLPLib. Similar formulations derived from the same GDP representation also perform well. We expect that the performance profiles of these formulations will change with new versions of Gurobi. Therefore, we provide a general software implementation of all the formulations so that we and others can benchmark with new solver versions in the future. Acknowledgements Sandia National Laboratories is a multimission laboratory managed and operated by National Technology & Engineering Solutions of Sandia, LLC, a wholly owned subsidiary of Honeywell International Inc., for the U.S. Department of Energy’s National Nuclear Security Administration under contract DE-NA0003525. This paper describes objective technical results and analysis. Any subjective views or opinions that might be expressed in the paper do not necessarily represent the views of the U.S. Department of Energy or the United States Government References Ammari BL, Johnson ES, Stinchfield G, Kim T, Bynum M, Hart WE, Pulsipher J, Laird CD (2023). “Linear Model Decision Trees as Surrogates in Optimization of Engineering Applications. Computers & Chemical Engineering 178:108347 Bussieck MR, Drud AS, Meeraus A (2003) “MINLPLib—A Collection of Test Models for Mixed-integer Nonlinear Programming.” INFORMS Journal on Computing 15:114–119 Fischetti, M and Jo, J (2018). “Deep Neural Networks and Mixed Integer Linear Optimization.” Constraints, 23:296–309. Huchette J, Vielma JP (2023) “Nonconvex Piecewise Linear Functions: Advanced Formulations and Simple Modeling Tools.” Operations Research 71:1835–1856 Mistry, M, Letsios, D, Krennrich, G, Lee, RM, and Misener, R (2021). “Mixed-integer Convex Nonlinear Optimization with Gradient-boosted Trees Embedded.” INFORMS Journal on Computing, 33:1103–1119. Vielma JP (2015) “Mixed Integer Linear Programming Formulation Techniques.” SIAM Review 57:3–57 Vielma JP (2018) “Embedding Formulations and Complexity for Unions of Polyhedra.” Management Science 64:4721–4734 Vielma JP, Ahmed S, Nemhauser G (2010) “Mixed-integer Models for Nonseparable Piecewise-linear Optimization: Unifying Framework and Extensions.” Operations Research 58:303–315 Vielma JP, Keha AB, Nemhauser GL (2008) “Nonconvex, Lower Semicontinuous Piecewise Linear Optimization.” Discrete Optimization 5:467–488",
+    "presenting_author": "Bashar Ammari | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Bashar Ammari | Carnegie Mellon University, Pittsburgh, PA",
+      "Emma Johnson | Center for Computing Research, Sandia National Laboratories, Albuquerque, NM",
+      "Carl Laird | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bashar Ammari",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Emma Johnson",
+        "affiliation": "Center for Computing Research, Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Carl Laird",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "679d",
+    "sortable_time": "2025-11-06_12:33:00_12:54:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716572"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716624",
+    "paper_endpoint": "Paper/716624",
+    "paper_id": "716624",
+    "topic": "Variable Aggregation for Nonlinear Optimization",
+    "title": "Variable Aggregation for Nonlinear Optimization",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "58642",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering II",
+    "session_number": "679",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Large scale nonlinear programs (NLPs) are encountered frequently in chemical engineering applications. Successfully solving these nonlinear optimization problems online for various process parameters is key to achieving economic savings and continuous operation. However, state of the art non-linear solvers can face difficulties in convergence when optimizing for certain challenging applications. Variable aggregation has been studied in great detail as a pre-solve algorithm for linear and mixed integer optimization and has shown to help in solving challenging instances [1]. Although, more recently some nonlinear solvers and algebraic modeling languages have implemented variable aggregation as a pre-solve for nonlinear optimization problems, there exists no formal analysis on its impact on constrained nonlinear optimization problems. We introduce a novel approximate maximum variable aggregation strategy [2] to aggregate as many variables as possible in an NLP. The approximate maximum variable aggregation is compared against other structure preserving variable aggregation approaches in terms of convergence reliability and solve time. Our results show that variable aggregation generally improves convergence reliability of the open-source nonlinear solver IPOPT [3]. Furthermore, variable aggregation can help in reducing the solve-time, however hessian evaluation can become a bottle neck if the number of nonlinear variables per constraint increases significantly due to aggregation. In this talk, we describe our variable aggregation framework developed in Pyomo [4], give details on the approximate-maximum aggregation algorithm and demonstrate that variable aggregation can lead to better convergence reliability on various test problems. References [1] T. Achterberg, R. E. Bixby, Z. Gu, E. Rothberg, and D. Weninger, “Presolve Reductions in Mixed Integer Programming,” INFORMS Journal on Computing , Nov. 2019. [2] S. Naik, L. Biegler, R. Bent, and R. Parker, “Variable aggregation for nonlinear optimization problems,” Feb. 21, 2025, arXiv : arXiv:2502.13869. [3] A. Wächter, L. Biegler, Y. Lang, and A. Raghunathan, IPOPT: An interior point algorithm for large-scale nonlinear optimization . 2002. [4] W. E. Hart, J.-P. Watson, and D. L. Woodruff, “Pyomo: modeling and solving mathematical programs in Python,” Mathematical Programming Computation , vol. 3, no. 3, pp. 219–260, 2011.",
+    "presenting_author": "Sakshi Naik | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Sakshi Naik | Carnegie Mellon University, Pittsburgh, PA",
+      "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA",
+      "Russell Bent | Los Alamos National Laboratory, NM",
+      "Robert Parker | Los Alamos National Laboratory, NM"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sakshi Naik",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Lorenz Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Russell Bent",
+        "affiliation": "Los Alamos National Laboratory, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Robert Parker",
+        "affiliation": "Los Alamos National Laboratory, NM",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "679e",
+    "sortable_time": "2025-11-06_12:54:00_13:15:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716624"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714477",
+    "paper_endpoint": "Paper/714477",
+    "paper_id": "714477",
+    "topic": "Exploring Disjunctive Programming Formulations for Optimal Design of Distillation Columns",
+    "title": "Exploring Disjunctive Programming Formulations for Optimal Design of Distillation Columns",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "58642",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering II",
+    "session_number": "679",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Motivation Automating process synthesis presents a formidable challenge in chemical engineering. Developing frameworks that are both general and accurate – while remaining computationally tractable – is particularly demanding. To further increase the solvable problem size, an advanced optimization framework is proposed, leveraging Generalized Disjunctive Programming (GDP) for process synthesis and design problems. This framework allows for multiple improvements over existing Mixed Integer Nonlinear Programming (MINLP) formulations, aiming to enhance feasibility and reduce solution time. Process synthesis problems are typically posed as nonlinear optimization problems with continuous and discrete variables. Traditionally, these are formulated as MINLP problems, where discrete variables appear as integer or binary variables. These are usually relaxed to continuous variables to solve the MINLP. In practice, the (in-)equality constraints are obtained starting from logical expressions, which are reformulated as algebraic constraints. Disjunctive expressions are typically converted into mixed integer constraints by using “big-M” constraints [1]. An alternative reformulation for treating disjunctions is the convex hull (chull) formulation, which achieves superior relaxation tightness but is rarely used due to its greater complexity and potential numerical difficulties [2]. Recent advances in GDP allow for automatic reformulation of optimization problems, e.g., by big-M or chull. Furthermore, dedicated GDP solution algorithms are now available [3]. Unlike conventional Branch and Bound or Outer Approximation algorithms, their logic-based counterparts can neglect inactive equations, reducing the size and complexity of subproblems. This is achieved by deactivating unused model equations during the solution procedure, as shown by Lee et al. [4]. This point is particularly interesting for chemical engineering, as a lot of time is spent computing NLP subproblems. Also, model formulation can have a large impact on the solution times of MINLP [1]. However, evaluating various model formulations tends to be rather tedious. Especially detailed model formulations that include rigorous thermodynamics and kinetics tend to increase the model size significantly. As a first step for further exploitation of GDP for process synthesis and process design, we developed a modeling environment and automatic code generation framework for GDP. This contribution aims at investigating different problem formulations for GDP in process design facilitated by the new framework. Methodology For maximum flexibility and independence from any given programming language, the modeling and problem formulation is implemented within MOSAICmodeling [5], a platform that allows for model formulation at the documentation level. Users formulate equations in LaTeX, which are then translated into MathML/XML preserving all relevant information while remaining as general as possible. The first step hereby consists in the definition of a suitable notation. This defines all possibly occurring variables and their indices and sets the basis of all MathML/XML operations. To include GDP into this workflow, already existing variable definitions were extended to also include logical / Boolean variables. Equations are created based on those extended notations: Basic logical operators – and (∧), or (∨), not (¬), implication (⇒), and equivalence (⇔) – were added to include logical expressions. Furthermore, disjunctions can be created by linking Boolean variables with single equations or sets of equations. The resulting systems defined in MathML/XML can be exported to any programming language using MOSAICmodeling’s UDLS feature [6], which has been extended to capture connections between disjunctive, logical variables, and their associated equations, allowing for code export to GAMS, Julia, and Pyomo. Four different MINLP/GDP formulations were implemented in MathML/XML in MOSAICmodeling, exported, and evaluated within pyomo regarding their benefits in optimizing thermal separation problems. For this case study, the MINLP formulation of Kraemer et al. [7] is evaluated (pureMINLP), which determines the optimal column height to achieve desired product specifications while minimizing costs for a multicomponent distillation column. The MINLP formulation varies locations of feed, reflux, and boilup streams. Each separation stage is modeled rigorously applying thermodynamics of varying complexity. An alternative, GDP formulation (pureGDP) specifies disjunctions for each separation stage as in [QGrossmann2000rig]. The disjunctive variables decide which stages are active or not. For active stages, the stage formulation is the same as above. For inactive stages, a passthrough of liquid and vapor streams without thermodynamic calculations is applied. The feed location is modeled as a nested disjunction for the active stages. Two additional formulations, in between pureMINLP and pureGDP, apply different levels of relaxation: Feed relaxed GDP (fr-GDP) employs the disjunctive formulation for the stages, while applying pureMINLP’s formulation for the feed location. Decision variable GDP (dv-GDP) on the other hand, applies a formulation that translates directly into the pureMINLP formulation if the dv-GDP is relaxed by BigM and the M is chosen accordingly. The four different MINLP/GDP formulations are combined with two different implementations for thermodynamics calls: (1) explicit formulation using the Antoine equation for vapor pressures, linearized heats of evaporation, and constant specific heat capacities; (2) external thermodynamic function calls using a CAPE-OPEN interface with TEA as thermodynamics engine [8]. Note that the same thermodynamic models are used for explicit and external thermodynamics implementations to ensure comparability of the solutions. However, the interface supports any CAPE-OPEN compliant thermodynamics engine, allowing for even highly complex equations of state, such as, PC-SAFT. Future work will therefore also include non-idealities, which is not in scope of this contribution. To evaluate the performance of available GDP solvers, the formulations in MathML/XML are exported to pyomo. Exports to julia and GAMS were also developed. However, they currently lack support for dedicated GDP solvers. Results Three cases were investigated with respect to runtime until an optimal solution was found: a column with up to 10 stages and internal thermodynamics, up to 10 stages and external thermodynamics, and up to 20 stages and external thermodynamics. For comparison, the runtime of the GDP problems (pureGDP, fr-GDP, dv-GDP) is given relative to the runtime of pureMINLP’s solution. This indicates the additional time that the GDP formulations require for each respective case. The optimal solution always shows 8 active stages with the feed located on the 5th stage from above. The results of the case study for the best performing GDP formulation are shown in the figure below. We discovered that all GDP formulations perform worse than the pureMINLP formulation. However, some formulations outperform others. Although the runtime of the best-performing GDP formulation (fr-GDP) consistently exceeds that of the MINLP formulation, the relative runtime surplus / difference decreases as system complexity increases. This is important as future problems, especially synthesis problems, will be a lot more complex than this study. Seeing that the runtime for (fr-GDP) scales better with increasing complexity, we assume that GDP formulations may be beneficial for larger process synthesis problems. This study also shows that simply transforming an MINLP formulation into a GDP does not necessarily yield benefits. Runtime strongly varies across the three GDP formulations. To this end, further investigations for efficient exploitation of GDP for process synthesis is required. Our modeling framework in MathML/XML now supports fast formulation of highly complex GDPs and evaluation in a variety of supporting platforms (pyomo, julia, GAMS), speeding up the process of tailoring problem formulations. The investigated problem sizes are small, chosen as a proof of concept for formulation, code generation, and solution of GDPs. Given the runtime of the investigated problems, increasing system size is feasible. Future work will aim to increase the total system size and move towards more general process synthesis, potentially putting GDP problem runtime below that of relaxed MINLP. References [1] L. T. Biegler, I. E. Grossmann und A. W. Westerberg, Systematic Methods of Chemical Process Design, 1997. [2] N. W. Sawaya and G. I. E., \"Computational implementation of non-linear convex hull reformulation,\" Computers & Chemical Engineering, vol. 31, no. 7, pp. 856-866, 200 [3] Q. Chen, E. S. Johnson, J. D. Siirola und I. E. Grossmann, „Pyomo.GDP: Disjunctive Models in Python,“ Computer Aided Chemical Engineering, Bd. 44, pp. 889-894, 2018. [4] S. Lee und I. E. Grossmann, „New algorithms for nonlinear generalized disjunctive programming,“ Computers & Chemical Engineering, Bd. 24, Nr. 9-10, pp. 2125-2141, 2000. [5] E. Esche, C. Hoffmann, M. Illner, D. Müller, S. Fillinger, G. Tolksdorf, H. Bonart, G. Wozny und J. Repke, „MOSAIC – Enabling Large‐Scale Equation‐Based Flow Sheet Optimization,“ Chemie Ingenieur Technik, Bd. 89, Nr. 5, p. 620–635, 2017. [6] G. Tolksdorf, E. Esche, G. Wozny und J.-U. Repke, „Customized code generation based on user specifications for simulation and optimization,“ Computers & Chemical Engineering, Bd. 121, pp. 670-684, 2019. [7] K. Kraemer, S. Kossack und W. Marquardt, „Efficient Optimization-Based Design of Distillation Processes for Homogeneous Azeotropic Mixtures,“ Industrial & Engineering Chemistry Research, Bd. 48, Nr. 14, p. 6749–6764, 2009. [8] J. Baten, R. Taylor und H. Kooijman, „Using Chemsep, COCO and other modeling tools for versatility in custom process modeling,“ AIChE Annual Meeting, Conference Proceedings, 2010.",
+    "presenting_author": "Lukas Scheffold | Bundesanstalt für Materialforschung und -prüfung, Berlin, Germany",
+    "authors": [
+      "Lukas Scheffold | Bundesanstalt für Materialforschung und -prüfung, Berlin, Germany",
+      "Erik Esche | Bundesanstalt für Materialforschung und -prüfung, Berlin, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Lukas Scheffold",
+        "affiliation": "Bundesanstalt für Materialforschung und -prüfung, Berlin, Germany",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Erik Esche",
+        "affiliation": "Bundesanstalt für Materialforschung und -prüfung, Berlin, Germany",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "679f",
+    "sortable_time": "2025-11-06_13:15:00_13:36:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714477"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/715164",
+    "paper_endpoint": "Paper/715164",
+    "paper_id": "715164",
+    "topic": "The Objective Reduction Community Algorithm (ORCA)",
+    "title": "The Objective Reduction Community Algorithm (ORCA)",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "58642",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering II",
+    "session_number": "679",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Many-objective optimization problems (MaOPs), particularly those involving four or more objectives, inherently appear in decision making for sustainable process systems but present significant challenges in computation and decision-making due to the high dimensionality of the objective space. The resulting high dimensional Pareto frontier is challenging to visualize and interpret [1], while generating a Pareto frontier using rigorous methods such as weighted sum and epsilon constraint approaches is prohibitive due to the number of single objective problems to solve scaling exponentially with objective dimensionality. To address this, we have developed a novel algorithm capable of systematically reducing the objective dimensionality of both mixed-integer linear and nonlinear MaOPs [2], which we call the Objective Reduction Community Algorithm (ORCA). For linear MaOPs, derivatives of objectives are projected onto the constraint surfaces of the problem. Strength of interaction is defined as the inner product of the projected vectors and a weighted sum of the interaction strengths over all constraints is used is used to determine the total objective correlation strength. For nonlinear problems, we extend this approach using an outer approximation-like method to generate linearized constraint surfaces. We strategically sample the region most likely to be active in determining the Pareto frontier by generating new linearization points using steps within the cone of objective gradients, converting the original nonlinear problem and to a linear problem. Objective correlation strengths are embedded as edge weights in a graph where each objective function is a node. Community detection is used on this graph to reduce objective dimensionality by identifying groupings of objectives whereby all objectives in the same group are correlated, while objectives in different groups are competing. To enhance its accessibility and impact, we are developing an open-source package in Julia and Python named ORCA. This tool will enable users to define the variables, constraints, and objectives within their MaOP of interest and automatically apply our dimensionality reduction algorithm to determine two or three groups of objectives, which can then form the basis of a solvable and interpretable multi-objective optimization problem with minimal tradeoff information loss. Designed to integrate with existing optimization workflows (JuMP and Pyomo), ORCA empowers practitioners and researchers to effectively interpret the tradeoffs between many sustainability objectives. We conclude the talk by discussing a few examples of the successful application of ORCA. For example, ORCA has been used to analyze the competing or correlated nature of cost and emissions objectives in green ammonia production [3]. It has also identified the objective groupings in process design problems [4] and elucidated relationships between planetary boundaries in hydrogen supply chain optimization, providing insights into maintaining sustainable indices. [1] de Freitas, A. R., Fleming, P. J., & Guimaraes, F. G. (2015). Aggregation trees for visualization and dimension reduction in many-objective optimization. Information Sciences , 298 , 288-314. [2] Russell, Justin M., and Andrew Allman. \"Sustainable decision making for chemical process systems via dimensionality reduction of many objective problems.\" AIChE Journal 69.2 (2023): e17962. [3] Wang, H., & Allman, A. (2024). Analysis of the correlating or competing nature of cost-driven and emissions-driven demand response. Computers & Chemical Engineering , 181 , 108520. [4] Wang, H., & Allman, A. Dimensionality Reduction in Optimal Process Design with Many Uncertain Sustainability Objectives. Syst. Control Trans, 3, 920-926.",
+    "presenting_author": "Hongxuan Wang | University of Michigan, Ann Arbor",
+    "authors": [
+      "Hongxuan Wang | University of Michigan, Ann Arbor",
+      "Andrew Allman | University of Michigan, Ann Arbor"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hongxuan Wang",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Andrew Allman",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "679g",
+    "sortable_time": "2025-11-06_13:36:00_13:57:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/715164"
+  }
+]

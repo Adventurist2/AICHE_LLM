@@ -1,0 +1,345 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/629258",
+    "paper_endpoint": "Paper/629258",
+    "paper_id": "629258",
+    "topic": "On the Use of Data Analytics Technology to Replace Dual Problems and Improve Decomposition Algorithms for Global Optimization Using Cutting Plane Approximations",
+    "title": "On the Use of Data Analytics Technology to Replace Dual Problems and Improve Decomposition Algorithms for Global Optimization Using Cutting Plane Approximations",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46966",
+    "session_title": "Data-driven optimization",
+    "session_number": "476",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The work explores data analytics in the development of optimization methodology for global optimization as applied through decomposition methods and cutting plane algorithms. The basic idea would be to treat cutting planes as data populations generated during the implementation of the method and at each separate iteration of the algorithm; the elements of the population are renewed based on the incumbent (local) solution. Data intelligence is subsequently applied to measure, fathom, and screen planes, also to represent data spaces of the dual problem. Data technology is applied to explore metrics, the geometry of the space and aims to evaluate correlations in the solution space. The data approach has been tested against a library of optimization problems formulated as quadratic and box constrained programs that feature varying sparsity and density in their symmetric matrix Q. The work capitalizes and builds on innovations by Baltean-Lugojan et al. (2019) who recently presented a generic and effective outer approximation method suitable for semidefinite relaxations. The key element of their work is to decompose high-dimensional cutting planes into their low-dimensional counterparts. Such a decomposition results in an combinatorial explosion in available cutting planes for the s eparation problem, and thus they have introduced novel selection measures based on feasibility violation and improvement of the objective function. Their separation problem has been researched using clustering techniques. New metrics are explored by means of geometrical interpretation of the similarities cutting planes are expected to be baring depending on the solution of the Primal problem. Apart from the Euclidean metric, an affinity metric is presented to efficiently evaluate and screen cutting planes generated from different subspaces. The cosine similarity is tested to evaluate cutting planes based on the direction they are driving the objective function. Data analytics are explored with the application of a range of clustering techniques while spectral clustering is applied with a twofold objective: visualize the solution space and represent the data in the dual space. Analytics are found to dramatically improve the duality gap and the quality of the solution. Computational overheads in the use have been tested with accelerated versions of clustering and a combined use of short-cut methods towards a number of hybrid variants that are compared using the set of test problems. The work identifies a lot of promising ground in the use of data analytics. Other than replacing the dual problem by a data-driven approach, advances include significant improvements in closing the duality gap in the optimization. This is a consistent result in all the problems tested as depicted in Figure 1. Overall, as the complexity of the problems increases, high dimensionality and high density, the gap closure is widened; in problems of Set 3 and Set 4 , QPs with 100 variables and 50 and 75 density respectively, the proposed clustering techniques outperform the Reference algorithm derived from Baltean-Lugojan et al. (2019). The best performance is observed by the use of the a ffinity metric algorithm followed by Hybrid1. In the cases of lower complexity the both the reference algorithm and the proposed algorithms have closed the duality gap. Figure 2 illustrates the convergence of the various examined algorithms for a fixed problem with 100 variables and 50% density. It is apparent that neither of the algorithms have reached the global optimum, however the new clustering approaches are converging faster in terms of optimization rounds and reach a lower final solution. To further investigate the improvement of the new algorithms, the ratio of the deference of % gap closure between reference and new algorithm (%Δf) to %gap closure of reference (f*) is computed. In Figure 3 the % improvement in the solution quality scales with the complexity of the set problem, in Set 3 the novel methods propose no improvements in the final solution, in Set 4 the are up to 40% for the new metric clustering and in Set 5 the y spike at almost 90% of the reference algorithm which is consistent with Figure 2 as well. We can summarize that the geometry of space and the metrics hold a very significant impact on the performance. In other words, the geometrical interpretation of the dual space holds the most promising lines for future work. References: Radu Baltean-Lugojan, Ruth Misener, Pierre Bonami and Andrea Tramontani. Scoring positive semidefinite cutting planes for quadratic optimization via trained neural networks. 2019",
+    "presenting_author": "Asimina Marousi | University College London, WC1E 7JE, United Kingdom",
+    "authors": [
+      "Asimina Marousi | University College London, WC1E 7JE, United Kingdom",
+      "Vasiliki Deligianni | National Technical University of Athens, Greece",
+      "Apostolos Chalkias | National & Kapodistrian University of Athens, Greece",
+      "Antonios Kokosis | National Technical University of Athens, Greece"
+    ],
+    "authors_structured": [
+      {
+        "name": "Asimina Marousi",
+        "affiliation": "University College London, WC1E 7JE, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Vasiliki Deligianni",
+        "affiliation": "National Technical University of Athens, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Apostolos Chalkias",
+        "affiliation": "National & Kapodistrian University of Athens, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Antonios Kokosis",
+        "affiliation": "National Technical University of Athens, Greece",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "476a",
+    "sortable_time": "2021-11-10_12:30:00_12:49:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/629258"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/631324",
+    "paper_endpoint": "Paper/631324",
+    "paper_id": "631324",
+    "topic": "Deep Neural Network As Surrogates for Intractable Constraints and Problem Dimension Reduction: Security Constrained AC Optimal Power Flow",
+    "title": "Deep Neural Network As Surrogates for Intractable Constraints and Problem Dimension Reduction: Security Constrained AC Optimal Power Flow",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46966",
+    "session_title": "Data-driven optimization",
+    "session_number": "476",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Optimal power flow (OPF) problems are frequently used in industry and academia to find economically optimal generator setpoints that balance given load demands (Cain 2012). Ideally, optimal solutions must also be “ N-1 secure”, which means that the system can absorb contingency events (e.g., transmission line or generator failures) without loss of service. Current practice is to solve the OPF problem and then check a subset of contingencies against heuristic values, resulting in suboptimal solutions. Unfortunately, online solution of the full OPF including N-1 contingencies, leads to a two-stage stochastic programming formulation, which is intractable for even modest sized electrical grids. To address this challenge, we present an efficient method to replace N-1 security constraints with a Neural Network (NN) classification model that maps the feasible space. The first challenge towards training an accurate NN representation of the secure operation is sampling, due to non-convexity, high dimensionality (10,000’s of variables) and large variable ranges of the system state space. Our approach introduces an optimization-based adaptive sampling technique (Dias 2019, Metta 2021) which aims to find informative sampling locations for our NN classifier (i.e., boundary points and points with high prediction error). This is distinct from existing sampling approaches for this problem which use hyperspheres (Venzke et al. 2019). We will present a non-linear programming formulation, that when solved using multistart approaches, leads to targeted addition of boundary samples that improve the classification accuracy of the NN models. Moreover, the availability of a full OPF N-1 contingency formulation enables us to solve an optimization problem that leads to new samples in regions where the classifier has maximum deviations from the full model. These two metrics combined lead to accurate NN classifiers of the security region, with reduced sampling requirements. Once the NN classifier model is trained and validated, it is embedded as a constraint into the original OPF formulation, which is a nonlinear, nonconvex problem with equations that are based on mechanistic knowledge. Hence, the overall OPF+NN formulation is a hybrid model (i.e., comprised of both physics-based and data-based constraints). We show that solving this hybrid optimization problem to get secure solutions is accurate and efficient when compared to the full OPF with N-1 contingency problem. We also investigate the performance of different NN models including non-linear sigmoid activation functions and linear ReLU networks. The former naturally lead to an overall non-linear program (NLP) formulation, while the latter can be approximated using complementarity formulations into NLPs. We show that solutions found with the hybrid formulation have marginally increased computational time when compared to unconstrained OPF but are much more secure to contingency events. Finally, through this work we address important challenges in hybrid modeling including the effects of surrogate complexity vs accuracy, hybrid sampling techniques using physics-based formulations and surrogates, and how to efficiently embed NN models using the Pyomo environment (Hart 2017). Disclaimer : Sandia National Laboratories is a multimission laboratory managed and operated by National Technology and Engineering Solutions of Sandia LLC, a wholly owned subsidiary of Honeywell International Inc. for the U.S. Department of Energy’s National Nuclear Security Administration under contract DE-NA0003525. This paper describes objective technical results and analysis. Any subjective views or opinions that might be expressed in the paper do not necessarily represent the views of the USDOE or the United States Government. References: M.B. Cain, R.P. Oneill, A. Castillo, 2012, History of Optimal Power Flow and Formulations, Federal Energy Regulatory Commision, p:1-36 Dias, Lisia, Atharv Bhosekar, and Mariathi Ierapetritou. \"Adaptive Sampling Approaches for Surrogate- Based Optimization.\" Computer Aided Chemical Engineering . Vol. 47. Elsevier, 2019. 377-384. W.E. Hart, C.D. Laird, J.P. Watson, D.L. Woodruff, G.A. Hackebeil, B.L. Nicholson, J.D. Siirola, 2017, Pyomo – Optimization Modeling in Python. Second Edition. Vol. 67. Springer. Metta, Nirupaplava, Rohit Ramachandran, and Marianthi Ierapetritou. \"A novel adaptive sampling based methodology for feasible region identification of compute intensive models using artificial neural network.\" AIChE Journal 67.2 (2021): e17095 Venzke, D. Molzahn, S. Chatzivasileiadis, 2019, Efficient Creation of Datasets for Data-Driven Power System Applications, Electrical Engineering and Systems Science: Systems and Control, Under Review. Venzke, D.T. Viola, J. Mermet-Guyennet, G.S. Misyris, S. Chatzivasileiadis, 2020, Neural Networks for Encoding Dynamic Security-Constrained Optimal Power Flow to Mixed-Integer Linear Programs, Under Review.",
+    "presenting_author": "Zachary Kilwein | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Zachary Kilwein | Georgia Institute of Technology, Atlanta, GA",
+      "Jordan Jalving | Sandia National Laboratories, Edgewood, NM",
+      "Michael Eydenberg | Sandia National Laboratories, Albuquerque, NM",
+      "Logan Blakely | Sandia National Laboratories, Albuquerque, NM",
+      "Carl Laird | Sandia National Laboratories, Albuquerque, NM",
+      "Fani Boukouvala | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zachary Kilwein",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jordan Jalving",
+        "affiliation": "Sandia National Laboratories, Edgewood, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Eydenberg",
+        "affiliation": "Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Logan Blakely",
+        "affiliation": "Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Carl Laird",
+        "affiliation": "Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Fani Boukouvala",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "476b",
+    "sortable_time": "2021-11-10_12:49:00_13:08:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/631324"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632218",
+    "paper_endpoint": "Paper/632218",
+    "paper_id": "632218",
+    "topic": "Optimization of Fischer-Tropsch Microchannel Reactor Using Computational Fluid Dynamics and Transfer-Learned Bayesian Optimization.",
+    "title": "Optimization of Fischer-Tropsch Microchannel Reactor Using Computational Fluid Dynamics and Transfer-Learned Bayesian Optimization.",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46966",
+    "session_title": "Data-driven optimization",
+    "session_number": "476",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Fischer-Tropsch(F-T) synthesis is a highly exothermic reaction that converts syngas into long chain hydrocarbons. This reaction cause catalyst deactivation such as sintering and fouling in catalysts due to a high temperature gradient [1]. The microchannel reactor is suitable for F-T synthesis because of its heat transfer efficiency, but high temperature gradient can be occurred. The method of discrete dilution is one method to prevent high temperature gradient which is to divide the reactor into several zones so that a different amount of catalyst is loaded separately [2]. Changes in the method of discrete dilution affect production of long hydrocarbons. Hence, optimization of the loading amount of catalyst for each zone is necessary for productivity of long chain hydrocarbon and preventing catalyst deactivation. Computational fluid dynamics (CFD) is widely used to analyze temperature profile of F-T synthesis in microchannel [2, 3]. Bayesian optimization (BO) is an effective tool for CFD- based optimization in that it purses the maximum efficiency through a solid theoretical background [4]. However, BO is a cold-start approach, which requires numerous function evaluations until it gives a meaningful result [5, 6]. Transfer learning, a method of using knowledge from a previous task to a new task, which improves performance when modeling a new task. Therefore, integration of BO and transfer-learning for CFD-based optimization reduce the number of CFD simulation runs, and thus alleviating the computational requirement. In this study, we propose the integration of BO and transfer-learning to optimize the F-T microchannel reactor with a length of 600 mm. In BO, CFD simulation is replaced by surrogate model. We chose the gaussian process as a surrogate model which is suitable for uncertainty estimation when dealing with stochastic data. In this study, the optimization variable is packing length and loading amount of catalyst. The objective function of optimization is selected to decrease the difference between inlet and peak temperature inside the reactor, and increase the productivity of long chain hydrocarbon. First, suppose that the historical data of F-T reactor is presented. After that, the optimization of the microchannel reactor with the inlet temperature changed was set as the target task. The transfer learning is utilized to obtain the gaussian process, which is the initial surrogate model. In the target task optimization, the mean and covariance functions are calculated using source task data as initial values to construct the surrogate model for BO. Since the surrogate model of the source task and the target task are different, it is assumed that there is uncertainty in the source task data when used in the target task optimization. BO used this surrogate model to select the next point to obtain from CFD simulation, then update the surrogate model. The influence of the source task data is adjusted through uncertainty calculated using target task data so that a surrogate model suitable for the target task function is constructed. The proposed model reduces the number of iterations to obtain an optimal value of optimization with CFD model than that of the traditional BO. References [1]. Tsakoumis, Nikolaos E., et al. \"Deactivation of cobalt based Fischer–Tropsch catalysts: a review.\" Catalysis Today 154.3-4 (2010): 162-182. [2]. Na, Jonggeol, et al. \"Multi-objective optimization of microchannel reactor for Fischer-Tropsch synthesis using computational fluid dynamics and genetic algorithm.\" Chemical Engineering Journal 313 (2017): 1521-1534. [3]. Deshmukh, Soumitra R., et al. \"Scale-up of microchannel reactors for Fischer− Tropsch synthesis.\" Industrial & engineering chemistry research 49.21 (2010): 10883-10888. [4]. Park, Seongeon, et al. \"Multi-objective Bayesian optimization of chemical reactor design using computational fluid dynamics.\" Computers & Chemical Engineering 119 (2018): 25-37. [5]. Joy, Tinu Theckel, et al. \"A flexible transfer learning framework for Bayesian optimization with convergence guarantee.\" Expert Systems with Applications 115 (2019): 656-672. [6]. Chuang, Yao-Chen, et al. \"Transfer learning for efficient meta-modeling of process simulations.\" Chemical Engineering Research and Design 138 (2018): 546-553.",
+    "presenting_author": "Kyoungmin Lee | Seoul National University, South Korea",
+    "authors": [
+      "Kyoungmin Lee | Seoul National University, South Korea",
+      "Jong Min Lee | Seoul National University, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kyoungmin Lee",
+        "affiliation": "Seoul National University, South Korea",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jong Min Lee",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "476c",
+    "sortable_time": "2021-11-10_13:08:00_13:27:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632218"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/629516",
+    "paper_endpoint": "Paper/629516",
+    "paper_id": "629516",
+    "topic": "Computations and Optimization for Catalysts Under Dynamic Operation",
+    "title": "Computations and Optimization for Catalysts Under Dynamic Operation",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46966",
+    "session_title": "Data-driven optimization",
+    "session_number": "476",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Rate enhancement of catalytic reactions is a focus of chemical engineering research, with applications ranging from energy to materials fabrication and sustainability. There is recent experimental and simulation evidence indicating that kinetic limitations, such as the Sabatier maximum can be overcome when adsorbates change with time due to an externally enforced oscillation of the binding energies [1,2]. The resulting surface dynamics call for advanced numerical methods due to the increased number of parameters and overall complexity [3]. In this work, fixed point algorithms are employed to find entrained periodic solutions under reactor performance constraints for a broad range of dynamic parameters (such as the forcing frequency, amplitude or duty cycle). In fact, it is also possible, using a good set of basis functions, to parametrize entire families of imposed oscillation shapes. These descriptions (e.g. through radial basis functions) have more degrees of freedom, but also lead to more diverse entrained solutions. This can be exploited to “optimally sculpt\" the shape of the forcing function in order to achieve (otherwise unattainable) selectivities. Bayesian Optimization can perform this task efficiently by adaptively constructing a surrogate model of the objective function as well as of the solution space [4]. Here, we demonstrate how this algorithmic pipeline can be used to optimally design forcing functions that drive the catalytic reactor to prescribed selectivities. [1] M. A. Ardagh, O. A. Abdelrahman, P. J. Dauenhauer, ”Principles of Dynamic Heterogeneous Catalysis: Surface Resonance and Turnover Frequency Response” ACS Catalysis, 2019, 9(8), 6929-6937. [2] J. Gopeesingh, M.A. Ardagh, M. Shetty, S. Burke, P. J. Dauenhauer, O.A. Abdelrahman, ”Resonance- Promoted Formic Acid Oxidation via Dynamic Electrocatalytic Modulation,” ACS Catalysis, 2020, 10(17), 9932-9942. [3] A. M. Ardagh, T. Birol, Q. Zhang, O. A. Abdelrahman, P. J. Dauenhauer, ”Catalytic Resonance Theory: SuperVolcanoes, Catalytic Molecular Pumps, and Oscillatory Steady State”, Catalysis Science & Technology. 2019, 9, 5058-5076. [4] B. Shahriari, K. Swersky, Z. Wang, R. P. Adams, N. de Freitas, \"Taking the Human Out of the Loop: A Review of Bayesian Optimization\", Proceedings of the IEEE, 2016, 104(1), 148-175.",
+    "presenting_author": "Georgios Psarellis | Johns Hopkins University, Baltimore, MD",
+    "authors": [
+      "Georgios Psarellis | Johns Hopkins University, Baltimore, MD",
+      "Paul Dauenhauer | University of Minnesota, Minneapolis, MN",
+      "Mihalis Kavousanakis | National Technical University of Athens, Greece",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Georgios Psarellis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Paul Dauenhauer",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      },
+      {
+        "name": "Mihalis Kavousanakis",
+        "affiliation": "National Technical University of Athens, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "476d",
+    "sortable_time": "2021-11-10_13:27:00_13:46:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/629516"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/639678",
+    "paper_endpoint": "Paper/639678",
+    "paper_id": "639678",
+    "topic": "Break",
+    "title": "Break",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46966",
+    "session_title": "Data-driven optimization",
+    "session_number": "476",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "",
+    "presenting_author": "",
+    "authors": [],
+    "authors_structured": [],
+    "sortable_time": "2021-11-10_13:46:00_14:05:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/639678"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/628254",
+    "paper_endpoint": "Paper/628254",
+    "paper_id": "628254",
+    "topic": "Digitalizing the Process Industries Via Surrogate Optimization",
+    "title": "Digitalizing the Process Industries Via Surrogate Optimization",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46966",
+    "session_title": "Data-driven optimization",
+    "session_number": "476",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Most optimization problems in engineering can be formulated as expensive black box problems whose solutions are limited by the number of function evaluations. Frequently, engineers develop models that are differentiable, cheap to evaluate and resemble reality. Under some conditions, namely if these models have algebraic expressions, these can be automatically differentiated to extract derivative expressions. Alternatively, if the function evaluations are cheap to compute, the derivatives can be approximated using finite difference methods. This gradient information can be leveraged within the framework of derivative-based optimization solvers (e.g. Newton’s method, Gradient descent) and the solution can then be transferred to the real system. In the absence of gradient information or cheap-to-evaluate models one must resort to efficient optimization routines that rely only on function evaluations. Creating a model can be itself considered part of the expensive black box optimization process. Zeroth-order, data-driven or derivative-free optimization (DFO) has a long history in chemical engineering. Direct and model-based, local and global, as well as deterministic and random derivative-free optimization algorithms and software implementations have been compared for deterministic and stochastic case studies [1, 2]. Applications range from multi-scale and multi-level optimization to chemical synthesis and design of dynamic experiments [3, 4, 5, 6]. Model-based methods have attracted a lot of attention in process engineering, given the discipline’s expertise in surrogate, meta- and reduced order modelling [3, 7]. As such, the local trust-region methods and the global Kriging interpolation models have been found to be particularly promising in process optimisation [8, 9, 10, 11]. Under which conditions the additional function evaluations of heuristic or systematic partition-based global search space exploration methods are worth the potential increase in solution quality often remains problem-specific. To the best of the authors’ knowledge, there is no systematic study that compares different DFO algorithms on the basis of convergence and constraint satisfaction on a broad range of chemical engineering applications with varying amounts of stochasticity. In this work, we investigate how different derivative-free optimization (DFO) algorithms can address different instances of problems in process engineering. On the algorithms side, we benchmark both model-based and direct-search DFO algorithms, which operate under different philosophies, as well as the alternative paradigm of finite difference approximation methods. On the problems side, the comparisons are made on illustrative toy-problem examples, as well as five chemical engineering applications: model-based design of experiments, self-optimizing reaction systems, flowsheet optimization, real-time optimization, and controller tuning. Various challenges, including constraint satisfaction, uncertainty, problem dimension, and evaluation cost are considered. In addition to this, the practical aspects of the implementation of these various algorithms are discussed, ranging from the ease of finding good hyperparameters to the applicability of these methods to specific problem instances. This work provides insights into the efficiency of data-driven solutions of optimization problems in the process systems domain in an effort to advance the digitalization of the chemical and process industries. References: Rios, L. M., & Sahinidis, N. V. (2012). Derivative-free optimization: A review of algorithms and comparison of software implementations. Journal of Global Optimization, 56 (3), 1247-1293. doi:10.1007/s10898-012-9951-y Amaran, S., Sahinidis, N. V., Sharda, B., & Bury, S. J. (2015). Simulation optimization: A review of algorithms and applications. Annals of Operations Research, 240 (1), 351-380. doi:10.1007/s10479-015-2019-x Biegler, L. T., Lang, Y., & Lin, W. (2014). Multi-scale optimization for process systems engineering. Computers & Chemical Engineering, 60 , 17-30. doi:10.1016/j.compchemeng.2013.07.009 Zhao, F., Grossmann, I., Muñoz, S. G., & Stamatis, S. (2020). Flexibility index of black-box models with parameter uncertainty through derivative-free optimization. doi:10.22541/au.160245361.19862481/v1 Felton, K., Rittig, J., & Lapkin, A. (2020). Summit: Benchmarking machine learning methods for reaction optimisation. doi:10.26434/chemrxiv.12939806 Olofsson, S., Schultz, E.S., Mhamdi, A., Mitsos, A., Deisenroth, M., & Misener, R. (2021). Design of Dynamic Experiments for Black-Box Model Discrimination. ArXiv, abs/2102.03782 . Bhosekar, A., & Ierapetritou, M. (2018). Advances in surrogate based modeling, feasibility analysis, and optimization: A review. Computers & Chemical Engineering, 108 , 250-267. doi:10.1016/j.compchemeng.2017.09.017 Eason, J. P., & Biegler, L. T. (2018). Advanced trust region optimization strategies for glass box/ black box models. AIChE Journal, 64 (11), 3934-3943. doi:10.1002/aic.16364 Boukouvala, F., & Ierapetritou, M. G. (2014). Derivative-free optimization for expensive constrained problems using a novel expected improvement objective function. AIChE Journal, 60 (7), 2462-2474. doi:10.1002/aic.14442 Boukouvala, F., & Floudas, C. A. (2016). ARGONAUT: Algorithms for global optimization of CONSTRAINED grey-box computational problems. Optimization Letters, 11 (5), 895-913. doi:10.1007/s11590-016-1028-2 Del Rio-Chanona, E. A., Petsagkourakis, P., Bradford, E., Graciano, J. E., & Chachuat, B. (2021). Real-time optimization MEETS Bayesian optimization AND Derivative-free optimization: A tale of Modifier adaptation. Computers & Chemical Engineering, 147 , 107249. doi:10.1016/j.compchemeng.2021.107249",
+    "presenting_author": "Damien van de Berg | Imperial College London, United Kingdom",
+    "authors": [
+      "Damien van de Berg | Imperial College London, United Kingdom",
+      "Tom Savage | University of Cambridge, United Kingdom",
+      "Panagiotis Petsagkourakis | University College of London, United Kingdom",
+      "Nilay Shah | Imperial College London, United Kingdom",
+      "Damien van de Berg | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Damien van de Berg",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Tom Savage",
+        "affiliation": "University of Cambridge, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Petsagkourakis",
+        "affiliation": "University College of London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Nilay Shah",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Damien van de Berg",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "476f",
+    "sortable_time": "2021-11-10_14:05:00_14:24:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/628254"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/622953",
+    "paper_endpoint": "Paper/622953",
+    "paper_id": "622953",
+    "topic": "Integration of Planning and Scheduling Using Data-Driven Feasibility Analysis",
+    "title": "Integration of Planning and Scheduling Using Data-Driven Feasibility Analysis",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46966",
+    "session_title": "Data-driven optimization",
+    "session_number": "476",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The economic success of a process industry is largely determined by its supply chain design, planning, and operation decisions. These decisions include the design of a robust supply chain network, and the deployment of supply chain resources to maximize profit while maintaining high customer service level 1,2 . Optimal decisions necessitate the use of integrated models, which capture multi-level dynamics 3 . Although integrated models improve accuracy of solution by leveraging the interconnection between levels, they can become intractable as problem’s dimensions increase 4 . Operational planning and scheduling are concerned with allocating available resources over time to perform a set of tasks required to complete several customer orders for finished products. Integrating the planning and scheduling model improves the feasibility and optimality of the planning decisions by taking into consideration detailed scheduling constraints 2 . The integration is achieved either using a simultaneous or hierarchical (sequential) approach 3,5 . Although the simultaneous approach can reach a coordinated and global solution, the resulting model can quickly become computationally intractable. Sequential approaches, on the other hand, needs to be refined appropriately to avoid infeasible solution. Therefore, additional coordinating constraints should be incorporated in the different decision levels to avoid the infeasibility issue. For the scheduling and planning problem, these coordinating constraints are resource constraints and the production cost constraint 3 . In the surrogate space, radial basis function (RBF) models have shown to approximate highly nonlinear responses to high accuracy 6 . For high-dimensional problems, the corresponding surrogate models are highly nonlinear expressions. Although the use of surrogate models to express production limits reduces problem’s infeasibility, it complicates the integrated problem 4 . This work exploits the radial basis function (RBF) kernel of support vector classifier by mapping the input data to randomized feature space and applying existing fast linear methods to this transformed predictor. This is done by approximating the RBF kernel's feature map by Monte Carlo approximation of it’s Fourier transform 7,8 . The basic idea of this approach is to reduce the training time for surrogate generation and build a linear model that is easily adaptable to the integrated model. The feasibility metrics proposed by Wang and Ierapetritou 9 was used to test the accuracy of the surrogate model. Furthermore, to test the effectiveness of the surrogate model, the integrated planning and scheduling problem is solved using the surrogates as aggregates of the feasible space. This integrated planning problem was solved and compared with the solution from the simultaneous method. This methodology is extended to solve high-dimensional problems since it reduces the model complexity by avoiding non-linearities. Bibliography Grossmann IE, Westerberg AW. Research challenges in process systems engineering. AIChE J . 2000;46(9):1700-1703. doi:https://doi.org/10.1002/aic.690460902 Li Z, Ierapetritou MG. Integrated production planning and scheduling using a decomposition framework. Chem Eng Sci . 2009;64(16):3585-3597. doi:10.1016/j.ces.2009.04.047 Maravelias CT, Sung C. Integration of production planning and scheduling: Overview, challenges and opportunities. Comput Chem Eng . 2009;33(12):1919-1930. doi:10.1016/j.compchemeng.2009.06.007 Dias LS, Ierapetritou MG. Data-driven feasibility analysis for the integration of planning and scheduling problems. Optim Eng . 2019;20(4):1029-1066. doi:10.1007/s11081-019-09459-w Chu Y, You F. Integrated Planning, Scheduling, and Dynamic Optimization for Batch Processes: MINLP Model Formulation and Efficient Solution Methods via Surrogate Modeling. Ind Eng Chem Res . 2014;53(34):13391-13411. doi:10.1021/ie501986d Bhosekar A, Ierapetritou M. Advances in surrogate based modeling, feasibility analysis, and optimization: A review. Comput Chem Eng . 2018;108:250-267. doi:10.1016/j.compchemeng.2017.09.017 Vempati S, Vedaldi A, Zisserman A, Jawahar CV. Generalized RBF feature maps for Efficient Detection. In: Procedings of the British Machine Vision Conference 2010 . British Machine Vision Association; 2010:2.1-2.11. doi:10.5244/C.24.2 Pedregosa F, Varoquaux G, Gramfort A, et al. Scikit-learn: Machine Learning in Python. J Mach Learn Res . 2011;12(85):2825-2830. Wang Z, Ierapetritou M. A novel feasibility analysis method for black-box processes using a radial basis function adaptive sampling approach. AIChE J . 2017;63(2):532-550. doi:10.1002/aic.15362",
+    "presenting_author": "Oluwadare Badejo | University of Delaware, Newark",
+    "authors": [
+      "Oluwadare Badejo | University of Delaware, Newark",
+      "Marianthi Ierapetritou | University of Delaware, Newark"
+    ],
+    "authors_structured": [
+      {
+        "name": "Oluwadare Badejo",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Marianthi Ierapetritou",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "476g",
+    "sortable_time": "2021-11-10_14:24:00_14:43:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/622953"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/624072",
+    "paper_endpoint": "Paper/624072",
+    "paper_id": "624072",
+    "topic": "Training and Reformulating Neural Network Surrogate Models for Optimization",
+    "title": "Training and Reformulating Neural Network Surrogate Models for Optimization",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46966",
+    "session_title": "Data-driven optimization",
+    "session_number": "476",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Detailed mathematical models are often complex and difficult to embed in process optimization, motivating the use of simpler, “surrogate” models. Data-driven surrogate modeling has been of particular interest [1-2], wherein a model that is tractable/amenable to optimization is fitted to samples obtained from a more computationally expensive, high-fidelity model. Neural networks (NNs) are the surrogate model form of choice for many applications, owing to their ability to represent complex functions well, scalability to high-dimensional problems, and accessibility via many open-source software tools [3-5]. In optimization, NNs are commonly represented as a nonlinear program [6-7], or a mixed-integer linear program [8-9] (depending on the type of NN). This work describes two advancements in optimization using neural network surrogate models: First, to construct reduced-order models from a low volume of data, NNs can be trained in Sobolev spaces, improving their performance in gradient-based optimization; Second, for mixed-integer programming applications, NNs can be encoded with tighter relaxations (compared to widely used formulations that rely on a technique known as “big-M”), improving their performance in branch-and-bound global optimization. Strategy (1) is based on quantifying the performance of NN models in terms of both prediction accuracy and accuracy of derivatives to arbitrary degree during model training [10]. We examine how these targets can be systematically scaled during NN training, and we find that this strategy improves the accuracy of surrogate-model-based optimization, in terms of deviation from the true optimum. Results are presented for both black-box and grey-box optimization studies, including optimization of prototypical chemical separation process models [11]. Strategy (2) is based on partitioning the inputs to each node in a trained NN model and forming the convex hull (i.e., the tightest possible formulation) over the resulting partitions via a technique known as disjunctive programming [9,12]. We present computational results on challenging “verification” problems, which examine the worst-case performance of NN models and are important for, e.g., safety guarantees in process control applications. The results show that our formulations balance model size and tightness, leading to significant improvements in performance compared to existing formulations. References: [1] Bhosekar, A., & Ierapetritou, M. (2018). Advances in surrogate based modeling, feasibility analysis, and optimization: A review. Computers & Chemical Engineering, 108, 250-267. [2] Tsay, C., & Baldea, M. (2019). 110th anniversary: using data to bridge the time and length scales of process systems. Industrial & Engineering Chemistry Research, 58(36), 16696-16708. [3] Zhang, D., Del Rio‐Chanona, E. A., Petsagkourakis, P., & Wagner, J. (2019). Hybrid physics‐based and data‐driven modeling for bioprocess online simulation and optimization. Biotechnology and bioengineering, 116(11), 2919-2930. [4] Eason, J., & Cremaschi, S. (2014). Adaptive sequential sampling for surrogate model generation with artificial neural networks. Computers & Chemical Engineering, 68, 220-232. [5] Kim, S. H., & Boukouvala, F. (2020). Surrogate-based optimization for mixed-integer nonlinear problems. Computers & Chemical Engineering, 140, 106847. [6] Henao, C. A., & Maravelias, C. T. (2011). Surrogate‐based superstructure optimization framework. AIChE Journal, 57(5), 1216-1232. [7] Schweidtmann, A. M., & Mitsos, A. (2019). Deterministic global optimization with artificial neural networks embedded. Journal of Optimization Theory and Applications, 180(3), 925-948. [8] Grimstad, B., & Andersson, H. (2019). ReLU networks as surrogate models in mixed-integer linear programs. Computers & Chemical Engineering, 131, 106580. [9] Tsay, C., Kronqvist, J., Thebelt, A., & Misener, R. (2021). Partition-based formulations for mixed-integer optimization of trained ReLU neural networks. arXiv preprint arXiv:2102.04373. [10] Tsay, C. (2021). Sobolev-trained neural network surrogate models for optimization. Submitted [11] Schweidtmann, A. M., Bongartz, D., Huster, W. R., & Mitsos, A. (2019). Deterministic global process optimization: flash calculations via artificial neural networks. In Computer Aided Chemical Engineering (Vol. 46, pp. 937-942). Elsevier. [12] Kronqvist, J., Misener, R., & Tsay, C. (2021). Between steps: Intermediate relaxations between big-M and convex hull formulations. International Conference on Integration of Constraint Programming, Artificial Intelligence, and Operations Research (CPAIOR). Accepted, preprint arXiv:2101.12708.",
+    "presenting_author": "Calvin Tsay | Imperial College London, United Kingdom",
+    "authors": [
+      "Calvin Tsay | Imperial College London, United Kingdom",
+      "Jan Kronqvist | Imperial College London, United Kingdom",
+      "Alexander Thebelt | Imperial College London, United Kingdom",
+      "Ruth Misener | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Calvin Tsay",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jan Kronqvist",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Alexander Thebelt",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Ruth Misener",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "476h",
+    "sortable_time": "2021-11-10_14:43:00_15:02:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/624072"
+  }
+]

@@ -1,0 +1,396 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645696",
+    "paper_endpoint": "Paper/645696",
+    "paper_id": "645696",
+    "topic": "Branch-and-Model: A Derivative-Free Global Optimization Algorithm",
+    "title": "Branch-and-Model: A Derivative-Free Global Optimization Algorithm",
+    "date_time": "2022-11-17_12:30:00_15:00:00",
+    "session_id": "49207",
+    "session_title": "Data-driven optimization",
+    "session_number": "624",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Derivative-free optimization (DFO) is an important class of optimization algorithms that solve problems based on objective and function evaluations. DFO methods have enormous practical potential to address problems where derivatives are unavailable, unreliable, or only available at a significant cost. Increasing complexity in mathematical software, an abundance of legacy codes, and applications in auto-tuning are some of the drivers that put DFO algorithms in high demand. DFO algorithms can be classified as local search algorithms and global search algorithms. In this work, we present a novel derivative-free global algorithm Branch-and-Model (BAM). The BAM algorithm utilizes a flexible partition scheme and model-based search techniques, which exploit the local trend and speed up the convergence in solution refinement. The BAM algorithm is guaranteed to converge to the globally optimal function value under mild assumptions. Extensive computational experiments over 500 publicly open-source test problems show that BAM outperforms state-of-the-art DFO algorithms, especially for higher-dimension problems.",
+    "presenting_author": "Kaiwen Ma | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Kaiwen Ma | Carnegie Mellon University, Pittsburgh, PA",
+      "Luis Miguel Rios | End-to-End Analytics, Lima, Peru",
+      "Atharv Bhosekar | GAMS Development Corporation, New York, NY",
+      "Nikolaos Sahinidis | Georgia Institute of Technology, Atlanta, GA",
+      "Sreekanth Rajagopalan | Dow, Lake Jackson, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kaiwen Ma",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Luis Miguel Rios",
+        "affiliation": "End-to-End Analytics, Lima, Peru",
+        "designation": "Author"
+      },
+      {
+        "name": "Atharv Bhosekar",
+        "affiliation": "GAMS Development Corporation, New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Nikolaos Sahinidis",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Sreekanth Rajagopalan",
+        "affiliation": "Dow, Lake Jackson, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "624a",
+    "sortable_time": "2022-11-17_12:30:00_12:49:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645696"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646160",
+    "paper_endpoint": "Paper/646160",
+    "paper_id": "646160",
+    "topic": "Data-Driven Coordination in Enterprise-Wide Optimization",
+    "title": "Data-Driven Coordination in Enterprise-Wide Optimization",
+    "date_time": "2022-11-17_12:30:00_15:00:00",
+    "session_id": "49207",
+    "session_title": "Data-driven optimization",
+    "session_number": "624",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Model-based optimization of operations is key for chemical enterprises to remain competitive in an environment of increasingly complex economical, sustainability, and safety considerations [1]. Enterprise-wide optimization (EWO) aims to coordinate previously disconnected decision-making. To this end, optimization models can be integrated into a single model wherein subproblems are coupled via few complicating variables and constraints [2]. When the complicating, also called shared or global, variables are sparse compared to the number of local, or private, subproblem variables, these applications lend themselves well to distributed optimization and decomposition techniques [3]. Examples include the planning and operation of supply chains where regional agents decide on the shared material streams that minimize a private cost. In this work, we show that derivative-free optimization (DFO) solvers present a promising alternative to distributed optimization to coordinate subproblems often arising in EWO. Distributed optimization is a powerful tool that allows for the solution of large-scale nonlinear problems with potential significant computational savings using only limited information exchange. ADMM and ALADIN have garnered special attention in the chemical engineering literature as distributed optimization techniques [4-7]. Yet, both algorithms display drawbacks that impede practical applicability: ADMM, as a subgradient method, requires many iterations to converge to a high-accuracy solution; ALADIN requires cheap gradient expressions and an approximation of the Hessian of the subproblems. This gradient information might not be available if the optimal solution of the subproblems requires ‘expensive black-box’ evaluations. This is the case in many process systems engineering (PSE) applications: when the subproblems sample the output of proprietary simulation queries; when expressions for the local objectives and constraints are not available for security, privacy, or organisation reasons; when multiple business entities have to coordinate on the design of a supply chain while respecting local constraints and privacy; or when faced with multi-objective optimization, where each objective is given by a black-box simulation or optimization model. Derivative-free optimization (DFO), also called blackbox or simulation(-based) optimization, is often used to optimize blackboxes, namely systems whose gradient expressions are not readily available [8]. While DFO has been benchmarked on typical process systems engineering problems [9] and bilevel problems [10,11], it has not been used to coordinate sparsely connected distributed subproblems. In this work, we consider the coordination of blackbox subproblems using no model information. We use DFO to find the shared variables that minimize the sum of private subproblem objectives. Four DFO solvers are compared under this data-driven coordination framework to ADMM on three EWO problems: collaborative learning, facility location, and multi-objective coordination. We show that the data-driven coordination scheme allows for convergence to the same optimum achieved with distributed optimization schemes. We highlight under which mathematical and organisational conditions the data-driven scheme is encouraged over ADMM and how these conditions inform the choice of DFO solver. Finally, we point towards further research avenues involving stochasticity and black-box constraints where data-driven strategies might outperform distributed optimization. References: Y. Chu, F. You, 2015, Model-based integration of control and operations: Overview, challenges, advances, and opportunities, Computers & Chemical Engineering 83, 2–20 C. E. Gounaris, I. E. Grossmann, 2019, A preface to the special issue on enterprise-wide optimization, Optimization and Engineering 20(4), 965–968 W. Tang, P. Daoutidis, 2019, Distributed control and optimization of process system networks: A review and perspective. Chinese J. Chem. Eng. 27, 1461–1473 S. Boyd, N. Parikh, E. Chu, B. Peleato, J. Eckstein, 2010, Distributed Optimization and Statistical Learning via the Alternating Direction Method of Multipliers. Trends R Mach. Learn. 3, 1–122 J. S. Rodriguez, B. Nicholson, C. Laird, V. M. Zavala, 2018, Benchmarking ADMM in nonconvex NLPs. Comput. Chem. Eng. 119, 315–325 B. Houska, J. Frasch, M. Diehl, 2016, An Augmented Lagrangian Based Algorithm for Distributed NonConvex Optimization. SIAM Journal on Optimization 26(2), 1101–1127 A. Engelmann, Y. Jiang, B. Houska, T. Faulwasser, 2020, Decomposition of Nonconvex Optimization via Bi-Level Distributed ALADIN. IEEE Trans. Control Netw. Syst. 7, 1848–1858 J. Larson, M. Menickelly, S. Wild, 2019, Derivative-free optimization methods. Acta Numerica 28, 287-404 D. van de Berg, T. Savage, P. Petsagkourakis, D. Zhang, N. Shah, E. A. del Rio-Chanona, 2022, Data-driven optimization for process systems engineering applications. Chemical Engineering Science 248, 117135 B. Beykal, S. Avraamidou, E. N. Pistikopoulos, 2022, Data-driven optimization of mixed-integer bi-level multi-follower integrated planning and scheduling problems under demand uncertainty, Computers & Chemical Engineering 156, 107551 F. Zhao, I. E. Grossmann, S. García‐Muñoz, S. D. Stamatis, 2021, Flexibility index of black‐box models with parameter uncertainty through derivative‐free optimization. AIChE Journal 67(5)",
+    "presenting_author": "Damien van de Berg | Imperial College London, United Kingdom",
+    "authors": [
+      "Damien van de Berg | Imperial College London, United Kingdom",
+      "Panagiotis Petsagkourakis | University College London, United Kingdom",
+      "Nilay Shah | Imperial College London, United Kingdom",
+      "Antonio del Rio Chanona | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Damien van de Berg",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Panagiotis Petsagkourakis",
+        "affiliation": "University College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Nilay Shah",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "624b",
+    "sortable_time": "2022-11-17_12:49:00_13:08:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646160"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648790",
+    "paper_endpoint": "Paper/648790",
+    "paper_id": "648790",
+    "topic": "A Surrogate-Based Framework for Feasibility Analysis and Optimization of Expensive Simulations",
+    "title": "A Surrogate-Based Framework for Feasibility Analysis and Optimization of Expensive Simulations",
+    "date_time": "2022-11-17_12:30:00_15:00:00",
+    "session_id": "49207",
+    "session_title": "Data-driven optimization",
+    "session_number": "624",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Simulation-based optimization has been widely studied in the field of operations research for optimization of complex systems. Compared to algebraic model-based mathematical programming, there exist several challenges in simulation-based optimization. First, the objective function and constraints are not available in algebraic form. Second, many simulations are computationally expensive to run, limiting the number of simulations that can be performed in search of the optimal solution. Third, the derivative information is usually unavailable or hard to estimate [1]. Hence, it is often impossible to utilize the conventional optimization approaches. Surrogate models have been considered to approximate expensive function evaluations using design of experiments (DOE). In addition, adaptive sampling techniques have been investigated to enrich the DOE samples, refine the surrogate model, and guide the search towards the optimum [2, 3]. The surrogate-based optimization framework has been extended to feasibility analysis, where different surrogate models have been implemented [4-9], and different methods for adaptive sampling have been discussed [10]. Most surrogate-based approaches for feasibility analysis are limited to the construction of a regression model for the feasibility function, not taking advantage of the fact that the feasibility problem is essentially a classification problem in nature. The regression model for feasibility function involves additional information regarding the degree of feasibility of each sample point, while in most feasibility problems what is of interest is whether the point is feasible or not. In this work, we consider the feasibility problem as a classification problem, and investigate the ability of classification models, such as support vector machines [11-13], to accurately characterize the design space boundary of complex systems. We integrate the classification results as constraints for process optimization and propose a modified framework for surrogate-based feasibility analysis and optimization based on the previous work of Wang et al. [14]. We also investigate adequate sampling budgets for feasibility characterization based on the complexity of the feasible space. We illustrate the efficiency of the proposed framework on a series of test problems to explore the computational complexity along with the accuracy, and compare it with existing regression-based approaches. Finally, the proposed framework is implemented on a realistic case study describing the production of solid-based drugs using wet granulation, aimed to reduce the operation cost, improve product quality, and increase process flexibility and robustness. References: 1. Amaran, S., et al., Simulation optimization: a review of algorithms and applications. 4or, 2014. 12 (4): p. 301-333. 2. Greenhill, S., et al., Bayesian Optimization for Adaptive Experimental Design: A Review. IEEE Access, 2020. 8 : p. 13937-13948. 3. Shahriari, B., et al., Taking the Human Out of the Loop: A Review of Bayesian Optimization. Proceedings of the IEEE, 2016. 104 (1): p. 148-175. 4. Banerjee, I., S. Pal, and S. Maiti, Computationally efficient black-box modeling for feasibility analysis. Computers & Chemical Engineering, 2010. 34 (9): p. 1515-1521. 5. Zhang, Q., et al., Data-driven construction of Convex Region Surrogate models. Optimization and Engineering, 2015. 17 (2): p. 289-332. 6. Boukouvala, F. and M.G. Ierapetritou, Feasibility analysis of black-box processes using an adaptive sampling Kriging-based method. Computers & Chemical Engineering, 2012. 36 : p. 358-368. 7. Wang, Z. and M. Ierapetritou, A novel feasibility analysis method for black-box processes using a radial basis function adaptive sampling approach. AIChE Journal, 2017. 63 (2): p. 532-550. 8. Metta, N., R. Ramachandran, and M. Ierapetritou, A novel adaptive sampling based methodology for feasible region identification of compute intensive models using artificial neural network. AIChE Journal, 2020. 67 (2). 9. Boukouvala, F., F.J. Muzzio, and M.G. Ierapetritou, Design Space of Pharmaceutical Processes Using Data-Driven-Based Methods. Journal of Pharmaceutical Innovation, 2010. 5 (3): p. 119-137. 10. Boukouvala, F. and M.G. Ierapetritou, Derivative-free optimization for expensive constrained problems using a novel expected improvement objective function. AIChE Journal, 2014. 60 (7): p. 2462-2474. 11. Dias, L.S. and M.G. Ierapetritou, Data-driven feasibility analysis for the integration of planning and scheduling problems. Optimization and Engineering, 2019. 20 (4): p. 1029-1066. 12. Badejo, O. and M. Ierapetritou, Integrating tactical planning, operational planning and scheduling using data-driven feasibility analysis. Computers & Chemical Engineering, 2022. 161 . 13. Burges, C.J.C., A Tutorial on Support Vector Machines for Pattern Recognition. Data Mining and Knowledge Discovery, 1998. 2 (2): p. 121-167. 14. Wang, Z., et al., Surrogate-based Optimization for Pharmaceutical Manufacturing Processes , in 27th European Symposium on Computer Aided Process Engineering . 2017. p. 2797-2802.",
+    "presenting_author": "Huayu Tian | University of Delaware, Newark",
+    "authors": [
+      "Huayu Tian | University of Delaware, Newark",
+      "Marianthi Ierapetritou | University of Delaware, Newark"
+    ],
+    "authors_structured": [
+      {
+        "name": "Huayu Tian",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Marianthi Ierapetritou",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "624c",
+    "sortable_time": "2022-11-17_13:08:00_13:27:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648790"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649195",
+    "paper_endpoint": "Paper/649195",
+    "paper_id": "649195",
+    "topic": "Data-Efficient Automated Tuning of Generic Control Structures Using Adversarially Robust Bayesian Optimization",
+    "title": "Data-Efficient Automated Tuning of Generic Control Structures Using Adversarially Robust Bayesian Optimization",
+    "date_time": "2022-11-17_12:30:00_15:00:00",
+    "session_id": "49207",
+    "session_title": "Data-driven optimization",
+    "session_number": "624",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Recent years have witnessed significant progress in the design and application of optimization- and learning-based controllers that can deal with multivariable dynamics, constraints, and uncertainties that appear in the system and/or the environment. However, the design of such advanced controllers hinges on the selection of several tuning parameters that may strongly affect closed-loop performance and constraint satisfaction. Due to the black-box nature of the relationship between tuning parameters and general closed-loop performance measures, there has been a significant interest in automatic calibration (i.e., auto-tuning) of complex control structures using derivative-free optimization methods as the corresponding objective function is expensive to evaluate, potentially nonconvex and multi-modal, and whose derivatives either do not exist or cannot be determined. Bayesian optimization (BO) [1] has recently been explored as a promising method that can handle noisy and expensive cost functions with unknown structure in the context of controller tuning (e.g., [2-4]). The main notion of BO is to represent the objective using a Gaussian Process (GP), i.e., a probabilistic surrogate model, which is learned by querying new points based on some, so-called, acquisition function. Nevertheless, an open challenge when applying BO to auto-tuning is how to effectively deal with uncertainties in the closed-loop system that cannot be attributed to a lumped, relatively small-scale noise term. In this talk, we will present an adversarially robust BO (ARBO) [5,6] method that is particularly suited to auto-tuning problems with significant time-invariant uncertainties in an expensive system model used for closed-loop simulations. We formulate the controller auto-tuning problem in the form of a nested, minimax optimization problem that aims to find the robustly (worst-case) optimal tuning parameters. ARBO relies on a GP model that jointly describes the effect of the tuning parameters and uncertainties on the closed-loop performance. From this joint GP model, ARBO uses an alternating (upper/lower) confidence-bound procedure to simultaneously select the next candidate tuning and uncertainty realizations to be queried, implying only one expensive closed-loop simulation is needed at each iteration. The adversarial robustness is tackled by alternating between an optimistic prediction of the performance measure to select the next best set of tuning parameters and a pessimistic prediction of the performance measure to select the most likely worst-case uncertainty for the suggested best tuning parameters. Subsequently, the selection of the robust optimal point is based on the posterior distribution of the candidate models for the objective, given all queried points so far. We will demonstrate the value of the proposed ARBO method on a challenging auto-tuning problem in which a highly nonlinear bioreactor with several unknown parameters is controlled using a nonlinear model predictive controller with multiple constraint backoffs that must be tuned. We will compare the quality of the ARBO solution to a random search, as well as a naïve mean-based robust BO approach. [1] Shahriari, B., Swersky, K., Wang, Z., Adams, R. P., & De Freitas, N. (2015). Taking the human out of the loop: A review of Bayesian optimization. Proceedings of the IEEE , 104 (1), 148-175. [2] Sorourifar, F., Makrygiorgos, G., Mesbah, A., & Paulson, J. A. (2021). A data-driven automatic tuning method for MPC under uncertainty using constrained Bayesian optimization. IFAC-PapersOnLine , 54 (3), 243-250. [3] Piga, D., Forgione, M., Formentin, S., & Bemporad, A. (2019). Performance-oriented model learning for data-driven MPC design. IEEE control Systems Letters, 3(3), 577-582. [4] Paulson, J.A. and Mesbah, A., (2020). Data-driven scenario optimization for automated controller tuning with probabilistic performance guarantees. IEEE Control Systems Letters, 5 (4), pp.1477-1482. [5] Bogunovic, I., Scarlett, J., Jegelka, S., & Cevher, V. (2018). Adversarially robust optimization with Gaussian processes. Advances in neural information processing systems, Vol. 31 [6] Paulson, J. A., Makrygiorgos, G., & Mesbah, A. (2021). Adversarially Robust Bayesian Optimization for Efficient Auto‐Tuning of Generic Control Structures under Uncertainty. AIChE Journal, e17591.",
+    "presenting_author": "Georgios Makrygiorgos | University of California, Berkeley",
+    "authors": [
+      "Georgios Makrygiorgos | University of California, Berkeley",
+      "Joel Paulson | The Ohio State University, Columbus",
+      "Ali Mesbah | University of California, Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Georgios Makrygiorgos",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "624d",
+    "sortable_time": "2022-11-17_13:27:00_13:46:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649195"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649225",
+    "paper_endpoint": "Paper/649225",
+    "paper_id": "649225",
+    "topic": "Accelerating Multiscale Global Optimization through Reduced Bayesian Optimization",
+    "title": "Accelerating Multiscale Global Optimization through Reduced Bayesian Optimization",
+    "date_time": "2022-11-17_12:30:00_15:00:00",
+    "session_id": "49207",
+    "session_title": "Data-driven optimization",
+    "session_number": "624",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Optimization of multiscale potentials is pertinent to a variety of fields, including computational biology [1], fluid mechanics [2], and materials science [3]. Such multiscale objective functions change rapidly in some directions and slowly in others, so optimization algorithms typically exhibit behavior akin to singularly perturbed dynamical systems. The trajectory of iterates is quickly attracted onto a low-dimensional slow manifold, but further progress comes much more slowly. We propose a method to accelerate the convergence of Bayesian optimization (BO) on these multiscale problems by exploiting the existence of an underlying low-dimensional manifold in a data-driven fashion. By using manifold learning techniques ( e.g. , diffusion maps), we construct an (approximate) on-the-fly parameterization of the slow manifold from the location history of our BO iterations in the “full space” of the original domain. Then, on the “reduced space” of the slow manifold, we continue optimizing in terms of the relatively few diffusion maps coordinates [4]. Previous work [5] used the reduced space to inform the choice of direction for a coarse step. Here, we allow for global optimization in the reduced space. Although at times we need to lift back to the full space in order to ensure that our approximation of the slow manifold remains valid, working preferentially in the reduced space limits the computational requirements of locating a global minimizer. Furthermore, motivated by BO problems in which a black-box objective function includes simulators or solvers, we present a Bayesian Continuation (BCon) framework. We finally demonstrate how BCon can be coupled with (full or reduced space) Bayesian optimization to improve its speed and efficiency. Extensions of BCon to other problems are also briefly discussed. [1] M. Alber, A. Buganza Tepole, W. R. Cannon, S. De, S. Dura-Bernal, K. Garikipati, G. Karniadakis, W. W. Lytton, P. Perdikaris, L. Petzold, and E. Kuhl. Integrating machine learning and multiscale modeling: Perspectives, challenges, and opportunities in the biological, biomedical, and behavioral sciences. NPJ Digital Medicine, 2(1):1–11, 2019. [2] S. Sirisup, G. E. Karniadakis, and D. Xiu, and I. G. Kevrekidis. Equation-free/Galerkin-free POD-assisted computation of incompressible flows. Journal of Computational Physics, 207(2):568—587, 2005. [3] M. F. Horstemeyer. Multiscale modeling: A review. In J. Leszczynski and M. K. Shukla, editors, Practical Aspects of Computational Chemistry: Methods, Concepts, and Applications, chapter 4, pages 87–135. Springer, Dordrecht, Netherlands, 2009. [4] F. Dietrich, J. M. Bello-Rivas, and I. G. Kevrekidis. On the Correspondence between Gaussian Processes and Geometric Harmonics. arXiv preprint arXiv:2110.02296, 2021. [5] D. Pozharskiy, N. J. Wichrowski, A. B. Duncan, G. A. Pavliotis, and I. G. Kevrekidis. Manifold learning for accelerating coarse-grained optimization. Journal of Computational Dynamics, 7(2):511—536, 2020.",
+    "presenting_author": "Noah J. Wichrowski | Johns Hopkins University, Baltimore, MD",
+    "authors": [
+      "Noah J. Wichrowski | Johns Hopkins University, Baltimore, MD",
+      "Georgios Psarellis | Johns Hopkins University, Baltimore, MD",
+      "Anastasia Georgiou | Johns Hopkins University, Baltimore, MD",
+      "Juan Bello-Rivas | Johns Hopkins University, Baltimore, MD",
+      "Felix Dietrich | Technical University of Munich, Garching, Germany",
+      "Jonathan Hauenstein | University of Notre Dame, IN",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Noah J. Wichrowski",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Georgios Psarellis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Anastasia Georgiou",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Juan Bello-Rivas",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Felix Dietrich",
+        "affiliation": "Technical University of Munich, Garching, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Jonathan Hauenstein",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "624e",
+    "sortable_time": "2022-11-17_13:46:00_14:05:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649225"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643553",
+    "paper_endpoint": "Paper/643553",
+    "paper_id": "643553",
+    "topic": "Exploiting High-Throughput Experiments in Bayesian Optimization",
+    "title": "Exploiting High-Throughput Experiments in Bayesian Optimization",
+    "date_time": "2022-11-17_12:30:00_15:00:00",
+    "session_id": "49207",
+    "session_title": "Data-driven optimization",
+    "session_number": "624",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "High-throughput experimentation (HTE) has become a powerful approach for driving discovery in research domains that span large parameter spaces. Over the past decade, scientists in catalysis [1], pharmaceuticals [2], synthetic biology [3], and chemical engineering [4] have increasingly adopted the use of HTE platforms; such platforms permit experiments to be automated and run in parallel, significantly decreasing costs in terms of time and economics. However, due to the large number of variables involved, determining optimal conditions at which to perform these types of experiments is often an infeasible task for human researchers. As a result, many HTE labs rely on screening, a process where experiments are performed at points along a grid of the parameter space to identify potential candidate solutions [5]. While this approach has proven useful, coupling HTE with an effective design of experiments (DoE) strategy can greatly augment the capabilities of these platforms by reducing time and materials required to discover new formulations. Bayesian optimization (BO) has proven to be one of the most effective machine learning (ML) algorithms for DoE [6]. BO is widely used in applications such as hyper-parameter tuning of ML models and reinforcement learning, and it has been shown to be a sample-efficient learning algorithm [7]. Of particular interest to researchers is the flexibility of BO; specifically, this approach is capable of accommodating both continuous and discrete parameters [8]. Unfortunately, the inherently sequential nature of BO makes it incompatible with DoE on HTE platforms. Ad-hoc modifications to the BO algorithm that would give it parallelization capabilities have been developed [9, 10, 11], and experimental results have demonstrated that these approaches can provide better performance than sequential BO [12]. However, these approaches are limited in the degree of parallelization that can be achieved, and can increase the complexity of the BO algorithm, making it slower and more difficult to implement. In this work, we propose strategies for parallelizing BO algorithms and with this exploit HTE platforms. These strategies are centered around modifications to the optimization routine of the acquisition function (AF), which serves as the decision-making mechanism for BO. Our approaches are focused around new and effective ways for partitioning the parameter space, allowing the AF to select multiple sampling points in tandem; we then assign a module to explore and optimize a specified objective in each partition. By processing the obtained data into a central model that is shared with each module, we ensure that they are able to observe global rather than local trends which further improves and accelerates the optimization routine. The methods we propose are scalable to any desired number of experiments, fully parallel, and designed to prevent redundant sampling. We apply our approach to a case study for a chemical reactor network where the aim is to select the temperature of each reactor that will minimize the yearly operating cost of the system. In addition to sequential BO, we also compare the performance of our parallel BO algorithm with existing parallelization techniques found in the literature such as Hyperspace [13], NxMC [14], and AF optimization over a set of exploratory parameters [15]. [1] Thanh Nhat Nguyen, Thuy Tran Phuong Nhat, Ken Takimoto, Ashutosh Thakur, Shun Nishimura, Junya Ohyama, Itsuki Miyazato, Lauren Takahashi, Jun Fujima, Keisuke Takahashi, and Toshiak Taniike. High-throughput experimentation and catalyst informatics for oxidative coupling of methane. ACS Catalysis , 10(2):921–932, 2012. [2] Steven M. Mennen, Carolina Alhambra, C. Liana Allen, Mario Barberis, Simon Berritt, Thomas A. Brandt, Andrew D. Campbell, Jesús Castañón, Alan H. Cherney, Melodie Christensen, David B. Damon, J. Eugenio de Diego, Susana García-Cerrada, Pablo García-Losada, Rubén Haro, Jacob Janey, David C. Leitch, Ling Li, Fangfang Liu, Paul C. Lobben, David W. C. MacMillan, Javier Magano, Emma McInturff, Sebastien Monfette, Ronald J. Post, Danielle Schultz, Barbara J. Sitter, Jason M. Stevens, Iulia I. Strambeanu, Jack Twilton, Ke Wang, and Matthew A. Zajac. The evolution of high-throughput experimentation in pharmaceutical development and perspectives on the future. Organic Process Research & Development , 23(6):1213–1242, 2019. [3] Michael J. Smanski, Hui Zhou, Ben Shen Claesen, Michael A. Fischbach, and Christopher A. Voigt. Synthetic biology to access and expand nature’s chemical diversity. Nature Reviews Microbiology , 14:135–149, 2016. [4] Joshua A. Selekman, Jun Qiu, Kristy Tran, Jason Stevens, Victor Rosso, Eric Simmons, Yi Xiao, and Jacob Janey. High-throughput automation in chemical process development. Annual Review of Chemical and Biomolecular Engineering , 8:525–547, 2017. [5] Michae Shevlin. Practical high-throughput experimentation for chemists. ACS Medicinal Chemistry Letters , 8(6):601–607, 2017 [6] Arpan Biswas, Anna N. Morozovska, Maxim Ziatdinov, Eugene A. Eliseev, and Sergei V. Kalinin. Multi-objective Bayesian optimization of ferroelectric materials with interfacial control for memory and energy storage applications. Journal of Applied Physics , 130(20):204102–1–204102–1, 2021 [7] Jasper Snoek, Oren Rippel, Kevin Swersky, Ryan Kiros, Nadathur Satish, Narayanan Sundaram, Mostofa Patwary, Mr Prabhat, and Ryan Adams. Scalable Bayesian optimization using deep neural networks. In International Conference on Machine Learning , pages 2171–2180. PMLR, 2015. [8] Eric Brochu, Vlad M Cora, and Nando De Freitas. A tutorial on Bayesian optimization of expensive cost functions, with application to active user modeling and hierarchical reinforcement learning. arXiv preprint arXiv:1012.2599 , 2010. [9] David Ginsbourger, Rodolphe Le Riche, and Laurent Carraro. Kriging is well-suited to parallelize optimization. In Computation Intelligence in Expensive Optimization Problems , pages 131–162. Springer, 2010. [10] Thomas Desautels, Andreas Krause, and Joel W. Burdick. Parallelizing exploration- exploitation tradeoffs in Gaussian process bandit optimization. Journal of Machine Learning Research , 15(119):4053–4103, 2014. [11] Sébastian Marmin, Clément Chevalier, and David Ginsbourger. Differentiating the multipoint expected improvement for optimal batch design. In Machine Learning, Optimization, and Big Data . 2015. [12] M. Todd Young, Jacob D. Hinkle, Ramakrishnan Kannan, and Arvind Ramanathan. Distributed Bayesian optimization of reinforcement learning algorithms. Journal of the Parallel and Distributed Computing , 139(1):43–52, 2020. [13] M. Todd Young, Jacob Hinkle, Arvind Ramanathan, and Ramakrishnan Kannan. Hyperspace: Distributed Bayesian hyperparameter optimization. In 2018 30th International Symposium on Computer Architecture and High Performance Computing , pages 339–347. IEEE, 2018. [14] Jasper Snoek, Hugo Larochelle, and Ryan P Adams. Practical Bayesian optimization of machine learning algorithms. In Advances in Neural Information Processing Systems , volume 25, pages 2951–2959. Curran Associates, Inc., 2012. [15] Frank Hutter, Holger H. Hoos, and Kevin Leyton-Brown. Parallel algorithm configuration. In International Conference on Learning and Intelligent Optimization , pages 55–70. Springer, 2012.",
+    "presenting_author": "Leonardo Gonzalez | University of Wisconsin-Madison",
+    "authors": [
+      "Leonardo Gonzalez | University of Wisconsin-Madison",
+      "Victor Zavala | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Leonardo Gonzalez",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Victor Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "624f",
+    "sortable_time": "2022-11-17_14:05:00_14:24:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643553"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643668",
+    "paper_endpoint": "Paper/643668",
+    "paper_id": "643668",
+    "topic": "Snake: Bayesian Optimization Via Pathwise Exploration",
+    "title": "Snake: Bayesian Optimization Via Pathwise Exploration",
+    "date_time": "2022-11-17_12:30:00_15:00:00",
+    "session_id": "49207",
+    "session_title": "Data-driven optimization",
+    "session_number": "624",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "The advent of new tools in flow chemistry and droplet micro-fluidic reactors allow us to carry out many experiments in quick succession, making it perfect ground for the application of automatic experiment design [2-3]. Machine Learning has proven to be a very useful tool for this, and has already been successfully applied in the field [4-6]. For the optimization of black-box functions, Bayesian Optimization (BO) uses a Gaussian Process surrogate model to find a balance between exploitative and explorative experiments [4, 7]. Chemical experiments exhibit peculiar challenges that makes traditional BO methods ineffective [5] or inadequate [6] . In particular, we focus on the fact BO algorithms perform under the assumption that changing an input does not incur any additional experimental cost. However, in practice, large changes to some variables, for example temperature, could mean that the experiment results are less reliable or that there must be a significant waiting time between experiments. This can happen when reactors take a long time to make changes or when we need to wait for a reaction to return to steady state. Consider a scenario where we can see into the future, so that we know beforehand which points classical BO would query. In this case, we could simply order the queries to attain the smallest input cost. In other words, a good solution would require looking into the future, creating an ordering, and then simply following the path defined by the ordering. We present SnAKe [1], a Bayesian Optimization algorithm that builds on this idea. We further investigate convergence properties and show that if applied naively, the algorithm may get stuck at local optima. Through a sample deletion scheme, SnAKe is able to overcome this and focuses on global optimization. By nature, the algorithm is also able to perform when the results of the experiments are subject to time delays, which is vital for applications where many experiments are run simultaneously and results require time and effort to be processed. Using synthetic benchmarks, we show the algorithm is able to achieve optimization results comparable with classical BO methods, but uses significant smaller input costs. We finalize by testing on SnAr chemistry benchmark [8] where we achieve the best performance at low cost. [1] Folch, J.P., Zhang, S., Lee, R.M., Shafei, B., Walz, D., Tsay, C., van der Wilk, M. and Misener, R., 2022. SnAKe: Bayesian Optimization with Pathwise Exploration. arXiv preprint arXiv:2202.00060 . [2] Houben, C. and Lapkin, A.A., 2015. Automatic discovery and optimization of chemical processes. Current opinion in chemical engineering , 9 , pp.1-7. [3] McMullen, J.P. and Jensen, K.F., 2010. Integrated microreactors for reaction automation: new approaches to reaction development. Annual review of analytical chemistry , 3 , pp.19-42. [4] Schweidtmann, A.M., Clayton, A.D., Holmes, N., Bradford, E., Bourne, R.A. and Lapkin, A.A., 2018. Machine learning meets continuous flow chemistry: Automated optimization towards the Pareto front of multiple objectives. Chemical Engineering Journal , 352 , pp.277-282. [5] Waldron, C., Pankajakshan, A., Quaglio, M., Cao, E., Galvanin, F. and Gavriilidis, A., 2019. An autonomous microreactor platform for the rapid identification of kinetic models. Reaction Chemistry & Engineering , 4 (9), pp.1623-1636. [6] Petsagkourakis, P., Sandoval, I.O., Bradford, E., Zhang, D. and del Rio-Chanona, E.A., 2020. Reinforcement learning for batch bioprocess optimization. Computers & Chemical Engineering , 133 , p.106649. [7] Shahriari, B., Swersky, K., Wang, Z., Adams, R.P. and De Freitas, N., 2015. Taking the human out of the loop: A review of Bayesian optimization. Proceedings of the IEEE , 104 (1), pp.148-175. [8] Felton, K.C., Rittig, J.G. and Lapkin, A.A., 2021. Summit: benchmarking machine learning methods for reaction optimisation. Chemistry ‐ Methods , 1 (2), pp.116-122.",
+    "presenting_author": "Jose Pablo Folch | Imperial College London, United Kingdom",
+    "authors": [
+      "Jose Pablo Folch | Imperial College London, United Kingdom",
+      "Shiqiang Zhang | Imperial College London, United Kingdom",
+      "Robert M. Lee | BASF, Ludwigshafen, Germany",
+      "Behrang Shafei | BASF, Ludwigshafen, Germany",
+      "David Walz | BASF, Ludwigshafen, Germany",
+      "Calvin Tsay | Imperial College London, United Kingdom",
+      "Mark van der Wilk | Imperial College London, United Kingdom",
+      "Ruth Misener | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jose Pablo Folch",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Shiqiang Zhang",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Robert M. Lee",
+        "affiliation": "BASF, Ludwigshafen, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Behrang Shafei",
+        "affiliation": "BASF, Ludwigshafen, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "David Walz",
+        "affiliation": "BASF, Ludwigshafen, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Calvin Tsay",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Mark van der Wilk",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Ruth Misener",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "624g",
+    "sortable_time": "2022-11-17_14:24:00_14:43:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643668"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647163",
+    "paper_endpoint": "Paper/647163",
+    "paper_id": "647163",
+    "topic": "Optimization Under Uncertainty with Bayesian Hybrid Models",
+    "title": "Optimization Under Uncertainty with Bayesian Hybrid Models",
+    "date_time": "2022-11-17_12:30:00_15:00:00",
+    "session_id": "49207",
+    "session_title": "Data-driven optimization",
+    "session_number": "624",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Multiscale computer models are used in science, (chemical) engineering, and beyond to guide discovery, optimize systems, and facilitate decision making in important application areas including carbon capture [1-3] and life sciences [4] . The complex nature of multiscale modeling, however, often requires approximations to ensure computational tractability, which also introduces model-form, i.e., epistemic, uncertainty. Harnessing the full predictive potential of these models requires a comprehensive framework to quantify this uncertainty. While machine learning has catalyzed tremendous progress in science and engineering, these techniques are often best suited for problems with readily available, rich datasets. At the intersection of so-called black box ML models and glass-box equation-oriented models are Kennedy-O’Hagan (KOH) or “hybrid” models [5,6] which use data-driven ML constructs to quantify epistemic (i.e. model-form) uncertainty associated with a simplified or reduced order often physics-based glass-box model. While KOH frameworks are popular in the broader computational science and engineering research community [7-11] , they remain niche in chemical engineering [3,12] . Moreover, a majority of KOH focuses on uncertainty quantification and propagation. It remains unclear how to most efficiently perform optimization under uncertainty for decision-making using KOH Bayesian hybrid models of the following form: y i = η(x i ; θ) + δ(x i ; φ) + ε i Here, observation y i is modeled with three components: a white-box model η(·,·) with global parameters θ and inputs x i for experiment i, a stochastic discrepancy function δ(·), and random measurement error ε ∼ N (0, I σ 2 ). In this presentation, we compare these Bayesian hybrid models to black-box and glass-box alternatives in the context of chemical kinetics modeling and reactor optimization. Using a complex series reaction, we demonstrate how hybrid models overcome systematic bias introduced by a reduced order kinetic model to correctly predict the operating temperature and reaction time of an objective function of the intermediate (desired) product yield. Pragmatically, the hybrid model enables reaction engineering decision-making for reactor design and optimization despite model inadequacy. We conclude by discussing stochastic programming formulations to facilitate optimization under uncertainty considering both aleatoric uncertainty obtained from the posterior of Bayesian parameter estimation and epistemic uncertainty quantified by Gaussian Processes in the KOH model [13] . References: [1] D. C. Miller, M. Syamlal, D. S. Mebane, C. Storlie, D. Bhattacharyya, N. V. Sahinidis, D. Agarwal, C. Tong, S. E. Zitney, A. Sarkar, X. Sun, S. Sundaresan, E. Ryan, D. Engel, and C. Dale, “Carbon capture simulation initiative: A case study in multiscale modeling and new challenges,” Annual Review of Chemical and Biomolecular Engineering , vol. 5, no. 1, pp. 301–323, 2014. PMID: 24797817. [2] K. S. Bhat, D. S. Mebane, P. Mahapatra, and C. B. Storlie, “Upscaling uncertainty with dynamic discrepancy for a multi-scale carbon capture system,” Journal of the American Statistical Association , vol. 112, no. 520, pp. 1453–1467, 2017. [3] J. Kalyanaraman, Y. Fan, Y. Labreche, R. P. Lively, Y. Kawajiri, and M. J. Realff, “Bayesian estimation of parametric uncertainties, quantification and reduction using optimal design of experiments for co2 adsorption on amine sorbents,” Computers and Chemical Engineering , vol. 81, 2015. [4] M. Alber, A. Buganza Tepole, W. R. Cannon, et al., “Integrating machine learning and multiscale modeling—perspectives, challenges, and opportunities in the biological, biomedical, and behavioral sciences.,” npj Digital Medicine , vol. 2. [5] M. C. Kennedy and A. O’Hagan, “Bayesian calibration of computer models,” J ournal of the Royal Statistical Society: Series B (Statistical Methodology) , vol. 63, no. 3, pp. 425–464, 2001. [6] R. Gramacy, Surrogates: Gaussian Process Modeling , Design, and Optimization for the Applied Sciences . Chapman & Hall/CRC Texts in Statistical Science, CRC Press, 2020. [7] A. van Griensven and T. Meixner, “A global and efficient multi-objective auto-calibration and uncertainty estimation method for water quality catchment models,” Journal of Hydroinformatics , vol. 9, no. 4, pp. 277–291, 2007. [8] Y. Xiong, W. Chen, K.-L. Tsui, and D. Apley, “A better understanding of model updating strategies invalidating engineering models,” Computer Methods in Applied Mechanics and Engineering , vol. 198, no. 15-16, pp. 1327–1337, 2009. [9] W. Chen, Y. Xiong, K. Tsui, and S. Wang, “A design-driven validation approach using bayesian prediction models,” Journal of Mechanical Design - Transactions of the ASME , vol. 130, no. 2, 2008. [10] P. M. Tagade, B.-M. Jeong, and H.-L. Choi, “A gaussian process emulator approach for rapid contaminant characterization with an integrated multizone-cfd model,” Building and Environment , vol. 70, pp. 232–244, 2013. [11] G. B. Arhonditsis, D. Papantou, W. Zhang, G. Perhar, E. Massos, and M. Shi, “Bayesian calibration of mechanistic aquatic biogeochemical models and benefits for environmental management,” Journal of Marine Systems , vol. 73, no. 1, pp. 8–30, 2008. [12] J. Kalyanaraman, Y. Kawajiri, R. P. Lively, and M. J. Realff, “Uncertainty quantification via bayesian inference using sequential monte carlo methods for co2 adsorption process,” AIChE Journal , vol. 62, no. 9, pp. 3352–3368, 2016. [13] J. Wang, E. Eugene, and A. Dowling, “Scalable stochastic programming with bayesian hybrid models,” in Proceedings of the 14th International Symposium on Process System Engineering , 2022.",
+    "presenting_author": "Elvis Eugene | University of Notre Dame, IN",
+    "authors": [
+      "Alexander Dowling | University of Notre Dame, IN",
+      "Kyla Jones | University of Notre Dame, IN",
+      "Elvis Eugene | University of Notre Dame, IN",
+      "Jialu Wang | University of Notre Dame, Mishawaka, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Alexander Dowling",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Kyla Jones",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Elvis Eugene",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jialu Wang",
+        "affiliation": "University of Notre Dame, Mishawaka, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "624h",
+    "sortable_time": "2022-11-17_14:43:00_15:02:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647163"
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670487",
+    "paper_endpoint": "Paper/670487",
+    "paper_id": "670487",
+    "topic": "Grey-Box Modeling and Estimation for Health Monitoring of High Temperature Boiler Components",
+    "title": "Grey-Box Modeling and Estimation for Health Monitoring of High Temperature Boiler Components",
+    "date_time": "2023-11-09_08:00:00_10:30:00",
+    "session_id": "52082",
+    "session_title": "Data-driven Modeling, Estimation and Optimization for Control II",
+    "session_number": "433",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Due to increased penetration of intermittent renewables to the energy grid, most power plants are forced to cycle their loads frequently and rapidly, operate at low load conditions for a sustained period, and start-up and shut down several hundred times in a year. These severe operations are causing substantial damage to the boiler components, compromising these plants' reliability and driving up costs. To mitigate these issues, developing advanced condition monitoring tools can be instrumental in understanding the impacts of load-following. These tools can eventually help these plants to make efficient plans for preventive maintenance, avoid undesired forced outages and develop advanced process control strategies for improved flexibility without compromising safety and reliability. Although condition monitoring using measurement data is widely used for operating plants, these monitoring techniques have been mainly developed for rotary equipment items. Condition monitoring of static equipment items such as the boiler components is challenging due to difficulty in estimating equipment health by simply using the measurement data. Furthermore, due to harsh operating conditions in high temperature regions that are most vulnerable to failure especially in the coal-fired boilers, there can be no or limited number of sensors. In addition, it is impractical to measure certain variables of interest. For example, even though the through-wall temperature profile of a tube in the high temperature superheater section of a boiler can provide important indication of scale formation or fouling, it is impractical to estimate the through-wall temperature profile. Hence, in this work we have developed a grey-box modeling and estimation approach for monitoring the health of critical boiler components. The grey-box model synergistically combines dynamic first-principles physics-based models with black-box models that are developed using the measurement data from operating plants. Various grey-box modeling approaches for superheater systems in steam boilers have been proposed using linear state space and detailed dynamic model of the physical system along with closed-loop data for parameter estimation using the prediction error method [1], [2] . A model-based approach was implemented to characterize the performance of the steam boiler system and an electric boiler for a hot water system. using nonlinear differential and algebraic equations model of mass and energy balances [3], [4] . Model parameters are adjusted using plant data using a nonlinear least-square optimization formulation. Detailed parametric models for various sections of a boiler system utilizing a genetic algorithm for parameter estimation have also been proposed [5] . Application of grey-box modeling approach for health monitoring of boiler systems is not well developed and lacks validation with operational data. Some studies have been conducted to determine the amount of oxide scale growth formation using damaged tubes from operating systems and doing lab scale characterization on them [6] . Empiricial methods for estimating remaining life using creep data analysis based on parabolic growth law for oxide evolution under the assumption of constant tube temperature have also been proposed [7] . However, experimental analysis of oxide growth in tubes and using empirical growth laws based on lab scale data is beneficial for offline assessment only, and detailed models are required to utilize for online monitoring providing actual time prediction. Using multisource data for damage prediction and health monitoring of boiler tubes utilizing large amount of historical operational data for training deep learning models based on long short-term memory (LSTM) and backpropagation through time (BPTT) networks has also been investigated [8] . However, using data-driven black-box models alone can lead to errors despite using extensive operational data because of the unforeseen scenarios not captured in the training data used in these models. Furthermore, work on estimators for grey-box systems is not well developed in the existing literature. A generic parameter estimation framework using stochastic grey-box models has been studied using extended Kalman filtering based on maximum likelihood and maximum a posteriori estimation for estimation [9] . A moving horizon estimation (MHE) scheme for parameter estimation in grey-box models based on a synthetic example using Monte Carlo simulation has also been proposed [10] . Grey box state estimators using an unscented Kalman filter have been proposed for systems with correlated and unmeasured disturbances combining mechanistic models with a discrete disturbance model [11] . One of the key issues in estimators for grey-box systems is the computation of error covariance matrix as the state transition matrix for the black-box model is not available explicitly. Furthermore, process noise covariance for the black-box model is difficult to estimate or assume. To address these challenges, in this work we have developed several hybrid grey-box modeling approaches combining white-box physics-based models with data-driven artificial intelligence (AI ) black-box models.The white-box model is based on a dynamic distributed first-principles 3-D DAE model considering thick-walled tubes and utilizing prior knowledge of the physics of the system. In addition, black-box models are developed using neural network and Bayesian machine learning models. Three different grey-box structures are developed - physics-based and black-box models arranges in series, physics-based and black-box models arranges in parallel, black-box model integrated within physics-based model where one or more phenomena or mechanisms or represented by a data-driven model. Formation of the oxide scale leads to higher heat transfer resistances leading to local temperature rise that can accelerate creep damage. The oxide scale growth is calculated using a parabolic growth rate law for different material specifications. Spatial and temporal variation of temperature is used for estimating creep failure using the Larson-Miller Parameter (LMP) method is used to predict damage accumulation in the system. The work on developing estimators for grey-box systems considered two cases- one where the structure and functional representation of the black-box model are known and another where this information are not available. The estimator algorithms have also been developed for three grey-box structures- series, parallel and integrated. The utility of the framework as an online health-monitoring tool is studied for a power plant boiler superheater system. References [1] T. T. K. Ly and H. M. Son, “Grey-Box Identification of Steam Boiler Using Linear State-Space Model and Closed-Loop Data,” vol. 101, no. I, pp. 25–29, 2014. [2] T. T. K. Ly, “GREY-BOX LPV MODEL IDENTIFICATION OF BOILER SUPERHEATED STEAM TEMPERATURE,” 2020. [3] J. B. T. BARSZCZ, P. CZOP, “Model-Based Evaluation of a Power Plant Steam Boiler System,” Probl. Eksploat. , vol. 2, pp. 7–19, 2011, [Online]. Available: www.problemyeksploatacji.itee.radom.pl [4] A. A. Farooq, A. Afram, N. Schulz, and F. Janabi-Sharifi, “Grey-box modeling of a low pressure electric boiler for domestic hot water system,” Appl. Therm. Eng. , vol. 84, pp. 257–267, 2015, doi: 10.1016/j.applthermaleng.2015.03.050. [5] A. Chaibakhsh, A. Ghaffari, and S. A. A. Moosavian, “A simulated model for a once-through boiler by parameter adjustment based on genetic algorithms,” Simul. Model. Pract. Theory , vol. 15, no. 9, pp. 1029– 1051, 2007, doi: 10.1016/j.simpat.2007.06.004. [6] R. Shukla and D. Pareek, “Condition Assessment of Re-heater / Superheater Tubes using Internal Oxide Scale Thickness Measurement – The Right Way,” e-Journal Nondestruct. Test. , pp. 1–8, 2019. [7] J. D. Angelo, A. Bennecer, S. Kaczmarczyk, and P. Picton, “Modelling of thermal behaviour of iron oxide layers on boiler tubes,” J. Phys. Conf. Ser. , vol. 721, no. 1, 2016, doi: 10.1088/1742-6596/721/1/012002. [8] G. Liu et al. , “Typical Damage Prediction and Reliability Analysis of Superheater Tubes in Power Station Boilers Based on Multisource Data Analysis,” Energies , vol. 15, no. 3, 2022, doi: 10.3390/en15031005. [9] N. R. Kristensen, H. Madsen, and S. B. Jørgensen, “Parameter estimation in stochastic grey-box models,” Automatica , vol. 40, no. 2, pp. 225–237, 2004, doi: 10.1016/j.automatica.2003.10.001. [10] A. J. Isaksson, D. Törnqvist, J. Sjöberg, and L. Ljung, “Grey-box identification based on horizon estimation and nonlinear optimization,” Proc. Isc. Int. Symp. Stoch. Syst. Theory its Appl. , vol. 2010, no. 0, pp. 1–6, 2010, doi: 10.5687/sss.2010.1. [11] V. A. Bavdekar and S. C. Patwardhan, “Development of grey box state estimators for systems subjected to time correlated unmeasured disturbances,” J. Process Control , vol. 22, no. 9, pp. 1543–1558, 2012, doi: 10.1016/j.jprocont.2012.06.004.",
+    "presenting_author": "Vivek Saini | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Vivek Saini | West Virginia University, Morgantown, WV",
+      "Angan Mukherjee | West Virginia University, Morgantown, WV",
+      "Samuel Adeyemo | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Vivek Saini",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Angan Mukherjee",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Samuel Adeyemo",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "433a",
+    "sortable_time": "2023-11-09_08:00:00_08:18:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670487"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/662687",
+    "paper_endpoint": "Paper/662687",
+    "paper_id": "662687",
+    "topic": "Time-Series Modeling for Run-to-Run Control of an Area-Selective Atomic Layer Deposition Process",
+    "title": "Time-Series Modeling for Run-to-Run Control of an Area-Selective Atomic Layer Deposition Process",
+    "date_time": "2023-11-09_08:00:00_10:30:00",
+    "session_id": "52082",
+    "session_title": "Data-driven Modeling, Estimation and Optimization for Control II",
+    "session_number": "433",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Time-Series Modeling for Run-to-Run Control of an Area-Selective Atomic Layer Deposition Process Matthew Tom 1 , Sungil Yun 1 , Henrik Wang 1 , Feiyang Ou 1 , Gerassimos Orkoulas 3 , and Panagiotis D. Christofides 1 , 2 Department of Chemical and Biomolecular Engineering, University of California, Los Angeles, CA Department of Electrical and Computer Engineering, University of California, Los Angeles, CA Department of Chemical Engineering, Widener University, Chester, PA During semiconductor fabrication, several procedures are employed to maintain the quality of the product, specifically the thin-film deposition rate, which is measured by sensitive metrological equipment, ex situ . However, the production of these semiconducting materials relies on stable operating conditions to promote ef­fective nanopatterning without time-consuming postprocessing steps, especially for bottom-up transistor stacking on wafers. Therefore, robust process control is necessary to monitor the changes in the processing environment while resisting the effects of disturbances, which are attributed to changes in the process input, genera­tion of byproducts, and equipment performance degradation with time. The application of statistical process control (SPC) methods has been widely used to mitigate process disturbances in order to retain the conformity of ultra-thin films and nanocoatings. In particular, run-to-run (R2R) control has been implemented in semi­conductor manufacturing processes as a model for process regulation and input adjustment according to the deviations between output variables and process-specified setpoint through various algorithms, including the exponentially weighted moving average (EWMA) [1,2]. Despite the robustness and reliability of R2R control strategy, it is not practical to perform output measurements and input modifications every batch from an industrial perspective due to ex situ monitoring. Additionally, even if in situ metrology systems are fully integrated, control might become unstable if inputs are modified too frequently in response to noises caused by measurement errors. One solution is to apply time-series fore­casting methods such as the autoregressive integrated moving average (ARIMA) method that employ a statistical predic­tion of the process through previously established data sets to perform input variable adjustment without requir­ing output measurements for each batch run [3,4]. Such an approach will en­able higher productivity while main­taining robust control within statistically significant limits. This work will integrate an in silico , multiscale modeling approach from a previously developed area-selective atomic layer deposition (ASALD) process in a rotary spatial reactor configuration [5] in conjunction to a run-to-run controller that is characterized by the EWMA method. First, an elaborate multiscale data set for the output varia­ble, deposition rate, will be collected for a range of input operating conditions including the rotation speed of the reactor to construct an empirical, linear regression model of the data set. Next, an R2R controller will be integrated into the work by introducing a drift disturbance and a stochastic shift disturbance that reduces the rate of reaction and will be conducted through each batch run. Lastly, a time-series model will be developed from the prior R2R controller data, and tested to determine the optimal number of batch runs required before measurement is needed and a loss of control outside of operation bounds is observed. References: Moyne, J., Del Castillo, E., & Hurwitz, A.M., 2018. Run-to-run control in semiconductor manufacturing . CRC Press. Del Castillo, E., 2002. Statistical process adjustment for quality control , Wiley-Interscience. Montgomery, D. C., 2013. Introduction to statistical quality control , 7th ed., John Wiley & Sons. Korabi, T. E., Graton, G., Adel, E. M. E, Ouladsine, M. & Pinaton, J., 2019. “Monitoring of a sampled process data under Run-to-Run control: application to a semiconductor process,” 2019 IEEE 15th International Conference on Automation Science and Engineering (CASE) , Vancouver, BC, Canada. Yun, S., Wang, H., Tom, M., Ou, F., Orkoulas, G., & Christofides P. D., 2023. “Multiscale CFD Modeling of Spatial Area-Selective Thermal Atomic Layer Deposition: Application to Reactor Design and Operating Condition Calculation,” Coatings , 13, 558.",
+    "presenting_author": "Matthew Tom | University of California, Los Angeles",
+    "authors": [
+      "Matthew Tom | University of California, Los Angeles",
+      "Sungil Yun | University of California, Los Angeles",
+      "Henrik Wang | University of California, Los Angeles",
+      "Feiyang Ou | University of California, Los Angeles",
+      "Gerassimos Orkoulas | Widener University, Chester, PA",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Matthew Tom",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sungil Yun",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Henrik Wang",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Feiyang Ou",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Gerassimos Orkoulas",
+        "affiliation": "Widener University, Chester, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "433b",
+    "sortable_time": "2023-11-09_08:18:00_08:36:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/662687"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667115",
+    "paper_endpoint": "Paper/667115",
+    "paper_id": "667115",
+    "topic": "Implicit Neural Representations for Accurately Modeling State Transition Dynamics of a Distillation Column",
+    "title": "Implicit Neural Representations for Accurately Modeling State Transition Dynamics of a Distillation Column",
+    "date_time": "2023-11-09_08:00:00_10:30:00",
+    "session_id": "52082",
+    "session_title": "Data-driven Modeling, Estimation and Optimization for Control II",
+    "session_number": "433",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "This study explores the potential of implicit neural representations for accurately learning the state transition dynamics of a distillation column. Recently, implicit neural representations with periodic activation functions have shown promising results in modeling signals and its derivatives [1]. Due to its inherent properties, implicit neural representations have been widely used in various fields including image synthesis, robotics, physics-based simulations, and control systems. However, in the field of chemical engineering, relatively few studies have been conducted on the potentials and limitations of employing implicit neural representations. Distillation is naturally a complex system with nonlinear dynamics because it involves the transport and separation of multiple chemical components with different volatilities. Optimal control of distillation systems has been widely studied in perspectives of model predictive control, dynamic optimization, and recently reinforcement learning. Considering its importance and established deep understanding of its system, it is a good starting-point for studying and evaluating a new algorithm. This works presents the development of an accurate state transition dynamic model of a distillation column. A rigorous dynamic distillation column simulation is utilized as a simulator. We define a partially observable Markov decision process where internal hidden states are not observable. The input actions are reflux ratio, condenser duty, reboiler duty, flow rates of the distillate and bottoms. The observed outputs are temperatures of top and bottom of the column, liquid levels in the condenser and reboiler, and pressure at the top of column. Other process state variables are assumed to be not provided when learning state transition dynamics. First, we compared the state transition dynamics of scenarios of when only outputs are learned, when only derivatives of outputs are learned, and when both outputs and their derivatives are learned. While all scenarios successfully learned the state transition dynamics, the scenario when both outputs and their gradients are learned showed the best performance. Furthermore, we compared different sample strategies in the input action space. Specifically, random sampling, uniform sampling, and Latin hypercube sampling methods were compared with different sampling sizes. Each sampling method showed benefit in either sampling efficiency or accuracy. Lastly, we explore the robustness of implicit neural representations to disturbances in observed output signals. Different scale in the variance of disturbance were tested and the capability and limitation of denoising effect by utilizing implicit neural representation will be presented. Our work suggests that implicit neural representations are a promising approach for accurately modeling complex systems with nonlinear dynamics. The property of well-maintaining derivatives will be valuable when the state transition dynamics is utilized in means of application of control, optimization, and fault diagnosis. It is our future work to extend this work to optimal control via nonlinear model predictive control and Hamilton-Jacobi-Bellman-based neural optimal control [2]. Reference [1] Sitzmann, V., Martel, J., Bergman, A., Lindell, D., and Wetzstein, G. (2020). Implicit neural representations with periodic activation functions. Advances in Neural Information Processing Systems, 33, 7462-7473. [2] Engin, S. and Isler, V. (2023). Neural Optimal Control using Learned System Dynamics. arXiv preprint arXiv:2302.09846.",
+    "presenting_author": "Jae Jung Urm | Seoul National University, Korea, Republic of (South)",
+    "authors": [
+      "Jae Jung Urm | Seoul National University, Korea, Republic of (South)",
+      "Jong Min Lee | Seoul National University, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jae Jung Urm",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jong Min Lee",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "433c",
+    "sortable_time": "2023-11-09_08:36:00_08:54:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667115"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667299",
+    "paper_endpoint": "Paper/667299",
+    "paper_id": "667299",
+    "topic": "Adversarially Robust Real-Time Optimization and Control (ARRTOC)",
+    "title": "Adversarially Robust Real-Time Optimization and Control (ARRTOC)",
+    "date_time": "2023-11-09_08:00:00_10:30:00",
+    "session_id": "52082",
+    "session_title": "Data-driven Modeling, Estimation and Optimization for Control II",
+    "session_number": "433",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "A practical challenge in process control is the handling of disturbances, noise and implementation errors which enter the system while still obtaining good set-point tracking. Moreover, all of this must be achieved within the tight time-constraints placed on controllers by the process dynamics. This can be handled by introducing additional complexity at the control layers, but this may not be practically implementable. In this work, we propose a novel algorithm, which favours practicality over complexity, by extending the role of Real-Time Optimization (RTO) to implicitly handle disturbance rejection and noise attenuation for the control layers. RTO is a critical task for the efficient operation of a process system. It allows optimal set-points to be found for the lower-level control layers in the process operation hierarchy while at the same time satisfying operating constraints. All of this must be handled in real-time due to changes in things such as equipment and costs amongst many other factors. However, compared to the lower-level control layers, there is still typically significant time between executions of the RTO operation. Once the set-points are calculated, they are sent to the lower-level control layers. Here the goals of the controllers can be broadly classified into three main objectives. Firstly, the controller must track the set-point, usually optimally. Beyond this, the controller must be able to handle disturbances which enter the system by having adequate disturbance rejection. Finally, imperfect sensor measurements mean that feedback controllers must also attenuate any noise entering the system. These three objectives are all in conflict with each other - A fundamental insight from linear control theory. For nonlinear systems, these conflicts are further exacerbated. All of these objectives must be adequately satisfied while at the same time ensuring the controller operates at a high enough frequency compared to the fastest dynamics acting on the system i.e. tight time-constraints are placed on the controller. Consequently, when designing controllers, a trade-off is usually sought in order to satisfy this constraint. For example, for MPC, while it may be possible to design a fully nonlinear MPC solution which is robust to certain disturbance and noise characteristics and other forms of uncertainty, this may not be practically implementable. Alternatively, to handle this challenge, we propose a means of exploiting the interaction between the upper-level RTO layer and the lower-level control layer. We argue that RTO need not only be concerned with finding optimal set-points for the controllers. Instead, it can use its better time resources to take on more responsibilities from the controllers, avoiding the need to rely on any complex, time-consuming algorithms at the resource-starved lower layers. In particular, we construct an RTO algorithm which implicitly handles disturbance rejection and noise attenuation for the control layers. This is done by finding optimal and adversarially robust set-points for the controllers. These are set-points which are, by design, robust to adversaries which in the context of RTO and control are disturbances and noisy measurements as well as other sources of implementation errors. This is chiefly achieved using a modified version of the Adversarially Robust Optimization algorithm [1,2,3]. In essence, our algorithm, which we refer to as the Adversarially Robust Real-Time Optimization and Control (ARRTOC) algorithm, is concerned with finding not only optimal set points but “operable” set-points. These are targets which allow the controller to operate at a set-point safely and reliably in the face of disturbances and noise. This goal of finding operable set-points is not new in the RTO literature. Currently, this is achieved via some form of pre or post analysis of the optimization solution space [4]. This, as attested to by several authors, may be computationally-intensive, dependent on unverified assumptions, suffer from the curse of dimensionality and thus may not be practical in some cases [5, 6]. Instead, our proposed ARRTOC algorithm handles the dual problem of optimality and operability seamlessly by finding regions of state-space which are inherently adversarially robust as part of an online optimization solution. The algorithm proceeds via two main steps. Firstly, given some initial point, the algorithm performs a neighbourhood exploration which searches for the directions in the neighbourhood where disturbances have the biggest impact on the objective. Thereafter, given this information, the algorithm selects a direction and step size within the neighbourhood which moves away from these worst-case disturbance directions. This repeats until a point is found where no feasible directions exist implying that an adversarially robust optimum has been found [1, 2]. The performance of the algorithm is best depicted via a visual illustration. Consider the example of controlling a CSTR with cooling water. The RTO objective is to maximise the operating profit. This is shown as a contour plot overlaying the concentration-temperature state-space in Fig 1 with the adversarially robust optimum (red cross), found using the ARRTOC algorithm, and the global optimum (blue cross) depicted. One should notice that the global optimum is on a \"narrow\" peak of the objective function. This alludes to the idea that this point is sensitive to perturbations. In the context of RTO and control, this has a direct analogy to the operability of this set-point. The controller, in this case a simple PI controller, attempts to steer the system to the proposed set-point while rejecting disturbances and attenuating noise. In Fig 2, we show the behaviour of the controller near the set-point in state-space for two scenarios. In scenario 1 (blue dashed line) the controller tracks the global optimum while in scenario 2 (red dashed line) the controller tracks the adversarially robust optimum. Both scenarios are subject to the exact same disturbance and noise characteristics. The dynamic performance of these two scenarios is shown in Fig 3 which shows the real-time, average, and standard deviation of the profit. For scenario 1, it is clear to see that, as a result of the disturbances acting on the system, the real-time profit (blue dashed line) rises and falls significantly, and at times almost drops to zero. The mean profit over time (solid blue line) is much lower than the expected global optimum (black dashed-starred line) suggesting that the system struggles to operate at this point. The standard deviation of the real-time profit (blue shaded region) is also quite significant. Crucially, all of this shows that, by design, the global optimum is not robust to adversarial perturbations. On the other hand, for scenario 2, one can clearly see the real-time profit (red dashed line) is far more stable over time as compared to scenario 1. In this case, as the set-point is robust by design, the mean profit (red solid line) is much closer to the robust optimum profit (green dashed-starred line) and the standard deviation (red shaded region) is much smaller compared to scenario 1. In fact, due to the inherent robustness associated with this point, the mean profit for scenario 2 is larger than the mean profit of scenario 1 by almost 25%, showing that the robust optimum has better operability properties. That is, perversely, by operating at the adversarially robust optimum, the system is more profitable, on average, than if the system operated at the global optimum. Fundamentally, we have taken the challenge of robustifying our controller and achieved it at the RTO level instead. This allows us to use more computational time resources at the RTO level (where they are abundant) and avoid this at the control level (where they are lacking). In fact, in our work, we demonstrate via case studies that the integration of the RTO and control layers as we have suggested allows practitioners to more easily balance the robustness of both layers in a unified and holistic manner. Specifically, the controllers can be designed to an adequate level of robustness (which fits within their computational time budget) and then the remaining robustness, if required, can be handled at the RTO level by the ARRTOC algorithm. To conclude, our proposed ARRTOC algorithm demonstrates that the RTO and control layers can be integrated in an efficient, scalable, and practical manner which satisfies both the RTO and control objectives mentioned hitherto. It favours practicality over complexity and can be extended to cases where the underlying RTO objective is not known through the use of Gaussian Process Regression [1]. [1] Bogunovic, I. et al. (2018) “Adversarially Robust Optimization with Gaussian Processes,” Advances in Neural Information Processing Systems 31 (NeurIPS 2018). [2] Bertsimas, D. et al. (2010) “Robust optimization for unconstrained simulation-based problems,” Operations Research, 58(1), pp. 161–178. [3] Paulson, J.A. et al. (2022) “Adversarially robust bayesian optimization for efficient auto‐tuning of generic control structures under uncertainty,” AIChE Journal, 68(6). [4] Gazzaneo, V. et al. (2019) “Process operability algorithms: Past, present, and future developments,” Industrial & Engineering Chemistry Research, 59(6), pp. 2457–2470. [5] Lima, F.V. et al. (2009) “Similarities and differences between the concepts of operability and flexibility: The steady-state case,” AIChE Journal. [6] Dinh, S. and Lima, F.V. (2023) “Dynamic operability analysis for process design and control of Modular Natural Gas Utilization Systems,” Industrial & Engineering Chemistry Research, 62(5), pp. 2052–2066.",
+    "presenting_author": "Akhil Ahmed | Imperial College London, United Kingdom",
+    "authors": [
+      "Akhil Ahmed | Imperial College London, United Kingdom",
+      "Antonio del Rio Chanona | Imperial College London, United Kingdom",
+      "Mehmet Mercangöz | ABB, London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Akhil Ahmed",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Mehmet Mercangöz",
+        "affiliation": "ABB, London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "433d",
+    "sortable_time": "2023-11-09_08:54:00_09:12:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667299"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667334",
+    "paper_endpoint": "Paper/667334",
+    "paper_id": "667334",
+    "topic": "Robust Learning and Predictive Control of Time-Delay Nonlinear Processes with Deep Recurrent Koopman Operators",
+    "title": "Robust Learning and Predictive Control of Time-Delay Nonlinear Processes with Deep Recurrent Koopman Operators",
+    "date_time": "2023-11-09_08:00:00_10:30:00",
+    "session_id": "52082",
+    "session_title": "Data-driven Modeling, Estimation and Optimization for Control II",
+    "session_number": "433",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Within the context of advanced control of large-scale industrial processes (e.g., chemical processes, pharmaceutical processes, wastewater treatment), time delays can arise from various sources, such as the duration required by lab analyzers to provide sample measurements, complex commutation, and information exchange (especially when networked communication is involved) [1-3]. While time delays may be considered small most of the times considering the slow dynamics of large-scale industrial processes, their presence has indeed posed significant challenges to the modeling and control performance of such systems, therefore considerable effort has long been devoted to overcoming these challenges [1,3]. The control of nonlinear systems with unknown time delays has been a challenging problem over the last decades. An attempt was initially made in [4] to extend the backstepping method to time-delay nonlinear systems. To circumvent the loop design issue produced by backstepping method [5], certain growth restrictions were enforced on the time-delay nonlinearities in [6]. By using the dynamic scaling change technique and adding a power integrator proposed in [7,8] addressed the global stabilization of feedforward nonlinear time-delay systems. As the scale of the nonlinear processes and the complexity of the tasks grow, machine learning-based modeling and control have drawn many interests. However, a general and reliable data-driven framework for the modeling and control of nonlinear uncertain systems with time delays has yet to come. In past decades, the success of machine learning has motivated its applications in system identification and control [9]. The first class of these advancements trains artificial neural networks with data to approximate the dynamics of target systems [10]. The modeling problems are formulated as supervised learning problems, and neural networks are trained to infer the system dynamical behaviors based on the states/measurements and control inputs. However, with the complex and over-parameterized neural networks, the learned models become restrictive when it comes to dynamics analysis and controller design. Another group of works is model-free, where control laws are learned out of data directly, e.g. reinforcement learning, adaptive dynamic programming, and iterative learning control. Recently, the Koopman operator theory has attracted much attention, owing to its ability to model and represent the dynamics of complex nonlinear systems as a linear system on a high dimensional observable space [11]. The transformation of nonlinearity to linearity makes it possible to apply linear control theories to the analysis and control of nonlinear systems. Motivated by this insight, practical algorithms like dynamic mode decomposition (DMD) and extended dynamic mode decomposition (EDMD), were developed and applied to the modeling of various engineering systems, including chemical processes [12,13]. The observable functions determine which features to be extracted from the state information and used for future state prediction, thus setting up a proper group of observable functions in the Koopman method is crucial yet difficult. In order to automate the design of observable functions, deep learning techniques were naturally introduced and formed the Deep-DMD methods [14-16]. However, these methods focus on modeling nominal systems with clean data sets, while noise and time delays were left out of consideration. In this work, we present a novel learning control framework called Deep Recurrent Koopman Operator (DRKO) for uncertain nonlinear systems with time delays. We train a deep recurrent neural network to map the original state/measurement trajectory to a high-dimensional probabilistic distribution and then learn a set of linear operators to predict future states. Within the proposed DRKO framework, a computationally efficient robust predictive control scheme is developed. The stability of the closed-loop system is guaranteed by the robust control framework even in the presence of modeling errors. Finally, the performance of DRKO is illustrated via the application of a reactor-separator process example, and the superiority of the proposed method is demonstrated in comparison with baselines. References Ellis M., Christofides, P. D., Economic model predictive control of nonlinear time-delay systems: Closed-loop stability and delay compensation. AIChE Journal , 2015, 61(12): 4152-4165. Rashedi M., Liu J., Huang B., Communication delays and data losses in distributed adaptive high‐gain EKF. AIChE Journal , 2016, 62(12): 4321-4333. Liu J., Chen X, de la Peña D. M., Christofides P. D., Iterative distributed model predictive control of nonlinear systems: Handling asynchronous, delayed measurements. IEEE Transactions on Automatic Control , 2011, 57(2): 528-534. Nguang S. K., Robust stabilization of a class of time-delay nonlinear systems. IEEE Transactions on Automatic Control , 2000, 45(4): 756-762. Zhou S., Feng G., Nguang S. K., Comments on “robust stabilization of a class of time-delay nonlinear systems”. IEEE Transactions on Automatic Control , 2002, 47(9): 1586. Hua C. C., Wang Q. G., Guan X. P., Memoryless state feedback controller design for time delay systems with matched uncertain nonlinearities. IEEE Transactions on Automatic Control , 2008, 53(3): 801-807. Qian C., Lin W., Non-Lipschitz continuous stabilizers for nonlinear systems with uncontrollable unstable linearization. Systems & Control Letters , 2001, 42(3): 185-200. Zhang X., Liu Q., Baron L, et al. Feedback stabilization for high order feedforward nonlinear time-delay systems. Automatica , 2011, 47(5): 962-967. Hewing L., Wabersich K. P., Menner M., et al. Learning-based model predictive control: Toward safe learning in control. Annual Review of Control, Robotics, and Autonomous Systems , 2020, 3: 269-296. Nagabandi A., Kahn G., Fearing R. S., et al. Neural network dynamics for model-based deep reinforcement learning with model-free fine-tuning, IEEE international conference on robotics and automation (ICRA) . 2018: 7559-7566. Koopman B. O., Hamiltonian systems and transformation in Hilbert space. Proceedings of the National Academy of Sciences , 1931, 17(5): 315-318. Narasingam A., Kwon J. S.-I., Koopman Lyapunov‐based model predictive control of nonlinear chemical process systems. AIChE Journal , 2019, 65(11): e16743. Narasingam A., Kwon J. S.-I., Application of Koopman operator for model-based control of fracture propagation and proppant transport in hydraulic fracturing operation. Journal of Process Control , 2020, 91: 25-36. Lusch B., Kutz J. N., Brunton S. L., Deep learning for universal linear embeddings of nonlinear dynamics. Nature Communications , 2018, 9(1): 4950. Morton J., Jameson A., Kochenderfer M. J., et al. Deep dynamical modeling and control of unsteady fluid flows. Advances in Neural Information Processing Systems , 2018, 31. Han Y., Hao W., Vaidya U., Deep learning of Koopman representation for control. 2020 59th IEEE Conference on Decision and Control (CDC) . 2020: 1890-1895.",
+    "presenting_author": "Xunyuan Yin | Nanyang Technological University, Singapore",
+    "authors": [
+      "Minghao Han | Nanyang Technological University, Singapore",
+      "Xunyuan Yin | Nanyang Technological University, Singapore"
+    ],
+    "authors_structured": [
+      {
+        "name": "Minghao Han",
+        "affiliation": "Nanyang Technological University, Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Xunyuan Yin",
+        "affiliation": "Nanyang Technological University, Singapore",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "433e",
+    "sortable_time": "2023-11-09_09:12:00_09:30:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667334"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670443",
+    "paper_endpoint": "Paper/670443",
+    "paper_id": "670443",
+    "topic": "Next-Generation Hybrid Models: Combining Attention Mechanisms and Lstm for Improved Predictions and Process Control in the Chemical Industry",
+    "title": "Next-Generation Hybrid Models: Combining Attention Mechanisms and Lstm for Improved Predictions and Process Control in the Chemical Industry",
+    "date_time": "2023-11-09_08:00:00_10:30:00",
+    "session_id": "52082",
+    "session_title": "Data-driven Modeling, Estimation and Optimization for Control II",
+    "session_number": "433",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The chemical industry is undergoing a significant transformation, which is driven by recent advancements in artificial intelligence (AI) and machine learning (ML) techniques that harness large quantities of process data from chemical plants. At the forefront of this revolution are hybrid models, which have gained substantial popularity over purely data-driven approaches such as deep and recurrent neural networks (DNN and RNN) and long short-term memory (LSTM) networks [1, 2]. This is because hybrid models combine a first-principles model with a suitable data-driven approach, benefiting from both a priori system information and feature-rich process data to synergistically provide better predictions than purely data-driven ML models [3, 4]. Although the literature is rife with DNN-based hybrid models for fermentation, paper and pulp process, hydraulic fracking, and other chemical systems that show good predictive performance [5,6], these models have limitations. Most chemical systems exhibit process uncertainties, such as sensor noise, feed and temperature fluctuations, and changing kinetics, which can distort the measurements fed to the hybrid model and result in a noticeable plant-model mismatch. For example, in a fermentation process, the substrate feed slurry shows the variance in solute content, and bacterial actions change in response to state evolution, leading to time-varying kinetics. As a result, a DNN-based hybrid model that does not accurately capture these temporal dependencies will display a plant-model mismatch with process operation. Therefore, the development of next-generation hybrid models that can (a) account for these process uncertainties and (b) accurately predict these time-varying parameters is necessary. Recently, attention-based ML models have been in the spotlight due to their remarkable ability to establish strong correlations between input and outputs, even in the presence of system noise or uncertainties. These models adeptly focus on short- and long-term dependences in the evolution of system states [7,8]. In essence, the attention mechanism performs a scaled-dot product calculation between various input vectors, enabling it to selectively pay attention to significant long-term (e.g., concentration evolution) and short-term (e.g., sudden change in temperature due to control actions) process alterations by assigning higher attention scores to such instances. As a result, the attention mechanism serves as a filtering mechanism to dynamically handle process uncertainties and data noise by effectively dampening weak correlations and amplifying strong interactions between the system states. On the other hand, LSTM-based sequential time-series models have shown superior predictive performance due to their ability to explicitly consider the time evolution of system states (i.e., battery dynamics, stock market estimates, energy forecasting) as opposed to DNNs. This is because, LSTM utilizes several internal gates to dynamically update, forget, and store relevant changes in the state dynamics, whereas DNNs tend to assign roughly equal weight to all input channels [9]. Thus, considering the abovementioned details, a combination of attention mechanism and LSTM can pose a highly effective solution that (a) can account for process uncertainties by selective attention to changes in system dynamics, and (b) accurately predict time-varying parameters. To this end, we propose a novel attention-LSTM-based hybrid model for a complex, non-trivial fed-batch fermentation process. Specifically, the input to the data-driven module of the hybrid model consists of state measurements for the previous time steps. This input is sent through an encoder module to lift the states into higher dimensions, and then an attention mechanism with a subsequent LSTM layer is applied to obtain time-series predictions of uncertain parameters for the next steps. The uncertain parameters are a lumped representation of different process variations, such as varying bacterial kinetics, and feed and temperature fluctuations, and are represented by the most sensitive kinetic parameters determined through global sensitivity analysis [6]. Next, the predicted uncertain parameters are then fed to the first-principles model, which includes mass and energy balance equations, concentration dynamics, and kinetic equations to obtain state predictions for the next time steps. The training and validation dataset is generated by simulating a high-fidelity (HF) model of a fermenter system for over 100 different arbitrarily initialized operating conditions, such as temperature, substrate flow rate, and catalyst rate. Additionally, the prediction results (i.e., biomass, substrate, oxygen concentration, and product) were compared against an existing DNN-based hybrid model to highlight the superior performance of the proposed attention-LSTM-based hybrid model. Finally, the developed hybrid model is incorporated within a model predictive controller (MPC) to achieve set-point targets for product amount and operating cost by determining optimal input profiles for feed flow rate and temperature. In a nutshell, the combined benefits of attention mechanism and LSTM-based sequential modeling give rise to the next generation of hybrid models that can regulate process uncertainties while providing accurate process predictions. Moreover, the current work lays the groundwork for developing attention-based hybrid models for more complex chemical processes and further gaining insights regarding unknown process uncertainties, leading to more accurate predictions and intelligent control. References: Sansana, J., Joswiak, M. N., Castillo, I., Wang, Z., Rendall, R., Chiang, L. H., & Reis, M. S. (2021). Recent trends on hybrid modeling for Industry 4.0. Computers & Chemical Engineering, 151, 107365. Chen, Yingjie, and Marianthi Ierapetritou. \"A framework of hybrid model development with identification of plant ‐ model mismatch.\" AIChE Journal 66.10 (2020): e16996 Thompson, M. L., & Kramer, M. A. (1994). Modeling chemical processes using prior knowledge and neural networks. AIChE Journal, 40(8), 1328-1340. Sharma, Niket, and Y. A. Liu. \"A hybrid science ‐ guided machine learning approach for modeling chemical processes: A review.\" AIChE Journal 68.5 (2022): e17609. Shah, P., Sheriff, M. Z., Bangi, M. S. F., Kravaris, C., Kwon, J. S. I., Botre, C., & Hirota, J. (2022). Deep neural network-based hybrid modeling and experimental validation for an industry-scale fermentation process: Identification of time-varying dependencies among parameters. Chemical Engineering Journal, 135643. Bangi, Mohammed Saad Faizan, and Joseph Sang-Il Kwon. \"Deep hybrid modeling of a chemical process: Application to hydraulic fracturing.\" Computers & Chemical Engineering 134 (2020): 106696. Devlin, Jacob, et al. \"Bert: Pre-training of deep bidirectional transformers for language understanding.\" arXiv preprint arXiv:1810.04805 (2018). Vaswani, Ashish, et al. \"Attention is all you need.\" Advances in neural information processing systems 30 (2017). Hochreiter, Sepp, and Jürgen Schmidhuber. \"Long short-term memory.\" Neural computation 9.8 (1997): 1735-1780.",
+    "presenting_author": "Parth Shah | Texas A&M University, College Station, TX",
+    "authors": [
+      "Parth Shah | Texas A&M University, College Station, TX",
+      "Niranjan Sitapure | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Parth Shah",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Niranjan Sitapure",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "433f",
+    "sortable_time": "2023-11-09_09:30:00_09:48:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670443"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670460",
+    "paper_endpoint": "Paper/670460",
+    "paper_id": "670460",
+    "topic": "Integrating Koopman Operator with Subspace Identification for Model Predictive Control (MPC) Design",
+    "title": "Integrating Koopman Operator with Subspace Identification for Model Predictive Control (MPC) Design",
+    "date_time": "2023-11-09_08:00:00_10:30:00",
+    "session_id": "52082",
+    "session_title": "Data-driven Modeling, Estimation and Optimization for Control II",
+    "session_number": "433",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Nonlinear dynamics are widely prevelent in chemical engineering processes, posing significant challenges in automatic control systems. There have been several nonlinear modeling algorithms to accurately model the dynamic behaviours of the processes for being used in nonlinear model predictive control (NMPC) frameworks, such as first-principles [1] and nonlinear data-driven approaches such artificial neural networks (ANN) [2]. The key challenge in these implementations is often the model identification. To address this issue, some researchers use approaches that represent the nonlinear dynamics in terms of linear terms, such as Koopman operator-based models [3]. The identification of a Koopman operator based on the first-principles model is challenging due to the complex dynamics of the system. In addition, first-principles models cannot be accessible easily in many practical situations. However, there have been several data-driven model identification methods developed to identify a linear model based on process historical data such as Subspace Identification (SID) and Dynamic Mode Decomposition (DMD) methods. DMD-based methods have been widely used to identify Koopman operators [3]. SID-based approaches, on the other hand, have not been integrated with the Koopman operator identification. Due to this and the fact that SID-based algorithms show reasonably good performance, we propose a novel modeling approach integrating SID with Koopman operator. In the first part, the superior performance of the SID-Koopman operator model is shown compared to DMD-Koopman operator. Next, the SID-Koopman operator model is utilized to implement MPC for an illustrative CSTR reactor. The efficacy of the proposed SID-Koopman-based MPC is shown using several set-point tracking scenarios for the CSTR example. References [1] Ganesh, H.S., Seo, K., Fritz, H. E., Edgar, T. F., Novoselac, A. and Baldea, M., 2021. Indoor air quality and energy management in buildings using combined moving horizon estimation and model predictive control. Journal of Building Engineering, 33, p.101552. [2] Hassanpour, H., Corbett, B. and Mhaskar, P., 2020. Integrating dynamic neural network models with principal component analysis for adaptive model predictive control. Chemical Engineering Research and Design, 161, pp.26-37. [3] Narasingam, A., Son, S. H. and Kwon, J. S. I., 2022. Data-driven feedback stabilisation of nonlinear systems: Koopman-based model predictive control. International Journal of Control, pp.1-12.",
+    "presenting_author": "Xiaonian Wang | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Xiaonian Wang | McMaster University, Hamilton, Canada",
+      "Brandon Corbett | Sartorius, Oakville, Canada",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Xiaonian Wang",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Brandon Corbett",
+        "affiliation": "Sartorius, Oakville, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "433g",
+    "sortable_time": "2023-11-09_09:48:00_10:06:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670460"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/671176",
+    "paper_endpoint": "Paper/671176",
+    "paper_id": "671176",
+    "topic": "A Training Methodology for Hybrid Building Thermal Models with Time-Varying Heat Disturbances",
+    "title": "A Training Methodology for Hybrid Building Thermal Models with Time-Varying Heat Disturbances",
+    "date_time": "2023-11-09_08:00:00_10:30:00",
+    "session_id": "52082",
+    "session_title": "Data-driven Modeling, Estimation and Optimization for Control II",
+    "session_number": "433",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In 2021, the combined energy consumption of the residential and commercial building sectors accounted for about 28% of total U.S. end-use energy consumption [1]. With rising energy prices and demand [2], energy-efficient building operations are more critical than ever. Studies have shown that model predictive control (MPC) can have a positive impact on building operations (refer to the review [3] and the references therein). However, the widespread adoption of MPC in buildings is limited due to the challenges of developing and training a model [4]. This task is complex because model parameter estimation is coupled to estimating the unmeasured time-varying heat disturbance resulting from occupancy, solar radiation, and electrical equipment. Hybrid models, which consist of physics-based and data-driven models, have been proposed for control-oriented building thermal modeling [4-6]. In our previous study [5], a physics-based thermal resistance-capacitance (RC) network model, derived from first principles, and a feedforward neural network, used to forecast the unmeasured heat disturbances, were integrated to form a parameterized hybrid model. This work proposed a method for training both model parameters simultaneously. In [6], a hybrid model was proposed that modeled the building thermal dynamics using a physics-based model and forecasted the unmeasured disturbances using a neural network. The neural network and physics-based models, however, were trained separately. The advantage of simultaneously training the hybrid model parameters is that this approach minimizes overall prediction errors and can potentially avoid compounding prediction errors resulting from training models separately. However, the model parameters obtained during training can depend on the initial parameter estimates provided to the solver due to the non-convexity of training problems. First-order training methods (e.g., gradient descent and stochastic gradient descent) are commonly used to train neural network models, owing to the availability of large datasets. However, in the case of modeling building thermal dynamics, the amount of data available for estimating model parameters is limited owing to practical considerations (i.e., minimizing potential comfort violations to building occupants). In this context, second-order or quasi-Newton methods like the Broyden-Fletcher-Goldfarb-Shanno (BFGS) algorithm can be considered. To this end, a novel heuristic three-step method for training hybrid building thermal models is proposed to improve the prediction of the building thermal dynamics with a lower computational time compared to using a single solver. The proposed method combines two gradient descent steps and one BFGS step, leveraging the advantages of BFGS while addressing the need to find a good initial parameter estimate to provide to the solver. The purpose of each training step is discussed. We propose a model validation approach agnostic to whether state or output measurements are available. As demonstrated by our hybrid model training results, the hybrid model trained using the three-step method achieves higher accuracy in predicting building thermal dynamics with fewer iterations compared to the same model trained using a single solver. References [1] “March 2023 monthly energy review”, Technical report, U.S. Energy Information Administration, 2023. [2] C.F. Alvarez, G. Molnar, “What is behind soaring energy prices and what happens next?”, Technical Report, International Energy Agency, 2021. [3] A. Afram, F. Janabi-Sharifi, A. S. Fung, and K. Raahemifar, “Artificial neural network (ANN) based model predictive control (MPC) and optimization of HVAC systems: A state of the art review and case study of a residential HVAC system”, Energy and Buildings 141 (2017), pp. 96–113. [4] M. Ellis, “Machine Learning Enhanced Grey-Box Modeling for Building Thermal Modeling,” In Proceedings of the American Control Conference, New Orleans LA USA, pp. 3927-3932, 25-28 May, 2021. [5] P. Krishna and M.J. Ellis, \"Control-Oriented Hybrid Modeling Framework for Building Thermal Modeling,\" in Energy Systems and Processes: Recent Advances in Design and Control, edited by M. Li (AIP Publishing, Melville, New York, 2023), Chapter 9, pp. 9-1–9-28. [6] P. Kumar, J.B. Rawlings, M.J. Wenzel, M.J. Risbeck, “Grey-box model and neural network disturbance predictor identification for economic MPC in building energy systems”, Energy & Buildings (2023)",
+    "presenting_author": "Pranav Krishna | University of California, Davis",
+    "authors": [
+      "Pranav Krishna | University of California, Davis",
+      "Loren dela Rosa | University of California, Davis",
+      "Matthew Ellis | University of California, Davis"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pranav Krishna",
+        "affiliation": "University of California, Davis",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Loren dela Rosa",
+        "affiliation": "University of California, Davis",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew Ellis",
+        "affiliation": "University of California, Davis",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "433h",
+    "sortable_time": "2023-11-09_10:06:00_10:24:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/671176"
+  }
+]

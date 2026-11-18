@@ -1,0 +1,360 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/662327",
+    "paper_endpoint": "Paper/662327",
+    "paper_id": "662327",
+    "topic": "Model-Based Diagnosis and Management of Chronic Obstructive Pulmonary Disease (COPD)*",
+    "title": "Model-Based Diagnosis and Management of Chronic Obstructive Pulmonary Disease (COPD)*",
+    "date_time": "2023-11-08_08:00:00_10:30:00",
+    "session_id": "52072",
+    "session_title": "Applied Math for Biomedical Systems",
+    "session_number": "296",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Chronic Obstructive Pulmonary Disease (COPD) is an inflammatory lung disease characterized by a persistent airflow obstruction severe enough to interfere with normal breathing function. The airflow limitation results from bronchial or alveolar abnormalities or a combination of them, usually caused by significant exposure to irritating gases such as wood or cigarette smoke [1,2]. The disease has an estimated global prevalence of over 10% (in the population aged >= 40 years) and is the 3 rd leading cause of death worldwide [2,3]. Consequently, the medical expenditures attributed to COPD are huge—the direct cost in the US alone is projected to approach $40 billion per year in the next few years, with similar expenses in the EU [2,3]. Despite being a significant public health challenge, several impediments exist to recognizing, assessing, and managing COPD, primarily due to the heterogeneity in disease and the patient-to-patient variations in response to therapy [4,5,6]. A key challenge in disease management is the occurrence of exacerbations—worsening of the patient’s condition beyond normal day-to-day variations—which may require a change in medication and/or hospitalization, depending on the severity of the episode. Owing to the hospitalization and ambulatory oxygen requirements, the most significant proportion of COPD-related medical expenses is also attributed to exacerbations [2]. It has been reported that initial symptoms of exacerbations occur well before the actual hospitalization, indicating the possibility of developing warning systems that could predict the occurrence and severity of these exacerbations [7]. In this context, Remote Patient Monitoring (RPM)—using digital technologies to collect medical/health data from individuals in one location and transmit (securely) to healthcare providers in a different location—is considered to hold the potential to improve COPD patient status assessment and treatment recommendations, predict exacerbations, and lower associated healthcare costs. There have been a few recent studies on predicting exacerbations using machine learning models that take as input one or more RPM variables—heart rate, activity level, self-declared state of well-being, spirometry test, and blood work results [7,8,9]. Noteworthy among these is the app-based product COPDPredict TM , recently released by NEPeSMO, which has been relatively successful [7]. However, the product relies heavily on biomarkers measured from the blood, indicating that the technology is not entirely continuous and requires a human-in-the-loop. In addition, after an initial screening by a decision tree, the diagnosis seems to be performed by a team of physicians rather than the software by itself. Most importantly, this, and none of the other works mentioned above, interprets the RPM data taking into account the physics involved, which can be crucial in predicting the severity of the exacerbation . We hypothesize that using the RPM data in conjunction with a personalized, physics-driven model of the human cardio-respiratory system could extract more information from the data, enabling RPM to be a continuous process requiring no human intervention, thereby improving the effectiveness of RPM technologies. Specifically, we propose modeling the occurrence of COPD from a control-systems engineering perspective, whereby the cardio-respiratory system—whose physiological functions will be described by appropriate mathematical equations—is represented as a control system (sensor, controller, actuator, process) and the disease state is modeled as a malfunct ion (or failure) of one or more components of the system . In the past, we have presented results of the basic system model and identified parameters associated with the emergence of COPD [10,11]. In the present work, we will discuss progress on model development and analysis in three parts: (i) the inclusion of the effect of activity level on the human cardio-respiratory control system as a feedforward loop—in addition to the existing feedback loop relying on measurements of arterial gas concentrations (ii) the analysis of the resultant model to understand the dynamics of RPM variables as a function of activity levels, resulting in the crucial conclusion that the RPM variables could encode information on disease states, with worsening disease states driving the RPM variables further from normal, and (iii) with the help of unsupervised learning tools and RPM data from COPD patients, the testing of the hypothesis on whether the disease state can be determined from RPM variables. Based on our analysis of the model—which we believe is the first instance of connecting physiological functions with RPM data in COPD patients—we conclude that RPM, combined with a personalized mathematical model, holds the potential to predict exacerbations, assess its severity, and facilitate timely access to healthcare facilities, thereby enhancing the quality of life for COPD patients. *The present presentation is dedicated to the memory of the late Prof. Babatunde A. Ogunnaike, a dear colleague, friend and the initiator of this research. References [1] Mannino, D. M., & Buist, A. S. (2007). Global burden of COPD: risk factors, prevalence, and future trends. The Lancet , 370 (9589), 765-773. [2] GOLD. (2023). Global Strategy for Prevention, Diagnosis, and Management of COPD: 2023 Report. https://goldcopd.org/2023-gold-report-2/. [3] World Health Organization. (2022). Chronic obstructive pulmonary disease (COPD). [2023-05-03]. https://www.who.int/news-room/fact-sheets/detail/chronic-obstructive-pulmonary-disease-(copd) . [4] Halpin, D. M., Celli, B. R., Criner, G. J., Frith, P., Varela, M. V. L., Salvi, S., ... & Agusti, A. (2019). It is time for the world to take COPD seriously: a statement from the GOLD board of directors. European Respiratory Journal , 54 (1). [5] Vogelmeier, C. F., Román-Rodríguez, M., Singh, D., Han, M. K., Rodríguez-Roisin, R., & Ferguson, G. T. (2020). Goals of COPD treatment: focus on symptoms and exacerbations. Respiratory medicine , 166 , 105938. [6] Franssen, F. M., Alter, P., Bar, N., Benedikter, B. J., Iurato, S., Maier, D., ... & Schmeck, B. (2019). Personalized medicine for patients with COPD: where are we?. International journal of chronic obstructive pulmonary disease , 1465-1484. [7] Patel, N., Kinmond, K., Jones, P., Birks, P., & Spiteri, M. A. (2021). Validation of COPDPredict™: unique combination of remote monitoring and exacerbation prediction to support preventative management of COPD exacerbations. International journal of chronic obstructive pulmonary disease , 1887-1899. [8] Tiwari, A., Liaqat, S., Liaqat, D., Gabel, M., de Lara, E., & Falk, T. H. (2021, November). Remote copd severity and exacerbation detection using heart rate and activity data measured from a wearable device. In 2021 43rd Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC) (pp. 7450-7454). IEEE. [9] Wu, C. T., Li, G. H., Huang, C. T., Cheng, Y. C., Chen, C. H., Chien, J. Y., ... & Lai, F. (2021). Acute exacerbation of a chronic obstructive pulmonary disease prediction system using wearable device data, machine learning, and deep learning: development and cohort study. JMIR mHealth and uHealth , 9 (5), e22591. [10] Ghadipasha, N., Chalant, A., Yu, B., Ogunnaike, B.A. (2019). Model-Based Diagnosis, Management, and Treatment of Chronic Obstructive Pulmonary Disease (COPD). 2019 AIChE Annual Meeting. [11] Kurian, V., Ghadipasha, N., Gee, M., Chalant, A., Hamill, T., Okossi, A., ... & Beris, A. N. (2022). A Systems Engineering Approach to Modeling and Analysis of Chronic Obstructive Pulmonary Disease (COPD). arXiv preprint arXiv:2212.13207.",
+    "presenting_author": "Michelle Gee | University of Delaware, Newark",
+    "authors": [
+      "Varghese Kurian | University of Delaware, Newark",
+      "Michelle Gee | University of Delaware, Newark",
+      "Alphonse Okossi | American Air Liquide Inc., Newark",
+      "Lucy Chen | American Air Liquide Inc., Newark",
+      "Antony N. Beris | University of Delaware, Newark"
+    ],
+    "authors_structured": [
+      {
+        "name": "Varghese Kurian",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Author"
+      },
+      {
+        "name": "Michelle Gee",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Alphonse Okossi",
+        "affiliation": "American Air Liquide Inc., Newark",
+        "designation": "Author"
+      },
+      {
+        "name": "Lucy Chen",
+        "affiliation": "American Air Liquide Inc., Newark",
+        "designation": "Author"
+      },
+      {
+        "name": "Antony N. Beris",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "296a",
+    "sortable_time": "2023-11-08_08:00:00_08:24:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/662327"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666480",
+    "paper_endpoint": "Paper/666480",
+    "paper_id": "666480",
+    "topic": "Optimal Control of Antibody Purification Via Protein a Affinity Chromatography during Multicycle Operations",
+    "title": "Optimal Control of Antibody Purification Via Protein a Affinity Chromatography during Multicycle Operations",
+    "date_time": "2023-11-08_08:00:00_10:30:00",
+    "session_id": "52072",
+    "session_title": "Applied Math for Biomedical Systems",
+    "session_number": "296",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Background: Monoclonal and polyclonal antibodies are essential therapies to treat many life-threatening diseases [1]. The most expensive step in antibody production is the Protein A chromatography resin used to selectively bind the antibody [2]. Many companies will use fixed residence time to maximize the antibody extraction capacity [3] and, as a result, minimize the amount of resin needed. Unfortunately, such strategy reduces the productivity of the purification step and increases the amount of water for injection needed. As a result, the use of fixed flow rates increases the overall costs of the operation and decreases the yield of the antibody due to the target molecule degradation with time [4]. Since the antibody yield and purity are improved at high flow rates but the resin capacity is improved at low flow rates, we investigate maximizing the resin performance by varying the flow rate while capturing the uncertainties of the process. Therefore, the objective of this work is to apply stochastic optimal control on a dynamic model, such as the Yoon-Nelson model [5], representing the affinity chromatography step, via inlet flow rate control to maximize the efficient use of the Protein A resin without sacrificing the yield and purity of the antibody. It is also expected that the resin will degrade with each cycle leading to a different optimal flow rate pathway. Therefore, the optimal control is expanded in our evaluation to also capture the resin performance during a multicycle process. Methods: Four temporal moments[6], are formulated to represent the dynamic chromatographic process model in the form of ordinary differential equations (ODEs). Stochastic optimal control is accomplished via the application of the Pontryagin’s maximum principle (PMP)[7] through the following steps: (i) integrate the Yoon-Nelson model with the method of moments[8] (ii) capture the uncertainty of the system via use of stochastic representations of the moments[9] (iii) determine the dynamic influent flow rate profile to achieve maximum antibody extraction10], and (iv) capture the multicycle degradation of the Protein A resin via linear representation and repeat the optimization steps. PMP also requires the introduction of deterministic and stochastic adjoint variables to complement the state variables, representing the four moments [10]. Resin performance optimization is achieved when the objective function, the theoretical plate number, is maximized at every time step. Results: When applying the Pontryagin’s maximum principle to maximize the resin performance, optimality was achieved via varying the flow rate with time. When the work is repeated with the same protein A resin for consecutive runs, the resin degradation was observed as the optimal flow rate pathway changed with each cycle enabling maximum resin lifetime usage. Adding optimal control on the flow rate will allow the use of any size column via control of the residence time. Our work expands the efficient lifetime use of the most expensive step in the antibody downstream processing via maximizing yields, purity, and resin capacity in real life stochastic processes. Keywords: Yoon-Nelson Model, stochastic optimal control, affinity chromatography. References: [1] R.-M. Lu et al. , “Development of therapeutic antibodies for the treatment of diseases,” J. Biomed. Sci. , vol. 27, no. 1, p. 1, Dec. 2020, doi: 10.1186/s12929-019-0592-z. [2] S. Arora, B. V. Ayyar, and R. O’Kennedy, “Affinity Chromatography for Antibody Purification,” in Protein Downstream Processing , vol. 1129, N. E. Labrou, Ed. Totowa, NJ: Humana Press, 2014, pp. 497–516. doi: 10.1007/978-1-62703-977-2_35. [3] A. M. Ramos-de-la-Peña, J. González-Valdez, and O. Aguilar, “Protein A chromatography: Challenges and progress in the purification of monoclonal antibodies,” J. Sep. Sci. , vol. 42, no. 9, pp. 1816–1827, May 2019, doi: 10.1002/jssc.201800963. [4] R. Molden et al. , “Host cell protein profiling of commercial therapeutic protein drugs as a benchmark for monoclonal antibody-based therapeutic protein development,” mAbs , vol. 13, no. 1, p. 1955811, Jan. 2021, doi: 10.1080/19420862.2021.1955811. [5] A. J. Shah, B. Soni, and S. K. Karmee, “Locally available agroresidues as potential sorbents: modelling, column studies and scale-up,” Bioresour. Bioprocess. , vol. 8, no. 1, p. 34, Dec. 2021, doi: 10.1186/s40643-021-00387-1. [6] J. W. Jawitz, “Moments of truncated continuous univariate distributions,” Adv. Water Resour. , vol. 27, no. 3, pp. 269–281, Mar. 2004, doi: 10.1016/j.advwatres.2003.12.002. [7] I. M. Ross, A primer on Pontryagin’s principle in optimal control . Carmel, Calif. : Collegiate Publishers, 2009., 2009. [Online]. Available: https://search.library.wisc.edu/catalog/9910894537702121 [8] M. N. Goltz and P. V. Roberts, “Using the method of moments to analyze three-dimensional diffusion-limited solute transport from temporal and spatial perspectives,” Water Resour. Res. , vol. 23, no. 8, pp. 1575–1585, Aug. 1987, doi: 10.1029/WR023i008p01575. [9] K. M. Yenkie and U. Diwekar, “Stochastic Optimal Control of Seeded Batch Crystallizer Applying the Ito Process,” Ind. Eng. Chem. Res. , p. 120604103933002, Jun. 2012, doi: 10.1021/ie300491v. [10] P. T. Benavides and U. Diwekar, “Studying various optimal control problems in biodiesel production in a batch reactor under uncertainty,” p. 9, 2013.",
+    "presenting_author": "Fadi Ghanem | Purolite, King of Prussia, PA",
+    "authors": [
+      "Fadi Ghanem | Purolite, King of Prussia, PA",
+      "Kirti Yenkie | Rowan University, Glassboro, NJ",
+      "Gerard Capellades | Rowan University, Glassboro, NJ",
+      "Purnima Kodate | Government Medical College, Nagpur, India"
+    ],
+    "authors_structured": [
+      {
+        "name": "Fadi Ghanem",
+        "affiliation": "Purolite, King of Prussia, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Kirti Yenkie",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Gerard Capellades",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Purnima Kodate",
+        "affiliation": "Government Medical College, Nagpur, India",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "296b",
+    "sortable_time": "2023-11-08_08:24:00_08:42:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666480"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667079",
+    "paper_endpoint": "Paper/667079",
+    "paper_id": "667079",
+    "topic": "A Mathematical Model for Simulating T-Cell Induced Vaccines",
+    "title": "A Mathematical Model for Simulating T-Cell Induced Vaccines",
+    "date_time": "2023-11-08_08:00:00_10:30:00",
+    "session_id": "52072",
+    "session_title": "Applied Math for Biomedical Systems",
+    "session_number": "296",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Vaccines are one way to take advantage of the fascinating nature of the adaptive immune system. However, the vaccine development process is hindered by time and resource limitations, which makes it challenging to develop vaccines for complicated pathogens causing diseases such as HIV, Ebola, and most recently COVID-19. T-cell induced vaccines are one of the most promising vaccine types. T-cells provide a unique and robust response to infections that can provide long-term immunity. This work contributes to the vaccine development process by creating a mathematical model that can simulate the immune response to a certain vaccine dose and injection method. The attached figure shows the life cycle of a T-cell which starts as a naïve cell that had previously matured in the thymus. When the cell encounters an antigen-presenting cell (arising from the vaccine), it is activated. This marks the beginning of the expansion phase where cells proliferate exponentially. Every cell that proliferates creates two new cells of a new generation. This proliferation stops after a specific period and the contraction phase starts. By the end of the contraction phase, the number of T-cells left in the body (memory T-cells) is only 5-10 % of the total cells generated, which provides robust long-term immunity against future infections. A major factor affecting the T-cell response is cell migration and recirculation through the body. A good understanding and representation of cell migration can help estimate an accurate memory T-cell population, which is an excellent advantage for the drug development process. There is a gap in the literature that was highlighted in a review by Brown et al . (2022), for stochastic agent-based models that simulate the different phases of the immune response [1]. Current models in the literature are deterministic. This is problematic because it does not reflect the true stochastic nature of mammalian immune systems. Stochastic models are more powerful as they can be used to predict the possible discrete outcomes in an induvial as well as probability distributions of whole populations. This work is a continuation of the previously developed STochastic Omentum REsponse (STORE) model, which is an agent-based model that showed great potential in modeling the immune response in the omentum during the expansion phase by simulating cell counts for the different cell generations [2]. We have extended this model to a network of interconnected immune-relevant tissues and the blood. This multi-tissue model simulates cell migration and recirculation patterns to predict the dynamic immune response in the different body tissues. The model is created by combining many individual system elements based on First-Principles. This approach minimizes the number of tuning parameters. Most parameters are determined based on biological knowledge of the individual tissues. Then the system as a whole is validated through additional experimental data collection. The model is useful for rapid vaccine development since it allows us to connect measurable properties such as T-cell counts in the blood with immeasurable properties such as T-cell counts in various tissues (without invasive tissue sampling). It can also be used to help predict future vaccine effectiveness in a patient by measuring blood samples shortly after vaccination. In addition, it could be useful in individualized medicine because it is able to account for differences in the sizes of various tissues which can affect T-cell dynamics. References: Brown, L. V., Coles, M. C., McConnell, M., Ratushny, A. V., & Gaffney, E. A. (2022). Analysis of cellular kinetic models suggest that physiologically based model parameters may be inherently, practically unidentifiable. Journal of Pharmacokinetics and Pharmacodynamics , 49 (5), 539–556. https://doi.org/10.1007/s10928-022-09819-7 2. Christian, D. A., Adams, T. A., 2nd, Shallberg, L. A., Phan, A. T., Smith, T. E., Abraha, M., Perry, J., Ruthel, G., Clark, J. T., Pritchard, G. H., Aronson, L. R., Gossa, S., McGavern, D. B., Kedl, R. M., & Hunter, C. A. (2022). cDC1 coordinate innate and adaptive responses in the omentum required for T cell priming and memory. Science immunology , 7 (75), eabq7432. https://doi.org/10.1126/sciimmunol.abq7432",
+    "presenting_author": "Nagat Elrefaei | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Nagat Elrefaei | McMaster University, Hamilton, Canada",
+      "David Christian | University of Pennsylvania, Philadelphia, PA",
+      "Thomas Adams II | Norwegian University of Science and Technology, Trondheim, Norway"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nagat Elrefaei",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "David Christian",
+        "affiliation": "University of Pennsylvania, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Thomas Adams II",
+        "affiliation": "Norwegian University of Science and Technology, Trondheim, Norway",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "296c",
+    "sortable_time": "2023-11-08_08:42:00_09:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667079"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670457",
+    "paper_endpoint": "Paper/670457",
+    "paper_id": "670457",
+    "topic": "Modeling the Short-Term Effect of Atrial Fibrillation on Hemodynamic Variables",
+    "title": "Modeling the Short-Term Effect of Atrial Fibrillation on Hemodynamic Variables",
+    "date_time": "2023-11-08_08:00:00_10:30:00",
+    "session_id": "52072",
+    "session_title": "Applied Math for Biomedical Systems",
+    "session_number": "296",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Atrial fibrillation (AF) remains the leading cardiac cause of stroke in the United States. An elevated and highly irregular heart rate is the trademark feature of AF and stems from the conduction of abnormal electrical signals from the atria to the ventricles. However, the impact of AF on other hemodynamic variables is not as well established since hypertension, heart failure and other cardiac diseases are often confounding factors. Our goal is to clarify the short-term impact of stand-alone AF on hemodynamic quantities using a lumped parameter approach. We developed a paroxysmal AF model by making three modifications to a computational model of the human cardiovascular-baroreflex system. Based on the relative constancy of the coefficient of variation of the change in successive heart periods (observed in the MIT-BIH AF dataset), we recast instantaneous heart period as a bounded stochastic variable. In addition, we re-defined the healthy left atrium as a pulsating compartment that boosts ventricular intake during late diastole. This contribution to mitral flow is muted during AF. AF has also been linked to the suppression of parasympathetic drive and a simultaneous enhancement of sympathetic activity. Thus, our third modification involves the development of a valid baroreflex sensitivity metric to quantify the extent of baroreflex impairment. Our model predictions of the changes in stroke volume and mean arterial pressure during AF episodes match published paroxysmal AF data. Insights obtained from this model will aid the in-silico assessment of potential neuromodulation strategies for AF suppression and also increase the specificity of AF detection algorithms.",
+    "presenting_author": "Oluwasanmi Adeodu | Lehigh University, Bethlehem, PA",
+    "authors": [
+      "Oluwasanmi Adeodu | Lehigh University, Bethlehem, PA",
+      "Michelle Gee | University of Delaware, Newark",
+      "Babak Mahmoudi | Emory University, Atlanta, GA",
+      "Rajanikanth Vadigepalli | Thomas Jefferson University, Philadelphia, PA",
+      "Mayuresh Kothare | Lehigh University, Bethlehem, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Oluwasanmi Adeodu",
+        "affiliation": "Lehigh University, Bethlehem, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Michelle Gee",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Author"
+      },
+      {
+        "name": "Babak Mahmoudi",
+        "affiliation": "Emory University, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Rajanikanth Vadigepalli",
+        "affiliation": "Thomas Jefferson University, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Mayuresh Kothare",
+        "affiliation": "Lehigh University, Bethlehem, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "296d",
+    "sortable_time": "2023-11-08_09:00:00_09:18:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670457"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670929",
+    "paper_endpoint": "Paper/670929",
+    "paper_id": "670929",
+    "topic": "Sex-Specific Immunoregulation: Computational Modeling Approaches to Determine Why Biological Females May Experience Greater Inflammation during Influenza Infection",
+    "title": "Sex-Specific Immunoregulation: Computational Modeling Approaches to Determine Why Biological Females May Experience Greater Inflammation during Influenza Infection",
+    "date_time": "2023-11-08_08:00:00_10:30:00",
+    "session_id": "52072",
+    "session_title": "Applied Math for Biomedical Systems",
+    "session_number": "296",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "In humans, biological males and females often experience different outcomes during respiratory infections . Here, we are referring to differences in biological sex (XX and XY) and not gender , which includes behaviors and activities that are determined by society or culture in humans . D uring the 2009 H1N1 influenza pandemic, adult females were at greater risk than their male, age-matched counterparts for hospitalization and death. Many factors may determine sex-specific outcomes , but there is considerable evidence that sex-specific immune regulation is a key driver of enhanced disease pathology . S evere influenza infections are characterized with aggressive inflammatory responses , and s tudies show that male and female inflammatory responses differ when infected with a common virus. Yet, it remains unknown how the inflammatory differences emerge . In complex systems, a change in a single component’s behavior impacts the temporal response of other system components. Computational modeling is a powerful tool for determining how changes in the behavior of immune system components lead to changes in the overall system response , and computational modeling can cons ider multiple hypotheses on how sex-specific immune responses emerge . Our research team develops knowledge-based, mechanistic models of the lung immune system and then employs state-of-the-art optimization and Bayesian inference approaches to rigorously determine how the lung immune system is differently regulated between cohorts. These models can be constructed to consider several factors impacting sex-specific regulation simultaneously, including the effects of hormones and sex chromosome dependent gene regulation. Here, we will discuss our most recent effort where we constructed a computational model of the mouse lung innate immune system and used computational models to deter mine how the immune system is differently regulated in male and female mice infected with a pandemic H1N1 virus . Our results suggest that not only do the rates of key immune processes , particularly those associated with interferon induction, have to be different between males and females, but that the effectiveness of therapeutic intervention using anti-inflammatory compounds is also sex-specific . The model is now being expanded to include additional immune components and we are currently developing strategies for incorporating hormone regulation.",
+    "presenting_author": "Jason E. Shoemaker | University of Pittsburgh, PA",
+    "authors": [
+      "Jason E. Shoemaker | University of Pittsburgh, PA",
+      "Tatum McGeary | University of Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jason E. Shoemaker",
+        "affiliation": "University of Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Tatum McGeary",
+        "affiliation": "University of Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "296e",
+    "sortable_time": "2023-11-08_09:18:00_09:36:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670929"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/664671",
+    "paper_endpoint": "Paper/664671",
+    "paper_id": "664671",
+    "topic": "A Computational Study of Combined Chemotherapy for a Growing Tumor with Heterogeneous Vasculature",
+    "title": "A Computational Study of Combined Chemotherapy for a Growing Tumor with Heterogeneous Vasculature",
+    "date_time": "2023-11-08_08:00:00_10:30:00",
+    "session_id": "52072",
+    "session_title": "Applied Math for Biomedical Systems",
+    "session_number": "296",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Cancer is a lethal disease affecting millions of patients each year worldwide. Consequently, a significant part of the scientific community is committed to battling this malady by designing novel therapeutic strategies. Modern therapeutic approaches entail the combination of several therapeutic agents, such as radiotherapy, chemotherapeutic drugs, and immunotherapy. In the present study, we develop and numerically solve a continuum-level, multiphase model [1, 2], where each phase corresponds to a distinct cellular population: cancer cells, healthy cells, capillaries, and the interstitium. The spatiotemporal evolution of cellular species is formulated through mass and momentum balance equations based on the assumption that said phases are non-mixable. In addition, we model the dynamics of chemical species regulating critical cellular processes, including cellular mitosis, the chemotactically driven motion of immature capillaries, and angiogenesis. The chemical species include nutrient species (oxygen) and the vascular endothelial growth factor (VEGF), which mediates angiogenesis and is an essential factor for the growth of endothelial cells. Finally, we incorporate the effect of chemotherapy by treating the therapeutic drug as additional chemical species. Here, we model the effect of an anti-VEGF and a cytotoxic drug acting independently and in a combined manner. In particular, an anti-VEGF drug (bevacizumab) inhibits the production of new vessels (angiogenesis). Cytotoxic drugs (e.g., docetaxel) infiltrate cancer cells, arresting the cell cycle and enabling apoptosis. The chemotherapeutic agents' dynamics are monitored by developing reaction-diffusion equations in a similar fashion to the rest of modeled chemical species. Our target is to demonstrate the enhanced efficiency of combined chemotherapy over monotherapy, to delve into the underlying mechanisms that yield these results, and to explore the chemotherapy schedule as a possible optimization parameter. In this context, we perform computational experiments on tumors treated with bevacizumab and docetaxel separately and in combination. Finally, we perform a series of simulations with the combination therapy components being administered at different starting dates relative to each other (with either drug's administration start being delayed). Our computations (performed in COMSOL) show that combination therapy is significantly more effective in suppressing the tumor for a prolonged time period when compared to monotherapy regimens. This behavior can be explained by docetaxel's increased residence time in the tissue in the presence of an anti-VEGF drug, which has also been experimentally observed for the combination of bevacizumab with paclitaxel [3]. Paclitaxel and docetaxel are the principal representatives of taxane drugs. Finally, our simulations show that the therapeutic efficacy becomes maximum when bevacizumab and docetaxel are administered within a time interval of ± one day, which is in line with the usual clinical practice [4, 5]. [1] M. Hubbard, H. Byrne, Multiphase modelling of vascular tumour growth in two spatial dimensions, Journal of Theoretical Biology 316 (2013) 70–89. [2] I. Lampropoulos, M. Charoupa, M. Kavousanakis, Intra-tumor heterogeneity and its impact on cytotoxic therapy in a two-dimensional vascular tumor growth model, Chemical Engineering Science 259 (2022) 117792. [3] N. Qi, F. Li, X. Li, H. Kang, H. Zhao, N. Du, Combination use of paclitaxel and avastin enhances treatment effect for the nsclc patients with malignant pleural effusion, Medicine 95 (47) (2016) e5392. [4] National Health Service, Chemotherapy protocol for advanced (stage IIIc/IV) ovarian, peritoneal or fallopian tube cancer, sub-optimally debulked either at primary or delayed primary (interval) surgery, https://www.uhs.nhs.uk/Media/UHS-website-2019/Docs/Chemotherapy-SOPs1/Ovarian-cancer/Bevacizumab7.5mgkgCarboplatinandPaclitaxel21day.pdf, accessed: 2022-11-14.658. [5] National Health Service, Chemotherapy protocol for the first line treatment of recurrent or metastatic stage IVB cervical cancer not amenable to curative treatment with surgery and / or radiotherapy and where there has been no prior treatment with bevacizumab or other anti-VEGF therapy, https://www.uhs.nhs.uk/Media/UHS-website-2019/Docs/Chemotherapy-SOPs1/Cervical-cancer/Bevacizumab-15-Carboplatin-Paclitaxel-21-day.pdf, accessed: 2022-11-14.",
+    "presenting_author": "Ioannis Lampropoulos | National Technical University of Athens, Greece",
+    "authors": [
+      "Ioannis Lampropoulos | National Technical University of Athens, Greece",
+      "Michail Kavousanakis | National Technical University of Athens, Greece"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ioannis Lampropoulos",
+        "affiliation": "National Technical University of Athens, Greece",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Michail Kavousanakis",
+        "affiliation": "National Technical University of Athens, Greece",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "296f",
+    "sortable_time": "2023-11-08_09:36:00_09:54:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/664671"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665634",
+    "paper_endpoint": "Paper/665634",
+    "paper_id": "665634",
+    "topic": "Combinatorial Model Building and Selection of Hypothesized Mechanisms Influencing Bone Health",
+    "title": "Combinatorial Model Building and Selection of Hypothesized Mechanisms Influencing Bone Health",
+    "date_time": "2023-11-08_08:00:00_10:30:00",
+    "session_id": "52072",
+    "session_title": "Applied Math for Biomedical Systems",
+    "session_number": "296",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Introduction: Bone health is important for everyday function and mobility. Bone health is regulated by the bone remodeling cycle that replaces older bone with new bone in a balanced process of bone resorption and formation. When this cycle is chronically thrown out of balance, diseases such as osteoporosis, Paget's disease, and osteoarthritis occur. The bone remodeling cycle has been shown to be influenced by several factors generated outside the bone compartment, such as estrogen levels, dietary changes, and immune responses [1,2]. Our previous work focused on the influence of a dietary change and immune response to bone remodeling using a mechanistic model of T regulatory cells and Wnt-10b. However, the results indicated that other interactions were also occurring [3,4]. This has motivated our lab to explore the multifaceted mechanisms influencing overall bone health. Methods: In this work, we are exploring how factors generated outside the bone compartment influence bone remodeling and bone health. We are creating a literature curated database of interactions from experimental studies that identify a connection between a specific external factor and a corresponding bone remodeling function or cell type. For example, one entry in our database includes the influence of external factor short-chain fatty acid (SCFA) on bone remodeling points to a direct connection to osteoclasts with no changes to osteoblasts [5]. From this database, we are generating multiple hypotheses centered around mechanisms that control bone homeostasis and bone diseases. For example, using the previously mentioned study, we hypothesize that SCFAs impair osteoclast development only; however, another study shows that SCFAs can influence osteoblast activity [6]. So we are testing the hypothesis that states that SCFAs increase osteoblast activity. In addition, we have a new hypothesis stating that SCFAs can influence both osteoclasts and osteoblasts. These hypotheses will be used to compose mechanistic candidate submodels that can be easily incorporated into a computational model of bone remodeling. To test our hypotheses, we follow the hypothesis testing method presented in a work focusing on the combinatory action of macrophages during bone healing, a closely related topic to bone remodeling [7]. We will select specific combinations of the ODE based candidate submodels to incorporate into our previously developed remodeling model and then determine if the hypothesis provides a promising mechanism. This method combines residuals and the Akaike information criterion to compare the hypothesized mechanism to the experiments and other hypothesized mechanisms [7]. This comparative process helps identify the most explanatory mechanisms for a particular external influence. We are focusing a large portion of this exploration on osteocyte interactions with external influences, as osteocytes have recently been identified as a main controller of the remodeling cycle [8]. Currently, the osteocyte mechanism most often considered in computational models is the relationship between the Wnt activation pathway and the Wnt antagonist sclerostin. So, there is a need for an updated model that considers more osteocyte mechanisms, hence our focus on this cell type. Results: We are motivated to complete this study using the described methodology because it will give us multiple desirable outcomes. First, we will have compiled a large database of mechanistic candidate submodels that can be strategically combined to explore a variety of bone remodeling factors and bone diseases. Second, we will identify the most promising mechanisms that explain some of the conflicting experimental relationships to different external factors. Lastly, we will provide a foundation for an updated model of bone remodeling that considers more osteocyte-based mechanisms. All of these outcomes support bone health research using systems engineering model identification and discrimination techniques. Acknowledgment: This work was supported by the National Institutes of Health grants R35GM133763 and R15AT010725 and the University at Buffalo. References: [1] Pacifici, et al., Role of T cells in ovariectomy induced bone loss—revisited, J Bone Miner Res (2012). [2] Tyagi et al., The microbial metabolite butyrate stimulates bone formation via T regulatory cell-mediated regulation of WNT10B expression, Immunity (2018). [3] Islam, et al., Mathematical modeling of the gut-bone axis and implications of butyrate treatment on osteoimmunology, Ind Eng Chem Res (2021). [4] Cook, et al., Mathematical modeling of the effects of Wnt-10b on bone metabolism, AIChE J (2022). [5] Lucas, et al., Short-chain fatty acids regulate systemic bone mass and protect from pathological bone loss, Nat Commun (2018). [6] Kondo, et al., Short-chain fatty acids, acetate and propionate, directly upregulate osteoblastic differentiation, Int J Food Sci Nutr (2022). [7] Baratchart, et al., Integrated computational and in vivo models reveal key insights into macrophage behavior during bone healing, PLOS Comp Bio (2022). [8] Creecy, et al., Control of bone matrix properties by osteocytes, Front Endocrinol (2021).",
+    "presenting_author": "Carley V. Cook | University at Buffalo, The State University of New York, NY",
+    "authors": [
+      "Carley V. Cook | University at Buffalo, The State University of New York, NY",
+      "Brenda J. Smith | Indiana University School of Medicine, Indianapolis",
+      "Ashlee Ford Versypt | University at Buffalo, The State University of New York, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Carley V. Cook",
+        "affiliation": "University at Buffalo, The State University of New York, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Brenda J. Smith",
+        "affiliation": "Indiana University School of Medicine, Indianapolis",
+        "designation": "Author"
+      },
+      {
+        "name": "Ashlee Ford Versypt",
+        "affiliation": "University at Buffalo, The State University of New York, NY",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "296g",
+    "sortable_time": "2023-11-08_09:54:00_10:12:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665634"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/662832",
+    "paper_endpoint": "Paper/662832",
+    "paper_id": "662832",
+    "topic": "Reducing Bias and Quantifying Uncertainty in Fluorescence Produced By PCR",
+    "title": "Reducing Bias and Quantifying Uncertainty in Fluorescence Produced By PCR",
+    "date_time": "2023-11-08_08:00:00_10:30:00",
+    "session_id": "52072",
+    "session_title": "Applied Math for Biomedical Systems",
+    "session_number": "296",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "We present a new approach for relating nucleic-acid content to fluorescence in a real-time Polymerase Chain Reaction (PCR) assay. By coupling a two-type stochastic branching process for PCR with a fluorescence analog of Beer’s Law, the approach reduces bias and quantifies uncertainty in fluorescence. As the two-type branching process distinguishes between complementary strands of DNA, it allows for a stoichiometric description of reactions between fluorescent probes and DNA and can capture the initial conditions encountered in assays targeting RNA. Analysis of the expected copy-number identifies new dynamics that occur at short times (or, equivalently, low cycle numbers), while investigation of the variance reveals the contributions from liquid volume transfer, imperfect amplification, and strand-specific amplification (i.e., if one strand is synthesized more efficiently than its complement). Linking the branching process to fluorescence by the Beer’s Law analog allows for a more objective and a priori description of background fluorescence. It also enables uncertainty quantification (UQ) in fluorescence which, in turn, leads to analytical relationships between amplification efficiency (probability) and limit of detection. This work sets the stage for UQ-PCR, where both the input copy-number and its uncertainty are quantified from fluorescence measurements.",
+    "presenting_author": "Robert DeJaco | National Institute of Standards and Technology, Gaithersburg, MD",
+    "authors": [
+      "Robert DeJaco | National Institute of Standards and Technology, Gaithersburg, MD",
+      "Matthew J. Roberts | Institute for Defense Analyses, Alexandria, VA",
+      "Erica L. Romsos | National Institute of Standards and Technology, Gaithersburg, MD",
+      "Peter M. Vallone | National Institute of Standards and Technology, Gaithersburg, MD",
+      "Anthony J. Kearsley | National Institute of Standards and Technology, Gaithersburg, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Robert DeJaco",
+        "affiliation": "National Institute of Standards and Technology, Gaithersburg, MD",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Matthew J. Roberts",
+        "affiliation": "Institute for Defense Analyses, Alexandria, VA",
+        "designation": "Author"
+      },
+      {
+        "name": "Erica L. Romsos",
+        "affiliation": "National Institute of Standards and Technology, Gaithersburg, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Peter M. Vallone",
+        "affiliation": "National Institute of Standards and Technology, Gaithersburg, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Anthony J. Kearsley",
+        "affiliation": "National Institute of Standards and Technology, Gaithersburg, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "296h",
+    "sortable_time": "2023-11-08_10:12:00_10:30:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/662832"
+  }
+]

@@ -1,0 +1,331 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714842",
+    "paper_endpoint": "Paper/714842",
+    "paper_id": "714842",
+    "topic": "Bayesian Copilot to Converge Process Simulations Via Open-Loop Surrogates",
+    "title": "Bayesian Copilot to Converge Process Simulations Via Open-Loop Surrogates",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57080",
+    "session_title": "10A: Advances in Process Design",
+    "session_number": "123",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Scaling up new chemical production technologies to industrial levels, critical for a more sustainable chemical sector, requires detailed process modelling, in which process simulators play a pivotal role [1]. By integrating rigorous models, high-fidelity process data, tailored algorithms, and user-friendly graphical interfaces, these tools have become indispensable for process engineers [2]. However, converging simulations using the modular sequential mode of calculation remains challenging for complex flowsheets, especially when lacking previous knowledge to initialize iterative calculations (e.g., recycles and design specifications in distillation columns) [3]. Additional complexities arise when using process simulators in optimization applications, including (i) the lack of analytical formulation when attempting deterministic global optimization [4]; (ii) noisy simulations that compromise derivative-base methods [5]; and high computation costs that limit advanced analyses, such as in multi-objective optimization [6]. Data-driven solutions have been proposed to overcome the above-mentioned limitations, including using machine-learning models as process surrogates for prediction and optimization [7]. Process surrogates can vary greatly in terms of their surrogacy level, ranging from replacing entire systems to integrating hybrid models at the unit or property level [8]. The choice of surrogate model can also span from more interpretable ones (e.g., symbolic regression [9]) to more data-driven ones (e.g., Gaussian Processes [10] and artificial neural networks [11]). While hybrid models often achieve higher predictive accuracy for each surrogate individually, they are susceptible to error propagation [12]. Conversely, more complex surrogates can represent more intricate system behaviors but at the cost of reduced interpretability and increased data requirements [8]. Overall, surrogate models are more stable and easier to optimize compared to the original process simulation, yet guaranteeing accurate predictions and truly optimal solutions that are required for well-informed decision-making remains a significant challenge. Here, we propose a process simulation copilot based on open-loop surrogate models to aid engineers in converging complex flowsheets where the simulators fail (Figure 1). Therefore, instead of traditionally using process surrogates for predictions, which are by definition always approximations of the underlying system, our approach replaces failure-prone iterative calculations within simulators. Open-loop surrogates model flowsheets with iterative calculations disabled, therefore mitigating computational inefficiencies and convergence issues. A feasibility optimization problem, in which the standard iterative convergence calculations are replaced by surrogate-based constraints, generates candidates that drive the simulation toward convergence in closed-loop (i.e., meeting design specifications and closing the recycle loop). Iteratively updating the open-loop surrogates with the new candidate in an adaptive sampling fashion allows this data-driven framework to resolve unconverged process simulation blocks. If no closed-loop solution is found within a predefined numerical tolerance, the algorithm deems the process flowsheet thermodynamically infeasible with some statistical confidence. In such cases, the algorithm can switch to the design mode, where process variables (i.e., flowsheet degrees of freedom) are allowed to change, such that the surrogate-based framework can identify a feasible, closed-loop simulation. We validated the proposed process simulation copilot framework on a mathematical benchmark problem, as well as for a hard-to-converge recycle loop in a monoethanolamine (MEA) absorption cycle flowsheet and a distillation column for methanol-water separation with tight design specifications. Across all case studies, the adaptive sampling approach with open-loop surrogates successfully identified closed-loop solutions within fewer than ten iterations where the built-in Aspen Plus and HYSYS solvers were unable to converge the recycle or design specification from a generic starting point, requiring only a modest overhead of initial open-loop simulations (ca. 10 times the number of iterative variables). Furthermore, the framework reliably detected infeasible flowsheets and, in design mode, successfully adjusted process variables to achieve feasible operation. These results demonstrate that the proposed approach offers a robust and efficient alternative to conventional solvers built into process simulators, enhancing their performance in complex flowsheets. Our approach is particularly suited for cases where convergence stability is problematic or prior knowledge and initialization strategies are insufficient.",
+    "presenting_author": "Lucas Francisco dos Santos | ETH Zürich, Switzerland",
+    "authors": [
+      "Lucas Francisco dos Santos | ETH Zürich, Switzerland",
+      "Dion Jakobs | ETH Zürich, Switzerland",
+      "Gonzalo Guillén-Gosálbez | ETH Zürich, Switzerland"
+    ],
+    "authors_structured": [
+      {
+        "name": "Lucas Francisco dos Santos",
+        "affiliation": "ETH Zürich, Switzerland",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Dion Jakobs",
+        "affiliation": "ETH Zürich, Switzerland",
+        "designation": "Author"
+      },
+      {
+        "name": "Gonzalo Guillén-Gosálbez",
+        "affiliation": "ETH Zürich, Switzerland",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "123a",
+    "sortable_time": "2025-11-03_12:30:00_12:51:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714842"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/715167",
+    "paper_endpoint": "Paper/715167",
+    "paper_id": "715167",
+    "topic": "Decomposition Approach for Solving Large-Scale MINLPs in the Design and Deployment of Chemical Process Families",
+    "title": "Decomposition Approach for Solving Large-Scale MINLPs in the Design and Deployment of Chemical Process Families",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57080",
+    "session_title": "10A: Advances in Process Design",
+    "session_number": "123",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Rapid design and deployment of advanced process systems is necessary to address growing energy and water demands. Conventional methodologies for process design are focused on economies of scale, optimizing each installation uniquely. While effective for a custom design and installation, it can be inefficient when designing and deploying multiple instances across a variety of installation sites with different ambient conditions, fluctuating demands, etc. To leverage the advantages of reduced manufacturing costs and shared engineering effort through economies of numbers, we have developed a “Process Family Design” approach (Stinchfield et al., 2024). The problem formulation simultaneously designs a large “family” of process variants using a common platform of shared components. A major characteristic of the approach is the concurrent optimization of the shared component platform in conjunction with the process family. The formulation is a fundamentally complex, large-scale mixed integer nonlinear programming (MINLP) problem involving nonlinear expressions that describe the physics, performance, and cost of each process variant in the family. It includes binary variables that capture the distribution of platform components to the different process variants across the family. Previous work (Stinchfield et al., 2024), employed a discretization technique to transform the MINLP into a mixed-integer linear programming (MILP) problem; however, this approach required a significant number of simulations a priori to formulate the problem. In this work, we address the solution of the MINLP directly. Off-the-shelf global optimization solvers are not able to solve the problem at scale, and we present a decomposition approach that exploits the inherent block-angular structure of the problem and apply a reduced-space global optimization algorithm for nonlinear stochastic programs proposed by Cao and Zavala (Cao and Zavala, 2019). We decompose the larger process family into smaller family subproblems with coupling constraints that ensure that the common platform is the same across all the subproblems. Here, we present the process family design formulation that allows us to embed equation-oriented process models directly, and a computational performance comparison of the decomposition approach with an off-the-shelf global optimization solver. Acknowledgement This work was conducted as part of the U.S. Department of Energy’s Institute for the Design of Advanced Energy Systems (IDAES) supported by the Office of Fossil Energy and Carbon Management’s Simulation-based Engineering Research Program. Disclaimer This project was funded by the Department of Energy, National Energy Technology Laboratory an agency of the United States Government, through a support contract. Neither the United States Government nor any agency thereof, nor any of its employees, nor the support contractor, nor any of their employees, makes any warranty, expressor implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof, or any of their contractors. References G. Stinchfield, J. C. Morgan, S. Naik, L. T. Biegler, J. C. Eslick, C. Jacobson, D. C. Miller, J. D. Siirola, M. Zamarripa, C. Zhang, and et al., “A mixed integer linear programming approach for the design of chemical process families,” Computers &amp; Chemical Engineering, vol. 183, p. 108620, Apr 2024. Y. Cao and V. M. Zavala, “A scalable global optimization algorithm for stochastic nonlinear programs,” Journal of Global Optimization, vol. 75, p. 393–416, Apr 2019.",
+    "presenting_author": "Ali Asger | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Ali Asger | Carnegie Mellon University, Pittsburgh, PA",
+      "Georgia Stinchfield | Carnegie Mellon University, Pittsburgh, PA",
+      "Miguel A. Zamarripa | National Energy Technology Laboratory Support Contractor, Pittsburgh, PA",
+      "Grigorios Panagakos | Carnegie Mellon University, Pittsburgh, PA",
+      "Carl Laird | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ali Asger",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Georgia Stinchfield",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Miguel A. Zamarripa",
+        "affiliation": "National Energy Technology Laboratory Support Contractor, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Grigorios Panagakos",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Carl Laird",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "123b",
+    "sortable_time": "2025-11-03_12:51:00_13:12:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/715167"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/710538",
+    "paper_endpoint": "Paper/710538",
+    "paper_id": "710538",
+    "topic": "Modeling Multi-Component Critical Material Feed Streams to Enable Design and Optimization of Multi-Stage Diafiltration Cascades",
+    "title": "Modeling Multi-Component Critical Material Feed Streams to Enable Design and Optimization of Multi-Stage Diafiltration Cascades",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57080",
+    "session_title": "10A: Advances in Process Design",
+    "session_number": "123",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "The U.S. Department of Energy acknowledges 68 critical materials with high-risk supply chains that are essential to national security [1]. These critical minerals and materials can be harvested from primary sources, such as mineral ore, or from unconventional, secondary sources. These unconventional and secondary sources include a broad range of materials ranging from recycled sources, such as spent consumer electronic waste, to post-industrial waste, such as coal combustion residuals (e.g., coal ash). With the concentrations of critical materials within primary ore declining, there is increased focus on securing the supply chains of critical materials via facilitating recovery from unconventional and secondary sources [2]. Regardless of the source, the conventional pathways for harvesting many critical materials (i.e., acid leaching, solvent extraction, pH adjustment, and precipitation) have opportunities for improvement [2]. Thus, we propose implementing membrane separations to recover critical materials to improve process efficiency and reduce process costs [2,3]. In this work, we consider a feedstock of lithium-ion battery leachate as a case study for the recovery of critical materials using a multi-stage diafiltration cascade modeled using the IDAES-PSE framework [4], which is built on Pyomo [5]. Previous work shows that superstructure optimization of the diafiltration cascade model is capable of efficiently designing robust, cost-optimal membrane systems to meet product specifications for lithium and cobalt products [6,7]. However, realistic critical material feed streams are more complex (i.e., contain multiple species with varying concentrations) [2] and higher fidelity models are required to accurately capture transport phenomena and inform process design. We propose a multi-component model for diafiltration cascades to recovery critical materials from complex feed streams such as lithium-ion battery leachate. Specifically, we use the extended Nernst-Plank equation, which accounts for convection, diffusion and electromigration, to derive the appropriate cross-diffusion relationships. Combined with additional constraints to describe ion partitioning at the membrane-solution interface and fluid convection through the cascade, the model can capture the effect of ion-ion interactions on the overall recovery of the system. We extend the modeling framework [7] to generate cost-optimal diafiltration cascades to meet product purity specifications for these complex streams. Using the high-fidelity model developed in this work, we present design strategies for recovering multiple high-value products from a mixed feed stream using multi-stage diafiltration cascades. Acknowledgements : This effort was funded by the U.S. Department of Energy’s Process Optimization and Modeling for Minerals Sustainability (PrOMMiS) Initiative, supported by the Office of Fossil Energy and Carbon Management’s Office of Resource Sustainability. Disclaimer : This project was funded by the United States Department of Energy, National Energy Technology Laboratory, in part, through a support contract. Neither the United States Government nor any agency thereof, nor any of their employees, nor the support contractor, nor any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof, or any of their contractors. References [1] What are critical materials and critical minerals? https://www.energy.gov/cmm/what-are-critical-materials-and-critical-minerals [2] Laurianne Lair, Jonathan Aubuchon Ouimet, Molly Dougher, Bryan W Boudouris, Alexander W Dowling, and William A Phillip. Critical mineral separations: Opportunities for membrane materials and processes to advance sustainable economies and secure supplies. Annual Review of Chemical and Biomolecular Engineering, 15:243–266, 2024. [3] Molly Dougher, Laurianne Lair, Jonathan Aubuchon Ouimet, William Phillip, Thomas Tarka, and Alexander Dowling. Opportunities for process intensification with membranes to promote circular economy development for critical minerals. Systems and Control Transactions, 3:711–718, 2024. [4] Andrew Lee, Jaffer H Ghouse, John C Eslick, Carl D Laird, John D Siirola, Miguel A Zamarripa, Dan Gunter, John H Shinn, Alexander W Dowling, Debangsu Bhattacharyya, et al. The IDAES process modeling framework and model library—flexibility for process simulation and optimization. Journal of advanced manufacturing and processing, 3(3):e10095, 2021. [5] Michael L Bynum, Gabriel A Hackebeil, William E Hart, Carl D Laird, Bethany L Nicholson, John D Siirola, Jean-Paul Watson, David L Woodruff, et al. Pyomo-optimization modeling in python, volume 67. Springer, 2021. [6] Noah P Wamble, Elvis A Eugene, William A Phillip, and Alexander W Dowling. Optimal diafiltration membrane cascades enable green recycling of spent lithium-ion batteries. ACS Sustainable Chemistry & Engineering, 10(37): 12207-12225, 2022. [7] Jason L Yao, Molly Dougher, Andrew Lee, Alexander W Dowling, Chrysanthos E Gounaris. Robust Optimization of Flexible Diafiltration Systems for Critical Mineral Separations. In Preparation.",
+    "presenting_author": "Molly Dougher | University of Notre Dame, IN",
+    "authors": [
+      "Molly Dougher | University of Notre Dame, IN",
+      "Laurianne Estrada | University of Notre Dame, IN",
+      "Jason Yao | Carnegie Mellon University, Pittsburgh, PA",
+      "Jonathan Ouimet | University of Notre Dame, IN",
+      "William Phillip | University of Notre Dame, IN",
+      "Chrysanthos Gounaris | Carnegie Mellon University, Pittsburgh, PA",
+      "Alexander Dowling | University of Notre Dame, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Molly Dougher",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Laurianne Estrada",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Jason Yao",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jonathan Ouimet",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "William Phillip",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Chrysanthos Gounaris",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Alexander Dowling",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "123c",
+    "sortable_time": "2025-11-03_13:12:00_13:33:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/710538"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/711796",
+    "paper_endpoint": "Paper/711796",
+    "paper_id": "711796",
+    "topic": "An Equation-Oriented Framework for Optimal Design of Amine-Based Carbon Capture Processes",
+    "title": "An Equation-Oriented Framework for Optimal Design of Amine-Based Carbon Capture Processes",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57080",
+    "session_title": "10A: Advances in Process Design",
+    "session_number": "123",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Separating carbon dioxide from gas streams emitted by point sources such as power plants is important for reducing greenhouse gas emissions during the energy transition. Cost is a critical factor for the adoption and widespread deployment of such technologies. Reducing cost calls for careful optimization of the process design, with a view toward tailoring the capture plant for each application. In turn, this requires that the models of the process units be accurate in both predicting the phenomena occurring in the capture process and in estimating the capital cost of the equipment as a function of scale and process conditions. Motivated by the above, this presentation describes a framework for design optimization of amine-based capture processes, as the most mature and accepted capture technology. Specifically, an equation-oriented set of models is described and used to formulate a design optimization problem aimed at minimizing capital and/or operating cost. The models are implemented in gPROMS Process ® and are available open source to interested parties [1,2] . Figure 1 shows the model structure and main material streams. For the absorber and stripper, CO 2 absorption and desorption are represented using a rate-based mass transfer model. The liquid-film mass transfer coefficient () is correlated from data generated by a model that involves detailed speciation in the solvent phase. Experimental measurements of the PZ-H 2 O-CO 2 equilibrium are used to regress a thermodynamically consistent set of equations for the necessary thermodynamic quantities. Publicly available front-end engineering design (FEED) studies for retrofitting commercial natural gas combined-cycle (NGCC) power plants with aqueous amine carbon capture were used to develop realistic capital cost estimates [3] . A design optimization case study for a natural gas-fired cogeneration unit (combined heat and power) is presented. Several cases are considered. As a baseline, a design optimized for typical NGCC conditions is used directly, with design variables like the intercooling configuration, rich solvent bypass ratios, and lean/rich solvent loadings held unchanged. This reflects a typical industry practice of using a standardized plant for each application. Subsequently, the design is optimized for the specific flue gas conditions of the plant. It is shown that the optimized design achieves substantial savings compared to the standardized plant.",
+    "presenting_author": "Jorge L. Martorell | The University of Texas at Austin, TX",
+    "authors": [
+      "Jorge L. Martorell | The University of Texas at Austin, TX",
+      "Michael Baldea | The University of Texas at Austin, TX",
+      "Gary T. Rochelle | The University of Texas at Austin, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jorge L. Martorell",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Michael Baldea",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Gary T. Rochelle",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "123d",
+    "sortable_time": "2025-11-03_13:33:00_13:54:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/711796"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712376",
+    "paper_endpoint": "Paper/712376",
+    "paper_id": "712376",
+    "topic": "Graph-Theoretic Abstractions of Physical Phenomena with Applications to Process Simulation",
+    "title": "Graph-Theoretic Abstractions of Physical Phenomena with Applications to Process Simulation",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57080",
+    "session_title": "10A: Advances in Process Design",
+    "session_number": "123",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Fast simulation of chemical processes is critical for the evaluation of diverse designs (techno-economic, life cycle assessment, safety) under myriads of potential scenarios and assumptions. Automating the evaluation of thousands of simulations is limited by the availability of rapid and robust algorithms. While many algorithmic paradigms have been developed over the past few decades (e.g., classical sequential modular simulation [1], equation-based simulation [2], and dynamic numerical methods [3]) only a limited set of these approaches explicitly leverage the topology/connectivity of the underlying phenomenological (physical) equations [4,5]. Separation column models are a classic example where decomposition algorithms are employed. For example, the Wang-Henke bubble point method converges all stages by iteratively solving mass, equilibrium, summation, and enthalpy (MESH) equations [6]. Different decomposition schemes may be optimized for different physical phenomena (e.g., vapor-liquid equilibrium vs. liquid-liquid equilibrium), level of connectivity, and chemical interactions which drive coupling between phenomenological equations. Understanding these topological relationships is essential in identifying effective decomposition approaches for rapid and robust simulation. Previously, we proposed the use of graph-theoretic representations of governing process equations to better understand the topology of a chemical process at the phenomena level . The graph abstraction consists of a bipartite network of interconnected variable and equation nodes that are systematically generated from process models in the BioSTEAM process simulator [7, 8, 9]. Through the graph abstraction, we navigated the system of equations and derived a general decomposition scheme at the flowsheet level from common structures in unit operation models. The decomposition isolates phenomenological nonlinearities at each stage and linearizes the material and energy balances across the flowsheet. Qualitatively, this decomposition helps accelerate convergence of certain separation flowsheets by consolidating material and energy balances at each iteration. Empirically, however, there is no quantitative understanding of how the decompositions impact convergence speed and robustness. The goal of this study was to leverage graph-theoretic representations to further understand the topology of phenomenological equations and characterize how different decompositions affect algorithmic convergence. Through the lens of the graph abstraction, we observed the convergence of equations and variables over a range of physical phenomena, connectivity, and strength of phenomena interactions by adapting the color of nodes as a function of convergence error. At the unit operation level, we show how ideal mixtures lead to monotonic convergence profiles while the presence of strong chemical interactions introduces oscillations in variables. At the flowsheet level, we observe how material and energy balances adapt to changes in variables more rapidly in the phenomena-based approach compared to the sequential modular approach. Ultimately, the capability of observing the convergence of flowsheets at the level of physical equations may aid in the development of unified decomposition strategies that can allow for more rapid and robust flowsheet convergence. (1) Motard, R. L.; Shacham, M.; Rosen, E. M. Steady State Chemical Process Simulation. AIChE Journal 1975 , 21 (3), 417–436. https://doi.org/10.1002/aic.690210302. (2) Bogle, I. D. L.; Perkins, J. D. Sparse Newton-like Methods in Equation Oriented Flowsheeting. Computers & Chemical Engineering 1988 , 12 (8), 791–805. https://doi.org/10.1016/0098-1354(88)80018-8. (3) Tsay, C.; Baldea, M. Fast and Efficient Chemical Process Flowsheet Simulation by Pseudo-Transient Continuation on Inertial Manifolds. Computer Methods in Applied Mechanics and Engineering 2019 , 348 , 935–953. https://doi.org/10.1016/j.cma.2019.01.025. (4) Ishii, Y.; Otto, F. D. Novel and Fundamental Strategies for Equation-Oriented Process Flowsheeting. Computers & Chemical Engineering 2008 , 32 (8), 1842–1860. https://doi.org/10.1016/j.compchemeng.2007.10.004. (5) Ishii, Y.; Otto, F. D. An Alternate Computational Architecture for Advanced Process Engineering. Computers & Chemical Engineering 2011 , 35 (4), 575–594. https://doi.org/10.1016/j.compchemeng.2010.06.010. (6) Monroy-Loperena, R. Simulation of Multicomponent Multistage Vapor−Liquid Separations. An Improved Algorithm Using the Wang−Henke Tridiagonal Matrix Method. Ind. Eng. Chem. Res. 2003 , 42 (1), 175–182. https://doi.org/10.1021/ie0108898. (7) Cortes-Peña, Y.; Kumar, D.; Singh, V.; Guest, J. S. BioSTEAM: A Fast and Flexible Platform for the Design, Simulation, and Techno-Economic Analysis of Biorefineries under Uncertainty. ACS Sustainable Chem. Eng. 2020 , 8 (8), 3302–3310. https://doi.org/10.1021/acssuschemeng.9b07040. (8) Cortés-Peña, Y. Thermosteam: BioSTEAM’s Premier Thermodynamic Engine. JOSS 2020 , 5 (56), 2814. https://doi.org/10.21105/joss.02814 . (9) Cortes-Pena, Y.; Zavala, VM. Graph-Based Representations and Applications to Process Simulation. LAPSE . 2024 ,129-136. https://doi.org/10.69997/sct.184650 .",
+    "presenting_author": "Yoel Cortes-Pena | University of Wisconsin-Madison",
+    "authors": [
+      "Yoel Cortes-Pena | University of Wisconsin-Madison",
+      "Gabriel Hernandez Morales | University of Wisconsin-Madison",
+      "Victor M. Zavala | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yoel Cortes-Pena",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Gabriel Hernandez Morales",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Victor M. Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "123e",
+    "sortable_time": "2025-11-03_13:54:00_14:15:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712376"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/706997",
+    "paper_endpoint": "Paper/706997",
+    "paper_id": "706997",
+    "topic": "Digital Twins and Physics-Informed Neural Networks (PINNs) for the Modelling and Design of Industrial Bioreactors: The Case Antivenom Nanobody Producing E. coli",
+    "title": "Digital Twins and Physics-Informed Neural Networks (PINNs) for the Modelling and Design of Industrial Bioreactors: The Case Antivenom Nanobody Producing E. coli",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57080",
+    "session_title": "10A: Advances in Process Design",
+    "session_number": "123",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "The paper presents the potential of PINNs as hybrid models to use for digital twins in the development and analysis of industrial bioreactors. The generic research framework is laid out for comparisons with custom-made (blind) NNs, and classical regression models using real-life experimental data related to nanobody scorpion antivenom production with Escherichia Coli . PINNs (Figure 1) confirm and excellent modelling potential outperforming modelling alternatives and explaining a strong promise in control and optimization. Classical ML tools include support vector machines (SVMs), random forest, reinforcement learning (RL) and artificial neural networks (ANNs), among others. These models have been extensively applied to model complex bioprocesses dsue to their ability to learn nonlinear relationships from data without requiring explicit mechanistic understanding. The application of digital twins (Figure 2) in conjunction with classical methods depends on the availability of large volumes of data; such data are typically scarce for bioreactors. PINNs have emerged as promising means to integrate first principle-based models with data. Unlike traditional neural networks that rely purely on data, PINNs embed physical laws-typically expressed as ordinary or partial differential equations-directly into the loss function during training. This enables the model to learn not just from observations, but also from governing scientific principles, thereby improving generalization, interpretability, and performance in data-scarce environments. PINNs have been already successfully applied in diverse domains such as fluid dynamics, heat transfer, image reconstruction and parameter estimation offering a compelling framework for developing reliable digital twins in biomanufacturing by combining the strengths of data-driven modeling with mechanistic consistency. PINNs are subsequently tested in an extensive round of experiments that includes (a) batch and semi-batch bioreactor models; (b) models where the modelling expression is under scrutiny or unknown. In the first round of experiments, we demonstrated the ability of PINNs to capture state-space dynamics and provide accurate short- and long-term state predictions for both batch and semi-batch bioreactor models (Figure 3). We begin by assessing the capacity of PINNs to perform digital twinning by learning the system’s kinetic parameter space as the process evolves. Unlike conventional methods that require full data trajectories for parameter estimation and model identification, the PINN-based approach enables continuous learning and real-time estimation of unknown kinetic parameters. This dynamic capability allows for more adaptive and responsive modeling, enhancing the overall utility of digital twins in bioprocess applications. Results are illustrated (Figure 4 and Figure 5) and show that effective digital twinning is achievable even with minimal data availability. Remarkably, PINNs were able to perform accurate system state and space estimation with as few as two data points, highlighting their robustness in data-scarce scenarios. This capability is possible because PINNs incorporate known physical laws directly into the learning process. In the semi-batch case, PINNs maintained reliable performance even when encountering discontinuous changes in state space—such as sudden variations in inlet flow rate—where traditional models often struggle. Accurate state estimation allows for timely adjustments to operating conditions based on the current state of the bioreactor, supporting proactive and informed decision-making. Furthermore, as the PINN continues to learn during operation, it dynamically explores the kinetic parameter space, moving beyond the limitations of fixed-parameter models. This adaptive modeling framework enables flexible and responsive control strategies, which are essential for maintaining optimal process conditions, mitigating risks, and improving overall biomanufacturing efficiency. Modelling expressions for the second round relates to unknown kinetics for protein production; kinetics need to be discovered from a selected set of options that could be extensive and related to curated kinetics available from upstream analysis of the unknown dynamics of the cell. As the process evolves, the digital twin autonomously determines the most suitable kinetic model while concurrently optimizing its associated parameters. This selection is guided by a defined criterion based on the training loss of the PINN, ensuring both model accuracy and physical consistency. The results (Figure 6) demonstrate that this approach can accurately identify the most appropriate kinetic expression for the previously unknown protein production dynamics. This capability is particularly valuable in bioprocess development, where mechanistic knowledge is often incomplete or uncertain. Accurately uncovering the underlying kinetics enables more reliable process predictions, better control strategies, and faster development cycles. This work highlights the significant potential of Physics-Informed Neural Networks as hybrid modeling tools for digital twins in industrial bioreactor applications. By integrating physical laws into the learning process, PINNs enable accurate state estimation and kinetic parameter identification even in data-scarce and dynamically changing environments. The experimental results demonstrate that PINNs outperform conventional data-driven models in both predictive accuracy and adaptability and can effectively handle unknown or evolving system dynamics. These strengths position PINNs as powerful enablers for advanced control strategies, particularly Model Predictive Control (MPC), where reliable, real-time predictions are critical for optimizing process performance, ensuring product quality, and maintaining safe and stable bioprocess operations.",
+    "presenting_author": "Konstantinos Mexis | National Technical University of Athens, Greece",
+    "authors": [
+      "Konstantinos Mexis | National Technical University of Athens, Greece",
+      "Stefanos Xenios | National Technical University of Athens, Greece",
+      "Nikos Trokanas | National Technical University of Athens, Greece",
+      "Antonis Kokossis | National Technical University of Athens, Greece"
+    ],
+    "authors_structured": [
+      {
+        "name": "Konstantinos Mexis",
+        "affiliation": "National Technical University of Athens, Greece",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Stefanos Xenios",
+        "affiliation": "National Technical University of Athens, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Nikos Trokanas",
+        "affiliation": "National Technical University of Athens, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Antonis Kokossis",
+        "affiliation": "National Technical University of Athens, Greece",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "123f",
+    "sortable_time": "2025-11-03_14:15:00_14:36:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/706997"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713035",
+    "paper_endpoint": "Paper/713035",
+    "paper_id": "713035",
+    "topic": "Quantum-Accelerated Reinforcement Learning-Driven Process Synthesis",
+    "title": "Quantum-Accelerated Reinforcement Learning-Driven Process Synthesis",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57080",
+    "session_title": "10A: Advances in Process Design",
+    "session_number": "123",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Industries are continuously advancing through the developments and applications of artificial intelligence (AI) and machine learning (ML) which are revolutionizing the design, optimization, and operations of chemical and energy processes [1]. In the area of process synthesis, reinforcement learning (RL)-driven process design has emerged as a systematic approach to intelligently identify optimal process configurations without relying on prior knowledge or expertise to guide unit operation selection or configuration [2-3]. In this way, the large-scale decision-making process of synthesizing flowsheets and selecting operating variables is robustified since the entire solution space remains for the RL agent to explore [4]. However, this causes a major challenge since it is difficult to manage the computational complexity that arises from the vast combinatorial space, quickly leading to excessively intensive or even intractable problems. Quantum computing, which has been regarded as the new frontier in computing power [5], presents a promising alternative to classical techniques by providing theoretically guaranteed speed-ups [6]. Quantum machine learning (QML) is a specialized approach that harnesses these speed-ups for ML-based tasks. At the center of QML algorithms are parameterized quantum circuits (PQCs), which encode and process data similar to neural networks (NNs) but are able to provide more expressibility with fewer tunable parameters [7-8]. To this end, we propose a novel methodology that integrates QML and RL-driven process synthesis and leverages PQCs and other QML techniques to improve the computational tractability of the synthesis problem while simultaneously accelerating the design space search of the RL agent. In this work, we build on our prior method of RL-driven process synthesis, which employs a deep q-network (DQN) algorithm to guide an agent in determining the optimal process design [9]. The RL scheme begins with a maximum set of possible unit operations (e.g., two reactors and two distillation columns) that encompass the full design space. The flowsheet structure is represented by stream matrices that encode the input-output relationships between the set of possible operations. This is used as the state in the RL algorithm. The action space comprises all possible manipulations to the flowsheet configuration (e.g., disconnecting or connecting units). The simulation and operating variable selection of flowsheets is done using the IDEAS-PSE platform [10]. DQN uses NNs as Q-function approximators which determine the changes made to the flowsheet matrixes. These are optimized to provide incrementally better flowsheets based on an objective function (e.g., productivity or cost). To integrate QML into this approach, we remove the NNs and replace them with PQCs, as conceptualized in Fig. 1. Special consideration is made to ensure that the observations of the PQC align with the action space of the DQN algorithm. We demonstrate the benefits of integrating QML into RL-driven synthesis through a case study on the hydrodealkylation process. Our results show that the quantum method accelerates the design space search by providing thirteen max reward solutions in one-thousand five-hundred training episodes as compared to nine max reward solutions given by the classical approach. Additionally, the PQC’s provide these solutions with much fewer tunable parameters than the NNs, needing only eighty-eight parameters as opposed to one-thousand ninety-two. This work highlights the need for the exploration of quantum computing, and particularly QML, in process engineering applications. It shows promising results that the implementation of this technology can provide performance benefits with the potential to exceed those provided by classical machine learning. References: [1] Braniff, A., Akundi, S. S., Liu, Y., Dantas, B., Niknezhad, S. S., Khan, F., Pistikopoulos, E. N., & Tian, Y. (2025). Real-time process safety and systems decision-making toward safe and smart chemical manufacturing. Digital Chemical Engineering, 100227. [2] Stops, L., Leenhouts, R., Gao, Q., & Schweidtmann, A. M. (2023). Flowsheet generation through hierarchical reinforcement learning and graph neural networks. AIChE Journal, 69(1), e17938. [3] Gao, Q., & Schweidtmann, A. M. (2024). Deep reinforcement learning for process design: Review and perspective. Current Opinion in Chemical Engineering, 44, 101012. [4] Wang, D., Bao, J., Zamarripa-Perez, M. A., Paul, B., Chen, Y., Gao, P., ... & Xu, Z. (2023). A coupled reinforcement learning and IDAES process modeling framework for automated conceptual design of energy and chemical systems. Energy Advances, 2(10), 1735-1751. [5] Ajagekar, A. & You, F. (2022). New frontiers of quantum computing in chemical engineering. Korean Journal of Chemical Engineering, 39(4), 811–820. [6] Bernal, D. E., Ajagekar, A., Harwood, S. M., Stober, S. T., Trenev, D., & You, F. (2022). Perspectives of quantum computing for chemical engineering. AIChE Journal, 68(6), e17651. [7] Jerbi, S., Gyurik, C., Marshall, S., Briegel, H., & Dunjko, V. (2021). Parametrized quantum policies for reinforcement learning. Advances in Neural Information Processing Systems, 34, 28362-28375. [8] Skolik, A., Jerbi, S., & Dunjko, V. (2022). Quantum agents in the gym: a variational quantum algorithm for deep q-learning. Quantum, 6, 720. [9] Tian, Y., Akintola, A., Jiang, Y., Wang, D., Bao, J., Zamarripa, M. A., Paul, B., Chen, Y., Gao, P., Noring, A., Iyengar, A., Liu, A., Marina, O., Koeppel, B., Xu, Z. (2024). Reinforcement Learning-Driven Process Design: A Hydrodealkylation Example. Systems and Control Transactions, 3, 387-393. [10] Lee, A., Ghouse, J. H., Eslick, J. C., Laird, C. D., Siirola, J. D., Zamarripa, M. A., ... & Miller, D. C. (2021). The IDAES process modeling framework and model library—Flexibility for process simulation and optimization. Journal of advanced manufacturing and processing, 3(3), e10095.",
+    "presenting_author": "Austin Braniff | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Austin Braniff | West Virginia University, Morgantown, WV",
+      "Fengqi You | Cornell University, Ithaca, NY",
+      "Yuhe Tian | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Austin Braniff",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Fengqi You",
+        "affiliation": "Cornell University, Ithaca, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Yuhe Tian",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "123g",
+    "sortable_time": "2025-11-03_14:36:00_14:57:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713035"
+  }
+]

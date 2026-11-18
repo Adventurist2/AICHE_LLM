@@ -1,0 +1,597 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper362759.html",
+    "topic": "Resource-Task Network Continuous-Time Formulation for Crude Oil Blending Operations",
+    "date_time": "Thursday, November 20, 2014: 1:33 PM",
+    "abstract": "Every refinery has an optimization opportunity associated with better crude oil blend scheduling that can reach multimillion dollars per year [1]. From the crude oil purchases perspective, the faster the ability to assess whether a particular spot oil purchase will result in a feasible operation, the better the refinery can capitalize on short-term market opportunities. From the operational perspective, variation in crude oil mixture quality and flowrate charged to the distillation columns affects downstream production units and is perhaps the single most influential disturbance to a refinery. Overall, crude oil blend scheduling optimization is a relatively inexpensive and timely way to improve performance. Early works on crude oil scheduling with mathematical programming techniques employed discrete-time formulations [2,3]. In particular, Lee et al. [3] proposed a MILP for the system comprised of storage tanks receiving crude from marine vessels, charging tanks and crude distillation units. It can be viewed as a relaxation of the non-convex MINLP model that is required to ensure that there are no discrepancies in crude compositions inside tanks with respect to their outlet streams. The turn of the millennium saw increased emphasis on continuous-time models. Jia et al. [4] proposed a State-Task Network, unit-specific formulation. A two-stage MILP-NLP solution procedure was proposed to tackle the MINLP, featuring in the first stage a relaxed MILP model without the complex, bilinear blending constraints. After fixing the binary variables, a near optimal solution to the original problem was then found in the second stage. A more rigorous model with respect to the synchronization of time events with material balances is given in [5]. The unit-specific MINLP model of Li et al. [10] is for marine-access refineries and is tackled through a spatial branch-and-bound optimization algorithm that on each node uses the MILP-NLP procedure. Rather than removing the blending constraints, a tighter MILP relaxation was created through piecewise McCormick envelopes [11]. Overall, the integer feasible solutions obtained for a set of test cases from the literature were guaranteed to be within 2% of global optima. Moro and Pinto [6] opted for a single time grid MINLP continuous-time formulation that was tackled with the augmented penalty version of the outer-approximation method. Sharing the time representation concept and the inability to provide global optima, Reddy et al. [7] proposed a MILP relaxation along the lines of [3] combined with a rolling-horizon algorithm to eliminate the composition discrepancy. Mouret et al. [8] considered yet another type of continuous-time formulation, called single operation sequencing model, which represents a schedule as a sequence of priority slots. Nonlinearities where handled by the two stage procedure of [4]. Later, the part of the model without the blending constraints (MILP) was compared to models relying on different time representation concepts, with continuous-time scaling better with problem size and hence outperforming its discrete-time counterpart [8]. In this work, we approach the solution of the crude oil scheduling problem with the Resource-Task Network based single time grid, continuous-time formulation of Castro et al. [12]. Contrary to most scheduling problems that feature a fixed recipe with known proportions of input materials to a processing task, the main goal of crude oil scheduling is to identify the optimal mix of low-cost and premium crudes that maximizes profit while meeting operational constraints. The main novelty is thus related to extending the generality of the formulation to handle variable recipe tasks with multiple input materials, of which crude oil blending is a particular case. While doing so, we also show how to derive a RTN superstructure that implicitly meets the logistic constraint of no simultaneous inlet and outlet streams from a storage/charging tank. The third novelty is related to the use of multiparametric disaggregation [13,14] for the relaxation of the bilinear blending constraints that: (i) is known to be tighter than the one resulting from the standard McCormick relaxation; (ii) scales more favorably than piecewise McCormick relaxation [14], often leading to lower optimality gaps. Overall, the new formulation has the advantage of avoiding computationally inefficient big-M constraints, unlike previously proposed unit-specific and priority-slot based models. Through the solution of a set of test problems from the literature, we show that the resulting MINLP problems can be solved closed to global optimality by the commercial solver GloMIQO [16] for the objective of gross margin maximization but not for operating cost minimization. We also show that adopting a two-step MINLP algorithm where the MILP relaxation is derived from multiparametric disaggregation, can reduce the optimality gap by orders of magnitude. Acknowledgments: Financial support from the Luso-American Foundation under the 2013 Portugal-U.S. Research Networks Program, from Fundação para a Ciência e Tecnologia (FCT) through the Investigador FCT 2013 program, and from FEDER (Programa Operacional Factores de Competitividade-COMPETE) and FCT through project FCOMP-01-0124-FEDER-020764. References: [1] Kelly, J.D.; Mann, J.L. Crude oil blend scheduling optimization: an application with multimillion dollar benefits-Part 1. Hydrocarbon Processing 2003 , 82(6) , 47. [2] Shah, N. Mathematical Programming Techniques for Crude Oil Scheduling. Comput. Chem. Eng. 1996 , 20 , S1227. [3] Lee, H.; Pinto, J. M.; Grossmann, I. E.; Park, S. Mixed-integer linear programming model for refinery short-term scheduling of crude oil unloading with inventory management. Ind. Eng. Chem. Res. 1996 , 35 , 1630. [4] Jia, Z.; Ierapetritou, M.; Kelly, J. D. Refinery Short-term Scheduling Using Continuous Time Formulation: Crude-Oil Operations. Ind. Eng. Chem. Res . 2003 , 42 , 3085. [5] Furman, K.; Jia, Z.; Ierapetritou, M.G. A Robust Event-Based Continuous Time Formulation for Tank Transfer Scheduling. Ind. Eng. Chem. Res. 2007 , 46 , 9126. [6] Moro, J.F.L.; Pinto, J.M. Mixed-integer Programming Approach for Short-Term Crude Oil Scheduling. Ind. Eng. Chem. Res. 2004 , 43 , 85. [7] Reddy, P.C.P.; Karimi, I.A.; Srinivasan, R. A new continuous-time formulation for scheduling crude oil operations. Chem. Eng. Sci. 2004 , 59 , 1325. [8] Mouret, S.; Grossmann, I. E.; Pestiaux, P. A novel priority-slot based continuous-time formulation for crude-oil scheduling problems. Ind. Eng. Chem. Res. 2009 , 48 , 8515. [9] Mouret, S.; Grossmann, I.E.; Pestiaux, P. Time representations and mathematical models for process scheduling problems. Comput. Chem. Eng. 2011 , 35 , 1038. [10] Li, J.; Misener, R.; Floudas, C.A. Continuous-Time Modeling and Global Optimization Approach for Scheduling of Crude Oil Operations. AIChE J. 2012 , 58 , 205. [11] Karuppiah, R.; Grossmann, I.E. Global optimization for the synthesis of integrated water systems in chemical processes. Comput. Chem. Eng. 2006 , 30 , 650. [12] Castro, P. M.; Barbosa-Póvoa, A. P.; Matos, H. A.; Novais, A. Q. Simple Continuous-Time Formulation for Short-Term Scheduling of Batch and Continuous Processes. Ind. Eng. Chem. Res . 2004 , 43 , 105. [13] Teles, J. P.; Castro, P. M.; Matos, H. A. Multiparametric disaggregation technique for global optimization of polynomial programming problems. Journal of Global Optimization 2013 , 55 , 227. [14] Kolodziej, S.; Castro, P. M.; Grossmann, I. E. Global optimization of bilinear programs with a multiparametric disaggregation technique. Journal of Global Optimization 2013 , 57 , 1039. [15] McCormick, G. P. Computability of global solutions to factorable nonconvex programs. Part I. Convex underestimating problems. Mathematical Programming 1976 , 10 , 147. [16] Misener, R.; Floudas, C.A. GloMIQO: Global mixed-integer quadratic optimizer. Journal of Global Optimization 2013 , 57 , 3.",
+    "presenting_author": "Pedro Castro | Faculdade de Ciências, Universidade de Lisboa, Lisboa, Portugal",
+    "authors": [
+      "Pedro Castro | Faculdade de Ciências, Universidade de Lisboa, Lisboa, Portugal",
+      "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pedro Castro",
+        "affiliation": "Faculdade de Ciências, Universidade de Lisboa, Lisboa, Portugal",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ignacio Grossmann",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "title": "Resource-Task Network Continuous-Time Formulation for Crude Oil Blending Operations",
+    "paper_id": "362759",
+    "paper_number": "697d",
+    "session_title": "Planning and Scheduling I",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/362759"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper385868.html",
+    "topic": "ARX-Based Approach for Steady-State Identification Analysis of Industrial Processes",
+    "date_time": "Thursday, November 20, 2014: 1:06 PM",
+    "abstract": "For the past decades, process systems engineering technologies, such as model predictive control (MPC) and real time optimization (RTO), have been employed to bring economic benefits to chemical processes. Along those lines, steady-state identification (SSI) approaches can help enhancing chemical processes by providing data for updating lumped parameters in stationary models, and by complementing other frameworks. For example, a classic steady-state RTO scheme crucially depends on SSI methodologies for its calculations, in order to update the parameters of the stationary model that represents various process operating conditions. The development and implementation of SSI methods have attracted much attention in numerous investigations 1 , but present several challenges, including processing noisy irregular process data, errors Type I and II. In this work, a new SSI method based on the ARX (Auto-Regressive model with eXogenous inputs) technique is proposed and compared against other techniques from the literature via process systems examples. Steady-state analyses have been performed with different strategies in the literature. For example, Cao and Rhinehart 2 proposed a methodology, denoted as F-like test, based on the comparison of two variances for the determination of steady states. Bhat and Saraf 3 extended the F-like test to consider the early determination of steady state and gross error detection in a crude distillation unit by means of tuning the critical values, implementing a linear Kalman filter, and performing data reconciliation by least-square techniques. Kelly and Hedengren 4 developed a method for SSI to detect non-stationary drifts in chemical processes. Flehmig and Marquardt 5 reported a technique which can infer trends in unmeasured states by using a linear process model. Jiang and coworkers 6 derived a method that can find steady-state points employing wavelet theory. Yao and coworkers 7 implemented a SSI methodology based on principal component analysis specific for batch processes. Finally, Le Roux et al. 8 and Tao et al. 9 proposed a technique based on a polynomial equation assuming a specified degree, and a moving window of data. Such techniques were employed for SSI by using the polynomial slope as index or critical value. Our proposed method in this presentation provides an alternative that permits the SSI with reduced tuning. This method considers a typical ARX model, in which the singularity of the model matrices is used as an index for steady-state determination. In this contribution, the F-like test 2 , the polynomial-based approach 9 and our proposed technique are implemented for SSI of two different cases. The first case considers a simulated data set in steady state and it is performed to evaluate the techniques under simple conditions. The second case corresponds to a non-linear CSTR described in Pannocchia and Rawlings 10 when operated at different steady states. During steady-state transitions, a non-linear model predictive control scheme is implemented to track set-point changes due to the non-linear characteristics of the system. For each case, we assume two white noise levels (with standard deviations equal to 3 and 5 % of the output value) that are typical of real industrial operating conditions. Results of these implementations show that the tuning of the F-like test and the polynomial-based methods is the most critical step for good performance of these approaches. Moreover, these techniques rely on an index that is sensitive to a user-defined threshold. On the other hand, our proposed approach depends on a mathematical index that characterizes the identifiability properties of the system and therefore can be implemented with reduced tuning. The conclusions of the analyses performed in these examples will facilitate the selection and implementation of the appropriate method for a depropanizer column owned by Petrobras S.A. with real industrial data. (1) Korbel, M.; Bellec, S.; Jiang, T.; Stuart, P. Steady State Identification for On-line Data Reconciliation Based on Wavelet Transform and Filtering. Computers & Chemical Engineering 2014 , 63 , 206. (2) Cao, S.; Rhinehart, R. R. An Efficient Method for On-line Identification of Steady State. Journal of Process Control 1995 , 5 , 363. (3) Bhat, S. A.; Saraf, D. N. Steady-State Identification , Gross Error Detection , and Data Reconciliation for Industrial Process Units. Industrial & Engineering Chemistry Research 2004 , 43 , 4323. (4) Kelly, J. D.; Hedengren, J. D. A Steady-state Detection (SSD) Algorithm to Detect Non-stationary Drifts in Processes. Journal of Process Control 2013 , 23 , 326. (5) Flehmig, F.; Marquardt, W. Inference of Multi-variable Trends in Unmeasured Process Quantities. Journal of Process Control 2008 , 18 , 491. (6) Jiang, T.; Chen, B.; He, X.; Stuart, P. Application of Steady-state Detection Method Based on Wavelet Transform. Computers & Chemical Engineering 2003 , 27 , 569. (7) Yao, Y.; Zhao, C.; Gao, F. Batch-to-Batch Steady State Identification Based on Variable Correlation and Mahalanobis Distance. Industrial & Engineering Chemistry Research 2009 , 48 , 11060. (8) Le Roux, G. A. C.; Santoro, B. F.; Sotelo, F. F.; Teissier, M.; Joulia, X. Improving Steady-state Identification. Proceedings of the 18th European Symposium on Computer Aided Process Engineering – ESCAPE 18 2008 , 25 , 459. (9) Tao, L.; Li, C.; Kong, X.; Qian, F. Steady-state Identification with Gross Errors for Industrial Process Units. Proceedings of the 10th World Congress on Intelligent Control and Automation 2012 , 4151. (10) Pannocchia, G.; Rawlings, J. B. Disturbance Models for Offset-free Model-predictive Control. AIChE Journal 2003 , 49 , 426.",
+    "presenting_author": "Bruno F. Santoro | University of São Paulo, São Paulo, Brazil",
+    "authors": [
+      "Franklin D. Rincon | Chemical Engineering Department, Polytechnic School of the University of São Paulo, São Paulo - SP, Brazil",
+      "Bruno F. Santoro | University of São Paulo, São Paulo, Brazil",
+      "Fernando Lima | West Virginia University, Morgantown, WV",
+      "Galo Carrillo le Roux | University of São Paulo, São Paulo, Brazil"
+    ],
+    "authors_structured": [
+      {
+        "name": "Franklin D. Rincon",
+        "affiliation": "Chemical Engineering Department, Polytechnic School of the University of São Paulo, São Paulo - SP, Brazil",
+        "designation": "Author"
+      },
+      {
+        "name": "Bruno F. Santoro",
+        "affiliation": "University of São Paulo, São Paulo, Brazil",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Fernando Lima",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Galo Carrillo le Roux",
+        "affiliation": "University of São Paulo, São Paulo, Brazil",
+        "designation": "Author"
+      }
+    ],
+    "title": "ARX-Based Approach for Steady-State Identification Analysis of Industrial Processes",
+    "paper_id": "385868",
+    "paper_number": "699c",
+    "session_title": "Process Modeling and Identification",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/385868"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper381033.html",
+    "topic": "Industrial Aspects on Production Scheduling Models and Solution Methods",
+    "date_time": "Thursday, November 20, 2014: 2:15 PM",
+    "abstract": "Abstracts: AIChE 2014 abstract Scheduling paper PCCM.pdf (80.6KB) - Uploading Abstracts",
+    "presenting_author": "Iiro Harjunkoski | ABB Corporate Research, Ladenburg, Germany",
+    "authors": [
+      "Iiro Harjunkoski | ABB Corporate Research, Ladenburg, Germany",
+      "Christos T. Maravelias | University of Wisconsin-Madison, Madison, WI",
+      "Pedro Castro | Faculdade de Ciências, Universidade de Lisboa, Lisboa, Portugal"
+    ],
+    "authors_structured": [
+      {
+        "name": "Iiro Harjunkoski",
+        "affiliation": "ABB Corporate Research, Ladenburg, Germany",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christos T. Maravelias",
+        "affiliation": "University of Wisconsin-Madison, Madison, WI",
+        "designation": "Author"
+      },
+      {
+        "name": "Pedro Castro",
+        "affiliation": "Faculdade de Ciências, Universidade de Lisboa, Lisboa, Portugal",
+        "designation": "Author"
+      }
+    ],
+    "title": "Industrial Aspects on Production Scheduling Models and Solution Methods",
+    "paper_id": "381033",
+    "paper_number": "697f",
+    "session_title": "Planning and Scheduling I",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/381033"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper391265.html",
+    "topic": "Reactor Modeling of Gasoil Systems with Graph-Based Databases",
+    "date_time": "Thursday, November 20, 2014: 1:42 PM",
+    "abstract": "Abstracts: Solvason_Reactors_Abstract.pdf (200.0KB) - Uploading Abstracts",
+    "presenting_author": "Jorge Martinis | Bryan Research & Engineering, Inc., Bryan, TX",
+    "authors": [
+      "Jorge Martinis | Bryan Research & Engineering, Inc., Bryan, TX",
+      "Charles C. Solvason | Bryan Research & Engineering, Inc., Bryan, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jorge Martinis",
+        "affiliation": "Bryan Research & Engineering, Inc., Bryan, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Charles C. Solvason",
+        "affiliation": "Bryan Research & Engineering, Inc., Bryan, TX",
+        "designation": "Author"
+      }
+    ],
+    "title": "Reactor Modeling of Gasoil Systems with Graph-Based Databases",
+    "paper_id": "391265",
+    "paper_number": "699e",
+    "session_title": "Process Modeling and Identification",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/391265"
+  },
+  {
+    "url": "https://aiche.confex.com/data/abstract/aiche/2014/Paper_385113_abstract_54494_0.docx",
+    "topic": "Reactor Modeling of Gasoil Systems with Graph-Based Databases",
+    "date_time": "Thursday, November 20, 2014: 1:42 PM",
+    "abstract": "Abstracts: Solvason_Reactors_Abstract.pdf (200.0KB) - Uploading Abstracts",
+    "presenting_author": "Jorge M. Martinis | Bryan Research & Engineering, Inc., Bryan, TX",
+    "authors": [
+      "Charles C. Solvason | Bryan Research & Engineering, Inc., Bryan, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jorge M. Martinis",
+        "affiliation": "Bryan Research & Engineering, Inc., Bryan, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Charles C. Solvason",
+        "affiliation": "Bryan Research & Engineering, Inc., Bryan, TX",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper384855.html",
+    "topic": "Theoretical Framework for Formulating MIP Scheduling Models with Multiple and Non-Uniform Discrete-Time Grids",
+    "date_time": "Thursday, November 20, 2014: 12:51 PM",
+    "abstract": "Abstracts: AIChE2014.Zenner.MultiGrid-II.docx (15.7KB) - Uploading Abstracts",
+    "presenting_author": "Christos T. Maravelias | University of Wisconsin, Madison, WI",
+    "authors": [
+      "Christos T. Maravelias | University of Wisconsin, Madison, WI",
+      "Sara Velez | University of Wisconsin-Madison, Madison, WI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Christos T. Maravelias",
+        "affiliation": "University of Wisconsin, Madison, WI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sara Velez",
+        "affiliation": "University of Wisconsin-Madison, Madison, WI",
+        "designation": "Author"
+      }
+    ],
+    "title": "Theoretical Framework for Formulating MIP Scheduling Models with Multiple and Non-Uniform Discrete-Time Grids",
+    "paper_id": "384855",
+    "paper_number": "697b",
+    "session_title": "Planning and Scheduling I",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/384855"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper368873.html",
+    "topic": "Simultaneous Scheduling and Control Using Fast MPC",
+    "date_time": "Thursday, November 20, 2014: 1:54 PM",
+    "abstract": "In chemical process operations simultaneous consideration of scheduling and control helps to enhance the overall process profitability but meanwhile increases the complexity of modeling and thus the computational efficiency of the solution approaches (Terrazas-Moreno, et al., 2008) (Engell and Harjunkoski, 2012). Online integration of scheduling and control requires updating operation solutions for both scheduling and control levels at real time in the presence of disturbance, thus the online integration requires a repetitive solution of the integrated problem at each time interval (Zhuge and Ierapetritou, 2012). Model Predictive Control (MPC) is an online optimization technique that involves repetitively solving optimization problems over a future time horizon. To reduce the computation burden of conventional MPC, multi-parametric Model Predictive Control (mp-MPC) was proposed to solve for the explicit control law offline and thus the online optimization is reduced to simple function evaluations (Pistikopoulos, 2009). However, as the problem size increases in terms of state dimension and prediction horizon, the number of polyhedral regions in the state partition increases exponentially and this limits the applicability of mp-MPC to small and medium-sized control problems (Richter, et al., 2012). Fast MPC on the other hand is capable in handling large scale problems, and therefore can be used to facilitate the efficient integration of scheduling and control of large-scale processes. Fast MPC transforms the MPC problem into a convex quadratic programming for which efficient nonlinear programming methods and computational tools can be used to speed up the computation by exploring the problem structure. Among the existing work in the literatures three solution approaches can be identified: active set method (Ferreau, et al., 2008), interior point method (Rao, et al., 1998) (Wang and Boyd, 2010) and Fast gradient method (Richter, et al., 2009) (Richter, Jones and Morari, 2012). In this study we propose a cascade control strategy that involves two control loops for the online integration of scheduling and control. In the outer loop we approximate the original process dynamics using a piece-wise affine (PWA) model and incorporate it with the scheduling level. This leads to an integrated problem that is subject to linear constraints. The primary MPC at the outer loop solves the integrated problem and generates both the production scheduling and the control solution. However, only the scheduling solution is transferred to the inner loop where the secondary MPC (a fast MPC) treats the scheduling solution as parameters and computes the exact control solution online. Note that these two loops correspond to different models. The outer loop uses the integrated model while the inner loop uses the process dynamic model. Following this approach the primary MPC is able to achieve an overall optimalility for both scheduling and control levels efficiently and the secondary MPC is able to respond quickly to the local disturbance. Results of case studies show the feasibility and efficiency of the proposed approach. References: (1) Terrazas-Moreno, S.; Flores-Tlacuahuac, A.; Grossmann, I. E. Simultaneous design, scheduling, and optimal control of a methyl-methacrylate continuous polymerization reactor. AIChE Journal 2008, 54, (12), 3160-3170. (2) Engell, S.; Harjunkoski, I. Optimal operation: Scheduling, advanced control and their integration. Computers & Chemical Engineering 2012, 47, 121-133. (3) Zhuge, J.; Ierapetritou, M. G. Integration of Scheduling and Control with Closed Loop Implementation. Industrial & Engineering Chemistry Research 2012, 51, (25), 8550-8565. (4) Pistikopoulos, E. N. Perspectives in multiparametric programming and explicit model predictive control. AIChE Journal 2009, 55, (8), 1918-1925. (5) Richter, S.; Jones, C. N.; Morari, M. Computational Complexity Certification for Real-Time MPC With Input Constraints Based on the Fast Gradient Method. Automatic Control, IEEE Transactions on 2012, 57, (6), 1391-1403. (6) Ferreau, H. J.; Bock, H. G.; Diehl, M. An online active set strategy to overcome the limitations of explicit MPC. International Journal of Robust and Nonlinear Control 2008, 18, (8), 816-830. (7) Rao, C. V.; Wright, S. J.; Rawlings, J. B. Application of Interior-Point Methods to Model Predictive Control. Journal of Optimization Theory and Applications 1998, 99, (3), 723-757. (8) Wang, Y.; Boyd, S. Fast Model Predictive Control Using Online Optimization. Control Systems Technology, IEEE Transactions on 2010, 18, (2), 267-278. (9) Richter, S.; Jones, C. N.; Morari, M. Real-time input-constrained MPC using fast gradient methods. Decision and Control, 2009 held jointly with the 2009 28th Chinese Control Conference. , 2009 , pp 7387-7393.",
+    "presenting_author": "Jinjun Zhuge | Rutgers - The State University of New Jersey, Piscataway, NJ",
+    "authors": [
+      "Jinjun Zhuge | Rutgers - The State University of New Jersey, Piscataway, NJ",
+      "Marianthi Ierapetritou | Rutgers - The State University of New Jersey, Piscataway, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jinjun Zhuge",
+        "affiliation": "Rutgers - The State University of New Jersey, Piscataway, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Marianthi Ierapetritou",
+        "affiliation": "Rutgers - The State University of New Jersey, Piscataway, NJ",
+        "designation": "Author"
+      }
+    ],
+    "title": "Simultaneous Scheduling and Control Using Fast MPC",
+    "paper_id": "368873",
+    "paper_number": "697e",
+    "session_title": "Planning and Scheduling I",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/368873"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper368236.html",
+    "topic": "Liquefaction Process, Energy Storage of Cryogenic Carbon Capture",
+    "date_time": "Thursday, November 20, 2014: 2:00 PM",
+    "abstract": "The cryogenic carbon capture (CCC) process is an innovative energy storage system that can be integrated by using an open loop natural gas refrigeration system. This system stores energy during non-peak times by liquefying gas. When the energy is at a premium during peak demand, the liquefaction of natural gas terminates and the stored liquefied natural gas carries out the cryogenic separation process relieving the parasitic load on the power plant. The natural gas combusts in a simple natural gas turbine increasing the power output of the plant during peak demand, only after the gas has been vaporized and warmed. In this paper, novel steady state and dynamic modeling of the natural gas liquefaction process have been designed and simulated by Aspen HYSYS. The unit energy consumption, sizing costs and liquefaction rate are selected as the objective functions and are optimized with several key variables of the process. The results show that efficient heat exchangers are highly recommended and will result in significant energy consumption reduction with the objective of maximized energy savings, considering capital costs as the natural gas liquefaction process consumes a large amount of energy.",
+    "presenting_author": "Farhad Fazlollahi | Brigham Young University, Provo, UT",
+    "authors": [
+      "Farhad Fazlollahi | Brigham Young University, Provo, UT",
+      "Larry L. Baxter | Brigham Young University, Provo, UT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Farhad Fazlollahi",
+        "affiliation": "Brigham Young University, Provo, UT",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Larry L. Baxter",
+        "affiliation": "Brigham Young University, Provo, UT",
+        "designation": "Author"
+      }
+    ],
+    "title": "Liquefaction Process, Energy Storage of Cryogenic Carbon Capture",
+    "paper_id": "368236",
+    "paper_number": "699f",
+    "session_title": "Process Modeling and Identification",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/368236"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper385398.html",
+    "topic": "Optimal Short-Term Scheduling of Turnarounds in an Integrated Site",
+    "date_time": "Thursday, November 20, 2014: 1:12 PM",
+    "abstract": "Integrated sites involve material flow in process networks. The disruption of flow due to planned maintenance turnarounds on some process units affects production rates in both upstream as well as downstream units. Due to this, long-term maintenance planning often recommends the alignment of a subset of the turnarounds around the same time in order to make use of synergistic effects. In this paper, we consider a short-term maintenance scheduling setting, where we focus on a time scale of a few months within which a number of turnarounds are scheduled to take place. A major concern during the time leading up to a set of turnarounds is the planning for inventory build-up in anticipation of a turnaround, so as to try and maintain normal operation and satisfy demands during these long outages. Another issue is the allocation of maintenance manpower among various subtasks, which is a scarce resource that has been negotiated for months in advance. The goal of this work is to provide an optimization formulation that will take into account operational level detail and suggest optimal maintenance schedules of these units while negotiating resource constraints, within a time interval that spans the recommended maintenance durations of a subset of the production units. In particular, we study the short-term scheduling of detailed maintenance tasks and subtasks, ramping up and down of unit production, allocation of available maintenance manpower, use of intermediate storage, and the effect on material flow in the entire site network. Not only maintenance task and manpower work schedules, but also site-wide short-term production plans and inventory policy decisions fall out of the optimization framework. We use an industrial-size site network example to illustrate the results.",
+    "presenting_author": "Tong Zhang | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Tong Zhang | Carnegie Mellon University, Pittsburgh, PA",
+      "Satyajith Amaran | Carnegie Mellon University, Pittsburgh, PA",
+      "Nikolaos Sahinidis | Carnegie Mellon University, Pittsburgh, PA",
+      "Bikram Sharda | The Dow Chemical Company, Freeport, TX",
+      "Scott Bury | Dow, Midland, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Tong Zhang",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Satyajith Amaran",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Nikolaos Sahinidis",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Bikram Sharda",
+        "affiliation": "The Dow Chemical Company, Freeport, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Scott Bury",
+        "affiliation": "Dow, Midland, MI",
+        "designation": "Author"
+      }
+    ],
+    "title": "Optimal Short-Term Scheduling of Turnarounds in an Integrated Site",
+    "paper_id": "385398",
+    "paper_number": "697c",
+    "session_title": "Planning and Scheduling I",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/385398"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper389105.html",
+    "topic": "Global Optimality Properties of Total Annualized and Operating Cost Problems for Compressor Sequences",
+    "date_time": "Thursday, November 20, 2014: 2:18 PM",
+    "abstract": "In this work, the minimum total annualized cost problem is studied for a series of non-isentropic compressors and coolers that brings a gas with constant compressibility factor from a specified initial pressure and temperature to a specified final pressure and the same temperature. It is established analytically that at the global optimum, the cooler outlet temperatures are equal to the minimum allowable temperature. For constant heat capacity, constant compressibility factor gases, additional properties of the globally optimal compressor sequence are analytically established for the minimum operating cost case. The aforementioned properties permit development of a solution strategy that identifies the globally-minimum operating cost. Several case studies are presented to illustrate the developed theorems and solution strategies.",
+    "presenting_author": "Jeremy A. Conner | University of California, Los Angeles, Los Angeles, CA",
+    "authors": [
+      "Jeremy A. Conner | University of California, Los Angeles, Los Angeles, CA",
+      "Vasilios Manousiouthakis | University of California, Los Angeles, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jeremy A. Conner",
+        "affiliation": "University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Vasilios Manousiouthakis",
+        "affiliation": "University of California, Los Angeles, CA",
+        "designation": "Author"
+      }
+    ],
+    "title": "Global Optimality Properties of Total Annualized and Operating Cost Problems for Compressor Sequences",
+    "paper_id": "389105",
+    "paper_number": "699g",
+    "session_title": "Process Modeling and Identification",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/389105"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper383661.html",
+    "topic": "Optimal Scheduling of Converter Aisle Operation in a Nickel Smelting Plant",
+    "date_time": "Thursday, November 20, 2014: 2:36 PM",
+    "abstract": "The Converter Aisle of a Nickel Smelting plant represents a significant challenge in terms of achieving efficient planning and scheduling. The scheduling is complicated by several factors including hybrid dynamics due to the interaction of discrete logical decisions and operational restrictions. The complexity of this multivariable system greatly complicates the derivation of a schedule by means of inspection, thus necessitating a systematic methodology by which optimal scheduling can be achieved. The process configuration includes one or more furnaces which transfer ladles of furnace matte via cranes to several converters which follow a standard batch recipe. Furnaces are characterized by a continuous inlet flow of Dry Solid Charge (DSC) with a discrete drawing of the Flash Furnace Matte (FFM), referred to as tapping. The standard batch recipe on the converters includes iteratively charging the converters with FFM, followed by high purity oxygen blows that reject iron, sulfur, and impurities, thereby purifying the FFM and producing Bessemer Matte (BM). Byproducts resulting from the oxygen blows include SO 2 and a layer of liquid impurities referred to as Converter Slag (CS). Oxygen blows must be followed by a removal of the CS to avoid re-contamination of the BM by means of a Converter Skim [1]. The blow, skim, and charge operations must be performed several times to ensure that the BM will meet the purity tolerances, whereas the number of FFM ladles added to each converter determine the cast size and thus the production level. The objective of this work is to design a centralized optimization-based scheduling algorithm that will maximize production by coordinating multiple furnaces and several converters operating in parallel by making FFM allocation decisions to satisfy matte demand based on converter cycle progression. Matte allocation decisions are subject to restrictions such as shared crane usage, furnace capacity constraints, and a range of operating furnace flow rates. The scheduling optimization must account for the semi-continuous furnace operation due to the continuous inlet flow and discrete removal. Converters are characterized by both batch and cyclical operation where casting times must be offset so as to account for the limited casting availability. Furthermore, converter blowing must be sequenced and timed to achieve compliance with SO 2 emission tolerances which limit the number of converters operating in parallel. This work builds on an initial simplified model [2], and contributes toward the development of a real-time decision support tool to optimize production and systematically handle constraints. Continuous-time formulations have been successful in solving industrial problems [3],[4]. As such, the scheduling optimization is formulated as a continuous-time mixed integer linear program (MILP). The formulation is modeled in AMPL and is solved using CPLEX 12.5 . A series of symmetry-breaking and tightening constraints are developed and employed to improve the computation efficiency of the optimization to facilitate the use of this technology in real-time applications. A reactive scheduling mechanism is included to allow rescheduling for when process disturbances impact the operating schedule. A methodology for reducing radical scheduling changes due to the optimization during reactive scheduling is presented using a tiered optimization approach that progressively increases the degrees of freedom available as required, in order to achieve a feasible production schedule. The optimization formulation will be presented, and its performance demonstrated through case studies simulating real plant operating conditions. Challenges encountered will be identified, and strategies for addressing them discussed. [1] Warner. A. E. M., Liu. J., Javor. F., Lawson. R., Shellshear. W., Hoang. T., and Falcioni. R. (2005). Developments in Pierce-Smith Converting at Inco's Copper Cliff Smelter During the Last 35 Years . pp. 27-43, San Francisco, California . [ 2] Ewaschuk. C. M., Swartz. C. L. E., and Zhang. Y. (2013). Optimal Converter Aisle Scheduling in a Nickel Smelting Plant . In Proceedings of the IFAC MMM, pp. 202-207, San Diego, California. [3] Floudas. C.A. and Lin. X. (2004). Continuous-time versus discrete-time approaches for scheduling of chemical processes: A review . Computers & Chemical Engineering , 28, pp. 4341-4359. [4] Harjunkoski. I., Maravelias. C. T., Bongers. P., Castro. P. M., Engell. S., Grossmann. I.E., Hooker. J., Méndez. C., Sand. G., Wassick. J. (2014). Scope for industrial applications of production scheduling models and solution methods . Computers & Chemical Engineering , Volume 62, pp. 161-193.",
+    "presenting_author": "Christopher Swartz | McMaster University, Hamilton, ON",
+    "authors": [
+      "Christopher Ewaschuk | McMaster University, Hamilton, ON",
+      "Christopher Swartz | McMaster University, Hamilton, ON"
+    ],
+    "authors_structured": [
+      {
+        "name": "Christopher Ewaschuk",
+        "affiliation": "McMaster University, Hamilton, ON",
+        "designation": "Author"
+      },
+      {
+        "name": "Christopher Swartz",
+        "affiliation": "McMaster University, Hamilton, ON",
+        "designation": "Presenting Author"
+      }
+    ],
+    "title": "Optimal Scheduling of Converter Aisle Operation in a Nickel Smelting Plant",
+    "paper_id": "383661",
+    "paper_number": "697g",
+    "session_title": "Planning and Scheduling I",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/383661"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper388053.html",
+    "topic": "Proactive Optimization-Based Reconfiguration of Heat-Exchanger Super Networks",
+    "date_time": "Thursday, November 20, 2014: 2:36 PM",
+    "abstract": "Large scale chemical or petrochemical processes are highly energy intensive and usually require energy recovery systems to guarantee high efficiency and low cost. A heat-exchanger network (HEN) aims at utilizing internal flow streams to satisfy outlet temperature targets so that operating costs can be minimized. A traditional HEN is expected to be operated under the condition of maximum heat integration and minimum utility consumption [1]. An emerging trend in energy management is to integrate renewable generation, such as wind and solar resources and to supply heat and power not only to residential users but also to process industries. As a result, the electricity can be “zero-cost” as well as “zero emission”, making renewable energy a promising power alternative, although the discrete generation and inherent uncertainty in renewable resources cannot be neglected. Furthermore, there is a trade-off between energy recovery using a HEN and adding external (auxiliary) energy to the process, the optimal decision of which depends on the corresponding costs. Most of the control and operation research regarding HENs assumes that the synthesis is fixed, which means all necessary network exchangers, utility units, and the network structure are well defined [2]. In this work, a supervisor level is proposed that plays a dominant role to decide the operating states of the local HEN according to varying electricity pricing and available heat-exchangers. This supervisor explores the space of possible optimal HENs and finds optimal structures within a superstructure that satisfies operational and economic targets and constraints. This superstructure can be proactively optimized and implemented through a receding horizon approach. The cost function for utilizing network heat-exchangers and utilities powered by electricity from either renewable resources or the grid is expressed as dollars per kWh. The more energy transferred within the HEN, the lower the amortized cost is with respect to per unit of energy due to the scaling effects for the equipment. On the other hand, the cost function, when multi-step tariff pricing is considered, would increase when the renewable generation is scarce and the utility has to be powered by electricity from the grid. An economic objective function considering both capital and operating costs is thus defined and optimized to decide which HEN structure is optimal at any given time period and also to determine the set-points for local controllers to follow. This hierarchical structure takes advantage of the disparate time scales associated with varying pricing dynamics (low frequency) and local set-point tracking (high frequency). Since heat-exchanger performance can be complex, the prediction of their operation from first principles can be challenging. The feasible synthesis of HEN are presented using advanced process simulations tools (such as Aspen Plus ® ), considering both the steady-state and dynamic models to incorporate controllers. This paper will present our preliminary results in defining proactive heat-exchanger super structures where transitions between HEN structures are instantaneous. We envision incorporating dynamic models not only for the local control scheme but also in the supervisory level to account for the structural transitions that incur operational and possibly capital costs. [1] González A H, Odloak D, Marchetti J L. Predictive control applied to heat-exchanger networks. Chemical Engineering and Processing: Process Intensification, 2006, 45(8): 661-671. [2] Aguilera N, Marchetti J L. Optimizing and controlling the operation of heat-exchanger networks. AIChE Journal, 1998, 44(5): 1090-1104. [3] Gorji-Bandpy M, Yahyazadeh-Jelodar H, Khalili M. Optimization of heat exchanger network. Applied Thermal Engineering, 2011, 31(5): 779-784. [4] Zamora J M, Grossmann I E. A global MINLP optimization algorithm for the synthesis of heat exchanger networks with no stream splits. Computers & Chemical Engineering, 1998, 22(3): 367-384.",
+    "presenting_author": "Xiaonan Wang | UC Davis, Davis, CA",
+    "authors": [
+      "Xiaonan Wang | UC Davis, Davis, CA",
+      "Ahmet Palazoglu | University of California, Davis, Davis, CA",
+      "Nael El-Farra | University of California, Davis, Davis, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Xiaonan Wang",
+        "affiliation": "UC Davis, Davis, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ahmet Palazoglu",
+        "affiliation": "University of California, Davis, Davis, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Nael El-Farra",
+        "affiliation": "University of California, Davis, Davis, CA",
+        "designation": "Author"
+      }
+    ],
+    "title": "Proactive Optimization-Based Reconfiguration of Heat-Exchanger Super Networks",
+    "paper_id": "388053",
+    "paper_number": "699h",
+    "session_title": "Process Modeling and Identification",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/388053"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper387239.html",
+    "topic": "A Time Scale-Bridging Approach for Integrating Production Scheduling and Process Control",
+    "date_time": "Thursday, November 20, 2014: 12:30 PM",
+    "abstract": "The control and operation hierarchy of the chemical supply chain comprises several layers of functionality, including regulatory and supervisory control, and production scheduling and planning. These functions act over different time horizons, ranging from seconds, in the case of regulatory control, to months, in the case of production planning). Since they all serve the common goal of improving process efficiency, profitability and safety, it is conceivable that carrying out several of these functions in an integrated fashion will yield further economic and/or operational benefits. Indeed, extensive literature studies have been dedicated to the interplay between regulatory and supervisory control, and to the integration of planning and scheduling. Conversely, the integration of scheduling and control has received far less attention. This is partly due to organizational challenges [1]: the two functions are typically the responsibility of different parts of an organization, with planning and scheduling being carried out by a business arm, and control belonging to an engineering/operations division. However, integrating these two functions also poses significant technical challenges: their time horizons and execution frequencies differ considerably. Moreover, scheduling must account for discrete decisions, in addition to using continuous variables as is typical in control calculations [2]. In this work, we present a novel framework for integrating short-term scheduling and nonlinear control of continuous chemical processes. We draw our inspiration from scale-bridging techniques used in multi-scale simulation, whereby a reduced-order model of the system characteristics in a faster time scale (or smaller lenghtscale) is used to improve the accuracy of the system model at a higher level in the time/space scale hierarchy. In a similar vein, we develop a low-dimensional dynamic model of the closed-loop input-output behavior of the process under nonlinear control [3]. This low order time scale-bridging model is then incorporated into the scheduling layer as a dynamic constraint. The schedule is computed in the form of a time-varying setpoint signal for the process controller [4]. We demonstrate the implementation of these concepts using multivariate input-output linearizing feedback control, which imposes a linear and decoupled closed loop behavior on the systems of interest. We then present two illustrative case studies, a multiple product reactor [5] and a polymerization reactor [6]. We show that the economic performance of the proposed scheduling mechanism is comparable to that of scheduling formulations that rely on the full process model when a perfect model is available, and emphasize the benefits of our approach in the presence of plant-model mismatch. References: [1] S. Engell and I. Harjunkoski. Optimal operation: Scheduling, advanced control and their integration. Comput. Chem. Eng., 47:121–133, 2012. [2] M. Baldea and I. Harjunkoski. A systematic review of the integration of production scheduling and process control. Comput. Chem. Eng., submitted. [3] M. Baldea, P. Daoutidis. Dynamics and Nonlinear Control of Integrated Process Systems, Cambridge University Press, 2012. [4] J. Du, J. Park, I. Harjunkoski, and M. Baldea. Integrating Production Scheduling and Process Control using Internal Coupling Models. ESCAEP 24, Budapest, Hungary. [5] A. Flores-Tlacuahuac and I.E. Grossmann. Simultanous cyclic scheduling and control of a multiproduct CSTR. Ind. Eng. Chem. Res., 45:6698–6712, 2006 [6] P. Daoutidis, M. Soroush, and C. Kravaris. Feedforward/feedback control of multivariable nonlinear processes. AIChE J., 36(10):1471–1484, 1990.",
+    "presenting_author": "Juan Du | The University of Texas at Austin, Austin, TX",
+    "authors": [
+      "Juan Du | The University of Texas at Austin, Austin, TX",
+      "Jungup Park | The University of Texas at Austin, Austin, TX",
+      "Iiro Harjunkoski | ABB Corporate Research, Ladenburg, Germany",
+      "Michael Baldea | The University of Texas at Austin, Austin, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Juan Du",
+        "affiliation": "The University of Texas at Austin, Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jungup Park",
+        "affiliation": "The University of Texas at Austin, Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Iiro Harjunkoski",
+        "affiliation": "ABB Corporate Research, Ladenburg, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Baldea",
+        "affiliation": "The University of Texas at Austin, Austin, TX",
+        "designation": "Author"
+      }
+    ],
+    "title": "A Time Scale-Bridging Approach for Integrating Production Scheduling and Process Control",
+    "paper_id": "387239",
+    "paper_number": "697a",
+    "session_title": "Planning and Scheduling I",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/387239"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper370072.html",
+    "topic": "Economic Model Predictive Control Using Nonlinear Empirical Models",
+    "date_time": "Thursday, November 20, 2014: 12:30 PM",
+    "abstract": "Significant strides have been made in the last five years to unify economic process optimization and feedback control. Economic model predictive control (EMPC) is a feedback control technique that attempts to tightly integrate economic optimization and feedback control since it is a predictive control scheme that is formulated with an objective function representing the process economics. Key theoretical developments on stability, performance, and robustness of EMPC have been presented as well as numerous demonstrations of improved economic performance of closed-loop systems under EMPC [1]-[3] (for an overview of recent results on EMPC see, also, [4]). As its name implies, EMPC requires the availability of a dynamic model to compute its control actions. However, in industrial processes, it may be difficult to obtain an accurate first-principles model of the process. Furthermore, EMPC may dictate a possibly time-varying operating policy, that is, it may not force convergence of the closed-loop state to a pre-defined operating steady-state. A consequence of such operating strategy is that the operating region in state-space under EMPC may be sufficiently large such that the effect of nonlinearities is significant (i.e., a linear model cannot adequately capture the process dynamics in the region of operation). For the cases where the development of a sufficiently accurate first-principles dynamic model is not possible, system identification techniques may need to be used to obtain an accurate empirical input/output model of the process dynamics. In particular, nonlinear autoregressive moving average with exogenous inputs (NARMAX) models may be one type of nonlinear system identification techniques employed and used to construct an empirical model [5]. In this work, EMPC schemes using NARMAX models are investigated and discussed. In this direction, EMPC schemes are formulated with NARMAX models and the applicability of using these models with EMPC is discussed. In the first part, a nonlinear system identification methodology is presented that can be used to identify model structure and parameters to construct a NARMAX model capable of adequately describing the process dynamics. Since EMPC may dictate a time-varying operating strategy, being able to construct a NARMAX model that can describe the process transients is especially important. In the second part, the advantages and disadvantages of the using various NARMAX models in the context of EMPC are discussed. Finally, the EMPC schemes are demonstrated through several chemical process examples. [1] Angeli D, Amrit R, Rawlings JB. On average performance and stability of economic model predictive control. IEEE Transactions on Automatic Control. 2012;57:1615-1626. [2] Huang R, Harinath E, Biegler LT. Lyapunov stability of economically oriented NMPC for cyclic processes. Journal of Process Control. 2011;21:501-509. [3] Heidarinejad M, Liu J, Christofides PD. Economic model predictive control of nonlinear process systems using Lyapunov techniques. AIChE Journal. 2012;58:855-870. [4] Ellis, and M, Durand H, Christofides PD. A tutorial review of economic model predictive control methods. Journal of Process Control, in press. [5] Billings SA. Nonlinear System Identification: NARMAX Methods in the Time, Frequency, and Spatio-Temporal Domains. Chichester, West Sussex, United Kingdom: John Wiley & Sons, 2013.",
+    "presenting_author": "Anas Alanqar | University of California, Los Angeles, Los Angeles, CA",
+    "authors": [
+      "Anas Alanqar | University of California, Los Angeles, Los Angeles, CA",
+      "Matthew Ellis | University of California, Los Angeles, Los Angeles, CA",
+      "Liangfeng Lao | University of California, Los Angeles, Los Angeles, CA",
+      "Panagiotis Christofides | University of California, Los Angeles, Los Angeles, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Anas Alanqar",
+        "affiliation": "University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Matthew Ellis",
+        "affiliation": "University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Liangfeng Lao",
+        "affiliation": "University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      }
+    ],
+    "title": "Economic Model Predictive Control Using Nonlinear Empirical Models",
+    "paper_id": "370072",
+    "paper_number": "699a",
+    "session_title": "Process Modeling and Identification",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/370072"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper388612.html",
+    "topic": "A Comparison of PLS and Subspace Identification for Batch Model Predictive Quality Control",
+    "date_time": "Thursday, November 20, 2014: 12:48 PM",
+    "abstract": "Abstracts: main_v2.pdf (77.8KB) - Uploading Abstracts",
+    "presenting_author": "Brandon Corbett | McMaster University, Hamilton, ON",
+    "authors": [
+      "Brandon Corbett | McMaster University, Hamilton, ON",
+      "Kuilin Chen | McMaster University, Hamilton, ON",
+      "Prashant Mhaskar | McMaster University, Hamilton, ON"
+    ],
+    "authors_structured": [
+      {
+        "name": "Brandon Corbett",
+        "affiliation": "McMaster University, Hamilton, ON",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Kuilin Chen",
+        "affiliation": "McMaster University, Hamilton, ON",
+        "designation": "Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, ON",
+        "designation": "Author"
+      }
+    ],
+    "title": "A Comparison of PLS and Subspace Identification for Batch Model Predictive Quality Control",
+    "paper_id": "388612",
+    "paper_number": "699b",
+    "session_title": "Process Modeling and Identification",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/388612"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2014/webprogram/Paper374852.html",
+    "topic": "Modeling of an Industrial Diesel Hydro-Processing Plant By the Continuous Lumping Approach",
+    "date_time": "Thursday, November 20, 2014: 1:24 PM",
+    "abstract": "Abstracts: AIChEDHP.pdf (174.6KB) - Uploading Abstracts",
+    "presenting_author": "Ayse Dilan Celebi | Koc University, Istanbul, Turkey",
+    "authors": [
+      "Ayse Dilan Celebi | Koc University, Istanbul, Turkey",
+      "Erdal Aydin | Koc University, İstanbul, Turkey",
+      "Hasan Sildir | Koc University, Istanbul, Turkey",
+      "Yaman Arkun | Koc University, Istanbul, Turkey",
+      "Ummuhan Canan | TUPRAS, Kocaeli, Turkey",
+      "Onur Kartal | TUPRAS, Kocaeli, Turkey",
+      "Fatih Demir | TUPRAS, Kocaeli, Turkey",
+      "Murat Erdogan | Tupras Kirikkale Refinery, Kirikkale, Turkey"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ayse Dilan Celebi",
+        "affiliation": "Koc University, Istanbul, Turkey",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Erdal Aydin",
+        "affiliation": "Koc University, İstanbul, Turkey",
+        "designation": "Author"
+      },
+      {
+        "name": "Hasan Sildir",
+        "affiliation": "Koc University, Istanbul, Turkey",
+        "designation": "Author"
+      },
+      {
+        "name": "Yaman Arkun",
+        "affiliation": "Koc University, Istanbul, Turkey",
+        "designation": "Author"
+      },
+      {
+        "name": "Ummuhan Canan",
+        "affiliation": "TUPRAS, Kocaeli, Turkey",
+        "designation": "Author"
+      },
+      {
+        "name": "Onur Kartal",
+        "affiliation": "TUPRAS, Kocaeli, Turkey",
+        "designation": "Author"
+      },
+      {
+        "name": "Fatih Demir",
+        "affiliation": "TUPRAS, Kocaeli, Turkey",
+        "designation": "Author"
+      },
+      {
+        "name": "Murat Erdogan",
+        "affiliation": "Tupras Kirikkale Refinery, Kirikkale, Turkey",
+        "designation": "Author"
+      }
+    ],
+    "title": "Modeling of an Industrial Diesel Hydro-Processing Plant By the Continuous Lumping Approach",
+    "paper_id": "374852",
+    "paper_number": "699d",
+    "session_title": "Process Modeling and Identification",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "affiliation_source": "aiche_2014_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2014/meetingapi.cgi/Paper/374852"
+  }
+]

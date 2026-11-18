@@ -1,0 +1,1168 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/674828",
+    "paper_endpoint": "Paper/674828",
+    "paper_id": "674828",
+    "topic": "Decision-Focused Surrogate Modeling for Mixed-Integer Optimization (Poster corresponding to plenary presentation)",
+    "title": "Decision-Focused Surrogate Modeling for Mixed-Integer Optimization (Poster corresponding to plenary presentation)",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Efficient and safe process operations require decision-making in real-time. Many online decision-making frameworks involve solving mathematical optimization problems; however, often the computational complexity of the given optimization problem presents a major challenge such that the long solution time renders it ineffective in time-critical online applications. A common approach to tackling this challenge is to perform online optimization with a surrogate model, which is an approximation of the original model that can be solved more efficiently [1, 2]. Typically in surrogate modeling, one tries to replace complicating functions that are embedded in the optimization problem with simpler ones. Here, a major underlying assumption is that a surrogate model that provides a good approximation of the original functions will, once incorporated into the optimization problem, also lead to solutions that are close to the true optimal solutions. However, it is unclear whether or under what conditions this assumption holds and how accurate the surrogate model needs to be. Recently, we proposed a decision-focused surrogate modeling framework that explicitly aims to construct surrogate models that minimize the decision prediction error defined as the difference between the optimal solutions of the original and the surrogate optimization problems [3]. The proposed approach was successfully applied to construct efficient surrogate models for nonconvex nonlinear programs. In this work, we extend the framework to consider challenging mixed-integer optimization problems, which commonly arise in hybrid model predictive control (MPC) and online scheduling applications [4]. In decision-focused surrogate modeling, we generate data by solving several instances of the original optimization problem offline, which gives us the true optimal solutions for different model inputs. We then try to estimate the parameters of a surrogate optimization model such that it provides the same optimal solutions. The corresponding learning problem can be formulated as a large-scale bilevel program, which we solve using a penalty-based block coordinate descent algorithm [5]. In our case, the original optimization problems are mixed-integer linear programs (MILPs) or mixed-integer quadratic programs (MIQPs) for which we construct surrogate models in the form of convex quadratic programs (QPs). The effectiveness of the proposed approach is demonstrated in multiple computational case studies, including one involving a hybrid vehicle MPC problem. In particular, the results show that the method is relatively data-efficient in learning QPs that achieve near-optimal solutions in significantly less time compared to the original MILPs or MIQPs. References [1] L. T. Biegler, Y. Lang, and W. Lin, “Multi-scale optimization for process systems engineering,” Comput. Chem. Eng., vol. 60, pp. 17–30, 2014. [2] A. Cozad, N. V. Sahinidis, and D. C. Miller, “Learning Surrogate Models for Simulation-Based Optimization,” AIChE J., vol. 60, no. 6, pp. 2211–2227, 2014. [3] R. Gupta and Q. Zhang, “Decision-focused surrogate modeling with feasibility guarantee,” in Computer Aided Chemical Engineering, 2022, pp. 1717–1722. [4] D. Bertsimas and B. Stellato, “Online Mixed-Integer Optimization in Milliseconds,” INFORMS J. Comput., vol. 34, no. 4, pp. 2229–2248, 2022. [5] R. Gupta and Q. Zhang, “Efficient learning of decision-making models : A penalty block coordinate descent algorithm for data-driven inverse optimization,” Comput. Chem. Eng., vol. 170, p. 108123, 2023.",
+    "presenting_author": "Shivi Dixit | IIT Kanpur, India",
+    "authors": [
+      "Shivi Dixit | IIT Kanpur, India",
+      "Rishabh Gupta | University of Minnesota, Minneapolis, MN",
+      "Qi Zhang | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shivi Dixit",
+        "affiliation": "IIT Kanpur, India",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Rishabh Gupta",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      },
+      {
+        "name": "Qi Zhang",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61a",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/674828"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/662221",
+    "paper_endpoint": "Paper/662221",
+    "paper_id": "662221",
+    "topic": "Neural Network Models for Predicting Impurity Removal Amount in ARDS Process and Operation Condition Optimization Using Genetic Algorithm",
+    "title": "Neural Network Models for Predicting Impurity Removal Amount in ARDS Process and Operation Condition Optimization Using Genetic Algorithm",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "With the development of the fourth industrial revolution, technological growth progressed rapidly, and the development of these technologies served as an accelerant for various industries to enter the digital era. The oil refining industry also introduces digital twin and artificial intelligence (AI) technologies in multiple areas, such as process simulation, optimization, monitoring, and anomaly detection systems [1]. One of the refining processes, the Atmospheric Residue Desulfurization (ARDS) process, is a pretreatment process that removes impurities from the High-sulfur Atmospheric Residue (HS AR) generated by the Crude Distillation Unit (CDU). The ARDS process produces various products such as Liquified Natural Gas (LNG), Naphtha, Diesel, and Treated-Atmospheric Residue (T-AR) through hydrogenation and catalytic reactions [2]. The reactor of the ARDS process is divided into two trains, and raw materials are injected into each train at almost the same rate. In addition, since each train has three reactors, the ARDS process consists of six reactors. HS AR contains impurities such as sulfur, nitrogen, metals (nickel, vanadium), and Conradson Carbon Residue (CCR), causing environmental pollution problems and affecting the purity of the product. [3]. These impurities are removed through a reactor containing a catalyst layer. The metal component and CCR are deposited on the catalyst's surface while removing contaminants. This increases the inactivity of the catalyst and leads to a decrease in the lifespan of the catalyst [4]. For this reason, the catalyst needs to be replaced periodically. Since the catalyst replacement costs considerably, removing impurities as efficiently as possible within a limited life period is necessary. However, it is limited to accurately measuring the information on the catalyst and many variables and parameters required to calculate the amount of impurity removal during actual plant operation. In addition, the ARDS process includes catalytic reactions and hydrocracking to remove impurities. Due to the nature of the refining process, most of the processes occurring are nonlinear, and the reactions and their reaction rate expression are so complicated. The first-principle approach for modeling these complex characteristics is cumbersome and challenging [5]. We propose the data-based modeling approach for the reactor parts using neural networks and several training strategies for model reliability. Each neural network predicts the amount of removal of each five impurities (sulfur, nitrogen, nickel, vanadium, CCR) through the reactors. Considering the aging status, we can determine the smallest temperature conditions where the impurities are removed sufficiently. Finally, we suggest the optimal operation temperatures of the reactors by using the neural networks with a genetic algorithm (GA). We use two fully connected neural networks (FCNN) to predict each impurity's removal amount from each train. The features for FCNNs are selected based on domain knowledge. The reactor temperatures, where the related catalyst is located, and the impurity feed flow rate are selected for the FCNNs features for each impurity. For example, for the FCNNs predicting the S removal amount, the S feed flow rate and the reactor temperatures at the HDS catalysts are used as the features. The outputs from FCNNs are multiplied by aging factor functions, then summed up to represent the total S removal amount from two trains. Because only the composition at the inlet and oultet of the two trains, the two FCNNs and the parameters in two aging factors should be trained at once. Because the removal amount from each train, the flow rates to each train, and the reactors' temperatures are operated similarly, we need to penalize the imbalance for the FCNNs representing each train. To this end, we add the penalizing term in the cost function for NN training along with the basic mean squared error terms. In addition, before considering the aging factor, the FCNNs outputs need to have a positive correlation with the features. In other words, before considering aging effects, the removal amount of the impurities should increase as the temperatures rise or the feed impurity flow rate increases. Thus, we clip the parameters in FCNNs to the positive values after a one-step update with the Adaptive Moment Estimation (ADAM) algorithm. With this strategy, we can guarantee a positive correlation between the features and the FCNNs outputs. Finally, every day, we train the model with the latest 28-day data to follow up on the catalyst aging effects. As a result, the proposed impurity removal amount prediction model shows that the error rate is less than 10% on average for all impurity components, and the performance of predicting the actual plant is excellent. The operating temperatures for the reactors are determined using the NNs and genetic algorithm. The decision variables are the reactor temperatures. To calculate the objective function for the minimization formulation, the NNs with the explored decision variables predict the impurity removal amount. If the impurity amount remaining in the outlet from the reactors is smaller than the required specification, then the objective function is the sum of the reactor temperatures. If not, the objective function is set as a very high value, such as 1e10. This is because the required purity is not satisfied with the explored reaction temperatures, so the greater temperatures should be explored. The bounds for the reactor temperatures are set in the range of 350-400℃, the actual operating range. Through this optimization, we can determine the optimal operation conditions daily while updating the NNs with the latest 28 days' data. References [1] Wanasinghe, Thumeera R., et al. \"Digital twin for the oil and gas industry: Overview, research trends, opportunities, and challenges.\" IEEE access 8 (2020): 104175-104197. [2] Rana, Mohan S., et al. \"A review of recent advances on process technologies for upgrading of heavy oils and residual.\" Fuel 86(9) (2007): 1216-1231. [3] Nguyen, Thanh-Huong, et al. \"Hydrodemetallization of heavy oil: Recent progress, challenge, and future prospects.\" Journal of Petroleum Science and Engineering (2022): 110762. [4] Ali, Mohammad Farhat, and Saeed Abbas. \"A review of methods for the demetallization of residual fuel oils.\" Fuel Processing Technology 87(7) (2006): 573-584. [5] Gueddar, Taoufiq, and Vivek Dua. \"Novel model reduction techniques for refinery-wide energy optimisation.\" Applied energy 89(1) (2012): 117-126. Acknowledgements This work was supported by the National Research Foundation of Korea(NRF) grant funded by the Korea government(MSIT) (NRF-2021R1C1C1004217), and by the Korea Agency for Infrastructure Technology Advancement(KAIA) grant funded by the Ministry of Land, Infrastructure and Transport (No. 21ATOG-C162087-01).",
+    "presenting_author": "Yungun Jung | Kwangwoon University, Seoul, Korea, Republic of (South)",
+    "authors": [
+      "Yungun Jung | Kwangwoon University, Seoul, Korea, Republic of (South)",
+      "Yeonsoo Kim | Kwangwoon University, Seoul, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yungun Jung",
+        "affiliation": "Kwangwoon University, Seoul, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yeonsoo Kim",
+        "affiliation": "Kwangwoon University, Seoul, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61b",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/662221"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670592",
+    "paper_endpoint": "Paper/670592",
+    "paper_id": "670592",
+    "topic": "Simulation and Optimization of the Supply-Chain of Plastic Recycling with Environmental Considerations",
+    "title": "Simulation and Optimization of the Supply-Chain of Plastic Recycling with Environmental Considerations",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Industrial economies have historically relied on linear manufacturing processes whereby raw materials are transformed into useful products and later discarded as waste [1]. However, this economic structure has a substantial impact on natural resource depletion, particularly in the case of plastics [2]. As a result, there is growing interest in transitioning towards a circular economic model that emphasizes the recycling of waste plastic [3]. While mechanical recycling has been the primary method for plastic recycling, chemical recycling has recently emerged as a promising alternative as it allows the breakdown of polymers into their constituent monomers, enabling the material to be fully reused without material degradation [2-4]. In contrast to conventional mechanical recycling, the complexity of chemical recycling processes has limited their implementation at the industrial scale. To successfully transition to a circular economy of plastics, it is crucial to assess their environmental impact and minimize their carbon footprint [5]. This work applies a process system optimization framework to analyze the transition towards a circular economy for plastics, while minimizing the associated environmental impacts. We map the supply chain of plastic waste recycling through the various waste management practices in the US [3, 5, 6] (e.g., landfilling, incineration, mechanical and chemical recycling). An equation-based formulation is adapted for this purpose, based on a realistic representation of the US recycling industry. The model is designed to minimize the cost and the environmental impacts, subject to constraints related to material balances and product quality requirements. While the presented case study focuses on the recycling of PET waste, the framework can be extended to include other types of plastic waste feedstocks. A broad range of chemical recycling process types that have recently received increasing attention in the literature, such as hydrolysis, solvolysis, methanolysis, and mechanocatalysis are incorporated. Sensitivity analyses are performed to examine the impact of different circularity indices and process maturities on the plastic supply chain. Through our formulation, the Pareto optimal solution is identified to assess the trade-offs between economically sound and environmentally friendly network configurations. In summary, this study showcases the development of a decision-making tool to assess the plastic recycling industry at the supply-chain level. We anticipate that the results of this work will offer valuable insights for policymakers, industry stakeholders, and researchers in the quest for more sustainable recycling processes that minimize the environmental impact of plastics. Citations [1] S. Avraamidou, S. G. Baratsas, Y. Tian, and E. N. Pistikopoulos, \"Circular Economy - A challenge and an opportunity for Process Systems Engineering,\" Computers & Chemical Engineering, vol. 133, pp. 106629-106629, 2020, doi: https://doi.org/10.1016/j.compchemeng.2019.106629 . [2] A. W. Tricker et al. , \"Stages and Kinetics of Mechanochemical Depolymerization of Poly (ethylene terephthalate) with Sodium Hydroxide,\" ACS Sustainable Chemistry & Engineering, 2022. [3] H. Li et al. , \"Expanding plastics recycling technologies: chemical aspects, technology status and challenges,\" Green Chemistry, 2022. [4] Y. Jiang et al. , \"Economic and environmental analysis to evaluate the potential value of co-optima diesel bioblendstocks to petroleum refiners,\" Fuel, vol. 333, p. 126233, 2023/02/01/ 2023, doi: https://doi.org/10.1016/j.fuel.2022.126233 . [5] U. S. Chaudhari et al. , \"Systems analysis approach to polyethylene terephthalate and olefin plastics supply chains in the circular economy: A review of data sets and models,\" ACS Sustainable Chemistry & Engineering, vol. 9, no. 22, pp. 7403-7421, 2021. [6] J. Ma et al. , \"Economic evaluation of infrastructures for thermochemical upcycling of post-consumer plastic waste,\" Green Chemistry, vol. 25, no. 3, pp. 1032-1044, 2023.",
+    "presenting_author": "Elisavet Anglou | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Elisavet Anglou | Georgia Institute of Technology, Atlanta, GA",
+      "Riddhi Bhattacharya | Georgia Institute of Technology, Atlanta, GA",
+      "Patricia Stathatou | Massachusetts Institute of Technology, Cambridge",
+      "Fani Boukouvala | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Elisavet Anglou",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Riddhi Bhattacharya",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Patricia Stathatou",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "Fani Boukouvala",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61c",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670592"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663518",
+    "paper_endpoint": "Paper/663518",
+    "paper_id": "663518",
+    "topic": "Temporal Intergrated Planning of Design, Shipping Scheduling, and Energy Management System for International Hydrogen Supply Chain",
+    "title": "Temporal Intergrated Planning of Design, Shipping Scheduling, and Energy Management System for International Hydrogen Supply Chain",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The shift towards a low-carbon economy has prompted increased interest in hydrogen as a clean energy carrier that can replace fossil fuels. Many countries are investing in hydrogen-related policies and infrastructure, and hydrogen research is experiencing a surge in activity. While some countries, such as Korea and Japan, are expected to become major importers of hydrogen due to low potential for renewable energy production, others, such as Saudi Arabia, have vast open land with high potential for renewable energy production and therefore are interested in exporting hydrogen. These countries also have many storage sites for captured CO 2 and thus have viable means to produce large quantities of blue hydrogen. The geographical discrepancies in supply and demand necessitate international cooperation and investment in hydrogen facilities and supply chains, particularly in the development of international hydrogen supply chains that involve the production, transportation, and storage of hydrogen across different countries. However, most research on hydrogen supply chain management (SCM) has focused on a national or regional scale and also did not account for the uncertainty in hydrogen production and demand and the real-time operation of SCM systems. To solve these challenges, this paper proposes an intertemporal integrated planning framework for the international hydrogen supply chain that considers the uncertainty in hydrogen production and demand, and optimizes the design, scheduling, and energy management decisions in real-time. A two-stage stochastic programming model is formulated to address the uncertainty in both demand and supply sides. For the first stage decision, the model determines the capacity of turbine, PV panel, battery, and hydrogen tanks, water electrolyzer, hydrogen liquefaction plant, and the number of liquid hydrogen ships. Then the operational decisions such as weekly shipping scheduling and hourly energy management are optimally determined for each realized scenario. The proposed methodology accounts for the potential consequences of uncertain events in decision-making and allows for the determination of optimal and robust design, scheduling, and energy management decisions across varying timescales. The proposed methodology is applied to a case study of the Korea-Saudi hydrogen supply chain, which involves the production of hydrogen in Saudi Arabia and its transportation to South Korea via liquefied hydrogen carriers (LHCs). The framework incorporates various factors that impact the efficiency and sustainability of the supply chain, including the design of LHCs, the scheduling of shipping routes, and the management of energy systems at both the production and consumption sites.",
+    "presenting_author": "Sunwoo Kim | KAIST, Daejeon, Korea, Republic of (South)",
+    "authors": [
+      "Jay Hyung Lee | University of Southern California, Los Angeles",
+      "Sunwoo Kim | KAIST, Daejeon, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jay Hyung Lee",
+        "affiliation": "University of Southern California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Sunwoo Kim",
+        "affiliation": "KAIST, Daejeon, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "61d",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663518"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665783",
+    "paper_endpoint": "Paper/665783",
+    "paper_id": "665783",
+    "topic": "Reliable Design and Optimization of Crystallization Systems Under Uncertainty",
+    "title": "Reliable Design and Optimization of Crystallization Systems Under Uncertainty",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Model-based design approaches are very popular for the design and control of various crystallization processes. To implement these approaches for the design of a new crystallization process, systematic digital design frameworks have been developed, which include steps such as thermodynamic and kinetic operating space investigation, population-balance model (PBM) development, and model-based process optimization and control. A common feature of most of the proposed frameworks is open-loop process optimization with nominal kinetic parameters as the last step. 1 However, as these kinetic parameters are estimated from experiments, it is very difficult to generate highly accurate models because of the limited quality and quantity of the experimental data and due to the experimental errors, that often affect the accuracy and precision of the data. Thus, during the practical implementation of the optimized model-based results, deviations between experimental and model-predicted trends are often observed, thereby defeating the entire purpose of model-based design. To address this issue, it is essential to incorporate parameter uncertainties in the design process. 2 In this study, we aim to extend existing digital design frameworks by integrating different concepts associated with uncertainty quantification, reliable design, and robust optimization to design crystallization systems that are robust to different parameter uncertainties. The system considered is the cooling crystallization of the pharmaceutical ingredient diphenhydramine hydrochloride. Population-balance models for both batch and continuous multistage stirred tank crystallizers were developed and solved using a high-resolution finite volume method. The existing digital design framework discussed above was implemented for the compound to estimate the unknown kinetic parameters and the associated uncertainty in the estimates by solving a nonlinear optimization problem that minimized the deviation between the model-predicted and experimentally observed trajectories. In the first step of the extended framework, the effects of kinetic parameter uncertainties and control trajectory uncertainties on the final properties of the product crystal size distribution were studied through uncertainty propagation and global sensitivity techniques. To circumvent the high computational expense associated with multiple model evaluations for uncertainty analysis, the sparse polynomial chaos expansion method was used to generate the surrogate model of the high-fidelity PBM model. 3 For the batch crystallization process design, different temperature trajectories were identified to optimize different process objectives, such as maximizing the mean crystal size or minimizing the span of the crystal size distribution, with nominal values of the kinetic parameters, and the influence of variations in these optimized trajectories on the optimal objectives was studied. These studies provided insights into which sections of the optimal trajectories need more robust control implementations to avoid deviations from the nominal behavior under parameter uncertainty. The above analysis was also extended to a multi-stage continuous crystallization process. Furthermore, novel optimization problem reformulations for reliable crystallization process design are presented and solved using the reliability-based design optimization framework (RBDO) to produce crystals satisfying the target crystal attributes with a given probability under parameter uncertainty. For both batch and continuous studies, it was found that during process optimization with nominal values of kinetic parameters, the optimized operating point falls within the boundaries of the limit-state constraints considered in the problem. However, by using RDBO, it is possible to push this operating point in the feasible/safe region in the design space at the expense of an increase in the objective function value. However, operation at this point ensures the reliable and robust production of crystals satisfying the target crystal attributes under kinetic parameter uncertainties. Acknowledgements This work is supported by the US Food and Drug Administration (FDA) under contract number 75F40121C00106. References: Szilágyi, B., Eren, A., Quon, J. L., Papageorgiou, C. D. & Nagy, Z. K. Digital Design of the Crystallization of an Active Pharmaceutical Ingredient Using a Population Balance Model with a Novel Size Dependent Growth Rate Expression. From Development of a Digital Twin to In Silico Optimization and Experimental Validation. Cryst Growth Des 22 , 497–512 (2022). Xie, X. & Schenkendorf, R. Stochastic back-off-based robust process design for continuous crystallization of ibuprofen. Comput Chem Eng 124 , 80–92 (2019). Makrygiorgos, G., Maggioni, G. M. & Mesbah, A. Surrogate modeling for fast uncertainty quantification: Application to 2D population balance models. Comput Chem Eng 138 , 106814 (2020).",
+    "presenting_author": "Yash Barhate | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Yash Barhate | Purdue University, West Lafayette, IN",
+      "Zoltan Nagy | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yash Barhate",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zoltan Nagy",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61e",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665783"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666541",
+    "paper_endpoint": "Paper/666541",
+    "paper_id": "666541",
+    "topic": "Applying a Comprehensive View of Resilience to Power Distribution Network Optimization",
+    "title": "Applying a Comprehensive View of Resilience to Power Distribution Network Optimization",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "A key challenge which complicates the design and operation of the power grid is the need for resilience, which can be defined as “the ability to prepare and plan for, absorb, recover from, or more successfully adapt to actual or potential adverse events” (National Research Council, 2012). Resilience has been particularly emphasized in the power systems community in recent years due to the increasing frequency of disruptions such as extreme weather events (Bhusal et al., 2020; Wang et al., 2016). Prior works on enhancing the resilience of power systems have primarily limited their focus to one type of stressor, corresponding to one type of disruptive effect on the system, at a time. Additionally, these works have considered a relatively small set of resilience-enhancing investments and actions that are tailored to the specific disruption or stressor that they consider. For instance, several prior works have proposed optimally investing in line hardening and automatic line switches to enhance the resilience of distribution networks to line faults caused by hurricanes (Ma et al., 2018; Zare‐Bahramabadi et al., 2018). While this approach is suitable for the specific disruption considered in the study, it does not enable the system to be resilient to other types of potential stressors, such as widespread generating unit failures like the ones occurred during the 2021 winter blackout in Texas (Busby et al., 2021). Another feature of prior works on power system resilience is that they typically only consider one aspect or concept of resilience. In most cases, resilience as robustness , which is the ability to manage stressors with limited-to-no impact on normal activities (Woods, 2015), is investigated and enhanced. Some other works focus on resilience as rebound , where resources are actively managed to restore system capabilities after a stressful event (Thiébaux et al., 2013). Another aspect of resilience considered in the literature is resilience as extensibility , which is the ability to extend system performance or capabilities to respond to surprise events that challenge current activities (Munoz-Delgado et al., 2021). In this work, we propose a decision-support tool that enables distribution system operators to optimally employ a variety of resilience-enhancing investments and activities to respond to a variety of uncertain stressors in a risk-averse manner. In particular, we develop a scenario-based stochastic programming model that incorporates line faults, generating unit failures, and demand uncertainty caused by short-term forecasting uncertainty and long-term load growth uncertainty. In this model, line hardening projects, mobile battery storage systems, and mobile ammonia-based energy storage systems are available for investment and coordinated use with line switching procedures. By incorporating these various disruptions and resilience-enhancing measures, the model enables the simultaneous consideration of resilience as robustness, rebound, and extensibility. Moreover, the Conditional Value at Risk (CVaR) is incorporated as a risk measure to penalize high-impact scenarios (Garcia et al., 2022). Computational case studies are performed to investigate the optimal choice of resilience-enhancing investments when multiple types of potential stressors are considered and explore the synergy and coordinated use of these investments. The large-scale problem instances considered in the case study are solved using a tailored decomposition algorithm that takes advantage of the problem’s structure as a two-stage stochastic mixed-integer linear program with mixed-integer recourse. References Bhusal, N., Abdelmalak, M., Kamruzzaman, M., & Benidris, M. (2020). Power System Resilience: Current Practices, Challenges, and Future Directions. IEEE Access , 8 , 18064–18086. https://doi.org/10.1109/ACCESS.2020.2968586 Busby, J. W., Baker, K., Bazilian, M. D., Gilbert, A. Q., Grubert, E., Rai, V., Rhodes, J. D., Shidore, S., Smith, C. A., & Webber, M. E. (2021). Cascading risks: Understanding the 2021 winter blackout in Texas. Energy Research & Social Science , 77 , 102106. https://doi.org/10.1016/J.ERSS.2021.102106 Garcia, M., Austgen, B., Pierre, B., Hasenbein, J., & Kutanoglu, E. (2022). Risk-Averse Investment Optimization for Power System Resilience to Winter Storms. 2022 IEEE/PES Transmission and Distribution Conference and Exposition (T&D) , 2022 - April , 1–5. https://doi.org/10.1109/TD43745.2022.9816875 Ma, S., Su, L., Wang, Z., Qiu, F., & Guo, G. (2018). Resilience enhancement of distribution grids against extreme weather events. IEEE Transactions on Power Systems , 33 (5), 4842–4853. https://doi.org/10.1109/TPWRS.2018.2822295 Munoz-Delgado, G., Contreras, J., Arroyo, J. M., Sanchez de la Nieta, A., & Gibescu, M. (2021). Integrated Transmission and Distribution System Expansion Planning Under Uncertainty. IEEE Transactions on Smart Grid , 12 (5), 4113–4125. https://doi.org/10.1109/TSG.2021.3071385 National Research Council. (2012). Disaster Resilience. In Disaster Resilience: A National Imperative . National Academies Press. https://doi.org/10.17226/13457 Thiébaux, S., Coffrin, C., Hijazi, H., & Slaney, J. (2013). Planning with MIP for supply restoration in power distribution systems. IJCAI International Joint Conference on Artificial Intelligence , 2900–2907. Wang, Y., Chen, C., Wang, J., & Baldick, R. (2016). Research on Resilience of Power Systems Under Natural Disasters—A Review. IEEE Transactions on Power Systems , 31 (2), 1604–1613. https://doi.org/10.1109/TPWRS.2015.2429656 Woods, D. D. (2015). Four concepts for resilience and the implications for the future of resilience engineering. Reliability Engineering and System Safety , 141 , 5–9. https://doi.org/10.1016/j.ress.2015.03.018 Zare‐Bahramabadi, M., Abbaspour, A., Fotuhi‐Firuzabad, M., & Moeini‐Aghtaie, M. (2018). Resilience‐based framework for switch placement problem in power distribution systems. IET Generation, Transmission & Distribution , 12 (5), 1223–1230. https://doi.org/10.1049/iet-gtd.2017.0970",
+    "presenting_author": "Benjamin P. Riley | University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "Benjamin P. Riley | University of Minnesota, Minneapolis, MN",
+      "Prodromos Daoutidis | University of Minnesota, Minneapolis, MN",
+      "Qi Zhang | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Benjamin P. Riley",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      },
+      {
+        "name": "Qi Zhang",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61f",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666541"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666828",
+    "paper_endpoint": "Paper/666828",
+    "paper_id": "666828",
+    "topic": "Adjustable Robust Optimization for the Synthesis of Continuous Rufinamide Manufacturing Process Under Uncertainty",
+    "title": "Adjustable Robust Optimization for the Synthesis of Continuous Rufinamide Manufacturing Process Under Uncertainty",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Rufinamide is a new class of antiepileptic drugs working by regulating sodium ion channels in the people’s brain voltage gate. It can assist to treat a kind of typical epilepsy, Lennox-Gastaut Syndrome. Rufinamide was first successfully developed by Eisai's North American subsidiary and approved by the U.S. Food and Drug Administration in 2008. The drug Banzel containing rufinamide as the API, is currently priced at ~ US $3.75 / mg tablet and ~ US $3.90 /mL liquid suspension according to its seller. The traditional batch synthesis process of rufinamide has some disadvantages such as low yield, complicated procedure, high labor cost and poor environmental benefit. Therefore, the continuous manufacturing methods of rufinamide have attracted extensive attention. In recent years, the continuous routes for synthesizing rufinamide have been improved and enriched continuously. However, each route at different synthesis stages has its own advantages and disadvantages. It is of great significance to identify the optimal rufinamide synthesis process from the viewpoint of process systems engineering via the superstructure optimization. In this work, we developed a superstructure contains more than 500 possible synthetic routes for the continuous rufinamide manufacturing. The deterministic mixed-integer nonlinear programming (MINLP) was correspondingly formulated to identify the best synthetic route. Furthermore, we formulated a two-stage adjustable robust optimization model to hedge against potential uncertain factors such as yields of key conversion step as well as the energy consumption coefficient. The tailored column-and-constraints algorithm was proposed to solve the above two-stage adjustable robust optimization model. The price of robustness of the adjustable decisions on optimal synthesis of the continuous manufacturing process was finally examined.",
+    "presenting_author": "Wenhui Yang | Tsinghua University, Beijing, China",
+    "authors": [
+      "Wenhui Yang | Tsinghua University, Beijing, China",
+      "Taoyu Qiu | Tsinghua University, Beijing, China",
+      "Zhihong Yuan | Tsinghua University, Beijing, China"
+    ],
+    "authors_structured": [
+      {
+        "name": "Wenhui Yang",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Taoyu Qiu",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Zhihong Yuan",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61g",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666828"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668350",
+    "paper_endpoint": "Paper/668350",
+    "paper_id": "668350",
+    "topic": "Integrated Design and NMPC-Based Control Under Uncertainty and Naturally Ordered Structural Decisions: A Discrete-Steepest Descent Approach.",
+    "title": "Integrated Design and NMPC-Based Control Under Uncertainty and Naturally Ordered Structural Decisions: A Discrete-Steepest Descent Approach.",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The significance of dynamic and controllability aspects in the initial phases of process design has been emphasized by the academia and industry. The integration of design and control has been shown to have an impact on the closed-loop performance of the process [1]. Linear model predictive control (LMPC) represents the current state-of-the-art in industry for process control since it offers the feature to explicitly introduce constraints in the controller formulation. However, for highly nonlinear processes that require a wide range of operating conditions, a LMPC may not be sufficient to maintain the process on target [2]. A promising alternative to control highly nonlinear processes is Nonlinear MPC (NMPC) [3]. Although NMPC can manage wide operational changes in highly nonlinear processes and improve the process performance, very few studies have explored the integration of design and NMPC-based control because it demands the solution of a bilevel formulation [4], i.e., the optimal process design problem (upper-level problem) is constrained by the optimization of the NMPC (lower-level problem). Attempting the solution of bilevel problems is a challenging task because they are difficult to solve using conventional NLP solvers. In a study presented by Hoffmann et al. [5], they implemented a fully discretized dynamic model in combination with an optimal economic NMPC for process design and control. Results showed notable changes in the process design when dynamic fluctuations (i.e., disturbances) and uncertainty are considered. Palma-Flores & Ricardez-Sandoval [6] implemented a decomposition strategy that approximates the bilevel problem using a power series expansion (PSE) approach. They observed a more economically attractive process design with improved control performance compared to solutions using LMPC and conventional PID controllers. A classical KKT transformation strategy to obtain a single-level mathematical program with complementarity constraints (MPCCs) was addressed by Palma-Flores & Ricardez-Sandoval [7]. That strategy allowed to fully incorporate the NMPC’s necessary conditions for optimality into the design problem as a set of algebraic constraints leading to a single-level optimization formulation; hence, it was possible to find solutions for the MPCC-based formulation using traditional NLP solvers, i.e., they avoided the use of decomposition strategies for the solution of the bilevel problem for integrated design and NMPC-based control. Consequently, this approach guaranteed local optimality in the solution. Those studies focused on the solution of formulations involving continuous decision variables, i.e., structural decisions were not considered. In a previous work [8], a first attempt for the integration of design and NMPC-based control under uncertainty and structural decision was presented. In that work, a branch & bound (B&B) algorithm was implemented for the solution of a single-level mixed-integer MPCC (MI-MPCC). That problem can be transformed into a conventional MINLP using reformulation strategies for complementarity constraints. It was found that the B&B strategy may return sub-optimal local solutions near the initial conditions. Moreover, the complexity of the problem is likely to increase with the number of integer decisions considered within the optimization formulation. This acts as the main barrier for the implementation of conventional solutions strategies with B&B algorithms for large-scale systems, in which large CPU times, low-quality local optima, or even lack of convergence to a solution may be experienced while using conventional MINLP solvers. In this work, we address the integration of design and NMPC-based control under uncertainty and structural decisions. This study aims to develop algorithmic framework that determines the optimal location of processing units or streams that follow a naturally ordered discrete set, e.g., a sequence of liquid-liquid separators, the number of trays in a distillation column, or the order of reaction units, among others. The binary variables associated to the superstructure can be expressed as a function of reduced variable sets called external variables. This allows the decomposition of the single-level MINLP into a master Integer Problem with Linear Constraints (IPLC) and a set of primal sub-problems. The master problem is constructed from the external variables and solved with a Discrete-Steepest Descent Algorithm (D-SDA) [9]. On the other hand, the primal sub-problems are conventional nonlinear problems (NLPs) obtained by fixing the binary variables according to the solution obtained from the master problem. Given a feasible initialization for the integer variables, the D-SDA executes a local search to optimize the process according to an objective function. In this local search, the master problem explores the neighborhoods of integer decisions by fixing their values and solving the corresponding primal sub-problems using conventional NLP solvers. This aims to determine a search direction that provides the steepest descent in the objective function. The algorithm converges to a local optimum when the neighborhood search does not show improvement in the objective function. The proposed algorithmic framework does not follow the usual definition of convexity for integer programs, but it is based on the definition of integral convexity. Consequently, a steepest-descent direction strategy can be implemented to explore the discrete search space. Thus, the proposed DSDA computes local solutions that cannot be efficiently identified using conventional MINLP solvers. Note that the decomposition strategy reduces the complexity of the formulation because all logical constraints are solved in the master problem; consequently, the primal sub-problems are simpler NLPs compared to the original MINLP. This D-SDA methodology was previously introduced by Linan et al. [9]. They implemented this method for the optimal process design of a reactive distillation column at steady-state. In this work, we illustrate the implementation of the D-SDA approach for the integration of design and NMPC-based control under uncertainty and structural decisions of a binary distillation column. This problem aims to determine the location of the feed and reflux streams, the diameter of the column, the values for the controller tuning parameters, and the operation set-points using a nonlinear process model, whereas three uncertain model parameters and process disturbances are also considered. To compare the performance and the solutions obtained with the proposed D-SDA approach, we implement an alternative benchmark methodology based on the distributed stream-tray optimization method (DSTO) presented by Lang & Biegler [10]. In the DSTO methodology, the stream locations for feed and reflux are allowed to be continuous variables in a differentiable distribution function (DDF), e.g., Gaussian distribution functions. That methodology assumes the solution of a continuous formulation that can be solved with conventional NLP solvers. The results show that the DSTO method is more sensitive to the initialization of the superstructure than the D-SDA, i.e., the DSTO method converged to local solutions that are closer to the initialization point. On the other hand, the D-SDA allowed to skip sub-optimal solution regions because the framework does not demand the relaxation of the discrete variables. This allowed the computation of a more economically attractive solution with better control performance using the D-SDA approach, i.e., a 39% more economic distillation column’s designs with fewer trays and faster control responses were obtained using the proposed D-SDA approach compared to the solution with the DSTO method. References [1] Rafiei, M., & Ricardez-Sandoval, L. A. (2020). New frontiers, challenges, and opportunities in integration of design and control for enterprise-wide sustainability. Computers & Chemical Engineering , 132 , 106610. [2] Allgower, F., Findeisen, R., & Nagy, Z. K. (2004). Nonlinear model predictive control: From theory to application. Journal-Chinese Institute Of Chemical Engineers, 35(3), 299-316. [3] Biegler, L. T. (2021). A perspective on nonlinear model predictive control. Korean Journal of Chemical Engineering , 38 (7), 1317-1332. [4] Dempe, S., Kalashnikov, V., Pérez-Valdés, G. A., & Kalashnykova, N. (2015). Bilevel programming problems. Energy Systems. Springer, Berlin , 10 , 978-3. [5] Hoffmann, C., Esche, E., & Repke, J. U. (2019). Integration of Design and Control Based on Large-Scale NLP Formulations and An Optimal Economic Nmpc. In Computer Aided Chemical Engineering (Vol. 47, pp. 125-130). Elsevier. [6] Oscar Palma-Flores and Luis A Ricardez-Sandoval. Simultaneous design and nonlinear model predictive control under uncertainty: A back-off approach. Journal of Process Control, 110:45–58, 2022. [7] Oscar Palma-Flores and Luis A Ricardez-Sandoval. Integration of design and nmpc-based control for chemical processes under uncertainty: An mpcc-based framework. Computers & Chemical Engineering, 162:107815, 2022. [8] Oscar Palma-Flores and Luis A Ricardez-Sandoval. Integration of design and nmpc-based control under uncertainty and structural decisions: An mpcc-based approach. IFAC-PapersOnLine, Accepted, 2023. [9] David A Linan, David E Bernal, Luis A Ricardez-Sandoval, and Jorge M Gómez. Optimal design of superstructures for placing units and streams with multiple and ordered available locations. part i: A new mathematical framework. Computers & Chemical Engineering, 137:106794, 2020. [10] Y-D Lang and LT Biegler. Distributed stream method for tray optimization. AIChE Journal, 48(3):582–595, 2002.",
+    "presenting_author": "Luis Ricardez-Sandoval | University of Waterloo, Canada",
+    "authors": [
+      "Oscar Palma-Flores | University of Waterloo, Canada",
+      "Luis Ricardez-Sandoval | University of Waterloo, Canada",
+      "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Oscar Palma-Flores",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Luis Ricardez-Sandoval",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Lorenz Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61h",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668350"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669342",
+    "paper_endpoint": "Paper/669342",
+    "paper_id": "669342",
+    "topic": "Uncertainty Quantification of Physics Informed Neural Networks Using Bayesian-Last-Layer Approach, and Its Application to Real-World Bioprocess",
+    "title": "Uncertainty Quantification of Physics Informed Neural Networks Using Bayesian-Last-Layer Approach, and Its Application to Real-World Bioprocess",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Physics informed neural networks (PINNs) is an emerging hybrid modeling technique that combine the adaptability of deep learning with the rigor of mechanistic laws 1 . Compared to traditional hybrid modeling techniques where data-driven models (DDMs) and first principle models (FPMs) are arranged in a structural manner, PINN completely integrates the FPM component into a neural network by enforcing the mechanistic laws (usually in the form of ordinary or partial differential equations) during the model training process. This ensures model predictions fall within realistic bounds. The PINN hybrid modeling framework has shown itself to be useful in describing a growing number of diverse and complex systems while remaining computationally scalable 2 . For highly regulated applications such as pharmaceutical manufacturing, quantifying the confidence associated with model predictions is critical for process transparency and robustness 3 . The predictive accuracy of PINN is inherently limited by the presence of uncertainty, stemming from sources such as unmeasured drivers of variability and measurement error (aleatoric) or modeling assumption and data availability (epistemic). Therefore, it is imperative to quantify the uncertainty associated with PINN prediction to be aware of the intrinsic system noise and “knowledge-poor” regions of the search space 4 . Bayesian-last-layer (BLL) is a scalable statistical approach for uncertainty quantification of deep learning models, which is particularly suited for real-time applications 5 . By introducing the Bayesian framework to only the last layer of a deep neural network, BLL can estimate both the epistemic as well as aleatoric uncertainty of model output while remaining computationally tractable. This study discusses a novel Bayesian formulation of PINN that is suited for real-time application. This strategy uses BLL formulation to quantify the model uncertainty of PINN. By introducing mechanistic knowledge as the prior for latent variables representing the derivatives 5 , the proposed probabilistic model will be able to generate confidence-aware predictions while respecting the mechanistic laws. The proposed modeling approach will be illustrated using both simulation case studies as well as real-world data from Pfizer’s bioreactors across different scales. Predictive performance, as well as uncertainty quantification of the proposed BLL-PINN model, are compared with traditional PINNs and Gaussian Processes. References: (1) Raissi, M.; Perdikaris, P.; Karniadakis, G. E. Physics-Informed Neural Networks: A Deep Learning Framework for Solving Forward and Inverse Problems Involving Nonlinear Partial Differential Equations. Journal of Computational Physics 2019 , 378 , 686–707. https://doi.org/10.1016/j.jcp.2018.10.045. (2) Bradley, W.; Kim, J.; Kilwein, Z.; Blakely, L.; Eydenberg, M.; Jalvin, J.; Laird, C.; Boukouvala, F. Perspectives on the Integration between First-Principles and Data-Driven Modeling. Computers & Chemical Engineering 2022 , 166 , 107898. https://doi.org/10.1016/j.compchemeng.2022.107898. (3) Makrygiorgos, G.; Berliner, A. J.; Shi, F.; Clark, D. S.; Arkin, A. P.; Mesbah, A. Data-Driven Flow-Map Models for Data-Efficient Discovery of Dynamics and Fast Uncertainty Quantification of Biological and Biochemical Systems. Biotechnology and Bioengineering 2023 , 120 (3), 803–818. https://doi.org/10.1002/bit.28295. (4) Yang, L.; Meng, X.; Karniadakis, G. E. B-PINNs: Bayesian Physics-Informed Neural Networks for Forward and Inverse PDE Problems with Noisy Data. Journal of Computational Physics 2021 , 425 , 109913. https://doi.org/10.1016/j.jcp.2020.109913. (5) Watson, J.; Lin, J. A.; Klink, P.; Pajarinen, J.; Peters, J. Latent Derivative Bayesian Last Layer Networks. In Proceedings of The 24th International Conference on Artificial Intelligence and Statistics ; PMLR, 2021; pp 1198–1206.",
+    "presenting_author": "Shu Yang | Pfizer Inc., Peapack, NJ",
+    "authors": [
+      "Shu Yang | Pfizer Inc., Peapack, NJ",
+      "Huiyi Cao | Pfizer Inc., Peapack, NJ",
+      "William Fahey | Pfizer Inc., Grange Castle, Ireland",
+      "Reza Kamyar | Pfizer Inc., Peapack, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shu Yang",
+        "affiliation": "Pfizer Inc., Peapack, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Huiyi Cao",
+        "affiliation": "Pfizer Inc., Peapack, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "William Fahey",
+        "affiliation": "Pfizer Inc., Grange Castle, Ireland",
+        "designation": "Author"
+      },
+      {
+        "name": "Reza Kamyar",
+        "affiliation": "Pfizer Inc., Peapack, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61i",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669342"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668076",
+    "paper_endpoint": "Paper/668076",
+    "paper_id": "668076",
+    "topic": "A Framework for Resilient Multi-Product Supply Chains: An Application to Healthcare",
+    "title": "A Framework for Resilient Multi-Product Supply Chains: An Application to Healthcare",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Supply chain management aims at identifying successful strategies for the timely delivery of products to end-customers, by coordinating procurement of raw materials, transformation of intermediates into finished products and distribution activities [1]. As business environments continuously change due to globalization, regulatory aspects, emerging information technology tools, competition, and mergers and acquisition or outsourcing contracts, decision-making processes become increasingly decentralized. This results in planning decisions taken rather asynchronously by the decision makers involved, based on the information available and aimed at fulfilling company-specific objectives. In this context, end-to-end supply chain responsiveness is hindered and the risk of shortages may increase. In next generation healthcare, supply chains are becoming increasingly distributed. Individual contract manufacturing organizations typically provide manufacturing expertise and assets for larger companies to produce complex genetic engineering-based raw materials, intermediates, and the end-therapy. In this landscape, key challenges arise from product orders varying on a day-to-day basis, a requirement for patient-specific batches for personalized therapies and short product shelf-lives [2]. Further constraints may result from the inventory kept for raw materials, which are acquired months prior to manufacturing [3]. On the raw material supply end, contractors may serve a range of markets and schedule production campaigns in advance to fulfil mid-term orders. This hinders the potential response of the manufacturing schedules to sudden short-term increases in end-therapy demand, failing to supply raw material and causing backlogs in downstream supply chain nodes. Strategies to mitigate shortage risks may include manufacturing raw materials in-house, which come with additional production costs. In these circumstances, computer-aided tools can help assess trade-offs and alternatives and identify supply chain configurations and operational policies which mitigate risks, ensuring successful end-product delivery (Figure 1) [4]. Here we present a mixed-integer linear programming (MILP) framework for the optimization of multi-product supply chains in personalized and targeted healthcare. Given location-specific and time-varying product demands, operating expenditures, process rates, inventory policies for each supply chain node, the optimization determines suitable candidate supply chain structures, production, and distribution plans. We demonstrate how the developed tool can be used to assess the impact of network configuration, raw material procurement and supply uncertainty on supply chain performance with respect to (i) cost and (ii) delivery success. This enables the identification of resilient manufacturing strategies for improved supply chain coordination and minimized risk of failure. References [1] Shah, N. (2005), Process industry supply chains: advances and challenges. Computers and Chemical Engineering, 29, 1225-1235. [2] Papathanasiou, M.M.; Stamatis, C.; Lakelin, M.; Farid, S.; Titchener-Hooker, N.; Shah, N. (2020). Autologous CAR T-cell therapies supply chain: challenges and opportunities? Cancer Gene Therapy, 27, 799-809. [3] Capra, E.; Gennari, A.; Loche, A.; Temps, C. (2022), Viral-vector therapies at scale: Todays’ challenges and future opportunities. McKinsey & Co. [4] Sarkis, M.; Bernardi, A.; Shah, N.; Papathanasiou, M. (2021). Decision support tools for next-generation vaccines and advanced therapy medicinal products: present and future, Current Opinion in Chemical Engineering, 32, 100689. Acknowledgements Funding from the UK Engineering & Physical Sciences Research Council (EPSRC) for the Future Targeted Healthcare Manufacturing Hub hosted at University College London with UK university partners is gratefully acknowledged (Grant Reference: EP/P006485/1). Financial and in-kind support from the consortium of industrial users and sector organizations is also acknowledged.",
+    "presenting_author": "Miriam Sarkis | Imperial College London, United Kingdom",
+    "authors": [
+      "Miriam Sarkis | Imperial College London, United Kingdom",
+      "Nilay Shah | Imperial College London, United Kingdom",
+      "Maria Papathanasiou | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Miriam Sarkis",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nilay Shah",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Maria Papathanasiou",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61k",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668076"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669487",
+    "paper_endpoint": "Paper/669487",
+    "paper_id": "669487",
+    "topic": "Reducing Solution Times of Continuous Production Scheduling MILP Models with Record Keeping Variables",
+    "title": "Reducing Solution Times of Continuous Production Scheduling MILP Models with Record Keeping Variables",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "In the context of chemical production facilities that convert raw materials into higher value products via processing tasks, scheduling involves assigning those tasks to specific units and establishing the times to execute the tasks in order to achieve a certain production goal. Scheduling is crucial to the design and operation of a manufacturing facility because assigning tasks to units and establishing their timing determine the overall performance of the plant. One key objective that researchers have focused on is reducing solution times of scheduling models, especially because even trivial scheduling problems can be computationally expensive. CPS problems generally possess many binary variables and, as such, are formulated as mixed-integer linear programming (MILP) models. The number of variables increases rapidly as the number of units/tasks in the network or the horizon length increases, which results in the problems becoming intractable. Several innovative solution methods have been developed to address the high computational costs of models; however, most of these efforts have been in the context of batch processes. One relevant example is the introduction of an integer variable that tracks the number of batches of each task that are executed. Branching on this variable quickly eliminates schedules that have the same number of batches, which, in turn, helps eliminate many symmetric solutions 1 . In the literature, continuous production scheduling model developments have received far less attention. Notable features of continuous processes are that they simultaneously produce and consume materials, whereas batch processes consume material when a task is executed and produces material at the end of its processing time. Continuous operations possess additional flexibility in terms of the duration of time tasks are executed, which their batch process counterparts do not possess. Discovering new solution methods for continuous process scheduling problems can assist in optimizing manufacturing facilities across various industries by making intractable problem instances solvable. In this paper, we present strategies for reformulating continuous production scheduling MILP models. We introduce several novel integer variables, which we refer to as record keeping variables (RKVs), that MILP solvers are able to exploit leading to a reduction in total solution times. RKVs are incorporated into the model by setting them equal to some summation of binary variables. In continuous process scheduling models, there are two main binary variables: X i,j,n , which denotes a task i is processed on unit j at time n and Y S i,j,n , which denotes a run of task i is started on unit j at time n ; runs are a string of consecutive task executions. One example of an RKV is N Y i,j = ∑ n ∈ N Y S i,j,n ∀ i ∈ I , j ∈ J , which essentially keeps a record of the number of runs of task i that are processed on unit j over all time periods n . N Y i,j is bounded from zero to the maximum number of times a run can be executed during the scheduling horizon. Other RKVs can be implemented based on the total number of tasks i that are executed, the total number of times a unit j is utilized to process a task, and the total number of time periods n that tasks are executed during. There are 10 RKVs that can be created; five are based on the X i,j,n binary variable, and five based on the Y S i,j,n binary variable. Results were collected using each RKV individually as well as in combination with other RKVs in order to observe computational performance changes. Overall, models with RKVs based on Y S i,j,n perform better than the models using RKVs based on X i,j,n . We observe that N Y i was the most impactful, and the formulation that included N Y i alone solved about 40% of the instances the fastest. The superscript “Y” denotes that it is keeping record of the Y S i,j,n binary variable since there are also RKVs with the superscript “X” that keep a record of the X i,j,n binary variable. The subscript “i” denotes that it is written for every task i because it keeps record of the total number of runs of i processed over all units and time periods. There are other RKVs that are written for every unit j , every time point n , or a combination of these indices. While implementing these RKVs into a model may seem trivial, their implementation leads to dramatic computational improvements. One possible explanation for these results is that by branching on N Y i , the solver is able to bound the number of runs of each task, thus efficiently eliminating suboptimal or infeasible schedules and closing the optimality gap more quickly. It is also worth noting that this reformulation technique is not limited to only continuous CPS models; it can also be extended to various other types of MILP models that utilize integer variables. References: [1] S. Velez and C. T. Maravelias, 2013, Reformulations and branching methods for mixed-integer programming chemical production scheduling models, Industrial and Engineering Chemistry Research 52, 10, 3832–3841.",
+    "presenting_author": "Amin Samadi | Princeton University, NJ",
+    "authors": [
+      "Amin Samadi | Princeton University, NJ",
+      "Christos Maravelias | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Amin Samadi",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christos Maravelias",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61l",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669487"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669903",
+    "paper_endpoint": "Paper/669903",
+    "paper_id": "669903",
+    "topic": "Perspective Reformulation of Stochastic Agrochemical Supply Chain Optimization Problem with Mean-Variance Risk Management",
+    "title": "Perspective Reformulation of Stochastic Agrochemical Supply Chain Optimization Problem with Mean-Variance Risk Management",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The global agrochemical industry presents a notably consolidated landscape wherein dominant multinational corporations hold substantial market shares. As a result, the supply chain of a single agrochemical commodity is conventionally known by an intricate network of pathways linking its origins from raw material sources to its ultimate consumers. Beyond its structural intricacy, the supply chain of agrochemicals is vulnerable to distinctive uncertainties arising from seasonal fluctuations and other impactful factors, thus necessitating the development and implementation of popular risk management tools and strategies. In this study, we model and optimize an agrochemical supply chain by developing and solving a scenario-based stochastic mixed-integer quadratic constrained program (MIQCP) using the mean-variance method to manage costs associated with demand loss or exceeded demand. We apply the perspective reformulation technique [1] to linearize the non-convex quadratic constraint (variance). This converts the problem from a non-convex MIQCP to a MILP. We solve the original MIQCP and reformulated MILP in several illustrative case studies with different sizes and compare the computational performance and results. We find that iteratively introducing perspective cuts to the reformulated MILP continuously improves the dual bound and solution time. Depending on the problem size, the reformulated MILP achieves either the global optimal solution in less computational time or a better local optimal solution within the same time compared to the original MIQCP. We conclude that perspective reformulation can be a powerful technique to solve large-scale non-convex quadratic constrained supply chain optimization problems. References: [1] Günlük, O., Linderoth, J. (2012). Perspective Reformulation and Applications. In: Lee, J., Leyffer, S. (eds) Mixed Integer Nonlinear Programming. The IMA Volumes in Mathematics and its Applications, vol 154. Springer, New York, NY.",
+    "presenting_author": "Saba Ghasemi Naraghi | oklahoma state university, Stillwater",
+    "authors": [
+      "Saba Ghasemi Naraghi | oklahoma state university, Stillwater",
+      "Zheyu Jiang | Oklahoma State University"
+    ],
+    "authors_structured": [
+      {
+        "name": "Saba Ghasemi Naraghi",
+        "affiliation": "oklahoma state university, Stillwater",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zheyu Jiang",
+        "affiliation": "Oklahoma State University",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61m",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669903"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665365",
+    "paper_endpoint": "Paper/665365",
+    "paper_id": "665365",
+    "topic": "Integration of Production Planning and Scheduling Problems with Uncertainty and Feasibility Analysis",
+    "title": "Integration of Production Planning and Scheduling Problems with Uncertainty and Feasibility Analysis",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Production planning and scheduling are two important problems in chemical production operations. Production planning aims at satisfying the production targets based on demand profile over a mid-term horizon, while production scheduling focuses on outlining the optimal task sequences following the production planning over a short-term horizon 1 . The integrated optimization of the two levels avoids infeasible solutions caused by overestimating production capacity of scheduling level, and therefore promotes production efficiency. Additionally, as the demand volatilities of chemicals and energy supply fluctuations, the decision making process has to improve by considering uncertainties. However the computational cost often becomes a significant burden for decision making, and machine learning integration has become a popular tendency to improve computational efficiency in this competitive market 2 . This presentation addresses simultaneous modeling and optimizing of production planning and scheduling problems with regard to demand uncertainty in planning level and utility uncertainty in scheduling level. In order to characterize the utility uncertainty more realistically, two kinds of utilities are classified: the utilities that are operated continuously (e.g., steam) and the utilities that have on/off characteristics (e.g., electricity). The volatility of supply and time-of-use electricity price are considered separately for the two utilities. Rolling horizon method is adopted to solve the integration problem and feasibility analysis will be executed to direct the planning level to generate more appropriate and computational tractable production targets for scheduling level. We propose a MILP framework for batch production systems with a discrete-time formulation. Rolling horizon method solves the planning and scheduling problem with a sequence of iterations; the planning model are solved within the time-window and only the production targets of the first planning period are transferred to the scheduling level. The time-window will roll forward and update its initial state according to the information transferred by the scheduling level until it reaches the last period of planning horizon. For the scheduling model, two kinds of micro-periods which depicts production and utility supply separately are considered. This avoids the problem that the duration of utility disturbance is not synchronized with the production batch duration. Additionally, we will use machine learning approaches to identify the interactions between planning and scheduling feasible regions. We will show that this strategy is advantageous with respect to the following interrelated aspects: (1) it maximizes the profit of the enterprise in an uncertain environment and provides the optimal production sequence and material flow; (2) it allows infeasible solutions for scheduling level when the production targets overestimate the capacity of scheduling level, while it also allows early production for future periods; (3) it demonstrates that we can maximize the profits to meet the demand while significantly reducing the energy cost; (4) it performs better when employing feasibility analysis. To the best of our knowledge, no research in chemical production scheduling takes the uncertainty of different utilities types into account, so this work will depict the uncertainty according to its characteristics, and benchmarks will be made to reveal the advantages of the uncertainty model. References： Beykal B, Avraamidou S, Pistikopoulos EN. Data-driven optimization of mixed-integer bi-level multi-follower integrated planning and scheduling problems under demand uncertainty. Comput Chem Eng . 2022;156:107551. doi:10.1016/j.compchemeng.2021.107551 Badejo O, Ierapetritou M. Integrating tactical planning, operational planning and scheduling using data-driven feasibility analysis. Comput Chem Eng . 2022;161:107759. doi:10.1016/j.compchemeng.2022.107759",
+    "presenting_author": "Ziqing Guo | Dalian University of Technology, China",
+    "authors": [
+      "Ziqing Guo | Dalian University of Technology, China",
+      "Yachao Dong | Institute of Chemical Process Systems Engineering, School of Chemical Engineering, Dalian, China",
+      "Jingxing Gao | Dalian university of technology, China",
+      "Jian Du | Dalian University of Technology, China"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ziqing Guo",
+        "affiliation": "Dalian University of Technology, China",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yachao Dong",
+        "affiliation": "Institute of Chemical Process Systems Engineering, School of Chemical Engineering, Dalian, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Jingxing Gao",
+        "affiliation": "Dalian university of technology, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Jian Du",
+        "affiliation": "Dalian University of Technology, China",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61n",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665365"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663943",
+    "paper_endpoint": "Paper/663943",
+    "paper_id": "663943",
+    "topic": "Multi-Stage Stochastic Programming for the Planning of a Mobile Modular Closed-Loop Supply Chain",
+    "title": "Multi-Stage Stochastic Programming for the Planning of a Mobile Modular Closed-Loop Supply Chain",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Traditionally, supply chains employ a fixed facility design to take advantage of the long strategic planning horizon and economies of scale. However, the global market has turned much more volatile in recent years, so more agile and dynamic supply chain paradigms are arising. The novel concept of modular and mobile supply chains has thus emerged and is beginning to be adopted by industrial decision makers. Mobile modular supply chains contains modular units with standardized interfaces that can be installed or removed at sites to expand or contract the capacity of a facility, or transported between different sites to adapt to market variations. Despite these advantages, the additional flexibility brought up by the modular design poses new challenges for decision makers as the location of modules involves both strategic and tactical decisions. The planning of a mobile modular closed-loop supply chain network is modeled as a mixed-integer linear programming (MILP) model in this work with the aim of minimizing total costs. The customer demands, return amounts and recoverable fractions of returned products are assumed to be uncertain, and the two echelons adjacent to the customers, distribution and collection centers, are chosen to be mobile and modular facilities. In each time stage, modules can be purchased and installed at sites to expand the capacity of the facilities, or transported to other sites of the same type. To make optimal decisions for different uncertainty realizations, we reformulate the model into a multi-stage stochastic model with stage-wise independent uncertainty. We also employ the stochastic dynamic dual integer programming (SDDiP) algorithm to solve the large scale MILP with integer state variables. The idea of independent Magnanti-Wong cuts is adopted to form enhanced cuts of the SDDiP algorithm. Computational experiments have shown that the SDDiP with enhanced cuts can more effectively solve the multistage stochastic model which may otherwise be intractable. The value of the mobile and modular design is examined through case study and is positively correlated with the variance of the customer demand. The value of stochastic solution is also confirmed.",
+    "presenting_author": "Congqin Ge | Tsinghua University, Beijing, China",
+    "authors": [
+      "Congqin Ge | Tsinghua University, Beijing, China",
+      "Zhang Lifeng | Tsinghua University, Beijing, China",
+      "Wenhui Yang | Tsinghua University, Beijing, China",
+      "Zhihong Yuan | Tsinghua University, Beijing, China"
+    ],
+    "authors_structured": [
+      {
+        "name": "Congqin Ge",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhang Lifeng",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Wenhui Yang",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Zhihong Yuan",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61o",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663943"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663458",
+    "paper_endpoint": "Paper/663458",
+    "paper_id": "663458",
+    "topic": "Energy Flow Redistribution for Optimal Operation of Heat Exchanger Networks",
+    "title": "Energy Flow Redistribution for Optimal Operation of Heat Exchanger Networks",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Strong impetus on the implementation of sustainable practices has increased the attention of process industries towards process and energy integration strategies. Heat exchanger networks (HENs) are designed to implement energy integration at a processing site. The design of HEN has received tremendous attention in the past few decades and can be considered a fairly matured field. However, the optimal operation of HEN, especially in the context of dynamic market conditions, is a challenging and an open problem. Some of the existing approaches to address this include design of flexible HENs [1], real time optimization (RTO) and control [2] or self optimizing control [3]. This work focuses on the optimal operation of heat exchanger networks using a concept of energy flow redistribution (EFR). The EFR methodology uses the structure of the HEN to direct the energetic impact of a disturbance along a favorable (e.g. minimum utility) path. Specifically, when a disturbance enters the HEN, the duties of the process-to-process heat exchangers are adjusted, using internal degrees of freedom like exchanger bypass or stream split fraction, such that the net impact on the utility exchangers is minimized. To this end, the governing equations of an individual heat exchanger and energy balance for the entire HEN are restructured to explicitly quantify the effect of disturbance on the overall performance of the HEN, and subsequently back-calculate the change needed in the values of the manipulated inputs (utility flow, exchanger bypass or stream split fraction) to achieve optimal operation. Additional operational constraints, such as limits on utility usage, absence of bypass on any exchanger can also be incorporated. The EFR strategy can be implemented in an openloop (similar to RTO) or closed-loop (similar to economic MPC) configuration as shown in the figure below. Using multiple illustrating examples, it is shown that the proposed approach successfully handles commonly encountered (measured and unmeasured) disturbances (such as feed flowrate or temperature, target specifications) as well as plant-model mismatch (exchanger fouling or complex flow patterns), and achieves better performance as compared to the existing methodologies. The proposed approach offers additional benefits such as flexible configuration (in terms of degrees of freedom and performance objective) and ability to incorporate trade-off between optimality, flexibility and computational efficiency. References: [1] Floudas CA and Grossmann IE, Synthesis of flexible heat exchanger networks with uncertain flowrates and temperatures, Comput. Chem. Eng., 11(4), 319-336, 1987. [2] Aguilera N and Marchetti JL, Optimizing and controlling the operation of heat exchanger networks, AIChE J., 44, 1090-1104, 1998. [3] Jaschke J and Skogested S, Optimal operation of heat exchanger networks with stream split: Only temperature measurements are required, Comput. Chem. Eng., 70, 35-49, 2014.",
+    "presenting_author": "Sujit Jogwar | Indian Institute of Technology Bombay, Mumbai",
+    "authors": [
+      "Karthika Mohanan | Indian Institute of Technology Bombay, Mumbai",
+      "Sujit Jogwar | Indian Institute of Technology Bombay, Mumbai"
+    ],
+    "authors_structured": [
+      {
+        "name": "Karthika Mohanan",
+        "affiliation": "Indian Institute of Technology Bombay, Mumbai",
+        "designation": "Author"
+      },
+      {
+        "name": "Sujit Jogwar",
+        "affiliation": "Indian Institute of Technology Bombay, Mumbai",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "61p",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663458"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667301",
+    "paper_endpoint": "Paper/667301",
+    "paper_id": "667301",
+    "topic": "Management of Multi-Microgrid System with 2D CNN Forecasting Model and End-Effect Mitigation Using Value Function",
+    "title": "Management of Multi-Microgrid System with 2D CNN Forecasting Model and End-Effect Mitigation Using Value Function",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Microgrid (MG) systems are becoming popular as they facilitate the incorporation of variable renewable energy (VRE) sources into local energy systems with low carbon emissions. However, the intermittent and uncertain nature of these sources poses significant challenges in the management as they result in highly irregular and unpredictable electricity generation [1]. To address these challenges, this study proposes the development of machine learning-based forecasting models for VRE sources and electricity price considering their nonstationary and periodic trending behavior. These models can help in effectively managing grids and storage devices. For this, we propose a framework for the optimal management of a multi-microgrid system mitigating the end-effect. Accurate forecasting of VRE sources and electricity price is crucial for maximizing the economic benefits in MG systems through operational decisions such as electricity production schedules, transaction, and storage [2, 3]. With the rise of electricity markets, accurate forecasting has become increasingly important, and numerous methods have been developed in recent years. Especially, deep learning methods such as recurrent neural network (RNN) and convolutional neural network (CNN) have attracted the attention of many energy industries and academic entities. These data-driven forecasting models share a fundamental assumption that the future trends will have similar statistical patterns to the historical data [3]. However, previous studies have not considered the cyclic nature of the hourly and daily variations of VRE sources and electricity price. This study proposes a novel approach to make multi-day-ahead forecasts from past data using a 2D CNN model and its variant (combined with RNN) that can handle the hourly and daily correlations simultaneously. Multi-microgrid (MMG) system has emerged as another promising solution to alleviate the challenges caused by uncertainties as it entails flexibility to trade energy between individual MGs [4, 5]. However, excessive installation of electric cable connections across the MMG network can be prohibitively expensive and is often not justified [6]. This study proposes a two-stage stochastic programming (2SSP) approach as a tool to balance a tradeoff between design- and operation-level decisions for MMG under stochastic uncertainty. It considers the capital cost of installing electric cables and the operating cost of the MMG. In the 2SSP, the choice of optimization horizon gets limited to a short, finite length due to the rapidly increasing problem size given the multi-scale nature of the problem. This limitation on the horizon length manifests as the storage being drained empty at the end of each horizon, known as the end-effect , which has a negative impact on the long-term management of the energy system and storage maintenance. To mitigate the end-effect, we propose several realistic valuation methods for the terminal energy in the storage at the end of a horizon. These include a benchmark method using a parameter based on the forecasted electricity price during the following period and an advanced method based on the value function approximation using reinforcement learning (RL) that can be combined with the 2SSP formulation. The 2SSP model is integrated with Markov Decision Process (MDP) through the value of terminal energy level in the storage at the end of each day to mitigate the end-effect and account for the longer-term value of stored electricity. This integration enables the value function to be recursively updated using observations sampled from the 2D CNN-based forecasting model and 2SSP decision-making model [7]. The proposed approach is compared with conventional methods used in previous studies and the benchmark method based on the forecasted electricity price. The results indicate that the proposed framework can ensure cost-effective and reliable energy supply from MMG systems by mitigating the end-effect. References [1] M. T. Kelley, R. Baldick, and M. Baldea, “Demand response scheduling under uncertainty: Chance-constrained framework and application to an air separation unit,” AIChE Journal , vol. 66, no. 9, pp. e16273, 2020. [2] B. Uniejewski, J. Nowotarskim, and R. Weron, “Automated variable selection and shrinkage for day-ahead electricity price forecasting,” Energies , vol. 9, no. 8, pp. 621, 2016. [3] T. Hong, P. Pinson, Y. Wang, R. Weron, D. Yang, and H. Zareipour, “Energy forecasting: A review and outlook,” IEEE Open Access Journal of Power and Energy , vol. 7, pp. 376–388, 2020. [4] I. Zenginis, J. S. Vardakas, C. Echave, M. Morato, J. Abadal, and C. V. Verikoukis, “Cooperation in microgrids through power exchange: An optimal sizing and operation approach,” Applied Energy , vol. 203, pp. 972-981, 2017. [5] A. Jafari, H. G. Ganjehlou, T. Khalili, and A. Bidram, “A fair electricity market strategy for energy management and reliability enhancement of islanded multi-microgrids,” Applied Energy , vol. 270, pp. 115170, 2020. [6] D. Han and J. H. Lee, “Two-stage stochastic programming formulation for optimal design and operation of multi-microgrid system using data-based modeling of renewable energy sources,” Applied Energy , vol. 291, pp. 116830, 2021. [7] J. Shin, J. H. Lee, and M. J. Realff, “Operational planning and optimal sizing of microgrid considering multi-scale wind uncertainty,” Applied Energy , vol. 195, pp. 616-633, 2017.",
+    "presenting_author": "Dongho Han | Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea, Republic of (South)",
+    "authors": [
+      "Dongho Han | Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea, Republic of (South)",
+      "Teemu Ikonen | Aalto University, Espoo, Finland",
+      "Iiro Harjunkoski | Aalto University, Espoo, Finland",
+      "Jay Hyung Lee | University of Southern California, Los Angeles",
+      "Seongmin Heo | Dankook University, Yongin, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dongho Han",
+        "affiliation": "Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Teemu Ikonen",
+        "affiliation": "Aalto University, Espoo, Finland",
+        "designation": "Author"
+      },
+      {
+        "name": "Iiro Harjunkoski",
+        "affiliation": "Aalto University, Espoo, Finland",
+        "designation": "Author"
+      },
+      {
+        "name": "Jay Hyung Lee",
+        "affiliation": "University of Southern California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Seongmin Heo",
+        "affiliation": "Dankook University, Yongin, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61q",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667301"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667691",
+    "paper_endpoint": "Paper/667691",
+    "paper_id": "667691",
+    "topic": "Clustering-Based Forecasting Framework for the Energy Sector",
+    "title": "Clustering-Based Forecasting Framework for the Energy Sector",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Energy sector is increasingly becoming more decentralized, de-fossilized, and digitalized. This also means that integrating green energy sources will bring some challenges that need to be handled with smart applications. In this context, load forecasting has gradually become the central and integral process in the planning and operation of electric utilities, energy suppliers, system operators, and other market participants (Weron et al., 2006). That's why statistical analysis and educated guesswork like machine learning (ML) and deep learning (DL) are widely applied and tried to improve by academia and companies in today's deregulated energy market. Energy demand/consumption data represents a challenge due to having non-linearity and volatility, which make it highly vulnerable to changes in exogeneous factors. In addition, a forecasting model may not completely capture and simulate the unique characteristics, leading to poor forecasting performance (Pradeepkumar et al., 2017 ). Indeed, each forecasting technique has benefits and drawbacks, and no single approach consistently outperforms the others for any given data set (Makridakis et al., 2018, Petropoulos et al., 2022). This makes exploring and comparing different forecasting methods essential to identify the most effective approach. In this respect, a clustering-based forecasting framework is proposed as a forecasting framework to predict the demand for energy products. With the proposed approach, different clustering algorithms will be applied to group similar data together, and then based on each cluster characteristic, different forecasting methods, including statistical, ML, and DL will be used to have more accurate predictions. The performance of the proposed clustering-based forecasting framework will be compared to traditional forecasting techniques to analyse its effectiveness. References Weron, 2006, Modeling and Forecasting Electrcity Loads and Prices: A Statistical Approach. Makridakis, S. Spiliotis, V. Assimakopoulos, 2018, Statistical and Machine Learning forecasting methods: Concerns and ways forward, PloS One, 13, e0194889. Petropoulos, D. Apiletti, V. Assimakopoulos, M. Z. Babai, D. K. Barrow, S. B. Taieb, C. Bergmeir, R. J. Bessa, J. Bijak, J. E. Boylan, and others, 2022, Forecasting: theory and practice, International Journal of Forecasting. Predeepkumar, V. Ravi, 2017, Forecasting financial time series volatiliy using swarm optimization trained quantile regression neural network. Applied Soft Computing, 58, 35–52.",
+    "presenting_author": "Funda Iseri | Texas A&M University, College Station, TX",
+    "authors": [
+      "Funda Iseri | Texas A&M University, College Station, TX",
+      "Harsh Shah | Texas A&M University, College Station, TX",
+      "Rahul Kakodkar | Texas A&M University, College Station, TX",
+      "Efstratios Pistikopoulos | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Funda Iseri",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Harsh Shah",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Rahul Kakodkar",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Efstratios Pistikopoulos",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61r",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667691"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667476",
+    "paper_endpoint": "Paper/667476",
+    "paper_id": "667476",
+    "topic": "Applications of Data-Driven Approaches in Chemical Process and Energy System Optimization",
+    "title": "Applications of Data-Driven Approaches in Chemical Process and Energy System Optimization",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "These days, the availability, and the ease access to enormous volumes of data derives different industrial and technological fields to utilize data-driven solutions. As optimization has always been constructed based on exchanging information between models and data, multi-level optimization tasks such as long-term planning, scheduling and control will tremendously benefit from information mined from massive data. Big data-driven tools (i.e., machine learning) has proven superiority over traditional data tools in dealing with substantial amounts of data and data different structure. Hence, in this work, big data tools are applied to address the challenges associated with planning models of energy systems and process optimization of operating chemical engineering processes. A Data-driven stochastic optimization framework that leverages big data in design and operation of power generation planning is proposed. The proposed approach is applied to different power planning models that include unit commitment (UC) characteristics where the size of uncertainty scenarios is reduced. Results show that the proposed approach is an effective tool to generate reduced size stochastic scenarios. The design and operation of energy hub problem involves the integration of decision levels with different time scales that usually lead to multiscale models which are computationally costly. A mathematical programming-based general clustering approach is applied to reduce the size of multiple attributes input data and tackle the computational complexity of multiscale energy hub problems. Different case studies are considered under different environmental and technical consideration. Assessments conclude that the clustering approach is an efficient tool to decrease the size of the original model while maintaining good results. Modern improvements in supervised machine learning tools have demonstrated their ability to achieve accurate and efficient prediction results. Therefore, these tools are employed as alternative approaches to model a specific application in the gas industry. Results obtained from this study showcase the ability of the developed models to offer reliable and accurate predictions. A data-driven surrogate-based optimization framework is developed, where the developed machine learning models can be used as a suitable replacement for detailed first principal models, to find the optimal conditions at maximum cost-saving. The proposed approach can help the gas industry to simultaneously achieve process efficiency, profitability, and safety.",
+    "presenting_author": "Mohammed Alkatheri | University of Waterloo, Canada",
+    "authors": [
+      "Mohammed Alkatheri | University of Waterloo, Canada",
+      "Tuhin Poddar | University of Waterloo, Canada",
+      "Ali Elkamel | University of Waterloo, Canada",
+      "Ali Almansoori | Khalifa University, Abu Dhabi, United Arab Emirates"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mohammed Alkatheri",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Tuhin Poddar",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Elkamel",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Almansoori",
+        "affiliation": "Khalifa University, Abu Dhabi, United Arab Emirates",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "61s",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667476"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668692",
+    "paper_endpoint": "Paper/668692",
+    "paper_id": "668692",
+    "topic": "Use of Bayesian Optimization for Efficient Finding of Optimal Operating Condition of Simulated Moving Bed Process",
+    "title": "Use of Bayesian Optimization for Efficient Finding of Optimal Operating Condition of Simulated Moving Bed Process",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Simulated moving bed (SMB) is a chromatographic separation process that can be operated continuously. It provides the effect of moving the stationary (solid) phase by arranging several columns and periodically switching the position of inlet and outlet ports. Since the solid phase and the solvent move in opposite directions, components highly adsorbed to the solid phase flow with solid bed movement and poorly adsorbed components flow with the solvent (desorbent), enabling separation of the mixture. Compared to the conventional batch chromatography, SMB process has the advantages of lower production costs (by reducing the amount of stationary phase and desorbent used) and high purity and yield. Due to these advantages, the SMB technology has been broadly applied in petrochemical, carbohydrate, and pharmaceutical industries. In practice, it is important to quickly find feasible and possibly optimal operating conditions of SMB process for a new separation task, because large amounts of off-spec products are produced during the test runs in searching for them. An SMB process generally takes a long time (sometimes more than 2 days) to reach a cyclic steady state when operating conditions change. Therefore, methods such as random search or grid search are inappropriate. It can be helpful to use a first-principles model to find a good starting guess for the optimal operation condition, but first-principles based high-fidelity SMB process models can be quite complex and take several hours or even days to calculate the cyclic steady state, making it difficult to use for this purpose. On the other hand, the true moving bed (TMB) model based on the assumption of instantaneous equilibrium is conceptually simple and requires much less computational time, but has low accuracy. To address these challenges, this study develops an automated algorithm based on Bayesian optimization that efficiently recommends a new candidate of operating conditions of SMB by balancing exploration and exploitation. With the algorithm, one can quickly and sequentially approach the optimal condition, both in high-fidelity simulations and actual plant trials. In our case, the optimal operating conditions of the SMB process are defined as those resulting in the minimum desorbent consumption while satisfying product specifications of 99.5% or higher purity. While the objective function (desorbent consumption rate) is inexpensive-to-evaluate, constraints (product purities) are very expensive-to-evaluate because they are defined with respect to the cyclic steady state which takes long time to reach. Operating degrees of freedom are the four m ratios, which are the ratio of the solvent flow rate to the solid flow rate for the four zones of the SMB process. As these m ratios vary, process variables such as the extract flow rate, raffinate flow rate, recycle flow rate, and switch time vary accordingly. In the developed Bayesian optimization framework for SMB process, Gaussian process regression with Mat é rn32 kernel is used to predict the extract and raffinate purity. As an acquisition function, the typical choice of expected constrained improvement is modified to fit the case of an inexpensive-to-evaluate objective function and expensive-to-evaluate constraints. We also introduced batch Bayesian optimization to recommend multiple candidates in one iteration when function evaluation can be performed in parallel. To test the suggested algorithm, the separation of m-cresol and p-cresol mixture is studied. Using the 66,510 data from the TMB model as a true function, it turned out that the Bayesian optimization approaches the true optimum faster than either random search or greedy search. Whereas the random search performs inconsistently and the greedy search gets stuck at a sub-optimum, Bayesian optimization effectively reaches the global minimum of desorbent consumption while satisfying the purity constraints, by balancing exploitation and exploration. Next, the complex high-fidelity SMB model is assumed as a real SMB process. The proposed framework is shown to find better operating conditions as iterations progress. Furthermore, we investigate the effect of using the simple TMB model as a baseline of purity prediction. Even though the TMB model is less accurate, it is worthwhile to utilize its results as the initial mean in the Gaussian modeling, because search space can be effectively narrowed in initial iterations by reflecting the physics of the SMB process, albeit only in an approximate manner. The current industrial practice is that the operating conditions of SMB process are explored by changing them little by little while relying on the experience of experts. The method not only requires many repetitions of experiments, but also may not ultimately find a point that satisfies the purity constraints. The proposed Bayesian optimization framework is more efficient and finds better operating conditions by allowing the algorithm to choose the next operating conditions it wants to learn from. It can lower the dependency on the expert experience and reduce the amounts of off-spec products by minimizing the number of trial runs.",
+    "presenting_author": "Woohyun Jeong | KAIST, Daejeon, Korea, Republic of (South)",
+    "authors": [
+      "Woohyun Jeong | KAIST, Daejeon, Korea, Republic of (South)",
+      "Jay Hyung Lee | University of Southern California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Woohyun Jeong",
+        "affiliation": "KAIST, Daejeon, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jay Hyung Lee",
+        "affiliation": "University of Southern California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61t",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668692"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670715",
+    "paper_endpoint": "Paper/670715",
+    "paper_id": "670715",
+    "topic": "Optimization of Waste Water Plant Operations",
+    "title": "Optimization of Waste Water Plant Operations",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The presentations will focus on development of intelligent modeling environment and tool sets for optimal design and control of wastewater treatment plants as they apply to Hillsborough County Facilities Florida. The approach is based on the available data and its characteristics; involve intelligent data processing techniques; include development of first principle predictive models using dynamic flowsheet simulator; validation and tuning of the models using existing plant, weather and demographic data; identifying knowledge gaps and data needs and supplementing them via sensor data augmented CFD modeling; model implementation development of a user-system interface that allows integration with the existing SCADA environment. The objectives include to assist model-based optimization of operation and design decisions as well as development of heuristic knowledge base. The system synergistically integrates plant performance with model predictions and transforms data to knowledge to optimize plant performance. The development utilizes following elements for making decisions (particularly plant operation) and recommendations: Influent rate forecasting based on large data bases as well as analysis of energy consumption patterns using deep learning techniques; Modeling and validation of plant performance using dynamic flowsheet simulators via an approach that integrates global sensitivity analysis for global methods for parameter estimation; Combined 3D complex kinetic and hydrodynamic CFD dynamic models to study effects of changing key manipulated variable schedules such as aeration parameters to develop on dissolved oxygen distribution and velocity profiles as well as model generation to be utilized in digital twin development; A user computer interface that integrates the data with models to be used by the engineers and operators along with the existing SCADA system; Optimal plant operation as well as development of a knowledge base for best operating practices for key operational situations. The approach allows the Hillsborough County wastewater plants to operate in a robust and safe manner while staying within environmental compliance at all times as well minimizing the energy consumption. The project allowed to identify data needs and gaps and cost effective means to rectify and reconcile them. Furthermore, the resulting models are being utilized in a portfolio of other ways including planning of plant expansions, retrofit designs, design of new plants, particularly while working with external constituents.",
+    "presenting_author": "Komal Rathore | University of South Florida, Tampa",
+    "authors": [
+      "Komal Rathore | University of South Florida, Tampa",
+      "Aydin Sunol | University of South Florida, Tampa",
+      "Tolga Pirasaci | University of South Florida, Tampa",
+      "Andres Tejada-Martinez | University of South Florida, Tampa",
+      "Kiesha Pierre | University of South Florida, Tampa",
+      "Aaron Driscoll | University of South Florida, Tampa",
+      "Gita Iranipour | Hillsborough County Public Utilities Department, Tampa, FL",
+      "Kyle Cogswell | University of South Florida, Tampa"
+    ],
+    "authors_structured": [
+      {
+        "name": "Komal Rathore",
+        "affiliation": "University of South Florida, Tampa",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Aydin Sunol",
+        "affiliation": "University of South Florida, Tampa",
+        "designation": "Author"
+      },
+      {
+        "name": "Tolga Pirasaci",
+        "affiliation": "University of South Florida, Tampa",
+        "designation": "Author"
+      },
+      {
+        "name": "Andres Tejada-Martinez",
+        "affiliation": "University of South Florida, Tampa",
+        "designation": "Author"
+      },
+      {
+        "name": "Kiesha Pierre",
+        "affiliation": "University of South Florida, Tampa",
+        "designation": "Author"
+      },
+      {
+        "name": "Aaron Driscoll",
+        "affiliation": "University of South Florida, Tampa",
+        "designation": "Author"
+      },
+      {
+        "name": "Gita Iranipour",
+        "affiliation": "Hillsborough County Public Utilities Department, Tampa, FL",
+        "designation": "Author"
+      },
+      {
+        "name": "Kyle Cogswell",
+        "affiliation": "University of South Florida, Tampa",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61u",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670715"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/662509",
+    "paper_endpoint": "Paper/662509",
+    "paper_id": "662509",
+    "topic": "Quantitative Studies of Decomposition Algorithm Efficiencies for Global Nonconvex Stochastic Optimization Problems",
+    "title": "Quantitative Studies of Decomposition Algorithm Efficiencies for Global Nonconvex Stochastic Optimization Problems",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Stochastic programming (SP) is a prevalent framework for modeling decision-making processes under uncertainty, and it has been widely applied in many areas, e.g., process planning and control. Nevertheless, it often leads to models with an exceedingly large number of variables and constraints. When the SP model also involves nonconvexity, directly solving it globally via standard global algorithms can be prohibitively costly. As a result, many decomposition algorithms have been developed to address nonconvex SP problems, aiming to reduce computational cost by leveraging the unique structure of SP models. However, these methods often fall short in guaranteeing global optimality and may perform as poorly as direct approaches in the worst-case scenarios. In recent years, several decomposition algorithms have been developed for nonconvex SP problems that overcome the aforementioned disadvantages [1]–[3]. These methods can be understood as reduced-space spatial branch-and-bound (SBB) approaches, wherein only the first-stage variables are branched on in the SBB procedure, ensuring guaranteed global optimality and outstanding scalability concerning the number of scenarios in the SP problem. Nevertheless, our previous work [4] has theoretically demonstrated that these methods may suffer from significant efficiency drawbacks for general problems. Within the reduced-space SBB framework, the lower bounding schemes of all these methods exhibit first-order convergence in general, except for an idealized version of [1] under certain assumptions. From previous research [5], the low convergence order makes all these algorithms susceptible to the cluster problem, i.e., their SBB procedure needs to visit an exponentially large number of nodes before termination, causing low computational speed in practice. Existing results from these algorithms support this claim given their struggle with problems involving more than a limited number of first-stage decisions. According to our analysis [4], all convex relaxation-based reduced-space SBB methods (including [1]–[3]) will suffer from first-order convergence in general, except when the projected value function of the optimization problem exhibit certain properties. However, no numerical experiments have been conducted to substantiate this analysis, and it remains unclear whether real-world SP problems meet the properties necessary for these algorithms to avoid the cluster problem. Therefore, there is a pressing need for systematic numerical experiments to assess the efficiency of these cutting-edge algorithms and evaluate the practicality of the reduced space framework. In this work, we built a library of nonconvex SP problems to assess the computational speed of the Cao and Zavala (CZ) algorithm [3] and the Li and Grossmann (LG) algorithm [1]. Our primary objective was to check whether, in general, both methods visit an exponential number of nodes relative to the first-stage variable number and the termination error before termination, which serves as the principal criterion for the occurrence of the cluster problem. The library, referred to as NSPLIB, comprises a diverse range of medium- to large-sized nonconvex SP problems, all derived from real-world applications. These problems feature continuous first-stage variables and may have mixed-integer second-stage variables, with nonconvexity arising either from the constraints or the integer second-stage variables. The CZ and LG algorithms were implemented in a streamlined manner, retaining only the aspects of their lower bounding schemes responsible for convergence, while the SBB procedure was executed in a simplistic fashion. In the LG algorithm, the subgradient method was fine-tuned to approach the Lagrangean dual. Alongside the number of visited nodes, we employed several additional metrics to estimate the computational speed of the algorithms. Both the problem library and the algorithm implementations were developed using Python/Pyomo and are available online. Our experimental results revealed that the limited implementations of both algorithms display notably slow performance. In comparison to directly solving the full model, the basic versions of the algorithms proved to be several orders of magnitude slower for most problems. In practice, both methods demonstrate first-order convergence, and the cluster problem almost always arises, confirming the conclusions of our previous work. The only exception was that the cluster problem did not happen for MILP problems where the value functions exhibited favorable geometric properties near the optimizers, further validating the theorems presented in [4]. The implementation of the subgradient method in the LG algorithm revealed that obtaining Lagrangean duals is exceedingly challenging and impractical for use. Although the dual may exhibit a higher convergence order, potentially mitigating the cluster problem, it remains unsuitable for practical applications. Moreover, our findings uncovered several aspects of the reduced-space SBB framework that influence algorithm speed and were not previously emphasized, including tolerance settings for subproblems, practical implementation of the subgradient method, and upper bounding. In summary, this study employed a variety of numerical instances to highlight the limitations of the reduced-space SBB framework for decomposition algorithms in nonconvex SP problems, providing guidance for developing more efficient algorithms for such problems in the future. It was also the first study to numerically showcase the cluster problem in the context of real-world SP problems. [1] C. Li and I. E. Grossmann, “A generalized Benders decomposition-based branch and cut algorithm for two-stage stochastic programs with nonconvex constraints and mixed-binary first and second stage variables,” Journal of Global Optimization , vol. 75, no. 2, pp. 247–272, 2019, doi: 10.1007/s10898-019-00816-8. [2] R. Kannan, “Algorithms, analysis and software for the global optimization of two-stage stochastic programs,” 2018. [Online]. Available: https://dspace.mit.edu/handle/1721.1/117326 [3] Y. Cao and V. M. Zavala, “A scalable global optimization algorithm for stochastic nonlinear programs,” Journal of Global Optimization , vol. 75, no. 2, pp. 393–416, 2019, doi: 10.1007/s10898-019-00769-y. [4] D. L. Robertson, P. Cheng, and J. K. Scott, “Convergence Rate Analysis for Schemes of Relaxations in Decomposition Methods for Global Nonconvex Stochastic Optimization,” in 2020 Virtual AIChE Annual Meeting , 2020. [5] A. Wechsung, S. D. Schaber, and P. I. Barton, “The cluster problem revisited,” Journal of Global Optimization , vol. 58, no. 3, pp. 429–438, 2014.",
+    "presenting_author": "Pengfei Cheng | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Pengfei Cheng | Georgia Institute of Technology, Atlanta, GA",
+      "Joseph Scott | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pengfei Cheng",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joseph Scott",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61v",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/662509"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665758",
+    "paper_endpoint": "Paper/665758",
+    "paper_id": "665758",
+    "topic": "Accelerating Process Design and Optimization with Novel Computational Tools",
+    "title": "Accelerating Process Design and Optimization with Novel Computational Tools",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Since the global energy requirements are expected to increase and most of the world-wide energy demand is still supplied by fossil fuels, a search for a suitable transition fuel is underway. Amongst the conventional energy sources, natural gas (NG) is generally considered to be the cleanest and highest growing fossil fuel. Its liquefied form, LNG, is suitable for long-distance transport, and so it is one of the pillars of energy supply in many countries. However, NG liquefaction is an energy-intensive process, accounting for 30–40% of LNG cost. This imposes a pressure on cutting the NG liquefaction costs down. Moreover, because more and more attention is paid to sustainable development, environmental and safety considerations cannot be ignored. Most of the published studies on simulation-based LNG process optimization focus solely on the main liquefaction process, where they usually aim at minimization of specific or total energy consumption (SEC/TEC), or exergy efficiency. Various feedstock quality, environmental impact, or process safety are usually not considered. While genetic algorithms (GA/NSGA-II) are among the prevalent optimization methods, the studies often use a very limited number of individuals and/or generations during the optimization as both simulation-based optimization using GA/NSGA-II and process safety evaluation are excessively time-consuming. To tackle these problems, two novel computational tools have been developed – Parallel Genetic Algorithm Interface II (PAGAN-II) to greatly improve the optimization speed, and Hazard Detection Software II (HADES-II) to drastically decrease the necessary time for inherent safety assessment. The problem of time-intensive optimization lies in great number of repetitive simulations required in simulation-based optimization. Furthermore, this repetition overwhelms the cache memory, which also gradually increases the optimization time. As a response, PAGAN-II, a Matlab-based algorithm compiled into a user-friendly graphical user interface (GUI), has been developed. As opposed to the traditional approach, PAGAN-II fully exploits the fact that Aspen Plus simulations can run asynchronously. To accelerate the computation, PAGAN-II creates a user-defined number of copies of the desired simulation. During the optimization, the entire population is sent to the optimization engine at once, the optimization engine assigns each simulation engine an individual, and the simulation engines start evaluating these individuals simultaneously. Once a simulation engine becomes idle, another individual is assigned to it. Thus, optimization time is greatly decreased. Additionally, PAGAN-II periodically reinitializes the simulation engines to diminish the effect of gradual optimization slow down. The problem with safety evaluation lies in repetitive set of computations for each unit operation required for safety indices in inherent safety assessment. Several authors tried to create automated software solutions, however, a great number of input values needed to be entered manually. As full potential of the programming interface is far from exploited, we have created a fully autonomous Hazard Detection Software II (HADES-II). This Matlab-based computational tool gains full control over Aspen Plus simulations and automatically loads every crucial information directly from the simulation without the need to enter anything manually. Furthermore, HADES-II encompasses a self-learning internal component database which currently contains information on approx. 300 most used hazardous chemicals. Because different safety indices put different weights on different safety aspects and there is no consensus on which indices should be used, HADES-II calculates a range of indices out of which the user can choose: Dow’s Fire and Explosion (Dow FEI) and Chemical Exposure (Dow CEI) Indices, Comprehensive Inherent Safety Index (CISI), Process Route Index (PRI), Process Stream Index (PSI), and Hazard Identification and Ranking system (HIRA). Furthermore, HADES-II also calculates overall process safety indices based on safety polygons, where applicable. Finally, HADES-II can operate as individual GUI, and thus serve as a simple user-friendly safety assessment tool, or it can be called directly from any Matlab function, and thus be incorporated into single- or multi-objective optimization studies. To demonstrate the capabilities of the proposed tools and in the spirit of the abovementioned, an extensive optimization and feasibility study of 5 MTPA propane-precooled mixed refrigerant (C3MR) LNG liquefaction process was done. In the study, 12 different types of NG were taken from published literature as feedstock and sorted into three categories: low-nitrogen feedstock (<1 mol. % nitrogen), mid-nitrogen feedstock (1–4 mol. % nitrogen), high-nitrogen feedstock (>4 mol. % nitrogen). For each type of feedstock, the C3MR process was optimized to obtain minimal SEC while 19 process parameters were optimized. These parameters included: exhaust pressures of compressors and throttle valves, mixed-refrigerant and NG temperatures in the main cryogenic heat exchanger, and composition of mixed refrigerant. Optimization was carried out using PAGAN-II with 100 individuals over 100 generations and 12 parallel simulations. Subsequently, a feasibility study of flash gas post-processing alternatives was carried out. In the base case (present in virtually all C3MR studies), LNG is reduced to storage pressure in a flash vessel, whereas the flash gas is not utilized further and is supposedly subjected to flaring. We studied five additional post-processing alternatives: Utilization of the cooling potential of the flash gas in NG liquefaction and subsequent flaring. Alternative 1 + recirculation of the flash gas (no flaring). Alternative 1 + gas turbines as prime movers and flash gas as gas-turbine fuel. Replacing the flash vessel with an integrated nitrogen rejection unit (NRU) venting stripped nitrogen to atmosphere. Alternative 4 + gas turbines as prime movers and NRU side product as gas-turbine fuel. The study was carried out with the following constraints: < 1 mol. % nitrogen in LNG, > 99.99 mol. % purity of vented nitrogen, < 15 mol. % nitrogen content in gas-turbine fuel. Each alternative was assessed from economic, environmental, and safety point of view. For economic evaluation, levelized main product unit cost was used. For environmental evaluation, direct and indirect carbon dioxide emissions were calculated. Safety assessment was done using Dow FEI and Dow CEI indices. Optimization of the 12 feedstock alternatives for C3MR process resulted in a 14% average decrease in SEC. To demonstrate the performance of PAGAN-II, a performance test was carried out using 1 (standard approach), 2, 3, 4, 6, 8, and 12 parallel simulations. The performance was tested using a desktop computer with an AMD Ryzen 9 3900X 3.80 GHz 12-core processor and 48 GB RAM. For reproducibility, every test run was initiated with identical initial population. For time reasons, test runs were done with 50 individuals and 20 generations. Results of the performance test are shown in Figs. 1 and 2. Based on the performance test results, the optimization time was estimated as 468 hours (19.5 days) using the standard approach. However, the optimization of 12 alternatives using PAGAN-II lasted approx. 32 hours (1.3 days) which translates into approx. 1460% increase in relative computation rate. Furthermore, standard optimization of 12 process alternatives using a combination of 200 individuals over 200 generations (commonly used in studies) was estimated to take over 125 days, whereas the estimated time using PAGAN-II was less than 6 days (i.e., a factor of 21). Results of the feasibility study are displayed in Fig. 3, where the position of points relative to the vertices of the hexagon of alternatives represents the optimality of the respective alternative for the respective feedstock. From the economics’ point of view, all low- and mid-nitrogen feedstocks favor Alternative 3, and all high-nitrogen feedstocks favor Alternative 5 – both alternatives employing gas turbines. However, from the environmental point of view, all feedstocks prefer alternatives which minimize on-site emissions, i.e., Alternatives 2 and 4. Unsurprisingly, safety assessment declared the base case as optimal for every feedstock, because it comprises the lowest number of equipment and the lowest amount of recirculated material. To choose the best alternative for each type of feedstock, each aspect was subjected to multi-criteria analysis using fuzzy non-dimensionalized distance from the respective optima. To sum up, Alternative 2 is suitable for low-nitrogen feedstocks with nitrogen content < 0.5 mol. %, Alternative 3 is suitable for low-nitrogen feedstocks with nitrogen content of 0.5–1.0 mol.% and for mid-nitrogen feedstocks, while Alternative 5 seems to be suitable for high-nitrogen feedstocks. In such feasibility studies, safety assessment usually creates a bottleneck as manual or even somehow automated safety assessment for each alternative can take hours. However, safety assessment utilizing HADES-II took about 20 seconds per alternative and per feedstock, which resulted in overall time of ca. 16 minutes for all feedstocks and applicable process alternatives. To summarize, developed computational tools express vast potential for use in chemical engineering practice which has been proven through extensive optimization and feasibility studies.",
+    "presenting_author": "Patrik Furda | Slovak University of Technology in Bratislava, Slovakia",
+    "authors": [
+      "Patrik Furda | Slovak University of Technology in Bratislava, Slovakia",
+      "Juraj Myšiak | Slovak University of Technology in Bratislava, Slovakia",
+      "Miroslav Variny | Slovak University of Technology in Bratislava, Slovakia"
+    ],
+    "authors_structured": [
+      {
+        "name": "Patrik Furda",
+        "affiliation": "Slovak University of Technology in Bratislava, Slovakia",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Juraj Myšiak",
+        "affiliation": "Slovak University of Technology in Bratislava, Slovakia",
+        "designation": "Author"
+      },
+      {
+        "name": "Miroslav Variny",
+        "affiliation": "Slovak University of Technology in Bratislava, Slovakia",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61w",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665758"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666319",
+    "paper_endpoint": "Paper/666319",
+    "paper_id": "666319",
+    "topic": "Generalised Optimisation Framework for Process Synthesis and Intensification in the Equation-Oriented Environment",
+    "title": "Generalised Optimisation Framework for Process Synthesis and Intensification in the Equation-Oriented Environment",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Equation-oriented (EO) process simulations and optimisations are widely used and critical enablers in the process synthesis and intensification. They have distinct advantages over sequential modular approaches, including efficient large-scale solvers and low-cost sensitivity analysis. However, many commercial process simulators that use EO approaches suffer various drawbacks. Except for gPROMS, other commercial process simulators such as Aspen Custom Modeller, have limited model formulation flexibility for MINLP problems. Even when the models are reformulated as relaxed NLP problems, simulations may fail due to the appearance of zero flows in some streams which are prevalent in the process synthesis and intensification problems. If the equipment is not selected, the material flow through this equipment naturally becomes zero. For some simple units like splitters and valves, zero flows do not affect the units. But in other, more complex units such as distillation columns, \"disappearing\" flows dispatch errors, causing the failure of simulation. Setting the lower bound of the flowrate to a small value (e.g., 1 × 10- 20 ) is not always working. The best approach to circumvent the zero-flow effect is to deactivate the associated constraints for calculating the mass and energy balance and the physical and chemical equilibrium. Generalized Disjunctive Programming (GDP) proposed by Yeomans and Grossmann (2000) succeeds in this regard by using Boolean variables to enforce the selection of a certain set of constraints representing the units, which provides an alternative to MINLP modelling and avoids numerical singularities in the nonlinear equations that are due to the disappearance of columns, sections of columns, and streams. Only GAMS algebraic modelling language supports GDP model implementation. However, GAMS is a generic optimisation platform and does not have any unit operation models, physical property database and flow sheeting capabilities. The accuracy of thermodynamics calculations may be compromised. In the meanwhile, elusive good initial points are required due to the highly nonconvexities of rigorous distillation models to foster the simulation convergence. To address the aforementioned zero flow impact and convergence difficulty issues, we propose a novel superstructure-based optimisation framework consisting of two components: a novel mathematical model constructed in the commercial modelling software - Aspen Custom Modeller (ACM) and the associated solution algorithm. The model makes use of the \"IF structure\" syntax to activate certain sets of equations and addresses the typical simulation failure issues when the flowrate of streams entering the units becomes zero. The formulated mixed integer nonlinear programming (MINLP) problem is optimised by our previously developed feasible path-based branch and bound (FPBB) method (Liu et al., 2022), in conjunction with an improved sequential quadratic programming (SQP) algorithm to solve the relaxed nonlinear programming (NLP) problem at each node. Our framework has been applied to solve three complex distillation column synthesis problems for ternary and quaternary hydrocarbon mixture separations using rigorous tray by tray model from random starting points. The optimal configurations can be selected from the superstructure using the State Task Network (STN) formalism (Caballero and Grossmann, 2004) which considers all the sequencing alternatives from conventional sequences to fully thermally coupled distillation sequences. The results validate the capability of handling the issue of zero flows entering distillation column sections. They also demonstrate the superiority that no tailor-made initialisation procedure is required to foster the convergence to optimum. In the future, this novel framework can also be extended to more complex process synthesis and intensification problems using superstructure coupled with reactors and separators. Yeomans, H. and Grossmann, I.E. (2000). Optimal Design of Complex Distillation Columns Using Rigorous Tray-by-Tray Disjunctive Programming Models. Industrial & engineering chemistry research, 39(11), pp.4326–4335. Caballero, J.A. and Grossmann, I.E. (2004). Design of distillation sequences: from conventional to fully thermally coupled distillation systems. Computers & chemical engineering, 28(11), pp.2307–2329. Chao Liu et al. (2022). Feasible Path-Based Branch and Bound Algorithm for Highly Nonconvex Mixed-Integer Nonlinear Programming Problems. Chemical engineering transactions, 94.",
+    "presenting_author": "Chao Liu | The University of Manchester, United Kingdom",
+    "authors": [
+      "Chao Liu | The University of Manchester, United Kingdom",
+      "Yingjie Ma | Massachusetts Institute of Technology, Cambridge",
+      "Dongda Zhang | The University of Manchester, United Kingdom",
+      "Jie Li | The University of Manchester, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Chao Liu",
+        "affiliation": "The University of Manchester, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yingjie Ma",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "Dongda Zhang",
+        "affiliation": "The University of Manchester, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Jie Li",
+        "affiliation": "The University of Manchester, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61x",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666319"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666459",
+    "paper_endpoint": "Paper/666459",
+    "paper_id": "666459",
+    "topic": "Learning to Select the Best Optimization Solution Strategy: An Algorithm Selection Approach",
+    "title": "Learning to Select the Best Optimization Solution Strategy: An Algorithm Selection Approach",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Decision-making optimization problems arise in a wide range of applications in chemical engineering, ranging from the molecular to the enterprise scale [1,2]. Many methods have been developed for the solution of broad classes of optimization problems, such as Mixed Integer Linear (MILP), Nonlinear (NLP), and Mixed Integer Nonlinear (MINLP) Programming problems [3-5]. Despite these significant advances, not a single algorithm outperforms all others for all problems. Therefore, given an optimization problem, it is challenging to determine a–priori which solution strategy, i.e., solver, solves the problem in the minimum computational time or finds a high-quality feasible solution for a given computational budget. This problem can be cast as an algorithm selection problem [6] in which given an optimization problem P and a set of algorithms {α 1 ,...,α n } one must find the algorithm α * that optimizes some performance function m (such as the solution time). This is a black box optimization problem since the solution time for a given problem is not known a-priory. Algorithm selection methods have been applied to optimization problems, using Machine Learning (ML) to either develop a surrogate model of the performance function or approximate the solution of the algorithm selection problem itself [6-9]. These methods have used a handcrafted vectorial feature representation of the optimization problem (such as the number of variables and constraints, numerical conditioning indexes, etc.), which becomes the input to the machine learning model. This approach aggregates information about the problem and does not consider the exact structural and functional coupling among the variables and the constraints of a problem. In this paper, we propose a new framework for selecting the best solution strategy for generic optimization problems while considering the detailed structural and functional interaction between the variables and the constraints of the problem. Specifically, we exploit geometric deep learning and pose the algorithm selection problem as a graph classification task. We represent an optimization problem as a graph [10,11], where the nodes represent variables and constraints, and the edges capture the presence of a variable in a constraint. This representation captures the structural coupling among the variables and the constraints through the adjacency matrix A. We extend this representation by incorporating a set of features for every node and edge in the graph, which capture key information about the variables and constraints, such as variable domain and convexity. Concatenation of all the features forms a feature matrix F, which captures the functional coupling among the variables and the constraints. Given this representation, we use graph neural networks [12] to develop a graph classifier C, where the inputs are the feature and adjacency matrices (A, F) and the output is a vector p, where p i is the probability that algorithm α i solves the problem in the minimum CPU time. Finally, we show how the classifiers obtained by the proposed approach can be integrated with current state-of-the-art optimization technology to enable full automation of the proposed approach. For illustration, we use the proposed framework to learn a classifier that predicts the best solution strategy for convex MINLP problems. We use benchmark MINLPs for learning a graph classifier, which determines if a convex MINLP should be solved by the branch and bound or the outer approximation algorithm as implemented in BONMIN 1.8.8 [13]. The results show that the classifier has 90% accuracy on the testing set. References: [1]. Daoutidis, P., Lee, J.H., Harjunkoski, I., Skogestad, S., Baldea, M. and Georgakis, C., 2018. Integrating operations and control: A perspective and roadmap for future research. Computers & Chemical Engineering , 115 , pp.179-184. [2]. Pistikopoulos, E.N., Barbosa-Povoa, A., Lee, J.H., Misener, R., Mitsos, A., Reklaitis, G.V., Venkatasubramanian, V., You, F. and Gani, R., 2021. Process systems engineering–the generation next?. Computers & Chemical Engineering , 147 , p.107252. [3]. Wächter, A. and Biegler, L.T., 2006. On the implementation of an interior-point filter line-search algorithm for large-scale nonlinear programming. Mathematical programming , 106 , pp.25-57. [4]. Misener, R. and Floudas, C.A., 2014. ANTIGONE: algorithms for continuous/integer global optimization of nonlinear equations. Journal of Global Optimization , 59 (2-3), pp.503-526. [5]. Tawarmalani, M. and Sahinidis, N.V., 2005. A polyhedral branch-and-cut approach to global optimization. Mathematical programming , 103 (2), pp.225-249. [6]. Kerschke, P., Hoos, H.H., Neumann, F. and Trautmann, H., 2019. Automated algorithm selection: Survey and perspectives . Evolutionary computation , 27(1), pp.3-45. [7]. Hutter, F., Xu, L., Hoos, H.H. and Leyton-Brown, K., 2014. Algorithm runtime prediction: Methods & evaluation. Artificial Intelligence , 206, pp.79-111. [8]. Kruber, M., Lübbecke, M.E. and Parmentier, A., 2017. Learning when to use a decomposition. In Integration of AI and OR Techniques in Constraint Programming: 14th International Conference, CPAIOR 2017, Padua, Italy, June 5-8, 2017, Proceedings 14 (pp. 202-210). Springer International Publishing. [9]. Bonami, P., Lodi, A. and Zarpellon, G., 2022. A classifier to decide on the linearization of mixed-integer quadratic problems in CPLEX. Operations Research , 70(6), pp.3303-3320. [10]. A llman, A., Tang, W. and Daoutidis, P., 2019. DeCODe: a community-based algorithm for generating high-quality decompositions of optimization problems. Optimization and Engineering , 20 , pp.1067-1084. [11]. Mitrai, I., Tang, W. and Daoutidis, P., 2022. Stochastic blockmodeling for learning the structure of optimization problems. AIChE Journal , 68 (6), p.e17415. [12]. Kipf, T.N. and Welling, M., 2016. Semi-supervised classification with graph convolutional networks. arXiv preprint arXiv:1609.02907. [13]. Bonami, P., Biegler, L.T., Conn, A.R., Cornuéjols, G., Grossmann, I.E., Laird, C.D., Lee, J., Lodi, A., Margot, F., Sawaya, N. and Wächter, A., 2008. An algorithmic framework for convex mixed integer nonlinear programs. Discrete optimization , 5 (2), pp.186-204.",
+    "presenting_author": "Ilias Mitrai | The University of Texas at Austin, TX",
+    "authors": [
+      "Ilias Mitrai | The University of Texas at Austin, TX",
+      "Prodromos Daoutidis | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ilias Mitrai",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "61y",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666459"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668271",
+    "paper_endpoint": "Paper/668271",
+    "paper_id": "668271",
+    "topic": "Stochastic Community Detection: Novel Solution Approach and Application to Sustainable Process Operations",
+    "title": "Stochastic Community Detection: Novel Solution Approach and Application to Sustainable Process Operations",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Network theoretic algorithms, such as community detection, have been demonstrated to be powerful tools in accelerating the solution of challenging decision making problems by identifying structure within the underlying optimization formulation to enable exploitation by decomposition solution methods [1] or dimensionality reduction [2]. While these methods are effective when the appropriate underlying graph structure of the optimization problem is known and fixed, many decision making problems, particularly those relevant to process operations and control, require the repeated solution of a problem whose parameters and models are either uncertain or varying in time. This uncertainty/intermittency can manifest in network structures that are also uncertain or time varying. When this occurs, it can be beneficial to identify network structure that occurs robustly over a distribution of graphs (i.e. with different edge weights or node connectivity), rather than one that occurs in a single deterministic network, such that the community detection algorithm doesn’t n ed to be run each time operation is to be optimized. However, while several well-known, greedy algorithms exist to solve the combinatorically-scaling deterministic community detection problem [3], these algorithms don’t easily extend to the stochastic case. In this work, we propose a novel approach for efficiently solving the stochastic community detection problem. This approach applies a common strategy for stochastic programming problems: using the sample average approximation, introducing copy variables (corresponding to the graph partitioning chosen) for each scenario, and adding non-anticipativity constraints which connect copy variables. This reformulation gives a stochastic programming problem amenable to solution by column generation [4]. Importantly, each independent column generation subproblem is simply the deterministic community detection problem with modularity objective augmented by linear Lagrangean terms. This enables the subproblems to be solved in parallel by efficient solution algorithms such as the Louvain algorithm, with only small modifications required, resulting in a fast, scalable approach to solving the stochastic community detection problem. To demonstrate the utility of the proposed approach, we consider our team’s recent work in the many-objective operation of a green ammonia production facility [5], which demonstrated that the correlation of cost, emissions, water usage, and safety objectives varied as power cost and emissions profiles evolved in time. In particular, we consider a stochastic objective correlation graph with edge weight distributions generated from various 48-hour operation horizons over a month-long period. We identify groupings of objectives that are optimal with respect to multiple stochastic metrics, including expected value and conditional value at risk, and discuss how this relates to solving the original optimal scheduling problem. We also demonstrate the importance of identifying communities from the stochastic graph, rather than various deterministic graphs. [1] Allman, A., Tang, W., Daoutidis, P. DeCODe: a community-based algorithm for generating high-quality decompositions of optimization problems. Optim. Eng. (20), 2019, pp. 1067-1084. [2] Russell, J.M., Allman, A. Sustainable decision making for chemical process systems via dimen1 sionality reduction of many objective problems. AIChE J. (69), 2023, e17962. [3] Blondel, V.D., Guillaume, J.-L. ,Lambiotte, R., Lefebvre, E. Fast unfolding of communities in large networks. J. Stat. Mech. Theor. Exp. (10), 2008, P10008. [4] Lubbecke, M.E., Desrosiers, J. Selected topics in column generation. Op. Res. (53), 2005, pp. 2-1038. [5] Allman, A., Russell, J.M. Dynamic objective correlation in many-objective optimization problems: A wind-powered ammonia case study. FOCAPO-CPC, 2023.",
+    "presenting_author": "Andrew Allman | University of Michigan, Ann Arbor",
+    "authors": [
+      "Hongxuan Wang | University of Michigan, Ann Arbor",
+      "Andrew Allman | University of Michigan, Ann Arbor"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hongxuan Wang",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      },
+      {
+        "name": "Andrew Allman",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "61z",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668271"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669500",
+    "paper_endpoint": "Paper/669500",
+    "paper_id": "669500",
+    "topic": "Adaptive Real-Time Exploration and Optimization for Safety-Critical Industrial Systems: The Arteo Algorithm",
+    "title": "Adaptive Real-Time Exploration and Optimization for Safety-Critical Industrial Systems: The Arteo Algorithm",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Real-time optimization plays a key role in improving energy efficiency and the operational effectiveness of industrial systems. However, due to the complexity of many industrial systems, their characteristics are often unknown, or change with time, which imposes a significant challenge to traditional model-based real-time optimization approaches [1]. To increase confidence in sequential optimization under uncertainty, a typical solution is to collect process data from different operating points through exploration, and then use machine learning models to capture the unknown plant characteristics. Considering the cost of exploration such as not delivering the expected demand from the system during exploration, there is a trade-off between exploring more and having more accurate estimations or exploiting collected observations and optimizing the obtained function. This trade-off is well-studied in the literature and multi-armed bandit approaches are suggested as a solution for optimally balancing exploration and exploitation [2]. In safety-critical systems, it is not possible to do exploration in some parts of the decision space due to safety concerns, which are typically modelled as safety constraints in optimization. Many industrial systems fall under the safety-critical systems due to their risk of danger to equipment, leading to substantial economic loss, or causing severe environmental damage. Therefore, if we want to approximate the unknown characteristics and optimize a process in this plant, we need to utilize safe exploration algorithms which allow only the exploration of feasible decision points by enforcing safety constraints. The safe exploration problem is well-studied in the literature. In [3], the authors have introduced the SafeOpt algorithm and showed it is possible that safely optimize a function with an unknown functional form by creating and expanding a safe decision set through safe exploration under certain assumptions. They also provided the safety guarantee of SafeOpt by using the confidence bounds construction method of [4]. These safe exploration algorithms are applied to many control and reinforcement learning problems and proved their success in those domains [5, 6]. These algorithms either require an exploration phase or apply a trade-off strategy between optimal decisions and exploration. However, many industrial systems cannot afford an exclusive exploration phase or require following optimization goals of the system even in the explored points. For instance, any deviation from target satisfaction in an industrial process may cause high costs to the plant or damage the reputation of the responsible party. Thus, there is a need to consider the exploration in an adaptive manner in accordance with the requirements of the environment and this aspect is not covered by existing safe exploration algorithms. Motivated by above background, this work proposes a novel safe Adaptive Real-Time Exploration and Optimization (ARTEO) algorithm, where we cast multi-armed bandits as a mathematical programming problem subject to safety constraints for the optimization of safety-critical systems. In ARTEO, we model the unknown characteristics of the system using Gaussian processes (GP) regression and utilize the covariance function of GPs to quantify uncertainty to ensure satisfaction of the safety constraints with high probability. We establish the safety of ARTEO by constructing confidence bounds as in [4]. We incorporate the uncertainty into the utility function as a contribution to encourage the exploration at points with high uncertainty while continuing to satisfy the optimization goals of the system. The size of this contribution is adaptively controlled by a hyperparameter in accordance with the requirements of the environment. Additionally, the GP models are updated online by incorporating new useful observations to capture the changing process characteristics. In experiment, we demonstrate the implementation of ARTEO for the power management problem of an industrial refrigeration system. The system includes 5 screw compressors in a parallel configuration, including one small-sized, one medium-sized and three large-sized compressors. The characteristics of load and power consumption relationship are unknown for individual compressors, which is expected to be learned by the GP models. The goal of our optimizer is to achieve the total load target whenever possible, while ensuring that a maximum total power constraint, which is an important safety requirement, is not exceeded. The operating range of each compressor is constrained by a minimum and maximum load. The algorithm starts with initial safe seeds. Fig. 1 illustrates the expected and achieved production loads, as well as total power consumption over time. It can be clearly seen that the expected production load is satisfied unless: (1) it is higher than what compressors can achieve without crossing the safety threshold, (2) it requires compressors to operate lower than their minimum operating points. Hence, the proposed ARTEO algorithm successfully minimizes the power consumption while tracking the desired cooling load within the operational and safety constraints. Even though the process starts with very limited information about the system, online learning provides comparable performance to a solution with exact knowledge of the environment. References [1] J. O. Trierweiler, “Real-time optimization of industrial processes,” in Encyclopedia of Systems and Control. Springer, 2021, pp. 1827–1836. [2] S. Bubeck, R. Munos, G. Stoltz, and C. Szepesvari, “Online optimization in x-armed bandits,” Advances in Neural Information Processing Systems, pp. 201–208, 2009. [3] Sui, Yanan, et al. \"Safe exploration for optimization with Gaussian processes,\" International Conference on Machine Learning. pp. 997-1005, 2015. [4] Srinivas N, Krause A, Kakade S M, et al. \" Gaussian process optimization in the bandit setting: No regret and experimental design,\" International Conference on Machine Learning, 2010. [5] Berkenkamp, Felix, Angela P. Schoellig, and Andreas Krause. \"Safe controller optimization for quadrotors with Gaussian processes,\" 2016 IEEE international conference on robotics and automation. pp.491-496, May 2016. [6] Berkenkamp, Felix, et al. \"Safe model-based reinforcement learning with stability guarantees.\" Advances in Neural Information Processing Systems, 2017.",
+    "presenting_author": "Mehmet Mercangöz | ABB, London, United Kingdom",
+    "authors": [
+      "Buse Sibel Korkmaz | Imperial College London, United Kingdom",
+      "Tong Liu | Imperial College London, United Kingdom",
+      "Marta Zagorowska | ETH Zurich, Switzerland",
+      "Mehmet Mercangöz | ABB, London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Buse Sibel Korkmaz",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Tong Liu",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Marta Zagorowska",
+        "affiliation": "ETH Zurich, Switzerland",
+        "designation": "Author"
+      },
+      {
+        "name": "Mehmet Mercangöz",
+        "affiliation": "ABB, London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "61aa",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669500"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670816",
+    "paper_endpoint": "Paper/670816",
+    "paper_id": "670816",
+    "topic": "A Comparison of Nonlinear Optimal Control Trajectory Sensitivity Formulations",
+    "title": "A Comparison of Nonlinear Optimal Control Trajectory Sensitivity Formulations",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "When using gradient-based numerical optimization methods, the cost function, the constraint functions, and their respective gradient information must be calculated at each iteration. The gradient information of a Non-Linear Programming (NLP) Optimal Control Problem (OCP) can be evaluated by the trajectory sensitivity method. This work is a study of the trajectory sensitivity method comparing three approaches for calculating the OCP gradient under a uniform time grid. A uniform time grid is the most commonly used time grid which requires switching times of all multiple inputs to occur synchronously as opposed to an emerging non-uniform time grid in which the input changes occur asynchronously. The first two approaches consider the control policy switching time (Approach 1) or the length of the time period (Approach 2) of the original OCP as the decision variables respectively. The time period OCP formulation may be transformed by a time scaling transformation named Control Parameterization Enhancing Transform (CPET) technique to evaluate the gradient of transformed OCP (Approach 3). Studies addressing Approach 1 and Approach 3 have been reported in the literature and this work involves slight improvements and supplements to Approach 1 and 3: The sensitivity equation of Approach 1 is re-derived in a slightly more rigorous and general form. With regard to Approach 3, this work presents an equivalently time scaling transformation and provides sensitivity and gradient formulae for the converted problem. The sensitivity equation of Approach 2 under the uniform time grid regarding time stage length as decision variable is derived from that under the non-uniform time grid and Approach 2 will be compared to Approach 1 and 3. Results show that employing the CPET technique with trajectory sensitivity method (Approach 3) is able to circumvent the numerical difficulties shown in Approach 1 and 2.",
+    "presenting_author": "Edward Gatzke | University of South Carolina, Columbia, SC",
+    "authors": [
+      "Hainan Wang | University of South Carolina, Columbia, SC",
+      "Edward Gatzke | University of South Carolina, Columbia, SC"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hainan Wang",
+        "affiliation": "University of South Carolina, Columbia, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Edward Gatzke",
+        "affiliation": "University of South Carolina, Columbia, SC",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "61ab",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670816"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/671426",
+    "paper_endpoint": "Paper/671426",
+    "paper_id": "671426",
+    "topic": "Discrete Nonlinear Optimization: Modeling and Solutions Via Novel Hardware and Decomposition Algorithms",
+    "title": "Discrete Nonlinear Optimization: Modeling and Solutions Via Novel Hardware and Decomposition Algorithms",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52090",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "61",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Optimization problems arise in different areas of Logistics, Manufacturing, and Process Systems Engineering (PSE), and Energy Systems Engineering, and solving these problems efficiently is essential for addressing important industrial applications. Quantum computers have the potential to efficiently solve challenging nonlinear and combinatorial problems. However, available quantum computers cannot efficiently address practical problems; they are limited to small sizes and do not handle constraints well. In this talk and tutorial, we present the modeling strategy of problems as Mixed-Integer Nonlinear Programs (MINLP), explain some of the approaches that quantum computers use to solve Quadratic Unconstrained Binary Optimization (QUBO) problems, and propose hybrid classical-quantum algorithms to solve a class of MINLP, mixed-binary quadratically constrained programs (MIQCP) and apply decomposition strategies to break them down into QUBO subproblems that can be solved by quantum computers. We will first consider a suite a software designed to automatically transform MINLP problems, usually used by the PSE and Operations Research (OR) communities to model optimization problems, into the QUBO formalism. The code is open-source and its performance surpasses currently available commercial tools. https://github.com/psrenergy/ToQUBO.jl We will then go into one of the proposed decomposition approaches, whose implementation is also openly available and which in terms of performance surpasses well known MIP solvers in addressing archetypical problems such as the max-clique problem. Details of that work can be found https://arxiv.org/abs/2207.13630. This approach is based on a copositve optimization reformulation of the optimization problems, integrated within a cutting plane algorithm. The overall algorithm provides optimality convergence guarantees, yet it is robust to suboptimal solutions of the QUBO problems, which are usually provided by the hardware-based approaches (e.g., Quantum Annealing) to QUBO. We will also cover different approaches to solving Quadratic Unconstrained Binary Optimization (QUBO) problems through unconventional computation methods, including but not limited to Quantum algorithms, and discuss how these approaches lead to algorithms able to outperform classical solution approaches. We complete this picture with analysis code provided to compare these methods and help in the challenging solver hyperparameter optimization task. https://github.com/usra-riacs/stochastic-benchmark",
+    "presenting_author": "Pedro Maciel Xavier | Purdue University, West Lafayette, IN",
+    "authors": [
+      "David E. Bernal Neira | NASA Ames Research Center, Moffett field, CA",
+      "Pedro Maciel Xavier | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "David E. Bernal Neira",
+        "affiliation": "NASA Ames Research Center, Moffett field, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Pedro Maciel Xavier",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "61ac",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/671426"
+  }
+]

@@ -1,0 +1,266 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper331313.html",
+    "paper_id": "331313",
+    "paper_number": "555a",
+    "topic": "Offset-Free Model Predictive Control of a Heat Pump",
+    "title": "Offset-Free Model Predictive Control of a Heat Pump",
+    "date_time": "Wednesday, November 6, 2013: 3:15 PM | 3:15 PM",
+    "session_id": "26269",
+    "session_title": "Modeling and Control of Energy Systems II",
+    "session_number": "555",
+    "authors_text": "Matt Wallace, Prashant Mhaskar, John House and Tim Salsbury",
+    "abstract": "The comfort level within the indoor environment of a building is maintained by mechanical and electrical systems classified as heating, ventilating and air-conditioning (HVAC) systems. In many residential and industrial settings this conditioning is provided through the heating and cooling mechanisms of a heat pump. This specific HVAC system is bi-modal in nature, in that it can either absorb/release heat depending on it's mode of operation, enabling any necessary heating/cooling demands to be satisfied through a single unit. The heat pump cooling mechanism is identical to that provided by a Vapor Compression Cycle due to these units sharing the same mechanical components and layout and is the focus of our current work. The most common realization of a heat pump consists of four components: a compressor, outdoor heat exchanger, expansion valve, and an indoor heat exchanger. In the cooling mode, conditioning performance is tied directly to the tracking performance of the indoor coil's supply air temperature , while safety-related issues center upon the above-zero regulation of the refrigerant superheat temperature at the outlet of the indoor coil. Multiple actuators are available for manipulation to satisfy these control objectives, however one caveat in their operation is the vast range which exists amongst each of their individual energy demands. This includes the most energy intensive actuator, the compressor, drawing electricity to regulate it's motor frequency which directly affects the inlet/outlet refrigerant compression ratio. Less energy intensive in nature are the fan drives which are used in setting the air flow rate over both the indoor and outdoor coils. The final actuator as well as the least energy intensive one, is the expansion valve. Through manipulating the valve flow area, conditioning ability of the indoor coil is directly affected (variation to refrigerant vapor/liquid fraction, refrigerant mass flow rate). On top of the large energy discrepancy amongst actuators, a high level of interaction and subsequent nonlinearities persist within the heat pump dynamics, causing single-input-single-output (SISO) control approaches (classical PI/PID or decoupled versions of it) to be far from superior when one must consider satisfying the interconnected control objectives described previously. A more suitable control approach, in terms of effectively accounting for such system dynamics and control objectives, is that of model predictive control (MPC). Model predictive control is designed to handle these shortfalls in a manner which models system interactions (both known and unknown), uses specific input/output constraints and can incorporate tiered objectives such as tracking and energy use through a single multi-term objective function. Here, an MPC strategy is developed which manipulates the set-point of an internal heat pump superheat PI controller while also manipulating the ramp height used in adjusting the compressor speed. An optimization problem is formulated within the MPC confines to minimize energy usage while ensuring other tracking and system objectives/constraints are satisfied. A linear supply air temperature model is used for predictions, while an offset-free mechanism in the form of an augmented model and state estimator is also incorporated so as to ensure predictions and plant converge. A detailed internal heat pump interfaced with two additional software clients, one housing the control design and the other providing an accurate medium for a building model, are used for evaluating the performance of this control approach. This will include closed-loop results for a practical test environment which considers realistic variations in both the physical setting as well as in the measuring sensors.",
+    "presenting_author": "Matt Wallace | McMaster University, Hamilton, ON",
+    "authors": [
+      "Matt Wallace | McMaster University, Hamilton, ON",
+      "Prashant Mhaskar | McMaster University, Hamilton, ON",
+      "John House | John House Consulting Services, Montreal, QC",
+      "Timothy Salsbury | Johnson Controls, Milwaukee, WI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Matt Wallace",
+        "affiliation": "McMaster University, Hamilton, ON",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, ON",
+        "designation": "Author"
+      },
+      {
+        "name": "John House",
+        "affiliation": "John House Consulting Services, Montreal, QC",
+        "designation": "Author"
+      },
+      {
+        "name": "Timothy Salsbury",
+        "affiliation": "Johnson Controls, Milwaukee, WI",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "sortable_time": "2013-11-06_15:15:00_15:35:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/331313"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper334685.html",
+    "paper_id": "334685",
+    "paper_number": "555b",
+    "topic": "Community-Scale Residential Air Conditioning Control for Effective Grid Management",
+    "title": "Community-Scale Residential Air Conditioning Control for Effective Grid Management",
+    "date_time": "Wednesday, November 6, 2013: 3:15 PM | 3:35 PM",
+    "session_id": "26269",
+    "session_title": "Modeling and Control of Energy Systems II",
+    "session_number": "555",
+    "authors_text": "Wesley Cole, Joshua D. Rhodes, William Gorman, Michael E. Webber and Thomas F. Edgar",
+    "abstract": "As of 2011, there were over 132 million housing units in the United States [1], and of those 87% had air conditioning units [2]. In the southern United States, the percentage of homes with air conditioning approaches 100% [2]. These air conditioning units exacerbate peak electricity demand issues, straining the grid [3]. For example, during the summer peak in 2011 in the Electric Reliability Council of Texas (ERCOT) grid, over 50% of the total electrical load was from residential homes [4], primarily driven by their air conditioning systems. The residential peak summer demand increases by almost 400% from shoulder seasons (e.g., March, October). Because of the wide range in power demand due to air conditioners, the residential sector will be an important contributor in future grid management. Using energy audits, homeowner survey data, web map images, and actual electricity meter data, we have created and tested 60 unique residential home energy models in EnergyPlus, a building energy simulation tool, for actual homes in Austin, Texas. Each of these home models includes geometries, constructions (e.g., insulation, windows), occupancy schedules, and orientations specific to the home from which it was modeled. Each home’s electricity meter data from 2011-2012 were used to validate the home models, which across all the homes had an average error of 5%. This work expands our previous work ([5], [6]) that developed an automated model reduction technique for converting an EnergyPlus residential home model into a linear, discrete-time dynamic model. This model uses inputs of weather, thermostat set point, and air conditioning energy consumption to accurately predict air conditioning energy consumption up to 24 hours into the future. The model was used in a model predictive controller (MPC) that minimized energy costs for a single home in the face of real-time electricity prices. Combining the 60 residential home models with the reduced-order modeling technique allows us to simulate and control a theoretical community and evaluate the demand response potential of that community. We use the 60 residential home models to create a 900-home community, which is represented by 900 unique reduced-order linear dynamic models. This community is built such that it is representative of communities in hot and dry climates such as Austin. In this analysis, we present the results of using MPC to control residential home air conditioning units (via the homes’ thermostats) in this simulated community in order to mitigate peak demand issues. We consider real-time electricity settlement point (wholesale market) prices as an indicator of grid strain. Centralized and decentralized model predictive control methods are compared, including their effectiveness and computational requirements. We discuss the effects of implementing residential air conditioning control across an entire utility and the impacts it can have on peak demand. Lastly, we consider some simple rules that were learned from the MPC that can be implemented across the different households in order to approach the optimal peak reduction scenario without requiring any control or optimization schemes. References: [1] US Census Bureau, “USA QuickFacts from the US Census Bureau,” USA QuickFacts from the US Census Bureau , 2013. [Online]. Available: http://quickfacts.census.gov/qfd/states/00000.html. [Accessed: 01-Feb-2013]. [2] B. McNary and C. Berry, “How Americans are using energy today,” presented at the 2012 ACEEE Summer Study on Energy Efficiency in Buildings, Pacific Grove, CA, 2012, vol. 1, pp. 204–215. [3] J. D. Rhodes, B. Stephens, and M. E. Webber, “Using energy audits to investigate the impacts of common air-conditioning design and installation issues on peak power demand and energy consumption in Austin, Texas,” Energy Build. , vol. 43, no. 11, pp. 3271–3278, Nov. 2011. [4] P. Wattles, “ERCOT Demand Response Overview & Status Report,” AMIT-DSWG Workshop “AMI”s Next Frontier: Demand Response’ , 30-Aug-2011. [Online]. Available: http://www.ercot.com/content/meetings/dswg/keydocs/2011/0830/3_ERCOT_presentation_workshop_083011.pdf. [Accessed: 29-Mar-2013]. [5] W. J. Cole, E. T. Hale, and T. F. Edgar, “Building energy model reduction for model predictive control using OpenStudio,” in Proceedings of the 2013 American Control Conference , Washington, D.C., 2013. [6] W. J. Cole, E. T. Hale, and T. F. Edgar, “Reduced-order residential home modeling for model predictive control,” Energy Build. , under review 2013.",
+    "presenting_author": "Wesley Cole | University of Texas at Austin, TX",
+    "authors": [
+      "Wesley Cole | University of Texas at Austin, TX",
+      "Joshua D. Rhodes | University of Texas at Austin, TX",
+      "William Gorman | University of Texas at Austin, TX",
+      "Michael Webber | The University of Texas at Austin, TX",
+      "Thomas F. Edgar | The University of Texas at Austin, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Wesley Cole",
+        "affiliation": "University of Texas at Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joshua D. Rhodes",
+        "affiliation": "University of Texas at Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "William Gorman",
+        "affiliation": "University of Texas at Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Webber",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Thomas F. Edgar",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "sortable_time": "2013-11-06_15:35:00_15:55:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/334685"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper338963.html",
+    "paper_id": "338963",
+    "paper_number": "555c",
+    "topic": "Microgrid Power Management Using Stochastic Real-Time Optimization and Control",
+    "title": "Microgrid Power Management Using Stochastic Real-Time Optimization and Control",
+    "date_time": "Wednesday, November 6, 2013: 3:15 PM | 3:55 PM",
+    "session_id": "26269",
+    "session_title": "Modeling and Control of Energy Systems II",
+    "session_number": "555",
+    "authors_text": "W. Alex Marvin, Milana Trifkovic, Mehdi Sheikhzadeh and Prodromos Daoutidis",
+    "abstract": "Pressing environmental issues, security of energy supply, and energy safety concerns drive research and development towards renewable energy sources (RES) worldwide. A key attribute of RES, such as wind and solar resources, is intermittency (uncertain and not dispatchable). One strategy for coping with the intermittency is to combine different RES with energy storage. Power management of such systems is an active field of research. This study deals with the development of an optimization-based power management tool for a 10kW energy system built in Lambton College, Sarnia, ON. The system consists of photovoltaic arrays, wind turbine, electrolyzers, hydrogen storage tanks, and fuel cells. Our approach builds off our previous work, which developed a comprehensive dynamic model and local controllers for each component. 1 In this study, we investigate the effectiveness of a stochastic real-time optimization framework as a supervisory controller. A bilateral communication between the high-level and the low-level control layer enables components’ current states updates and minimizes the effect of model mismatch between two layers. The supervisory controller framework incorporates wind, solar and demand forecasts to determine optimal set-points and operating schedules for this multi-component system. Forecasts of these stochastic time series are handled as a scenario tree generated using auto-regressive moving average models. We compare the performance of this framework with our previously developed decision based supervisory power controller (a reactive logic-tree approach that neglects forecasts) 1 , as well as with a deterministic real-time optimization approach 2 . We demonstrate that the inclusion of forecasts can result in significant cost and energy savings. 1. M. Trifkovic, M. Sheikhzadeh, K. Nigim, P. Daoutidis. “Modeling and Control of a Renewable Hybrid Energy System with Hydrogen Storage,” IEEE Transactions on Control Systems Technology , 2013, doi: 10.1109/TCST.2013.2248156. 2. M. Trifkovic, W.A. Marvin, M. Sheikhzadeh, P. Daoutidis. “Dynamic Real-time Optimization and Control of a Hybrid Energy System,” In proceedings of the 12 th European Control Conference , Zurich, Switzerland, July 17-19, 2013.",
+    "presenting_author": "W. Alex Marvin | University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "W. Alex Marvin | University of Minnesota, Minneapolis, MN",
+      "Milana Trifkovic | University of Calgary, AB",
+      "Mehdi Sheikhzadeh | Lambton College, Sarnia, Canada",
+      "Prodromos Daoutidis | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "W. Alex Marvin",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Milana Trifkovic",
+        "affiliation": "University of Calgary, AB",
+        "designation": "Author"
+      },
+      {
+        "name": "Mehdi Sheikhzadeh",
+        "affiliation": "Lambton College, Sarnia, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "sortable_time": "2013-11-06_15:55:00_16:15:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/338963"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper322548.html",
+    "paper_id": "322548",
+    "paper_number": "555d",
+    "topic": "Pseudo-Distributed Feed Configurations for Catalytic Plate Microchannel Reactors",
+    "title": "Pseudo-Distributed Feed Configurations for Catalytic Plate Microchannel Reactors",
+    "date_time": "Wednesday, November 6, 2013: 3:15 PM | 4:15 PM",
+    "session_id": "26269",
+    "session_title": "Modeling and Control of Energy Systems II",
+    "session_number": "555",
+    "authors_text": "Richard Pattison, Forrest Estep and Michael Baldea",
+    "abstract": "Pseudo-Distributed Feed Configurations for Catalytic Plate Microchannel Reactors Richard Pattison and Forrest Estep and Michael Baldea Department of Chemical Engineering The University of Texas at Austin, 1 University Station C0400, Austin, TX 78712 email: mbaldea@che.utexas.edu Catalytic plate microchannel reactors (CPRs) are one of the most successful implementations of process intensification. They have been recognized as important contributors in the path towards monetizing stranded and associated natural gas resources through small scale gas-to-liquids (GTL) processing at the well head [1-2]. Microchannel architectures minimize transport limitations and result in devices with high surface-area-to-volume ratios; typical CPR dimensions are an order of magnitude smaller than those of conventional equipment with comparable processing capacity [3]. Despite their economic benefits, microchannel reactors pose significant control and operational challenges. Steam methane reforming, a very likely first step in the GTL process, is highly endothermic. When carried out in CPRs, reforming is supported by the exothermic combustion of methane, with the two reactions occurring in alternate channels. Synchronizing heat generation and consumption along the reactor is particularly challenging and, if not properly addressed, could result in temperature hot spots that can compromise the integrity of the reactor [4-6]. In conventional reactors, these issues are typically addressed by judiciously distributing the feed streams along the reactor to modulate the rate of heat generation and consumption. Physical considerations (including the lack of availability of distributed actuators at the required small dimensions) limit the application of this strategy to microchannel reactor stacks. In this paper, we propose a novel approach for controlling the axial temperature profiles in microchannel reactors. Specifically, we propose using a segmented catalyst macromorphology, whereby the catalyst coating in the microchannels alternates between catalytically active and inactive (“blank”) segments. We introduce an optimization-based strategy for simultaneously selecting a parameterized temperature profile that guarantees high conversion and reduced maximum temperatures, and the optimal locations, lengths, and number of segments along the reactor length that ensures close tracking of the optimal temperature profile. We demonstrate the effectiveness of the proposed optimization approach using a detailed 2-dimensional autothermal steam methane reforming CPR model. Compared to a base-case reactor with non-segmented catalyst geometry, the resulting reactor exhibits less variability in the axial temperature profile, a significant reduction in the maximum steady state reactor temperature, and higher conversions in both the reforming and combustion channels. To further analyze the results, we demonstrate that the temperature and conversion profiles obtained using the optimal segmented catalyst morphology are very similar to those obtained in a hypothetical reactor with multiple, axially distributed feed locations. Furthermore, the operation of the reactor demonstrates improved dynamic robustness compared to the base-case when subject to composition and flow rate disturbances in the reforming channel. A feedback-feedforward linearizing controller is implemented that adjusts the flow rate to the combustion channel to compensate for these fluctuations. The maximum reactor temperature throughout a disturbance sequence is significantly reduced, and temperature variability along the reactor is minimal. References [1] Ogugbue, C.; Chukwu, G.; Khataniar, S. Economics of GTL technology for gas utilization. Hydrocarbon Economics and Evaluation Symposium, Dallas, TX , 2007 . [2] Hall, K.R. A new gas to liquids (GTL) or gas to ethylene (GTE) technology. Catalysis today 2005 , 106 , 243-246. [3] Zanfir, M.; Gavriilidis, A. Catalytic combustion assisted methane steam reforming in a catalytic plat reactor. Chem. Eng. Sci. 2003, 58 , 3947-3960. [4] Baldea, M.; Daoutidis, P. Dynamics and Control of Autothermal Reactors for the Production of Hydrogen. Chem. Eng. Sci. 2007, 62 , 3218-3230. [5] Zanfir, M.; Gavriilidis, A. Influence of flow arrangement in catalytic plate reactors for methane steam reforming. Chem. Eng. Res. & Des. 2004, 82 , 252-258. [6] Vaccaro, S.; Malangone, L.; Ciambelli, P. Modelling of a catalytic micro-reactor coupling endothermic methane reforming and combustion. Int. J. of Chem. Reactor Eng. 2010 , 8 .",
+    "presenting_author": "Richard Pattison | University of Texas at Austin, TX",
+    "authors": [
+      "Richard Pattison | University of Texas at Austin, TX",
+      "Forrest Estep | University of Texas, Austin, TX",
+      "Michael Baldea | The University of Texas at Austin, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Richard Pattison",
+        "affiliation": "University of Texas at Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Forrest Estep",
+        "affiliation": "University of Texas, Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Baldea",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "sortable_time": "2013-11-06_16:15:00_16:35:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/322548"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper312360.html",
+    "paper_id": "312360",
+    "paper_number": "555e",
+    "topic": "Simulation and Control of Porosity in a Three-Dimensional Thin-Film Solar Cell",
+    "title": "Simulation and Control of Porosity in a Three-Dimensional Thin-Film Solar Cell",
+    "date_time": "Wednesday, November 6, 2013: 3:15 PM | 4:35 PM",
+    "session_id": "26269",
+    "session_title": "Modeling and Control of Energy Systems II",
+    "session_number": "555",
+    "authors_text": "Jianqiao Huang, Gerassimos Orkoulas and Panagiotis D. Christofides",
+    "abstract": "Solar energy is currently one of the most promising alternative energy sources, and thin-film silicon solar cells are currently the most widely used solar cell systems. Presently, the main obstacles for a wide use of solar power are the relatively high costs and the limited conversion efficiency of the solar energy. Optimizing the light trapping process is one of the major aspects to improve the solar cell conversion efficiency and is one of the central research aspects nowadays. Specifically, research has indicated that porous silicon can reduce solar cell optical losses from 37% to 8% and increase a short-circuit current by 25% and open circuit voltage by 20 mV. Thus, it is very important to develop a systematic way to simulate and control this porous silicon layer deposition process and improve the solar cell conversion efficiency. Despite its importance, this problem has not attracted much attention. This work focuses on the simulation and control of a three-dimensional (3D) porous silicon thin-film deposition process that is used in the manufacture of thin-film solar cell systems. Initially, a solid-by-solid 3D kinetic Monte Carlo (kMC) model is introduced to simulate the porous silicon thin-film deposition process, and the simulation parameters are tuned to generate porous silicon films with porosity values that match available experimental data. A closed-form differential equation model then is introduced to predict the dynamics of the film porosity computed by the kMC model, and the parameters in this model are identified by appropriate fitting to open-loop kMC simulation results. Subsequently, a model predictive controller (MPC) is designed and implemented on the kMC model. Closed-loop simulation results demonstrate that the thin-film porosity can be regulated to desired values.",
+    "presenting_author": "Gerassimos Orkoulas | University of California, Los Angeles",
+    "authors": [
+      "Jianqiao Huang | University of California, Los Angeles",
+      "Gerassimos Orkoulas | University of California, Los Angeles",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jianqiao Huang",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Gerassimos Orkoulas",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "sortable_time": "2013-11-06_16:35:00_16:55:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/312360"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper339264.html",
+    "paper_id": "339264",
+    "paper_number": "555f",
+    "topic": "Valuation and Optimal Operation of Energy Commodity Storage",
+    "title": "Valuation and Optimal Operation of Energy Commodity Storage",
+    "date_time": "Wednesday, November 6, 2013: 3:15 PM | 4:55 PM",
+    "session_id": "26269",
+    "session_title": "Modeling and Control of Energy Systems II",
+    "session_number": "555",
+    "authors_text": "Fanghui Fan and Jeffrey C. Kantor",
+    "abstract": "Energy commodity prices are influenced by supply, demand, and exogenous events. Stochastic prices introduce financial risks for the operators of energy storage facilities. Integrating the financial and physical operations of an energy commodity storage mitigates the effect of price fluctuations caused by unbalanced supply and demand, and offers the energy storage facility owner/operator lower financial risk. We proposed a storage model serving known demand to maximize the expected profit of a storage operation for a generic energy commodity such as coal, natural gas, or oil. The storage holds a finite inventory subject to bounds on the rate at which the energy commodity can be stored or recovered. We assume a finite convenience yield [ 3 ] , [ 2 ], where convenience yield is defined as the additional value that accrues due to physical ownership of a commodity. The mathematical model is derived following a dynamic programming procedure found in [ 5 ] , [ 6 ] , [ 7 ] , and [ 8 ] . The model features a finite convenience yield and mean-reverting price model for a single energy commodity. The resulting Hamilton-Jacobi-Bellman (HJB) equation is obtained to solve for an optimal control strategy. A numerical solution is computed using finite differences and boundary conditions specific to this application . The model can be extended to price processes with jump diffusions. Computational results demonstrate the incremental value of physical ownership of energy commodities. The valuation result is compared with that computed with a thresholding method [ 4 ]. C omparision demonstrates the value of solving for an optimal control using the dynamic programming . The models are calibrated to historical data, and validated using out-of-sample testing with historical data. References [1] Shijie Deng. Stochastic models of energy commodity prices and their applications: Mean-reversion with jumps and spikes. working paper, University of California Energy Institute , February 2000. [2] Rajna Gibson and Eduardo S. Schwartz. Stochastic convenience yield and the pricing of oil contingent claims. The Journal of Finance , 45(3):959–976, 1990. [3] Hélyette Geman. Commodities and Commodity Derivatives: Modeling and Pricing for Agriculturals, Metals and Energy . Wiley, 2005. [4] Stephen Boyd Jacob Mattingley, Yang Wang. Receding horizon control: automatic generation of high-speed solvers. IEEE control system magazine , pages 52–65, June 2011. [5] Robert C. Merton. Option pricing when underlying stock returns are discontinuous. Journal of Financial Economics , 3:125–144, 1976. [6] Robert C. Merton. Continuous time finance . Blackwell publishers, 1990. [7] Matt Thompson, Matt Davison, and Henning Rasmussen. Valuation and optimal operation of electric power plants in competitive markets. Operations Research , 52(4):546–562, July–August 2004. [8] Matt Thompson, Matt Davison, and Henning Rasmussen. Natural gas storage valuation and optimization: A real options application. Naval Research Logistics , 56(3):226–238, 2009.",
+    "presenting_author": "Jeffrey C. Kantor | University of Notre Dame, IN",
+    "authors": [
+      "Fanghui Fan | University of Notre Dame, IN",
+      "Jeffrey C. Kantor | University of Notre Dame, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Fanghui Fan",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Jeffrey C. Kantor",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Presenting Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "sortable_time": "2013-11-06_16:55:00_17:15:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/339264"
+  }
+]

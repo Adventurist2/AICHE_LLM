@@ -1,0 +1,348 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/630995",
+    "paper_endpoint": "Paper/630995",
+    "paper_id": "630995",
+    "topic": "Data-Driven Development of Approximate Inertial Forms and Closures for Coarse-Scale Modeling of Multiphase Flows",
+    "title": "Data-Driven Development of Approximate Inertial Forms and Closures for Coarse-Scale Modeling of Multiphase Flows",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48104",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "303",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Learning closures for coarse-graining fine scale models in multiscale systems is relevant when the macroscopic physics must be accurately described without having to explicitly resolve the fine scales [1]. Traditional constitutive modeling to close the equations and solve for the variables that describe the relevant fields is now evolving due to machine learning techniques for data-driven modeling [2][3]. This modeling approach can also take advantage of further reduced latent spaces, based on the idea of approximate inertial manifolds [4], learning reduced order nonlinear representations that are not easily physically interpretable. The aim of this work is to learn coarse grained PDEs as well as reduced order models of coarse-scale PDEs for multiphase flows using a data-driven approach. In the first portion of this work, we train a neural network to learn an approximate inertial form : a few ODEs for the system behavior projected onto a few proper orthogonal decomposition (POD) modes obtained from the fine scale simulations [5]: From 2D Direct Numerical Simulations of a multiphase bubbly flow in a vertical channel, we average in the direction parallel to the overall flow to create a dataset of one-spatial-dimension, time-dependent profiles, corresponding to the vertical velocity of the liquid and the void fraction fields [6]. We perform POD to reduce the high-dimensional averaged snapshot data to a truncated set of 10 leading-mode amplitude coefficients, and further reduce these to two latent coordinates (through an autoencoder) which are one to one with the first two POD modes, as illustrated in Fig.1(a). We train a neural network to approximate the continuous-time dynamics of the system in terms of the amplitudes of the first two, \"determining\" POD modes. Since the higher POD modes are functions (on our data) of the first two \"determining\" ones, that parametrize our approximate inertial manifold, we reconstruct the full solution from these two time series through a network that has learned the manifold, i.e. the higher 8 POD coefficients as a function of the 2 \"determining\" ones, as depicted in Fig.1(b). In the second portion of this work, we attempt to learn the right-hand-side operator of the averaged PDE through (a) a black box model and (b) a learned \"grey-box\" model that exploits the known parts/structure of the operator: everything else but the closure. To evolve the relevant fields, a pair of unknown closure terms must be modelled, F l ( x , t ), G l ( x , t ) = C l ( system state ( x , t )) for the wall-normal liquid flux and summed dissipative terms, respectively. These terms are learned from coarse evolution data [7]: we train a network to approximate these closure terms C l away from the wall, using only x-local information. Close to the wall, we learn a smooth non-decreasing function that corrects the effect of the drag. The wall function is zero in a region close to the wall, and asymptotes to one far from it. Before applying this closure-learning method to the data derived from the full 2D multiphase flow, we validate the approach on a simplified version of the problem with an explicitly known closure function (which we show we can accurately recover). [1] C. Meneveau and J. Katz. Scale-invariance and turbulence models for large-eddy simulation. Annual Review of Fluid Mechanics, 32(1):1–32, 2000. [2] F. J. Alexander, G. Johnson, G. L. Eyink, and I. G. Kevrekidis. Equation-free implementation of statistical moment closures. Physical Review E, 77:026701, 2008. [3] S. Ansumali, C. E. Frouzakis, I. V. Karlin, and I. G. Kevrekidis. Exploring Hydrodynamic Closures for the Lid-driven Micro-cavity. arXiv:0502018 [cond-mat], 2005. [4] C. Foias, M. S. Jolly, I. G. Kevrekidis, G. R. Sell, and E. S. Titi. On the computation of inertial manifolds. Physics Letters A, 131(7):433–436, 1988. [5] R. Rico-Martinez, K. Krischer, I. G. Kevrekidis, M. C. Kube, and J. L. Hudson. Discrete vs. continuous-time nonlinear signal processing of cu electrodissolution data. Chemical Engineering Communications, 118(1):25–48, 1992. [6] M. Ma, J. Lu, and G. Tryggvason. Using statistical learning to close two-fluid multiphase flow equations for bubbly flows in vertical channels. International Journal of Multiphase Flow, 85:336–347, 2016. [7] S. Lee, M. Kooshkbaghi, K. Spiliotis, C. I. Siettos, and I. G. Kevrekidis. Coarse-scale PDEs from fine-scale observations via machine learning. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(1):013141, 2020.",
+    "presenting_author": "Cristina Martin Linares | Johns Hopkins University, Baltimore, MD",
+    "authors": [
+      "Cristina Martin Linares | Johns Hopkins University, Baltimore, MD",
+      "Thomas Bertalan | Amgen, Inc., Cambridge, MA",
+      "Seungjoon Lee | San Jose State University, CA",
+      "Jiacai Lu | Johns Hopkins University, Baltimore, MD",
+      "Gretar Tryggvason | Johns Hopkins University, Baltimore, MD",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Cristina Martin Linares",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Thomas Bertalan",
+        "affiliation": "Amgen, Inc., Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Seungjoon Lee",
+        "affiliation": "San Jose State University, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jiacai Lu",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Gretar Tryggvason",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "303a",
+    "sortable_time": "2021-11-09_12:30:00_12:49:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/630995"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/631686",
+    "paper_endpoint": "Paper/631686",
+    "paper_id": "631686",
+    "topic": "Combining Particle-Based Simulations and Machine Learning Models for the Prediction of Defect Kinetics in Thin Films of Symmetric Diblock Copolymers",
+    "title": "Combining Particle-Based Simulations and Machine Learning Models for the Prediction of Defect Kinetics in Thin Films of Symmetric Diblock Copolymers",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48104",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "303",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Self-assembly in soft matter is a practical way to achieve nano-structuring in materials without direct control on these length scales. The symmetric diblock copolymer that self-assembles into a lamellar phase can be considered as a prototype for this material class. The simulation techniques for this system have been perfected over the last decades. And it is now possible to predict experimental results with these models on short to medium scales accessible. However, afterward, the morphologies remain stuck in the rugged free-energy landscape. Evolving in time to overcome the free-energy barriers is even with modern supercomputers untractable. We present a machine learning model that is trained by medium-time scale simulations of a soft, coarse-grained model to simulate the defect kinetics in the lamellar morphology. We are exploiting the physical characteristics of overdamped dynamics to formulate the problem of time evolution as a Markov chain. The trained artificial neural network (ANN) predicts a time-independent transition probably from one time step to the next. As a result, we obtain a method that can repeatedly apply these mechanisms to obtain very long-time trajectories. By design, we can choose very large time steps for this evolution. Predicting the defect kinetics this way with our ANN enables insights into the late-time dynamics. Unique about this approach is that we can generate the training data fully in silico, which ensures good data quality - the minimum requirement for successful machine learning. Even as the data generation is computationally costly, we can demonstrate that our approach easily breaks even with the upfront costs. We specifically design the neural network to be independent of the input size, which enables training on smaller systems, while predictions can be inferred on very large scales. The combination of being able to predict very large time steps and for large systems enables desktop computers to make predictions on an engineering length scale. Hence, these techniques open the avenue for fast prototyping in practical applications.",
+    "presenting_author": "Ludwig Schneider | University of Chicago, IL",
+    "authors": [
+      "Ludwig Schneider | University of Chicago, IL",
+      "Juan J. de Pablo | University of Chicago, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ludwig Schneider",
+        "affiliation": "University of Chicago, IL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Juan J. de Pablo",
+        "affiliation": "University of Chicago, IL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "303b",
+    "sortable_time": "2021-11-09_12:49:00_13:08:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/631686"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/623933",
+    "paper_endpoint": "Paper/623933",
+    "paper_id": "623933",
+    "topic": "Machine Learning-Based Predictive Control of Nonlinear Parabolic PDE Systems",
+    "title": "Machine Learning-Based Predictive Control of Nonlinear Parabolic PDE Systems",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48104",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "303",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Diffusion-reaction processes arise naturally in a variety of industrial applications including rapid thermal processing, crystal growth and various deposition systems, and these processes are usually governed by nonlinear parabolic PDE systems. The traditional approach to controlling systems governed by parabolic PDEs involves application of Galerkin’s method and its variants (like eigenfunction expansion techniques) thereby deriving reduced-order finite-dimensional models of a small number of first-order nonlinear ordinary differential equations in time that describe the dominant dynamics of the PDE system (e.g., [2], [3]), which are used to design low-order controllers for the parabolic PDE system (e.g., [4]). Model predictive control (MPC) strategies have gained popularity because of its capability to address closed-loop stability in tandem with satisfying input and state constraints. The most important requirement of MPC is an accurate process model for the system, which can be constructed by accounting for the physiochemical mechanisms that drive the process, or derived using a data driven approach by developing recurrent neural network models based on simulated/experimentally obtained data (e.g., [1]). This work focuses on designing and analyzing closed loop stability of machine-learning-based predictive control systems for nonlinear parabolic PDE systems using only process state trajectories from measurements. First, the Karhunen-Loeve expansion is used to derive dominant spatial empirical eigenfunctions of the nonlinear parabolic system using the process state trajectories, then these eigenfunctions are used as basis functions within a Galerkin’s model reduction framework to derive the temporal evolution of a small number of temporal modes capturing the dominant dynamics of the PDE system. Recurrent neural networks (RNN) are then used to model the data-derived reduced-order dominant dynamics of the parabolic PDE system based on extensive and carefully-chosen open-loop simulations within a desired operating region. Finally, Lyapunov based MPC techniques [1] are used to design controllers based on the RNN models for a diffusion-reaction process, and simulations are performed to evaluate their closed-loop performance. References: [1] Wu, Z., A. Tran, D. Rincon and P. D. Christofides (2019), \"Machine Learning-Based Predictive Control of Nonlinear Processes. Part I: Theory,'' AIChE J., 65, e16729. [2] Baker, J. and P. D. Christofides (2000), ''Finite-Dimensional Approximation and Control of Nonlinear Parabolic PDE Systems,'' Int. J. Contr., 73, 439-456. [3] Lao, L., M. Ellis and P. D. Christofides (2014), \"Economic Model Predictive Control of Parabolic PDE Systems: Addressing State Estimation and Computational Efficiency,\" J. Proc. Contr., 24, 448-462. [4] Armaou, A. and P. D. Christofides (2001), ''Finite-Dimensional Control of Nonlinear Parabolic PDEs with Time-Dependent Spatial Domains Using Empirical Eigenfunctions,'' Int. J. Appl. Math. & Comp. Sci., 11, 287-317.",
+    "presenting_author": "Aarsh Dodhia | University of California, Los Angeles",
+    "authors": [
+      "Aarsh Dodhia | University of California, Los Angeles",
+      "Zhe Wu | National University of Singapore",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Aarsh Dodhia",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhe Wu",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "303c",
+    "sortable_time": "2021-11-09_13:08:00_13:27:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/623933"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/625068",
+    "paper_endpoint": "Paper/625068",
+    "paper_id": "625068",
+    "topic": "Symmetry Reduction for Deep Reinforcement Learning Active Flow Control of Chaotic Spatiotemporal Dynamics",
+    "title": "Symmetry Reduction for Deep Reinforcement Learning Active Flow Control of Chaotic Spatiotemporal Dynamics",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48104",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "303",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Deep reinforcement learning (RL) is a data-driven, model-free method capable of discovering complex control strategies for macroscopic objectives in high-dimensional systems, making its application towards flow control promising. Many systems of flow control interest possess symmetries that, when neglected, can significantly inhibit the learning and performance of a naive deep RL approach. Using a test-bed consisting of the Kuramoto-Sivashinsky Equation (KSE), equally spaced actuators, and a goal of minimizing dissipation and power cost, we demonstrate that by moving the deep RL problem to a symmetry-reduced space, we can alleviate limitations inherent in the naive application of deep RL. We demonstrate that symmetry-reduced deep RL yields improved data efficiency as well as improved control policy efficacy and dynamical consistency compared to policies found by naive deep RL. The symmetry-reduced control policy learns to discover and target a forced equilibrium, related to a known equilibrium of the KSE, that exhibits low dissipation and power input cost, despite having been given no explicit information regarding its existence. Finally, we demonstrate that the symmetry-reduced control policy is robust to observation and actuation signal noise, as well as to system parameters it has not observed before. We aim to extend our method to consider sensor symmetries and to incorporate data-driven reduced-order models to leverage more natural state representations and the ability to generate surrogate interaction data for accelerated training.",
+    "presenting_author": "Kevin Zeng | University of Wisconsin-Madison",
+    "authors": [
+      "Kevin Zeng | University of Wisconsin-Madison",
+      "Michael Graham | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kevin Zeng",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Michael Graham",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "303d",
+    "sortable_time": "2021-11-09_13:27:00_13:46:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/625068"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/627091",
+    "paper_endpoint": "Paper/627091",
+    "paper_id": "627091",
+    "topic": "Ensuring Convexity in Constrained Optimal Control Using Input Convex Neural Networks",
+    "title": "Ensuring Convexity in Constrained Optimal Control Using Input Convex Neural Networks",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48104",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "303",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Many common chemical and biochemical processes exhibit nonlinear behavior. In response to a dynamic market and increasing complexity of process operation, modeling the nonlinear dynamics of process systems has become crucial for process safety and profitability. Artificial neural networks (ANNs) are widely used to model nonlinear systems due to their universal approximation capability and simplicity in model development [1,2]. However, optimal control and decision-making on top of ANN models are difficult because the learned ANN models are usually non-convex from the input to output [3]. Input convex neural networks (ICNNs) are a family of deep learning models where the outputs are constructed to be convex functions of the inputs [4]. Similar to ordinary ANNs, ICNNs can efficiently approximate all continuous Lipschitz convex functions [5]. Additionally, ICNNs can be efficiently trained on GPUs using existing deep learning packages such as PyTorch and TensorFlow. By modeling systems using ICNNs, optimal control problems on top of the system models can be solved as convex optimization problems, leading to improved performance and robustness. Current work discusses using ICNNs for constrained optimal control of nonlinear systems. This strategy uses Model Predictive Control (MPC) on top of ICNN-based system models to dynamically optimize system performance. The strategy consists of three basic steps: Firstly, the relationships that can be approximated by convex function are identified using field knowledge or simulation. Then, process data are used to train ICNN-based system and constraint models. Lastly, the system and constraint models are integrated into the MPC framework. Because both system dynamics and constraints are modeled using ICNNs, their Jacobians can be easily calculated using backpropagation, and the MPC problems can be solved efficiently using sequential quadratic programming (SQP). The proposed approach will be illustrated through a case study based on the Van de Vusse reactor [6], which exhibits input multiplicity and nonminimum phase behavior. The simulation results demonstrate improved economic yield compared with normal ANNs. Additionally, the input convexity formulation is compared with simple regularization techniques, and unique benefits such as improved data efficiency and robustness of the proposed formulation are shown. By explicitly incorporating prior knowledge about convexity, this framework provides a good balance between the universal approximation power of deep learning and the computational feasibility required by control and optimization. References [1] M. Kuure-Kinsey, R. Cutright, B.W. Bequette, Computationally efficient neural predictive control based on a feedforward architecture, Ind. Eng. Chem. Res. 45 (2006) 8575–8582. [2] N. Bhat, T.J. McAvoy, Use of neural nets for dynamic modeling and control of chemical process systems, Comput. Chem. Eng. 14 (1990) 573–582. [3] K. Kawaguchi, Deep Learning without Poor Local Minima, in: D.D. Lee, M. Sugiyama, U. V Luxburg, I. Guyon, R. Garnett (Eds.), Adv. Neural Inf. Process. Syst. 29, Curran Associates, Inc., 2016: pp. 586–594. [4] B. Amos, L. Xu, J. Zico Kolter, J.Z. Kolter, Input Convex Neural Networks, in: Proc. 34th Int. Conf. Mach. Learn. - Vol. 70, JMLR.org, 2017: pp. 146–155. [5] Y. Chen, Y. Shi, B. Zhang, Optimal Control Via Neural Networks: A Convex Approach, in: Int. Conf. Learn. Represent., 2018. [6] B.W. Bequette, Process control: modeling, design, and simulation, Prentice Hall Professional, Upper Saddle River, NJ, United States, 2003.",
+    "presenting_author": "Shu Yang | Rensselaer Polytechnic Institute, Troy, NY",
+    "authors": [
+      "Shu Yang | Rensselaer Polytechnic Institute, Troy, NY",
+      "B. Wayne Bequette | Rensselaer Polytechnic Institute, Troy, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shu Yang",
+        "affiliation": "Rensselaer Polytechnic Institute, Troy, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "B. Wayne Bequette",
+        "affiliation": "Rensselaer Polytechnic Institute, Troy, NY",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "303e",
+    "sortable_time": "2021-11-09_13:46:00_14:05:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/627091"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/629805",
+    "paper_endpoint": "Paper/629805",
+    "paper_id": "629805",
+    "topic": "Initializing the Internal States of Lstm Neural Networks Via Manifold Learning",
+    "title": "Initializing the Internal States of Lstm Neural Networks Via Manifold Learning",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48104",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "303",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "There has been a long standing effort to derive dynamical systems from data, in particular for tasks such as prediction and control. One particular class of functions that excel in this are recurrent neural networks. Long-short term memory (LSTM) networks have gained an increasing amount of attention in recent years, in particular due to their ability to deal with the vanishing gradient problem and their potential to model partially-observed high-dimensional systems using a set of internal cell states [1]. For accurate predictions, however, the internal states have to be initialized properly, and a precise way guaranteed to find these initial values is still missing. Here, we present a manifold-learning approach to initialize the internal state values of LSTM recurrent neural networks consistent with initial observed input data. Our approach is based on learning the intrinsic data manifold from the observed variables as a preprocessing step. Using concepts such as generalized synchronization, we argue that the converged internal states are a function on this learned manifold. We show that the dimension of this manifold indicates the required amount of observed input data for proper initialization. This ansatz is demonstrated on a partially observed chemical model system, where we show that initializing the internal LSTM states using this approach yields visibly improved performance compared to earlier \"warm-start\" initialization approaches [2]. We furthermore discuss the potential application of our approach to other recurrent neural network variants such as reservoir computing [3]. Finally, we show that learning the data manifold can transform the problem of partially observed dynamics into a fully observed one, facilitating the identification of nonlinear dynamical systems [4]. [1] Sepp Hochreiter and Jürgen Schmidhuber. Long short-term memory. Neural Computation, 9(8):1735–1780, 1997 [2] Hans-Georg Zimmermann, Christoph Tietz, and Ralph Grothmann. Forecasting with Recurrent Neural Networks:12 Tricks, pages 687–707. Springer Berlin Heidelberg, Berlin, Heidelberg, 2012 [3] Herbert Jaeger. The echo state approach to analysing and training recurrent neural networks. Technical report, Fraunhofer Institute for Autonomous Intelligent Systems, 2001 [4] Felix P. Kemeth, Tom Bertalan, Nikolaos Evangelou, Tianqi Cui, Saurabh Malani, and Ioannis G. Kevrekidis, Initializing LSTM internal states via manifold learning. (submitted), 2021",
+    "presenting_author": "Saurabh Malani | Princeton University, NJ",
+    "authors": [
+      "Felix Kemeth | Johns Hopkins University, Baltimore, MD",
+      "Thomas Bertalan | Princeton University, NJ",
+      "Nikolaos Evangelou | Johns Hopkins University, Baltimore, MD",
+      "Tianqi Cui | Johns Hopkins University, Baltimore, MD",
+      "Saurabh Malani | Princeton University, NJ",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Felix Kemeth",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Thomas Bertalan",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Nikolaos Evangelou",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Tianqi Cui",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Saurabh Malani",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "303f",
+    "sortable_time": "2021-11-09_14:05:00_14:24:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/629805"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/630895",
+    "paper_endpoint": "Paper/630895",
+    "paper_id": "630895",
+    "topic": "Performance-Oriented Learning of Hybrid Models for Model Predictive Control",
+    "title": "Performance-Oriented Learning of Hybrid Models for Model Predictive Control",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48104",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "303",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Model predictive control (MPC) is the most widely used advanced control strategy for constrained multivariable systems in a wide range of applications [1] . An important practical consideration in MPC design is the model quality, which can greatly affect the closed-loop control performance especially when the inherent robustness provided by receding-horizon control is insufficient to mitigate model uncertainties. Inspired by the notion of identification for control (I4C) [2], this talk presents a strategy for performance-oriented learning of data-driven models for MPC. The traditional practice in MPC design has relied on developing models independent of their control-oriented performance, i.e., how the predictive quality of models would influence the closed-loop control performance. An alternative view in handling system uncertainties in model-based control is to focus on the performance-oriented quality of models, rather than their general predictive quality. The fundamental idea of I4C is that the model that provides the best closed-loop performance may not be the one yielding the smallest prediction errors. Hence, for control applications, data-driven models must be identified or adapted by optimizing for their control-oriented predictive quality, which can be quantified in terms of closed-loop performance measures of interest. To this end, we present a hybrid modeling approach in which a residual neural network model [3] representing high-fidelity system knowledge (i.e., a surrogate of a first-principles model) is combined with transfer learning to enable performance-oriented adaptation of a subset of model parameters. Transfer learning has emerged as a popular technique in machine learning applications where knowledge acquired in one task is used to enhance the learning efficiency in a different but similar task [4]. The proposed hybrid modeling approach integrates domain knowledge (i.e., via a first-principles model) into a deep neural network model to improve data efficiency and model interpretability while improving the learning efficiency of model adaptation given a fixed budget of process runs. To solve the performance-oriented model learning problem, we use constrained Bayesian optimization (CBO) that can directly handle black-box, expensive and noisy function evaluations, while accounting for the feasibility region of a black-box optimization problem [5]. BO has been employed in various applications, including automated controller tuning [6]. A key advantage of initializing the CBO procedure using a hybrid model includes efficient discovery of a performance-oriented model whose predictions retain their physical relevance and, as such, greatly aid with constraint satisfaction. The proposed approach is demonstrated on a benchmark bioreactor case study [7]. Simulation results indicate that, given a fixed budget of process runs, performance-oriented adaptation of the hybrid model can yield control-oriented models that result in a significant improvement in closed-loop performance compared to model re-identification using closed-loop data. The proposed performance-oriented hybrid modeling approach can be especially useful for model-based control of batch processes, where each process run is associated with a high monetary value and/or high labor costs. [1] Rawlings, J. B., Mayne, D. Q., & Diehl, M. (2017). Model predictive control: theory, computation, and design (Vol. 2). Madison, WI: Nob Hill Publishing. [2] Gevers, M. (2005). Identification for control: From the early achievements to the revival of experiment design. European journal of control , 11 (4-5), 335-352. [3] Qin, T., Wu, K., & Xiu, D. (2019). Data driven governing equations approximation using deep neural networks. Journal of Computational Physics , 395 , 620-635. [4] Pan, S. J., & Yang, Q. (2009). A survey on transfer learning. IEEE Transactions on knowledge and data engineering , 22 (10), 1345-1359. [5] Gardner, J. R., Kusner, M. J., Xu, Z. E., Weinberger, K. Q., & Cunningham, J. P. (2014). Bayesian Optimization with Inequality Constraints. In ICML (Vol. 2014, pp. 937-945). [6] Sorourifar, F., Makrygirgos, G., Mesbah, A., & Paulson, J. A. (2020). A Data-Driven Automatic Tuning Method for MPC under Uncertainty using Constrained Bayesian Optimization. arXiv preprint arXiv:2011.11841 . [7] Agrawal, P., Koshy, G., & Ramseier, M. (1989). An algorithm for operating a fed‐batch fermentor at optimum specific‐growth rate. Biotechnology and bioengineering , 33 (1), 115-125.",
+    "presenting_author": "Georgios Makrygiorgos | University of California, Berkeley",
+    "authors": [
+      "Georgios Makrygiorgos | University of California, Berkeley",
+      "Angelo D. Bonzanini | University of California Berkeley",
+      "Victor Miller | University of California, Berkeley",
+      "Ali Mesbah | University of California, Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Georgios Makrygiorgos",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Angelo D. Bonzanini",
+        "affiliation": "University of California Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Victor Miller",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "303g",
+    "sortable_time": "2021-11-09_14:24:00_14:43:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/630895"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632175",
+    "paper_endpoint": "Paper/632175",
+    "paper_id": "632175",
+    "topic": "Learning-Based Economic Model Predictive Control for Energy Storage Systems Under Imperfect Forecast Information",
+    "title": "Learning-Based Economic Model Predictive Control for Energy Storage Systems Under Imperfect Forecast Information",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48104",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "303",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Energy storage systems have to be managed in the presence of different forms of uncertainty: time-varying and stochastic weather conditions, spot electricity prices, and energy demand. An important feature in many of these problems is the availability of rolling forecasts with varying levels of accuracy (Powell, 2014; Anderson et al., 2011). A standard approach to solve these problems is to use a deterministic economic model predictive control formulation, where the available forecast is used to compute control actions under the assumption that the predictions are correct. However, this certainty equivalence approach can result in arbitrarily poor performance depending on the level of accuracy of the forecast . In this work, we explore a way of learning the optimal control policy in the presence of imperfect rolling forecasts by combining economic model predictive control (EMPC) with reinforcement learning (RL) techniques. We illustrate this approach in an energy storage case study, where the time-varying energy demand from a building must be satisfied by a wind farm (stochastic, but free supply), a battery, and/or the power grid (unlimited supply, but stochastic prices). We assume that inaccurate rolling forecasts of the wind, demand, and electricity prices are available and can be used for control purposes. The objective is to design a controller to operate the system such that the energy demand from the building is satisfied at minimum cost. It has recently been shown that an EMPC scheme can be tuned to deliver the optimal policy of the real system even when using the wrong model (Gros and Zanon, 2019). This suggests that EMPC can be used as a function approximator within RL. In this work, we use this idea to design an EMPC scheme where the stage cost, terminal cost, and constraints are carefully parametrized. These parameters are then adjusted online to improve performance under imperfect forecast information using reinforcement learning techniques such as Q-learning. We show in closed-loop simulations how the RL-tuned MPC is able to improve performance under imperfect forecast information. References: Anderson, R. N., Boulanger, A., Powell, W. B., and Scott, W. (2011). Adaptive stochastic control for the smart grid. Proceedings of the IEEE, 99(6):1098–1115. Gros, S. and Zanon, M. (2019). Data-driven economic NMPC using reinforcement learning. IEEE Transactions on Automatic Control, 65(2):636–648. Powell, W. (2014). Energy and uncertainty: Models and algorithms for complex energy systems. AI Magazine, 35(3):8–21.",
+    "presenting_author": "David Pérez-Piñeiro | Norwegian University of Science and Technology, Trondheim, Norway",
+    "authors": [
+      "David Pérez-Piñeiro | Norwegian University of Science and Technology, Trondheim, Norway",
+      "Sigurd Skogestad | Norwegian University of Science and Technology (NTNU), Trondheim, Norway"
+    ],
+    "authors_structured": [
+      {
+        "name": "David Pérez-Piñeiro",
+        "affiliation": "Norwegian University of Science and Technology, Trondheim, Norway",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sigurd Skogestad",
+        "affiliation": "Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "303h",
+    "sortable_time": "2021-11-09_14:43:00_15:02:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632175"
+  }
+]

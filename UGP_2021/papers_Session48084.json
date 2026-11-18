@@ -1,0 +1,312 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632052",
+    "paper_endpoint": "Paper/632052",
+    "paper_id": "632052",
+    "topic": "A Novel Constrained Bayesian Optimization Method for Computationally Expensive Grey-Box Models with Composite Objective and Constraint Functions",
+    "title": "A Novel Constrained Bayesian Optimization Method for Computationally Expensive Grey-Box Models with Composite Objective and Constraint Functions",
+    "date_time": "2021-11-11_08:00:00_10:30:00",
+    "session_id": "48084",
+    "session_title": "Advances in nonlinear and surrogate optimization",
+    "session_number": "558",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Modern nonlinear programming (NLP) solvers can efficiently solve very large-scale optimization problems when derivatives can be exactly computed [1]–[3] . However, the development and formulation of multi-scale process models for which derivative information is readily available remains a significant challenge in many real-world applications. A particularly challenging class of problems is when at least one component of the model is very expensive or time-consuming to evaluate including high-fidelity computer simulations (e.g., molecular dynamics calculations) or laboratory experiments (e.g., measurement of critical material, chemical, or biological properties). In such cases, one must often resort to “black-box” optimization methods (as opposed to rigorous “white-box” NLP approaches) as they assume very little about the structure of the objective and/or the constraint functions. Bayesian optimization (BO) is one of the most widely applied approaches for data-driven / simulation-based optimization in recent years due to its data efficiency [4]–[7] . BO relies on the construction of Gaussian process (GP) surrogate models to represent the posterior distribution for the objective and/or constraints [8] . By combining the posterior distributions with an acquisition function, BO selects the next point at which to evaluate the unknown functions in a way that tradeoffs the exploration of regions where the surrogate model is uncertain and exploitation of the model’s confidence in good (feasible and low-cost) locations. Although BO has been empirically shown to perform very well in a variety of complex engineering applications in which the problem dimensions is fairly small (on the order of 10 or less), its sample efficiency tends to decrease as problem size increases due to exponential growth in the size of the search space [9] . This is mostly due to the fact that the developed GP model(s) ignore any structure in the underlying objective or constraints. In many practical engineering problems, however, only a portion of the model is not known, so that a more realistic representation is a “grey-box” problem where the objective and constraints can be thought of as having a composite structure, e.g., f(x) = g(h(x)) where g and h are white- and black-box functions, respectively. For example, composite objectives appear in the calibration of expensive process simulators to data wherein h(x) denotes the simulator output data for a given set of parameters x , which should match measured data y meas as closely as possible. In this case, the objective to be minimized is often of the form g(h(x)) = ||h(x)-y meas || where ||.|| is some norm or monotonic transformation of the likelihood of the measurement errors. Recent work in [10] showed significant improvements in convergence rate over traditional BO when the acquisition function is modified to account for the composite structure. Extending this approach to consider composite equality and/or inequality constraints is not trivial, as it relies on a stochastic gradient descent algorithm, whose convergence is not easily guaranteed in the presence of nonlinear and non-convex constraints. One way to overcome these challenges is to resort to a trust region filter algorithm, similar to that introduced in [11], [12], that provides strong convergence guarantees to a local optimum. A disadvantage of such an approach, however, is the lack of a global model for h that may result in convergence to a highly suboptimal local solution. Another possibility is to fit a deterministic surrogate model (that ignores any relevant uncertainty information) and solve the resulting optimization to global optimality [13] , [14] . However, this type of adaptive sampling method can be suboptimal in that it is purely exploitative approach that does not systematically address the exploitation/exploration tradeoff. In this work, we propose a novel algorithm that addresses the aforementioned challenges in the context of constrained grey-box optimization problems; we refer to this algorithm as COBALT ( CO nstrained B ayesian optimiz A tion of computationa L ly expensive grey-box models exploiting deriva T ive information), which is based on several improvements relative to previous approaches. First, building on [10] , we extend the expected improvement (EI) acquisition function to composite functions using a sample average approximation (SAA). We then show how to further modify EI to reduce its degree of multimodality through proper choices of scale and shifting factors that are related to the predicted mean objective, which makes it easier to locate the global maximum of the subproblems. To account for grey-box constraints, we then extend the upper trust bound (UTB) framework presented in [15] to composite functions. The UTB method, as opposed to alternative constraint handling methods such as [16] , directly promotes exploration of the feasible region by incorporating variance information into the definition of the constraints. Since the variance cannot be analytically computed in the case of composite GP functions, we propose a moment-based approximation of the constraints that can be efficiently optimized using state-of-the-art NLP solvers. We demonstrate the effectiveness of COBALT, relative to traditional BO and other readily available black-box optimizers, on several benchmark global optimization problems as well as a challenging, realistic parameter estimation problem derived from a genome-scale bioreactor model in [17] . We observed that COBALT provided multiple orders of magnitude improvement in terms of the average regret (i.e., difference between best found solution and true global optimum) versus number of black-box function evaluations in all considered cases. References [1] L. T. Biegler and V. M. Zavala, “Large-scale nonlinear programming using {IPOPT}: An integrating framework for enterprise-wide dynamic optimization,” Comput. Chem. Eng. , vol. 33, pp. 575–582, 2009. [2] N. V. Sahinidis, “BARON: A general purpose global optimization software package,” J. Glob. Optim. , vol. 8, no. 2, pp. 201–205, 1996, doi: 10.1007/bf00138693. [3] R. Misener and C. A. Floudas, “ANTIGONE: Algorithms for coNTinuous / Integer Global Optimization of Nonlinear Equations,” J. Glob. Optim. , vol. 59, no. 2–3, pp. 503–526, 2014, doi: 10.1007/s10898-014-0166-2. [4] F. Sorourifar, G. Makrygirgos, and A. Mesbah, “A Data-driven automatic tuning method for MPC under uncertainty using constrained Bayesian optimization,” in IFAC Symposium on Advanced Control of Chemical Processes , 2021 (accepted). [5] D. C. Manheim and R. L. Detwiler, “Accurate and reliable estimation of kinetic parameters for environmental engineering applications: A global, multi objective, Bayesian optimization approach,” MethodsX , vol. 6, pp. 1398–1414, 2019, doi: 10.1016/j.mex.2019.05.035. [6] R. R. Griffiths and J. M. Hernández-Lobato, “Constrained bayesian optimization for automatic chemical design,” arXiv Prepr. arXiv1709.05501 , 2017. [7] B. Shahriari, K. Swersky, Z. Wang, R. P. Adams, and N. De Freitas, “Taking the human out of the loop: A review of Bayesian optimization,” Proceedings of the IEEE , vol. 104, no. 1. Institute of Electrical and Electronics Engineers Inc., pp. 148–175, Jan. 01, 2016, doi: 10.1109/JPROC.2015.2494218. [8] D. R. Jones, M. Schonlau, and W. J. Welch, “Efficient Global Optimization of Expensive Black-Box Functions,\" , vol. 13, no. 4, pp. 455-492, 1998.,” J. Glob. Optim. , vol. 13, pp. 455–492, 1998. [9] S. Flaxman, A. Gelman, D. Neill, and A. G. Wilson, “Fast hierarchical Gaussian processes,” Manuscr. Prep. , pp. 1–18, 2015. [10] R. Astudillo and P. I. Frazier, “Bayesian Optimization of Composite Functions,” in Proceedings of the 36th International Conference on Machine Learning , May 2019, pp. 354–363, Accessed: Apr. 12, 2021. [Online]. Available: http://proceedings.mlr.press/v97/astudillo19a.html. [11] J. P. Eason and L. T. Biegler, “A trust region filter method for glass box/black box optimization,” AIChE J. , vol. 62, no. 9, pp. 3124–3136, Sep. 2016, doi: 10.1002/aic.15325. [12] J. P. Eason and L. T. Biegler, “Advanced trust region optimization strategies for glass box/black box models,” AIChE J. , vol. 64, no. 11, pp. 3934–3943, 2018, doi: 10.1002/aic.16364. [13] F. Boukouvala and C. A. Floudas, “ARGONAUT: AlgoRithms for Global Optimization of coNstrAined grey-box compUTational problems,” Optim. Lett. , vol. 11, no. 5, pp. 895–913, 2017, doi: 10.1007/s11590-016-1028-2. [14] S. H. Kim and F. Boukouvala, “Surrogate-based optimization for mixed-integer nonlinear problems,” Comput. Chem. Eng. , vol. 140, p. 106847, 2020, doi: 10.1016/j.compchemeng.2020.106847. [15] R. Priem, N. Bartoli, Y. Diouane, and A. Sgueglia, “Upper Trust Bound Feasibility Criterion for Mixed Constrained Bayesian Optimization with Application to Aircraft Design,” arXiv , 2020. [16] J. R. Gardner, M. J. Kusner, Z. E. Xu, K. Q. Weinberger, and J. P. Cunningham, “Bayesian Optimization with Inequality Constraints.,” in ICML , 2014, vol. 2014, pp. 937–945. [17] J. A. Paulson, M. Martin-Casas, and A. Mesbah, Fast uncertainty quantification for dynamic flux balance analysis using non-smooth polynomial chaos expansions , vol. 15, no. 8. 2019, pp. 1–35.",
+    "presenting_author": "Joel Paulson | The Ohio State University, Columbus",
+    "authors": [
+      "Congwen Lu | The Ohio State University, Columbus",
+      "Joel Paulson | The Ohio State University, Columbus"
+    ],
+    "authors_structured": [
+      {
+        "name": "Congwen Lu",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "558a",
+    "sortable_time": "2021-11-11_08:00:00_08:19:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632052"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/622095",
+    "paper_endpoint": "Paper/622095",
+    "paper_id": "622095",
+    "topic": "A Unifying Abstraction for Infinite-Dimensional Optimization",
+    "title": "A Unifying Abstraction for Infinite-Dimensional Optimization",
+    "date_time": "2021-11-11_08:00:00_10:30:00",
+    "session_id": "48084",
+    "session_title": "Advances in nonlinear and surrogate optimization",
+    "session_number": "558",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Infinite-dimensional optimization problems contain variables that live in infinite-dimensional spaces such as states over a space-time field or states under uncertainty [1]. This class of problems commonly embeds complex modeling elements that include: measures (e.g., multi-dimensional integrals), differential algebraic equations (DAEs), and partial differential equations (PDEs). These elements, in combination with the presence of infinite-dimensional decision variables, make this problem class challenging to model and solve, since most optimization algorithms are intended for finite-dimensional spaces (e.g., linear and nonlinear programming) [2]. Infinite-dimensional problems encompass a wide breadth of optimization fields that include stochastic optimization [3], dynamic optimization [4], PDE-constrained optimization [5], and combinations (e.g., stochastic PDEs) [6]. For instance, decision variables in stochastic problems are random variables that are dependent on infinite-dimensional random spaces with objectives and constraints that employ stochastic measure operators over those spaces (e.g., risk measures and chance constraints) [3]. Applications pertaining to these optimization fields include model predictive control [7], process design [8], parameter estimation [9], reliability analysis [10], design of dynamic experiments [11], and more. Typically, optimization problems of this class are solved by transforming them into finite-dimensional representations via discretization (e.g., finite differences) [12]. This \"transcription\" process enables the use of standard optimization solution approaches, and is so predominant as a modeling/transformation paradigm that application classes often forego infinite-dimensional representations and the use of other transformation techniques (e.g., projection unto orthogonal basis functions [1]). Moreover, although problems in the aforementioned optimization fields are often identified as infinite-dimensional optimization problems, there exists a conceptual gap in abstracting these problems rigorously through a common lens. Coherent abstractions play a key role in facilitating innovative advancements and enabling general modeling languages [13]. To address this conceptual gap, we present a unifying abstraction for characterizing and modeling infinite-dimensional optimization problems. Specifically, we propose a measure-centric modeling paradigm to capture a wide breadth of optimization fields and promote novel theoretical insights/techniques. Our abstraction forms the basis for a Julia-based, infinite-dimensional optimization modeling implementation entitled InfiniteOpt.jl [14]. We demonstrate how characterizing problems in this abstraction readily encourages new theoretical crossover and novel problem formulations, and even engenders new optimization fields (e.g., random field optimization and optimization using basis functions). We also discuss how this perspective decouples traditional finite transformation techniques across the subsequent disciplines and promotes the use of non-traditional solution methodologies. References: [1] Olivier Devolder, Francois Glineur, and Yurii Nesterov. Solving infinite-dimensional optimization problems by polynomial approximation. In Recent Advances in Optimization and its Applications in Engineering, pages 31–40. Springer, 2010. [2] Bethany Nicholson, John D Siirola, Jean-Paul Watson, Victor M Zavala, and Lorenz T Biegler. pyomo.dae: A modeling and automatic discretization framework for optimization with differential and algebraic equations. Mathematical Programming Computation, 10(2):187–223, 2018. [3] John R Birge and Francois Louveaux. Introduction to stochastic programming. Springer Science & Business Media, 2011. [4] Dimitri P Bertsekas, Dimitri P Bertsekas, Dimitri P Bertsekas, and Dimitri P Bertsekas. Dynamic programming and optimal control, volume 1. Athena scientific Belmont, MA, 1995. [5] Michael Hinze, Ren ́e Pinnau, Michael Ulbrich, and Stefan Ulbrich. Optimization with PDE constraints, volume 23. Springer Science & Business Media, 2008. [6] Christian Bes and SP Sethi. Concepts of forecast and decision horizons: Applications to dynamic stochastic optimization problems. Mathematics of Operations Research, 13(2):295–310, 1988. [7] James B Rawlings. Tutorial overview of model predictive control. IEEE control systems magazine, 20(3):38–52, 2000. [8] David A Straub and Ignacio E Grossmann. Design optimization of stochastic flexibility. Computers & Chemical Engineering, 17(4):339–354, 1993. [9] Sungho Shin, Ophelia S Venturelli, and Victor M Zavala. Scalable nonlinear programming framework for parameter estimation in dynamic biological system models. PLoS computational biology, 15(3):e1006828, 2019. [10] Joshua L Pulsipher and Victor M Zavala. Measuring and optimizing system reliability: a stochastic programming approach. TOP, pages 1–20, 2020. [11] Christos Georgakis. Design of dynamic experiments: A data-driven methodology for the optimization of time-varying processes. Industrial & Engineering Chemistry Research, 52(35):12369–12382, 2013. [12] Lorenz T Biegler. An overview of simultaneous strategies for dynamic optimization. Chemical Engineering and Processing: Process Intensification, 46(11):1043–1053, 2007. [13] Jordan Jalving, Yankai Cao, and Victor M Zavala. Graph-based modeling and simulation of complex systems. Computers & Chemical Engineering, 125:134–154, 2019. [14] Joshua L Pulsipher, Weiqi Zhang, and Victor M Zavala. InfiniteOpt.jl -- A Julia package for modeling infinite-dimensional optimization problems. Zenodo, 10.5281/zenodo.4291106, 2020.",
+    "presenting_author": "Joshua Pulsipher | University of Wisconsin-Madison",
+    "authors": [
+      "Joshua Pulsipher | University of Wisconsin-Madison",
+      "Weiqi Zhang | University of Wisconsin-Madison",
+      "Victor M. Zavala | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joshua Pulsipher",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Weiqi Zhang",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Victor M. Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "558b",
+    "sortable_time": "2021-11-11_08:19:00_08:38:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/622095"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/622106",
+    "paper_endpoint": "Paper/622106",
+    "paper_id": "622106",
+    "topic": "Exponential Decay of Sensitivity in Graph-Structured Nonlinear Programs",
+    "title": "Exponential Decay of Sensitivity in Graph-Structured Nonlinear Programs",
+    "date_time": "2021-11-11_08:00:00_10:30:00",
+    "session_id": "48084",
+    "session_title": "Advances in nonlinear and surrogate optimization",
+    "session_number": "558",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "A graph-structured nonlinear program (gNLP) is a nonlinear optimization problem whose algebraic structure is induced by a graph. These problems arise in diverse applications such as dynamic optimization (model predictive control and moving horizon estimation) [1,2], network optimization (energy systems and supply chain) [3,4,5], optimization with embedded discretized partial differential equations (PDEs) [6], and multi-stage stochastic programming [7]. Characterization of the nodal sensitivity of such problems (the sensitivity of the solution at a particular node against the data perturbation on another node) allows addressing a wide range of questions that are of practical interest. For example, in the context of dynamic optimization, it allows understanding the relationship between the prediction horizon length and the control/estimation performance [8]. This further enables systematically balancing the computational complexity and the expected control/estimation performance. Furthermore, in the context of energy infrastructures, it allows understanding how far the disturbance in one part of the network may propagate to the other part; this enables assessing the flexibility and reliability of operations [9]. In this work, we aim to quantitatively characterize the nodal solution sensitivity of gNLPs. Building upon the existing NLP sensitivity theory [10,11], we show that the nodal sensitivity decays exponentially with respect to the distance to the perturbation point [12]. Remarkably, this result (which we call exponential decay of sensitivity; EDS) holds under fairly standard assumptions used in classical NLP sensitivity theory: second-order sufficiency conditions (SOSC) and the linear independence constraint qualification (LICQ) [10,11]. In practical terms, these regularity conditions (LICQ and SOSC) can be interpreted as having sufficient flexibility and positive objective curvature. This interpratation enables an intuitive explanation of EDS that the positive objective curvature and the flexibility of the system damps the propagation of the perturbation. In the context of control, the regularity conditions can be obtained from controllability and observability [13]. These results generalize our previous results under simpler settings [14,15]. Also, it provides new insights on how perturbations propagate through graphs and on how the NLP formulation influences such propagation. Moreover, EDS allows the creation of novel computing strategies and optimization formulations, which include the overlapping Schwarz decomposition method (also known as domain decomposition) [14,16,17], online algorithms for dynamic optimization [18], diffusing-horizon model predictive control [19], and flexibility-maximizing design method (currently under study). References: [1] Rawlings, James Blake, David Q. Mayne, and Moritz Diehl. Model predictive control: theory, computation, and design. Vol. 2. Madison, WI: Nob Hill Publishing, 2017. [2] Rao, Christopher V., James B. Rawlings, and David Q. Mayne. \"Constrained state estimation for nonlinear discrete-time systems: Stability and moving horizon approximations.\" IEEE transactions on automatic control 48.2 (2003): 246-258. [3] Huneault, M., and F. D. Galiana. \"A survey of the optimal power flow literature.\" IEEE transactions on Power Systems 6.2 (1991): 762-770. [4] Zlotnik, Anatoly, Michael Chertkov, and Scott Backhaus. \"Optimal control of transient flow in natural gas networks.\" 2015 54th IEEE conference on decision and control (CDC). IEEE, 2015. [5] Dembo, Ron S., John M. Mulvey, and Stavros A. Zenios. \"Practice ORLarge-Scale Nonlinear Network Models and Their Application.\" Operations Research 37.3 (1989): 353-372. [6] Biegler, Lorenz T., et al. \"Large-scale PDE-constrained optimization: an introduction.\" Large-Scale PDE-Constrained Optimization. Springer, Berlin, Heidelberg, 2003. 3-13. [7] Pereira, Mario VF, and Leontina MVG Pinto. \"Multi-stage stochastic optimization applied to energy planning.\" Mathematical programming 52.1 (1991): 359-375. [8] Zavala, Victor M., et al. \"On-line economic optimization of energy systems using weather forecast information.\" Journal of Process Control 19.10 (2009): 1725-1736. [9] Greene, Scott, and I. Dobson. Margin and sensitivity methods for security analysis of electric power systems. 1998. [10] Robinson, Stephen M. \"Strongly regular generalized equations.\" Mathematics of Operations Research 5.1 (1980): 43-62. [11] Dontchev, Asen L., and R. Tyrrell Rockafellar. Implicit functions and solution mappings. Vol. 543. New York: Springer, 2009. [12] Shin, Sungho, Mihai Anitescu, and Victor M. Zavala. \"Exponential Decay of Sensitivity in Graph-Structured Nonlinear Programs.\" arXiv preprint arXiv:2101.03067 (2021). [13] Shin, Sungho, and Victor M. Zavala. \"Exponential Decay of Sensitivity in Dynamic Optimization: A Graph-Theoretic Approach.\" arXiv preprint arXiv:2101.06350 (2021). [14] Shin, Sungho, Mihai Anitescu, and Victor M. Zavala. \"Overlapping Schwarz Decomposition for Constrained Quadratic Programs.\" 2020 59th IEEE Conference on Decision and Control (CDC). IEEE, 2020. [15] Na, Sen, and Mihai Anitescu. \"Exponential decay in the sensitivity analysis of nonlinear dynamic programming.\" SIAM Journal on Optimization 30.2 (2020): 1527-1554. [16] Shin, Sungho, et al. \"Graph-Based Modeling and Decomposition of Energy Infrastructures.\" arXiv preprint arXiv:2010.02404 (2020). [17] Na, Sen, et al. \"Overlapping Schwarz Decomposition for Nonlinear Optimal Control.\" arXiv preprint arXiv:2005.06674 (2020). [18] Na, Sen, and Mihai Anitescu. \"Superconvergence of online optimization for model predictive control.\" arXiv preprint arXiv:2001.03707 (2020). [19] Shin, Sungho, and Victor M. Zavala. \"Diffusing-horizon model predictive control.\" arXiv preprint arXiv:2002.08556 (2020).",
+    "presenting_author": "Victor M. Zavala | University of Wisconsin-Madison",
+    "authors": [
+      "Sungho Shin | Massachusetts Institute of Technology, Cambridge",
+      "Mihai Anitescu | Argonne National Laboratory, Lemont, IL",
+      "Victor M. Zavala | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sungho Shin",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "Mihai Anitescu",
+        "affiliation": "Argonne National Laboratory, Lemont, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Victor M. Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "558c",
+    "sortable_time": "2021-11-11_08:38:00_08:57:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/622106"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/622225",
+    "paper_endpoint": "Paper/622225",
+    "paper_id": "622225",
+    "topic": "Learning the Structure of Optimization Problems through Stochastic Blockmodeling",
+    "title": "Learning the Structure of Optimization Problems through Stochastic Blockmodeling",
+    "date_time": "2021-11-11_08:00:00_10:30:00",
+    "session_id": "48084",
+    "session_title": "Advances in nonlinear and surrogate optimization",
+    "session_number": "558",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The efficient operation and design of process systems is based on the solution of a wide class of large-scale optimization problems. Solving these problems efficiently can be challenging. Application of decomposition-based solution methods can reduce the computational time but a decomposition of the optimization problem itself is a pre-requisite. In general, decomposition-based solution algorithms exploit the underlying structure of the optimization problem [1,2], but the structure is not always apparent. Therefore, learning the underlying structure of the problem is an important first step towards the selection of the most appropriate decomposition-based solution method. In previous work we have proposed the application of community detection on suitable graph representations of optimization problems as a systematic decomposition framework [3]. Although this approach can provide high quality decompositions, it relies on the assumption that the graph has a community structure, which is rather restrictive. In this work we propose Stochastic Blockmodeling (SBM) and statistical inference as a framework to learn the underlying structure of a optimization problem without any a-priori assumption on the structure of the problem. SBM is a random graph generative model, where the connections among the nodes depend solely on their block affiliation [4]. Therefore, parametric statistical inference can be used to estimate the parameters of the model. Given the graph of an optimization problem and assuming that it is generated by a SBM the inverse problem must be solved: what is the partition of the nodes that generated the observed graph? Efficient approaches for the solution of this problem utilizing maximum likelihood estimation or Bayesian inference will be discussed, along with a general framework for linking the graph structure with standard distributed or hierarchical decomposition-based solution algorithms such as Benders and Lagrangean ones. We apply this approach to benchmark optimization problems from MINLP and MORG libraries and we show that the proposed approach can indeed uncover complex block structures of optimization problems. The estimated structure is used as the basis for the application of decomposition-based solution algorithms which are shown to reach an optimum or bound estimate in reduced computational time compared to monolithic approaches. Finally, we present a general software platform for automated block structure detection and decomposition-based solution. References: [1]. Conejo, A.J., Castillo, E., Minguez, R. and Garcia-Bertrand, R., 2006. Decomposition Techniques in Mathematical Programming: Engineering and Science Applications . Springer Science & Business Media. [2]. Daoutidis, P., Tang, W. and Allman, A., 2019. Decomposition of control and optimization problems by network structure: Concepts, methods, and inspirations from biology. AIChE Journal , 65 (10), p.e16708. [3]. Allman, A., Tang, W. and Daoutidis, P., 2019. DeCODe: a community-based algorithm for generating high-quality decompositions of optimization problems. Optimization and Engineering , 20 (4), pp.1067-1084. [4]. Peixoto, T.P., 2019. Bayesian stochastic blockmodeling. Advances in network clustering and blockmodeling , pp.289-332.",
+    "presenting_author": "Ilias Mitrai | The University of Texas at Austin, TX",
+    "authors": [
+      "Ilias Mitrai | The University of Texas at Austin, TX",
+      "Prodromos Daoutidis | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ilias Mitrai",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "558d",
+    "sortable_time": "2021-11-11_08:57:00_09:16:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/622225"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/622620",
+    "paper_endpoint": "Paper/622620",
+    "paper_id": "622620",
+    "topic": "A New Reinforcement Learning Based Bayesian Optimization Method for a Sequential Decision Making in an Unknown Environment",
+    "title": "A New Reinforcement Learning Based Bayesian Optimization Method for a Sequential Decision Making in an Unknown Environment",
+    "date_time": "2021-11-11_08:00:00_10:30:00",
+    "session_id": "48084",
+    "session_title": "Advances in nonlinear and surrogate optimization",
+    "session_number": "558",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Bayesian optimization (BO), a sequential decision making strategy for efficiently finding a global optimum through iteration between search and evaluation, has recently gained great popularity given its high efficiency in terms of data requirements. In chemical engineering, where data generation through experiments is oftentimes time-consuming and expensive, the utility of BO has been examined in solving diverse experimental design problems, including materials discovery and reaction design[1-2]. The efficiency of BO is achieved by balancing the exploration and exploitation of the search space, and for this, a so-called acquisition function is defined and optimized. In standard BO, however, the widely-used acquisition functions are one-step optimal, which means that they consider just the immediate improvement at next step, and ignore the gains that would be obtained through many rounds of future evaluations[3]. However, none of real-world decision-making problem can be solved in a single step of iteration. Real-world problems require decision making over multiple iterations starting from the initial knowledge state. Theoretically, to obtain an optimal solution to the multi-step lookahead BO problem, a stochastic dynamic programming (DP) problem should be solved, which is computationally intractable in almost all cases. Thus, several approximate methods for the multi-step lookahead BO have been suggested[3-4]; however, they are computationally too expensive to implement or restricted to two-step lookahead. In this work, we propose an architecture of reinforcement learning based BO for multi-step lookahead decision making in an uncertain environment. Reinforcement learning (RL) is used to approximately solve the DP problem in an efficient way and to enable multi-step lookahead decision making. To incorporate reinforcement learning into the BO, the BO problem has to be translated into a Markov Decision Process (MDP) which RL requires. Unlike games or robotics where reinforcement learning has been applied to thus far, proper definitions of the state and reward for an agent are not clear for the BO problem. Thus, this paper suggests a novel way of defining an MDP for solving the multi-step lookahead BO problem. Proximal Policy Optimization (PPO), a state-of-the art RL algorithm, is employed in this work. The performance of the proposed RL-based BO has been tested throughout several benchmark functions by comparing average regrets for each step of decision to that of the conventional BO. As a result, the proposed BO has lower average regret values than the conventional BO, which means the reinforcement learning based BO has found a better optimum faster than the conventional BO. The proposed BO can be applied to a variety of sequential decision-making problems cast in an unknown environment (e.g. with an unknown decision-reward map) to accelerate the finding of the global optimal solution. [1] Schmidt, J., Marques, M. R., Botti, S., & Marques, M. A. (2019). Recent advances and applications of machine learning in solid-state materials science. npj Computational Materials , 5 (1), 1-36. [2] Greenhill, S., Rana, S., Gupta, S., Vellanki, P., & Venkatesh, S. (2020). Bayesian optimization for adaptive experimental design: A review. IEEE Access , 8 , 13937-13948. [3] Wu, J., & Frazier, P. (2019). Practical two-step lookahead Bayesian optimization. Advances in neural information processing systems , 32 , 9813-9823. [4] Lam, R., & Willcox, K. (2017, December). Lookahead Bayesian Optimization with Inequality Constraints. In NIPS (pp. 1890-1900).",
+    "presenting_author": "Mujin Cheon | Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea, Republic of (South)",
+    "authors": [
+      "Mujin Cheon | Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea, Republic of (South)",
+      "Ha-Eun Byun | Department of Chemical and Biomolecular Engineering, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea, Republic of (South)",
+      "Jay Lee | Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mujin Cheon",
+        "affiliation": "Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ha-Eun Byun",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Jay Lee",
+        "affiliation": "Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "558e",
+    "sortable_time": "2021-11-11_09:16:00_09:35:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/622620"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/622653",
+    "paper_endpoint": "Paper/622653",
+    "paper_id": "622653",
+    "topic": "A Nested Schur Decomposition Approach for Multiperiod Optimization of Chemical Process",
+    "title": "A Nested Schur Decomposition Approach for Multiperiod Optimization of Chemical Process",
+    "date_time": "2021-11-11_08:00:00_10:30:00",
+    "session_id": "48084",
+    "session_title": "Advances in nonlinear and surrogate optimization",
+    "session_number": "558",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "This work develops an algorithm for solving multiperiod optimization (MPO) problems using a nested Schur decomposition (NSD) approach. MPOs are an important class of problems that usually consider design and operation plans for predicted demands over a given time horizon. MPOs are also one of multi-scale integration problems from a single process model to MPOs related to business decisions. For chemical processes, rigorous process models are highly integrated with multiple unit models and thermodynamic property models, which lead to a large system of nonlinear and non-convex equations. MPOs of such process models could be significantly larger and more complex than a single process model. In the current volatile market situation, the chemical industry highly demands strategies to transit multi-scale problems in a robust, flexible, and efficient way over their process development. Therefore, we develop and demonstrate the NSD approach with an MPO of an industrial process model in this work. The NSD approach decomposes MPO using a Schur complement, and allows us to solve the decomposed problem in parallel. Unlike other internal decomposition approaches (e.g., Schur-IPOPT)[1], the NSD partitions the problem into a two-level problem at the problem level. The problem level decomposition could be easier and more flexible than the internal decomposition methods. The two-level problem consists of the upper and lower problems. In MPOs, the upper problem has inventory, demand, and design constraints set over the entire period. On the other hand, the lower problem consists of a single process model for each period. There are, however, complicating variables that need to exist in both upper and lower problems, such as production rates. Hence, each lower problem is disaggregated by introducing artificial variables and constraints, which force the values of the artificial variables onto the complicating variables in the lower problem. It is noted that each lower problem could be infeasible or overdetermined by strictly forcing the constraints for complicating variables such as production rates. Thus, those constraints are relaxed, and its violations are penalized in the lower problem of the NSD. For the solution strategy, the NSD converges the disaggregated problem in each period as the lower level problem, and the complicating variables are solved in the upper level problem. The detailed solution strategy is as follows. First, the lower problem is solved for each period and collects the KKT (Karush Kuhn Tucker) matrices. Then, the reduced Hessian matrix for the complicating variables is constructed from the assembled KKT system using the Schur complement. The reduced gradient vector for the complicating variables is obtained with sensitivity information of each period; this step can be parallelized. Finally, the upper problem updates the complicating variables with the Hessian and gradient information by using a globally convergent Newton-type solver. In the implementation, Pyomo is used to define both upper and lower problems. The KKT system is retrieved from the lower problem solution with Pynumero after solving the lower problem with IPOPT or CONOPT. The lower problem solver can be selected based on the inner problem condition. For example, IPOPT is efficient when the problem is well-conditioned. CONOPT is robust if the problem is ill-conditioned. Then, the Hessian and gradient information obtained by Schur complement are augmented into the upper problem. The augmented upper problem is solved with IPOPT iteratively. An industrial benzene chlorination (BC) process for the MPO is used to demonstrate the NSD approach in this work. The BC process model contains approximately 10,000 constraints and 30 degrees of freedom. The lower problem consists of the BC process model, and the production rates are considered the complicating variables. In the upper problem, the problem is formulated with inventory, demand constraints, and production rates. The entire MPO problem will be at least 10,000 × N constraints and 30 × N degrees of freedom, where N is the number of periods. For solving the lower problem, CONOPT4 is used, which is one of the most robust active set solvers for nonlinear optimization. The NSD solution is compared with the direct solution, where the entire MPO is simultaneously solved without the decomposition by CONOPT4. From the result, the NSD successfully converges to the same optimum of the direct solution. The parallel computation of the NSD shows a significant time reduction in computation. The computational time of the parallel NSD increases sublinearly while the direct solution linearly increases in terms of . Thus, the parallel NSD has the advantage for large-scale MPO. In summary, NSD is developed and demonstrated with an industrial multiperiod process optimization problem. The method allows us flexibly to choose the inner problem solver. Especially, we have demonstrated the NSD with CONOPT4 in this work. In addition, the NSD has a similar relationship between IPOPT and CONOPT, which are infeasible and feasible path solvers, respectively, in contrast to Schur-IPOPT. The NSD enforces feasibility in the inner problem over the iterations. This feature could be the reason for the robustness. Furthermore, the parallel NSD could outperform the computational time over the direct solution approach in the MPO with a large number of periods. Therefore, NSD provides a robust, flexible, and efficient option for industry to solve large MPOs. References [1] Zavala VM, Laird CD, Biegler LT. Interior-point decomposition approaches for parallel solution of large-scale nonlinear parameter estimation problems. Chem Eng Sci . 2008;63(19):4834-4845",
+    "presenting_author": "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Noriyuki Yoshio | Carnegie Mellon University, Pittsburgh, PA",
+      "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Noriyuki Yoshio",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Lorenz Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "558f",
+    "sortable_time": "2021-11-11_09:35:00_09:54:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/622653"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/622977",
+    "paper_endpoint": "Paper/622977",
+    "paper_id": "622977",
+    "topic": "Model-and-Search: A Derivative-Free Local Optimization Algorithm",
+    "title": "Model-and-Search: A Derivative-Free Local Optimization Algorithm",
+    "date_time": "2021-11-11_08:00:00_10:30:00",
+    "session_id": "48084",
+    "session_title": "Advances in nonlinear and surrogate optimization",
+    "session_number": "558",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Derivative-free optimization (DFO) is an important class of optimization algorithms that optimize problems based on objective and function evaluations. DFO methods have enormous practical potential to address problems where derivatives are unavailable, unreliable, or only available at a significant cost. Increasing complexity in mathematical software, an abundance of legacy codes, and applications in auto-tuning are some of the drivers that put DFO algorithms in high demand. DFO algorithms can be classified as local search algorithms and global search algorithms. Thorough reviews of DFO algorithms and a comparison of DFO software appear in [1, 2]. Some well-known DFO solvers developed based on local search algorithms include BOBYQA [3], FMINSEARCH [4], IMFIL [5], NEWUOA [6], NOMAD [7] and DAKOTA/PATTERN [8]. In this work, we propose Model-and-Search (MAS), a novel local search DFO algorithm, and show it is convergent to a stationary point. The problem of interest is the optimization of a deterministic function over a box-bounded domain of interest. In MAS, the search is oriented to improve the value of the incumbent by combining a set of techniques, including gradient estimation, quadratic model building and optimization. A novel sensitivity-based approach is proposed to construct an incomplete quadratic model when points are not enough to build a complete quadratic surrogate model of the true function. The surrogate model is then used to guide the search. We present extensive computational results on a collection of over 300 test problems from publicly available sources with varying dimensions and complexity. These results show that the proposed algorithm outperforms all other DFO local solvers. [1] Conn, A. R., Scheinberg, K., Vicente, L. N.: Introduction to derivative-free optimization. SIAM, Philadelphia, PA (2009). [2] Rios, L. M., Sahinidis, N. V.: Derivative-free optimization: A review of algorithms and comparison of software implementations. Journal of Global Optimization, 56, 1247–1293 (2013). [3] Powell, M. J. D.: The BOBYQA Algorithm for Bound Constrained Optimization without Derivatives. Technical report, Department of Applied Mathematics and Theoretical Physics, University of Cambridge (2009). [4] Mathworks. FMINSEARCH. https://www.mathworks.com/help/matlab/ref/fminsearch.html. [5] Kelley, C. T.: Users Guide for IMFIL version 1.0. http://www4.ncsu.edu/ctk/imfil.html. [6] Powell, M. J. D.: Developments of NEWUOA for minimization without derivatives. IMA Journal of Numerical Analysis, 28, 649-664 (2008). [7] Abramson, M. A., Audet, C., Couture, G., Dennis, J. E. Jr., LeDigabel, S.: The Nomad project. http://www.gerad.ca/nomad/ [8] B. M. Adams, M. S. Ebeida, M. S. Eldred, G. Geraci, J. D. Jakeman, K. A. Maupin, J. A. Monschke, J. A. Stephens, L. P. Swiler, D. M. Vigil, T. M. Wildey, W. J. Bohnhoff, K. R. Dalbey, J. P. Eddy, J. R. Frye, R. W. Hooper, K. T. Hu, P. D. Hough, M. Khalil, E. M. Ridgway, J. G. Winokur, and A. Rushdi.: DAKOTA, A Multilevel Parallel Object-Oriented Framework for Design Optimization, Parameter Estimation, Uncertainty Quantification, and Sensitivity Analysis: Version 6.9 User's Manual. Sandia National Laboratories, Albuquerque, NM and Livermore, CA, 2018. https://dakota.sandia.gov/.",
+    "presenting_author": "Kaiwen Ma | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Kaiwen Ma | Carnegie Mellon University, Pittsburgh, PA",
+      "Luis Miguel Rios | End-to-End Analytics, Lima, Peru",
+      "Nikolaos Sahinidis | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kaiwen Ma",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Luis Miguel Rios",
+        "affiliation": "End-to-End Analytics, Lima, Peru",
+        "designation": "Author"
+      },
+      {
+        "name": "Nikolaos Sahinidis",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "558g",
+    "sortable_time": "2021-11-11_09:54:00_10:13:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/622977"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/629356",
+    "paper_endpoint": "Paper/629356",
+    "paper_id": "629356",
+    "topic": "Safe Real-Time Optimization Using Multi-Fidelity Gaussian Processes",
+    "title": "Safe Real-Time Optimization Using Multi-Fidelity Gaussian Processes",
+    "date_time": "2021-11-11_08:00:00_10:30:00",
+    "session_id": "48084",
+    "session_title": "Advances in nonlinear and surrogate optimization",
+    "session_number": "558",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The advantages of real-time optimization (RTO) in industrial processes are well known; however, currently, most implementations rely on heuristics and trial and error to reach optimality. The fact that complex phenomena cannot be modelled precisely is the biggest challenge in real-time optimization; in this context, we refer to the 'plant' as the 'true' system and therefore refer to 'plant-model mismatch' as the error of our model with respect to the real system (the plant). Real-time optimization relies on the development of models utilized to conduct optimization [1]; these (imperfect) models are usually updated in real-time when measurements are available. The optimization is repeated with the updated models, and an iterative procedure between model refinement and optimization ensues. This two-step procedure in RTO schemes is called the model-adaptation strategy. Despite being the most widely used industry method, this model-adaptation strategy does not converge to the systems' optimal operating conditions. Modifier Adaptation [2] has been proposed to accommodate this issue inspired by the technique of Integrated System Optimization and Parameter Estimation [3]. Still, it differs in the fact that no parameter estimation is required. These RTO schemes can reach plant optimality upon convergence, despite the presence of a structural plant-model mismatch. However, this comes at the cost of having to estimate gradient terms from process measurements. The use of derivative-free approaches can lift the issues with the estimation of gradients. The natural choice of surrogates is Gaussian processes (GPs) within Bayesian optimization ideas [4]. These methods use the GPs as a discrepancy model that approximate the mismatch between the model and the plant. The prior model combined with the GP is then explicitly used in the optimization formulation; however, most industrially relevant models are not analytical. They are often complex black-box simulators and legacy code, e.g. systems of ordinary or partial differential equations or a set of `if/else if' rules. This work's novelty lies on integrating derivative-free optimization schemes and multi-fidelity Gaussian processes [5] within a Bayesian optimization framework. The proposed method uses two Gaussian processes for the stochastic system; one emulates the (known) process model, and another, the true system through measurements. In this way, low fidelity samples can be obtained via a model, while high fidelity samples are obtained through the system's measurements. This framework captures the system's behaviour in a non-parametric fashion while driving exploration through acquisition functions. The benefit of using a Gaussian process to represent the system is the ability to perform uncertainty quantification in real-time and allow for chance constraints to be satisfied with high confidence. This results in a practical approach illustrated in numerical case studies, including a semi-batch photobioreactor Optimization problem. The results show that the use of the multi-fidelity GP and chance constraints significantly help both the convergence to the optimum and the system's feasibility. References: Chachuat B., Srinivasan B., Bonvin D. (2009) Adaptation strategies for real-time optimization. Comput. Chem. Eng. 33:1557-1567 Marchetti A.G., François G., Faulwasser T., Bonvin D. (2016) Modifier adaptation for real-time optimization—Methods and applications. Processes 4:55. Roberts P.D., Williams T.W. (1981) On an algorithm for combined system optimisation and parameter estimation. Automatica 17:199-209. del Rio Chanona A., Petsagkourakis P., Bradford E., Alves Graciano J. E.,Chachuat B. (2021) Real-time optimization meets Bayesian optimization and derivative-free optimization: A tale of modifier adaptation. Computers & Chemical Engineering. Volume 147.107249, Perdikaris P., Raissi m., Damianou A., Lawrence N. D., and Karniadakis G. E. (2017) Nonlinear information fusion algorithms for data-efficient multi-fidelity modelling, Proceedings of the Royal Society A: Mathe-matical, Physical and Engineering Sciences, vol. 473, no. 2198",
+    "presenting_author": "Panagiotis Petsagkourakis | University College London, United Kingdom",
+    "authors": [
+      "Panagiotis Petsagkourakis | University College London, United Kingdom",
+      "Benoit Chachuat | Imperial College London, United Kingdom",
+      "Antonio del Rio Chanona | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Panagiotis Petsagkourakis",
+        "affiliation": "University College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Benoit Chachuat",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "558h",
+    "sortable_time": "2021-11-11_10:13:00_10:32:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/629356"
+  }
+]

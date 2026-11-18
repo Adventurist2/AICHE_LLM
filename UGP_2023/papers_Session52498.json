@@ -1,0 +1,407 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668796",
+    "paper_endpoint": "Paper/668796",
+    "paper_id": "668796",
+    "topic": "Simple (Scattering-Informed Microstructure Prediction during Lagrangian Evolution) – a Data-Driven Framework for Modeling Complex Fluids",
+    "title": "Simple (Scattering-Informed Microstructure Prediction during Lagrangian Evolution) – a Data-Driven Framework for Modeling Complex Fluids",
+    "date_time": "2023-11-07_15:30:00_18:00:00",
+    "session_id": "52498",
+    "session_title": "Data Science for Complex Fluids and Complex Flows",
+    "session_number": "422",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Fluid Mechanics",
+    "abstract": "An overarching challenge in rheological practice is the rapid development of microscopic predictive models of fluid structure and rheology in material classes for which no first principles physics-based models currently exist. Progress in machine learning algorithms has facilitated dramatic improvements in data-driven modeling in many scientific fields, but purely data-driven rheological models have largely lagged behind. This is primarily due to a lack of experimental methods for generating training data sets, as well as an absence of machine learning approaches to efficiently train models that enforce the underlying mechanistic constraints of the material. We address these challenges using the recently developed fluidic four-roll mill with scanning small-angle X-ray scattering (FFoRM-sSAXS), which can rapidly generate a large data set of nanostructural measurements along diverse 2D Lagrangian deformation trajectories. We propose a machine learning framework in which FFoRM-sSAXS data is used to train a model which can predict the nanostructural evolution of the fluid for an arbitrary deformation (velocity gradient tensor) input. We use deep learning approaches including autoencoders and neural ordinary differential equations to learn a computationally efficient reduced order model. We also learn a transformation from the state data embedded in the scattering intensity to the stress exerted on the fluid. We incorporate frame indifference and material symmetries by performing data-driven operations in a co-rotating, phase-aligned frame determined completely by the deformation input. The framework is tested on a rigid rod suspension and compared to theoretical constitutive models and bulk rheological data.",
+    "presenting_author": "Michael Graham | University of Wisconsin-Madison",
+    "authors": [
+      "Charles Young | University of Wisconsin-Madison",
+      "Patrick Corona | Bristol Myers Squibb, New Brunswick, NJ",
+      "Anukta Datta | University of California - Santa Barbara",
+      "Matthew Helgeson | University of California - Santa Barbara",
+      "Michael Graham | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Charles Young",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Patrick Corona",
+        "affiliation": "Bristol Myers Squibb, New Brunswick, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Anukta Datta",
+        "affiliation": "University of California - Santa Barbara",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew Helgeson",
+        "affiliation": "University of California - Santa Barbara",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Graham",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "422a",
+    "sortable_time": "2023-11-07_15:30:00_15:45:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668796"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665637",
+    "paper_endpoint": "Paper/665637",
+    "paper_id": "665637",
+    "topic": "Multi-Fidelity Data-Driven Design and Analysis of Reactor and Tube Simulations",
+    "title": "Multi-Fidelity Data-Driven Design and Analysis of Reactor and Tube Simulations",
+    "date_time": "2023-11-07_15:30:00_18:00:00",
+    "session_id": "52498",
+    "session_title": "Data Science for Complex Fluids and Complex Flows",
+    "session_number": "422",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Fluid Mechanics",
+    "abstract": "The development of new manufacturing techniques such as 3D printing have enabled the creation of previously infeasible chemical reactor designs. These novel reactor configurations have increasingly been considered for chemical synthesis, for example, microfluidic reactors, and mesoscale reactors. Microfluidic reactors can enable finer control over local conditions resulting in increased product selectivity, and improved heat transfer resulting in more sustainable processes. 3D printed mesoscale reactors have been proposed as next-generation alternatives to traditionally manufactured designs, lending to their large potential design space. 3D printed reactors for biodiesel production have been shown to provide high yields and helical coil-in-coil reactors, unable to be manufactured otherwise, have been shown to demonstrate `excellent plug-flow behaviour' . The modeling and design of traditional chemical reactors has largely been considered an art, with small improvements in performance resulting in wider impacts on product yield, sustainability, and economic costs. However, with the promise of new reactors comes the need for new analytical techniques to model and optimize in increasingly complex design spaces. Chemical reactors have been investigated through computational fluid dynamics (CFD) simulations, where systems of partial differential equations (PDEs) with large degrees of freedom are solved iteratively, resulting in large computational costs. In addition to being expensive, gradient information is practically unavailable. Derivative-free optimization has found significant application in domains where mathematical expressions or gradients are unavailable. Examples include the optimization of proprietary chemical process software, chemical reaction optimization, real time optimization, and topology optimization of two-dimensional chemical reactor channels. With the advent of new technologies in reactor design, reactor geometries are becoming highly-parameterized, resulting in higher-dimensional, more complex derivative-free optimization problems. As such, there exists significant scope for a robust, domain-specific approach for the optimization of simulated chemical reactors to support the next generation of sustainable chemical processes. In many real-world and simulated engineering systems, differing quality evaluations of quantities of interest exist. Reactor performance can be quantified by a correlation of dimensionless numbers, a CFD simulation, or a pilot-scale experiment. These all attempt to capture the true underlying performance of a system, with differing accuracies and associated costs. Taking the view that only the industrial-scale reactor in its intended setting will provide a true evaluation of performance: any approximation to this, including pilot and lab-scale experiments, simulations, and basic calculations all become valid lower-fidelity evaluations which may be used simultaneously for design and optimization. For CFD simulations of a reactor, fidelities are most often associated with the number of finite element cells in a simulation as they dictate the accuracy and computational cost. By motivating the notion that all predicted, unmeasured quantities derive from a lower-fidelity approximation to a desired high-fidelity function, it becomes pertinent to investigate methodologies that apply these approximations to learn about the true system of interest. Here we present a framework to rapidly solve this nonlinear, computationally expensive, and derivative-free problem, enabling the fast prototype of novel reactor parameterizations. We take advantage of Gaussian processes to adaptively learn a multi-fidelity model of reactor simulations across a number of different continuous mesh fidelities.The search space of reactor geometries is explored through an amalgam of different, potentially lower, fidelity simulations which are chosen for evaluation based on weighted acquisition function, trading off information gain with cost of simulation. Within our framework we derive a novel criterion for monitoring the progress and dictating the termination of multi-fidelity Bayesian optimization, ensuring a high-fidelity solution is returned before experimental budget is exhausted. We demonstrate our framework by investigating the optimization of helical-tube reactors under pulsed-flow conditions, which have demonstrated outstanding mixing characteristics, have the potential to be highly parameterized, and are easily manufactured using 3D printing. A helical-tube reactor is parameterized by a coil radius, coil pitch, and inversion. Coil pitch denoted by φ controls how extended the helical tube is, coil radius denoted by ρ controls how tight the coils are within the helical tube, and the inversion parameter is denoted by δ controls the change in coil direction. Inversions within helical-tube reactors have been shown to provide effective mixing properties. δ takes a value between 0 and 1, and specifies where along the coil the inversion takes place. The length of the coil is maintained as fixed, resulting in all parameterized coils having the same volume. Within the parameterization, we include a fixed-length inlet and outlet to the coil.The inlet and outlet are horizontal, and a smooth interpolation is used to ensure that the transition from inlet to coil and coil to outlet, is smooth. In addition to geometric design and oscillatory parameters, the output of a simulation is also influenced by one or more fidelities. A typical fidelity used within CFD simulations is the number of discrete finite elements that are contained within the mesh, known as cell count. Fluid behaviour within pulsed-flow helical-tube reactors is complex due to the transient formation and unravelling vortex structures affecting axial and radial mixing. Therefore, it is important to capture simulation resolution both axially, through the length of the tube, as well as radially throughout the cross-section of the tube for a high-quality simulation. In this work, as opposed to applying cell count as a single scalar fidelity parameter, we instead maintain the ability to adapt the resolution of a simulation both axially and radially resulting in two independent fidelities. We implement a custom meshing procedure that allows for axial and radial fidelity to be varied independently. The simulation that serves as the highest fidelity corresponds to when both the axial and radial fidelities are greatest. Whilst both axial and radial fidelities are discrete due to their meaning within a finite element context, we treat them as continuous parameters. During mesh creation values of both fidelities are rounded to the nearest integer. Within the solution to CFD problems, a number of solver options may be considered as valid fidelities. However, as many of these take on non-continuous or Boolean values, we leave their integration for future work. Figure 1 demonstrates the effect of δ, ρ and φ on helical coil tube geometry on the final mesh, and Figure 2 demonstrates the impact each fidelity parameter on final mesh. Figure 3 shows the optimization progress throughout 64 hours. The time to generate, and objective values of initial solutions generated are denoted by using negative iteration and wall-clock time values. Therefore, optimization itself it denoted as starting at iteration 0, and at a wall-clock time of 0. Figure 4 shows the different simulation fidelities evaluated throughout optimisation. The optimal coil geometry has a pitch of 1.04cm, radius of 1.25cm, and an inversion that occurs 66% along the coil length. The associated optimal operating conditions are pulsed-flow with an amplitude of 1mm, frequency of 2 Hz and a Reynolds number of 50. Figure 4 highlights the specific behaviour of fluid within the optimal reactor throughout a single oscillatory cycle. Streamlines are coloured with tracer concentration to show the movement through the coil. For the positive part of the oscillatory cycle, the tracer moves in the forward direction in a streamlined manner towards the outlet. The important features start to occur at the negative part of the oscillation cycle where the secondary flow starts to emerge. Cross-sectional flow streamlines transitioning to Dean-type vortices due to the centrifugal forces at the coil turns are shown. These counter-rotating Dean vortices promote radial mixing of the tracer with the water medium and close to the walls of the computational domain, no tracer dead zones are left behind. Additionally, along with the reverse flow, the swirling motion developed during the negative oscillation cycle, redirects the flow in the tangential direction which limits the axial dispersion of the tracer. This combination of promoting radial mixing and inhibiting axial mixing results in high plug flow performance. This flow cycle is periodic in nature for the amplitude of 1 mm and frequency of 2 Hz, and the simulation is continued until the tracer leaves the computational domain. The optimal reactor geometry was exported into an STL file format and modified into a 3D printable model by adding a bounding box to give the part volume. The straight sections at the inlet and outlet were given 8 mm and 10 mm OD tube fittings for connection to the experiment apparatus, and the bounding box was then trimmed to reduce the amount of resin needed for the print. The inlet region was also extended by 20 mm to provide additional development length to ensure the experiment matched as closely as possible the parabolic inlet velocity used in the simulations. The optimal geometry was printed using a FormLabs Form3+ using the Clear V4 resin using the default settings. Post-processing involved washing in IPA for 20 min, drying for 24 hours, and post-curing in a FormCure at 60°C for 30 min. Figure 5 shows the raw STL file, modified geometry, and printed geometry. In obtaining a robust and explainable solution, so we demonstrate our design framework to be extensible to a broad variety of expensive simulation-based optimization problems, supporting the design of the next generation of highly parameterized chemical reactors.",
+    "presenting_author": "Tom Savage | Imperial College London, United Kingdom",
+    "authors": [
+      "Tom Savage | Imperial College London, United Kingdom",
+      "Nausheen Basha | Imperial College London, United Kingdom",
+      "Jonathan McDonough | Newcastle University, Newcastle upon Tyne, United Kingdom",
+      "Omar Matar | Imperial College London, United Kingdom",
+      "Antonio del Rio Chanona | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Tom Savage",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nausheen Basha",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Jonathan McDonough",
+        "affiliation": "Newcastle University, Newcastle upon Tyne, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Omar Matar",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "422b",
+    "sortable_time": "2023-11-07_15:45:00_16:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665637"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667135",
+    "paper_endpoint": "Paper/667135",
+    "paper_id": "667135",
+    "topic": "Comparative Study of Erosion Prediction in Elbows Using Machine Learning and CFD",
+    "title": "Comparative Study of Erosion Prediction in Elbows Using Machine Learning and CFD",
+    "date_time": "2023-11-07_15:30:00_18:00:00",
+    "session_id": "52498",
+    "session_title": "Data Science for Complex Fluids and Complex Flows",
+    "session_number": "422",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Fluid Mechanics",
+    "abstract": "Understanding and developing an efficient approach for estimating erosion damage in pipeline facilities remains an industrial problem wherever solid particles are transported either as pure solids or in multiphase flows [1, 2, 3]. Presently, experimental and numerical methods are the most widely used for predicting erosion. Computational Fluid Dynamics (CFD) studies are mostly used to complement experimental erosion studies [1, 4]. Reproducing experimental results by CFD requires a large number of underlying assumption, several factors such as mesh properties, force combinations, collisions, coupling, solid particle and fluid properties, erosion equations etc, need to be investigated, carefully selected, and optimised in order to achieve an approximate predictions. This task can be time-consuming, computationally expensive, and may contribute to uncertainties of predictions. Sometimes experimental observations are not easily reproducible by CFD, which reinforces the need for alternative, data-driven methods for erosion prediction that are simplified, easy to use but reliable In this study, we investigate the prediction of maximum erosion in a 76.2mm diameter elbow geometry by machine learning (ML) and compare the results with CFD simulations reported by Zamani [4], Vieira [5], and Banakermani [6] for gas-solid system. ML was performed using the Random Forest (RF) and Decision Tree (DT) regressions methods, with a 50-50% data split between the training and testing datasets. Six variables were studied and used for erosion prediction, which include gas superficial velocity, geometry orientation, material hardness, pipe diameter, volume fractions, and particle size. The R 2 values obtained from erosion prediction on the testing data after fitting of the training dataset are 0.954 and 0.965 for DT and RF (see Figure 1), respectively. The fitted algorithm was tested using six cases, and the average deviation of ML predictions from the experimental data obtained are 25.33% and 35.85% for DT and RF, respectively, compared to 54.27% for Vieira, 49.86% for Zamani, 45.31% for Banakermani (see Figure 2). These results show that ML can provide an improved prediction compared to CFD, and the prediction for each case by ML can be improved and optim i sed with the use of t uning parameters. Ranking of the parameters indicates that gas superficial velocity and volume fractions are the most dominant variables affecting erosion. Our results demonstrate that ML is a promising approach for erosion prediction, which also has the advantage of reducing CFD uncertainties due to mesh quality, erosion equations, etc. It is also important to note, however, that the ML prediction accuracy will significantly depend on the robustness and accuracy of the data source utilised. References [1] C. B. Solnordal, C. Y. Wong, and J. Boulanger, “An experimental and numerical analysis of erosion caused by sand pneumatically conveyed through a standard pipe elbow,” Wear, vol. 336-337, pp. 43–57, aug 2015. [2] “CFD study of Jet Impingement Test erosion using Ansys Fluent® and OpenFOAM®,” Computer Physics Communications, vol. 197, pp. 88–95, dec 2015. [Online]. Available: https://linkinghub.elsevier.com/retrieve/pii/S0010465515002945 [3] S. A. Shirazi and B. S. McLaury, “Predicting Solid Particle Erosion in Multiphase Flow: Challenges and Success Stories (Keynote Paper),” in Volume 1: Symposia, Parts A, B and C. ASMEDC, jan 2009, pp. 637–637. [Online]. Available: https://asmedigitalcollection.asme.org/FEDSM/proceedings/FEDSM2009/43727/637/346665 [4] M. Zamani, S. Seddighi, and H. R. Nazif, “Erosion of natural gas elbows due to rotating particles in turbulent gas-solid flow,” Journal of Natural Gas Science and Engineering, vol. 40, pp. 91–113, 2017. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S1875510017300434 [5] “Experimental and computational study of erosion in elbows due to sand particles in air flow,” Powder Technology, vol. 288, pp. 339–353, jan 2016. [6] M. R. Banakermani, H. Naderan, and M. Saffar-Avval, “An investigation of erosion prediction for 15° to 90° elbows by numerical simulation of gas- solid flow,” Powder Technology, vol. 334, pp. 9–26, 2018. [Online]. Available: https://doi.org/10.1016/j.powtec.2018.04.033",
+    "presenting_author": "Isa Mohammed | Imperial College London, United Kingdom",
+    "authors": [
+      "Isa Mohammed | Imperial College London, United Kingdom",
+      "Adel A. Alghamdi | Imperial College London, United Kingdom",
+      "Thomas Abadie | University of Birmingham, United Kingdom",
+      "Sibo Cheng | Imperial College London, United Kingdom",
+      "Omar Matar | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Isa Mohammed",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Adel A. Alghamdi",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Thomas Abadie",
+        "affiliation": "University of Birmingham, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Sibo Cheng",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Omar Matar",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "422c",
+    "sortable_time": "2023-11-07_16:00:00_16:15:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667135"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669218",
+    "paper_endpoint": "Paper/669218",
+    "paper_id": "669218",
+    "topic": "Data-Driven Symmetry-Aware Low-Dimensional Models for Predicting Turbulent Fluid Flows",
+    "title": "Data-Driven Symmetry-Aware Low-Dimensional Models for Predicting Turbulent Fluid Flows",
+    "date_time": "2023-11-07_15:30:00_18:00:00",
+    "session_id": "52498",
+    "session_title": "Data Science for Complex Fluids and Complex Flows",
+    "session_number": "422",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Fluid Mechanics",
+    "abstract": "Reduced-order models (ROMs) that capture flow dynamics are important for decreasing computational cost in simulations as well as for applications such as control for drag reduction. In this work we present a framework for learning low-dimensional models in a symmetric subspace where the dynamics of the flow occur. Symmetries are inherent in many physical and dynamical systems; in the Navier-Stokes equations (NSE) these appear in the form of continuous and discrete symmetry groups. Any dynamic trajectory that is a solution to the NSE will be equivariant with respect to its symmetries, and the result of a symmetry group that acts on a solution will be a solution as well. In general, ROMs will not have information of the group of symmetries. This means that to learn accurate ROMs that describe the flow, the models need access to data in every symmetry subspace which are populated in the long-time dynamics. To overcome this, we learn ROMs with the use of neural networks in a subspace of the symmetries and apply this to the case of two-dimensional Kolmogorov flow in a chaotic bursting regime. This system has a continuous symmetry in the flow direction as well as rotation and shift-reflect discrete symmetries. By charting the space into different symmetric sections, tracked with the use of indicators that differentiate these, we are able to map the flow field to a fundamental space and learn dynamics on it. With this framework: equivariance in the NSE is satisfied, less data is needed to learn accurate models, and better short time tracking with respect to the true data is observed. We also comment on the minimal dimension needed to accurately capture the dynamics of the flow.",
+    "presenting_author": "Carlos E. Perez De Jesus | University of Wisconsin-Madison",
+    "authors": [
+      "Carlos E. Perez De Jesus | University of Wisconsin-Madison",
+      "Alec Linot | University of Wisconsin-Madison",
+      "Michael Graham | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Carlos E. Perez De Jesus",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Alec Linot",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Graham",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "422d",
+    "sortable_time": "2023-11-07_16:15:00_16:30:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669218"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/671003",
+    "paper_endpoint": "Paper/671003",
+    "paper_id": "671003",
+    "topic": "Computational Analysis of Different Sparging Systems and Their Influence in the Fluid-Dynamic Behavior of Bubble Column Reactors.",
+    "title": "Computational Analysis of Different Sparging Systems and Their Influence in the Fluid-Dynamic Behavior of Bubble Column Reactors.",
+    "date_time": "2023-11-07_15:30:00_18:00:00",
+    "session_id": "52498",
+    "session_title": "Data Science for Complex Fluids and Complex Flows",
+    "session_number": "422",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Fluid Mechanics",
+    "abstract": "Bubble column bioreactors are being actively considered for gas fermentation applications, specifically for CO2 utilization, and sugars to fuels conversion. Their main advantages include good mass transfer without any moving parts and low-cost of operation and maintenance. However, the design and scale-up of such reactors is challenging specifically for carbon capture applications where a mixture of gases (e.g. CO2/CO/H2) with variable solubilities is used. The overall performance of scaled-up bioreactors (e.g., mass transfer rate) is largely affected by gas holdup, bubble size distribution (BSD), and multiphase hydrodynamics. We investigate the effect of gas sparger designs on the performance of these large-scale bioreactors using computational fluid dynamics simulations in this work, so as to improve CO2 conversion at scale. The gas distribution systems in bubble column reactors not only determines operational regime, but also affects the evolution of the BSD, which in turn influences interfacial mass transfer and ultimately the efficiency of the gas-liquid exchange process. In addition to the BSD, uniformity in gas sparging affects gas holdup and bubble residence time which constitute important metrics of performance in gas-liquid systems. In this work, we use computational models to simulate high fidelity representations of different sparger designs and their effect on the operation of a bubble column reactor. Four different types of spargers have been selected for the computational study (Fig. 1): ladder, multi-ring, single-ring and toroidal. Their effect on superficial velocity, gas holdup mixing efficiency, and BSD will be evaluated in this work. The model uses a multiphase Eulerian framework similar to [1] and include a composition of mixtures of H2/CO/CO2 gases, common in fermentation applications. Bibliography. [1]. Rahimi, M., Sitaraman, H., Humbird, D. and Stickel, J., Computational fluid dynamics study of full-scale aerobic bioreactors: Evaluation of gas–liquid mass transfer, oxygen uptake, and dynamic oxygen distribution, Chemical Engineering Research and Design . 2018 . 139: 283–295. Figure 1: Selected sparger designs common in bubble column reactors.",
+    "presenting_author": "Mohammad Rahimi | National Renewable Energy Laboratory, Golden, CO",
+    "authors": [
+      "John Parra-Alvarez | National Renewable Energy Laboratory, Golden, CO",
+      "Malik Hassanaly | National Renewable Energy Laboratory, Golden, CO",
+      "Mohammad Rahimi | National Renewable Energy Laboratory, Golden, CO",
+      "Hari Sitaraman | National Renewable Energy Laboratory, Golden, CO"
+    ],
+    "authors_structured": [
+      {
+        "name": "John Parra-Alvarez",
+        "affiliation": "National Renewable Energy Laboratory, Golden, CO",
+        "designation": "Author"
+      },
+      {
+        "name": "Malik Hassanaly",
+        "affiliation": "National Renewable Energy Laboratory, Golden, CO",
+        "designation": "Author"
+      },
+      {
+        "name": "Mohammad Rahimi",
+        "affiliation": "National Renewable Energy Laboratory, Golden, CO",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Hari Sitaraman",
+        "affiliation": "National Renewable Energy Laboratory, Golden, CO",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "422f",
+    "sortable_time": "2023-11-07_16:30:00_16:45:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/671003"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666861",
+    "paper_endpoint": "Paper/666861",
+    "paper_id": "666861",
+    "topic": "Validation of a Quadrature-Based Moment Method for the Simulation of Bubble Columns",
+    "title": "Validation of a Quadrature-Based Moment Method for the Simulation of Bubble Columns",
+    "date_time": "2023-11-07_15:30:00_18:00:00",
+    "session_id": "52498",
+    "session_title": "Data Science for Complex Fluids and Complex Flows",
+    "session_number": "422",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Fluid Mechanics",
+    "abstract": "A quadrature-based Euler-Euler method incorporating the evolution of bubble size due to coalescence and breakup, and the corresponding effects of polycelerity, is validated against experimental measurements of gas void fraction and bubble size distribution in a 32.1 cm diameter bubble column with an eight-arm spider sparger. The experimental measurements show the bubble column operates in the pure heterogeneous regime for a range of gas superficial velocities between 1 and 20 cm/s. Aspects of turbulence modeling in the bubble column using a large-eddy simulation approach will be discussed. Predictions of gas hold-up, void fraction and bubble size distributions will be presented and compared to experimental measurements. Due to the significant interest for bubble columns not only in traditional Chemical Engineering applications, but also in biochemical and biotechnological industries, a set of recommendations to predict the flow behavior accurately and efficiently in bubble columns operating in the conditions under consideration is presented.",
+    "presenting_author": "Manjil Ray | Iowa State University, Ames, IA",
+    "authors": [
+      "Manjil Ray | Iowa State University, Ames, IA",
+      "Alexandra Sigel | Iowa State University, Ames, IA",
+      "Rodney Fox | Iowa State University, Ames, IA",
+      "Theodore Heindel | Iowa State University, Ames, IA",
+      "Alberto Passalacqua | Iowa State University, Ames, IA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Manjil Ray",
+        "affiliation": "Iowa State University, Ames, IA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Alexandra Sigel",
+        "affiliation": "Iowa State University, Ames, IA",
+        "designation": "Author"
+      },
+      {
+        "name": "Rodney Fox",
+        "affiliation": "Iowa State University, Ames, IA",
+        "designation": "Author"
+      },
+      {
+        "name": "Theodore Heindel",
+        "affiliation": "Iowa State University, Ames, IA",
+        "designation": "Author"
+      },
+      {
+        "name": "Alberto Passalacqua",
+        "affiliation": "Iowa State University, Ames, IA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "422g",
+    "sortable_time": "2023-11-07_16:45:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666861"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665420",
+    "paper_endpoint": "Paper/665420",
+    "paper_id": "665420",
+    "topic": "A Numerical Simulation of Droplet Coalescence",
+    "title": "A Numerical Simulation of Droplet Coalescence",
+    "date_time": "2023-11-07_15:30:00_18:00:00",
+    "session_id": "52498",
+    "session_title": "Data Science for Complex Fluids and Complex Flows",
+    "session_number": "422",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Fluid Mechanics",
+    "abstract": "Droplet coalescence is a common phenomenon in nature and industrial production processes. A deeper understanding of the mechanism of droplet coalescence is of great significance for guiding practical production processes. However, the current understanding of the coalescence mechanism is still limited, and further fundamental research on the mechanism of droplet coalescence is needed. Numerical simulation is an important method for studying the process of droplet coalescence, and the level-set method has unique advantages in computing complex topological changes of interface under the effect of interfacial tension. However, in the numerical simulation studies of droplet coalescence, the traditional single level-set function method may lead to distortion in the flow field. To solve this problem, a double level-set function simulation method is developed to simulate the droplet coalescence process under the static contact condition. This method can effectively solve the problem of flow field distortion, and lays the foundation for further numerical simulation research on droplet coalescence considering interaction forces.",
+    "presenting_author": "Yijing Jin | Tsinghua University, Beijing, China",
+    "authors": [
+      "Yijing Jin | Tsinghua University, Beijing, China"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yijing Jin",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "422h",
+    "sortable_time": "2023-11-07_17:00:00_17:15:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665420"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668969",
+    "paper_endpoint": "Paper/668969",
+    "paper_id": "668969",
+    "topic": "Instabilities of Dilute Wormlike Micelle Solutions in 2D and 3D Circular Couette Flows",
+    "title": "Instabilities of Dilute Wormlike Micelle Solutions in 2D and 3D Circular Couette Flows",
+    "date_time": "2023-11-07_15:30:00_18:00:00",
+    "session_id": "52498",
+    "session_title": "Data Science for Complex Fluids and Complex Flows",
+    "session_number": "422",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Fluid Mechanics",
+    "abstract": "Dilute surfactant solutions that form wormlike micelles (WLMs) have been shown to exhibit remarkable drag reduction at levels comparable to some of the most widely used polymer solutions; these WLM solutions further benefit from being self-assembling in nature and can thus recover from mechanical degradation, such as that in high shear regions, which is a known drawback of using polymer solutions as drag-reducing agents. WLM solutions also display a range of interesting flow dynamics including both shear-thickening and -thinning, a reentrant (i.e. multivalued) flow curve, and a number of instabilities in shear and extensional flows. Notably, these solutions can display a vorticity banding instability in circular Couette flow (CCF) that manifests as stacked bands along the vorticity axis, where adjacent bands support distinct shear stresses. In this study, we present on computational results of a model for dilute WLM solutions – the reformulated reactive rod model (RRM-R) – in 2D and 3D circular Couette flows. The RRM-R, which treats WLMs as rigid, Brownian rods that can fuse and rupture in flow, has shown strong agreement with experimental observations of steady and transient WLM solution rheology and is well-suited for CFD simulations. We perform direct numerical simulations in 2D and 3D circular Couette flows and focus on critical conditions for viscoelastic and elastic instability formation, paying close attention to parameter regimes in which the RRM-R predicts a reentrant flow curve (a necessary condition for vorticity banding). Upon forcing the flow into unstable regions of the constitutive curve (i.e. dτ 12 /dγ < 0), we observe an ‘interface-like’ instability in which extreme gradients in the length of micelles (and therefore also the stress and normal stress differences) arise, giving the appearance of a multiphase fluid. We further investigate the origins and mechanisms of this instability by pairing these simulations with a linear stability analysis of the governing RRM-R equations using a Chebyshev pseudospectral method. In comparing our results to experiments, we look at how variations in micelle length and orientation can give rise to the birefringence and turbidity differences observed in experiments. We also investigate the roles that curvature and gap width play in the development of instabilities, finding that increasing curvature tends to destabilize the flow.",
+    "presenting_author": "Richard Hommel | University of Wisconsin-Madison",
+    "authors": [
+      "Richard Hommel | University of Wisconsin-Madison",
+      "Michael Graham | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Richard Hommel",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Michael Graham",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "422i",
+    "sortable_time": "2023-11-07_17:15:00_17:30:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668969"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670426",
+    "paper_endpoint": "Paper/670426",
+    "paper_id": "670426",
+    "topic": "Molecualr Origin of Shearbanding in Entangled Polymeric Solutions",
+    "title": "Molecualr Origin of Shearbanding in Entangled Polymeric Solutions",
+    "date_time": "2023-11-07_15:30:00_18:00:00",
+    "session_id": "52498",
+    "session_title": "Data Science for Complex Fluids and Complex Flows",
+    "session_number": "422",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Fluid Mechanics",
+    "abstract": "In recent years, a number of studies have suggested that the occurrence of shear banding in entangled polymeric solutions is a consequence of the interplay between flow induced concentration fluctuation, and concentration dependence of shear and normal stresses. To that end, theoretical analysis based on the two-fluid approach has used to examine the role of shear-induced macromolecular migration on the formation of banded velocity profiles. Specifically, to delineate the role of shear-induced migration on shear banding, constitutive equations with non-monotonic and monotonic flow curves with the two-fluid approach were employed. These analyses provide evidence that a flow-induced concentration redistribution leads to a shear-banded flow structure with a lower concentration in the high shear rate band. Recent experiments performed using in-situ Rheo-PTV measurements to obtain the velocity and concentration profiles for a PBD-DOP solution with an average entanglement density of thirty-eight, in a Taylor-Couette flow geometry show a lower polymer concentration in the fast band and a higher concentration in the slow band. Therefore, existence of nonuniform polymer concentration is postulated to be a prerequisite for formation banded flow structures in entangled polymeric solutions. Although these studies provide evidence that shear-induced migration can cause shear banding, few issues require clarification before one can unequivocally claim that shear banding in entangled polymeric solutions is a consequence of shear induced migration of macromolecules. For instance, the time scale for development of concentration fluctuations is extremely long, i.e., O(10 6 ) of the disengagement time. Also, the results of aforementioned studies are at odds with high-resolution planar large amplitude oscillatory flow confocal microscopy/rheometry of a polymeric solution composed of -lambda-phage DNA with an average entanglement number of three-hundred In fact, these experiments observe shear-banded velocity profiles at high flow rates at significantly shorter time scales without any evidence of a concentration difference between the high and low shear bands. Hence, to elucidate the molecular origin of shear banding, high-fidelity coarse-grained dissipative particle dynamics (DPD) simulations of entangled polymeric solutions over a wide range of shear rates has been carried out. Our results show a novel coupling between inhomogeneous entanglement density and shear induced concentration to be the molecular origin of banded flow structures in entangled polymeric solutions.",
+    "presenting_author": "Bamin Khomami | University of Tennessee, Knoxville, TN",
+    "authors": [
+      "Bamin Khomami | University of Tennessee, Knoxville, TN",
+      "Brian Edwards | University of Tennessee at Knoxville, TN",
+      "Mahdi Boudaghi | U of Tennessee-Knoxvile, Knoxville, TN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bamin Khomami",
+        "affiliation": "University of Tennessee, Knoxville, TN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Brian Edwards",
+        "affiliation": "University of Tennessee at Knoxville, TN",
+        "designation": "Author"
+      },
+      {
+        "name": "Mahdi Boudaghi",
+        "affiliation": "U of Tennessee-Knoxvile, Knoxville, TN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "422j",
+    "sortable_time": "2023-11-07_17:30:00_17:45:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670426"
+  }
+]

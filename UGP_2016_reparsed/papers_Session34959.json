@@ -1,0 +1,544 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467109.html",
+    "topic": "An Optimization-Based Approach for the Design of Self-Assembled DNA Tiles",
+    "date_time": "Thursday, November 17, 2016: 10:45 AM",
+    "abstract": "In structural DNA nanotechnology, DNA strands exceed their\ntraditional role in gene expression and are being used as programmable building\nblocks for nanoscale structures. This self-assembly is driven by hybridization\nfollowing the Watson-Crick rule.[1-3] Depending on the design of the DNA\nstrands, structures with a rich set of nanoscale features can be\nself-assembled. A special class of DNA structures are the so-called DNA tiles,[4]\nwhich are self-assembled from a relatively small number of DNA strands.\nExperimental methods to self-assemble DNA tiles for a given design of DNA\nstrands are well developed. However, a challenge is to find the optimal design\nof the individual DNA strands to self-assemble a desired DNA tile. In general, the design of DNA strands for self-assembly of tiles\ninvolves two steps, 1) structural design and, 2) sequence generation. For\nstructural design, the aim is to select optimal locations for so-called crossovers,\nwhich involves bridging of two DNA double helices (see Figure 1). Each\ncrossover connects two double helices by a pair of shared single strands\nDNA.[1,3] For sequence generation, an optimal sequence of nucleotides for each\nDNA strand needs to be selected to enable the formation of the selected\ncrossovers. Generally speaking, efficient algorithms for sequence generation\nexist. However, for the structural design, existing methods typically only\nprovide a modeling framework for prediction and visualization of a stable\nstructure for a given structural design (i.e., for solving the 'forward'\nproblem).[6-9] In contrast, finding a structural design that allows for\nself-assembly of a desired final structure with high stability (i.e., solving\nthe 'inverse' problem) remains challenging. The objective of this work is to investigate an optimization-based\napproach for the optimal structural design of self-assembled DNA tiles. A\nsemi-empirical model from literature [8] is used to predict the potential\nenergy of a self-assembled DNA tile. First, minimization of the potential energy for a given design\n(i.e., locations of crossovers) is studied for three different types of\ntiles.[5,10,11] The optimization problem was implemented in Matlab (2014a,\nMathworks, Inc.) using the solver fmincon and\nin General Algebraic Modeling System (GAMS) Release 24.4.6. (GAMS Development\nCorporation, Washington, DC, USA, 2015) using different non-linear programming\n(NLP) solvers. Figure 2 illustrates the structural configurations of various\nself-assembled DNA tiles that were found after minimization of the potential\nenergy. Different local minima were identified depending on the randomly chosen\ninitial guesses. In all cases, the structure with the lowest potential energy\ncorresponded to the intended structure reported in literature. Furthermore, in\nall cases, a significant part of the initial guesses converged to local minima.\nThe structural configurations corresponding to those local minima could be\nsignificantly different from the intended structure (Figure 1), which\nillustrates the practical importance of avoiding local. Both a multi-start\noptimization method and deterministic global optimization using GAMS/BARON were\ninvestigated to identify the global minimum. Second, self-assembly of the DNA tensegrity triangle [5,12](Figure\n1) is chosen as the case to investigate model-based optimization of the\nstructural design. This tile has been synthesized experimentally[5] and has\npractical relevance as template for protein crystallization. The optimization\nproblem aims to minimize the potential energy of the tile, to maximize\nstability, using the orientation and position of the helices and the locations\nof the crossovers as degrees of freedom. Since the length of the DNA strands is\ntypically short, decisions regarding the locations of crossovers are discrete\ndecisions (represented by integer variables). Therefore, the optimization\nproblem is formulated as a mixed-integer nonlinear programming (MINLP) problem.\nThe optimization problem was implemented in GAMS using the solver SBB, which is\nbased on branch-and-bound. The solution obtained with the MINLP formulation was\ncompared to the solution obtained by exhaustive enumeration of the integer\nvariables and solving an NLP problem at each node. The lowest potential energy\ncould be obtained by using 27 nucleotides between each crossover for an\nequilateral triangle design, which matches experimental findings[5] and was\nalso found using branch-and-bound with a 10-fold smaller CPU time compared to\nexhaustive enumeration. Finally, the design problem was also solved with the\nnumber of nucleotides between crossovers on each side of the triangle as a\ndecision variable. The proposed MINLP optimization method was again able to\nidentify the same mixed-integer solution compared to exhaustive enumeration at\na much smaller CPU time (200-fold), which demonstrates the strength of a\nbranch-and-bound algorithm for structural design of self-assembled DNA tiles. Figure 1: An example of a self-assembled DNA tile (tensegrity triangle)\nand detailed view of the structure of crossovers that interlink DNA helices. Figure 2: Identified local minima when minimizing the\npotential-energy of three different types of DNA tiles with fixed locations of\ncrossovers. The percentage of randomly chosen initial guesses that led to each\nstructure is indicated below the potential energy of the structure Reference [1] Seeman, N. C. An overview of structural DNA nanotechnology. Mol. Biotechnol. 37, 246-257\n(2007). [2] Seeman, N. C. DNA in a material world. Nature 421, 427-431\n(2003). [3] Seeman, N. C. DNA nanotechnology: novel DNA constructions. Annu. Rev. Biophys. Biomol.\nStruct. 27, 225-248\n(1998). [4] Park, S. H. et\nal. Programmable\nDNA self-assemblies for nanoscale organization of ligands and proteins. Nano Lett. 5, 729-733\n(2005). [5] Zheng, J. et\nal. From\nmolecular to macroscopic via the rational design of a self-assembled 3D DNA\ncrystal. Nature 461, 74-77\n(2009). [6] Birac, J. J., Sherman, W. B., Kopatsch, J., Constantinou, P.\nE. & Seeman, N. C. Architecture with GIDEON, a program for design in\nstructural DNA nanotechnology. J.\nMol. Graph. Model. 25, 470-480\n(2006). [7] Castro, C. E. et\nal. A\nprimer to scaffolded DNA origami. Nat.\nMethods 8, 221-229\n(2011). [8] Zhu, J., Wei, B., Yuan, Y. & Mi, Y. UNIQUIMER 3D, a\nsoftware system for structural DNA nanotechnology design, analysis and\nevaluation. Nucleic\nAcids Res. 37, 2164-2175\n(2009). [9] Pan, K. et\nal. Lattice-free\nprediction of three-dimensional structure of programmed DNA assemblies. Nat. Commun. 5, (2014). [10] Wei, B. & Mi, Y. A new triple crossover triangle (TXT)\nmotif for DNA self-assembly. Biomacromolecules 6, 2528-2532\n(2005). [11] He, Y. et\nal. Self-Assembly\nof Hexagonal DNA Two-Dimensional ( 2D ) Arrays. J. Am. Chem. Soc. 12202-12203\n(2005). [12] Liu, D., Wang, M., Deng, Z., Walulu, R. & Mao, C.\nTensegrity: construction of rigid DNA triangles with flexible four-arm DNA\njunctions. J.\nAm. Chem. Soc. 126, 2324-2325 (2004).",
+    "presenting_author": "Yu Gao | Chemical and Biomolecular Engineering, Hong Kong University of Science and Technology, Hong Kong, China",
+    "authors": [
+      "Yongli Mi and Richard Lakerveld | Chemical and Biomolecular Engineering, Hong Kong University of Science and Technology, Hong Kong, China"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yu Gao",
+        "affiliation": "Chemical and Biomolecular Engineering, Hong Kong University of Science and Technology, Hong Kong, China",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yongli Mi and Richard Lakerveld",
+        "affiliation": "Chemical and Biomolecular Engineering, Hong Kong University of Science and Technology, Hong Kong, China",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper471285.html",
+    "topic": "Dynamic Data Reconciliation and Model Validation of a CO2Capture Process Using Pilot Plant Data",
+    "date_time": "Thursday, November 17, 2016: 8:30 AM",
+    "abstract": "The post-combustion CO 2 capture systems would be subjected to fluctuating flue gas flow rate and composition as the power plants follow the load. In addition, future CO 2 capture plants can vary the extent of CO 2 capture in response to the electricity price. Therefore optimal servo control and disturbance rejection characteristics are highly desired while designing the control system for CO 2 capture processes. One essential element for designing the control system is a high fidelity dynamic model that is validated with the experimental data . However, there is a lack of validated dynamic models for solvent-based CO 2 capture processes. With this incentive, a rigorous dynamic model of a MEA-based CO 2 capture process is developed and validated using steady-state and dynamic data obtained from the US DOE’s National Carbon Capture Center (NCCC) in Wilsonville, Alabama. Rigorous thermodynamic and transport models with quantified uncertainties are first developed and validated using large number of experimental data. A novel approach is developed to obtain a rigorous mass transfer model by considering the wetted wall column and packed column data simultaneously while regressing the parameters of the interfacial area model, mass transfer coefficient models, and diffusivity models together. In addition, rigorous kinetic model, holdup model, and pressure drop model are developed. The steady-state model is validated using large number of data collected from NCCC. One issue with the limited dynamic data that are available in the open literature is that they span a limited range of operating conditions and often only contain a single step change. In this work, the dynamic test runs were conducted by designing a test protocol that helps to reflect the process nonlinearity and ensures persistence of excitation approximately. The dynamic data include solvent composition and loading data that were manually collected every 5 minutes and analyzed in the NCCC laboratory. The dynamic data collected from the NCCC pilot plant were found to have significant measurement noise and some inaccurate measurements. In addition, there were a number of key variables that were unmeasured. To handle these issues, a dynamic data reconciliation (DDR) framework is developed to ensure closure of material and energy balances prior to model validation. As the rate-based models are not currently supported in Aspen Plus Dynamics, the software platform of our choice, an approximate method that matches the results from the rate-based Aspen Plus model closely is developed and implemented using scripts in Aspen Plus Dynamics. It is observed that the results from the dynamic model match very well with the experimental data that span more than three days. The dynamic model is then leveraged to perform a number of transient studies by simulating expected disturbances and setpoint tracking problems.",
+    "presenting_author": "Anderson Soares Chinen | Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+    "authors": [
+      "Joshua Morg | Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+      "Benjamin Omell | ",
+      "Debangsu Bhattacharyy | Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+      "David C. Miller | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Anderson Soares Chinen",
+        "affiliation": "Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joshua Morg",
+        "affiliation": "Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Benjamin Omell",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyy",
+        "affiliation": "Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "David C. Miller",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462113.html",
+    "topic": "Viscous Solvents Enable a Model Prebiotic Nucleic Acid Replication Cycle",
+    "date_time": "Thursday, November 17, 2016: 10:15 AM",
+    "abstract": "Increased control of molecular self-assembly is important for the further development of nucleic acid-based technologies. While nucleic acid technology research has been carried out almost exclusively in aqueous buffer, alternative solvents could increase our ability to direct nucleic acid assembly. Deep eutectic solvents (DES), closely related to ionic liquids, are characterized by significantly lower melting points than their separate components. Recently, DES have been shown to preserve nucleic acid base pairing and duplex formation, offering a relatively unexplored medium for directing nucleic acid assembly. In this work, we show that DES provide a highly effective means for tuning nucleic acid thermodynamics and kinetics. The power of alternative solvents to alter a nucleic acid assembly pathway is illustrated by our ability to circumvent the “strand inhibition problem” by thermally cycling nucleic acids in a DES. Strand inhibition describes the propensity of a long nucleic acid polymer to form a duplex with its complementary strand rather than to serve as a template for assembly of oligonucleotides. This longstanding problem in the field of prebiotic chemistry has limited demonstration of a prebiotic nucleic acid replication mechanism. We address the problem of nucleic acid strand inhibition by employing highly viscous solvents to control the annealing rates of long templates and shorter oligonucleotides. In a viscous environment, nucleic acid mobility is slowed in a length-dependent manner, so that long nucleic acid polymers (such as template and copy strands) are kinetically trapped. Meanwhile, short oligonucleotides can diffuse quickly and bind to their complementary targets on the templates. Template duplex formation is further slowed by the formation of intramolecular secondary structure on the template single strands. Based on these thermodynamic and kinetic effects, we show that thermal cycling in a viscous environment can be used to copy a gene-length region (over 300 nucleotides) of a longer mixed sequence template, using both DNA and RNA systems.",
+    "presenting_author": "Christine He 1 | ",
+    "authors": [
+      "Martha A. Grover | ",
+      "Isaac Gallego | ",
+      "Brandon Laughli | ",
+      "Nicholas Hu | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Christine He 1",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Martha A. Grover 1",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Isaac Gallego 2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "3",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Brandon Laughlin 2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "3 and Nicholas Hud 2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "3",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462113.html",
+    "paper_id": "462113"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468232.html",
+    "topic": "Tension-Dependent Free Energies of Nucleosome Unwrapping",
+    "date_time": "Thursday, November 17, 2016: 10:30 AM",
+    "abstract": "Nucleosomes form the basic unit of compaction within eukaryotic genomes and their locations represent an important, yet poorly understood, mechanism of genetic regulation. Quantifying the strength of interactions within the nucleosome is a central problem in biophysics and is critical to understanding how nucleosome positions influence gene expression. By comparing to single-molecule experiments, we demonstrate that a coarse-grained molecular model of the nucleosome can reproduce key aspects of nucleosome unwrapping. Using detailed simulations of DNA and histone proteins, we calculate the tension-dependent free energy surface corresponding to the unwrapping process. The model reproduces quantitatively the forces required to unwrap the nucleosome, and reveals the role played by electrostatic interactions during this process. We then demonstrate that histone modifications and DNA sequence can have significant effects on the energies of nucleosome formation. Most notably, we show that histone tails are crucial for stabilizing the outer turn of nucleosomal DNA.",
+    "presenting_author": "Joshua Lequieu | Institute for Molecular Engineering, University of Chicago, Chicago, IL",
+    "authors": [
+      "Andres Cordoba and Juan J. de Pablo | Institute for Molecular Engineering, University of Chicago, Chicago, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joshua Lequieu",
+        "affiliation": "Institute for Molecular Engineering, University of Chicago, Chicago, IL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Andres Cordoba and Juan J. de Pablo",
+        "affiliation": "Institute for Molecular Engineering, University of Chicago, Chicago, IL",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472328.html",
+    "topic": "Membrane Guided Self-Assembly of Dimers and Trimers of Tight Junction Proteins",
+    "date_time": "Thursday, November 17, 2016: 9:15 AM",
+    "abstract": "Tight junctions (TJ) constituted by the claudin family of transmembrane proteins determine solute permeability in the paracellular space of various tissues. Multimeric aggregation of the claudin tight junction strands is difficult to probe using experimental methods. However, understanding how the membrane environment guides the claudin-claudin interactions into TJ assembly has far-reaching significance to a range of biochemical, mechanistic and physiological processes. In this study, we have employed molecular simulations to probe the membrane-driven self-assembly of cis interactions in seven prototypic classic claudins. Hydrophobic mismatch between the transmembrane domains and the bulk lipid medium initiates polymerization that leads to dimeric, trimeric, and higher order assemblies. There are both conformational and morphological differences between individual claudins. Specifically in the case of claudin-2, we observed dimeric conformations that are potentially the cation channel forming dimer, which is important for cation absorption in the kidneys. Furthermore, trimeric assemblies were observed in claudin-2, -4 and -19 that match with the receptor configurations for trimeric Clostridium perfringens enterotoxin (CPE), revealing the potential mechanism for pathogenesis. These important findings observed in the long-timescale self-assembly simulations provide unprecedented molecular level clues about the tight junction architecture.",
+    "presenting_author": "Flaviyan Jerome Irudayanathan | Department of Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY",
+    "authors": [
+      "Xiaoyi Wang | Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY",
+      "Nan Wang | ",
+      "Shikha Nangi | Department of Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Flaviyan Jerome Irudayanathan",
+        "affiliation": "Department of Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Xiaoyi Wang",
+        "affiliation": "Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Nan Wang",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Shikha Nangi",
+        "affiliation": "Department of Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram//data/abstract/aiche/2016/Paper_474467_abstract_99240_0.gif",
+    "topic": "Title Not Found",
+    "date_time": "November 2016",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467239.html",
+    "topic": "Incorporation of 1-Butyl-3-Methylimidazolium Hexafluorophosphate into ZIF-8: Elucidation of Interactions and Their Consequences on Gas Separation Performance",
+    "date_time": "Thursday, November 17, 2016: 9:58 AM",
+    "abstract": "Incorporation of 1-butyl-3-methylimidazolium hexafluorophosphate into ZIF-8: Elucidation of Interactions and Their Consequences on Gas Separation Performance Fatma Pelin Kinik, Seda Keskin, * and Alper Uzun * Chemical and Biological Engineering Department, Koç University, Istanbul 34450, Turkey Metal organic frameworks (MOFs) have been popular recently in adsorption-based gas separation applications due to their configurable pores, large surface areas, robust framework structures and high chemical and thermal stabilities.[1] Lately, ionic liquids (ILs) have been used to enhance the gas separation performances of MOFs. ILs are liquid salts at room temperature which consist of organic cations and inorganic or organic anions.[2] Because of their favorable physical and chemical properties such as non-flammability, negligible volatility, high thermal stability and remarkable gas solubility (especially towards CO 2 ), ILs have been used in gas adsorption and separation processes.[3] In this work, an IL was used to improve gas adsorption and separation properties of a MOF. The influence of IL confinement into MOF structure was examined for CO 2 /CH 4 , CO 2 /N 2 and CH 4 /N 2 gas separations. ZIF-8 (2-methylimidazole zinc salt) was selected as the MOF as it is a thermally and chemically stable zeolite-type material with large pore size of 11.6 Å and small pore size of 3.4 Å.[4] Because of having high surface area, significant porosity, water resistance and commercial availability, ZIF-8 has been commonly used in gas separation applications.[5] As IL, 1-butyl-3-methylimidazolium hexafluorophosphate, [BMIM][PF 6 ], was selected because of its hydrophobic nature, low cost, and notable affinity for CO 2 .[6] Crystalline structures, thermal stabilities and interionic interactions were investigated by combining various characterization techniques. XRD and SEM results showed that the crystalline structure of the MOF is preserved upon the incorporation of IL. Moreover, XRF and BET measurements indicated that impregnation of the IL was successfully achieved at an IL loading of 24 wt.%. TGA and FTIR results proved that there is an interaction between IL and MOF. Adsorption measurements of CO 2 , CH 4 , and N 2 gases in ZIF-8 and [BMIM][PF 6 ]/ZIF-8 were performed using the volumetric method at room temperature up to 35 bar and ideal selectivities were calculated for CO 2 /CH 4 , CO 2 /N 2 , and CH 4 /N 2 separations. It was shown that the CO 2 selectivities of IL/MOF samples at low pressures significantly increased compared to the pristine ZIF-8, while CH 4 /N 2 selectivity of IL/MOF samples remained lower than the one of pristine ZIF-8. There is a considerable improvement in the CO 2 /N 2 selectivity of IL-incorporated MOF, which is almost three times of pristine ZIF-8 up to 0.3 bar and two times of pristine ZIF-8 up to 1 bar. Also IL-incorporated MOF has approximately two times more CO 2 /CH 4 selectivity than pristine ZIF-8 up to 1 bar. As a conclusion, IL-modified ZIF-8 is a promising material for gas separation applications, especially for CO 2 capturing processes such as natural gas sweetening and removing CO 2 from power plant flue gas. Tunable physicochemical properties of ILs and MOFs offer great potential for optimizing these structures for better gas separation performance. Acknowledgement This work is supported by the Scientific and Technological Research Council of Turkey (TUBITAK) under 1001-Scientific and Technological Research Projects Funding Program (project number: 114R093) and by Koç University Seed Fund Program. Financial support provided by the KUTEM (Koç University TUPRAS Energy Center) is gratefully acknowledged. S.K. acknowledges TUBA-GEBIP and A.U. acknowledges the support by the Science Academy of Turkey under the BAGEP Award Program. Authors thank Koç University Surface Science and Technology Center (KUYTAM) for providing help with the sample characterization. *Corresponding authors: skeskin@ku.edu.tr and auzun@ku.edu.tr References: [1] Li, J.-R.; Kuppler, R. J.; Zhou, H.-C., Selective Gas Adsorption and Separation in Metal-Organic Frameworks. Chemical Society Reviews 2009, 38, 1477-1504. [2] Marsh, K.; Boxall, J.; Lichtenthaler, R., Room Temperature Ionic Liquids and Their Mixtures—a Review. Fluid Phase Equilibria 2004, 219, 93-98. [3] Hasib-ur-Rahman, M.; Siaj, M.; Larachi, F., Ionic Liquids for CO 2 Capture—Development and Progress. Chemical Engineering and Processing: Process Intensification 2010, 49, 313-322. [4] M. Zhu; Venna, S. R.; Jasinski, J. B.; Carreon, M. A., Room-Temperature Synthesis of ZIF-8: The Coexistence of Zno Nanoneedles. Chemistry of Materials 2011, 23, 3590-3592. [5] Venna, S. R.; Carreon, M. A., Highly Permeable Zeolite Imidazolate Framework-8 Membranes for CO 2 /CH 4 Separation. Journal of the American Chemical Society 2009, 132, 76-78. [6] Chen, Y.; Hu, Z.; Gupta, K. M.; Jiang, J., Ionic Liquid/Metal–Organic Framework Composite for CO 2 Capture: A Computational Investigation. The Journal of Physical Chemistry C 2011, 115, 21736-21742.",
+    "presenting_author": "Fatma Pelin Kinik | Chemical and Biological Engineering, Koç University, Istanbul, Turkey",
+    "authors": [
+      "Seda Keski | Chemical and Biological Engineering, Koç University, Istanbul, Turkey",
+      "Alper Uzu | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Fatma Pelin Kinik",
+        "affiliation": "Chemical and Biological Engineering, Koç University, Istanbul, Turkey",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Seda Keski",
+        "affiliation": "Chemical and Biological Engineering, Koç University, Istanbul, Turkey",
+        "designation": "Author"
+      },
+      {
+        "name": "Alper Uzu",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram//data/abstract/aiche/2016/Paper_474467_abstract_99243_0.gif",
+    "topic": "Title Not Found",
+    "date_time": "November 2016",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470543.html",
+    "topic": "Strontium-Based Bimetallic Metal Organic Frameworks (MOFs) for CO2Separation",
+    "date_time": "Thursday, November 17, 2016: 10:20 AM",
+    "abstract": "Metal organic frameworks (MOFs) are promising candidates for separation and purification applications due to their tunable chemistry, high surface area, and porosity [1]. An interesting class of nanoporous bimetallic compounds known as strontium-based metal-organic frameworks have been synthesized on the organic basis of malonate. Cobalt and copper were employed to form MOFs with the general formula of [SrM(C 3 H 2 O 4 ) 2 ( H 2 O) n ], (M=Co, n=7 and M=Cu, n=4). These MOFs are designated with the refcodes of FOHQUO and VAMQOP in the Cambridge Structural Database, respectively. Haldoupis and co-workers [1] examined a new category of MOFs using atomic simulation for gas sorption including FOHQUO. According to their results, FOHQUO with pore limiting diameter of 3 Å has a binary adsorption selectivity above 190 with water-free molecular lattice [1]. Having removed all the guest water molecules between 70°C to 190°C, they report that FOHQUO’s framework integrity remain stable up to 350°C [1]. A molecular simulation study on mixed matrix membranes with FOHQUO as the dispersive phase was conducted by Yilmaz and Keskin [2] for CO 2 /N 2 separation. According to their predictions, FOHQUO has a CO 2 permeability of about 500000 Barrer and CO 2 /CH 4 selectivity of about 5000. One of the challenges in MOFs nature is their thermal, chemical and physical stability under heat treatment and in presence of acids and moistures. The crystalline lattice of as-synthesized MOFs are typically filled with guest molecules of solvents [3]. Solvent removal can pose obstacles in crystallinity of MOFs and collapse the framework integrity and convert to amorphous materials [4]. In this study, we have synthesized FOHQUO and VAMQOP to investigate their potential for use in CO 2 separation and mixed matrix membrane formation. We examined their thermal and structural stability, surface area, and gas sorption capacity. Interestingly, X-ray diffraction (XRD) analysis proved that FOHQUO framework was not stable above 80°C. However, TGA analysis reflected the dehydration step at 80°C. On the other hand, VAMQOP has a stable structure up to 140°C. XRD analysis revealed that, after an amorphous period above 170°C, phase transformation occurs. This work is supported by TUBITAK (Turkish Scientific and Technological Research Council) through Project No. 113M776. References: Haldoupis, E., Nair, S., Sholl, D. S. (2012), Finding MOFs for Highly Selective CO2/N2 Adsorption Using Materials Screening Based on Efficient Assignment of Atomic Point Charges, J Am Chem Soc, 134, 4313-4323. Yilmaz, G., Keskin, S. (2014). Molecular Modeling of MOF and ZIF-Filled MMMs for CO2/N2 Separations, Journal of Membrane Science, 454, 407-417. Qiu, S., Xue, M., Zhu, G. (2014), Metal-Organic Framework Membranes: From Synthesis to Separation Applicatio,. Chem Soc Rev, 43, 6116-6140. Mondloch, J. E., Karagiaridi, O., Farha, O. K., Hup, J. T. (2013,. Activation of Metal–Organic Framework Materials, CrystEngComm, 15, 9258.",
+    "presenting_author": "Mahdi Ahmadi | Department of Chemical Engineering, Istanbul Technical University, Istanbul, Turkey",
+    "authors": [
+      "Sadiye Velioglu | Department of Chemical Engineering, Istanbul Technical University, Istanbul, Turkey",
+      "Ender Tas | Department of Chemical Engineering, Istanbul Technical University, Istanbul, Turkey",
+      "M. Göktug Ahunbay and  S. Birgül Tantekin-Ersolmaz | Department of Chemical Engineering, Istanbul Technical University, Istanbul, Turkey"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mahdi Ahmadi",
+        "affiliation": "Department of Chemical Engineering, Istanbul Technical University, Istanbul, Turkey",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sadiye Velioglu",
+        "affiliation": "Department of Chemical Engineering, Istanbul Technical University, Istanbul, Turkey",
+        "designation": "Author"
+      },
+      {
+        "name": "Ender Tas",
+        "affiliation": "Department of Chemical Engineering, Istanbul Technical University, Istanbul, Turkey",
+        "designation": "Author"
+      },
+      {
+        "name": "M. Göktug Ahunbay and  S. Birgül Tantekin-Ersolmaz",
+        "affiliation": "Department of Chemical Engineering, Istanbul Technical University, Istanbul, Turkey",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram//data/abstract/aiche/2016/Paper_474467_abstract_99241_0.jpg",
+    "topic": "Title Not Found",
+    "date_time": "November 2016",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper455953.html",
+    "topic": "Destabilization of Proteins in Extreme Conditions: Molecular Simulations of the Denaturation of Trp-Cage Miniprotein",
+    "date_time": "Thursday, November 17, 2016: 8:30 AM",
+    "abstract": "Proteins are stable in their compact, folded structures only in a narrow range of physiological conditions. Deviation from these conditions, such as changes in temperature and salt concentrations, can destabilize the folded structures. Investigating the mechanism(s) of protein denaturation induced by these extreme conditions has a fundamental importance in understanding of the evolution of organisms with extreme habitats and formulating effective long-term preservation strategies for biological therapeutics. Using replica-exchange molecular dynamics simulations, we examine the mechanisms of cold- and salt-induced denaturation of a fully-atomistic model of the Trp-cage miniprotein, and we make direct comparison with the unfolding behavior at high temperatures. In contrast to the complete unraveling of the secondary and tertiary structures observed during heat denaturation, the cold-denatured structure of the Trp-cage is compact and partially folded with stable alpha-helix, despite the loss of salt bridges. We also find that the salt-denatured structures exhibit a strong resemblance to the cold-unfolded Trp-cages. The mechanism of cold- and salt-induced protein denaturation is examined by analyzing the structural change, thermodynamic quantities, and protein-solvent interaction.",
+    "presenting_author": "Sang Beom Kim | Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+    "authors": [
+      "Jeremy C. Palmer | ",
+      "Pablo G. Debenedetti | Chemical and Biological Engineering, Princeton University, Princeton, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sang Beom Kim",
+        "affiliation": "Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jeremy C. Palmer",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Pablo G. Debenedetti",
+        "affiliation": "Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram//data/abstract/aiche/2016/Paper_474467_abstract_99242_0.gif",
+    "topic": "Title Not Found",
+    "date_time": "November 2016",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper474890.html",
+    "topic": "Oxygen Selectivity of RPM3-Zn Gate-Opening Metal-Organic Frameworks",
+    "date_time": "Thursday, November 17, 2016: 10:42 AM",
+    "abstract": "Commercial cryogenic distillation process is applied to air separation, based on different normal boiling points of nitrogen (77.4 K) and oxygen (90.2 K), but the process comprises of 30% of capital costs due to significant energy consumption. This study begins to explore the potential for kinetic separations of air via exploiting the gate-opening (GO) process of various metal organic frameworks (MOFs). Here, we report the gas adsorption capacities of nitrogen and oxygen on the GO-MOF RPM3-Zn (a.k.a. Zn 2 (bpdc) 2 (bpee); bpdc = 4,4’-biphenyldicarboxylate; bpee = 1,2-bipyridylethene) at temperatures ranging from 77 K to 273 K up to 20 bar. Given sufficient equilibration time, the nitrogen and oxygen GO pressures are indistinguishable at 77 K, 87 K, 195 K, and 273 K. Yet, somewhat unexpectedly, RPM3-Zn exhibits higher oxygen adsorption capacity than nitrogen at low temperatures. The heats of adsorption in gate opening RPM3-Zn with oxygen and nitrogen are calculated as 12 kJ/mol and 8 kJ/mol, respectively, further evidence for oxygen selectivity. The selectivity is enhanced significantly when kinetic effects are also included. Efforts to deduce the role of various adsorption sites on oxygen selectivity will be discussed.",
+    "presenting_author": "Cheng-Yu Wang | Energy and Mineral Engineering, the Pennsylvania State University, University Park, PA, Linxi Wang, Pennsylvania State University, State College, PA, Jing Li, Department of Chemistry and Chemical Biology, Rutgers University, Piscataway, NJ and Angela D. Lueking, Energy and Geo-Environmental Engineering, Pennsylvania State University, State College, PA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Cheng-Yu Wang",
+        "affiliation": "Energy and Mineral Engineering, the Pennsylvania State University, University Park, PA, Linxi Wang, Pennsylvania State University, State College, PA, Jing Li, Department of Chemistry and Chemical Biology, Rutgers University, Piscataway, NJ and Angela D. Lueking, Energy and Geo-Environmental Engineering, Pennsylvania State University, State College, PA",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464675.html",
+    "topic": "Self-Assembled Peptides with RGD Motifs As Scaffolds for Tissue Engineering",
+    "date_time": "Thursday, November 17, 2016: 9:00 AM",
+    "abstract": "Self-assembled peptides gain increasing interest as biocompatible and biodegradable scaffolds for tissue engineering (1). Rationally designed self-assembling building blocks that carry cell attachment motifs such as RGD are especially attractive. We have been using a combination of theoretical and experimental approaches towards such rational designs (2-5). We have been especially focusing on modular designs that consist of a central ultrashort amphiphilic motif derived from the adenovirus fiber shaft (2-4). This central motif is combined with the RGD motif and cysteine residues that allow further functionalization possibilities, such as conjugation of growth factors or attachment to surfaces. We employed replica exchange MD simulations and free energy calculations using CHARMM (6) to computationally investigate the self-assembly properties of possible designed peptide sequences. Our simulations provide insights into the amyloidogenic β-sheet rich self-assembling conformations of the peptides. We performed a detailed analysis on the highly-ordered and well- aligned β-sheet containing conformations and provided insights into the structural arrangement of the peptides’ functional groups. The designer peptides experimentally self-assemble into fibers that are structurally characterized with Transmission Electron Microscopy, Scanning Electron Microscopy and X-ray fiber diffraction. Furthermore, they support cell attachment and proliferation of model cell lines. Such short self-assembling peptides that are amenable to computational design offer open-ended possibilities towards multifunctional tissue engineering scaffolds of the future. References 1. Loo Y, Goktas M, Tekinay AB, Guler MO, Hauser CAE, Mitraki A. (2015) Self-assembled proteins and peptides as scaffolds for tissue regeneration. Advanced Healthcare Materials 16: 2557-86. 2. Tamamis, P., Kasotakis, E., Mitraki, A., and Archontis, G. (2009) Amyloid-like self-assembly of peptide sequences from the adenovirus fiber shaft: insights from molecular dynamics simulations. J. Phys. Chem. B. 113: 15639-15647. 3. Tamamis, P., Kasotakis, E., Archontis, G., Mitraki, A. (2014) Combination of Theoretical and Experimental Approaches for the Design and Study of Fibril-forming Peptides. In Protein Design: Methods and Applications. Methods Mol. Biol. 1216: 53-70. 4. Tamamis, P., Archontis, G. (2011) Amyloid-like Self-Assembly of a Dodecapeptide Sequence from the Adenovirus Fiber Shaft: Perspectives from Molecular Dynamics Simulations. Journal of Non-Crystalline Solids, 357 (2): 717-722. 5. Tamamis, P., Terzaki, K., Kassinopoulos, M., Mastrogiannis, L., Mossou, E., Forsyth, V. T., Mitchell, E. P., Mitraki, A., Archontis, G. (2014) Self-Assembly of an Aspartate-Rich Sequence from the Adenovirus Fiber Shaft: Insights from Molecular Dynamics Simulations and Experiments. Journal of Physical Chemistry B, 118 (7): 1765-1774. 6. B.R. Brooks, C.L. Brooks, III, A.D. MacKerell, Jr., L. Nilsson, R.J. Petrella, B. Roux, Y. Won, G. Archontis, C. Bartels, S. Boresch, A. Caflisch, L. Caves, Q. Cui, A.R. Dinner, M. Feig, S. Fischer, J. Gao, M. Hodoscek, W. Im, K. Kuczera, T. Lazaridis, J. Ma, V. Ovchinnikov, E. Paci, R.W. Pastor, C.B. Post, J.Z. Pu, M. Schaefer, B. Tidor, R. M. Venable, H. L. Woodcock, X. Wu, W. Yang, D.M. York, and M. Karplus. (2009) CHARMM: The Biomolecular Simulation Program J Comput Chem. 30(10): 1545–1614.",
+    "presenting_author": "Sai Vamshi R Jonnalagadda | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College station, TX",
+    "authors": [
+      "\n\t\n\t\tGraziano Dei | Department of Materials Science and Technology, University of Crete, Heraklion, Greece",
+      "Jacob W Spies | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College station, TX",
+      "Anthi Ranell | Department of Materials Science and Technology, University of Crete, Heraklion, Greece",
+      "Estelle Mossou | EPSAM/ISTM, Keele University, Staffordshire, United Kingdom",
+      "V. Trevor Forsyth | EPSAM/ISTM, Keele University, Staffordshire, United Kingdom",
+      "Edward P Mitchell | European Synchrotron Radiation Facility, Grenoble, France",
+      "Anna Mitraki | Department of Materials Science and Technology, University of Crete, Heraklion, Greece",
+      "Phanourios Tamamis | "
+    ],
+    "authors_structured": [
+      {
+        "name": "\n\t\n\t\tGraziano Dei",
+        "affiliation": "Department of Materials Science and Technology, University of Crete, Heraklion, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Sai Vamshi R Jonnalagadda",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jacob W Spies",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Anthi Ranell",
+        "affiliation": "Department of Materials Science and Technology, University of Crete, Heraklion, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Estelle Mossou",
+        "affiliation": "EPSAM/ISTM, Keele University, Staffordshire, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "V. Trevor Forsyth",
+        "affiliation": "EPSAM/ISTM, Keele University, Staffordshire, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Edward P Mitchell",
+        "affiliation": "European Synchrotron Radiation Facility, Grenoble, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Anna Mitraki",
+        "affiliation": "Department of Materials Science and Technology, University of Crete, Heraklion, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Phanourios Tamamis",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470463.html",
+    "topic": "How Macromolecular Solvation Influences Its Conformations",
+    "date_time": "Thursday, November 17, 2016: 10:00 AM",
+    "abstract": "Under ambient conditions, globular proteins sacrifice their conformational entropy, and fold into well-defined “native” states. They do so because folding leads to favorable intra-molecular interactions, and importantly, to more favorable (or less unfavorable) interactions with the solvent. Consequently, proteins can be denatured under a variety of conditions, by either making the folded protein-solvent interactions less favorable, or unfolded protein-solvent interactions more favorable. Such conditions include lower temperatures, higher pressures, proximity to hydrophobic interfaces, and the presence of co-solutes that act as denaturants. Using hydrophobic polymers as model globular proteins, here we study how the hydration environment of a polymer influences its collapse. We find that near ambient conditions, typical hydrophobic macromolecules are situated at the edge of a collective collapse transition, making them sensitive to perturbations such as the application of pressure or the presence of co-solutes.",
+    "presenting_author": "Zhitong Jiang and  Amish Patel | University of Pennsylvania, Philadelphia, PA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Zhitong Jiang and  Amish Patel",
+        "affiliation": "University of Pennsylvania, Philadelphia, PA",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470416.html",
+    "topic": "Understanding the Structural Differences Between Psychrophilic and Thermophilic Enzymes: A Molecular Dynamics Study",
+    "date_time": "Thursday, November 17, 2016: 8:45 AM",
+    "abstract": "Industrial use of enzymes has grown at a tremendous rate. The global market for industrial enzymes is predicted to reach $7 billion by 2018. This is not surprising, given enzymatic catalysis results in high yields, low cost and is environmentally friendly compared to many conventional chemical catalysts. A wide range of industrial markets, such as food industry, textile industry, pharmaceuticals, deployable biosensors and production of biofuels are exploring enzymatic catalysis. These diverse markets demand more robust enzymes which can tolerate environments ranging from low to high temperatures. However, most enzymes are inactive and denature at such extreme conditions. Extremophile proteins – that include thermophilic and psychrophilic proteins are being investigated as enzymes for extreme temperatures. Thermophilic and psychrophilic proteins refer to enzymes that are active at high and low temperatures respectively but not at ambient temperatures. Thermophilic enzymes are more stable at high temperatures while psychrophilic enzymes tend to have shorter lifetimes and tend to be less stable at ambient temperatures. The underlying reasons for the differences in the range of the temperatures that these enzymes are active is not yet understood. Studies have suggested that the active site flexibility of psychrophilic enzymes provides their high activity at low temperatures. In contrast, the loss of flexibility helps thermophilic enzymes retain stability at high temperatures. We test this hypothesis through large-scale all-atom molecular dynamics (MD) simulations. Specifically, we perform simulations of G. thermocatenulatus (GTL) – a thermophilic enzyme and P . lipolyticum (M37L) – a psychrophilic enzyme in a range of temperatures. We investigate the differences in the global and local flexibility, specifically near the active site in both enzymes. In our talk, we will present these results and comment on their implications for designing enzymes with a broader range of stability and activity.",
+    "presenting_author": "Siva Dasetty | Department of Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+    "authors": [
+      "Weigao Wang | Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+      "Sapna Sarupri | Department of Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+      "Mark A. Blenner | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Siva Dasetty",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Weigao Wang",
+        "affiliation": "Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Sapna Sarupri",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Mark A. Blenner",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper463128.html",
+    "topic": "Rigorous Modeling of a MEA-Based CO2Capture Process with Uncertainty Quantification and Validation Using Large Scale Pilot Plant Data",
+    "date_time": "Thursday, November 17, 2016: 8:52 AM",
+    "abstract": "The US DOE’s Carbon Capture Simulation Initiative (CCSI) has a strong focus on the development of state of the art process models to accelerate the development and commercialization of post-combustion carbon capture system technologies. One of CCSI’s goals is the development of a methodology for a “gold standard” process model that will serve as a definitive reference for benchmarking the performance of steady-state and dynamic CO 2 capture systems. Although this methodology is intended to be applicable for various solvent types and for a wide range of operating conditions at different scales, an aqueous monoethanolamine (MEA) system is treated as a baseline in this work due to its widespread use as the industrial standard. This work is focused on developing the “gold standard” process model in Aspen Plus ® and validating the model with pilot plant data. The MEA model in this work is developed through a compilation of submodels, including physical property, reaction kinetics, mass transfer, and hydraulic models. The model parameters are regressed with experimental data that span the temperature, pressure, and composition ranges of interest. For each submodel, a Bayesian inference methodology is used to quantify the parametric uncertainty. This model is validated with high quality steady-state data (23 total trials) collected from the National Carbon Capture Center (NCCC) in Wilsonville, Alabama. While most of the steady-state test runs reported in the literature are focused on narrow operating range, the key manipulated variables such as solvent flowrate and reboiler steam flowrate and disturbance variables such as the flowrate and CO 2 concentration of the inlet flue gas were varied widely in these test runs. Moreover, the number of beds, and thus packing height, and the presence of intercooling in the absorber are variable in the test runs. For each of the 23 cases, uncertainty in the key variables of interest, including percentage of CO 2 capture in the absorber and required reboiler duty in the regenerator, are determined by propagating parametric uncertainty through the process model. This rigorous methodology for obtaining uncertainty ranges on key operating variables is not only novel, but also provides insight into the effects of the operating variables on output uncertainty and helps to identify process submodels that have significant impact on output uncertainty. The insights gained through this developed methodology can play a key role in reducing scale up uncertainty of CO 2 capture processes.",
+    "presenting_author": "Joshua Morgan | Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+    "authors": [
+      "Anderson Soares Chine | Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+      "Benjamin Omell | National Energy Technology Laboratory, Pittsburgh, PA",
+      "Debangsu Bhattacharyy | Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+      "Charles Tong | ",
+      "David C. Miller | National Energy Technology Laboratory, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joshua Morgan",
+        "affiliation": "Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Anderson Soares Chine",
+        "affiliation": "Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Benjamin Omell",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyy",
+        "affiliation": "Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Charles Tong",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "David C. Miller",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper471729.html",
+    "topic": "Immobilizing Metal Organic Frameworks on Active Substrates for CO2adsorption",
+    "date_time": "Thursday, November 17, 2016: 9:14 AM",
+    "abstract": "Scaling up gas separation processes requires novel approaches for manufacturing of adsorbent materials into scalable contactors such as monolithic structures that offer a cost-effective platform for practical applications in comparison to traditional packing systems. In this study, several metal-organic frameworks (MOFs) are supported on a variety of commercial and synthesized monolithic substrates and their dynamic adsorption behavior are assessed in a rapid pressure swing adsorption (RPSA) system for post-combustion CO 2 capture. To gain control over crystal nucleation and growth, various bottom-up growth techniques are employed and optimized with respect to uniformity, thickness, and adsorption characteristics of the MOFs films. To further improve the equilibrium capacity, post-functionalization of composite adsorbents are carried out using several aminopolymers and aminosilanes. In addition, long-term stability of the structured adsorbents are evaluated by performing cyclic operation. Furthermore, to assess the influence of water on adsorption behavior of coated monoliths, both dry and humid runs are performed under real conditions. Finally, the influence of SO x /NO x impurities are determined by exposing the structured adsorbents to a simulated flue gas containing SO 2 and NO.",
+    "presenting_author": "Fateme Rezaei | Chemical and Biochemical Engineering, Missouri University of Science and Technology, Rolla, MO",
+    "authors": [
+      "\n\t\n\t\tHooman Hosseini | Chemical and Biochemical Engineering, Missouri University of Science and Technology, Rolla, MO",
+      "Harshul Thakkar | Chemical and Biochemical Engineering, Missouri University of Science and Technology, Rolla, MO",
+      "Anirudh Krishnamurthy | Chemical and Biochemical Engineering, Missouri University of Science and Technology, Rolla, MO",
+      "Patrick J. Bre | Chemical and Biochemical Engineering, Missouri University of Science and Technology, Rolla, MO",
+      "Ali A. Rownaghi | "
+    ],
+    "authors_structured": [
+      {
+        "name": "\n\t\n\t\tHooman Hosseini",
+        "affiliation": "Chemical and Biochemical Engineering, Missouri University of Science and Technology, Rolla, MO",
+        "designation": "Author"
+      },
+      {
+        "name": "Harshul Thakkar",
+        "affiliation": "Chemical and Biochemical Engineering, Missouri University of Science and Technology, Rolla, MO",
+        "designation": "Author"
+      },
+      {
+        "name": "Anirudh Krishnamurthy",
+        "affiliation": "Chemical and Biochemical Engineering, Missouri University of Science and Technology, Rolla, MO",
+        "designation": "Author"
+      },
+      {
+        "name": "Patrick J. Bre",
+        "affiliation": "Chemical and Biochemical Engineering, Missouri University of Science and Technology, Rolla, MO",
+        "designation": "Author"
+      },
+      {
+        "name": "Fateme Rezaei",
+        "affiliation": "Chemical and Biochemical Engineering, Missouri University of Science and Technology, Rolla, MO",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ali A. Rownaghi",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper459217.html",
+    "topic": "Insights into Self-Assembly Mechanisms of Intrinsically Disordered Proteins from Atomistic Simulations",
+    "date_time": "Thursday, November 17, 2016: 9:30 AM",
+    "abstract": "Intrinsically disordered proteins (IDPs), which lack well­-defined stable structures yet still perform key biological functions, comprise more than one-third of the eukaryotic proteome. Well-ordered fibril structures or aggregation of many IDPs are associated with the pathology of a number of debilitating human diseases including Alzheimer's, Parkinson's, Huntington's, amyotrophic lateral sclerosis, type II diabetes, etc. Moreover, certain types of low sequence-complexity IDPs f orm non-membrane bound intracellular assemblages that co-exist with the cytoplasm showing liquid-like properties, i.e. deform under shear, fuse with one another and take a spherical shape. In this work, we study IDPs, such as TAR DNA-binding protein 43 (TDP-43) or FUsed in Sarcoma (FUS) or Islet Amyloid PolyPeptide (IAPP), forming which are the major constituents of membrane-free assemblages and/or well-ordered pathological aggregates. Structural properties of these IDPs from molecular simulations shed light on intra - and inter-molecular interactions leading self-assembly/aggregation of these proteins.",
+    "presenting_author": "Gul H. Zerze  and Jeetain Mittal | Department of Chemical and Biomolecular Engineering, Lehigh University, Bethlehem, PA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Gul H. Zerze  and Jeetain Mittal",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, Lehigh University, Bethlehem, PA",
+        "designation": "Presenting Author"
+      }
+    ]
+  }
+]

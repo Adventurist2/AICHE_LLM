@@ -1,0 +1,413 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646941",
+    "paper_endpoint": "Paper/646941",
+    "paper_id": "646941",
+    "topic": "A Hybrid Model Feature Relevance Analysis for First-Principle Model Refinement Suggestions",
+    "title": "A Hybrid Model Feature Relevance Analysis for First-Principle Model Refinement Suggestions",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49206",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making",
+    "session_number": "11",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Mathematical models representing process behavior can be classified as first-principle model (FPM), data-driven model (DDM), or hybrid model (HM) based on the dependence of their development on process mechanisms versus data inference [1]. The FPM is derived from the process knowledge while the DDM is dependent on the information obtained from process data. The hybrid model combines FPM with DDM inferred from data where there is a lack of understanding of the mechanistic details. Within the hybrid model, the DDM compensates for the FPM prediction disagreement with experimental measurement due to the absence of process knowledge in FPM. The FPM expands the DDM’s applicability and enables the hybrid model extrapolation over a wider operating condition range. As a result, the hybrid model outperforms the DDM in extrapolation capability and exceeds the FPM in enabling the modeling of a system with incomplete mechanism knowledge. According to the model structure, the hybrid models are generally arranged in two ways, the serial structure, and the parallel structure. The serial hybrid model is suitable for systems with few precise underlying mechanisms but rich data sets. The parallel hybrid model is preferred when the system can be modeled by decomposing the system into certain effects and modeling each part separately [2]. For a typical parallel hybrid model, the system is decomposed into the FPM prediction and the model discrepancy, which is the difference between the experimental measurements and the FPM prediction [3]. Compared to the FPM prediction, the model discrepancy includes the information that the FPM fails to capture from the experimental measurement. If the model discrepancy is fitted using a DDM, the mechanism that the FPM fails to include can be inferred from the DDM. If this missing mechanism can be allocated to which input variable it comes from, the input variables the impact of which the FPM does not correctly incorporate can be identified. Identification of these features provides the FPM developers with potential avenues for refinement. In our previous study [4], a framework that provides suggestions for refining a mechanistic model from an input variable perspective is introduced. The framework is developed based on a parallel structure hybrid model composed of FPM and DDM built using model discrepancy. After building the DDM using Gaussian Process Regression (GPR), the feature relevance analysis approaches are used to evaluate each feature's importance with respect to the FPM prediction and the model discrepancy. Each feature's importance from the FPM and the DDM are compared to determine which features the FPM fails to capture information from. The comparison enabled the qualitative inference of the equations and parameters that the mechanistic model refinement studies should focus on. This study extends our framework by modifying the feature relevance comparison method by adding a quantitative evaluation metric. A quantitative evaluation of the amount of information that the FPM fails to capture from each variable is estimated. After building the hybrid model, the feature importance is evaluated using the partial derivative of the output over the inputs. For each sample point, the partial derivatives are decomposed into contributions from FPM and DDM. The magnitude of partial derivative from the DDM output over one input variable quantitatively evaluates the amount of information FPM fails to capture from this input. Then, the FPM feature parameter refinement space, which is the feature parameter tuning space to meet the relationships inferred from experimental data, is interpreted from DDM. Feature parameters with a larger refinement space should be modified with priority. The validation experiments consider various scenarios and functions to test the effectiveness of the proposed method, and they are designed to validate if the amount of information the FPM failed to capture can be assessed from the DDM feature importance evaluated using the proposed method. To simulate the true model structure, for each experiment, we generate samples from one function f e to simulate the experimental data and defined another function f m to simulate the FPM. Then, a GP is built using samples generated from the difference between f e and f m outputs to simulate the model discrepancy. The feature importance inferred from GP is then compared with the true feature importance difference between f e and f m to test the effectiveness of the approach. We employed the Sobol-G function, the Ishigami function, and polynomial functions as test functions. Scenarios, where the FPM was built using a subset of features from the experimental data, are considered in the validation experiments. From the validation results, the updated feature relevance comparison approach effectively quantifies the amount of information the FPM fails to capture. This approach identifies feature parameter refinement space accurately for the FPM, whether it was built using a subset or all of the features. References Zendehboudi, S.; Rezaei, N.; Lohi, A. Applications of Hybrid Models in Chemical, Petroleum, and Energy Systems: A Systematic Review. Appl. Energy 2018 , 228 , 2539–2566, doi:10.1016/j.apenergy.2018.06.051. von Stosch, M.; Oliveira, R.; Peres, J.; Feyo de Azevedo, S. Hybrid Semi-Parametric Modeling in Process Systems Engineering: Past, Present and Future. Comput. Chem. Eng. 2014 , 60 , 86–101, doi:10.1016/j.compchemeng.2013.08.008. Jiang, Z.; Chen, W.; Fu, Y.; Yang, R.J. Reliability-Based Design Optimization with Model Bias and Data Uncertainty. SAE Int. J. Mater. Manuf. 2013 , 6 , doi:10.4271/2013-01-1384. Deng, Y.; Selen, C.; Eden, M. A Hybrid Model Feature Relevance Analysis for White-Box Model Refinement Suggestions. In Proceedings of the 2021 AIChE Annual Meeting; 2021.",
+    "presenting_author": "Yushi Deng | Auburn University, AL",
+    "authors": [
+      "Yushi Deng | Auburn University, AL",
+      "Selen Cremaschi | Auburn University, AL",
+      "Mario Eden | Auburn University, AL",
+      "Haijing Gao | Chevron Energy Technology Company, Houston, TX",
+      "Shuxing Cheng | Chevron Energy Technology Company, Houston, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yushi Deng",
+        "affiliation": "Auburn University, AL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Selen Cremaschi",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      },
+      {
+        "name": "Mario Eden",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      },
+      {
+        "name": "Haijing Gao",
+        "affiliation": "Chevron Energy Technology Company, Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Shuxing Cheng",
+        "affiliation": "Chevron Energy Technology Company, Houston, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "11a",
+    "sortable_time": "2022-11-13_15:30:00_15:47:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646941"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645630",
+    "paper_endpoint": "Paper/645630",
+    "paper_id": "645630",
+    "topic": "X AI-MEG : An Ontology-Based Explanation Generator Via Machine Learning",
+    "title": "X AI-MEG : An Ontology-Based Explanation Generator Via Machine Learning",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49206",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making",
+    "session_number": "11",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Generating mechanistic explanations of process systems requires identification of mechanistic process models, and relationships between the process variables. In order to infer the causal interactions between system variables requires tremendous human effort based on prior knowledge about the system. To create an automated system to generate such explanations of the system, the system needs to be equipped with plausible mechanisms, and scientific knowledge about physicochemical model forms, variables and parametric mapping. In this talk, we present an artificial intelligence system, XAI-MEG, for generating natural language explanations of process systems from process data, using an ontology of physicochemical phenomenological interactions. These first-principles interactions are codified in an ontology of model forms, process variables and physical process parameters. The system is equipped with knowledge about physicochemical processes, variables, known feature transformations of the variables, scientific model forms, and explanations of the model form, based on simplifications of phenomenology and conservation laws. We show how ontology of symbolic variables and contexts can be combined with machine learning to create causal explanations of process systems.",
+    "presenting_author": "Venkat Venkatasubramanian | Columbia University, New York, NY",
+    "authors": [
+      "Abhishek Sivaram | Columbia University, New York, NY",
+      "Venkat Venkatasubramanian | Columbia University, New York, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Abhishek Sivaram",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Venkat Venkatasubramanian",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "11b",
+    "sortable_time": "2022-11-13_15:47:00_16:04:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645630"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647010",
+    "paper_endpoint": "Paper/647010",
+    "paper_id": "647010",
+    "topic": "Meta-Modeling-Based Sensitivity Analysis of Hybrid Models",
+    "title": "Meta-Modeling-Based Sensitivity Analysis of Hybrid Models",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49206",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making",
+    "session_number": "11",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Hybrid models are an amalgamation of first-principles models and data-driven models. Hybrid models’ success is accredited to their intended structure of overcoming the shortcomings of first principles models (like high computation expense, uncertainties in parameter estimation) and data-driven models (like overfitting, no physical significance, extrapolation capabilities). Hybrid models are more adaptive than first-principles models and can handle uncertainties efficiently. Since its inception, hybrid models are being used in several domains of engineering to solve complex systems, especially in biological systems for modeling, simulation, and optimization [1, 2]. While the hybrid models have several advantages, it is necessary to employ a good strategy while designing hybrid models (e.g., series integration, parallel integration). A good strategy would be to establish an understanding of the significance of all parameters in the hybrid model to justify the choice of the user-dependent data-driven model. Otherwise, the resulting hybrid model would only perform well locally with no global-performance guarantees. While parameter analysis techniques have been implemented for first-principles models, parameter analysis for data-driven models is relatively an upcoming domain of research. Hence, the analysis of hybrid models has not been extensively studied. Sensitivity analysis (SA) has been historically used to understand models, their important parameters, and for validation purposes. Sensitivity (or what-if) analysis refers to the study of changes in the output of a model due to large or extreme changes in the input [3]. Global sensitivity analysis methods have been proposed to study the variation in inputs over the input domain and associate it with the output uncertainties [4]. Functional ANOVA (FANOVA) is an SA tool that models the multivariate functions as a sum of their individual input effects and interactions and has been commonly used for first-principles models [5]. On the other hand, data-driven models are mainly optimized and analyzed through Bayesian optimization; a Gaussian process-based global optimization. Bayesian Optimization is well-suited for handling computationally expensive objective functions as it uses the acquisition function for optimization [6]. Given there is no proposed common ground for sensitivity analysis of first-principles and data-driven models, we extend sensitivity analysis studies to hybrid models. In our proposed work, we plan to decompose the hybrid model into Koopman eigenfunctions as they capture nonlinear dynamics in the form of linear models [7]. The linear model will be optimized using a Bayesian Optimization-based Dynamic Mode Decomposition method. The sensitivity of parameters will be finally analyzed using FANOVA through Sobol’s indices estimation. This work will provide insights into the impact of chosen black box model on the overall hybrid model. The advantage of this approach is demonstrated through application to isothermal CSTR, bioreactor, and hydraulic fracturing systems. References [1] P. Shah, M. Sheriff, M. Bangi, C. Kravaris, J. Kwon, C. Botre and J. Hirota, \"Deep neural network-based hybrid modeling and experimental validation for an industry-scale fermentation process: Identification of time-varying dependencies among parameters,\" Chemical Engineering Journal, vol. 441, no. 1, p. 135643, 2022. [2] S. Zendehboudi, N. Rezaei, and A. Lohi, \"Applications of hybrid models in chemical, petroleum, and energy systems: A systematic review,\" Applied Energy, vol. 228, no. 1, pp. 2539-2566, 2018. [3] J. Kleijnen, \"Sensitivity Analysis versus Uncertainty Analysis: When to Use What?,\" in Predictability and Nonlinear Modelling in Natural Sciences and Economics , Springer, Dordrecht, 1994, pp. 322-333. [4] A. Saltelli, K. Chan, E. Scott and editors, Sensitivity Analysis, Wiley, 2009. [5] R. Ghanem, D. Higdon, and H. Owhadi, Handbook of Uncertainty Quantification, Springer International, 2017. [6] M. Gelbart, J. Snoek and R. Adams, \"Bayesian Optimization with Unknown Constraints,\" 22 Mar 2014. [Online]. Available: https://arxiv.org/abs/1403.5607. [Accessed 9 April 2022]. [7] E. Kaiser, J. Kutz, and S. Brunton, \"Data-Driven Approximations of Dynamical Systems Operators for Control,\" in The Koopman Operator in Systems and Controls , A. Mauroy, I. Meźic, and Y. Susuki, Eds., Springer Nature, 2020, pp. 197-234.",
+    "presenting_author": "Parth Shah | Texas A&M University, College Station, TX",
+    "authors": [
+      "Sagar Vinod Lakhwani | Texas A&M University, College Station, TX",
+      "Parth Shah | Texas A&M University, College Station, TX",
+      "Mohammed Saad Faizan Bangi | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sagar Vinod Lakhwani",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Parth Shah",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mohammed Saad Faizan Bangi",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "11c",
+    "sortable_time": "2022-11-13_16:04:00_16:21:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647010"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645494",
+    "paper_endpoint": "Paper/645494",
+    "paper_id": "645494",
+    "topic": "Subspace Based Model Identification for Batch Quality Analysis Using Missing Data Algorithms",
+    "title": "Subspace Based Model Identification for Batch Quality Analysis Using Missing Data Algorithms",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49206",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making",
+    "session_number": "11",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Developing a good process model capable of handling batch process data is the key to good quality control. Batch processes tend towards the low volume production of high value products as this allows for poor quality batches to be discarded. Each discarded batch represents a significant loss in revenue motivating the need for advanced batch control approaches and fundamentally the development of accurate quality models. Recent advances in computing technology have led to increased amounts of historical data being available making data-driven modeling a viable choice for model identification. An important consideration when identifying data-driven models is the choice of input and output variables. While the distinction is typically based on variables that are controlled in comparison to those that are measured, the batch process also introduces a separate type of output variable; quality variables. Quality variables are still considered to be outputs from the process however they are not measured continuously nor are they always measured online. Quality measurements are often calculated based on the regular measured outputs or are determined by separate analyses of the batch. This difference is an important consideration for data driven modeling techniques as one assumption that is prevalent in process modeling scenarios is that the inputs and outputs are sampled at a single and uniform sampling rate. In practice, industrial processes often have different sampling rates for input and output variables. Additionally, processes record quality measurements at an even slower rate compared to traditional inputs and outputs. This leads to scenarios where inputs and outputs have some missing values due to differences in sampling rates whereas quality measurements are available at extremely low frequencies. This presents a challenge to traditional data driven modeling approaches that require complete data sets to identify a model. This presentation addresses the problem of quality modeling in batch process data using a missing data subspace algorithm that adapts nonlinear iterative partial least squares (NIPALS) algorithms from both partial least squares (PLS) and principal component analysis (PCA) is utilized to build a data driven model. The use of NIPALS algorithms allow for the correlation structure of the input-output data to minimize the impact of the large amounts of missing quality measurements. These techniques are applied to a polymethyl methacrylate (PMMA) process example to show the efficacy of the missing data approach at identifying batch quality models.",
+    "presenting_author": "Nikesh Patel | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Nikesh Patel | McMaster University, Hamilton, Canada",
+      "Kavitha Sivanathan | McMaster University",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nikesh Patel",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Kavitha Sivanathan",
+        "affiliation": "McMaster University",
+        "designation": "Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "11d",
+    "sortable_time": "2022-11-13_16:21:00_16:38:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645494"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649321",
+    "paper_endpoint": "Paper/649321",
+    "paper_id": "649321",
+    "topic": "Bayesian Optimization for Performance-Oriented Model Learning: An Application to Learning-Based Predictive and Parameter-Varying Control of Cold Plasmas",
+    "title": "Bayesian Optimization for Performance-Oriented Model Learning: An Application to Learning-Based Predictive and Parameter-Varying Control of Cold Plasmas",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49206",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making",
+    "session_number": "11",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Cold atmospheric plasma (CAP) treatment has become a promising technology for biomedical applications [1]. CAPs are a class of weakly ionized gasses that exist at ambient temperature and pressure. This non-equilibrium existence enables CAPs to exhibit an assortment of synergistic effects that have shown to elicit effective decontamination [2], [3] as well as therapeutic effects, including activating wound healing in chronic wounds [4] and selectively killing cancerous cells [5]. A clear challenge to bringing CAP treatments to practice is the safe and effective control of the CAP administration to surfaces and biological media. Modeling plasma effects on complex interfaces plays a key role in effective control [6], [7], but faces several challenges: (i) plasma behavior/dynamics are intricate and span over several length and time scales [8]; (ii) plasma interactions with varied interfaces are poorly understood and thus hard to model and poorly understood [9]; and (iii) highly-fidelity plasma models are computationally expensive for control design purposes [10]. In one aspect, the modeling challenges may be addressed by the abundance of work in robust and stochastic model-based control [11], [12]. These strategies deal with the available reduced- order models by systematically accounting for model uncertainties and disturbances in the control formulation. [13], [14]. While useful in ensuring robust controller performance, these strategies can suffer from overly-conservative control actions, as well as the inability account for the time-varying nature of plasma systems. An alternative perspective to combat the modeling challenges emphasizes the performance-oriented quality of models over the general predictive quality, i.e., the notion of identification for control (I4C) [15]. Traditionally, models are developed independent of how their predictive quality impacts closed-loop control performance. In I4C, model development coincides with closed-loop performance, and relies on the idea that the best-performing model may not be the best predictive model. This implies that data-driven models should be identified or adapted with respect to predefined closed-loop performance metrics. In this work, we demonstrate the a performance-oriented model learning approach for the control of CAPs for biomedical applications. In particular, we use Bayesian optimization (BO) [16] for the performance-oriented model adaptation of artificial neural network (ANN)-based linear parameter-varying (LPV) models utilized for model predictive control (MPC) of atmospheric pressure plasma jets (APPJs). We consider the use of APPJs to deliver a desired amount of thermal effects to heat-sensitive bio-materials [17], [18]. First, we developed a nominal data-driven LPV plasma model to capture the nonlinear dynamics over the operating window for plasma treatment using ANNs [19]. The strategy for this initial identification has been termed state integrated matrix estimation, which simultaneously estimates the state(s) and model matrix functions which have been approximated by ANNs [19]. This model is then used in a MPC which optimizes control actions for the delivery of the the desired thermal effects. For model adaptation and taking inspiration from transfer learning, we freeze the ANN representations of the state-space LPV model except the last layers, which are updated based on new closed-loop data. BO is used to guide the performance-oriented model learning by adapting the neural network parameters of the last layers. In this way, BO balances exploration of new model parameters and exploitation of currently available information of the model based on previous data. In real-time experiments with a kHz-excited APPJ in Helium, we compare the performance-oriented strategy to closed-loop identification. We demonstrate that BO offers improved closed-loop performance compared to closed-loop identification with an equivalent number of process runs. Furthermore, we demonstrate the capability of such a performance-oriented strategy to overcome variations in the system environment by testing the strategy’s performance over substrates with significantly different properties. A mismatched model-substrate environment can be overcome with this strategy using an order of magnitude less data than needed to train the nominal model. [1] A. A. Fridman and G. G. Friedman, Plasma medicine . John Wiley & Sons Chichester, UK:, 2013. [2] V. Scholtz, J. Pazlarova, H. Souskova, J. Khun, and J. Julak,“Nonthermal plasma—a tool for decontamination and disinfection,” BiotechnologyAdvances , vol. 33, no. 6, pp. 1108–1119, 2015. [3] A. Sakudo, Y. Yagyu, and T. Onodera, “Disinfection and sterilization using plasma technology: Fundamentals and future perspectives for biological applications,” International Journal of Molecular Sciences , vol. 20, no. 20, p. 5216, 2019. [4] B. Haertel, T. Von Woedtke, K.-D. Weltmann, and U. Lindequist, “Non-thermal atmospheric-pressure plasma possible application in wound healing,” Biomolecules & Therapeutics , vol. 22, no. 6, p. 477, 2014. [5] M. Keidar, R. Walk, A. Shashurin, P. Srinivasan, A. Sandler, S. Dasgupta, R. Ravi, R. Guerrero-Preston, and B. Trink, “Cold plasma selectivity and the possibility of a paradigm shift in cancer therapy,” British Journal of Cancer , vol. 105, no. 9, pp. 1295–1301, 2011. [6] D. Gidon, D. B. Graves, and A. Mesbah, “Effective dose delivery in atmospheric pressure plasma jets for plasma medicine: A model predictive control approach,” Plasma Sources Science and Technology , vol. 26, no. 8, p. 085005, 2017. [7] D. Gidon, H. S. Abbas, A. D. Bonzanini, D. B. Graves, J. M. Velni, and A. Mesbah, “Data-driven LPV model predictive control of a cold atmospheric plasma jet for biomaterials processing,” Control Engineering Practice , vol. 109, p. 104725, 2021. [8] A. N. Bhoj and M. J. Kushner, “Multi-scale simulation of functionalization of rough polymer surfaces using atmospheric pressure plasmas,” Journal of Physics D: Applied Physics , vol. 39, no. 8, p. 1594, 2006. [9] D. Breden and L. L. Raja, “Computational study of the interaction of cold atmospheric helium plasma jets with surfaces,” Plasma Sources Science and Technology , vol. 23, no. 6, p. 065020, 2014. [10] A. Sobester, A. Forrester, and A. Keane, Engineering design via surrogate modelling: A practical guide . John Wiley & Sons, 2008. [11] A. Bemporad and M. Morari, “Robust model predictive control: A survey,” in Robustness in identification and control . Springer, 1999, pp. 207–226. [12] A. Mesbah, “Stochastic model predictive control: An overview and perspectives for future research,” IEEE Control Systems Magazine , vol. 36, no. 6, pp. 30–44, 2016. [13] A. D. Bonzanini, J. A. Paulson, D. B. Graves, and A. Mesbah, “Toward safe dose delivery in plasma medicine using projected neural network-based fast approximate NMPC,” IFAC-PapersOnLine , vol. 53, no. 2, pp. 5279–5285, 2020. [14] A. D. Bonzanini, J. A. Paulson, G. Makrygiorgos, and A. Mesbah, “Fast approximate learning-based multistage nonlinear model predictive control using Gaussian processes and deep neural networks,” Computers & Chemical Engineering , vol. 145, p. 107174, 2021. [15] M. Gevers, “Identification for control: From the early achievements to the revival of experiment design,” European Journal of Control , vol. 11, no. 4-5, pp. 335–352, 2005. [16] B. Shahriari, K. Swersky, Z. Wang, R. P. Adams, and N. DeFreitas, “Taking the human out of the loop: A review of Bayesian optimization,” Proceedings of the IEEE , vol. 104, pp. 148–175, 2015. [17] L. Minati, C. Migliaresi, L. Lunelli, G. Viero, M. Dalla Serra, and G. Speranza, “Plasma assisted surface treatments of biomaterials,” Biophysical Chemistry , vol. 229, pp. 151–164, 2017. [18] E. Stoffels, A. Flikweert, W. Stoffels, and G. Kroesen, “Plasma needle: A non-destructive atmospheric plasma source for fine surface treatment of (bio) materials,” Plasma Sources Science and Technology , vol. 11, no. 4, p. 383, 2002. [19] Y. Bao, J. M. Velni, A. Basina, and M. Shahbakhti, “Identification of state-space linear parameter-varying models using artificial neural networks,” IFAC-PapersOnLine , vol. 53, no. 2, pp. 5286–5291, 2020.",
+    "presenting_author": "Kimberly Chan | University of California, Berkeley",
+    "authors": [
+      "Kimberly Chan | University of California, Berkeley",
+      "Yajie Bao | University of Georgia, Athens, GA",
+      "Javad Mohammadpour Velni | University of Georgia, Athens, GA",
+      "Ali Mesbah | University of California, Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kimberly Chan",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yajie Bao",
+        "affiliation": "University of Georgia, Athens, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Javad Mohammadpour Velni",
+        "affiliation": "University of Georgia, Athens, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "11e",
+    "sortable_time": "2022-11-13_16:38:00_16:55:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649321"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645750",
+    "paper_endpoint": "Paper/645750",
+    "paper_id": "645750",
+    "topic": "A Computational Study on the Benefits of Decision-Focused Surrogate Modeling",
+    "title": "A Computational Study on the Benefits of Decision-Focused Surrogate Modeling",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49206",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making",
+    "session_number": "11",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Optimization using rigorous computational models of chemical systems is often difficult due to the complex underlying physics of such systems. A common strategy for solving these problems, especially in real-time applications, is to develop surrogate models of reduced computational complexity. While surrogate modeling has a long tradition in process systems engineering [1], recent focus has been on data-driven surrogate modeling methods that take advantage of advances in machine learning [2, 3]. In data-driven surrogate modeling, one typically replaces either a part of or the entire optimization model with a machine learning model. However, as we show in our previous work [4], these standard approaches have several disadvantages due to which they do not always lead to a low decision error , which is defined as the difference between the optimal solutions of the original and the surrogate optimization models. To overcome the drawbacks of the standard methods, we developed a data-driven inverse optimization (IO) approach to construct surrogate optimizers of reduced complexity [5]. Our IO approach allows direct decision-focused learning , i.e., the models are trained to obtain (almost) the same optimal solutions as the original optimization models. Furthermore, in contrast to traditional machine learning models, IO allows the incorporation of domain knowledge in the form of explicit constraints and tends to be more data-efficient. In this work, we validate our framework through numerical experiments involving the real-time optimization of common chemical processes such as chemical reactors, and heat exchanger networks. We test our decision-focused surrogate modeling method against several standard data-driven surrogate modeling approaches. We find that with our framework, even simple surrogate models that are linear in the decision variables result in high out-of-sample prediction accuracies. This is because, while nonconvex functions cannot generally be approximated well with linear functions, our approach allows to “transfer” the nonconvexity from the decision variable space to the input space, which is enough for the surrogate model to learn the key features of the original model. In contrast, we find that optimization models obtained with standard surrogate modeling approaches struggle to match the true optimal solutions even when highly sophisticated machine learning frameworks such as deep learning are used. References: 1. Bhosekar, A., & Ierapetritou, M. (2018). Advances in surrogate based modeling, feasibility analysis, and optimization: A review. Computers & Chemical Engineering , 108 , 250-267. 2. Kim, S. H., & Boukouvala, F. (2020). Machine learning-based surrogate modeling for data-driven optimization: a comparison of subset selection for regression techniques. Optimization Letters , 14 (4), 989-1010. 3. Cozad, A., Sahinidis, N. V., & Miller, D. C. (2014). Learning surrogate models for simulation‐based optimization. AIChE Journal , 60 (6), 2211-2227. 4. Gupta, R., & Zhang, Q. (2021). A data-driven inverse optimization approach to learning surrogate optimizers. 2021 AIChE Annual Meeting. AIChE 5. Gupta, R., & Zhang, Q. ( forthcoming ). Decision-focused surrogate modeling with feasibility guarantee. Proceeding of the 14 th International Symposium on Process Systems Engineering.",
+    "presenting_author": "Rishabh Gupta | University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "Rishabh Gupta | University of Minnesota, Minneapolis, MN",
+      "Joshua Larson | University of Minnesota, Minneapolis, MN",
+      "Qi Zhang | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rishabh Gupta",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joshua Larson",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      },
+      {
+        "name": "Qi Zhang",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "11f",
+    "sortable_time": "2022-11-13_16:55:00_17:12:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645750"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646525",
+    "paper_endpoint": "Paper/646525",
+    "paper_id": "646525",
+    "topic": "Decision-Making Optimization of Hybrid Energy Management System for Curtailed Renewable Energy through Deep Reinforcement Learning",
+    "title": "Decision-Making Optimization of Hybrid Energy Management System for Curtailed Renewable Energy through Deep Reinforcement Learning",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49206",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making",
+    "session_number": "11",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Managing curtailed renewable energy is becoming more important, as the penetration level of renewable energy increases [1] . Accordingly, research on energy management systems (EMS) that store curtailed renewable energy [2],[ 3] or convert it into other energy is being actively studied. A fine decision-making model of EMS should consider the characteristics of the energy utilization methods (e.g., electrolyzer) and parameter uncertainties (e.g., amount of curtailed energy). However, the uncertainty grows due to the integration of various types of renewable energy sources [4] and extended installations. To solve the large-scale problem under uncertainties, we suggest reinforcement learning (RL) methodology which can realize the real-time optimal EMS planning for maximizing the profit of EMS with curtailed renewable energy. The EMS is composed of photovoltaic and wind power sources [5] , the battery energy storage system (BESS), and the alkaline water electrolyzer (AWE). The RL agent is trained to make a decision on how much energy to distribute to BESS or AWE using the Proximal Policy Optimization (PPO) algorithm. Regarding the RL architecture, the state (e.g., state of charge) in the environment which expresses EMS is changed by the action and the numerical reward is calculated according to the state. The agent receives the reward as a result of its action and updates the policy network in the direction of maximizing the reward. The RL training result shows more than 93% performance compared to the mixed-integer linear programming (MILP) optimal solution which is the profit value of EMS operation, even in the absence of a curtailed energy prediction model. In addition, the policy of the agent was evaluated in other years and provided about 90% performance which means proving applicability to other scenarios. These comparisons with mathematical programming (MP) based optimal solution allows for assessing the quantitative performance of RL, unlike the previous papers that stopped at the implementation of RL. The trained policy also showed excellent evaluation results even in the presence of uncertainty in the curtailed energy, which performed better than that solved by stochastic optimization (SO). We conducted the Monte Carlo simulation of SO and RL and proved that RL can better reject parameter uncertainty. Finally, by visually expressing the action and state mapping of the trained policy, the correlation and logic of the EMS can be understood as opposed to the order in which a person makes a decision. This result shows that RL can implement real-time and multi-period optimal planning in EMS. We confirmed that RL does not require much training time and computing power, unlike MP according to the length of the period or the size of uncertainty. Therefore, RL can be a promise for the decision-making model of the hybrid EMS problem that contains uncertainty. [1] I. Dincer, Renewable energy and sustainable development: a crucial review, Renewable and Sustainable Energy Reviews 4 (2) (2000) 157–175. [2] H. Saber, M. Moeini-Aghtaie, M. Ehsan, M. Fotuhi-Firuzabad, A scenario- based planning framework for energy storage systems with the main goal of mitigating wind curtailment issue, International Journal of Electrical Power Energy Systems 104 (2019) 414–422. [3] X. Dui, G. Zhu, L. Yao, Two-stage optimization of battery energy storage capacity to decrease wind power curtailment in grid-connected wind farms, IEEE Transactions on Power Systems 33 (3) (2018) 3296– 3305. [4] C. Li, H. Shi, Y. Cao, J. Wang, Y. Kuang, Y. Tan, J. Wei, Comprehensive review of renewable energy curtailment and avoidance: A specific example in china, Renewable and Sustainable Energy Reviews 41 (2015) 1067– 1079. [5] Caiso curtailed energy dataset, https://www.caiso.com/informed/Pages/ManagingOversupply.aspx.",
+    "presenting_author": "Jonggeol Na | Ewha Womans University, Seoul 03760, Korea, Republic of (South)",
+    "authors": [
+      "Doeun Kang | Ewha Womans University, Seoul 03760, Korea, Republic of (South)",
+      "Dongju Kang | Seoul National University, Korea, Republic of (South)",
+      "Sumin Hwangbo | Ewha Womans University, Seoul 03760, Korea, Republic of (South)",
+      "Haider Niaz | Pukyong National University, Busan, Korea, Republic of (South)",
+      "Wonbo Lee | Seoul National University, Korea, Republic of (South)",
+      "J Jay Liu | Pukyong National University, Busan, Korea, Republic of (South)",
+      "Jonggeol Na | Ewha Womans University, Seoul 03760, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Doeun Kang",
+        "affiliation": "Ewha Womans University, Seoul 03760, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Dongju Kang",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Sumin Hwangbo",
+        "affiliation": "Ewha Womans University, Seoul 03760, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Haider Niaz",
+        "affiliation": "Pukyong National University, Busan, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Wonbo Lee",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "J Jay Liu",
+        "affiliation": "Pukyong National University, Busan, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Jonggeol Na",
+        "affiliation": "Ewha Womans University, Seoul 03760, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "11g",
+    "sortable_time": "2022-11-13_17:12:00_17:29:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646525"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/650314",
+    "paper_endpoint": "Paper/650314",
+    "paper_id": "650314",
+    "topic": "Hybrid Modeling and Optimization of Process Flowsheets Using Bayesian Symbolic Regression",
+    "title": "Hybrid Modeling and Optimization of Process Flowsheets Using Bayesian Symbolic Regression",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49206",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making",
+    "session_number": "11",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Surrogate formulations of first-principles models that mimic their behavior while improving their numerical robustness have become popular to address the optimization of process flowsheets. However, such purely black-box models show poor extrapolation capabilities (they lead to large errors outside the training set) and lack interpretability (due to the absence of mechanistic insights). Additionally, a large number of data points are often required to construct accurate surrogate models [1]. In the recent past, black-box models have been refined by adding mechanistic equations, leading to hybrid models combining the complementary strengths of first-principles and data-driven approaches. Notably, Artificial Neural Networks (ANNs) and Gaussian processes (GPs) have been widely applied in process optimization, yet they are hardly interpretable and require tailored optimization approaches. The latter is particularly true when global optimization is sought, like in the work by Schweidtmann and Mitsos [2], which proposed a global optimization algorithm for ANNs based on propagating McCormick relaxations in a reduced space. In recent years, symbolic regression has attracted increasing interest as an alternative to ANNs and GPs. In contrast to the latter two, symbolic regression generates a closed-form analytical expression based on expression trees [3]. In essence, the goal here is to find a suitable analytical expression to explain given data without any aprioristic knowledge of the model structure. Such an analytical model can be more easily interpreted while facilitating the use of derivative-based optimization techniques. Furthermore, having analytical surrogates defined in the space of the degrees of freedom could improve the numerical performance of global optimization solvers such as BARON [4]. Despite the appealing properties of symbolic regression, hybrid modeling of process flowsheets often rely on ANNs and GPs. Azarpour et al. [5] developed hybrid models for the terephthalic acid production process and the methanol production process based on ANNs complemented with first-principles (mass and energy balances). Moreover, Kahrs and Marquardt [6] constructed a hybrid model of ethylene glycol production using ANNs coupled with mass balances and vapor-liquid equilibrium equations, which was optimized to maximize the ethylene glycol yield. Here we explore the use of Bayesian symbolic regression to build hybrid models of process flowsheets. In essence, we develop hybrid process models applying symbolic regression tools based on Bayesian learning [7] to generate closed-form analytical expressions of individual process units. These are then inserted into a mechanistic backbone based on mass and energy balances, giving rise to a fully analytical model. The latter can be optimized following an equation-oriented approach implemented in an algebraic modeling system interfacing with off-the-shelf solvers. Notably, the problem is formulated as a mixed-integer non-linear programming (MINLP) model. Here, continuous variables denote process variables (e.g., flow rates and temperatures of process streams), while integers represent structural variables (e.g., selection of process units, number of trays in a distillation column, etc.). We demonstrate the successful implementation of this approach in two case studies, i.e., propylene glycol and green methanol production. The results show that the hybrid modeling approach outperforms the standalone optimization of the rigorous process simulation, avoiding convergence issues and enabling the use of state-of-the-art solvers, including global optimization packages. References [1] Fahmi, I., & Cremaschi, S. (2012). Process synthesis of biodiesel production plant using artificial neural networks as the surrogate models. Computers & Chemical Engineering , 46 , 105-123. [2] Schweidtmann, A. M., & Mitsos, A. (2019). Deterministic global optimization with artificial neural networks embedded. Journal of Optimization Theory and Applications , 180 (3), 925-948. [3] Cozad, A., & Sahinidis, N. V. (2018). A global MINLP approach to symbolic regression. Mathematical Programming , 170 (1), 97-119. [4] Tawarmalani, M., & Sahinidis, N. V. (2005). A polyhedral branch-and-cut approach to global optimization. Mathematical programming , 103 (2), 225-249. [5] Azarpour, A., Borhani, T. N., Alwi, S. R. W., Manan, Z. A., & Mutalib, M. I. A. (2017). A generic hybrid model development for process analysis of industrial fixed-bed catalytic reactors. Chemical Engineering Research and Design , 117 , 149-167. [6] Kahrs, O., & Marquardt, W. (2007). The validity domain of hybrid models and its application in process optimization. Chemical Engineering and Processing: Process Intensification , 46 (11), 1054-1066. [7] Guimerà, R., Reichardt, I., Aguilar-Mogas, A., Massucci, F. A., Miranda, M., Pallarès, J., & Sales-Pardo, M. (2020). A Bayesian machine scientist to aid in the solution of challenging scientific problems. Science advances , 6(5), eaav6971.",
+    "presenting_author": "Sachin Jog | ETH Zürich, Switzerland",
+    "authors": [
+      "Sachin Jog | ETH Zürich, Switzerland",
+      "Daniel Vázquez | ETH Zürich, Switzerland",
+      "Gonzalo Guillén-Gosálbez | ETH Zürich, Switzerland"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sachin Jog",
+        "affiliation": "ETH Zürich, Switzerland",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Daniel Vázquez",
+        "affiliation": "ETH Zürich, Switzerland",
+        "designation": "Author"
+      },
+      {
+        "name": "Gonzalo Guillén-Gosálbez",
+        "affiliation": "ETH Zürich, Switzerland",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "11h",
+    "sortable_time": "2022-11-13_17:29:00_17:46:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/650314"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647607",
+    "paper_endpoint": "Paper/647607",
+    "paper_id": "647607",
+    "topic": "Data-Driven Explainable Classification for Economic Bioproduct Separation",
+    "title": "Data-Driven Explainable Classification for Economic Bioproduct Separation",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49206",
+    "session_title": "Data-Driven and Hybrid Modeling for Decision Making",
+    "session_number": "11",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Lignocellulosic biomass is a renewable feedstock to produce platform chemicals and biofuels [1, 2]. The microbial conversion of biomass often produces low-concentration bioproducts in the aqueous phase [3]. Bioproduct separation to achieve purity and recovery requirements can contribute to more than 70% of the total production costs [4], motivating the investigation of improved separation approaches. Liquid-liquid extraction is a low-energy separation technology which is based on the preferential partitioning of bioproducts into a selected solvent system from water. To reduce solvent consumption, liquid-liquid extraction is often coupled with other separations ( e.g. , distillation) to purify and recycle solvents. This results in a hybrid separation consisting of liquid-liquid extraction and distillation. Given information on component relative volatilities, liquid-liquid equilibrium constants, bioproduct feed composition and solvent price, research questions exist regarding 1) when hybrid separation is feasible; 2) when hybrid separation is more favorable than individual distillation operation; and 3) how system properties influence separation designs. In this work, we propose a data-driven classification framework to identify system property domains when hybrid separation is more economically feasible than distillation. Thermodynamic properties on relative volatilities, and liquid-liquid equilibrium constants are prepared for 747 common solvents and 38 bioproducts using a property prediction framework based on molecular dynamics (MD) simulations, conformer sampling, and COSMO-RS (COnductor-like Screening Model for Real Solvents) [5]. Within this domain of thermodynamics properties, we sample practical thermodynamic parameters along with the bioproduct feed composition and solvent price. These parameters are input to a hybrid separation model with stage-by-stage extraction [6] and short-cut distillation [7] and to an individual short-cut distillation model. Under common parameters, these models are solved to global optimality and the minimum separation costs are compared for hybrid separation and distillation. The feasible cost comparison gives the separation decision of hybrid separation and distillation. To facilitate separation decision making within enormous solvent and bioproduct space, we further connect the input parameters with output separation decision through random forest classifiers for fast separation decision prediction. We compute Shapley values to interpret input parameters’ influence on separation decisions and identify critical interactions among parameters that have a major impact on separation decisions [8]. We show that solvent price and water-bioproduct relative volatility are key contributing parameters for selection between hybrid separation and distillation. We discuss the variation of separation structure with liquid-liquid equilibrium constant of solvent and relative volatilities. Furthermore, we demonstrate the rapid solvent screening for bioproduct separation using the trained classifiers. [1] Baral, N.R., Sundstrom, E.R., Das, L., Gladden, J., Eudes, A., Mortimer, J.C., Singer, S.W., Mukhopadhyay, A. and Scown, C.D. Approaches for more efficient biological conversion of lignocellulosic feedstocks to biofuels and bioproducts. ACS sustainable chemistry & engineering , 7(10), 9062-9079, 2019. [2] Kim, J., Sen, S.M. and Maravelias, C.T. An optimization-based assessment framework for biomass-to-fuel conversion strategies. Energy & Environmental Science , 6(4), 1093-1104, 2013. [3] Luterbacher, J., Alonso, D. M., Dumesic, J. Targeted chemical upgrading of lignocellulosic biomass to platform molecules. Green Chemistry , 16 (12), 4816-4838, 2014. [4] Yenkie, K.M., Wu, W., Clark, R.L., Pfleger, B.F., Root, T.W. and Maravelias, C.T., 2016. A roadmap for the synthesis of separation networks for the recovery of bio-based chemicals: matching biological and process feasibility. Biotechnology Advances , 34(8), 1362-1383, 2016. [5] Li, J., Maravelias, C.T., Van Lehn, R.C. Adaptive conformer sampling for property prediction using the COnductor-like Screening Model for Real Solvents. Submitted . [6] Taifan, G. S., Maravelias, C. T. Integration of graphical approaches into optimization-based design of multistage liquid extraction. Computers & Chemical Engineering , 143, 107126, 2020. [7] Ryu, J. and Maravelias, C.T. Computationally efficient optimization models for preliminary distillation column design and separation energy targeting. Computers & Chemical Engineering , 143, 107072, 2020 [8] Lundberg, S.M., Erion, G., Chen, H., DeGrave, A., Prutkin, J.M., Nair, B., Katz, R., Himmelfarb, J., Bansal, N. and Lee, S.I. From local explanations to global understanding with explainable AI for trees. Nature machine intelligence , 2(1), 56-67, 2020",
+    "presenting_author": "Jianping Li | Chemical and Biological Engineering, University of Wisconsin-Madison",
+    "authors": [
+      "Jianping Li | Chemical and Biological Engineering, University of Wisconsin-Madison",
+      "Reid Van Lehn | University of Wisconsin-Madison",
+      "Christos Maravelias | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jianping Li",
+        "affiliation": "Chemical and Biological Engineering, University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Reid Van Lehn",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Christos Maravelias",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "11i",
+    "sortable_time": "2022-11-13_17:46:00_18:03:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647607"
+  }
+]

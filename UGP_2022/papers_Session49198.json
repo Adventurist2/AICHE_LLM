@@ -1,0 +1,288 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649087",
+    "paper_endpoint": "Paper/649087",
+    "paper_id": "649087",
+    "topic": "Hybrid Mixed-Integer Programming/Constraint Programming Solution Strategies for Single-Stage Scheduling Problems Using a Discrete-Time Grid",
+    "title": "Hybrid Mixed-Integer Programming/Constraint Programming Solution Strategies for Single-Stage Scheduling Problems Using a Discrete-Time Grid",
+    "date_time": "2022-11-14_12:30:00_15:00:00",
+    "session_id": "49198",
+    "session_title": "Advances in Mixed-Integer Optimization and Optimization with Logistics Applications",
+    "session_number": "104",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Production scheduling is an extremely active research field within the process systems engineering community. In the past two decades, several works have emerged that combine the advantages of mathematical programming-based methods and constraint programming-based methods for solving single-stage scheduling problems (Jain and Grossman 2001, Bockmayr and Pisaruk, Maravelias and Grossman 2004, Sadykov and Wolsey 2006). However, all of these works utilize a continuous time grid representation. While these continuous time formulations work well due to their solution accuracy and relatively small model sizes, they cannot be used to model time-varying constraints (e.g., utility prices), profiles (e.g., inventory and resource consumption), and other features (e.g., intermediate material deliveries and orders) that can be easily incorporated into formulations that employ a discrete time grid representation. In this work, we present a new solution strategy for solving single-stage scheduling problems that employs a discrete time grid representation and also simultaneously exploits the benefits of mathematical programming and constraint programming. The major drawback to using a discrete time grid when solving production scheduling problems is that one must often sacrifice solution accuracy in order to obtain a model that is sufficiently small and can be solved in reasonable time. For this reason, the discrete continuous algorithm (DCA) of Merchan et al. (Merchan, Lee, and Maravelias 2016) serves as the foundation for the solution methodology presented herein. The DCA is a two-phase approach. In the first phase, an initial solution is obtained using a discrete time model that employs a coarse time grid. The assignment and sequencing binaries are then fixed in the second phase and a continuous time model is used to recalculate and refine the timing of the batches. While the DCA is able to quickly produce high quality solutions in many cases, it has two major drawbacks: (i) the solution obtained from DCA is not provably optimal and may, in some cases, be infeasible; and (ii) the quality and feasibility of the solution obtained from DCA depends on relaxed batch due times that are user-selected (Lee and Maravelias 2019). In order to eliminate the abovementioned drawbacks of DCA, we embed the DCA within a branch-and-cut solution strategy. The model passed to our branch-and-cut is the phase one DCA model, i.e., the model in which a coarse time grid is employed and batch due times have been relaxed . The refinement phase of DCA is then carried out whenever a solution is discovered that is integer-feasible for th is phase one model . Thus, throughout the course of branch-and-cut we are able to eliminate solutions that are not truly feasible when due times are strictly enforced. Moreover, we can also use appropriately computed bounds in order to guarantee that the optimal schedule is found prior to termination. Prior to the start of our branch-and-cut procedure, w e employ a preprocessing phase in order to guarantee that due times are sufficiently relaxed. We note, however, that relaxing due times too much can significantly increase solution time. For this reason, we consider five variants of the preprocessing phase and discuss the strengths and weaknesses of each. Allow us to now elaborate on the specifics of our proposed branch-and-cut strategy. Th r oughout execution, e ach time a solution is found that is integer-feasible on the original coarse time grid, we check the feasibility of the batching assignments and sequencing for each unit with the original due times strictly enforced . If it is determined that for a given unit, processing the assigned batches in the specified order will result in the completion time of some batch exceeding its due time, we do two things. First, we add a cut to the model that eliminates from consideration any other solution for which the given unit is assigned the same batches in the same sequence. After this, we employ a constraint programming model to determine if the there exists any feasible sequencing of the batches assigned to the given unit. If the constraint program is infeasible, we add another cut to the model that eliminates from consideration any other solution for which the given unit is assigned the same batches, regardless of the sequence. On the other hand, if the constraint program is feasible, we record the start times of each batch computed by the constraint program and map them back to the original coarse time grid. Then, after we have carried out all the aforementioned procedures for each unit, if we have determined that the assignments made to every unit are feasible, but that some of the sequencing decisions were not feasible, we use the updated start times computed from the constraint programming solutions to construct a new integer-feasible solution and pass it to the optimizer. W e present the results of several computational tests in which we compare the performance of our proposed branch-and-cut strategy with that of more traditional solution strategies (standard discrete time and continuous time formulations), a pure constraint programming approach, and a state-of-the-art hybrid mixed-integer programming/constraint programming approach that employs a continuous time grid. The results of our tests demonstrate that in most cases our proposed approach results in significant reductions in run time when compared to the standard discrete time and continuous time model s as well as the pure constraint programming model. The results further show that our proposed approach is competitive with the state-of-the-art continuous time-based hybrid mixed-integer programming/constraint programming approach. References: A. Bockmayr, N. Pisaruk, “Detecting infeasibility and generating cuts for MIP using CP.” Proceedings of CP-AI-OR 2003 (2003), 24-34. V. Jain, I. E. Grossmann, “Algorithms for hybrid MILP/CP Model for a class of optimization problems.” INFORMS Journal on Computing , 13 (2001), 258-276. H. Lee and C. T. Maravelias. \"Combining the advantages of discrete-and continuous-time scheduling models: Part 2. systematic methods for determining model parameters.\" Computers & Chemical Engineering 128 (2019), 557-573. C. T. Maravelias, I. E. Grossmann, “A hybrid MILP/CP decomposition approach for the short term scheduling of multipurpose batch plants.” Computers & Chemical Engineering , 28 (2004) 1921-1949. A. F. Merchan, H. Lee, and C. T. Maravelias. \"Discrete-time mixed-integer programming models and solution methods for production scheduling in multistage facilities.\" C omputers & Chemical Engineering , 94 (2016) 387-410. R. Sadykov, L. A. Wolsey. \"Integer programming and constraint programming in solving a multimachine assignment scheduling problem with deadlines and release dates.\" INFORMS Journal on Computing , 18.2 (2006) 209-217.",
+    "presenting_author": "Nathan Adelgren | Princeton University, NJ",
+    "authors": [
+      "Nathan Adelgren | Princeton University, NJ",
+      "Christos Maravelias | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nathan Adelgren",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christos Maravelias",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "104a",
+    "sortable_time": "2022-11-14_12:30:00_12:48:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649087"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647931",
+    "paper_endpoint": "Paper/647931",
+    "paper_id": "647931",
+    "topic": "Extending Generalized Disjunctive Programming to Model Hierarchical Systems",
+    "title": "Extending Generalized Disjunctive Programming to Model Hierarchical Systems",
+    "date_time": "2022-11-14_12:30:00_15:00:00",
+    "session_id": "49198",
+    "session_title": "Advances in Mixed-Integer Optimization and Optimization with Logistics Applications",
+    "session_number": "104",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Modeling systems with discrete-continuous decisions is commonly done in algebraic form with mixed-integer programming models, which can be linear or nonlinear in the continuous variables. A more systematic approach to modeling such systems is to use Generalized Disjunctive Programming (GDP) (Chen & Grossmann, 2019; Grossmann & Trespalacios, 2013), which generalizes the Disjunctive Programming paradigm proposed by Balas (2018). GDP allows modeling systems from a logic-based level of abstraction that captures the fundamental rules governing such systems via algebraic constraints and logic. The models obtained via GDP can then be reformulated into the pure algebraic form best suited for the application of interest. The two main reformulation strategies are the Big-M reformulation (Nemhauser & Wolsey, 1999; Trespalacios & Grossmann, 2015) and the Convex-Hull reformulation (Lee & Grossmann, 2000), the latter of which yields tighter models than those typically used in standard mixed-integer programming (Grossmann & Lee, 2003). Although GDP provides a more general way of modeling systems, it warrants further generalization for systems presenting a hierarchical structure. Examples of hierarchical models are those that involve design and planning decisions (van den Heever & Grossmann, 1999), and those that involve long-term planning decisions coupled to short-term scheduling decisions (Maravelias & Sung, 2009). Such systems can be modelled via nested disjunctions inside the GDP formulation (van den Heever & Grossmann, 1999). More specifically, nested disjunctions correspond to disjunctions that in addition to involving algebraic or propositional logic constraints, may also contain as constraints one or several additional disjunctions. We denote these more general GDP problems Nested GDP (NGDP). Methods for transforming these NGDPs models into algebraic discrete-continuous models have not been formalized yet. Previous works have suggested either reformulating such models via a flattening approach, followed by an algebraic reformulation (Vecchietti & Grossmann, 2000), or else via an iterative inside-out reformulation (van den Heever & Grossmann, 1999). In this work, we study these two reformulation approaches. We formalize the flattening approach to convert NGDPs to GDPs, and then reformulate to algebraic discrete-continuous models via Big-M or Convex-Hull reformulations to MI(N)LPs. We also formalize the inside-out or direct approach to reformulate NGDPs to MI(N)LPs. The tightness of the flattening and inside-out approaches are compared, as well as the size in terms of the 0-1 and continuous variables, and the nature of the constraints. Computational results are presented with examples from the areas of process synthesis of flowsheets and optimization of electric power expansion planning with reliability considerations. The results show the computational benefits of the direct (inside-out) reformulation of the NGDP. Keywords: Generalized Disjunctive Programming, Nested Disjunctions, Discrete-Continuous Optimization References: Balas, E. (2018). Disjunctive Programming. In Disjunctive Programming . Springer International Publishing. https://doi.org/10.1007/978-3-030-00148-3 Chen, Q., & Grossmann, I. E. (2019). Modern Modeling Paradigms Using Generalized Disjunctive Programming. Processes , 7 (11). https://doi.org/10.3390/pr7110839 Grossmann, I. E., & Lee, S. (2003). Generalized convex disjunctive programming: Nonlinear convex hull relaxation. Computational Optimization and Applications , 26 (1), 83–100. https://doi.org/10.1023/A:1025154322278 Grossmann, I. E., & Trespalacios, F. (2013). Systematic modeling of discrete-continuous optimization models through generalized disjunctive programming. AIChE Journal , 59 (9), 3276–3295. https://doi.org/10.1002/AIC.14088 Lee, S., & Grossmann, I. E. (2000). New algorithms for nonlinear generalized disjunctive programming. Computers & Chemical Engineering , 24 (9–10), 2125–2141. https://doi.org/10.1016/S0098-1354(00)00581-0 Maravelias, C. T., & Sung, C. (2009). Integration of production planning and scheduling: Overview, challenges and opportunities. Computers & Chemical Engineering , 33 (12), 1919–1930. https://doi.org/10.1016/J.COMPCHEMENG.2009.06.007 Nemhauser, G. L., & Wolsey, L. A. (1999). Integer and combinatorial optimization . Wiley. Trespalacios, F., & Grossmann, I. E. (2015). Improved Big-M reformulation for generalized disjunctive programs. Computers & Chemical Engineering , 76 , 98–103. https://doi.org/10.1016/J.COMPCHEMENG.2015.02.013 van den Heever, S. A., & Grossmann, I. E. (1999). Disjunctive multiperiod optimization methods for design and planning of chemical process systems. Computers & Chemical Engineering , 23 (8), 1075–1095. https://doi.org/10.1016/S0098-1354(99)00273-2 Vecchietti, A., & Grossmann, I. E. (2000). Modeling issues and implementation of language for disjunctive programming. Computers & Chemical Engineering , 24 (9–10), 2143–2155. https://doi.org/10.1016/S0098-1354(00)00582-2",
+    "presenting_author": "Hector Perez | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Hector Perez | Carnegie Mellon University, Pittsburgh, PA",
+      "Seolhee Cho | Incheon National University, Korea, Republic of (South)",
+      "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hector Perez",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Seolhee Cho",
+        "affiliation": "Incheon National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Ignacio Grossmann",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "104b",
+    "sortable_time": "2022-11-14_12:48:00_13:06:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647931"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/644895",
+    "paper_endpoint": "Paper/644895",
+    "paper_id": "644895",
+    "topic": "Tightening Discretization-Based MILP Models for the Pooling Problem Using Upper Bounds on Bilinear Terms",
+    "title": "Tightening Discretization-Based MILP Models for the Pooling Problem Using Upper Bounds on Bilinear Terms",
+    "date_time": "2022-11-14_12:30:00_15:00:00",
+    "session_id": "49198",
+    "session_title": "Advances in Mixed-Integer Optimization and Optimization with Logistics Applications",
+    "session_number": "104",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Discretization-based methods have been proposed for solving nonconvex optimization problems with bilinear terms. These methods convert the original nonconvex optimization problems into mixed-integer linear programs (MILPs); for example, Kolodziej et al. (Kolodziej et al. 2013) proposed global optimization algorithms for multiperiod blending problems based on solving MILPs resulted from discretization, Dey and Gupte (Dey and Gupte 2015) analyzed discretization-based MILP techniques to address bilinear terms in the pooling problem, and Ceccon and Misener (Ceccon and Misener 2022) implemented a discretization technique into an extensible solver for the pooling problem. Compared to a wide range of studies related to methods to convert nonconvex optimization problems into MILPs, research on tightening the resulting MILP models is limited. In this talk, we present tightening constraints for the discretization-based MILP models for the pooling problem. We note one related work from Gupte et al. (Gupte et al. 2013), in which the authors presented the convex hull of the set resulted from binary expansion of one variable involved in the bilinear term by exploiting the underlying knapsack structure in the set. Different from Gupte et al., we study tightening constraints derived from upper bounds on bilinear term, which are commonly seen in models for Process Systems Engineering applications. We show that the constraints we propose are facet-defining, and present a full description of the convex hull of a mixed-integer set resulted from discretization of bilinear term. We demonstrate the effectiveness of our constraints, showing computational results for MILP models derived from different formulations for (1) the pooling problem and (2) discretization-based pooling models. Computational results show that our methods reduce the computational time for MILP models on CPLEX 12.10. Finally, we note that while our methods are presented in the context of the pooling problem, they can be extended to address other nonconvex optimization problems with upper bounds on bilinear terms. References Ceccon, Francesco, and Ruth Misener. 2022. “Solving the Pooling Problem at Scale with Extensible Solver GALINI.” Computers & Chemical Engineering 159 (March): 107660. https://doi.org/10.1016/J.COMPCHEMENG.2022.107660. Dey, Santanu S., and Akshay Gupte. 2015. “Analysis of MILP Techniques for the Pooling Problem.” Operations Research 63 (2): 412–27. https://doi.org/10.1287/opre.2015.1357. Gupte, Akshay, Shabbir Ahmed, Myun Seok Cheon, and Santanu Dey. 2013. “Solving Mixed Integer Bilinear Problems Using MILP Formulations.” SIAM Journal on Optimization 23 (2): 721–44. https://doi.org/10.1137/110836183. Kolodziej, Scott P., Ignacio E. Grossmann, Kevin C. Furman, and Nicolas W. Sawaya. 2013. “A Discretization-Based Approach for the Optimization of the Multiperiod Blend Scheduling Problem.” Computers and Chemical Engineering 53: 122–42. https://doi.org/10.1016/j.compchemeng.2013.01.016.",
+    "presenting_author": "Yifu Chen | University of Wisconsin-Madison",
+    "authors": [
+      "Yifu Chen | University of Wisconsin-Madison",
+      "Christos Maravelias | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yifu Chen",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christos Maravelias",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "104c",
+    "sortable_time": "2022-11-14_13:06:00_13:24:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/644895"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/644168",
+    "paper_endpoint": "Paper/644168",
+    "paper_id": "644168",
+    "topic": "A Hybrid Multicut Generalized Benders Decomposition Algorithm for the Integration of Process Operations and Dynamic Optimization",
+    "title": "A Hybrid Multicut Generalized Benders Decomposition Algorithm for the Integration of Process Operations and Dynamic Optimization",
+    "date_time": "2022-11-14_12:30:00_15:00:00",
+    "session_id": "49198",
+    "session_title": "Advances in Mixed-Integer Optimization and Optimization with Logistics Applications",
+    "session_number": "104",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The integration of process operations, i.e. planning and scheduling, and dynamic optimization is considered as a promising avenue to improve the economic performance of process systems by exploiting the interactions between the different decision levels [1]. However, the solution of integrated planning, scheduling, and dynamic optimization problems is computationally challenging due to the nonlinear behavior of most process systems, the discrete nature of planning/scheduling decisions and the different time scales that are involved [2,3]. Decomposition based solution algorithms can be used to improve the tractability of such problems by exploiting the underlying structure of the problem [4,5]. However, their implementation is nontrivial since a decomposition of the problem itself is necessary and the structure of the problem depends on the formulation of the problem. In this work we propose a new formulation of the integrated planning, scheduling, and dynamic optimization problem for continuous single stage processes. We assume that several products (N pr ) must be manufactured, the time horizon is decomposed into N p planning periods and each planning period is composed of N s slots. Motivated by the formulation of the integrated scheduling and dynamic optimization problem for batch systems [6], we consider all the transitions between the products for all slots and periods simultaneously. The resulting integrated problem is a large scale Mixed Integer Nonlinear Problem (MINLP) whose monolithic solution is intractable. Analysis of the structure of the problem via Stochastic Blockmodeling [7,8] reveals that in the proposed formulation the planning/scheduling variables and constraints are coupled with the dynamic optimization variables and constraints for each transition only via the transition times. Based on the identified structure we propose a multicut Generalized Benders Decomposition algorithm, where the Benders cuts approximate the cost associated with the transitions for each slot and period. The master problem is a MINLP solved with Gurobi [9] and the subproblems are nonlinear problems solved with IPOPT [10]. In order to reduce further the computational time we propose a hybrid multicut Generalized Benders Decomposition algorithm where the cut associated with one transition in one slot and period is added for all slots and periods. We apply the two algorithms in two case studies. In the first we assume that the system is an isothermal CSTR and we compare the proposed formulation and decomposition based algorithms with the application of Generalized Benders Decomposition based on the problem formulation proposed in [2] and the decomposition proposed in [5]. We assume that four products must be produced in two planning periods. The proposed multicut algorithm leads to 90% reduction in CPU and the hybrid algorithm to 96% reduction, compared to the approach proposed in [2,5]. Both algorithms improve the both the upper and lower bounds faster compared to the application of GBD based on [2,5]. Also, the addition of multiple cuts per transition in the hybrid algorithm lead to further reduction in CPU time (compared to the mutlicut algorithm), since more information is added in the master problem in each iteration. In the second case study we analyze the effect of the planning periods on the performance of the proposed algorithms. We assume that the system is a polymerization reactor where 4 products must be manufactured. We vary the number of planning periods from 4 to 10 and compare the computational performance of the proposed algorithms and the approach proposed in [2,5]. We show that the proposed algorithms solve the problem in reduced computational time and the solution that is obtained is better, i.e. the value of the objective function is higher, for all planning periods. Specifically, the multicut algorithm reduces the CPU time up to 94% and the hybrid algorithm up to 98%, whereas the value of the objective function is improved up to 6.4%. References: [1]. Daoutidis, P., Lee, J. H., Harjunkoski, I., Skogestad, S., Baldea, M., &amp; Georgakis, C. (2018). Integrating operations and control: A perspective and roadmap for future research. Computers &amp; Chemical Engineering, 115, 179-184. [2]. Gutiérrez-Limón, Miguel Angel, Antonio Flores-Tlacuahuac, and Ignacio E. Grossmann. \"MINLP formulation for simultaneous planning, scheduling, and control of short-period single-unit processing systems.\" Industrial & Engineering Chemistry Research 53, no. 38 (2014): 14679-14694. [3]. Charitopoulos, V.M., Dua, V. and Papageorgiou, L.G., 2017. Traveling salesman problem-based integration of planning, scheduling, and optimal control for continuous processes. Industrial & Engineering Chemistry Research , 56 (39), pp.11186-11205. [4]. Mora-Mariano, D., Gutiérrez-Limón, M.A. and Flores-Tlacuahuac, A., 2020. A Lagrangean decomposition optimization approach for long-term planning, scheduling and control. Computers & Chemical Engineering , 135 , p.106713. [5]. Mitrai, I. and Daoutidis, P., 2021. Efficient Solution of Enterprise-Wide Optimization Problems Using Nested Stochastic Blockmodeling. Industrial & Engineering Chemistry Research, 60(40), pp.14476-14494. [6]. Chu, Y. and You, F., 2013. Integrated scheduling and dynamic optimization of complex batch processes with general network structure using a generalized benders decomposition approach. Industrial & Engineering Chemistry Research , 52 (23), pp.7867-7885. [7]. Mitrai, I., Tang, W. and Daoutidis, P., 2021. Stochastic blockmodeling for learning the structure of optimization problems. AIChE Journal , p.e17415. [8]. Peixoto, T.P., 2019. Bayesian stochastic blockmodeling. Advances in network clustering and blockmodeling , pp.289-332. [9]. Gurobi Optimization, LLC, Gurobi Optimizer Reference Manual, accessed: 2021-08-31 (2021).URL https://www.gurobi.com [10]. Wächter, A. and Biegler, L.T., 2006. On the implementation of an interior-point filter line-search algorithm for large-scale nonlinear programming. Mathematical programming , 106 (1), pp.25-57.",
+    "presenting_author": "Ilias Mitrai | The University of Texas at Austin, TX",
+    "authors": [
+      "Ilias Mitrai | The University of Texas at Austin, TX",
+      "Prodromos Daoutidis | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ilias Mitrai",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "104d",
+    "sortable_time": "2022-11-14_13:24:00_13:42:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/644168"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647100",
+    "paper_endpoint": "Paper/647100",
+    "paper_id": "647100",
+    "topic": "A Priori Objective Dimensionality Reduction for Many-Objective Optimization",
+    "title": "A Priori Objective Dimensionality Reduction for Many-Objective Optimization",
+    "date_time": "2022-11-14_12:30:00_15:00:00",
+    "session_id": "49198",
+    "session_title": "Advances in Mixed-Integer Optimization and Optimization with Logistics Applications",
+    "session_number": "104",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Analyzing the sustainability of a chemical process design, supply chain, or control scheme is an increasingly important aspect of decision-making in chemical industries. Sustainability inherently requires considering a large number of objectives beyond the traditional economic scope. These additional sustainability objectives come from the environmental and social impacts of a decision including carbon emissions, water usage, job creation, social equity, and so on. Scalarization techniques such as the weighted-sum and epsilon constraint methods rigorously produce the Pareto frontier of solutions for a multi-objective optimization problem which is a valuable decision-making tool. However, for problems with more than three objectives, called many-objective optimzation (MOO) problems, rigorous scalarization methods scale poorly and heuristic evolutionary methods are often applied. In sustainability studies the number of objectives can quickly make producing a rigorous Pareto frontier a computationally expensive task. Traditionally, this has been mitigated in sustainability studies by lumping objectives into the three pillars of sustainability: economics, environmental, and social. Unfortunately, this approach inherently results in objective trade-off information loss. As the number of objectives grows, conflict will inevitably occur between objectives within the same category. As an intuitive example occurring within the social pillar, consider that in a supply chain as more jobs are created by building more facilities throughout the region, more people suffer from worsened air quality due to closer proximity to chemical facilities. By grouping these objectives together within the social categorical objective this trade-off information is lost. A more systematic approach is to generate set of Pareto-optimal solutions and determines objective correlation using principal component analysis 1 . A major drawback of this method include that it requires generation of a set of Pareto-optimal solutions. As a result it may be susceptible to imposed bias from the set of generated solutions and changes in parameters will necessitate a new set of Pareto-optimal solutions. In this work we propose an a priori method for determination of objective groups without requiring pre-generation of a set of solutions. The method utilizes the underlying problem structure of linear MOO problems. Linear MOO problems can be represented as a tripartite graph with nodes corresponding to objectives, variables, and constraints and edges linking objective and constraint nodes to variables included in their formulation. Exploiting this structure entails taking the objective and constraint coefficients and determining the relative importance of the shared variables towards reaching the optimal solution. Normalized coefficient vectors for each objective are used in calculating the direct link strength. Additionally, objectives that are linked through constraints have their secondary strength determined by examining the directions objective functions want to move along the hyperplanes of inequality constraints. A weighted sum is used to combine primary and secondary correlation strengths and these values are used as the edge weights in the objective space graph. Community detection is then used to identify groups of objectives that are most strongly correlated 2 . We also propose a metric to quantify the information lost through the grouping of objectives. This metric is used to compare the groups our method identifies with traditional categorical objective combination. The methods developed are applied to a case study based on previously published work on a renewable-powered distributed ammonia supply chain 3 . The published works explored economic objectives and a multi-objective study of the tradeoff between economics and carbon emissions. Our work considers capital cost and operating cost as separate objectives as well as including water usage as an objective. The proposed method identifies a correlated relationship between operating cost and emissions which goes against the conventional objective grouping method where these correlated objectives would be in separate economic and environmental groups. The proposed information loss metric is used to verify that the pair identified by the algorithm reduces the lost information, producing a more useful decision-making tool. 1 Saxena, D.K., Duro, J.A., Tiwari, A., Deb, K., Zhang, Q. Objective Reduction in Many-Objective Optimization: Linear and Nonlinear Algorithms. (2013) IEEE Transactions on Evolutionary Computation ., 17(1), 77-99. 2 Traag, V.A., Waltman, L., van Eck, N.J. From Louvain to Leiden: guaranteeing well-connected communities. (2019) Scientific Reports ., 9, 5233. 3 Palys, M.J., Allman, A., Daoutidis, P. Exploring the Benefits of Modular Renewable-Powered Ammonia Production: A Supply Chain Optimization Study. (2019) Ind. Eng. Chem. Res. ., 58(15), 5898-5908.",
+    "presenting_author": "Justin Russell | University of Michigan, Ann Arbor",
+    "authors": [
+      "Justin Russell | University of Michigan, Ann Arbor",
+      "Andrew Allman | University of Michigan, Ann Arbor"
+    ],
+    "authors_structured": [
+      {
+        "name": "Justin Russell",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Andrew Allman",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "104e",
+    "sortable_time": "2022-11-14_13:42:00_14:00:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647100"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/644611",
+    "paper_endpoint": "Paper/644611",
+    "paper_id": "644611",
+    "topic": "Piecewise Linear Decision Rules Via Adaptive Partition for Two Stage Stochastic Mixed Integer Linear Programs",
+    "title": "Piecewise Linear Decision Rules Via Adaptive Partition for Two Stage Stochastic Mixed Integer Linear Programs",
+    "date_time": "2022-11-14_12:30:00_15:00:00",
+    "session_id": "49198",
+    "session_title": "Advances in Mixed-Integer Optimization and Optimization with Logistics Applications",
+    "session_number": "104",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Two-stage stochastic mixed-integer linear programming (TS-SMILP) is a very challenging class of problems, especially for problems with mixed-integer second-stage variables. In process systems engineering, a large number of applications under uncertainty can be modelled using TS-SMILP [1], such as supply chain management, clinical trial, and energy systems. However, solving TS-SMILP remains to be computationally very challenging. For TS-SMILP with discrete distribution, Küçükyavuz, and Sen [2] provide a review of the recent advances. For TS-SMILP with continuous distributions, one approach is to use sample average approximation to generate a finite number of samples. Another is the decision rule-based approach. Decision rule-based approach has been used to solve both robust optimization and stochastic programming problems. In stochastic programming, Nasab and Li [3] apply piecewise decision rule to multistage stochastic programming. Vayanos et al. [4] propose to partition the domain of uncertain parameters into some hyperrectangles. The authors apply linear decision rules on the continuous variable in each partition and keep the binary variables constant in each partition. In robust optimization, Postek and den Hertog [5] and Bertsimas and Dunning [6] propose two adaptive splitting approaches, where the uncertainty set is iteratively split into smaller subsets and apply a linear decision rule in each subset. Other works in robust optimization include Avraamidou and Pistikopoulos [7], Feng et al. [8]. In this presentation, we propose an algorithm based on piecewise linear decision rules for TS-SMILP with continuous distributions. The domain of the uncertainty parameter is partitioned into several subsets. In each subset, the second stage continuous variables adopt a linear decision rule with respect to the uncertain parameters and the second-stage binary variables are constant. Several theoretical properties are proved. First, we prove that there exists a piecewise decision rule that is optimal for TS-SMILP. Second, under uniform partition, the convergence rate of the piecewise decision rule is proved and compared with the convergence rate of sample average approximation. In the proposed algorithm, the partition of the uncertainty set is adaptively updated. Several adaptive partition schemes including uniform partition, strong partition, and reliability partition, are proposed. The proposed algorithms are applied to an energy storage problem under demand and renewable output uncertainty. Numerical experiments suggest that the proposed algorithms have superior computational performance compared with sample average approximation in problems with low-dimension uncertain parameters. References [1] Li, C., & Grossmann, I. E. (2021). A Review of Stochastic Programming Methods for Optimization of Process Systems under Uncertainty. Frontiers in Chemical Engineering, 2, 34. [2] Küçükyavuz, S., & Sen, S. (2017). An introduction to two-stage stochastic mixed-integer programming. In Leading Developments from INFORMS Communities (pp. 1 27). INFORMS. [3] Nasab, F. M., & Li, Z. (2021). Multistage Adaptive Stochastic Mixed Integer Optimization through Piecewise Decision Rule Approximation. Computers & Chemical Engineering, 107286. [4] Vayanos, P., Kuhn, D., & Rustem, B. (2011, December). Decision rules for information discovery in multi-stage stochastic programming. In 2011 50th IEEE Conference on Decision and Control and European Control Conference (pp. 7368-7373). IEEE. [5] Postek, K., & Hertog, D. D. (2016). Multistage adjustable robust mixed-integer optimization via iterative splitting of the uncertainty set. INFORMS Journal on Computing, 28(3), 553-574. [6] Bertsimas, D., & Dunning, I. (2016). Multistage robust mixed-integer optimization with adaptive partitions. Operations Research, 64(4), 980-998. [7] Avraamidou, S., & Pistikopoulos, E. N. (2020). Adjustable robust optimization through multi-parametric programming. Optimization Letters, 14(4), 873-887. [8] Feng, W., Feng, Y., & Zhang, Q. (2021). Multistage robust mixed-integer optimization under endogenous uncertainty. European Journal of Operational Research.",
+    "presenting_author": "Can Li | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Can Li | Purdue University, West Lafayette, IN",
+      "Kibaek Kim | Argonne National Laboratory, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Can Li",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Kibaek Kim",
+        "affiliation": "Argonne National Laboratory, IL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "104f",
+    "sortable_time": "2022-11-14_14:00:00_14:18:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/644611"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648122",
+    "paper_endpoint": "Paper/648122",
+    "paper_id": "648122",
+    "topic": "Reformulation and Decomposition of Integer Programs Using Propositional Logic",
+    "title": "Reformulation and Decomposition of Integer Programs Using Propositional Logic",
+    "date_time": "2022-11-14_12:30:00_15:00:00",
+    "session_id": "49198",
+    "session_title": "Advances in Mixed-Integer Optimization and Optimization with Logistics Applications",
+    "session_number": "104",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Many optimization problems of practical interest (e.g., set-covering problem [1]) lead to integer programming (IP) models that contain discrete variables. These models can be formulated in many ways, some of which often contain nonintuitive redundant constraints. This in turn leads to large computational time to solve these problems. Currently, few methods can be applied to systematically eliminate these unnecessary constraints. In this work, we propose a technique to transform IP constraints into equivalent logical clauses and then use propositional logic rules to resolve and identify the redundant constraints. Interestingly, this approach can be also used to systematically decompose the original IP into smaller subproblems which can be solved sequentially or parallelly. We are also able to provide insights to the interpretation of the feasible domains of the decomposed IPs with respect to the feasible domain of the original IP and establish a relationship between the global solution of the original IP and the solutions of the decomposed IPs. With examples from literature, we will demonstrate these new logic-based reformulation and decomposition techniques that can be used to expedite the overall solution time of IP problems. References: [1] H.P. Williams, Logic and Integer Programming (2009), International Series in Operations Research & Management Science 130, DOI 10.1007/978-0-387-92280-5",
+    "presenting_author": "Chinmay Aras | Texas A&M University, College Station, TX",
+    "authors": [
+      "Chinmay Aras | Texas A&M University, College Station, TX",
+      "Faruque Hasan | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Chinmay Aras",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Faruque Hasan",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "104g",
+    "sortable_time": "2022-11-14_14:18:00_14:36:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648122"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646779",
+    "paper_endpoint": "Paper/646779",
+    "paper_id": "646779",
+    "topic": "Surrogate-Based Optimization for Box-Constrained Black-Box Systems Via k-Means Clustering",
+    "title": "Surrogate-Based Optimization for Box-Constrained Black-Box Systems Via k-Means Clustering",
+    "date_time": "2022-11-14_12:30:00_15:00:00",
+    "session_id": "49198",
+    "session_title": "Advances in Mixed-Integer Optimization and Optimization with Logistics Applications",
+    "session_number": "104",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "In a bid to remain competitive during the current era of smart manufacturing, optimization of various industrial process objectives has been becoming increasingly necessary. While high-fidelity digital twins and commercial simulators allow accurate modeling and simulation of intricate process operations, such models are often black-box providing negligible idea of the underlying variable relationships and gradient information. Clearly, global optimization of such black-box systems is extremely challenging. Derivative-free optimization techniques such as meta-heuristics and geometric partitioning techniques have been used extensively for such systems, however they cannot guarantee a global solution. Moreover, they typically require many model runs or evaluations, which may be extremely computationally prohibitive for optimizing complex systems. Data-driven surrogate models offer a computationally cheaper alternative to their high-fidelity counterparts by approximating the functional relationships between the system inputs and outputs by means of response surfaces. This has prompted numerous works, including review articles (Boukouvala and Ierapetritou, 2013; Garud et al., 2019; Regis and Shoemaker, 2007; Rios and Sahinidis, 2013) on surrogate-based optimization (SBO) techniques to assist global optimization of black-box systems at limited computational expense. A recent work (Garud et al., 2019) from our group had proposed an SBO framework for global optimization of box-constrained black-box systems. The framework iteratively optimizes a surrogate using a gradient-based optimization solver, while refining and improving the surrogate via an adaptive sampling technique in each iteration. The adaptive sampling process partitions the input domain using delaunay triangulations, and adds a new sample point in a favorable triangulation by balancing exploration and exploitation. While exploration aims to globally explore the design space uniformly, exploitation aims to locally focus near the nonlinear regions which can possibly host some optima. The primary limitation of the framework was the large computational expense of constructing delaunay triangulations, especially in higher-order (>5) dimensional space with many sample points. Also, the framework uses a fixed, periodic sequence of weights to balance exploration and exploitation in successive iterations. Such a heuristic might not necessarily work well for all scenarios. Thus, multiple SBO runs with different set of periodic weights may be required, which may increase the computational expense. In order to reduce the computational burden of the framework, this work proposes a simple, yet effective SBO strategy for box-constrained black-box systems. Starting with an initial data set, a surrogate model is first constructed, and then updated subsequently by adding new data points iteratively. At any iteration, k-means clustering technique creates a few data clusters in the design space. Then, two sample points are added to account for exploration and exploitation, separately. The first point is simply added by Monte-Carlo technique in pursuit of filling the design space iteratively, while the second point is identified as a convex combination of all points of the cluster which hosts the current optima (exploitation). This iterative process continues until a stopping criterion of maximum sample points is met. Our algorithm does not entail partitioning of the input space by delaunay triangulations, and can be applied on large dimensional systems. The performance of our algorithm was evaluated on various data sets generated from a suite of complex, multimodal test functions with dimensions ranging from 2 to 6. A metric ‘Compute Effort’ (β) quantified the computational burden of the algorithm in obtaining the global optima for a given data set. We considered Hammersley, Halton, and Sobol sampling techniques for initial design of experiments (DoE), and Radial Basis Function (RBF) surrogates with Bi-Harmonic, Multi-Quadratic, Inverse Multi-Quadratic, Thin Plate Spline, Gaussian, and Cubic basis functions. Analyzing the performance of various surrogate-DoE combinations over 29 test functions, we observed that an RBF surrogate with Bi-Harmonic basis function was the worst in obtaining the global optima (β=100%) for all test functions irrespective of the initial sampling technique, owing to the piecewise linear profile of the response surface. Other surrogate-DoE combinations showed varying performance, with no combination outperforming others. Our algorithm identified the global optima precisely for 22/29 test functions for at least one DoE-surrogate pair, at low computational expense. For 7/29 test functions, it either got stuck at some local optima, or could not precisely reach the global solution before termination. On the 22 successful test functions, our algorithm had lower β as compared to six commercially available global optimization algorithms, including pattern-search-based and evolutionary algorithms. Our future work includes modifying the exploration process so that our proposed algorithm can escape the local optima better, and show improved performance. References: Boukouvala, F., Ierapetritou, M.G., 2013. Surrogate-Based Optimization of Expensive Flowsheet Modeling for Continuous Pharmaceutical Manufacturing. J Pharm Innov 8, 131–145. https://doi.org/10.1007/s12247-013-9154-1 Garud, S.S., Mariappan, N., Karimi, I.A., 2019. Surrogate-based black-box optimisation via domain exploration and smart placement. Computers & Chemical Engineering 130, 106567. https://doi.org/10.1016/j.compchemeng.2019.106567 Regis, R.G., Shoemaker, C.A., 2007. A Stochastic Radial Basis Function Method for the Global Optimization of Expensive Functions. INFORMS Journal on Computing 19, 497–509. https://doi.org/10.1287/ijoc.1060.0182 Rios, L.M., Sahinidis, N.V., 2013. Derivative-free optimization: a review of algorithms and comparison of software implementations. J Glob Optim 56, 1247–1293. https://doi.org/10.1007/s10898-012-9951-y",
+    "presenting_author": "Iftekar Karimi | National University of Singapore",
+    "authors": [
+      "Maaz Ahmad | National University of Singapore",
+      "Iftekar Karimi | National University of Singapore"
+    ],
+    "authors_structured": [
+      {
+        "name": "Maaz Ahmad",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Iftekar Karimi",
+        "affiliation": "National University of Singapore",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "104h",
+    "sortable_time": "2022-11-14_14:36:00_14:54:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646779"
+  }
+]

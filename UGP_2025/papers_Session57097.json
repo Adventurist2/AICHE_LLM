@@ -1,0 +1,384 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/718902",
+    "paper_endpoint": "Paper/718902",
+    "paper_id": "718902",
+    "topic": "Optimal, Individualized Drug Dosing Using Hybrid Pharmacokinetic & Pharmacodynamic Models and Multi-Objective Dynamic Optimization Under Uncertainty",
+    "title": "Optimal, Individualized Drug Dosing Using Hybrid Pharmacokinetic & Pharmacodynamic Models and Multi-Objective Dynamic Optimization Under Uncertainty",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57097",
+    "session_title": "10D: Applied Math for Biological and Biomedical Systems",
+    "session_number": "595",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Optimal, individualized drug administration is an unresolved problem with important repercussions on the probability and speed of recovery of critically ill patients and the quality of life of both critically and chronically ill patients. In addition, it also has indirect implications for the economics of the healthcare system (average healthcare costs, average hospital bed turnover, minimum hospital capacity needed per geographical area, etc.) and for drug supply chain operations (optimal trade-off between efficiency and resiliency in drug production, storage and distribution). The most important challenges that must be overcome to solve this complex problem include: (I) the development of accurate pharmacokinetic/pharmacodynamic models, despite the incomplete understanding of the mechanisms of action of most drugs, the significant inter-patient and intra-patient variabilities, and the difficulties in collecting reliable and comprehensive pharmacokinetic/pharmacodynamic data; (II) the development of a systematic approach to assess the benefits, offered by individualized drug dosing over one-size-fits-all treatment options; and (III) the challenges to the adoption of model-based decision support tools into routine clinical practice. Over the past two decades, the process systems engineering community has recognized and partially addressed some of the aforementioned challenges. For example, Doyle et al. (2014) developed a closed-loop approach to insulin administration (the “artificial pancreas”), which relies on physiologically based pharmacokinetic (PBPK) models. Nașcu et al. (2017) devised a closed-loop systems for inducing and maintaining anesthesia, based on PBPK models, and analyzed the impact of inter-patient variability on the results of their calculations. Savoca at al. (2018) studied the transdermal administration of melatonin, using dedicated PBPK models, which include special compartments that model the diffusion of melatonin through the skin. Laínez et al. (2011) proposed general strategies for modeling inter-patient variability, based on Bayesian statistics. Finally, Hartmanshenn et al. (2018) proposed to improve existing physiologically based pharmacokinetic and pharmacodynamic (PBPK/PD) models by combining omics approaches with the conventional PBPK/PD modeling paradigm. However, despite the substantial progress made over the last decade in pharmacokinetic and pharmacodynamic modeling, individualized medicine is a research area that still offers significant challenges and opportunities. One of the latest attempts at developing a general approach to optimal, individualized drug administration is the framework proposed by Rossi et al. (2023, 2024) (HM-OIDD), the rationale of which is summarized in Fig. 1 – A-1, A-2. This strategy utilizes hybrid, physiologically based pharmacokinetic (PBPK) models, able to predict the patient’s response to treatment with the drug product of interest complemented with predictions of its degree of uncertainty, in combination with multi-objective dynamic optimization under uncertainty, to compute optimal drug dosage regimens for each target patient. In addition, it offers dedicated tools for rigorous analysis of the benefits of individualized drug dosing over one-size-first-all approaches. The aforementioned hybrid PBPK models, comprised of a first principles inspired pharmacokinetic component combined with a Bayesian component, are one of the key elements of HM-OIDD, in that they retain the most important benefits of both first principles and machine learning models while also mitigating their most significant disadvantages, at the cost of higher computational complexity. More specifically, the first principles inspired pharmacokinetic component, composed of an extended, multi-compartment pharmacokinetic model, equipped with a flexible, multi-protein & multi-site drug – serum protein binding model, provides physics awareness, enhances model interpretability and extrapolability, and reduces the need for comprehensive, high-quality training data. In turn, the Bayesian component, currently configured as a single-layer, non-hierarchical Bayesian model, allows continued model learning from newly available training data, boosts prediction accuracy, and provides reliable prediction uncertainty estimates. Overall, all these features allow mitigation of most of the challenges which need to be overcome to realize the goal of optimal, individualized drug administration. The second key component of HM-OIDD is its embedded strategy for multi-objective dynamic optimization under uncertainty, which offers the benefits of both robust and stochastic optimization while mitigating the downsides of both. This very unique optimization method, based on the work of Rossi et al. (2016) combined with the scalarization techniques proposed by Ringuest (1992), provides optimal solutions to individualized drug administration problems potentially featuring multiple contrasting therapeutic objectives, which offer an excellent compromise between the need for robustness to inter-patient variability and the desire for high therapeutic efficacy, at reasonable computation cost. All these features are essential for addressing real-word precision medicine applications. Although HM-OIDD already offers an array of very interesting features, its hybrid PBPK models still require further improvement. Therefore, in this contribution, we develop an advanced, first principles inspired tubular secretion model, able to consider the effect of key patient covariates (e.g., gender, race and age) on drug tubular secretion rates, and incorporate it into HM-OIDD hybrid PBPK models. In addition, we convert the single-layer, non-hierarchical Bayesian component, currently embedded in HM-OIDD hybrid PBPK models, which can only operate on the entire patient population as a whole, into a multi-layer, hierarchical version thereof (Fig. 1 – B-1), which operates on appropriate patient sub-groups with similar characteristics (patients are organized in a tree-like fashion by relevant covariates, such as gender, race, etc.), so as to increase prediction accuracy and reduce prediction uncertainty. This new multi-layer, hierarchical Bayesian component also incorporates ad-hoc tools for dimensionality reduction, such as dedicated strategies for identification of those hybrid model parameters that can be fixed to their maximum likelihood estimates, so as to ensure that the overall computational complexity of the resulting hybrid PBPK models is always compatible with multi-objective dynamic optimization calculations under uncertainty. Finally, we greatly expand the capabilities of HM-OIDD hybrid PBPK models by addition of key elements of pharmacodynamics, namely, the capability of predicting the chance of recovery, chance of developing serious adverse effects and expected time to recovery for each individual patient (Fig. 1 – B-2), which enable drug dose individualization directly aimed at achieving optimal treatment outcomes rather than optimal plasma drug concentration ranges. The impact of these advances is demonstrated on a comprehensive case study, based on the drug Vancomycin (Vancomycin is a potent antibiotic, used to treat serious Gram-positive bacterial infections, which can potentially cause severe adverse effects, including permanent organ damage). In particular, we utilize the extended version of HM-OIDD, proposed in this manuscript, to compute several different types of optimal Vancomycin dosing regimens for a comprehensive cohort of in-silico patients with different covariates, e.g. different genders, ages, body mass indices, serum albumin levels (hypoalbuminemia is common in patients undergoing certain types of medical treatments, such as chemotherapy), serum IgA levels (elevated serum IgA is found in a variety of inflammatory disorders), and degrees of renal function (we assume that degree of renal function and serum creatinine levels are directly correlated), so as to demonstrate that individualized Vancomycin administration, directly aimed at achieving optimal treatment outcomes, consistently outperforms Vancomycin dose individualization, aimed at attaining optimal plasma drug concentrations, in terms of expected therapeutic efficacy, frequency of adverse events, time to recovery and overall drug exposure. In addition, we also show that the extended version of HM-OIDD, proposed in this manuscript, can potentially simplify and improve patient triage (it can rapidly identify patients with greater chance of recovery) and enable simultaneous, optimal, individualized administration of Vancomycin to entire cohorts of patients (it can find the optimal trade-off between overall Vancomycin consumption and overall chance of patient recovery), in the presence of drug shortages and/or inadequate hospital staffing. These results emphasize the potential benefits offered by the systematic incorporation of model-based decision support tools into the clinical practice, and call for fundamental changes to the way we approach patient treatment. References Doyle III, F. J., Huyett, L. M., Lee, J. B., Zisser, H. C., & Dassau, E. (2014). Closed-loop artificial pancreas systems: engineering the algorithms. Diabetes care, 37, 1191-1197. Hartmanshenn, C., Rao, R. T., Bae, S. A., Scherholz, M. L., Acevedo, A., Pierre, K. K., & Androulakis, I. P. (2018). Quantitative systems pharmacology: Extending the envelope through systems engineering. Computer Aided Chemical Engineering, 42, 3-34. Laínez, J. M., Blau, G., Mockus, L., Orçun, S., & Reklaitis, G. V. (2011). Pharmacokinetic based design of individualized dosage regimens using a Bayesian approach. Industrial & Engineering Chemistry Research, 50, 5114-5130. Nașcu, I., Oberdieck, R., & Pistikopoulos, E. N. (2017). Explicit hybrid model predictive control strategies for intravenous anaesthesia. Computers & Chemical Engineering, 106, 814-825. Ringuest, J. L. (1992). Compromise programming. Multiobjective optimization: behavioral and computational considerations. Springer. Rossi, F., Mockus, L., Nagy, Z., & Reklaitis, G. (2023). Advances in optimal, individualized drug dosing strategies, based on hybrid models and dynamic optimization under uncertainty. Paper 400c, 2023 AIChE Annual Meeting, Orlando, FL. Rossi, F., Mockus, L., Nagy, Z., & Reklaitis, G. (2024). Individualized drug dosing using hybrid pharmacokinetic models and multi-objective dynamic optimization under uncertainty. Paper 252e, 2024 AIChE Annual Meeting, San Diego, CA. Rossi, F., Reklaitis, G., Manenti, F., & Buzzi-Ferraris, G. (2016). Multi-scenario robust online optimization and control of fed-batch systems via dynamic model-based scenario selection. AIChE Journal, 62, 3264-3284. Savoca, A., Mistraletti, G., & Manca, D. (2018). A physiologically-based diffusion-compartment model for transdermal administration–The melatonin case study. Computers & Chemical Engineering, 113, 115-124.",
+    "presenting_author": "Francesco Rossi | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Francesco Rossi | Purdue University, West Lafayette, IN",
+      "Linas Mockus | Purdue University, West Lafayette, IN",
+      "Zoltan Nagy | Purdue University, West Lafayette, IN",
+      "Gintaras V. Reklaitis | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Francesco Rossi",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Linas Mockus",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Zoltan Nagy",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Gintaras V. Reklaitis",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "595a",
+    "sortable_time": "2025-11-05_15:30:00_15:48:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/718902"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712516",
+    "paper_endpoint": "Paper/712516",
+    "paper_id": "712516",
+    "topic": "Mouse Neural-Glial Metabolic Modeling for Elucidating the Role of FABP7 Circadian-Sleep-Metabolism Node in Neurological Disease",
+    "title": "Mouse Neural-Glial Metabolic Modeling for Elucidating the Role of FABP7 Circadian-Sleep-Metabolism Node in Neurological Disease",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57097",
+    "session_title": "10D: Applied Math for Biological and Biomedical Systems",
+    "session_number": "595",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Disruptions in the neuron-astrocyte metabolic interactions are widely recognized as a key contributor to various neurological disorders. However, the systems level mechanisms underlying the roles of these disruptions in diseased states are poorly understood. Recent findings show that the brain-type fatty acid binding protein 7 (FABP7), a circadian-regulated protein that regulates subcellular trafficking of fatty acids, acts as an integrator of sleep and neuron-astrocyte metabolic coupling. FABP7 is implicated in neurological disorders such as epilepsy, traumatic brain injury (TBI), and neurodegenerative diseases (Alzheimer’s). Recent experimental studies further show that the seizure-induction threshold by electrical shock is increased in mice with FABP7 knocked out compared to wild-type (WT), but only during their waking period. Here, we evaluated the role of FABP7 in neuron-astrocyte metabolism and its mechanistic roles in seizure susceptibility using computational metabolic modeling approaches. We recurated the iMM1865 model to generate a high-quality genome-scale metabolic (GSM) model for a generic mouse cell ( Mus musculus ) by addressing the deficiencies in fatty acids metabolism, mass balancing, and metadata. The iMAT tool was used to reconstruct cell-line specific neurons and astrocytes GSM models. Both models were used with GECKO 3.0 protocol to reconstruct resource allocation models (RAMs) by integrating proteomic data. These models were integrated into a unified neuron-astrocyte mouse metabolic model using SteadyCom to simulate metabolic interaction in WT and FABP7 knockout conditions. Resource Balance Analysis (RBA) simulations showed overflow metabolism due to mitochondrial limitations driving the astrocyte-neuron lactate shuttle (ANLS), quantifying their metabolic coupling. We demonstrated that this overflow metabolism further drives the ANLS in TBI due to mitochondrial degradation. Additionally, we found a lack of reactive oxygen species (ROS) scavenging in the FABP7 knockout condition, making damage to the neuron membrane difficult for action potentials to be achieved, thereby decreasing seizure susceptibility. This modeling framework can be extended to investigate metabolism and FABP7-related mechanisms in other neurological disorders.",
+    "presenting_author": "Samuel Hayford Ayensu | Washington State University, Pullman",
+    "authors": [
+      "Samuel Hayford Ayensu | Washington State University, Pullman",
+      "Carlos C. Flores | Washington State University, Spokane",
+      "Abdul Wadood Khan | Washington State University, Pullman",
+      "Jason Gerstner | Washington State University, Spokane",
+      "Wheaton L. Schroeder | Washington State University, Pullman"
+    ],
+    "authors_structured": [
+      {
+        "name": "Samuel Hayford Ayensu",
+        "affiliation": "Washington State University, Pullman",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Carlos C. Flores",
+        "affiliation": "Washington State University, Spokane",
+        "designation": "Author"
+      },
+      {
+        "name": "Abdul Wadood Khan",
+        "affiliation": "Washington State University, Pullman",
+        "designation": "Author"
+      },
+      {
+        "name": "Jason Gerstner",
+        "affiliation": "Washington State University, Spokane",
+        "designation": "Author"
+      },
+      {
+        "name": "Wheaton L. Schroeder",
+        "affiliation": "Washington State University, Pullman",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "595b",
+    "sortable_time": "2025-11-05_15:48:00_16:06:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712516"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713954",
+    "paper_endpoint": "Paper/713954",
+    "paper_id": "713954",
+    "topic": "Data Augmentation Models for Machine Learning Applications in Stem Cell Bioprocessing",
+    "title": "Data Augmentation Models for Machine Learning Applications in Stem Cell Bioprocessing",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57097",
+    "session_title": "10D: Applied Math for Biological and Biomedical Systems",
+    "session_number": "595",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Despite its promise for regenerative medicine, scalable and efficient stem cell manufacturing continues to pose significant challenges. Existing bioprocesses require extensive resources, restricting experimental studies and optimization of critical quality attributes (CQAs) to levels far below what production necessitates. With adequate data, multivariate machine learning (ML) can clarify the relationships between controllable process variables and CQAs. Utilizing feature importance as a method for post hoc interpretability provides valuable insights into these models' learned parameters. Human pluripotent stem cells (hPSCs) exhibit a glycolytic metabolism that correlates with their proliferation, viability, and pluripotency; this makes measurable metabolic indicators like glucose and lactate particularly suitable for ML models focused on hPSC CQAs. However, the success of ML is dependent on the availability of bioprocess data, which is often limited, leading to the need for data augmentation techniques. Given the complexity of hPSC-based processes, augmentation models (AMs) require physical constraints to ensure that in-silico samples conform to the known system limits dynamics. This study investigated three additive manufacturing (AM) techniques utilizing digital twins and perturbation methods to create expanded data, each varying in constraints. The first-principles AM (fpAM), which is the most constrained, relies on time-dependent material balances and physical parameters. The hybrid digital AM (hdAM) incorporates a neural ordinary differential equation (NODE) constrained by stoichiometry, growth limits, and dependencies on viable cell counts. In contrast, the statistical NODE-based AM (nodeAM) captures experimental data trends without specific physical constraints. These models amplified data for machine learning analysis of critical quality attributes (CQAs) based on glycolytic activity in hPSCs and enhanced the information represented in digital twin models. Experimental data was collected from two hPSC types (embryonic and induced pluripotent stem cells) at four glucose feed concentrations (1, 5, 17.5, 20 mM). Each AM was trained for all conditions, with representative results at 1 mM glucose displayed in Figure 1A. Feature importance concerning the relationship between glucose and lactate profiles and CQAs was assessed using a Monte Carlo variable importance projection method (Fig. 1B). Functional analysis of variance revealed that model selection significantly influences importance profiles (p = 0.014). As anticipated, lactate accumulation inhibits growth and is strongly associated with CQAs, particularly at later time points, with greater relevance observed at lower glucose concentrations. Glucose is correctly deemed unimportant when absent, and its significance increases across all models as feed concentration rises. This study provides biologically relevant insights and enhances interpretability, addressing issues related to data scarcity. It paves the way for advancing AMs and facilitates the integration of ML in the design and optimization of bioprocesses for hPSC therapeutics and beyond. Acknowledgment: The research was partially supported by the National Science Foundation (NSF) grant CBET-2326510.",
+    "presenting_author": "Owen Skriloff | Tufts University, Medford, MA",
+    "authors": [
+      "Owen Skriloff | Tufts University, Medford, MA",
+      "Demetrios Stoukides | Tufts University, Medford, MA",
+      "Emmanuel Tzanakakis | Tufts University, Medford, MA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Owen Skriloff",
+        "affiliation": "Tufts University, Medford, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Demetrios Stoukides",
+        "affiliation": "Tufts University, Medford, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Emmanuel Tzanakakis",
+        "affiliation": "Tufts University, Medford, MA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "595c",
+    "sortable_time": "2025-11-05_16:06:00_16:24:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713954"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/711980",
+    "paper_endpoint": "Paper/711980",
+    "paper_id": "711980",
+    "topic": "Model-Based Optimization of Fermentation Strategy for Cost-Effective Production of O-Acetyl-L-Homoserine",
+    "title": "Model-Based Optimization of Fermentation Strategy for Cost-Effective Production of O-Acetyl-L-Homoserine",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57097",
+    "session_title": "10D: Applied Math for Biological and Biomedical Systems",
+    "session_number": "595",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "O-acetyl-L-homoserine (OAH) is a key biochemical intermediate as a direct precursor to L-methionine, the principal sulfur-containing amino acid in proteins. It can be produced via aerobic microbial fermentation using engineered strains. Sucrose is often used as a single-carbon source for the production of OAH; however, we introduce a novel dual-carbon strategy incorporating acetic acid as a secondary carbon source. This approach aims to reduce raw material costs and also facilitate the recycling of industrial byproducts. A key challenge lies in achieving an optimal trade-off between cost and productivity, which requires optimization of critical operational parameters—such as substrate concentration and feeding rate. Model-based strategies have been extensively validated in prior studies as effective tools to enhance both productivity and economic efficiency. [01,02] In this study, we develop a mathematical model of aerobic fed-batch fermentation for OAH production using Corynebacterium to derive an optimal feeding strategy. The process begins with a batch phase in a 30 L bioreactor, followed by a fed-batch phase using a single-feed system delivering sucrose and acetic acid. We first tested various feed concentration profiles experimentally. Based on the experimental data, we construct a kinetic model to predict the dynamic behavior of the fermentation. Key parameters are initially estimated using the Monod model [03] , followed by a modified Luong-type model [04] to account for substrate inhibition under excess substrate concentrations. Simulation results indicate that maintaining substrate concentrations between the saturation constant (K s ) and inhibition constant (K is ) enhances productivity and thus lowers production costs. Optimization of the feeding rate and concentration profile during the fed-batch phase is then carried out to further minimize the cost of OAH production. This study presents a systematic framework that combines sequential kinetic modeling and process optimization, offering practical insights for the economically viable and scalable production of OAH in industrial fermentation. Reference 1. Flevaris, K., & Chatzidoukas, C. (2021). Optimal fed-batch bioreactor operating strategies for the microbial production of lignocellulosic bioethanol and exploration of their economic implications: A step forward towards sustainability and commercialization. Journal of Cleaner Production, 295, 126384 2. Shah, P., Sheriff, M. Z., Bangi, M. S. F., Kravaris, C., Kwon, J. S., Botre, C., & Hirota, J. (2022). Multi‐rate observer design and optimal control to maximize productivity of an industry‐scale fermentation process. AIChE Journal, 69(2). 3. Monod, J. (1949). The growth of bacterial cultures. Annual Review of Microbiology, 3(1), 371–394. 4. Luong, J. H. T. (1987). Generalization of monod kinetics for analysis of growth data with substrate inhibition. Biotechnology and Bioengineering, 29(2), 242–248.",
+    "presenting_author": "Jisu Kim | Chungnam National University, Daejeon, Korea, Republic of (South)",
+    "authors": [
+      "Jisu Kim | Chungnam National University, Daejeon, Korea, Republic of (South)",
+      "Dami Kim | Chungnam National University, Daejeon, Korea, Republic of (South)",
+      "Hongbum Choi | Korea Advanced Institute of Science and Technology, Daejeon, Korea, Republic of (South)",
+      "Jay Hyung Lee | University of Southern California, Los Angeles",
+      "Jung-Ho Kim | CJ CheilJedang Corp., Suwon-si, Korea, Republic of (South)",
+      "Dong-Hun Kwak | CJ CheilJedang Corp., Suwon-si, Korea, Republic of (South)",
+      "Joseph Kwon | Texas A&M University, College Station, TX",
+      "Kosan Roh | Chungnam National University, Daejeon, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jisu Kim",
+        "affiliation": "Chungnam National University, Daejeon, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Dami Kim",
+        "affiliation": "Chungnam National University, Daejeon, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Hongbum Choi",
+        "affiliation": "Korea Advanced Institute of Science and Technology, Daejeon, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Jay Hyung Lee",
+        "affiliation": "University of Southern California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Jung-Ho Kim",
+        "affiliation": "CJ CheilJedang Corp., Suwon-si, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Dong-Hun Kwak",
+        "affiliation": "CJ CheilJedang Corp., Suwon-si, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Kosan Roh",
+        "affiliation": "Chungnam National University, Daejeon, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "595d",
+    "sortable_time": "2025-11-05_16:24:00_16:42:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/711980"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713466",
+    "paper_endpoint": "Paper/713466",
+    "paper_id": "713466",
+    "topic": "Computer Modeling of Bevacizumab Drug Distribution after Intravitreal Injection in Rabbit and Human Eyes",
+    "title": "Computer Modeling of Bevacizumab Drug Distribution after Intravitreal Injection in Rabbit and Human Eyes",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57097",
+    "session_title": "10D: Applied Math for Biological and Biomedical Systems",
+    "session_number": "595",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Objectives: Wet age-related macular degeneration (AMD) is a chronic disease that can lead to central vision loss, primarily due to overexpression of vascular endothelial growth factor (VEGF). Bevacizumab, an anti-VEGF drug, is commonly administered off-label intravitreally once a month due to its short half-life in the vitreous. However, the quantitative effect of elimination routes and drug concentration in the macula are not well understood in the bevacizumab pharmacokinetic profile in the vitreous. Methods: In a recently published work 1 , we developed two spatial computational models based on rabbit and human vitreous anatomy and physiology. The models were used to explore different drug elimination conditions and injection locations. Bevacizumab vitreous concentration and its half-life were calculated and compared to published data. Bevacizumab concentration in the macula was also estimated. Results: Our 3D models successfully captured drug distribution in rabbit and human vitreous, in agreement with experimental data despite inter-individual variability. The model suggested that in rabbits, anterior elimination was the main route of drug clearance, whereas in humans, both anterior and posterior elimination contributed significantly to drug clearance. Furthermore, the modeling results showed that drug injection location does not substantially influence drug half-life or duration of action in the vitreous, but the peak concentration experienced at the fovea is affected. Conclusions: The 3D models were able to successfully capture bevacizumab PK and provide insights into the relative contribution of elimination routes. Moreover, simulations can provide an estimate of bevacizumab drug concentration in the macula and help determine the duration of action of the drug. Such simulation results can be used to gain insight into different dosing regimens . Citations: 1. J. M. Chowdhury, E. A. Chacin Ruiz, M. P. Ohr, K. E. Swindle-Reilly, A. N. Ford Versypt, Computer modeling of bevacizumab drug distribution after intravitreal injection in rabbit and human eyes, Journal of Pharmaceutical Sciences 114 (2) 1164–1174, 2025.",
+    "presenting_author": "Eduardo A. Chacin Ruiz | University at Buffalo, The State University of New York, NY",
+    "authors": [
+      "Eduardo A. Chacin Ruiz | University at Buffalo, The State University of New York, NY",
+      "Jabia M. Chowdhury | University at Buffalo, The State University of New York, NY",
+      "Matthew P. Ohr | The Ohio State University Wexner Medical Center, Columbus",
+      "Katelyn E. Swindle-Reilly | The Ohio State University, Columbus",
+      "Ashlee N. Ford Versypt | University at Buffalo, The State University of New York, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Eduardo A. Chacin Ruiz",
+        "affiliation": "University at Buffalo, The State University of New York, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jabia M. Chowdhury",
+        "affiliation": "University at Buffalo, The State University of New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew P. Ohr",
+        "affiliation": "The Ohio State University Wexner Medical Center, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Katelyn E. Swindle-Reilly",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Ashlee N. Ford Versypt",
+        "affiliation": "University at Buffalo, The State University of New York, NY",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "595e",
+    "sortable_time": "2025-11-05_16:42:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713466"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/710064",
+    "paper_endpoint": "Paper/710064",
+    "paper_id": "710064",
+    "topic": "Validating a Cell-Scale Calcium Signaling Digital Twin Using Science-Based Design of Experiments",
+    "title": "Validating a Cell-Scale Calcium Signaling Digital Twin Using Science-Based Design of Experiments",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57097",
+    "session_title": "10D: Applied Math for Biological and Biomedical Systems",
+    "session_number": "595",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "A digital twin, a sophisticated, predictive, computational representation of a physical system, rapidly transforms fields from healthcare to biological research. Recent advances in computational modeling and high-throughput data acquisition empower researchers to construct digital twins at increasingly granular scales, including the single-cell level. Studies leveraging Drosophila melanogaster as a powerful model organism demonstrate the potential to integrate complex biochemical and mechanical properties into comprehensive cellular models (Mirzoyan et al., 2019). By deploying these models, researchers extract insights into cellular dynamics, catalyzing innovative systems biology and disease modeling approaches. Constructing these high-fidelity single-cell digital twins necessitates the acquisition of massive, multi-modal datasets. Researchers must engineer efficient experimental protocols and leverage automated data pipelines to address this. Engineering effective protocols include optimizing sensor placement, designing high-throughput imaging systems, and implementing robust data pre-processing algorithms to minimize noise and maximize information content. As demand for biological and medical digital twins increases, so does the imperative for efficient experimental design strategies. Science-based design of experiments (SBDoE) is a pivotal methodology to maximize information gain while minimizing resource expenditure (Chakrabarty et al., 2013). Synergizing SBDoE with mechanistic and data-driven models substantially amplifies the predictive accuracy of digital twins. Open-source tools like Pyomo.DoE provide a structured framework to optimize experimental conditions and refine model parameter estimation (Wang & Dowling, 2022). These approaches propel the evolution of digital twins from conceptual frameworks to practical tools for dissecting complex biological phenomena. Despite these advancements, critical gaps persist in developing and applying biological digital twins. A primary challenge lies in the robust validation of models across diverse experimental conditions and biological systems. Moreover, combining information from diverse data streams, such as calcium signaling pathways and morphogenetic processes, into a unified digital twin framework remains an active area of research (Berridge, 2016; Lobato-Rios et al., 2022). Furthermore, while applying digital twins to human disease modeling holds immense promise, translating findings from model organisms to human systems demands rigorous refinement and validation (Yamaguchi, 2018). Addressing these gaps is essential to unlock the full potential of digital twins in biomedical research and personalized medicine. As the field accelerates, sustained interdisciplinary collaboration and methodological innovation will be pivotal in bridging these gaps and pioneering new frontiers in life sciences (Committee on Digital Twins, 2024). This work validates a cellular digital twin using calcium signaling data from Drosophila melanogaster . A key challenge is navigating the dynamical system models' high-dimensional, non-convex parameter space, often containing multiple local optima. By initiating the algorithm from diverse starting points, this approach broadens the search for potential solutions. It reduces the risk of getting trapped in suboptimal local minima, resulting in parameter estimates that better reflect biological reality and improve the digital twin's predictive capabilities (Martí, 2003). The calcium signaling cell scale digital twin will enable scientists to differentiate laboratory data through parameter estimation against selected mathematical models. The resulting parameter estimates will allow a deeper understanding of the mechanistic differences present with a quantified amount of uncertainty and facilitate discovery in the life sciences community. References: Mirzoyan, Z.; Sollazzo, M.; Allocca, M.; Valenza, A.; Grifoni, D.; Bellosta, P. Drosophila melanogaster: A Model Organism to Study Cancer. Front. Genet. 2019 , 10 , 51. Chakrabarty, S.; Wang, H. Y.; Stephanopoulos, G. Model‐Based Design of Experiments for Cellular Processes. WIREs Mech. Dis. 2013 , 1 (3), 277–292. Wang, H.; Dowling, A. Pyomo.DoE: An Open-Source Package for Model-Based Design of Experiments in Python. AIChE J. 2022 , 68 (4), e17620. Berridge, M. J. The Inositol Trisphosphate/Calcium Signaling Pathway in Health and Disease. Physiol. Rev. 2016 , 96 (4), 1261–1296. Lobato-Rios, V.; Mendes, A.; de Vries, J.; Boyen, S.; Karamouzas, I.; Devaine, M. NeuroMechFly: A Neuromechanical Model of Adult Drosophila melanogaster. Nat. Methods 2022 , 19 (8), 1015–1025. Yamaguchi, M. Drosophila as a Model Organism for Neurodegenerative Diseases Associated with Genetic Variation in Humans. Exp. Anim. 2018 , 67 (4), 421–430. Committee on Foundational Research Gaps and Future Directions for Digital Twins, National Academies of Sciences, Engineering, and Medicine. Foundational Research Gaps and Future Directions for Digital Twins ; The National Academies Press : Washington, DC, 2024. Martí, R. Multi-Start Methods. In Handbook of Metaheuristics ; Glover, F., Kochenberger, G. A., Eds.; Springer US : Boston, MA, 2003; pp 355–368. https://doi.org/10.1007/0-306-48056-5_12 .",
+    "presenting_author": "Stephen Cini | University of Notre Dame, IN",
+    "authors": [
+      "Stephen Cini | University of Notre Dame, IN",
+      "Jeremiah Zartman | University of Notre Dame, IN",
+      "Alexander Dowling | University of Notre Dame, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Stephen Cini",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jeremiah Zartman",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Alexander Dowling",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "595f",
+    "sortable_time": "2025-11-05_17:00:00_17:18:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/710064"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716449",
+    "paper_endpoint": "Paper/716449",
+    "paper_id": "716449",
+    "topic": "Digital Twin Modeling of Liver-on-a-Chip Systems: Integrating Computational Fluid Dynamics and Biochemical Kinetics for Drug Metabolism Studies",
+    "title": "Digital Twin Modeling of Liver-on-a-Chip Systems: Integrating Computational Fluid Dynamics and Biochemical Kinetics for Drug Metabolism Studies",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57097",
+    "session_title": "10D: Applied Math for Biological and Biomedical Systems",
+    "session_number": "595",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Accurate modeling of liver function is essential in drug discovery, providing critical insights into hepatic metabolism, toxicity, and drug interactions [1]. As the primary site for drug biotransformation, the liver converts pharmaceuticals into active or inactive metabolites, influencing therapeutic efficacy and safety. Traditional in vivo and in vitro approaches for studying hepatic metabolism are constrained by ethical concerns, species-specific physiological differences, and high operational costs [2]. Emerging platforms, such as organ-on-a-chip technologies and digital twin models, address these limitations by enabling high-fidelity simulation of liver function in a controlled environment [3-5]. This study focuses on developing a digital twin framework for a liver-on-a-chip system designed to emulate the tissue-vessel interface of hepatic microenvironments. The device comprises two fluidic channels embedded within a solid scaffold, separated by a central porous hydrogel supporting functional hepatic cell culture [6]. Nutrients such as glucose and amino acids diffuse across a semi-permeable membrane into the hydrogel, where they are consumed by liver cells. Concurrently, metabolic byproducts diffuse out of the hydrogel and are transported downstream through the outlet channel. Species transport in the hydrogen domain is governed by diffusive gradients, with effective diffusivities estimated using the Stokes-Einstein relation and porous media models. Fluid flow within the microchannels is assumed to be laminar and described by the Navier-Stokes equations, with advective transport incorporated into the species balance equations. Biochemical reactions, including amino acid catabolism and carbohydrate metabolism, were modeled using kinetic parameters calibrated from experimental studies involving primary human hepatocytes [7]. The resulting reaction network captured key proteolytic trends, particularly the release of amino acids into the extracellular medium. Simulation results demonstrated distinct spatial and temporal concentration profiles during the first 48 hours, with nutrient gradients and metabolite levels stabilizing as the system approached pseudo-steady state conditions. These outcomes underscore the digital twin’s ability to mimic physiological liver responses, offering predictive capabilities for in vitro drug metabolism and toxicity assessments. In addition to simulating local hepatic activity, this work incorporated a systemic perspective by examining the liver’s role in whole-body energy homeostasis. An integrated computational model was developed using experimental data [8] to quantify metabolic fluxes associated with energy production, amino acid turnover, and urea cycle activity. A computational fluid dynamics modeling approach was employed to represent hepatic perfusion dynamics, capturing the interplay between molecular transport and biochemical reaction kinetics under varying physiological conditions. The digital twin model was further validated under conditions simulating glucose-enriched perfusion, highlighting its adaptability to diverse experimental setups. References: [1] Kratochwil, N. A., Meille, C., Fowler, S., Klammers, F., Ekiciler, A., Molitor, B., ... & Parrott, N. J. (2017). Metabolic profiling of human long-term liver models and hepatic clearance predictions from in vitro data using nonlinear mixed-effects modeling. The AAPS journal , 19 (2), 534-550. [2] Godoy, P., Hewitt, N. J., Albrecht, U., Andersen, M. E., Ansari, N., Bhattacharya, S., ... & Hengstler, J. G. (2013). Recent advances in 2D and 3D in vitro systems using primary hepatocytes, alternative hepatocyte sources and non-parenchymal liver cells and their use in investigating mechanisms of hepatotoxicity, cell signaling and ADME. Archives of Toxicology , 87 , 1315–1530. [3] Yang, J. W., Khorsandi, D., Trabucco, L., Ahmed, M., Khademhosseini, A., Dokmeci, M. R., ... & Jucaud, V. (2024). Liver-on-a-chip integrated with label-free optical biosensors for rapid and continuous monitoring of drug-induced toxicity. Small , 20 (48), 2403560. [4] Lin, C., & Khetani, S. R. (2016). Advances in engineered liver models for investigating drug-induced liver injury. BioMed Research International , 2016 , 1829148. [5] Kuepfer, L., Niederalt, C., Wendl, T., Schlender, J. F., Willmann, S., Lippert, J., Block, M., Eissing, T., & Teutonico, D. (2016). Applied concepts in PBPK modeling: How to build a PBPK/PD model. CPT: Pharmacometrics & Systems Pharmacology , 5 (10), 516–531. [6] Khorsandi, D., Yang, J., Jenson, S., Kajino, T., Maity, S., Salih, A. R. C., ... & Dokmeci, M. R. (2024). In Lab-on-a-chip devices for advanced biomedicines: Laboratory scale engineering to clinical ecosystem (Vol. 25, Ch. 17, pp. 560–614), edited by A. Parihar & P. Pradeep Mehta. Royal Society of Chemistry. [7] Guthke, R., Schmidt-Heck, W., Pless, G., Gebhardt, R., Pfaff, M., Gerlach, J. C., & Zeilinger, K. (2006). Dynamic model of amino acid and carbohydrate metabolism in primary human liver cells. In Biological and Medical Data Analysis: 7th International Symposium, ISBMDA 2006, Thessaloniki, Greece, December 7–8, 2006. Proceedings 7 (pp. 137–149). Springer. [8] Ashworth, W. B., Davies, N. A., & Bogle, I. D. L. (2016). A computational model of hepatic energy metabolism: Understanding zonated damage and steatosis in NAFLD. PLoS Computational Biology , 12 (9), e1005105.",
+    "presenting_author": "Amirmohammad Ebrahimi | Kansas State University, Manhattan, KS",
+    "authors": [
+      "Amirmohammad Ebrahimi | Kansas State University, Manhattan, KS",
+      "Thiago Oliveira Cabral | Kansas State University, Manhattan, KS",
+      "Davood Pourkargar | Kansas State University, Manhattan, KS"
+    ],
+    "authors_structured": [
+      {
+        "name": "Amirmohammad Ebrahimi",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Thiago Oliveira Cabral",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Author"
+      },
+      {
+        "name": "Davood Pourkargar",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "595g",
+    "sortable_time": "2025-11-05_17:18:00_17:36:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716449"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714003",
+    "paper_endpoint": "Paper/714003",
+    "paper_id": "714003",
+    "topic": "Vagal Nerve Stimulation for Gastric Function Via Model Based Closed Loop Control",
+    "title": "Vagal Nerve Stimulation for Gastric Function Via Model Based Closed Loop Control",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57097",
+    "session_title": "10D: Applied Math for Biological and Biomedical Systems",
+    "session_number": "595",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Vagal nerve stimulation (VNS) is an emerging therapeutic approach for gastric disorders such as gastroparesis and functional dyspepsia, which involve impairments in gastric accommodation, antral motility, bile reflux, gastric emptying, and mixing efficiency. Although open-loop VNS has been shown to modulate gastric motility in animal models, optimizing stimulation parameters remains a significant challenge due to the complexity and dynamic nature of gastric function. This study presents a model-based closed-loop control strategy to optimize VNS in real time, aiming to enhance its efficacy compared to traditional open-loop methods. A computationally efficient compartmental vago-vagal reflex model is developed, capturing key physiological mechanisms, including intramural and vagal reflex pathways. Model Predictive Control (MPC) is employed to adaptively tune VNS parameters based on real-time feedback of gastric motility and emptying. The control framework integrates two compartmental models: a healthy gastric model, which provides reference trajectories for variables such as gastric emptying rate, intragastric pressure, mixing efficiency, and reverse transpyloric flow; and a disease-state model, representing pathological gastric function. A cost function minimizes deviations between the two models, allowing the MPC to iteratively adjust VNS inputs to steer gastric behavior toward physiological norms. Simulation results show that MPC-driven VNS can effectively regulate gastric motility and enhance gastric emptying, underscoring its potential for personalized neuromodulation therapies. This framework lays the groundwork for experimental validation and clinical translation, offering a promising step toward adaptive VNS treatments for gastric disorders.",
+    "presenting_author": "Shannon Fernandes | Lehigh University, Bethlehem, PA",
+    "authors": [
+      "Shannon Fernandes | Lehigh University, Bethlehem, PA",
+      "Mayuresh Kothare | Lehigh University, Bethlehem, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shannon Fernandes",
+        "affiliation": "Lehigh University, Bethlehem, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mayuresh Kothare",
+        "affiliation": "Lehigh University, Bethlehem, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "595h",
+    "sortable_time": "2025-11-05_17:36:00_17:54:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714003"
+  }
+]

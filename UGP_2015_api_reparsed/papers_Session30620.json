@@ -1,0 +1,422 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper423126.html",
+    "topic": "Addressing Control Challenges of Discontinuous Processes with Multi-Fidelity Model Predictive Control",
+    "date_time": "Wednesday, November 11, 2015: 2:36 PM",
+    "abstract": "Petroleum currently fulfills 32% of total national energy demand, more than any other source of energy, and is likely to continue to do so for at least the next 30 years [ 1 ] . While the need for alternative sources of energy is clear, the growth and maturity of renewable energies has been slow and unable to meet energy demands, especially in transportation. Therefore, to meet the growing demand for energy, more efficient, robust, and reliable technological advances are needed in the petroleum industry. The petroleum industry is historically divided into upstream and downstream divisions. The upstream division finds and extracts oil and gas from geologic formations, while the downstream division refines the crude oil and gas into usable products. The downstream sector has seen many technological advances in process control and optimization, but many processes in the upstream sector, such as oil well drilling, still lack any significant automation [ 2 ] . When automation is optimized, it improves safety and efficiency over manual control by responding faster to process disturbances and by operating closer to process constraints. However, a unique challenge of automating Managed Pressure Drilling (MPD) for oil and gas is the discontinuous nature of the process [ 2 ] . An oil or gas well is created by drilling into the earth for several hundred to several thousand feet, stopping to insert and cement in place a segment of casing pipe to the well bore, then repeating the process until the target depth is reached. Before the casing pipe is inserted into the well bore, the string of drill pipe must be removed from the well, set aside, and then placed back in the well to resume operations. As the well deepens, more drill pipe is connected to the drillstring. At the bottom of the drillstring, a Bottom Hole Assembly (BHA), consisting of measurement and steering equipment, is attached to the drill bit. The drill bit is cooled by the drilling fluid, or mud, which also moves the rock cuttings to the surface and maintains pressure in the well annulus (see Figure 1). The well annulus pressure consistently needs to be greater than the geologic reservoir pressure to prevent hydrocarbons from entering the well during the drilling process. If the mud pressure in the well is too high, it can damage the rock formation; if it is too low, hydrocarbons from the subsurface reservoir can come to the surface in an uncontrolled and dangerous manner. When this catastrophe happens it is known as a blowout. The well bore pressure must be maintained within a small range of pressures that balances the reservoir fluid pressure to prevent damaged formations and blowouts. Maintaining the pressure balance in the well is the goal of MPD [ 3 ] . Figure 1 A simplified diagram of the MPD process Currently, industrial MPD is completely manual. However, it has been demonstrated that an automated controller can maintain borehole pressure and reject disturbances faster and more accurately than manual control by using Nonlinear Model Predictive Control (NMPC) [ 4 ] . A controller can coordinate the mud pump flow rate and the annulus choke valve opening to reach the desired bit pressure set point [ 5 ] . One of the challenges with automated control of MPD is the necessary stopping and starting of operations. This discontinuous process can cause pressure sensors in the drillstring and BHA to lose calibration and controller models to lose tuning in the intervals. To address these challenges, this work simulates multiple control models arranged in an ensemble control structure to maintain control over various process stages: normal drilling operations, pipe reconnection procedures, and the disturbance of unwanted gas influx from the reservoir to the well bore. The novel control structure allows switching among control models of varying accuracy. A high fidelity model of the process is used when available, but the long computation time makes it unavailable for every control instance. The faster and less accurate low-order first principles model is the primary controller, yet it may not converge to an optimal solution at every time step due to the use of dynamic parameter estimation using Moving Horizon Estimation (MHE). An empirical First Order Plus Dead Time (FOPDT) model generally converges to an optimal solution at each time step, yet it is the least accurate model available. The controller makes use of these multi-fidelity models based on the availability and accuracy of the past model predictions compared to the current process state. The model solution with the least error is used to control the process at the present control instance. A limitation on the rate of change of process inputs is set to avoid sudden jumps when switching between models. An additional benefit of this control structure is the ability to tune one model while another is being used to control the process. Thus, model tuning can be accomplished without interrupting the drilling process [ 6 ] . Hence, the redundant model control structure offers benefits typically associated with redundant process measurements. This novel ensemble controller is capable of maintaining control over the discontinuous MPD process.�� ������ References 1.����������� Annual Energy Outlook 2014, U. S. Energy Information Administration. p. A-1. 2.����������� Godhavn, J.M., et al., Drilling Seeking Automation Control Solutions , in 18th IFAC World Congress . 2011: Milano, Italy. 3.����������� Breyholtz, O., G. Nygaard, and M. Nikolaou. Automatic control of managed pressure drilling . in American Control Conference (ACC), 2010 . 2010. 4.����������� Asgharzadeh Shishavan, R., et al., Combined Rate of Penetration and Pressure Regulation for Drilling Optimization by Use of High-Speed Telemetry SPE Drilling and Completion Journal, 2015. 30 (1). 5.����������� Breyholtz, O., et al. Evaluating control designs for co-ordinating pump rates and choke valve during managed pressure drilling operations . in Control Applications, (CCA) & Intelligent Control, (ISIC), 2009 IEEE . 2009. 6.����������� Sui, D., et al., Ensemble Methods for Process Monitoring in Oil and Gas Industry Operations. Journal Of Natural Gas Science and Engineering, 2011. 3 : p. 748-753.",
+    "presenting_author": "Ammon Eaton | Chemical Engineering, Brigham Young University, Provo, UT",
+    "authors": [
+      "Logan Beal | Chemical Engineering, Brigham Young University, Provo, UT",
+      "Ethan Janis | Brigham Young University",
+      "Sam Thorpe | Brigham Young University",
+      "Casey Hubbell | Brigham Young University",
+      "John D. Hedengre | Chemical Engineering, Brigham Young University, Provo, UT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ammon Eaton",
+        "affiliation": "Chemical Engineering, Brigham Young University, Provo, UT",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Logan Beal",
+        "affiliation": "Chemical Engineering, Brigham Young University, Provo, UT",
+        "designation": "Author"
+      },
+      {
+        "name": "Ethan Janis",
+        "affiliation": "Brigham Young University",
+        "designation": "Author"
+      },
+      {
+        "name": "Sam Thorpe",
+        "affiliation": "Brigham Young University",
+        "designation": "Author"
+      },
+      {
+        "name": "Casey Hubbell",
+        "affiliation": "Brigham Young University",
+        "designation": "Author"
+      },
+      {
+        "name": "John D. Hedengre",
+        "affiliation": "Chemical Engineering, Brigham Young University, Provo, UT",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper427831.html",
+    "topic": "Coding and Decoding Using Microfluidic Loops: An Analytical Approach",
+    "date_time": "Wednesday, November 11, 2015: 2:30 PM",
+    "abstract": "Droplet microfluidics is the science and technology of systems that process and manipulate small (pico- litres) volumes of fluids, using channels of dimensions less than a millimetre. The fluid flow in the channels is in the creeping flow regime where the governing equations are linear and reversible. But experiments in the literature have shown that a network device as simple as a microfluidic loop can result in complex patterns. A droplet reaching the junction of the loop chooses one of the two branches based on the local flow rates, which depend on branch lengths and the number of drops present in the branches. This discrete decision making step makes the problem non-linear and irreversible. A train of equally spaced droplets (1 period) entering the loop device gets converted to a periodically spaced train of droplets with one, two or even chaotic periods. This loop device can be thought of as an encoder that passively converts a signal (train of drops) into a coded signal (periodic train of drops). Then it would be interesting to understand if there could be a decoder which is a loop device or several loops in series which can essentially convert the coded signal back to the original signal. This would mean that the decoder should convert an n-period input to a single period output. We propose an analytical scheme based on continuous phase redistribution and repeatability of events to find the different possible solutions for the lengths of the branches of the decoder loop. Multiple solutions exist to a certain decoding problem, based on the sequence of occurrence of events (drops entering and exiting the loop). The number of possibilities scale up with the periodicity of the signal being decoded. However, there exists one specific sequence of events, a pattern common to all decoding solutions that can decode any periodicity to a single period in the output signal. The problem of decoding any period signal to 1 period signal now scales down to arranging for this sequence of events to occur by optimising the branch lengths. Decoding of 2 period and 3 period to 1 period using this sequence of events is demonstrated and extension to the decoding higher period signals is indicated.",
+    "presenting_author": "Santhoshreddy Sandiri | Indian Institute of Technology Madras, Chennai, India, Laya Das, Chemical engineering, Indian Institute of Technology Gandhinagar, Ahmedabad, India, Jeevan Maddala, Microfluidic Systems, SYSENG, LLC, Lubbock, TX, Danny Raj M, Chemical Engineering, Indian Institute of Technology Madras, Chennai, India",
+    "authors": [
+      "Raghunathan Rengaswamy | Chemical Engineering, Indian Institute of Technology Madras, chennai, India"
+    ],
+    "authors_structured": [
+      {
+        "name": "Santhoshreddy Sandiri",
+        "affiliation": "Indian Institute of Technology Madras, Chennai, India, Laya Das, Chemical engineering, Indian Institute of Technology Gandhinagar, Ahmedabad, India, Jeevan Maddala, Microfluidic Systems, SYSENG, LLC, Lubbock, TX, Danny Raj M, Chemical Engineering, Indian Institute of Technology Madras, Chennai, India",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Raghunathan Rengaswamy",
+        "affiliation": "Chemical Engineering, Indian Institute of Technology Madras, chennai, India",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper432561.html",
+    "topic": "Deployment of a Search Space Reduction Algorithm to an NMPC Problem - Comparative Experimental Analysis to a Fuel Cell System",
+    "date_time": "Wednesday, November 11, 2015: 2:18 PM",
+    "abstract": "Nowadays, the increase in energy demands, the tighter environmental regulations and various economic considerations require for the systems and processes to operate over a wider range of conditions and often near the boundaries of their operating region. Moreover, the interconnection and cooperation of various systems into integrated units is a prerequisite for efficient resource handling and allocation. In the sight of these issues, advance process control, such as Model Predictive Control (MPC) aims to facilitate the improvement of the response and overall behavior of systems and processes. In general the impact of control technology is evident in a wide range of application areas, including fuel cells, as it is the necessary facilitator for achieving desired objectives and fulfilling application-specific goals. Fuel cells represent a versatile and efficient electricity generation source that can be applied in a wide range of industries - from vehicles and primary energy systems to autonomous back-up power stations and portable consumer electronics devices. Fuel cell systems exhibit fast dynamics, nonlinearities and uncertainties that constitute challenges requiring appropriate control in order to be confronted effectively. This work presents an alternative way of combining components from two advanced MPC methodologies for a multi-variable nonlinear control problem in order to systematically exploit their synergistic benefits. More specifically at the core of a nonlinear model predictive control (NMPC) formulation a nonlinear programming (NLP) problem is solved utilising a discretized nonlinear dynamic model. Prior to the online solution of the NLP problem a pre-processing search space reduction (SSR) algorithm is applied. The SSR algorithm adjusts the search space of selected variables, based on a pre-computed augmented low-complexity piecewise affine (PWA) approximation of the feasible space. The behavior of the proposed synergetic formulation is illustrated through a multivariable nonlinear control problem involving the operation of a small scale fully automated Polymer Electrolyte Membrane (PEM) fuel cell unit. Overall, four different MPC-based approaches are formulated and subsequently evaluated by addressing the control issues that arise during the operation of the fuel cell system. The aim of comparative experimental study is to explore the behavior of MPC-based configurations and summarize the characteristics of each approach with respect to the specific control problem. To achieve this objective an experimental scenario is formed which is applied to the PEM fuel cell unit using each time a different control configuration. The proposed framework is developed and deployed online to an industrial-grade Supervisory Control and Data Acquisition (SCADA) system. The response of the multivariable nonlinear controllers are assessed through a set of experimental studies, illustrating that the control objectives are achieved and the fuel cell system operates at a stable environment regardless of the varying operating conditions. The performance of the deployed controllers is assessed based on their response, their qualitative response characteristics and the required energy for the heat-up and the cooling during each experiment. The comparative experimental study presents the benefits and challenges of each configuration.",
+    "presenting_author": "Chrysovalantou Ziogou | Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece",
+    "authors": [
+      "Efstratios N. Pistikopoulos | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+      "Michael C. Georgiadis | Department of Chemical Engineering, Aristotle University of Thessaloniki, Thessaloniki, Greece",
+      "Spyros S. Voutetakis | Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece",
+      "Simira Papadopoulou | Department of Automation Engineering, Alexander Technological Educational Institute of Thessaloniki, Thessaloniki, Greece"
+    ],
+    "authors_structured": [
+      {
+        "name": "Chrysovalantou Ziogou",
+        "affiliation": "Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Efstratios N. Pistikopoulos",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael C. Georgiadis",
+        "affiliation": "Department of Chemical Engineering, Aristotle University of Thessaloniki, Thessaloniki, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Spyros S. Voutetakis",
+        "affiliation": "Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Simira Papadopoulou",
+        "affiliation": "Department of Automation Engineering, Alexander Technological Educational Institute of Thessaloniki, Thessaloniki, Greece",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper430925.html",
+    "topic": "Power Management of Microgrids: Multiparametric Programming Approach to Improved Handling of System Uncertainties",
+    "date_time": "Wednesday, November 11, 2015: 12:48 PM",
+    "abstract": "Local power quality and environmental concerns associated with the conventional energy systems have spurred a move towards an improved grid system consisting of distributed, hybrid energy sources (renewable and non-renewable) and loads – microgrid. In the face of external uncertainties arising from electricity demand, price, and the availability of renewable resources, the microgrid system is required to operate seamlessly and optimally with or without interactions with a central grid network. This study presents a multi-parametric programming (MPP) based operational strategy for efficient and tractable integration and management of the distributed energy sources in a residential level microgrid. The hybrid system comprises of renewable (solar photovoltaic and wind turbine) and conventional systems (microturbine and utility grid connection). The overall problem is formulated using multi-parametric mixed-integer linear programming (mp-MILP) via parameterizations of the uncertain coordinates of the wind and solar resources. This results in a bi-level optimization problem, where choice of the parameterization scheme is made at the upper level while system operation decisions are made at the lower level. The mp-MILP formulation leads to significant improvements in uncertainty management, solution quality and computational burden; by easing dependency on the need for accurate meteorological information and removing the limitations of multiple computational cycles of the traditional online optimization techniques. The problem is solved offline on a day-ahead basis, allowing online implementation to be achieved on hourly system state updates. We consider two microgrid arrangements where one operates under a fixed feed-in-tariff (FIT) contract with a local distribution company, while the other goes through the price bidding system to take advantage of the time-of-use electricity price dynamics through the energy trading system (ETS). In the first scenario, renewables feed-in incentives discountenance any energy storage requirement. For the second scenario, the variable electricity pricing system calls for smart economic decisions where renewable energy surpluses to local load are stored in a battery when selling price is low, and subsequently sold when price is high. These two case studies of microgrid energy systems are used to assess the performance of the MPP algorithm. Lastly, the algorithm is applied to an experimental microgrid located in Sarnia, Ontario. Our preliminary results evidence the feasibility and the effectiveness of the proposed approach.",
+    "presenting_author": "Eva Umeozor | Chemical & Petroleum Engineering, University of Calgary, Calgary, AB, Canada",
+    "authors": [
+      "Milana Trifkovic | Chemical & Petroleum Engineering, University of Calgary, Calgary, AB, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Eva Umeozor",
+        "affiliation": "Chemical & Petroleum Engineering, University of Calgary, Calgary, AB, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Milana Trifkovic",
+        "affiliation": "Chemical & Petroleum Engineering, University of Calgary, Calgary, AB, Canada",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper429658.html",
+    "topic": "A Cellular Automaton Approach for Modeling Biomass Pyrolysis",
+    "date_time": "Wednesday, November 11, 2015: 2:10 PM",
+    "abstract": "Lignocellulosic biomass is a chemically and morphologically heterogeneous material. Furthermore, this heterogeneity is in-part responsible for the vast number of thermal decomposition products seen in pyrolysis events. While modeling of biomass pyrolysis has been a subject of much research in past years, at the macro and microscopic scales, the majority of this work has focused on a range of continuum-based approaches. While effective at capturing global outcomes, these approaches are less tractable as frameworks for capturing microstructural effects and upscaling molecular information. This work demonstrates the use of cellular automata (CA) as an alternative platform for the modeling and simulation of biomass pyrolysis. Efficient at capturing transport and chemical processes in highly heterogeneous system, CA is effective for modeling microstructural changes that occur as a result of chemical and physical transformations. A number of benchmark trials demonstrated the convergence of the CA to global continuum outcomes. Application of the CA to images of actual biomass show promise for this platform as an intermediate length-scale tool capable of predicting char morphologies that mimic experimental outcomes.",
+    "presenting_author": "Michael Adenson | Chemical Engineering, Tennessee Technological University, Cookeville, TN",
+    "authors": [
+      "Joseph J. Biernacki | Tennessee Technological University, Cookeville, TN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Michael Adenson",
+        "affiliation": "Chemical Engineering, Tennessee Technological University, Cookeville, TN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joseph J. Biernacki",
+        "affiliation": "Tennessee Technological University, Cookeville, TN",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper420732.html",
+    "topic": "Investigation of Film Porosity and Hydrogen Content Dependence on Deposition Conditions in a PECVD Process Using a Multiscale Model",
+    "date_time": "Wednesday, November 11, 2015: 1:10 PM",
+    "abstract": "Plasma enhanced chemical vapor deposition (PECVD) is widely used in the microelectronics and solar cell industries to deposit thin films from a mixture of gas-phase species onto a solid substrate [1]. Specifically, in the solar cell industry, PECVD is broadly used in the production of thin film silicon solar cells to deposit amorphous silicon semiconductor layers due to reduced manufacturing costs via silane recycling and the possibility for extremely low operating temperatures (<250 ͦ C) while achieving optimal dielectric properties of amorphous silicon thin films. The material of interest here, hydrogenated amorphous silicon (a-Si:H), differs from crystalline silicon by the lack of long-range order and the high content of bonded hydrogen (typically around 10% in device-quality a-Si:H). Although useful for opto-electronic devices, this material suffers from degradation via the well characterized Staebler-Wronski effect; whereby, in the first six months of operation the defect density increases under intense light, accompanied by a 10-15% drop in efficiency [2,3]. Motivated by the above considerations, a multiscale modeling and operation framework is developed to explore the relationship between standard operating conditions (e.g., 150 < T < 250 ͦ C, 1 < P < 5 bar) and the quality of deposited films, in an effort to develop deposition techniques that are capable of producing high-quality materials at reasonable growth rates. In the present work, quality is a function of two conditions: the hydrogen content which affects the stability and optical band-gap, and the void fraction which plays a role in the electronic and structural properties of the film [4]. Specifically, the continuous gas phase is modeled via a system of one dimensional reaction and transport equations at discrete locations across the wafer surface. The resulting concentration of silane and hydrogen radicals is then applied to a hybrid kinetic Monte Carlo (kMC) model which captures the complex surface chemistry involved in the growth of a-Si:H films [5]. Unlike traditional solid-on-solid schemes, the triangular, two-dimensional lattice employed in this study creates the possibility for overhangs and voids to develop within the growing film. Additionally, both silicon and hydrogen radicals interact on the surface and within the lattice bulk, yielding a more accurate growth mechanism than in previous studies. After completion of the deposition process, post batch measurements allow for the hydrogen content and void fraction to be characterized. Simulations across a wide range of deposition conditions reveal that the reactor temperature and the ratio of SiH 4 to H 2 in the feed are critical parameters which play a key role in determining the quality of the film microstructure and the concentration of trapped hydrogen species. [1] Kern W. Thin Film Processes II. Academic Press. 1991 [2] Rech B, Wagner H. Potential of amorphous silicon for solar cells. Appl. Phys. A. 1999;69:155-167. [3] Nelson J. The Physics of Solar Cells. Imperial College Press. 2003 [4] Smets AHM, Kessels WMM, Van de Sanden MCM. Vacancies and voids in hydrogenated amorphous silicon. Appl. Phys. Let. 2003;82:1547-1549. [5] Crose M, Kwon JS, Nayhouse M, Ni D, Christofides PD. Multiscale modeling and operation of PECVD of thin film solar cells. Chem. Eng. Sci. 2015, in press.",
+    "presenting_author": "Marquis Crose | UCLA, Los Angeles, CA, Joseph Sangil Kwon, Chemical Engineering, UCLA, Los Angeles, CA",
+    "authors": [
+      "Panagiotis D. Christofides | Department of Chemical and Biomolecular Engineering and Department of Electrical Engineering, University of California, Los Angeles, Los Angeles, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Marquis Crose",
+        "affiliation": "UCLA, Los Angeles, CA, Joseph Sangil Kwon, Chemical Engineering, UCLA, Los Angeles, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Panagiotis D. Christofides",
+        "affiliation": "Department of Chemical and Biomolecular Engineering and Department of Electrical Engineering, University of California, Los Angeles, Los Angeles, CA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper436664.html",
+    "topic": "Atomic Layer Deposition Processes: Understanding the Algebraic and Geometrical Structure of Dynamic Reaction Models",
+    "date_time": "Wednesday, November 11, 2015: 12:30 PM",
+    "abstract": "While substantial effort has been invested in understanding the fundamentals of atomic layer deposition (ALD) surface reaction mechanisms and how surface reaction models are integrated with reactor-scale precursor transport simulations (see, e.g., [1-3]), ambiguities remain in modeling the surface species dynamics during the different phases of an ALD process cycle. For example, open questions exist regarding how reactive surface species in amorphous ALD films are defined, how rate-limiting steps are identified in surface reaction networks, how equilibrium processes are distinguished from their finite-rate counterparts, and how redundant modeling equations can be pruned from the ALD surface reaction network. Therefore, the objective of this work is to take the first steps towards developing a mathematical framework that can be used to decompose ALD surface reaction dynamics according to the time-scales of the elementary reactions and to assess whether the resulting simulation problem is well-posed and so will provide physically meaningful simulation results. In this paper, we present a recently developed reaction factorization procedure [4] that explicitly separates the slow (deposition), fast (equilibrium), and instantaneous (conserved) modes of thin- film deposition models describing the dynamics of the precursor, surface, and deposition chemical species for ALD processes. The reaction factorization procedure provides an unambiguous means of translating sequences of adsorption, equilibrium, and irreversible reactions characterizing a deposition system into a low-dimensional differential-algebraic (DAE) system when the reaction kinetics are predicted using transition-state theory, an approach that builds directly on such ALD DFT studies as those described in [1]. The factorization eliminates redundant dynamic modes and provides a wealth of other structural information about the deposition model. An implicit Euler procedure then is used to numerically solve the singular- perturbation problem describing the time-evolution of the reaction species on the manifold defined by the combination of the equilibrium relationships and conserved quantities. Our modeling and analysis approach will be described in the context of an alumina ALD process based on the TMA/water precursor system. Even with the existing bodies of modeling research for these two systems, our approach to reaction kinetics modeling will reveal new insights into the rate-limiting processes of each deposition reaction network by quantifying the flux of ALD precursors and surface species through the nodes of an ALD reaction graph. References [1] Elliott, S. D., Semicond. Sci. Tech. 27, 1–10 (2012) [2] Holmqvist, A., T. Torndahl and S. Stenstrom, Chem. Eng. Sci. 81, 260–272 (2012) [3] Travis, C. D. and R. A. Adomaitis, Processes 1, 128–152 (2013) [4] Remmers, E., C. D. Travis, and R. A. Adomaitis, Chem. Eng. Sci., in press, (2015)",
+    "presenting_author": "Raymond A. Adomaitis | Department of Chemical & Biomolecular Engineering",
+    "authors": [
+      "David Arana-Chavez | Department of Chemical & Biomolecular Engineering"
+    ],
+    "authors_structured": [
+      {
+        "name": "Raymond A. Adomaitis",
+        "affiliation": "Department of Chemical & Biomolecular Engineering",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "David Arana-Chavez",
+        "affiliation": "Department of Chemical & Biomolecular Engineering",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper431958.html",
+    "topic": "Stochastic Nonlinear Model Predictive Control Applied to an Epitaxial Thin Film Growth Process Under Uncertainty",
+    "date_time": "Wednesday, November 11, 2015: 1:30 PM",
+    "abstract": "The design of a nonlinear Model Predictive Controller that regulates the performance of an epitaxial thin film growth process under distributional uncertainty is presented. The epitaxial deposition process has been modeled employing nonlinear partial differential equations (PDEs) coupled with lattice-based kinetic Monte Carlo (KMC) simulations, i.e. a multi-scale model. Since the KMC simulations are computationally prohibitive for online control applications, reduced order models (ROM) are developed in this work based on data-driven simulations of the multiscale system. The key innovative feature in the ROMs is that they explicitly account for distributional uncertainty in the multiscale system’s parameters. Power series expansions are employed in this work for uncertainty propagation. Therefore, the resulting ROMs quantify the key distributional characteristics in the controlled variables due to changes in the key manipulated variables, e.g. substrate temperature, and under distributional uncertainty in the parameters, e.g. the activation energy in the migration process occurring in the thin film’s surface. The ROMs have been validated using open-loop simulations of the multiscale process and have been embedded within a nonlinear model predictive control (NMPC) framework to predict estimates of the control actions that comply with the process control objectives at a user-defined probability of satisfaction, i.e. a stochastic NMPC. The shrinking horizon approach is adopted to minimize the roughness of the thin film while satisfying the constraints on the applied substrate temperature at each time interval and film thickness at the end of the deposition process (at a given probability of occurrence).",
+    "presenting_author": "Luis A. Ricardez-Sandoval | Chemical Engineering, University of Waterloo, Waterloo, ON, Canada",
+    "authors": [
+      "Shabnam Rasoulian | Chemical Engineering, University of Waterloo, Waterloo, ON, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shabnam Rasoulian",
+        "affiliation": "Chemical Engineering, University of Waterloo, Waterloo, ON, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Luis A. Ricardez-Sandoval",
+        "affiliation": "Chemical Engineering, University of Waterloo, Waterloo, ON, Canada",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425064.html",
+    "topic": "A MULTI-Objective Optimization Approach to Optimal Sensor Location Problem in IGCC POWER Plants",
+    "date_time": "Wednesday, November 11, 2015: 1:42 PM",
+    "abstract": "A MULTI-OBJECTIVE OPTIMIZATION APPROACH TO OPTIMAL SENSOR LOCATION PROBLEM IN IGCC POWER PLANTS ABSTRACT In order to operate an IGCC power plant in a safe and stable manner, many input and output process parameters need to be monitored. However, due to economic and operational constraints it is infeasible to place sensors at locations pertaining to all of these parameters. Hence, it becomes important to select the most effective sensor locations which can lead us to gain maximum information about the plant conditions. Drawing on the work done by “Lee & Diwekar”, this paper attempts to broaden the realm of the optimal sensor location problem to address simultaneous optimization of multiple objective functions. In addition to “Fisher Information”, two other objective functions, viz., “thermal efficiency of the power plant” and “cost”, will be considered. Practical issues present in an IGCC power plant such as harsh physical conditions and variability in process parameters make the optimal sensor location problem an especially complicated one. Advanced simulation software and data from a set of existent sensors are used to collect information about the output parameters which do not have any sensors to gauge them yet. In order to solve this real world large scale problem, we use a novel algorithm called Better Optimization of Nonlinear Uncertain Systems (BONUS). BONUS works in probability distribution space and avoids sampling for each optimization and derivative calculations iterations. A non-linear stochastic multi-objective problem has been solved to determine the non-dominated or Pareto set which contains different options for optimal sensor network locations that can simultaneously satisfy the three objective functions, (maximizing observability, minimizing cost and maximizing the IGCC power plant thermal efficiency).",
+    "presenting_author": "Urmila Diwekar | ",
+    "authors": [
+      "Pallabi Se | Industrial Engineering, University of Illinois at Chicago, Chicago, IL",
+      "Kinnar Se | Industrial Engineering, University of Illinois at Chicago, Chicago, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pallabi Se",
+        "affiliation": "Industrial Engineering, University of Illinois at Chicago, Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Kinnar Se",
+        "affiliation": "Industrial Engineering, University of Illinois at Chicago, Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Urmila Diwekar",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425468.html",
+    "topic": "On the Optimal Sizing and Dispatch Problem for Microgrids with Stochastic Generators � When Is the Expected-Cost Differentiable?",
+    "date_time": "Wednesday, November 11, 2015: 1:06 PM",
+    "abstract": "This presentation concerns the problem of jointly optimizing the component sizes and dispatching rules for microgrids incorporating intermittent renewable resources such and wind and solar. The stochasticity introduced by these renewable resources, and to a lesser extent by the loads, plays a central role in this problem. First, it is well known that sizing components (e.g., generators and storage units) based on average resource availabilities can lead to designs that are highly unreliable or suboptimal in reality. Moreover, dispatching decisions must be made under large uncertainties about the future demand and resource availabilities, despite the fact that the relative costs and benefits of the competing options may change radically across alternative futures. Thus, the optimization problem at hand involves complex trade-offs between cost and reliability arising from the interplay of both design and operational decisions over time. To capture these trade-offs, a number of detailed simulation models have recently been developed. A given design is typically evaluated through an hourly time-series simulation over the course of a year. Hourly load, irradiance, and wind speed data are supplied by the user or stochastically generated from monthly averages. In each hour, these data are used to compute the net available power and dispatch decisions are made, typically based on a fixed set of logical rules parameterized by user-defined thresholds. Finally, model equations are solved for each component to update the system state and evaluate performance over the hour. The high temporal resolution of these simulations makes it possible to incorporate accurate performance and operational cost models for the system components. Moreover, these simulations can be driven with randomized load and generation profiles to accurately evaluate the expected cost of a system, including both stochastic operational costs and reliability metrics. In light of the preceding discussion, the optimal microgrid sizing and dispatch problem can be formulated as a nonlinear program in which the objective is defined as the expected-value of randomized time-series simulations. In fact, this simulation-optimization formulation has been used extensively in conjunction with heuristic optimization algorithms that view the stochastic simulation as a black-box. However, in the interest of enabling more efficient optimization approaches, we consider here the important question of whether or not the expected-cost is a continuously differentiable function of the decision variables (i.e., the component sizes and parameters influencing the dispatching rules). We begin by formulating time-series microgrid simulations generically as discrete-time stochastic hybrid systems (DTSHS) with associated stage and terminal costs. Alarmingly, for any fixed realization of uncertainty, we find that discrete dispatching decisions can introduce discontinuities in the system cost at every time-step along the simulation horizon. This observation carries over to finite sample averages of the cost, so that formally optimizing such an average would require the introduction of very many binary variables (there is a relation to the conventional multistage stochastic programming formulation of the problem here). Remarkably, our findings show that the true expected-value of the cost function is nonetheless continuously differentiable under very general conditions, and hence is amenable to gradient-based optimization strategies. We provide sufficient conditions for continuous differentiability and demonstrate their verification for some representative microgrid models. We also highlight particular model features and dispatching strategies that may lead to violations. Finally, we present improved optimization results using a stochastic gradient-descent algorithm.",
+    "presenting_author": "Joseph Scott | Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+    "authors": [
+      "Alphonse Hakizimana | Chemical and Biomolecular Engineering, Clemson University, Clemson, SC"
+    ],
+    "authors_structured": [
+      {
+        "name": "Alphonse Hakizimana",
+        "affiliation": "Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Scott",
+        "affiliation": "Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper422920.html",
+    "topic": "Nonlinear Analysis of the Surface Morphological Evolution of Stressed Crystalline Materials and Heteroepitaxial Thin Films",
+    "date_time": "Wednesday, November 11, 2015: 12:50 PM",
+    "abstract": "Strained crystalline materials are found in many electronic and photonic devices, such as in integrated circuits in microelectronics, with strain resulting from the manufacturing processes, and in heteroepitaxial thin films, where strain is induced by the lattice mismatch between the film and the substrate. The resulting accumulation of elastic strain energy has a significant impact on the morphological stability of the material, triggering well-known instabilities. These include the Asaro-Tiller/Grinfeld (ATG) instability that causes surface cracking in stressed bulk materials and the Stranski-Krastanov (SK) instability that leads to formation of three-dimensional (3D) islands in heteroepitaxial films. Numerical simulations of the surface morphological evolution of uniaxially stressed elastic crystalline solids have demonstrated that, in addition to ATG (surface cracking) instabilities, long-wavelength perturbations from the planar surface morphology can trigger a tip-splitting instability that causes formation of a pattern of secondary ripples, which cannot be explained by linear stability theory. In this presentation, we develop a weakly nonlinear stability theory, which can explain the occurrence of such secondary rippling instabilities and predict the number of secondary ripples that form on the surface as a function of perturbation wavelength. The theory shows that this type of surface pattern formation arises entirely due to the competition between surface energy and elastic strain energy, regardless of surface diffusional anisotropy or the action of externally applied fields. The origin of secondary rippling is explained through nonlinear terms included in the analysis that generate sub-harmonic ripples in the surface morphology with wave numbers that are multiples of the original surface perturbation wave number. Based on the weakly nonlinear theory, we have derived simple analytical expressions that predict the critical wavelength for the onset of secondary rippling, the increase of the number of secondary ripples with increasing perturbation wavelength, and how the onset of the secondary rippling instability and the rippled surface pattern are affected by surface diffusional anisotropy and the action of an applied electric field. The conclusions of the theory are validated by systematic comparisons with results of self-consistent dynamical simulations of surface morphological evolution. Further quantitative analysis based on a wavelength selection nonlinear theory also will be presented. Following the same approach, we have carried out a weakly nonlinear analysis of the surface morphological evolution of a heteroepitaxial thin film on a substrate. We have found that in addition to the SK instability, long-wavelength perturbations also can trigger nonlinear secondary instabilities, resulting in the splitting of a single quantum dot (i.e., 3D island) into multiple quantum dots of smaller sizes. The theory also can predict the critical wavelength of the initial surface perturbation for the onset of the secondary nonlinear instability. A systematic protocol of self-consistent dynamical simulations based on a fully nonlinear continuum model of epitaxial film driven morphological evolution were conducted to assess the validity of the theoretical results. The theoretical predictions were found to be in good qualitative and quantitative agreement with the simulation results. Our study sets the stage for exploiting nonlinear surface phenomena toward engineering tunable-size nanoscale surface features.",
+    "presenting_author": "Lin Du | Department of Chemical Engineering, University of Massachusetts, Amherst, Amherst, MA",
+    "authors": [
+      "Dwaipayan Dasgupta | Department of Chemical Engineering, University of Massachusetts, Amherst, Amherst, MA",
+      "Dimitrios Maroudas | Department of Chemical Engineering, University of Massachusetts, Amherst, Amherst, MA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Lin Du",
+        "affiliation": "Department of Chemical Engineering, University of Massachusetts, Amherst, Amherst, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Dwaipayan Dasgupta",
+        "affiliation": "Department of Chemical Engineering, University of Massachusetts, Amherst, Amherst, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Dimitrios Maroudas",
+        "affiliation": "Department of Chemical Engineering, University of Massachusetts, Amherst, Amherst, MA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper429448.html",
+    "topic": "Development of a Multiscale Simulation Approach for Modeling Nanostructured Si-Based Anodes in Lithium Ion Batteries",
+    "date_time": "Wednesday, November 11, 2015: 1:50 PM",
+    "abstract": "Recently, significant interest has been focused on Lithium ion batteries containing silicon based anodes for their ability to lead to increased storage capacity due to the significant gain in Lithium uptake evidenced by the silicon anode in comparison to more traditional graphitic or carbon based anodes. However, the increased capacity seen in lithium insertion into amorphous silicon (a-Si) has a substantial drawback: The full insertion of lithium into the anode is accompanied by a roughly 300% volume increase of the anode material upon full lithiation, coupled with a substantial reduction in the mechanical properties of the lithiated silicon. As such, while the capacity of a-Si to accept lithium is prodigious, the stabilitiy of the silicon anode on repeated cycling remains problematic due to the evolution of high internal stresses from expansion coupled with the decrease in mechanical stability as the silicon bonding network is disrupted by lithium insertion and bonding. Since the chemical process of lithium insertion is fundamental to the destabilization of the silicon anode mechanical properties, avenues apart from chemical modification of the anode material have been investigated in order to improve the cyclability and performance of the silicon anode. Some success has been seen by reinforcing the silicon phase with external coatings, or changing the physical size and shape of the silicon composing the anode phase to allow for more even lithium penetration. While such techniques are evocative of potential avenues for increasing the mechanical stability while preserving the viability of lithium storage in amorphous silicon anodes, they are not prescriptive. In order to try to enable rational design of electrodes, we have therefore embarked on an effort to develop a robust computational multi-scale model of the Li/a-Si composite system which will allow for a phenomenological understanding of the stress evolution and failure of these systems, and which may therefore serve as a basis for establishing design parameters to promote more reliable future anode designs. This talk will focus on our efforts to build a dynamically launched, computational framework to support the necessary elements of multi-scale modeling of the Li/a-Si anode evolution upon charge/discharge cycles. While the context is the specific sets of models and equations which allow for the calculation of this particular system, we have developed a generic framework for such multi-scale approaches which allows us to couple microscopic sensitivity (in the guise of the changing mobility of the Lithium within the partially lithiated a-Si at arbitrary stress state) with macroscopic response (via a chemo-reactive material-point method (MPM) simulation) by enacting dynamic and on-demand calculation of the key elements of the MPM constitutive equations via atomistic molecular dynamics and ab initio simulations. We will discuss the construction of this framework, the necessary assumptions and relations that must hold true in order to allow for this coupling, and the statistical techniques (based upon uncertainty quantification) used to guide the launch of the on-demand sub-grid calculations, which modify the MPM material response. By providing a concrete demonstration of our multi-scale approach, we will also demonstrate the generic sets of constraints under which it is possible to enact clean transition between differing simulation scales, in order to help to begin to establish the capability for consistently tying dynamic multiple scale simulations into a cohesive overall material model which may span multiple time/length scales and dynamic processes seamlessly.",
+    "presenting_author": "Justin B. Hooper | Materials Science and Engineering, University of Utah, Salt Lake City, UT",
+    "authors": [
+      "Dmitry Bedrov | Materials Science and Engineering, University of Utah, Salt Lake City, UT",
+      "Chris Gritto | School of Computing, University of Utah, Salt Lake City, UT",
+      "Yanyan He | School of Computing, University of Utah, Salt Lake City, UT",
+      "Martin Berzins | School of Computing, University of Utah, Salt Lake City, UT",
+      "Robert M. Kirby II | Department of Computer Science and the Scientific Computing & Imaging Institute, University of Utah, Salt Lake City, UT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Justin B. Hooper",
+        "affiliation": "Materials Science and Engineering, University of Utah, Salt Lake City, UT",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Dmitry Bedrov",
+        "affiliation": "Materials Science and Engineering, University of Utah, Salt Lake City, UT",
+        "designation": "Author"
+      },
+      {
+        "name": "Chris Gritto",
+        "affiliation": "School of Computing, University of Utah, Salt Lake City, UT",
+        "designation": "Author"
+      },
+      {
+        "name": "Yanyan He",
+        "affiliation": "School of Computing, University of Utah, Salt Lake City, UT",
+        "designation": "Author"
+      },
+      {
+        "name": "Martin Berzins",
+        "affiliation": "School of Computing, University of Utah, Salt Lake City, UT",
+        "designation": "Author"
+      },
+      {
+        "name": "Robert M. Kirby II",
+        "affiliation": "Department of Computer Science and the Scientific Computing & Imaging Institute, University of Utah, Salt Lake City, UT",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper432717.html",
+    "topic": "Model Predictive Control of Integrated Gasification Combined Cycle Power Plants with Membrane Reactors for Carbon Capture",
+    "date_time": "Wednesday, November 11, 2015: 1:24 PM",
+    "abstract": "In recent years, facing the challenge of global climate change, technologies of power plants with carbon capture have been studied worldwide. Integrated gasification combined cycle (IGCC) plants, which have potential for higher efficiencies than the conventional pulverized coal-fired power plants [1], are an emerging candidate for carbon capture. In this work, we analyze the implementation of model predictive control (MPC) strategies for an IGCC power plant equipped with a water gas shift membrane reactor (WGS-MR) unit for carbon capture. A model for this IGCC power plant represented by a system of differential algebraic equations was previously developed in MATLAB/Octave [2]. Using this model, two centralized control strategies based on linear and nonlinear MPC algorithms are presented to address different power generation scenarios. The linear MPC control strategy is based on a dynamic matrix control (DMC) method. For this method, a multiple-input multiple-output step response matrix is obtained employing step tests in the IGCC plant. The nonlinear MPC control strategy, NLMPC [2, 3], is based on the conversion of the differential algebraic equation system into a large-scale nonlinear programming (NLP) problem, which is solved using IPOPT, an efficient interior point-based large-scale nonlinear optimization algorithm. In the proposed multivariate control strategies, the following variables are considered as controlled output variables (CVs): carbon capture rate, power generation, temperature of cooled syngas stream, temperature of cooled permeate stream, steam to CO ratio at the WGS-MR inlet and hydrogen purity in the permeate stream. Also, the selected manipulated variables (MVs) are: water flow rates for syngas and permeate cooling, steam injection flow to syngas for the facilitation of the WGS reaction, total coal/water slurry, oxygen enriched air flow for the gasifier, sweep flow for the WGS-MR and air flow for the gas turbine. A number of control scenarios for the IGCC power plant are addressed. These scenarios include: (i) setpoint tracking associated with a power generation demand change, in which the IGCC power plant demand imposes a step increase from its original power generation steady point; (ii) disturbance rejection related to the variability in the quality of the coal feed. In this case, the power generation should be kept at the setpoint while the carbon content in the coal/slurry is reduced; and (iii) a combination of both setpoint tracking and disturbance rejection cases. In this presentation, results on the closed-loop responses for these different scenarios will be analyzed and compared considering the advanced linear and nonlinear MPC control strategies. References [1] Lima, F. V. P. Daoutidis, M. Tsapatsis, and J. J. Marano. Modeling and optimization of membrane reactors for carbon capture in Integrated Gasification Combined Cycle units. Ind. Eng. Chem. Res., 51(15):5480–5489, 2012. [2] Lima, F. V., R. Amrit, M. Tsapatsis, and P. Daoutidis. Nonlinear model predictive control of IGCC plants with membrane reactors for carbon capture. In Proceedings of the American Control Conference. Washington, DC, June 17-19 2013. [3] R. Amrit, J. B. Rawlings, and L. T. Biegler. Optimizing process economics online using model predictive control. Computers and Chemical Engineering, 58:334-343, 2013.",
+    "presenting_author": "Fernando V. Lima | Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+    "authors": [
+      "Xin He | Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+      "Rishi Amrit | Westhollow Technology Center, Shell Global Solutions (US) Inc., Houston, TX",
+      "Richard Turto | Department of Chemical Engineering, West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Xin He",
+        "affiliation": "Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Rishi Amrit",
+        "affiliation": "Westhollow Technology Center, Shell Global Solutions (US) Inc., Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Richard Turto",
+        "affiliation": "Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Fernando V. Lima",
+        "affiliation": "Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper434902.html",
+    "topic": "Smart Grid Coordination of an IGCC Plant: Comparison of Multi-Stage Stochastic Programming and Empc",
+    "date_time": "Wednesday, November 11, 2015: 2:00 PM",
+    "abstract": "The Integrated Gasification Combined Cycle (IGCC) possesses a number of benefits over traditional power generation plants, ranging from increased energy conversion efficiency to flex-fuel and carbon capture opportunities. A less known benefit of the IGCC configuration is the ability to load track electricity market prices. The idea being that material storage can be used to time-shift power production away from periods of low power value to periods of high power value. Due to the uncertainty of electricity prices, the problem of sizing material storage units within the process must be formulated as a stochastic program. However, rather than being a fairly simple two-stage stochastic program, the dynamics imposed by the storage devices requires the formulation to be of the far more challenging multistage class. Due to the computationally intense nature of multistage stochastic programming, many have advocated the use of Economic MPC. The objective of this work is to provide a head-to-head comparison of feedback policies generated from multi-stage stochastic programming and EMPC. This comparison of policies provides a validation of EMPC based equipment design procedures.",
+    "presenting_author": "Jin Zhang | Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+    "authors": [
+      "Donald J. Chmielewski | Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jin Zhang",
+        "affiliation": "Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Donald J. Chmielewski",
+        "affiliation": "Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425418.html",
+    "topic": "Optimal Scheduling of Demand Responsive Industrial Production with Hybrid Renewable Energy Systems",
+    "date_time": "Wednesday, November 11, 2015: 12:30 PM",
+    "abstract": "The operational scheduling problem, including the management of energy demand and utilization associated with production processes, has received significant attention over the last decade, especially in light of the increased penetration levels of renewable and smart grid technologies, along with the adoption of time-varying electricity pricing policies. While the benefits of integrating renewable generation into the existing energy infrastructure have been widely recognized, the resulting time variations in energy flows between generation and consumption may significantly influence the cost of electricity. Taking the varying energy costs into account over a future time horizon in the production scheduling phase has already been shown to be technically feasible and economically plausible in a number of previous studies (e.g., see [1-3]). One of the merging trends aimed at achieving optimal economic performance is the smart scheduling between the power grid and the consumers. A two-way communication scheme is envisioned in the future smart grid. A major focus from the power system research side is on the multi-agent communication and scheduling of electricity generation [4]. However, the demand side should also take an active role in optimizing the grid operations and end-user economic performance, especially when renewable energy generation systems are incorporated and selling excess power back to the grid is allowed to gain benefits. This paper presents a methodology to apply real-time optimization and game theory techniques to the problem of optimally scheduling and managing the interaction between electricity providers and consumers so that the grid and loads can come to an agreement to achieve optimal economic performance. The energy flows in a typical energy-intensive industrial process, such as the chlor-alkali production, are simulated to conduct day-ahead scheduling and real-time demand response behaviors, while the smart grid allows for buying or selling electricity. The chlor-alkali production plant also combines photovoltaic/thermal hybrid solar systems, wind energy conversion systems and fuel cells, focusing on the supply and recovery of power, heat and materials. A communication and incentive scheme is first proposed for the complete energy scheduling process. The trade-off between following the contracted electricity profiles and paying penalties for any deviations from the contract to ensure maximum real-time profits is analyzed. Energy management strategies are then developed to realize the objectives of meeting production requirements while minimizing the overall operating costs and environmental impact. Production demand response to maximize profits is also integrated into the proposed methodology. Finally, it is demonstrated that load contracting can bring benefits such as reduced uncertainties to the grid as well. References: [1] K. Nolde and M. Morari, “Electrical load tracking scheduling of a steel plant,” Computers & Chemical Engineering , vol. 34, no. 11, pp. 1899–1903, 2010. [2] X. Wang, H. Teichgraeber, A. Palazoglu, and N. H. El-Farra, “An economic receding horizon optimization approach for energy management in the chlor-alkali process with hybrid renewable energy generation,” Journal of Process Control , vol. 24, no. 8, pp. 1318–1327, 2014. [3] S. Mitra, I. E. Grossmann, J. M. Pinto, and N. Arora, “Optimal production planning under time-sensitive electricity prices for continuous power-intensive processes,” Computers & Chemical Engineering , vol. 38, pp. 171–184, 2012. [4] W. Saad, Z. Han, H. V. Poor, and T. Basar, “Game-theoretic methods for the smart grid: An overview of microgrid systems, demand-side management, and smart grid communications,” Signal Processing Magazine, IEEE , vol. 29, no. 5, pp. 86–105, 2012.",
+    "presenting_author": "Xiaonan Wang | Chemical Engineering and Materials Science, UC Davis, Davis, CA, Ahmet Palazoglu, Chemical Engineering & Materials Science, UC Davis, Davis, CA",
+    "authors": [
+      "Nael H. El-Farra | Department of Chemical Engineering & Materials Science, University of California, Davis, Davis, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Xiaonan Wang",
+        "affiliation": "Chemical Engineering and Materials Science, UC Davis, Davis, CA, Ahmet Palazoglu, Chemical Engineering & Materials Science, UC Davis, Davis, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nael H. El-Farra",
+        "affiliation": "Department of Chemical Engineering & Materials Science, University of California, Davis, Davis, CA",
+        "designation": "Author"
+      }
+    ]
+  }
+]

@@ -1,0 +1,425 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648600",
+    "paper_endpoint": "Paper/648600",
+    "paper_id": "648600",
+    "topic": "Multiscale Optimization of Integrated Energy Systems Using Machine Learning Models for Market Interactions",
+    "title": "Multiscale Optimization of Integrated Energy Systems Using Machine Learning Models for Market Interactions",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "49228",
+    "session_title": "Process Design in Energy and Sustainability: towards a net zero carbon economy",
+    "session_number": "485",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Achieving deep decarbonization of the power sector requires large-scale adoption of renewable energy sources. New sources of flexibility from both consumers (demand) and generators (supply) are critical to offsetting the variability for non-dispatchable renewable sources and maintaining the continuous balance of the electric grid. Integrated Energy Systems (IES) [1] can provide this flexibility by synchronizing material and energy flows to produce multiple valuable products such as electricity, heat, steam, or chemicals in hybrid configurations, ultimately enabling greater new renewable integration, more curtailment of emissions, and reductions in grid operating costs [2]. A key advantage afforded by IES flexibility is the means to participate in electricity markets by offering energy and regulation services. Because an IES can dynamically apportion its energy output (e.g., using thermal and/or electrical storage), it can provide responsive generation to grid operators and help to improve grid reliability [3]. Consequently, the design and optimization of an IES must consider both the technical performance of the energy system and its economic viability within dynamic energy markets. Fundamental challenges toward the development of an IES include accounting for multiple energy market time scales (e.g. real-time, day-ahead, and long-term capacity markets) [4], and exogenous uncertainty that arises due to decisions as a market participant that affect the entire system. The effects of exogenous uncertainty can be particularly important to capture. For instance, an IES design decision like the size of storage will impact how it bids into the market (e.g., ramping rate), which impacts both (1) the market revenues of the entire system and (2) how the IES is asked to respond from the system operator. Market prices are also often set by the marginal resource, i.e., the resource with the highest cost out of those that are dispatched. As a result, slight perturbations in the parameters of an IES that is marginal (such as generation) can induce large fluctuations in the market, both for the IES and its neighbors. Accepted modeling approaches typically use \"price-taker\" assumptions [5] that do not capture the exogenous uncertainty inherent to designing new generation systems, which necessitates the development of new optimization formulations. In this talk, we propose novel computational approaches to co-optimize the design and operation of IES while explicitly capturing market interactions (i.e., exogenous uncertainty). We start by conducting over 64,000 annual simulations of the RTS-GMLC system while varying the characteristics of a single generator using the open-source Prescient cost production model [6-8]. Here, each simulation corresponds to replacing a single generator in the network with a hypothetical IES. Sensitivity analysis [9,10] confirms that generator parameters such as the marginal production and startup costs are most influential on market outcomes. From this large simulation library, we develop algebraic [11] and neural network surrogate models to predict the impact of these generator characteristics, i.e., market inputs, on market outcomes including generator revenue and the dispatch profile. We then formulate mixed-integer and/or nonlinear two-stage stochastic programs to co-optimize the design (e.g., sizing of components, stage 1 decisions) and operations (e.g., power generation profile, stage 2 decisions) of an IES. Prescient simulations of the optimized IES design are used to compare the predicted versus actual market outcomes such as revenue and capacity factors. Using simple IES examples, we show how our proposed surrogate approach outperforms the de facto standard price taker approach which ignores market interactions. We also discuss extensions to multi-period problems with dynamic surrogates. We conclude by highlighting the importance of incorporating complex IES/market interactions, especially when considering future scenarios such as deep carbonization where energy infrastructure is more tightly coupled. References: [1] M. O. Malley et al., “Energy Systems Integration : Defining and Describing the Value Proposition”, 2016 [2] D. Arent et al., \"Multi-input, Multi-output Hybrid Energy Systems,\" Joule, 2021 [3] A. W. Dowling and V. M. Zavala, “Economic opportunities for industrial systems from frequency regulation markets,” Computers and Chemical Engineering, 2018 [4] F. Sorourifar, V. M. Zavala, and A. W. Dowling, “Integrated Multiscale Design , Market Participation , and Replacement Strategies for Battery Energy Storage Systems,” IEEE Transactions on Sustainable Energy, 2020 [5] A. W. Dowling, R. Kumar, and V. M. Zavala, “A multi-scale optimization framework for electricity market participation,” Applied Energy, 2016 [6] B. Knueven, J. Ostrowski, J. P. Watson, \"On Mixed-Integer Programming Formulations for the Unit Commitment Problem\", INFORMS Journal on Computing, 2020 [7] J. P. Watson, B. Knueven, R. Concepcion, D. Melander, A. Short, P. Zhang, D. Woodruff, Prescient, Computer software, Available: https://github.com/grid-parity-exchange/Prescient [8] C. Barrows et al., “The IEEE Reliability Test System: A Proposed 2019 Update,” IEEE Transactions on Power Systems, 2020 [9] E. Plischke, E. Borgonovo, and C. L. Smith, “Global sensitivity measures from given data,” European Journal of Operational Research, 2013 [10] A. Saltelli, P. Annoni, I. Azzini, F. Campolongo, M. Ratto, and S. Tarantola, “Variance based sensitivity analysis of model output . Design and estimator for the total sensitivity index,” Computer Physics Communications, 2010 [11] A. Cozad, N. V Sahinidis, and D. C. Miller, “Learning Surrogate Models for Simulation-Based Optimization,” AIChE Journal, 2014 Acknowledgments: This work was conducted as part of the Design Integration and Synthesis Platform to Advance Tightly Coupled Hybrid Energy Systems (DISPATCHES) project through the Grid Modernization Lab Consortium with funding from the U.S. Department of Energy’s Office of Fossil Energy and Carbon Management, Office of Nuclear Energy, and Hydrogen and Fuel Cell Technology Office. Additional work was conducted as part of the Institute for the Design of Advanced Energy Systems (IDAES) with support through the Simulation-Based Engineering, Crosscutting Research Program within the U.S. Department of Energy’s Office of Fossil Energy and Carbon Management. Additional work was conducted in part by appointments to the U.S. Department of Energy (DOE) Postgraduate and Faculty Research Programs at the National Energy Technology Laboratory administered by the Oak Ridge Institute for Science and Education (ORISE). This work was authored in part by the National Renewable Energy Laboratory, operated by Alliance for Sustainable Energy, LLC, for the U.S. Department of Energy (DOE) under Contract No. DE-AC36-08GO28308. Sandia National Laboratories is a multimission laboratory managed and operated by National Technology and Engineering Solutions of Sandia, LLC., a wholly owned subsidiary of Honeywell International, Inc., for the U.S. Department of Energy's National Nuclear Security Administration under contract DE-NA-0003525. This work describes objective technical results and analysis. Any subjective views or opinions that might be expressed in the paper do not necessarily represent the views of the U.S. Department of Energy or the United States Government. This work was prepared as an account of work sponsored by an agency of the United States Government. Neither the United States Government nor any agency thereof, nor any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof.",
+    "presenting_author": "Jaffer Ghouse | NETL Support Contractor, Pittsburgh, PA",
+    "authors": [
+      "Jaffer Ghouse | NETL Support Contractor, Pittsburgh, PA",
+      "Jordan Jalving | Sandia National Laboratories (former), Albuquerque, NM",
+      "Bernard Knueven | National Renewable Energy Laboratory, Golden, CO",
+      "Xian Gao | University of Notre Dame, IN",
+      "Xinhe Chen | University of Notre Dame, IN",
+      "Damian Agi | University of Notre Dame, IN",
+      "Nicole Cortes | University of Notre Dame, IN",
+      "John Siirola | Sandia National Laboratories, Albuquerque, NM",
+      "David Miller | National Energy Technology Laboratory, Pittsburgh, PA",
+      "Alexander Dowling | University of Notre Dame, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jaffer Ghouse",
+        "affiliation": "NETL Support Contractor, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jordan Jalving",
+        "affiliation": "Sandia National Laboratories (former), Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Bernard Knueven",
+        "affiliation": "National Renewable Energy Laboratory, Golden, CO",
+        "designation": "Author"
+      },
+      {
+        "name": "Xian Gao",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Xinhe Chen",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Damian Agi",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Nicole Cortes",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "John Siirola",
+        "affiliation": "Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "David Miller",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Alexander Dowling",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "485a",
+    "sortable_time": "2022-11-16_12:30:00_12:47:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648600"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649652",
+    "paper_endpoint": "Paper/649652",
+    "paper_id": "649652",
+    "topic": "An Operational Optimization Approach for Supply Network Decarbonization for Energy-Chemical Co-Production",
+    "title": "An Operational Optimization Approach for Supply Network Decarbonization for Energy-Chemical Co-Production",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "49228",
+    "session_title": "Process Design in Energy and Sustainability: towards a net zero carbon economy",
+    "session_number": "485",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Motivated by the ambitious goal of net-zero economy by 2050, there has been burgeoning interest from the chemical and energy sectors string for the development of clean energy solutions using renewable energy sources, green production routes, carbon capture and utilization techniques, etc. [1-2]. Extensive efforts have also made by the process systems engineering to quantitatively identify a long-term strategic energy transition pathway via the advanced process optimization and multi-scale synthesis approaches [3-5]. However, the resulting solutions typically require future breakthrough advances in the cost-competitiveness of energy storage devices and carbon neutral technologies (e.g., water electrolysis, direct carbon conversion) for commercial scale production. Innovative process design and operation strategies leveraging current process infrastructure are in dire need to start paving the way from fossil fuel to zero-carbon. In this work, we propose an operational optimization approach for multi-product scheduling in response to grid and renewable energy source intermittency. Particularly, we are interested in a co-production plant for hydrogen and methanol, two of the most important energy carriers and fundamental chemicals but challenged by very high energy and carbon intensity in the current industrial practices [6-7]. Multiple process routes are considered synergizing green and blue production, such as water electrolysis, direct carbon hydrogenation, natural gas steam reforming with carbon capture, etc. This also enables to take advantage of the different energy intensity of each route towards optimal and flexible operation in response to power grid peak demand, energy price, and renewable energy intermittency. The statistics on electricity, solar, and wind power are collected from the national or state-wise databases such as EIA, ERCOT, and NREL. A multi-period process synthesis and scheduling model using mixed-integer linear programming formulation is developed to optimize the co-production schedule. The dynamic hydrogen-methanol production routes and product distribution at each time of a day or week are determined using tailored data-driven algorithms to solve the resulting large scale optimization model with temporal considerations. The proposed approach is demonstrated to achieve: (i) evolutionary penetration of carbon-neutral technologies in combination with existing processes, (ii) improvements in both cost and sustainability metrics. References [1] World Resource Institute and World Business Council for Sustainable Development. Greenhouse Gas Protocol. https://ghgprotocol.org/about-wri-wbcsd [2] U.S. Department of Energy. Hydrogen Program Plan. 2020. https://www.hydrogen.energy.gov/ [3] Kakodkar, R., He, G., Demirhan, C. D., Arbabzadeh, M., Baratsas, S. G., Avraamidou, S., Mallapragada, D., Miller, I., Allen, R. C., Gençer, E. & Pistikopoulos, E. N. (2022). A review of analytical and optimization methodologies for transitions in multi-scale energy systems. Renewable and Sustainable Energy Reviews, 160, 112277. [4] Allman, A., Palys, M. J., & Daoutidis, P. (2019). Scheduling‐informed optimal design of systems with time‐varying operation: A wind‐powered ammonia case study. AIChE Journal, 65(7), e16434. [5] Potrč, S., Čuček, L., Martin, M., & Kravanja, Z. (2021). Sustainable renewable energy supply networks optimization–The gradual transition to a renewable energy system within the European Union by 2050. Renewable and Sustainable Energy Reviews, 146, 111186. [6] Harris, K., Grim, R. G., & Tao, Ling. National Renewable Energy Laboratory. A Comparative Techno-Economic Analysis of Renewable Methanol Synthesis Pathways from Biomass and CO2. 2021. [7] Soltanieh, M., Azar, K. M., & Saber, M. (2012). Development of a zero emission integrated system for co-production of electricity and methanol through renewable hydrogen and CO2 capture. International Journal of Greenhouse Gas Control, 7, 145-152.",
+    "presenting_author": "Yuhe Tian | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Yuhe Tian | West Virginia University, Morgantown, WV",
+      "Benjamin Akoh | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yuhe Tian",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Benjamin Akoh",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "485b",
+    "sortable_time": "2022-11-16_12:47:00_13:04:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649652"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647824",
+    "paper_endpoint": "Paper/647824",
+    "paper_id": "647824",
+    "topic": "Modeling the Mobility Transition - a Multi-Scale Approach",
+    "title": "Modeling the Mobility Transition - a Multi-Scale Approach",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "49228",
+    "session_title": "Process Design in Energy and Sustainability: towards a net zero carbon economy",
+    "session_number": "485",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Data-driven decision making is important towards promoting a systemic transition towards net- carbon neutrality by 2050 [1]. There is a recognized need to synchronize long term infrastructure planning with scheduling decisions subject to variations at shorter temporal scales [2, 3], viz. 1) intermittent renewable availability and 2) resource price fluctuations. This is especially relevant in the context of integrating: 1) renewable power generation, 2) the production and supply of energy vectors, 3) carbon capture utilization and sequestration (CCUS). Moreover, typically long planning horizons mandate careful consideration of invested capital and existing infrastructure, as also the evolution of technology, and the associated costs of deployment. The multi-scale energy systems framework considers the evolution of technology costs under differ ent levels of promotion through research and targeted policies based on their current technology readiness levels (TRLs). The utilization of infrastructure materials and their associated global warming potential (GWP) is also considered. Furthermore, the framework posits how proposed policies such as carbon credits for CCUS initiatives could manifest over a protracted timescale. Nevertheless, extensive mathematical programming frameworks can be computationally challenging to resolve. To this end, scenario reduction, model decomposition strategies, and surrogate modeling of nonlinear processes is implemented to ensure computational tractability at an acceptable loss of solution fidelity. The implementation of the mixed integer linear programming (MILP) framework is illustrated through computational case studies wherein the role of Texas’ ample renewable feedstock, and mature chemical production and supply infrastructure in promoting a cost conscious mobility tran sition is evaluated. This includes the potential to supplement the energy demands in key domestic (California, New York) as well as distant (Japan, EU) economies through a multiplicity of energy vectors such as hydrogen, methanol, and electricity, and transportation modes not limited to ship- ping, rail, and electricity grids. Additionally, the market for performance materials to realize the ancillary infrastructure, and the role of extant oil and gas infrastructure is assessed. The trade-offs between different technology pathways, sensitivity to resource price fluctuations, and contributions to system expenditure are also elucidated upon. References [1] R. Kakodkar, G. He, C. Demirhan, M. Arbabzadeh, S. Baratsas, S. Avraamidou, D. Mallapra- gada, I. Miller, R. Allen, E. Gen ̧ cer, et al. , “A review of analytical and optimization methodolo- gies for transitions in multi-scale energy systems,” Renewable and Sustainable Energy Reviews , vol. 160, p. 112277, 2022. [2] R. C. Allen, S. G. Baratsas, R. Kakodkar, S. Avraamidou, J. B. Powell, C. F. Heuberger, C. D. Demirhan, and E. N. Pistikopoulos, “An optimization framework for solving integrated planning and scheduling problems for dense energy carriers,” IFAC-PapersOnLine , vol. 54, no. 3, pp. 621–626, 2021. [3] R. C. Allen, S. G. Baratsas, R. Kakodkar, S. Avraamidou, C. D. Demirhan, C. F. Heuberger- Austin, M. Klokkenburg, and E. N. Pistikopoulos, “A multi-period integrated planning and scheduling approach for developing energy systems,” Optimal Control Applications and Methods , 2022.",
+    "presenting_author": "Rahul Kakodkar | Texas A&M University, College Station, TX",
+    "authors": [
+      "Rahul Kakodkar | Texas A&M University, College Station, TX",
+      "Swaminathan Sundar | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+      "Funda Iseri | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+      "Efstratios Pistikopoulos | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rahul Kakodkar",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Swaminathan Sundar",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Funda Iseri",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Efstratios Pistikopoulos",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "485c",
+    "sortable_time": "2022-11-16_13:04:00_13:21:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647824"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643746",
+    "paper_endpoint": "Paper/643746",
+    "paper_id": "643746",
+    "topic": "Evaluating Impacts of Carbon Taxes on the Economic Viability and Carbon Footprint of Plastic Production Pathways",
+    "title": "Evaluating Impacts of Carbon Taxes on the Economic Viability and Carbon Footprint of Plastic Production Pathways",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "49228",
+    "session_title": "Process Design in Energy and Sustainability: towards a net zero carbon economy",
+    "session_number": "485",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Plastics are indispensable in modern society due to their exceptional functional properties of lightweight, good durability, and inexpensive production cost. Global production for plastics has reached 380 Mt in 2015, with a compound annual growth rate of 8.4% [1]. Most plastics used in our daily life are manufactured from fossil fuels, including petroleum, coal, and natural gas. For example, polyethylene (PE) is made from ethylene, which is produced from steam cracking of petroleum naphtha [2]. However, the reliance on the non-renewable fossil fuels will cause the problems of resource depletion [3]. Moreover, the use of fossil fuels will result in substantial greenhouse gas (GHG) emissions [4]. Therefore, several new production methods using renewable resources have been proposed to avoid the usage of fossil fuels [5–7]. A promising strategy to achieve more sustainable plastic production is to use biomass as feedstock, since this feedstock is renewable and can absorb carbon dioxide from the atmosphere [8]. Recently, researchers have successfully converted various biomass feedstocks to petrochemicals for further polymer processing [9–11]. For instance, Machado et al. demonstrated the process of propylene production from sugarcane [12]. However, most bio-based products are still not economically feasible nowadays. To address this problem, it is necessary to advance technologies for biomass conversion to increase product yields, which can make the production costs lower. Nevertheless, this requires significant time and effort and cannot be achieved over a short period of time. Another approach is to incentivize bio-based products through government regulations, such as imposing carbon taxes. In this work, we propose an optimization formulation for determining optimal production pathways for various plastics from either fossil or biomass feedstocks. This problem is formulated as a network flow problem, where the total production cost is minimized. The nodes consist of raw materials, intermediates, products, and technologies. When materials are used as raw materials or processed in technologies, there are the associated costs and CO 2 emissions. Our objective is to find out the production schedule with minimized total cost while satisfying the global demands for various plastics. At the same time, the total CO 2 emission is calculated. We started with the analysis without the carbon tax imposed in the system as the base case scenario. In this scenario, most products are produced from fossil fuels in the optimized schedule. In addition, the contribution for CO 2 emission from each plastic is calculated, and the most CO 2 intensive product and intermediate are determined. Next step, we considered the imposition of carbon tax in the system. As a carbon tax is imposed, the feedstock of some plastics changes to biomass under the optimized production schedule, and the total CO 2 emission decreases. Then, we increased the carbon tax to different levels and solved the optimization problem at the level. When the carbon tax increases to a certain level, carbon neutrality can be achieved. In other words, the net CO 2 emission is zero under the optimized production schedule at the carbon tax rate. Since governments around the world are committed to achieve carbon neutrality by 2050 in order to attain the goals of the Paris Agreement, this work can be a preliminary guideline for policymakers to determine the carbon pricing system in their countries to combat global warming problem. References [1] R. Geyer, J.R. Jambeck, K.L. Law, Production, use, and fate of all plastics ever made, Science Advances. 3 (2017). [2] S. Ronca, Polyethylene, Brydson’s Plastics Materials: Eighth Edition. (2017) 247–278. [3] M. Höök, X. Tang, Depletion of fossil fuels and anthropogenic climate change—A review, Energy Policy. 52 (2013) 797–809. [4] J. Edmonds, J. Reilly, A long-term global energy- economic model of carbon dioxide release from fossil fuel use, Energy Economics. 5 (1983). [5] B. Triyono, P. Prawisudha, M. Aziz, Mardiyati, A.D. Pasek, K. Yoshikawa, Utilization of mixed organic-plastic municipal solid waste as renewable solid fuel employing wet torrefaction, Waste Management. 95 (2019). [6] H. Kobayashi, H. Ohta, A. Fukuoka, Conversion of lignocellulose into renewable chemicals by heterogeneous catalysis, Catalysis Science and Technology. 2 (2012). [7] U. Qasim, A.I. Osman, A.H. Al-Muhtaseb, C. Farrell, M. Al-Abri, M. Ali, D.V.N. Vo, F. Jamil, D.W. Rooney, Renewable cellulosic nanocomposites for food packaging to avoid fossil fuel plastic pollution: a review, Environmental Chemistry Letters 2020 19:1. 19 (2020) 613–641. [8] J. Kemper, Biomass and carbon dioxide capture and storage: A review, International Journal of Greenhouse Gas Control. 40 (2015). [9] M.J. Gilkey, A. v. Mironenko, D.G. Vlachos, B. Xu, Adipic acid production via metal-free selective hydrogenolysis of biomass-derived tetrahydrofuran-2,5-dicarboxylic acid, ACS Catalysis. 7 (2017). [10] P. Ghorbannezhad, M.D. Firouzabadi, A. Ghasemian, P.J. de Wild, H.J. Heeres, Sugarcane bagasse ex-situ catalytic fast pyrolysis for the production of Benzene, Toluene and Xylenes (BTX), Journal of Analytical and Applied Pyrolysis. 131 (2018). [11] J. van Haveren, E.L. Scott, J. Sanders, Bulk chemicals from biomass, Biofuels, Bioproducts and Biorefining. 2 (2008). [12] P.G. Machado, A. Walter, M. Cunha, Bio-based propylene production in a sugarcane biorefinery: A techno-economic evaluation for Brazilian conditions, Biofuels, Bioproducts and Biorefining. 10 (2016).",
+    "presenting_author": "Bo-Xun Wang | University of Wisconsin-Madison",
+    "authors": [
+      "Bo-Xun Wang | University of Wisconsin-Madison",
+      "Victor Zavala | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bo-Xun Wang",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Victor Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "485d",
+    "sortable_time": "2022-11-16_13:21:00_13:38:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643746"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648259",
+    "paper_endpoint": "Paper/648259",
+    "paper_id": "648259",
+    "topic": "Optimization of Biomass to Fuels with Carbon Capture: Economic and Environmental Analysis",
+    "title": "Optimization of Biomass to Fuels with Carbon Capture: Economic and Environmental Analysis",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "49228",
+    "session_title": "Process Design in Energy and Sustainability: towards a net zero carbon economy",
+    "session_number": "485",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Bioenergy with carbon capture and sequestration (BECCS) combines fuel production with permanent carbon dioxide (CO 2 ) removal, and features prominently in many pathways identified that limit global warming to 1.5°C. BECCS involves converting biomass to a wide range of fuels, including ethanol, gasoline, diesel, electricity, or hydrogen. Depending on the pathway selected, a different number of point sources of CO 2 streams with different relative flows, pressures, and CO 2 concentrations may be present at the biorefinery. For example, a biorefinery that uses fermentation to convert lignocellulosic biomass to ethanol emits CO 2 in three different sources: in off-gas from fermentation, in biogas from wastewater treatment, and in flue gas from solid residue combustion. We develop and use a mixed-integer nonlinear programming (MINLP) model to determine the combination of conversion technology, fuel type, and amount of carbon capture that result in the lowest breakeven cost of fuel production. We solve thousands of optimization problems with varying parameter values to investigate the impact of CO 2 sequestration credit, biorefinery capacity, and energetic self-sufficiency on the economic and environmental performance of pioneer and n th plant biorefineries producing liquid fuels and capturing carbon. We then compare traditional liquid fuels to electricity and hydrogen, and find that biomass to electricity or hydrogen is economically preferred when costs are normalized to forward motion in vehicles, and environmentally preferred because there is the potential to capture more carbon at the biorefinery because there is no carbon in the fuel product. Finally, we examine how the greenhouse gas mitigation from a biorefinery producing electricity or hydrogen would be affected by temporal changes in the production mix of electricity and hydrogen.",
+    "presenting_author": "Caleb Geissler | Princeton University, NJ",
+    "authors": [
+      "Caleb Geissler | Princeton University, NJ",
+      "Christos Maravelias | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Caleb Geissler",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christos Maravelias",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "485e",
+    "sortable_time": "2022-11-16_13:38:00_13:55:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648259"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646788",
+    "paper_endpoint": "Paper/646788",
+    "paper_id": "646788",
+    "topic": "Development of an Interactive Software Tool for Designing Industrial Solvent Recovery Processes",
+    "title": "Development of an Interactive Software Tool for Designing Industrial Solvent Recovery Processes",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "49228",
+    "session_title": "Process Design in Energy and Sustainability: towards a net zero carbon economy",
+    "session_number": "485",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "The chemical industry was reported to be the world’s second-largest manufacturing sector in 2017, and its production is projected to double by the year 2032 (United Nations Environment Programme 2019; Vlaeminck 2022). With production growth there is an increase in subsequent waste generation, that leads to many environmental concerns. One of the largest contributions to process waste is solvents, since they are used in most chemical operations as a reaction medium, for selective dissolution, extraction or dilution agents. Due to the typical single-use operations with no recovery and recycle, a sizable amount of solvent waste is generated. In addition, even more waste accumulates due to process inefficiencies such as inefficient mixing, or inappropriate process equipment. The three most common methods to handle solvent wastes are on-site disposal, off-site disposal, and incineration (J. Raymond, Stewart Slater, and J. Savelski 2010). All three of these methods pose great environmental risks, yet are commonplace, since all methods are easy to use for large-scale material disposal. One greener alternative to these methods is solvent recovery, which attempts to recycle the material back into the process rather than releasing it into the environment. However, solvent recovery is not typically used due to complications in achieving the required purity set by regulatory standards for pharmaceutical and chemical industries. Furthermore, solvent recovery requires additional separation infrastructure, demanding investments in an already established chemical plant. To this end, finding a simple approach to solvent recovery requires a multi-level framework aimed at achieving the required purity while keeping other aspects in mind such as capital needs, environmental benefits, and comparison to traditional disposal methods. Often times, professional engineers find this task daunting due to the multitude of recovery technologies available and no clear guidance system or tool to assist them in comparing multiple recovery options. If such a tool existed, professional engineers can easily access the different possible solvent recovery options and start a shift towards an environmentally friendly waste handling method rather than incineration, on-site disposal, or off-site disposal. Thus, our team is working towards creating such a user-friendly tool by combining knowledge of chemical and solvent properties, separation techniques, plant design, modeling, simulation and optimization methods. As Figure 1A depicts, this tool will provide a greener alternative, but also give a process engineer the ability to recycle used solvent back into the plant, which is economically favorable to purchasing fresh solvent. To account for the myriad of chemicals that can be found in waste streams, a robust framework is needed. The framework has a maximal process flow diagram which is broken into different stages of separations. Each stage is comprised of multiple technologies and is aimed at one area of separation. As a result, the process flow diagram develops a superstructure which gives a multitude of technology combination pathway options for any one solvent waste stream. By reviewing literature on existing separation techniques, we created four unique stages in the superstructure: Solid Removal, Recovery, Purification, and Refinement (Yenkie, Wu, and Maravelias 2017; Biegler 1997; Geankoplis 2003). Common and novel technologies are allocated to the different stages based on the components they can separate in terms of their physical and chemical properties. These properties are taken from a comprehensive chemical database which is developed using sources such as the Design Institute for Physical Properties (DIPPR) (“DIPPR” 2012). The coding environment, General Algebraic Modeling Systems (GAMS), is used to model the separation units and process flows as a multi-objective optimization problem, to maximize the solvent recovered while minimizing total cost and environmental footprints (Chea et al. 2020; Yenkie et al. 2016). To make the framework easily accessible, a Graphical User Interface (GUI) is created in MATLAB with the GAMS code operating in the back end. As Figure 1B depicts, the GUI communicates with the GAMS code and chemical database, finding the optimal technology pathway from the user inputs. The GUI allows for a user to input components and parameters that model the waste stream being considered. Through the connection between MATLAB and GAMS, the solvent recovery process can be modeled in the GUI with the specific input parameters. After executing the code, economic, chemical, and environmental factors are displayed for the user to consider. The tool breaks the economic costs into an annualized cost breakdown, utility costs, consumable costs, labor costs, and overhead costs. The chemical factors report the purity level for each component recovered and the amount of solvent the selected pathway recovered. Lastly, the environmental factors report the environmental impact of the selected pathway against common waste handling methods. Thus, this tool provides an accessible option for engineers to develop a solvent recovery waste handling system for their chemical plant.",
+    "presenting_author": "Jake Stengel | Rowan University, Glassboro, NJ",
+    "authors": [
+      "Jake Stengel | Rowan University, Glassboro, NJ",
+      "Austin Lehr | Rowan University, Glassboro, NJ",
+      "Emmanuel Aboagye | Rowan University, Glassboro, NJ",
+      "John Chea | Rowan University, Glassboro, NJ",
+      "Kirti Yenkie | Rowan University, Glassboro, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jake Stengel",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Austin Lehr",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Emmanuel Aboagye",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "John Chea",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Kirti Yenkie",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "485f",
+    "sortable_time": "2022-11-16_13:55:00_14:12:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646788"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/644016",
+    "paper_endpoint": "Paper/644016",
+    "paper_id": "644016",
+    "topic": "A Practical Perspective on CO 2 Electrolysis in View of Future Net-Zero Energy Systems",
+    "title": "A Practical Perspective on CO 2 Electrolysis in View of Future Net-Zero Energy Systems",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "49228",
+    "session_title": "Process Design in Energy and Sustainability: towards a net zero carbon economy",
+    "session_number": "485",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Driven by a variety of factors, including the need to stabilize anthropogenic carbon emissions, falling costs of renewable energy, and social pressures, among others, different local, regional, and national governments and companies have committed to reach net-zero carbon emissions in the energy system by 2050 1 . Achieving net-zero carbon emissions in energy systems is a daunting task that will require significant efforts to reduce carbon emissions in hard-to-decarbonize energy sectors, e.g., the transportation and industrial sectors 2,3 . For instance, globally, achieving a net-zero energy system by 2050 could require the cumulative reduction of 8 Gt CO2 and 6.5 Gt CO2 from 2020 to 2050 in the industrial and transportation sectors, respectively (https://www.iea.org/reports/net-zero-by-2050). Moreover, around 7.6 Gt CO2 would need to be captured and stored or utilized in 2050, including 5.2 Gt CO2 from emitting point sources, i.e., fossil fuel combustion, ammonia and bioethanol plants, and industrial processes, and 1.0 Gt CO2 from air, i.e., via direct air capture (https://www.iea.org/reports/net-zero-by-2050). In this context, CO2 electroreduction to chemicals and fuels could facilitate the pathway towards a net-zero energy system by (i) replacing conventional carbon-emitting fuel and petrochemical processes and (ii) utilizing otherwise emitted CO2 or CO2 from the atmosphere. However, despite recent progress on the fundamental and mechanistic understanding 4-6 , catalyst and reactor design 7-10 , as well as scale-up and commercialization 11-14 of CO2 electrolysis, large-scale industrial deployment of this technology is not yet imminent. Indeed, technoeconomic analyses suggest that significant capital and operating cost reductions are required for CO2 electrolysis to be profitable or cost-competitive with traditional fossil-based or biocatalytic production processes, particularly for C2+ products, e.g., ethylene and ethanol 15-17 . This presentation provides an overview of CO2 electrolysis in view of net-zero energy systems. First, we provide a detailed description of different figures of merit for CO2 electrolysis as well as proposed industrial benchmarks and the corresponding status quo of the technology, for both low-temperature and high-temperature electrolysis. Additionally, we illustrate how each figure of merit may impact the total system cost for CO2 electrolysis, when possible. Then, an overview of the opportunities and challenges associated with the integration of CO2 capture and CO2 electrolysis is presented. We then summarize recent advances and remaining research gaps in catalysts and membranes for CO2 electrolysis and discuss progress towards practical reactor and process designs. Finally, we discuss the integration pathways for CO2 electrolysis, renewable energy sources, and electricity markets, including a discussion around the variability of renewable power sources, the dynamics of electricity prices, and the flexibility of CO2 electrolyzers. References 1. United Nations. Net-Zero-Coalition. (2022). Available at: https://www.un.org/en/climatechange/net-zero-coalition. (Accessed: 3rd July 2022) 2. Hepburn, C. et al. The technological and economic prospects for CO2 utilization and removal. Nature 575, 87–97 (2019). 3. Davis, S. J. et al. Net-zero emissions energy systems. Science (80-. ). 360, (2018). 4. Birdja, Y. Y. et al. Advances and challenges in understanding the electrocatalytic conversion of carbon dioxide to fuels. Nat. Energy 4, 732–745 (2019). 5. Ma, W. et al. Electrocatalytic reduction of CO2 and CO to multi-carbon compounds over Cu-based catalysts. Chem. Soc. Rev. 50, 12897–12914 (2021). 6. Zhang, W. et al. Progress and Perspective of Electrocatalytic CO2 Reduction for Renewable Carbonaceous Fuels and Chemicals. Adv. Sci. 5, 1700275 (2018). 7. Lees, E. W., Mowbray, B. A. W., Parlane, F. G. L. & Berlinguette, C. P. Gas diffusion electrodes and membranes for CO2 reduction electrolysers. Nat. Rev. Mater. 7, 55–64 (2022). 8. Wakerley, D. et al. Gas diffusion electrodes, reactor designs and key metrics of low-temperature CO2 electrolysers. Nat. Energy 7, 130–143 (2022). 9. Hauch, A. et al. Recent advances in solid oxide cell technology for electrolysis. Science (80-. ). 370, (2020). 10. Overa, S., Ko, B. H., Zhao, Y. & Jiao, F. Electrochemical Approaches for CO2 Conversion to Chemicals: A Journey toward Practical Applications. Acc. Chem. Res. 55, 638–648 (2022). 11. Sánchez, O. G. et al. Recent advances in industrial CO2 electroreduction. Curr. Opin. Green Sustain. Chem. 16, 47–56 (2019). 12. Chen, C., Khosrowabadi Kotyk, J. F. & Sheehan, S. W. Progress toward Commercial Application of Electrochemical Carbon Dioxide Reduction. Chem 4, 2571–2586 (2018). 13. Burdyny, T. & Smith, W. A. CO2 reduction on gas-diffusion electrodes and why catalytic performance must be assessed at commercially-relevant conditions. Energy Environ. Sci. 12, 1442–1453 (2019). 14. Cheng, Y., Hou, P., Wang, X. & Kang, P. CO2 Electrolysis System under Industrially Relevant Conditions. Acc. Chem. Res. 55, 231–240 (2022). 15. Jordaan, S. M. & Wang, C. Electrocatalytic conversion of carbon dioxide for the Paris goals. Nat. Catal. 4, 915–920 (2021). 16. Somoza-Tornos, A., Guerra, O. J., Crow, A. M., Smith, W. A. & Hodge, B.-M. Process modeling, techno-economic assessment, and life cycle assessment of the electrochemical reduction of CO2: a review. iScience 24, 102813 (2021). 17. Shin, H., Hansen, K. U. & Jiao, F. Techno-economic assessment of low-temperature carbon dioxide electrolysis. Nat. Sustain. 4, 911–919",
+    "presenting_author": "Omar Guerra | National Renewable Energy Laboratory, Golden, CO",
+    "authors": [
+      "Omar Guerra | National Renewable Energy Laboratory, Golden, CO",
+      "Ana Somoza Tornos | Renewable and Sustainable Energy Institute, University of Colorado, Boulder",
+      "Hussain Almajed | Renewable and Sustainable Energy Institute, University of Colorado, Boulder",
+      "Wilson A. Smith | National Renewable Energy Laboratory, Golden, CO",
+      "Bri-Mathias Hodge | National Renewable Energy Laboratory, Golden, CO"
+    ],
+    "authors_structured": [
+      {
+        "name": "Omar Guerra",
+        "affiliation": "National Renewable Energy Laboratory, Golden, CO",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ana Somoza Tornos",
+        "affiliation": "Renewable and Sustainable Energy Institute, University of Colorado, Boulder",
+        "designation": "Author"
+      },
+      {
+        "name": "Hussain Almajed",
+        "affiliation": "Renewable and Sustainable Energy Institute, University of Colorado, Boulder",
+        "designation": "Author"
+      },
+      {
+        "name": "Wilson A. Smith",
+        "affiliation": "National Renewable Energy Laboratory, Golden, CO",
+        "designation": "Author"
+      },
+      {
+        "name": "Bri-Mathias Hodge",
+        "affiliation": "National Renewable Energy Laboratory, Golden, CO",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "485g",
+    "sortable_time": "2022-11-16_14:12:00_14:29:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/644016"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643748",
+    "paper_endpoint": "Paper/643748",
+    "paper_id": "643748",
+    "topic": "Process Design and Operation for the Flexible Electrification of Methanol Synthesis",
+    "title": "Process Design and Operation for the Flexible Electrification of Methanol Synthesis",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "49228",
+    "session_title": "Process Design in Energy and Sustainability: towards a net zero carbon economy",
+    "session_number": "485",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "The US chemical industry consumes roughly 7,000 trillion BTU of energy annually, accounting for more than 10% of total energy consumption in 2018 [1]. Avoiding generating carbon dioxide during the production of feedstocks (such as hydrogen) is key for mitigating the carbon footprint of the chemical industry [2]. It is estimated that the global warming potential (GWP) of producing one kg of hydrogen by methane steam reforming is 11.8 CO 2 -equivalent kg [3]. Instead of using steam reforming, sourcing hydrogen from splitting water by using renewable electricity enables reduction of carbon emissions. Producing chemical feedstocks from renewable (e.g., wind/solar) electricity paves the way to decarbonization. Moreover, this is one of the most promising methods for helping balancing the supply and demand of the power grid [4,5]. For example, using electrolyzers, electricity can be used to spilt water and synthesize hydrogen, which can then be used as a feedstock for chemical production. Using electricity through water electrolysis and synthesizing hydrogen together with CO/CO 2 /N 2 into gaseous or liquid, enables the integration of electricity and chemical sectors [6]. This Power-to-X concept has been applied to a host of chemical processes including the synthesis of ammonia [7-10], methane [11-14], methanol [15-19], Fischer-Tropsch liquids [20-22], and dimethoxymethane (DME) [23-24]. Unfortunately, techno-economic analysis (TEA) studies show that approach is not cost-competitive with traditional fossil fuel-based methods [24-27]. At present, 60-70% of the current electrolytic hydrogen cost is due to electricity demand [27]. Consequently, the economic viability of these technologies heavily depends on the electricity cost. In 2020, the average wholesale electricity price in the US was 21.03$/MWh. In the mid regions like Kansas, Oklahoma, and Texas, the average wholesale electricity price was between 13.6-19.04$/MWh [28]. Moreover, electricity markets are quite volatile; for example, the electricity price of the real-time market (RTM) changes widely every 15 mins and negative prices are common [28]. The presence of negative prices implies that facilities can be remunerated for consuming electricity. Low electricity prices, high frequency of negative prices, and the volatile nature of energy markets bring new opportunities to the chemical production systems that require hydrogen as input. To harness these features of the current energy market, we propose a computational framework that facilitates the optimal design and operation of flexible electrification coupled with chemical production systems. The goals of our framework are: Decipher the economic feasibility of retrofitting an existing chemical production system with a flexible electrification unit. Investigate the impact of some key technological and economic parameters on the viability of this strategy. Identify the optimal design and the operation mode of the proposed infrastructure. Reveal the Levelized hydrogen production cost under variable electricity markets. Discuss how should chemical facilities participate in a dynamic electricity market by using flexible electrification. To achieve these goals, we developed a multi-period linear optimization model that facilitates the optimal sizing and operation of a flexible hydrogen production systems that respond to volatile electricity market signals. We applied this framework to study the economic potential of electrification of methanol synthesis; our analysis reveals that real-time electricity price dynamics provide incentives that make electrification economically viable. Reference: [1] EIA, “2018 Manufacturing Energy Consumption Survey,” Surv. Data-Energy Consum. as a fuel. U.S. Energy Inf. Adm. , 2021. [2] Z. J. Schiffer and K. Manthiram, “Electrification and Decarbonization of the Chemical Industry,” Joule , vol. 1, no. 1, pp. 10–14, 2017. [3] and M. K. M. Spath, Pamela L., “Life cycle assessment of hydrogen production via natural gas steam reforming,” vol. No. NREL, no. TP, pp. 570–27637, 2000. [4] M. Götz et al. , “Renewable Power-to-Gas: A technological and economic review,” Renew. Energy , vol. 85, pp. 1371–1390, 2016. [5] A. Varone and M. Ferrari, “Power to liquid and power to gas: An option for the German Energiewende,” Renew. Sustain. Energy Rev. , vol. 45, pp. 207–218, 2015. [6] A. Buttler and H. Spliethoff, “Current status of water electrolysis for energy storage, grid balancing and sector coupling via power-to-gas and power-to-liquids: A review,” Renew. Sustain. Energy Rev. , vol. 82, no. September 2017, pp. 2440–2454, 2018. [7] M. Capdevila-Cortada, “Electrifying the Haber–Bosch,” Nat. Catal. , vol. 2, no. 12, p. 1055, 2019. [8] V. Kyriakou, I. Garagounis, A. Vourros, E. Vasileiou, and M. Stoukides, “An Electrochemical Haber-Bosch Process,” Joule , vol. 4, no. 1, pp. 142–158, 2020. [9] H. Wang, M. Palys, P. Daoutidis, and Q. Zhang, “Optimal Design of Sustainable Ammonia-Based Food-Energy-Water Systems with Nitrogen Management,” ACS Sustain. Chem. Eng. , vol. 9, no. 7, pp. 2816–2834, 2021. [10] H. Wang, P. Daoutidis, and Q. Zhang, “Harnessing the Wind Power of the Ocean with Green Offshore Ammonia,” ACS Sustain. Chem. Eng. , vol. 9, no. 43, pp. 14605–14617, 2021. [11] K. Ghaib and F. Z. Ben-Fares, “Power-to-Methane: A state-of-the-art review,” Renew. Sustain. Energy Rev. , vol. 81, no. August 2017, pp. 433–446, 2018. [12] S. H. Jensen et al. , “Large-scale electricity storage utilizing reversible solid oxide cells combined with underground storage of CO2 and CH4,” Energy Environ. Sci. , vol. 8, no. 8, pp. 2471–2479, 2015. [13] F. Salomone, E. Giglio, D. Ferrero, M. Santarelli, R. Pirone, and S. Bensaid, “Techno-economic modelling of a Power-to-Gas system based on SOEC electrolysis and CO2 methanation in a RES-based electric grid,” Chem. Eng. J. , vol. 377, no. October 2018, p. 120233, 2019. [14] H. Blanco, W. Nijs, J. Ruf, and A. Faaij, “Potential for hydrogen and Power-to-Liquid in a low-carbon EU energy system using cost optimization,” Appl. Energy , vol. 232, no. September, pp. 617–639, 2018. [15] H. Zhang and U. Desideri, “Techno-economic optimization of power-to-methanol with co-electrolysis of CO2 and H2O in solid-oxide electrolyzers,” Energy , vol. 199, p. 117498, 2020. [16] C. Bergins, K. Tran, E. Koytsoumpa, E. Kakaras, T. Buddenberg, and Ó. Sigurbjörnsson, “Power to Methanol Solutions for Flexible and Sustainable Operations in Power and Process Industries Mitsubishi Hitachi Power Systems Europe GmbH , Germany * Carbon Recycling International , Iceland,” pp. 1–18, 2015. [17] K. F. Tzanetis, J. A. Posada, and A. Ramirez, “Analysis of biomass hydrothermal liquefaction and biocrude-oil upgrading for renewable jet fuel production: The impact of reaction conditions on production costs and GHG emissions performance,” Renew. Energy , vol. 113, pp. 1388–1398, 2017. [18] C. Hank et al. , “Economics & carbon dioxide avoidance cost of methanol production based on renewable hydrogen and recycled carbon dioxide-power-to-methanol,” Sustain. Energy Fuels , vol. 2, no. 6, pp. 1244–1261, 2018. [19] S. Mbatha, R. C. Everson, N. M. Musyoka, H. W. Langmi, A. Lanzini, and W. Brilman, “Power-to-methanol process: A review of electrolysis, methanol catalysts, kinetics, reactor designs and modelling, process integration, optimisation, and techno-economics,” Sustain. Energy Fuels , vol. 5, no. 14, pp. 3490–3569, 2021. [20] S. Van Bavel, S. Verma, E. Negro, and M. Bracht, “Integrating CO2Electrolysis into the Gas-to-Liquids-Power-to-Liquids Process,” ACS Energy Lett. , vol. 5, no. 8, pp. 2597–2601, 2020. [21] A. P. Kulkarni, T. Hos, M. V. Landau, D. Fini, S. Giddey, and M. Herskowitz, “Techno-economic analysis of a sustainable process for converting CO2and H2O to feedstock for fuels and chemicals,” Sustain. Energy Fuels , vol. 5, no. 2, pp. 486–500, 2021. [22] Q. Fu, C. Mabilat, M. Zahid, A. Brisse, and L. Gautier, “Syngas production via high-temperature steam/CO2 co-electrolysis: An economic assessment,” Energy Environ. Sci. , vol. 3, no. 10, pp. 1382–1397, 2010. [23] J. Burre et al. , “Comparing pathways for electricity-based production of dimethoxymethane as a sustainable fuel,” Energy Environ. Sci. , vol. 14, no. 7, pp. 3686–3699, 2021. [24] V. Dieterich, A. Buttler, A. Hanel, H. Spliethoff, and S. Fendt, “Power-to-liquid via synthesis of methanol, DME or Fischer–Tropsch-fuels: a review,” Energy Environ. Sci. , vol. 13, no. 10, pp. 3207–3252, 2020. [25] H. Zhang, L. Wang, J. Van herle, F. Maréchal, and U. Desideri, “Techno-economic comparison of green ammonia production processes,” Appl. Energy , vol. 259, no. October 2019, p. 114135, 2020. [26] A. González-Garay, M. S. Frei, A. Al-Qahtani, C. Mondelli, G. Guillén-Gosálbez, and J. Pérez-Ramírez, “Plant-to-planet analysis of CO2-based methanol processes,” Energy Environ. Sci. , vol. 12, no. 12, pp. 3425–3436, 2019. [27] S. J. Davis et al. , “Net-zero emissions energy systems,” Science (80-. ). , vol. 360, no. 6396, 2018. [28] Seel, Joachim, et al. \"Plentiful electricity turns wholesale prices negative.\" Advances in Applied Energy 4 (2021): 100073.",
+    "presenting_author": "Jiaze Ma | University of Wisconsin-Madison",
+    "authors": [
+      "Jiaze Ma | University of Wisconsin-Madison",
+      "Michael Rebarchik | University of Wisconsin - Madison",
+      "Manos Mavrikakis | University of Wisconsin–Madison",
+      "George Huber | University of Wisconsin-Madison",
+      "Victor Zavala | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jiaze Ma",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Michael Rebarchik",
+        "affiliation": "University of Wisconsin - Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Manos Mavrikakis",
+        "affiliation": "University of Wisconsin–Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "George Huber",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Victor Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "485h",
+    "sortable_time": "2022-11-16_14:29:00_14:46:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643748"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648513",
+    "paper_endpoint": "Paper/648513",
+    "paper_id": "648513",
+    "topic": "Electrified Ethane Cracking Reactor Design and Modeling",
+    "title": "Electrified Ethane Cracking Reactor Design and Modeling",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "49228",
+    "session_title": "Process Design in Energy and Sustainability: towards a net zero carbon economy",
+    "session_number": "485",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "The need to reduce the carbon intensity of chemical manufacturing creates an opportunity to not only create processes that produce no emissions but are much more efficient, cost effective and process intensified. Electrification of industrial processes is being frequently mentioned as an option to reduce greenhouse gas emissions from energy-intensive industries. The increasing availability of cheap renewable electricity provides an opportunity to decarbonize energy intensive processes. As part of this decarbonization effort, the commodity chemical industry is an important target due to its large energy requirements and greenhouse gas emissions. One potential paradigm for electrification involves replacing the use of steam, generated by burning fossil fuels, as a source of heat in chemical processes to processes with direct electrical heating using renewable energy sources. Steam cracking of hydrocarbons is widely practiced, and there is significant industrial interest in the electrification of this process. Steam crackers rely on fossil fuel combustion to heat their furnaces, making them CO 2 intensive. The challenge is to develop a technologically and economically feasible solution. This work focuses on the design of an electrical resistance heating of the cracking reactor and models for temperature profiles and concentration gradients along the multiple dimensions of the reactor. Various designs are considered and insights on the kinetic and transport phenomena presented.",
+    "presenting_author": "Cornelius Masuku | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Cornelius Masuku | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Cornelius Masuku",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "485i",
+    "sortable_time": "2022-11-16_14:46:00_15:03:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648513"
+  }
+]

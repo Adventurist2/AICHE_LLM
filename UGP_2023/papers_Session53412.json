@@ -1,0 +1,318 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/664953",
+    "paper_endpoint": "Paper/664953",
+    "paper_id": "664953",
+    "topic": "A Branch-and-Price Algorithm for Multistage Stochastic Programs with Discrete State Variables",
+    "title": "A Branch-and-Price Algorithm for Multistage Stochastic Programs with Discrete State Variables",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "53412",
+    "session_title": "Advances in Optimization II",
+    "session_number": "206",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Modeling multistage planning problems is becoming increasingly important in various real-world applications, such as developing optimal expansion policies for renewable energy transitions, solving optimal power flow problems in power systems, and deriving complex scheduling decisions in various chemical industries. However, in practice, it is extremely challenging to model and solve these large-scale problems, which often forces decision-makers to adapt and implement suboptimal policies. Some of the major factors that render these model difficult include: 1) Unavailability or inaccessibility of data, resulting in uncertainty in these models. 2) Discrete decisions, such as capacity expansion via installation of new chemical plants, which lead to mixed-integer optimization models. 3) Complex nonlinear correlations between various decision variables result in mixed-integer nonlinear programs (MINLPs), which can often be nonconvex and are known to be one of the most challenging classes of problems to solve. To address the above-mentioned issues, we propose to apply a stochastic programming [1] framework and develop a tailored decomposition approach for multistage stochastic MINLPs with discrete state variables. Stochastic programming provides a natural framework for modeling sequential optimization problems under uncertainty; however, the efficient solution of large-scale multistage stochastic programs, particularly under significant uncertainty (large number of scenarios), remains a challenge. In the presence of discrete state variables, the multistage stochastic MINLPs exhibit a decomposable structure that allows them to be solved using a branch-and-price approach. Following a Dantzig-Wolfe reformulation, we apply column generation (CG) [2, 3] such that each pricing subproblem is an MINLP of much smaller size, making it more amenable to exact MINLP solvers like BARON. Furthermore, the decoupled subproblems allow for a distributed computing approach, which significantly reduces the solution time. To mitigate the known convergence issues [4] in CG, we further incorporate a technique for information sharing among subproblems [5], generating more relevant and feasible columns per CG iteration. Finally, we propose effective branching strategies to further improve the efficiency of our branch-and-price algorithm. Several case studies of practical relevance are used to demonstrate the effectiveness of our proposed decomposition algorithm over solving the full-space model. References [1] Birge, J. R., & Louveaux, F. (2011). Introduction to stochastic programming . Springer Science & Business Media. [2] Lübbecke, M. E., & Desrosiers, J. (2005). Selected topics in column generation. Operations research , 53 (6), 1007-1023. [3] Allman, A., & Zhang, Q. (2021). Branch-and-price for a class of nonconvex mixed-integer nonlinear programs. Journal of Global Optimization , 81 , 861-880. [4] Vanderbeck, F. (2005). Implementing mixed integer column generation. Column generation , 331-358. [5] Flores-Quiroz, A., & Strunz, K. (2021). A distributed computing framework for multi-stage stochastic planning of renewable power systems with energy storage as flexibility option. Applied Energy , 291 , 116736.",
+    "presenting_author": "Tushar Rathi | University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "Tushar Rathi | University of Minnesota, Minneapolis, MN",
+      "Angela Flores | University of Chile, Santiago",
+      "Qi Zhang | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Tushar Rathi",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Angela Flores",
+        "affiliation": "University of Chile, Santiago",
+        "designation": "Author"
+      },
+      {
+        "name": "Qi Zhang",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "206a",
+    "sortable_time": "2023-11-07_08:00:00_08:18:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/664953"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665832",
+    "paper_endpoint": "Paper/665832",
+    "paper_id": "665832",
+    "topic": "Advances in Constructing Tight Quadratic Underestimators for Global Optimization",
+    "title": "Advances in Constructing Tight Quadratic Underestimators for Global Optimization",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "53412",
+    "session_title": "Advances in Optimization II",
+    "session_number": "206",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Several complex problems arising in chemical engineering applications, such as molecular conformation identification, distillation sequencing, reactor network design [1], among others, require non-convex mathematical optimization, which prescribes the use of global optimization algorithms to identify globally optimal solutions. Recently, global optimization has been applied in identifying synergistic domains of process intensification for reactive separation [2], scheduling hybrid energy sources for hydrogen production [3], regulating nitrogen oxide emissions under process uncertainty [4], and synthesizing heat exchanger networks [5]. In the aforementioned settings, global optimization algorithms address the non-convexities present in the mathematical representations of the problems by constructing convex relaxations in the context of spatial branch-and-bound to identify globally optimal solutions. Hence, as convex relaxation techniques improve in tightness and construction efficiency, practitioners will be enabled to tractably solve to global optimality a greater variety of problem types and sizes. Current state-of-the art algorithms compute lower bounds for non-convex problems by (i) determining convex relaxations for non-convex expressions, (ii) polyhedrally outer approximating those, and (iii) solving the linear programming (LP) subproblems [6]. While linear approximations utilize the computational efficiency and reliability afforded by linear programming technology, recent advances in the computational efficiency and reliability of algorithms solving convex quadratically constrained quadratic programming problems (QCQPs) [7] suggest that utilizing non-linear convex quadratic relaxations rather than linear ones might be a numerically promising alternative. We conjecture that, in comparison to their linear counterparts, the marginal computational expense required to generate non-linear convex quadratic approximations at select nodes in the branch-and-bound tree will, by utilizing fathoming efficiencies, ultimately reduce the overall algorithm runtime. In prior work [8], we developed a novel cutting-plane algorithm to construct valid convex quadratic underestimators of the form proposed by Su et al. [9] for (i) twice differentiable convex functions and (ii) twice differentiable non-convex functions with a difference of convex (d.c.) function representation under certain conditions. In this work, we propose multiple advances to our cutting-plane algorithm and quadratic underestimator form to generate even tighter quadratic underestimators with less stringent conditions for construction, and at improved computational times. First, we modify the quadratic underestimator form by introducing a vector of scaling parameters into the 2 nd -order Taylor series term, each parameter corresponding to scaling a particular eigenvalue, thus achieving a non-uniformly scaled quadratic underestimator. Observing the linearity of the quadratic form as a function of the parameters, we determine the appropriate scaling parameters in the cutting- plane algorithm using an auxiliary LP. We provide examples of non-uniformly scaled quadratic underestimators and emphasize the improvement in tightness achieved. Second, we introduce a linear shift parameter into the quadratic form that relaxes the stringent conditions for valid underestimator construction on d.c. functions. In particular, for points of construction that previously did not admit a valid quadratic underestimator, the linear shift parameter allows the cutting-plane algorithm to escape the rigidity of the Taylor series approximation and linearly shift the underestimator, thereby creating valid underestimators for all trial points of construction, although in many cases these underestimators are linear. Furthermore, by simultaneously optimizing the linear shift parameter and the non-uniform scaling parameters in the auxiliary LP, the cutting-plane algorithm generates quadratic underestimators for all trial points of construction where they are tighter than linear. Third, we leverage the auxiliary LP in the cutting-plane algorithm to assess the computational efficiency and the underestimator quality of solving the parameter determination problem of multiple quadratic underestimators simultaneously. In other words, given a set of points of construction, rather than sequentially generating quadratic underestimators for points of construction one at a time without shared information and then taking the point-wise maximum to achieve an aggregate convex underestimator, we solve the parameter selection problem simultaneously for all points of construction directly on the point-wise maximum form. The advantages that arise from this approach are two-fold: (i) parameter values are determined in light of the aggregate underestimator, thus improving tightness and (ii) the procedure requires only one execution of the cutting-plane algorithm, rather than one per point of construction, thus conserving computational resources. Fourth and finally, we explore more general forms of the quadratic underestimator that extend beyond the scaling of the diagonal and modify the off-diagonal elements. We start with the set of diagonally dominant symmetric matrices, which represents a (quite) restricted set of symmetric matrices that, while permitting modification of off-diagonal terms also preserves guarantees of convexity over domains. We showcase the performance of our quadratic underestimators in two different computational studies. First, we examine the computational efficiency and underestimator quality of each variant on a set of modified test functions extracted from various established optimization benchmark libraries, such as PrincetonLib [10] and MINLPLib [11]. Second, we use the most promising variant in a root-node relaxation comparison with state-of-the-art global optimization algorithms. Observing that no benchmark library of d.c. optimization problems currently exists in literature, we consequently develop a set of multimodal d.c. optimization problems for testing. [1] Adjiman, C. S., Dallwig, S., Floudas, C. A., & Neumaier, A. \"A global optimization method, αBB, for general twice-differentiable constrained NLPs—I. Theoretical advances.\" Computers & Chemical Engineering 22.9 (1998): 1137-1158. [2] Li, Jianping, and MM Faruque Hasan. \"A parametric approach to identify synergistic domains of process intensification for reactive separation.\" Chemical Engineering Science 267 (2023): 118337. [3] Yang, Y., De La Torre, B., Stewart, K., Lair, L., Phan, N.L., Das, R., Gonzalez, D. & Lo, R.C. \"The scheduling of alkaline water electrolysis for hydrogen production using hybrid energy sources.\" Energy Conversion and Management 257 (2022): 115408. [4] Kim, M., Cho, S., Jang, K., Hong, S., Na, J., & Moon, I. \"Data-driven robust optimization for minimum nitrogen oxide emission under process uncertainty.\" Chemical Engineering Journal 428 (2022): 130971. [5] Kazi, S. R., Short, M., Isafiade, A. J., & Biegler, L. T. \"Heat exchanger network synthesis with detailed exchanger designs—2. Hybrid optimization strategy for synthesis of heat exchanger networks.\" AIChE Journal 67.1 (2021): e17057. [6] Mohit Tawarmalani and Nikolaos V Sahinidis. “A polyhedral branch-and-cut approach to global optimization.” Mathematical programming, 103(2):225–249, 2005. [7] Mittelmann, Hans D. Convex continuous QPLIB benchmark. http://plato.asu.edu/ftp/cconvex.html, 2021. [Online; Accessed: 22-March-2023]. [8] Strahl, W., Raghunathan, A., Sahinidis, N.V., & Gounaris, C.E. “A Novel Algorithm for Constructing Tight Quadratic Underestimators for Global Optimization [Conference presentation].” AIChE Annual Meeting, 13-18 Nov. 2022, Phoenix, Arizona. [9] Su, L., Tang, L., Bernal, D. E., & Grossmann, I. E. \"Improved quadratic cuts for convex mixed-integer nonlinear programs.\" Computers & Chemical Engineering 109 (2018): 77-95. [10] Vanderbei, Robert. Princeton library of nonlinear programming models. http: //www.gamsworld.org/performance/princetonlib/princetonlib.htm, 2022. [Online; Accessed: 22-March-2023]. [11] Minlplib, a library of mixed-integer and continuous nonlinear programming instances. http://www.minlplib.org/, 2023",
+    "presenting_author": "William Strahl | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "William Strahl | Carnegie Mellon University, Pittsburgh, PA",
+      "Arvind Raghunathan | Mitsubishi Electric Research Laboratories, Cambridge, MA",
+      "Nikolaos Sahinidis | Georgia Institute of Technology, Atlanta, GA",
+      "Chrysanthos Gounaris | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "William Strahl",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Arvind Raghunathan",
+        "affiliation": "Mitsubishi Electric Research Laboratories, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Nikolaos Sahinidis",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Chrysanthos Gounaris",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "206b",
+    "sortable_time": "2023-11-07_08:18:00_08:36:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665832"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/671073",
+    "paper_endpoint": "Paper/671073",
+    "paper_id": "671073",
+    "topic": "Evaluating Lower Bounds in Global Optimization Via Cheaper Sampling of Convex Relaxations",
+    "title": "Evaluating Lower Bounds in Global Optimization Via Cheaper Sampling of Convex Relaxations",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "53412",
+    "session_title": "Advances in Optimization II",
+    "session_number": "206",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Several chemical engineering applications demand global optimization of nonconvex process models, including safety verification and determination of thermodynamic equilibria. Typical deterministic methods for global optimization proceed by generating bounds on the unknown objective value at a global minimum, and progressively improving these bounds. In this setting, lower bounds are typically obtained by minimizing convex relaxations of the original objective function. This minimization is often carried out using a gradient-based nonlinear programming solver. However, if these convex relaxations involve parametric ODEs, embedded optimization problems, or other complications, then furnishing subgradients for convex minimization may be difficult. Two years ago, at the 2021 AIChE Annual Meeting, we presented the first approach [1] for computing appropriate lower bounds tractably by derivative-free sampling of the convex relaxations, under minimal assumptions, and without any gradient/subgradient evaluations at all. For a convex relaxation of n variables, that approach involves taking (2 n +1) samples, and assembling these in a new dedicated finite difference formula for bounding. Roughly, these samples are taken at the center of the considered subdomain, and at respective perturbations of this center in each positive coordinate direction and each negative coordinate direction. This presentation shows that, surprisingly, we can get by with far fewer samples. We show how to obtain guaranteed affine underestimators and/or constant lower bounds of a convex function of n variables on a box domain using only ( n +2) derivative-free samples of that function, and assembling these in newer dedicated finite difference formulas for bounding. This new result approximately halves the computational effort of bound construction for large n , and is minimal in the sense that it is obviously impossible to achieve this outcome using only ( n +1) samples. Like our previous underestimators [1], our new sampling-based underestimators inherit second-order pointwise convergence [2] of the sampled convex relaxations, and thereby converge rapidly to the original convex relaxations as the subdomain of interest shrinks. Our formulae are readily adapted to incorporate known bounds on any noise/error in each evaluation of the sampled convex function. Implications are discussed, and we present numerical results in which these new underestimators are deployed within branch-and-bound frameworks for global optimization. References [1] Yingkai Song, Huiyi Cao, C. Mehta, and Kamil A. Khan, Bounding convex relaxations of process models from below by tractable black-box sampling, Computers & Chemical Engineering, 153 (2021). doi:10.1016/j.compchemeng.2021.107413 [2] A. Bompadre and A., Mitsos, Convergence rate of McCormick relaxations, J Glob Optim, 52 :1–28 (2012). doi:10.1007/s10898-011-9685-2",
+    "presenting_author": "Kamil Khan | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Felix Bonhoff | RWTH Aachen, Germany",
+      "Kamil Khan | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Felix Bonhoff",
+        "affiliation": "RWTH Aachen, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Kamil Khan",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "206c",
+    "sortable_time": "2023-11-07_08:36:00_08:54:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/671073"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667449",
+    "paper_endpoint": "Paper/667449",
+    "paper_id": "667449",
+    "topic": "Deciding Which Equality Constraints to Eliminate in Mixed-Integer Nonlinear Programs for Deterministic Global Optimization",
+    "title": "Deciding Which Equality Constraints to Eliminate in Mixed-Integer Nonlinear Programs for Deterministic Global Optimization",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "53412",
+    "session_title": "Advances in Optimization II",
+    "session_number": "206",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Mixed-Integer Nonlinear programs (MINLPs) are ubiquitous in Chemical Engineering and are challenging to solve to global optimality. Recent developments in deterministic global optimization (DGO) of MINLPs include the development of the open-source solvers MAiNGO (1) and EAGO (2), which employ McCormick relaxations (3-5) to solve lower bounding problems. McCormick relaxations can be beneficial for problems with fewer variables but potentially more complex nonlinear expressions (5) relative to relaxations generated using auxiliary variable method (AVM) (6). As a result, reduced space formulations (4) were proposed, in which equality constraints are eliminated, thereby resulting in a problem with lower dimensionality. In the extreme case all equality constraints are eliminated, or all that can be eliminated. However, we have already demonstrated that the extreme case is not necessarily advisable and a careful selection of equality constraints to eliminate is required (7). Solving reduced-space formulations with solvers based on McCormick relaxations often requires significantly lower computational effort than full-space problems, e.g., for problems in flowsheet optimization (7) and optimization of hybrid/data-driven models (8). In contrast, state-of-the-art DGO solvers such as BARON (9,10), ANTIGONE (11) and SCIP (12) rely on AVM (6) to construct convex relaxations. Eliminating equality constraints leads to more complex nonlinear expressions, which for AVM-based solvers leads to introduction of a different set of auxiliary variables compared to the full-space formulation. In contrast to McCormick relaxation-based solvers, for AVM-based solvers it is unclear if eliminating equality constraints is useful. In this work, we investigate whether eliminating equality constraints is beneficial for AVM-based solvers. We present an assessment of the factors that affect the choice of equality constraints to be eliminated and the impact of this choice on the computational performance of AVM-based DGO solvers. Numerical experiments are conducted on selected problems from MINLPLib (13), and on case studies from Chemical Engineering. These are used to suggest heuristics to guide the selection of equality constraints to be eliminated based on the reduction in the computational effort needed to solve the selected MINLPs to global optimality. These heuristics could potentially be integrated into existing portfolio of pre-processing strategies employed by the DGO solvers to solve MINLPs more effectively. References: (1) Bongartz D, Najman J, Sass S, Mitsos A. MAiNGO: McCormick based Algorithm for mixed integer Nonlinear Global Optimization. Process Systems Engineering (AVT. SVT), RWTH Aachen University 2018:1-7; Available at: http://permalink.avt.rwth-aachen.de/?id=729717. (2) Wilhelm ME, Stuber MD. EAGO. jl: easy advanced global optimization in Julia. Optimization Methods and Software 2022;37(2):425-450. (3) McCormick GP. Computability of global solutions to factorable nonconvex programs: Part I — Convex underestimating problems. Mathematical Programming 1976 Dec;10(1):147-175. (4) Mitsos A, Chachuat B, Barton PI. McCormick-Based Relaxations of Algorithms. SIAM Journal on Optimization 2009 Jan 1,;20(2):573-601. (5) Tsoukalas A, Mitsos A. Multivariate McCormick relaxations. Journal of Global Optimization 2014 Jul 1,;59(2-3):633-662. (6) Smith EMB, Pantelides CC. A symbolic reformulation/spatial branch-and-bound algorithm for the global optimisation of nonconvex MINLPs. Computers & Chemical Engineering 1999 May 1,;23(4):457-478. (7) Bongartz D, Mitsos A. Deterministic global optimization of process flowsheets in a reduced space using McCormick relaxations. Journal of Global Optimization 2017 Dec 1,;69(4):761-796. (8) Schweidtmann AM, Mitsos A. Deterministic Global Optimization with Artificial Neural Networks Embedded. Journal of Optimization Theory and Applications 2019 Mar 1,;180(3):925-948. (9) Tawarmalani M, Sahinidis NV. A polyhedral branch-and-cut approach to global optimization. Mathematical Programming 2005 Jun 1,;103(2):225-249. (10) Kılınç MR, Sahinidis NV. Exploiting integrality in the global optimization of mixed-integer nonlinear programming problems with BARON. Optimization Methods & Software 2018 May 4,;33(3):540-562. (11) Misener R, Floudas CA. ANTIGONE: Algorithms for coNTinuous / Integer Global Optimization of Nonlinear Equations. Journal of Global Optimization 2014 Jul 1,;59(2-3):503-526. (12) Bestuzheva K, Chmiela A, Müller B, Serrano F, Vigerske S, Wegscheider F. Global Optimization of Mixed-Integer Nonlinear Programs with SCIP 8. 2023 Jan 2; Available at: https://arxiv.org/abs/2301.00587. (13) Vigerske S. MINLPLib: A Library of Mixed-Integer and Continuous Nonlinear Programming Instances. 2018; Available at: https://minlplib.org/index.html.",
+    "presenting_author": "Tanuj Karia | Imperial College London, United Kingdom",
+    "authors": [
+      "Tanuj Karia | Imperial College London, United Kingdom",
+      "Claire Adjiman | Imperial College London, United Kingdom",
+      "Benoit Chachuat | Imperial College London, United Kingdom",
+      "Alexander Mitsos | RWTH Aachen University, Germany",
+      "Dominik Bongartz | KU Leuven, Belgium"
+    ],
+    "authors_structured": [
+      {
+        "name": "Tanuj Karia",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Claire Adjiman",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Benoit Chachuat",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Alexander Mitsos",
+        "affiliation": "RWTH Aachen University, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Dominik Bongartz",
+        "affiliation": "KU Leuven, Belgium",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "206d",
+    "sortable_time": "2023-11-07_08:54:00_09:12:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667449"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669594",
+    "paper_endpoint": "Paper/669594",
+    "paper_id": "669594",
+    "topic": "Learning to Select Convex Relaxations in a Branch and Bound Algorithm",
+    "title": "Learning to Select Convex Relaxations in a Branch and Bound Algorithm",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "53412",
+    "session_title": "Advances in Optimization II",
+    "session_number": "206",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Mixed-integer linear and nonlinear programming have wide applications in PSE 1 . Until recently, its methods have focused on solving problem instances in isolation, ignoring that they often stem from related data distributions in practice. However, recent years have seen a surge of interest in using machine learning as a new approach for solving MILP problems 2 , either directly as solvers or by enhancing exact solvers. Examples include learning to select branching variables in a branch and bound algorithm 3,4 , learning to schedule primal heuristics 5 , learning to decompose a problem 6 , and learning to select cutting planes 7 . In this presentation, we focus on an important task in solving nonconvex MINLP problems, selecting convex relaxations in a branch and bound algorithm. Global MINLP solvers such as BARON 8 and ANTIGONE 9 rely on creating convex relaxations for the nonconvex functions. However, which convex relaxation to use at each node for a given problem is not straightforward. On the contrary, tradeoffs usually exist for using different relaxations. Tight relaxations are typically expensive to solve but can reduce the number of nodes in a branch and bound algorithm. Using weaker relaxations allows us to enumerate more nodes within a time limit but will increase the total number of nodes needed to prove optimality. In this presentation, we use Quadratic Unconstrained Binary Optimization(QUBO) as a proof-of-concept for learning to select convex relaxations. SDP type of relaxations provides tight bounds 10 for QUBO but are more expensive to solve than most LP relaxations. We propose a hybrid branch and bound framework 11 for solving QUBOs. By default, only the LP relaxation based on McCormick inequalities is solved at each node of the branch-and-bound algorithm. SDP relaxations that include the McCormick inequalities are solved parsimoniously, i.e., we only wish to solve the SDP relaxations if there is a high chance that it can fathom a given node. To predict whether a node can be fathomed by SDP bound, we propose a machine learning-based method that includes features associated with each branch and bound node. The most important feature is the objective of solving a convex quadratic constrained program (QCP) that is derived by fixing most of the variables at a node to the optimal solution of its parent node and taking the Schur complement. The QCP problem has O(n) variables, making it computationally much easier to solve than the original SDP. Other features such as the depths of the node and the density of the adjacency matrix are also used. A support vector machine classifier is trained which achieves over 95% accuracy in predicting whether the SDP bound can fathom a node. Our proposed approach is shown to save the number of SDP solves and computational time in a number of maxcut instances with different sizes and densities we tested. Biegler, L. T. & Grossmann, I. E. Retrospective on optimization. Comput Chem Eng 28 , 1169–1192 (2004). Bengio, Y., Lodi, A. & Prouvost, A. Machine learning for combinatorial optimization: a methodological tour d’horizon. Eur J Oper Res 290 , 405–421 (2021). Balcan, M.-F., Dick, T., Sandholm, T. & Vitercik, E. Learning to Branch. in ICML (eds. Dy, J. G. & Krause, A.) vol. 80 353–362 (PMLR, 2018). Ghaddar, B. et al. Learning for Spatial Branching: An Algorithm Selection Approach. arXiv preprint arXiv:2204.10834 (2022). Khalil, E. B., Dilkina, B., Nemhauser, G., Ahmed, S. & Shao, Y. Learning to Run Heuristics in Tree Search. in 26th International Joint Conference on Artificial Intelligence (IJCAI) (2017). Mitrai, I., Tang, W. & Daoutidis, P. Stochastic blockmodeling for learning the structure of optimization problems. AIChE Journal 68 , (2022). Baltean-Lugojan, R., Bonami, P., Misener, R. & Tramontani, A. Scoring positive semidefinite cutting planes for quadratic optimization via trained neural networks. preprint: http://www. optimization-online. org/DB_ HTML/2018/11/6943. html (2019). Kılınç, M. R. & Sahinidis, N. V. Exploiting integrality in the global optimization of mixed-integer nonlinear programming problems with BARON. Optim Methods Softw 33 , 540–562 (2018). Misener, R. & Floudas, C. A. ANTIGONE: Algorithms for coNTinuous / Integer Global Optimization of Nonlinear Equations. Journal of Global Optimization 59 , 503–526 (2014). Rendl, F., Rinaldi, G. & Wiegele, A. Solving Max-Cut to optimality by intersecting semidefinite and polyhedral relaxations. Math Program 121 , 307–335 (2010). Furini, F. & Traversi, E. Hybrid SDP Bounding Procedure. in 248–259 (2013). doi:10.1007/978-3-642-38527-8_23.",
+    "presenting_author": "Can Li | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Can Li | Purdue University, West Lafayette, IN",
+      "Andrea Lodi | Cornell Tech and the Technion, New York, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Can Li",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Andrea Lodi",
+        "affiliation": "Cornell Tech and the Technion, New York, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "206e",
+    "sortable_time": "2023-11-07_09:12:00_09:30:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669594"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670381",
+    "paper_endpoint": "Paper/670381",
+    "paper_id": "670381",
+    "topic": "Optimization Methods for Robust Model Predictive Control",
+    "title": "Optimization Methods for Robust Model Predictive Control",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "53412",
+    "session_title": "Advances in Optimization II",
+    "session_number": "206",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Nominal model predictive control (MPC) is a feedback control scheme that predicts the future states of a dynamic system, using a process model, over a finite time window. Based on the predicted and current states, the control scheme optimizes an objective function to determine an optimal manipulated variable profile, i.e. an optimal control action sequence. The term nominal refers to the assumption that the system is deterministic for the optimization problem. If instead unknown disturbances cause a system to be uncertain, then robust model predictive control (RMPC) is a suitable control scheme. However, practical applications of RMPC have been limited by the optimization problem, which is computationally expensive and intractable for complex systems. While many aspects of nominal MPC for deterministic systems are well understood (Mayne et al., 2000), the presence of uncertain systems, which motivates a robust controller in the form of RMPC, is still a significant challenge that is receiving major attention (Mayne, 2014; Bujarbaruah et al. 2020). Min-max RMPC, which is considered in this study, was first developed by Campo et al. (1987) and minimizes the worst-case performance over all uncertainty realizations. Solving a min-max robust optimization problem is intractable or time consuming and ineffective for online implementation and industrial control applications (Veres et al., 1993; Lee et al. 1997; Kerrigan et al. 2004; Eliasi et al. 2012). Highly complex and inefficient numerical optimization algorithms are generally not suitable for most industrial platforms and computationally simple optimization statements for RMPC have not been formulated (Saltik et al. 2018). Therefore developing a tractable problem for min-max RMPC is an active area of research, and to this date no optimization strategies have been deployed industrially (Yan et al., 2021). The traditional min-max robust optimization problem solved in discrete time for linear process models given an energy bound on the variable to maximize, the disturbance, is also known as disturbance attenuation problem (Basar et al, 1995), which is a constrained min-max optimization. Algorithms have been developed to solve for the suboptimal version of this problem, but iterative or trial-and-error methods are usually required to solve for the optimal solutions to the disturbance attenuation problem, which are possible limitations to the industrial applications of this type of robust controller (Basar et al, 1995; Hespanha, 2017). In this study, we present an optimization formulation and algorithm to solve for the optimal disturbance attenuation problem. Differently from what is presented in the previous literature, we propose an algorithm which efficiently solve for the optimal solutions without requiring any additional iterative or trial-and-error methods. The proposed algorithm translates the constrained min-max optimization into an equivalent constrained minimization. When there are no constraints on the manipulated variable, then the proposed algorithm is actually solving a constrained scalar minimization and finds analytical solutions. When the manipulated variable is constrained, the proposed algorithm is still able to efficiently find the optimal solutions. We also discuss the claim made by Basar et al, (1995) that in the limit of $x_0 \\rightarrow 0$, where $x_0$ is the initial condition for the state of the system, the disturbance attenutaion problem solves the $H_{\\infty}$ optimal control problem. Furthermore, we present a case study where the performance of nominal MPC and RMPC, implemented using the proposed optimization algorithm, is compared, as applied to a generic process monitoring control problem. The RMPC simulation is solved efficiently with the proposed algorithm and the numerical simulations suggest that RMPC is a better controller in limiting the influence of disturbances to the state of the system. However, robustness comes with a higher average cost than nominal MPC. References Basar, Tamer, and Pierre Bernhard. \"$H^{\\infty}$-optimal control and related minimax design problems. Systems and Control: Foundations and Applications.\" (1995). Bujarbaruah, Monimoy, Ugo Rosolia, Yvonne R. Stürz, Xiaojing Zhang, and Francesco Borrelli. \"Robust MPC for linear systems with parametric and additive uncertainty: A novel constraint tightening approach.\" arXiv preprint arXiv:2007.00930 (2020). Campo, Peter J., and Manfred Morari. \"Robust model predictive control.\" 1987 American control conference. IEEE, 1987. Eliasi, H., M. B. Menhaj, and H. Davilu. \"Robust nonlinear model predictive control for a PWR nuclear power plant.\" Progress in Nuclear Energy 54.1 (2012): 177-185. Hespanha, João P. Noncooperative game theory. Princeton University Press, 2017. Lee, Jay H., and Zhenghong Yu. \"Worst-case formulations of model predictive control for systems with bounded parameters.\" Automatica 33.5 (1997): 763-781. Kerrigan, Eric C., and Jan M. Maciejowski. \"Feedback min‐max model predictive control using a single linear program: robust stability and the explicit solution.\" International Journal of Robust and Nonlinear Control: IFAC‐Affiliated Journal 14.4 (2004): 395-413. Mayne, David Q., James B. Rawlings, Christopher V. Rao, and Pierre OM Scokaert. \"Constrained model predictive control: Stability and optimality.\" Automatica 36, no. 6 (2000): 789-814. Mayne, David Q. \"Model predictive control: Recent developments and future promise.\" Automatica 50.12 (2014): 2967-2986. Saltık, M. Bahadır, Leyla Özkan, Jobert HA Ludlage, Siep Weiland, and Paul MJ Van den Hof. \"An outlook on robust model predictive control algorithms: Reflections on performance and computational aspects.\" Journal of Process Control 61 (2018): 77-102. Veres, Sandor M., and J. P. Norton. \"Predictive self-tuning control by parameter bounding and worst-case design.\" Automatica 29.4 (1993): 911-928. Yan, Yan, and Longge Zhang. \"Robust Model Predictive Control with Almost Zero Online Computation.\" Mathematics 9.3 (2021): 242.",
+    "presenting_author": "James Rawlings | University of California, Santa Barbara",
+    "authors": [
+      "James Rawlings | University of California, Santa Barbara",
+      "Davide Mannini | University of California, Santa Barbara"
+    ],
+    "authors_structured": [
+      {
+        "name": "James Rawlings",
+        "affiliation": "University of California, Santa Barbara",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Davide Mannini",
+        "affiliation": "University of California, Santa Barbara",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "206f",
+    "sortable_time": "2023-11-07_09:30:00_09:48:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670381"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670644",
+    "paper_endpoint": "Paper/670644",
+    "paper_id": "670644",
+    "topic": "Nonlinear Optimization on Exascale Computing Architectures and GPUs",
+    "title": "Nonlinear Optimization on Exascale Computing Architectures and GPUs",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "53412",
+    "session_title": "Advances in Optimization II",
+    "session_number": "206",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Large-scale nonlinear optimization is critical for many scientific and engineering applications, such as energy infrastructure operations, process control, and machine learning. These problems often exhibit extreme complexities because they embed complex physical models that exhibit space-time dynamics and/or uncertainty scenario trees. However, solving such problems with second-order algorithms is computationally challenging, and traditional optimization solvers [1,2] struggle to cope with the extreme scale of emerging applications. With the performance of single-core computers stagnating in recent years, the need for optimization software tools capable of exploiting parallel and distributed computing architectures, such as distributed computing clusters and graphics processing units (GPUs), to enable scalability is increasing. Despite the potential of parallel and distributed computing architectures, the development of parallel nonlinear optimization solvers has faced challenges due to the sequential nature of some operations within nonlinear optimization algorithms, resulting in limited success reported in the literature [3,4,5,6,7]. In large-scale regimes, the computational complexity is delegated to automatic differentiation (AD) tools and linear solvers, and the key to developing parallel optimization solvers is the parallelization of the derivative evaluations and solving sparse linear systems. While the parallel solution of linear systems has been extensively studied in the context of partial differential equations (PDEs), the linear systems arising from interior-point nonlinear optimization solvers are critically ill-conditioned, making the widespread use of iterative methods impossible. Consequently, the parallel solution of ill-conditioned sparse linear systems remains one of the most significant challenges in parallel nonlinear optimization. Moreover, parallel sparse automatic differentiation is inherently challenging to implement, and existing state-of-the-art AD tools do not support parallel computation of derivatives, even though significant opportunities exist for additional speed-up [8,9,10]. In this work, we present our recent efforts to develop software infrastructure for solving extremely large-scale constrained nonlinear optimization problems on supercomputers equipped with GPU accelerators [11,12,13,14]. Our software tools include the algebraic modeling/AD tool MadDiff.jl [15] and the nonlinear optimization solver MadNLP.jl [16]. MadDiff.jl allows users to specify optimization problems in a way that allows parallelization at the automatic differentiation level, running on multi-core CPUs as well as GPU accelerators, while abstracting away low-level details such as dispatching parallel derivative evaluations to GPU kernels. MadNLP.jl can take the optimization model in such a form and can solve optimization problems efficiently by performing the majority of operations on GPUs. The key advantages of our software tools include flexibility and portability. The multiple dispatch feature of Julia Language enables the development of a high-level optimization solver that can handle different data structure backends, allowing for the use of structure-exploiting strategies for linear algebra subroutines. The use of KernelAbstractions.jl unifies all the different vendor APIs, by wrapping them in Julia as a single API, enabling us to run the same code on CPUs as well as Intel, AMD, and NVIDIA GPUs. Importantly, since Julia is a compiled language, these flexibilities do not compromise performance. Although developing parallel linear algebra subroutines for general sparse linear systems is challenging, we have developed several specialized linear solvers based on structure-exploiting reduction strategies [11,12,13]. These methods aim to reduce the large-scale sparse linear systems with few degrees of freedom into a dense linear system in a smaller dimension, which can be efficiently handled by vendor libraries (e.g., NVidia's CUDA framework). While this strategy may not be sufficient for handling general sparse linear systems, it can effectively address a wide range of optimization problems observed in chemical processes and energy systems. We have conducted numerical experiments to demonstrate the effectiveness of our tools in solving large-scale optimization problems on GPUs, or even with a cluster of GPUs. Our results demonstrate a significant reduction in computation time, making it feasible to tackle problems that were previously considered intractable. We have benchmarked our algorithms and software infrastructure on several large-scale optimization problems from various domains, including chemical process control, PDE-constrained optimization, and AC and security-constrained optimal power flow problems. Our experiments show that for large-scale instances, our approach can speed up the solution time by up to 50 times compared to state-of-the-art methods running on a single CPU [13]. These promising results open up new opportunities for solving increasingly complex optimization problems by fully leveraging the computational power of exascale computing architectures and GPU accelerators. [1] Wächter and Biegler. On the implementation of an interior-point filter line-search algorithm for large-scale nonlinear programming. Mathematical programming (2006). [2] Byrd, Nocedal, and Waltz. KNITRO: An integrated package for nonlinear optimization. Large-scale nonlinear optimization (2006). [3] Cao, Seth, and Laird. An augmented Lagrangian interior-point approach for large-scale NLP problems on graphics processing units. Computers & Chemical Engineering (2016). [4] Rodriguez, Parker, Laird, Nicholson, Siirola, and Bynum. Scalable parallel nonlinear optimization with PyNumero and Parapint. INFORMS Journal on Computing (2023). [5] Shin, Coffrin, Sundar, and Zavala. Graph-based modeling and decomposition of energy infrastructures. IFAC-PapersOnLine (2021). [6] Chiang, Petra, and Zavala. Structured nonconvex optimization of large-scale energy systems using PIPS-NLP. In 2014 Power Systems Computation Conference (2014). [7] Rodriguez, Laird, and Zavala. Scalable preconditioning of block-structured linear algebra systems using ADMM. Computers & Chemical Engineering (2020). [8] Fourer, Gay, and Kernighan. AMPL: A mathematical programming language. AT & T Bell Laboratories (1987). [9] Dunning, Huchette, and Miles. JuMP: A modeling language for mathematical optimization. SIAM review (2017). [10] Andersson, Gillis, Horn, Rawlings, and Diehl. CasADi: a software framework for nonlinear optimization and optimal control. Mathematical Programming Computation (2019). [11] Cole, David, et al. Exploiting GPU/SIMD Architectures for Solving Linear-Quadratic MPC Problems. 2023 American Control Conference (to appear). [12] Pacaud, Shin, Schanen, Maldonado, and Anitescu. Accelerating condensed interior-point methods on SIMD/GPU architectures. Journal of Optimization Theory and Applications (2023). [13] Pacaud, Shin, Schanen, Maldonado, and Anitescu. Parallel Interior-Point Solver for Block-Structured Nonlinear Programs on SIMD/GPU Architectures. arXiv:2301.04869 (2023). [14] Anitescu, Kim, Kim, Maldonado, Pacaud, Rao, Schanen, Shin, and Subramanian. Targeting Exascale with Julia on GPUs for multiperiod optimization with scenario constraints. SIAG/OPT Views and News (2021). [15] MadDiff.jl: An automatic differentiation and algebraic modeling package. https://github.com/sshin23/MadDiff.jl [16] MadNLP.jl: A solver for nonlinear programming. https://github.com/MadNLP/MadNLP.jl",
+    "presenting_author": "Sungho Shin | Massachusetts Institute of Technology, Cambridge",
+    "authors": [
+      "Sungho Shin | Massachusetts Institute of Technology, Cambridge",
+      "François Pacaud | Mines Paris - PSL, France",
+      "Mihai Anitescu | Argonne National Laboratory, Lemont, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sungho Shin",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "François Pacaud",
+        "affiliation": "Mines Paris - PSL, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Mihai Anitescu",
+        "affiliation": "Argonne National Laboratory, Lemont, IL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "206g",
+    "sortable_time": "2023-11-07_09:48:00_10:06:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670644"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/662870",
+    "paper_endpoint": "Paper/662870",
+    "paper_id": "662870",
+    "topic": "A Global Optimization Algorithm for Qcps Relying on Piecewise Relaxations with Logarithmic Partitioning",
+    "title": "A Global Optimization Algorithm for Qcps Relying on Piecewise Relaxations with Logarithmic Partitioning",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "53412",
+    "session_title": "Advances in Optimization II",
+    "session_number": "206",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "In the optimization models encountered in Process Systems Engineering, bilinear terms are the most common source of non-convexities in the constraints. Such quadratically constrained problems (QCPs) can be solved to global optimality by commercial solvers like BARON, ANTIGONE and GUROBI, which mostly rely on spatial branch & bound (B&B) for convergence. A critical feature is the relaxation used in spatial B&B, with the preference still given to the one derived from the McCormick envelopes of the bilinear terms [1]. Nevertheless, a tighter but computationally more expensive relaxation can be derived after adding a set of binary variables, leading to a mixed-integer linear program (MILP) instead of a linear program (LP). The most efficient way to do it is by relying on logarithmic partitioning schemes [2] that, for the same number of binary variables, can return relaxation gaps that are orders of magnitude smaller [3] than their linear counterparts [4]. Note that the formulation can be as tight as desired, and so the challenge is to find the tradeoff leading to the lowest computational time. The approach suggested in this paper, is to adjust the settings controlling the quality and size of the relaxation formulation dynamically, after observing the behavior of the instance being solved. The relaxation is primarily used to compute the dual bound on the objective function but can also be used to reduce the domain of the model variables [5], and to provide a good initialization for a local QCP solver like CONOPT to generate a high quality primal bound. The proposed global optimization algorithm is inspired by our previous work [6] and consists of the following four steps: 1. Computation of a quick dual bound through the LP relaxation . Such solution is then used as initialization for the solution of the QCP with a fast local solver, giving us the primal bound and the first optimality gap. 2.The user specifies a maximum time per execution of OBBT. If this value if greater than the estimated time required (number of problems multiplied by computational time of LP relaxation), LP-based OBBT is triggered. Better variable bounds are typically obtained, leading to an improved dual bound and a tighter optimality gap in the next step. 3. If the elapsed time is below the specified maximum, we proceed to the MILP relaxation , derived using the base-2 multiparametric disaggregation technique (MDT) with the lowest setting for all discretized variables [3]: 2 intervals per partition. The solution pool capability of the MILP solver is used to provide multiple initialization points for the local QCP solver to try to improve the primal bound. 4. We recompute the estimated time for OBBT and, if low enough, execute MILP-based OBBT [7]. Multiple iterations of steps 3 and 4, with increasing number of intervals per partition, will typically be executed. 5. Once the computational time of the MILP relaxation surpasses a certain threshold (defined by the user), we trigger spatial B&B until closing the optimality gap to the desired target or running out of time. For performance evaluation we rely on a set of benchmark instances from the literature. They consist of 34 instances of the water-using network design problem, and 10 instances of the pooling problem for the q- and tp-formulations. The results for the water instances show that the new algorithm significantly outperforms BARON 22.7.23 and GUROBI 9.5.2 with respect to the optimality gap at termination, achieving a reduction of up to 4 orders of magnitude. For the pooling instances GUROBI was the best performer. Over all 54 instances, the new algorithm was the best at proving global optimality (22 instances vs. 3 and 9), BARON excelled at find the optimal solution (43), while GUROBI always generated tighter dual bounds than BARON at termination (1 h of wall-clock time limit). Acknowledgments : Financial support from Fundação para a Ciência e Tecnologia (FCT) through project UIDB/04028/2020. References : [1] McCormick, G.P. (1976). Computability of global solutions to factorable nonconvex programs. Part I. Con- vex underestimating problems. Math Program 10,146. [2] Misener, R., Thompson, J.P., Floudas, C.A. (2011). APOGEE: global optimization of standard, generalized, and extended pooling problems via linear and logarithmic partitioning schemes. Comput. Chem. Eng. 35, 876-892. [3] Castro, P.M., Liao, Q., Liang, Y. (2022). Comparison of mixed‐integer relaxations with linear and logarithmic partitioning schemes for quadratically constrained problems. Optimization and Engineering 23, 717-747. [4] Bergamini, M.L., Aguirre, P., Grossmann, I.E. Logic-based outer approximation for globally optimal synthesis of process networks. Comput. Chem. Eng. 29, 1914-1933. [5] Puranik, Y., Sahinidis, N. V. (2017). Domain reduction techniques for global NLP and MINLP optimization. Constraints 22, 338–376. [6] Castro, P.M. (2017). Spatial branch-and-bound algorithm for MIQCPs featuring multiparametric disaggregation. Optim Methods Softw 32(4), 719–737 [7] Castro, P.M., Grossmann, I.E. (2014). Optimality-based bound contraction with multiparametric disaggregation for the global optimization of mixed-integer bilinear problems, J. Global Optim. 59, 277–306.",
+    "presenting_author": "Pedro Castro | Instituto Superior Técnico, Universidade de Lisboa, Portugal",
+    "authors": [
+      "Pedro Castro | Instituto Superior Técnico, Universidade de Lisboa, Portugal"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pedro Castro",
+        "affiliation": "Instituto Superior Técnico, Universidade de Lisboa, Portugal",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "206h",
+    "sortable_time": "2023-11-07_10:06:00_10:24:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/662870"
+  }
+]

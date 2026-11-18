@@ -1,0 +1,460 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/709191",
+    "paper_endpoint": "Paper/709191",
+    "paper_id": "709191",
+    "topic": "Leveraging Novel Topological Features to Develop Generalizable Machine Learning Models for Accelerated Discovery of Mechanically Stable MOFs",
+    "title": "Leveraging Novel Topological Features to Develop Generalizable Machine Learning Models for Accelerated Discovery of Mechanically Stable MOFs",
+    "date_time": "2025-11-03_15:30:00_18:00:00",
+    "session_id": "58546",
+    "session_title": "Automated Molecular and Materials Discovery: Integrating Machine Learning, Simulation, and Experiment II",
+    "session_number": "202",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Metal-organic frameworks (MOFs) are promising candidate materials for various applications, including water harvesting, direct air capture, ion separation, and gas storage. However, their commercial application is unrealized in part due to low stability under mechanical stress. MOFs can undergo amorphization under external pressure, which alters the pore size and shape, thereby reducing performance. Hence, screening MOFs with high mechanical stability is essential to identify suitable candidate materials for experimental application. However, the diversity in metal-centric inorganic nodes, organic nodes, and organic edge chemistry makes the MOF design space in the order of millions, making it impossible to identify MOFs with high mechanical stability by performing experiments or computer simulations. Previous work has shown the potential of leveraging atomistic simulation and machine learning (ML) models for the accelerated discovery of mechanically stable MOFs. Still, the limited diversity in the MOF building blocks in the training dataset and categorical encoding of MOF topology to the ML models impede the generalizability of the models over a broader range of unseen MOF chemistries and topologies as well as the interpretability of structure-stability relationships. Here, we develop ML models for predicting mechanical stability in MOFs trained with novel interpretable topological features, resulting in much greater generalizability across the entire MOF design space and more exhaustive structure-stability relationships. We start with a dataset of hypothetical MOFs with over six times inorganic node diversity and ten times topological diversity than previous work. We then use the bulk moduli of the hypothetical MOFs reported in our earlier study as the descriptor of mechanical stability in our work. Unlike prior work, where only MOF geometric features and categorical topological features were used as inputs to the ML models, we develop our ML models with interpretable MOF chemical features, geometric features, and novel topological features that we develop in our work, making our ML models transferable to new unseen MOF chemistries and topologies. Using our ML models, we next identified functional groups from an extensive set with diverse chemistry to further improve mechanical stability in MOFs. Finally, we employ our ML models to virtually screen ~500k hypothetical and experimental MOFs to identify the most mechanically stable MOFs with potential for industrial applications.",
+    "presenting_author": "Akash Ball | Massachusetts Institute of Technology, Cambridge",
+    "authors": [
+      "Akash Ball | Massachusetts Institute of Technology, Cambridge",
+      "Changhwan Oh | Massachusetts Institute of Technology, Cambridge",
+      "Gozel Dovranova | Massachusetts Institute of Technology, Cambridge",
+      "Heather Kulik | Massachusetts Institute of Technology, Cambridge"
+    ],
+    "authors_structured": [
+      {
+        "name": "Akash Ball",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Changhwan Oh",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "Gozel Dovranova",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "Heather Kulik",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "202a",
+    "sortable_time": "2025-11-03_15:30:00_15:45:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/709191"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/710232",
+    "paper_endpoint": "Paper/710232",
+    "paper_id": "710232",
+    "topic": "Machine-Learning Model for the Discovery of Dielectric Cooling Fluids",
+    "title": "Machine-Learning Model for the Discovery of Dielectric Cooling Fluids",
+    "date_time": "2025-11-03_15:30:00_18:00:00",
+    "session_id": "58546",
+    "session_title": "Automated Molecular and Materials Discovery: Integrating Machine Learning, Simulation, and Experiment II",
+    "session_number": "202",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Data centres are the backbone of the world’s modern IT and internet needs. The data centre industry is expected to consume approximately 4.5% of the world’s electricity demand by 2025 [ [i] ], and approximately 40% of this energy is employed for uninterruptible cooling systems. Efficient direct liquid cooling is an efficient substitute for traditional air cooling; the design of these thermal management fluids has become an increasingly important area of research-oriented toward reducing energy consumption and reusing waste heat. Currently, cooling fluids under development include hydrocarbons and high molecular weight esters, whether natural or synthetic. These fluids are required to meet stringent performance goals for thermal management, signal integrity, material compatibility, and reliability for deployment in IT equipment. Machine learning models can transform materials discovery by allowing the rapid prediction of properties and the generation of candidate materials. However, these models require large volumes of high-quality training data to accurately learn the underlying chemical space—a challenge when such data is limited. Dielectric cooling fluids are a case in point: their performance depends on various thermophysical properties, including density, heat capacity, and transport properties such as viscosity and thermal conductivity. However, data for these fluids is unavailable for much of the chemical space, which includes a diverse range of organic chemistries and is sparse across the phase space, mainly concentrated around ambient temperature. We showcase the development of a Graph Neural Network (GNN) to predict the thermophysical properties of potential thermal management fluids. Our training dataset combines high-quality experimental data from NIST REFPROP and DIPPR 801 with lower-accuracy pseudo-data generated by molecular dynamics (MD) simulations. We use experimental data from over 1,500 compounds, curated to include only C, H, O, N and Si atoms, assessed at four different temperatures ranging from 85 to 1200 K. After evaluating the available chemical space, we “plug the holes” by generating pseudo-data from MD simulations utilizing the Transferable United-Atom force fields based on the Mie potential [ [ii] ]. The lower reliability of this latter data is incorporated into the loss functions by including estimates of uncertainty. The fits to density and heat capacity are robust, while those for thermal conductivity and viscosity have the highest errors, mainly attributed to the uncertainty in the data. The trained GNN is deployed to analyze the molecular trends that contribute to higher “figures of merit” for thermal fluids and to prioritize potential candidate fluids for immersion cooling. We demonstrate that integrating lower-accuracy data can significantly improve the GNN’s performance by bridging gaps in chemical space—provided that the quality of the data is adequately considered. References [i] Azarifar, M., Arik M. and Chang, J. Y. Liquid cooling of data centers: A necessity facing challenges Appl Therm Eng , 247, (2024), [ii] Fischer, M., Bauer, G. and Gross, J. Transferable Anisotropic United-Atom Mie (TAMie) Force Field: Transport Properties from Equilibrium Molecular Dynamic Simulations. Industrial & Engineering Chemistry Research 59, 8855–8869 (2020).",
+    "presenting_author": "Erich A. Muller | Imperial College London, United Kingdom",
+    "authors": [
+      "Oliver Gittus | Imperial College London, United Kingdom",
+      "Erich A. Muller | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Oliver Gittus",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Erich A. Muller",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "202b",
+    "sortable_time": "2025-11-03_15:45:00_16:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/710232"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/711852",
+    "paper_endpoint": "Paper/711852",
+    "paper_id": "711852",
+    "topic": "AI-Powered Colorimetric Sensing: Predicting Analyte-Dye Interactions with Machine Intelligence and Large Language Models",
+    "title": "AI-Powered Colorimetric Sensing: Predicting Analyte-Dye Interactions with Machine Intelligence and Large Language Models",
+    "date_time": "2025-11-03_15:30:00_18:00:00",
+    "session_id": "58546",
+    "session_title": "Automated Molecular and Materials Discovery: Integrating Machine Learning, Simulation, and Experiment II",
+    "session_number": "202",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Rapid, cost-effective analyte detection is essential for applications across pharmaceuticals, agriculture, environmental monitoring, and food safety. Colorimetric sensor arrays offer a powerful solution, which classifies different analytes based on collective sensing response instead of specific molecular recognition. However, the development of colorimetric sensor arrays remains an empirical and time-intensive process. To bridge this gap, we harnessed AI and molecular informatics to create a high-quality, open-source database comprising 12,000+ curated data points from 200 published research articles. Our automated large language pipeline extracts key sensing parameters—dyes, analytes, and solvents and translates them into molecular fingerprints and latent space embeddings via Variational Autoencoders (VAE). Leveraging this rich database, we trained machine learning models to accurately predict analyte-dye interactions, and the best-performing model was selected for experimental validation. The results underscore AI’s transformative role in advancing intelligent colorimetric sensing, paving the way for rapid sensor dye screening and automated sensor array generation.",
+    "presenting_author": "Sina Jamalzadegan | North Carolina State University, Raleigh, NC",
+    "authors": [
+      "Sina Jamalzadegan | North Carolina State University, Raleigh, NC",
+      "Akhil Penumudy | North Carolina State University, Raleigh, NC",
+      "Belinda Mativenga | North Carolina State University, Raleigh, NC",
+      "Md Halim Mondol | North Carolina State University, Raleigh, NC",
+      "Oindrila Hossain | North Carolina State University, Raleigh, NC",
+      "Edgar Lobaton | North Carolina State University, Raleigh, NC",
+      "Nelson Vinueza Benitez | North Carolina State University, Raleigh, NC",
+      "Coby Schal | North Carolina State University, Raleigh, NC",
+      "Qingshan Wei | North Carolina State University, Raleigh, NC"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sina Jamalzadegan",
+        "affiliation": "North Carolina State University, Raleigh, NC",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Akhil Penumudy",
+        "affiliation": "North Carolina State University, Raleigh, NC",
+        "designation": "Author"
+      },
+      {
+        "name": "Belinda Mativenga",
+        "affiliation": "North Carolina State University, Raleigh, NC",
+        "designation": "Author"
+      },
+      {
+        "name": "Md Halim Mondol",
+        "affiliation": "North Carolina State University, Raleigh, NC",
+        "designation": "Author"
+      },
+      {
+        "name": "Oindrila Hossain",
+        "affiliation": "North Carolina State University, Raleigh, NC",
+        "designation": "Author"
+      },
+      {
+        "name": "Edgar Lobaton",
+        "affiliation": "North Carolina State University, Raleigh, NC",
+        "designation": "Author"
+      },
+      {
+        "name": "Nelson Vinueza Benitez",
+        "affiliation": "North Carolina State University, Raleigh, NC",
+        "designation": "Author"
+      },
+      {
+        "name": "Coby Schal",
+        "affiliation": "North Carolina State University, Raleigh, NC",
+        "designation": "Author"
+      },
+      {
+        "name": "Qingshan Wei",
+        "affiliation": "North Carolina State University, Raleigh, NC",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "202c",
+    "sortable_time": "2025-11-03_16:00:00_16:15:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/711852"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712196",
+    "paper_endpoint": "Paper/712196",
+    "paper_id": "712196",
+    "topic": "A Bayesian Optimization Approach for the Discovery of High-Efficiency Sodium-Ion Battery Electrolytes",
+    "title": "A Bayesian Optimization Approach for the Discovery of High-Efficiency Sodium-Ion Battery Electrolytes",
+    "date_time": "2025-11-03_15:30:00_18:00:00",
+    "session_id": "58546",
+    "session_title": "Automated Molecular and Materials Discovery: Integrating Machine Learning, Simulation, and Experiment II",
+    "session_number": "202",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Sodium-ion batteries are a potential low-cost rechargeable battery alternative with safer chemistries and less susceptible supply risks over contemporarily popular lithium-ion batteries [1]. However, the chemical differences between sodium and lithium complicate the substitution of sodium-ions into developed lithium-ion technologies. Currently, swapping sodium into lithium-based battery technologies results in sodium-ion batteries with short cycle lives, low coulombic efficiencies, and unstable solid-electrolyte interphases due to the increased redox-ion size and chemical incompatibilities [2]. Multicomponent electrolyte mixtures have been utilized to overcome these limitations in redox cycling by beneficially modulating ion solvation structures [3], although this approach has not yet been broadly investigated in sodium-ion batteries. In this work, we combine batch Bayesian optimization (BO) and high-throughput cycling experiments to discover complex electrolyte mixtures with up to 10 components for sodium-ion batteries. We show that the BO approach effectively explores the high-dimensional electrolyte design space and quickly identifies mixtures with >99.9% coulombic efficiency, while testing <1% of the possible mixtures. By visualizing the Gaussian Process (GP) model predictions over the experimental design space [4], we identify electrolyte composition trends that advance our understanding of sodium-ion solvation, coulombic efficiency, and solid-electrolyte interphase stability. Overall, the combined automated experimental platform provides a new avenue to efficiently optimize electrolyte mixtures while learning chemical insights into material-property relationships. Nayak, P.K., et al., From Lithium-Ion to Sodium-Ion Batteries: Advantages, Challenges, and Surprises. Angewandte Chemie International Edition, 2018. 57 (1): p. 102-120. Hu, Z., et al., Current Progress of Anode-Free Rechargeable Sodium Metal Batteries: Origin, Challenges, Strategies, and Perspectives. Advanced Functional Materials, 2024. 34 (22): p. 2313823. Kim, S.C., et al., High-entropy electrolytes for practical lithium metal batteries. Nature Energy, 2023. 8 (8): p. 814-826. Vela, B., et al., Visualizing high entropy alloy spaces: methods and best practices. Digital Discovery, 2025. 4 (1): p. 181-194.",
+    "presenting_author": "J. E. Umana | University of Wisconsin-Madison",
+    "authors": [
+      "J. E. Umana | University of Wisconsin-Madison",
+      "Qianli Xing | University of Wisconsin-Madison",
+      "Andrew C. Cavell | University of Wisconsin-Madison",
+      "Victor M. Zavala | University of Wisconsin-Madison",
+      "Fang Liu | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "J. E. Umana",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Qianli Xing",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Andrew C. Cavell",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Victor M. Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Fang Liu",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "202d",
+    "sortable_time": "2025-11-03_16:15:00_16:30:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712196"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714123",
+    "paper_endpoint": "Paper/714123",
+    "paper_id": "714123",
+    "topic": "Using Artificial Neural Networks Combined with the Group Contribution Method to Predict the Highest CO₂ Solubility of Ionic Liquids for Direct-Air Carbon Capture",
+    "title": "Using Artificial Neural Networks Combined with the Group Contribution Method to Predict the Highest CO₂ Solubility of Ionic Liquids for Direct-Air Carbon Capture",
+    "date_time": "2025-11-03_15:30:00_18:00:00",
+    "session_id": "58546",
+    "session_title": "Automated Molecular and Materials Discovery: Integrating Machine Learning, Simulation, and Experiment II",
+    "session_number": "202",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Global warming has become a very popular subject of our time, developing a great need to capture carbon from our atmosphere. One method is through Direct-Air Capture (DAC), where a chemical absorbent is used to selectively absorb carbon dioxide (CO 2 ) from air or flue gas. However, developing solvents for carbon capture is a challenging task due to complex molecular structures and costly experimentation. This study investigates the use of an optimized Artificial Neural Network (ANN) model combined the Group Contribution Method (GCM) to predict the best ionic liquid (IL) structures, with capabilities of achieving high CO 2 solubility. Increasing their effectiveness in carbon capture applications. A database has been previously compiled containing 10,310 data measurements of CO 2 solubilities in various ILs. These solubility values have been experimentally tested at different temperatures and pressures. Based on this database, the relationship between IL structure, CO 2 solubility, temperature, and pressure are correlated using GCM. By utilizing GCM, the IL molecules are separated into smaller functional groups, incorporated into an ANN model, permitting an enhanced prediction process. The ANN model utilizes a tree-based algorithm and demonstrates robust test accuracy in predicting CO 2 solubility. The performance of the model was analyzed using statistical metrics such as the coefficient of determination (R 2 ) and mean absolute error (MAE), resulting in values of 0.986 and 0.0155, respectively. It is believed that the computational cost of this model is significantly lower than the essential computational time of other models. Using this newly developed model, the ultimate goal would be to propose a novel IL structure. One that can maximize CO 2 solubility, while maintaining cost-effectiveness and ease of production. Future research will be needed to find ways to synthesize and test this proposed molecule.",
+    "presenting_author": "Salim Soubra | Mississippi State University, Starkville, MS",
+    "authors": [
+      "Salim Soubra | Mississippi State University, Starkville, MS",
+      "Amin Amirlatifi | Mississippi State University, Starkville, MS"
+    ],
+    "authors_structured": [
+      {
+        "name": "Salim Soubra",
+        "affiliation": "Mississippi State University, Starkville, MS",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Amin Amirlatifi",
+        "affiliation": "Mississippi State University, Starkville, MS",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "202e",
+    "sortable_time": "2025-11-03_16:30:00_16:45:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714123"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714978",
+    "paper_endpoint": "Paper/714978",
+    "paper_id": "714978",
+    "topic": "Automatic Chemical Information Extraction Using Deep Learning and Large Language Models: Applications in Chemistry and Materials Predictions",
+    "title": "Automatic Chemical Information Extraction Using Deep Learning and Large Language Models: Applications in Chemistry and Materials Predictions",
+    "date_time": "2025-11-03_15:30:00_18:00:00",
+    "session_id": "58546",
+    "session_title": "Automated Molecular and Materials Discovery: Integrating Machine Learning, Simulation, and Experiment II",
+    "session_number": "202",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Machine learning (ML) is transforming molecular sciences by accelerating the discovery and optimization of molecules, materials, and reactions. However, the performance of ML models heavily relies on the availability of high-quality, large-scale datasets. Historically, constructing such datasets in chemistry and materials science has required labor-intensive manual curation due to the heterogeneous distribution of data across publications and the complexity of domain-specific formats. As ML applications in these fields expand rapidly, reliance on manual data extraction has emerged as a critical bottleneck. Automated data extraction from scientific literature offers a promising solution, particularly with recent advances in large language models (LLMs). Yet, chemistry and materials science present unique challenges, including complex named entities, long-range dependencies, and multimodal data (e.g., text, tables, and figures). In this work, we present deep learning and LLM-based approaches for automated information extraction from organic chemistry and polymer materials literature. By leveraging data augmentation, prompt engineering, and fine-tuning, we develop efficient and accurate models for structured knowledge extraction. Notably, the automatically extracted data achieves comparable performance in downstream ML tasks to expert-curated datasets. Our results demonstrate the potential of fully automated, data-driven pipelines to accelerate discovery in chemistry and materials science.",
+    "presenting_author": "Hanyu Gao | Hong Kong University of Science and Technology",
+    "authors": [
+      "Hanyu Gao | Hong Kong University of Science and Technology",
+      "Yufan Chen | Hong Kong University of Science and Technology",
+      "Haifan Zhou | Hong Kong University of Science and Technology",
+      "Yuxuan Zhang | Hong Kong University of Science and Technology"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hanyu Gao",
+        "affiliation": "Hong Kong University of Science and Technology",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yufan Chen",
+        "affiliation": "Hong Kong University of Science and Technology",
+        "designation": "Author"
+      },
+      {
+        "name": "Haifan Zhou",
+        "affiliation": "Hong Kong University of Science and Technology",
+        "designation": "Author"
+      },
+      {
+        "name": "Yuxuan Zhang",
+        "affiliation": "Hong Kong University of Science and Technology",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "202f",
+    "sortable_time": "2025-11-03_16:45:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714978"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/715423",
+    "paper_endpoint": "Paper/715423",
+    "paper_id": "715423",
+    "topic": "A Modular Computational Pipeline Utilizing Fragment-Based Characterization Towards Targeted Glycan Nanocarrier Design",
+    "title": "A Modular Computational Pipeline Utilizing Fragment-Based Characterization Towards Targeted Glycan Nanocarrier Design",
+    "date_time": "2025-11-03_15:30:00_18:00:00",
+    "session_id": "58546",
+    "session_title": "Automated Molecular and Materials Discovery: Integrating Machine Learning, Simulation, and Experiment II",
+    "session_number": "202",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "As the prospects of revolutionizing medicine through targeted drug delivery become more fully realized, the demand for safe, sustainable, and effective drug carrier materials has risen commensurately. In the field of nanomedicine, glycans have long been highly desirable for use in targeted drug carrier materials as they are known to display receptor specificity with antibody-like precision while possessing far greater biosafety and immunomodulatory properties. Despite this, the complex and highly dynamic structural nature of glycans often presents a significant hindrance to traditional experimental methods of study and design. The past two decades have shown, however, that computational simulation of glycosylated systems can overcome much of what experiments lack in capability and are even becoming a gold-standard in the design of smart drug delivery systems. While computational simulation and design of glycosylated drug delivery systems has seen some advancements in recent years, a comprehensive methodology capable of accommodating the extensive design space inherent to glycomaterials has not yet been fully established. It is here that we propose a computational platform equipped to efficiently model, characterize, and simulate both observed and novel glycan structures towards their actualization as a targeted biomaterial for use in nanomedicine. Glycan modeling tools such as RosettaCarbohydrate and the CHARM36 force field parameters provide robust cheminformatic support for precise replication of mechanistic phenomena inherent to complex carbohydrates in silico, while glycan characterization is performed through high-throughput molecular docking simulation between constructed glycoligand candidates and PDB-tabulated carbohydrate-binding receptors relevant to the drug delivery field such as lectins, antibodies, and certain viral proteins. Inspired by the process of lead optimization for structure-based drug design, our modular computational pipeline employs a fragment-based approach to structural screening and characterization tailored to the unique physiochemical properties of glycans; this is achieved through docking algorithms like Rosetta’s GlycanDock and Scripps’ Vina-Carb which allows for exhaustive sampling of the complex torsional angles involved in glycosidic linkages which are often not sufficiently represented by other docking suites such as Vina and Schrodinger Glide. Additionally, by sampling oligomeric permutations of carbohydrates replicating common glycan motifs documented in literature, useful parameters such as binding affinity, interface score, and residue contacts can be tabulated for a multitude of glycan-fragments cross-docked with a large repository of potential receptor targets. To ensure high-resolution thermodynamic data are obtained, high-scoring docked poses predicted by GlycanDock are further explored through Schrodinger IFD-MD to consider receptor flexibility and estimate structural stability over time. Prospects for later features of this analysis and design pipeline include support for GlycanDock’s “blind docking” which shows success in docking glycoligands for which the receptor binding site is unknown, and incorporation of GROMACS pose clustering to explore extended binding mode sampling beyond that of the top scoring pose. This work will establish the foundation for a modular computational pipeline aiding in the design of future drug delivery systems incorporating glycan-promoted target specificity. Additionally, this investigation will establish a comprehensive database of predicted binding affinity between common glycan residue motifs and carbohydrate binding proteins found throughout the body as potential receptor targets for future drugs.",
+    "presenting_author": "Jason Kantorow | Northeastern University, Boston, MA",
+    "authors": [
+      "Jason Kantorow | Northeastern University, Boston, MA",
+      "Shashi Murthy | Nanite, Boston, MA",
+      "Srirupa Chakraborty | Northeastern University, Boston, MA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jason Kantorow",
+        "affiliation": "Northeastern University, Boston, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Shashi Murthy",
+        "affiliation": "Nanite, Boston, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Srirupa Chakraborty",
+        "affiliation": "Northeastern University, Boston, MA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "202g",
+    "sortable_time": "2025-11-03_17:00:00_17:15:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/715423"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717183",
+    "paper_endpoint": "Paper/717183",
+    "paper_id": "717183",
+    "topic": "Machine Learning Zeolite Synthesis Conditions",
+    "title": "Machine Learning Zeolite Synthesis Conditions",
+    "date_time": "2025-11-03_15:30:00_18:00:00",
+    "session_id": "58546",
+    "session_title": "Automated Molecular and Materials Discovery: Integrating Machine Learning, Simulation, and Experiment II",
+    "session_number": "202",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Zeolites are commonly used as catalysts and absorbents for various chemical applications, but the conditions to synthesize zeolites with target structures and thus properties remain elusive given the large synthesize design space. Machine learning (ML) methods provide a viable way to elucidate the relationships between synthesis conditions and the output zeolite structures and properties. This study investigates the use of ML methods, particularly random forest and XGBoost, in discovering the optimal synthesis conditions for zeolite EMT. Using experimental datasets of EMT synthesis we first conducted a feature importance analysis using Shapley Additive exPlanations (SHAP) to rank all synthesis parameters. By perturbing the datasets, the model effectively pinpointed specific synthesis conditions conducive to EMT formation. Additionally, we utilized principal component analysis (PCA) and autoencoder for dimensionality reduction, which allowed us to retain three components for the development of a new predictive model. The model was employed to predict further synthesis conditions favorable for EMT formation. This method led to the identification of multiple synthesis conditions of producing EMT different from the experimental datasets and the synthesis conditions were confirmed using experiment to confirm the model prediction validity.",
+    "presenting_author": "Emmanuel Olanrewaju | University of Houston, TX",
+    "authors": [
+      "Emmanuel Olanrewaju | University of Houston, TX",
+      "Mingjian Wen | University of Houston, TX",
+      "Michael Nikolaou | University of Houston, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Emmanuel Olanrewaju",
+        "affiliation": "University of Houston, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mingjian Wen",
+        "affiliation": "University of Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Nikolaou",
+        "affiliation": "University of Houston, TX",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "202h",
+    "sortable_time": "2025-11-03_17:15:00_17:30:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717183"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717373",
+    "paper_endpoint": "Paper/717373",
+    "paper_id": "717373",
+    "topic": "Organic Solubility Prediction at the Aleatoric Limit with Neural Networks",
+    "title": "Organic Solubility Prediction at the Aleatoric Limit with Neural Networks",
+    "date_time": "2025-11-03_15:30:00_18:00:00",
+    "session_id": "58546",
+    "session_title": "Automated Molecular and Materials Discovery: Integrating Machine Learning, Simulation, and Experiment II",
+    "session_number": "202",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "The solubility of small molecules in organic (non-aqueous) solvents at arbitrary temperatures impacts every stage of the drug pipeline including screening, benchtop and reactor-scale synthesis, and formulation. Experimental determination of solubility is a time- and resource-intensive process which tends to yield noisy results. a-priori knowledge of a molecule’s solubility would therefore accelerate this entire workflow immensely, though arriving at a practically useful estimate is challenging [1]. Physics-based in-silico estimations of solubility are often inaccurate and limited in their flexibility with respect to both solute and solvent. Artificial intelligence methods trained on datasets of experimentally determined solubilities scraped from scientific literature have made significant progress in providing estimations, but are not without limitations. The literature-best model for temperature-dependent solubility predictions by Vermeire et al. [2] does not address the inherent experimental noise when reporting its performance. To address these shortcomings, we present the fastsolv solubility predictor ( Figure 1a ). This machine learning model provides predictions of small molecule solubility in arbitrary solvents and at arbitrary temperature under rigorous extrapolation conditions at twice the accuracy of the current state of the art. The model also provides physically reasonable and numerically accurate gradients of solubility with respect to temperature ( Figure 1b ), of special interest in process chemistry, due to the use of Sobolev training. Even in cases where the fastsolv model predictions are not accurate, it still often achieves correct rank-ordering of solvents, making it useful for solvent screening. fastsolv is highly extensible, open source, and freely available under the MIT license at GitHub.com/JacksonBurns/fastsolv and fastsolv.mit.edu hosts a demonstration of the fastsolv model. Python users may install the fastsolv python package for easy integration into their own workflows. The research community has already begun to do so, with fastsolv having been integrated into ASKCOS, Rowan Scientific, and Wolfram. A preprint describing fastsolv in greater detail is published on ChemRxiv . [1] Murdande, S.B., Pikal, M.J., Shanker, R.M., Bogner, R.H.: Aqueous solubility of crystalline and amorphous drugs: challenges in measurement. Pharmaceutical development and technology 16(3), 187–200 (2011) [2] Vermeire, F.H., Chung, Y., Green, W.H.: Predicting solubility limits of organic solutes for a wide range of solvents and temperatures. Journal of the Ameri can Chemical Society 144(24), 10785–10797 (2022) https://doi.org/10.1021/jacs. 2c01768",
+    "presenting_author": "Jackson Burns | Massachusetts Institute of Technology, Cambridge",
+    "authors": [
+      "Jackson Burns | Massachusetts Institute of Technology, Cambridge",
+      "Lucas Attia | Massachusetts Institute of Technology, Cambridge",
+      "Patrick Doyle | Massachusetts Institute of Technology, Cambridge",
+      "William Green | Massachusetts Institute of Technology, Cambridge"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jackson Burns",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Lucas Attia",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "Patrick Doyle",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "William Green",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "202i",
+    "sortable_time": "2025-11-03_17:30:00_17:45:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717373"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717641",
+    "paper_endpoint": "Paper/717641",
+    "paper_id": "717641",
+    "topic": "Integrated Use of Explainable AI and Constrained Generative Adversarial Networks for Novel Design of Redox-Active Organic Molecules for CO 2 Capture",
+    "title": "Integrated Use of Explainable AI and Constrained Generative Adversarial Networks for Novel Design of Redox-Active Organic Molecules for CO 2 Capture",
+    "date_time": "2025-11-03_15:30:00_18:00:00",
+    "session_id": "58546",
+    "session_title": "Automated Molecular and Materials Discovery: Integrating Machine Learning, Simulation, and Experiment II",
+    "session_number": "202",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "With the climate crisis more imminent as ever, various methods for mitigating CO 2 is in great demand. While amine-based CO 2 capture has been considered as an efficient method for capturing CO2 from fluegas, it has limitations in use for direct air capture (DAC) owing to volatility of the amines and degradation. As an alternative, solid sorbents such as amine-functionalized sorbents and metal-organic frameworks are being used as materials for DAC, but significant amount of energy is required at the current technology level, resulting in very high costs making it less profitable for companies to fully invest in it. Since DAC is a net-negative technology in terms of CO 2 , it is considered a key technology for meeting the CO 2 emission goals, and a breakthrough is required to contribute to actual CO2 mitigation. Recent studies have made use of redox-active organic materials (ROMs) as electrochemical CO 2 capture agents. Such studies have made use of ROMs such as NeutralRed and 4,4-Azopyridine for capture of CO 2 , showing regeneration energy of 35 kJ/mol of CO 2 , which is comparable to state-of-the-art amine-based capture systems. While these ROMs have shown potential for DAC, ROMs tend to be sensitive towards oxygen, which limits their usage. To make use of ROMs for DAC, various characteristics need to be met, such redox potential, solubility, CO 2 affinity and O 2 insensitivity. However, a ROM meeting all of these criteria is yet to be found, and efficient analysis of the molecular characteristics and synthesis of these materials is an essential field of study to expand the usage of ROMs. In this study, explainable AI is paired with constrained generative adversarial networks (cGAN) to analyze the characteristics of various ROMs, and to synthesize novel molecules with preferred properties. Based on the Murcko fragmentation rule, the attributions of the substructures of the ROMs included within the RedDB with respect to DAC-preferred characteristics are analyzed by substructure masking. This involves the development of a graphical isomorphism network for predicting the characteristic values of a ROM, and masking of the substructures to evaluate its effect on the ROM characteristic. After defining the essential substructures of ROM for effective DAC, a cGAN model is developed to generate novel ROM molecules. Upon acquiring the ROM with optimal characteristics for DAC, the ROM is synthesized and tested out for DAC performance. Air is flown through an H-cell with the synthesized ROM, and energy values for electrochemical stripping of CO 2 is evaluated.",
+    "presenting_author": "Changsoo Kim | Seoul National University, Korea, Republic of (South)",
+    "authors": [
+      "Sunghyun Ko | Korea Institute of Science and Technology, Seoul, Korea, Republic of (South)",
+      "Changsoo Kim | Seoul National University, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sunghyun Ko",
+        "affiliation": "Korea Institute of Science and Technology, Seoul, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Changsoo Kim",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "202j",
+    "sortable_time": "2025-11-03_17:45:00_18:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717641"
+  }
+]

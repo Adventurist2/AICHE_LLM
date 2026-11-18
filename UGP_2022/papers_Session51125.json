@@ -1,0 +1,360 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645938",
+    "paper_endpoint": "Paper/645938",
+    "paper_id": "645938",
+    "topic": "Surrogate Modeling of 3D Flow Dynamics and Chemical Reactions Using Physics-Constrained Deep Learning",
+    "title": "Surrogate Modeling of 3D Flow Dynamics and Chemical Reactions Using Physics-Constrained Deep Learning",
+    "date_time": "2022-11-16_15:30:00_18:00:00",
+    "session_id": "51125",
+    "session_title": "Advances in Computational Methods and Numerical Analysis - II",
+    "session_number": "542",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "As product purity requirements and environmental regulations become more stringent, the need of high-fidelity chemical process models grows. A simple model assuming perfect mixing is widely employed for a reactor such as CSTR, however, inhomogeneities due to imperfect mixing may occur and greatly affect the rate and dynamics of systems [1-3]. The inhomogeneous state can greatly affect product quality, such as causing cell death in bioreactors [4] or creating hot spots in polymerization reactors [5]. Therefore, for the correct interpretation of chemical process, a high-fidelity model that can accurately simulate the flow inside the reactor should be used. Computational Fluid Dynamics (CFD) techniques have been extensively used to create high-fidelity models of reactors, owing to its capability to simulate three-dimensional flow and reflect kinetics changes accordingly [4, 5]. However, employing CFD techniques necessitates a significant amount of computational power in order to solve systems of partial differential equations (PDEs) such as mass and momentum balance equations. Additionally, the majority of classic PDE solvers rely on mesh-based techniques such as the Finite Element Method (FEM) and the Finite Volume Method (FVM), which require the entire mesh be rebuilt whenever the geometry of the target system changes. These issues significantly restrict the use of the CFD model for real-time or structure optimization. To address the aforementioned issues, cost-effective surrogate models have been investigated. A recently proposed model of this type is the physics-informed neural network (PINN) [6]. PINN is a neural network that is trained in such a way that the residuals of governing equations are minimized. The PINN has advantages, including the ability to learn PDE solutions without using a mesh and to predict flow information in real time following training. Lu et al. (2019) demonstrate with the efficiency of PINN in learning benchmark PDEs and solving inverse problems [7]. Choi et al. (2020) show that PINN is capable of learning CFD models with moving reference frames as well as chemical reactions [8]. However, Lu et al. (2019) and Choi et al. (2020) incorporate the boundary condition (BC) and the initial condition (IC) into the loss function via a soft constraint. Because NN with soft constraints cannot be forced to produce an output that satisfies BC and IC, the output may not be physically realistic. As a result, to ensure the physical feasibility of the output, BCs and ICs should be applied to the neural network in a ‘hard’ manner. Sun et al. (2020) demonstrated the application of hard constraints to simple flow and learnt flow according to parametric geometry [9], while Berg and Nyström (2018) demonstrated the use of hard constraints to more complex geometry [10]. However, both studies addressed mainly difficulties involving two-dimensional geometry. The purpose of this study is to develop a framework for surrogate modeling of a three-dimensional, non-isothermal reactor with non-linear chemical reactions. BCs such as non-slip conditions on reactor wall and ICs were applied in the form of hard constraints, with another neural network learning the distance to the boundary. A CSTR with a van de Vusse reaction was chosen as the target system. The trained hard-constrained NN prediction results were compared to the CFD model for validation. The surrogate model successfully learnt the flow information of the high-fidelity CFD model and decreased the prediction speed by several orders of magnitude when compared to the CFD model. This method can be employed for the real-time optimization of chemical reactors. References [1] Villa, C.M., Dihora, J.O. and Harmon Ray, W. (1998), Effects of imperfect mixing on low-density polyethylene reactor dynamics. AIChE J., 44: 1646-1656. https://doi.org/10.1002/aic.690440716 [2] Qi, N., Zhang, H., Zhang, K., Xu, G., & Yang, Y. (2013). CFD simulation of particle suspension in a stirred tank. Particuology , 11 (3), 317–326. https://doi.org/10.1016/j.partic.2012.03.003 [3] Strizhak, P., Ali, F., & Menzinger, M. (1998). Inhomogeneities of CSTR on a Macroscale Due to Spatial Dependence of Micromixing Time: The BZ Reaction . https://pubs.acs.org/sharingguidelines [4] Mishra, S., Kumar, V., Sarkar, J., & Rathore, A. S. (2021). CFD based mass transfer modeling of a single use bioreactor for production of monoclonal antibody biotherapeutics. Chemical Engineering Journal , 412 . https://doi.org/10.1016/j.cej.2021.128592 [5] Fathi Roudsari, S., Ein-Mozaffari, F., & Dhib, R. (2013). Use of CFD in modeling MMA solution polymerization in a CSTR. Chemical Engineering Journal , 219 , 429–442. https://doi.org/10.1016/j.cej.2012.12.049 [6] Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2019). Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. Journal of Computational Physics , 378 , 686–707. https://doi.org/10.1016/j.jcp.2018.10.045 [7] Lu, L., Meng, X., Mao, Z., & Karniadakis, G. E. (2019). DeepXDE: A deep learning library for solving differential equations . https://doi.org/10.1137/19M1274067 [8] Choi, S., Jung, I., Kim, H., Na, J., & Lee, J. M. (2022). Physics-informed deep learning for data-driven solutions of computational fluid dynamics. Korean Journal of Chemical Engineering , 39 (3), 515–528. https://doi.org/10.1007/s11814-021-0979-x [9] Sun, L., Gao, H., Pan, S., & Wang, J. X. (2020). Surrogate modeling for fluid flows based on physics-constrained deep learning without simulation data. Computer Methods in Applied Mechanics and Engineering , 361 . https://doi.org/10.1016/j.cma.2019.112732 [10] Berg, J., & Nyström, K. (2018). A unified deep artificial neural network approach to partial differential equations in complex geometries. Neurocomputing , 317 , 28–41. https://doi.org/10.1016/j.neucom.2018.06.056",
+    "presenting_author": "Youngseok Bak | Seoul National University, Korea, Republic of (South)",
+    "authors": [
+      "Youngseok Bak | Seoul National University, Korea, Republic of (South)",
+      "Jong Min Lee | Seoul National University, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Youngseok Bak",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jong Min Lee",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "542a",
+    "sortable_time": "2022-11-16_15:30:00_15:49:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645938"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649364",
+    "paper_endpoint": "Paper/649364",
+    "paper_id": "649364",
+    "topic": "A Machine Learning Approach to Bridge the Gap between the Kuramoto-Sivashinsky and the Navier-Stokes Equations for Thin Film Flow",
+    "title": "A Machine Learning Approach to Bridge the Gap between the Kuramoto-Sivashinsky and the Navier-Stokes Equations for Thin Film Flow",
+    "date_time": "2022-11-16_15:30:00_18:00:00",
+    "session_id": "51125",
+    "session_title": "Advances in Computational Methods and Numerical Analysis - II",
+    "session_number": "542",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Amplitude equations for the fluid interface are reduced representations of the dominant physics in thin film flows that are typically derived (and valid) under certain limiting conditions. The Kuramoto-Sivashinsky (KS) equation being one of them, is generally considered the first in a hierarchy of one- and two-equation models for the interface evolution of a thin film [ 1] . The most detailed description of the physics is given by the Navier-Stokes equations, which requires more involved computations and entails increased computational cost. We present a machine learning approach to leverage an ensemble of data (velocity distributions and amplitude) collected from a CFD model of a thin film flow under conditions where the KS is approximately valid. We use this dataset to train an Artificial Neural Network (ANN) to “learn” the right-hand-side of a PDE describing the time-evolution of the thin film interface. This is then used as part of a time-integrator to capture the dynamics of the interface as a “black box” data-driven amplitude model. We explore further by proposing two cases of “gray”-box models according to which, the “learned” quantity is not the amplitude but two different corrections to the KS prediction [ 2] . We also exploit the fact that the dataset, which includes the fluid velocity distribution and the interface shape in various Re numbers, can be described by a small number of latent variables. These are derived using both linear (Proper orthogonal decomposition-POD) and nonlinear (Diffusion Maps-DMAPS and autoencoders) [ 3] methods which determines the “shape” of the approximation of the manifold that contains the data: POD requires several linear hyperplanes to describe a nonlinear manifold, whereas DMAPS delivers a parsimonious representation, requiring less coordinates. We use interpolation methods in the latent space, such as Gappy POD [ 4] in the linear case and Geometric Harmonics in the nonlinear case, to predict fluid velocity distributions from only a handful of measurements of the interface amplitude. In collaboration with Prof. C. Siettos and Dr. G. Fabiani of the University Federico II, Naples, Italy, we also explore constructing bifurcation diagrams from spatio-temporal observations through Random Projection Neural Networks (RPNNs) [ 5]. [1] Chang, H. (1994). Wave evolution on a falling film. Annual review of fluid mechanics , 26 (1), 103-136. [2] Lee, S., Siettos, C., Bertalan, T., Amchin, D.B., Bhattacharjee, T., Datta, S., Kevrekidis, I.G. (2020). On the data-driven discovery and calibration of closures. 2020 Virtual AIChE Annual Meeting. [3] Koronaki, E., Boudouvis, A.G., Evangelou, N., Psarellis, G., Dietrich, F., Kevrekidis, I.G. (2020). From Partial Data to out-of-Bounds Parameter and Observation Estimation with Diffusion Maps and Geometric Harmonics. 2020 Virtual AIChE Annual Meeting. [4] Willcox, K. (2006). Unsteady flow sensing and estimation via the gappy proper orthogonal decomposition. Computers & fluids , 35 (2), 208-226. [5] Galaris, E., Fabiani, G., Gallos, I., Kevrekidis, I., & Siettos, C. (2022). Constructing coarse-scale bifurcation diagrams from spatio-temporal observations of microscopic simulations: A parsimonious machine learning approach. arXiv preprint arXiv:2201.13323 .",
+    "presenting_author": "Cristina Martin Linares | Johns Hopkins University, Baltimore, MD",
+    "authors": [
+      "Cristina Martin Linares | Johns Hopkins University, Baltimore, MD",
+      "Eleni Koronaki | University of Luxembourg, Esch-sur-Alzette,",
+      "Georgios Psarellis | Johns Hopkins University, Baltimore, MD",
+      "George Karapetsas | Aristotle University of Thessaloniki, Greece",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Cristina Martin Linares",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Eleni Koronaki",
+        "affiliation": "University of Luxembourg, Esch-sur-Alzette,",
+        "designation": "Author"
+      },
+      {
+        "name": "Georgios Psarellis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "George Karapetsas",
+        "affiliation": "Aristotle University of Thessaloniki, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "542b",
+    "sortable_time": "2022-11-16_15:49:00_16:08:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649364"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649152",
+    "paper_endpoint": "Paper/649152",
+    "paper_id": "649152",
+    "topic": "A Data-Driven Approach to Determining Problem Well-Posedness",
+    "title": "A Data-Driven Approach to Determining Problem Well-Posedness",
+    "date_time": "2022-11-16_15:30:00_18:00:00",
+    "session_id": "51125",
+    "session_title": "Advances in Computational Methods and Numerical Analysis - II",
+    "session_number": "542",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "In recent years, the (re)emergence of physics-informed neural networks (PINNs) [1,2] has been proposed as an alternative to direct numerical simulations (DNS) for producing solutions to differential equations (DEs). The key idea is that the easy access to derivatives of the approximant can be used to create a loss function based on the residuals of the DE at all discretization locations in the (space-)time domain. This is in addition to another important loss term--that the solution should match provided values or derivative(s) at particular supervised points--conditions analogous to traditional initial and boundary conditions for DNS. A major strength of the PINN approach is that the supervisory data need not be prescribed at the domain locations typically used for initial and boundary conditions, but can instead be opportunistically sampled throughout the domain of interest (\"internal\" as opposed to \"boundary\" conditions). Another apparent advantage is that the variational solution of the PINN problem will return results even if the original problem is not well posed (whether due to overspecification of underspecification of constraints). However, though the method will produce an approximant at all domain locations, and a well-trained PINN will extrapolate reasonably to all locations where the DE-residual term is enforced, this does not mean that the usual issues of well-posedness, critical for DNS, are absent for PINNs. Here, we explore (for both the under-constrained and the over-constrained case) how the lack of well-posedness affects the approximant produced by the PINN training. In particular, we relate the richness of variational solutions to the number of prescribed characteristics in wave-type problems, and draw analogies to randomized linear algebra development. We use this variational approach for PINNs, but also for more traditional numerical discretizations, and conclude with some recommendations on metrics for diagnosing over- and under-determinedness in PINN training. [1]: Raissi, Maziar, Paris Perdikaris, and George E. Karniadakis. \"Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.\" Journal of Computational Physics 378 (2019): 686-707. [2]: Lagaris, Likas, Fotiadis. \"Artificial neural networks for solving ordinary and partial differential equations.\" IEEE Transactions on Neural Networks. 9(5) (1998): 987-1000.",
+    "presenting_author": "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD",
+    "authors": [
+      "Thomas Bertalan | Amgen, Inc., Cambridge, MA",
+      "Elizaveta Rebrova | Princeton University, NJ",
+      "George Kevrekidis | Johns Hopkins Univerity, Baltimore, MD",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Thomas Bertalan",
+        "affiliation": "Amgen, Inc., Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Elizaveta Rebrova",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "George Kevrekidis",
+        "affiliation": "Johns Hopkins Univerity, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "542c",
+    "sortable_time": "2022-11-16_16:08:00_16:27:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649152"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649508",
+    "paper_endpoint": "Paper/649508",
+    "paper_id": "649508",
+    "topic": "Nonlinear Data Fusion from Heterogeneous Partial Observation Sets",
+    "title": "Nonlinear Data Fusion from Heterogeneous Partial Observation Sets",
+    "date_time": "2022-11-16_15:30:00_18:00:00",
+    "session_id": "51125",
+    "session_title": "Advances in Computational Methods and Numerical Analysis - II",
+    "session_number": "542",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Our understanding of physical processes can be greatly advanced by informative low-dimensional embeddings of high-dimensional data, such as those arising from molecular dynamics simulations or stochastic simulations of chemically reacting systems. Here we consider the problem of combining multiple data sets, each arising from different partial observations of the same system. We can imagine different “experts” observing the system in different ways, but each expert only sees part of the data. We can calibrate our experts’ observations to appropriately discovered intrinsic system states (e.g., from the covariance of short noisy simulation bursts at each data point, the so-called Mahalanobis metric [1,2] ). This filters out the effect of different observation functions, allowing us to estimate distances between data points in an intrinsic low-dimensional embedding of the system. We demonstrate our approach on stochastic simulation data for an enzyme reaction network with multiple time scales. This framework does not require that any expert to see all the data, nor that any data point be seen by all the experts. We also discuss a neural network architecture (Gappy Local Conformal Autoencoder [3] ) capable of solving this problem. The latter work is in collaboration with Ofir Lindenbaum and Matan Gavish. [1] A. Singer and R.R. Coifman. Non-linear independent component analysis with diffusion maps. Applied and Computational Harmonic Analysis , 25(2):226-239, 2008. [2] C. J. Dsilva, R. Talmon, N. Rabin, R.R. Coifman, and I.G. Kevrekidis. Nonlinear intrinsic variables and state reconstruction in multiscale simulations. J. Chem. Phys , 139, 184109, 2013. [3] E. Peterfreund, O. Lindenbaum, F. Dietrich, T. Bertalan, M. Gavish, I.G. Kevrekidis, and R.R. Coifman. Local conformal autoencoder for standardized data coordinates. PNAS , 117(49), 2020.",
+    "presenting_author": "David Sroczynski | Princeton University, NJ",
+    "authors": [
+      "David Sroczynski | Princeton University, NJ",
+      "Erez Peterfruend | The Hebrew University of Jerusalem, Israel",
+      "Ronald Coifman | Yale University, New Haven, CT",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "David Sroczynski",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Erez Peterfruend",
+        "affiliation": "The Hebrew University of Jerusalem, Israel",
+        "designation": "Author"
+      },
+      {
+        "name": "Ronald Coifman",
+        "affiliation": "Yale University, New Haven, CT",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "542d",
+    "sortable_time": "2022-11-16_16:27:00_16:46:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649508"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649610",
+    "paper_endpoint": "Paper/649610",
+    "paper_id": "649610",
+    "topic": "Learning What to Learn: Common and Sensor-Specific Information across Multiple Sensors, with Some Thoughts about Sensor Spoofing and Causality",
+    "title": "Learning What to Learn: Common and Sensor-Specific Information across Multiple Sensors, with Some Thoughts about Sensor Spoofing and Causality",
+    "date_time": "2022-11-16_15:30:00_18:00:00",
+    "session_id": "51125",
+    "session_title": "Advances in Computational Methods and Numerical Analysis - II",
+    "session_number": "542",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "We consider the case where two or more sensors measure information from a common reaction system of interest, but each sensor's measurements also contain information from independent sensor-specific dynamics (\"the disjoint'', e.g. sensor-specific noise). In this context, manifold learning methods (i.e., Diffusion Maps [1]) can be modified to isolate the components of the measurements that correspond to the common system. We compare the results of Alternating Diffusion Maps [2] and our recent Jointly Smooth Functions [3] in parametrizing the common system. Depending on the scenario, we can either (a) find which sensor variables can be learned as functions of the other sensor's variables (i.e. what nonlinear observers we can construct) or (b), given a \"common\" measurement that matters, find all possible instances of what does not matter consistent with it (an appropriate level set). In certain cases, we can even learn evolution equations for the common system, a form of causality. From this point, it is desirable to also parametrize each uncommon system. We demonstrate an approach using Output-Influenced Diffusion Maps [4], as well as a more reliable approach using Conformal Neural Networks to find parametrizations of the disjoint features; these are (in the original sensor data) locally conformal to the common system parametrization. References: [1] R.R. Coifman and S. Lafon, Appl. Comput. Harmon. Anal. 21, 5 (2006). [2] R.R. Lederman and R. Talmon, Appl. Comput. Harmon. Anal. 44, 509 (2018). [3] O. Yair, F. Dietrich, R. Mulayoff, R. Talmon, and I.G. Kevrekidis, Spectral discovery of jointly smooth features for multimodal data, ArXiv (2020). [4] A. Holiday, M. Kooshkbaghi, J.M. Bello-Rivas, C. William Gear, A. Zagaris, and I.G. Kevrekidis, J. Comput. Phys. 392, 419 (2019).",
+    "presenting_author": "David Sroczynski | Princeton University, NJ",
+    "authors": [
+      "David Sroczynski | Princeton University, NJ",
+      "Felix Dietrich | Technical University of Munich, Garching, Germany",
+      "George Kevrekidis | Johns Hopkins Univerity, Baltimore, MD",
+      "Ronen Talmon | Technion - Israel Institute of Technology, Haifa",
+      "Matthew Williams | Oceanit, Honolulu, HI",
+      "David Siu | Oceanit, Honolulu, HI",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "David Sroczynski",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Felix Dietrich",
+        "affiliation": "Technical University of Munich, Garching, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "George Kevrekidis",
+        "affiliation": "Johns Hopkins Univerity, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Ronen Talmon",
+        "affiliation": "Technion - Israel Institute of Technology, Haifa",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew Williams",
+        "affiliation": "Oceanit, Honolulu, HI",
+        "designation": "Author"
+      },
+      {
+        "name": "David Siu",
+        "affiliation": "Oceanit, Honolulu, HI",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "542e",
+    "sortable_time": "2022-11-16_16:46:00_17:05:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649610"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647316",
+    "paper_endpoint": "Paper/647316",
+    "paper_id": "647316",
+    "topic": "Towards Exact Designs in Optimal Experiment Campaigns",
+    "title": "Towards Exact Designs in Optimal Experiment Campaigns",
+    "date_time": "2022-11-16_15:30:00_18:00:00",
+    "session_id": "51125",
+    "session_title": "Advances in Computational Methods and Numerical Analysis - II",
+    "session_number": "542",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Model-based design of experiments for parameter precision is essential to accelerating the development of nonlinear mechanistic models 1 ; however, due to the nonconvex nature of the problem, standard local criteria are sensitive to initial parameter values 1,2,3 . Additionally, the computational burden introduced when designing campaigns of parallel experiments is typically too high. Effort-based methods 4,5 overcome the above drawbacks by discretising the experimental space into a set of experiment candidates and determining the fraction of the total number of experiments (the “effort”) associated with each candidate, with the objective of selecting the experiments that will generate the highest information content. Effort relaxation leads to a convex formulation 4 that can readily be solved using existing nonlinear programming codes. However, as the efforts are treated as continuous variables, the solution obtained needs to be modified to derive integer numbers of experiments of each type. Such a posteriori adjustments can lead to large suboptimality, especially for campaigns with a limited number of experiments. In this article, a discrete-effort approach to the exact design of experiment campaigns comprising a finite number of experiments is presented. The experimental design space is discretised using Sobol sampling 6 and efforts are treated as integer optimisation variables, leading to pure integer programs with a convex objective function and linear constraints. Integer programming techniques for solving the exact design problem are assessed, with a view on understanding which problems may be tractable, both in terms of number of design variables and number of experiment samples. The proposed approach is implemented within the gPROMS modelling platform 7 to rely on existing optimisation solvers. Case studies are conducted for a range of experiment design problems. References: (1) Franceschini, G., and S. Macchietto (2008), “Model-based design of experiments for parameter precision: State of the art”, Chemical Engineering Science , 63 (19), pp. 4846-4872. (2) Asprey, S. P., S. Macchietto, and C. C. Pantelides (2000), “Robust optimal designs for dynamic experiments”, IFAC Proceedings Volumes , 33 (10), pp. 845-850. (3) Asprey, S. P., and S. Macchietto (2002), “Designing robust optimal dynamic experiments”, Journal of Process Control , 12 (4), pp. 545-556. (4) Kusumo, K. P., K. Kuriyan, S. García-Muñoz, N. Shah, and B. Chachuat (2021), “Continuous-effort approach to model-based experimental designs”, presented at the 31st European Symposium on Computer Aided Process Engineering, Istanbul, Turkey. (5) Kusumo, K. P., K. Kuriyan, S. Vaidyaraman, S. García-Muñoz, N. Shah, and B. Chachuat (2022), “Risk mitigation in model-based experiment design: A continuous-effort approach to optimal campaigns”, Computers & Chemical Engineering , 159, pp. 107680-107693. (6) Sobol, I. M. (1967), “On the distribution of points in a cube and the approximate evaluation of integrals”, USSR Computational Mathematics and Mathematical Physics , 7 (4), pp. 86-112. (7) Siemens Process Systems Engineering Limited, gPROMS, www.psenterprise.com/products/gproms, 1997-2022.",
+    "presenting_author": "Marco Sandrin | Imperial College London, United Kingdom",
+    "authors": [
+      "Marco Sandrin | Imperial College London, United Kingdom",
+      "Benoit Chachuat | Imperial College London, United Kingdom",
+      "Costas Pantelides | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Marco Sandrin",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Benoit Chachuat",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Costas Pantelides",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "542f",
+    "sortable_time": "2022-11-16_17:05:00_17:24:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647316"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643716",
+    "paper_endpoint": "Paper/643716",
+    "paper_id": "643716",
+    "topic": "Squeeze Functional Approach for Adaptive Step Size in Solving Stiff ODE/Dae Problems",
+    "title": "Squeeze Functional Approach for Adaptive Step Size in Solving Stiff ODE/Dae Problems",
+    "date_time": "2022-11-16_15:30:00_18:00:00",
+    "session_id": "51125",
+    "session_title": "Advances in Computational Methods and Numerical Analysis - II",
+    "session_number": "542",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "The problem of stiffness arises in the solution of ordinary differential equations (ODEs) when the solution varies very rapidly with time in some time intervals and much more slowly in others. Many ODE problems in science and engineering applications exhibit some degree of stiffness. For a stiff ODE problem, explicit solution methods, even with adaptive step size, may fail, or be unacceptably slow due to the extremely small step size that may be required in the intervals with rapid change. To address this issue generally requires use of implicit solution methods, often involving a backwards difference approach, using appropriate backwards difference formulas (BDFs) or numerical differentiation formulas (NDFs) [1]. Adaptive step sizes can also be used in this context, usually by comparing the implicit solution estimate with some form of higher-order truncated Taylor approximation to obtain an error estimate, but there still may be performance and/or accuracy issues since there is no guarantee that either the implicit solution estimate or the truncated approximation is near the true solution. In this paper we introduce an adaptive step size approach based on a dynamic error estimate obtained from a pair of “squeeze” functionals that bound the true solution and its Taylor approximation (of desired order). By monitoring the size and growth rate of the bound gap, relative to specified tolerances, it can be determined whether the Taylor approximations remain sufficiently accurate, and then the length of the time step can be adapted accordingly. Results of preliminary tests of this approach on a variety of stiff ODE problems will be presented, indicating that it is more efficient and reliable than standard Matlab solvers (e.g., ode15s, ode23s, ode23t) for stiff problems. Test problems include a flame propagation problem [2], the Robertson’s chemical reaction model [3], the van der Pol oscillator, a double pendulum problem and a three-body problem. [1] Shampine, L. F. and M. W. Reichelt, “The MATLAB ODE Suite,” SIAM Journal on Scientific Computing, 18, 1-22 (1998). [2] Jannelli A., Fazio R. “Adaptive stiff solvers at low accuracy and complexity”, J. of Computational and Applied Mathematics, 191, 246-258 (2006). [3] Robertson, H.H. The solution of a set of reaction rate equations. In Numerical Analysis: An Introduction, J. Walsh, Ed., Academic Press: London, UK, 1966.",
+    "presenting_author": "Gang Xu | AVEVA, Lake Forest, CA",
+    "authors": [
+      "Gang Xu | AVEVA, Lake Forest, CA",
+      "Mark Stadtherr | University of Texas at Austin, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gang Xu",
+        "affiliation": "AVEVA, Lake Forest, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mark Stadtherr",
+        "affiliation": "University of Texas at Austin, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "542g",
+    "sortable_time": "2022-11-16_17:24:00_17:43:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643716"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649612",
+    "paper_endpoint": "Paper/649612",
+    "paper_id": "649612",
+    "topic": "Partial Multiparametric Programming for Accelerating Optimal Control, Applied to an Air Separation Unit",
+    "title": "Partial Multiparametric Programming for Accelerating Optimal Control, Applied to an Air Separation Unit",
+    "date_time": "2022-11-16_15:30:00_18:00:00",
+    "session_id": "51125",
+    "session_title": "Advances in Computational Methods and Numerical Analysis - II",
+    "session_number": "542",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Multiparametric programming is the mathematical optimization methodology of solving optimization problems explicitly and offline with applications to optimal control[1], simultaneous design and control[2], and multilevel optimization[3]. However, as the optimization problem size grows in size, generating the full explicit solution becomes increasingly burdensome to calculate and store. To address these issues, we propose an approach where the online optimization problem is augmented with information derived from the multiparametric programming problem. This presentation describes a novel multiparametric programming-based approach to reducing the number of constraints that must be considered in the online step by generating bounds in the parametric space where the constraints appear in an optimal basis. These bounds are generated via a bilevel optimization approach reformulated as a single-level optimization problem based on substituting the KKT conditions. After these bounds are calculated, they can be utilized in the online setting to remove any constraints that do not need to be considered. Due to the nature of the bounds, the memory requirement to store the bounds is low. This procedure can be viewed as an aggressive dynamic pre-solving procedure where some optimality aspects are known ahead of time. The proposed procedure is then on an optimization-based control case study of an Air Separation Unit (ASU). Where the optimization problem to solve repeatedly is the optimal control problem introduced by a Model Predictive Controller (MPC). This MPC is then recast as a multiparametric MPC. The constraint bounds procedure is then applied. With this, the bounds of applicability are known for every constraint as a function of the process state. We will show that this procedure reduces the computational load of resolving the proceeding optimization problems at each step. This general procedure applies to other applications where optimization problems must be resolved frequently. [1] - I. Pappas, D. Kenefake, B. Burnak, S. Avraamidou, H. S. Ganesh, J. Katz, N. A. Diangelakis, E. N. Pistikopoulos, 2021. Multiparametric programming in process systems engineering: Recent developments and path forward. Frontiers in Chemical Engineering 2, 32. [2] - B. Burnak, N. A. Diangelakis, J. Katz, E. N. Pistikopoulos, 2019. Integrated process design, scheduling, and control using multiparametric programming. Computers & Chemical Engineering 125, 164–184 [3] - S. Avraamidou, E. N. Pistikopoulos, 2019. B-pop: Bi-level parametric optimization toolbox. Computers & Chemical Engineering 122, 193 – 202, 2017 Edition of the European Symposium on Computer Aided Process Engineering (ESCAPE-27)",
+    "presenting_author": "Dustin Kenefake | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+    "authors": [
+      "Dustin Kenefake | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+      "Efstratios Pistikopoulos | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dustin Kenefake",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Efstratios Pistikopoulos",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "542h",
+    "sortable_time": "2022-11-16_17:43:00_18:02:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649612"
+  }
+]

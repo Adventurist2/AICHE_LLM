@@ -1,0 +1,342 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/596109",
+    "paper_endpoint": "Paper/596109",
+    "paper_id": "596109",
+    "topic": "Inferential Control of Distillation Column By Successive Update of Softsensor and Control Algorithm",
+    "title": "Inferential Control of Distillation Column By Successive Update of Softsensor and Control Algorithm",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45767",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "470",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In the industrial processes, quality variables should be monitored in real-time, and directly controlled to suppress the variation. The smaller variation minimizes the risk of violation of the quality criterion and more economical process operation is achieved. However, it is often difficult to measure quality variables, such as concentration, in real-time. Softsensors are powerful means to predict the values of the difficult-to-measure variable in real time, from the measurement of easy-to-measure variables. The control system with such a softsensor is called inferential control system and useful for quality control. The operation data used for building a softsensor is usually obtained from a plant which is under the influence of an existing control system. However, the controlled variables of the existing control system are different from those of the inferential control system. The process dynamics under an inferential control can be different from those under the existing control system. When the process dynamics is largely different, the prediction accuracy of the softsensor will deteriorate in the inferential control system. As a result, the quality control performance will not improve. On the other hand, when the difference in operating condition is small, the quality variation will not reduce by introducing the inferential control system. Most of the researches on inferential control did not take the above-mentioned problem into account, and did not show the condition where the model construction data was obtained [1–7]. In references [8–15], the model construction data was prepared in impractical condition. Some authors obtained data for model building from a plant without a control system [8–12]. Qian et al. obtained data for the model construction under sustained excitation condition [13]. Bidar et al. changed the setpoint frequently when they obtained the model construction data [14]. Clementi et al. assumed the variable which cannot be measured in real-time in reality to be measurable in real-time and controlled on simulation to obtain the model construction data [15]. Kano et al. obtained model construction data under a practical condition where the existing control system was used and no intentional oscillation to generate the data with a broader range was added [16]. However, even in reference [16], the effective method to improve the quality control performance was not shown. As mentioned above, the quality control performance does not improve, whether the operating condition is changed largely or not. In the present work, we proposed a novel method to introduce the inferential control system into the existing plant. In the proposed method, the limit for the change in operation condition is set according to the applicable domain size of the softsensor. In addition, the softsensor is updated to enlarge the range of the applicable domain, by using the new data obtained when the inferential control system is used. The new operating data covers a larger domain because the former controlled variable in the existing control system fluctuates intensely in the inferential control system. Consequently, the softsensor updated with this newly obtained data is expected to have a larger applicable domain. We use a cascade control system where the quality variable and the former controlled variable are controlled in the primary and secondary control loops, respectively. This is because the cascade structure is known to be superior to the ordinary single-loop feedback structure in the prediction accuracy of the softsensor [16]. In addition to using the cascade control system, the upper and lower limit constraint is imposed on the setpoint of the secondary control loop in order to restrict the variation of the secondary controlled variable. When the softsensor is updated, the constraint is relaxed to change the operating condition and to enhance the quality control performance. As the number of new data increases, we can obtain the inferential control system with higher control performance and prediction accuracy. A case study was conducted through the control simulation of the vinyl acetate monomer (VAM) plant [17, 18]. The main objective in the control simulation was to keep the water mole fraction at the bottom of the distillation column ( x B ) constant. The inferential control system which was designed and updated by the proposed method (proposed control system), was compared with that of the existing plant (conventional control system 1) and with the inferential cascade control system where the softsensor or the control algorithm are not updated (conventional control system 2). x B was directly controlled in the proposed control system and conventional control system 2, and the 18th tray temperature was controlled to keep x B constant in conventional control system 1. The proposed control system was best of the three in the x B control performance. Mean absolute errors of the proposed control system and control system 2 were 3.95×10 -2 mol% and 7.05×10 -2 mol% respectively, and the proposed method improved the x B control performance by 44 %, compared to control system 2. The proposed method was found to be useful in introducing the inferential control system. References [1] H. Guan, L. Ye, F. Shen, and Z. Song. Economic operation of a fluid catalytic cracking process using self-optimizing control and reconfiguration. Journal of the Taiwan Institute of Chemical Engineers, 96:104–113, 2019. [2] S. Bosca, A. Barresi, and D. Fissore. On the use of model-based tools to optimize in-line a pharmaceuticals freeze-drying process. Drying Technology, 34(15):1831–1842, 2016. [3] A. Escalante-Sanchez, J. Barrera-Cortes, H.M. Poggi-Varaldo, T. Ponce-Noyola, and I.S. Baruch. A soft sensor based on online biomass measurements for the glucose estimation and control of fed-batch cultures of Bacillus thuringiensis. Bioprocess and Biosystems Engineering, 41(10):1471–1484, 2018. [4] P. Cao, X. Luo, and X. Song. Feasibility analysis and online adjustment of constraints in model predictive control integrated with soft sensor. Chinese Journal of Chemical Engineering, 25(9):1230–1237, 2017. [5] A. Abusnina, D. Kudenko, and R. Roth. Improving robustness of gaussian process-based inferential control system using kernel principle component analysis. Proceedings - 2014 13th International Conference on Machine Learning and Applications, ICMLA 2014, pages 99–104, 2014. [6] Q. Jiang, Y. Cai, S. Jia, Z. Cao, B. Chen, and H. Zhou. Optimal product quality control in a hydrocracking fractionator with process simulation approaches. Industrial and Engineering Chemistry Research, 54(17):4805–4814, 2015. [7] A.K. Jana and S. Banerjee. Neuro estimator-based inferential extended generic model control of a reactive distillation column. Chemical Engineering Research and Design, 130:284–294, 2018. [8] G. Pannocchia and A. Brambilla. Consistency of property estimators in multicomponent distillation control. Industrial and Engineering Chemistry Research, 42(20):4452–4460, 2003. [9] A. Bahar and C. Zgen. State estimation and inferential control for a reactive batch distillation column. Engineering Applications of Artificial Intelligence, 23(2):262–270, 2010. [10] S.R. Vijaya Raghavan, T.K. Radhakrishnan, and K. Srinivasan. Soft sensor based composition estimation and controller design for an ideal reactive distillation column. ISA Transactions, 50(1):61–70, 2011. [11] V. Sakhre, S. Jain, V.S. Sapkal, and D.P. Agarwal. Modified neural network based cascaded control for product composition of reactive distillation. Polish Journal of Chemical Technology, 18(2):111–121, 2016. [12] K. Chiewchanchairat, P. Bumroongsri, V. Lersbamrungsuk, A. Apornwichanop, and S. Kheawhom. Implementation of Model Predictive Control in Industrial Gasoline Desulfurization Process. Computer Aided Chemical Engineering, 37:1619–1624, 2015. [13] X. Qian, K. Huang, S. Jia, H. Chen, Y. Yuan, L. Zhang, and S. Wang. Composition/temperature cascade control for a Kaibel dividing-wall distillation column by combining PI controllers and model predictive control integrated with soft sensor. Computers and Chemical Engineering, 126:292–303, 2019. [14] B. Bidar, M.M. Khalilipour, F. Shahraki, and J. Sadeghi. A data-driven soft-sensor for monitoring ASTM-D86 of CDU side products using local instrumental variable (LIV) technique. Journal of the Taiwan Institute of Chemical Engineers, 84:49–59, 2018. [15] L.A. Clementi, R.B. Suvire, F.G. Rossomando, and J.R. Vega. A Closed-Loop Control Strategy for Producing Nitrile Rubber of Uniform Chemical Composition in a Semibatch Reactor: A Simulation Study. Macromolecular Reaction Engineering, 12(2), 2018. [16] M. Kano, K. Miyazaki, S. Hasebe, and I. Hashimoto. Inferential control system of distillation compositions using dynamic Partial Least Squares regression. Journal of Process Control, 10(2):157–166, 2000. [17] Y. Machida, S. Ootakara, H. Seki, Y. Hashimoto, M. Kano, Y. Miyake, N. Anzai, M. Sawai, T. Katsuno, and T. Omata. Vinyl Acetate Monomer (VAM) Plant Model: A New Benchmark Problem for Control and Operation Study. IFAC-Papers OnLine, 49(7):533–538, 2016. [18] Omega Simulation Co., Ltd. Visual Modeler Trial Version, 27 Feb 2020. www.omegasim.co.jp.",
+    "presenting_author": "Masanori Oshima | Kyoto University, Japan",
+    "authors": [
+      "Masanori Oshima | Kyoto University, Japan",
+      "Sanghong Kim | Tokyo University of Agriculture and Technology, Japan",
+      "Ken-Ichiro Sotowa | Kyoto University, Japan"
+    ],
+    "authors_structured": [
+      {
+        "name": "Masanori Oshima",
+        "affiliation": "Kyoto University, Japan",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sanghong Kim",
+        "affiliation": "Tokyo University of Agriculture and Technology, Japan",
+        "designation": "Author"
+      },
+      {
+        "name": "Ken-Ichiro Sotowa",
+        "affiliation": "Kyoto University, Japan",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "470a",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/596109"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/610595",
+    "paper_endpoint": "Paper/610595",
+    "paper_id": "610595",
+    "topic": "Application of Feature Engineering and Selection for Spectrometry-Based Soft Sensing",
+    "title": "Application of Feature Engineering and Selection for Spectrometry-Based Soft Sensing",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45767",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "470",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In recent years, with increasing demand for tighter product quality monitoring and control, soft sensors have been widely applied in a variety of fields to predict critical variables with easy-to-measure secondary variables. In particular, near infrared (NIR) spectroscopy based soft sensors have found wide applications in many industries since the rapid and usually non-invasive spectroscopic reading of a sample is well suited for quantitative determination of its properties of interest. However, the predictive accuracy of soft sensor may be limited due to the following characteristics of the NIR spectra: (1) multicollinearity (i.e., high correlation among readings of neighboring wavelengths); (2) spectra noise; (3) curse of dimensionality (i.e., usually much fewer samples than number of variables). Variable selection plays an important role in the spectroscopy-based soft sensors because identification of informative variables helps establish a simple model with better prediction performance and easier interpretation. Although many successful methods have been reported, there are a couple of notable limitations. One is that the variables selected can by strongly influenced by spectra noise and disturbance (e.g., outliers or extreme points). In other words, there is a strong dependence of the selected variables on the choice of the training samples. The other notable limitations for many existing methods is that the selected wavelengths often show little connection to the chemical bounds or functional groups presenting in the sample. To address these limitations, a feature-based soft sensing approach was developed by employing the statistics pattern analysis (SPA) framework. In the SPA feature-based soft sensing, the whole spectrum is split into several segments and features that describe spectral characteristics are extracted from each segment. In other words, soft sensor is built by using features instead of the original spectral readings. The hypothesis is that the features not only better capture spectral characteristics such as nonlinearity and peak shift, but also reduce the influence of the spectra noises and disturbances, which would lead to improved predictive power of the soft sensor. On the other hand, not all features contribute equally to the predictive power of a soft sensor. For this reason, we recently developed a novel variable selection method, namely consistency enhanced evolution for variable selection (CEEVS). CEEVS increases soft sensor predictive accuracy through improving consistency of variable selection associated with chemical functional groups. In this work, we propose a novel soft sensor that integrates SPA (i.e., feature engineering) with CEEVS (i.e., feature selection), referred to as SPA-CEEVS soft sensor. We demonstrate that SPA-CEEVS soft sensor can achieve high predictive accuracy and is robust to the choice of the training samples. In addition, SPA-CEEVS can identify the segments associated with key chemical functional groups in a sample and the key features of the spectral segments that contribute the most to the predictive power of the soft sensor. The effectiveness of the SPA-CEEVS soft sensor is demonstrated through its application to four NIR spectroscopic data sets and compared with several other soft sensing approaches.",
+    "presenting_author": "Jangwon Lee | Auburn University, AL",
+    "authors": [
+      "Jangwon Lee | Auburn University, AL",
+      "Jesus Flores-Cerrillo | Linde PLC, Tonawanda, NY",
+      "Jin Wang | Auburn University, AL",
+      "Peter He | Auburn University, AL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jangwon Lee",
+        "affiliation": "Auburn University, AL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jesus Flores-Cerrillo",
+        "affiliation": "Linde PLC, Tonawanda, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Jin Wang",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      },
+      {
+        "name": "Peter He",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "470b",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/610595"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/610359",
+    "paper_endpoint": "Paper/610359",
+    "paper_id": "610359",
+    "topic": "Adaptive System Identification of an Industrial Ethylene Splitter: A Comparison of Subspace Identification and Artificial Neural Networks",
+    "title": "Adaptive System Identification of an Industrial Ethylene Splitter: A Comparison of Subspace Identification and Artificial Neural Networks",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45767",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "470",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The work considers the problem of data driven modeling of the operation of an ethylene splitter (and in particular, the ethylene splitter at the Joffre site in Alberta) used to separate ethylene from ethane. The process exhibits highly nonlinear behavior and presently operates with no direct end composition controllers making the process sub-optimal in terms of the products purities and energy consumption. The two types of data-driven models that can be obtained from process input-output data are input-output model and state-space model [1]. State-space model such as subspace identification models have been developed for distillation column for control purposes [2] [3]. Also, different neural networks models have been used to develop a model for distillation column [4] [5]. The objective of the present work is to investigate the use of different data driven techniques such as linear subspace identification, nonlinear feed forward neural network, and nonlinear recurrent neural network for the purpose of developing a dynamic data driven model. To this end, first an ethylene splitter simulation model is built that replicates industrial operation. The ability of the simulation model to capture the key traits of the process dynamics are first established by comparing with data from plant operation. The simulation model is subsequently utilized to generate data and utilize to test the ability of the modeling tools for interpolation and extrapolation. An online model adaptation scheme is developed for some of these methods to improve their prediction capabilities under new operation patterns. The methods are finally utilized to model (and are validated against) industrial data. References [1] Phan, M. Q., and Longman, R. W. (1970). Relationship between state-space and input-output models via observer Markov parameters. WIT Transactions on The Built Environment , 22 . [2] Castaño, J. E., Patiño, J. A., and Espinosa, J. J. (2011). Model identification for control of a distillation column. In IX Latin American Robotics Symposium and IEEE Colombian Conference on Automatic Control, 2011 IEEE (pp. 1-5). IEEE. [3] Meenakshi, S., Almusthaliba, A., and Vijayageetha, V. (2013). MIMO Identification and Controller design for Distillation Column. International journal of innovative research in electrical, electronics, instrumentation and control engineering , 1 (2), 44-48. [4] Kanthasamy, R., Anwaruddin, H., and Sinnadurai, S. K. (2014). A new approach to the identification of distillation column based on hammerstein model. Modelling and Simulation in Engineering , 2014 . [5] MacMurray, J., and Himmelblau, D. (1993). Identification of a packed distillation column for control via artificial neural networks. In 1993 American Control Conference (pp. 1455-1459). IEEE.",
+    "presenting_author": "Mahir Jalanko | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Mahir Jalanko | McMaster University, Hamilton, Canada",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada",
+      "Vladimir Mahalec | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mahir Jalanko",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Vladimir Mahalec",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "470c",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/610359"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/598938",
+    "paper_endpoint": "Paper/598938",
+    "paper_id": "598938",
+    "topic": "Lie-Sobolev Nonlinear System Identification and Its Effect on Nonlinear Control",
+    "title": "Lie-Sobolev Nonlinear System Identification and Its Effect on Nonlinear Control",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45767",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "470",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The intrinsic nonlinearity of process systems has motivated the development of nonlinear control strategies such as input—output linearizing control and model predictive control (MPC). The implementation of nonlinear control is usually heavily dependent on the accuracy of nonlinear dynamic models, and since white-box first-principle models are rarely available or directly applicable, the importance of nonlinear system identification methods is self-evident. For chemical processes, system identification usually refers to the estimation of unknown parameters in a structured dynamic model, which should be performed in combination with the state observation [1, 2]. However, the design of such an observer-estimator is challenging for general nonlinear systems due to the existence of parametric as well as structural complexities in the true underlying dynamics. In this work, we note that the Lie derivatives constitute essential control-relevant information that is of decisive importance to the performance of nonlinear control. For input—output linearizing control, Lie derivatives are used directly in the construction of the feedback control law, while for MPC, Lie derivatives indirectly affect the prediction of future trajectories in the receding horizon through the Chen-Fliess expansion [3]. Hence the identification scheme should be designed in such a way that the identified model and the true dynamics should match not only in the direct input and output measurements, i.e., in an L 2 -sense, but also in the higher-order Lie derivatives, i.e. , in a Sobolev sense. This argument is first motivated with a small example of nonlinear regression. Then a theoretic analysis of Luenberger observer for linear systems shows that by modifying the observer with a Lie-Sobolev criterion, the rate of convergence of observation errors to zero is increased in the absence of structural model mismatch, and in the presence of structural deviations, the ultimate bound of observation errors can be reduced. We then formulate two different forms of the Lie-Sobolev observer-estimator. One is based on the gradient descent of a criterion function accounting for the instantaneous discrepancies between the identified model and the measured input—output trajectories, and the other is a Lie derivative-modified moving horizon estimator (MHE) that accounts for the discrepancies in the past horizon. Their convergence properties are established, and the effects of these Lie-Sobolev identification schemes on the input–output linearizing control and model predictive control (MPC) respectively are studied, based on an extension of the results for non-Lie-Sobolev estimation and control [4, 5]. Advantages of Lie-Sobolev system identification of nonlinear processes are demonstrated by two numerical examples and a glycerol etherification reactor process [6] with complex dynamics. References [1] Soroush, M. (1998). State and parameter estimations and their applications in process control. Computers & Chemical Engineering , 23 , 229—245. [2] Kravaris, C., et al. (2013). Advances and selected recent developments in state and parameter estimation, Computers & Chemical Engineering , 51 , 111—123. [3] Isidori, A. (1995). Nonlinear Control Systems: An Introduction . Springer. [4] Müller, M. A. (2017). Nonlinear moving horizon estimation in the presence of bounded disturbances. Automatica , 79 , 306—314. [5] Mayne, D. Q., & Falugi, P. (2019). Stabilizing conditions for model predictive control. International Journal of Robust Nonlinear Control , 29 , 894—903. [6] Liu, J., Daoutidis, P., & Yang, B. (2016). Process design and optimization for etherification of glycerol with isobutene. Chemical Engineering Science , 144 , 326—335.",
+    "presenting_author": "Wentao Tang | University of Minnesota, Twin Cities, Minneapolis, MN",
+    "authors": [
+      "Wentao Tang | University of Minnesota, Twin Cities, Minneapolis, MN",
+      "Prodromos Daoutidis | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Wentao Tang",
+        "affiliation": "University of Minnesota, Twin Cities, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "470d",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/598938"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/596366",
+    "paper_endpoint": "Paper/596366",
+    "paper_id": "596366",
+    "topic": "Data-Driven Control Via Dynamic-Mode Decomposition",
+    "title": "Data-Driven Control Via Dynamic-Mode Decomposition",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45767",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "470",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Modeling and control of systems that exhibit spatio-temporal behavior is challenging due to their inherent high state dimensionality. Examples of such systems include flight dynamics, fluid flow control, aeroelasticity, and 3D thermal zone control in buildings [1-4]. Despite their high dimensionality, the dynamics of such systems typically resides on a low-order manifold and thus model reduction techniques can be used to create low-order and high quality model representations. Reduced-order modeling (ROM) techniques such as balanced truncation assume the explicit availability of a full-scale model; however, building such models might require an exorbitant amount of data or the models might simply not fit in memory [5]. In contrast, data-driven modeling approaches such as proper orthogonal decomposition (POD) [6] and dynamic mode decomposition (DMD) [7] can directly extract low-order models from data without the need of identifying an intermediate full-scale model. DMD has become a popular technique in recent years due to its ability to extract dominant modes directly from data and because of connections with powerful techniques such as subspace identification and Koopman operators [8]. However, characterizations of the predictive accuracy of DMD models still remains an open problem [9]; such characterizations are essential for the controller design to ensure provide convergence and closed-loop stability guarantees. In this work we present a theoretical characterization of the prediction accuracy of DMD models. We derive an explicit error bound that reveals the effect of the model order and the number of data samples in training the DMD model and establishes conditions under which the prediction error vanishes. We propose a model-predictive control (MPC) framework based on DMD for controlling high-dimensional systems. This strategy is motivated by the need to control systems directly from real-time image and video data. We show the the proposed framework can handle high-dimensional systems in a scalable manner but also reveals interesting controllability limitations that arise in high-dimensional systems. We use a 2D heat diffusion system to illustrate the developments; this system contains 2,500 states and 36 heating/cooling actuators. It is shown that the DMD provides an accurate model (accounting for 99.5% of the information of the full-scale system) that contains only 40 states. We also show that the reduced-order MPC controller can track reference fields to high accuracy, provided that such reference fields live in a low-order controllable subspace of the original system. References: [1] Clarence W. Rowley. Model reduction for fluids, using balanced proper orthogonal decomposition. International Journal of Bifurcation and Chaos , 15(3): 997-1013, 2005. [2] Mehdi Ghoreyshi, Adam Jirasek, and Russell M. Cummings. Reduced order unsteady aerodynamic modeling for stability and control analysis using computational fluid dynamics. Progress in Aerospace Science , 71: 167-217, 2014. [3] David J. Lucia, Philip S. Beran, and Walter A. Silva. Reduced-order modeling: new approaches for computational physics. Progress in Aerospace Science , 40(1-2): 51-117, 2004. [4] Erik A. Wolff and Siguard Skogestad. Temperature cascade control of distillation columns. Industrial & Engineering Chemistry Research , 35: 475-484, 1996. [5] Bruce Moore. Principal component analysis in linear systems: Controllability, observability, and model reduction. IEEE Transactions on Automatic Control , 26(1): 17-32, 1981. [6] Athanasios C. Antoulas. Approximation of Large-scale Dynamical Systems , vol. 6, SIAM, 2015. [7] J. Nathan Kutz, Steven L. Brunton, Bingni W. Brunton, and Joshua L. Proctor. Dynamic Mode Decomposition: Data-driven Modeling of Complex Systems , SIAM, 2016. [8] Clarence W. Rowley. Model reduction for fluids, using balanced proper orthogonal decomposition. International Journal of Bifurcation and Chaos , 15(3): 997-1013, 2015. [9] Hannah Lu and Daniel M. Tartakovsky. Predictive accuracy of dynamic mode decomposition. arXiv preprint: 1905.01587 , 2019.",
+    "presenting_author": "Qiugang Lu | University of Wisconsin-Madison",
+    "authors": [
+      "Qiugang Lu | University of Wisconsin-Madison",
+      "Sungho Shin | University of Wisconsin-Madison",
+      "Victor M. Zavala | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Qiugang Lu",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sungho Shin",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Victor M. Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "470e",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/596366"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/610441",
+    "paper_endpoint": "Paper/610441",
+    "paper_id": "610441",
+    "topic": "Learning the Dynamics of Coupled Oscillator Systems through the Discovery of Emergent PDEs Via Artificial Neural Networks and Manifold Learning",
+    "title": "Learning the Dynamics of Coupled Oscillator Systems through the Discovery of Emergent PDEs Via Artificial Neural Networks and Manifold Learning",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45767",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "470",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The time evolution of heterogeneous coupled oscillators is typically described by systems of ordinary differential equations (ODEs). When the coupling is strong enough, these systems can exhibit attracting, low dimensional manifolds on which the collective dynamics depend on the model heterogeneities in a smooth fashion. By taking advantage of this smoothness, we are able to rephrase this discrete problem as a continuous one in a neighborhood of the attracting manifold. We liken our continuous approach to typical partial differential equations (PDEs), where the oscillators can be viewed as the discretization points customarily used for the numerical solution of PDEs, such as those employed by the method of lines approach, and as such refer to it as an “emergent PDE” description of the system. In order to find the emergent PDE we use spatial partial derivatives, here derivatives of the oscillator states with respect to the model heterogeneities, as input features with which to approximate the temporal partial derivatives of the system. By limiting ourselves to systems and regimes in which the coupled behavior can be accurately approximated by local effects, we are able to fit the temporal partial derivatives with a reduced set of these features via a neural network. We discuss the challenges and benefits of such a coarse-grained emergent PDE description — for example, the selection of appropriate boundary conditions — and present an application of this approach to Hodgkin-Huxley type coupled neurons. We also consider the case in which the model heterogeneities are unknown, and demonstrate how a manifold learning tool (Diffusion Maps) can be leveraged to identify data-driven features that are suitable for use as independent variables for our PDE methodology [1-2]. Finally, we elaborate on the technical challenge of ensuring stability for the learned dynamics, outline different approaches to tackle this problem, and contrast these with methods proposed in recent literature. [1] Thiem, Thomas N., Kooshkbaghi, Mahdi, Bertalan, Tom, Laing, Carlo R., and Kevrekidis, Ioannis G. \"Emergent spaces for coupled oscillators.\" arXiv preprint. , 2020, arXiv:2004.06053v1. [2] Kemeth, Felix P., et al. \"An Emergent Space for Distributed Data With Hidden Internal Order Through Manifold Learning.\" IEEE Access , vol. 6, 2018, pp. 77402-77413.",
+    "presenting_author": "Thomas Thiem | Princeton University, NJ",
+    "authors": [
+      "Thomas Thiem | Princeton University, NJ",
+      "Thomas Bertalan | Princeton University, NJ",
+      "Felix Kemeth | Johns Hopkins University, Baltimore, MD",
+      "Georgios Psarellis | Johns Hopkins University, Baltimore, MD",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Thomas Thiem",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Thomas Bertalan",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Felix Kemeth",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Georgios Psarellis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "470f",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/610441"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/596341",
+    "paper_endpoint": "Paper/596341",
+    "paper_id": "596341",
+    "topic": "Unifying Theorems for Subspace Identification and Dynamic Mode Decomposition",
+    "title": "Unifying Theorems for Subspace Identification and Dynamic Mode Decomposition",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45767",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "470",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "We present a theoretical treatment that unifies two data-driven dynamic model identification techniques: subspace ID (SID) and dynamic mode decomposition (DMD). SID seeks to identify a dynamical model in state-space form from output sequence data [1,2]. SID adopts a sequential approach: first, an extended observability matrix and the state sequence are identified from the output data; then these quantities are used to identify the state-space system matrices. Various SID algorithms have been proposed in the literature such as PC, UPC, and CVA [3] (for autonomous systems) and N4SID [4], MOSEP [5], and CVA [6] (for non-autonomous systems). In seminal work, Van Overschee and De Moor [7] have shown that the only defining feature of such methods is the weighting scheme used for singular value decomposition (SVD); thus, even if there exist different variants of SID algorithms, they are not significantly different from each other. SID techniques have been the dominant paradigm for state-space dynamic model identification in industrial applications [2,8]. DMD is an identification method that has recently gained considerable attention in the literature as an identification method to deal with high-dimensional data (as those arising in computational fluid dynamics) [9,10,11]. In DMD, a low-rank dynamical model is obtained by approximately solving a linear regression problem via truncated SVD. Subsequently, an alternative rank-constrained regression approach, which has optimality guarantees, has been proposed [12]. Connections between DMD and classical Koopman operator theory have also been established in [9,10,13]. Unlike SID, however, the model order of DMD is assumed to be equal to the order of a delay-embedded observable (i.e., low-order state space is not formally constructed); as such, DMD models do not provide a direct low-order state-space representation. In this work, we present unifying theorems for SID and DMD for autonomous dynamical systems [14]. Connections between SID and DMD have only been addressed superficially in the literature (e.g., see [15,16]). We observe that SID seeks to solve an optimization problem to estimate an extended observability matrix and a state sequence that minimizes the prediction error for the state-space model. In addition, we observe that DMD seeks to solve a rank-constrained matrix regression problem that minimizes the prediction error of an extended autoregressive model. We prove that existence conditions for perfect (error-free) state-space and low-rank extended autoregressive models are equivalent and that the SID and DMD optimization problems are equivalent; therefore, SID and DMD fundamentally solves the same problem. We exploit these results to propose an SID-DMD algorithm that delivers a provably optimal model and that is easy to implement. In specific, in the proposed algorithm, we first solve a low-rank linear regression problem with a delay-embedded data set, and then directly extract the low-order system matrices from the factorization of the identified low-rank model. The optimality guarantees of the identified models are provided. We demonstrate our developments using a case study that aims to build dynamical models directly from pixel (video) data. References: [1] Van Overschee, Peter, and B. L. De Moor. Subspace identification for linear systems: Theory—Implementation—Applications. Springer Science & Business Media, 2012. [2] Qin, S. Joe. \"An overview of subspace identification.\" Computers & chemical engineering 30.10-12 (2006): 1502-1513. [3] Arun, K. S., and S. Y. Kung. \"Balanced approximation of stochastic systems.\" SIAM journal on matrix analysis and applications 11.1 (1990): 42-68. [4] Van Overschee, Peter, and Bart De Moor. \"N4SID: Subspace algorithms for the identification of combined deterministic-stochastic systems.\" Automatica 30.1 (1994): 75-93. [5] Verhaegen, Michel. \"Identification of the deterministic part of MIMO state space models given in innovations form from input-output data.\" Automatica 30.1 (1994): 61-74. [6] Larimore, Wallace E. \"Canonical variate analysis in identification, filtering, and adaptive control.\" 29th IEEE Conference on Decision and control. IEEE, 1990. [7] Van Overschee, Peter, and Bart De Moor. \"A unifying theorem for three subspace system identification algorithms.\" Automatica 31.12 (1995): 1853-1864. [8] Favoreel, Wouter, Bart De Moor, and Peter Van Overschee. \"Subspace state space system identification for industrial processes.\" Journal of process control 10.2-3 (2000): 149-155. [9] Schmid, Peter J. \"Dynamic mode decomposition of numerical and experimental data.\" Journal of fluid mechanics 656 (2010): 5-28. [10] Tu, Jonathan H., et al. \"On dynamic mode decomposition: Theory and applications.\" Journal of Computational Dynamics 1.2 (2014): 391-421. [11] Kutz, J. Nathan, et al. Dynamic mode decomposition: data-driven modeling of complex systems. Society for Industrial and Applied Mathematics, 2016. [12] Héas, Patrick, and Cédric Herzet. \"Optimal low-rank dynamic mode decomposition.\" 2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2017. [13] Lasota, Andrzej, and Michael C. Mackey. Chaos, fractals, and noise: stochastic aspects of dynamics. Vol. 97. Springer Science & Business Media, 2013. [14] Shin, Sungho, Qiugang Lu, and Victor M. Zavala. \"Unifying Theorems for Subspace Identification and Dynamic Mode Decomposition.\" arXiv preprint arXiv:2003.07410 (2020). [15] Proctor, Joshua L., Steven L. Brunton, and J. Nathan Kutz. \"Dynamic mode decomposition with control.\" SIAM Journal on Applied Dynamical Systems 15.1 (2016): 142-161. [16] Arbabi, Hassan, and Igor Mezic. \"Ergodic theory, dynamic mode decomposition, and computation of spectral properties of the Koopman operator.\" SIAM Journal on Applied Dynamical Systems 16.4 (2017): 2096-2126.",
+    "presenting_author": "Qiugang Lu | University of Wisconsin-Madison",
+    "authors": [
+      "Sungho Shin | University of Wisconsin-Madison",
+      "Qiugang Lu | University of Wisconsin-Madison",
+      "Victor M. Zavala | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sungho Shin",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Qiugang Lu",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Victor M. Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "470g",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/596341"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/610391",
+    "paper_endpoint": "Paper/610391",
+    "paper_id": "610391",
+    "topic": "Subspace Based Model Identification for Missing Data",
+    "title": "Subspace Based Model Identification for Missing Data",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "45767",
+    "session_title": "Data-Driven Techniques for Dynamic Modeling, Estimation and Control II",
+    "session_number": "470",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Batch processes are important for a wide range of manufacturing industries such as chemicals, polymers, specialty glass, ceramics, and steel production. The recipe can be adjusted based on results from previous batches to maintain and promote quality control. [1] Economic considerations motivate the need for advanced batch process control strategies which, in turn, often necessitates a good process model. Recent advances in data storage technology have resulted in increased availability of accessible historical process data, making data-driven modeling more viable than before. Data driven modeling techniques however, often deal with several challenges ranging from process nonlinearity to incomplete data. One problem that is particularly common when dealing with historical data is that of missing data where for certain time instances, process data is not recorded. In some cases, there are periods where an entire set of data is missing due to sensor failure or maintenance on the system. In other cases, the measurements contain large errors and need to be removed from the data set. A common occurrence of missing data in chemical engineering processes is when different sensors have different sampling periods. Thus, while there is continuous data from each sensor the measurements cannot be readily aligned with the other recorded variables. Partial least squares (PLS) is a data-driven techniques that is often applied to industrial data, especially in cases for which missing data must be accounted for. [2-4] The inherent ability to handle missing data is one of the attributes that makes PLS an attractive method for modeling batch processes. The method identifies a time-varying model, and at its core, does not distinguish between output and input variables, which may limit its natural applicability for traditional model predictive control, and particularly applications where the process duration itself might be a decision variable. To address these issues, new approaches adapting existing subspace identification techniques [5-8] for batch processes have been proposed. [9,10] The present contribution focuses on adapting a recently proposed batch subspace identification approach. [9] In recent results, traditional subspace algorithm has been modified to use the same SVD method but for batch data with varying batch lengths. [11] In subspace identification methods, however, there are limited results that are able to directly handle the problem of missing data since SVD requires matrices to be full rank. Motivated by these considerations, this work presents a different approach to subspace identification that readily enables handing of missing data. The first step is to use latent variable methods (PCA followed by PLS) to identify a reduced dimensional space for the variables which accounts for missing data values. The second step replaces singular value decomposition with PCA to identify the states of the system. This proposed approach is demonstrated on a Polymethyl Methacrylate (PMMA) process as the motivating example. The proposed approach is shown to be more accurate in comparison to both mean replacement and linear interpolation techniques. References (1) Lee, K. S.; Lee, J. H. Iterative learning control-based batch process control technique for integrated control of end product properties and transient profiles of process variables. Journal of Process Control 2003, 13, 607 _ 621, Selected Papers from the sixth IFAC Symposium on Bridging Engineering with Science - DYCOPS - 6. (2) Hu, B.; Zhao, Z.; Liang, J. Multi-loop nonlinear internal model controller design under nonlinear dynamic PLS framework using ARX-neural network model. Journal of Process Control 2012, 22, 207_217. (3) Nelson, P. R.; Taylor, P. A.; MacGregor, J. F. Missing data methods in PCA and PLS: Score calculations with incomplete observations. Chemometrics and intelligent laboratory systems 1996, 35, 45_65. (4) Walczak, B.; Massart, D. Dealing with missing data: Part I. Chemometrics and Intelligent Laboratory Systems 2001, 58, 15_27. (5) Moonen, M.; De Moor, B.; Vandenberghe, L.; Vandewalle, J. On-and off-line identification of linear state-space models. International Journal of Control 1989, 49, 219_232. (6) Qin, S. J. An overview of subspace identification. Computers and Chemical Engineering 2006, 30, 1502_1513. (7) Huang, B.; Ding, S. X.; Qin, S. J. Closed-loop subspace identification: an orthogonal projection approach. Journal of process control 2005, 15, 53_66. (8) Van Overschee, P.; De Moor, B. A unifying theorem for three subspace system identification algorithms. Automatica 1995, 31, 1853_1864. (9) Corbett, B.; Mhaskar, P. Subspace identification for data-driven modeling and quality control of batch processes. AIChE Journal 62, 1581_1601. (10) Dorsey, A. W.; Lee, J. H. Building inferential prediction models of batch processes using subspace identification. Journal of Process Control 2003, 13, 397_406. (11) Corbett, B.; Mhaskar, P. Data-driven modeling and quality control of variable duration batch processes with discrete inputs. Industrial & Engineering Chemistry Research 2017, 56, 6962_6980.",
+    "presenting_author": "Nikesh Patel | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Nikesh Patel | McMaster University, Hamilton, Canada",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada",
+      "Brandon Corbett | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nikesh Patel",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Brandon Corbett",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "470h",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/610391"
+  }
+]

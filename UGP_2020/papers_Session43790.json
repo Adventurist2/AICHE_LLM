@@ -1,0 +1,300 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/608972",
+    "paper_endpoint": "Paper/608972",
+    "paper_id": "608972",
+    "topic": "Human-in-the-Loop: Coordinated Decision-Making",
+    "title": "Human-in-the-Loop: Coordinated Decision-Making",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "43790",
+    "session_title": "Advances in Process Control",
+    "session_number": "172",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Chemical plants are highly integrated processes with advanced automation and fault-detection techniques. Although advanced automation systems, incorporating real-time optimization, process monitoring, and model predictive control have yielded significant economic benefits, humans remain important and critical components in these systems. Process operators must take active roles during startup, shutdown and abnormal situations. Unfortunately, poor decisions (at many levels in the decision-making hierarchy) can also lead to disasters, such as the BP Texas City refinery explosion and fire in 2005. An integral part of this is a hierarchical structure which transcends beyond the plant and includes human at every level. In this work, an overview of Human-in-The-Loop (HiTL) approaches is presented. This starts with a general top-down analysis of a plant with humans at every level of operation. A brief discussion for the motivation of HiTL approaches in the industry is given to lay the foundation for the work [1-2]. A detailed discussion of a HiTL Supervisory Model Predictive Control (MPC) algorithm is given with simple simulation studies aimed at usage of this tool for operator training. The examples used are Single-Input Single-Output (SISO) and Multi-Input Multi-Output (MIMO) cases where the operator either shares the control decision with the MPC or controls a subset of the outputs while the remaining is controlled by the MPC. The MPC optimization objective is to minimize the set-point change input to regulatory PID controllers by penalizing the deviation from upper-layer output setpoints and human suggested inputs. Depending on the input/output pairs chosen for manual and MPC, the state-space matrices are modified. For shared control of input/output pairs, a tuning parameter is also included to weigh the human inputs. The MPC modifications discussed here are used to explore how different operator decisions ranging from closing control loops to taking supervisory decisions can affect the plant. On a second study, we present results of an in-house experiment where human subjects are tested for their supervisory decision-making capabilities by using a dynamic simulation of the Vinyl Acetate Monomer benchmark problem [3]. Operator inputs are crucial to a plant during the startup/shutdown phases. This is a complicated MIMO problem which is further aggravated by alarm flooding and information transfer during shift changes. The experiment involves a simple setup mimicking these conditions under laboratory conditions to explore important human factors and how better control-room designs are possible. Concluding remarks on using the HiTL supervisory MPC algorithm in the human experiments and future directions of the work are provided. References [1] S. Ghosh and B. W. Bequette, “Process Systems Engineering and the Human-in-the-Loop--the Smart Control Room,” Ind. Eng. Chem. Res. , vol. 59, no. 6, pp. 2422–2429, 2019. [2] S. Ghosh and B. W. Bequette, “A Framework for the Control Room of the Future: Human-in-the-loop MPC,” IFAC-PapersOnLine , vol. 51, no. 34, 2019. [3] M. L. Luyben and B. D. Tyréus, “An industrial design/control study for the vinyl acetate monomer process,” Comput. Chem. Eng. , vol. 22, no. 7–8, pp. 867–877, 1998.",
+    "presenting_author": "Sambit Ghosh | Rensselaer Polytechnic Institute, TROY, NY",
+    "authors": [
+      "Sambit Ghosh | Rensselaer Polytechnic Institute, TROY, NY",
+      "B. Wayne Bequette | Rensselaer Polytechnic Institute, Troy, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sambit Ghosh",
+        "affiliation": "Rensselaer Polytechnic Institute, TROY, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "B. Wayne Bequette",
+        "affiliation": "Rensselaer Polytechnic Institute, Troy, NY",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "172a",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/608972"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/606549",
+    "paper_endpoint": "Paper/606549",
+    "paper_id": "606549",
+    "topic": "Systematic Design of Active Constraint Switching Using Selectors",
+    "title": "Systematic Design of Active Constraint Switching Using Selectors",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "43790",
+    "session_title": "Advances in Process Control",
+    "session_number": "172",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Selector logic blocks (also commonly known as override) have been in use in process control applications for several decades to switch between a plurality of controllers, and are available as a part of any standard digital control system (DCS) software package. Despite the widespread use of selectors, (not just in the process industries, but also in other application domains) there is a lack of systematic design procedure that tells us when to use a max selector, when to use a min selector, and when is it not feasible to use a selector. In practice, selectors are designed in an ad-hoc fashion based on engineering know-how and experience. Academic textbooks such as [1] also demonstrate the use of selectors simply using various illustrative examples. To address this gap, in this talk we present a systematic design procedure using selectors for switching between different controllers. The proposed framework does not need detailed process models, nor process knowledge. In particular, we study the use of selectors for active constraint switching in the context of economic optimal operation. Recently, there is an increasing interest in achieving optimal operation without the need to solve numerical optimization problems. Here, the main idea is to convert the optimization problem into a feedback control problem, thereby achieving optimal operation using simple feedback control structures [2][3]. The economic objectives can be translated into control objectives by controlling (in this order): The active constraints at its limit, For the remaining unconstrained degrees of freedom, control self-optimizing controlled variables, e.g. the steady-state cost gradient to zero. It is then evident, that the active constraint regions play an important role in designing a feedback optimizing control structure, since this determines “ what to control ”. When the set of active constraints changes as a function of disturbance, then this requires a change in the controlled variables and reconfiguration of the control loops, and possible identify different self-optimizing variables for each active constraint region. The active constraints may be on the controlled variables (CV), or on the manipulated variables (MV). Therefore, optimal operation may involve either CV-CV switching, MV-MV switching, or CV-MV switching. Here, we focus on the use of selector blocks for CV-CV and CV-MV switching. More precisely, we state under what conditions is the switching between different CV constraints using a given MV feasible and optimal. Different illustrative example will be used to demonstrate the proposed framework. ´ References [1] Shinskey, F. G. Process control systems: application, design, and tuning; McGraw-Hill New York, 1996; Vol. 4. [2] Morari, M.; Arkun, Y.; Stephanopoulos, G. Studies in the synthesis of control structures for chemical processes: Part I: Formulation of the problem. Process decomposition and the classification of the control tasks. Analysis of the optimizing control structures. AIChE Journal 1980, 26, 220-232. [3] Skogestad, S. Plantwide control: the search for the self-optimizing control structure. Journal of process control 2000, 10, 487-507.",
+    "presenting_author": "Dinesh Krishnamoorthy | Norwegian University of Science and Technology, Trondheim, Norway",
+    "authors": [
+      "Dinesh Krishnamoorthy | Norwegian University of Science and Technology, Trondheim, Norway",
+      "Sigurd Skogestad | Norwegian University of Science and Technology (NTNU), Trondheim, Norway"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dinesh Krishnamoorthy",
+        "affiliation": "Norwegian University of Science and Technology, Trondheim, Norway",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sigurd Skogestad",
+        "affiliation": "Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "172b",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/606549"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/608605",
+    "paper_endpoint": "Paper/608605",
+    "paper_id": "608605",
+    "topic": "Resource-Constrained Stabilization of Nonlinear Process Systems Subject to Parametric Drift",
+    "title": "Resource-Constrained Stabilization of Nonlinear Process Systems Subject to Parametric Drift",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "43790",
+    "session_title": "Advances in Process Control",
+    "session_number": "172",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The stabilization of nonlinear dynamical systems via feedback control is a fundamental problem whose practical significance spans a wide range of process control applications. Traditionally, the problem is formulated using the classical feedback control paradigm in which sensor-controller communication is assumed to take place over dedicated links, and considerations such as real-time communication resource constraints are ignored. These considerations, however, have become increasingly important in the formulation and solution of the control problem, especially with the widespread reliance on communication networks in industrial control systems, where dedicated feedback paths are replaced by resource-constrained sensor-controller communication channels. An approach to address the resource constraints problem, which has enjoyed a wide appeal, is the use of model-based control (e.g., [1], [2], [3]). The appeal of this approach stems from the fact that it helps reduce the need for frequent sensor-controller communication over the network by relying on a process model instead. However, the extent to which the network resources are conserved is typically limited when a single model with fixed parameters is embedded in the control system. This limitation is particularly evident when the process experiences parametric drift. In chemical processes, for example, certain physical phenomena such as catalyst deactivation and heat-exchanger fouling commonly manifest themselves in the form of parameter variations that, over time, increase the mismatch between the model and plant. Mitigating the impact of this drift requires increased levels of feedback through sensor-controller communication which may not be attainable due to existing sensor-controller communication constraints. An effort to deal with this problem was initiated in [4] where a methodology for the integration of model-based control and model identification was developed. The key idea was to re-identify the model parameters whenever needed in order to keep the plant-model mismatch, and thus the required communication rate, to a minimum. In this prior work, however, the focus was on processes where the underlying dynamics are linear. The resulting linear control, stability characterization and identification approaches are therefore not directly suited for application to processes with strong nonlinearities, especially if the process is to be operated over a wide range of operating conditions or is subject to significant process upsets. Motivated by these considerations, we present in this work a methodology for augmenting model-based feedback control with error-triggered parameter re-identification for nonlinear processes controlled over resource-constrained sensor-controller communication channels subject to parametric variations. The goal is to maintain closed-loop stability in the presence of varying levels of plant-model mismatch during periods of parametric drift, while simultaneously keeping the sensor-controller communication rate to a minimum and maintaining acceptable levels of closed-loop performance. Initially, a stabilizing nonlinear state feedback controller is designed. The controller utilizes model-generated state estimates which are periodically updated using the available state measurements. An estimate of the maximum allowable update period is obtained and characterized in terms of the parametric uncertainty and the controller design parameters. An error monitoring scheme with a time-varying instability alarm threshold is then devised to determine on-line if and when the model parameters need to be updated. A breach of the instability threshold at some time triggers a safe-parking mode of operation in which the sensor-controller communication rate is adjusted to mitigate the destabilizing impact of increased plant-model mismatch. The measurements collected during the safe-parking mode are used to obtain new estimates of the process parameters using nonlinear grey-box parameter estimation techniques. An explicit characterization of the closed-loop stability region associated with the new model parameters is obtained to determine the appropriate post-drift sensor-controller communication rate that should be used when the model parameters are updated. The implementation of the proposed methodology is illustrated using a chemical process example. References : [1] Sun Y, El-Farra NH. Quasi-Decentralized Model-Based Networked Control of Process Systems. Computers & Chemical Engineering. 2008; 32(9):2016–2029. [2] Sun Y, El-Farra NH. Resource-Aware Quasi-Decentralized Control of Networked Process Systems over Wireless Sensor Networks. Chemical Engineering Science. 2012; 69:93-106. [3] Garcia, E, Antsaklis, PJ, and Montestruque, LA. Model-Based Control of Networked Systems, Systems &Control: Foundations & Applications. Springer International Publishing, Switzerland, 2014. [4] Zedan A, Xue D, El-Farra NH. Integrating Model Identification and Model-Based Control of Networked Process Systems. Proceedings of 13th International Symposium on Process Systems Engineering, vol. 44 of Computer Aided Chemical Engineering, pp. 715–720. Elsevier. 2018.",
+    "presenting_author": "Amr Zedan | University of California, Davis",
+    "authors": [
+      "Amr Zedan | University of California, Davis",
+      "Nael El-Farra | University of California, Davis"
+    ],
+    "authors_structured": [
+      {
+        "name": "Amr Zedan",
+        "affiliation": "University of California, Davis",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nael El-Farra",
+        "affiliation": "University of California, Davis",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "172c",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/608605"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/604292",
+    "paper_endpoint": "Paper/604292",
+    "paper_id": "604292",
+    "topic": "A Multiple Model Predictive Control Approach Based on Dynamic Discrepancy Reduced Order Modeling",
+    "title": "A Multiple Model Predictive Control Approach Based on Dynamic Discrepancy Reduced Order Modeling",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "43790",
+    "session_title": "Advances in Process Control",
+    "session_number": "172",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Model predictive control (MPC) has been widely used in industrial process applications due to its ability to forecast the dynamic behavior of multiple-input, multiple-output systems and to incorporate constraints associated with the physical system into the controller formulation. To reduce the MPC online computational burden, the dynamic system model developed for MPC purposes can be represented using a reduced-order model. The plant-model mismatch of a reduced-order model is only negligible in a subset of the dynamic operating region. A possible solution to this problem is to cover the operating region with a set of linearized models in a multiple-model adaptive control algorithm [1] . However, a systematic approach to build a reduced-order model set for MPC applications is lacking, especially when the system is operating under uncertainty. Reduced-order models can increase the output variances when the dynamic system is affected by stochastic disturbances, which can lead to suboptimal controller performance. To address the aforementioned challenges of reduced-order models in advanced control, a novel grey box model identification algorithm for process control is developed by integrating dynamic operability mapping and statistical calibration. In the developed framework, the plant is represented by a high-fidelity model and the reduced-order models are initially chosen to be linear time-invariant state-space models. Dynamic operability mapping [2] is performed to analyze the mismatch between the plant model and the reduced-order models and new linearizations at high mismatch neighborhoods are performed to enhance the model bank for MPC. For each linearized model, discrepancy terms in the form of Gaussian processes with Bayesian smoothing spline are added to the disturbance matrix, and the linear model is calibrated to the plant model using a Bayesian approach [3] . For the application in focus, a setpoint tracking MPC is implemented for a Fischer-Tropsch synthesis process that takes place in a slurry bubble column reactor. The Fischer Tropsch process is a collection of reactions that rearrange the carbon and hydrogen molecules in the syngas to produce higher-value hydrocarbons in the liquid products. Because the products of this process include a wide range of hydrocarbons from C 1 to C 50+ and the product distribution is influenced by the reactor pressure and temperature, controlling the process conditions simultaneously and accurately is crucial to yield the product with desired specifications. The high-fidelity dynamic model is developed based on a hydrodynamic model from literature [4] and extended to paraffin and olefin products in the slurry phase. A bank of reduced-order models for this process is built for MPC purposes employing dynamic discrepancy. The proposed multi-model controller with the novel framework is implemented and compared to a traditional MPC and a nonlinear MPC to evaluate its tracking performance. References: [1] Rao, R. R., Aufderheide, B., & Bequette, B. W. (2003). Experimental studies on multiple-model predictive control for automated regulation of hemodynamic variables. IEEE Transactions on Biomedical Engineering, 50(3), 277-288. [2] Gazzaneo, V., Carrasco, J. C., Vinson, D. R., & Lima, F. V. (2020). Process operability algorithms: past, present, and future developments. Industrial & Engineering Chemistry Research, 59(6), 2457-2470. [3] Bhat, K. S., Mebane, D. S., Mahapatra, P., & Storlie, C. B. (2017). Upscaling uncertainty with dynamic discrepancy for a multi-scale carbon capture system. Journal of the American Statistical Association, 112(520), 1453-1467. [4] Maretto, C., & Krishna, R. (1999). Modelling of a bubble column slurry reactor for Fischer–Tropsch synthesis. Catalysis today, 52(2-3), 279-289.",
+    "presenting_author": "San Dinh | West Virginia University, Morgantown, WV",
+    "authors": [
+      "San Dinh | West Virginia University, Morgantown, WV",
+      "Jose Bohorquez | West Virginia University, Morgantown, WV",
+      "David S. Mebane | West Virginia University, Morgantown, WV",
+      "Fernando Lima | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "San Dinh",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jose Bohorquez",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "David S. Mebane",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Fernando Lima",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "172d",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/604292"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/611740",
+    "paper_endpoint": "Paper/611740",
+    "paper_id": "611740",
+    "topic": "Interpretability for Moving Toward Verification of Advanced and Data-Driven Control",
+    "title": "Interpretability for Moving Toward Verification of Advanced and Data-Driven Control",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "43790",
+    "session_title": "Advances in Process Control",
+    "session_number": "172",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "There is an increasing emphasis on the capabilities of the use of automation for handling a variety of tasks that involve complex decision-making or learning from past data. Though this presents many opportunities for systems which are able to adapt in the face of complicated or unforeseen circumstances, it also poses many challenges in terms of verification at the design and test stage that such systems will work as expected in practice. Prior work in our group explored the development of constraints for an advanced optimization-based control design known as economic model predictive control (EMPC) [1] that could be adjusted via learning over time within a range in which it was guaranteed that they would not impact closed-loop stability [2]. However, it would be expected that there would be many circumstances in which restricting adaptability of control systems only to constraints which do not impact control-theoretic guarantees may not be practical. In such a case, it is necessary to develop strategies for gaining trust for learned control actions even when guarantees cannot be made. It has been suggested that one way in which humans may learn to trust artificially intelligent systems is by causing their decision-making process to be interpretable [3]. However, while interpretability for machine learning techniques such as neural networks has received a good deal of attention (e.g., [4]), there is not currently a broadly-accepted means for incorporating interpretability in control design, particularly in cases where the controller may make non-intuitive decisions by solving an optimization problem to determine its control actions, or where a model-based controller may incorporate a model or constraints that adapt over time to changing environments. Motivated by the above considerations, this work provides an investigation of how interpretability may be incorporated within the context of optimization-based control, and particularly within the context of EMPC with both time-invariant first-principles models (but where it may still compute non-intuitive control actions to optimize profits), and when it utilizes a neural network model for the process that is updated using process data as the process conditions change over time. The initial focus will be on defining cases in which the actions of the EMPC would not be interpretable, and on defining interpretability in a variety of mathematical contexts (e.g., those based on pattern recognition or directionality in process behavior when the input trajectories take certain directions). It will be analyzed how the EMPC formulation may be modified to cause it to be more interpretable with respect to these different metrics. Subsequently, we will investigate how approaches to neural network interpretability from the literature (e.g., approaches which analyze which nodes are being activated for certain inputs to the neural network, and how sensitive the outputs of the network are to changes in certain weights [3,5]) can be used to seek to understand how the changes in the control actions over time as the process model changes might be made understandable to a human in light of the model modifications and the process data so that an operator could assess whether these actions are appropriate or not. [1] M. Ellis, H. Durand, and P. D. Christofides. “A tutorial review of economic model predictive control methods.” Journal of Process Control , 24:1156–1178, 2014. [2] H. Durand. “Responsive economic model predictive control for next-generation manufacturing.” Mathematics , 8:259, 38 pages, 2020. [3] S. Chakraborty, R. Tomsett, R. Raghavendra, D. Harborne, M. Alzantot, F. Cerutti, M. Srivastava, A. Preece, S. Julier, R. M. Rao, T. D. Kelley, D. Braines, M. Sensoy, C. J. Willis, and P. Gurram. “Interpretability of deep learning models: A survey of results.” In Proceedings of the IEEE Smart World Congress, San Francisco, CA, 2017. [4] Zhang, Q., Y. N. Wu, and S.-C. Zhu. “Interpretable convolutional neural networks.” In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, Salt Lake City, UT, 8827-8836, 2018. [5] Gilpin, L. H., D. Bau, B. Z. Yuan, A. Bajwa, M. Specter and L. Kagal. “Explaining explanations: An overview of interpretability of machine learning.” In Proceedings of the 2018 IEEE 5 th International Conference on Data Science and Advanced Analytics, Turin, Italy, 80-89, 2018.",
+    "presenting_author": "Helen Durand | Wayne State University, Detroit, MI",
+    "authors": [
+      "Helen Durand | Wayne State University, Detroit, MI",
+      "Dominc Messina | Wayne State University, Detroit, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Helen Durand",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Dominc Messina",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "172e",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/611740"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/596263",
+    "paper_endpoint": "Paper/596263",
+    "paper_id": "596263",
+    "topic": "Distributed Model Predictive Control of Nonlinear Processes Using Machine Learning Models",
+    "title": "Distributed Model Predictive Control of Nonlinear Processes Using Machine Learning Models",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "43790",
+    "session_title": "Advances in Process Control",
+    "session_number": "172",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "As machine learning techniques have demonstrated their effectiveness in traditional engineering applications, its usage in model identification in process control and operations has garnered increasing interest in recent years [2,3]. Particularly, recurrent neural networks (RNN) have been widely utilized to model nonlinear dynamical systems [4,5]. Furthermore, given the increased dimension and complexity of the control network with both networked and point-to-point sensor communications, distributed control systems have been developed to carry out calculations in separate processors while achieving the closed-loop plant objectives cooperatively and efficiently [1]. While model-based controllers provide a natural control framework for distributed control systems due to their abilities of handling multi-variable ineractions and constraints, the performance of the Distributed Model Predictive Control (DMPC) systems will be heavily dependent on the accuracy of the model, which may not be always available or remain accurate throughout the plant operation. In this work, we develop a Lyapunov-based Distributed Model Predictive Control system using RNN prediction models. A hierarchical DMPC architecture is proposed which allows easy integration of new control loops with pre-existing stabilizing control loops to further improve closed-loop performance. Working with a general class of nonlinear models, and assuming that there exists a Lyapunov-based controller that stabilizes the nominal closed-loop system using only the pre-existing control loops, two separate Lyapunov-based MPC’s are designed, coordinating their actions in an efficient manner, to improve overall closed-loop performance while preserving the stability properties and reducing computational effort relative to that required in a centralized MPC design. With a dataset generated from extensive open-loop simulations within the desired operating region, RNN models are trained with a sufficiently small modeling error such that closed-loop state boundedness and convergence to the origin can be achieved. The proposed RNN-DMPC framework is applied to a nonlinear chemical process example consists of two continuously stirred tank reactors connected in series. [1] Christofides, P. D., Liu, J., and Muñoz de la Peña, D. Networked and distributed predictive control: Methods and nonlinear process network applications. Springer Science & Business Media, 2011. [2] Schmidhuber, J. Deep learning in neural networks: An overview. Neural networks, 2015, 61: 85-117. [3] Venkatasubramanian, V. The promise of artificial intelligence in chemical engineering: Is it here, finally?. AIChE Journal, 2019, 65: 466-478. [4] Wang, Y. \"A new concept using LSTM Neural Networks for dynamic system identification.\" In Proceedings of American Control Conference (ACC), pp. 5324-5329. IEEE, 2017. [5] Wu, Z., Tran, A., Rincon, D., Christofides, P.D., 2019. Machine learning-based predictive control of nonlinear processes. part I: Theory. AIChE Journal 65, e16729.",
+    "presenting_author": "Scarlett (Siyao) Chen | University of California, Los Angeles",
+    "authors": [
+      "Scarlett (Siyao) Chen | University of California, Los Angeles",
+      "Zhe Wu | University of California, Los Angeles",
+      "David Rincon | University of California, Los Angeles",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Scarlett (Siyao) Chen",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhe Wu",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "David Rincon",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "172f",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/596263"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/611756",
+    "paper_endpoint": "Paper/611756",
+    "paper_id": "611756",
+    "topic": "Output Feedback Control of Integrated Lumped and Distributed Parameter Systems Using Mobile Sensors Network",
+    "title": "Output Feedback Control of Integrated Lumped and Distributed Parameter Systems Using Mobile Sensors Network",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "43790",
+    "session_title": "Advances in Process Control",
+    "session_number": "172",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The optimal control and real-time decision-making are often implemented in the chemical process industry with model predictive control (MPC), due to its relative simplicity, flexibility, performance, robustness, and its ability to efficiently handle complex multivariable systems with the hard path and terminal constraints [1]. MPC addresses the control problem by repeatedly solving a constrained dynamic optimization problem to compute a sequence of future manipulated inputs. Since the availability of full state information at each sampling time cannot be invoked in practical cases, using a state estimation method is required along with the control algorithm. Among the several available methods for state estimation, moving horizon estimation (MHE) has attracted much attention because it can be formulated as a similar constrained dynamic optimization problem [2-5]. Complex chemical plants can be considered as integrated networks of lumped parameter systems (LPSs) (e.g., staged separators, well-mixed reactors), described by ordinary differential equations (ODEs) and distributed parameter systems (DPSs) (e.g., tubular reactors, packed beds, heat exchangers) described by partial differential equations (PDEs) [6, 7]. For such systems of systems, the solvability of the MHE and MPC becomes more crucial because the underlying optimization problem must be solved in the presence of PDE constraints involving spatial variation and complex temporal dynamics of the state variables [7]. This work focuses on developing an algorithmic framework to address the nonlinear output-feedback control problem for integrated LPSs and DPSs through a combined MHE and MPC. Reduced-order model representations of the PDEs in the form of finite-dimensional ODEs are employed as the basis for the dynamic optimization formulation in the estimation and control problems. A network of mobile sensors that provide continuous measurement outputs is used to improve the MHE performance in estimating the spatial profiles of the system states. The mobile sensors are capable of moving within spatial domains of the DPSs. The basic premise of this proposed method is that a set of mobile sensors achieve better estimation performance than a set of fixed sensors [8]. The effectiveness of the proposed combined MHE and MPC is demonstrated through a case study on a benchmark diffusion-convection-reaction process network. The estimation error and the closed-loop performance are evaluated using detailed simulations for the spatially distributed fixed and mobile sensors, as well as for different scanning speeds of the mobile sensors to propose a scanning policy. Rawlings, J. B.; Mayne, D. Q.; Diehl, M. Model Predictive Control: Theory, Computation, And Design; Nob Hill Publishing: Madison, WI, 2017. Copp, D.; Hespanha, J. Simultaneous nonlinear model predictive control and state estimation. Automatica 2017, 77, 143-154. Rawlings, J.; Bakshi, B. Particle filtering and moving horizon estimation. Comput. Chem. Eng. 2006, 30(10-12), 1529-1541. Rao, C. V.; Rawlings, J. B.; Mayne, D. Q. Constrained state estimation for nonlinear discrete-time systems: Stability and moving horizon approximations. IEEE Trans. Autom. Control 2003, 48(2), 246-258. Pourkargar, D. B.; Moharir, M.; Almansoori, A.; Daoutidis, P. Distributed estimation and nonlinear model predictive control using community detection. Ind. Eng. Chem. Res. 2019, 58, 13495-13507. Christofides, P.D. Nonlinear and robust control of PDE systems; Birkhauser: New York, NY, 2000. Moharir, M.; Pourkargar, D. B.; Almansoori, A.; Daoutidis, P. Graph representation and distributed control of diffusion-convection-reaction system networks. Chem. Eng. Sci. 2019, 204, 128-139. Demetriou, M.A.; Hussein, I.I. Estimation of spatially distributed processes using mobile spatially distributed sensor network. SIAM J. Control Optim. 2009, 48(1), 266-291.",
+    "presenting_author": "Davood Pourkargar | Kansas State University, Manhattan, KS",
+    "authors": [
+      "Davood Pourkargar | Kansas State University, Manhattan, KS"
+    ],
+    "authors_structured": [
+      {
+        "name": "Davood Pourkargar",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "172g",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/611756"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/602232",
+    "paper_endpoint": "Paper/602232",
+    "paper_id": "602232",
+    "topic": "Data-Driven Stabilization of Nonlinear Dynamical Systems: A Koopman Operator Approach",
+    "title": "Data-Driven Stabilization of Nonlinear Dynamical Systems: A Koopman Operator Approach",
+    "date_time": "2020-11-16_08:00:00_09:00:00",
+    "session_id": "43790",
+    "session_title": "Advances in Process Control",
+    "session_number": "172",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Nonlinear systems abound in nature. Yet, a universal feedback design for stabilizing nonlinear dynamics remains a daunting challenge unlike its linear counterpart. An alternative approach that has gained a lot of attention recently in this direction is the Koopman operator-theoretic description of dynamical systems [1]. Koopman operator facilitates a linear representation of an unforced nonlinear dynamical system, which is made possible by shifting focus from state space to the space of functions called observables (functions of states). This means that the spectral properties of the Koopman operator (i.e., eigenvalues and eigenfunctions) encode global information associated with geometric properties such as Lyapunov functions and measures, and therefore facilitates nonlinear stability analysis and controller synthesis [2]. The authors in [3] extended this idea to controlled systems and proposed a stabilizing feedback controller which relies on control Lyapunov functions (CLF) in the Koopman space. However, they did not provide any theoretical analysis on the stability of the original nonlinear system. CLFs were also employed in our previous work [4] where a feedback controller was designed in the Koopman space using Lyapunov constraints within a model predictive control framework. However, the limitation is that the CLF was derived for the original system which requires an explicit mathematical expression of the original nonlinear dynamics, which is often not available. To address these issues, this work seeks to derive a stabilizing feedback controller based on the Koopman operator representation of the original nonlinear system. To do so, first, Koopman system identification is applied to derive a bilinear representation of the dynamics (i.e., Koopman operator theory, when extended to include actuation, gives rise to a bilinear term of state and input) [5]. Then, a predictive controller is formulated in the space of Koopman eigenfunctions by using an auxiliary CLF based bounded controller as a constraint which enables the characterization of stability of the Koopman bilinear system. Finally, a stability criterion is presented that guarantees stability of the original closed loop system in the Lyapunov sense, which comes from the stability of the Koopman bilinear system. Specifically, if there exists a continuously differentiable inverse mapping from the Koopman space to the original state space, then the difference between the predicted state and the original state can be shown to be bounded at all times. This, along with the guaranteed stability of the predicted state (owing to the stability of the bilinear system), will ensure the stability of the closed-loop system under the implementation of the proposed controller. Unlike [4], the feedback controller design proposed in this work is completely data-driven and does not require any a priori knowledge of the original system. Moreover, please note that the CLFs are derived for the bilinear system which is much more computationally affordable than the original nonlinear system. In fact, the search for CLFs can be focused to a class of quadratic functions, by formulating an optimization problem, which is known to effectively characterize the stability region of simpler systems like the (Koopman) bilinear systems. The application of the proposed method is illustrated on a couple of canonical examples in chemical engineering and mechanical engineering. Overall, the proposed method has the potential to control complex nonlinear systems using bilinear, simple surrogate models. Literature cited: [1] Koopman, B.O. Hamiltonian systems and transformation in Hilbert space. Proceedings of National Academy of Sciences USA , 17 (5):315, 1931. [2] A. Mauroy and I. Mezic. Global stability analysis using the eigenfunctions of the Koopman operator, IEEE Transactions on Automatic Control , 61 :3356–3369, 2016. [3] B. Huang, X. Ma, and M. Vaidya, Feedback stabilization using koopman operator, in IEEE 57th Annual Conference on Decision and Control (CDC) , Miami Beach, FL, Dec 17-19 2018, pp. 6434–6439. [4] A. Narasingam and J. S. Kwon, Koopman Lyapunov-based model predictive control of nonlinear chemical process systems, AIChE J., 65 :e16743, 2019. [5] A. Surana and A. Banaszuk, “Linear observer synthesis for nonlinear systems using koopman operator framework,” IFAC-PapersOnLine , 49 (18):716–723, 2016.",
+    "presenting_author": "Abhinav Narasingam | Texas A&M University, College Station, TX",
+    "authors": [
+      "Abhinav Narasingam | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Abhinav Narasingam",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "172h",
+    "sortable_time": "2020-11-16_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/602232"
+  }
+]

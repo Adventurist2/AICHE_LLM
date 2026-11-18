@@ -1,0 +1,342 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667836",
+    "paper_endpoint": "Paper/667836",
+    "paper_id": "667836",
+    "topic": "Integrated Metabolic and Compartment Model for Simulations of Large-Scale Multi-Impeller Aerated Bioreactors",
+    "title": "Integrated Metabolic and Compartment Model for Simulations of Large-Scale Multi-Impeller Aerated Bioreactors",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53404",
+    "session_title": "Applied Math for Metabolic and Bioreactor Systems",
+    "session_number": "373",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Simulation-based study of cell population heterogeneity in bioreactors requires coupling of fluid dynamic and metabolic cell models. To simplify the computational effort required numerical solve these models, a novel approach is proposed involving integration of a compartmental model, informed by multiphase CFD simulation, combined with a dynamic flux balance models (DFBM) for each compartment. DFBMs have are a state-of-the-art approach for the modelling and simulation of biochemical processes due to their ability to account for the metabolic network of microorganisms. Since DFBMs require the repeated solutions of linear programming (LP) optimization at each time interval, the proposed method uses a multi-parametric approach that provides analytical expressions for calculation of the fluxes for each active set of constraints in the model. To significantly reduce the computational complexity of each DFBM evaluation, a binary search tree metabolic (BSTMM) is applied as a parametric point location method. This enables the efficient assignment to each compartment of an active set from the parameterization, thus leading to rapid analytical calculation of the resulting fluxes. A reduction of computational complexity of almost two orders of magnitude, compared to using original DFBM model through the solution of an LP, is achieved. A multi-parametric solver, MPT3, was used to produce critical regions expressing analytical equations for flux computation for each active set of DFBM constraints. After identifying the critical regions corresponding to each active set of constraints, the LP problem is then converted into a parametric point location problem. The data structure encoding the map (i.e. hash table, BST, k-dimensional tree (KDT), etc.) is then developed and its related point location method employed to accelerate the search for the optimal solution. This method has been frequently applied in the field of explicit model predictive control, where it displays outstanding online computation time reduction, depending on the point location method and data structure chosen. The BST data structure was chosen due to its very efficient online searching time scaling of O(log n), with n being the number of items. The BST structure is based on division of the critical region map using hyperplanes (HP) between each of the critical regions. A sample BST corresponding to a critical region map is shown the Figure. The point location algorithm is then used to determine the path through the tree to reach the leaf node, for which an analytical expression for the DFBM is uniquely defined. Search through the BST is based on determined the side of the hyperplane (in the parameter space) where the concentration vector (c) is located. Once the leaf node is identifed, the reaction rate vector (r) predicted by the DFBM is computed through a simple evaluation of an analytical expression. As most reported compartmental models are based on a velocity field of the two-dimensional section of the stirred tank, the azimuthal (tangential) components have not taken into account in reported studies. This results in inaccuracies in the corresponding compartmental model, due to unsteady three-dimensional nature of turbulent multiphase flows. In this work, the compartmentalization approach is informed by fully three-dimensional velocity fields resulting from CFD simulation to improve accuracy and fidelity. A compartmentalization algorithm based on scalar fields is applied to both decompose the domain into compartments, compute net volumetric flow rates between compartments (Q), and active volume for each compartment (V). An example of this process is shown in the Figure, along with the resulting compartmental model equations. In order to validate the presented methodology, a BSTMM of E. coli is combined with the compartment model obtained from a CFD simulation of a 20 cubic meter four-impeller aerated bioreactor. The BSTMM was developed, and then the coefficients of the model were calibrated using experimental data of E. coli in batch operation of a 7 liter bioreactor reported in the literature. The calibrated model was applied for prediction of experimental concentrations obtained in fed-batch operation and compared to those reported in the literature. The model results are in good agreement with concentration profiles reported from the experiments. The simulation is able to predict gradients of concentrations, variations in reaction rates and cell growth limits in different zones of the bioreactor. Thus, the proposed approach provides a better understanding of the impacts of heterogeneity inside the bioreactor on a microbial population. The integrated metabolic/compartment model presented is shown to enable the simulation of large-scale bioreactors over industrially relevant time-scales without significant loss of accuracy. While it requires accurate CFD simulations for compartmentalization and a calibrated BSTMM, it enables computationally efficient simulations which would be infeasible with an integrated CFD/DFBM method.",
+    "presenting_author": "Nasser M. Abukhdeir | University of Waterloo, Canada",
+    "authors": [
+      "Ittisak Promma | University of Waterloo, Canada",
+      "Marc G. Aucoin | University of Waterloo, Canada",
+      "Nasser M. Abukhdeir | University of Waterloo, Canada",
+      "Hector M. Budman | University of Waterloo, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ittisak Promma",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Marc G. Aucoin",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Nasser M. Abukhdeir",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Hector M. Budman",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "373a",
+    "sortable_time": "2023-11-07_12:30:00_12:55:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667836"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668037",
+    "paper_endpoint": "Paper/668037",
+    "paper_id": "668037",
+    "topic": "Mathematical Model for Measles Virus Production in Batch Bioreactors",
+    "title": "Mathematical Model for Measles Virus Production in Batch Bioreactors",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53404",
+    "session_title": "Applied Math for Metabolic and Bioreactor Systems",
+    "session_number": "373",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Measles virus (MeV) propagation has been studied extensively for production of recombinant MeV vectors for viral vaccines and gene therapy applications as well as for oncolytic virus therapy. Recombinant MeV vectors have demonstrated high safety and efficacy as well as long-lasting immunity toward antigens [1]. In addition, MeV is a suitable candidate for an oncolytic virus because tumor cells overexpress the MeV receptor CD46 [2] . MeV is commonly produced in bioreactors with microcarrier culture using Vero cells as a production cell line [3]. This process is yet to provide sufficient concentrations of MeV required for therapeutic applications primarily due to the stability of the virus. MeV, an enveloped virus, is sensitive to shear stress, low pH, and UV light [3], [4]. However, the main challenge of MeV production is its high sensitivity to temperature. At the growth temperature of Vero cells (37°C), MeV has a half-life of one hour [3]. This temperature-dependent virus inactivation reduces the maximum virus yield in two ways: initial infection by inoculation and the overall production yield [3]. Therefore, it is imperative to know the optimal timing of the infection (TOI) process and the time of virus release to predict the optimal time of harvest (TOH). Our objective is to develop a modeling approach to predict the kinetics of MeV infection in Vero cells for the purpose of virus production. Our model is adapted from an unstructured dynamic mass balance model by Möhler et al . describing the populations of uninfected cells, infected cells, and free virus over the course of infection in a vaccine production bioreactor producing influenza virus [5]. Our model constitutes seven dynamic mass balance equations which, in addition to uninfected and infected cells, includes balances for dead cells due to infection and infected cells that detach from the microcarriers into the supernatant. Our model also captures both infectious virus particles and non-infectious virus particles. Our model includes syncytia formation, a common cytopathic effect in MeV-induced infections, and reduction in infectious virus particles due to defective interfering particles [3], [6]. To determine an optimal set of model parameters from a limited data set, we used a global optimization algorithm. Data available for use in parameter estimation included concentrations of total cells, dead cells, total virus, and infectious virus from five similar batch bioreactor runs. A bootstrapping technique was utilized to determine confidence intervals for our parameter estimates. Model performance and validation were evaluated using datasets not included in the parameter estimation. We have further performed a global sensitivity analysis to determine which subset of parameters have the most impact on process performance and to suggest how culture operational parameters, TOI and TOH, may be manipulated to optimize productivity. References: [1] M. Lu et al. , “A safe and highly efficacious measles virus-based vaccine expressing SARS-CoV-2 stabilized prefusion spike”, PNAS , vol. 118, no. 12, Feb. 2021, doi: 10.1073/pnas.2026153118. [2] S. Aref, K. Bailey, and A. Fielding, “Measles to the Rescue: A Review of Oncolytic Measles Virus,” Viruses , vol. 8, no. 10, Oct. 2016, doi: 10.3390/V8100294. [3] T. A. Grein, D. Loewe, H. Dieken, D. Salzig, T. Weidner, and P. Czermak, “High titer oncolytic measles virus production process by integration of dielectric spectroscopy as online monitoring system,” Biotechnol Bioeng , vol. 115, no. 5, pp. 1186–1194, May 2018, doi: 10.1002/BIT.26538. [4] S. Kiesslich and A. A. Kamen, “Vero cell upstream bioprocess development for the production of viral vectors and vaccines,” Biotechnol Adv , vol. 44, Nov. 2020, doi: 10.1016/J.BIOTECHADV.2020.107608. [5] L. Möhler, D. Flockerzi, H. Sann, and U. Reichl, “Mathematical model of influenza A virus production in large-scale microcarrier culture,” Biotechnol Bioeng , vol. 90, no. 1, pp. 46–58, Apr. 2005, doi: 10.1002/bit.20363. [6] T. Whistler, W. J. Bellini, and P. A. Rota, “Generation of Defective Interfering Particles by Two Vaccine Strains of Measles Virus,” Virology , vol. 220, no. 2, pp. 480–484, Jun. 1996, doi: 10.1006/VIRO.1996.0335.",
+    "presenting_author": "Shiny Samuel | Rensselaer Polytechnic Institute, Troy, NY",
+    "authors": [
+      "Shiny Samuel | Rensselaer Polytechnic Institute, Troy, NY",
+      "Todd Przybycien | Rensselaer Polytechnic Institute, Troy, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shiny Samuel",
+        "affiliation": "Rensselaer Polytechnic Institute, Troy, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Todd Przybycien",
+        "affiliation": "Rensselaer Polytechnic Institute, Troy, NY",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "373b",
+    "sortable_time": "2023-11-07_12:55:00_13:13:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668037"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670201",
+    "paper_endpoint": "Paper/670201",
+    "paper_id": "670201",
+    "topic": "Data-Driven Disentanglement of Latent variables and Effective parameters for Cellular Trajectories with Manifold Learning and Deep Learning Approaches",
+    "title": "Data-Driven Disentanglement of Latent variables and Effective parameters for Cellular Trajectories with Manifold Learning and Deep Learning Approaches",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53404",
+    "session_title": "Applied Math for Metabolic and Bioreactor Systems",
+    "session_number": "373",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "We begin with sets of trajectories sampled from ordinary differential equations (ODE) for various initial conditions from various populations. We illustrate two data-driven frameworks to discover intrinsic information from the ODE system: latent variables and effective parameters. Our first approach utilizes the questionnaire Diffusion Maps metric [1-3]. Questionnaire Diffusion Maps uses an iterative approach to refine its similarity matrix, which allows us to discover latent variables and effective parameters after a few successive steps in a fully unsupervised manner. Our second approach involves using a) output-informed Diffusion Maps [4] to discover a set of latent observables that capture the intrinsic dimensionality of the system’s response, and b) a conformal Autoencoder Neural Networks (AE) [5] to disent angle the contribution of the initial conditions from that of the parameters to the behavior of the ODE system. This second approach can be easily extended to stochastic trajectories sampled from heterogeneous populations by using a recently developed Neural-SDE approach [6]. We discuss the explainability of the identified data-driven observables for both cases and illustrate that our discovered data-driven observables (latent variables and effective parameters) can be physically interpretable. We consider pedagogical examples from synthetic data generated from parameter dependent ordinary differential equations that we use as a proof of concept. We illustrate the ability of our scheme to discover data-driven observables from data obtained from wearable devices. We also illustrate the ability of our scheme to identify the latent parameter given experimental cellular trajectories of dermal fibroblasts from individuals between 2 and 96 years of age [7]. [1] J.I. Ankenman, Geometry and Analysis of Dual Networks on Questionnaires, Ph.D. thesis, Yale University (2014). [2] O. Yair, R. Talmon, R.R. Coifman, and I.G. Kevrekidis, Proc. Natl. Acad. Sci. U. S. A. 114, E7865 (2017). [3] D.W. Sroczynski, O. Yair, R. Talmon, and I.G. Kevrekidis, Isr. J. Chem. 58, 787 (2018). [4] Holiday, Alexander, et al. \"Manifold learning for parameter reduction.\" Journal of computational physics 392 (2019): 419-431. [5] Evangelou, Nikolaos, et al. \"On the parameter combinations that matter and on those that do not: data-driven studies of parameter (non) identifiability.\" PNAS Nexus 1.4 (2022): pgac154. [6] Dietrich, Felix, et al. \"Learning effective stochastic differential equations from microscopic simulations: Linking stochastic numerics to deep learning.\" Chaos: An Interdisciplinary Journal of Nonlinear Science 33.2 (2023): 023121. [7] Phillip, Jude M., et al. \"Biophysical and biomolecular determination of cellular age in humans.\" Nature biomedical engineering 1.7 (2017): 0093.",
+    "presenting_author": "Anastasia Georgiou | Princeton University, NJ",
+    "authors": [
+      "Nikolaos Evangelou | Johns Hopkins University, Baltimore, MD",
+      "Anastasia Georgiou | Princeton University, NJ",
+      "David Sroczynski | Princeton University, NJ",
+      "Jude Phillip | Johns Hopkins University, Baltimore, MD",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nikolaos Evangelou",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Anastasia Georgiou",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "David Sroczynski",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Jude Phillip",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "373c",
+    "sortable_time": "2023-11-07_13:13:00_13:31:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670201"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665607",
+    "paper_endpoint": "Paper/665607",
+    "paper_id": "665607",
+    "topic": "Stability Analysis and Dynamic Trajectory Clustering in Exploring Parameter Spaces of a Biofuel Production Tripartite Consortia",
+    "title": "Stability Analysis and Dynamic Trajectory Clustering in Exploring Parameter Spaces of a Biofuel Production Tripartite Consortia",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53404",
+    "session_title": "Applied Math for Metabolic and Bioreactor Systems",
+    "session_number": "373",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Engineering of synthetic microbial consortia has emerged as a new and powerful biotechnology platform, because it can capitalize upon natural predispositions by selecting for interspecies relationships or specific community functions. Pairing photosynthetic and diazotrophic organisms with metabolic engineering is a powerful strategy for simultaneously driving bioproduction while reducing the environmental, energetic, and monetary burden of carbon and nitrogen substrates. To this end, tripatite platforms in which the pairing organisms drive production of a third producer species has been proposed to produce biofuels, commodity chemicals, or chemical precursors for bulk polymer production. One such promising system that is analyzed in this work uses Azotobacter vinelandii, Synechococcus elongatus , and E.coli [1,2,3] to convert sunlight, carbon dioxide, and atmospheric nitrogen into isobutanol. As each wet-lab experiment analyzing the microbial systems with different inputs and parameters is costly and time-consuming, building and analyzing a mathematical model representative of the aforementioned system is essential to fully exploring the parameter space to understand how different biological parameters and operating strategies impact the productivity of the tri-culture. In this work, we develop a comprehensive mathematical model to describe the dynamics of the tri-culture system. When different operating parameters are implemented, the system behaviors can be divided into two operating regions where seeding cells results in continuous growth (unstable dynamics) that we aim to promote, or cells dying (stable dynamics) that we try to avoid. A linear stability analysis of the ordinary differential equations is utilized to identify these regions, which provides insights on the significance of different operational conditions and roughly microbial kinetic parameters in our model. However, there are large number of impactful parameters in our model, such as substrate/product yield coefficients for three bacteria, which display coupled effects on system dynamics, rendering traditional methods of bifurcation analysis ineffective. Thus, we present an approach to identify the categories of microbial growth curves using the k-means clustering method[4] to better investigate the dynamic characteristics of the tripartite system. Through classifying and labeling clusters with related parameter ranges, we propose a mathematical guideline of the relationship between operational/microbial parameters and kinetic trajectories of the tripartite system, which provides insights on how to optimize the experimental conditions. Using simulations of the mathematical kinetic model of the tri-culture system, we present the stability diagrams with different operational and microbial parameters. Results suggest that a substrate-limited system for all bacteria usually leads to stable dynamics, while having a sufficient amount of at least one substrate shows the unstable behavior. After implementing the clustering algorithm, all trajectories are categorized into different characteristics with corresponding parameter ranges. The stability subspaces from clustering methods generally agree with the stability diagrams, implying the consistence between local linear stability analysis and global dynamic simulations. Using the classifier, parameter ranges can be shrunk when fitting parameters of the tri-culture model with wet-lab data, which is important as it allows for the implementation of tight bounds when formulating optimal decision making models. [1] B. M. Barney, L. J. Eberhart, J. M. Ohlert, C. M. Knutson, and M. H. Plunkett, “Gene deletions resulting in increased nitrogen release by azotobacter vinelandii: application of a novel nitrogen biosensor,” Applied and environmental microbiology , vol. 81, no. 13, pp. 4316–4328, 2015. [2] B. W. Abramson, B. Kachel, D. M. Kramer, and D. C. Ducat, “Increased photochemical efficiency in cyanobacteria via an engineered sucrose sink,” Plant and Cell Physiology , vol. 57, no. 12, pp. 2451–2460, 2016. [3] D. N. Carruthers, T. E. Saleski, S. A. Scholz, and X. N. Lin, “Random chromosomal integration and screening yields e. coli k-12 derivatives capable of efficient sucrose utilization,” ACS Synthetic Biology , vol. 9, no. 12, pp. 3311–3321, 2020. [4] H. Teichgraeber and A. R. Brandt, “Clustering methods to find representative periods for the optimization of energy systems: An initial framework and comparison,” Applied energy , vol. 239, pp. 1283–1293, 2019",
+    "presenting_author": "Yi Dai | University of Michigan, Ann Arbor",
+    "authors": [
+      "Yi Dai | University of Michigan, Ann Arbor",
+      "Andrew Allman | University of Michigan, Ann Arbor"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yi Dai",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Andrew Allman",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "373d",
+    "sortable_time": "2023-11-07_13:31:00_13:49:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665607"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663235",
+    "paper_endpoint": "Paper/663235",
+    "paper_id": "663235",
+    "topic": "Systematic Evaluation of Two Genome-Scale Models for Clostridium Tyrobutyricum through Knowledge Matching",
+    "title": "Systematic Evaluation of Two Genome-Scale Models for Clostridium Tyrobutyricum through Knowledge Matching",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53404",
+    "session_title": "Applied Math for Metabolic and Bioreactor Systems",
+    "session_number": "373",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Clostridium tyrobutyricum is perhaps the most promising microorganism for producing high titers of C4 hydrocarbons [1,2]. While native C. tyrobutyricum is widely known for producing butyrate, several mutant strains have been developed for butanol production [3,4]. Despite its high C4 production rate, C. tyrobutyricum co-produces acetate, increasing downstream costs for utilizing the bio-C4 substrates. In addition, various publications have noted the significant production of either lactate or ethanol in certain environments. The current understanding for the strain’s coproduction lies in how the cell balances its energy and cofactor requirements when exposed to a particular environment. However, the specifics of this balance have been theorized but are not fully understood. Genome-scale models (GEM’s) provide an overarching view of a cell’s metabolism by using the genome to create a reaction network. GEM ’ s can be used to predict cell ular phenotypes, facilitate mutant design through in-silico experiments, and provide a platform for multi-omics data integration . Traditionally, for a GEM to be deemed relevant, it must provide quantitatively reasonable estimates based on multiple sets of experimental data. However, the GEM should also capture how the cell reacts to scenarios beyond the experimental data. GEM’s should be qualitatively evaluated based on pre-existing biological knowledge. Identifying the key qualitative results can simplify the hundreds to thousands of numerical results into a legible one that expedites the collection of novel insights [5]. To better understand the energy and cofactor balance of C. tyrobutyricum , this work conducted systematic evaluation of two separate GEM’s developed for C. tyrobutyricum ATCC 25755. The first GEM, iKB917, was developed using iCM925, a GEM for C. beijerinckii NCIMB 8052 [6], as a reference model [7]. The central carbon pathway and biomass equation were manually altered to match those of C. tyrobutyricum . The second GEM, iCT583, was constructed using the strain’s genome and manually curated to match a particular set of quantitative and qualitative experiments [1]. To compare the two models, the biomass equations were reconstructed so the elemental requirements (namely carbon, nitrogen, and phosphorous) were roughly identical. In addition, the metabolite names for iCT583 were converted to the same syntax as iKB917 for ease of analysis. For all validation, maximizing biomass production was set as the objective function. The two C. tyrobutyricum GEM’s were initially evaluated quantitatively based on the results from their primary sources [1,4,7]. Not surprisingly, each model provided reasonable estimates for their source material when the glucose consumption rate was set. Nevertheless, neither model seemed to capture the quantitative measurements of the other. This may be due to differences in experimental media. The source for iKB917 noted significant ethanol production and no lactate production when the strain was grown on Tryptone-Glucose-Yeast medium [8]. Conversely, the source for iCT583 recorded significant lactate yields at higher pH values when grown on Reinforced Clostridial Medium under the same abiotic conditions [1]. We apply the system identification (SID)- based framework to conduct a systematic evaluation of the two GEM’s [ 5 ] . The basic idea of the SID framework is to extract the biological k nowledge captured by a GEM according to the following steps: (1) designing and conducting a series of in silico experiments that rep resents environmental perturbation to the cells ; (2) analyzing the in silico results using multivariate statistical analysis methods (such as principal component analysis ) to extract how the perturbation propagates through the me ta bolic network; and (3) visualize the extracted knowledge against the metabolic network. For example, a pplying the SID framework, we found that hydrogen gas production plays a vital role in butyrate yield in both GEM’s. This qualitative result matches the current understanding of the metabolism: ferrodoxin is oxidized with the formation of hydrogen gas, and the ferrodoxin is reduced to assist in producing butyryl-CoA, the precursor for butyrate [1]. In addition to the SID-based knowledge matching , we also co nducted manual examination of the reactions, metabolites, and subsystems of each GEM , contextualizing the SID results and explaining key differences between the two GEM’s. Work Cited : [1] Feng, J., Guo, X., Cai, F., Fu, H., & Wang, J. (2022). Model-based driving mechanism analysis for butyric acid production in Clostridium tyrobutyricum . Biotechnology for Biofuels and Bioproducts , 15 (1). https://doi.org/10.1186/s13068-022-02169-z [2] Linger, J. G., Ford, L. R., Ramnath, K., & Guarnieri, M. T. (2020). Development of Clostridium tyrobutyricum as a microbial cell factory for the production of fuel and chemical intermediates from lignocellulosic feedstocks. Frontiers in Energy Research , 8 . https://doi.org/10.3389/fenrg.2020.00183 [3] Bao, T., Feng, J., Jiang, W., Fu, H., Wang, J., & Yang, S.-T. (2020). Recent advances in N-butanol and butyrate production using engineered Clostridium tyrobutyricum . World Journal of Microbiology and Biotechnology , 36 (9). https://doi.org/10.1007/s11274-020-02914-2 [4] Zhang, J., Zong, W., Hong, W., Zhang, Z.-T., & Wang, Y. (2018). Exploiting endogenous CRISPR-CAS system for multiplex genome editing in Clostridium tyrobutyricum and engineer the strain for high-level butanol production. Metabolic Engineering , 47 , 49–59. https://doi.org/10.1016/j.ymben.2018.03.007 [5] Damiani, A. L., He, Q. P., Jeffries, T. W., & Wang, J. (2015). Comprehensive evaluation of two genome-scale metabolic network models for Scheffersomyces stipitis . Biotechnology and Bioengineering , 112 (6), 1250–1262. https://doi.org/10.1002/bit.25535 [6] Milne, C. B., Eddy, J. A., Raju, R., Ardekani, S., Kim, P.-J., Senger, R. S., Jin, Y.-S., Blaschek, H. P., & Price, N. D. (2011). Metabolic Network Reconstruction and genome-scale model of butanol-producing strain clostridium beijerinckii NCIMB 8052. BMC Systems Biology , 5 (1). https://doi.org/10.1186/1752-0509-5-130 [7] Badr, K., He, Q. P., & Wang, J. (2022). Knowledge-matching based computational framework for genome-scale metabolic model refinement. Computer Aided Chemical Engineering , 919–924. https://doi.org/10.1016/b978-0-323-85159-6.50153-6 [8] Wang, Y., Li, X., Milne, C. B., Janssen, H., Lin, W., Phan, G., Hu, H., Jin, Y.-S., Price, N. D., & Blaschek, H. P. (2013). Development of a gene knockout system using mobile group II introns (Targetron) and genetic disruption of acid production pathways in clostridium beijerinckii. Applied and Environmental Microbiology , 79 (19), 5853–5863. https://doi.org/10.1128/aem.00971-13",
+    "presenting_author": "Loyal Murphy | Auburn University, AL",
+    "authors": [
+      "Loyal Murphy | Auburn University, AL",
+      "Yi Wang | Auburn University, AL",
+      "Jin Wang | Auburn University, AL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Loyal Murphy",
+        "affiliation": "Auburn University, AL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yi Wang",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      },
+      {
+        "name": "Jin Wang",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "373e",
+    "sortable_time": "2023-11-07_13:49:00_14:07:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663235"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669291",
+    "paper_endpoint": "Paper/669291",
+    "paper_id": "669291",
+    "topic": "Omics-Informed Metabolic Modeling of Staphylococcus Aureus Reveals Underlying Principles of Overflow Metabolism",
+    "title": "Omics-Informed Metabolic Modeling of Staphylococcus Aureus Reveals Underlying Principles of Overflow Metabolism",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53404",
+    "session_title": "Applied Math for Metabolic and Bioreactor Systems",
+    "session_number": "373",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Staphylococcus aureus is a gram-positive human pathogenic bacterium that causes a wide variety of diseases, ranging from severe skin infections to fatal pneumonia. Due to its high metabolic adaptability to antibiotics, some strains of S. aureus have developed antibiotic resistance, thereby making traditional treatments challenging. An interesting characteristic of S. aureus is that it performs overflow metabolism during exponential growth, despite respiration being the most efficient way to produce ATP. In this work, we examined this unusual phenomenon of S. aureus from a synergistic experimental and computational perspective. First, a thermodynamic analysis of the respiratory pathway revealed that the menaquinone-based succinate dehydrogenase reaction of TCA cycle is infeasible during aerobic growth on glucose but feasible during growth on acetate. Experimental omics data further verifies this observation. To better understand this metabolic mechanism, based on previously published genome-scale metabolic model (GEM) of S. aureus (Mazharul Islam et al., 2020) , we reconstructed contextualized models of different growth phases of multiple strains ( Δpyc , ΔcitZ , ΔsucA , ΔackA , ΔgudB , ΔndhA , ΔmenD , and ΔatpA ) using transcriptomics data. These strains were selected for their potential in impacting key cellular processes such as carbon and nitrogen redirection pathways, cellular redox homeostasis, and overflow metabolism. A systems-level investigation of the metabolic landscape of these mutants pertinent to the overflow metabolism may connect this unusual metabolic trait of S. aureus to its antibiotic resistance. In this regard, flux variability, metabolic bottleneck, and shadow price analysis were conducted, and they showed significant differences in central metabolism across strains in exponential and stationary phase. Finally, these findings will be used to obtain regulatory points in this lethal bacterium’s metabolism that can be potential therapeutics. Reference Mazharul Islam, M., Thomas, V. C., Van Beek, M., Ahn, J. S., Alqarzaee, A. A., Zhou, C., Fey, P. D., Bayles, K. W., & Saha, R. (2020). An integrated computational and experimental study to investigate Staphylococcus aureus metabolism. Npj Systems Biology and Applications , 6 (1), 1–13. https://doi.org/10.1038/s41540-019-0122-3",
+    "presenting_author": "Nabia Shahreen | University of Nebraska-Lincoln",
+    "authors": [
+      "Nabia Shahreen | University of Nebraska-Lincoln",
+      "Vinai Chittezham Thomas | University of Nebraska Medical Center, Omaha",
+      "Rajib Saha | University of Nebraska-Lincoln"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nabia Shahreen",
+        "affiliation": "University of Nebraska-Lincoln",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Vinai Chittezham Thomas",
+        "affiliation": "University of Nebraska Medical Center, Omaha",
+        "designation": "Author"
+      },
+      {
+        "name": "Rajib Saha",
+        "affiliation": "University of Nebraska-Lincoln",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "373f",
+    "sortable_time": "2023-11-07_14:07:00_14:25:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669291"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669404",
+    "paper_endpoint": "Paper/669404",
+    "paper_id": "669404",
+    "topic": "Constructing Surrogate Models with Smolyak Sparse Grids",
+    "title": "Constructing Surrogate Models with Smolyak Sparse Grids",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53404",
+    "session_title": "Applied Math for Metabolic and Bioreactor Systems",
+    "session_number": "373",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Design of experiments (sampling) and curve fitting are essential to building surrogate functions that accurately predict the output of a complex simulation or experiment with high-dimensional input (design) space. In many cases, collecting samples is expensive and the amount of data that can be collected is small, requiring that surrogate model development uses as few sampled data points as possible; however, when the input space contains a high number of variables, dense sampling using, for instance, a tensor product grid, runs into the curse of dimensionality , since the number of samples needed grows exponentially with number of dimensions. Smolyak sparse grids, in contrast, select only the points assumed to contribute most significantly to the curve fit. The numerical values of these points, as well as the basis functions that comprise the surrogate function’s terms, depend on the choice of orthogonal basis functions and unidimensional grid. Further improving the Smolyak algorithm has long been an interest in the field, one proposed method allows for self-adapting Smolyak sparse grids that prioritize adding samples that are expected to have a substantial effect on the accuracy. Self-adaptive schemes use an error estimate to predict which points, in a dimensional or regional manner, would have the greatest effect reducing the error of the surrogate function. Slow exponential growth schemes, which limit the rate at which new points can be added after each iteration, have also been proposed. In this work, we describe the implementation and evaluation of a new Python package, smolyay, for surrogate modeling using Smolyak sparse grids that includes both adaptive and slow growth strategies for efficiency improvement. The Python package has a modular and object-oriented design, allowing the choice of basis function, unidimensional grid, and optimizations to be changed and new ones to be added. Here we present a comparison between different strategies for building Smolyak surrogate models currently available in the smolyay package, as well as compare them to other conventional surrogate modeling methods, such as Gaussian process models. The smolyay package has potential for a wide variety of applications, allowing for the creation of simple models with a similar predictive power as higher fidelity and more detailed models. The error estimate of the self-adaptive strategies could be informative to experimentalists who want to know what conditions will give them the most insightful results given the data they already have.",
+    "presenting_author": "Michaela Bush | Auburn University, AL",
+    "authors": [
+      "Michaela Bush | Auburn University, AL",
+      "Mohammadreza Fakhraei | Auburn University, AL",
+      "Michael Howard | Auburn University, AL",
+      "Christopher Kieslich | Auburn University, AL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Michaela Bush",
+        "affiliation": "Auburn University, AL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mohammadreza Fakhraei",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Howard",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      },
+      {
+        "name": "Christopher Kieslich",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "373g",
+    "sortable_time": "2023-11-07_14:25:00_14:43:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669404"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/664829",
+    "paper_endpoint": "Paper/664829",
+    "paper_id": "664829",
+    "topic": "Graph-Based Multi-Objective Flux Balance Analysis: A Novel Framework for Determining Optimal Weights in Multi-Objective Functions",
+    "title": "Graph-Based Multi-Objective Flux Balance Analysis: A Novel Framework for Determining Optimal Weights in Multi-Objective Functions",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53404",
+    "session_title": "Applied Math for Metabolic and Bioreactor Systems",
+    "session_number": "373",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Metabolomics-based network analysis poses challenges in identifying and interpreting metabolites due to their complex relationships. To overcome this, networks can be constructed using network graphs where nodes represent metabolites or reaction fluxes and edges represent their connections relationships [1] . Network graphs can be built from a variety of stoichiometric network models. Genome-scale metabolic models have gained attention for their comprehensive view of metabolic systems, but their large size often leads to ill-conditioning problems, resulting in inaccurate predictions and high sensitivity to small perturbations [2] . To improve the accuracy and robustness of the metabolic models, researchers have compared different objective functions in determining flux values for modeling cell metabolism under specific environmental conditions [3] . Choosing the appropriate objective function can significantly impact the results. However, the determination of the objective function may be labor and time-consuming under the limiting understanding of the system. To deal with these challenges, a novel mass flow graph-based multi-objective flux balance analysis (FBA) framework is proposed. The mass flow graph is a directed and weighted graph where the nodes represent the reaction/ fluxes in the model and the weights are estimated from the metabolic mass fluxes from experiment data. After transforming the network matrix to the graph, the maximum flow algorithm (or minimum cut) is applied to the mass flow graph of the genome-scale metabolic model to extract the featured pathway of the reactions from the source point (sugars) to the desired product point (e.g., solventogenesis [5] ). The extracted subnetwork provides information about the relationships between the metabolic networks at different stages, and estimates the quantitative priorities of the fluxes of products. The quantitative values can serve as weights of an objective function that will determine the solution and uncover the cellular metabolic priority. In this study, a complex multi-species isopropanol-butanol-ethanol (IBE) system is used to illustrate the proposed framework [4] . In this system, four species are involved ( C. acetobutylicum ( Cac ), C. ljungdahlii ( Clj ), and fused types of Cac and Clj ) and two sugar sources (glucose and fructose). The objective is to predict the flux profiles of solventogenesis products. The result shows that the proposed framework provided a more accurate and robust estimation compared to conventional single objective function analysis, and the extracted pathways allowed for better interpretation and focus on crucial metabolic pathways among thousands-of-reactions involved in the network. References: [1] Beguerisse-Díaz, M., Bosque, G., Oyarzún, D., Picó, J., & Barahona, M. (2018). Flux-dependent graphs for metabolic networks. NPJ systems biology and applications , 4 (1), 32. [2] Gábor, A., & Banga, J. R. (2015). Robust and efficient parameter estimation in dynamic models of biological systems. BMC systems biology , 9 (1), 1-25. [3] Gu, C., Kim, G. B., Kim, W. J., Kim, H. U., & Lee, S. Y. (2019). Current status and applications of genome-scale metabolic models. Genome biology , 20 , 1-18. [4] Foster, C., Charubin, K., Papoutsakis, E. T., & Maranas, C. D. (2021). Modeling Growth kinetics, interspecies cell fusion, and metabolism of a Clostridium acetobutylicum/Clostridium ljungdahlii syntrophic coculture. Msystems , 6 (1), e01325-20. [5] Senger, R. S., & Papoutsakis, E. T. (2008). Genome‐scale model for Clostridium acetobutylicum: Part I. Metabolic network resolution and analysis. Biotechnology and bioengineering , 101 (5), 1036-1052.",
+    "presenting_author": "Ching-Mei Wen | University of Delaware, Newark",
+    "authors": [
+      "Ching-Mei Wen | University of Delaware, Newark",
+      "Marianthi Ierapetritou | University of Delaware, Newark",
+      "Eleftherios Papoutsakis | University of Delaware, Newark"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ching-Mei Wen",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Marianthi Ierapetritou",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Author"
+      },
+      {
+        "name": "Eleftherios Papoutsakis",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "373h",
+    "sortable_time": "2023-11-07_14:43:00_15:01:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/664829"
+  }
+]

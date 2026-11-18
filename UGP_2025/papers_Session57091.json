@@ -1,0 +1,297 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/715787",
+    "paper_endpoint": "Paper/715787",
+    "paper_id": "715787",
+    "topic": "Investigation of the Modelling of Precipitation of Ni-Mn-Co Hydroxides.",
+    "title": "Investigation of the Modelling of Precipitation of Ni-Mn-Co Hydroxides.",
+    "date_time": "2025-11-06_14:30:00_17:00:00",
+    "session_id": "57091",
+    "session_title": "10B: Predictive Control and Optimization",
+    "session_number": "709",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The world efforts towards achieving net zero include the development of several technologies aiming at the sustainable production and storage of energy. A share of these efforts is focused on the development of Li-ion batteries, whose utilisation has grown in multiple applications like electric portable devices, EVs and storage due to their ability to store and deliver energy over cycles of use. The performance and cost of the batteries relates to the properties of the cathode materials. Several chemistries have been researched to improve the performance of cathode active materials including the use of lithium-iron phosphate, nickel-manganese-cobalt and nickel-manganese-aluminium. In this work, we look at the synthesis of combined hydroxides of nickel-manganese-cobalt via co-precipitation, particularly the mathematical modelling of this process. We investigate a semi-batch precipitator applying global sensitivity analysis to determine the relevance of various crystallization processes (e.g. nucleation, growth, agglomeration and breakage) over the particle size distribution and mean particle sizes. The mathematical model relies on the application of the population balance equation along the mass balances of the dissociated species in solution. The main assumptions of the model are: The precipitated crystals are spherical. No seeds in the initial solution or the feed are present. The precipitator is well mixed. The precipitation of individual transition metal hydroxides does not occur. The reaction rate of both the ionic complexes and the hydroxide formation are fast; the controlling mechanisms of the process are the nucleation and growth of the crystals. The crystalliser operates isothermally. In addition, the model considered different cases regarding growth and agglomeration/breakage: size independent and size-dependent growth, no agglomeration/breakage, and agglomeration/ breakage occurring. With the previous assumptions and considerations, the model is presented by Equations (1)-(24). The model equations were implemented and solved by the method of lines for a total of 250 simulations where the values of main operating parameters and the kinetic constants were randomly sampled using the Latin hypercube technique. Figure (2) and (3) are preliminary results of the particle size distribution and the volume-weighted particle size d[4,3] for a few selected cases among considering the model with size-independent growth and no agglomeration/breakage. The effect of the input parameters over the response of the model is visible; in general, for this case, the sensitivity indices (Table 1) obtained from GSA suggested that the model response is primarily sensitive to the growth kinetics, the solution pH and the initial concentration of ammonia. Less relevant is the kinetics of nucleation, whereas the concentration of ammonia feed seems to be irrelevant. Next steps are to analyse the effects of size-dependent growth, and agglomeration/breakage.",
+    "presenting_author": "Erik Resendiz | University of Sheffield, United Kingdom",
+    "authors": [
+      "Erik Resendiz | University of Sheffield, United Kingdom",
+      "Solomon Brown | University of Sheffield, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Erik Resendiz",
+        "affiliation": "University of Sheffield, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Solomon Brown",
+        "affiliation": "University of Sheffield, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "391f",
+    "sortable_time": "2025-11-06_14:30:00_14:48:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/715787"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717022",
+    "paper_endpoint": "Paper/717022",
+    "paper_id": "717022",
+    "topic": "A Generalized Framework for Supervisory Economic Model Predictive Control of Energy Systems",
+    "title": "A Generalized Framework for Supervisory Economic Model Predictive Control of Energy Systems",
+    "date_time": "2025-11-06_14:30:00_17:00:00",
+    "session_id": "57091",
+    "session_title": "10B: Predictive Control and Optimization",
+    "session_number": "709",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Model predictive control (MPC) is an advanced control strategy that uses a mathematical model to predict system behavior and determine control actions that minimize a cost function. MPC can handle constrained, multivariable nonlinear systems, making it suitable for a wide range of applications. Economic MPC (EMPC) incorporates an economic cost function, enabling dynamic, off-steady state operation of the system to optimize system economics, particularly valuable in scenarios where system operations need to adapt to changing economic conditions, such as fluctuating energy prices [1]. Over the years, practical MPC and EMPC designs have been widely discussed in the literature. Qin and Badgewell [2] provide a comprehensive overview of commercial MPC technologies from the late 1990s, primarily applied in refinery, petrochemical, and chemical industries. They examined vendor approaches to aspects such as output feedback (state estimation), input parameterization, and solution methods. More recently, Badgwell and Qin [3] outlined the steps for successful MPC implementation, including justification, pretest, step test, modeling, control configuration, commissioning, post-audit, and sustainment. Research in MPC for building operations has also advanced. Drgoňa et al. [4] presented a review of MPC applied to buildings, reviewing the state estimators, software for formulating and solving MPC problems, and methods for handling parametric and non-parametric uncertainties in the literature, among others. Kumar et al. [5] developed a method to integrate a PI controller model into EMPC to reduce HVAC energy costs. Additionally, Wenzel et al. developed a hierarchical control strategy for successful optimization of the central plant, battery storage, temperature setpoints, and utility program participation in real-time for campus buildings [6]. Despite over a decade of development and deployment efforts, a systematic and generalized framework for deploying supervisory EMPC systems to energy systems has yet to be presented. Such a framework could elucidate critical concepts and components often overlooked by fundamental EMPC research, demystify the deployment of supervisory EMPC, and provide a more robust foundation for its design and development. Energy systems, in particular, require careful consideration due to the dynamic nature of energy demand, the availability of renewable energy, and economic factors, which could be addressed by incorporating energy demand forecasts, marginal greenhouse gas emissions rate, and time-varying electricity prices [7]. To address these challenges, we present a systematic, generalized framework for supervisory EMPC systems, focusing on energy systems. This framework highlights key design considerations in the data processing pipeline, algorithm execution (e.g., state estimation, EMPC, post-processing of EMPC solutions), and system scalability for practical implementation. This includes the design of data collection, handling, and pre-processing (e.g., data reconstruction and resampling), considering diverse data sources (e.g., external APIs, telemetry data, or previous EMPC solutions) and data types (e.g., change-of-value/event-based or synchronous sampling). We present our extensible data handling approach. We also address communication and processing delays, including data loading latencies and the time required for the EMPC to return setpoints and schedule them to device(s). We employ a schedule-ahead type approach to address these issues. Furthermore, we demonstrate our framework on a large-scale, real-world heat pump water heater study. We compare its performance in terms of electricity cost, greenhouse gas emissions, and occupant comfort under EMPC with that achieved under a conventional operating strategy. References: [1] M. Ellis, H. Durand, and P. D. Christofides, “A tutorial review of economic model predictive control methods”, Journal of Process Control, pp. 1156–1178, 2014. [2] S. J. Qin and T. A. Badgewell, “A survey of industrial model predictive control technology”, Control Engineering Practice, vol. 11, pp. 733 – 764, 2003. [3] T. A. Badgwell and S. J. Qin, “Model predictive control in practice”, In: J. Baillieul and T. Samad (eds) Encyclopedia of Systems and Control, pp. 1239–1252, 2021. [4] J. Drgoňa, J. Arroyo, I. Cupeiro Figueroa, D. Blum, K. Arendt, D. Kim, and E. P. Ollé, J. Oravec, M. Wetter, D. L. Vrabie, and L. Helsen, “All you need to know about model predictive control for buildings”, Annual Reviews in Control, vol. 50, pp. 190 – 232, 2020. [5] P. Kumar, J. B. Rawlings, and P. Carrette, “Modeling proportional-integral controllers in tracking and economic model predictive control”, Journal of Process Control, vol. 122, pp. 1 – 12, 2023. [6] M. J. Wenzel, M. N. ElBsat, M. J. Ellis, M. J. Asmus, and A. J. Przybylski, “Large scale optimization problems for central energy facilities with distributed energy storage”, in Proceedings of the 5th International High Performance Buildings Conference, West Lafayette, IN, Jul. 9-12, 2018, pp. 1-10. [7] Y. Zong, G. M. Böning, R. M. Santos, S. You, J. Hu, and X. Han, “Challenges of implementing economic model predictive control strategy for buildings interacting with smart energy systems”, Applied Thermal Engineering, vol. 114, pp. 1476-1486, 2017.",
+    "presenting_author": "Loren dela Rosa | University of California, Davis",
+    "authors": [
+      "Loren dela Rosa | University of California, Davis",
+      "Caton Mande | University of California, Davis",
+      "Matthew Ellis | University of California, Davis"
+    ],
+    "authors_structured": [
+      {
+        "name": "Loren dela Rosa",
+        "affiliation": "University of California, Davis",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Caton Mande",
+        "affiliation": "University of California, Davis",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew Ellis",
+        "affiliation": "University of California, Davis",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "709b",
+    "sortable_time": "2025-11-06_14:48:00_15:06:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717022"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716337",
+    "paper_endpoint": "Paper/716337",
+    "paper_id": "716337",
+    "topic": "Accelerating Distributed MPC Via Facet Properties: Faster Computation with Lower Communication Overhead",
+    "title": "Accelerating Distributed MPC Via Facet Properties: Faster Computation with Lower Communication Overhead",
+    "date_time": "2025-11-06_14:30:00_17:00:00",
+    "session_id": "57091",
+    "session_title": "10B: Predictive Control and Optimization",
+    "session_number": "709",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Cooperative Distributed Model Predictive Control (DiMPC) architecture [1] employs local MPC controllers to control individual subsystems, exchanging information with each other through an iterative procedure to enhance overall control performance compared to the decentralized architecture [2]. However, this method can result in high communication burden between the controllers and increased computational costs. To reduce the computation time, previous studies improved convergence rate per iteration [3, 4] or accelerated solution time of optimal control problems by employing explicit-MPC [5] in the DiMPC framework. To reduce both computation and communication load, a multiparametric (mp) programming [6] based iteration free cooperative DiMPC (IF-mpDiMPC) method was proposed by Saini et al. [7]. The framework leverages mp programming to compute explicit control laws [8]—defined by critical regions—offline for each subsystem and simultaneously solve them, enabling real-time control without iterative control data exchanges. We propose a novel facet-based iteration-free method that builds on the IF-mpDiMPC framework to achieve greater computational efficiency. The method solves mp programming-based explicit control laws simultaneously as systems of linear equations while limiting the solution space through reduced combinations. By leveraging the geometric properties of critical regions in mp solutions, the proposed approach restricts the online search for optimal control inputs to the current critical region and its facet-sharing neighbors. Identifying pairs of facet-sharing critical regions requires solving multiple linear programs [9], although this computation can be performed offline, after the solution of the mp programs, avoiding real-time overhead. Simulation results demonstrate a 41% reduction in average computation time over prior iteration-free approaches, while achieving centralized-level control performance. References: [1] Stewart, B.T., Venkat, A.N., Rawlings, J.B., Wright, S.J. and Pannocchia, G., 2010. Cooperative distributed model predictive control. Systems & Control Letters, 59(8), pp.460-469. [2] Christofides, P.D., Scattolini, R., De La Pena, D.M. and Liu, J., 2013. Distributed model predictive control: A tutorial review and future research directions. Computers & Chemical Engineering, 51, pp.21-41. [3] Wang, J. and Yang, Y., 2022. An improved iterative solution for cooperative distributed MPC. Automatica, 140, p.110155. [4] Cai, X., Tippett, M.J., Xie, L. and Bao, J., 2014. Fast distributed MPC based on active set method. Computers & chemical engineering, 71, pp.158-170. [5] Saini, R.S., Pappas, I., Avraamidou, S. and Ganesh, H.S., 2023. Noncooperative distributed model predictive control: A multiparametric programming approach. Industrial & Engineering Chemistry Research, 62(2), pp.1044-1056. [6] Pappas, I., Kenefake, D., Burnak, B., Avraamidou, S., Ganesh, H.S., Katz, J., Diangelakis, N.A. and Pistikopoulos, E.N., 2021. Multiparametric programming in process systems engineering: Recent developments and path forward. Frontiers in Chemical Engineering, 2, p.620168. [7] Saini, R.S., Brahmbhatt, P.R., Avraamidou, S. and Ganesh, H.S., 2024. Iteration-Free Cooperative Distributed MPC through Multiparametric Programming. arXiv preprint arXiv:2411.14319. [8] Bemporad, A., Morari, M., Dua, V. and Pistikopoulos, E.N., 2002. The explicit linear quadratic regulator for constrained systems. Automatica, 38(1), pp.3-20. [9] Airan, A., Bhushan, M. and Bhartiya, S., 2016. Linear machine solution to point location problem. IEEE Transactions on Automatic Control, 62(3), pp.1403-1410.",
+    "presenting_author": "Parth Brahmbhatt | University of Wisconsin-Madison",
+    "authors": [
+      "Parth Brahmbhatt | University of Wisconsin-Madison",
+      "Hari S. Ganesh | Indian Institute of Technology Gandhinagar",
+      "Styliani Avraamidou | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Parth Brahmbhatt",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Hari S. Ganesh",
+        "affiliation": "Indian Institute of Technology Gandhinagar",
+        "designation": "Author"
+      },
+      {
+        "name": "Styliani Avraamidou",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "709c",
+    "sortable_time": "2025-11-06_15:06:00_15:24:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716337"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/715621",
+    "paper_endpoint": "Paper/715621",
+    "paper_id": "715621",
+    "topic": "Enhanced Yaw Reliability in NREL 5-MW Turbines Under Various Wind Conditions",
+    "title": "Enhanced Yaw Reliability in NREL 5-MW Turbines Under Various Wind Conditions",
+    "date_time": "2025-11-06_14:30:00_17:00:00",
+    "session_id": "57091",
+    "session_title": "10B: Predictive Control and Optimization",
+    "session_number": "709",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "This work presents a comprehensive physics-based simulation framework for assessing the reliability of the yaw system in a 5‐MW wind turbine. Leveraging detailed turbine specifications and updated yaw system parameters, our model integrates realistic wind conditions, including variable wind speed, direction, turbulence intensity, and storm events through a dynamic simulation that captures the transient behavior of yaw motion. The simulation environment is built utilizing advanced AI tools such as Claude AI and ChatGPT, which have been instrumental in the iterative development and refinement of the modeling framework. Latin Hypercube Sampling is employed to efficiently explore input uncertainties, while advanced statistical methods (empirical, lognormal, Weibull, Gamma, and bootstrap analyses) quantify the system's reliability against established safety criteria. Under typical conditions with wind speeds ranging from 3 m/s to 10 m/s characteristic of the moderate wind regimes encountered in the Gulf region and the yaw system consistently operates within prescribed safety thresholds. In contrast, under storm conditions common to the region, where wind speeds can exceed 25 m/s, the system is subjected to elevated aerodynamic loads and rapid fluctuations. The reliability (blue markers and error bars) remains near or above 90–100% for mean wind speeds up to about 14 m/s, reflecting robust yaw performance under moderate Gulf wind conditions. As wind speed increases beyond rated values and approaches the cut‑out region, reliability progressively declines to around 50% by 35 m/s, highlighting the system’s susceptibility to extreme loads and rapid yaw misalignments. The safety criterion (red dashed line, right axis) underscores the critical threshold for yaw angles, with higher wind speeds causing more frequent excursions near or beyond this limit. In these severe scenarios, our enhanced yaw control strategy with aggressive brake torque logic and dynamic damping adjustments play a critical role in maintaining yaw alignment within tighter safety margins, although increased variability in maximum yaw angles indicates potential challenges that warrant further optimization to mitigate mechanical fatigue. Overall, this simulation framework not only evaluates the performance of an aggressive yaw control strategy across a wide spectrum of operational scenarios but also provides robust visualizations and statistical summaries to inform operational decision-making. The methodology contributes to the broader field of energy systems modeling, control, and optimization, offering valuable insights for integrating renewable technologies into decarbonization strategies and supporting a more resilient, sustainable energy infrastructure.",
+    "presenting_author": "Parviz Azizov | Tulane University, New Orleans",
+    "authors": [
+      "Parviz Azizov | Tulane University, New Orleans",
+      "Daniel Shantz | Tulane University, New Orleans",
+      "Kyriakos Papadopoulos | Tulane University, New Orleans"
+    ],
+    "authors_structured": [
+      {
+        "name": "Parviz Azizov",
+        "affiliation": "Tulane University, New Orleans",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Daniel Shantz",
+        "affiliation": "Tulane University, New Orleans",
+        "designation": "Author"
+      },
+      {
+        "name": "Kyriakos Papadopoulos",
+        "affiliation": "Tulane University, New Orleans",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "709d",
+    "sortable_time": "2025-11-06_15:24:00_15:42:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/715621"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717122",
+    "paper_endpoint": "Paper/717122",
+    "paper_id": "717122",
+    "topic": "Field Demonstration of Cloud-Based Supervisory Economic Model Predictive Control for Space Conditioning Heat Pumps",
+    "title": "Field Demonstration of Cloud-Based Supervisory Economic Model Predictive Control for Space Conditioning Heat Pumps",
+    "date_time": "2025-11-06_14:30:00_17:00:00",
+    "session_id": "57091",
+    "session_title": "10B: Predictive Control and Optimization",
+    "session_number": "709",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Heat pumps (HPs) are emerging as a key technology for electrifying space and water heating systems, decarbonizing buildings by leveraging an increasingly renewable-powered grid, and reducing energy consumption through high efficiency [1]. However, widespread HP adoption will increase grid demand, potentially straining the grid, particularly for residential buildings, which currently account for 36% of U.S. electricity consumption, with heating and cooling systems contributing significantly to peak electricity demand [2-4]. Today, most residential HPs rely on standard on/off thermostats—rule-based controllers (RBCs)—which do not account for future system behavior, system dynamics, and grid signals such as time-varying electricity rates. This leads to suboptimal HP operation with respect to its associated energy cost and grid stress, highlighting the need for predictive control strategies to optimize HP performance in response to dynamic grid signals. Economic model predictive control (EMPC) is an advanced control strategy that uses a dynamic model of the system to predict future system behavior and determines the control actions that minimize an economic cost function while satisfying operational limitations (constraints). While numerous simulation studies have demonstrated EMPC’s effectiveness in shifting HP loads to reduce energy costs [5, 6], field demonstration of EMPC in residential buildings with air-to-air HPs remains limited [7-10]. More field demonstrations in different climate zones are needed with EMPC to fully validate its performance in real-world applications. To this end, we present closed-loop results from a recent field demonstration of our cloud-based supervisory EMPC framework, designed to co-optimize expected electricity costs and grid-associated greenhouse gas emissions from HP operation. Because multiple setpoint trajectories often yield similar HP behavior, this flexibility can lead to frequent setpoint changes, which may be undesirable from an occupant comfort perspective. To mitigate this, we formulate the EMPC with additional penalties to limit setpoint changes. We present the cloud-based EMPC architecture and detail how it addresses practical challenges such as intermittent connectivity and manual setpoint overrides by residents. We conducted the field demonstration in two multi-family residential units in California Climate Zone 12, each equipped with cloud-connected thermostats. To validate the performance of the EMPC framework, we compare data collected under the EMPC framework to data collected under a fixed-setpoint RBC strategy, evaluating electricity cost, temperature comfort violations, and the frequency of setpoint changes. References: [1] L. Bernard, A. Hackett, R. D. Metcalfe, and A. Schein, “Decarbonizing Heat: The Impact of Heat Pumps and a Time-of-Use Heat Pump Tariff on Energy Demand,” National Bureau of Economic Research, Tech. Rep. w33036, 2024. [2] U.S. Energy Information Administration, “Monthly Energy Review,” U.S. Department of Energy, 2025. [Online]. Available: https://www.eia.gov/totalenergy/data/monthly/pdf/sec7.pdf [3] U.S. Department of Energy, “Decarbonizing the U.S. Economy by 2050: A National Blueprint for the Buildings Sector,” Apr. 2024. [Online]. Available: https://www.energy.gov/sites/default/files/2024-12/bto-decarbonizing-us-economy-2050-122724.pdf [4] Center for Sustainable Systems, University of Michigan, “Residential Buildings Factsheet,” Pub. No. CSS01-08, 2024. [5] T. Q. Péan, J. Salom, and R. Costa-Castelló, “Review of control strategies for improving the energy flexibility provided by heat pump systems in buildings,” Journal of Process Control, vol. 74, pp. 35–49, 2019. [6] Y. Yao and D. K. Shekhar, “State of the art review on model predictive control (MPC) in Heating Ventilation and Air-conditioning (HVAC) field,” Building and Environment, vol. 200, p. 107952, 2021. [7] E. N. Pergantis, N. Al Theeb, P. Dhillon, J. P. Ore, D. Ziviani, E. A. Groll, and K. J. Kircher, “Field demonstration of predictive heating control for an all-electric house in a cold climate,” Applied Energy, vol. 360, p. 122820, 2024. [8] D. Wang, Y. Chen, W. Wang, C. Gao, and Z. Wang, “Field test of Model Predictive Control in residential buildings for utility cost savings,” Energy and Buildings, vol. 288, p. 113026, 2023. [9] B. Dong and K. P. Lam, “A real-time model predictive control for building heating and cooling systems based on the occupancy behavior pattern detection and local weather forecasting,” Building Simulation, vol. 7, pp. 89–106, Feb. 2014. [10] A. Afram and F. Janabi-Sharifi, “Supervisory model predictive controller (MPC) for residential HVAC systems: Implementation and experimentation on archetype sustainable house in Toronto,” Energy and Buildings, vol. 154, pp. 268–282, 2017.",
+    "presenting_author": "Hossein Kalantar-Neyestanaki | University of California, Davis",
+    "authors": [
+      "Hossein Kalantar-Neyestanaki | University of California, Davis",
+      "Loren dela Rosa | University of California, Davis",
+      "Caton Mande | University of California, Davis",
+      "Matthew Ellis | University of California, Davis"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hossein Kalantar-Neyestanaki",
+        "affiliation": "University of California, Davis",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Loren dela Rosa",
+        "affiliation": "University of California, Davis",
+        "designation": "Author"
+      },
+      {
+        "name": "Caton Mande",
+        "affiliation": "University of California, Davis",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew Ellis",
+        "affiliation": "University of California, Davis",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "709e",
+    "sortable_time": "2025-11-06_15:42:00_16:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717122"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/725683",
+    "paper_endpoint": "Paper/725683",
+    "paper_id": "725683",
+    "topic": "Break",
+    "title": "Break",
+    "date_time": "2025-11-06_14:30:00_17:00:00",
+    "session_id": "57091",
+    "session_title": "10B: Predictive Control and Optimization",
+    "session_number": "709",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "",
+    "presenting_author": "",
+    "authors": [],
+    "authors_structured": [],
+    "sortable_time": "2025-11-06_16:00:00_16:18:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/725683"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/718239",
+    "paper_endpoint": "Paper/718239",
+    "paper_id": "718239",
+    "topic": "Joint Operations Optimization of Renewable-Driven Power Systems and Electrified Chemical Process Heating: Advances in Centralized and Decentralized Algorithms",
+    "title": "Joint Operations Optimization of Renewable-Driven Power Systems and Electrified Chemical Process Heating: Advances in Centralized and Decentralized Algorithms",
+    "date_time": "2025-11-06_14:30:00_17:00:00",
+    "session_id": "57091",
+    "session_title": "10B: Predictive Control and Optimization",
+    "session_number": "709",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Process heating in chemical industries constitutes a large portion of the energy usage and greenhouse gas emissions in the U.S. manufacturing sector [1]. In the current energy landscape, process heating is achieved either through direct combustion of fossil fuels or the use of steam generated from fossil fuel combustion. As the U.S. energy landscape continues to transition to clean, decarbonized electricity, there is a critical need and unique opportunity to decarbonize chemical process heating via electrification. To achieve this, chemical process heating must be tightly integrated with renewable-driven electric infrastructure systems. Such integration is essential because chemical process heating consumes significant amounts of energy, making it imperative for electrified plants to jointly optimize their operations with the power systems. In this talk, we introduce an optimization framework with new solution strategies to enable joint operations of renewable-driven power transmission systems and electrified chemical process heating. In this optimization framework, electrified chemical plants are modeled as microgrids that accommodate diverse energy sources for process heating. We then integrate the microgrid operation model with multi-agent unit commitment to derive a large-scale mixed-integer linear programming (MILP) formulation to coordinate the operations of electrified chemical plants and the power system [2]. Nevertheless, directly implementing this MILP formulation faces several practical limitations and computational challenges. First, when directly solving this joint operation formulation, state-of-the-art solvers such as Gurobi often fail to converge in a reasonable amount of time. Furthermore, this formulation implicitly assumes no information sharing barrier between power systems and chemical plant stakeholders. However, in reality, most plant managers are hesitant about directly sharing their process data with an independent system operator (ISO) due to its sensitive and private nature. Such information sharing barrier would impede decarbonization of process heating in chemical industries. To tackle these challenges, we develop effective decomposition schemes that solve the joint problem in decentralized fashion. First, we implement a two-stage solution methodology based on Benders’ decomposition followed by MILP refinement. This allows for improved computational efficiency and solution tractability. Second, to preserve data privacy, we explore an Alternating Direction Method of Multiplier (ADMM) approach for dualizing the power flow and process heating demand constraint. This leads to a joint formulation that consists of process heating subproblems for each chemical plant and can be integrated with the power system operations problem in a decentralized manner. In this iterative ADMM scheme, power system stakeholder only needs to share the power flow variables corresponding to the bus associated with the electrified chemical plant, whereas transmission ISO only needs to receive the objective function value obtained from the plant-level operational subproblem [3]. We also study the convergence and computational performance of ADMM-based decentralized algorithms and obtain theoretical guarantees. To validate the effectiveness of these computational advances, we consider a case study of clean olefins production in Texas using electrified steam cracking. We survey all 26 ethylene plants in Texas in terms of their feedstocks, production capacities, and local wind and solar profiles. We consider heterogeneous scenarios of electrification level across different chemical plants. And for each plant, its associated bus in ERCOT is identified within the benchmark 2000-bus synthetic grid dataset ACTIVSg2000 [4]. By comparing the computational time and optimal solution obtained using only Benders’ decomposition with those using Bender’s decomposition as well as ADMM-based decentralized algorithms, we find out that, apart from preserving data privacy, the latter strategy leads to much faster convergence to the optimal solution. In addition to operating cost minimization, we also calculate the carbon emissions under different electrification levels to evaluate the trade-offs between economic and environmental considerations. This allows us to identify practical “sweet spots” that balance economic performance with sustainability goals. Overall, findings of this case study will provide valuable, actionable insights for chemical and power systems stakeholders seeking to design and operate future-generation clean energy systems in the evolving energy landscape. [1] U.S. DOE, “Industrial decarbonization roadmap,” September 2022. [Online]. Available: https://www.energy.gov/eere/doe-industrial-decarbonization-roadmap [2] S. Ghasemi Naraghi, T. Kareck, R. Reed, P. Ramanan, and Z. Jiang. Decarbonization of Steam Cracking for Clean Olefins Production: Microgrid Planning and Operation. In: Optimization of Sustainable Process Systems: Multiscale Models and Uncertainties. John Wiley & Sons, Inc. (2025) [3] S. Boyd, N. Parikh, E. Chu, B. Peleato, and J. Eckstein, “Distributed optimization and statistical learning via the alternating direction method of multipliers,” Found. Trends Mach. Learn., vol. 3, no. 1, pp. 1–122, Jan. 2011. [4] H. Li, J. H. Yeo, A. L. Bornsheuer and T. J. Overbye, “The Creation and Validation of Load Time Series for Synthetic Electric Power Systems,” in IEEE Transactions on Power Systems, vol. 36, no. 2, pp. 961-969, March 2021, doi: 10.1109/TPWRS.2020.3018936.",
+    "presenting_author": "Saba Ghasemi Naraghi | Oklahoma State University, Stillwater",
+    "authors": [
+      "Zheyu Jiang | Oklahoma State University, Stillwater",
+      "Saba Ghasemi Naraghi | Oklahoma State University, Stillwater"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zheyu Jiang",
+        "affiliation": "Oklahoma State University, Stillwater",
+        "designation": "Author"
+      },
+      {
+        "name": "Saba Ghasemi Naraghi",
+        "affiliation": "Oklahoma State University, Stillwater",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "709g",
+    "sortable_time": "2025-11-06_16:18:00_16:36:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/718239"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713297",
+    "paper_endpoint": "Paper/713297",
+    "paper_id": "713297",
+    "topic": "Feasibility Governor for Economic Model Predictive Control",
+    "title": "Feasibility Governor for Economic Model Predictive Control",
+    "date_time": "2025-11-06_14:30:00_17:00:00",
+    "session_id": "57091",
+    "session_title": "10B: Predictive Control and Optimization",
+    "session_number": "709",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The performance of chemical industries is typically assessed using economic-oriented criteria, such as profit, energy consumption, yields, and sustainability [1]. These economic criteria are usually affected by market fluctuation due to frequent changes in energy prices, costs, and production demands [1][2]. The conventional model predictive controller (MPC), which typically drives the system states to operate at a pre-defined steady-state, may not suffice to adapt to consistently changing economic criteria and achieve economically optimal operation [3]. To address this limitation, the economic model predictive controller (EMPC), which incorporates the economic criteria in the optimal control framework, has emerged as a promising framework. By leveraging the economic cost as the objective function, EMPC enables systems to operate in a consistently dynamic and transient way. The stability of EMPC can be ensured by using a point-wise terminal constraint [4] or a terminal region constraint [3][5][6], both of which rely on the pre-calculation of an economically optimal equilibrium. Specifically, the point-wise terminal constraint requires the terminal state to be the pre-calculated equilibrium, while the terminal region constraint relaxes this requirement and allows the terminal state to lie in a region containing the equilibrium. However, the economically optimal equilibrium suffers from frequent changes due to the change of economic criteria caused by market fluctuation. In this case, when the current system states are far from the target equilibrium, the EMPC may become infeasible. To address this issue, several approaches have been proposed to improve the feasibility of EMPC with changing economic criteria. In [2][5], the point-wise terminal constraint was relaxed, which allows the terminal state to be any admissible equilibrium rather than a fixed, economically optimal equilibrium. [6] further extended the approach in [5] and proposed the generalized terminal region constraint, which allows the terminal state to lie in a terminal region around any equilibrium. In [7], a robust EMPC was proposed to account for changing economic criteria. In this method, the optimal equilibria in the terminal inequality constraints are treated as decision variables and jointly determined with optimal control input. It is noted that the above approaches require a redesign of the EMPC formulation. Another promising framework to address the feasibility of EMPC is to leverage the feasibility governor (FG) [8][9][10]. Different from the methods in [2][5][6][7], the FG is an add-on scheme, which does not require modifications to the EMPC design. FG was initially introduced in [8] to address the feasibility of MPC. The key idea of FG is to modify the reference at each sampling instant to ensure that the terminal set of MPC remains reachable within the control horizon. The FG design was extended in [9], where the FG is designed by leveraging the information of the terminal set of MPC instead of the feasible set utilized in [8]. In [10], the terminal set FG was utilized to address the feasibility of preview. It is noted that the FG designs in [8][9][10] rely on the feasibility set or terminal set computation, which is challenging to obtain for nonlinear systems. To account for the nonlinear systems, [12] proposed a new FG design by leveraging the formulation of the explicit reference governor [11]. To the best of our knowledge, the feasibility of EMPC is typically addressed through modifications to its formulation [2][5][6][7]. The incorporation of FG with EMPC remains an unexplored direction. Based on the above considerations, we address the feasibility of EMPC by proposing a feasibility governor-based EMPC (FG-EMPC). Our objective is three-fold: 1) to ensure the feasibility of EMPC with changing economic criteria using FG; 2) to guarantee the constraint satisfaction; 3) to achieve cost-effective system operation. The proposed FG-EMPC is applied to a simulated chemical process to demonstrate the effectiveness of the proposed FG-EMPC approach. References [1] M. Ellis, H. Durand, and P. D. Christofides. A tutorial review of economic model predictive control methods. Journal of Process Control , 24(8):1156–1178, 2014. [2] A. Ferramosca, D. Limón, and E. F. Camacho. Economic MPC for a changing economic criterion for linear systems. IEEE Transactions on Automatic Control , 59(10):2657–2667, 2014. [3] R. Amrit, J. B. Rawlings, and D. Angeli. Economic optimization using model predictive control with a terminal cost. Annual Reviews in Control , 35(2):178–186, 2011. [4] M. Diehl, R. Amrit, and J. B. Rawlings. A Lyapunov function for economic optimizing model predictive control. IEEE Transactions on Automatic Control , 56(3):703–707, 2010. [5] L. Fagiano and A. R. Teel. Generalized terminal state constraint for model predictive control. Automatica , 49(9):2622–2631, 2013. [6] M. A. Müller, D. Angeli, and F. Allgöwer. On the performance of economic model predictive control with self-tuning terminal cost. Journal of Process Control , 24(8):1179–1186, 2014. [7] A. D'jorge, A. Anderson, A. H. González, and A. Ferramosca. A robust economic MPC for changing economic criterion. International Journal of Robust and Nonlinear Control , 28(15):4404–4423, 2018. [8] T. Skibik, D. Liao-McPherson, T. Cunis, I. Kolmanovsky, and M. M. Nicotra. A feasibility governor for enlarging the region of attraction of linear model predictive controllers. IEEE Transactions on Automatic Control , 67(10):5501–5508, 2022. [9] T. Skibik, D. Liao-McPherson, and M. M. Nicotra. A terminal set feasibility governor for linear model predictive control. IEEE Transactions on Automatic Control , 68(8):5089–5095, 2023. [10] J. Leung and I. Kolmanovsky. Feasibility governor for MPC with disturbance preview information. Systems & Control Letters , 185:105735, 2024. [11] M. M. Nicotra and E. Garone. The explicit reference governor: A general framework for the closed-form control of constrained nonlinear systems. IEEE Control Systems Magazine , 38(4):89–107, 2018. [12] B. Convens, D. Liao-McPherson, K. Merckaert, B. Vanderborght, and M. M. Nicotra. A terminal state feasibility governor for real-time nonlinear model predictive control over arbitrary horizons. IEEE Transactions on Control Systems Technology , 32(4):1341–1356, 2024.",
+    "presenting_author": "Xiaojie LI | Nanyang Technological University, Singapore",
+    "authors": [
+      "Xiaojie LI | Nanyang Technological University, Singapore",
+      "Xunyuan Yin | Nanyang Technological University, Singapore"
+    ],
+    "authors_structured": [
+      {
+        "name": "Xiaojie LI",
+        "affiliation": "Nanyang Technological University, Singapore",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Xunyuan Yin",
+        "affiliation": "Nanyang Technological University, Singapore",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "709h",
+    "sortable_time": "2025-11-06_16:36:00_16:54:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713297"
+  }
+]

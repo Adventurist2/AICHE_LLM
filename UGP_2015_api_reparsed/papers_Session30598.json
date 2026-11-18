@@ -1,0 +1,357 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper412226.html",
+    "topic": "Genome Editing in Yarrowia Lipolytica Using a Crispr-Cas9 System with RNA Polymerase II Transcribed Single Guide RNA",
+    "date_time": "Tuesday, November 10, 2015: 5:09 PM",
+    "abstract": "Yarrowia lipolytica has been the focus of a wide range of studies due to its ability to make and accumulate lipids to a high level. Here, we engineer a single plasmid CRISPR-Cas9 system for Y. lipolytica that enables markerless gene knockouts and insertions. A functional system was created using a codon optimized Cas9 from Streptococcus pyogenes and single guide RNA (sgRNA) expressed from the well characterized constitutive TEF promoter. RNA cleavage by flanking ribozymes generated the mature sgRNA, ensuring proper folding and preventing export to the cytosol by mRNA transport processes. Gene knockout efficiency of ≥75% was achieved when targeting the ku70 gene without a cotransformed homologous recombination (HR) donor. The ku70 gene was targeted as it has been shown that Y. lipolytica strongly favors non-homologous end-joining (NHEJ) to repair double strand breaks. Knockout of ku70 suppresses NHEJ and allows HR to serve as the primary double strand break repair mechanism. Using the generated Δku70 strain and the CRISPR-Cas9 system, markerless gene tagging with fluorescent proteins is being done to investigate protein localization to lipid droplets and to the endoplasmic reticulum.",
+    "presenting_author": "Cory Schwartz | Chemical and Environmental Engineering, UC Riverside, Riverside, CA",
+    "authors": [
+      "Murtaza Hussai | Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+      "Mark Blenner | Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+      "Ian Wheeldo | Chemical and Environmental Engineering, UC Riverside, Riverside, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Cory Schwartz",
+        "affiliation": "Chemical and Environmental Engineering, UC Riverside, Riverside, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Murtaza Hussai",
+        "affiliation": "Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Mark Blenner",
+        "affiliation": "Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Ian Wheeldo",
+        "affiliation": "Chemical and Environmental Engineering, UC Riverside, Riverside, CA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper435203.html",
+    "topic": "Metabolomic Modularity Analysis (MMA) to Quantify Human Liver Perfusion Dynamics",
+    "date_time": "Tuesday, November 10, 2015: 3:15 PM",
+    "abstract": "Biological cells are complex dynamic systems, comprising thousands of interacting nucleic acids, proteins, and metabolites acting in concert to perform coordinated and well regulated tasks. The ability to effectively quantify system-wide cellular responses to various stimuli is paramount to our understanding of complex disease-states and how pharmacological agents elicit desired outcomes. Investigators are therefore increasingly relying on large scale �omics data ( transcriptomics , proteomics, metabolomics ) to experimentally capture changes in signaling and metabolic pathway components. While the burden of data acquisition has lightened with improved instrumentation, data interpretation in the proper biological context remains challenging. Metabolomics data, in particular, are difficult to interpret in the context of pathways because a single metabolite may be utilized by several functional modules.� Both univariate and multivariate statistical tools can determine which metabolites explain a differential response among experimental treatment groups. However, these data-driven methods do not utilize the vast domain-specific biochemical knowledge of known stoichiometric and regulatory interactions that can be used to systematically uncover which signaling or metabolic pathways are activated by a perturbation. To this end, mapping metabolomics data onto well curated metabolic graph networks can help identify interactions that may not be intuitive from simply observing the metabolic pathway maps offered by the KEGG database. � In this study, we introduce Metabolomic Modularity Analysis (MMA) as a graph-based algorithm to systematically identify modules of reactions enriched with metabolites flagged to be statistically significant based on univariate analysis. Briefly, a metabolic network is abstracted as a reaction-centric graph network where a non-directional edge is drawn between two reactions if a metabolite produced by the first reaction is consumed by the second. The length of the edge between reactions is weighted such that if the two reactions are involved in metabolites that are statistically significant, their edge distance is shorter. When applying Newman's hierarchical partition algorithm based on relative reaction-pair shortest paths, the resulting modules feature reactions from the surrounding local topological neighborhood, which favors adjacent reaction pairs that involve statistically significant metabolites. A defining feature of determining reaction-centric modularity is that interactions between reactions mediated by the production and consumption of cofactors and other hub metabolites are also accounted for. We apply MMA on time-course metabolomics data collected from biopsies during subnormothermic machine perfusion (SNMP) of nine discarded human livers that were rejected for transplantation. These livers had endured various degrees of warm ischemia time (WIT) prior to organ procurement and three of them exhibited over 30% macrovesicular steatosis . Of the 155 primary metabolites measured, the pre-perfusion levels (t=0 hours) of 33 of them were found to be significantly correlated with WIT, suggesting that they could be putative biomarkers for ischemic injury. MMA was performed on the human ReconX metabolic network (7439 reactions and 2626 metabolites) after flagging these 33 metabolites in the cytosolic compartment as being significant. For a network this large, computing the adjacency distance matrix requires 7439 C 2 , or 2.77 �10 7 computations for the initial network, which causes total run times on the order of days with a laptop, rendering the method impractical for repeated analysis. Fortunately, Mathworks � now offers Matlab's Distributed Computing Server (MDCS) on Amazon's Elastic Compute Cloud (EC2). For this study, one cluster node (c3.8xlarge) with 16 workers was rented at a rate of $1.68/hour for the cluster and $1.12/hour for MDCS. Several key parts of the MMA algorithm are parallelizable and was therefore able to complete a full run in 2.7 hours, with a total cost of $8.40 for the 3 hours of server time. The MMA partitioning resulted in 4755 hierarchical modules, of which 223 contain at least one significant metabolite. To highlight an example, one such module contained four metabolites significantly correlated with WIT; arachidic acid ( arach [c]), cholesterol ( chsterol [c]), stearic acid ( ocdca [c]), and palmitic acid ( hdca [c]). The stoichiometry of reactions in the module suggests that ischemia may have an impact on coenzyme A ( coA [ c]) pools as a cause for why these four metabolite levels are affected (Figure 1). Ongoing work involves applying MMA to identify modules activated by perfusion itself by flagging metabolites significantly different between various time points and determine how ischemia or fat content affects the modules uncovered.�� � In this study, we demonstrate that graph network-based analytics to quantify metabolomics data is made practical and feasible using parallel computing on Amazon's cloud. Prospectively, similar graph-based algorithms can be employed to analyze proteomics and transcriptomics data as well and ultimately devise ways to incorporate all information to best characterize cellular dynamics.� Figure 1 Example of module identified using MMA. Metabolite nodes are represented as ellipses, while reaction nodes are represented as rectangles. Metabolite nodes colored in red are those whose pre-perfusion levels are correlated to WIT (p<0.10). �",
+    "presenting_author": "Gautham V. Sridharan | Center for Engineering in Medicine (CEM) at Massachusetts General Hospital � Harvard Medical School - Shriners Hospital for Children, Boston, MA",
+    "authors": [
+      "Bote Bruinsm | Center for Engineering in Medicine (CEM) at Massachusetts General Hospital � Harvard Medical School - Shriners Hospital for Children, Boston, MA",
+      "Martin L. Yarmush | Center for Engineering in Medicine (CEM) at Massachusetts General Hospital � Harvard Medical School - Shriners Hospital for Children, Boston, MA",
+      "Korkut Uygu | Center for Engineering in Medicine, Harvard Medical School, Boston, MA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gautham V. Sridharan",
+        "affiliation": "Center for Engineering in Medicine (CEM) at Massachusetts General Hospital � Harvard Medical School - Shriners Hospital for Children, Boston, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Bote Bruinsm",
+        "affiliation": "Center for Engineering in Medicine (CEM) at Massachusetts General Hospital � Harvard Medical School - Shriners Hospital for Children, Boston, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Martin L. Yarmush",
+        "affiliation": "Center for Engineering in Medicine (CEM) at Massachusetts General Hospital � Harvard Medical School - Shriners Hospital for Children, Boston, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Korkut Uygu",
+        "affiliation": "Center for Engineering in Medicine, Harvard Medical School, Boston, MA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper435867.html",
+    "topic": "Systematic Analysis of Adaptive Resistance and Fractional Responses of Melanoma Cancer Cells to RAF/MEK Inhibition",
+    "date_time": "Tuesday, November 10, 2015: 4:09 PM",
+    "abstract": "Activation of BRAF via a V600E mutation is the most prevalent genetic change in human melanoma (the deadliest form of skin cencaer), found in >50% of tumors, and induces constitutive activation of pro-mitogenic RAF/MEK/ERK signaling. Treatment of BRAF V600E melanomas with drugs, such as vemurafenib, that inhibit RAF/MEK signaling is effective in the short term, but remission is not durable. Drug resistance appears to involve short-term adaptive responses that compensate for RAF/MEK inhibition via up-regulation of other pro-growth mechanisms. Understanding and ultimately preventing adaptive responses is key to durable therapy. Systematic data comparing BRAF V600E tumor cells is generally lacking and it is not known whether adaptation is fundamentally similar across cell types or among individual cells within a cell population. We apply a systematic approach to studying the responses of human melanoma cell lines to five RAF and MEK inhibitors, with the overall goal of (i) characterizing variability in adaptation with time, dose, cell type and across individual cells, (ii) discovering new or poorly characterized adaptive mechanisms, and (iii) demonstrating the effectiveness of a high-throughput approach involving multiplex measurement, single-cell analysis and computational modeling. The data involves time-course measurement of total level and activity of signaling proteins and cell state markers using array-based methods and single-cell immunofluorescence assays as well as measurement of apoptosis and cell viability under the same conditions. Statistical modeling using partial least squares regression (PLSR) revealed which of the changes in the ~200,000 point dataset were phenotypically consequential. We found that responses to RAF inhibitors are remarkably diverse and involve multiple pathways that can be up or down-regulated over time, with significant variability across cell types and individual cells. We identified a role for JNK/c-Jun signaling in altering the cell-cycle distribution of melanoma cells, causing apoptosis-resistant cells to accumulate and drug maximal effect (Emax) to fall; co-drugging with RAF and JNK inhibitors or JUN knockdown reverse this effect. Our study shows that a systems-level approach (combining high density time-dependent measurements, quantitative modeling and single-cell analysis) may provide a general framework for evaluating new drugs with adaptive and paradoxical response, and identifying potentially useful combination therapies.",
+    "presenting_author": "Mohammad Fallahi-Sichani | Systems Biology, Harvard Medical School, Boston, MA",
+    "authors": [
+      "Nathan J. Moerke | Systems Biology, Harvard Medical School, Boston, MA",
+      "Jia-Ren Lin | Systems Biology, Harvard Medical School, Boston, MA",
+      "Verena Becker | Systems Biology, Harvard Medical School, Boston, MA",
+      "Sarah A. Boswell | Systems Biology, Harvard Medical School, Boston, MA",
+      "Peter K. Sorger | Systems Biology, Harvard Medical School, Boston, MA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mohammad Fallahi-Sichani",
+        "affiliation": "Systems Biology, Harvard Medical School, Boston, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nathan J. Moerke",
+        "affiliation": "Systems Biology, Harvard Medical School, Boston, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jia-Ren Lin",
+        "affiliation": "Systems Biology, Harvard Medical School, Boston, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Verena Becker",
+        "affiliation": "Systems Biology, Harvard Medical School, Boston, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Sarah A. Boswell",
+        "affiliation": "Systems Biology, Harvard Medical School, Boston, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Peter K. Sorger",
+        "affiliation": "Systems Biology, Harvard Medical School, Boston, MA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper430840.html",
+    "topic": "Thermodynamics of Ionic Liquids and Gases",
+    "date_time": "Tuesday, November 10, 2015: 4:15 PM",
+    "abstract": "Ionic liquids (ILs) present intriguing possibilities for a variety of important gas separations, including removal of carbon dioxide from post-combustion flue gas, pre-combustion gases, air, and raw natural gas streams. An important advantage of ILs is their low volatility, which prevents evaporation or loss of the IL to the gas stream. Even by physical absorption, many ILs provide sufficient selectivity of CO 2 over N 2 , O 2 , CH 4 and other gases to be used for separations. Here we will focus on the solubility of CO 2 , H 2 S, N 2, Ar, Xe and Kr in ILs with imidazolium, ammonium and phosphonium cations paired with a wide variety of different anions. The gas solubilities are measured with both gravimetric and volumetric apparatuses. We will explore the relative contributions to the solubility from both enthalpic and entropic effects, using densitometry and calorimetry to complement the information available from the temperature-dependent solubility isotherms. In addition, we will demonstrate how CO 2 capacity (and, subsequently, selectivity over other gases) can be dramatically enhanced by incorporation of chemical functionality into the IL that can chemically react with CO 2 . Increasing CO 2 capacity is particularly important when CO 2 partial pressures are low, as is the case in post-combustion flue gas separation. The thermodynamics of the chemical reaction between the IL and CO 2 are discerned both from the equilibrium solubilities and calorimetry. The key outcome of this research is the tremendous tunability made available by the ionic liquid platform.",
+    "presenting_author": "Joan F. Brennecke | Department of Chemical and Biomolecular Engineering, University of Notre Dame, Notre Dame, IN",
+    "authors": [
+      "Maggie Tangqiumei Song | Department of Chemical and Biomolecular Engineering, University of Notre Dame, Notre Dame, IN",
+      "J. Edward Bennett | Department of Chemical and Biomolecular Engineering, University of Notre Dame, Notre Dame, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Maggie Tangqiumei Song",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, University of Notre Dame, Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "J. Edward Bennett",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, University of Notre Dame, Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Joan F. Brennecke",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, University of Notre Dame, Notre Dame, IN",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425828.html",
+    "topic": "Computational Studies of Biophysical Systems",
+    "date_time": "Tuesday, November 10, 2015: 3:15 PM",
+    "abstract": "Chemical engineers are at the forefront of the invention and development of powerful algorithms for the molecular-based analysis of complex systems and problems, such as developing strategies for the long-term preservation of therapeutic drugs. Building upon a solid foundation in thermodynamics and statistical mechanics, these methods allow detailed microscopic scrutiny of a wide range of problems of interest in modern chemical engineering, thereby providing fundamental understanding and facilitating rational design. I will illustrate the insights that can be gained from theory and computation by drawing on examples from my own research in areas including proteins in water-lean environments, proteins at low temperatures, hydrophobically-driven self-assembly, and chiral symmetry breaking.",
+    "presenting_author": "Pablo G. Debenedetti | Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Pablo G. Debenedetti",
+        "affiliation": "Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper419144.html",
+    "topic": "OM-FBA: Integrate Multi-Omics Data to Flux Balance Analysis to Better Understand Cell Metabolism",
+    "date_time": "Tuesday, November 10, 2015: 3:33 PM",
+    "abstract": "omFBA : Integrate Multi-omics Data to Flux Balance Analysis to Better Understand Cell Metabolism Weihua Guo, Xueyang Feng* Department of Biological Systems Engineering, Virginia Polytechnic Institute and State University, Blacksburg, VA 24060 Constraint-based metabolic modeling such as flux balance analysis (FBA) has been widely used to simulate cell metabolism. Thanks to its simplicity and flexibility, numerous algorithms have been developed based on FBA and successfully predicted the phenotypes of various biological systems. However, their phenotype predictions may not always be accurate in FBA because of using the objective function that is assumed for cell metabolism. To overcome this challenge, we have developed a novel algorithm, namely omFBA, to integrate multi-omics data (e.g. transcriptomics , proteomics and metabolomics) into FBA to obtain omics-guided objective functions with high accuracy. In general, we first collected multi-omics data and phenotype data from published database (e.g. GEO database) for different microorganisms such as Saccharomyces cerevisiae . We then developed a �Phenotype Match� algorithm to derive an objective function for FBA that can lead to the most accurate estimation of the known phenotype (e.g. biomass yield). The derived objective function was next correlated with multi-omics data via regression analysis to generate the omics-guided objective functions, which will be further used to accurately simulate cell metabolism. We have applied omFBA in both E. coli and S. cerevisiae and found that the ethanol yield and biomass yield can be accurately predicted in most of the cases tested (~70%) by using transcriptomics data. In addition, omFBA could be incorporated with other existing algorithms easily by using the omics-guided objective functions. Compared to current approaches that attempt to integrate omics data to FBA (e.g. ROOM), omFBA can be more advantages in extendibility and comparability.",
+    "presenting_author": "Weihua Guo | Department of Biological Systems Engineering, Virginia Polytechnic Institute and State University, Blacksburg, VA",
+    "authors": [
+      "Xueyang Feng | Department of Biological Systems Engineering, Virginia Polytechnic Institute and State University, Blacksburg, VA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Weihua Guo",
+        "affiliation": "Department of Biological Systems Engineering, Virginia Polytechnic Institute and State University, Blacksburg, VA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Xueyang Feng",
+        "affiliation": "Department of Biological Systems Engineering, Virginia Polytechnic Institute and State University, Blacksburg, VA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425805.html",
+    "topic": "Self-Energy Effects of Salt Ions on Phase Behavior and Interfacial Properties",
+    "date_time": "Tuesday, November 10, 2015: 4:45 PM",
+    "abstract": "Ions are essential in physical chemistry, colloidal science, electrochemistry, biology and many other areas of science and engineering. While their role is commonly described in terms of screening and translational entropy, many phenomena, ranging from some classical experimental observations made many decades ago to some new systems of current interest, cannot be explained, even qualitatively, by these concepts. A key effect that is often ignored or inadequately treated in the main literature on electrolytes and polyelectrolytes is the self-energy of the ions. In this talk, I will discuss several self-energy effects in macromolecular and interfacial systems. First, we show that the preferential solvation energy of the ions provides a significant driving force for phase separation. This concept is used to develop a theory to explain the dramatic shift in the order-disorder transition temperature in PEO-PS diblock copolymers upon the addition of salt. Second, we show that the dielectric contrast between the polymer backbone and the solvent significantly affects the conformation and charge condensation in dilute polyelectrolyte solutions. Third, we show that the image force has qualitative effects on the double layer structure and forces, such as like charge attraction and charge inversion. Finally we present a simple model for understanding the specific ion effects in the interfacial activity for air/water and oil/water interfaces.",
+    "presenting_author": "Zhen-Gang Wang | Division of Chemistry and Chemical Engineering, California Institute of Technology, Pasadena, CA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Zhen-Gang Wang",
+        "affiliation": "Division of Chemistry and Chemical Engineering, California Institute of Technology, Pasadena, CA",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper437590.html",
+    "topic": "Title Not Found",
+    "date_time": "November 2015",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper422695.html",
+    "topic": "A Hidden Markov Model Reconstruction of a Cellular Signaling Network in Embryonic Fibroblasts from Time-Course Gene Expression Profiles Reveals the Mechanism of the SPRY2 Tumor-Suppressor",
+    "date_time": "Tuesday, November 10, 2015: 3:51 PM",
+    "abstract": "A hidden Markov model reconstruction of a cellular signaling network in embryonic fibroblasts from time-course gene expression profiles reveals the mechanism of the SPRY2 tumor-suppressor. Mark F. Ciaccio and Neda Bagheri. Department of Chemical & Biological Engineering, McCormick School of Engineering, Northwestern University. Introduction: Cellular phenotype is controlled, in part, by the abundance of signaling proteins as well as the dynamic parameters governing their activation. For this reason, time-course gene expression data is invaluable for understanding the molecular regulatory mechanisms that underlie cancer behavior. Sprouty Homolog 2 (SPRY2), a known tumor suppressor, not only attenuates the amplitude of Receptor Tyrosine Kinase (RTKs) signaling but also decreases the duration of activity [1]. However, the mechanism by which SPRY2 inhibits RTK-signaling is poorly understood. We performed RNA-sequencing at six time points on cell lysates after stimulation with Fibroblast Growth Factor (FGF) in Sprouty-null Mouse Embryonic Fibroblasts (MEFs) and wild-type controls. We trained a hidden Markov model on a transcription-factor/DNA binding database [2], and used it to predict the transcription factors responsible for bifurcation points where clusters of time-course transcriptional profiles diverge. The differential activity of transcription factors informed how the signaling network is rewired in the absence of SPRY2. Background: SPRY2 is down-regulated in many types of cancers including those of the colon and breast [1]. Understanding the mechanism of SPRY2 in signal transduction can lead to new therapies for cancer. Materials and Methods: We quantified the expression of gene transcripts using RNA-seq at six time points in SPRY-knockout vs. wild-type MEF cells. A refined version of the Dynamic Regulatory Events Miner (DREM) algorithm [2] was used with a protein-DNA binding database to infer the most likely active transcription factors at each time point. Differences in edge confidences between signaling networks inferred from the changes in activity of transcription factors were used as the basis to infer the location of SPRY2 within the signaling network. Results and Discussion: We found SPRY2 increased binding of the ubiquitin ligase, CBL-B, to several RTKs including FGFR. This suggests that the Sprouty-proteins locate ubiquitin ligases to the cellular membrane, thereby marking the receptors for degradation. Conclusions: Hidden Markov models are an efficient means to infer the mechanism of proteins from time-course gene expression profiles. This study suggests the importance of the regulation of RTK-degradation in the etiology of cancer and highlights the importance of incorporating regulation of protein stability into computational models of cancer.",
+    "presenting_author": "Mark Ciaccio | Chemical & Biological Engineering, Northwestern University, Evanston, IL",
+    "authors": [
+      "Neda Bagheri | Chemical & Biological Engineering, Northwestern University, Evanston, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mark Ciaccio",
+        "affiliation": "Chemical & Biological Engineering, Northwestern University, Evanston, IL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Neda Bagheri",
+        "affiliation": "Chemical & Biological Engineering, Northwestern University, Evanston, IL",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper429940.html",
+    "topic": "Applying Adaptive Laboratory Evolution to Engineer Platform Strains",
+    "date_time": "Tuesday, November 10, 2015: 4:51 PM",
+    "abstract": "Adaptive Laboratory Evolution (ALE) is a powerful technology for developing both compound-specific and platform bioprocessing strains. To leverage the utility of high-throughput sequencing after ALE, sophisticated experimentation is necessary to perform controlled high-throughput ALE experiments with the goal of understanding the range of phenotypes available to cellular production systems and how they arise. The presented work will describe an automated technology built for performing ALE experiments and its application towards highlighted use cases. These ALE use cases include adapting strains to higher tolerance of a desired compound, adaptation to utilize non-natural substrates, and adaptation to various bioprocessing conditions. The genomic changes which enable such adaptation will also be discussed along with interpretation of optimal phenotypes using genome-scale modeling and omics data characterization. ALE use is increasing in industrial biotechnology and sophisticated platforms for conducting experiments and analyzing outcomes will be necessary to make it a viable technology in the strain generation pipeline.",
+    "presenting_author": "Adam M. Feist | Bioengineering, University of California, San Diego, La Jolla, CA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Adam M. Feist",
+        "affiliation": "Bioengineering, University of California, San Diego, La Jolla, CA",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper434054.html",
+    "topic": "Synechocystis Sp. PCC 6803: Light Plus Endogenous Regulation Governing Gene Expression Patterns in the Diurnal Cycle",
+    "date_time": "Tuesday, November 10, 2015: 4:33 PM",
+    "abstract": "Cyanobacteria are the only photosynthetic prokaryotes with circadian behavior. Based on global transcriptomic data, several cyanobacteria including the strain Synechocystis sp. PCC 6803 have been analyzed thus revealing their oscillatory temporal expression. Synechocystis cells tune the transcriptional level of genes in response to the oscillation of daily diurnal cycle. However, it is still unclear how changes in cellular physiology are coordinated by this cyclic light exposure. In this study, we measured and subsequently analyzed expression patterns of nearly 3,500 genes in Synechocystis 6803 over two consecutive diurnal periods. Based on this analysis, at least 39% of genes with many from major cellular processes including central carbon metabolism, transport, and regulation were found to exhibit oscillating expression profiles. The pattern of gene expression also led to the development of two distinct transcriptional networks of co-regulated oscillatory genes. These networks described how Synechocystis regulated its cellular processes at the end of the dark period so as to make efficient use of light at the early light period. Interestingly, the light peaking genes showed damping patterns even in the middle of the light period which led to the inference not only the presence/absence of light but also endogenous regulation controlled the oscillatory gene expression patterns. We then measured important physiological parameters including glycogen concentration, ATP level, and NADPH/NADP + ratio in two consecutive light/dark cycles and, thereby, analyzed the physiological changes and their correlations with temporal expression patterns. This global transcriptional analysis of Synechocystis sheds light on the global coordination of cellular processes as evidenced in the transcriptional levels of genes.",
+    "presenting_author": "Rajib Saha | Department of Biology, Washington University, St. Louis, MO",
+    "authors": [
+      "Deng Liu | Department of Biology, Washington University, St. Louis, MO",
+      "Allison G. Hoynes-O'Connor | Department of Energy, Environmental, and Chemical Engineering, Washington University, St. Louis, MO",
+      "Michelle Liberto | Department of Biology, Washington University, St. Louis, MO",
+      "Jingjie Yu | Department of Biology, Washington University, St. Louis, MO",
+      "Maitrayee Bhattacharyy | Department of Biology, Washington University, St. Louis, MO",
+      "Andrea Balassy | Department of Energy, Environmental, and Chemical Engineering, Washington University, St. Louis, MO",
+      "Fuzhong Zhang | Department of Energy, Environmental, and Chemical Engineering, Washington University, St. Louis, MO",
+      "Tae Seok Moo | Department of Energy, Environmental, and Chemical Engineering, Washington University, St. Louis, MO",
+      "Costas D. Maranas | Department of Chemical Engineering, The Pennsylvania State University, University Park, PA",
+      "Himadri B. Pakrasi | Department of Biology, Washington University, St. Louis, MO"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rajib Saha",
+        "affiliation": "Department of Biology, Washington University, St. Louis, MO",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Deng Liu",
+        "affiliation": "Department of Biology, Washington University, St. Louis, MO",
+        "designation": "Author"
+      },
+      {
+        "name": "Allison G. Hoynes-O'Connor",
+        "affiliation": "Department of Energy, Environmental, and Chemical Engineering, Washington University, St. Louis, MO",
+        "designation": "Author"
+      },
+      {
+        "name": "Michelle Liberto",
+        "affiliation": "Department of Biology, Washington University, St. Louis, MO",
+        "designation": "Author"
+      },
+      {
+        "name": "Jingjie Yu",
+        "affiliation": "Department of Biology, Washington University, St. Louis, MO",
+        "designation": "Author"
+      },
+      {
+        "name": "Maitrayee Bhattacharyy",
+        "affiliation": "Department of Biology, Washington University, St. Louis, MO",
+        "designation": "Author"
+      },
+      {
+        "name": "Andrea Balassy",
+        "affiliation": "Department of Energy, Environmental, and Chemical Engineering, Washington University, St. Louis, MO",
+        "designation": "Author"
+      },
+      {
+        "name": "Fuzhong Zhang",
+        "affiliation": "Department of Energy, Environmental, and Chemical Engineering, Washington University, St. Louis, MO",
+        "designation": "Author"
+      },
+      {
+        "name": "Tae Seok Moo",
+        "affiliation": "Department of Energy, Environmental, and Chemical Engineering, Washington University, St. Louis, MO",
+        "designation": "Author"
+      },
+      {
+        "name": "Costas D. Maranas",
+        "affiliation": "Department of Chemical Engineering, The Pennsylvania State University, University Park, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Himadri B. Pakrasi",
+        "affiliation": "Department of Biology, Washington University, St. Louis, MO",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425773.html",
+    "topic": "DNA Assembly at Nanometer, Micrometer, and Millimeter Length Scales",
+    "date_time": "Tuesday, November 10, 2015: 3:45 PM",
+    "abstract": "This presentation will provide an overview of recent hierarchical models and computational approaches developed by our research group to investigate the effects of confinement, hydrodynamic interactions, and salt concentration, on the structure and properties of DNA, both at equilibrium and beyond equilibrium. Particular emphasis will be placed on recently proposed detailed models and methods designed to describe the manipulation of DNA in microfluidic devices, the melting and rehybridization of DNA at the single nucleotide level, and DNA molecular recognition in DNA-protein complexes. The relevance of the models will be discussed in the context of nanofluidic designs for applications in optimal mapping, and in the context of recent experiments on DNA packaging in chromatin.",
+    "presenting_author": "Juan J. de Pablo | Institute for Molecular Engineering, University of Chicago, Chicago, IL",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Juan J. de Pablo",
+        "affiliation": "Institute for Molecular Engineering, University of Chicago, Chicago, IL",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper423142.html",
+    "topic": "Relationship Between Molecular Structure and Performance of Polymer Electrolytes for Lithium Batteries",
+    "date_time": "Tuesday, November 10, 2015: 5:15 PM",
+    "abstract": "Polymer electrolytes are desirable for next-generation lithium metal batteries because of their thermal and electrochemical stability against lithium metal, which would lead to safer batteries for use in consumer and industrial applications. Block copolymer electrolytes in particular are of interest due to their ability to decouple the mechanical properties and ion transport mechanisms. These elements need to be high in order to meet operating demands: high ionic conductivity and good mechanical rigidity to prevent lithium dendrite growth. However, these systems are still hindered by concentration gradients; i.e., the number of effective lithium ions that carries the current is limited. In this respect, single-ion-conducting block copolymer electrolytes provide much promise to resolve this problem. They enable the sole conduction of lithium ions; hence, they avert detrimental battery limitations due to salt concentration gradients. Single-ion-conducting block copolymer electrolytes, poly(ethylene oxide)-b-polystyrenesulfonyllithium (trifluoromethyl sulfonyl) imide (PEO-b-PSLiTFSI), with lithium transference numbers close to unity, were characterized for its ionic conductivity and morphology using AC impedance spectroscopy and small angle x-ray scattering, respectively. The effect of molecular structure on ion transport in this class of polymers will be discussed.",
+    "presenting_author": "Nitash Balsara | Chemical Engineering, University of California, Berkeley, Berkeley, CA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Nitash Balsara",
+        "affiliation": "Chemical Engineering, University of California, Berkeley, Berkeley, CA",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram//data/abstract/aiche/2015/Paper_427492_abstract_74597_0.gif",
+    "topic": "Title Not Found",
+    "date_time": "November 2015",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  }
+]

@@ -1,0 +1,295 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper322483.html",
+    "paper_id": "322483",
+    "paper_number": "698a",
+    "topic": "Dynamic Continuation Strategies for Flowsheet Simulation and Optimization",
+    "title": "Dynamic Continuation Strategies for Flowsheet Simulation and Optimization",
+    "date_time": "Thursday, November 7, 2013: 12:30 PM | 12:30 PM",
+    "session_id": "24517",
+    "session_title": "Process Design I",
+    "session_number": "698",
+    "authors_text": "Richard Pattison and Michael Baldea",
+    "abstract": "Dynamic Continuation Strategies for Flowsheet Simulation in Process Design and Optimization Richard Pattison and Michael Baldea Department of Chemical Engineering The University of Texas at Austin, 1 University Station C0400, Austin, TX 78712 email: mbaldea@che.utexas.edu An important component of process design and optimization is the steady-state simulation of the process flowsheet. From a mathematical perspective, this requires solving the detailed equations describing the material and energy balances of the process units, as well as the correlations defining the physical properties of the components present in the process. The resulting system of algebraic equations (model) is typically highly nonlinear and poses significant solution challenges. Sequential modular (SM) simulation environments solve this system in an iterative manner by “tearing” the recycle streams and solving individual units in sequence until convergence at the flowsheet level is reached. Equation oriented (EO) simulation entails solving all the nonlinear model equations simultaneously. SM simulators are currently predominant in practical industrial applications owing to their superior numerical robustness - they are typically far more likely to obtain a solution for the process model starting from a poor initial guess than their EO counterparts [1-2]. However, EO approaches are advantageous from an optimization perspective due to the simplified calculation of Jacobian and Hessian matrices via automatic differentiation. Thus, in view of accelerating the development and optimization of novel process and energy systems, improving the convergence properties and robustness of EO process simulators is an imperative need. Newton or Quasi-Newton methods are the most widely used methods for solving nonlinear algebraic equations in process simulators due to the super-linear convergence rate. However, it is recognized that Newton methods are only locally convergent from close initial guesses [3-4]. Several continuation methods have been implemented to address this issue [5], but in all cases, these are specific to individual unit operations, like reactors or distillation columns, and are not suitable for initializing the entire process flowsheet. To overcome these challenges, we propose a novel pseudo-time continuation approach to solving the steady state process model. Within this context, the nonlinear algebraic system is converted using a set of filters with tunable constants to a set of ordinary differential equations and algebraic equations resulting in a differential algebraic equation (DAE) system [6]. Solving the system consists of i) a simplified consistent initialization and ii) a time stepping routine applied until steady state is reached. We also introduce a set of specific stability constraints that ensure that, at steady state, the solution of the pseudo-dynamic system is identical to that of the original steady-state model. We present a preliminary implementation of these concepts in a new process simulation environment, featuring the most frequently used unit operations, including reaction, distillation, heat exchange, and compression. Furthermore, we show that the developed pseudo-dynamic models lend themselves naturally to use in process optimization calculations, using our previously-developed time relaxation-based optimization algorithm [7-8]. We present a validation of the proposed concepts using an ethylene-to-ethanol process as a testbed [9]. We show that the proposed solution approach exhibits superior convergence properties compared to commercially available simulators, and demonstrate the use of gradient-based rigorous optimization to improve the energy efficiency of the process. References [1] Pantelides, C.C.; Renfro, J.G. The online use of first-principles models in process operations: review current status & future needs. Comput. Chem. Eng., 2012 . [2] Biegler, L.T. Nonlinear programming: concepts, algorithms, and applications to chemical processes . SIAM, 2010 . [3] De P Soares, R. Finding all real solutions of nonlinear systems of equations with discontinuities by a modified affine arithmetic. Comput. Chem. Eng. 2012 . [4] Stuber, M.D.; Kumar, V.; Barton, P.I. Nonsmooth exclusion test for finding all solutions of nonlinear equations. BIT Numerical Mathematics. 2010, 50 , 885-917. [5] Malinen, I.; Tanskanen, J. Homotopy parameter bounding in increasing the robustness of homotopy continuation methods in multiplicity studies. Comput. Chem. Eng. 2010, 34, 1761-1774. [6] Kelley, C.T.; Keyes, D.E. Convergence analysis of pseudo-transient continuation. SIAM Journal on Numerical Analysis , 1998, 35, 508–523. [7] Baldea, M.; Jibb, R.J.; Cano, A.; Ramos, A. Optimal design of plate-fin brazed aluminum heat exchangers, AIChE Annual Meeting, Nashville, TN, 2009 [8] Zanfir, M.; Baldea, M.; Daoutidis, P. Optimizing the Catalyst Distribution for Counter-current Methane Steam Reforming in Plate Reactors, AIChE Journal , 2011, 57 , 2518–2528. [9] Biegler, L.T.; Grossmann, I.E.; Westerberg, A.W. Systematic Methods of Chemical Process Design. Prentice Hall: Upper Saddle River, NJ, 1997 .",
+    "presenting_author": "Richard Pattison | The University of Texas at Austin, TX",
+    "authors": [
+      "Richard Pattison | The University of Texas at Austin, TX",
+      "Michael Baldea | The University of Texas at Austin, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Richard Pattison",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Michael Baldea",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "sortable_time": "2013-11-07_12:30:00_12:52:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/322483"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper324220.html",
+    "paper_id": "324220",
+    "paper_number": "698b",
+    "topic": "Integrated Process and Solvent Design of Physical CO2 Absorption Using the SAFT-&#947; Mie Equation of State and Hierarchical Optimisation",
+    "title": "Integrated Process and Solvent Design of Physical CO2 Absorption Using the SAFT-&#947; Mie Equation of State and Hierarchical Optimisation",
+    "date_time": "Thursday, November 7, 2013: 12:30 PM | 12:52 PM",
+    "session_id": "24517",
+    "session_title": "Process Design I",
+    "session_number": "698",
+    "authors_text": "Jakob Burger, Vassilis Papaioannou, Amparo Galindo, George Jackson and Claire S. Adjiman",
+    "abstract": "During the design of new processes, molecular-level decisions need to be made, such as choosing a solvent or other working fluid. Often, these decisions are made prior to the design of the process on the basis of experience, heuristic rules, or a few guiding experiments. The choices of solvents or other additives are, however, closely linked to decisions of process operation and therefore influence the overall performance. Thus, an integration of process and solvent design is necessary to identify an optimal process design. In our work, discrete decisions on the molecular structure of the solvent to be used for high-pressure separation are integrated into process optimisation. This integration enables simultaneous optimisation of the process and the solvent structure. The physical properties required by the process model are calculated by a molecular based equation of state that explicitly considers intermolecular interactions. For the first time, a group contribution version of SAFT (SAFT-γ Mie [1]) is used in process and solvent design. Due to its firm physical foundation, the property model needs only few parameters to describe the thermodynamic properties accurately over a wide range of pressures and temperatures for a large number of solvents. To overcome the complexity of the resulting MINLP problem of integrated process and solvent design, a novel hierarchical optimisation approach is proposed: in a first step, a multi-objective optimisation is carried out with a simplified process model developed here to reduce the space of solvent candidates. It is shown that the simplified model provides a reliable assessment of the best performance that can be achieved in each unit operation and is computationally cheap and robust. In a second step, an optimisation in the reduced solvent space is carried out using the full process model. The Pareto optimal set obtained in the first step serves as initial guesses to improve convergence of the design problem. The approach is applied to a novel high pressure physical absorption process to remove CO2 from natural gas. A group of poly ethers are identified as optimal solvents, with a performance predicted to be superior to commonly used alternatives such as dimethyl ethers of polyethylene glycol. This provides a useful focus for future experimental studies. References: [1] C. Avendano, T. Lafitte, C.S. Adjiman, A. Galindo, E.A. Muller, G. Jackson. SAFT-γ Force Field for the Simulation of Molecular Fluids: 2. Coarse-Grained Models of Greenhouse Gases, Refrigerants, and Long Alkanes. J. Phys. Chem. B (117) p. 2717-2733, 2013",
+    "presenting_author": "Jakob Burger | University of Kaiserslautern, Germany",
+    "authors": [
+      "Jakob Burger | University of Kaiserslautern, Germany",
+      "Vassilis Papaioannou | Imperial College London, United Kingdom",
+      "Amparo Galindo | Imperial College London, United Kingdom",
+      "George Jackson | Imperial College London, United Kingdom",
+      "Claire Adjiman | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jakob Burger",
+        "affiliation": "University of Kaiserslautern, Germany",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Vassilis Papaioannou",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Amparo Galindo",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "George Jackson",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Claire Adjiman",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "sortable_time": "2013-11-07_12:52:00_13:14:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/324220"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper324451.html",
+    "paper_id": "324451",
+    "paper_number": "698c",
+    "topic": "An Initial Experimental Design Methodology Incorporating Expert Conjecture, Prior Data, and Engineering Models for Deposition of Iridium Nanoparticles in Supercritical Carbon Dioxide",
+    "title": "An Initial Experimental Design Methodology Incorporating Expert Conjecture, Prior Data, and Engineering Models for Deposition of Iridium Nanoparticles in Supercritical Carbon Dioxide",
+    "date_time": "Thursday, November 7, 2013: 12:30 PM | 1:14 PM",
+    "session_id": "24517",
+    "session_title": "Process Design I",
+    "session_number": "698",
+    "authors_text": "Michael J. Casciato, Justin Vastola, J.C. Lu, Dennis W. Hess and Martha Grover",
+    "abstract": "The study and optimization of nanofabrication techniques in nanotechnology research is often challenging because experiments are costly to conduct in terms of time and money. In particular, for a new system that has not been previously studied at length, it is a challenge to efficiently plan the first round of experiments in the region of interest near the process optimum, and there may be multiple process inputs that must be optimized simultaneously. A purely statistical approach to this challenge would apply a space-filling experimental design, or, alternatively, domain knowledge could be applied to guide the experimental design. However, both of these approaches may waste precious resources by failing to sample efficiently near the desired process output. In this work, a novel technique termed Initial Experimental Design (IED) is applied to combine the statistical and experimental approaches for planning the initial round of experiments for a new system that is related to a similar but non-identical existing system. The new system is directed toward the deposition of iridium nanoparticles on a silicon wafer surface from an iridium hexafluoroacetylacetonate cyclooctadiene (Ir(hfac)(COD)) precursor in supercritical carbon dioxide (sc-CO 2 ), while the older, related system studied the deposition of silver nanoparticles on Si from Ag(hfac)(COD) in sc-CO 2 . The goal was to deposit 40 nm mean size Ir nanoparticles within a tolerance of 5 nm. The previous data of mean particle size vs. temperature from the Ag(hfac)(COD) system were used in concert with expert opinions about the behavior of the new system, elicited via survey instrument, to efficiently plan the experiments in the new Ir(hfac)(COD) system. Four experts were surveyed for their conjectures on the design space and Arrhenius model structure for the new system. A unified model incorporating the experts' conflicting opinions was then built to use in the experimental design, which balanced a space-filling design with an objective-oriented design. The IED approach succeeded in directing experiments toward the desired process optimum at a temperature of 175 °C, although the variance of the prediction of the local mean Arrhenius model did not fall within the 5 nm tolerance for the local model chosen to fit the data. Moreover, an altogether unforseen growth mode was also observed for the Ir(hfac)(COD) system that had not been previously observed in the Ag(hfac)(COD) system.",
+    "presenting_author": "Martha Grover | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Michael J. Casciato | Georgia Institute of Technology, Atlanta, GA",
+      "Justin Vastola | Georgia Institute of Technology, Atlanta, GA",
+      "Jye-Chyi Lu | Georgia Institute of Technology, Atlanta, GA",
+      "Dennis Hess | Georgia Institute of Technology, Atlanta, GA",
+      "Martha Grover | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Michael J. Casciato",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Justin Vastola",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jye-Chyi Lu",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Dennis Hess",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Martha Grover",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "sortable_time": "2013-11-07_13:14:00_13:36:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/324451"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper329493.html",
+    "paper_id": "329493",
+    "paper_number": "698d",
+    "topic": "Design and Development of Integrated Biorefinery Paths",
+    "title": "Design and Development of Integrated Biorefinery Paths",
+    "date_time": "Thursday, November 7, 2013: 12:30 PM | 1:36 PM",
+    "session_id": "24517",
+    "session_title": "Process Design I",
+    "session_number": "698",
+    "authors_text": "Antonis Kokossis",
+    "abstract": "Process integration has a pivotal and critical role in the development of biorefineries. The general view is increasingly supported by results and analysis that prove the significance of this technology in future developments. The design and the synthesis of biorefineries is a particularly challenging and complex problem. This is because it has to cope with large, unknown product portfolios arising from different chemical itineraries and processing paths, while dealing with alternative processes that have to be integrated. In all cases, the designs must match maximum efficiencies in the use of materials and energy, assessing uncertainties in processing and economic parameters that may affect the selected designs and the level of integration. To cope with the challenges, the paper outlines an approach that mobilizes a complete and powerful list of systems methods in process synthesis and integration, optimization and modelling. At a conceptual level, process synthesis determines process and products to use, enabling a systematic screening with a simultaneous approach and the use of optimization. Process integration, integrates for maximum efficiency in raw materials and energy, as well as for a maximum performance against environmental targets. Process flowsheeting validates with process simulation and enables improvements with parametric optimization. The coordinated use of the methods constitutes a significant advancement in the state of the art, currently deploying case-by-case analysis (flowsheeting) using commercial simulators (NREL work on bioethanol production; 2012). The work is applied both to lignocellulosic and oleochemical biorefineries, also in emerging algo-biorefineries. Its application has scoped paths of 70-odd chemicals that include basic intermediates (sugars, lignin, ethylene, oils), bulk chemicals (ethanol, butanol, propanol, isopropanol), bio-based polymers (PVC, resins, polyamides, PEIF, polyacrylates, PUs), and a wide range of chemicals (xylitol, xylonic acid, itaconic acid, sorbitol, isosorbide, hydrogel etc). Other than developing and scoping integrated paths for the plant, the analysis reduces energy by 70% and water use by 50-60%. The work is further integrated with LCA calculations with results explaining that, unless fully integrated, the biorefinery is not sustainable, actually not even feasible. Instead, fully integrated biorefineries remain viable, operational and offer a strong promise to the development of sustainable industries based on renewables.",
+    "presenting_author": "Antonis Kokossis | National Technical University of Athens, Greece",
+    "authors": [
+      "Antonis Kokossis | National Technical University of Athens, Greece"
+    ],
+    "authors_structured": [
+      {
+        "name": "Antonis Kokossis",
+        "affiliation": "National Technical University of Athens, Greece",
+        "designation": "Presenting Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "sortable_time": "2013-11-07_13:36:00_13:58:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/329493"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper331289.html",
+    "paper_id": "331289",
+    "paper_number": "698e",
+    "topic": "Screening for Solvents in Extractive Distillation Considering Quantitative Risk Analysis",
+    "title": "Screening for Solvents in Extractive Distillation Considering Quantitative Risk Analysis",
+    "date_time": "Thursday, November 7, 2013: 12:30 PM | 1:58 PM",
+    "session_id": "24517",
+    "session_title": "Process Design I",
+    "session_number": "698",
+    "authors_text": "Nancy Medina-Herrera, Arturo Jim�nez-Guti�rrez and Ignacio E. Grossmann",
+    "abstract": "Extractive distillation systems are used to separate near-boiling and azeotropic mixtures. In addition to the design variables of conventional distillation problems, the selection of a solvent, or entrainer, is a major variable for the design of extractive distillation schemes. In general, the solvent selection is done taking into account its performance in terms of equipment cost and its capability to alter the relative volatility of the original mixture. 1 Other aspects that are important for the design implementation are usually analyzed after the conceptual design has been developed. One such aspect is related to the system safety, which in the case of extractive distillation systems is of major importance because of the potential risk inherent to the entrainer properties. Patel et al. 2 have reported an initial work that includes safety aspects during a system design, showing an application for the design of an extraction column. This work presents an approach for solvent selection in an extractive distillation system. In addition to economic terms, safety measures are included through a Chemical Process Quantitative Risk Analysis (CPQRA). First, potential solvents that meet key properties specifications are found in a pre-selection step through the use of molecular design techniques. Then, the behavior of the potential solvents is tested in ASPEN Plus, and a multi-objective optimization problem is formulated, such that optimal tradeoffs between risk and cost criteria are found. Societal risk (SR) and total annual cost (TCA) are used to quantify the two objective functions. In the pre-selection step, the ProCAMD tool within the ICAS Software, developed at the Technical University of Denmark, is used to find components that reach a set of specified solvent properties. In the optimization step, a CPQRA is formulated based on CCPS guidelines. 3 SR is a measure to estimate risk for a group of people located to an affected area given a set of incidents. Risk is a function of probabilities of incidents and consequences. Incident probabilities are calculated through fault trees and event trees. Quantification of consequences implies source, dispersion, and incident effects calculations. All these estimations are represented by nonlinear models, which in addition to the equations for the distillation system provide a highly nonlinear model. To handle this situation, a Derivative Free Optimization (DFO) procedure was implemented within MATLAB, with ASPEN Plus simulations working as a black box within the DFO, and a genetic algorithm recursively used to find the set of optimal tradeoffs (or Pareto front) between both objectives. Results from the application to case studies are presented to show how the best potential solvents for a given separation task are identified through the use of the proposed approach. 1. Luyben, W. L.; Chien, I. L., Design and Control of Distillation Systems for Separating Azeotropes . John Wiley & Sons: 2011. 2. Patel, S. J.; Ng, D.; Mannan, M. S., Inherently safer design of solvent processes at the conceptual stage: Practical application for substitution. Journal of Loss Prevention in the Process Industries 2010, 23 (4), 483-491. 3. CCPS, A. I. o. C. E., Guidelines for Chemical Process Quantitative Risk Analysis . 2 ed.; New York, New York, 2000; p 756.",
+    "presenting_author": "Nancy Medina-Herrera | Universidad Autónoma de Tlaxcala, Apizaco, Tlax, Mexico",
+    "authors": [
+      "Nancy Medina-Herrera | Universidad Autónoma de Tlaxcala, Apizaco, Tlax, Mexico",
+      "Arturo Jiménez-Gutiérrez | Instituto Tecnológico de Celaya, GJ",
+      "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nancy Medina-Herrera",
+        "affiliation": "Universidad Autónoma de Tlaxcala, Apizaco, Tlax, Mexico",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Arturo Jiménez-Gutiérrez",
+        "affiliation": "Instituto Tecnológico de Celaya, GJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Ignacio Grossmann",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "sortable_time": "2013-11-07_13:58:00_14:20:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/331289"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper338299.html",
+    "paper_id": "338299",
+    "paper_number": "698f",
+    "topic": "Process Design of Gwh Level Renewable Energy Storage and Supply Using Liquid CO2",
+    "title": "Process Design of Gwh Level Renewable Energy Storage and Supply Using Liquid CO2",
+    "date_time": "Thursday, November 7, 2013: 12:30 PM | 2:20 PM",
+    "session_id": "24517",
+    "session_title": "Process Design I",
+    "session_number": "698",
+    "authors_text": "Easa I. Al-musleh, Dharik S. Mallapragada and Rakesh Agrawal",
+    "abstract": "The push towards electricity generation from renewable energy sources like solar energy is motivated by the need for reducing the use of finite-fossil fuels and minimizing CO 2 emissions. However, a grand challenge for the large-scale deployment of grid-based renewable electricity is the intermittent nature of the energy source, which warrants the need for energy efficient storage systems. Here, we outline a novel, energy-efficient solution for large-scale renewable energy storage involving a closed loop cycle that transforms carbon atoms between liquid carbon dioxide and carbon-based fuels like liquid methane and methanol. Carbon-based fuels offer an attractive storage option owing to their high volumetric energy density and the well-established technology and infrastructure available for their utilization. Yet, the use of carbon-based fuels for energy storage is limited by the availability of renewable carbon and hydrogen sources. Hence, it is worth considering a closed system where little additional carbon or water sources are needed. Our proposed storage cycle operates in energy storage and energy recovery mode, depending on whether the renewable energy is available or not. During energy storage mode of the cycle, renewable energy is stored as a carbon-based fuel, synthesized from stored water and liquid CO 2 using any of the well-known thermochemical CO 2 to fuel routes, and later liquefied to be stored onsite. Any energy input necessary for fuel liquefaction can be partially or fully met by the refrigeration available from vaporizing liquid CO 2 . In the energy recovery mode of the cycle, the stored liquid fuel is vaporized and oxidized to generate electricity via systems like high temperature Solid Oxide Fuel Cells (SOFC). The oxidation byproducts, CO 2 and water, are separated and liquefied for storage. Here, the energy penalty of CO 2 liquefaction can be met partially or fully using the available refrigeration from vaporizing the liquid fuel. We present two preferred examples of the proposed cycles designed for producing >100 MW electrical power round the clock, using methane and methanol respectively as the energy storage media. The methane cycle relies on a reversible SOFC, CO 2 methanation and synergistic liquefaction schemes involving: 1) liquid CO 2 vaporization and vapor methane liquefaction and 2) vapor CO 2 liquefaction and liquid methane vaporization. The methane cycle electrical energy storage efficiency is estimated to be ~55%. The salient features of the methanol cycle include a reversible SOFC, methanol synthesis, ease of methanol liquefaction and flexibility to store methanol-water mixtures rather than pure methanol to balance the storage volume and energy requirements for separation of water. When using a 50:50 methanol-water mixture for storage, the electrical energy storage efficiency of the methanol cycle is found to approach that of the methane cycle. However, methane as an energy storage media, in addition to its higher per carbon energy content, requires~ 59% lesser storage volume and 98% less carbon make up than methanol. Both these proposed cycles avoid the large energy storage volumes associated with using alternatives like H 2 and current batteries.",
+    "presenting_author": "Easa I. Al-musleh | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Easa I. Al-musleh | Purdue University, West Lafayette, IN",
+      "Dharik S. Mallapragada | Purdue University, West Lafayette, IN",
+      "Rakesh Agrawal | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Easa I. Al-musleh",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Dharik S. Mallapragada",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Rakesh Agrawal",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "sortable_time": "2013-11-07_14:20:00_14:42:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/338299"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2013/webprogram/Paper338950.html",
+    "paper_id": "338950",
+    "paper_number": "698g",
+    "topic": "Study of Efficiency Improvements of Pre-Combustion CO2 Removal Units By Means of Validated Steady-State Simulations",
+    "title": "Study of Efficiency Improvements of Pre-Combustion CO2 Removal Units By Means of Validated Steady-State Simulations",
+    "date_time": "Thursday, November 7, 2013: 12:30 PM | 2:42 PM",
+    "session_id": "24517",
+    "session_title": "Process Design I",
+    "session_number": "698",
+    "authors_text": "Carsten Trapp, Timon Thomaser and Piero Colonna",
+    "abstract": "Pre-combustion CO 2 capture in combination with the integrated gasification combined cycle (IGCC) process is an advanced technical solution for the implementation of carbon capture and storage (CCS) in the power sector aiming at high efficiency and effective emission reduction. The removal of CO 2 from the synthetic gas leads to a large efficiency penalty for the thermal power plant. Solutions to reduce the energy consumption in the pre-combustion capture unit must therefore be investigated. In order to study the optimal design and operation of the capture unit, a unique and fully instrumented CO 2 -capture pilot plant has been designed and realized at the Buggenum IGCC power station in the Netherlands by the utility company Vattenfall. The pilot plant comprises a three-stage, sweet, high-temperature water-gas shift process with inter-stage cooling and a physical absorption/desorption process utilizing a mixtures of homologues, polyethylene glycol dimethyl ethers for the removal of CO 2 which is further compressed by a multi-stage compressor. Steady-state models of the pilot plant process have been developed and implemented in a commercial software tool. The thermophysical properties of the highly non-ideal mixtures involved in the capture process are calculated with the implementation of the PC-SAFT Equation of State (EoS) provided by an in-house software tool. The binary interaction parameters for the solvent-gas and gas-gas interaction are fitted against data from literature and experimental data. The pilot plant system model is validated against experimental data obtained from the CO 2 capture pilot plant. Finally, the validated models are modified for the simulation of a large-scale pre-combustion capture unit. The system model is extended in order to encompass an H 2 S removal process, which is integrated with the CO 2 absorption process and hence utilizes the same solvent. One of the main design variables of the absorption/desorption section is the solvent temperature. Operation at refrigerated solvent temperature leads to an increase in absorption efficiency and therefore to a reduction in solvent flow rate and solvent pumping power, thus maintaining a constant capture efficiency. However, this comes at the cost of energy required for solvent chilling. For operation at medium solvent temperature higher solvent flow rates and solvent pumping power are required to compensate for the less efficient absorption, though no energy for chilling is required. The two capture unit configurations (with and without solvent chilling) are compared in terms of energy consumption and maintaining a CO 2 -capture efficiency of 85%. Other variables considered in the optimization problem are the H 2 O:CO ratio, the CO conversion efficiency of the water-gas shift section, and the CO 2 removal efficiency and flash pressures of the absorption section.",
+    "presenting_author": "Carsten Trapp | Delft University of Technology, Netherlands",
+    "authors": [
+      "Carsten Trapp | Delft University of Technology, Netherlands",
+      "Timon Thomaser | Politecnico di Milano, Italy",
+      "Piero Colonna | Delft University of Technology, Netherlands"
+    ],
+    "authors_structured": [
+      {
+        "name": "Carsten Trapp",
+        "affiliation": "Delft University of Technology, Netherlands",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Timon Thomaser",
+        "affiliation": "Politecnico di Milano, Italy",
+        "designation": "Author"
+      },
+      {
+        "name": "Piero Colonna",
+        "affiliation": "Delft University of Technology, Netherlands",
+        "designation": "Author"
+      }
+    ],
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "sortable_time": "2013-11-07_14:42:00_15:04:00",
+    "affiliation_source": "aiche_2013_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2013/meetingapi.cgi/Paper/338950"
+  }
+]

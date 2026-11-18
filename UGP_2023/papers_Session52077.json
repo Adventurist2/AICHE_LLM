@@ -1,0 +1,379 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665768",
+    "paper_endpoint": "Paper/665768",
+    "paper_id": "665768",
+    "topic": "Hierarchical Bayesian Optimization of Gray-Box Models",
+    "title": "Hierarchical Bayesian Optimization of Gray-Box Models",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52077",
+    "session_title": "Data-driven and hybrid modeling for decision making I",
+    "session_number": "327",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "In chemical engineering, computer models based on physicochemical knowledge are frequently used to predict behavior in areas where data is unavailable. However, if the underlying model structure is misspecified, the predictions may differ significantly from reality. To address this issue, statisticians Kennedy and O'Hagan developed a Bayesian framework for model calibration that utilizes an additive semi-parametric (i.e., gray-box) structure [1] . In this approach, the unknown model is the sum of a misspecified computer model and a nonparametric bias term that corrects for systematic discrepancy between the data and the model. Furthermore, the nonparametric bias term follows a Gaussian process (GP) prior, and its posterior is inferred jointly with the unknown parameters of the computer model. While technically well-defined in Bayesian inference, joint estimation generally results in an unidentifiable model, thereby fragmenting meaningful uncertainty quantification [2,3] . Although identifiable frameworks have been developed [3,4] , this issue is often overlooked by practitioners. Additionally, there is a gap in using identifiable gray-box models for applications such as adaptive design of experiments. Recently, Bayesian optimization (BO) has emerged as an adaptive sampling strategy for optimizing black-box functions [5] . In BO, the unknown objective function is approximated using a GP surrogate model, which enables the construction of an inexpensive acquisition function. The acquisition function samples the design space with the fitted GP by balancing the tradeoff between exploration (sampling where uncertainty is high) and exploitation (sampling where the objective mean is high). The expected improvement acquisition function [6] is commonly used due to its ease of implementation [7] . In this work, we demonstrate how to perform BO of identifiable gray-box models to enable adaptive design of experiments under uncertainty. Using the identifiable model calibration framework introduced by Wong et al. [3] , we first estimate the misspecified model parameters using frequentist methods to construct the mean of the GP. We then use a hierarchical adaptation of the expected improvement acquisition function [8] to recommend the most informative experiments, while incorporating prior beliefs on the bias term. Numerical experiments show that this approach improves upon BO with ordinary kriging models [9] for a reaction engineering case study. [1] Kennedy MC, O'Hagan A. Bayesian calibration of computer models. Journal of the Royal Statistical Society Series B: Statistical Methodology. 2001;63(3):425-64. [2] Brynjarsdóttir J, OʼHagan A. Learning About Physical Parameters: The Importance of Model Discrepancy. Inverse Problems. 2014;30(11):114007. [3] Wong RKW, Storlie CB, Lee TCM. A Frequentist Approach to Computer Model Calibration. Journal of the Royal Statistical Society Series B: Statistical Methodology. 2017;79(2):635-48. [4] Tuo R, Jeff Wu CF. A Theoretical Framework for Calibration in Computer Models: Parameterization, Estimation and Convergence Properties. SIAM/ASA Journal on Uncertainty Quantification. 2016;4(1):767-95. [5] Greenhill S, Rana S, Gupta S, Vellanki P, Venkatesh S. Bayesian Optimization for Adaptive Experimental Design: A Review. IEEE Access. 2020;8:13937-48. [6] Jones DR, Schonlau M, Welch WJ. Efficient Global Optimization of Expensive Black-Box Functions. Journal of Global Optimization. 1998;13(4):455–92. [7] Wang K, Dowling AW. Bayesian Optimization for Chemical Products and Functional Materials. Current Opinion in Chemical Engineering. 2022;36:100728. [8] Chen Z, Mak S, Wu CFJ. A Hierarchical Expected Improvement Method for Bayesian Optimization. arXiv:191107285. 2022. [9] Olea RA. Geostatistics for Engineers and Earth Scientists. Springer Science & Business Media; 2012.",
+    "presenting_author": "Kyla Jones | University of Notre Dame, IN",
+    "authors": [
+      "Kyla Jones | University of Notre Dame, IN",
+      "Ke Wang | University of Notre Dame, IN",
+      "Alexander Dowling | University of Notre Dame, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kyla Jones",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ke Wang",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Alexander Dowling",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "327a",
+    "sortable_time": "2023-11-07_08:00:00_08:21:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665768"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666960",
+    "paper_endpoint": "Paper/666960",
+    "paper_id": "666960",
+    "topic": "Hybrid Modeling with Phase Contrast Microscopy Images for the Design of Mesenchymal Stem Cell Cultivation Processes",
+    "title": "Hybrid Modeling with Phase Contrast Microscopy Images for the Design of Mesenchymal Stem Cell Cultivation Processes",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52077",
+    "session_title": "Data-driven and hybrid modeling for decision making I",
+    "session_number": "327",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Mesenchymal stem cells (MSCs) are promising cell source for regenerative medicines due to their therapeutic properties. In anticipation of the demand growth of MSCs, quality manufacturing by process design is required to produce clinical-grade cells at industrial scale [1]. In static cell culture, the spatial distribution of seeded cells affects their growth due to contact inhibition. In fact, different initial cell distributions were investigated and the work showed that uneven distributions significantly slowed down cell growth, especially towards the end of cultivation [2]. Recently, our group developed a kinetic model for MSC cultivation processes to incorporate system dynamics and variabilities including contact inhibition [3]. However, the way of predicting the effects of initial spatial distribution of MSCs on their subsequent growth is yet to be presented. In order to improve our previous model, this work presents an integration of both mechanistic and data-driven modeling approaches for designing MSC cultivation processes considering initial cell distribution using phase contrast microscopy images. The hybrid model was built in three steps: (i) First, three initial distribution cases were experimentally investigated to compare their effects on the resulting growth dynamics. (ii) Second, the spatial distribution was quantified by phase contrast microscopy images to define the standard deviation of the cell number fraction for the 2D cultivation. (iii) Third, a new parameter was integrated with our previous mechanistic model [3] by formulating a novel growth inhibition term for the Monod equation to represent the decrease in growth rate. The developed model showed a good agreement with experimental results with sufficiently small values of the normalized root mean squared error for various variables (i.e., attached cell numbers and metabolite concentrations). The new model was then used in a dynamic simulation of MSC cultivation, which enabled the determination of appropriate time for cell harvesting based on their initial distribution. The developed hybrid model can serve as the basis for quantitative decision-making in the design of MSC cultivation processes. References [1] Lipsitz, Y. Y., Timmins, N. E. & Zandstra, P. W. Quality cell therapy manufacturing by design. Nat. Biotechnol. 34, 393–400 (2016). https://doi.org/10.1038/nbt.3525 [2] Zygourakis, K., Markenscoff, P. & Bizios, R. Proliferation of anchorage-dependent contact- inhibited cells. II: experimental results and validation of the theoretical models. Biotechnol. Bioeng. 38, 471–479 (1991). https://doi.org/10.1002/bit.260380505 [3] Hirono, K., A. Udugama, I., Hayashi, Y., Kino-oka, M. & Sugiyama, H. A Dynamic and Probabilistic Design Space Determination Method for Mesenchymal Stem Cell Cultivation Processes. Ind. Eng. Chem. Res. 61, 7009–7019 (2022). https://doi.org/10.1021/acs.iecr.2c00374",
+    "presenting_author": "Keita Hirono | The University of Tokyo, Japan",
+    "authors": [
+      "Keita Hirono | The University of Tokyo, Japan",
+      "Yusuke Hayashi | The University of Tokyo, Japan",
+      "Isuru A. Udugama | The University of Tokyo, Japan",
+      "Mohamed Rami Gaddem | The University of Tokyo, Japan",
+      "Yuto Takemoto | Nagoya University, Japan",
+      "Ryuji Kato | Nagoya University, Japan",
+      "Masahiro Kino-oka | The University of Osaka, Japan",
+      "Hirokazu Sugiyama | The University of Tokyo, Japan"
+    ],
+    "authors_structured": [
+      {
+        "name": "Keita Hirono",
+        "affiliation": "The University of Tokyo, Japan",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yusuke Hayashi",
+        "affiliation": "The University of Tokyo, Japan",
+        "designation": "Author"
+      },
+      {
+        "name": "Isuru A. Udugama",
+        "affiliation": "The University of Tokyo, Japan",
+        "designation": "Author"
+      },
+      {
+        "name": "Mohamed Rami Gaddem",
+        "affiliation": "The University of Tokyo, Japan",
+        "designation": "Author"
+      },
+      {
+        "name": "Yuto Takemoto",
+        "affiliation": "Nagoya University, Japan",
+        "designation": "Author"
+      },
+      {
+        "name": "Ryuji Kato",
+        "affiliation": "Nagoya University, Japan",
+        "designation": "Author"
+      },
+      {
+        "name": "Masahiro Kino-oka",
+        "affiliation": "The University of Osaka, Japan",
+        "designation": "Author"
+      },
+      {
+        "name": "Hirokazu Sugiyama",
+        "affiliation": "The University of Tokyo, Japan",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "327b",
+    "sortable_time": "2023-11-07_08:21:00_08:42:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666960"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666975",
+    "paper_endpoint": "Paper/666975",
+    "paper_id": "666975",
+    "topic": "Modeling and Dynamic Simulation of Cultivation in Monoclonal Antibody Production Considering Cell Metabolic Shifts",
+    "title": "Modeling and Dynamic Simulation of Cultivation in Monoclonal Antibody Production Considering Cell Metabolic Shifts",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52077",
+    "session_title": "Data-driven and hybrid modeling for decision making I",
+    "session_number": "327",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "The market for biopharmaceuticals has been rapidly growing, particularly for monoclonal antibody (mAb) drugs. Chinese hamster ovary (CHO) cells are the most frequently used host cells for mAb production processes. Cell cultivation is known to be one of the most expensive and time-consuming steps. To increase the efficiency of mAb production, developments have been made to cell cultivation, including host cell lines, control strategies, and operating modes. Also, in addition to productivity, product quality is also an important indicator. The generation of process-related impurities (e.g., host cell proteins (HCPs)) from dead cells affects product quality [1] and increases the load on downstream purification units. Therefore, considering quality earlier in the design of cultivation processes is necessary. However, cell metabolic shifts, such as from lactate production to consumption are challenging to follow with current fundamental kinetic models [2], particularly for high-performance cell lines. This is because the models usually assume constant coefficients (e.g., specific lactate production rate [mmol cell –1 h –1 ]). In this work, to overcome this challenge, hybrid modeling [3], combining data-driven and fundamental kinetic models, was used to obtain insights into cell cultivation phenomena and to develop new representative and robust models. For the data analysis and model development, experimental data using a newly developed high-performance cell line, CHO-MK cell line, were obtained from a pilot-scale research facility. The approach consists of three steps. First, variations in the online measurements (e.g., dissolved oxygen, pH) were used to gain insights into the parameters to be varied in the kinetic model. Principal components analysis followed by regression (PCR) [4] and data clustering [5] were used for the analysis of the gap between process measurements and the calculated metabolite profiles using the available kinetic models. The analysis was used to identify the key factors correlated with changes in cell phases and metabolic behavior. The clustering and PCR enabled the identification of the important factors for differentiating cell phases, as well as the resolution of the gap observed between experimental and calculation results from previous kinetic models. Second, for each identified phase, dynamic models were developed to follow cell metabolic shifts and replace the constants used in the kinetic model. This study focused on the specific lactate production/consumption rate in particular as a modeling target. Third, the new dynamic parameter models were integrated into the overall mass balance equations in the fundamental kinetic models. The new models were then used to evaluate the impacts of changes in operating strategies on production efficiency and product quality represented by the final concentrations of mAb and HCP, respectively. The modeling results showed that the approach enabled highly accurate modeling and simultaneous simulation of nine factors, including products and impurities associated with the newly developed cell line. Process evaluation results showed that, for the explored range, a compromise must be made to maintain the productivity and quality targets. The developed model provides more precise time and cost estimations for process design purposes and can be used for early screening of process alternatives. The evaluation results thus contribute to the robust design of integrated processes, including downstream purification units. The model would also help creating better control models and strategies for process operation. [1] Goey, C. H., Alhuthali, S., & Kontoravdi, C. (2018). Host Cell Protein Removal from Biopharmaceutical Preparations: Towards the Implementation of Quality by Design. Biotechnology Advances, 36 (4), 1223–1237. https://doi.org/10.1016/j.biotechadv.2018.03.021 [2] Badr, S., Okamura, K., Takahashi, N., Ubbenjans, V., Shirahata, H., & Sugiyama, H. (2021). Integrated Design of Biopharmaceutical Manufacturing Processes: Operation Modes and Process Configurations for Monoclonal Antibody Production. Computers & Chemical Engineering, 153, 107422. https://doi.org/10.1016/j.compchemeng.2021.107422 [3] Narayanan, H., Sokolov, M., & Morbidelli, M. (2019). A New Generation of Predictive Models: The Added Value of Hybrid Models for Manufacturing Processes of Therapeutic Proteins. Biotechnology and Bioengineering, 116(10), 2540–2549. https://doi.org/10.1002/bit.27097 [4] Okamura, K., Badr, S., Murakami, S., Sugiyama, H. (2022) Hybrid Modeling of CHO Cell Cultivation in Monoclonal Antibody Production with an Impurity Generation Module. Industrial & Engineering Chemistry Research, 61, 14898–14909. https://doi.org/10.1021/acs.iecr.2c00736 [5] Badr, S., Oishi, K., Okamura, K., Murakami, S., Sugiyama, H. Hybrid modelling and data-driven parameterization of monoclonal antibody cultivation processes: Shifts in cell metabolic behavior. Computer Aided Chemical Engineering, accepted",
+    "presenting_author": "Kozue Okamura | The University of Tokyo, Japan",
+    "authors": [
+      "Kozue Okamura | The University of Tokyo, Japan",
+      "Sara Badr | The University of Tokyo, Japan",
+      "Akira Yamada | The University of Tokyo, Japan",
+      "Hirokazu Sugiyama | The University of Tokyo, Japan"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kozue Okamura",
+        "affiliation": "The University of Tokyo, Japan",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sara Badr",
+        "affiliation": "The University of Tokyo, Japan",
+        "designation": "Author"
+      },
+      {
+        "name": "Akira Yamada",
+        "affiliation": "The University of Tokyo, Japan",
+        "designation": "Author"
+      },
+      {
+        "name": "Hirokazu Sugiyama",
+        "affiliation": "The University of Tokyo, Japan",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "327c",
+    "sortable_time": "2023-11-07_08:42:00_09:03:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666975"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670084",
+    "paper_endpoint": "Paper/670084",
+    "paper_id": "670084",
+    "topic": "Crystalgpt: Revolutionizing Crystallization Process Prediction and Control with a Multivariate Time-Series Approach Leveraging Transformer Networks",
+    "title": "Crystalgpt: Revolutionizing Crystallization Process Prediction and Control with a Multivariate Time-Series Approach Leveraging Transformer Networks",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52077",
+    "session_title": "Data-driven and hybrid modeling for decision making I",
+    "session_number": "327",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "The past decade has seen a significant increase in the use of various machine learning (ML) techniques (e.g., deep and recurrent neural networks (DNN and RNN), and long-short-term-memory (LSTM) networks) for creating surrogate models for different chemical systems [1,2]. Although these models show good performance, they face two key challenges: (a) Accurately predicting long-term dependencies often encountered in systems with slow and complex dynamics, and (b) the system-specific nature of these models that makes it difficult to directly implement or repurpose a model for one system to another [3,4]. This has major implications for plant-wide operations in process control or monitoring, as the bespoke nature of different surrogate models makes them incompatible with each other due to different calibration or model architecture. Thus, to resolve this issue, a unified surrogate model that leverages the ‘transfer learning’ ability to achieve good predictive performance across a variety of systems is required. Very recently, transformer-based large-language models (LLMs) and vision-transformers have paved the way for groundbreaking applications like ChatGPT, CodeGPT, Dall-E, and others, providing a unified model within the natural language processing (NLP) and computer vision space [5,6]. This revolution is driven by two key factors: positional encoding (PE), and multiheaded attention mechanism (MAM), which together enhance transfer learning capabilities [7]. Specifically, PE and the MAM architecture enableeasy parallelization of model training on large datasets, and MAH learns the underlying syntax, grammar, and context in language [8]. Unfortunately, despite their remarkable predictive and transfer learning capabilities, the application of transformers to time-series prediction of complex chemical systems has not yet been realized in practice. To address this knowledge gap, we developed a first-of-a-kind time-series transformer (TST) for accurate time-series prediction of complex multivariate chemical systems. More specifically, the TST model consists of N encoder blocks and M decoder blocks, each with n attention heads and an internal dimension of . We considered a non-trivial case study involving batch crystallization of various sugars and protein systems prevalent in the food and pharmaceutical industries. Training data was generated by simulating 20+ such crystal systems with varying nucleation (B) and growth rates (G) using a population-balance model (PBM) [9]. This large corpus of time-series data was used to train a TST model (named ‘CrystalGPT’) and tested on an unseen crystallization system in two ways: with and without finetuning. Visualization of the attention scores indicates that TST learns the underlying relationship between different states, mimicking the coupling of system states observed in dynamic models (i.e., mass and energy balance equations, growth kinetics, etc.). Thus, CrystalGPT can provide baseline predictions for an unseen crystal system without fine-tuning [9]. Additionally, fine-tuning CrystalGPT with a small amount of data from the unseen system boosts its predictive capabilities, resulting in a normalized mean-squared-error (NMSE) of and an value of 0.95+. Next, we also developed a first-of-a-kind TST-based set-point tracking model predictive controller (MPC) to further demonstrate the practical applicability of CrystalGPT for process monitoring and control applications. Also, CrystalGPT was benchmarked against existing state-of-the-art (SOTA) DNN and LSTM models, showcasing the superior transfer learning performance of transformer-based models. Finally, the current work provides a concrete foundation for developing unified surrogate models for different chemical systems (i.e., ReactorGPT, DistillationGPT, etc.) that exhibit remarkable transfer learning capabilities for direct application to chemical processes or next-level integration with first-principle models to developed TST-based hybrid models [10]. Given these exciting prospects, we are eager to see what the future holds as we continue to push the boundaries of what is possible with these ‘transformer-tive’ technologies. Literature Cited: Wu, Zhe, David Rincon, and Panagiotis D. Christofides. \"Process structure-based recurrent neural network modeling for model predictive control of nonlinear processes.\" Journal of Process Control 89 (2020): 74-84. Lima, Fernando Arrais RD, et al. \"Development of a recurrent neural networks-based NMPC for controlling the concentration of a crystallization process.\" Digital Chemical Engineering 5 (2022): 100052. Shah, Parth, Hyun-Kyu Choi, and Joseph Sang-Il Kwon. \"Achieving Optimal Paper Properties: A Layered Multiscale kMC and LSTM-ANN-Based Control Approach for Kraft Pulping.\" Processes 11.3 (2023): 809. Bhadriraju, Bhavana, et al. \"Operable adaptive sparse identification of systems: Application to chemical processes.\" AIChE Journal 66.11 (2020): e16980. Brown, Tom, et al. \"Language models are few-shot learners.\" Advances in neural information processing systems 33 (2020): 1877-1901. Dosovitskiy, Alexey, et al. \"An image is worth 16x16 words: Transformers for image recognition at scale.\" arXiv preprint arXiv:2010.11929 (2020). Devlin, Jacob, et al. \"Bert: Pre-training of deep bidirectional transformers for language understanding.\" arXiv preprint arXiv:1810.04805 (2018). Vaswani, Ashish, et al. \"Attention is all you need.\" Advances in neural information processing systems 30 (2017). Kit, Yuheng, and Musa Mohd Mokji. \"Sentiment Analysis Using Pre-Trained Language Model With No Fine-Tuning and Less Resource.\" IEEE Access 10 (2022): 107056-107065. Lin, Fan, et al. \"Kernel-based Hybrid Interpretable Transformer for High-frequency Stock Movement Prediction.\" 2022 IEEE International Conference on Data Mining (ICDM). IEEE, 2022.",
+    "presenting_author": "Joseph Kwon | Texas A&M University, College Station, TX",
+    "authors": [
+      "Niranjan Sitapure | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Niranjan Sitapure",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "327d",
+    "sortable_time": "2023-11-07_09:03:00_09:24:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670084"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/661855",
+    "paper_endpoint": "Paper/661855",
+    "paper_id": "661855",
+    "topic": "Uncertainty Analysis of Hybrid Modeling: A Case Study of Partial Least Squares and Population Balance Model in Continuous Twin-Screw Wet Granulation",
+    "title": "Uncertainty Analysis of Hybrid Modeling: A Case Study of Partial Least Squares and Population Balance Model in Continuous Twin-Screw Wet Granulation",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52077",
+    "session_title": "Data-driven and hybrid modeling for decision making I",
+    "session_number": "327",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "A hybrid modeling approach combining a mechanistic model and a data-driven model has been recognized as a powerful tool along with the interest in Industry 4.0 [1]. Hybrid models retain the merits of both mechanistic and data-driven models by compensating for the demerits of each technique. Different types of hybrid models have been applied to different processes, e.g., parallel hybrid modeling for water systems [2] and serial hybrid modeling for pharmaceutical manufacturing [3]. Whereas the hybrid modeling approach is an appropriate tool for industrial applications, uncertainty analysis should be performed simultaneously to consider variability and different sources of uncertainty. A large number of researchers have worked on analyses of different types of uncertainties for different applications, as summarized in the review paper [4]. However, uncertainty analysis of hybrid models has yet to be standardized because both mechanistic and data-driven models can possess uncertainty in addition to original measurement data uncertainty. This study aims to develop a methodology of uncertainty analysis for hybrid models. We have established a hybrid model of partial least square (PLS) regression and a population balance model (PBM) for simulating granule size distribution in continuous twin-screw wet granulation (TSWG) [5]. This hybrid model is a serial model, where the outputs of PLS are used as the inputs of PBM and was used as the case study of uncertainty analysis. A two-step Markov chain Monte Carlo (MCMC) simulation was performed to obtain probabilistic density functions (PDFs) of model parameters. First, MCMC was applied to one-dimensional compartmental PBM [6] to quantify model uncertainty from experimental data. The Gaussian log-likelihood function was defined, where standard deviations of experimental data were calculated from granule size distributions of multiple samples characterized. Subsequently, mean values and standard deviations of PBM parameters were calculated from PDFs generated by the first MCMC. MCMC of the PBM was performed for all the compartments considered in the TSWG with ten different formulations and liquid-to-solid (L/S) ratios. Second, MCMC was used for PLS models to simulate model uncertainty of the PBM parameters. PLS models can calculate PBM parameters based on the values of material properties as well as the L/S ratio as inputs [5]. The second MCMC considers uncertainty quantified by the first MCMC in the Gaussian log-likelihood function. Finally, PDFs were generated for PLS coefficients of material properties and L/S ratio. The first MCMC results revealed the dependencies of PBM parameters. In the first compartment, which is named as the wetting zone, two PBM parameters related to aggregations were inversely proportional. An aggregation kernel and a positive breakage constant were slightly correlated in the kneading zones. In some cases, PDFs of PBM parameters have bimodality because of heterogeneous liquid distribution or missing phenomena captured in the PBM. In the current PBM, PBM kernels of aggregation and breakage were described only by size and defined based on experimental investigation with identifiability analysis [6]. 1D-PBM has a limitation in that it cannot capture certain phenomena or consider other properties than size. Hence, it is necessary to develop multi-dimensional PBMs, e.g., 2D-PBM computing size and porosity [7], for understanding heterogeneity and capturing missing phenomena. After the execution of the second MCMC, the developed uncertainty-conscious hybrid model was validated by applying it to new formulations with different L/S ratios. The expected ranges of granule size distributions were calculated by Monte Carlo simulation (i.e. uncertainty propagation) of PLS coefficients following the defined PDFs and checked if experimental data were within the expected ranges. The proposed method can reflect measurement errors and uncertainty of different types of models simultaneously. Different case studies are expected to prove the value and the applicability of the proposed method. [1] Joel Sansana, Mark N. Joswiak, Ivan Castillo, Zhenyu Wang, Ricardo Rendall, Leo H. Chiang, Marco S. Reis. Recent trends on hybrid modeling for Industry 4.0, Computers & Chemical Engineering, 151, 107365 (2021). [2] Ward Quaghebeur, Elena Torfs, Bernard De Baets, Ingmar Nopens. Hybrid differential equations: Integrating mechanistic and data-driven techniques for modelling of water systems, Water Research, 213, 118166 (2022). [3] Yingjie Chen, Marianthi Ierapetritou. A framework of hybrid model development with identification of plant-model mismatch, AIChE Journal, 66(10), e16996 (2020). [4] Can Li, Ignacio E. Grossmann. A review of stochastic programming methods for optimization of process systems under uncertainty, Frontiers in Chemical Engineering, 2, 622241 (2021). [5] Kensaku Matsunami, Ana Alejandra Barrera Jiménez, Michiel Peeters, Daan Van Hauwermeiren, Thomas De Beer, Ingmar Nopens. In-depth analysis of the impacts of material properties on size distributions in continuous twin-screw wet granulation to construct a generic 1D population balance model, 2022 AIChE Annual Meeting, 641b (2022). [6] Ana Alejandra Barrera Jiménez, Daan Van Hauwermeiren, Michiel Peeters, Thomas De Beer, Ingmar Nopens. Improvement of a 1D population balance model for twin-screw wet granulation by using identifiability analysis, Pharmaceutics, 13(5), 692 (2021). [7] Ana Alejandra Barrera Jiménez, Kensaku Matsunami, Michael Ghijs, Daan Van Hauwermeiren, Michiel Peeters, Fanny Stauffer, Thomas De Beer, Ingmar Nopens. Model development and calibration of two-dimensional population balance model for twin-screw wet granulation based on particle size distribution and porosity, Powder Technology, 419, 118334 (2023).",
+    "presenting_author": "Kensaku Matsunami | Ghent University, Belgium",
+    "authors": [
+      "Kensaku Matsunami | Ghent University, Belgium",
+      "Ana Alejandra Barrera Jimenez | Ghent University, Belgium",
+      "Thomas De Beer | Ghent University, Belgium",
+      "Ingmar Nopens | Ghent University, Belgium"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kensaku Matsunami",
+        "affiliation": "Ghent University, Belgium",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ana Alejandra Barrera Jimenez",
+        "affiliation": "Ghent University, Belgium",
+        "designation": "Author"
+      },
+      {
+        "name": "Thomas De Beer",
+        "affiliation": "Ghent University, Belgium",
+        "designation": "Author"
+      },
+      {
+        "name": "Ingmar Nopens",
+        "affiliation": "Ghent University, Belgium",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "327e",
+    "sortable_time": "2023-11-07_09:24:00_09:45:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/661855"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667459",
+    "paper_endpoint": "Paper/667459",
+    "paper_id": "667459",
+    "topic": "Physical and Data-Driven Modelling of in Vitro Transcription Process",
+    "title": "Physical and Data-Driven Modelling of in Vitro Transcription Process",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52077",
+    "session_title": "Data-driven and hybrid modeling for decision making I",
+    "session_number": "327",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Abstract In Vitro transcription (IVT) process is the key part of the RNA production process [1]. Accurately modelling the general IVT process can significantly contribute to developing soft sensors and digital twins for automatically manufacturing RNA products [1, 2]. In this work, we utilised the up-to-date process knowledge and experimental data to build more detailed mechanistic models for predicting the RNA yield and its critical quality attributes (CQA) [1, 2, 3]. Meanwhile, the novel Gaussian process (GP) and global sensitivity analysis (GSA) [4] based machine learning approach was employed to construct fast-solving data-driven models, based on the high-quality data from the built physical models and pure experimentation. In future, the constructed mechanistic and data-driven models will be used to guide process automation and quality by design (QbD) [5] for the RNA manufacturing. Keywords : Gaussian Process, RNA manufacturing, In Vitro transcription, Global Sensitivity Analysis, Soft Sensor, Digital Twin [1] Berg D van de, Kis Z, et al. (2021) Quality by Design modelling to support rapid RNA vaccine production against emerging infectious diseases. NPJ Vaccines. 6, 1–10. [2] Kis Z, Kontoravdi C, et al. (2020) Rapid development and deployment of high volume vaccines for pandemic response. J. Adv. Manuf. Process. 2, e10060. [3] Kis Z, Kontoravdi C, et al. (2021) Resources, Production Scales and Time Required for Producing RNA Vaccines for the Global Pandemic Demand. Vaccines. 9, 1–14. [4] Yeardley AS, Bellinghausen S, et al. (2021) Efficient global sensitivity-based model calibration of a high-shear wet granulation process. Chem. Eng. Sci. 238, 116569. [5] Daniel, S., Kis, Z., Kontoravdi, C., et al. (2022). Quality by Design for enabling RNA platform production processes. Trends in Biotechnology.",
+    "presenting_author": "Ioanna Kalospyrou | University of Sheffield, United Kingdom",
+    "authors": [
+      "Min Tao | University of Sheffield, United Kingdom",
+      "Ioanna Kalospyrou | University of Sheffield, United Kingdom",
+      "Mahdi Ahmed | University of Sheffield, United Kingdom",
+      "Robert Milton | University of Sheffield, United Kingdom",
+      "Zoltán Kis | University of Sheffield, United Kingdom",
+      "Joan Cordiner | University of Sheffield, United Kingdom",
+      "Solomon Brown | University of Sheffield, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Min Tao",
+        "affiliation": "University of Sheffield, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioanna Kalospyrou",
+        "affiliation": "University of Sheffield, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mahdi Ahmed",
+        "affiliation": "University of Sheffield, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Robert Milton",
+        "affiliation": "University of Sheffield, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Zoltán Kis",
+        "affiliation": "University of Sheffield, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Joan Cordiner",
+        "affiliation": "University of Sheffield, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Solomon Brown",
+        "affiliation": "University of Sheffield, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "327f",
+    "sortable_time": "2023-11-07_09:45:00_10:06:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667459"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669632",
+    "paper_endpoint": "Paper/669632",
+    "paper_id": "669632",
+    "topic": "Early-Stage Process Design and Sustainability: The Role of Machine Learning in Predicting Environmental Impacts",
+    "title": "Early-Stage Process Design and Sustainability: The Role of Machine Learning in Predicting Environmental Impacts",
+    "date_time": "2023-11-07_08:00:00_10:30:00",
+    "session_id": "52077",
+    "session_title": "Data-driven and hybrid modeling for decision making I",
+    "session_number": "327",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Introduction Early-stage process design is critical in ensuring that products and processes are designed to be environmentally sustainable. However, assessing the environmental impacts of chemicals at this stage can be challenging, as the information available is often limited and uncertain (Papadokonstantakis et al., 2016). This situation arises because the design of the products or processes is often not fully defined, making it difficult to identify all the potential impacts (Argoti et al., 2019). Furthermore, impact assessment requires collecting and analyzing a wide range of data, including information on the properties of the chemicals, their toxicity, and their fate in the environment, among others (Finnveden et al., 2009). The data collection can be extremely complicated, particularly for new or emerging chemicals. Additionally, the impact assessment involves interdisciplinary collaborations between scientists and engineers with expertise in various fields, which further adds to the complexity of the process (Chaplin-Kramer et al., 2017). Machine learning algorithms offer a promising solution to this challenge, as they can help predict the environmental impacts of these novel chemicals with high accuracy even when limited data is available (Karka et al., 2019). Thus, by using machine learning to assess the environmental impacts of chemicals and processes at an early stage of process synthesis, researchers and industries can make informed decisions about the design of sustainable products and processes, leading to a more sustainable design (Karka et al., 2019). Methodology This present study focuses on using machine learning to predict the endpoint environmental impacts of chemicals, specifically regarding human health impacts, ecosystem quality, climate change, and resource utilization and presents a novel approach to cradle-to-cradle life cycle assessment where the solvent is recovered for use at the disposal-phase. The eXtreme Gradient Boosting (XGBoost) algorithm was used due to its ability to handle large datasets with many features and handle non-linear relationships between the features and the target variables. A total of 350 data points were used, with 70% being used for training, 15% for validation, and the remainder for testing. SimaPro was used to acquire the data for the target variables. The feature set comprised 200 molecular descriptors and 23 thermodynamic properties for each chemical. A stepwise feature selection criterion was used to select the top 5 features from each feature set, reducing the number of features from 223 to 10. After tuning the six most important hyperparameters for the model, the performance was evaluated on the test set using the R-squared and Root-Mean-Squared- Error (RMSE). To demonstrate the application of the model, we investigate a cradle-to-cradle LCA of Isopropanol (IPA). We use our developed model to predict the LCA for the production of IPA from cradle-to-gate. We then model the use phase by considering a distillation problem where we try to separate a binary mixture of IPA and water. At the use phase (gate-to-gate), we consider emissions due to energy demands and fugitive emissions from the distillation column. At the end-of-life phase, we recover the solvent for reuse by implementing the solvent recovery framework proposed by (Aboagye et al., 2022) giving a gate-to-cradle assessment. The total LCA for the entire process is given by Equation 1. Figure 1 shows the implementation of this approach. Results Figure 2 shows the results from the ML model for the production-phase. The model is able to generalize both the human health and global warming potential metrics, giving an R 2 value greater than 0.7, while that on resource utilization has the least predictive performance with an R 2 value of 0.318 and a RMSE of 30. We expect to increase the size of this data set so that an accurate prediction can be made for ecosystem and resource utilization impact metrics. References Aboagye, E.A., Chea, J.D., Lehr, A.L., Stengel, J.P., Heider, K.L., Savelski, M.J., Slater, C.S., Yenkie, K.M., 2022. Systematic Design of Solvent Recovery Pathways: Integrating Economics and Environmental Metrics. ACS Sustainable Chem. Eng. 10, 10879–10887. https://doi.org/10.1021/acssuschemeng.2c02497 Argoti, A., Orjuela, A., Narváez, P.C., 2019. Challenges and opportunities in assessing sustainability during chemical process design. Current Opinion in Chemical Engineering 26, 96–103. https://doi.org/10.1016/j.coche.2019.09.003 Chaplin-Kramer, R., Sim, S., Hamel, P., Bryant, B., Noe, R., Mueller, C., Rigarlsford, G., Kulak, M., Kowal, V., Sharp, R., Clavreul, J., Price, E., Polasky, S., Ruckelshaus, M., Daily, G., 2017. Life cycle assessment needs predictive spatial modelling for biodiversity and ecosystem services. Nat Commun 8, 15065. https://doi.org/10.1038/ncomms15065 Finnveden, G., Hauschild, M.Z., Ekvall, T., Guinée, J., Heijungs, R., Hellweg, S., Koehler, A., Pennington, D., Suh, S., 2009. Recent developments in Life Cycle Assessment. Journal of Environmental Management 91, 1–21. https://doi.org/10.1016/j.jenvman.2009.06.018 Karka, P., Papadokonstantakis, S., Kokossis, A., 2019. Predictive LCA - a systems approach to integrate LCA decisions ahead of design, in: Computer Aided Chemical Engineering. Elsevier, pp. 97–102. https://doi.org/10.1016/B978-0-12-818634-3.50017-5 Papadokonstantakis, S., Karka, P., Kikuchi, Y., Kokossis, A., 2016. Challenges for Model-Based Life Cycle Inventories and Impact Assessment in Early to Basic Process Design Stages, in: Sustainability in the Design, Synthesis and Analysis of Chemical Engineering Processes. Elsevier, pp. 295–326. https://doi.org/10.1016/B978-0-12-802032-6.00013-X",
+    "presenting_author": "Emmanuel Aboagye | Rowan University, Glassboro, NJ",
+    "authors": [
+      "Emmanuel Aboagye | Rowan University, Glassboro, NJ",
+      "Austin Lehr | Rowan University, Glassboro, NJ",
+      "Elizabeth Dellorco | Rowan University, Glassboro, NJ",
+      "Ethan Shumaker | Rowan University, Glassboro, NJ",
+      "Liela Clarke | Rowan University, Glassboro, NJ",
+      "Brandon Jarrett | Rowan University, Glassboro, NJ",
+      "Robert Hesketh | Rowan University, Glassboro, NJ",
+      "Kirti Yenkie | Rowan University, Glassboro, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Emmanuel Aboagye",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Austin Lehr",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Elizabeth Dellorco",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Ethan Shumaker",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Liela Clarke",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Brandon Jarrett",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Robert Hesketh",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Kirti Yenkie",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "60j",
+    "sortable_time": "2023-11-07_10:06:00_10:27:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669632"
+  }
+]

@@ -1,0 +1,390 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/621585",
+    "paper_endpoint": "Paper/621585",
+    "paper_id": "621585",
+    "topic": "Multistage Nonlinear Model Predictive Control of the Hydraulic Fracturing Process",
+    "title": "Multistage Nonlinear Model Predictive Control of the Hydraulic Fracturing Process",
+    "date_time": "2021-11-11_12:30:00_15:00:00",
+    "session_id": "46669",
+    "session_title": "Modeling, Estimation and Control of Industrial Processes",
+    "session_number": "610",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Hydraulic fracturing process is a well stimulation technique that has been playing an important role in the worldwide energy supply for several decades. The process begins with a perforation stage to create initial paths along a drilled well and then the fracturing fluid, composed of water, proppant, and chemical additives is injected into the well at a very high pressure to crack the rock formation underground. The pumped fluid continues to extend the fracture path and the substances are transported along the fracture as it propagates forward. After the pumping stage is completed, the proppant is trapped inside the fracture and keeps the induced channel open as the rock walls close because of the internal rock pressure. The created space provides high conductive channels that allow for the constrained natural gas or crude oil, which was once identified as inaccessible resources to flow out, increasing the well production and bringing significant economic benefits (Bartik et al., 2019). However, hazardous operating conditions of high pressure should be controlled carefully during the entire process to avoid the machine damage and the safety threat for onsite workers. In the current control strategy, the injection pressure is usually monitored on the ground level and the pump rate is adjusted manually according to the pressure measurements. Also, the spatially varying rock properties have significant effects on the process (Narasingam et al., 2018), making the process more difficult to control and sometimes even leading to undesired premature termination. In this talk, we present a dynamic model that describes the hydraulic fracturing process considering the fracture propagation, mass transport of substances (Singh Sidhu et al., 2018), changing fluid properties, drag reduction due to friction reducer (Le Brun et al., 2016), and the wellhead pressure formulation. Next, the fracturing process is simulated with this first-principle model and controlled by Nonlinear Model Predictive Controller (NMPC) to fulfill a set of endpoint requirements and operating constraints. NMPC is known for its ability to deal with the constraints and the model nonlinearity explicitly for a multiple-input-multiple-output system. In our case studies, we compare the performance between standard NMPC and multistage NMPC. Standard NMPC performs well when there is no uncertainty in the rock properties. However, its performance deteriorates when parameter and model mismatch occur and standard NMPC fails to satisfy the final requirements for fracture geometry and maximum pressure specification. On the other hand, multistage NMPC, which considers possible realizations of rock uncertainties with a scenario tree, provides robust control for the fracturing process by satisfying all constraints, no matter if the uncertainty realization is time-invariant or time-variant in the process. We also compare the difference between different robust horizons, which include the branching to different stages for multistage NMPC. Our results show that multistage NMPC is capable of handling non-homogeneous rock parameters and providing a robust, high performance control strategy for the hydraulic fracturing process. References W. Bartik, J. Currie, M. Greenstone, C. R. Knittel, The local economic and welfare consequences of hydraulic fracturing, American Economic Journal: Applied Economics 11 (4) (2019) 105–55. Narasingam, P. Siddhamshetty, J. S.-I. Kwon, Handling spatial heterogeneity in reservoir parameters using proper orthogonal decomposition-based ensemble Kalman filter for model-based feedback control of hydraulic fracturing, Industrial & Engineering Chemistry Research 57 (11) (2018). Singh Sidhu, P. Siddhamshetty, J. S. Kwon, Approximate dynamic programming-based control of proppant concentration in hydraulic fracturing, Mathematics 6 (8) (2018). Le Brun, I. Zadrazil, L. Norman, A. Bismarck, C. N. Markides, On the drag reduction effect and shear stability of improved acrylamide copolymers for enhanced hydraulic fracturing, Chemical Engineering Science 146 (2016) 135 – 143.",
+    "presenting_author": "Kuan-Han Lin | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Kuan-Han Lin | Carnegie Mellon University, Pittsburgh, PA",
+      "John P. Eason | Exenity LLC, Pittsburgh, PA",
+      "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kuan-Han Lin",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "John P. Eason",
+        "affiliation": "Exenity LLC, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Lorenz Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "610a",
+    "sortable_time": "2021-11-11_12:30:00_12:49:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/621585"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/630254",
+    "paper_endpoint": "Paper/630254",
+    "paper_id": "630254",
+    "topic": "Development of Koopman-Based Model Predictive Control with Multimodel Approach to Handle Local Dynamics of Chemical Processes in Presence of Feed Fluctuation",
+    "title": "Development of Koopman-Based Model Predictive Control with Multimodel Approach to Handle Local Dynamics of Chemical Processes in Presence of Feed Fluctuation",
+    "date_time": "2021-11-11_12:30:00_15:00:00",
+    "session_id": "46669",
+    "session_title": "Modeling, Estimation and Control of Industrial Processes",
+    "session_number": "610",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Koopman operator is an infinite-dimensional linear operator proposed by Koopman and Neumann to describe the nonlinear system dynamics using an alternative operator theoretic perspective [1,2]. Herein, the original dynamics is lifted to a higher-dimensional observable (function of original state) space where an infinite-dimensional linear operator (i.e., Koopman operator) governs the evolution of observable functions. However, due to its infinite-dimensional characteristic, the direct implementation of the Koopman operator to practical systems has been avoided. Hence, data-driven algorithms have been suggested as alternatives to derive a finite-dimensional approximation of the Koopman operator [3,4]. Recently, owing to the possibility of exploiting the established linear control methods, the Koopman-based model identification methods have gained extensive attention in the realm of model-based control. Hence, the Koopman-based model predictive control (KMPC) schemes have been developed [5,6] and successfully implemented in the chemical process control systems [7,8]. Although the Koopman-based model generates a reliable global linear predictor of a nonlinear system, it is challenging to accurately capture the local dynamics of the process, which has highly complex nonlinear dynamics with a broad operation range by only a single Koopman-based model [9]. Hence, in this study, a KMPC framework with the multimodel approach was developed to manage the local dynamics of the complex chemical processes. First, time-series data collected from the process operation is partitioned into several clusters. Subsequently, a local linear predictor for each cluster is derived by the Koopman-based model identification method. A local Koopman-based model predictive controller is then designed for each cluster based on the previously derived (Koopman-based) local models. Thereafter, the constructed local controllers are implemented in the closed-loop operation with a model switching framework that selects and employs one local controller associated with the cluster exhibiting the process dynamic behavior most similar to the current process state. To validate the efficacy of the KMPC with a multimodel approach, a batch digester where the pulp products are produced from wood chips via delignification reaction was adopted as a case study to control the multiscale variables such as Kappa number and cell wall thickness (CWT) of fibers inside the wood chips. In the closed-loop operation, a high-fidelity multiscale model developed in [10,11] was utilized as a virtual batch pulping process in the presence of feed fluctuation. During the operation, the designed KMPC system with a multimodel approach accurately predicted the local behavior of the pulping process and successfully allowed the controlled variables to reach the set-point value, whereas the KMPC system with a single Koopman-based model could not accurately achieve the desired values. REFERENCES [1] Koopman, B. O. (1931). Hamiltonian systems and transformation in Hilbert space. Proceedings of the national academy of sciences of the united states of America , 17 (5), 315. [2] Koopman, B. O., & Neumann, J. V. (1932). Dynamical systems of continuous spectra. Proceedings of the National Academy of Sciences of the United States of America , 18 (3), 255. [3] Williams, M. O., Kevrekidis, I. G., & Rowley, C. W. (2015). A data–driven approximation of the koopman operator: Extending dynamic mode decomposition. Journal of Nonlinear Science , 25 (6), 1307-1346. [4] Budišić, M., Mohr, R., & Mezić, I. (2012). Applied koopmanism. Chaos: An Interdisciplinary Journal of Nonlinear Science , 22 (4), 047510. [5] Korda, M., & Mezić, I. (2018). Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control. Automatica , 93 , 149-160. [5] Choi, H. K., & Kwon, J. S. I. (2019). Multiscale modeling and control of Kappa number and porosity in a batch‐type pulp digester. AIChE Journal , 65 (6), e16589. [6] Narasingam, A., & Kwon, J. S. I. (2019). Koopman Lyapunov‐based model predictive control of nonlinear chemical process systems. AIChE Journal , 65 (11), e16743. [7] Narasingam, A., & Kwon, J. S. I. (2020). Application of Koopman operator for model-based control of fracture propagation and proppant transport in hydraulic fracturing operation. Journal of Process Control , 91 , 25-36. [8] Sootla, A., Mauroy, A., & Ernst, D. (2018). Optimal control formulation of pulse-based control using Koopman operator. Automatica , 91 , 217-224. [9] Bangi, M. S. F., Narasingam, A., Siddhamshetty, P., & Kwon, J. S. I. (2019). Enlarging the domain of attraction of the local dynamic mode decomposition with control technique: Application to hydraulic fracturing. Industrial & Engineering Chemistry Research , 58 (14), 5588-5601. [10] Choi, H. K., & Kwon, J. S. I. (2019). Modeling and control of cell wall thickness in batch delignification. Computers & Chemical Engineering , 128 , 512-523. [11] Choi, H. K., & Kwon, J. S. I. (2020). Multiscale modeling and multiobjective control of wood fiber morphology in batch pulp digester. AIChE Journal , 66 (7), e16972.",
+    "presenting_author": "Sang Hwan Son | Texas A&M University, College Station, TX",
+    "authors": [
+      "Sang Hwan Son | Texas A&M University, College Station, TX",
+      "Hyun-Kyu Choi | Texas A&M University, College Station, TX",
+      "Jiyoung Moon | Inha University, Incheon, South Korea",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sang Hwan Son",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Hyun-Kyu Choi",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Jiyoung Moon",
+        "affiliation": "Inha University, Incheon, South Korea",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "610b",
+    "sortable_time": "2021-11-11_12:49:00_13:08:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/630254"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632243",
+    "paper_endpoint": "Paper/632243",
+    "paper_id": "632243",
+    "topic": "Distributed State Estimation from Delayed Measurements",
+    "title": "Distributed State Estimation from Delayed Measurements",
+    "date_time": "2021-11-11_12:30:00_15:00:00",
+    "session_id": "46669",
+    "session_title": "Modeling, Estimation and Control of Industrial Processes",
+    "session_number": "610",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Modern chemical plants often consist of highly integrated subsystems with strong material and energy interactions. In recent years, the international competition for the production of higher-quality products at lower costs has made industries pay increased attention to product quality monitoring and control [1, 2]. However, online measurements of product quality indices are often not available or available infrequently and with time delays. In such cases, frequent information on these variables can be calculated using a multirate state estimator. The combination of these measurements can improve state estimation accuracy and robustness. For large-scale plant, the distributed implementation of state estimators has been found to have several advantages [3]. Previous studies have focused on the centralized state estimation in the presence of delayed and infrequent measurements [7-9]. However, distributed state estimation in the presence of the measurement attributes has received little attention. In this work, we propose a distributed state estimation method that utilizes sampled state augmentation approach [5, 11] to handle delays in different subsystems. A sampled state augmentation approach is use to handle the tradeoff between computational time and estimation accuracy compared to existing approaches [5]. Unscented Kalman filter [10]is chosen to test the method, as it is suitable for highly nonlinear systems. The proposed method can be extended to other nonlinear filters, such as the extended Kalman filter and moving horizon. The proposed algorithm is implemented on a process consisting of two reactors and a separator to show the improved state estimates on arrival of the delayed measurements. REFERENCES [1] Soroush, M., et al., Model-predictive safety: A new evolution in functional safety , in Smart Manufacturing . 2020, Elsevier. p. 283-321. [2] Baldea, M. and P. Daoutidis, Dynamics and nonlinear control of integrated process systems . 2012: Cambridge University Press. [3] Carli, R., et al., Distributed Kalman filtering based on consensus strategies. IEEE Journal on Selected Areas in communications, 2008. 26 (4): p. 622-633. [4] Khan, U.A. and J.M. Moura, Distributing the Kalman filter for large-scale systems. IEEE Transactions on Signal Processing, 2008. 56 (10): p. 4919-4935. [5] Gopalakrishnan, A., N.S. Kaisare, and S. Narasimhan, Incorporating delayed and infrequent measurements in Extended Kalman Filter based nonlinear state estimation. Journal of Process Control, 2011. 21 (1): p. 119-129. [6] Soroush, M., State and parameter estimations and their applications in process control. Computers & Chemical Engineering, 1998. 23 (2): p. 229-245. [7] Fatehi, A. and B. Huang, Kalman filtering approach to multi-rate information fusion in the presence of irregular sampling rate and variable measurement delay. Journal of Process Control, 2017. 53 : p. 15-25. [8] Choi, M., et al. State estimation with delayed measurements considering uncertainty of time delay . in 2009 IEEE International Conference on Robotics and Automation . 2009. IEEE. [9] Alexander, R., et al., Challenges and Opportunities on Nonlinear State Estimation of Chemical and Biochemical Processes. Processes, 2020. 8 (11): p. 1462. [10] Wan, E.A., R. Van Der Merwe, and S. Haykin, The unscented Kalman filter. Kalman filtering and neural networks, 2001. 5 (2007): p. 221-280. [11] Van Der Merwe, R., Sigma-point Kalman filters for probabilistic inference in dynamic state-space models . 2004, OGI School of Science & Engineering at OHSU.",
+    "presenting_author": "Leila Samandari Masooleh | Drexel University, Philadelphia, PA",
+    "authors": [
+      "Leila Samandari Masooleh | Drexel University, Philadelphia, PA",
+      "Jeffrey E. Arbogast | Air Liquide, Paris, France",
+      "Ulku Oktem | Near-Miss Management LLC, Philadelphia, PA",
+      "Warren Seider | University of Pennsylvania, Philadelphia, PA",
+      "Masoud Soroush | Drexel University, Philadelphia, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Leila Samandari Masooleh",
+        "affiliation": "Drexel University, Philadelphia, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jeffrey E. Arbogast",
+        "affiliation": "Air Liquide, Paris, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Ulku Oktem",
+        "affiliation": "Near-Miss Management LLC, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Warren Seider",
+        "affiliation": "University of Pennsylvania, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Masoud Soroush",
+        "affiliation": "Drexel University, Philadelphia, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "610c",
+    "sortable_time": "2021-11-11_13:08:00_13:27:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632243"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/628869",
+    "paper_endpoint": "Paper/628869",
+    "paper_id": "628869",
+    "topic": "Impact of Sensor Placement in Soil Water Estimation of Agro-Hydrological Systems: A Real-Case Study",
+    "title": "Impact of Sensor Placement in Soil Water Estimation of Agro-Hydrological Systems: A Real-Case Study",
+    "date_time": "2021-11-11_12:30:00_15:00:00",
+    "session_id": "46669",
+    "session_title": "Modeling, Estimation and Control of Industrial Processes",
+    "session_number": "610",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Freshwater scarcity is becoming a serious issue worldwide primarily due to population growth, climate change, and increasing pollution. Of the total amount of freshwater, about 70% is consumed in the agricultural activities, with the main consumer being irrigation [1]. Currently, the water-use efficiency in irrigation is estimated to be between 50% to 60% due to poor irrigation strategies [2]. In order to mitigate the freshwater supply crisis, the water-use efficiency in agriculture irrigation needs to be improved, through precision irrigation and implementing a closed-loop irrigation system [3]. One important element in implementing the closed-loop irrigation system is obtaining the soil moisture of the entire field which is required for feedback control. Since the agriculture fields usually are of large scale, installing sensors in the whole field is impractical. Soil moisture estimation techniques are required to reconstruct the full soil moisture information based on a small number of sensors. Because of the limited number of sensors, the determination of the best locations to install the sensors such that good state estimation can be obtained is an important problem. In our recent work [4], this issue has been addressed by employing the modal degree of observability based on extensive simulations. It was found that optimally placed sensors can lead to much improved soil moisture estimation performance. However, it is unclear whether the significantly improved estimation performance can still be observed in actual applications. In this work, we consider an actual agricultural field in Lethbridge, Alberta, Canada, and study the impact of sensor placement in soil water estimation. Soil moisture measurements from 36 soil moisture sensors installed at different depths were collected for one growing season. First, a three-dimensional agro-hydrological model with heterogeneous soil parameters of the research farm is developed. Then, a state estimator designed based on the extended Kalman filter (EKF) is adopted to estimate the soil water content. Subsequently, we apply the modal degree of observability to the three-dimensional system and determine where the best sensor locations. Estimation results based on different measurements are obtained and analyzed. In this presentation, we will share our findings on the impact of sensor placement in soil moisture estimation. References: [1] T. Sauer, P. Havlik, U. A. Schneider, E.Schmid, G. Kindermann, M. Obersteiner, “Agriculture and resource availability in a changing world: The role of irrigation” Water Resourc. Res.,46 (2010). [2] “Water in a changing world,” The United Nations World Water Development Report 3, (2017). [3] S. L. Shah, B. R. Bakshi, J. Liu, C. Georgakis*, B. Chachuat, R. D. Braatz, and B. R. Young. Meeting the challenge of water sustainability: the role of process systems engineering, AIChE Journal , 67:e17113, 2021. [4] S. R. Sahoo, X. Yin, and J. Liu, “Optimal sensor placement for agro-hydrological systems” AIChE Journal. vol. 65, no. 12, (2019).",
+    "presenting_author": "Erfan Orouskhani | University of Alberta, Edmonton, Canada",
+    "authors": [
+      "Erfan Orouskhani | University of Alberta, Edmonton, Canada",
+      "Soumya Sahoo | University of Alberta, Edmonton, Canada",
+      "Bernard Agyeman | University of Alberta, Edmonton, Canada",
+      "Song Bo | University of Alberta, Edmonton, Canada",
+      "Xunyuan Yin | Nanyang Technological University, Singapore",
+      "Jinfeng Liu | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Erfan Orouskhani",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Soumya Sahoo",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Bernard Agyeman",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Song Bo",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Xunyuan Yin",
+        "affiliation": "Nanyang Technological University, Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Jinfeng Liu",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "610d",
+    "sortable_time": "2021-11-11_13:27:00_13:46:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/628869"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/630197",
+    "paper_endpoint": "Paper/630197",
+    "paper_id": "630197",
+    "topic": "Mitigation of Fiber Degradation in a Pulp Digester Via Multiscale Modeling and Control of the Degree of Polymerization of Cellulose",
+    "title": "Mitigation of Fiber Degradation in a Pulp Digester Via Multiscale Modeling and Control of the Degree of Polymerization of Cellulose",
+    "date_time": "2021-11-11_12:30:00_15:00:00",
+    "session_id": "46669",
+    "session_title": "Modeling, Estimation and Control of Industrial Processes",
+    "session_number": "610",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Due to the growing interest in sustainability, pulp products have gained attention as renewable alternatives to non-renewable materials such as plastics. [1]. For instance, over the past ten years, the demand for packaging paper such as paperboard has increased by 32 %, which counterbalances the reduced production of copy paper [2]. Hence, such increasing demand for pulp products has prompted the development of an efficient control strategy to produce pulps with desired grades such as brightness and strength while minimizing the ratio of off-spec pulp products [3]. Moreover, the operating conditions of the pulping process, such as a cooking temperature and cooking liquor dosage [4], should also be considered to achieve target pulp properties. Specifically, cellulose degree of polymerization (DP), which is a cellulose chain length in pulp, has been known to play a crucial role in determining the tensile strength of end-use papers [5, 6]. Hence, it is important to understand the time-varying characteristics of DP during the process [7 - 9]. For instance, during the industrial pulping process, such as Kraft pulping, DP significantly decreases due to cellulose chain break induced by alkaline hydrolysis (i.e. fiber degradation). However, the direct measurement of DP during delignification is unavailable because of practical issues such as measurement delay and limited sensor placements [10]. Moreover, even though several efforts have been made to develop first principle models to capture macroscopic phenomena in a pulp digester, the nanoscale events could not properly be elucidated since the previously developed deterministic models are not able to describe the microscopic variables such as the cellulose chain scissions at random locations, which are governed by stochastic events. Motivated by these limitations, in this work, a multiscale model was developed to capture the multidimensional phenomena which are simultaneously taking place at different time and length scales in a pulp digester. First, the Purdue model, which is a widely used mathematical model for pulping process, and a kinetic Monte Carlo (kMC) algorithm were integrated to capture the evolution of both the Kappa number (i.e., residual lignin content in pulps) and fiber morphology such as cell wall thickness (CWT) and cellulose DP [11 - 13]. Subsequently, separate kMC events were employed in the simulation to handle the scale differences between microscopic events. Thereafter, reaction parameters were estimated, and the developed multiscale model was validated by experimental data sets including cellulose DP and lignin content. The developed model was proven to have predictive capability under varying pulping conditions (e.g., cooking time, temperature, and inlet white liquor concentration) and intensified feedstock variability (e.g., fiber-to-fiber heterogeneity and feed fluctuation). The developed model was then incorporated into the model-based controller to obtain the optimal input sequences to attain the target pulp properties such as Kappa number while mitigating fiber degradation during the pulping process. Consequently, the designed model-based feedback controller enables the pulp properties to be driven to set-point values with the minimum usage of energy and alkaline cooking liquor. References [1] Gupta, G. K., & Shukla, P. (2020). Insights into the resources generation from pulp and paper industry wastes: challenges, perspectives and innovations. Bioresource technology , 297, 122496. [2] Tiseo, I. (2021, January 27). Production volume of paper by type 2018. Retrieved March 27, 2021, from https://www.statista.com/statistics/270317/production-volume-of-paper-by-type/ [3] Onarheim, K., Santos, S., Kangas, P., & Hankalin, V. (2017). Performance and cost of CCS in the pulp and paper industry part 2: Economic feasibility of amine-based post-combustion CO2 capture. International Journal of Greenhouse Gas Control, 66, 60-75. [4] Rahman, M., Avelin, A., & Kyprianidis, K. (2020). A Review on the Modeling, Control and Diagnostics of Continuous Pulp Digesters. Processes , 8(10), 1231. [5] Joutsimo, O., Wathén, R., & Tamminen, T. (2005). Effects of fiber deformations on pulp sheet properties and fiber strength. Paperi ja puu , 87(6), 392. [6] Tatsumi, D., Ishioka, S., & Matsumoto, T. (2002). Effect of fiber concentration and axial ratio on the rheological properties of cellulose fiber suspensions . Nihon Reoroji Gakkaishi , 30(1), 27-32. [7] Krässig, H., & Kitchen, W. (1961). Factors influencing tensile properties of cellulose fibers. Journal of Polymer Science , 51(155), 123-172. [8] Testa, G., Sardella, A., Rossi, E., Bozzi, C., & Seves, A. (1994). The kinetics of cellulose fiber degradation and correlation with some tensile properties. Acta polymerica, 45(1), 47-49. [9] Gassan, J., & Bledzki, A. K. (1999). Alkali treatment of jute fibers: relationship between structure and mechanical properties. Journal of Applied Polymer Science, 71(4), 623-629. [10] Battista, O. A., Coppick, S., Howsmon, J. A., Morehead, F. F., & Sisson, W. A. (1956). Level-off degree of polymerization. Industrial & Engineering Chemistry, 48(2), 333-335. [11] Wisnewski, P. A., Doyle III, F. J., & Kayihan, F. (1997). Fundamental continuous‐pulp‐digester model for simulation and control. AIChE journal, 43(12), 3175-3192. [12] Choi, H. K., & Kwon, J. S. I. (2019). Multiscale modeling and control of Kappa number and porosity in a batch‐type pulp digester. AIChE Journal, 65(6), e16589. [13] Choi, H. K., & Kwon, J. S. I. (2020). Multiscale modeling and multiobjective control of wood fiber morphology in batch pulp digester. AIChE Journal, 66(7), e16972.",
+    "presenting_author": "Hyun-Kyu Choi | Texas A&M University, College Station, TX",
+    "authors": [
+      "Hyun-Kyu Choi | Texas A&M University, College Station, TX",
+      "Sang Hwan Son | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hyun-Kyu Choi",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sang Hwan Son",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "610e",
+    "sortable_time": "2021-11-11_13:46:00_14:05:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/630197"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/630654",
+    "paper_endpoint": "Paper/630654",
+    "paper_id": "630654",
+    "topic": "Advanced Model Predictive Control for Reducing Equipment Damage in a Supercritical Pulverized Coal Fired Power Plant during Load-Following Operation",
+    "title": "Advanced Model Predictive Control for Reducing Equipment Damage in a Supercritical Pulverized Coal Fired Power Plant during Load-Following Operation",
+    "date_time": "2021-11-11_12:30:00_15:00:00",
+    "session_id": "46669",
+    "session_title": "Modeling, Estimation and Control of Industrial Processes",
+    "session_number": "610",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Supercritical pulverized coal (SCPC) power plants are being forced to cycle their load rapidly and frequently due to the increasing penetration of intermittent renewable energy sources to the grid. Traditionally, maintaining the load and main steam temperature and pressure have been some of the key challenges of power plant control [1]. However, SCPC plants are facing increasing equipment damage – especially in high-temperature boiler components – due to rapid load changes that lead to temperature and pressure cycling and significant temperature excursions. Large temperature excursions will lead to increased thermal stresses and in turn creep damage, while repetitive pressure cycling will lead to fatigue damage. Thus, a control system that can also take equipment damage into account is desired. However, the real-time and in-situ measurement of damage in boiler components is practically impossible due to the harsh operating conditions. Furthermore, the damage is typically highly localized at the locations of stress concentration and can vary with time as a function of the operational profile. Additionally, as the boiler pressure is changed during load-following operation, the boiler can transition from supercritical to subcritical steam conditions and vice versa. During this phase transition there are considerable nonlinear changes in the steam properties and heat transfer characteristics that make control challenging. While commercial power plants are typically operated using feedback-augmented feedforward control (FBAFF), known as the coordinated control system (CCS), there are few works in the open literature that have investigated the use of model predictive control (MPC). These works have primarily considered linear MPC (LMPC) such as dynamic matrix control (DMC) [2]–[4]. However, these works do not consider transitioning between supercritical and subcritical operation, nor do they account for equipment health. Furthermore, due to the considerable changes in the steam properties and plant characteristics in SCPC plants, it is difficult for traditional LMPC using a single linear model to obtain satisfactory closed-loop performance. In previous work, a detailed dynamic model for an SCPC power plant was developed [1]. This model includes a first-principles, distributed model for all sections of the boiler, custom models of the steam turbine and feed water heaters, and detailed modeling of the balance of the plant. In this work, the model is validated using load-following data from an industrial SCPC plant. The operating data capture plant dynamics and performance characteristics over a wide load range, including transitions through the critical point in either direction. As the plant data do not satisfy mass and energy balances, a dynamic data reconciliation problem is solved. The dynamic model results compare well with a large number of measured plant variables over a long time span and when considering multiple ramp rates. The validated dynamic model is used for developing and evaluating predictive control strategies with an emphasis on reducing equipment damage during load-following operation. Due to considerable nonlinearity of the plant and equipment health models along with the spatial and temporal variability of the location of stress concentration, a highly complicated nonlinear predictive control model is required for representing the system over the entire operating range of interest. However, the resulting computational expense and nonlinearity makes it difficult to execute MPC at the desired time intervals. To address this issue, two strategies are developed. First, we note that there is considerable time-scale separation for the underlying control problems. While the load dynamics are very fast, temperature transients are much slower. Further, equipment damage occurs over a considerably slower time scale. Therefore we have developed a distributed MPC (DMPC) where multiple MPCs operate under both hierarchical and cooperative paradigms [5]. Each MPC can use a linear or nonlinear model as appropriate. The second strategy is to use a bank of linear models leading to a multi-model predictive control (MMPC) strategy [6]. The contribution of each model is computed recursively using Bayesian statistics based on the model residuals. Both the DMPC and MMPC algorithms are evaluated alone and in combination and are compared with the industry standard FBAFF-based CCS. When these algorithms are used in combination, only linear or a bank of linear models are used in the DMPC strategy. A number of load-following scenarios are evaluated to evaluate control performance under difference ramp rates and for different initial and final loads. It is observed that while DMPC and MMPC strategies lead to superior control performance compared to the CCS, there is considerable difference in their execution times. The hybrid DMPC-MMPC strategy offers a tradeoff between control performance and execution time. All MPC strategies that are evaluated in this work are found to reduce equipment damage considerably compared to the CCS. [1] P. Sarda, E. Hedrick, K. Reynolds, D. Bhattacharyya, S. E. Zitney, and B. Omell, “Development of a dynamic model and control system for load-following studies of supercritical pulverized coal power plants,” Processes , vol. 6, no. 11, Nov. 2018, doi: 10.3390/pr6110226. [2] Z.-J. Li, Z.-X. Li, W. Tan, and J.-Z. Liu, “CONSTRAINED DYNAMIC MATRIX CONTROL FOR A BOILER-TURBINE UNIT,” Proc. Fifth Int. Conf. Mach. Learn. Cybern. , pp. 665–670, Aug. 2006. [3] U. C. Moon and K. Y. Lee, “Step-response model development for dynamic matrix control of a drum-type boiler-turbine system,” IEEE Trans. Energy Convers. , vol. 24, no. 2, pp. 423–430, 2009, doi: 10.1109/TEC.2009.2015986. [4] T. Lee, E. Han, U. C. Moon, and K. Y. Lee, “Supplementary control of air-fuel ratio using dynamic matrix control for thermal power plant emission,” Energies , vol. 13, no. 1, Jan. 2020, doi: 10.3390/en13010226. [5] P. D. Christofides, R. Scattolini, D. Muñoz de la Peña, and J. Liu, “Distributed model predictive control: A tutorial review and future research directions,” Comput. Chem. Eng. , vol. 51, pp. 21–41, Apr. 2013, doi: 10.1016/j.compchemeng.2012.05.011. [6] M. Thoma, F. Allgöwer, and M. Morari, Nonlinear Model Predictive Control , vol. 384. Springer, 2009.",
+    "presenting_author": "Elijah Hedrick | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Elijah Hedrick | West Virginia University, Morgantown, WV",
+      "Katherine Reynolds | West Virginia University, Morgantown, WV",
+      "Sung Min Choi Hong | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV",
+      "Stephen Zitney | National Energy Technology Laboratory, Morgantown, WV",
+      "Benjamin P. Omell | National Energy Technology Laboratory, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Elijah Hedrick",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Katherine Reynolds",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Sung Min Choi Hong",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephen Zitney",
+        "affiliation": "National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Benjamin P. Omell",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "610f",
+    "sortable_time": "2021-11-11_14:05:00_14:24:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/630654"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632080",
+    "paper_endpoint": "Paper/632080",
+    "paper_id": "632080",
+    "topic": "Reduced-Order Modeling of CFD and FEA Simulations for Predicting the Impacts of Control Actions and Cyberattacks on Materials",
+    "title": "Reduced-Order Modeling of CFD and FEA Simulations for Predicting the Impacts of Control Actions and Cyberattacks on Materials",
+    "date_time": "2021-11-11_12:30:00_15:00:00",
+    "session_id": "46669",
+    "session_title": "Modeling, Estimation and Control of Industrial Processes",
+    "session_number": "610",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Modern chemical processes rely extensively on control to manipulate processes toward desired states. These control systems represent an interface between the virtual computing environment and the physical system (the so-called cyber-physical system [1]), and this means that control actions directly impact the physical state of a process. Understanding the behavior of this interaction is important when considering problems in safety and security; however, direct testing of a process is often not possible. Therefore, simulation methods can be used to develop an understanding of how control actions affect process equipment. A comprehensive method for representing a wide variety of equipment involves continuum mechanics methods such as computational fluid dynamics (CFD) and finite element analysis (FEA). Previous research has indicated that such simulations could be used to develop intuition of the impacts of control actions on process equipment that might not be immediately evident, and would allow for a wide variety of situations to be considered [2]. However, these methods can be computationally expensive which limits how they could be applied to study a process. Thus, reduced-order models can be derived from CFD and FEA results to adequately represent system dynamics and allow for a wide variety of test cases to be studied offline. Motivated by this, this work initially considers a coupled CFD/FEA simulation of a steam methane reforming tube created using ANSYS simulation software for developing reduced-order models for the fluid and for the solid equipment wall behavior. These are then used in analyzing how the fluid and solid evolve in response to a control system cyberattack and the use of an advanced control law. The CFD/FEA simulation builds on work done by Lao , et al . [5], in which closed-loop CFD simulations of the steam methane process were performed, where our goal is to use the CFD simulations of a reduced-size reforming tube with FEA simulations to investigate the equivalent stress (also known as von Mises stress) of the reactor walls. After verifying that the results of these CFD/FEA simulations were independent with respect to mesh and time step size, reduced-order autoregressive with exogenous terms (ARX) models were created to relate the control input (the temperature applied to the reactor) to variables which were desired to be predicted (equivalent stress and outlet hydrogen mole fraction). The resulting models are capable of representing the desired process and equipment dynamics in the CFD/FEA simulation and allow for the simulation of the equipment response (maximum equivalent stress variation over time) with reasonable computation time. A cyberattack scenario is considered because cyberattacks represent an increasing threat to the interconnected chemical processes that exist today, and the strong interactions between the cyber and physical systems means that an attacker could directly drive a system towards an unsafe state that damages process equipment by manipulating the process control system [3]. Here, a cyberattack that provides false sensor measurements is simulated directly within the CFD simulation using a user-defined function. Impacts of the cyberattacks on the equipment compared to the hydrogen mole fraction at the tube outlet are compared. The advanced control scenario simulated using the reduced-order models obtained from the CFD/FEA simulation involves an advanced control method called economic model predictive control (EMPC), which optimizes control inputs based on an economic objective function and allows for varying operation in a safe region around the steady-state [4]. Cases in which the controller operates the process at a high-temperature steady-state (to maximize the outlet hydrogen mole fraction), and in which a constraint intended to represent a feedstock limitation applied periodically to facilitate a time-varying control action, are applied to demonstrate the impact of these control input profiles on the maximum equivalent stress in the tube wall. This talk concludes with discussion of FEA modeling with advanced control considering equipment stress for another process known as powder bed fusion (PBF), which is an additive manufacturing process used to create metal components by melting successive layers of powder. FEA simulations were developed to represent the buildup of stresses components during the PBF process by using work done by Hussein, et al . [6], Zeng, et al . [7], and Goldak, et al . [8]. The computational intensity of these simulations means that only small and simple components can be directly simulated, and necessitate the use of reduced-order modeling techniques to simulate a wider variety of created components under advanced control strategies, and particularly those which constrain equipment behavior such as stresses in the part during the part construction. By using these situations as illustrative examples, this work demonstrates how reduced-order modeling techniques can be employed to represent processes with phenomena captured by CFD and FEA simulations. REFERENCES: [1] Chen, H. “Applications of Cyber-Physical System: A Literature Review.” Journal of Industrial Integration and Management . Vol. 2, No. 3, 1750012. (2017) [2] Nieman, K., Oyama, H., Wegener, M., and Durand, H. “Predict the Impact of Cyberattacks on Control Systems.” Chemical Engineering Progress . September 2020. [3] Davis, J., “Cybersecurity for Manufacturers: Securing the Digitized and Connected Factory,” Mahoney, T.C. (ed.), MForesight. (2017). [4] Ellis, M., Durand, H., Christofides, P. D. “A tutorial review of economic model predictive control methods.” Journal of Process Control. Volume 24, Issue 8, Pages 1156-1178. (2014) [5] Lao, L., Aguirre, A., Tran, A., Wu, Z., Durand, H., Christofides, P.D. “CFD modeling and control of a steam methane reforming reactor.” Chemical Engineering Science . Vol. 148, Pages 78-92. (2016) [6] Hussein, A., Hao, L., Yan, C., and Everson, R. “Finite element simulation of the temperature and stress fields in single layers built without-support in selective laser melting.” Materials and Design . Volume 52, Pages 638-647. (2013) [7] Zeng, K., Pal, D., Gong, H., Patil, N., and Stucker, B. “Comparison of 3DSIM thermal modelling of selective laser melting using new dynamic meshing method to ANSYS.” Materials Science and Technology . Volume 31, Pages 945-956. (2014) [8] Goldak, J., Chakravarti, A., and Bibby, M. “A New Finite Element Model for Welding Heat Sources.” Metallurgical Transactions B . Volume 15B, Pages 299-305. (1984)",
+    "presenting_author": "Kip Nieman | Wayne State University, Detroit, MI",
+    "authors": [
+      "Kip Nieman | Wayne State University, Detroit, MI",
+      "Matthew Wegener | Wayne State University, Detroit, MI",
+      "Helen Durand | Wayne State University, Detroit, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kip Nieman",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Matthew Wegener",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      },
+      {
+        "name": "Helen Durand",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "610g",
+    "sortable_time": "2021-11-11_14:24:00_14:43:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632080"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/631781",
+    "paper_endpoint": "Paper/631781",
+    "paper_id": "631781",
+    "topic": "Optimal Sensor Network Design for Corrosion Monitoring of Multi-Scale Time-Varying Systems: Application to a Power Plant Boiler",
+    "title": "Optimal Sensor Network Design for Corrosion Monitoring of Multi-Scale Time-Varying Systems: Application to a Power Plant Boiler",
+    "date_time": "2021-11-11_12:30:00_15:00:00",
+    "session_id": "46669",
+    "session_title": "Modeling, Estimation and Control of Industrial Processes",
+    "session_number": "610",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Hot corrosion can lead to undesired and unexpected outages of critical equipment items. Therefore, it is desired to monitor corrosion in these equipment items. Corrosion monitoring can also be helpful in devising optimal control strategies. However, due to very high operating temperature and highly erosive environment in many such equipment items, placing corrosion sensors at the desired locations is impractical given the current state of the art in measurement technology. Recently a novel type of electrochemical sensor is being developed in-house for in-situ measurement of the hot corrosion rate [1] . However these sensors are costly and difficult to install in the flame region. Furthermore, as there can be considerable spatial variation in corrosion profile in the equipment item and it is not practical to install sensors at all locations, neither it is required to install sensor at many locations, it is desired to develop an optimal sensor placement algorithm and use the sensor network for real-time corrosion monitoring. Corrosion monitoring in the equipment items of interest include multiple times-scales. While the temperature and gas composition evolve in seconds or minutes time scale, corrosion rate involves time scales of weeks or months. Furthermore, the system is time-varying. As the material of construction changes with time due to corrosion rate, it involves different corrosion mechanisms and different corrosion kinetics. Furthermore, due to the changed materials composition and thinning of the tube, thermal properties of the material of construction also change with time. Therefore, in this work, an optimal sensor placement algorithm is developed for a multi-scale, time-varying nonlinear system. Previously an algorithm has been developed by some of the authors of this work for optimal sensor placement for multi-scale time-varying system. [2] However, for corrosion monitoring, time scale differences are much higher. Furthermore, previous system was non-reactive. Due to the reactive corrosion process and time-varying reaction mechanisms and kinetics, it leads to a highly nonlinear system. The sensor placement algorithm is developed assuming that a bank of optimal nonlinear filters is used for estimation. Using integral normalized posterior error covariance of a multi-scale filter coupled with an adaptive sampling rate approach, the sensor network is synthesized. The algorithm is applied to a power plant boiler that is facing higher than normal flue gas temperature due to increased load following operation. High temperature and presence of sulfur dioxide in the flue gas generated from burning of sulfur-containing coal led to hot corrosion in these power plant boilers [3] . Waterwall (WW) tubes are one of the primary components prone to such hot corrosion [4] . A corrosion model is developed as the measurement model. The model is validated using experimental data collected from an operating power plant boiler. As the metal temperature and SO 2 and O 2 concentrations in the flue gas vary along the WW section, and so does the corrosion rate, the sensor placement algorithm considers hundreds of candidate locations for installing the temperature, composition and corrosion sensors leading to a large-scale mixed integer nonlinear optimization problem. Performance of the sensor network is evaluated by simulating the boiler with various operating conditions as would be expected during load-following operation. It is observed that the estimation accuracy of the sensor network largely remains unaffected beyond a critical number of sensors. Performance of the estimator with the optimal network in terms of computational expense and estimation accuracy is evaluated. References N. N. Aung and X. Liu, “High temperature electrochemical sensor for in situ monitoring of hot corrosion,” Corros. Sci. , vol. 65, pp. 1–4, 2012. Q. Huang and D. Bhattacharyya, “Optimal sensor network design for multi-scale, time-varying differential algebraic equation systems: Application to an entrained-flow gasifier refractory brick,” Comput. Chem. Eng. , vol. 141, 2020. P. Besuner and S. Lefton, “The cost of cycling coal fired power plants,” Coal Power Mag. , pp. 16–20, 2006. N. Kumar, P. Besuner, S. Lefton, D. Agan, and D. Hilleman, “Power Plant Cycling Costs,” National Renewable Energy Laboratory (NREL), Sunnyvale, CA, April 2012.",
+    "presenting_author": "Chandra Sekhar Somayajula | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Chandra Sekhar Somayajula | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV",
+      "Xingbo Liu | West Virginia University, Morgantown, WV",
+      "Shanshan Hu | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Chandra Sekhar Somayajula",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Xingbo Liu",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Shanshan Hu",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "610h",
+    "sortable_time": "2021-11-11_14:43:00_15:02:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/631781"
+  }
+]

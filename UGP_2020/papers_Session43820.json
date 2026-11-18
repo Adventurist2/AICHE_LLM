@@ -1,0 +1,384 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/594601",
+    "paper_endpoint": "Paper/594601",
+    "paper_id": "594601",
+    "topic": "Nonlinear Model Predictive Control for a Process with Steady-State Gain Inversion",
+    "title": "Nonlinear Model Predictive Control for a Process with Steady-State Gain Inversion",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43820",
+    "session_title": "Process Modeling, Estimation and Control Applications",
+    "session_number": "744",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "1. NMPC Methodology Nonlinear Model Predictive Control (NMPC) is used infrequently for industrial applications compared to Linear Model Predictive Control (LMPC) [1] due to as­sociated modeling and computational burden, and most of these applications are in the field of polymerization control. Industrial use of NMPC is typically justified for processes where LMPC will not be able to achieve process control objectives due to severe nonlinearities in steady-state gains, dead times and dynamic response [2]. A robust NMPC formulation is required to control the output variable at the peak for an industrial application with steady-state gain inversion due to process dis­turbances and potential modeling errors. The measured feed-forward disturbances along with any unmeasured disturbances also have an effect on the location of the peak or optimum for the controlled variable. Researchers have attempted to address the problem of controlling a process that exhibits change in the sign of steady-state gain for output variable with respect to the manipulated input variable. Lack of stability for an unconstrained nonlinear controller at the peak for processes with steady-state gain inversion has been discussed [3, 4]. The proposed nonlinear model predictive controller augmented with a custom output measurement along with an appropriate disturbance model [5] is different and better because it solves the nonlinear constrained optimization problem explic­itly without formulating an unconstrained control law thereby ensuring robustness for controlling at the optimum point where steady-state gain changes sign. Previous simulation work focused on unconstrained controller formulation and appropriate tuning to prevent instability in presence of disturbances for a process with steady-state gain inversion. For ill-conditioned processes with steady-state gain inversion and the control objective of maximizing the output at the peak, the closed-loop controller will exhibit instability when the sign of the gain is different between the model and the plant [6]. In this work, the controller objective is to control at the peak where steady-state gain inversion happens in presence of disturbances instead of preventing instability that arises from operating at that point. Control­ling at the optimum in presence of measured and unmeasured disturbances will lead to frequent steady-state gain inversion and needs appropriate estimation of unmeasured plant-model mismatch for proper control action that maximizes the controlled output. Problems arise in applications to control actual industrial pro­cesses with gain inversion due to significant process disturbances and potential modeling errors thereby increasing the importance of a robust solution. The novel features of the proposed NMPC to maximize an output variable that has steady-state gain inversion with respect to the manipulated input are Use of the optimum steady-state manipulated input as a custom output mea­surement that is available infrequently, Input disturbance model that utilizes the infrequent custom output measure­ment to act as an integrator for effective offset free control The optimum steady-state manipulated input is used as an infrequent custom mea­surement instead of the available output directly to provide a robust estimate of the input disturbance that accounts for plant-model mismatch and unmodeled distur­bances. Robust identification of the input disturbance is important to ensure effi­cient maximization of the output for noisy industrial data with potential modeling errors. 2. NMPC application 2.1 Process Description Ethylene oxide is produced by using silver based catalysts for selective oxidation of ethylene to ethylene oxide thereby minimizing secondary reactions that decrease ethylene oxide (EO) selectivity. For conventional catalysts, EO selectivity does not reach values above 85 . 7 percent that had long been considered as the theoretical maximum selectivity for the process [7]. Modern industrial ethylene epoxidation reactors use co-fed chlorination promoters that are adsorbed on the catalyst to pro­vide moderate chlorine coverage thereby further increasing selective oxidation to ethylene oxide. These high efficiency industrial catalysts also tend to exhibit rela­tively steep parabolic curves for EO selectivity as a function of adsorbed chloride that is measured as a dimensionless chlorination parameter ( Z ). The location of the peak or optimum EO selectivity is also a strong function of reaction temper­ature that is used to control EO production rate. The objective of the feedback controller is to maximize EO selectivity by manipulating the chlorination param­eter ( Z ) in presence of disturbances due to EO production rate and inlet oxygen concentration. The location of peak where the steady-state gain for EO selectiv­ity with respect to chlorination parameter reaches a maximum and changes sign is dependent on measured disturbances and unmeasured disturbances. Unmeasured disturbances that also include the mismatch in predicted catalyst performance as per its age will cause the location of the optimized chlorination parameter for max­imizing EO selectivity to be different. 2.2 NMPC Results EO selectivity has been maximized more effectively using NMPC than the old control scheme that used the steady-state non-linear process model to calculate open-loop targets for chlorination parameter ( Z ) resulting in an average gain of 0 . 5 − 1 percent in selectivity for the industrial process after taking catalyst aging and EO production rate effects into account. Three different scenarios have been shown with plant data for the NMPC application to maximize EO selectivity [5] EO Selectivity control at high EO production rate EO Selectivity control with increasing EO production rate EO Selectivity control for a big unmeasured disturbance The moves for the chlorination parameter, Z , are implemented using the proposed NMPC controller by passing them as targets to the secondary LMPC or PID con­troller that controls the chlorination parameter by manipulating ethyl chloride flow and rejects faster disturbances. Strong nonlinearities due to gain inversion for max­imization of EO selectivity along with noisy measurements for industrial data ne­cessitate the formulation of a novel robust NMPC controller. The computational burden for NMPC has been reduced to enable real-time industrial application by formulating a hierarchical controller for EO selectivity and chlorination parameter. 3. Conclusions The proposed NMPC controller formulation for a process with steady-state gain inversion utilizes the optimum steady-state manipulated input as a custom infre­quent output measurement. The location of optimum steady-state manipulated input where controlled output is maximized depends on both measured and un­measured disturbances, and is used to update the unmeasured input disturbance estimate infrequently. Accurate identification of the input disturbance is problem­atic with using the controlled output directly due to associated input multiplicity. Robust identification of input multiplicity is important for a controller that has the goal of staying at the peak with noisy industrial data as measurements. The NMPC controller can also be used for processes that exhibit steady-state gain inversion at a minimum instead of a maximum with the control objective of minimizing at the trough. For a process that may have multiple gain inversions, it will be important to locate the global optimum to maximize the output for the associated non-convex optimization problem. The NMPC controller has been applied successfully with results from indus­trial ethylene epoxidation reactor that show robustness in maximizing EO selec­tivity of the effluent ethylene oxide at the peak where steady-state gain inversion occurs [5]. The industrial NMPC has been in use since October 2018 to max­imize EO selectivity in presence of measured and unmeasured disturbances that affect the location of the peak where steady-state gain inversion occurs. Due to the success achieved in maximizing EO selectivity that resulted in significant com­mercial value associated with an average gain of 0 . 5 − 1 percent in EO selectivity for similar catalyst age and EO production rates, the business unit has made it a part of their strategy to deploy these NMPC applications at other EO production sites. A second application for maximizing EO selectivity at another Dow location has been implemented in July 2019 while another project to deploy a third NMPC application for maximization of EO selectivity will be implemented in May 2020. References J. Qin, T. A. Badgwell, A survey of industrial model predictive technology, Control Engineering Practice 11 (2003) 733–764. Bindlish, Nonlinear model predictive control of an industrial polymerization process, Computers and Chemical Engineering 73 (2015) 43–48. T. Biegler, J. B. Rawlings, Optimization approaches to nonlinear model pre­dictive control, Fourth International Conference on Chemical Process Control, Padre Island, TX (1991) 543–571. Daoutidis, C. Kravaris, Dynamic output feedback control of minimum-phase nonlinear processes, Chemical Engineering Science 47 (7) (1992) 837–849. Bindlish, Nonlinear model predictive control of an industrial process with steady-state gain inversion, Computers and Chemical Engineering 135 (2020) accepted for publication. G. Pannocchia, J. B. Rawlings, Disturbance models for offset-free model-predictive control, AIChE Journal 49 (2) (2003) 426–437. L. Zhang, A. C. Liu, M. Habenschuss, Method of achieving and maintaining a specified alkylene oxide production parameter with a high efficiency catalyst, patent No. US 8,362,284 B2 (January 29 2013).",
+    "presenting_author": "Rahul Bindlish | Dow, Houston, TX",
+    "authors": [
+      "Rahul Bindlish | Dow, Houston, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rahul Bindlish",
+        "affiliation": "Dow, Houston, TX",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "744a",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/594601"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/602861",
+    "paper_endpoint": "Paper/602861",
+    "paper_id": "602861",
+    "topic": "Handling Fiber-to-Fiber Heterogeneity in Pulp and Paper Industry Via Stochastic Multiscale Modeling and Model Predictive Control",
+    "title": "Handling Fiber-to-Fiber Heterogeneity in Pulp and Paper Industry Via Stochastic Multiscale Modeling and Model Predictive Control",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43820",
+    "session_title": "Process Modeling, Estimation and Control Applications",
+    "session_number": "744",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Handling fiber-to-fiber heterogeneity in pulp and paper industry via stochastic multiscale modeling and model predictive control Sang Hwan Son 1,2 , Hyun-Kyu Choi 1,2 , and Joseph Sang-Il Kwon 1,2 1) Artie McFerrin Department of Chemical Engineering, Texas A&M University College Station, TX 2) Texas A&M Energy Institute, Texas A&M University, College Station, TX Contrary to the expectation that the demand for paper will decrease due to the development of the digital industry, the pulp and paper industry is steadily increasing [1]. Specifically, over the past decade, the global demand for document paper has decreased from 151 to 122 million tons per year as the display industry developed, but the demand for packaging paper has increased from 190 to 235 million tons per year because of online shopping booms [2]. As the plastic or styrofoam packaging materials are replaced with paper in accordance with eco-friendly policies, the pulp and paper industry is also expected to continuously grow. Therefore, to deal with the growing demand for various quality of papers, the need for maximizing yields and minimizing energy consumption in pulp and paper manufacturing processes has received much attention recently. In order to manufacture pulp from a wood chip, the lignin component that adheres to cellulose microfibrils must be removed through a delignification process. The degree of delignification is expressed numerically through an index called Kappa number. The extended Purdue model, which considers mass transport and heat transfer phenomena during delignification via differential equations, has been widely used to describe macroscopic variables such as the process temperatures and concentrations at the solid, entrapped-liquor and free-liquor phases [3-5]. However, this macroscopic model was not able to explain the evolution of microscopic characteristics such as pore size distribution, porosity and cell wall thickness (CWT), while these attributes significantly affect the physical properties of the paper such as density, ink holdup, surface smoothness, strength and absorbability. Recent studies proposed multiscale pulp digester models which integrate the kinetic Monte Carlo (kMC) algorithm (to describe the microscopic characteristics) with the extended Purdue model [6-8]. Although the proposed multiscale models are able to describe macroscopic and microscopic characteristics concurrently, they only studied the evolution of a single-fiber morphology without considering the fiber-to-fiber heterogeneity (e.g., variation in CWT and wood chip composition, etc. [9]); this heterogeneity is mainly due to the intrinsic source from stochastic fluctuations in dissolution kinetics and the extrinsic source from collection of fibers from multiple sources and recycling. In this study, we present a new multiscale modeling framework of batch pulp digester under fiber-to-fiber variation. Specifically, we run a number of kMC simulations in parallel by incorporating fiber-to-fiber heterogeneity via heterogeneous morphology evolution for each fiber and distributions of CWT and wood chip composition, while simultaneously running the Purdue model to describe the macroscopic variables. To effectively reduce the computational load of this parallel computation, we developed a novel coarse-grained kinetic Monte Carlo (CGMC) scheme, where neighboring microscopic particles are grouped together into coarse-grained (CG) cells (or meso-particles) [10,11]. More specifically, unlike the existing studies that consider a single dissolution event taking place at each solid lattice site separately, we simultaneously considered a number of dissolution events occurring at a group of solid lattice sites to reduce the computational requirement. Based on this multiscale pulp digester model, we designed a model-based control system to regulate the CWT as well as other macroscopic variables to desired set-point values. REFERENCES [1] Watson, A., (2019). Unit sales of printed books in the United States from 2004 to 2018 (in millions). Publishers Weekly Statistics , https://www.statista.com/statistics/422595/print-book- sales-usa/.. [2] (2019). Producer price index by commodity for pulp, paper, and allied products: wood pulp [WPU0911], U.S. Bureau of Labor Statistics , retrieved from FRED, Federal Reserve Bank of St. Louis, https://fred.stlouisfed.org/series/WPU0911. [3] Christensen, T., Albright, L.F., Williams, T.J., (1982). A Mathematical Model of the Kraft Pulping Process . Ph.D. thesis. Purdue University, West Lafayette, IN. [4] Wisnewski, P. A., Doyle III, F. J., & Kayihan, F. (1997). Fundamental continuous‐pulp‐digester model for simulation and control. AIChE journal , 43 (12), 3175-3192. [5] Bhartiya, S., Dufour, P., & Doyle III, F. J. (2003). Fundamental thermal‐hydraulic pulp digester model with grade transition. AIChE journal , 49 (2), 411-425. [6] Choi, H. K., & Kwon, J. S. I. (2019). Multiscale modeling and control of Kappa number and porosity in a batch‐type pulp digester. AIChE Journal , 65 (6), e16589. [7] Choi, H. K., & Kwon, J. S. I. (2019). Modeling and control of cell wall thickness in batch delignification. Computers & Chemical Engineering , 128 , 512-523. [8] Choi, H. K., & Kwon, J. S. I. (2020). Multiscale modeling and multiobjective control of wood fiber morphology in batch pulp digester. AIChE Journal , in press. [9] Brändström, J. (2001). Micro-and ultrastructural aspects of Norway spruce tracheids: a review. Iawa Journal , 22 (4), 333-353. [10] Drews, T. O., Braatz, R. D., & Alkire, R. C. (2004). Coarse-grained kinetic Monte Carlo simulation of copper electrodeposition with additives. International Journal for Multiscale Computational Engineering , 2 (2). [11] Collins, S. D., Chatterjee, A., & Vlachos, D. G. (2008). Coarse-grained kinetic Monte Carlo models: Complex lattices, multicomponent systems, and homogenization at the stochastic level. The Journal of chemical physics , 129 (18), 184101.",
+    "presenting_author": "Sang Hwan Son | Texas A&M University, College Station, TX",
+    "authors": [
+      "Sang Hwan Son | Texas A&M University, College Station, TX",
+      "Hyun-Kyu Choi | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sang Hwan Son",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Hyun-Kyu Choi",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "744b",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/602861"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/609801",
+    "paper_endpoint": "Paper/609801",
+    "paper_id": "609801",
+    "topic": "Nonlinear Model Predictive Control of Air Separation Processes Based on Model Reduction",
+    "title": "Nonlinear Model Predictive Control of Air Separation Processes Based on Model Reduction",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43820",
+    "session_title": "Process Modeling, Estimation and Control Applications",
+    "session_number": "744",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Nonlinear model predictive control (NMPC) of chemical processes is based on real-time solution of dynamic optimization problems. To enable NMPC for large-scale processes, such as cryogenic air separation units (ASU), model reduction techniques can be applied [8]. These can drastically reduce the computational time while yielding an accurate solution of the dynamic optimization problem. Recently, we have proposed two approaches to reducing dynamic models of multi-component distillation columns [2, 6]. The transient wave propagation approach [2] builds on the geometrical wave phenomenon observed in distillation columns and extends the applicability of existing theory [4] to load change scenarios. Data-driven hybrid compartment modeling [6] combines the compartment concept [5] and substitution of mathematically complex algebraic model blocks by artificial neural networks. The two strategies have been applied for economic NMPC of an ASU benchmark process including a single-section column. Industrial air separation processes, however, feature complex flowsheets including multi-sectional columns with several feed and withdrawal streams [3]. Reduced dynamic modeling and NMPC for these ASU topologies has not yet been investigated in the literature. In this work, we implement an NMPC for an ASU of industrial complexity and demonstrate its performance in an in-silico closed-loop control case study. To this end, we perform model reduction to derive a controller model suitable for real-time applications. We implement the NMPC with Extended Kalman Filter in Python and use our open-source optimization framework DyOS [1] for solving the nonlinear optimal control problems. We compare an NMPC implementing a reduced model with a controller employing mechanistic stage-by-stage modeling. The obtained CPU times indicate that the proposed framework provides a real-time capable control strategy for an industrial ASU. References [1] A. Caspari, A. Bremen, J. M. Faust, F. Jung, C. D. Kappatou, S. Sass, Y. Vaupel, R. Hannemann-Tamás, A. Mhamdi, and A. Mitsos. DyOS – A framework for optimization of large-scale differential algebraic equation systems. In Computer Aided Chemical Engineering, volume 46, pages 619–624. Elsevier, 2019. [2] A. Caspari, C. Offermanns, A. M. Ecker, M. Pottmann, G. Zapp, A. Mhamdi, and A. Mitsos. A Wave Propagation Approach for Reduced Dynamic Modeling of Distillation Columns: Optimization and Control. Under Review, 2020. [3] H.-W. Häring and A. Belloni. Industrial gases processing. John Wiley & Sons, 2008. [4] A. Kienle. Low-order dynamic models for ideal multicomponent distillation processes using nonlinear wave propagation theory. Chemical Engineering Science, 55(10):1817–1828, 2000. [5] J. Lévine and P. Rouchon. Quality control of binary distillation columns via nonlinear aggregated models. Automatica, 27(3):463–480, 1991. [6] P. Schäfer, A. Caspari, K. Kleinhans, A. Mhamdi, and A. Mitsos. Reduced dynamic modeling approach for rectification columns based on compartmentalization and artificial neural networks. AIChE Journal, 65(5):e16568, 2019. [7] P. Schäfer, A. Caspari, A. Mhamdi, and A. Mitsos. Economic nonlinear model predictive control using hybrid mechanistic data-driven models for optimal operation in real-time electricity markets: In- silico application to air separation processes. Journal of Process Control, 84:171–181, 2019. [8] D. R. Vinson. Air separation control technology. Computers & Chemical Engineering, 30(1012):1436–1446, 2006. Acknowledgements The authors gratefully acknowledge the financial support of the Kopernikus project SynErgie by the Federal Ministry of Education and Research (BMBF) and the project supervision by the project management organization Projektträger Jülich.",
+    "presenting_author": "Jan Schulze | RWTH Aachen University, Germany",
+    "authors": [
+      "Jan Schulze | RWTH Aachen University, Germany",
+      "Adrian Caspari | RWTH Aachen University, Germany",
+      "Pascal Schäfer | RWTH Aachen University, Germany",
+      "Anna-Maria Ecker | Linde GmbH, Linde Engineering, Pullach bei München, Germany",
+      "Martin Pottmann | Linde GmbH, Linde Engineering, Pullach bei München, Germany",
+      "Adel Mhamdi | RWTH Aachen University, Germany",
+      "Alexander Mitsos | RWTH Aachen University, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jan Schulze",
+        "affiliation": "RWTH Aachen University, Germany",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Adrian Caspari",
+        "affiliation": "RWTH Aachen University, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Pascal Schäfer",
+        "affiliation": "RWTH Aachen University, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Anna-Maria Ecker",
+        "affiliation": "Linde GmbH, Linde Engineering, Pullach bei München, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Martin Pottmann",
+        "affiliation": "Linde GmbH, Linde Engineering, Pullach bei München, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Adel Mhamdi",
+        "affiliation": "RWTH Aachen University, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Alexander Mitsos",
+        "affiliation": "RWTH Aachen University, Germany",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "744c",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/609801"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/605256",
+    "paper_endpoint": "Paper/605256",
+    "paper_id": "605256",
+    "topic": "Embedded Deep Learning-Based Robust Model Predictive Control for Fast-Sampling Atmospheric Pressure Plasma Jets Using Field Programmable Gate Arrays",
+    "title": "Embedded Deep Learning-Based Robust Model Predictive Control for Fast-Sampling Atmospheric Pressure Plasma Jets Using Field Programmable Gate Arrays",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43820",
+    "session_title": "Process Modeling, Estimation and Control Applications",
+    "session_number": "744",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "With the increasing need for optimal control of complex and safety-critical systems, there has been a growing interest in model predictive control (MPC) strategies that are fast, while also guaranteeing safety and achieving high-performance system operation. Generally, robust and stochastic MPC methods are often computationally expensive, which renders them inapt for fast-sampling system applications. Thus, there has been extensive work on fast MPC. One class of fast MPC methods is based on fast optimization techniques [1], [2]. Alternatively, learning methods, such as deep learning, are becoming increasingly viable options for deriving cheap-to-evaluate, explicit surrogates for robust MPC laws [3], [4]. It has recently been shown that deep neural network- (DNN) based approximation of robust MPC laws are useful not only for their quick evaluation time, but also for their potential low-memory footprint [5], [6], [7], which is especially important for controller implementation on resource-limited hardware. Implementation of approximate MPC laws on embedded systems has become increasingly desired as it addresses the limitation of latency between capturing data and receiving results to perform an operation due to the nature of system level modeling languages on the software side and direct implementation of the “system on chip” (SoC) on the hardware side [8]. Despite this, there remains several open challenges pertaining to efficient and reliable hardware implementation of embedded DNN-based controllers [9]. In this work, we investigate embedded implementation of a DNN-based approximate robust MPC strategy to control the effects of a fast-sampling atmospheric pressure plasma jet (APPJ) with prototypical applications in plasma medicine. APPJs are increasingly being considered for use in biomedical applications [10], [11], for example, to shrink cancerous tumors [12], increase the rate of wound healing [13], and deactivate antibiotic-resistant bacteria [14]. However, controlling the nonlinear effects of the plasma on the target substrate in the presence of intrinsic variabilities as well as exogenous disturbances is crucial in achieving safe and effective operation of the APPJ. In addition, the fast dynamics of the APPJ require fast control implementations [15]. To this end, we first develop an approximate closed-loop robust MPC strategy, where a scenario-based MPC problem is solved offline to train the DNN. Once the DNN is trained, it is deployed onto a proposed field programmable gate array (FPGA) architecture. FPGAs are chosen not only because of their increased computational power over standard microcontrollers, but also because of their configurability and potential to further speed up control performance via methods such as parallelization and pipelining [16]. We investigate the FPGA implementation and the memory footprint of the DNN-based controller in relation to the complexity of the underlying system model, control policy parametrization, prediction horizon, as well as amount of data used to learn the DNN-based controller. The embedded implementation is performed first as prototyping and designing the DNN-based controller in a system-level language, and then testing in both computer simulations and hardware-in-loop simulations. Real-time control experiments on an APPJ testbed demonstrate the effectiveness of the proposed embedded DNN-based robust MPC strategy in controlling the highly nonlinear APPJ at fast time-scales for use in biomedical applications. Wang and S. Boyd, “Fast model predictive control using online optimization,” IEEE Transactions on Control Systems Technology , vol. 18, no. 2, pp. 267–278, 2010. L. Jerez, P. J. Goulart, S. Richter, G. A. Constantinides, E. C. Kerrigan, and M. Morari, “Embedded predictive control on an fpga using the fast gradient method,” in 2013 European Control Conference (ECC) . IEEE, 2013, pp. 3614–3620. Chen, K. Saulnier, N. Atanasov, D. D. Lee, V. Kumar, G. J. Pappas, and M. Morari, “Approximating explicit model predictive control using constrained neural networks,” in Proceedings of thel American Control Conference , (Milwaukee), pp. 1520–1527, 2018. Raha, A. Chakrabarty, V. Raghunathan, and G. T. Buzzard, “Embedding approximate nonlinear model predictive control at ultrahigh speed and extremely low power,” IEEE Transactions on Control Systems Technology , pp. 1–8, 2019. Karg and S. Lucia, “Efficient representation and approximation of model predictive control laws via deep learning,” arXiv preprint arXiv:1806.10644 , 2018. W. Chen, T. Wang, N. Atanasov, V. Kumar, and M. Morari, “Large scale model predictive control with neural networks and primal active sets,” arXiv preprint arXiv:1910.10835 , 2019. A. Paulson and A. Mesbah, “Approximate closed-loop robust model predictive control with guaranteed stability and constraint satisfaction,” IEEE Control Systems Letters , 2020. Monmasson and M. N. Cirstea, “FPGA design methodology for industrial control systems—a review,” IEEE transactions on Industrial Electronics , vol. 54, no. 4, pp. 1824–1842, 2007. Lucia, D. Navarro, B. Karg, H. Sarnago, and O. Lucia, “Deep learning-based model predictive control for resonant power converters,” IEEE Transactions on Industrial Informatics , 2020. Mesbah and D. B. Graves, “Machine learning for modeling, diagnostics, and control of non-equilibrium plasmas,” Journal of Physics D: Applied Physics, vol. 52, no. 30, 2019. Gidon, D. B. Graves, and A. Mesbah, “Effective dose delivery in atmospheric pressure plasma jets for plasma medicine: a model predictive control approach,” Plasma Sources Science and Technology , vol. 26, pp. 085005, 2017. -R. Metelmann, D. S. Nedrelow, C. Seebauer, M. Schuster, T. von Woedtke, K. D. Weltmann, S. Kindler, P. H. Metelmann, S. E. Finkelstein, D. D. Von Hoff, and F. Podmelle, “Head and neck cancer treatment and physical plasma,” Clinical Plasma Medicine , vol. 3, no. 1, pp. 17–23, 2015. Fridman, G. Friedman, A. Gutsol, A. B. Shekhter, V. N. Vasilets, and A. Fridman, “Applied plasma medicine,” Plasma Processes and Polymers , vol. 5, no. 6, pp. 503–533, 2008. Heinlin, G. Isbary, W. Stolz, G. Morfill, M. Landthaler, T. Shimizu, B. Steffes, T. Nosenko, J. Zimmermann, and S. Karrer, “Plasma applications in medicine with a special focus on dermatology,” Journal of the European Academy of Dermatology and Venereology , vol. 25, no. 1, pp. 1–11, 2011. D. Bonzanini, J. A. Paulson, D. B. Graves, and A. Mesbah, “ Safe dose delivery in fast sampling atmospheric plasmas using projection-based approximate economic MPC ,” In Proceedings of the IFAC World Congress, 2020 . H. Ghasemi, O. Lucia, and S. Lucia, “Computing in the blink of an eye: Current possibilities for edge computing and hardware-agnostic programming,” IEEE Access , 2020.",
+    "presenting_author": "Kimberly Chan | University of California, Berkeley",
+    "authors": [
+      "Kimberly Chan | University of California, Berkeley",
+      "Angelo D. Bonzanini | University of California Berkeley",
+      "Ali Mesbah | University of California, Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kimberly Chan",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Angelo D. Bonzanini",
+        "affiliation": "University of California Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "744d",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/605256"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/602527",
+    "paper_endpoint": "Paper/602527",
+    "paper_id": "602527",
+    "topic": "Multiscale Modelling and Model Predictive Control of CsPbBr 3 Quantum Dots Production: A Step Towards on-Demand Smart-Nanomanufacturing",
+    "title": "Multiscale Modelling and Model Predictive Control of CsPbBr 3 Quantum Dots Production: A Step Towards on-Demand Smart-Nanomanufacturing",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43820",
+    "session_title": "Process Modeling, Estimation and Control Applications",
+    "session_number": "744",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Solution-processed inorganic lead halide perovskite quantum dots (QDs) have recently garnered a lot of attention as a promising semiconducting material for applications in next-generation solar cells, displays, and photocatalysis. 1 Particularly, cesium lead bromide (CsPbBr 3 ) QDs, due to its near-unity photoluminescence quantum yield (PLQY), has received significant attention. The optoelectronic properties of CsPbBr 3 QDs are majorly dictated by their bandgap energy (related to their size) and PLQY (related to surface passivation and defects). Thus, it is of paramount importance to fine-tune the size and surface passivation of CsPbBr 3 QDs for the targeted optoelectronic devices. Furthermore, device-level applications demand a fast and continuous production of application-ready QDs. However, most of the published work on perovskite QDs are pertaining to the conventional flask-based synthesis techniques. 2 Despite the ease of assembly and operation, the batch synthesis strategies are not a viable solution for mass production of such high-priority semiconducting materials because of (a) batch-to-batch variation, (b) scale-up challenges due to irreproducible and uncontrollable mixing and mass transfer characteristics, and (c) the fast formation kinetics of perovskite QDs (typically in the order of seconds). Hence, a continuous synthesis platform with precise size-tuning and prediction abilities for large-scale QD production is highly coveted in the materials community. Recently, an automated microfluidic platform for continuous production and mass transfer-controlled size-tuning of CsPbBr 3 QDs was demonstrated. 3 A continuous size-tuning of CsPbBr 3 QDs in the range of 7-11 nm was achieved by manipulating the precursors mixing rate that was controlled by the average flow velocity in the microreactor. Interestingly, increasing the flow velocity ( i.e. , faster mixing rates) resulted in a blue shift ( i.e. , smaller CsPBr 3 QDs). Furthermore, it was observed that the concentration of the surface ligands (oleic acid) played a vital role in CsPbBr 3 synthesis by forming a loosely bound ligand shell around the QD surface. 4 The results of our previous studies also suggest that the CsPbBr 3 QDs do not follow classical crystallization models and need a more comprehensive modeling effort. 5 Such fundamental understanding will be a crucial factor for large-scale on-demand nanomanufacturing of CsPbBr 3 QDs with designer optoelectronic properties. The goal of this work is to address the above-mentioned knowledge gap in the perovskite QD research field by proposing a multiscale model for plug-flow crystallizer (PFC). Specifically, the macroscopic phase of PFC was modelled to describe the dynamic spatio-temporal evolution of concentration and QD size using differential mass and energy balance equations (MEBEs). The discretized MEBEs were integrated with the proposed kinetic Monte Carlo simulation (KMC) to formulate a high-fidelity multiscale model; the KMC, based upon solid-on-solid crystal model, describes the physics behind QD synthesis (viz., attachment and mass-transfer of ligand and desorption of the ligand) and depends on the local environment and location of the crystal. Furthermore, for model validation, precise time-series QD size data for different precursor mixing rate scenarios are generated. 3 The model predictions are in excellent agreement with the experimental results. Lastly, a model predictive controller (MPC) was designed to produce QDs of the desired size in the presence of disturbances. To this end, precursors flowrate and concentration were used as manipulated inputs to the PFC system. Overall, this work will be major leap towards on-demand continuous smart-nano-manufacturing.",
+    "presenting_author": "Niranjan Sitapure | Texas A&M University, College Station, TX",
+    "authors": [
+      "Niranjan Sitapure | Texas A&M University, College Station, TX",
+      "Robert Epps | North Carolina State University, Raleigh, NC",
+      "Milad Abolhasani | North Carolina State University, Raleigh, NC",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Niranjan Sitapure",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Robert Epps",
+        "affiliation": "North Carolina State University, Raleigh, NC",
+        "designation": "Author"
+      },
+      {
+        "name": "Milad Abolhasani",
+        "affiliation": "North Carolina State University, Raleigh, NC",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "744e",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/602527"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/611172",
+    "paper_endpoint": "Paper/611172",
+    "paper_id": "611172",
+    "topic": "Soil Water Map Construction Using Microwave Sensor and Agro-Hydrological Model",
+    "title": "Soil Water Map Construction Using Microwave Sensor and Agro-Hydrological Model",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43820",
+    "session_title": "Process Modeling, Estimation and Control Applications",
+    "session_number": "744",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In response to rapid population growth and increased population densities, changes must occur in agriculture in order to meet the higher demand for food. With a limited potential to increase arable cropland, agricultural irrigation has become an increasingly important tool to ensure enough global supply of food [3]. Increased levels of irrigation is expected to have an adverse effect on freshwater supply. Currently, the water-use efficiency in irrigation is estimated to be between 50% to 60% due to poor irrigation practices [2]. A critical step towards mitigating the anticipated freshwater supply crisis is to increase the water-use efficiency in agricultural irrigation through precision irrigation. One important step towards precision irrigation is to close the irrigation decision loop to form a closed-loop irrigation system. In order to implement closed-loop irrigation, various moisture sensing techniques must be employed to provide the required soil moisture information for feedback control. In the context of obtaining soil moisture measurements, microwave remote sensing can be useful and has demonstrated the possibility of measuring the near-surface moisture quantitatively [1]. Microwave sensors mounted on central pivots provide a feasible approach to measure the soil water content of fields which have central pivots as irrigation implementers. The sensors measure the soil moisture content at different locations of the field as the central pivot rotates and provides the soil moisture information in the form of soil water content maps at the end of the pivot’s rotation cycle. There however exist three main challenges with this approach which reduces the usability of the soil water content maps for closed-loop irrigation. Firstly, it takes between two to three days for a central pivot to complete one rotation cycle which means that it also takes between two to three days to obtain a single water content map from the microwave sensors. This significant time delay in the soil moisture measurements means that very little or nothing can be done with the measurements when irrigation decisions are being made. Secondly, the current approach lacks a predictive capability in the sense that the sensors cannot provide soil moisture information of the field when the central pivot is stationary. Lastly, the current approach does not provide information in the root zone, knowledge of which is required for closed-loop irrigation. In this work, we propose the construction of frequently updated soil water content maps that can be used for irrigation decision making for fields equipped with microwave sensors mounted on central pivots. Firstly, we propose an agro-hydrological model that can accurately model a field equipped with a central pivot. The measurements obtained from the microwave sensors are then integrated with the field model and a state estimator, the Extended Kalman filter, in an information fusion system which will provide frequent estimates and predictions of soil water content in the form of soil water content maps for the surface of the field as well as the root zone. We demonstrate the effectiveness of the proposed solution in providing frequently updated soil water content maps (Figure 1) using microwave sensor measurements obtained from the Alberta Irrigation Center in Lethbridge, Canada. We employ the Normalised Innovation Squared (NIS) test to demonstrate the consistency of our proposed approach. Finally, we validate the soil moisture estimates using a section of the microwave sensor measurements and show that our approach provides soil moisture estimates within reasonable error bounds from the actual measurements . References [1] P. K. Srivastava, D. Han, M. A. Rico-Ramirez, T. Islam, “Sensitivity and uncertainty analysis of mesoscale model downscaled hydro-meteorological variables for discharge prediction” Hydrol. Process., 28 (2013) pp. 4419-4432 . [2] “Water in a changing world,” The United Nations World Water Development Report 3, 2017. [3] T. Sauer, P. Havlik, U. A. Schneider, E.Schmid, G. Kindermann, M. Obersteiner, “Agriculture and resource availability in a changing world: The role of irrigation” Water Resourc. Res.,46 (2010).",
+    "presenting_author": "Bernard Agyeman | University of Alberta, Edmonton, Canada",
+    "authors": [
+      "Bernard Agyeman | University of Alberta, Edmonton, Canada",
+      "Song Bo | University of Alberta, Edmonton, Canada",
+      "Soumya Sahoo | University of Alberta, Edmonton, Canada",
+      "Jinfeng Liu | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bernard Agyeman",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Song Bo",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Soumya Sahoo",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Jinfeng Liu",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "744f",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/611172"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/604945",
+    "paper_endpoint": "Paper/604945",
+    "paper_id": "604945",
+    "topic": "Continuous Direct Compaction Tablet Manufacturing Characterization Using Data-Reconciliation and Residence Time Distribution Functions",
+    "title": "Continuous Direct Compaction Tablet Manufacturing Characterization Using Data-Reconciliation and Residence Time Distribution Functions",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43820",
+    "session_title": "Process Modeling, Estimation and Control Applications",
+    "session_number": "744",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The success in pharmaceutical continuous manufacturing depends on the accurate, reliable, and real-time information flow from and to the unit operations. In real industrial applications, in addition to the complexities associated with the selection and set-up of measurement devices (in-situ sensors), the coordination and correction of disturbances or gross errors in the generated process data represents a major concern. The process is typically monitored using multivariate statistical process control (MSPC) the effectiveness of MSPC depends critically on the quality of the data from which the PCA model is built. In addition to the complexity to build a sufficiently reliable model, the MSPC method fails to capture variables measured or calculated indirectly and it cannot distinguish between an actual variation of the product quality attributes and an imperfection in the measurement. Data reconciliation (DR) has been advanced as a compelling alternative to reduce data mismatch/uncertainty considering both process knowledge and data measurement simultaneously [1] . DR also has the potential to estimate variables that cannot be measured directly [2] . Direct compaction (DC) represents the simplest solid-dosage pharmaceutical manufacturing process consisting of a series of powder-based unit operations, i.e., feeding, blending and tableting. The DC system in Purdue University’s Continuous Solids Processing Pilot Plant has been used for both computational and experimental studies [3,4] , in which the feeder is modeled and simulated using a first-order plus time-delay function and the blender was described using a two-dimensional compartment model. The main compression force applied in the rotary tablet press was characterized using the Kawakita model for a pre-defined turret speed. Su et al., (2019) [3] used a DR analysis to correlate the tablet weight and main compression force (characterized off-line out of the Kawakita model) while minimizing the discrepancy between the estimated and measured data. It is worth noting that the DR was performed only at the tablet press and to estimate a single attribute. However, the same strategy needs to be used to simultaneously analyze all the unit operations across the DC continuous line. Specifically, in addition to tablet weight, the estimation of other quality attributes such as tensile strength and elastic recovery using real-time main compression force measurement is productive direction of research. Monitoring and control of a continuous manufacturing systems not only depends on the accuracy of plant models but also on having a detailed understanding of the process dynamics. In a continuous DC line, any physical changes in the material can occur at the timescale of seconds and thus, regardless of the sensors’ accuracy, the process dynamics may not be fully captured. Since perturbations propagate across the entire system following different distributions, residence time distribution (RTD) models have been used to evaluate the impact and duration of these disturbances [5] . Traditional RTD models use steady-state values to capture the propagation of disturbances. Recently, Escotet-Espinoza et al., (2019) [6,7] characterized the effects of material types, properties, tracer materials and equipment configuration in the residence time distribution for a powder feeding-blending system. The main goal of tis set of studies was to provide some standard methods for conducting, interpreting, and using RTD results in continuous pharmaceutical manufacturing. However, it bears emphasis that RTDs are dependent on details of dynamics and, therefore, if material properties or unit operations change then RTD parameters must be updated. In this study, the DC system in Purdue University’s Continuous Solids Processing Pilot Plant was characterized pursuing two main objectives. First, the unit operations constituting the continuous DC line were modeled and characterized using experimental campaigns. The loss-in-weight feeder was described by a feed factor model, and other unit operations were modeled using the formulation presented by Tian et al., (2019). The mismatch between the experimental measured data and the model prediction was corrected through DR. The second part of this study characterizes the powder dynamics across the pilot plant using RTDs. In particular, the DC line consists of two loss-in-weight feeders connected in parallel, which are further connected in series to a continuous blender and a Natoli NP-400 continuous rotary tablet press. By running experiments, RTDs were calibrated from tracer concertation measurements at different times after tracer insertion at the feeders and at different locations in the line. Specifically, powder samples were taken at the exit of each unit operation and the amount of tracer material was measured using spectrometry. References [1] Su, Q., Bommireddy, Y., Shah, Y., Ganesh, S., Moreno, M., Liu, J., Gonzalez, M., Yazdanpanah, N., O’Connor, T., Reklaitis, G.V., Nagy, Z.K., 2019. Data reconciliation in the Quality-by-Design (QbD) implementation of pharmaceutical continuous tablet manufacturing. International Journal of Pharmaceutics. 563, 259-272. [2] Liu, J., Su, Q., Moreno, M., Laird, C., Nagy, Z.K., Reklaitis, G.V., 2019. Robust state estimation of feeding–blending systems in continuous pharmaceutical manufacturing. Chemical Engineering Research and Design. 134, 140-153. [3] Su, Q., Moreno, M., Giridhar, A., Reklaitis, G.V., Nagy, Z.K., 2017. A systematic framework for process control design and risk analysis in continuous pharmaceutical solid-dosage manufacturing. J. Pharm. Innov. 12, 327–346. [4] Su, Q., Ganesh, S., Moreno, M., Bommireddy, Y., Gonzalez, M., Reklaitis, G. V., & Nagy, Z. K. (2019). A perspective on Quality-by-Control (QbC) in pharmaceutical continuous manufacturing. Computers & Chemical Engineering, 125, 216-231. [5] Tian, G., Koolivand, A., Arden, N.S., Lee, S., O’Connor, T.F., 2019. Quality risk assessment and mitigation of pharmaceutical continuous manufacturing using flowsheet modeling approach. Computers and Chemical Engineering 106508. [6] Escotet-Espinoza, M.S., Moghtadernejad, S., Oka, S., Wang, Y., Roman-Ospino, A., Schäfer, E., Cappuyns, P., Assche, I.V., Futran, M., Ierapetritou, M., Muzzio, F., 2019. Effect of tracer material properties on the residence time distribution (RTD) of continuous powder blending operations. Part I of II: Experimental evaluation. Powder Technology 342, 744-763. [7] Escotet-Espinoza, M.S., Moghtadernejad, S., Oka, S., Wang, Y., Roman-Ospino, A., Schäfer, E., Cappuyns, P., Assche, I.V., Futran, M., Ierapetritou, M., Muzzio, F., 2019. Effect of tracer material properties on the residence time distribution (RTD) of continuous powder blending operations. Part II of II: Application of models. Powder Technology 344, 525-544.",
+    "presenting_author": "Sergio Medina-González | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Sergio Medina-González | Purdue University, West Lafayette, IN",
+      "Yan-Shu Huang | Purdue University, West Lafayette, IN",
+      "Sunidhi Bachawala | Purdue University, West Lafayette, IN",
+      "Yasasvi Bommireaddy | Purdue University, West Lafayette, IN",
+      "Marcial Gonzalez | Purdue University, West Lafayette, IN",
+      "Zoltan Nagy | Purdue University, West Lafayette, IN",
+      "Gintaras Reklaitis | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sergio Medina-González",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yan-Shu Huang",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Sunidhi Bachawala",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Yasasvi Bommireaddy",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Marcial Gonzalez",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Zoltan Nagy",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Gintaras Reklaitis",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "744g",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/604945"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/597827",
+    "paper_endpoint": "Paper/597827",
+    "paper_id": "597827",
+    "topic": "Optimal Selection of Novel Organic-Inorganic Analogs through Computer-Aided Synthesis of Perovskite Solar Cells",
+    "title": "Optimal Selection of Novel Organic-Inorganic Analogs through Computer-Aided Synthesis of Perovskite Solar Cells",
+    "date_time": "2020-11-19_08:00:00_09:00:00",
+    "session_id": "43820",
+    "session_title": "Process Modeling, Estimation and Control Applications",
+    "session_number": "744",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "1. Introduction: In recent years the cost-effective perovskite solar cells have gained tremendous attention from the academic community due to its outstanding progress in performance since its inception (NREL, 2020). Structurally, perovskite is defined with the stoichiometry of ABX 3 , where A and B are cations and X is an anion. A majority of perovskite solar cells reported so far typically consist of the following combination, methylammonium (MA), formamidinium (FA) or cesium (Cs) or a combination of the three at the A site, lead (Pb) at the B site and iodine (I) or bromine (Br) or a combination of the two at the X site [(Cs/MA/FA)Pb(I x Br y )]. A major drawback preventing the global commercialization of perovskite solar cells is the poor long-term stability of the device in severe environmental conditions. Hence, continuous efforts are being made to develop devices with better stability by improvisations to the composition of the cell and its structural design. However, the study of potential alternatives for sites A, B, and X in the device structure is very limited. 2. Objectives: The goal of this research is to design cost-effective perovskites by exploring potential analogs for sites A, B and, X in the ABX 3 chemical structure while maintaining their stability. The specific objectives to achieve this research goal are: (1) Collect existing information through literature review (2) List potential options for A, B, and X sites (3) Formulate an optimal synthesis problem that minimizes cost and maintains stability (4) Solve using mixed-integer linear programming, and (5) Find the ranked list of best combinations. 3. Methodology: We propose a methodology that can select an optimal combination of different ions for the perovskite solar cell. Stability features that include, the tolerance factor (t) and octahedral factor (µ ) proposed by Goldschmidt provide guidelines for selecting ions for perovskite solar cells (Green, Ho-Baillie, and Snaith 2014). For an idealized solid sphere model, t = R A +R X /(2) 1/2 (R B +R X ) (1) and µ = R B /R X (2) where R A : Ionic radii of cation A R B : Ionic radii of cation B R X : Ionic radii of anion X. A base case is developed by selecting three potential candidates that are deemed most interesting to study each for site A, B, and X. We have an optimization problem with an objective function to select the possible combination of ions for the perovskite cell based on the stability factors and simultaneously minimize the material cost, which is considered a significant criterion for large scale commercialization of perovskite solar cells. The objective function was formulated and solved through General Algebraic Modeling Systems (GAMS) and MATLAB. The solution provides the optimum perovskite crystal structure with minimum cost. The motivational case was further extended to a large set of combinations (over 2000). A systematic representation of our evaluation framework is illustrated in Figure 1. Summary: The results indicate that the optimal perovskite crystal structure is ammonium-magnesium-formate with a cost of $6.33, while the percentage variation in cost from the first-best combination to the second-best is 24.7%. Thus, an optimization problem that attempts to find an optimal perovskite based on Goldschmidt stability factors and simultaneously minimizes cost is solved successfully. The mathematical model presented in this study can provide an excellent starting point for exploring the undiscovered combination of materials for perovskite solar cell synthesis. References Green, Martin A., Anita Ho-Baillie, and Henry J. Snaith. 2014. “The Emergence of Perovskite Solar Cells.” Nature Photonics 8 (7): 506–14. https://doi.org/10.1038/nphoton.2014.134. Hoye, Robert L. Z., Philip Schulz, Laura T. Schelhas, Aaron M. Holder, Kevin H. Stone, John D. Perkins, Derek Vigil-Fowler, et al. 2017. “Perovskite-Inspired Photovoltaic Materials: Toward Best Practices in Materials Characterization and Calculations.” Chemistry of Materials 29 (5): 1964–88. https://doi.org/10.1021/acs.chemmater.6b03852. Kieslich, Gregor, Shijing Sun, and Anthony K. Cheetham. 2014. “Solid-State Principles Applied to Organic–Inorganic Perovskites: New Tricks for an Old Dog.” Chemical Science 5 (12): 4712–15. https://doi.org/10.1039/C4SC02211D. Kieslich, G., Sun, S., K. Cheetham, A., 2015. “An Extended Tolerance Factor Approach for Organic–Inorganic Perovskites.” Chemical Science 6 (6): 3430–33. https://doi.org/10.1039/C5SC00961H. National Renewable Energy Laboratory (NREL) (2020) https://www.nrel.gov/pv/cell-efficiency.html (accessed 02.12.20).",
+    "presenting_author": "Swapana Jerpoth | Rowan University, Glassboro, NJ",
+    "authors": [
+      "Swapana Jerpoth | Rowan University, Glassboro, NJ",
+      "Joseph Iannello | Rowan University, Glassboro, NJ",
+      "Emmanuel A. Aboagye | Rowan University, Glassboro, NJ",
+      "Kirti Yenkie | Rowan University, Glassboro, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Swapana Jerpoth",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joseph Iannello",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Emmanuel A. Aboagye",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Kirti Yenkie",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "744h",
+    "sortable_time": "2020-11-19_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/597827"
+  }
+]

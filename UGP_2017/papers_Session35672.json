@@ -1,0 +1,330 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/502509",
+    "paper_endpoint": "Paper/502509",
+    "paper_id": "502509",
+    "topic": "Exploiting Structure in Direct Simultaneous Methods for Global Dynamic Optimization",
+    "title": "Exploiting Structure in Direct Simultaneous Methods for Global Dynamic Optimization",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "35672",
+    "session_title": "Dynamic Simulation and Optimization",
+    "session_number": "599",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "To date, a majority of the research in deterministic global optimization for dynamic systems has focused on direct sequential methods, mainly direct single-shooting [1-4] and more recently direct multiple-shooting [5]. Such sequential methods rely on set-propagation techniques in order to enclose the reachable set of the embedded dynamic system, for instance using interval, ellipsoidal or polynomial model arithmetic, and typically perform a branch-and-bound search in the reduced space of the main decision variables. Despite much progress in recent years, their practical applicability is currently limited to problems with around 10 decision variables and small-scale dynamic systems. In contrast, direct simultaneous methods based on orthogonal collocations have been used extensively for local optimization, but seldom have they been investigated in a context of global optimization [6-7]. The simultaneous approach presents the inherent advantage that the objective and constraint functions in the discretized optimization problem are now factorable, so that in principle state-of-the-art global optimization solvers such as BARON or ANTIGONE can be applied directly. Of course, an attendant drawback is the large number of variables and constraints, which leads to prohibitive computational times but for very small problems. The main objective of this work is to further investigate direct simultaneous methods in deterministic global optimization. Our main focus is on exploiting the underlying structure of the discretized NLP problem in order to expedite the branch-and-bound search. Specifically, the residuals from the discretization of the differential equations present a bordered-block diagonal structure, which we are exploiting to generate additional constraints between the decision variables and the state collocation variables using novel implicit equation bounders [8]. This leads to a tightening of the NLP relaxations and provides a means of being more selective with regards to the branching variable selection. We also consider various discretization schemes for the differential equations, including time-series expansion, Runge-Kutta formula, and orthogonal collocation. Comparisons are made between these improved direct simultaneous methods and existing direct sequential methods for a number of numerical case studies. References: [1] Papamichail, I., Adjiman, C.S.: A rigorous global optimization algorithm for problems with ordinary differential equations. Global Optim. 24:1-33, 2002 [2] Chachuat, B., Singer, A.B., Barton, P.I.: Global methods for dynamic optimization and mixed-integer dynamic optimization. Ind. Eng. Chem. Res. 45(25):8373-8392, 2006 [3] Lin, Y., Stadtherr, M.A.: Deterministic global optimization of nonlinear dynamic systems. AIChE J. 53(4):866-875, 2007 [4] Sahlodin, A.M.: Global optimization of dynamic process systems using complete search methods. Ph.D. thesis, McMaster University, ON, Canada, 2012 [5] Diedam, H.: Global optimal control using direct multiple shooting. Ph.D. thesis, Ruprech-Karls-Universität Heidelberg, Germany, 2015 [6] Esposito, W.R., Floudas, C.A.: Global optimization for the parameter estimation of differential-algebraic systems. Ind. Eng. Chem. Res. 39(5):1291-1310, 2000 [7] Flores Tlacuahuac, A., Terrazas, S., Biegler, L.T.: Global optimization of highly nonlinear dynamic systems. Ind. Eng. Chem. Res. 47(8):2643-2655, 2008 [8] Rajyaguru, J.: Rigorous numerical analysis with polynomial models: Applications to implicit and differential-algebraic equations. Ph.D. thesis, Imperial College London, UK, 2016",
+    "presenting_author": "Benoit Chachuat | Imperial College London, United Kingdom",
+    "authors": [
+      "Yukun Wang | Imperial College London, United Kingdom",
+      "Jai Rajyaguru | Imperial College London, United Kingdom",
+      "Benoit Chachuat | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yukun Wang",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Jai Rajyaguru",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Benoit Chachuat",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "599a",
+    "sortable_time": "2017-11-01_15:15:00_15:34:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/502509"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/496280",
+    "paper_endpoint": "Paper/496280",
+    "paper_id": "496280",
+    "topic": "Demand Response Operation of Air Separation Units Utilizing an Efficient MILP Modeling Framework",
+    "title": "Demand Response Operation of Air Separation Units Utilizing an Efficient MILP Modeling Framework",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "35672",
+    "session_title": "Dynamic Simulation and Optimization",
+    "session_number": "599",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "Deregulation, abundance and affordability of natural gas, and the increase of renewable-based electricity generation from wind and solar power has transformed U.S. energy markets. While highly beneficial in terms of the environment, the variability of solar and wind power coupled with the variable demand of consumers creates a challenge for grid operators. Consequently, increased reliance on renewables carries serious energy security risks, manifest in brown-outs or black-outs when supply cannot meet demand. Electricity storage is a natural way to synchronize renewable electricity generation with demand but remains cost-prohibitive. Managing demand rather than generation, referred to as demand response (DR), has emerged as the approach of choice for mitigating demand variability. Electricity-intensive air separation units (ASUs) are a promising industrial DR candidate—production can be increased during off-peak hours, and excess product stored (in either liquid or gas form) for use during peak demand when production rate is lowered. DR operation of ASUs requires that the process dynamic characteristics and performance be included in production scheduling calculations to ensure that production rate changes (typically scheduled at hourly intervals) are feasible and do not violate product quality and operating safety constraints. However, the (first-principles) mathematical models that are needed to describe and optimize the DR behavior of industrial facilities cover multiple time scales and are inevitably large-scale, nonlinear, and stiff, posing computational challenges for simulation and optimization. In this work, we address this problem by developing a computationally efficient optimal scheduling framework for ASUs operating under DR conditions. In particular, we propose using (nonlinear) low-order data-driven models of the scheduling-relevant dynamics of the plant [1], and present a set of reformulation and (exact) linearization techniques that allow us to cast the overall DR scheduling problem as Mixed Integer Linear Program (MILP). We illustrate these concepts using an Air Separation Unit (ASU) capable of producing 50 tons of nitrogen per day. We show that DR operation can save over 3% in operating costs compared to a scenario where the production rate is kept constant during the day, a considerable savings in the context of an established industrial system that generates a commoditized product. Further, we demonstrate the computational efficiency of this framework and its potential for real-time implementation. [1] R. C. Pattison, C. R. Touretzky, T. Johansson, I. Harjunkoski, and M. Baldea, “Optimal Process Operations in Fast-Changing Electricity Markets: Framework for Scheduling with Low-Order Dynamic Models and an Air Separation Application,” Ind. Eng. Chem. Res. , vol. 55, no. 16, pp. 4562–4584, Apr. 2016.",
+    "presenting_author": "Morgan Kelley | The University of Texas at Austin, TX",
+    "authors": [
+      "Morgan Kelley | The University of Texas at Austin, TX",
+      "Richard Pattison | The University of Texas at Austin, TX",
+      "Ross Baldick | The University of Texas at Austin, TX",
+      "Michael Baldea | The University of Texas at Austin, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Morgan Kelley",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Richard Pattison",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Ross Baldick",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Baldea",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "599b",
+    "sortable_time": "2017-11-01_15:34:00_15:53:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/496280"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/499222",
+    "paper_endpoint": "Paper/499222",
+    "paper_id": "499222",
+    "topic": "Automatic Sensitivity Analysis and Structure-Exploiting Nonlinear Programming for Dynamic Optimization",
+    "title": "Automatic Sensitivity Analysis and Structure-Exploiting Nonlinear Programming for Dynamic Optimization",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "35672",
+    "session_title": "Dynamic Simulation and Optimization",
+    "session_number": "599",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "CasADi [1] is an open-source software framework for numerical optimization, dynamic simulation and algorithmic differentiation. Of special interest are optimization problems constrained by differential equations, i.e. optimal control problems, both in an online and in an offline context. CasADi is a general-purpose tool, available for C++, Python, MATLAB and Octave, and uses a lower level of abstraction than is what is associated with popular algebraic modeling languages such as AMPL, GAMS, JuMP or Pyomo. This in makes CasADi suitable to be used as a building block for domain-specific tools, and to address non-standard problem formulations, in particular in the context of optimal control. Since its inception in late 2009, CasADi has been used successfully for academic teaching as well as in applications from multiple fields, including process control, robotics and aerospace. In this presentation we give a general introduction to the tool and discuss two of the key features of the tool which sets it apart from other optimization modeling tools; namely (1) efficient and fully automatic sensitivity analysis for initial-value problems in ordinary differential equations (ODE) and differential algebraic equations (DAE) and (2) structure-exploiting nonlinear programming. CasADi automates ODE/DAE sensitivity analysis by working with a relatively rich problem formulation, namely that of an initial-value problem in DAE coupled to a terminal-value problem in DAE. Problems of this form can be efficiently be solved with efficient integrator schemes such as backward differential formulas (BDF) or implicit Runge-Kutta methods, implemented in popular software tools such as SUNDIALS. CasADi supports differentiation of such objects, to arbitrary order and using any combination of forward and adjoint sensitivity analysis, by automatically generating augmented ODE/DAE systems and then exploiting their structure during numerical integration. The second feature we discuss is that of structure-exploiting nonlinear programming (NLP), particular in the context of simultanous methods for optimal control. While sparsity exploiting NLP solvers - such as IPOPT - often work well for very sparse problems arising from fully simultanous discretization approaches, some type of structure exploitation is often needed for hybrid discretization approaches. These hybrid discretization methods, e.g the direct multiple shooting method, can then efficiently be applied to higher-dimensional optimal control problems. CasADi supports structure-exploiting nonlinear programming by two different approaches, namely by an implementation of the lifted Newton method [2] and via an interface to the block-structure exploiting NLP solver blockSQP [3]. [1] J. Andersson. A general-purpose software framework for dynamic optimization, Ph. D. thesis. Faculty of Engineering, KU Leuven, Leuven, Belgium (2013) [2] J. Albersmeyer and M. Diehl. The Lifted Newton Method and its Application in Optimization. SIAM Journal on Optimization 20, 3 (2010), 1655–1684 [3] D. Janka, C. Kirches, S. Sager, A. Waechter. An SR1/BFGS SQP algorithm for nonconvex nonlinear programs with block-diagonal Hessian matrix. Mathematical Programming Computation 8, 4 (2016), 435- 459.",
+    "presenting_author": "Joel A. E. Andersson | University of Wisconsin-Madison",
+    "authors": [
+      "Joel A. E. Andersson | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joel A. E. Andersson",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "599c",
+    "sortable_time": "2017-11-01_15:53:00_16:12:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/499222"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/501742",
+    "paper_endpoint": "Paper/501742",
+    "paper_id": "501742",
+    "topic": "Dynamic Modelling of an LNG Storage Tank in a Regasification Terminal",
+    "title": "Dynamic Modelling of an LNG Storage Tank in a Regasification Terminal",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "35672",
+    "session_title": "Dynamic Simulation and Optimization",
+    "session_number": "599",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "Abstract Liquefied natural gas (LNG) is a convenient medium for storage and transport of natural gas, by virtue of its relative compactness. On the downside, LNG storage is a cryogenic process, which inevitably suffers from heat leak. This in turn generates boil-off gas, which is conventionally recycled to the storage tank via an energy-intensive re-liquefaction process. Generation of boil-off gas is particularly intensive at regasification terminals carrying large LNG inventories, especially due to the presence of recirculation flows which maintain cryogenic temperature in loading, unloading, and transfer lines. The present work introduces a comprehensive dynamic model for LNG storage tanks at regasification terminals, a semi-analytical solution to the model, and several case studies on minimization of boil-off gas generation 1 . The necessity for the present model arises from the observation that LNG storage tank modelling almost invariably assume thermal and mass equilibrium between the vapor- and liquid-phases, in contradiction with measured temperature data from our industrial partner. A case in point is the influential work of Miana et al. and , wherein the vapor- and liquid-phases are treated as a flashing mixture at each time step 2 . This approximation is expected to be appropriate for marine cargo tanks, wherein surface wetting results in greatly increase heat- and mass-transfer area, but not for the relatively still vapor-liquid interface in land-based LNG storage tanks. A second concern relevant to the aforementioned work concerns the use of an arbitrary, constant boil-off rate, which is expected to vary circumstantially. Others works e.g. Migliore et al. have eliminated the use of constant boil-off rate 3 , but retain the equilibrium assumption. Note also that both the temperature and the mass flow rate of the boil-off gas are needed to accurately estimate the compressor duty of the re-liquefaction process. To date, we were only able to identify two studies which incorporate heat leak arising from recirculation flows. The first study, published by Querol et al., is a simple but comprehensive attempt at estimating heat leak into LNG storage tanks 4 . The steady-state model presented therein incorporates heat leaks from various heat-transfer areas and dissipation of shaft work, and forms an excellent framework for a more detailed dynamic model. The second study, published by Park et al., incorporates the same features, albeit using a dynamic process simulator 5 . Both studies appear to capture the main features of LNG storage tank modelling in regasification terminals, but lack the details on the heat- and mass-transfer processes, and thus possess limited predictive value. The present study consolidates the best features of the aforementioned studies in the form of a single model which accounts for the sources of heat leak indicated by Querol et al. and the heat-transfer mechanics of Migliore et al., while also accounting for vapor-liquid disequilibrium via vapor-liquid interface heat transfer and the dynamic effects introduced by changing liquid level. The model possesses a neat partial solution in the form of a set of algebraic equations for the special case of nitrogen-free LNG. The model is subsequently used to study minimization of boil-off generation as a function of tank aspect ratio and recirculation line properties for a representative case study. The insights gleaned from this model should prove valuable in future designs of LNG regasification terminals. References 1. Effendy S, Khan MS, Farooq S, Karimi IA. Dynamic Modelling and Optimization of an LNG Storage Tank in a Regasification Terminal with Semi-Analytical Solutions for N 2-Free LNG. Computers & Chemical Engineering. 2017. 2. Miana M, Del Hoyo R, Rodrigálvarez V, Valdés JR, Llorens R. Calculation Models for Prediction of Liquefied Natural Gas (LNG) Ageing During Ship Transportation. Applied energy. 2010;87(5):1687-1700. 3. Migliore C, Tubilleja C, Vesovic V. Weathering Prediction Model for Stored Liquefied Natural Gas (LNG). J. Nat. Gas. Sci. Eng. 2015;26:570-580. 4. Querol E, Gonzalez-Regueral B, García-Torrent J, García-Martínez M. Boil Off Gas (BOG) Management in Spanish Liquid Natural Gas (LNG) Terminals. Applied energy. 2010;87(11):3384-3392. 5. Park C, Lee C-J, Lim Y, Lee S, Han C. Optimization of Recirculation Operating in Liquefied Natural Gas Receiving Terminal. Journal of the Taiwan Institute of Chemical Engineers. 2010;41(4):482-491.",
+    "presenting_author": "Surya Effendy | National University of Singapore",
+    "authors": [
+      "Surya Effendy | National University of Singapore",
+      "Mohd S. Khan | National University of Singapore",
+      "Farooq Shamsuzzaman | National University of Singapore",
+      "Iftekhar A. Karimi | National University of Singapore"
+    ],
+    "authors_structured": [
+      {
+        "name": "Surya Effendy",
+        "affiliation": "National University of Singapore",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mohd S. Khan",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Farooq Shamsuzzaman",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Iftekhar A. Karimi",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "599d",
+    "sortable_time": "2017-11-01_16:12:00_16:31:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/501742"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/492571",
+    "paper_endpoint": "Paper/492571",
+    "paper_id": "492571",
+    "topic": "Optimization of Dynamic Flux Balance Analysis Systems",
+    "title": "Optimization of Dynamic Flux Balance Analysis Systems",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "35672",
+    "session_title": "Dynamic Simulation and Optimization",
+    "session_number": "599",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "Optimization of Dynamic Flux Balance Analysis Systems Jose A. Gomez a and Paul I. Barton a a Process Systems Engineering Laboratory, Massachusetts Institute of Technology, Cambridge MA 02139, USA Bioprocesses involving microbial communities have widespread applications in the pharmaceutical, food and biofuels industries. These complex bioprocesses can be modeled accurately using dynamic flux balance analysis (DFBA) [1], [2], [3], which combines genome-scale metabolic network reconstructions with dynamic process models. DFBA models result in dynamic systems with linear programs (LPs) embedded [4]. These LPs are embedded because their right-hand side depends on the dynamic states and the dynamic states depend on the solution vector of the LP. Newly available simulators [4], [5] have made the reliable and efficient implementation of DFBA possible. This modeling framework has opened a new set of possibilities with regards to the discovery of novel bioprocesses [6], [7], [8] and the optimal design and control of bioprocesses. The optimal design and control of bioprocesses requires optimization algorithms for DFBA systems. Optimization algorithms that rely on transforming the DFBA system into a Mathematical Program with Complementarity Constraints [9] or possibly high-index differential-algebraic equations system [10] have been published in literature. However, numerical difficulties and shortcomings of these approaches have also been reported [11]. Here, we use the simulation framework reported in [11], [4], [5] that transforms the LP embedded into a lexicographic LP (LLP) to address complications associated with nonunique and infeasible LP solutions. The objectives of a LLP in standard form as a function of its right-hand side are piecewise linear functions [12], and therefore, nonsmooth. This source of nonsmoothness can be propagated to the parametric dependence of the final states of the dynamic system. Therefore, there exist some parameter values for which the Jacobian of the dynamic system may not exist. Computing elements of Clarke’s generalized Jacobian for complex nonsmooth functions is challenging [13], but can be done efficiently for piecewise differentiable functions, such as LLPs parameterized by their right-hand side, with lexicographic-directional (LD) derivatives [14]. This paper presents an algorithm for the optimization of DFBA systems. This algorithm relies on LD-derivatives to compute sensitivity information. It then uses bundle methods to solve the resulting nonsmooth optimization problem. An example illustrating the application of this algorithm is presented. Keywords: Linear programming, generalized Jacobian, lexicographic differentiation, LD-derivative, lexicographic optimization, nonsmooth sensitivities, nonsmooth equation solving, flux balance analysis, dynamic flux balance analysis. References [1] A. Varma and B. Ø. Palsson, \"Stoichiometric flux balance models quantitatively predict growth and metabolic by-product secretion in wild-type Escherichia coli W3110,\" Applied and Environmental Microbiology, vol. 60, no. 10, pp. 3724-3731, 1994. [2] J. D. Orth, I. Thiele and B. Ø. Palsson, \"What is flux balance analysis?,\" Nature Biotechnology, vol. 28, pp. 245-248, 2010. [3] R. Mahadevan, J. Edwards and F. I. Doyle, \"Dynamic flux balance analysis of diauxic growth in Escherichia coli.,\" Biophysical Journal, vol. 83, no. 3, pp. 1331-40, 2002. [4] K. Höffner, S. M. Harwood and P. I. Barton, \"A reliable simulator for dynamic flux balance analysis,\" Biotechnology and Bioengineering, vol. 110, no. 3, pp. 792-802, 2013. [5] J. A. Gomez, K. Höffner and P. I. Barton, \"DFBAlab: A fast and reliable MATLAB code for Dynamic Flux Balance Analysis,\" BMC Bioinformatics, vol. 15, p. 409, 2014. [6] J. A. Gomez, K. Höffner and P. I. Barton, \"From sugars to biodiesel using microalgae and yeast,\" Green Chemistry, vol. 18, no. 2, pp. 461-475, 2016. [7] J. Chen, J. Gomez, K. Höffner, P. Barton and M. Henson, \"Metabolic modeling of synthesis gas fermentation in bubble column reactors,\" Biotechnology for Biofuels, vol. 8, no. 89, 2015. [8] J. Chen, J. Gomez, K. Höffner, P. Phalak, P. Barton and M. Henson, \"Spatiotemporal modeling of microbial metabolism,\" BMC Systems Biology, vol. 10, no. 21, 2016. [9] A. U. Raghunathan, J. R. Pérez-Correa, E. Agosin and L. T. Biegler, \"Parameter estimation in metabolic flux balance models for batch fermentation - formulation and solution using differential variational inequalities,\" Ann Oper Res, vol. 148, pp. 251-270, 2006. [10] U. Kaplan, M. Türkay, L. Biegler and B. Karasözen, \"Modeling and simulation of metabolic networks for estimation of biomass accumulation parameters,\" Discrete Applied Mathematics, vol. 157, no. 10, pp. 2483-2493, 2009. [11] S. Harwood, K. Höffner and P. Barton, \"Efficient solution of ordinary differential equations with a parametric lexicographic linear program embedded,\" Numerische Mathematik, vol. 133, no. 4, pp. 623-653, 2016. [12] D. Bertsimas and J. N. Tsitsiklis, Introduction to Linear Optimization, Nashua, NH: Athena Scientific, 1997. [13] F. H. Clarke, Optimization and Nonsmooth Analysis, Philadelphia: Society for Industrial and Applied Mathematics, 1990. [14] K. A. Khan and P. Barton, \"A vector forward mode of automatic differentiation for generalized derivative evaluation,\" Optimization Methods & Software, vol. 30, no. 6, pp. 1185-1212, 2015. [15] K. A. Khan and P. I. Barton, \"Generalized Derivatives for Solutions of Parametric Ordinary Differential Equations with Non-differentiable Right-Hand Sides,\" Journal of Optimization Theory and Applications, vol. 163, no. 2, pp. 355-386, 2014.",
+    "presenting_author": "Jose A. Gomez | Massachusetts Institute of Technology, Cambridge",
+    "authors": [
+      "Jose A. Gomez | Massachusetts Institute of Technology, Cambridge",
+      "Paul I. Barton | Massachusetts Institute of Technology, Cambridge"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jose A. Gomez",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Paul I. Barton",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "599e",
+    "sortable_time": "2017-11-01_16:31:00_16:50:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/492571"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/492805",
+    "paper_endpoint": "Paper/492805",
+    "paper_id": "492805",
+    "topic": "Parallel Cyclic Reduction Decomposition for Dynamic Optimization Problems",
+    "title": "Parallel Cyclic Reduction Decomposition for Dynamic Optimization Problems",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "35672",
+    "session_title": "Dynamic Simulation and Optimization",
+    "session_number": "599",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "Direct transcription of dynamic optimization problems, with differential-algebraic equations discretized and written as algebraic constraints, can create very large nonlinear optimization problems. When this discretized optimization problem is solved with an NLP solver, such as IPOPT, the dominant computational cost often lies in solving the linear system that generates Newton steps for the KKT system. Computational cost and memory constraints for this linear system solution raise many challenges as the system size increases. On the other hand, the linear KKT system for our dynamic optimization problem is sparse and structured, and can be permuted to form a block tridiagonal matrix. This study explores a parallel decomposition strategy for block tridiagonal systems that is based on cyclic reduction (CR) factorization of the KKT matrix. The classical CR method has good observed performance, but its numerical stability properties are unproved for our KKT system. Alternately, Yalamov and Pavlov proposed a modified, full-space CR algorithm with proven stability bounds. Here we compare the performance of both methods on random test matrices. Stable behavior is observed in both cases, and the classical CR method has lower computational cost. This result is explained by analyzing the complexity of both methods. Finally, we discuss modifications to the CR decomposition that improve performance, and we apply the approach to four industrially relevant case studies. These include a moving horizon estimation of a CSTR, nonlinear model predictive control of a CSTR, grade transition for a polymerization process, and nonlinear model predictive control of a bubbling fluidized bed reactor. The latter problem is discretized in both space and time, resulting in up to 250000 variables and constraints. On this problem, a parallel speedup of a factor of four is observed when using eight processors.",
+    "presenting_author": "John P. Eason | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Wei Wan | Carnegie Mellon Univeristy, Pittsburgh, PA",
+      "John P. Eason | Carnegie Mellon University, Pittsburgh, PA",
+      "Bethany Nicholson | Sandia National Laboratories, Albuquerque, NM",
+      "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Wei Wan",
+        "affiliation": "Carnegie Mellon Univeristy, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "John P. Eason",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Bethany Nicholson",
+        "affiliation": "Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Lorenz Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "599f",
+    "sortable_time": "2017-11-01_16:50:00_17:09:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/492805"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/493837",
+    "paper_endpoint": "Paper/493837",
+    "paper_id": "493837",
+    "topic": "Dynamic Optimization of Polymerization Processes with Detailed Molecular Weight Distributions",
+    "title": "Dynamic Optimization of Polymerization Processes with Detailed Molecular Weight Distributions",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "35672",
+    "session_title": "Dynamic Simulation and Optimization",
+    "session_number": "599",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "Dynamic optimization can be used to find fast and economical grade transitions in polymerization processes. The high degree of nonlinearity and large size of these systems makes this a very challenging problem. Many end-use polymer properties on the molecular weight distribution (MWD). Conventionally, a Flory-Schulz distribution with a small-scale moment model has been used to represent the MWD, but it is valid only under steady state or pseudo steady state assumptions. Ideally, the full population balance model should be included in the optimization process so that an operator can control from one desired MWD to another desired MWD in minimum time. However, population balance models consist of a countable system of differential equations. Even if chain length is truncated at a suitable value, these problems are too large for existing dynamic optimization methodologies. In this talk, we discuss alternative representations of the MWD using orthogonal collocation methods 1,2 . In the collocation method, the population balance equations of polymer chains are satisfied exactly at the collocation points in the chain length domain. The resulting solution is used to reconstruct a piecewise polynomial representation of the entire MWD. There are several outstanding challenges compared to typical applications of collocation. First, the inherently discrete MWD is being approximated by smooth functions, and the collocation points must be chosen as integers. In addition, reactions are driven by finite difference relations rather than derivatives, which introduces numerical challenges 1 . We investigate the impacts of these potential sources of error and discuss potential adaptive approaches to regulate and reduce the error. The MWD collocation method is demonstrated on an industrial high-density polyethylene (HDPE) slurry process with a continuous stirred-tank reactor. A detailed mathematical model is presented to track the behavior of the entire plant with liquid and vapor recycles 3 . We will develop and discuss the steady state optimization of the process to produce a product of a specified MWD. A Monte-Carlo simulation method is used to verify the accuracy of the collocation approach. In addition, a dynamic grade transition problem will be presented, where a direct transcription optimization approach is applied to solve this problem after fully discretizing state and control variables in time. References: Canu, P., and Ray, W.H. Discrete weighted residual methods applied to polymerization reactions. Computers and Chemical Engineering, 1991. Vol 15, issue 8, pp 549-564 Pontes, K.V., Embirucu, M., Maciel, R., Hartwich, A., Marquardt, W. Optimal process operation for the production of linear polyethylene resins with tailored molecular weight distribution. AIChE Journal, 2011. Vol 57, No 8. pp 2149-2163. Zhang, C., Shao, Z., Chen, X., Yao, Z., Gu, X. and Biegler, L. T. Kinetic parameter estimation of HDPE slurry process from molecular weight distribution: Estimability analysis and multistep methodology. AIChE Journal, 2014. 60: 3442–3459.",
+    "presenting_author": "John P. Eason | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "John P. Eason | Carnegie Mellon University, Pittsburgh, PA",
+      "Yannan Ma | Zhejiang University, Hangzhou, China",
+      "Xi Chen | Zhejiang University, Hangzhou, China",
+      "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "John P. Eason",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yannan Ma",
+        "affiliation": "Zhejiang University, Hangzhou, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Xi Chen",
+        "affiliation": "Zhejiang University, Hangzhou, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Lorenz Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "599g",
+    "sortable_time": "2017-11-01_17:09:00_17:28:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/493837"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/494109",
+    "paper_endpoint": "Paper/494109",
+    "paper_id": "494109",
+    "topic": "Improved Bounds on the Solutions of Nonlinear Dynamic Systems Using Centered-Form Differential Inequalities",
+    "title": "Improved Bounds on the Solutions of Nonlinear Dynamic Systems Using Centered-Form Differential Inequalities",
+    "date_time": "2017-11-01_15:15:00_17:45:00",
+    "session_id": "35672",
+    "session_title": "Dynamic Simulation and Optimization",
+    "session_number": "599",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computers in Operations and Information Processing",
+    "abstract": "In this talk, we will present and compare several new techniques for computing interval enclosures of the solutions of nonlinear ordinary differential equations (ODEs) subject to a range of parameters and initial conditions. Bounding algorithms of this type are broadly used for uncertainty propagation, set-based state estimation, fault detection, and the global solution of optimal control problems. However, despite significant recent progress, state-of-the-art ODE bounding methods still provide an unsatisfactory compromise between computational efficiency and accuracy for many systems of practical complexity. In particular, classical methods based on interval computations are very efficient but often produce bounds that are extremely conservative. In contrast, methods based on higher-order set enclosures such as polytopes, zonotopes, and Taylor models often provide highly accurate enclosures, but are much more computationally demanding. Together, these issues severely limit the use of existing bounding methods for online control applications, and are also primarily responsible for the inefficiency of current global dynamic optimization algorithms. To address this problem, this talk will present several new approaches based on extensions of the classical theory of differential inequalities (DI), which furnishes simple interval enclosures at very low computational cost. One of the primary drawbacks of the standard DI method is that it computes bounds assuming that, at every point in time, the uncertain quantities (i.e., all model parameters and state variables) can vary independently of one another (because they are bounded in a Cartesian product of intervals). This greatly simplifies computations, but also leads to severe overestimation of the true solution set in many cases. However, this problem is not unique to dynamic systems – a simpler form of the problem also in occurs when using interval arithmetic to bound the range of a given function, where it is known as the ‘dependency problem.’ Moreover, several well known strategies have been developed that partially resolve the dependency problem using derivative information while largely maintaining the computational efficiency of standard interval arithmetic. These techniques are broadly known as ‘centered forms’ and include the mean-value form and slope forms of several varieties. In this work, we extend these centered-forms to dynamic problems by combining them with the theory of differential inequalities in a novel way. The resulting bounding methods are most similar to the method of Chachuat and Villanueva (Comp. & Chem. Eng., 2012), which combines differential inequalities with Taylor models (a form of enclosure for the range of a function that is represented by a polynomial approximation with a rigorous bound on the approximation error). However, the proposed methods use only first order derivative (or slope) information, whereas Taylor models use at least second order information. Thus, the proposed methods are expected to be more computationally efficient in general. We will present detailed numerical comparisons for several different centered-form ODE bounding methods, along with comparisons to existing state-of-the-art bounding methods, on a test set of nonlinear models of chemical reaction systems, mechanical systems, and aerospace systems. Our results indicate that a significantly better compromise between efficiency and accuracy can be achieved in many cases. Moreover, the use of centered-forms can also enhance the effectiveness of another bounds tightening technique recently developed by the authors based on the use of solution invariants. We conclude with a discussion of key problem features that appear to dictate the effectiveness of the new approaches.",
+    "presenting_author": "Joe Scott | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Kai Shen | Clemson University, SC",
+      "Joe Scott | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kai Shen",
+        "affiliation": "Clemson University, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Joe Scott",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "599h",
+    "sortable_time": "2017-11-01_17:28:00_17:47:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/494109"
+  }
+]

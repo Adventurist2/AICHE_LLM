@@ -1,0 +1,155 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/605676",
+    "paper_endpoint": "Paper/605676",
+    "paper_id": "605676",
+    "topic": "Convergence Rate Analysis for Schemes of Relaxations in Decomposition Methods for Global Nonconvex Stochastic Optimization",
+    "title": "Convergence Rate Analysis for Schemes of Relaxations in Decomposition Methods for Global Nonconvex Stochastic Optimization",
+    "date_time": "2020-11-17_09:00:00_10:00:00",
+    "session_id": "46290",
+    "session_title": "Division Plenary Part 3: CAST (Invited Talks)",
+    "session_number": "806",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "This presentation describes a framework for analyzing the convergence rate of convex relaxations used in decomposition-based global optimization techniques for nonconvex stochastic programs and provides a detailed convergence analysis of two existing techniques. Stochastic programming is a powerful framework for modeling decision-making under uncertainty and is highly advantageous, e.g., in planning and process control, where much information is not known with certainty when decisions are made. However, stochastic programming models often involve a very large number of variables and constraints. For nonconvex models, this makes it prohibitively expensive to find global solutions, at least by direct application of standard global optimization algorithms. As a result, there is significant interest in decomposition-based techniques that can transform a stochastic programming problem into a sequence of smaller subproblems that can be solved more efficiently and largely in parallel, while still providing a rigorous guarantee of global optimality. There are two existing methods that can achieve such a decomposition for general mixed-integer nonconvex stochastic programs. Both methods operate by applying spatial-branch-and-bound (B&B) in the space of the first-stage variables only, and use various decomposition-based techniques within each B&B node to obtain lower bounds on the problem projected into this space. Reference 1 computes a lower bound in each B&B node by first copying the first-stage variables for each scenario, and then relaxing the non-anticipativity constraints. The resulting lower-bounding problem is easily decomposed over the scenarios, leading to subproblems that can be solved globally and independently, and the resulting optimal values are added together to get the final lower bound. Reference 2 presents a significantly different lower bounding technique. They take linear cuts derived from Lagrangian subproblems (which are solved globally and independently for each scenario) and combine them with Benders cuts to form a relaxed master problem, the solution of which gives the required lower bound. In order to better understand and potentially improve these methods, it is of interest to investigate the accuracy of these two lower bounding schemes. In spatial-B&B algorithms more generally, several recent developments have begun to provide a rigorous link between B&B performance and the strength of the convex relaxations used in the lower-bounding problem. Reference 3 first introduced they key concept of convergence order for schemes of relaxations of a function and established a second-order convergence property for several common relaxation techniques. In Ref. 4, this concept was extended to characterize the convergence order of B&B lower-bounding problems. Finally, in Ref. 5 and Ref. 4, it was shown that these notions of convergence order effectively determine whether or not a spatial-B&B algorithm will suffer from the cluster problem, which is the cause of exponential run-time scaling in practice. This talk will present a new framework for assessing the performance of decomposition-based global stochastic optimization methods by viewing them in terms of schemes of relaxations and/or lower bounding problems in the space of the first-stage variables and analyzing their convergence order. We will then use this framework to analyze the convergence rates of the decomposition methods of Ref. 1 and Ref. 2 in detail. Our key findings indicate that Ref 1’s algorithm is first-order convergent, while second-order convergence is generally necessary to avoid the cluster problem, particularly at unconstrained minima. In contrast, Ref 2’s method can achieve second-order convergence when optimal Lagrange multipliers are obtained. However, this requires smoothness of the first-stage optimal value function, which is only guaranteed to be lower semi-continuous under standard assumptions, and this alludes to a larger issue in the projection-based decomposition approach. Finally, we will present empirical results verifying our theoretical convergence rate results and demonstrating their practical importance. Listed References: 1. Cao Y, and Zavala V M , “A scalable global optimization algorithm for stochastic nonlinear programs” Journal of Global Optimization, 75 pp. 393–416, (2019). 2. Li C, and Grossmann I E , “A generalized Benders decomposition-based branch and cut algorithm for two-stage stochastic programs with non convex constraints and mixed-binary first and second stage variables” Journal of Global Optimization, 75 pp. 247–272, (2019). 3. Bompadre A, and Mitsos A , “Convergence rate of McCormick relaxations” Journal of Global Optimization, 52 pp. 1–28, (2012). 4. Kannan R, and Barton P I , “ The cluster problem in constrained global optimization ” Journal of Global Optimization, 69 pp. 629–676, (2017). 5. Wechsung A, and Schaber S D, and Barton P I , “The cluster problem revisited” Journal of Global Optimization, 58 pp. 429–438, (2014).",
+    "presenting_author": "Joe Scott | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Dillard L. Robertson | Georgia Institute of Technology, Atlanta, GA",
+      "Pengfei Cheng | Georgia Institute of Technology, Atlanta, GA",
+      "Joe Scott | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dillard L. Robertson",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Pengfei Cheng",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Joe Scott",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "56e",
+    "sortable_time": "2020-11-17_09:00:00_09:15:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/605676"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/601248",
+    "paper_endpoint": "Paper/601248",
+    "paper_id": "601248",
+    "topic": "Entmoot: A Framework for Optimization over Ensemble Tree Models",
+    "title": "Entmoot: A Framework for Optimization over Ensemble Tree Models",
+    "date_time": "2020-11-17_09:00:00_10:00:00",
+    "session_id": "46290",
+    "session_title": "Division Plenary Part 3: CAST (Invited Talks)",
+    "session_number": "806",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Using data-driven methods in chemical engineering remains challenging due to the high-dimensional input feature space of complex physical systems. Ever-increasing monitoring of chemical plants allows large-scale collection of system information. However, with control equipment keeping processes at only a few operating points [Pantelides and Renfro, 2013; Tsay et al., 2018], the resulting datasets show low variability. Experimental studies may help to gain more system information but are expensive and time-consuming, resulting in inherently sparse datasets. Coupled with high system dimensionality, this leads to two related challenges: large datasets with low variability and small datasets with high variability. Using data-driven models as surrogates for mechanistic models in optimization settings is becoming increasingly popular [Bhosekar and Ierapetritou, 2018; Ning and You, 2017]. Successful applications of such surrogate models use algebraic equations [Boukouvala and Floudas, 2017; Wilson and Sahinidis, 2017], artificial neural networks [Henao and Maravelias, 2011; Schweidtmann and Mitsos, 2019], Gaussian processes [Palma and Realff, 2002; Davis and Ierapetritou, 2007; Caballero and Grossmann, 2008; Olofsson et al., 2019] and gradient boosted trees [Mišić 2017; Mistry et al., 2018]. We present the ENsemble Tree MOdel Optimization Tool (ENTMOOT) [Thebelt et al., 2020] which provides (i) strong regression performance, (ii) reliable model uncertainty quantification, (iii) natural support of discrete and categorical features, (iv) mathematically proven -global optimal solutions of the underlying acquisition function and (v) support for hard constraints. ENTMOOT uses gradient boosted trees [Friedman, 2001; Friedman, 2002], a well-established machine learning architecture that can effectively handle sparse data and naturally support discrete and categorical features. ENTMOOT encodes gradient boosted trees as a mixed-integer linear program (MILP) according to Mišić (2017). A distance-based model uncertainty measure captures the prediction performance of the surrogate model and identifies its weaknesses. ENTMOOT derives an acquisition function to trade-off the objective captured in the surrogate model and the model uncertainty. We distinguish between two related applications: (1) optimal decision-making under uncertainty and (2) black-box optimization. Optimal decision-making uses surrogate models to approximate physical systems, e.g. the behavior of a manufacturing unit, and includes such models into larger optimization problems. Model-based black-box optimization trains surrogate models to guide sequential evaluations of the black-box to determine its optimum, e.g. propose new promising catalyst compositions to maximize reaction yield. ENTMOOT captures these modes in the acquisition function by either penalizing model uncertainty deriving optimal solutions where we expect good model performance, or incentivizing model uncertainty to efficiently explore promising areas of the feature space. The resulting mixed-integer nonlinear program (MINLP) is convex for the optimal decision-making and nonconvex for black-box optimization depending on how the distance-based uncertainty measure contributes to the objective function. Both MINLP formulations are internally optimized by the third-party software tool Gurobi 9, providing -global optimal solutions and capturing the best trade-off between model uncertainty and predicted performance as intended in the acquisition function. Moreover, the MINLP can be extended with additional hard constraints to include safety related restrictions or existing physical domain knowledge enhancing the underlying data-driven model. Other approaches using tree-based models for model-based black-box optimization often rely on stochastic optimization techniques [B. Shahriari, 2016], and thereby fail to provide -global optimal solutions of the acquisition function and satisfy additional constraints. In an extensive numerical study, we compare ENTMOOT’s performance with scikit-optimize, a popular library for Bayesian optimization using gradient boosted trees and Gaussian processes. We test ENTMOOT’s performance on a set of 14 black-box functions, including global optimization benchmark functions [S. Surjanovic and D. Bingham, 2020] and a fermentation model. In particular, the study shows: (i) ENTMOOT’s distance-based measure comparing well against other tree-model uncertainty measures, (ii) global optimization techniques becoming increasingly important for high-dimensional problems, and (iii) the ENTMOOT approach competing well against state-of-the-art Bayesian optimization frameworks using Gaussian processes. ENTMOOT is an attractive framework to effectively handle sparse data in high-dimensional settings for optimal decision-making under uncertainty and black-box optimization to propose new promising data points to enhance system knowledge. References: A. Bhosekar, M. Ierapetritou, 2018. Advances in surrogate based modeling, feasibility analysis, and optimization: A review. Computers & Chemical Engineering 108, 250­–267 F. Boukouvala, C. A. Floudas, 2017. Argonaut: Algorithms for global optimization of constrained grey-box computational problems. Optimization Letters 11 (5), 895–913. J. A. Caballero, I. E. Grossmann, 2008. An algorithm for the use of surrogate models in modular flowsheet optimization. AIChE Journal 54 (10), 2633–2650. E. Davis, M. Ierapetritou, 2007. A kriging method for the solution of nonlinear programs with black-box functions. AIChE Journal 53 (8), 2001–2012. J. H. Friedman, 2001. Greedy function approximation: A gradient boosting machine. Annals of Statistics . J. H. Friedman, 2002. Stochastic gradient boosting. Computational statistics & data analysis 38 (4), 367–378. C. A. Henao, C. T. Maravelias, 2011. Surrogate-based superstructure optimization framework. AIChE Journal 57 (5), 1216–1232. M. Mistry, D. Letsios, G. Krennrich, R. M. Lee, R. Misener, 2018. Mixed-integer convex nonlinear optimization with gradient-boosted trees embedded. arXiv 1803.00952. V. V. Mišić, 2017. Optimization of tree ensembles. arXiv 1705.10883. C. Ning, F. You, 2017. Data-driven adaptive nested robust optimization: General modeling framework and efficient computational algorithm for decision making under uncertainty. AIChE Journal 63 (9), 3790– 3817. S. Olofsson, M. Mehrian, R. Calandra, L. Geris, M. P. Deisenroth, R. Misener, 2019. Bayesian Multiobjective Optimisation with Mixed Analytical and Black-Box Functions: Application to Tissue Engineering. IEEE Transactions on Biomedical Engineering 66 (3), 727–739. K. Palmer, M. Realff, 2002. Optimization and validation of steady-state flowsheet simulation metamodels. Chemical Engineering Research and Design 80 (7), 773 – 782. C. C. Pantelides and J. G. Renfro. The online use of first-principles models in process operations: Review, current status and future needs. Computers & Chemical Engineering 51 (2013), 136–148. A. M. Schweidtmann, A. Mitsos, 2019. Deterministic Global Optimization with Artificial Neural Networks Embedded. Journal of Optimization Theory and Applications 180 (3), 925–948. B. Shahriari, K. Swersky, Z. Wang, R. P. Adams, N. De Freitas. Taking the Human Out of the Loop: A Review of Bayesian Optimization. Proceedings of the IEEE 104.1 (2016), 148–175. S. Surjanovic and D. Bingham. Virtual Library of Simulation Experiments: Test Functions and Datasets. 2020. URL: http://www.sfu.ca/~ssurjano. A. Thebelt, J. Kronqvist, M. Mistry, R. M. Lee, N. Sudermann-Merx, R. Misener, 2020. ENTMOOT: A Framework for Optimization over Ensemble Tree Models arXiv 2003.04774. C. Tsay, R. C. Pattison, M. R. Piana, M. Baldea, A survey of optimal process design capabilities and practices in the chemical and petrochemical industries. Computers & Chemical Engineering 112 (2018), 180–189. Z. T. Wilson, N. V. Sahinidis, 2017. The ALAMO approach to machine learning. Computers & Chemical Engineering 106, 785–795.",
+    "presenting_author": "Ruth Misener | Imperial College London, United Kingdom",
+    "authors": [
+      "Alexander Thebelt | Imperial College London, United Kingdom",
+      "Jan Kronqvist | Imperial College London, United Kingdom",
+      "Miten Mistry | Imperial College, London, United Kingdom",
+      "Robert M. Lee | BASF, Ludwigshafen, Germany",
+      "Nathan Sudermann-Merx | BASF SE, Ludwigshafen, Germany",
+      "Ruth Misener | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Alexander Thebelt",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Jan Kronqvist",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Miten Mistry",
+        "affiliation": "Imperial College, London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Robert M. Lee",
+        "affiliation": "BASF, Ludwigshafen, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Nathan Sudermann-Merx",
+        "affiliation": "BASF SE, Ludwigshafen, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Ruth Misener",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "56f",
+    "sortable_time": "2020-11-17_09:15:00_09:30:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/601248"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/607070",
+    "paper_endpoint": "Paper/607070",
+    "paper_id": "607070",
+    "topic": "A Physiologically-Based Pharmacokinetic Model of Endogenous Clotting in Obstetric Patients",
+    "title": "A Physiologically-Based Pharmacokinetic Model of Endogenous Clotting in Obstetric Patients",
+    "date_time": "2020-11-17_09:00:00_10:00:00",
+    "session_id": "46290",
+    "session_title": "Division Plenary Part 3: CAST (Invited Talks)",
+    "session_number": "806",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Objectives: According to the CDC’s Pregnancy Mortality Surveillance System, adopted in 1987, pregnancy-related mortality had more than doubled by 2003 and continues to rise. Hemorrhage and venous thromboembolism (VTE), or excessive clotting, combine to account for over 30 percent of maternal deaths (Kuriya et al. 2016). Understanding how activated coagulation factors dynamically distribute and drive clot development during and after pregnancy may provide insight into the mechanisms driving these key morbid outcomes. Physiologically-based pharmacokinetic (PBPK) models provide improved mechanistic understanding of drug distributions throughout the body and the impact of these administrations. PBPK models have been applied to the obstetric population with relative success (Luecke et al. 1994, Kalluri et al. 2017, Zhang et al. 2018). However, to the best of our knowledge, modeling the dynamic coagulation potential over gestation and during childbirth has not been explored and may help bridge the gap between systemic challenges and the mechanisms driving coagulation. Methods: The PBPK model includes the following compartments: arteries, central veins, liver, uterus, legs, and a compartment to encompass all other organs (the “organs” compartment). Interacting dynamic equations capturing volume, activated clotting factors (aCFs), and clot were built using mass balance principles using ordinary differential equations (ODEs). Volumetric flow rates were determined from a combination of literature and expert input, and all parameter ranges simulated were restricted to capture the physiological range. Compartmental volumes change as a result of gestational accumulation of volume and increases in specific organ flow rates, particularly in the uterus and organs compartments. Gestational fluid accumulation, and return to the initial blood volume, is accomplished through changes in kidney volume elimination, which is grouped into the organs compartment. Reduced volume elimination drives gestational volume accumulation, and an elimination rate increase after birth provides return to baseline. The model also incorporates the loss of volume occurring immediately post-delivery (simulated over thirty minutes), along with a net shift of blood from the uterus to the venous space that is observed with postpartum uterine contraction. Volume loss is modeled as linearly dependent upon a uterine tone parameter, allowing for simulations of abnormal and insufficient uterine tone leading to increased blood loss during labor and delivery. During and after delivery, coagulation factor blood concentrations exhibit an increase and return to baseline levels (Gerbasi et al., 1990) and can be associated with a generalized coagulation ability modeled as aCFs. Generation of aCFs is captured in an activation rate parameter, A, which is dependent on the rate of blood loss by the uterus during delivery. The rate of deactivation of aCFs follows liver metabolism, in addition to the fibrinolytic effects in circulation (i.e., tissue plasminogen activator). Specifically, a deactivation parameter, D, serves to decrease concentrations in the liver and system flow in a first-order manner. Lastly, the clot state includes a growth and a breakdown functionality. Clot growth requires exposure to aCFs (residence time in the compartment multiplied by concentration), and a compartment-specific binding affinity parameter. The breakdown or lysis of the clot is linearly dependent on the compartment clot state value and a lysis parameter. Results: Model simulations describe compartmental volumes, clotting factor concentrations, as well as the increase in flow to the uterus during gestation. Volume simulations of all organs were parameterized to capture published gestational blood volume changes. Delivery and resulting volume distribution changes resulted in a total loss of 350 mL of blood for a simulated patient with healthy uterine tone. Blood loss increased to 800 mL when uterine tone diminished to a quarter of the healthy value for 30 minutes. This larger volume blood loss qualifies as postpartum hemorrhage. To assess the effect of dynamic volume changes, the magnitude and trajectory of the simulation results for the aCFs and clot state for a healthy and a diminished uterine tone (reduced to 25 percent of the normal value) are compared. Concentration of aCFs simulated for the diminished uterine tone simulation were 1.7 times the concentration of aCFs of the healthy tone simulation in the compartments. The difference between the aCF trajectories includes an extended time that the compartments are exposed to aCFs for the diminished tone simulation. The peak aCF concentration is reached at the end of delivery and hemorrhage (which is extended for the diminished tone simulation). In contrast, the clot state peaks in each compartment at varying times after delivery and hemorrhage. For the leg compartment, the peak clot state occurs approximately 1.2 hours after delivery ends and is 2.2 times higher for diminished uterine tone compared to normal tone. These trajectory differences, including increased exposure marked by increased area under the curves, for both aCFs and clot state might help analyze timing and mechanisms leading to hypercoagulation events including venous thromboembolism that primarily originate in the legs. Summary: Our model demonstrates elevated exposure to aCFs, increased clot formation (especially in the legs), and increased blood loss after childbirth as a result of diminished uterine tone. Changes in this model structure and parameterization including uterine tone value, activation and deactivation, clot formation functionality including binding and breakdown, will be assessed with available literature and clinical data. These parameters are expected to vary on a per patient basis, resulting in variability in the expected aCF and clot trajectories. Ongoing work includes testing patient-specific risk factors and characteristics mapped to changes relevant parameters. A higher risk patient will exhibit a lower uterine tone, in addition to an elevated activation rate. Additionally, the resulting exposure to clotting via the clot state may eventually be calibrated to published changes in risk (odds ratio) based on hemorrhage for developing VTE (James 2009). Once validated, this type of model could use patient-specific risk factors to return a timeline of risk as well as recommendations for monitoring coagulation-related challenges.",
+    "presenting_author": "Robert Parker | University of Pittsburgh, PA",
+    "authors": [
+      "Michelle Pressly | University of Pittsburgh, PA",
+      "Gilles Clermont | University of Pittsburgh, PA",
+      "Matthew Neal | University of Pittsburgh Medical Center, PA",
+      "Jonathan Waters | University of Pittsburgh, PA",
+      "Robert Parker | University of Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Michelle Pressly",
+        "affiliation": "University of Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Gilles Clermont",
+        "affiliation": "University of Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew Neal",
+        "affiliation": "University of Pittsburgh Medical Center, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jonathan Waters",
+        "affiliation": "University of Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Robert Parker",
+        "affiliation": "University of Pittsburgh, PA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "56g",
+    "sortable_time": "2020-11-17_09:30:00_09:45:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/607070"
+  }
+]

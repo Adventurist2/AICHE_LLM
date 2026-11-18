@@ -1,0 +1,295 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/493111",
+    "paper_endpoint": "Paper/493111",
+    "paper_id": "493111",
+    "topic": "GPU Parameter Tuning for Dense Linear Least Squares Problems",
+    "title": "GPU Parameter Tuning for Dense Linear Least Squares Problems",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35658",
+    "session_title": "Advances in Computational Methods and Numerical Analysis",
+    "session_number": "254",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Linear least squares problems (LLSPs) routinely arise in many types of scientific and engineering problems. As the size of datasets used to generate linear models increases, there exists a need to efficiently solve large dense linear least squares problems. One of the fastest ways to solve large LLSPs is to utilize the parallel processing power of graphics processing units (GPUs) and GPU parallel LLSP solvers such as cuSolverDN [5] and communication avoiding QR [3]. There has also been work to develop hybrid algorithms that take advantage of the processing power of both CPUs and GPUs through the MAGMA project [7]. However, these parallel algorithms are typically designed and optimized for one GPU architecture and may be unusable or suboptimal on another GPU. To design algorithms that are portable between devices, most algorithms are designed with tunable parameters that can be adjusted to avoid having to rewrite most of an algorithm to remain optimal on any GPU architecture. Traditionally, these parameters have been chosen through extensive experimentation or through heuristics that come from the knowledge of solver designers. The primary contribution of this work is to propose systematic methods for tuning GPU or hybrid CPU/GPU algorithms through the use of derivative-free optimization (DFO) [6] and simulation optimization (SO) [1]. A second contribution of our work is to provide a comparison of thirty-one DFO and four SO solvers in the context of tuning GPU algorithms. To determine a baseline of performance, we evaluated the performance of a few of the most well-known dense linear algebra libraries: LAPACK [2], a multicore solver PLASMA [4], a GPU only algorithm cuSolverDN [5], and a hybrid implementation MAGMA [7]. We evaluated each of these solvers over a wide range of different sized square and tall and skinny matrices. Tall and skinny matrices commonly arise when solving LLSPs, and are typically challenging to obtain high performance on because of the matrix structure. For square matrices, the solver MAGMA was able to outperform all of the other solvers. However, for tall and skinny matrices MAGMA was not able to perform as well as the other solvers. Our computational results show that the best DFO solver is able to speed up the performance of MAGMA by 1.67x compared to default MAGMA parameters. After tuning MAGMA through the proposed approach, MAGMA was able to outperform all other solvers for tall and skinny matrices. References cited [1] S. Amaran, N. V. Sahinidis, B. Sharda, and S. J. Bury. Simulation optimization: A review of algorithms and applications. Annals of Operations Research, 240:351–380, 2016. [2] E. Anderson, Z. Bai, C. Bischof, L. S. Blackford, J. Demmel, J. Dongarra, J. Du Croz, S. Hammarling, A. Greenbaum, A. McKenney, and D. Sorensen. LAPACK users’ guide (third ed.). Society for Industrial and Applied Mathematics, Philadelphia, PA, USA, 1999. [3] M. Anderson, G. Ballard, J. Demmel, and K. Keutzer. Communication-avoiding QR decomposition for GPUs. In Parallel & Distributed Processing Symposium (IPDPS), 2011 IEEE International, pages 48–58, 2011. [4] B. Hadri, H. Ltaief, E. Agullo, and J. Dongarra. Tile QR factorization with parallel panel processing for multicore architectures. In Parallel & Distributed Processing (IPDPS), 2010 IEEE International Symposium on, pages 1–10, 2010. [5] NVIDIA Corporation. cuSolver, Current as of 28 December, 2016. http://docs.nvidia.com/cuda/cusolver/#axzz4SZ3ssQJO. [6] L. M. Rios and N. V. Sahinidis. Derivative-free optimization: A review of algorithms and comparison of software implementations. Journal of Global Optimization, 56:1247–1293, 2013. [7] S. Tomov, J. Dongarra, and M. Baboulin. Towards dense linear algebra for hybrid GPU accelerated manycore systems. Parallel Computing, 36:232–240, 2010.",
+    "presenting_author": "Benjamin Sauk | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Benjamin Sauk | Carnegie Mellon University, Pittsburgh, PA",
+      "Nikolaos Ploskas | Carnegie Mellon University, Pittsburgh, PA",
+      "Nikolaos Sahinidis | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Benjamin Sauk",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nikolaos Ploskas",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Nikolaos Sahinidis",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "254a",
+    "sortable_time": "2017-10-31_08:00:00_08:21:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/493111"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/494680",
+    "paper_endpoint": "Paper/494680",
+    "paper_id": "494680",
+    "topic": "Phase Change Transient Model for Predicting Frost Formation in Ambient Air Vaporizer",
+    "title": "Phase Change Transient Model for Predicting Frost Formation in Ambient Air Vaporizer",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35658",
+    "session_title": "Advances in Computational Methods and Numerical Analysis",
+    "session_number": "254",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Natural gas is continuously getting attention as an eco-friendly and sustainable energy source mainly composed of methane. Natural gas is liquefied into liquefied natural gas (LNG) in order to facilitate transportation and then regasified to natural gas (NG) to be supplied to the user at the terminal. LNG regasifiers used in terminals include ORV, SCV, AAV, etc. ORV uses seawater as a heat source and SCV burns fuel to provide heat. Among them, Ambient Air Vaporizer (AAV) is LNG regasification technology using air in the atmosphere as a heat source. The ORV increases the temperature of seawater and affects the marine ecosystem, and SCV burns the fuel, which adversely affects the atmospheric environment. On the other hand, AAV uses the atmospheric air directly, so it is eco-friendly and offers reasonable price and high operating efficiency. However, in the process of transferring thermal energy from air to LNG, the phenomenon of condensation of water vapor contained in the air into frost on the AAV surface occurs due to cryogenic temperature of LNG. This frost acts as a thermal resistance that interferes with the heat transfer between the air and the LNG, thereby lowering the heat transfer efficiency between the LNG and the air. As time goes on, the frost accumulates more and more. As a result, after a certain period of time, the heat transfer efficiency of the AAV becomes very low and the target NG output temperature is not reached. Thus, the AAV will alternate between operation and defrosting. Therefore, for the design of AAV and its application to LNG regasification of AAV, it is essential to understand how frost is formed in AAV. However, research on AAV and studies on frost growth in AAV are lacking. Therefore, this study presents a model for frost growth using CFD, and applies this model to AAV to analyze the effect of frost growth on AAV performance on AAV. The proposed model is an Eulerian-Eulerian multiphase flow model of ice and moist air simulating frost formation and growth using CFD. At below freezing point, the water vapor contained in the moist air is phase-changed to Ice, and the generated ice accumulates without flowing. That is, mass transfer with phase change from air to frost occurs over time, changing the thickness and density of the frost and affecting the flow of moist air. Therefore, this model can observe the thickness, density, and shape of the frost with time, and also the effects of frost on the flow of air and its effect on heat transfer.",
+    "presenting_author": "Jongmin Park | Seoul National University, Korea, Republic of (South)",
+    "authors": [
+      "Jongmin Park | Seoul National University, Korea, Republic of (South)",
+      "Yongkyu Lee | Seoul National University, Korea, Republic of (South)",
+      "Jonggeol Na | Seoul National University, Korea, Republic of (South)",
+      "Chonghun Han | Seoul National University, Korea, Republic of (South)",
+      "Won Bo Lee | Seoul National University, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jongmin Park",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yongkyu Lee",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Jonggeol Na",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Chonghun Han",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Won Bo Lee",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "254b",
+    "sortable_time": "2017-10-31_08:21:00_08:42:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/494680"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/495741",
+    "paper_endpoint": "Paper/495741",
+    "paper_id": "495741",
+    "topic": "Simulation of the Effect of Contact Area Loss in All-Solid-State Batteries",
+    "title": "Simulation of the Effect of Contact Area Loss in All-Solid-State Batteries",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35658",
+    "session_title": "Advances in Computational Methods and Numerical Analysis",
+    "session_number": "254",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Maintaining the physical contact between the solid electrolyte and the electrode is important to improve the performance of all-solid-state batteries. Imperfect contact can be formed during cell fabrication and will be worsened due to cycling, resulting in degradation of the battery performance. In this paper, the effect of imperfect contact area was incorporated into a 1­D Newman battery model by assuming the current and Li concentration will be localized at the contacted area. Constant current discharging processes at different rates and contact areas was simulated for a film-type Li|LiPON|LiCoO2 all­solid­state battery. The capacity drop was correlated with the contact area loss. It was found at lower cutoff voltage, the correlation is almost linear with a slope of 1; while at higher cut off voltage, the dropping rate is slower. To establish the relationship of the applied pressure and the contact area, Persson’s contact mechanics theory was applied, as it uses self-affined surfaces to simplify the multi-length scale contacts in all-solid-state batteries. The contact area and pressure was computed for both film-type and bulk-type all-solid-state Li-ion batteries. The model is then used to suggest how much pressures should be applied to recover the capacity drop due to contact area loss.",
+    "presenting_author": "Hong-Kang Tian | Michigan State University, Lansing",
+    "authors": [
+      "Hong-Kang Tian | Michigan State University, Lansing",
+      "Yue Qi | Michigan State University, Lansing"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hong-Kang Tian",
+        "affiliation": "Michigan State University, Lansing",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yue Qi",
+        "affiliation": "Michigan State University, Lansing",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "254c",
+    "sortable_time": "2017-10-31_08:42:00_09:03:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/495741"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/496443",
+    "paper_endpoint": "Paper/496443",
+    "paper_id": "496443",
+    "topic": "Multi-Phase Mathematical Modeling of Compressed CO 2 Expansion through a Coanda Nozzle",
+    "title": "Multi-Phase Mathematical Modeling of Compressed CO 2 Expansion through a Coanda Nozzle",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35658",
+    "session_title": "Advances in Computational Methods and Numerical Analysis",
+    "session_number": "254",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "A Coanda nozzle can be used to produce a high velocity mixture of air, gaseous CO 2 , and dry ice particles from a supply of liquid CO 2. Such a process is effective (for instance) for residue-free rapid cooling or precision cleaning. A multiphase thermodynamic and computational fluid dynamics (CFD) analysis of this flow is presented for the purpose of optimizing the process parameters, which include the temperature of the liquid CO 2 supply, the flow rate, and the pressure and nozzle and air configuration. Temperature, pressure, velocity and mass fraction profile distributions have been modeled on the spray-nozzle system. Flow characteristics have been quantified for dry ice particle sizes of 1.0x10 -3 m, 1.0x10 -4 m and 1.0x10 -5 m. Maximum velocity and residence time as a function of inlet temperature have been simulated and quantified. The analysis suggests that as inlet CO 2 temperature increases, the maximum velocity increases and the particle residence time decreases. Decreasing dry ice particle size decreases the residence time in the nozzle channel. Overall, this study provides a basis for optimizing the temperature and velocity profiles, and thus the cooling or cleaning capacity of such Coanda devices.",
+    "presenting_author": "Michael A Matthews | University of South Carolina, Columbia, SC",
+    "authors": [
+      "Odell Glenn Jr. | University of South Carolina, Columbia, SC",
+      "Sirivatch Shimpalee | University of South Carolina, Columbia, SC",
+      "Michael A Matthews | University of South Carolina, Columbia, SC"
+    ],
+    "authors_structured": [
+      {
+        "name": "Odell Glenn Jr.",
+        "affiliation": "University of South Carolina, Columbia, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Sirivatch Shimpalee",
+        "affiliation": "University of South Carolina, Columbia, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael A Matthews",
+        "affiliation": "University of South Carolina, Columbia, SC",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "254d",
+    "sortable_time": "2017-10-31_09:03:00_09:24:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/496443"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/498349",
+    "paper_endpoint": "Paper/498349",
+    "paper_id": "498349",
+    "topic": "Stochastic Modeling of CTB-GM1 Binding Mechanisms",
+    "title": "Stochastic Modeling of CTB-GM1 Binding Mechanisms",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35658",
+    "session_title": "Advances in Computational Methods and Numerical Analysis",
+    "session_number": "254",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Cholera toxin (CTx) is a toxin protein, which can lead to lethal cholera. CTx is an AB 5 protein that is consisted of an enzymatic A-subunit and five identical cholera toxin B-subunits (CTB) [1]. CTB binds with gangliosides such as GM1 on host cell membrane, which facilitates the endocytosis of CTx and the development of cholera. Despite extensive experimental and theoretical work on understanding the CTB structure and function, there is a lack of systematic framework that relies on fundamental understanding of the binding mechanisms of CTB at the microscopic level and utilizes such information to elucidate the detailed mechanism of CTB-GM1 interactions, which is the prerequisite for CTx cell entry. It is worth noting that a pentavalent CTB can simultaneously binds to multiple copies of GM1 in cell membranes. Also, the positive binding cooperativity between each binding subunit can further enhance the overall binding avidity. Since microscopic binding events highly dependent on the current surface configuration, the kinetic Monte Carlo methodology is applied to simulate the complex interactions between CTB and GM1 microscopically. The goal of this research focuses on modeling and simulation of CTB-GM1 interactions. In this work, GM1 is modeled as an entity constrained to a 2 dimensional host cell membrane, whereas CTB is modeled as an entity capable of binding and detaching from the membrane surface. Three types of microscopic events are considered: 1) molecular attachment, 2) detachment, and 3) migration events on host cell membranes. The implementation of the kinetic Monte Carlo methodology requires knowledge of association, dissociation and migration reaction constants. Previous work computed a range of values to these parameters until satisfactory agreement between the calculated and the experimental binding rates was achieved [2, 3]. Due to the overwhelming likelihood of migration events, migration has been decoupled from the event selection process in order to improve computational efficiency [4]. For molecular attachment, it is assumed that each lattice site is available for attachment, and thus the attachment rate is equal over the lattice. Conversely, for molecular detachment and migration events, the rates are dependent on the local environment. Each local environment comprises up to 6 nearest neighbors. This allows us to classify our local environment into seven classes (zero to six nearest neighbors) in order to increase the computational efficiency when calculating the rates associated with executing a kinetic Monte Carlo event. We will also apply the kinetic Monte Carlo model to examine other host cell receptors such as GM2, which exhibits a distinct CTB binding kinetics. The specific details of how the GM1 concentration affects the CTB-GM1 interactions as well as steric hindrance between the CTB molecules on the membrane surface will be presented. Reference de Haan, L.; Hirst , T.R. Cholera toxin: A paradigm for multi-functional engagement of cellular mechanisms. Molecular Membrane Biology 2004 , 21 , 77-92. Lauer, S.; Goldstein, B.; Nolan, R.L.; Nolan, J.P. Analysis of cholera toxin – ganglioside interactions by flow cytometry. Biochemistry 2002 , 41 , 1742-1751. Lin, H.; Kitova, E.N.; Klassen, J.S. Measuring positive cooperativity using the direct ESI-MS Assay. Cholera toxin B subunit homopentamer binding to GM1 pentasaccharide. J. Am. Soc. Mass. Spectrom . 2014 , 25 , 104-110. Crose, M.; Kwon, J.S.; Nayhouse, M.; Ni, D.; Christofides, P.D. Multiscale modeling and operation of PECVD of thin film solar cells. Chem. Eng. Sci. 2015 , 136 , 50-61.",
+    "presenting_author": "Dongheon Lee | Texas A&M University, College Station, TX",
+    "authors": [
+      "Dongheon Lee | Texas A&M University, College Station, TX",
+      "John Larry Dial III | Texas A&M University, College Station, TX",
+      "Joseph Sang-Il Kwon | Texas A&M Energy Institute, Texas A&M University, College Station, TX",
+      "Singla Akshi | Texas A&M University, College Station, TX",
+      "Hung-Jen Wu | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dongheon Lee",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "John Larry Dial III",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Sang-Il Kwon",
+        "affiliation": "Texas A&M Energy Institute, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Singla Akshi",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Hung-Jen Wu",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "254e",
+    "sortable_time": "2017-10-31_09:24:00_09:45:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/498349"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/500043",
+    "paper_endpoint": "Paper/500043",
+    "paper_id": "500043",
+    "topic": "Numerical Investigation of a Water Droplet on Vibrating Surface with and without Inclination",
+    "title": "Numerical Investigation of a Water Droplet on Vibrating Surface with and without Inclination",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35658",
+    "session_title": "Advances in Computational Methods and Numerical Analysis",
+    "session_number": "254",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Modeling of droplet-surface interaction remains a challenge in fluids research, because of its complex, multiscale nature that involves both microscale interactions and macroscale flows. To understand its underlying mechanisms is important for the application design. The interactions amongst liquid/gas/solid molecules dominate the contact line dynamics, and determines the stationary and dynamic contact angles. The interactions between liquid/solid molecules also governs friction on the surface. We propose a novel numerical method to handle the droplet on a superhydrophobic surface, and validate our model with experiments on a 3mm water droplet sitting on a vibrating surface. A variable surface tension field is used to model the superhydrophobic behavior, and a term based on the gradient of surface tension is formulated to compensate the surface tension force. Different cases have be investigated for validating our methods and understanding of the underlying physics. Although the vibration-induced wetting transition was investigated in some recent studies, the vibration mechanism of droplet shedding has not yet been fully understood. This research quantitatively considers the effect of vibration on droplet shedding under various vibration resonance conditions, providing a possible way to effectively shed droplet off surfaces in condensation applications.",
+    "presenting_author": "Ping He | Lamar University, Beaumont, TX",
+    "authors": [
+      "Ping He | Lamar University, Beaumont, TX",
+      "Chun-Wei Yao | Lamar University, Beaumont, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ping He",
+        "affiliation": "Lamar University, Beaumont, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chun-Wei Yao",
+        "affiliation": "Lamar University, Beaumont, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "254f",
+    "sortable_time": "2017-10-31_09:45:00_10:06:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/500043"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2017/meetingapp.cgi/Paper/501527",
+    "paper_endpoint": "Paper/501527",
+    "paper_id": "501527",
+    "topic": "Novel Optimization-Based Adaptive Sparse-Grid Methods for Numerical Integration",
+    "title": "Novel Optimization-Based Adaptive Sparse-Grid Methods for Numerical Integration",
+    "date_time": "2017-10-31_08:00:00_10:30:00",
+    "session_id": "35658",
+    "session_title": "Advances in Computational Methods and Numerical Analysis",
+    "session_number": "254",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "The Smolyak algorithm (also known as Sparse-Grid, Hyperbolic Cross-Points or Boolean method) was derived in 1963 by Russian mathematician Smolyak, and was based on the fact that spaces of n-dimensional continuous linear functionals contain tensor products of spaces of continuous linear functionals on the one-dimensional space [1]. This development was followed by a plethora of advances in theory, methods and applications, due to the realization that high-dimensional tensor product problems can be solved efficiently using accurate n-dimensional approximations which can be generated from univariate approximations [2]. Sparse-grid methods have been used for approximation, integration and optimization in mathematics, physics, economics and engineering design [3-5]. Two of their main advantages are (a) sparse-grid tensor products do not grow exponentially with dimension n (curse-of-dimensionality), and (b) convergence rates and error-bound analysis are available as a function of smoothness of the function within a bounded region. In this work, we aim to show the power of this extremely mathematically-rich theory, and extend the capabilities of existing methods by combining existing theory with theory from deterministic optimization. Specifically, we have developed a computational tool for multidimensional integration of functions, using the Smolyak algorithm with a variety of univariate quadrature rules, such as Clenshaw-Curtis, Gauss-Patterson and Fejer rules. These rules are based on roots or extrema of orthogonal polynomials and lead to non-equidistant sparse tensor grids, which perform exceptionally well with fewer number of sample points, when compared to equidistant full-tensor grid points. We have incorporated a newly derived formula for the efficient calculation of the weights for the calculation of multidimensional integrals. This derivation circumvents a main hurdle in the Smolyak algorithm, namely the problem of redundant weights which significantly increases the computational cost of the method [3]. This development allows us to push the limits of high dimensional integration, which we will show through benchmark cubature problems. Furthermore, we have incorporated an approach for the further reduction of the total number of points required for accurate multidimensional integral calculation, using ideas from adaptive-sparse grids [6-7] and optimization. Overall, this talk aims to introduce significant theoretical and methodological advances, which have a wide range of applications in the field of chemical engineering. 1. Smolyak, S. A. (1963). Quadrature and Interpolation Formulas for Tensor Products of Certain Classes of Functions. Soviet Math. Dokl., 4, 240-243 2. Novak, E., Ritter, K. (1996). High dimensional integration of smooth functions over cubes, Numer. Math. 75, 79-97 3. Judd, K.L., Maliar, L., Maliar, S., Valero, R. (2014). Smolyak method for solving dynamic economic models: Lagrange interpolation, anisotropic grid and adaptive domain. J of Economic Dynamics & Control, 44, 92-123 4. Bohn, B., Garcke, J., Griebel, M. (2016). A Sparse-Grid Based Method for Generative Dimensionality Reduction of High-Dimensional Data. J of Comp Physics, 309, 1-17 5. Malin, B., Krueger, D., Kubler, F. (2011). Solving the multi-country real business cycle model using a Smolyak-collocation method. J of Economic Dynamics & Control, 35, 229-239 6. Gerstner, T., Griebel, M. (2003) Dimension-Adaptive Tensor-Product Quadrature. Computing, 71, 65-87 7. Bungartz, H.J., Dirnstorfer, S. (2003). Multivariate Quadrature on Adaptive Sparse Grids. Computing, 71, 89-114",
+    "presenting_author": "Chris A. Kieslich | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Chris A. Kieslich | Georgia Institute of Technology, Atlanta, GA",
+      "Fani Boukouvala | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Chris A. Kieslich",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Fani Boukouvala",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "254g",
+    "sortable_time": "2017-10-31_10:06:00_10:27:00",
+    "affiliation_source": "aiche_2017_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2017/meetingapi.cgi/Paper/501527"
+  }
+]

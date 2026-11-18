@@ -1,0 +1,262 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/711221",
+    "paper_endpoint": "Paper/711221",
+    "paper_id": "711221",
+    "topic": "Examodels: A Nonlinear Optimization Modeling Platform for GPUs",
+    "title": "Examodels: A Nonlinear Optimization Modeling Platform for GPUs",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57079",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering I",
+    "session_number": "593",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Recently, there has been a surge of interest in accelerating classical mathematical optimization solution procedures by leveraging GPUs [1–3,3–7] . In particular, recent advancements in algorithms and software have enabled the creation of a fully GPU-resident second-order optimization solver for nonlinear optimization [4,6,8–10] . Key algorithmic developments include condensed-space interior point methods and lifted/hybrid KKT system strategies [4,6] . cuDSS, a sparse linear solver tailored for GPUs, has enabled the solution of sparse positive definite condensed KKT systems. Finally, ExaModels, an algebraic modeling and automatic differentiation platform, as well as MadNLP, a GPU-accelerated nonlinear optimization solver, have been developed to provide the complete GPU-resident optimization capablities [6] . These combined capabilities have resulted in significant speed-ups for various large-scale nonlinear optimization problems; for example, the largest AC optimal power flow instance demonstrated over a tenfold speed increase [4,6] . The computation procedure for nonlinear programming can be segmented into several sub-procedures: derivative evaluation, KKT system resolution, and internal computation within the nonlinear optimization solver. The first two components account for the majority of computational time in large-scale nonlinear programming instances. Derivative evaluation functionality is typically provided by algebraic modeling systems such as the AMPL solver library [11] (the AD backend of Pyomo [12,13] ), CasADi [14] , JuMP [15–17] , Gravity [18] , and PyOptInterface [19,20] . ExaModels is an algebraic modeling system that enables efficient derivative evaluations across various hardware platforms, including CPUs (both single-threaded and multi-threaded) and GPUs (from NVIDIA, AMD, and Intel). A novel design feature of ExaModels is its syntax and data structure, which is designed to capture the repeated patterns within the objective and constraint functions, common to many large-scale nonlinear optimization problems. This design allows for the compilation of derivative evaluation procedures into a limited number of GPU-executable kernels. Through just-in-time compilation via Julia Language [21] and KernelAbstractions.jl [22] , ExaModels generates these derivative evaluation kernels tailored for the hardware—CPU or accelerator—on-the-fly, while providing users with a seamless interface that requires no GPU-specific coding. We present numerical results highlighting the performance and flexibility of ExaModels across a range of benchmark instances, including the pglib-opf AC optimal power flow cases and the COPS benchmark instances. The findings indicate that ExaModels significantly outperforms existing implementations, exhibiting superior speed relative to JuMP and the AMPL solver library when executed on the same CPU hardware. When executed on GPUs, ExaModels often achieves more than two orders of magnitude speed-up compared to its performance on CPUs. Moreover, ExaModels operates efficiently on both single-threaded and multi-threaded CPUs, as well as all major GPU platforms (NVIDIA, AMD, and Intel). These results underscore ExaModels as a potent tool for enhancing nonlinear optimization solution procedures. With ExaModels, the time required for derivative evaluations becomes negligible compared to the total solution time, leaving KKT system resolution as the primary bottleneck. We will also discuss future directions for ExaModels, including its potential use as a derivative evaluation engine for other optimization modeling platforms and modeling library development activities within the ExaModels ecosystem. [1] Y. Cao, A. Seth, and C. D. Laird, An augmented Lagrangian interior-point approach for large-scale NLP problems on graphics processing units , Computers & Chemical Engineering 85 , 76 (2016). [2] M. Schubiger, G. Banjac, and J. Lygeros, GPU acceleration of ADMM for large-scale quadratic programming , Journal of Parallel and Distributed Computing 144 , 55 (2020). [3] H. Lu, J. Yang, H. Hu, Q. Huangfu, J. Liu, T. Liu, Y. Ye, C. Zhang, and D. Ge, cuPDLP-C : A Strengthened Implementation of cuPDLP for Linear Programming by C Language , https://doi.org/10.48550/arXiv.2312.14832 . [4] F. Pacaud, S. Shin, M. Schanen, D. A. Maldonado, and M. Anitescu, Accelerating Condensed Interior-Point Methods on SIMD / GPU Architectures , J Optim Theory Appl (2023). [5] E. Adabag, M. Atal, W. Gerard, and B. Plancher, MPCGPU : Real-Time Nonlinear Model Predictive Control Through Preconditioned Conjugate Gradient on the GPU , https://doi.org/10.48550/arXiv.2309.08079 . [6] S. Shin, M. Anitescu, and F. Pacaud, Accelerating optimal power flow with GPUs : SIMD abstraction of nonlinear programs and condensed-space interior-point methods , Electric Power Systems Research 236 , 110651 (2024). [7] F. Pacaud, M. Schanen, S. Shin, D. A. Maldonado, and M. Anitescu, Parallel interior-point solver for block-structured nonlinear programs on SIMD / GPU architectures , Optimization Methods and Software 39 , 874 (2024). [8] F. Pacaud, M. Schanen, S. Shin, D. A. Maldonado, and M. Anitescu, Parallel Interior-Point Solver for Block-Structured Nonlinear Programs on SIMD / GPU Architectures , https://doi.org/10.48550/arXiv.2301.04869 . [9] F. Pacaud and S. Shin, GPU-accelerated Nonlinear Model Predictive Control with ExaModels and MadNLP , https://doi.org/10.48550/arXiv.2403.15913 . [10] D. Cole, S. Shin, F. Pacaud, V. M. Zavala, and M. Anitescu, Exploiting GPU / SIMD Architectures for Solving Linear-Quadratic MPC Problems * , in 2023 American Control Conference ( ACC ) (2023), pp. 3995–4000. [11] R. Fourer, D. M. Gay, and B. W. Kernighan, A Modeling Language for Mathematical Programming , Management Science 36 , 519 (1990). [12] W. E. Hart, C. D. Laird, J.-P. Watson, D. L. Woodruff, G. A. Hackebeil, B. L. Nicholson, and J. D. Siirola, Pyomo — Optimization Modeling in Python , Vol. 67 (Springer International Publishing, Cham, 2017). [13] W. E. Hart, J.-P. Watson, and D. L. Woodruff, Pyomo: Modeling and solving mathematical programs in Python , Math. Prog. Comp. 3 , 219 (2011). [14] J. A. E. Andersson, J. Gillis, G. Horn, J. B. Rawlings, and M. Diehl, CasADi : A software framework for nonlinear optimization and optimal control , Math. Prog. Comp. 11 , 1 (2019). [15] M. Lubin, O. Dowson, J. D. Garcia, J. Huchette, B. Legat, and J. P. Vielma, JuMP 1.0: Recent improvements to a modeling language for mathematical optimization , Math. Prog. Comp. 15 , 581 (2023). [16] I. Dunning, J. Huchette, and M. Lubin, JuMP : A Modeling Language for Mathematical Optimization , SIAM Rev. 59 , 295 (2017). [17] B. Legat, O. Dowson, J. D. Garcia, and M. Lubin, MathOptInterface : A Data Structure for Mathematical Optimization Problems , INFORMS Journal on Computing 34 , 672 (2022). [18] H. Hijazi, G. Wang, and C. Coffrin, Gravity: A Mathematical Modeling Language for Optimization and Machine Learning , (2018). [19] Y. Yang, C. Lin, L. Xu, X. Yang, W. Wu, and B. Wang, Accelerating Optimal Power Flow With Structure-Aware Automatic Differentiation and Code Generation , IEEE Transactions on Power Systems 40 , 1172 (2025). [20] R. Xu et al., A global-scale framework for hydropower development incorporating strict environmental constraints , Nat Water 1 , 113 (2023). [21] J. Bezanson, A. Edelman, S. Karpinski, and V. B. Shah, Julia: A Fresh Approach to Numerical Computing , SIAM Rev. 59 , 65 (2017). [22] V. Churavy, KernelAbstractions .jl , (2025).",
+    "presenting_author": "Sungho Shin | Massachusetts Institute of Technology, Cambridge",
+    "authors": [
+      "Sungho Shin | Massachusetts Institute of Technology, Cambridge"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sungho Shin",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "593a",
+    "sortable_time": "2025-11-05_15:30:00_15:48:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/711221"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712445",
+    "paper_endpoint": "Paper/712445",
+    "paper_id": "712445",
+    "topic": "Regularized Symbolic Regression with Pystar",
+    "title": "Regularized Symbolic Regression with Pystar",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57079",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering I",
+    "session_number": "593",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Symbolic regression (SR) is a surrogate modelling technique that simultaneously determines a model’s functional form and the regression parameter values that best fit data. SR has received significant attention in recent years, because it facilitates the discovery of unknown functions analytically without making any assumptions about their functional form. Traditionally, SR is formulated as a genetic programming problem, which requires many iterations to find an appropriate expression due to its stochastic nature. Cozad and Sahinidis [1] were the first to formulate the symbolic regression problem as a Mixed-Integer Nonlinear Program (MINLP) and solve it globally. However, this approach can also be computationally inefficient, especially for large datasets. To address this, Sarwar [2] developed the algorithm STAR (Symbolic regression Through Algebraic Representations) which formulates a relaxed MINLP, whose solution provides probabilities for randomized rounding that leads to a scalable approach to symbolic regression. Kim et al. [3] present the results on various datasets obtained with PySTAR (Python Symbolic regression Through Algebraic Representations), an open-source Python implementation of STAR. Their results indicate that the STAR approach has a superior overall predictive performance compared to the state-of-the-art methods for SR, such as GPLearn [4] and Operon [5]. Here, we present recent advances in SR and PySTAR. In our work, we use regularized objectives including the Bayesian Information Criterion, as the model fitness metric, instead of the Sum of Squared Residuals (SSR) used in previous studies, to address the bias-variance trade-off of the STAR surrogates. Regularized objectives balance predictive accuracy and model complexity by penalizing the number of non-zero parameters through a regularization term that is added to the traditional SSR. This leads to the construction of models that are not only accurate, but also simple and interpretable. To demonstrate this regularization capability and its implementation in PySTAR, we build surrogates for critical minerals processes utilizing both SSR and regularized objectives, and compare them in optimization frameworks. We also perform a benchmarking study to compare STAR with other surrogate modelling techniques, including deep learning and regularization. Our results showcase that the regularized SR expressions are among the most accurate models, while their simplicity facilitates optimization and interpretability. References [1] Cozad, A. and Sahinidis, N. V. A global MINLP approach to symbolic regression. Mathematical Programming , 170:97–119, 2018. [2] Sarwar, O. Algorithms for interpretable high-dimensional regression, Carnegie Mellon University, Pittsburgh, PA, 2022. [3] Kim, M., Sarwar, O. and Sahinidis, N. V. STAR: Symbolic regression Through Algebraic Representations. Submitted, 2025. [4] Jones, T. K. GPLearn: Genetic Programming in Python, with a scikit-learn inspired API. https://github.com/trevorstephens/gplearn, 2017. [5] Burlacu, B., Kronberger, G., and Kommenda, M. Operon C++ an efficient genetic programming framework for symbolic regression. In Proceedings of the 2020 Genetic and Evolutionary Computation Conference Companion , pp. 1562–1570, 2020.",
+    "presenting_author": "Dimitrios Fardis | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Dimitrios Fardis | Georgia Institute of Technology, Atlanta, GA",
+      "Radhakrishna Tumbalam Gooty | National Energy Technology Laboratory, Pittsburgh, PA",
+      "Nikolaos Sahinidis | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dimitrios Fardis",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Radhakrishna Tumbalam Gooty",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Nikolaos Sahinidis",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "593b",
+    "sortable_time": "2025-11-05_15:48:00_16:06:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712445"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/718026",
+    "paper_endpoint": "Paper/718026",
+    "paper_id": "718026",
+    "topic": "GPU-Accelerated Nonlinear Model Predictive Control with Infiniteopt.Jl",
+    "title": "GPU-Accelerated Nonlinear Model Predictive Control with Infiniteopt.Jl",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57079",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering I",
+    "session_number": "593",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Model predictive control (MPC) is a widely used control strategy in applications such as power plants, petroleum refineries, and manufacturing [1, 2], where an optimal control problem (OCP) is repeatedly solved over a rolling time horizon to determine optimal control inputs [3]. While linear MPC (LMPC) is commonly implemented for its computational efficiency, many real-world systems like separation units [4] and air conditioning systems [5] exhibit highly nonlinear behaviour [3, 6]. Various schemes have been developed to approximate these dynamics, such as neural network surrogate models [7, 8] or partitioning the system into subregions with tailored LMPC controllers [6]. However, these approaches often introduce modelling error that can degrade controller performance, especially for systems with fast or sensitive dynamics that require greater control precision. Nonlinear MPC (NMPC) provides an attractive approach by directly incorporating high-fidelity models and constraints that better capture system behaviour across a wide range of operating conditions [3]. However, in many applications, real-time NMPC is challenging to implement due to the significant computational cost of solving nonlinear programs (NLPs) that are often nonconvex [3, 6]. NPMC formulations are often solved via direct transcription which results in NLPs with highly recurrent constraint and objective structures that traditional algebraic modelling languages (AMLs) like JuMP and Pyomo do not exploit [9]. To address this, Pulsipher and Shin introduced InfiniteExaModels.jl, an extension of InfiniteOpt.jl (an AML for infinite-dimensional optimization [10]) that leverages the capabilities of the ExaModels.jl ecosystem (an AML for NLPs with recurrent structure [9]) to more efficiently transcribe, differentiate, and solve transcribed infinite-dimensional optimization (InfiniteOpt) problems [11]. Gondosiswanto and Pulsipher further refined the abstraction (the InfiniteSIMD-NLP abstraction) behind InfiniteExaModels.jl to solve InfiniteOpt problems entirely on GPUs, accelerating NLP solution times by one to two orders-of-magnitude across a range InfiniteOpt benchmark problems (including NMPC problems) using the MadNLP.jl interior-point solver with NVDIA’s cuDSS linear solver [12]. This framework provides an attractive means to accelerate NMPC performance without using reduced models, but this was not verified with closed-loop NMPC. Interestingly, Pacaud and Shin recently showed that, for many NLP problems solved on GPU via the ExaModels framework, the symbolic factorization of the Karush-Kuhn-Tucker (KKT) system via cuDSS’s sparse Cholesky factorization is the main computational bottleneck [4, 13]. This observation is significant since most NMPC formulations exhibit a consistent sparsity pattern across iterations which means that the symbolic factorization can be treated as a one-time offline cost and reused for online NMPC [4], this presents yet another opportunity to further reduce NMPC solutions times beyond those demonstrated in [12]. Despite the aforementioned opportunities, their utility for NPMC remains untested, in part because no comprehensive framework has been available to facilitate GPU-accelerated NMPC. Hence, we present an NMPC-tailored framework, implemented in Julia, that builds on the capabilities of InfiniteExaModels.jl to significantly accelerate the solution of NMPC problems on GPU. The framework automatically caches the symbolic factorization of the KKT system and provides efficient warmstarting to facilitate significant speedup for NMPC problems solved via direct transcription. Moreover, it leverages the InfiniteOpt.jl AML to provide an intuitive modelling API for NMPC problems that automates transcription. The effectiveness of the proposed GPU-NMPC framework is demonstrated via case studies in distillation column control, reactor control, and 2D temperature control. This framework has great potential for real-time NMPC applications, enabling more efficient control of systems with fast, complex dynamics and demanding constraints. References [1] N. Blet, D. Megıas, J. Serrano, and C. de Prada. NONLINEAR MPC VERSUS MPC USING ONLINE LINEARISATION — A COMPARATIVE STUDY. IFAC Proceedings Volumes, 35(1):147–152, 2002. 15th IFAC World Congress. [2] S. Joe Qin and Thomas A. Badgwell. An Overview of Nonlinear Model Predictive Control Applications. In Nonlinear Model Predictive Control, pages 369–392. Birkh¨auser Basel, 2000. [3] Frank Allgower, Rolf Findeisen, and Zoltan K. Nagy. Nonlinear Model Predictive Control: From Theory to Application. Journal of the Chinese Institute of Chemical Engineers, 35:299–315, 2004. [4] Francois Pacaud and Sungho Shin. GPU-accelerated dynamic nonlinear optimization with ExaModels and MadNLP. pages 5963–5968, December 2024. [5] Saman Taheri, Paniz Hosseini, and Ali Razban. Model predictive control of heating, ventilation, and air conditioning (HVAC) systems: A state-of-the-art review. Journal of Building Engineering, 60, 2022. [6] Michael G. Forbes, Rohit S. Patwardhan, Hamza Hamadah, and R. Bhushan Gopaluni. Model predictive control in industry: Challenges and opportunities. IFAC-PapersOnLine, 48(8):531–538, 2015. 9th IFAC Symposium on Advanced Control of Chemical Processes ADCHEM 2015. [7] Carlos Andres Elorza Casas, Luis A. Ricardez-Sandoval, and Joshua L. Pulsipher. A comparison of strategies to embed physics-informed neural networks in nonlinear model predictive control formulations solved via direct transcription. Computers & Chemical Engineering, 198:109105, 2025. [8] Yankai Cao and R. Bhushan Gopaluni. Deep Neural Network Approximation of Nonlinear Model Predictive Control. IFAC-PapersOnLine, 53(2):11319–11324, 2020. 21st IFAC World Congress. [9] Sungho Shin, Mihai Anitescu, and Francois Pacaud. Accelerating optimal power flow with GPUs: SIMD abstraction of nonlinear programs and condensed-space interior-point methods, 2024. [10] Joshua L. Pulsipher, Weiqi Zhang, Tyler J Hongisto, and Victor M Zavala. A unifying modeling abstraction for infinite-dimensional optimization. Computers & Chemical Engineering, 156:107567, 2022. [11] Joshua L. Pulsipher and Sungho Shin. Scalable Modeling of Infinite-Dimensional Nonlinear Programs with InfiniteExaModels. jl. In Computer Aided Chemical Engineering, volume 53, pages 3373–3378. Elsevier, 2024. [12] Evelyn Gondosiswanto and Joshua L. Pulsipher. Advances to Modelling and Solving Infinite-Dimensional Optimization Problems in InfiniteOpt.jl. Digital Chemical Engineering, 2025. In Press. [13] Francois Pacaud, Sungho Shin, Alexis Montoison, Michel Schanen, and Mihai Anitescu. Condensed-space methods for nonlinear programming on GPUs. Working paper or preprint, July 2024.",
+    "presenting_author": "Evelyn Gondosiswanto | University of Waterloo, Canada",
+    "authors": [
+      "Evelyn Gondosiswanto | University of Waterloo, Canada",
+      "Joshua Pulsipher | University of Waterloo, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Evelyn Gondosiswanto",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joshua Pulsipher",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "593c",
+    "sortable_time": "2025-11-05_16:06:00_16:24:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/718026"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713864",
+    "paper_endpoint": "Paper/713864",
+    "paper_id": "713864",
+    "topic": "Dominopy: A Python Package for Data-Driven Optimization of Bi-Level Mixed-Integer Nonlinear Problems",
+    "title": "Dominopy: A Python Package for Data-Driven Optimization of Bi-Level Mixed-Integer Nonlinear Problems",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57079",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering I",
+    "session_number": "593",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Bi-level programming is a holistic modeling technique that results in hierarchical optimization problems with two levels of decision makers, where one decision maker’s problem is constrained by another’s optimization problem. The most common approach for addressing bi-level programming involves reducing them into single-level problems by replacing the convex lower-level optimization problem with its necessary and sufficient Karush-Kuhn-Tucker (KKT) optimality conditions. However, the KKT method is not applicable for reformulating the original structure when the lower-level problems involve discrete variables. Even though several successful algorithms that use branch-and-bound [1], branch-and-sandwich [2], and parametric optimization [3] are developed to tackle such problems, achieving guaranteed feasible solutions for problems with highly nonlinear and nonconvex mixed-integer nonlinear programming (MINLP) lower-levels is still an open research question. Therefore, to tackle such types of problems, data-driven algorithms are proposed to approximate the global solution. In this work, we introduce DOMINOpy, a ready-to-use Python implementation of the Data-driven Optimization of bi-level Mixed-Integer NOnlinear problems (DOMINO) framework [4]. DOMINOpy enables flexible construction of bi-level MINLP optimization models and leverages data-driven strategies to solve them. It supports: (a) Constructing models from basic problem information; (b) Incorporating user-defined models, including GAMSPy, Pyomo, and scikit-learn workflows; (c) Using deterministic solvers (e.g., BARON [5], GUROBI, IPOPT, CPLEX) to find the global optima at the lower level; (d) Data-driven algorithms for constrained, bound-constrained, or unconstrainted optimization at the upper level (e.g., Particle Swarm Optimization, DIRECT, NOMAD [6], etc.). The application of DOMINOpy is examined across a diverse range of bi-level benchmark problems with varying complexity and hyperparameter optimization for machine-learning models as an example of user-defined models at the lower level. References: [1] Gümüş, Z.H. and Floudas, C.A., 2001. Nonlinear bilevel programming: A deterministic global optimization framework. In Computer Aided Chemical Engineering (Vol. 9, pp. 393-400). Elsevier. [2] Kleniati, P.M. and Adjiman, C.S., 2014. Branch-and-Sandwich: a deterministic global optimization algorithm for optimistic bilevel programming problems. Part I: Theoretical development. Journal of Global Optimization , 60 , pp.425-458. [3] Avraamidou, S. and Pistikopoulos, E.N., 2019. B-POP: Bi-level parametric optimization toolbox. Computers & Chemical Engineering , 122 , pp.193-202. [4] Beykal, B., Avraamidou, S., Pistikopoulos, I.P., Onel, M. and Pistikopoulos, E.N., 2020. Domino: Data-driven optimization of bi-level mixed-integer nonlinear problems. Journal of Global Optimization , 78, pp.1-36. [5] Sahinidis, N.V., 1996. BARON: A general purpose global optimization software package. Journal of global optimization , 8 , pp.201-205. [6] Le Digabel, S., 2011. Algorithm 909: NOMAD: Nonlinear optimization with the MADS algorithm. ACM Transactions on Mathematical Software (TOMS) , 37 (4), pp.1-15.",
+    "presenting_author": "Amir Shahbazi | University of Connecticut, Storrs",
+    "authors": [
+      "Amir Shahbazi | University of Connecticut, Storrs",
+      "Meng-Lin TSA | University of Wisconsin-Madison",
+      "Styliani Avraamidou | University of Wisconsin-Madison",
+      "Burcu Beykal | University of Connecticut, Storrs"
+    ],
+    "authors_structured": [
+      {
+        "name": "Amir Shahbazi",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Meng-Lin TSA",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Styliani Avraamidou",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Burcu Beykal",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "593d",
+    "sortable_time": "2025-11-05_16:24:00_16:42:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713864"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712623",
+    "paper_endpoint": "Paper/712623",
+    "paper_id": "712623",
+    "topic": "GO-Clustering.Jl: A Julia Package for Global Optimal Centroid-Based Clustering",
+    "title": "GO-Clustering.Jl: A Julia Package for Global Optimal Centroid-Based Clustering",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57079",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering I",
+    "session_number": "593",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Centroid-based clustering methods, such as k-means, k-medoids, and k-center, are essential in chemical engineering for analyzing large datasets and uncovering underlying data structures. These methods assign data to clusters depending on the data points’ proximity to the centers of the clusters, which may either be data points, as in k-medoids and k-center, or calculated averages, as in k-means. They are particularly useful for process monitoring, fault detection, and chemical compound analysis, where interpretability and robustness are critical [1, 2]. However, traditional heuristic algorithms for these clustering methods often yield suboptimal solutions, while traditional exact methods guarantee optimality but struggle to scale with large datasets [3, 4, 5]. To address these challenges, we developed GO-Clustering.jl, an open-source Julia package that computes globally optimal solutions for centroid-based clustering problems. GO-Clustering.jl implements tailored spatial branch-and-bound (sBB) algorithms that reformulate the clustering problems as two-stage optimization problems. The sBB scheme ensures convergence by branching only on the low-dimensional space of cluster center regions. Efficiency is further enhanced through analytically derived, closed-form lower bounds and advanced bound tightening techniques as well as parallel execution. GO-Clustering.jl could deliver provably global optimal solutions for k-means (minimizing sum-of-distance to arbitrary points as centers), k-medoids (minimizing sum-of-distance to data points as centers), and k-center (minimizing maximum distance to data points as centers). Extensive computational studies demonstrate unprecedented scalability: it produces high-quality global solutions for k-means problems with up to 210,000 samples, achieves small optimality gaps for k-medoids problems with up to one million samples, and solves k-center problems with up to one billion samples. Compared to state-of-the-art heuristics, GO-Clustering.jl significantly reduces objective function values (e.g., a 25.8% average reduction for k-center). Compared to traditional exact methods, GO-Clustering.jl is orders of magnitude faster and more scalable (e.g., capable of solving datasets 200,000 times larger for k-center). These advancements in GO-Clustering.jl provide the chemical engineering community with a robust, scalable, and accessible tool for solving fundamental clustering tasks with global optimality. By overcoming the scalability challenges of previous exact methods, it enables reliable analysis of large, complex datasets common in modern process industries. Its guarantees of global optimality ensure solution quality, making it indispensable for safety-critical applications and robust decision-making in process design, monitoring, control, and optimization. This work bridges the gap between heuristic efficiency and exactness, advancing large-scale data analysis in chemical engineering. References [ 1 ] Aldrich, C., & Auret, L. (2013). Unsupervised process monitoring and fault diagnosis with machine learning methods (Vol. 16, No. 3, pp. 593-606). London: Springer. [ 2 ] Backman, T. W., Cao, Y., & Girke, T. (2011). ChemMine tools: an online service for analyzing and clustering small molecules. Nucleic acids research, 39, W486-W491. [ 3 ] Hua, K., Shi, M., & Cao, Y. (2021). A Scalable deterministic global optimization algorithm for clustering problems. In International Conference on Machine Learning (pp. 4391-4401). PMLR. [ 4 ] Ren, J., Hua, K., & Cao, Y. (2022). Global optimal k-medoids clustering of one million samples. Advances in Neural Information Processing Systems, 35, 982-994. [ 5 ] Ren, J., You, N., Hua, K., Ji, C., & Cao, Y. (2022). A Global Optimization Algorithm for K-Center Clustering of One Billion Samples. Management Science, accepted.",
+    "presenting_author": "Jiayang Ren | University of British Columbia, Vancouver, Canada",
+    "authors": [
+      "Jiayang Ren | University of British Columbia, Vancouver, Canada",
+      "Yankai Cao | The University of British Columbia, Vancouver, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jiayang Ren",
+        "affiliation": "University of British Columbia, Vancouver, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yankai Cao",
+        "affiliation": "The University of British Columbia, Vancouver, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "593e",
+    "sortable_time": "2025-11-05_16:42:00_17:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712623"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/724554",
+    "paper_endpoint": "Paper/724554",
+    "paper_id": "724554",
+    "topic": "Break",
+    "title": "Break",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57079",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering I",
+    "session_number": "593",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "",
+    "presenting_author": "",
+    "authors": [],
+    "authors_structured": [],
+    "sortable_time": "2025-11-05_17:00:00_17:18:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/724554"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712467",
+    "paper_endpoint": "Paper/712467",
+    "paper_id": "712467",
+    "topic": "Optimization Abstraction Layer for Acausal/Equation-Oriented Models in Julia",
+    "title": "Optimization Abstraction Layer for Acausal/Equation-Oriented Models in Julia",
+    "date_time": "2025-11-05_15:30:00_18:00:00",
+    "session_id": "57079",
+    "session_title": "10: Software Tools and Implementations for Process Systems Engineering I",
+    "session_number": "593",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Engineering design and operations tasks rely on the modeling and simulation of physical systems. Accurate models allow engineers to predict system behavior under various conditions and explore scenarios that may be impractical or impossible to safely test physically. By modeling and simulating systems before building them, engineers can identify potential issues to reduce the risks of unexpected failures and optimize designs to lower costs and improve operational efficiency. These modeling efforts are enhanced by using acausal modeling---often referred to as equation-oriented modeling---tools, which allow engineers to construct basic unit operations models as components without explicit declaration of independent and dependent variables and then combine them to build arbitrarily complex systems models. Significant efforts have gone into the development of acausal/equation-oriented modeling languages across diverse disciplines from aerospace engineering to chemical engineering. Modelica [1], IDAES [2], and ModelingToolkit [3] are popular, state-of-the-art tools used for constructing acausal models, each specializing in different aspects of system modeling. Modelica is primarily focused on model simulation and does not offer built-in optimization support without integration with external tools [1]. IDAES, built on the Pyomo framework [4], facilitates the direct integration of equation-oriented modeling and process optimization [2]. Being written in Python provides easy extensibility and access to a vast library of data management tools. ModelingToolkit is primarily used for scientific computing involving differential-algebraic equations and machine learning applications, provides preprocessing tools for structural analysis and automatic dimensionality reduction, and is part of a larger ecosystem written in Julia [3]. A critical component of design and operations tasks is the use of optimization-based decision-making tools to improve novel designs and operational efficiency. While all three packages can interface with optimization solvers to varying degrees, support is limited for dynamical systems, and none offer direct support for a general-purpose deterministic global optimizer. This work is driven by the need for deterministic global optimization tools to be applied to complex engineering models. Physics-based models of process systems are typically nonconvex, and in many applications, guaranteed global optimality of solutions can be critical for economic viability, safety, and other reasons. For such systems models, using a deterministic global optimizer, such as BARON [5], EAGO [6], or MAiNGO [7] is necessary. Engineers using Modelica or IDAES can leverage the capabilities of solvers compatible with Pyomo [1, 2, 4] with some restrictions, but ModelingToolkit users are limited to solvers compatible with Optimization.jl [8]. Since no deterministic global optimizers are integrated into Optimization.jl [8], global solutions can only be furnished by translating models into an algebraic modeling language such as JuMP [9]. To address the current shortcomings in Julia, we propose an open-source abstraction layer that automatically translates dynamic and steady-state equation-oriented/acausal systems models developed in ModelingToolkit to optimization models in the JuMP modeling language. This connection is vital because while algebraic modeling languages such as JuMP are flexible and readily support large-scale optimization [2], they are not designed to construct these process models needed for detailed modeling and simulation. In this talk, we will show how our abstraction layer enables us to construct nonlinear, nonconvex models using ModelingToolkit, automatically analyze and simplify the resulting system of equations, transform it into a standard JuMP model, and solve it to global optimality using EAGO. We demonstrate that this is accomplished without requiring any additional modifications to the optimizer. Due to this flexibility, our abstraction layer enables users to seamlessly integrate ModelingToolkit models into JuMP models and exploit the benefits of both tools in a unified software stack for simulation and optimization of process systems. Furthermore, users can leverage the capabilities of the open-source EAGO solver for deterministic global optimization or use another favorite solver that is compatible with JuMP. 1. Modelica Association, 2023. Modelica. URL: https://www.modelica.org/ . 2. Lee, A., Ghouse, J.H., Eslick, J.C., Laird, C.D., Siirola, J.D., Zamarripa, M.A., Gunter, D., Shinn, J.H., Dowling, A.W., Bhattacharyya, D., Biegler, L.T., Burgard, A.P., and Miller, D.C. The IDAES process modeling framework and model library—Flexibility for process simulation and optimization. Journal of Advanced Manufacturing and Processing. Wiley Online Library. 3(3): e10095 (2021). DOI:10.1002/amp2.10095 3. Ma, Y., Gowda, S., Anantharaman, R., Laughman, C., Shah, V., and Rackauckas, C. ModelingToolkit: A composable graph transformation system for equation-based modeling (2021). 4. Hart, W.E., Laird, C.D., Watson, J.P., Woodruff, D.L., Hackebeil, G.A., Nicholson, B.L., and Siirola, J.D. Pyomo — Optimization Modeling in Python. Springer. (2017). ISBN: 978-3-319-58821-6. 5. Sahinidis, N.V. BARON: A general purpose global optimization software package, Journal of Global 8: 201-205 (1996). DOI: 10.1007/bf00138693. 6. Wilhelm, M.E. and Stuber, M.D. EAGO.jl: easy advanced global optimization in Julia. Optimization Methods and Software. 37(2): 425-450 (2022). DOI: 10.1080/10556788.2020.1786566 7. Bongartz, D., Najman, J., Sass, S., & Mitsos, A. MAiNGO - McCormick-based Algorithm for mixed-integer Nonlinear Global Optimization. Process Systems Engineering (AVT.SVT), RWTH Aachen University (2018). URL: https://lirias.kuleuven.be/retrieve/754260 8. Dixit, V.K., and Rackauckas, C. Optimization.jl: A Unified Optimization Package (v3.12.1). Zenodo. (2023). DOI: 10.5281/zenodo.7738525 9. Lubin, M., Dowson, O., Garcia, J.D., Huchette, J., Legat, B., and Vielma, J.P. JuMP 1.0: Recent improvements to a modeling language for mathematical optimization. Mathematical Programming Computation, 15: 581-589 (2023). DOI: 10.1007/s12532-023-00239-3.",
+    "presenting_author": "Dimitri Alston | University of Connecticut, Storrs",
+    "authors": [
+      "Dimitri Alston | University of Connecticut, Storrs",
+      "Joseph Choi | University of Connecticut, Storrs",
+      "Nirvaan Vyas | University of Connecticut, Storrs",
+      "Pengfei Xu | University of Connecticut, Storrs",
+      "Matthew Stuber | University of Connecticut, Storrs"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dimitri Alston",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joseph Choi",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      },
+      {
+        "name": "Nirvaan Vyas",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      },
+      {
+        "name": "Pengfei Xu",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew Stuber",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "593g",
+    "sortable_time": "2025-11-05_17:18:00_17:36:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712467"
+  }
+]

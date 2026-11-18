@@ -1,0 +1,1234 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/674827",
+    "paper_endpoint": "Paper/674827",
+    "paper_id": "674827",
+    "topic": "Case Studies on the Combined Identification and Offset-Free Control of Chemical Processes (Poster corresponding to plenary presentation)",
+    "title": "Case Studies on the Combined Identification and Offset-Free Control of Chemical Processes (Poster corresponding to plenary presentation)",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Model predictive control (MPC) is widely used in the chemical process industries as an advanced feedback control method (Qin and Badgwell, 2003). Some important factors in the success of MPC are its inherent robustness to disturbances and plant-model mismatch, and the ability to track setpoints without offset (Rawlings et al., 2020, pp. 46-59, 204-214). As is often noted by industrial practitioners, MPC can be quite forgiving with respect to model errors, aging of the plant, changes in environmental conditions, and changes in operating conditions. As such, practitioners have long achieved sufficient performance with heuristic or out-of-date models, without rigorous methods of identifying both plant and disturbance models. As stake holders continue to demand greater performance from their processes, however, they require a system of best practices for identifying plant and disturbance models. Traditionally, MPC implementations have relied on linear finite impulse response (FIR) plant models (Qin and Badgwell, 2003). Over the last two decades, however, recent MPC products have shifted away from FIR models and towards linear state-space models (Darby and Nikolaou, 2012). This shift is motivated by a number of shortcomings of the FIR approach, most notably: (1) the inability to handle unstable and integrating systems without modification, (2) the overparameterization of the underlying linear system (especially for slow processes), (3) the difficulty of formulating estimators, and (4) the fact that FIR models are a special case of the linear state-space model (Lee et al., 1994; Lundström et al., 1995). To identify the plant model, practitioners typically fit a linear model to step response data (Caveness and Downs, 2005). However, this does not provide the noise covariance estimates required to design an estimator for MPC implementation. While subspace methods—such as canonical variate analysis (CVA) (Larimore, 1983), N4SID (Van Overschee and De Moor, 1994), or MOESP (Verhaegen, 1994)—are sometimes used to identify estimate the process and measurement noise covariances, these methods can only identify controllable and observable realizations (Qin, 2006), and the disturbance model contains uncontrollable integrating modes (Muske and Badgwell, 2002; Pannocchia and Rawlings, 2003). Disturbance models may be tuned under strong assumptions on the process and measurement noises (Lee et al., 1994; Lee and Yu, 1994), but the required assumptions are not general, producing suboptimal estimator performance. Autocovariance least squares can identify the complete disturbance model, but it has a high computational cost for minimum variance estimates (Odelson et al., 2006; Zagrobelny and Rawlings, 2015). Kuntz and Rawlings (2022) presented the first identification algorithm that provides estimates of both the state-space model coefficients and the disturbance noise covariance required to implement an offset-free MPC. In this study, we present a closed-loop extension of the algorithm proposed in Kuntz and Rawlings (2022) and demonstrate its efficacy in an industrial case study. Our method systematizes the identification of new offset-free MPC models and design of new MPC estimators, allowing practitioners save time and achieve optimal estimator performance. To do this, we combine the plant modeling and disturbance modeling steps by passing information about state estimates between identification steps. Because state information is passed between steps, each step can be formulated as a linear regression problem for which closed-form solutions are readily available (Rao, 1973; Anderson, 2003). The plant modeling step is a regularized version of the closed-loop identification procedure outlined by Larimore (1983, 1997, 2005). To validate the viability of our method in the wider chemical process industries, we performed a case study on an existing process at Eastman Chemical’s Kingsport, Tennessee location. The newly identified model shows clear improvement from the older step-response model, and the closed-loop performance is improved as measured by the controlled variable tracking error. Moreover, we used a closed-loop experimental design that is desirable to operations engineers for its simplicity, safety, and ability to produce predictably high-quality data. The case study serves as a template for using this new method to improve existing MPC performance. References Anderson, T.W., 2003. An Introduction to Multivariate Statistical Analysis. third ed., John Wiley & Sons, New York. Caveness, M.H., Downs, J.J., 2005. Reactor control using infinite horizon model predictive control. AIChE Spring Meeting, Atlanta, GA. Darby, M.L., Nikolaou, M., 2012. MPC: Current practice and challenges. Control Eng. Pract. 20, 328 – 342. Kuntz, S.J., Rawlings, J.B., 2022. Maximum likelihood estimation of linear disturbance models for offset-free model predictive control, in: American Control Conference, Atlanta, GA. pp. 3961–3966. Larimore, W.E., 1983. System identification, reduced-order filtering and modeling via canonical variate analysis, in: Proceedings of the American Control Conference, San Fransisco, CA. pp. 445–451. Larimore, W.E., 1997. Optimal reduced rank modeling, prediction, monitoring, and control using canonical variate analysis, in: Proceedings of the IFAC 1997 International Symposium on Advanced Control, Banff, Canada. pp. 61–66. Larimore, W.E., 2005. Maximum likelihood subspace identification for linear, nonlinear, and closed-loop systems, in: Proceedings of the 2005 American Control Conference, IEEE. pp. 2305–2319. Lee, J.H., Morari, M., Garcı́a, C.E., 1994. State-space interpretation of model predictive control. Automatica 30, 707–717. Lee, J.H., Yu, Z.H., 1994. Tuning of model predictive controllers for robust performance. Comput. Chem. Eng. 18, 15–37. Lundström, P., Lee, J.H., Morari, M., Skogestad, S., 1995. Limitations of dynamic matrix control. Comput. Chem. Eng. 19, 409–421. Muske, K.R., Badgwell, T.A., 2002. Disturbance modeling for offset-free linear model predictive control. J. Proc. Cont. 12, 617–632. Odelson, B.J., Rajamani, M.R., Rawlings, J.B., 2006. A new autocovariance least-squares method for estimating noise covariances. Automatica 42, 303– 308. Pannocchia, G., Rawlings, J.B., 2003. Disturbance models for offset-free MPC control. AIChE J. 49, 426–437. Qin, S.J., 2006. An overview of subspace identification. Comput. Chem. Eng. 30, 1502–1513. Qin, S.J., Badgwell, T.A., 2003. A survey of industrial model predictive control technology. Control Eng. Pract. 11, 733–764. Rao, C.R., 1973. Linear Statistical Inference and Its Applications. second ed., John Wiley and Sons, New York. Rawlings, J.B., Mayne, D.Q., Diehl, M.M., 2020. Model Predictive Control: Theory, Design, and Computation. 2nd, paperback ed., Nob Hill Publishing, Santa Barbara, CA. 770 pages, ISBN 978-0-9759377-5-4. Van Overschee, P., De Moor, B., 1994. N4SID: subspace algorithms for the identification of combined deterministic-stochastic systems. Automatica 30, 75–93. Verhaegen, M., 1994. Identification of the deterministic part of MIMO state space models given in innovations form from input-output data. Automatica 30, 61–74. Zagrobelny, M.A., Rawlings, J.B., 2015. Identifying the uncertainty structure using maximum likelihood estimation, in: American Control Conference, Chicago, IL. pp. 422–427.",
+    "presenting_author": "Steven Kuntz | University of California, Santa Barbara",
+    "authors": [
+      "Steven Kuntz | University of California, Santa Barbara",
+      "James J. Downs | Eastman Chemical Company, Kingsport, TN",
+      "Stephen M. Miller | Eastman Chemical Company, Kingsport, TN",
+      "James Rawlings | University of California, Santa Barbara"
+    ],
+    "authors_structured": [
+      {
+        "name": "Steven Kuntz",
+        "affiliation": "University of California, Santa Barbara",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "James J. Downs",
+        "affiliation": "Eastman Chemical Company, Kingsport, TN",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephen M. Miller",
+        "affiliation": "Eastman Chemical Company, Kingsport, TN",
+        "designation": "Author"
+      },
+      {
+        "name": "James Rawlings",
+        "affiliation": "University of California, Santa Barbara",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149a",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/674827"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663416",
+    "paper_endpoint": "Paper/663416",
+    "paper_id": "663416",
+    "topic": "Fast Zone-Model Predictive Control for Full Battery Pack of Electric Vehicles",
+    "title": "Fast Zone-Model Predictive Control for Full Battery Pack of Electric Vehicles",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Environmental concerns about carbon footprint and climate change have drawn interest in the development of hybrid electric vehicles (HEVs) and electric vehicles (EVs) in the automotive industry [1]. Lithium-ion (Li) batteries are mainly used in electric vehicles due to their high voltage and energy density. Therefore, the performance of lithium batteries is an important factor for the success of electric vehicles. The most important factor affecting battery performance is temperature. Lithium batteries have optimal efficiency and safety in the range of 15 to 40 [2]. Outside this temperature range, batteries experience significant degradation in efficiency, durability, and safety thermal runaway [2,3]. Therefore, it is necessary to control the optimum temperature of the battery so that the battery can operate within an appropriate temperature range during vehicle operation [3,4,5]. In order to keep the battery temperature within the optimal temperature range, the heat generation of the battery must be predicted. Therefore, model predictive control (MPC) approaches are suitable for considering future states and determining optimal control. There is an increasing number of studies applying the MPC approach for thermal management considering the pump power for coolant operation [1,3,5]. However, previous studies dealt with the entire battery pack as a single cell [5] or two subpacks (96 cells) [1]. Additionally, only the typical MPC, i.e. the setpoint MPC, was used to track the setpoint within the optimal temperature range [1,3,4]. In this paper, we propose a fast zone-MPC for temperature control of the entire battery pack. The zone-MPC strategy is much more efficient than setpoint MPC because the pump for coolant operation is turned off when the temperature of the battery pack enters the zone. The zone-MPC formulation requires mixed integer nonlinear programming (MINLP) solver. However, solving MINLP in real time in EV is not possible. Thus, introducing a soft plus function to approximate the objective function leads to nonlinear programming (NLP) formulation. Then, we declare the soft plus function as a new variable with the relevant dynamics. Finally, the continuous linearization method [6] can be used to transform NLP into a quadratic program (QP). An equivalent circuit model (ECM) with integrated energy balance is used for battery dynamics and considers the heat exchange with the coolant. For model reduction, we introduce two representative cells for each 1 subpack (48 cells) and the total number of representative cells is 16 for full pack (360 cells). This is determined by examining experimental and simulation data. The cells contacting with air and cell are different from the cells contacting with cells; thus, we need two representative cells for one-subpacks (shown in the attached optional figure). In the objective function of MPC, we give the penalty if the temperatures of cells are outside the proper temperature zone and do not give any penalty if they are in the zone. Additionally, the pump power for the coolant circulation and the amount of heat exchange energy for cooling or heating the coolant temperature are considered in the objective function. The proposed zone-MPC maintains the battery temperature within an optimal temperature range and can reduce power consumption much more than the typical set-point MPC. When the driving simulation for 1 hour under 0.3C-rate with an ambient temperature of 38°C, the power consumption by the proposed zone MPC is 59% smaller than that of the set-point MPC. References [1] Yi Xie, Chenyang Wang, etc, “An MPC-Based Control Strategy for Electric Vehicle Battery Cooling Considering Energy Saving and Battery Lifespan”, IEEE Transactions on Vehicular Technology 69, no.12 (2020): 14657-14673. [2] Garrow .Sarah Grace, “Dynamic modeling and control of transcritical vapor compression system for battery electric vehicle thermal management.”, Urbana, Illinois (2018). [3] S. Park and C. Ahn, “ Model Predictive Control With Stochastically Approximated Cost-to-Go for Battery Cooling System of Electric Vehicles”, IEEE Transactions on Vehicular Technology 70, no.5 (2021): 4312-4323. [4] Y. Masoudi and N. L Azad, “MPC-based battery thermal management controller for Plug-in hybrid electric vehicles.”, 2017 American Control Conference (ACC) (2017): 4365-4370. [5] C. Wei, T. Hofman, E. Ilhan Caarls, R. van Iperen, “Zone Model Predictive Control for Battery Thermal Management including Battery Aging and Brake Energy Recovery in Electrified Powertrains”, IFAC 52, no.5 (2019): 303-308. [6] Jay H. Lee and N. Lawrence Ricker, “Extended Kalman Filter Based Nonlinear Model Predictive Control”, Ind. Eng. Chem. Res 33, no.6 (1994) :1530-1541. Acknowledgement This work was supported by Hyundai Motor Company as Mixed Integer Nonlinear Optimization Methodology Study for Nonlinear System Control Including Integer Variables.",
+    "presenting_author": "Changbeom Hong | Kwangwoon University, Seoul, Korea, Republic of (South)",
+    "authors": [
+      "Changbeom Hong | Kwangwoon University, Seoul, Korea, Republic of (South)",
+      "Hyeonwoo Cho | Kwangwoon University, Seoul, Korea, Republic of (South)",
+      "Sanghoon Shin | Kwangwoon University, Seoul, Korea, Republic of (South)",
+      "Se-Kyu Oh | Hyundai Motor Company, Hwaseong-si, Korea, Republic of (South)",
+      "Daeki Hong | Hyundai Motor Company, Hwaseong-si, Korea, Republic of (South)",
+      "Yeonsoo Kim | Kwangwoon University, Seoul, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Changbeom Hong",
+        "affiliation": "Kwangwoon University, Seoul, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Hyeonwoo Cho",
+        "affiliation": "Kwangwoon University, Seoul, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Sanghoon Shin",
+        "affiliation": "Kwangwoon University, Seoul, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Se-Kyu Oh",
+        "affiliation": "Hyundai Motor Company, Hwaseong-si, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Daeki Hong",
+        "affiliation": "Hyundai Motor Company, Hwaseong-si, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Yeonsoo Kim",
+        "affiliation": "Kwangwoon University, Seoul, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149b",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663416"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663820",
+    "paper_endpoint": "Paper/663820",
+    "paper_id": "663820",
+    "topic": "A Machine Learning Assisted Approach to Model Predictive Control with Multi-Objective Optimization and Multi-Criteria Decision Making",
+    "title": "A Machine Learning Assisted Approach to Model Predictive Control with Multi-Objective Optimization and Multi-Criteria Decision Making",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Model predictive control (MPC) is an advanced control methodology that is widely used in various engineering fields. In chemical engineering, MPC has been extensively studied and applied for several decades [1]. In recent years, the integration of machine learning (ML) with MPC has garnered attention in both academic research and industrial applications. One reason for this increased interest is the difficulty and time required to construct accurate first-principles models using mathematical equations for many complex chemical processes [2, 3]. Furthermore, first-principles models, especially those involving many differential equations, can be computationally expensive to solve. The combination of MPC with ML has demonstrated the capability to improve the performance of control systems and reduce computational burden [4]. Through an extensive literature review, it has been observed that there have been numerous studies on MPC applications in chemical engineering and a growing trend towards incorporating ML into MPC. However, most of these studies only consider a single objective (e.g., deviation from setpoint) in the MPC process; this approach is typically not optimal in the design and operation of complex chemical processes, where multiple objectives (e.g., those related to economic benefits, environmental impact, process safety, energy efficiency, and product quality) need to be considered and optimized simultaneously [5, 6]. In this work, we address the research gap by proposing a comprehensive ML aided MPC with multi-objective optimization (MOO) and multi-criteria decision making (MCDM) methodology (abbreviated as ML aided MPC-MOO-MCDM) in chemical engineering. The proposed methodology is evaluated on a continuous stirred tank reactor (CSTR), considering up to three objectives within the MPC process. The results demonstrate its capability to achieve intended optimization considering multiple objectives in MPC without compromising the convergence of the controlled system. The present work also reinforces the viability of using ML models as surrogates for first-principles models in process control and optimization. Overall, this work exhibits the effectiveness of the proposed ML aided MPC-MOO-MCDM methodology and its applicability to complex chemical processes. [1] S. Vazquez et al., \"Model predictive control: A review of its applications in power electronics,\" IEEE industrial electronics magazine, vol. 8, no. 1, pp. 16-31, 2014. [2] Z. Wang, J. Li, G. P. Rangaiah, and Z. Wu, \"Machine learning aided multi-objective optimization and multi-criteria decision making: Framework and two applications in chemical engineering,\" Computers & Chemical Engineering, vol. 165, p. 107945, 2022. [3] K. McBride and K. Sundmacher, \"Overview of surrogate modeling in chemical process engineering,\" Chemie Ingenieur Technik, vol. 91, no. 3, pp. 228-239, 2019. [4] F. Simonetti, G. D. Di Girolamo, A. D’Innocenzo, and C. Cecati, \"Machine Learning for Model Predictive Control of Cascaded H-Bridge Inverters,\" in 2022 IEEE 21st Mediterranean Electrotechnical Conference (MELECON), 2022: IEEE, pp. 1241-1246. [5] G. P. Rangaiah, Multi-objective optimization: techniques and applications in chemical engineering. world scientific, 2016. [6] M. Park, Z. Wang, L. Li, and X. Wang, \"Multi-objective building energy system optimization considering EV infrastructure,\" Applied Energy, vol. 332, p. 120504, 2023.",
+    "presenting_author": "Zhiyuan Wang | National University of Singapore",
+    "authors": [
+      "Zhiyuan Wang | National University of Singapore",
+      "Wallace Tan Gian Yion | National University of Singapore",
+      "Gade Pandu Rangaiah | National University of Singapore",
+      "Zhe Wu | National University of Singapore"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zhiyuan Wang",
+        "affiliation": "National University of Singapore",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Wallace Tan Gian Yion",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Gade Pandu Rangaiah",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Zhe Wu",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149c",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663820"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/671012",
+    "paper_endpoint": "Paper/671012",
+    "paper_id": "671012",
+    "topic": "Model Predictive Control of an Axial Dispersion Tubular Reactor with Recycle: A Distributed Parameter System with State Delay",
+    "title": "Model Predictive Control of an Axial Dispersion Tubular Reactor with Recycle: A Distributed Parameter System with State Delay",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In many petrochemical, biochemical, and pharmaceutical unit operations, transport-reaction processes are described by distributed parameter system (DPS) models. The use of DPS models has enabled the capture of the intrinsic features of these operations, such as reactions, convection, and diffusion, within a finite spatial domain. [1] Various types of delays have also been addressed using DPS models in the same field. Therefore, the corresponding systems are typically formulated using partial differential equations (PDEs), which make them belong to the class of infinite-dimensional systems. [2] DPS models may be addressed using either the “Early Lumping” or the “Late Lumping” method. In the early lumping approach, the original infinite-dimensional system is reduced to a finite-dimensional system. [1] However, such an approximation might result in an unwanted mismatch between the behavior of the original system and its finite-dimensional approximation. [3] Another approach to address DPS models is to use the “Late Lumping” method, treating the original system as an infinite-dimensional system and then implementing numerical methods to obtain the solutions. While using the late lumping method produces more accurate models to predict the behavior of the original system, controlling the DPS becomes mathematically challenging. [1] Axial dispersion tubular reactors are one type of distributed parameter systems in the field of chemical and process engineering that have received a significant amount of attention from academia and industry due to their prevalence and practical complexity. Numerous works have been done on the modeling and the control of these reactors as distributed parameter systems, including the control of an axial dispersion tubular reactor with an instantaneous recycle. [4] Another important class of chemical and process engineering problems that classify as infinite-dimensional systems are those that show some aspect of delay. [5] The notion of delay in these systems may be equivalently represented by an infinite-dimensional pure transport setup. [2] Although delay systems that refer to input-output delays are well-known in the field of chemical engineering and process control, [2,6] less attention has been drawn to those systems with state delays. This may be due to the fact that such systems are assumed to be uncommon in the field of chemical and process systems engineering. Acknowledging tubular reactors equipped with recycle as one of the most common industrial setups, it can be shown that the notion of state delay may need to be used to model such a widely used chemical engineering setup, as it takes time for the recycled flow to re-enter the reactor inlet. This is shown in the attached Figure. Thus, in this work, the behavior of a tubular reactor with recycle is modeled using an infinite-dimensional transient system of PDEs describing reaction, transport, diffusion, and state delay; addressed by the Late Lumping approach. Knowing that most modern control strategies focus on the discrete-time setting, a Cayley-Tustin transformation is used to convert the original continuous-time infinite-dimensional system to its discrete-time representation. Hence, neither spatial discretization nor model order reduction is done in the scope of this work. A model-predictive control structure has also been proposed to ensure the stability of the controlled system, as well as its ability to appropriately track given set points within a finite time horizon. [1] Ray, W. Advanced process control. (1982): 505. [2] Curtain, R. and Zwart, H. Introduction to infinite-dimensional systems theory: a state-space approach. Vol. 71. Springer Nature, 2020. [3] Alizadeh Moghadam A., Aksikas I., Dubljevic S., Forbes J. Boundary optimal (LQ) control of coupled hyperbolic PDEs and ODEs. Automatica. 2013;49(2):526-33. [4] Khatibi, S., Ozorio Cassol G. and Dubljevic S. Model predictive control of a non-isothermal axial dispersion tubular reactor with recycle. Computers & Chemical Engineering 145 (2021): 107159. [5] Chen C. Linear System Theory and Design. 4th ed. Oxford Series in Electrical and Computer Engineering. Cary, NC: Oxford University Press; 2012. [6] Ozorio Cassol G., Ni D. and Dubljevic S. Heat exchanger system boundary regulation. AIChE Journal. 2019;65(8):e16623.",
+    "presenting_author": "Behrad Moadeli | University of Alberta, Edmonton, Canada",
+    "authors": [
+      "Behrad Moadeli | University of Alberta, Edmonton, Canada",
+      "Guilherme Ozorio Cassol Sr. | University of Alberta, Edmonton, Canada",
+      "Stevan Dubljevic | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Behrad Moadeli",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Guilherme Ozorio Cassol Sr.",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Stevan Dubljevic",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149d",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/671012"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666151",
+    "paper_endpoint": "Paper/666151",
+    "paper_id": "666151",
+    "topic": "Distributed Control of Integrated Process Systems – an Experimental Study",
+    "title": "Distributed Control of Integrated Process Systems – an Experimental Study",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Distributed architecture has gained significant attention in recent years in the context of estimation, optimization and control of large scale systems. It proposes valuable trade-off between performance and practical implementation. In the context of distributed control, especially distributed model predictive control (DMPC), significant work has been done in terms of problem formulation, communication protocols, convergence and stability analysis, and performance comparison with centralized and decentralized control schemes. The performance of DMPC strongly depends on the underlying distributed architecture (decomposition of the problem into sub-problems). Such a decomposition is non-trivial in the case of integrated process systems and has been a focus of research in the last few years. Initial works on distributed architecture synthesis relied on heuristics (such as topology [1] or variable type [2]) to decompose the master control problem into coupled sub-problems. Recent works have relied on graph theory to systematically decompose the master control problem while simultaneously optimizing one of the performance indicators (e.g. minimum computational time [3], response sensitivity [4] or strength of input-output response [5]) of the overall system. For an integrated system, one can therefore have a number of distributed architectures to choose from. In an attempt to come up with useful recommendations, these structures are explicitly compared via rigorous simulation studies [6]. However, no such comparison has been performed on an live system which poses a number of practical challenges like plant-model mismatch, measurement noise, transport lags and computational limitations. In this work, distributed control of an experimental quadruple tank system is pursued. This 2 input-2 output system gives rise to 2 DMPC architectures as shown in the figure below. It is established that, depending on the operating steady state, one architectures proposes better (analytical) performance compared to the other. The proposed work aims at experimental validation of these theoretical claims as well as quantification of this performance improvement. Firstly, a state-space model of the experimental system is identified and used for the synthesis of distributed architectures based on the existing methods. The DMPC controllers are then implemented and tuned via rigorous simulations. Subsequently, they are deployed on the experimental facility and their performance is compared with a centralized MPC. The rigorous comparison of these three control schemes, in terms of closed-loop performance and computation time, under practical constraints, is presented. References: [1] Stewart, B. T., Venkat, A. N., Rawlings, J. B., Wright, S. J., & Pannocchia, G. (2010). Cooperative distributed model predictive control. Systems & Control Letters, 59(8), 460-469. [2] Liu, J., Muñoz de la Peña, D., & Christofides, P. D. (2009). Distributed model predictive control of nonlinear process systems. AIChE journal, 55(5), 1171-1184. [3] Jogwar, S. S., & Daoutidis, P. (2017). Community-based synthesis of distributed control architectures for integrated process networks. Chemical Engineering Science, 172, 434-443. [4] Tang, W., & Daoutidis, P. (2018). Network decomposition for distributed control through community detection in input–output bipartite graphs. Journal of Process Control, 64, 7-14. [5] Jogwar, S. S. (2019). Distributed control architecture synthesis for integrated process networks through maximization of strength of input–output impact. Journal of Process Control, 83, 77-87. [6] Pourkargar, D. B., Almansoori, A., & Daoutidis, P. (2018). Comprehensive study of decomposition effects on distributed output tracking of an integrated process over a wide operating range. Chemical Engineering Research and Design, 134, 553-563.",
+    "presenting_author": "Sujit Jogwar | Indian Institute of Technology Bombay, Mumbai",
+    "authors": [
+      "Priti Sukhadeve | Indian Institute of Technology Bombay, Mumbai",
+      "Sujit Jogwar | Indian Institute of Technology Bombay, Mumbai"
+    ],
+    "authors_structured": [
+      {
+        "name": "Priti Sukhadeve",
+        "affiliation": "Indian Institute of Technology Bombay, Mumbai",
+        "designation": "Author"
+      },
+      {
+        "name": "Sujit Jogwar",
+        "affiliation": "Indian Institute of Technology Bombay, Mumbai",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "149e",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666151"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670117",
+    "paper_endpoint": "Paper/670117",
+    "paper_id": "670117",
+    "topic": "Dynamic Analysis and Model Predictive Control of a Biochemical Reactor Under Delayed Uncertain Measurement and Multi-Rate Actuation/Sampling",
+    "title": "Dynamic Analysis and Model Predictive Control of a Biochemical Reactor Under Delayed Uncertain Measurement and Multi-Rate Actuation/Sampling",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Different types of (bio)chemical processes are modeled by partial differential equations, generally known as distributed parameter systems. Axial dispersion reactors, separation columns, and the flow inside a pipeline are a few examples. In this contribution, a tubular biochemical reactor nonlinear model is initially considered. This dynamical model can describe a large class of bioprocesses, such as in wastewater treatment [1] or water treatment [2]. First, the possible existence of different equilibrium profiles is shown in the dynamic analysis of the non-linear model [3]. Then, the control and state estimation problems are considered for a linearized version of the system around a desired equilibrium profile. It is considered that the system is under output delay due to the necessary analysis that needs to be carried out in the output of a biochemical process. In the same line, the output is also considered to present measurement uncertainties. Furthermore, the system is considered multi-rate for the actuation and sampling times. When it comes to the stabilization of distributed systems, the complexity associated with the infinite-dimensional nature of the system has been addressed with the application of different methodologies, for example, backstepping [4], the linear quadratic regulator [5], and inertial manifolds [6]. Here, we consider an extension of the model predictive control for linear systems developed in previous contributions [7, 8]. As the controller requires state feedback, a Kalman filter is developed for state reconstruction based on the delayed output [9]. Finally, the difference in the actuation and sampling time also needs to be considered in the controller design. [1] O. Schoefs, D. Dochain, H. Fibrianto and J.P. Steyer . Modelling and identification of a partial differential equation model for an anaerobic wastewater treatment process. Proc. 10th World Congress on Anaero bic Digestion (AD10-2004), Montreal, Canada, 2004. [2] S. Bourrel, D. Dochain, J.P. Babary and I. Queinnec . Modelling, iden tification and control of a denitrifying biofilter. Journal of Process Control, 10, 73-91, 2000. [3] S. Bourrel, D. Dochain . Stability analysis of two linear distributed parameter bioprocess models. Mathematical and Computer Modelling of Dynamical Systems, 6(3), 267-281, 2000 . [4] M. Krstic and A. Smyshlyaev , Boundary Control of PDEs: A course on backstepping designs. Philadelphia: SIAM, 2008. [5] I. Aksikas, J. J. Winkin, and D. Dochain , “ Optimal LQ-feedback regulation of a nonisothermal plug flow reactor model by spectral factorization,” IEEE Transactions on Automatic Control, vol. 52, no. 7, pp. 1179 – 1193, 2007. [6] P. Christofides and P. Daoutidis , “ Finite-dimensional control of parabolic PDE systems using approximate inertial manifolds, ” Journal of Mathematical Analysis and Applications, vol. 216, no. 2, pp. 398 – 420, 1997. [7] K. Muske and J. Rawlings. Model predictive control with linear models. AIChE Journal. 1993; 39(2):262–287. [8] Q. Xu and S. Dubljevic. Linear Model Predictive Control for Transport-Reaction Processes. AIChE Journal. 2017;63 (7). [9] J. Xie, Q. Xu, D. Ni and S. Dubljevic. Observer and filter design for linear transport-reaction systems, European Journal of Control , 2019;",
+    "presenting_author": "Guilherme Ozorio Cassol Sr. | University of Alberta, Edmonton, Canada",
+    "authors": [
+      "Guilherme Ozorio Cassol Sr. | University of Alberta, Edmonton, Canada",
+      "Stevan Dubljevic | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Guilherme Ozorio Cassol Sr.",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Stevan Dubljevic",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149f",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670117"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670132",
+    "paper_endpoint": "Paper/670132",
+    "paper_id": "670132",
+    "topic": "Multiscale Kinetic Modeling and Optimization: In-Depth Analysis of Cellulose Degradation for Enhanced Pulping Process and Superior Paper Quality",
+    "title": "Multiscale Kinetic Modeling and Optimization: In-Depth Analysis of Cellulose Degradation for Enhanced Pulping Process and Superior Paper Quality",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Recently, despite advancements in information technology (IT), the demand for paper products remains remarkably high and continues to increase. This trend is primarily driven by the rapid growth of e-commerce businesses and their extensive need for packaging materials [1]. In response to environmental concerns, such as carbon neutrality, the paper industry has made significant endeavors to reduce its carbon footprint. These efforts involve optimizing resource consumption [2] and producing mechanically superior papers that can be easily recycled after use [3]. A thorough understanding of the pulping process is critical for further optimization. Understanding how the underlying structure of the wood chips evolves in a pulp digester and identifying factors that contribute to paper quality are essential. Cellulose, derived from woody biomass, serves as the primary building block of paper products and functions as the load-bearing element of paper [4, 5]. To produce mechanically strong papers, it is necessary to maintain a high degree of polymerization (DP) in the cellulose microfibers [6]. Additionally, low lignin content in the resulting cellulose fibers is desirable for high-quality papers [7]. However, current pulping practices using strong chemical reagents effectively remove lignin while also causing unavoidable cellulose degradation, creating a trade-off. Therefore, it is crucial to control operating conditions such as reaction temperature and time [8]. Nonetheless, tracking cellulose DP and lignin content during the pulping process remains a challenge, making the study of the relationship between operating conditions and cellulose quality a paramount interest. Establishing an appropriate kinetic model during pulping is difficult, as the bulk dissolution and depolymerization of cellulose fibers occur simultaneously but at different length and time scales. Motivated by this challenge, we propose a multiscale model employing a kinetic Monte Carlo (kMC) approach with a simulation lattice to track the spatiotemporal evolution of the biomass in the reaction system. We implemented several layers to describe cellulose dynamics: a macroscopic layer for the continuum model (mass/energy balances); a mesoscopic layer coupled with the kMC simulation lattice (dissolution of components); and a microscopic layer for cellulose depolymerization. This approach enabled us to obtain mesoscopic properties such as Kappa number (quantifying lignin content) and cell wall thickness (CWT), as well as microscopic properties like cellulose DP. Notably, our kinetic model classifies the cellulose degradation mechanism into two categories: dissolution and depolymerization, corresponding to meso/microscopic scales, respectively. We verified the multiscale model using experimental results from lab-scale pulping with phenol-4-sulfonic acid (PSA). Since the process outputs are sensitive to operating conditions, including solvent concentration and temperature, we also performed sensitivity analyses. Also, we implemented the proposed model to develop optimal operating strategies for achieving target properties in pulp products. Specifically, we developed a model predictive control (MPC) to track set-points while satisfying the process constraints. The MPC had two objectives: Kappa number and cellulose DP, with manipulated inputs being cooking time, temperature, and PSA concentration. The closed-loop simulations demonstrated that the required set-points are attained at the end of the operations. Literature cited: [1] Mboowa D. (2021). A review of the traditional pulping methods and the recent improvements in the pulping processes. Biomass Conv. Bioref. , 1, 1-12. [2] Kermani M., Perin-Levasseur Z., Benali M., Savulescu L., & Marechal F. (2017). A novel MILP approach for simultaneous optimization of water and energy: Application to a Canadian softwood Krapt pulping mill. Comput. Chem. Eng. , 102, 238-257. [3] Sridach W., (2010). The environmentally benign pulping process of non-wood fibers. Suranaree J. Sci. Technol. , 17, 2. [4] Chen J., Zhang M., Yuan Z., & Wang J. (2013). Improved high-tield pulp network and paper sheet properties by the addition of fines. BioResources , 8, 6309-6322. [5] Lavrykov S., Ramarao B., Lindstrom S., & Singh K. (2012). 3D network simulations of paper structure, Nord. Pulp Pap. Res. J. , 27, 256-263. [6] Jung J., Choi H.-K., Son S.H., Kwon J.S.-I., & Lee J.H. (2022). Multiscale modeling of fiber deformation: Application to a batch pulp digester for model predictive control of fiber strength. Comput. Chem. Eng. , 158, 107640. [7] Son S.H., Choi H.-K., & Kwon J.S.-I. (2021). Application of offset-free Koopman-based model predictive control to a batch pulp digester. AIChE J. , 67, e17301. [8] Son S.H., Choi H.-K., Moon J. & Kwon J.S.-I. (2022). Hybrid Koopman model predictive control of nonlinear systems using multiple EDMD models: An application to a batch pulp digester with feed fluctuation, Control Eng. Pract. , 118, 104956.",
+    "presenting_author": "Juhyeon Kim | Texas A&M University, College Station, TX",
+    "authors": [
+      "Juhyeon Kim | Texas A&M University, College Station, TX",
+      "Silabrata Pahari | Texas A&M University, College Station, TX",
+      "Anqi Ji | SUNY College of Environmental Science and Forestry, Syracuse",
+      "Mairui Zhang | SUNY College of Environmental Science and Forestry, Syracuse",
+      "Chang Geun Yoo | SUNY College of Environmental Science and Forestry, Syracuse",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Juhyeon Kim",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Silabrata Pahari",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Anqi Ji",
+        "affiliation": "SUNY College of Environmental Science and Forestry, Syracuse",
+        "designation": "Author"
+      },
+      {
+        "name": "Mairui Zhang",
+        "affiliation": "SUNY College of Environmental Science and Forestry, Syracuse",
+        "designation": "Author"
+      },
+      {
+        "name": "Chang Geun Yoo",
+        "affiliation": "SUNY College of Environmental Science and Forestry, Syracuse",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149g",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670132"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/662103",
+    "paper_endpoint": "Paper/662103",
+    "paper_id": "662103",
+    "topic": "The Theoretical Basis of Ratio Control",
+    "title": "The Theoretical Basis of Ratio Control",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Background Ratio control is extensively used in the process industries, in particular for mixing processes and for feed flows to chemical rectors. Ratio control is most likely the oldest control approach (think of recipes for making food and chemical compounds), but despite this, there exists no theoretical basis for its use. What is ratio control? The figure shows a typical ratio control scheme for mixing with an outer feedback loop to set the ratio. Note that no model is needed, except for the insight that the a constant ratio is desired. The correct ratio setpoint is found by feedback based on keeping the measured controlled variable y at its desired setpoint ys. In the figure, y is the viscocity, but generally it can be any intensive variable, Ratio control is more powerful than most people think, because its application only depends on a “ scaling assumption ” and does require an explicit model for the controlled variable ( y) . Scaling assumption For a mixing process, the “ scaling assumption” says when all feed flows are increased proportionally (with a fixed ratio), then at steady state any intensive variable y will remain constant. Note that all extensive variables (flows, heat rates, sizes of certain equipment) need to be scaled by the same factor for the scaling property to hold, and that also the independent intensive variables (typical feed composition and temperature) need to be kept constant. The scaling assumption may be formulated as follows (e.g., Skogestad, 1991): In words: Scaling all the independent extensive variables by a factor k (with the independent intensive variables constant) scales all the dependent extensive variables by the same factor k and keeps all the dependent intensive variables constant, Mathematically: Consider a steady-state relationship y=y(x 1 , x 2 , F 1 , F 2 , F 3 ) where the independent variables are divided in two classes: Intenstive variables, x 1 and x 2 Extensive variables, F 1 , F 2 and F 3 (typically flow and heat rates) Assume that all extensive variables are increased by the same factor k compared to their nominal values ( 0 ), that is, F 1 =kF 0 1 , F 2 =kF 0 2 , F 3 =k F 0 3 . Then y intensive: y(x 1 ,x 2 ,F 1 , F 2 , F 3 ) = y(x 1 , x 2 , F 0 1 , F 0 2 , F 0 3 ) (1) y extensive : y(x 1 ,x 2 ,F 1 , F 2 , F 3 ) = k y(x 1 , x 2 , F 0 1 , F 0 2 , F 0 3 ) (2) The point of control is that we want to keep the controlled variable y constant, that is, for ratio control (1) is the important relationship. Main result From (1) we arrive at the following important conclusions for the use of ratio control: (A) The systems must satisfy the scaling assumption, (B) The controlled variable y is implicitly assumed to be an intensive variable, for example, a property variable like composition, density or viscosity, but it could also be a temperature or pressure. (C) If the system has n independent extensive variables, then we need to keep n-1 ratios constant in order to keep the (any) independent intensive variable y constant. (D) Since all extensive variables must be scaled by the same factor, there must be at most one extensive variable disturbance, typically the throughput. Note that for achieving perfect control with only ratio control, we must assume that there are no intensive variable disturbances (like feed composition), but in practice this is not a serious limitation because these disturbances can be handled by an outer feedback controller which adjusts the ratio setpoint(s). When does the scaling assumption hold? Similar to the use in thermodynamics, it holds for all equilibrium systems. The scaling property (and thus the use of ratio control) applies to many process units, including Mixers, equilibrium reactors, equilibrium flash and equilibrium distillation Example distillation . For distillation we must assume that the pressure and efficiency (the number of theoretical stages) is constant. For a typical distillation column, there are three independent extensive variables at steady state, so at steady state we need to keep two ratios constant, for example, L/F and V/F where L is the reflux, V is the boilup and F is the federate (often a disturbance). Example mixing: Ratio control is very common for mixing processes because here the assumption of constant efficiency holds, at least at steady state when we assume perfect mixing. As an example, consider a mixing process with three feeds (F 1 , F 2 , F 3 ) and one mixed product outflow (F). Because of the steady-state mass balance (F=F 1 +F 2 +F 3 ), there are three independent variables at steady state. Assume now that one flow is given and is therefore the disturbance d from a control point of view (e.g., d=F 3 ). With the level loop closed (to satisfy the steady-state mass balance) there are then two independent (manipulated) variables left (e.g. u 1 = F 1 and u 2 = F 2 ) and the system will be fully specified by fixing two flow ratios, for example, u 1 /d and u 2 /d, and this will result in constant mixture properties. Importantly, note that u 1 , u 2 and d can be any of the four flows F 1 , F 2 , F 3 and F. The important thing is that we keep two ratios constant. However, there are also many process units where ratio control should not be used, because the scaling property does not hold. This includes, for example, non-equilibrium reactors (where kinetics are important) and heat exchangers. For the scaling property to hold for a heat exchanger, we would need to increase the heat transfer area A proportionally to the flow rates. This is reasonable during design but not during operation (control) when the equipment is fixed. Discussion MPC and ratio control. Note that ratio control is difficult to implement with MPC. With MPC, we need a nonlinear model for how y depends on u and d , which may be a quite complex model, for example, if y is viscosity. On the other hand, a simple ratio control implementation (see Figure) does not require a model for how y depends on u and d , we just need the physical insight that y will be constant if we keep the ratio u/d constant. We also do not need to have a model to find the correct setpoint for the ratio u/d to keep y constant, as this can be found indirectly through the action of feedback (see Figure). Warning. Even for units where the scaling property should hold, ratio control only applies when all extensive variables are increased by the same factor k. Example mixing (for case where ratio control should not be used ). Assume we want to make a drink by mixing three ingredients (feeds), namely F 1 = lemon juice, F 2 = lime juice (both of which are quite sour), F 3 = sugar. There are three independent extensive variables, and according to the scaling property, we will achieve constant product composition if we keep any two flow ratios constant, for example, F 2 /F 1 and F 3 /F 1 . However, assume that we are limited on sugar, so F 3 = F 3,max = constant. Thus, it will be impossible to increase F 3 further and ratio control should not be used, in spite of the fact the scaling property holds for this system. In fact, for this particular example, if we increase F 1 and keep F 3 (sugar feed) constant (at its maximum), then keeping the ratio F 2 /F 1 constant (and thus increasing F 2 ) is most likely the opposite of what we should do, because it makes the drink even more sour. Instead, if we increase F 1 (lemon) with F 3 (sugar) constant, then the drink will taste best if we decrease F 2 (lime). Relationship to thermodynamics , The scaling property may be used to derive steady-state gain consistency relationships and is also important in thermodynamics (Skogestad, 1991). We here assume that y is homogeneous to the degree h in the extensive variables, where h=0 if y is intensive and h=1 if y is extensive: y(x 1 , x 2 , kF 0 1 , kF 0 2 , kF 0 3 ) = k y(x 1 , x 2 , F 0 1 , F 0 2 , F 0 3 ) (3) In thermodynamics, (3) is used to derive Euler’s theorem and from this derive the fundamental equation of thermodynamics, Legendre transformations and the Gibbs-Duhem equation. Conclusion Ratio control is very simple to use and it gives nonlinear feedforward action without needing an explicit process model. It is almost always used for chemical processes to set the ratio of the reactant feed streams. Ratio control may be viewed as a special case of feedforward control, but note that we do not need a model for the property y for ratio control, whereas such a model is needed for feedforward control. Reference Skogestad, “Consistency of Steady-State Models Using Insight about Extensive Variables”, Ind. Eng. Chem. Res., 30, 4, 654-661 (1991)",
+    "presenting_author": "Sigurd Skogestad | Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+    "authors": [
+      "Sigurd Skogestad | Norwegian University of Science and Technology (NTNU), Trondheim, Norway"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sigurd Skogestad",
+        "affiliation": "Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "149h",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/662103"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/662548",
+    "paper_endpoint": "Paper/662548",
+    "paper_id": "662548",
+    "topic": "Self-Optimizing Control for Secondary Controlled Variable Selection",
+    "title": "Self-Optimizing Control for Secondary Controlled Variable Selection",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The technique of self-optimizing control has garnered significant attention in recent times as a means of selecting controlled variables (Skogestad, 2000). This approach involves the conversion of the optimization objective of a process into a process control goal through the design of controlled variables, which can be a known function of measured variables with some tunable parameters. The self-optimized controlled variables are then maintained at a constant set-point to achieve optimal or near-optimal operation(Jäschke et al., 2017). Currently, the most commonly used method in SOC is to select a linear combination of measured variables as the controlled variable, that is, c=Hy, where c is the controlled variable, y is the measured variables, and H is the linear combination matrix. Self-optimizing control finds a primary application in the design of control structures for continuous chemical processes, where controlled variables are selected with regard to the steady-state economic performance of the process(Jäschke et al., 2017). While a few studies consider dynamic factors, such as the work by Klemets et al.(Klemets and Hovd, 2019), who combined PI controller design with controlled variable design to achieve a trade-off between steady-state and dynamic performance, and research on the design of self-optimized controlled variables for batch processes are also emerged(Grema and Cao, 2020; Ye and Skogestad, 2018). Nevertheless, existing self-optimizing control methods concentrate on real-time optimization schemes that prioritize controlled variables design at the optimization layer. That means it focus to select the primary variable, and thus, the selection and design of controlled variables for regular control layers which is called secondary controlled variables remain unexplored. However, the proper selection of secondary measurements is a crucial challenge in the field of chemical process control, particularly in the case of multistage or distributed parameter systems that comprise key process units(Shen and Yu, 1990). Typically, the primary variables are the variables we would really like to control, and secondary variables are the variables we control locally to make control of primary variables easier (Skogestad and Postlethwaite, 2005). As highlighted by Hsu et al. (1990), this control structure can be interpreted as an indirect feedforward control, given that the secondary controller acts as a feedforward controller for specific load changes. However, in practice, many process units experience multiple-load disturbances, leading to suboptimal parallel cascade control performance when the real load disturbance deviates from the nominal one used for secondary controller design. To address this issue, Shih-Haur Shen(Shen and Yu, 1990) proposes a measurement selection criterion to enhance disturbance-rejection averaging. However, these methods are rarely applicable to nonlinear systems. Secondary variables selection based on a linear model is the easiest and most efficient. However, it may be ineffective, since the nonlinear plant may loose desirable properties due to linearization, like controllability.(van de Wal and de Jager, 2001) The same issue exists in the early research of SOC. Early efforts to address the SOC CVs design problem focused on linear analysis for the sake of simplification(Alstad et al., 2009; Alstad and Skogestad, 2007; Halvorsen et al., 2003; Kariwala, 2007; Kariwala et al., 2008). The localness of self-optimizing performance remains a significant challenge for the local linear analysis, particularly when the chemical plant is significantly nonlinear and operated under drifting points. The method known as global SOC (gSOC) approach(Ye et al., 2015) minimizes the average loss when disturbances are distributed across the entire uncertain space. This method starts from the optimal data and no longer depends on the local linear model when designing the controlled variable. Moreover, the secondary variables selected by these studies were single measurements. Nevertheless, limited by current sensor technology, it is difficult to achieve optimal rejection of each disturbance based on a single measurement. Minasidis et al.(Minasidis et al., 2015) proposed that in the design of plant-level control structures, the secondary controlled variable can also be represented by a linear combination of measured variables within the control structure of the conventional control layer. However, the authors refrained from undertaking a comprehensive evaluation of the advantages and consequences of utilizing such an approach. This paper considers extending the global self-optimizing control to the structure design of the regular control layer to introduce a nonlinear design method of system output design, and expanding the secondary variables for a single measurement to the linear combination of the measured variables, so as to improve the resistance of a process to disturbance. In this paper, we use the averaging integrated error defined by Shen(Shen and Yu, 1990) to identify the effects of disturbances on primary loop variable outputs in the presence of secondary loops. The proposed method is applied to an industrial-scale superheated steam drying process for shredded tobacco. In this process, the tobacco is continuously conveyed via a feed-in vibratory conveyor and an infeed airlock into the acceleration bend, where the tobacco is dried by heated process gas (hot air) flow with a temperature of approximate 150-300 ℃. After a very short drying time (total retention time of the tobacco in the dryer is about ten seconds), the tobacco is ejected from the superheated steam dryer via a cyclone with a discharge airlock. Part of the process gas is vented and the residual circulated via a process gas fan to the process gas heater where it is heated up. Then the ejected cut tobacco is conveyed along the vibratory conveyor into the winnower where it gets thoroughly mixed and eventually moves to the next process. According to product quality requirements, it is expected that the moisture content of cut tobacco before moves to the next process will remain constant at the set value. So the primary goal of this process is that the final cooled moisture is constantly maintained at the desired level. However, this process has two dynamic modes with extremely different time constants, fast and slow, making it difficult to control the cooled moisture stably constant. In this paper, the global self-optimizing control method is used to design secondary variables to have better rejection ability to various disturbances. The method has been tested in both the mechanism model and the actual plant. The selected secondary control loop significantly reduces variations in the cooled moisture, hence verifies the concept that self-optimizing control can also be applicable to secondary controlled variable design. The contribution of this paper lies : The global self-optimizing control method is expanded to the structure design of the regular control layer. And it is successfully applied to the superheated steam drying process for shredded tobacco. By introducing a nonlinear design method of system output design and expanding the secondary variables for a single measurement to the linear combination of the measured variables, which can improve the resistance of the process to disturbance. Overall, the proposed method offers a promising solution for controlling the moisture content of cut tobacco in a superheated steam drying process, which is challenging due to the multiple dynamic modes with extremely different time constants. By designing a set of better secondary variables that are resistant to disturbances, this method can help improve product quality and increase process efficiency. Alstad, V., Skogestad, S., 2007. Null Space Method for Selecting Optimal Measurement Combinations as Controlled Variables. https://doi.org/10.1021/IE060285 Alstad, V., Skogestad, S., Hori, E.S., 2009. Optimal measurement combinations as controlled variables. Journal of Process Control 19, 138–148. https://doi.org/10.1016/J.JPROCONT.2008.01.002 Grema, A.S., Cao, Y., 2020. Dynamic Self-Optimizing Control for Uncertain Oil Reservoir Waterflooding Processes. IEEE Transactions on Control Systems Technology 28, 2556–2563. https://doi.org/10.1109/TCST.2019.2934072 Halvorsen, I.J., Skogestad, S., Morud, J.C., Alstad, V., 2003. Optimal selection of controlled variables. Industrial and Engineering Chemistry Research. https://doi.org/10.1021/ie020833t Jäschke, J., Cao, Y., Kariwala, V., 2017. Self-optimizing control – A survey. Annual Reviews in Control 43, 199–223. https://doi.org/10.1016/j.arcontrol.2017.03.001 Kariwala, V., 2007. Optimal measurement combination for local self-optimizing control. Industrial and Engineering Chemistry Research 46, 3629–3634. https://doi.org/10.1021/IE0610187/SUPPL_FILE/IE0610187SI20070109_012236.ZIP Kariwala, V., Cao, Y., Janardhanan, S., 2008. Local Self-Optimizing Control with Average Loss Minimization. https://doi.org/10.1021/IE070897 Klemets, J.R.A., Hovd, M., 2019. Accounting for dynamics in self-optimizing control. Journal of Process Control 76, 15–26. https://doi.org/10.1016/J.JPROCONT.2019.01.003 Minasidis, V., Skogestad, S., Kaistha, N., 2015. Simple Rules for Economic Plantwide Control, in: Gernaey, K.V., Huusom, J.K., Gani, R. (Eds.), Computer Aided Chemical Engineering, 12 International Symposium on Process Systems Engineering and 25 European Symposium on Computer Aided Process Engineering. Elsevier, pp. 101–108. https://doi.org/10.1016/B978-0-444-63578-5.50013-X Shen, S.-H., Yu, C.-C., 1990. Selection of secondary measurement for parallel cascade control. AIChE Journal 36, 1267–1271. https://doi.org/10.1002/aic.690360818 Skogestad, S., 2000. Plantwide control: The search for the self-optimizing control structure. Journal of Process Control 10, 487–507. https://doi.org/10.1016/S0959-1524(00)00023-8 Skogestad, S., Postlethwaite, I., 2005. Multivariable Feedback Control: Analysis and Design. John Wiley & Sons. van de Wal, M., de Jager, B., 2001. A review of methods for input/output selection. Automatica 37, 487–510. https://doi.org/10.1016/S0005-1098(00)00181-3 Ye, L., Cao, Y., Yuan, X., 2015. Global Approximation of Self-Optimizing Controlled Variables with Average Loss Minimization. Industrial and Engineering Chemistry Research 54, 12040–12053. https://doi.org/10.1021/acs.iecr.5b00844 Ye, L., Skogestad, S., 2018. Dynamic self-optimizing control for unconstrained batch processes. Computers and Chemical Engineering 117, 451–468. https://doi.org/10.1016/j.compchemeng.2018.06.024",
+    "presenting_author": "Chenchen Zhou | Zhejiang University, Hangzhou, China",
+    "authors": [
+      "Chenchen Zhou | Zhejiang University, Hangzhou, China",
+      "Hongxi Su | Zhejiang University, Hangzhou, China",
+      "Xincheng Zhu | Zhejiang University, Hangzhou, China",
+      "Xinhui Tang | Zhejiang University, Hangzhou, China",
+      "Fanda Pan | China Tobacco Zhejiang Industrial Co., Ltd.,, Hangzhou",
+      "Kai Shen | China Tobacco Zhejiang Industrial Co., Ltd.,, Hangzhou",
+      "Mingming Hu | China Tobacco Zhejiang Industrial Co., Ltd.,, Hangzhou",
+      "Kaixuan Jiao | China Tobacco Zhejiang Industrial Co., Ltd.,, Hangzhou",
+      "Yi Cao | Zhejiang University, Hangzhou, China",
+      "Shuanghua Yang | Zhejiang University, Hangzhou, China"
+    ],
+    "authors_structured": [
+      {
+        "name": "Chenchen Zhou",
+        "affiliation": "Zhejiang University, Hangzhou, China",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Hongxi Su",
+        "affiliation": "Zhejiang University, Hangzhou, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Xincheng Zhu",
+        "affiliation": "Zhejiang University, Hangzhou, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Xinhui Tang",
+        "affiliation": "Zhejiang University, Hangzhou, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Fanda Pan",
+        "affiliation": "China Tobacco Zhejiang Industrial Co., Ltd.,, Hangzhou",
+        "designation": "Author"
+      },
+      {
+        "name": "Kai Shen",
+        "affiliation": "China Tobacco Zhejiang Industrial Co., Ltd.,, Hangzhou",
+        "designation": "Author"
+      },
+      {
+        "name": "Mingming Hu",
+        "affiliation": "China Tobacco Zhejiang Industrial Co., Ltd.,, Hangzhou",
+        "designation": "Author"
+      },
+      {
+        "name": "Kaixuan Jiao",
+        "affiliation": "China Tobacco Zhejiang Industrial Co., Ltd.,, Hangzhou",
+        "designation": "Author"
+      },
+      {
+        "name": "Yi Cao",
+        "affiliation": "Zhejiang University, Hangzhou, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Shuanghua Yang",
+        "affiliation": "Zhejiang University, Hangzhou, China",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149i",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/662548"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670456",
+    "paper_endpoint": "Paper/670456",
+    "paper_id": "670456",
+    "topic": "Practical Control Laws with Quantum Computation",
+    "title": "Practical Control Laws with Quantum Computation",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Quantum computing has been receiving interest in chemical engineering (e.g., [2] [3]). Chemical engineering involves a broad range of science and engineering problems related for example to transport phenomena, optimization, design and modeling of complex systems [6]. Applications of quantum devices for chemical engineering applications have included using a hybrid quantum/classical approach to solve process scheduling problems in [7]. Quantum computing combined with quantum artificial intelligence was also elaborated for renewable and sustainable energy systems in [8]. In addition, quantum computing has been receiving engineering attention for applications such as control (e.g., [1]). In [1] and [9], proportional control algorithms implemented on quantum computers were investigated. However, proportional-integral control is often more preferable than proportional-only control. Therefore, to move toward practical control algorithm implementations on quantum computers, it is necessary to consider a proportional-integral control formulation, and also how controllers might be more systematically designed. In this talk, we discuss implementing proportional-integral control with the aid of a quantum computer, using an addition code from [10] that takes advantage of the Quantum Fourier Transform for implementing the control law. We also build on the discussion from [4] in which, inspired by learning of a quantum circuit in [11], we discussed how an integer program might be developed for attempting to learn an algorithm for quantum chemistry computations for a single qubit, and discussed how the single qubit would not be able to take advantage of all of the properties of quantum computers. We expand the discussion here to present how integer programs might in general be developed for gate selection for specific state measurement/control output relationships to find the gates which can represent a specific action desired by a control law. However, we also will discuss how this does not constitute learning an \"algorithm\" like the Quantum Fourier Transform-based addition algorithm [12], because such algorithms are able to adapt a relationship that can be coded to different numbers of total qubits and should correspond to different state/input relationships without the need to \"re-code\" them. We will discuss the implications of control algorithms on quantum computers for control of both traditional process-scale systems as well as smaller-scale systems. Specifically, quantum computing was employed to design an optimally-shaped electromagnetic field in order to control molecular systems on a quantum basis in [5]. In the last part of our talk, we will introduce principles of quantum control in the context of the control of the bond length of an HF molecule and discuss the challenges of implementing the control algorithms developed for the classical devices (such as quantum computing-implemented proportional and proportional-integral control) for the quantum system, which result due to the measurement principles of quantum mechanics that affect feedback control . References: [1] Nieman, K., Kasturi Rangan, K., and Durand, H., “Control implemented on quantum computers: Effects of noise, nondeterminism, and entanglement,” Ind. Eng. Chem. Res. 61 (28), 10133–10155 (2022). [2] Akshay Ajagekar and Fengqi You. “Quantum computing based hybrid deep learning for fault diagnosis in electrical power systems”. In: Applied Energy 303 (2021), p. 117628. [3] Akshay Ajagekar and Fengqi You. “Quantum computing for energy systems optimization: Challenges and opportunities”. In: Energy 179 (2019), pp. 76–89 [4] Keshav Kasturi Rangan et al. “Quantum Computing and Resilient Design Perspectives for Cybersecurity of Feedback Systems”. In: IFAC-PapersOnLine 55.7 (2022), pp. 703–708 [5] Alicia B Magann et al. “Digital quantum simulation of molecular dynamics and control”. In: Physical Review Research 3.2 (2021), p. 023165. [6] Ajagekar, A. and You, F., 2022. New frontiers of quantum computing in chemical engineering. Korean Journal of Chemical Engineering, 39 (4), pp.811-820. [7] Tran, T., Do, M., Rieffel, E., Frank, J., Wang, Z., O'Gorman, B., Venturelli, D. and Beck, J., 2016. A hybrid quantum-classical approach to solving scheduling problems. In Proceedings of the International Symposium on Combinatorial Search (Vol. 7, No. 1, pp. 98-106). [8] Ajagekar, A. and You, F., “Quantum computing and quantum artificial intelligence for renewable and sustainable energy: A emerging prospect towards climate neutrality,” Renew. Sustain. Energy Rev. 165, 112493 (2022). [9] Kasturi Rangan, K., Oyama, H., Azali Assoumani, I., Durand, H., & Ng, K. Y. S. (2023). Cyberphysical Systems and Energy: A Discussion with Reference to an Enhanced Geothermal Process. In Energy Systems and Processes: Recent Advances in Design and Control (pp. 8-1). Melville, New York: AIP Publishing LLC. [10] Anagolum, S. DoNew. 2018. https://github.com/SashwatAnagolum/DoNew. [11] Cincio, L., Subaşı, Y., Sornborger, A. T., & Coles, P. J. (2018). Learning the quantum algorithm for state overlap. New Journal of Physics, 20 (11), 113022. [12] Ruiz-Perez, L., & Garcia-Escartin, J. C. (2017). Quantum arithmetic with the quantum Fourier transform. Quantum Information Processing, 16 , 1-14.",
+    "presenting_author": "Jihan Abou Halloun | Wayne State University, Detroit, MI",
+    "authors": [
+      "Jihan Abou Halloun | Wayne State University, Detroit, MI",
+      "Keshav Kasturi Rangan | Wayne State University, Detroit, MI",
+      "Helen Durand | Wayne State University, Detroit, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jihan Abou Halloun",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Keshav Kasturi Rangan",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      },
+      {
+        "name": "Helen Durand",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149j",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670456"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/671433",
+    "paper_endpoint": "Paper/671433",
+    "paper_id": "671433",
+    "topic": "Considerations of Space Manufacturing: Utilizing Earth-Based Resources for Modeling and Control Applications While Considering Communication Delay",
+    "title": "Considerations of Space Manufacturing: Utilizing Earth-Based Resources for Modeling and Control Applications While Considering Communication Delay",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Habitation at distant locations in space will introduce new challenges in ensuring safety and sustainability. This is compounded by the long transportation times between Earth and any colony in space, meaning that colonists may have difficulty adapting to unpredictable concerns. Because of this, it is likely that colonists will need to be mostly self-sufficient. This includes, for example, the manufacture of replacement parts and tools or agriculture to produce food. Given that many optimization and model-based control schemes are computationally intensive, being able to utilize cloud-resources on Earth may be desired. An issue with the use of cloud computation in this case is the long communication time between Earth and other bodies in space. Other issues to consider are the ability to model complex processes for use in model-based control. In space, it is likely that available energy is limited, which could be addressed in part by using model-based controller to minimize energy usage. For this reason, we first consider how the control of processes in space would work given long communication times, specifically by studying the speed of the process dynamics. In general, ‘fast’ processes will become unstable when controlled this way, while ‘slow’ processes may benefit from this strategy. In this analysis, we consider a continuous stirred-tank reactor with adjustable residence time, controlled by Lyapunov-based economic model predictive control (LEMPC) [1, 2]. Previously, our group demonstrated difficulties in determine best case estimates of the LEMPC parameters [3]. In this work, we study ways of improving this method, for the purpose of finding parameters for different residence times. With this, we are able to predict how ‘fast’ a process can be and still maintain stability. Next, we discuss the modeling of methods for production in space. For the production of parts, we study an additive manufacturing method called powder bed fusion (PBF), which produces objects in a bed of powder. In PBF, which is a ‘fast’ process, each successive layer is added by melting a cross-section into the bed of powder fusing it to the previous layer, sweeping over a fresh layer of powder between each layer. Previously we adapted several sources [4-6] to create a finite element analysis (FEA) simulation in ANSYS to represent the thermal evolution of the process [7]. In this work, we first focus on the development of a coupled ANSYS thermal and structural simulation for predicting the temperatures, deformations, and stresses in the completed object. We discuss challenges in the modeling strategy, such as accounting for unconnected floating elements and large element deformations, as well as solutions to these problems. Some explored solutions include comparing the application of linear and quadratic elements, temporarily removing floating elements until they become fused to the larger part body, and appropriately setting reference temperatures. Also discussed is the method used to link the thermal profile results to the structural simulation. Since PBF has fast dynamics, we study methods of control that slow down the manufacturing process so that Earth-based resources might be usable. [1]. Nieman, Kip, et al. \"Challenges and Opportunities for Next-Generation Manufacturing in Space.\" IFAC-PapersOnLine 55.7 (2022): 963-968. [2]. Hussein, Ahmed, et al. \"Finite element simulation of the temperature and stress fields in single layers built without-support in selective laser melting.\" Materials & Design (1980-2015) 52 (2013): 638-647. [3]. Zeng, K., et al. \"Comparison of 3DSIM thermal modelling of selective laser melting using new dynamic meshing method to ANSYS.\" Materials Science and Technology 31.8 (2015): 945-956. [4]. Goldak, John, Aditya Chakravarti, and Malcolm Bibby. \"A new finite element model for welding heat sources.\" Metallurgical transactions B 15 (1984): 299-305. [6]. Oyama, Henrique, et al. \"Lyapunov-based economic model predictive control for detecting and handling actuator and simultaneous sensor/actuator cyberattacks on process control systems.\" Frontiers in Chemical Engineering 4 (2022): 810129. [7]. Heidarinejad, Mohsen, Jinfeng Liu, and Panagiotis D. Christofides. \"Economic model predictive control of nonlinear process systems using Lyapunov techniques.\" AIChE Journal 58.3 (2012): 855-870. [8]. Ellis, Matthew, Helen Durand, and Panagiotis D. Christofides. \"A tutorial review of economic model predictive control methods.\" Journal of Process Control 24.8 (2014): 1156-1178.",
+    "presenting_author": "Kip Nieman | Wayne State University, Detroit, MI",
+    "authors": [
+      "Kip Nieman | Wayne State University, Detroit, MI",
+      "Helen Durand | Wayne State University, Detroit, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kip Nieman",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Helen Durand",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149k",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/671433"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667742",
+    "paper_endpoint": "Paper/667742",
+    "paper_id": "667742",
+    "topic": "Harnessing Feedback Control Strategy for Improved Core Annular Flow Stability in Heavy Oil Transportation",
+    "title": "Harnessing Feedback Control Strategy for Improved Core Annular Flow Stability in Heavy Oil Transportation",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "INTRODUCTION The Core Annular Flow (CAF) pattern, also known as annular flow, is a phenomenon that occurs in multiphase flow systems where one fluid is encircled by another external fluid within a pipeline. This flow pattern is crucial in various engineering fields, particularly in the oil and gas industry¹. One of the primary applications of CAF lies in the transportation of viscous fluids. In such cases, it is essential to utilize an external fluid with low viscosity to minimize the friction between the internal fluid and the pipeline wall. Commonly, water serves as the less viscous fluid, resulting in a liquid-liquid system². A visual representation of this system is depicted in Figure 1, where high-viscosity oil is at the center, and water surrounds it, functioning as a lubricant. Figure 1 – Example of Core Annular Flow. By utilizing water as an external fluid, the application of CAF enables more efficient oil transportation with reduced pressure loss. This is particularly beneficial in regions with cold climates, where oil viscosity tends to increase³. Despite being used in large-scale transport systems, CAF still faces various challenges. These include destabilization of annular flow due to geometric variations or changes in the pipeline's flow direction, fouling caused by viscous fluids adhering to the pipeline wall, emulsion formation resulting from solid impurities or water present in the fluid that may impact the annular flow pattern's stability, and maintaining CAF stability over extended distances due to the buoyancy effect.². Control solutions are often the first consideration when addressing stability issues in other engineering problems. However, the authors are unaware of any existing literature specifically tackling control issues in CAF systems. On the other hand, there are notable applications of PID control in addressing oil and gas transport challenges, as reported in Jahanshahi et al. (2012) 4 . In this study, the authors aimed to develop a simple and robust control structure for stabilizing gas-lifted oil wells, preventing casing-heading instability. They performed a controllability analysis using various candidate control variables and manipulated variables, ultimately creating an effective control structure based on top-side pressure measurements. In another study by Jahanshahi et al. (2013) 5 , PI and PID controllers were employed to prevent unstable flow in offshore oil fields. The authors proposed robust and applicable tuning rules through model identification and IMC design, validating their results using test rigs and simulations with the OLGA simulator. Therefore, this work intends to utilize CFD (computational fluid dynamics) techniques to simulate a CAF system and subsequently develop a PI strategy for controlling this process. By increasing the spatial occupation of oil in the pipe's cross-section, the controller will seek to maintain the process in a highly productive region while preventing fouling in the presence of disturbances. METHODOLOGY Building upon the CAF induction head concept, which features water inlets at the radial extremity of the pipe, CFD simulations were carried out using Ansys Fluent software. An isothermal system was assumed, in which the physicochemical properties of the fluids remain constant. For the simulation, densities of 998.2 kg/m³ and 854 kg/m³ were considered for water and oil, respectively. The viscosities were set at 0.001003 Pa·s for water and 0.62 Pa·s for oil. The interfacial tension between water and oil was 0.032 N/m⁶. The multiphase system employed the VOF (Volume of Fluid) model, while the RANS 𝐾−𝜖 SST model was used for viscosity, with refined treatment on the walls. A two-dimensional, 1-meter pipe was simulated, featuring a 50 mm inlet. The central oil inlet measured 40 mm, accompanied by two peripheral 5 mm water inlets. Figure 2 illustrates the generated geometry representing the induction head. Figure 2 - Geometry for the induction of the Core Annular Flow. Upon defining the system, open-loop simulations were conducted, varying the boundary conditions (water and oil velocities) to assess their impact on the spatial occupation within the pipeline. Initially, the pipe was filled with water. Subsequently, closed-loop tests were initiated using MATLAB software to implement a proportional controller in the system. This aimed to control the spatial occupation of oil within the pipeline and evaluate the controller's ability to withstand disturbances in the system. RESULTS Through open-loop simulations of the system, it became apparent that the oil's spatial occupation could vary significantly. Moreover, it was observed that certain operating conditions might be unstable and could potentially lead to fouling within the pipeline in the presence of disturbances. Some of these phenomena can be seen in Figure 3, emphasizing the ratio 0.35 and ratio 0.1, which begin to display foul. Figure 3 - Simulations of different operating conditions. The figure above shows that a decrease in the water injection rate leads to an increase in the volumetric fraction occupied by the oil. This effect is noticeable when comparing ratio 2 with ratio of 1.5, where a slight increase in oil volume can be observed. As the water-to-oil rate is reduced, the buoyancy effects on the oil become more significant due to the oil's lower density than water. Consequently, the volume occupied by the oil tends to increase in the cross-section up to a critical point where a reduction in water velocity results in pipe fouling. A proportional controller with a gain of 0.25 was proposed to address the control challenges in the CAF system. The controller's objective is to track the oil fraction setpoint by manipulating the water velocity while considering the oil velocity as an unmeasured disturbance. The proposed control scheme is expected to improve the CAF system's stability, particularly in the presence of disturbances, by controlling the oil fraction. The controller can prevent fouling deposits on the pipeline wall and maintain the system's productivity. To evaluate the effectiveness of the proposed control scheme, closed-loop simulations were conducted. The system started with a high fraction of oil, and the value of 0.6 was established as a setpoint, defined from the open loop stability limit. In addition, for every 15 actions, there is an unmeasured disturbance of 0.025 m/s in the oil velocity, making a step from 0.3 m/s to 0.375 m/s in oil speed, as seen in figure 4. Figure 4 - Result of controlling the oil fraction in the pipeline cross-section. Figure 4 shows that the controller successfully maintained the setpoint for disturbance rejection. Comparing it with Figure 3 reveals that the second disturbance would have caused the system to enter a stratification regime, leading to fouling the pipe’s wall. To prevent this, the controller increased the water velocity, ensuring the CAF remained in the annular flow regime. It is remarkable that a single feedback loop was enough to keep the system under the annular regime, making it possible to improve the system in future works with more advanced control strategies. CONCLUSIONS In conclusion, the Core Annular Flow (CAF) pattern is a significant phenomenon in multiphase flow systems. Despite its wide-ranging applications, challenges in maintaining the stability of the annular flow pattern remain. Using computational fluid dynamics (CFD) simulations and the implementation of PID control techniques, this study demonstrates the potential for enhanced system performance in CAF systems for transporting heavy oil in liquid-liquid systems. The results indicate that the proportional controller successfully controlled the spatial occupation of the oil in the pipeline and demonstrated resistance against disturbances in the system. This research highlights the importance of understanding the dynamics of CAF systems and presents an opportunity to apply control techniques for improved efficiency and stability. REFERENCES ¹ Rosa, E. S. (2012). Escoamento multifásico isotérmico: modelos de multifluidos e de mistura . ² Joseph, D. D., Bai, R., & Chen, K. P. (1997). CORE-ANNULAR FLOWS . 65–90. ³ Tripathi, S., Tabor, R. F., Singh, R., & Bhattacharya, A. (2017). Characterization of interfacial waves and pressure drop in horizontal oil-water core-annular flows. Physics of Fluids , 29 (8). https://doi.org/10.1063/1.4998428 ⁴ Jahanshahi, E., Skogestad, S., & Hansen, H. (2012). Control structure design for stabilizing unstable gas-lift oil wells. IFAC Proceedings Volumes (IFAC-PapersOnline) , 8 (PART 1), 93–100. https://doi.org/10.3182/20120710-4-SG-2026.00110 ⁵ Jahanshahi, E., & Skogestad, S. (2013). Closed-loop model identification and PID/PI tuning for robust anti-slug control. IFAC Proceedings Volumes (IFAC-PapersOnline) , 10 (PART 1), 233–240. https://doi.org/10.3182/20131218-3-IN-2045.00009 ⁶ Li, X. G., Zhang, L. H., Zhang, R. Y., Sun, Y. L., Jiang, B., Luo, M. F., & Li, X. G. (2015). CFD modeling of phase change and coke formation in petroleum refining heaters. Fuel Processing Technology , 134 , 18–25. https://doi.org/10.1016/j.fuproc.2015.03.005 ⁷ Li, L., Popa, F., & Houchens, B. C. (2015). Mechanistic prediction of oil-water, two-phase flow in horizontal or near-horizontal pipes for a wide range of oil viscosities. Proceedings - SPE Annual Technical Conference and Exhibition , 2015-January , 64–78. https://doi.org/10.2118/174726-ms",
+    "presenting_author": "Patrick Lima | Federal University of Bahia, Salvador, Brazil",
+    "authors": [
+      "Patrick Lima | Federal University of Bahia, Salvador, Brazil",
+      "Erbet Costa | Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+      "Teófilo Paiva Guimarães Mendes | Federal University of Bahia, Salvador, Brazil",
+      "Leizer Schnitman | Federal University of Bahia, Salvador, Brazil",
+      "Sigurd Skogestad | Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+      "Idelfonso Nogueira | Norwegian University of Science and Technology (NTNU), Trondheim, Norway"
+    ],
+    "authors_structured": [
+      {
+        "name": "Patrick Lima",
+        "affiliation": "Federal University of Bahia, Salvador, Brazil",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Erbet Costa",
+        "affiliation": "Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Teófilo Paiva Guimarães Mendes",
+        "affiliation": "Federal University of Bahia, Salvador, Brazil",
+        "designation": "Author"
+      },
+      {
+        "name": "Leizer Schnitman",
+        "affiliation": "Federal University of Bahia, Salvador, Brazil",
+        "designation": "Author"
+      },
+      {
+        "name": "Sigurd Skogestad",
+        "affiliation": "Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+        "designation": "Author"
+      },
+      {
+        "name": "Idelfonso Nogueira",
+        "affiliation": "Norwegian University of Science and Technology (NTNU), Trondheim, Norway",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149l",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667742"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666333",
+    "paper_endpoint": "Paper/666333",
+    "paper_id": "666333",
+    "topic": "Machine Learning-Based Predictive Irrigation Scheduling",
+    "title": "Machine Learning-Based Predictive Irrigation Scheduling",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Water scarcity and climate change are placing increasing pressure on the agricultural sector to conserve water resources while optimizing crop yield [1]. Traditional irrigation scheduling methods have limitations in terms of efficiency and practicality for large-scale irrigation systems [2]. Machine learning techniques and predictive control have emerged as promising solutions to optimizing irrigation scheduling [3]. T his work proposes a machine-learning-based predictive irrigation scheduler that employs the three paradigms of machine learning to improve water use efficiency and sustainability in agriculture: supervised learning, unsupervised learning, and reinforcement learning. Specifically, the k-means clustering method will be used in the unsupervised learning paradigm to delineate the considered field into definite management zones based on soil hydraulic parameters and topology information. Next, a long short-term memory network will be employed in the supervised learning paradigm to train dynamic models for the resulting management zones. These dynamic models will be used in the design of a mixed-integer model predictive control, where the irrigation scheduler's main objective is to determine the daily irrigation decision and irrigation rate that ensures optimal root water uptake while reducing water wastage and energy consumption during the irrigation event. Given that mixed-integer problems are challenging to solve, the reinforcement learning paradigm will be used to determine a policy that calculates the daily irrigation decision. This decision will be communicated to the model predictive controller, which can then determine the daily irrigation rate. Finally, the proposed scheduler will be evaluated under dry and wet weather conditions. The results show that it can achieve a 15% and 22% savings in water under dry and wet weather conditions, respectively. References [1]. United Nations World Water Assessment Programme. The United Nations World Water Development Report 2018: Nature-Based Solutions for Water, 2018 [2]. Shah, Sirish L., et al. \"Meeting the challenge of water sustainability: The role of process systems engineering.\" AIChE Journal 67.2 (2021): e17113. [3]. Saggi, Mandeep Kaur, and Sushma Jain. \"A Survey Towards Decision Support System on Smart Irrigation Scheduling Using Machine Learning approaches.\" Archives of Computational Methods in Engineering 29.6 (2022): 4455-4478.",
+    "presenting_author": "Bernard Agyeman | University of Alberta, EDMONTON, Canada",
+    "authors": [
+      "Bernard Agyeman | University of Alberta, EDMONTON, Canada",
+      "Jinfeng Liu | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bernard Agyeman",
+        "affiliation": "University of Alberta, EDMONTON, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jinfeng Liu",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149n",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666333"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666724",
+    "paper_endpoint": "Paper/666724",
+    "paper_id": "666724",
+    "topic": "Data Driven Economic Model Predictive Control of a Rotational Molding Process",
+    "title": "Data Driven Economic Model Predictive Control of a Rotational Molding Process",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Batch processes are commonly found in many domains including chemical, mechanical, biochemical, agriculture and pharmaceutical industries due to the requirement of producing high-value products. Since the productions amount is small in batch process, it is important to maintain consistency in obtaining products with excellent quality and this can be only achieved by deploying a suitable control strategy. Model predictive controller (MPC) is a standard control technology preferred in the industries due to its ability to predict the future of the process and come up with an optimal input sequence subject to any sort of constraints [1,2,3]. Rotational molding, or simply rotomolding, is one such batch process, used in industries for fabricating hollow plastics. Production of these items can be made profitable by using optimal control to significantly reduce the waste costs and in order to develop such a strategy one must focus on the modelling aspect associated with the same, especially for this process the quality variables which have to be tracked are not measurable and thus not available during the process. The present manuscript addresses the problem of economically achieving a user specified set of product qualities in an industrial complex batch process, illustrated through a lab-scale uni-axial rotational molding (also known as Rotomolding) setup. To this end, a data driven Economic MPC (EMPC) formulation is developed and implemented to achieve product specification via constraints on the predicted quality variables. First, a state-space dynamic model of the rotomolding process is built using previous batch data generated in the lab using uni-axial rotomolding setup. The dynamic model captures the internal mold temperature trajectory for an input sequence (combination of two heaters and compressed air). This model is then supplemented by a partial-least-squares quality model, which relates with key quality variables (sinkhole area and impact energy) with the terminal (states) prediction. The complete model is then placed within the EMPC scheme which minimizes the cost associated with inputs and allows the user to specify required product quality via constraints on the quality variables. Results achieved from experimental studies illustrate the capability of the proposed EMPC scheme in lowering the process cost (energy requirements) for two manifestations of the economic objective. References: 1. Bonvin, D. Optimal operation of batch reactors—a personal view. Journal of Process Control 1998, 8, 355–368. 2. Flores-Cerrillo, J.; MacGregor, J. F. Control of particle size distributions in emulsion semibatch polymerization using mid-course correction policies. Industrial and Engineering Chemistry Research 2002, 41, 1805–1814 3. Mhaskar, P.; Garg, A.; Corbett, B. Modeling and Control of Batch Processes; Advances in Industrial Control; Springer International Publishing: Cham, 2019.",
+    "presenting_author": "Aswin Chandrasekar | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Aswin Chandrasekar | McMaster University, Hamilton, Canada",
+      "Abhinav Garg | McMaster University, Hamilton, Canada",
+      "Hassan Abdulhussain | McMaster University, Hamilton, Canada",
+      "Vladimir Gritsichine | McMaster University, Hamilton, Canada",
+      "Michael R. Thompson | McMaster University, Hamilton, Canada",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Aswin Chandrasekar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Abhinav Garg",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Hassan Abdulhussain",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Vladimir Gritsichine",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael R. Thompson",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149o",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666724"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666748",
+    "paper_endpoint": "Paper/666748",
+    "paper_id": "666748",
+    "topic": "Hybrid Subspace-Rnn Based Approach for Modelling of Non-Linear Processes",
+    "title": "Hybrid Subspace-Rnn Based Approach for Modelling of Non-Linear Processes",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Batch processes are commonly found in many domains including chemical, mechanical, biochemical, agriculture and pharmaceutical industries due to the requirement of producing high-value products. Since the productions amount is small in batch process, it is important to maintain consistency in obtaining products with excellent quality and this can be only achieved by deploying a suitable control strategy. In particular, model predictive controllers (MPC) are preferred since the underlying model aids the controller by precisely predicting the process trajectory. Naturally, the challenge is to arrive at a suitable model that is able to mimic the process reasonably well especially when the process has non-linear dynamics and possibly also multiple phases. Non-linear machine learning based models like neural networks have become increasingly popular with the rise in computational resources due to their ability to capture any kind of trend [1,2]. However, a sizeable amount of process data is required to train the model since even a seemingly simple neural network might contain a significant number of parameters that need to be tuned. With increasing number of parameters, the immediate concern is the time taken for training the network and moreover there is always a risk of over-fitting. Hence it is desired to get away with a simpler network with fewer parameters to address these issues, and additionally, it could be easier to explain a simpler model rather than a highly complex model. There has been work done in reducing the higher dimensional model [3], especially to obtain a better functioning MPC [4,5]. The present work discusses the possible limitations of these techniques and hence proposes a hybrid recurrent neural network (RNN) modelling strategy which incorporates the rigor of subspace-based approaches that are known to be designed for robustly identifying linear models. The proposed modeling strategy is as follows. Subspace identification algorithm is first utilized on all the training batches to obtain the state sequence for these batches. Then the state sequences from all the training batches and the corresponding input sequences are given as the output and the input to the RNN, respectively. This step essentially builds a non-linear state space model, albeit using the state trajectory identified by the subspace model. The output equation obtained from the above-mentioned subspace identification step along with the newly obtained non-linear state equation, is now ready to be used for predicting the output trajectory of the system. The results illustrate the difference in prediction performance of a model obtained by 1) pure subspace-based approach, 2) pure RNN-based approach, and 3) the proposed hybrid Subspace-RNN approach. References: 1. Gopaluni, R. Bhushan, et al. \"Modern machine learning tools for monitoring and control of industrial processes: A survey.\" IFAC-PapersOnLine 53.2 (2020): 218-229. 2. Wu, Z., Rincon, D., & Christofides, P. D. (2020). Process structure-based recurrent neural network modeling for model predictive control of nonlinear processes. Journal of Process Control, 89, 74-84. 3. Prasad, V., & Bequette, B. W. (2003). Nonlinear system identification and model reduction using artificial neural networks. Computers & chemical engineering, 27(12), 1741-1754. 4. Narasingam, A., Son, S. H., & Kwon, J. S. I. (2022). Data-driven feedback stabilisation of nonlinear systems: Koopman-based model predictive control. International Journal of Control, 1-12. 5. Lee, K. S., Eom, Y., Chung, J. W., Choi, J., & Yang, D. (2000). A control-relevant model reduction technique for nonlinear systems. Computers & Chemical Engineering, 24(2-7), 309-315.",
+    "presenting_author": "Aswin Chandrasekar | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Aswin Chandrasekar | McMaster University, Hamilton, Canada",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Aswin Chandrasekar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149p",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666748"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667199",
+    "paper_endpoint": "Paper/667199",
+    "paper_id": "667199",
+    "topic": "Model-Based Control for Liquid-Liquid Extraction",
+    "title": "Model-Based Control for Liquid-Liquid Extraction",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Liquid-liquid extraction is a common task in downstream processing of diverse compounds of chemical and pharmaceutical interest, either to remove impurities from a product stream or to carry a substance of interest into another liquid phase. To support the selection of the most suitable process route, process models are of high interest. These models predict critical quality attributes (CQA) of the pharmaceutical product based on critical process parameters (CPP) of the process investigated. Increasing attention is given to process models available in early development stages of continuous manufacturing setups.Virtual testing of different process routes, operation scenarios and control concepts can reduce the amount of costly experimental test runs. By now, final process designs are frequently based on results from such virtual experiments. Suitable control concepts help to identify optimization potentials (e.g., reducing the amount of waste generated during processing). In the past, however, different models for different process routes were required, resulting in high modeling effort in early development stages. Here, we present a systematic approach for the development of models and control concepts applied to liquid-liquid extraction. The core of our highly efficient approach is to reuse models for different process routes: The unit operations of the different routes are split into sub-processes and similarities of these sub-processes across the different process routes are identified. Consequently, the effort in developing process models for different process routes is reduced significantly. Based on that, the process models obtained are used to compare different control concepts on each process route and in between different process routes, resulting in a cost-benefit analysis of using simple control strategies against more sophisticated ones. This comparison uses defined criteria, including tolerable ranges for individual values of CQAs and the required efforts in including process analytical tools. We demonstrate this approach by successfully applying it to two validated models of liquid-liquid extraction process routes. The results obtained form the basis for decisions on the process route for an industrial-scale real-world process. The models can be used as a digital twin and be combined to capture more complex process lines. Recommendations for process control and required real-time measurements are provided by the demonstrated approach.",
+    "presenting_author": "Daniel Moser | Research Center Pharmaceutical Engineering GmbH, Graz, Austria",
+    "authors": [
+      "Daniel Moser | Research Center Pharmaceutical Engineering GmbH, Graz, Austria",
+      "Joscha Boehm | RCPE, Graz, Austria",
+      "Peter Neugebauer | Research Center Pharmaceutical Engineering GmbH, Graz, Austria",
+      "Stephan Sacher | Research Center Pharmaceutical Engineering GmbH, Graz, Austria",
+      "Martin Horn | Graz University of Technology, Austria",
+      "Martin Steinberger | Institute of Automation and Control, Graz University of Technology, Austria",
+      "Jakob Rehrl | Research Center Pharmaceutical Engineering GmbH, Graz, Austria"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daniel Moser",
+        "affiliation": "Research Center Pharmaceutical Engineering GmbH, Graz, Austria",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joscha Boehm",
+        "affiliation": "RCPE, Graz, Austria",
+        "designation": "Author"
+      },
+      {
+        "name": "Peter Neugebauer",
+        "affiliation": "Research Center Pharmaceutical Engineering GmbH, Graz, Austria",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephan Sacher",
+        "affiliation": "Research Center Pharmaceutical Engineering GmbH, Graz, Austria",
+        "designation": "Author"
+      },
+      {
+        "name": "Martin Horn",
+        "affiliation": "Graz University of Technology, Austria",
+        "designation": "Author"
+      },
+      {
+        "name": "Martin Steinberger",
+        "affiliation": "Institute of Automation and Control, Graz University of Technology, Austria",
+        "designation": "Author"
+      },
+      {
+        "name": "Jakob Rehrl",
+        "affiliation": "Research Center Pharmaceutical Engineering GmbH, Graz, Austria",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149q",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667199"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666824",
+    "paper_endpoint": "Paper/666824",
+    "paper_id": "666824",
+    "topic": "Parameter Estimation for Bioprocesses Cognizant of Measurement Noise Distribution",
+    "title": "Parameter Estimation for Bioprocesses Cognizant of Measurement Noise Distribution",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "This work addresses the problem of parameter estimation for bioprocesses using Bayesian inference in a way that allows the use of measurement noise distribution to determine confidence intervals on the parameter estimates. The overarching objective is to use this information to design experiments to better estimate parameters to in-turn use for model based control. To this end, a nested sampling algorithm is utilized in conjunction with a neural network to act as a surrogate for the first principles model. The algorithm allows the use of a likelihood function that can be customized based on knowledge of the sensor noise distribution. Data from twelve runs of a bio process is used to demonstrate the proposed parameter estimation technique. References [1] J. Skilling, “Nested sampling for general Bayesian computation,” Bayesian Anal. , vol. 1, no. 4, Dec. 2006, doi: 10.1214/06-BA127 .",
+    "presenting_author": "Lauren Weir | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Lauren Weir | McMaster University, Hamilton, Canada",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada",
+      "Brandon Corbett | Sartorius, Oakville, Canada",
+      "Nigel Mathias | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Lauren Weir",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Brandon Corbett",
+        "affiliation": "Sartorius, Oakville, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Nigel Mathias",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149s",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666824"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665257",
+    "paper_endpoint": "Paper/665257",
+    "paper_id": "665257",
+    "topic": "Advanced Model Predictive Control Strategies for Large-Scale Dynamic Systems Based on Data-Driven Artificial Neural Networks",
+    "title": "Advanced Model Predictive Control Strategies for Large-Scale Dynamic Systems Based on Data-Driven Artificial Neural Networks",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Model Predictive Control (MPC) is a promising control methodology which was developed and applied in the process industries since the 1990s. Models in the form of closed equation sets are normally needed for MPC, but it is often difficult to obtain such formulations for large nonlinear systems. To extend MPC application to nonlinear distributed parameter systems (DPS) with unknown dynamics, advanced MPC control strategies based on model reduction technique and artificial neural network have been developed. An off-line model reduction technique, the proper orthogonal decomposition (POD) method, is first applied to extract accurate non-linear low-order models from the non-linear dynamic large-scale distributed system. Then a series of successive ANNs are trained based on the time coefficients of POD basis functions to obtain the model for the system. There are ANN (artificial neural network) –POD (proper orthogonal decomposition) – nonlinear MPC (model predictive control) and ANN-POD-TPWL (Trajectory Piecewise-Linear) - MPC, and both of them can be applied to highly non-linear dynamic systems. The novelty of our methodology lies in the application of POD's highly efficient linear decomposition for the consequent conversion of any distributed multi-dimensional space-state model to a reduced 1-dimensional model, dependent only on time, which can be handled effectively as a black-box through ANNs. It is potential to apply them for process optimization and control in wider process industries. A benchmark case study to use cooling zones to stabilize a tubular reactor with recycle, as shown in Figure 1, will be used as an illustrative example to show those control strategies.",
+    "presenting_author": "Weiguo Xie | University of Minnesota - Duluth, MN",
+    "authors": [
+      "Weiguo Xie | University of Minnesota - Duluth, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Weiguo Xie",
+        "affiliation": "University of Minnesota - Duluth, MN",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "149u",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665257"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667297",
+    "paper_endpoint": "Paper/667297",
+    "paper_id": "667297",
+    "topic": "Physics-Informed Neural Networks (PINNs) for Modeling Dynamic Processes Based on Limited Physical Knowledge and Data",
+    "title": "Physics-Informed Neural Networks (PINNs) for Modeling Dynamic Processes Based on Limited Physical Knowledge and Data",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Dynamic operation of chemical and biotechnological processes is essential for efficient and sustainable production of many important products. Hybrid models have become a crucial tool for numerous tasks related to process operation, as often both extensive amounts of measurement data and a complete mechanistic description are lacking, rendering both entirely data-driven (black-box) and purely physics-based (white-box) modeling impractical. Various types of hybrid models have been proposed over the years, such as the sequential, parallel, and structured approaches [1, 2, 3]. Physics-informed neural networks (PINNs) can be seen as a conceptually different type of hybrid model, where a deep network acts as the sole prediction model but is informed by governing physical laws during training through additional residual terms in the loss function [4]. The origins of physics-based regularization of neural networks date back to the works of Lagaris et al. [5], but recently Karniadakis and co-workers [6, 7] showed that PINNs can predict the solutions to various forward and inverse problems defined by (partial) differential equations with high accuracy. Even more recently, Antonello et al. [8] have extended the PINN concept by adding control inputs and initial conditions as inputs to the network and thus have made the approach suitable for control applications. Antonello et al. [8], however, assume complete mechanistic knowledge of the processes and do not utilize experimental data for training the PINN. In the present work, we investigate PINNs for modeling dynamic processes when the governing physico-chemical laws are only partially known, and availability of observational data is limited. By studying continuously stirred tank reactor (CSTR) models from the literature [9, 10], we follow an in-silico approach, i.e., we use known models to generate synthetic observational data for PINN training. Being able to effectively control the amount and diversity of training data allows us to run extensive numerical experiments on fitting and generalization capabilities of both the PINN models and purely data-driven benchmark models, i.e., deep feed-forward multilayer perceptrons. To facilitate application in control, all models take controls and initial conditions as inputs. By deliberately hiding parts of the mechanistic ground truth model from the computation of the residual loss term, we simulate the degree of mechanistic knowledge available for model development. To assess the extrapolation capabilities, we test the PINN model with input data not seen during training. We show that PINN models predict and extrapolate better than purely data-driven benchmarks when the available data is scarce. Moreover, we find that PINN models can infer hidden states, i.e., states for which neither observational data nor constitutive equations are available, with an acceptable accuracy. With their capability of modeling processes when relatively little experimental data and only partially known mechanistic descriptions are available, PINNs constitute a promising avenue for hybrid modeling in chemical engineering that warrants further investigation. References: [1] Psichogios, D. C. and Ungar, L. H. (1992). A hybrid neural network-first principles approach to process modeling. AIChE Journal, 38(10):1499–1511. [2] Su, H.-T., Bhat, N., Minderman, P., and McAvoy, T. (1992). Integrating neural networks with first principles models for dynamic modeling. IFAC Proceedings Volumes, 25(5):327–332. [3] Kahrs, O. and Marquardt, W. (2007). The validity domain of hybrid models and its application in process optimization. Chemical Engineering and Processing: Process Intensification, 46(11):1054–1066. [4] Nabian, M. A. and Meidani, H. (2020). Physics-driven regularization of deep neural networks for enhanced engineering design and analysis. Journal of Computing and Information Science in Engineering, 20(1):011006. [5] Lagaris, I. E., Likas, A., & Fotiadis, D. I. (1998). Artificial neural networks for solving ordinary and partial differential equations. IEEE Transactions on Neural Networks, 9(5), 987-1000. [6] Raissi, M., Perdikaris, P., and Karniadakis, G. (2019). Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. Journal of Computational Physics, 378:686–707. [7] Raissi, M., Yazdani, A., & Karniadakis, G. E. (2018). Hidden fluid mechanics: A Navier-Stokes informed deep learning framework for assimilating flow visualization data. arXiv preprint arXiv:1808.04327. [8] Antonelo, E. A., Camponogara, E., Seman, L. O., de Souza, E. R., Jordanou, J. P., & Hubner, J. F. (2021). Physics-Informed Neural Nets for Control of Dynamical Systems. arXiv preprint arXiv:2104.02556. [9] Flores-Tlacuahuac, A., & Grossmann, I. E. (2006). Simultaneous cyclic scheduling and control of a multiproduct CSTR. Industrial & Engineering Chemistry Research, 45(20), 6698-6712. [10] Van de Vusse, J. G. (1964). Plug-flow type reactor versus tank reactor. Chemical Engineering Science, 19(12), 994-996.",
+    "presenting_author": "Mehmet Velioglu | Forschungszentrum Jülich GmbH, Germany",
+    "authors": [
+      "Mehmet Velioglu | Forschungszentrum Jülich GmbH, Germany",
+      "Alexander Mitsos | RWTH Aachen University, Germany",
+      "Manuel Dahmen | Forschungszentrum Jülich GmbH, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mehmet Velioglu",
+        "affiliation": "Forschungszentrum Jülich GmbH, Germany",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Alexander Mitsos",
+        "affiliation": "RWTH Aachen University, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Manuel Dahmen",
+        "affiliation": "Forschungszentrum Jülich GmbH, Germany",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149v",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667297"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670019",
+    "paper_endpoint": "Paper/670019",
+    "paper_id": "670019",
+    "topic": "Parameter Estimation in Bioprocesses Using Bayesian Inference",
+    "title": "Parameter Estimation in Bioprocesses Using Bayesian Inference",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Abstract: This project provides a proof of concept for the parameter estimation for bioprocess based on rigorous and reliable confidence intervals. Bayesian Inference is used to estimate the uncertainty in the prediction of a parameter due to the presence of measurement noise in the process. While the major goal in this project is parameter estimation, one significant challenge in using Bayesian inference is the estimation of the evidence. In this regard, an algorithm called Nested Sampling is used to solve this problem by treating the evidence as an integral over the prior volume. The Nested Sampling algorithm works by continuously sampling from a prior distribution and calculating the likelihood of the model being “true”. Another issue previously associated with this algorithm was in the estimation of the likelihood itself. A high-fidelity mechanistic model typically uses ODE solvers such as RK45 which are relatively slow in solving and Nested Sampling usually converges after computing the model thousands of times. Therefore, a universal approximator such as a parameterized neural network is used in order to provide near instantaneous predictions making this technique feasible. References: J. Skilling, ‘Nested sampling for general Bayesian computation’, Bayesian Analysis , vol. 1, no. 4, pp. 833–859, 2006.",
+    "presenting_author": "Nigel Mathias | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Nigel Mathias | McMaster University, Hamilton, Canada",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada",
+      "Brandon Corbett | Sartorius, Oakville, Canada",
+      "Lauren Weir | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nigel Mathias",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Brandon Corbett",
+        "affiliation": "Sartorius, Oakville, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Lauren Weir",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149w",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670019"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670433",
+    "paper_endpoint": "Paper/670433",
+    "paper_id": "670433",
+    "topic": "Hybrid Series/Parallel All-Nonlinear Dynamic-Static Stochastic Neural Networks: Development, Training and Application to Chemical Processes",
+    "title": "Hybrid Series/Parallel All-Nonlinear Dynamic-Static Stochastic Neural Networks: Development, Training and Application to Chemical Processes",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Developing accurate first-principles models for complex nonlinear stochastic dynamic systems can be time consuming, computationally expensive, and may be infeasible for certain systems due to lack of knowledge. It is also challenging to adapt first-principles models for time-varying probabilistic process systems. Data-driven or black-box models are relatively easier to develop, simulate and adapt online. However, for many nonlinear dynamic stochastic systems, it can be significantly difficult to accurately model them by a deterministic simple (i.e., containing just one or very few hidden layers) static or dynamic neural network. If a large number of hidden layers are used, it can lead to potential overfitting during model training especially in absence of large data sets 1 . The typical data-driven system identification approaches for nonlinear dynamic processes models with different uncertainty characteristics comprise the conventional deep neural networks like the Long Short-Term Memory (LSTM) 2 or Gated Recurrent Unit (GRU) 3 types of recurrent neural networks, the Gaussian radial basis function (RBF) kernel for the primal-dual formulation of least squares support vector machines 4,5 (LS-SVMs), as well as the Hammerstein and Wiener models 6 represented by a linear time invariant (LTI) dynamic combined with a nonlinear static network. These models can lead to high computational expense or can fail to accurately capture the nonlinearities in the process dynamics as well as the uncertainties in parameter estimates. Therefore, it is desired to consider hybrid static-dynamic models where both static and dynamic models are simple, and nonlinear. Furthermore, for modeling stochastic systems, it is desired that probabilistic data-driven models be developed. However, the presence of nonlinearities in both the static and dynamic networks makes it considerably difficult to synthesize optimal hybrid network and estimate the network parameters especially when probabilistic networks are considered. This work proposes the development of hybrid stochastic series and parallel all-nonlinear static-dynamic neural networks. Efficient sequential training algorithms 7 have also been developed to provide flexibility in the optimal network synthesis and parameter estimation. Conventional backpropagation algorithms for training deterministic/stochastic static and dynamic neural networks use first order methods, but these methods may require significant tuning of hyper parameters or suffer from slow convergence rates. On the contrary, second order methods can address some of these issues but can be subjected to excessive computational expense due to Hessian calculation, may be limited in terms of candidate architectures, and may only be used for estimating parameters during training of small to medium sized networks. Therefore, applying the second-order methods for the hybrid fully nonlinear static-dynamic networks in a monolithic approach can lead to higher computational costs. Furthermore, classical Gaussian RBF with fixed centers and widths may suffer from the curse of dimensionality for modeling higher order systems with larger input space and may be extremely sensitive to noisy data. It may also happen that the most efficient optimization algorithm and its parameters for converging the static network model may be different than that for converging the dynamic network model. This work 7 focuses on developing sequential parameter estimation algorithms for optimal synthesis of the hybrid stochastic neural network models, where the static and dynamic networks can be trained independently by different optimization algorithms, while solving an outer layer of optimization for estimating the connection weights between the static and dynamic models. Gaussian RBF models with stochastic updates of centers and widths as well as Bayesian Neural Network (BNN) algorithms have been used for learning the optimal parameters of the probabilistic models. Both series and parallel types of architecture have been considered to develop flexible network models that offer tradeoff between computational expense and prediction accuracy for highly nonlinear systems with uncertainties in training data and are flexible for incorporating modifications in network architecture. The proposed algorithms are applied to train the hybrid networks for three nonlinear dynamic processes with different noise characteristics – a pH neutralization reactor, the Van de Vusse reactor, and a pilot plant for post-combustion CO 2 capture using the monoethanolamine solvent 8 . It has been observed that the hybrid series and parallel all-nonlinear stochastic static-dynamic models show superior performance compared to the existing state-of-the-art network models (LSTM, GRU, etc.) as well as the LS-SVM approaches, especially for the CO 2 capture system. In summary, the proposed network structures and training algorithms show promise for solving large-sized nonlinear dynamic stochastic network problems. References Bejani, M. M. & Ghatee, M. A systematic review on overfitting control in shallow and deep neural networks . Artificial Intelligence Review vol. 54 (Springer Netherlands, 2021). Yu, Y., Si, X., Hu, C. & Zhang, J. A Review of Recurrent Neural Networks: LSTM Cells and Network Architectures. Neural Comput. 31 , 1235–1270 (2019). Ren, Y. M. et al. A tutorial review of neural network modeling approaches for model predictive control. Comput. Chem. Eng. 165 , 107956 (2022). Goethals, I., Pelckmans, K., Suykens, J. A. K. & De Moor, B. Identification of MIMO Hammerstein models using least squares support vector machines. Automatica 41 , 1263–1272 (2005). Falck, T. et al. Least-Squares Support Vector Machines for the identification of Wiener-Hammerstein systems. Control Eng. Pract. 20 , 1165–1174 (2012). Biagiola, S. I. & Figueroa, J. L. Identification of uncertain MIMO Wiener and Hammerstein models. Comput. Chem. Eng. 35 , 2867–2875 (2011). Mukherjee, A. & Bhattacharyya, D. Hybrid Series/Parallel All-Nonlinear Dynamic-Static Neural Networks: Development, Training, and Application to Chemical Processes. Ind. Eng. Chem. Res. 62 , 3221–3237 (2023). Chinen, A. S., Morgan, J. C., Omell, B., Bhattacharyya, D. & Miller, D. C. Dynamic Data Reconciliation and Validation of a Dynamic Model for Solvent-Based CO 2 Capture Using Pilot-Plant Data. Ind. Eng. Chem. Res. 58 , 1978–1993 (2019).",
+    "presenting_author": "Angan Mukherjee | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Angan Mukherjee | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Angan Mukherjee",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149x",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670433"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670874",
+    "paper_endpoint": "Paper/670874",
+    "paper_id": "670874",
+    "topic": "Physics-Informed Neural Networks (PINNs) for Process Systems with Model Plant Mismatch",
+    "title": "Physics-Informed Neural Networks (PINNs) for Process Systems with Model Plant Mismatch",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "This work addresses the problem of incorporating process knowledge into machine learning methods and illustrates it for a stirred-tank reactor system. In particular, purely data-driven modeling techniques like subspace identification and feed-forward neural networks (NN) use data analysis to predict relationships between system state variables. These predictions may violate the physics of the system. By using a hybrid modeling technique like a physics-informed neural network (PINN), first-principles knowledge is incorporated into data-driven modeling, resulting in a model that respects known physical relationships. The PINN’s implementation is demonstrated as follows: data is obtained from a 2 CSTRs in series simulation system. A standard NN and a regular subspace model are developed first. While both the regular subspace and NN models capture the process dynamics reasonably well, the resultant models predict (small but non-negligible) changes in outlet concentrations from CSTR 1 when changes are made to the inlets to CSTR 2. Subsequently, a PINN is developed based on the known system of differential equations (using a model with parametric mismatch to demonstrate robustness). The PINN not only captures the process dynamics reasonably well, but is also consistent with the physics of the problem. As such, it demonstrates superior results compared to the regular NN and subspace models. These results indicate the benefit of utilizing hybrid modeling techniques.",
+    "presenting_author": "Prashant Mhaskar | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Sarah Rasmussen | McMaster University, Hamilton, Canada",
+      "Samardeepsingh Sarna | McMaster University, Hamilton, Canada",
+      "Farshad Moayedi | McMaster University, Hamilton, Canada",
+      "Brandon Corbett | Sartorius, Oakville, Canada",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sarah Rasmussen",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Samardeepsingh Sarna",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Farshad Moayedi",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Brandon Corbett",
+        "affiliation": "Sartorius, Oakville, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "149y",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670874"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667196",
+    "paper_endpoint": "Paper/667196",
+    "paper_id": "667196",
+    "topic": "Reinforcement Learning Based Control of Fed-Batch Production Reactor",
+    "title": "Reinforcement Learning Based Control of Fed-Batch Production Reactor",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Mammalian cells produce up to 80% of the commercially available therapeutic proteins, with Chinese Hamster Ovary (CHO) cells being the primary production host. The production of monoclonal antibodies, which are used in the treatment of cancer and autoimmune diseases, using CHO cells is a highly complex and nonlinear process with many correlated variables. The industry standard for control of this process involves PID control of pH, temperature and dissolved oxygen tension. However, these traditional control strategies fail to capture the complex dynamics of the process, leading to high batch-to-batch variability. This is problematic in a highly regulated industry like biopharma, which must ensure a consistent and safe product. The inherent complexity of bioprocesses makes them challenging to model purely mechanistically. However, the lack of experimental data and the need for explainability in control policies prevent the use of fully data-driven solutions. Hence, hybrid systems encompassing mechanistic and data-driven tools provide a suitable compromise. However, it is unclear how to best integrate these two components. In this work, we propose a model-based reinforcement learning agent to optimize the glucose feeding strategy. In reinforcement learning, an agent interacts with an environment and learns to act through trial and error. By receiving rewards for its actions, the agent develops a control policy based on the experiences gathered from the environment. We defined the environment as a high-fidelity kinetic model of the reactor production process, simulating CHO cell growth and antibody production dynamics. The high-fidelity reactor model consists of differential and algebraic equations describing the mass balances for each component (cells, nutrients and metabolites) and the corresponding specific uptake and production rates. The cell culture dynamics are described by Monod-type kinetics. The model includes the description of 22 metabolites and the estimation of 35 model parameters. The high-fidelity model provides a safe and realistic representation of reality, suitable for the agent to learn and explore. The agent receives only partial state observations of the reactor. The observations include information on the concentration of amino acids, cell density, and antibody production - measurements which are commonly available offline during manufacturing. The agent acts on the environment by manipulating the glucose concentration and volume provided to the production reactor. To promote the learning of useful strategies, the agent is rewarded for maximising biomass in the growth phase of the batch and for maximising antibody production in the later stages. Furthermore, the agent receives observations from a wide operational space, thus allowing for a better understanding of the system across a broader range of conditions. To evaluate the efficacy of the reinforcement learning agent, we compare its performance against two cases: a design of experiments-based feeding strategy [1] and a model-based control approach that utilized a metabolic model to dictate control policies. Our results suggest that the proposed methodology can lead to higher product yield compared to conventional feeding approaches. The proposed data-driven methodology is a step towards advanced process control in the bioprocessing industry. Our approach enables the integration of mechanistic knowledge with data to develop more effective control strategies. Furthermore, the proposed control approach offers adaptability, which reduces the need for frequent reparameterization of the controller model when culture conditions change. References: [1] Kyriakopoulos S, Kontoravdi C. A framework for the systematic design of fed-batch strategies in mammalian cell culture. Biotechnol Bioeng . 2014;111(12):2466-2476. doi:10.1002/bit.25319",
+    "presenting_author": "Mariana Monteiro | Imperial College London, United Kingdom",
+    "authors": [
+      "Mariana Monteiro | Imperial College London, United Kingdom",
+      "Sarah Fadda | Imperial College London, United Kingdom",
+      "Cleo Kontoravdi | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mariana Monteiro",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sarah Fadda",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Cleo Kontoravdi",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149z",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667196"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665344",
+    "paper_endpoint": "Paper/665344",
+    "paper_id": "665344",
+    "topic": "Synthesis of Decarbonized Hydrogen Production Processes Using the Attainable Region Framework",
+    "title": "Synthesis of Decarbonized Hydrogen Production Processes Using the Attainable Region Framework",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Hydrogen is an important feedstock in various industrial processes and has a potential to be an energy carrier. Its production is currently heavily reliant on fossil fuels, which contribute to greenhouse gas emissions. There is currently significant effort to produce green hydrogen. This work uses an Attainable Region Framework to synthesize hydrogen production processes using carbon-free electricity as energy sources. The Attainable Region method is a powerful synthesis tool that enables the identification of achievable performance boundaries of a chemical process, considering thermodynamic and kinetic limitations. We integrate the Attainable Region analysis with process modeling and optimization techniques to identify optimal configurations for various carbon-free electricity sources and hydrogen production methods. We also consider the integration of water electrolysis and hydrogen purification units, and account for different technological and economic factors such as efficiency, capital and operating costs, and carbon emissions. The results demonstrate that the Attainable Region approach can effectively identify the best design options for hydrogen production, with significant improvements in terms of process efficiency and sustainability compared to traditional methods. Furthermore, we highlight the potential of the approach to support decision-making and planning in the development of renewable hydrogen production systems, by providing a rigorous and systematic methodology that accounts for fundamental thermodynamic and material balance principles.",
+    "presenting_author": "Cornelius Masuku | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Cornelius Masuku | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Cornelius Masuku",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "149aa",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665344"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670764",
+    "paper_endpoint": "Paper/670764",
+    "paper_id": "670764",
+    "topic": "Considerations of Closed-Loop Control on Quantum Computers Using a Modified Grover’s Algorithm for Simulation of a Chemical Process",
+    "title": "Considerations of Closed-Loop Control on Quantum Computers Using a Modified Grover’s Algorithm for Simulation of a Chemical Process",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Quantum computing is becoming of greater interest for a variety of reasons. These include that some quantum computing algorithms, such as Grover’s and Shor’s algorithms, have been shown to offer a speedup over their classical computing analogues [1]. Quantum computing has been receiving recent attention in the process systems engineering field for applications in modeling, optimization, and machine learning tasks [2,3]. It is not yet clear how quantum algorithms could impact process control. The use of quantum computing algorithms in control can introduce phenomena that need to be accounted for such as nondeterminism, \"noise\" (unexpected/erroneous results from computations), and rounding effects, among other considerations [2, 3]. In our previous work [4], we sought to understand some of the effects of nondeterminism in control law selection due to a quantum algorithm on control-theoretic safety guarantees. The control law used a lookup table of state measurement/control input relationships that was \"searched\" using a quantum circuit based on the database-searching algorithm known as Grover's algorithm [4]. The search procedure in [4] used a series of controlled Grover blocks to obtain the control input corresponding to a measurement from the table with a certain probability. Initial results considering how this would integrate with the control-theoretic guarantees of an advanced control framework known as Lyapunov-based economic model predictive control (LEMPC) [5,6] were described. Our prior work in [4] was a proof-of-concept and addressed theory considerations, but did not showcase through example how the algorithm could be designed for a chemical process or how a process system might act when controlled by such an algorithm. In this talk, we discuss how the modified Grover's algorithm framework from [4] could be applied to a simulation of control of a chemical process. We will discuss the creation of a lookup table of control actions for state measurements for a process operating under LEMPC, which is a requirement of implementing the quantum computing algorithm. Due to an assumption of limited qubit availability, measured process states and inputs must be rounded before incorporation into the table. The effects of different total numbers of qubits on the results will be explored in simulation, and the relationship of the results to the theory from [4] will be discussed. Following this, we will also discuss a modification of this algorithm, where additional gates are added to the algorithm to prevent the selection of certain unwanted control actions. This is a concern because the nondeterminism involved in the algorithm means that there is a probability of measuring one of many different quantum states, and it is possible that one of the control inputs returned through this process could be problematic for safety. We will discuss ways of creating these gates, including by solving an optimization problem where, for a given process state measurement, the qubit amplitude of an undesired control action is constrained to zero. Finally, we will discuss methods of dealing with the nondeterminism in the control actions, such as specifying regions where a stabilizing classical control action is activated to ensure an equilibrium remains stable. [1]. Yanofsky, Noson S., and Mirco A. Mannucci. Quantum computing for computer scientists. Cambridge University Press, 2008. [2]. Andersson, Martin P., et al. \"Quantum computing for chemical and biomolecular product design.\" Current Opinion in Chemical Engineering 36 (2022): 100754. [3]. Ajagekar, Akshay, and Fengqi You. \"New frontiers of quantum computing in chemical engineering.\" Korean Journal of Chemical Engineering 39.4 (2022): 811-820. [4]. Nieman, Kip, Keshav Kasturi Rangan, and Helen Durand. \"Control Implemented on Quantum Computers: Effects of Noise, Nondeterminism, and Entanglement.\" Industrial & Engineering Chemistry Research 61.28 (2022): 10133-10155. [5]. Heidarinejad, Mohsen, Jinfeng Liu, and Panagiotis D. Christofides. \"Economic model predictive control of nonlinear process systems using Lyapunov techniques.\" AIChE Journal 58.3 (2012): 855-870. [6]. Ellis, Matthew, Helen Durand, and Panagiotis D. Christofides. \"A tutorial review of economic model predictive control methods.\" Journal of Process Control 24.8 (2014): 1156-1178.",
+    "presenting_author": "Kip Nieman | Wayne State University, Detroit, MI",
+    "authors": [
+      "Kip Nieman | Wayne State University, Detroit, MI",
+      "Helen Durand | Wayne State University, Detroit, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kip Nieman",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Helen Durand",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149ab",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670764"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669422",
+    "paper_endpoint": "Paper/669422",
+    "paper_id": "669422",
+    "topic": "Optimization-Based State and Parameter Estimation for Distributed Parameter Pipeline Systems",
+    "title": "Optimization-Based State and Parameter Estimation for Distributed Parameter Pipeline Systems",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "As one of the most representative and cost-effective infrastructures for material transportation, pipelines have been widely utilized to transport hydrocarbon liquid commodities such as petroleum, crude oil, and diesel fuel. With the growing requirements for energy transportation, monitoring and controlling a pipeline system safely and efficiently are important [1]. However, in practice, it would be prohibitively expensive to install pressure and flow meters throughout entire pipeline systems. In addition, parameters (i.e., pipe friction) are often not accurately known due to surface roughness and fluid parameters, making it difficult to model accurately. Therefore, accurate state and parameter estimation based on limited measurements is crucial in describing complex dynamics and accounting for uncertainties in pipeline systems. As a typical distributed parameter system, the flow dynamic behaviors depend on time and space. An infinite-dimensional transient hydraulic model is introduced to describe the complex flow dynamics within a liquid pipeline [2]. In this work, to develop an accurate estimator, we formulate and solve one optimization-based problem to realize an online estimation of states (i.e., pressure and flow velocity) and parameters (i.e., friction coefficient) based on the available plant or input information and measurement that are corrupted with bounded disturbances [3]. The proposed optimization framework can take the physical constraints into consideration. In particular, the Cayley-Tustin transform is utilized to convert the continuous infinite-dimensional system into a discrete one without spatial discretization or model order reduction [4]. To improve the calculation efficiency, a receding horizon implementation strategy is further proposed, similar to [5]. The effectiveness of the proposed designs is finally verified via case studies. Sensitivity studies are provided to show the robustness of the proposed designs. References: [1] K. Sundar and A. Zlotnik. “State and parameter estimation for natural gas pipeline networks using transient state data,” IEEE Transactions on Control Systems Technology, 27, no. 5 (2018): 2110-2124. [2] Xie, J., Xu, X. and Dubljevic, S., 2019. Long range pipeline leak detection and localization using discrete observer and support vector machine. AIChE Journal , 65 (7), p.e16532. [3] A. Alessandri and M. Awawdeh. Moving-horizon estimation with guaranteed robustness for discrete-time linear systems and measurements subject to outliers, Automatica , 67, pp.85-93, 2016. [4] Havu V., Malinen J., 2007. The Cayley transform as a time discretization scheme. Numerical Functional Analysis and Optimization 28 (7-8): 825-851. [5] J. Jalving and V. M. Zavala. “An optimization-based state estimation framework for large-scale natural gas networks ,” Industrial & Engineering Chemistry Research , 57, no. 17: 5966-5979, 2018.",
+    "presenting_author": "Lu Zhang | University of Alberta, Edmonton, Canada",
+    "authors": [
+      "Lu Zhang | University of Alberta, Edmonton, Canada",
+      "Junyao Xie | University of Alberta, Edmonton, Canada",
+      "Stevan Dubljevic | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Lu Zhang",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Junyao Xie",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Stevan Dubljevic",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149ac",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669422"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/671029",
+    "paper_endpoint": "Paper/671029",
+    "paper_id": "671029",
+    "topic": "A Constraint-Based Modeling Framework with Deep Reinforcement Learning and Multi-Objective Optimization for Control of Mammalian Cell Cultures",
+    "title": "A Constraint-Based Modeling Framework with Deep Reinforcement Learning and Multi-Objective Optimization for Control of Mammalian Cell Cultures",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Mammalian cell cultures have become the favored production hosts for monoclonal antibodies (MAbs) and therapeutic proteins, since microbial systems are not able to carry out the complex post-translational and functional modifications of these proteins, such as glycosylation. Products of these cell cultures have broad applications in vaccination, drug screening and development, and gene therapy. MAbs are significant reagents used extensively in diagnostic assays, therapeutic applications, and in vivo imaging. Chinese Hamster Ovary (CHO) cells and hybridoma cells, which share similar metabolic characteristics, have been popular cell types for production of MAbs. The efficient performance of these cell cultures requires highly specialized culture media to enhance MAb yield for in vitro production in view of substantial cell death and reduced MAb productivity due to the variations in culture conditions. Although some production practices have been employed for decades, cell kinetics is still under investigation to obtain quantitatively as well as qualitatively cost-effective production strategies. Creating these strategies requires understanding of cell metabolism affected by process dynamics in applicable culture environments. Kinetic models empower us to quantitatively illustrate cell growth and metabolic activity, which allows prediction of different cell phenotypes and provides better understanding of cell physiology, which is important in optimization of MAb production in animal cell cultures. Kinetic descriptions of mammalian cell cultures are difficult due to these complexities. Development of first principles models (FPMs) is tedious. While FPMs provide qualitative understanding of the cell culture processes, their application in dynamic operations for prediction, optimization and feedback control of mammalian cell cultures is limited due to their rigid structure. A recent focus has been on using statistical methods for modeling mammalian cell cultures. This approach has limited success due to it being restrictive to particular strains. In this work, we used the Recurrent Neural Network Long-Short Term Memory (LSTM) method for modeling mammalian cell cultures. The LSTM method uses neural network algorithms to model and analyze sequential data and is capable of handling large and nonlinear experimental databases. This method has been improved in the past decade, and with the availability of large databases and better computing power, we are able to model and analyze mammalian cell cultures. The models developed here used data generated from in silico experiments involving a large number of process inputs and outputs. The model simulations predict the trends observed in batch and fed-batch mammalian cell cultures for key nutrients glucose and glutamine, viable cell density, target product (MAb) titer, and inhibitory metabolites lactate and ammonia with high accuracy. The optimization of mammalian cell cultures is a crucial step in biopharmaceutical production. However, the nonlinearity and complexity of cell cultures make it difficult to model and optimize these processes. To overcome these hindrances, we demonstrate the use of Deep Reinforcement Learning with Deep Deterministic Policy Gradient (DRL-DDPG) method for multi-objective optimization of fed-batch mammalian cell cultures. The DRL-DDPG method is a model-free, actor-critic algorithm that can find optimal control policies in dynamic systems such as bioprocesses. To represent the actor-critic in the DRL-DDPG algorithm, we employed the LSTM method to model and analyze experimental databases for fed-batch cultures. LSTM is capable of handling large sets of data with nonlinearities and can be tuned further for improved predictive ability. The model in this study is trained using in-silico data generated using 11 inputs and outputs, including MAb titer, viable cell density, and concentrations of glucose, glutamine, lactate, and ammonia. The proposed framework predicts the trajectories of these process variables satisfactorily and with sufficient accuracy and reliability. In addition to multi-objective optimization techniques, we utilized appropriate constraints on state and manipulated variables to ensure that the proposed control policy satisfies constraints on nutrients, target metabolites, and undesired metabolites (waste products). The results presented here reveal that the proposed framework can effectively optimize multiple objectives while satisfying appropriate constraints. The study represents a promising approach for multi-objective optimization and control of mammalian cell cultures using DRL-DDPG. In the near future, we will focus on further improving the accuracy and efficiency of the proposed framework by incorporating additional process variables and optimizing the DRL-DDPG algorithm.",
+    "presenting_author": "Satish Parulekar | Illinois Institute of Technology, Chicago",
+    "authors": [
+      "Essa Almutar | Illinois Institute of Technology, Chicago",
+      "Satish Parulekar | Illinois Institute of Technology, Chicago"
+    ],
+    "authors_structured": [
+      {
+        "name": "Essa Almutar",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      },
+      {
+        "name": "Satish Parulekar",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "149ad",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/671029"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668204",
+    "paper_endpoint": "Paper/668204",
+    "paper_id": "668204",
+    "topic": "Bayesian Identification of Nonlinear, Sparse, Dynamic Models",
+    "title": "Bayesian Identification of Nonlinear, Sparse, Dynamic Models",
+    "date_time": "2023-11-07_15:30:00_17:00:00",
+    "session_id": "52088",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "149",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Bayesian Identification of Nonlinear, Sparse, Dynamic Models Samuel Adeyemo, Debangsu Bhattacharyya Department of Chemical and Biomedical Engineering, West Virginia University, Morgantown, WV 26506, USA Data-driven models are useful for both derivative-free and derivative-based optimizations, online control of dynamic processes, feasibility analysis, parameter estimation and sensitivity analysis 4 . Popular among several data-driven approaches for modeling of dynamic processes are the artificial neural networks (ANNs) and polynomial models. Despite the great success in the performance of ANNs, one significant drawback of the ANNs is the interpretability of the resulting model, and possibility of complicated and large models. Recently, different approaches have been developed to address the challenge of the interpretability of developed data-driven models, these including the Sparse Identification of Nonlinear Dynamics (SINDy) 5,6 and Algebraic Learning Via Elastic Net (ALVEN) 7 . However, there is scarcity of work on approaches that will both explicitly account for the presence of noise in the data and presence of correlated data. If the noise is not necessarily Gaussian and zero-mean, then many existing approaches can lead to biased estimates of model parameters. A Bayesian inference algorithm is developed for optimal learning of basis functions and maximum a posteriori estimate of the parameter vector. An expectation maximization (EM) algorithm is developed where current user belief is cast in the form of informed priors. Using the Bayes law, posterior densities are estimated based on likelihood densities and informed priors. Hyperparameters that are used to parameterize the error covariance matrix are also optimally estimated once the maximum likelihood estimate of the underlying noise free output is obtained. An efficient branch and bound (B&B) algorithm that employs bi-directional pruning strategies is developed for optimal selection of basis functions whose elements are linear and nonlinear transformations of the measured input and output variables. An information-theoretic criterion is used as the optimization objective for model selection. To penalize uncertainties in parameter estimate, the objective function employs a covariance complexity penalty term, that yields a measure of the information loss due to the assumption that the parameter estimates are independent. The algorithm is thoroughly tested for a highly nonlinear chemical solvent-based post-combustion CO 2 capture system 1 for which large amount of pilot plant data are available 1,2 . The process involves complex chemical reactions kinetics, highly nonlinear vapor-liquid equilibrium, and complicated mass transfer mechanisms due to the presence of ionic species 3 making the development of first principles model quite involved. Sparse identification of the models is tested by corrupting the pilot plant data with noise of known and unknown characteristics. Performance of the developed algorithm is compared with the leading algorithms. It is found that the algorithm yields considerably superior results especially when the data are corrupted with non-Gaussian and correlated noise. References Pashaei, H., Ghaemi, A., Nasiri, M. & Karami, B. Experimental Modeling and Optimization of CO2 Absorption into Piperazine Solutions Using RSM-CCD Methodology. ACS Omega 5 , 8432–8448 (2020). Chinen, A. S., Morgan, J. C., Omell, B., Bhattacharyya, D. & Miller, D. C. Dynamic Data Reconciliation and Validation of a Dynamic Model for Solvent-Based CO 2 Capture Using Pilot-Plant Data. Ind. Eng. Chem. Res. 58 , 1978–1993 (2019). Morgan, J. C. et al. Thermodynamic modeling and uncertainty quantification of CO2-loaded aqueous MEA solutions. Chem. Eng. Sci. 168 , 309–324 (2017). McBride, K. & Sundmacher, K. Overview of Surrogate Modeling in Chemical Process Engineering. Chemie-Ingenieur-Technik 91 , 228–239 (2019). Brunton, S. L., Proctor, J. L., Kutz, J. N. & Bialek, W. Discovering governing equations from data by sparse identification of nonlinear dynamical systems. Proc. Natl. Acad. Sci. U. S. A. 113 , 3932–3937 (2016). Mangan, N. M., Kutz, J. N., Brunton, S. L. & Proctor, J. L. Model selection for dynamical systems via sparse regression and information criteria. Proc. R. Soc. A Math. Phys. Eng. Sci. 473 , (2017). Sun, W. & Braatz, R. D. ALVEN : Algebraic learning via elastic net for static and dynamic nonlinear model identification. Comput. Chem. Eng. 143 , 107103 (2020).",
+    "presenting_author": "Samuel Adeyemo | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Samuel Adeyemo | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Samuel Adeyemo",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "149ae",
+    "sortable_time": "2023-11-07_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668204"
+  }
+]

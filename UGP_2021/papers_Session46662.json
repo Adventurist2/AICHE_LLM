@@ -1,0 +1,264 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/639020",
+    "paper_endpoint": "Paper/639020",
+    "paper_id": "639020",
+    "topic": "Delayed Start",
+    "title": "Delayed Start",
+    "date_time": "2021-11-08_12:30:00_15:00:00",
+    "session_id": "46662",
+    "session_title": "Advances in Process Control I",
+    "session_number": "105",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "",
+    "presenting_author": "",
+    "authors": [],
+    "authors_structured": [],
+    "sortable_time": "2021-11-08_12:30:00_12:49:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/639020"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/631935",
+    "paper_endpoint": "Paper/631935",
+    "paper_id": "631935",
+    "topic": "Online Data-Gathering Lyapunov-Based Economic Model Predictive Control for Model Selection and Verification",
+    "title": "Online Data-Gathering Lyapunov-Based Economic Model Predictive Control for Model Selection and Verification",
+    "date_time": "2021-11-08_12:30:00_15:00:00",
+    "session_id": "46662",
+    "session_title": "Advances in Process Control I",
+    "session_number": "105",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Several techniques have been proposed in the literature regarding process data collection for developing model-based control designs such as model predictive control (MPC) (e.g., [1, 2, 3, 4, 5]). Particularly, the model must be sufficiently accurate to have state predictions representative of the process and allow the controller to compute proper control actions based on the expected future states. However, if the process model used by the controller does not capture the plant dynamics (e.g., due to process dynamics changes over the time of operation), it must be revised and updated to achieve the desired closed-loop performance and safe operation. The task to update the process model can be more challenging when a process is operated at steady-state operation, which may not provide as much data useful for the model identification as might be desired. Moreover, data recorded offline may not carry relevant information to reidentify the process model during online operation. A control-assisted selection of the process model that allows the system to be excited out of steady-state may be used to aid in online data collection for model updates. In this context, an MPC formulation in which experiment design is included as an auxiliary constraint has been proposed that applies control signals to excite the process and obtain relevant operational data for online identification [1]. In a similar vein, MPC based on requiring persistently exciting control actions to the process has been studied which may be used for closed-loop system identification [2, 3]. Another MPC alternative has been proposed with dual features (i.e., the control actions are computed to both control and explore the process) [4] and performs parameter identification only when there is high uncertainty in the model parameters. In addition to model/parameter identification, the selection of an appropriate model structure with a physics-based portion can play an important role in data-driven modeling techniques (e.g., structured hybrid modeling [6]) and verification for safety purposes. However, the development or selection of a physics-based model may add important challenges to the aforementioned methods, which may include the consideration of time-varying complex nonlinearities, closed-loop stability issues, and profit loss. In light of this, a type of model-based controller that incorporates a free form objective function and closed-loop stability constraints known as Lyapunov-based economic model predictive control (LEMPC) [7, 8] may be utilized to design control-assisted frameworks that could gather informative data online while accounting for time-varying process dynamics and operation, process safety, and profitability. This may also be directed to address limitations in MPC for safe learning as many learning-based control techniques cannot ensure that safety/physical constraints are satisfied during learning iterations [9]. Motivated by the above, this work investigates an online data gathering-based LEMPC for model selection and verification purposes. In particular, we propose an LEMPC design that automatically chooses and collects the information that leads to the most suitable model candidate among a predefined set of models available, which could potentially contain data-driven/first-principles model structures, while ensuring closed-loop stability in a safe region of state-space. Specifically, we formalize a flexible control method in which the objective function includes a soft constraint on the deviation of state predictions from the various potential models from one another. Assuming that the stability regions for the different potential models are nested and that a sufficiently accurate model is contained within the set of potential models, closed-loop stability can be maintained (in the sense that the closed-loop state is maintained within a bounded region of operation throughout the time of operation) even as data is gathered to discern which of the model candidates is most appropriate to utilize in the controller. Models are discarded from the set utilized by the controller when, at the end of a sampling period, state predictions from a given model and state measurements over the last sampling period are determined not to be sufficiently close to one another. We discuss methods for reducing the complexity of the proposed technique compared to a case in which state predictions from all models are subjected to Lyapunov-based stability constraints, and compare this type of strategy for probing for model fidelity with other strategies for determining desired information that could lead to the development of more physics-based process models from on-line operating data, such as the strategy in [10] or strategies which attempt to develop multiple steady-states in state-space which LEMPC’s might drive the closed-loop state toward to attempt to gather data along specific trajectories. We discuss different techniques for triggering that type of probing for data, including techniques which only attempt to gather the data if the profit is not significantly impacted over the subsequent sampling period. For the data-gathering scheme based on discerning an adequate model from a set of models, we discuss techniques for selecting the appropriate model. A chemical process example consisting of a continuous stirred tank reactor for the case that there are several candidate models, including the first-principles model and its linearization around the operating steady-state, is used to illustrate the proposed data gathering-based control scheme based on model discernment. References: 1. Larsson, C. A., Annergren, M., Hjalmarsson, H., Rojas, C. R., Bombois, X., Mesbah, A., & Modén, P. E. (2013). Model predictive control with integrated experiment design for output error systems. In 2013 European Control Conference (ECC) (pp. 3790-3795). IEEE. 2. Marafioti, G., Bitmead, R., & Hovd, M. (2010). Persistently exciting model predictive control using fir models. In International Conference Cybernetics and Informatics (Vol. 6). 3. Shouche, M. S., Genceli, H., & Nikolaou, M. (2002). Effect of on-line optimization techniques on model predictive control and identification (MPCI). Computers & Chemical Engineering , 26 (9), 1241-1252. 4. Heirung, T. A. N., Ydstie, B. E., & Foss, B. (2012). Towards dual MPC. IFAC Proceedings Volumes , 45 (17), 502-507. 5. Kheradmandi, M., & Mhaskar, P. (2018). Model predictive control with closed-loop re-identification. Computers & Chemical Engineering , 109 , 249-260. 6. Kahrs, O., & Marquardt, W. (2007). The validity domain of hybrid models and its application in process optimization. Chemical Engineering and Processing: Process Intensification , 46 (11), 1054-1066. 7. Heidarinejad, M., Liu, J., & Christofides, P. D. (2012). Economic model predictive control of nonlinear process systems using Lyapunov techniques. AIChE Journal , 58 (3), 855-870. 8. Ellis, M., Durand, H., & Christofides, P. D. (2014). A tutorial review of economic model predictive control methods. Journal of Process Control , 24 (8), 1156-1178. 9. Hewing, L., Wabersich, K. P., Menner, M., & Zeilinger, M. N. (2020). Learning-based model predictive control: Toward safe learning in control. Annual Review of Control, Robotics, and Autonomous Systems , 3 , 269-296. 10. Giuliani, L. & Durand, H. (2018) Data-based nonlinear model identification in economic model predictive control,” Smart and Sustainable Manufacturing Systems , 2, 61-109.",
+    "presenting_author": "Henrique Oyama | Wayne State University, Detroit, MI",
+    "authors": [
+      "Henrique Oyama | Wayne State University, Detroit, MI",
+      "Helen Durand | Wayne State University, Detroit, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Henrique Oyama",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Helen Durand",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "105b",
+    "sortable_time": "2021-11-08_12:49:00_13:08:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/631935"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632214",
+    "paper_endpoint": "Paper/632214",
+    "paper_id": "632214",
+    "topic": "Model Predictive Control and Observer Design for a Chemostat Reactor",
+    "title": "Model Predictive Control and Observer Design for a Chemostat Reactor",
+    "date_time": "2021-11-08_12:30:00_15:00:00",
+    "session_id": "46662",
+    "session_title": "Advances in Process Control I",
+    "session_number": "105",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The chemostat is a reactor that is generally used to cultivate organisms on a small scale [1]. Thus, this type of reactor is important in environmental research, ecology, evolutionary biology, and biotechnological industry. In the reactor’s operation, the volume is kept constant, such that the feed of fresh medium is continuously added at the same rate as the fluid containing metabolic products and some microorganisms are removed. Generally, the control in the reactor is carried out by changing the inlet and outlet flow rate, while the other conditions, such as temperature, pH, and mixing are kept constant. This alters the dilution rate (thus, the residence time) inside the reactor, which can be used to control the growth rate of the organism [3]. As the control of this process can result in higher production, in this contribution the Model Predictive Control (MPC) for the chemostat reactor is derived. This type of controller can be used to optimize the performance of a system subjected to constraints [3], while the model generally used to represent the dynamics inside the reactor is a nonlinear first-order hyperbolic partial integro-differential equation (PIDE) with integral boundary conditions [4]. Furthermore, as the MPC requires full state feedback and only the total amount of organisms in the reactor is available for measurement, the observer design is also addressed. Finally, the results from simulation studies show the controller’s performance. [1] Smith, H. L., and Waltman, P., 1995. “The theory of the chemostat-dynamics of microbial competition”. Cam bridge University Press [2] Toth, D., and Kot, M., 2006. “Limit cycles in a chemo stat model for a single species with age structure”. Mathematical Biosciences, 202, pp. 194–217 [3] K. R. Muske and J. B. Rawlings, “Model predictive control with linear models,” AIChE Journal, vol. 39, no. 2, pp. 262–287, 1993 [4] Gurtin, M., and MacCamy, R., 1974. “Non-linear age dependent population dynamics”. Arch. Ration. Mech. An., 54, pp. 281–300.",
+    "presenting_author": "Guilherme Ozorio Cassol Sr. | University of Alberta, Edmonton, Canada",
+    "authors": [
+      "Guilherme Ozorio Cassol Sr. | University of Alberta, Edmonton, Canada",
+      "Stevan Dubljevic | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Guilherme Ozorio Cassol Sr.",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Stevan Dubljevic",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "105c",
+    "sortable_time": "2021-11-08_13:08:00_13:27:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632214"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632260",
+    "paper_endpoint": "Paper/632260",
+    "paper_id": "632260",
+    "topic": "Output Feedback Control of Nonlinear Distributed Parameter Systems with Unknown Parameters Using a Two-Tier Adaptive Identification Method",
+    "title": "Output Feedback Control of Nonlinear Distributed Parameter Systems with Unknown Parameters Using a Two-Tier Adaptive Identification Method",
+    "date_time": "2021-11-08_12:30:00_15:00:00",
+    "session_id": "46662",
+    "session_title": "Advances in Process Control I",
+    "session_number": "105",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The estimation and control problems of nonlinear distributed parameter systems are challenging due to the nonlinear nature and spatiotemporal dependency of the system states [1-9]. Examples in chemical process and advanced materials manufacturing include packed-bed and fluidized-bed reactors, chemical vapor deposition, powder-bed laser printing, and fused filament fabrication. In this work, we develop a framework to address the regulation problem of distributed parameter systems with unknown parameters described by nonlinear dissipative partial differential equation (DPDE) systems. The infinite-dimensional model representation of such systems can be decomposed into two subsystems with a time-scale separation; a finite-dimensional subsystem that includes slow and possibly unstable modes of the system and a complemented infinite-dimensional subsystem that contains fast and stable modes. By exploiting such a separation, we can approximate the governing DPDEs by a finite set of ordinary differential equations that capture the dominant dynamics of the infinite-dimensional model. Such an approximation can then be employed as the basis for state estimation and control design. A standard approach to obtain the approximated model is applying a weighted residual method to discretize the governing DPDEs. The most challenging part of such an approach is the computation of the optimal basis functions required by the weighted residual method, especially in the presence of unknown transport-reaction parameters. To resolve this fundamental issue, a learning-based approach is used to recursively compute the basis functions from the spatiotemporal data of the system's key states. As the number and shape of the resulting basis functions change by appearing new dynamics, the dimension and form of the approximated model change adaptively to capture the dominant dynamics. The resulting adaptive approximate reduced-order model is then used for an adaptive output feedback control design consisting of a dynamic observer to estimate the states of the reduced-order model, an adaptation law to estimate the unknown parameters, and a Lyapunov-based nonlinear controller to stabilize the dominant modes of the system dynamics. The temperature regulation problem in a catalytic reactor with unknown transport-reaction parameters is used as a case study to illustrate the application and computational advantages of the proposed two-tier adaptive identification and output feedback control strategy. [1] P.D. Christofides. Nonlinear and robust control of PDE systems. Birkhauser, New York, 2000. [2] A. Armaou and P.D. Christofides. Finite-dimensional control of nonlinear parabolic PDE systems with time-dependent spatial domains using empirical eigenfunctions. International Journal of Applied Mathematics and Computer Science, 2001; 11:287-317. [3] E. Schuster and M. Krstic. Control of a nonlinear PDE system arising from non-burning tokamak plasma transport dynamics. International Journal of Control, 2003; 76:1116-1124. [4] N. El-Farra, A. Armaou, and P.D. Christofides. Analysis and control of parabolic PDE systems with input constraints. Automatica, 2003; 39(4), 715-725. [5] J. Ng and S. Dubljevic. Optimal boundary control of a diffusion-convection-reaction PDE model with time-dependent spatial domain: Czochralski crystal growth process. Chemical Engineering Science, 2012; 67(1):111-119. [6] A. Varshney, S. Pitchaiah, and A. Armaou. Feedback control of dissipative distributed parameter systems using adaptive model reduction. AIChE J., 2009; 55:906-918. [7] H.S. Sidhu, A. Narasingam, P. Siddhamshetty, J. Sang-Il Kwon. Model order reduction of nonlinear parabolic PDE systems with moving boundaries using sparse proper orthogonal decomposition: Application to hydraulic fracturing. Computers & Chemical Engineering, 2018; 112:92-100. [8] D.B. Pourkargar and A. Armaou. Modification to adaptive model reduction for regulation of distributed parameter systems with fast transients. AIChE J., 2013; 59(12):4595-4611. [9] D.B. Pourkargar and A. Armaou. Geometric output tracking of nonlinear distributed parameter systems via adaptive model reduction. Chemical Engineering Science, 2014; 116:418-427.",
+    "presenting_author": "Davood Pourkargar | Kansas State University, Manhattan, KS",
+    "authors": [
+      "Davood Pourkargar | Kansas State University, Manhattan, KS",
+      "Antonios Armaou | The Pennsylvania State University, University Park, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Davood Pourkargar",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Antonios Armaou",
+        "affiliation": "The Pennsylvania State University, University Park, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "105d",
+    "sortable_time": "2021-11-08_13:27:00_13:46:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632260"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/637408",
+    "paper_endpoint": "Paper/637408",
+    "paper_id": "637408",
+    "topic": "Break",
+    "title": "Break",
+    "date_time": "2021-11-08_12:30:00_15:00:00",
+    "session_id": "46662",
+    "session_title": "Advances in Process Control I",
+    "session_number": "105",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "",
+    "presenting_author": "",
+    "authors": [],
+    "authors_structured": [],
+    "sortable_time": "2021-11-08_13:46:00_14:05:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/637408"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/627966",
+    "paper_endpoint": "Paper/627966",
+    "paper_id": "627966",
+    "topic": "A Distributed Feedback Optimizing Control Framework for Large-Scale Coupled Systems with Convergence Guarantees",
+    "title": "A Distributed Feedback Optimizing Control Framework for Large-Scale Coupled Systems with Convergence Guarantees",
+    "date_time": "2021-11-08_12:30:00_15:00:00",
+    "session_id": "46662",
+    "session_title": "Advances in Process Control I",
+    "session_number": "105",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Distributed real-time optimization (RTO) enables optimal operation of large-scale coupled process systems with common resources shared across several clusters. Typically, in distributed RTO, the different subsystems are optimized locally, and a centralized master problem is used to coordinate the different subsystems in order to reach system-wide optimal operation. This is especially beneficial in eco-industrial parks with shared common resources, where only limited information can be shared between the different subsystems. However, the use of distributed RTO methods in practice remains rather low [1]. The main reasons for this are attributed to the computational cost of solving the numerical optimization problems online, and the slow convergence rate. Currently, there is active research to improve the rate of convergence, such that the master and subproblems converge to a feasible optimal solution in a small number of iterations/communication rounds (see [1] and the references therein). Despite the algorithmic developments to improve the convergence rate, the subproblems still need to solve numerical optimization problems online at each iteration, which is often the main computational bottleneck in real-time optimization. Feedback optimizing control, also commonly known as direct input adaptation, is a class of RTO methods that circumvents the need to solve computationally intensive optimization problems. The concept of feedback optimizing control dates back to the 1980s [2], where steady-state optimal process operation is achieved by directly manipulating the input using feedback control [2,3]. However, feedback optimizing control, in general, is more suited for unit operations, or for small-scale processes. In large-scale systems, this leads to a decentralized control structure, where some clusters of operating units are optimized locally without any coordination. When the system is coupled in one form or the other, system-wide optimal operation does not result from the aggregates of individual operating units in a decentralized fashion [2]. In order to address this issue, we present a distributed feedback optimizing control framework, where the local subproblems are converted into control problems that are coordinated by a master problem. Particularly, in this talk - we first present a generic framework where the augmented Lagrangian of the optimization problem is used to express the “optimizing” controlled variables (CV) for each subproblem as a function of the Lagrange multipliers. When controlled to a constant setpoint locally, this leads to optimal operation of the local subsystem, and as the master coordinator updates the Lagrange multipliers, this leads to system-wide optimal operation [4]. - we show that by using the augmented Lagrange function, the proposed distributed feedback optimizing control framework converges to a KKT point of the overall optimization problem under mild assumptions [4]. - we then demonstrate the performance of the proposed approach using an optimal resource allocation problem in an industrial symbiotic oil production network [4]. To this end, the proposed approach enables industrial symbiosis without the need to solve numerical optimization problems online. In addition, it also broadens the applicability of feedback optimizing control to large-scale systems with complex interconnections. The proposed framework can also be used with any model-based or model-free feedback optimizing control approach, or a combination of both, making it broadly applicable. Another advantage of the proposed approach is that it enables the different local controllers to be implemented at different sampling rates, which is often desirable in a heterogenous network of systems. References [1] Wenzel, S., Riedl, F. and Engell, S., 2020. An efficient hierarchical market-like coordination algorithm for coupled production systems based on quadratic approximation. Computers & Chemical Engineering , 134 , p.106704. [2] Morari, M., Arkun, Y. and Stephanopoulos, G., 1980. Studies in the synthesis of control structures for chemical processes: Part I: Formulation of the problem. Process decomposition and the classification of the control tasks. Analysis of the optimizing control structures. AIChE Journal , 26 (2), pp.220-232. [3] Chachuat, B., Srinivasan, B. and Bonvin, D., 2009. Adaptation strategies for real-time optimization. Computers & Chemical Engineering , 33 (10), pp.1557-1567. [4] Krishnamoorthy, D., 2021. A distributed feedback-based online process optimization framework for optimal resource sharing. Journal of Process Control , 97 , pp.72-83.",
+    "presenting_author": "Dinesh Krishnamoorthy | Harvard John A. Paulson School of Engineering and, Allston, MA",
+    "authors": [
+      "Dinesh Krishnamoorthy | Harvard John A. Paulson School of Engineering and, Allston, MA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dinesh Krishnamoorthy",
+        "affiliation": "Harvard John A. Paulson School of Engineering and, Allston, MA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "105f",
+    "sortable_time": "2021-11-08_14:05:00_14:24:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/627966"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/628917",
+    "paper_endpoint": "Paper/628917",
+    "paper_id": "628917",
+    "topic": "Enhancing Resource Utilization Efficiency in Networked Control of Nonlinear Distributed Processes with Parametric Drift",
+    "title": "Enhancing Resource Utilization Efficiency in Networked Control of Nonlinear Distributed Processes with Parametric Drift",
+    "date_time": "2021-11-08_12:30:00_15:00:00",
+    "session_id": "46662",
+    "session_title": "Advances in Process Control I",
+    "session_number": "105",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The stabilization of spatial profiles in spatially-distributed processes using feedback control is a fundamental problem that has a long history in process control (e.g., [1,2]). The significance of this problem spans many practical applications, ranging from control of product quality in transport-reaction processes to the reduction of frictional drag in fluid flows and the control of vibrations in structural systems. While the problem has traditionally been addressed using the classical feedback control paradigm where sensor-controller communication is assumed to take place over dedicated links, more recent efforts have focused on incorporating communication resource constraints explicitly in the distributed control system design (e.g., [3,4,5]). These efforts have been motivated by the prevalence of shared bandwidth-limited communication networks in industrial control systems and the detrimental effects that communication constraints can have on the stability and performance of the closed-loop system, if unaccounted for in the control system design. A common theme of these studies has been to address the resource-constrained stabilization problem for distributed processes using model-based control. In this approach, sensor-controller communication is suspended for times during which an embedded reduced-order model is used to compute the control action. The model state is then updated using the available measurements whenever communication is permitted. A rigorous closed-loop analysis is performed to identify the minimum allowable sensor-controller communication rate that can be used without jeopardizing closed-loop stability. While operation at this communication rate helps reduce the utilization of network resources, the actual network resource savings that can be achieved using this approach may be limited when a single fixed-parameter model is used. Such limitations become evident when the process experiences parameter variations, which is typically the case in the operation of chemical processes. Certain physical phenomena, such as catalyst deactivation and heat-exchanger fouling, often manifest themselves in the form of parameter variations that increase the mismatch between the model and the plant over time. Mitigating the impact of parametric drift requires increased levels of feedback through sensor-controller communication to maintain closed-loop stability. This realization has motivated recent work on the integration of model-based control with subspace identification schemes to enhance the resource utilization efficiency of the networked control system [6]. The key idea is to re-identify the model parameters when necessary in order to keep the plant-model mismatch, and thus the required communication rate, to a minimum. In this prior work, however, the focus was on distributed processes where the underlying dynamics are linear. The resulting linear control, stability characterization and model identification approaches are therefore not directly suited for application to processes with strong nonliearities, especially if the process is to be operated over a wide range of operating conditions or is subject to significant process upsets. Explicit account of the nonlinear dynamics must be taken not only in the controller synthesis and subsequent closed-loop stability characterization, but also in the parameter identification component of the methodology. Motivated by these considerations, we present in this work a framework for augmenting the model-based feedback control approach with an error-triggered parameter re-identification scheme in spatially-distributed processes modeled by nonlinear highly-dissipative PDEs subject to sensor-controller communication constraints and process parametric variations. The goal is to maintain closed-loop stability in the presence of varying levels of plant-model mismatch, while simultaneously keeping the rate of sensor-controller communication to a minimum and accounting explicitly for the presence of nonlinearities. The problem is addressed on the basis of a suitable finite-dimensional approximation that captures the dominant dynamics of the infinite-dimensional system. A residual-based monitoring scheme with a time-varying alarm threshold is developed and used to determine the conditions necessary for model parameter updates. A breach of the alarm threshold transitions process operation into a safe-parking mode in which the sensor-controller communication rate is temporarily adjusted to mitigate the impact of increased plant-model mismatch and allow the re-identification of process parameters using nonlinear grey-box parameter estimation techniques. An explicit characterization of the closed-loop stability region associated with the new model parameters is obtained to determine the appropriate post-drift communication rate that should be used when the model parameters are updated. The implementation of the proposed methodology is illustrated using a representative diffusion-reaction process example. References: [1] Ray W. Advanced Process Control. McGraw-Hill. 1981. [2] Christofides PD. Nonlinear and Robust Control of PDE systems. Birkhäuser. 2001. [3] Sun Y, Ghantasala S, El-Farra NH. Networked control of spatially distributed processes with sensor-controller communication constraints. In: Proceedings of American Control Conference. 2009; pp. 2489–2494. [4] Yao Z, El-Farra NH. Model-based networked control of spatially distributed systems with measurement delays. In: Proceedings of American Control Conference. 2012; pp.2990–2995. [5] Xue D, El-Farra NH. Output feedback-based event-triggered control of distributed processes with communication constraints. In: Proceedings of IEEE Conference on Decision and Control. 2016; pp. 4296–4301. [6] Zedan A, El-Farra NH. Model-based networked control of spatially-distributed processes with event-triggered parameter re-identification. In: Proceedings of IEEE Conference on Decision and Control. 2019; pp. 1207–1212.",
+    "presenting_author": "Amr Zedan | University of California, Davis",
+    "authors": [
+      "Amr Zedan | University of California, Davis",
+      "Nael El-Farra | University of California, Davis"
+    ],
+    "authors_structured": [
+      {
+        "name": "Amr Zedan",
+        "affiliation": "University of California, Davis",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nael El-Farra",
+        "affiliation": "University of California, Davis",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "105g",
+    "sortable_time": "2021-11-08_14:24:00_14:43:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/628917"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/629259",
+    "paper_endpoint": "Paper/629259",
+    "paper_id": "629259",
+    "topic": "Application of Model Predictive Control to Wormlike Micelles Production: A Case Study of CTAB and NaCl",
+    "title": "Application of Model Predictive Control to Wormlike Micelles Production: A Case Study of CTAB and NaCl",
+    "date_time": "2021-11-08_12:30:00_15:00:00",
+    "session_id": "46662",
+    "session_title": "Advances in Process Control I",
+    "session_number": "105",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Wormlike micelles (WLMs) are one of the supramolecular self-assemblies, which are elongated aggregates of amphiphilic surfactants in polar solvents [1]. Owing to the entanglements of the chains, these threadlike nanostructures exhibit remarkable viscoelasticity and thus have gained extensive research and industrial attention [2]. Specifically, in this non-covalent system, the WLMs continuously break and recombine, enabling instantaneous change in rheological properties via various external stimuli such as pH, salt concentration, temperature, and light [3]. Recently, such responsive WLMs have been employed in a broad range of industrial applications, for instance, personal care products, enhanced oil recovery, and pharmaceuticals [4]. Moreover, with the increasing demands of these macromolecular end-products, an advanced control technique can be utilized to produce the WLMs with desired properties. Model predictive control (MPC) has been widely employed in chemical processes such as polymer production as it can efficiently handle complex multi-input-multi-output problems with constraints [5]. Specifically, viscosity, as one of the crucial polymer properties, can be regulated to acquire the desired rheology of the final polymer products. Although the MPC control techniques have been widely implemented in industrial applications to control such variables [6], no studies have been executed regarding the control of the WLMs production. Moreover, owing to the unique ‘living’ nature (i.e., dynamic union and scission) of the WLMs, it is infeasible to directly extend the control strategies of conventional polymers to the production of WLMs. Hence, in this work, a MPC scheme which elucidates the dynamic behavior of the WLMs was formulated and applied to a CTAB and NaCl system as a case study. First, a mathematical model was developed by integrating a kinetic micelle growth model [7,8], a thermodynamic model [9], and a tube-reptation-based rheology model [10]. Subsequently, in order to alleviate the high computational complexity of the integrated model, a state-space model was derived and employed in developing the model-based control system. Herein, the manipulated variables are surfactant concentrations, salt concentrations, and temperature to attain the target viscosity. In addition, a state estimator was implemented in the control loop since online measurement of viscosity was not presented in this system. Consequently, this feedback controller is capable of obtaining the required input sequences to attain the target viscosity of the WLMs. Keywords : Wormlike micelle (WLM); model predictive control (MPC); reduced-order model (ROM) References [1] Nagarajan R, Ruckenstein E. Theory of Surfactant Self-Assembly: A Predictive Molecular Thermodynamic Approach. Langmuir 1991;7:2934–69. https://doi.org/10.1021/la00060a012. [2] Jiang Yang. Viscoelastic wormlike micelles and their applications. Curr Opin Colloid Interface Sci 2002;7:276–81. [3] Feng Y, Chu Z, Dreiss CA. Smart Wormlike Micelles Design , Characteristics and Applications. 2015. [4] Chu Z, Dreiss CA, Feng Y. Smart wormlike micelles. Chem Soc Rev 2013;42:7174–203. https://doi.org/10.1039/c3cs35490c. [5] Lee JH. Model predictive control: Review of the three decades of development. Int J Control Autom Syst 2011;9:415–24. https://doi.org/10.1007/s12555-011-0300-6. [6] Bindlish R. Nonlinear model predictive control of an industrial polymerization process. Comput Chem Eng 2015;73:43–8. https://doi.org/10.1016/j.compchemeng.2014.11.001. [7] Lund R, Willner L, Monkenbusch M, Panine P, Narayanan T, Colmenero J, et al. Structural observation and kinetic pathway in the formation of polymeric micelles. Phys Rev Lett 2009;102:1–4. https://doi.org/10.1103/PhysRevLett.102.188301. [8] Jensen GV, Lund R, Gummel J, Monkenbusch M, Narayanan T, Pedersen JS. Direct observation of the formation of surfactant micelles under nonisothermal conditions by synchrotron SAXS. J Am Chem Soc 2013;135:7214–22. https://doi.org/10.1021/ja312469n. [9] Danov KD, Kralchevsky PA, Stoyanov SD, Cook JL, Stott IP. Analytical modeling of micelle growth. 2. Molecular thermodynamics of mixed aggregates and scission energy in wormlike micelles. J Colloid Interface Sci 2019;551:227–41. https://doi.org/10.1016/j.jcis.2019.05.017. [10] Zou W, Larson RG. A mesoscopic simulation method for predicting the rheology of semi-dilute wormlike micellar solutions. J Rheol (N Y N Y) 2014;58:681–721. https://doi.org/10.1122/1.4868875.",
+    "presenting_author": "Silabrata Pahari | Texas A&M University, College Station, TX",
+    "authors": [
+      "Silabrata Pahari | Texas A&M University, College Station, TX",
+      "Jiyoung Moon | Inha University, Incheon, Korea, Republic of (South)",
+      "Sungwon Hwang | Inha University, Incheon, Korea, Republic of (South)",
+      "Mustafa Akbulut | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Silabrata Pahari",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jiyoung Moon",
+        "affiliation": "Inha University, Incheon, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Sungwon Hwang",
+        "affiliation": "Inha University, Incheon, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Mustafa Akbulut",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "105h",
+    "sortable_time": "2021-11-08_14:43:00_15:02:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/629259"
+  }
+]

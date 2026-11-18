@@ -1,0 +1,476 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper418570.html",
+    "topic": "Online Optimization for Grade Transitions in Polyethylene Solution Polymerization Process",
+    "date_time": "Monday, November 9, 2015: 3:15 PM",
+    "abstract": "Various grades of linear low-density polyethylene (LLDPE) are tailored to different applications, with each grade defined by specifications of product properties such as melt index and density. Typically, several different grades are produced in the same production line, which requires frequent transitions. Given the large market of LLDPE and the current experience-based transitions, there is a need, and also room for improvement, to perform transitions and to change operation conditions in a way such that the transition time as well as the off-grade product could be minimized. In our previous study, a mathematical model capturing the dynamics of the solution polymerization process carried out in a CSTR is developed. Besides the mass and heat balance equations, the optimization model for the entire process adopts the molecular weight moment model for the prediction of product properties and incorporates a simple, yet accurate, data-driven vapor-liquid equilibrium (VLE) model derived from rigorous calculation. Two optimization formulations, single stage and multistage optimization, are proposed to deal with single-value specification and specification bands of product properties, respectively. The results show significant improvement in transition times and off-grade production. The offline dynamic optimization demonstrates strong potential in handling grade transition problems, but its performance can deteriorate in the presence of uncertainties, disturbances and model mismatch. In order to deal with this problem, an offline optimization strategy based on backoff constraints is taken into account to obtain robust optimal policies which can be applied to systems with different uncertainty levels. In this talk, we extend the off-line framework described above to include online state estimation and optimal control of the large-scale grade transition problems. As described in Jung et al. (2015), two key components of the framework are state estimator and model predictive controller; both components incorporate the rigorous dynamic model we developed in our previous work. First, a shrinking horizon nonlinear model predictive control (sh-NMPC) is applied to minimize transition time and off-grade product, and to refine the control schemes. Next, an expanding horizon least squares estimation (eh-LSE) is designed to provide state estimates based on measurements in the past. At each time step, process measurements are obtained and used in eh-LSE optimization problem. The resulting state estimates serve as the initial value of an updated NMPC problem, which is then solved to reduce the overall transition time and the off-grade product. The resulting control scheme is also applied to the system at each time step so that new measurements are added. The effectiveness of the framework is demonstrated by several case studies in which uncertainties, measurement errors and disturbances are taken into account. Reference Tae Y. Jung, Yisu Nie, J. H. Lee, L. T. Biegler, “Model-based On-Line Optimization Framework for Semi-batch Polymerization Reactors,” Proceedings of ADCHEM 2015, Whistler, BC, June, 2015",
+    "presenting_author": "Jun Shi | Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Intan Ham | Chemical Engineering, The Dow Chemical Company, Freeport, TX",
+      "Lorenz T. Biegler | Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jun Shi",
+        "affiliation": "Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Intan Ham",
+        "affiliation": "Chemical Engineering, The Dow Chemical Company, Freeport, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Lorenz T. Biegler",
+        "affiliation": "Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper432377.html",
+    "topic": "Moving Horizon Estimation Via Carleman Linearization and Stability Analysis",
+    "date_time": "Monday, November 9, 2015: 4:12 PM",
+    "abstract": "In order to control dynamic systems, knowledge of the status of the system e.g. state variables is critical. However, the online measurement of state variables is not always feasible. Consequently, there are many different approaches in the literature to estimate these unmeasurable state variables of a dynamic system. However, the estimation problem would become harder when the system is corrupted with noise signals. Moving Horizon Estimation (MHE) is one of the most successful estimation approaches in dealing with such random uncertainties [1]. The idea behind MHE design is very similar to MPC design. To handle the constraints on input and state variables, these two methods formulate and solve a constrained dynamic nonlinear optimization problem. However, solving this optimization problem is usually time-consuming and online convergence of the scheme to the optimal decision variables is sometimes infeasible. In this work, we propose a new approach that accelerates computations in MHE by exploiting Carleman linearization and prove the stability of this new design. Extended Kalman Filter (EKF) is the alternative method for state estimation in nonlinear systems in presence of noise. In fact, EKF is a simplified version of MHE which has an analytical closed-form solution; it uses only the last measurement data and linearizes the nonlinear system around the last estimate of states. In contrast, MHE considers the entire output sequence and also takes constraints and nonlinearities into account. This work focuses on design of a new estimator using MHE's structure with a constant estimation horizon. The estimator further simplifies the associated dynamic optimization problem through use of Carleman linearization, which is more accurate than first-order Taylor expansions. Therefore, the new design of MHE gives a better balance between accuracy and simplicity . In a previous work, we employed this design method and also performed a sensitivity analysis for a system with unknown disturbance [2, 3]. In the current work, in contrast, we build on our previous work by considering system noise and also studying MHE's stability. The stability of MHE is an important issue. This issue is particularly very thoroughly addressed for constrained linear systems. For constrained nonlinear problems, Rao et al. presented an algorithm to design a stable MHE by assuming boundedness of noise signals [4]. Also, they assumed the estimator is able to solve the optimization problem ideally and provide the global optimal solution. Later, some papers considered the optimization error in their MHE design [5]. Our work falls into the second category. We consider the maximum error for Carleman linearization at every time step and prove the estimation error is still bounded. Also it is shown that this error bound can be reduced to any desirable level by choosing a proper order of Carleman linearization. Finally, we employ the proposed MHE in a practical chemical engineering example. The simulation running time is reduced remarkably by employing the proposed MHE. Reference: [1] Haseltine, E. L., & Rawlings, J. B. (2005). Critical evaluation of extended Kalman filtering and moving-horizon estimation. Industrial and Engineering Chemistry Research , 44, 2451-2460. [2] Hashemian, N., & Armaou, A. (2015). Fast moving horizon estimation of nonlinear processes via Carleman linearization. American Control Conference , Chicago, IL. [3] Hashemian, N., & Armaou, A. (2014). Moving horizon estimation using Carleman linearization and sensitivity analysis. Annual Meeting AIChE, Atlanta, GA. [4] Rao, C. V., Rawlings, J. B., & Mayne, D. Q. (2003). Constrained state estimation for nonlinear discrete-time systems: stability and moving horizon approximations. IEEE Transactions on Automatic Control, 48, 246-258. [5] Alessandri, A., Baglietto, M., & Battistelli, G. (2008). Moving-horizon state estimation for nonlinear discrete-time systems: New stability results and approximation schemes. Automatica , 44, 1753-1765.",
+    "presenting_author": "Negar Hashemian | Chemical Engineering, Pennsylvania State University, State College, PA",
+    "authors": [
+      "Antonios Armaou | Chemical Engineering, Pennsylvania State University, State College, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Negar Hashemian",
+        "affiliation": "Chemical Engineering, Pennsylvania State University, State College, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Antonios Armaou",
+        "affiliation": "Chemical Engineering, Pennsylvania State University, State College, PA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper434839.html",
+    "topic": "The Role of Surface Chemical Reactivity in Artificial Photocatalysis",
+    "date_time": "Monday, November 9, 2015: 3:55 PM",
+    "abstract": "Surface chemical reactivity is the engine that drives heterogeneous catalytic reactions. However, the degree at which innate surface chemical reactivity determines the overall catalytic performance in heterogeneous photocatalytic reduction of CO 2 and water-splitting reactions remains elusive. A combination of the first principles quantum chemical modeling and experiments has been applied to investigate the role of surface chemical reactivity in promoting overall catalytic activity and controlling the selectivity in photocatalytic CO 2 reduction towards the production of CH 3 OH, CH 4 , and H 2 production. Photocatalytic reduction of CO 2 for the production of CH 3 OH, CH 4 , H­ 2 over TiO 2 , SiC, GaN:ZnO, CdS, GaP, and Bi 2 S 3 was investigated. We found that the energetics for CO 2 and H 2 O dissociation, the stability of organic intermediates, and the chemical nature of surface bound atomic hydrogen collectively contribute to the selectivity of the reaction. For instance, organic intermediates are found to be stable on SiC due to its greater surface chemical reactivity towards carbon. This enhanced stability correlates well with SiC ability to selectively produce CH 4 . On the contrary, moderate surface chemical reactivity towards oxygen and hydrogen, in case of Bi 2 S 3 and CdS, appears to correlate with their ability to selectively produce CH 3 OH. Results suggest that CH3OH production hinges upon inhibiting the second C-O bond-breaking step. Finally, the catalysts with low surface chemical reactivity towards oxygen and hydrogen – TiO 2 and GaN – preferentially produce H2 since all organic intermediates are unstable and rapidly consumed in reverse reactions.",
+    "presenting_author": "Samiksha Poudyal | Chemical and Biomolecular Engineering Department, University of Tennessee, Knoxville, TN",
+    "authors": [
+      "Siris Laursen | Chemical and Biomolecular Engineering, University of Tennessee, Knoxville, TN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Samiksha Poudyal",
+        "affiliation": "Chemical and Biomolecular Engineering Department, University of Tennessee, Knoxville, TN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Siris Laursen",
+        "affiliation": "Chemical and Biomolecular Engineering, University of Tennessee, Knoxville, TN",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper432632.html",
+    "topic": "Parameter Estimation and Nonlinear Model Predictive Control Using Meshless Modelling Framework",
+    "date_time": "Monday, November 9, 2015: 4:31 PM",
+    "abstract": "Nonlinearities and complex dynamics are inherent to chemical process systems. Safe and stable operation of these processes – while maintaining profitability – in the presence of process constraints is essential to meet economic and environmental criteria. Model based control plays an important role in realizing this objective and has contributed to improved process operations. Nonlinear Model Predictive Control (NLMPC) is particularly of great interest to chemical process engineers. This is due to the ability of this controller to explicitly handle constraints, consider multivariable process interactions and intrinsically manage nonlinearities in process systems [1]. The success of NLMPC is based on accurate modelling and representation of the process. NLMPC controllers which utilize fundamental models are attractive as they can be extrapolated for a wide range of data – unlike empirical models. In this work, a new paradigm for solving the fundamental models in NLMPC controllers is presented. Artificial Neural Networks (ANN) are utilized as a meshless modelling platform to provide solution to the Ordinary Differential Equation (ODE) models of dynamic process systems [2]. Traditional numerical methods have limited differentiability, experience a significant increase in complexity with increasing number of sampling points and may be challenging to use for higher dimension problems. These limitations can be overcome by utilizing the ANN integrator to provide a solution to the ODEs. The set of system ODEs is transformed into a set of Algebraic Equations (AE) and posed as a nonlinear programming (NLP) optimization problem. The NLMPC framework, where the ODEs are integrated using the ANN, is applied to setpoint tracking, regulatory and zone control [3] studies. In process control, adequate information about the system is vital. Operational transitions could lead to changes in system parameters; and knowledge of these parameters is crucial to the operation and control of these processes. Utilizing the ANN formulation, a parameter estimation problem is formulated and solved as an NLP [2]. This offers a solution approach in which available online measurements can be utilized to compute the process parameters while simultaneously providing a solution to the system of ODEs representing the process. Case studies for parameter estimation and NLMPC are presented to demonstrate the applicability of the proposed approach. References [1] V. Dua, “Stability Analysis of Nonlinear Model Predictive Control : An Optimization Based Approach,” no. 1995, pp. 1–6, 2005. [2] V. Dua and P. Dua, “A Simultaneous Approach for Parameter Estimation of a System of Ordinary Differential Equations, Using Artificial Neural Network Approximation,” Ind. Eng. Chem. Res. , vol. 51, no. 4, pp. 1809–1814, Feb. 2012. [3] B. Grosman, E. Dassau, H. C. Zisser, L. Jovanovic, and F. J. Doyle, “Zone model predictive control: a strategy to minimize hyper- and hypoglycemic events.,” J. Diabetes Sci. Technol. , vol. 4, no. 4, pp. 961–75, Jul. 2010.",
+    "presenting_author": "Vivek Dua | Department of Chemical Engineering, University College London, London, United Kingdom",
+    "authors": [
+      "Abiodun Owolaja | Chemical Engineering, University College London, London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Vivek Dua",
+        "affiliation": "Department of Chemical Engineering, University College London, London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Abiodun Owolaja",
+        "affiliation": "Chemical Engineering, University College London, London, United Kingdom",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper428101.html",
+    "topic": "A New Approach to Solving Stochastic Optimal Control Problems",
+    "date_time": "Monday, November 9, 2015: 5:09 PM",
+    "abstract": "Dynamic systems like batch processes are difficult to design and control because of time dependent nature of the system. Optimal control theory is used to establish efficient operating policies for batch unit operations. However, the time dependent nature of the system makes it difficult to deal with uncertainties. Recently, the problem of uncertainties in batch unit operation optimal control was handled by modeling the uncertainties in terms of Ito processes and Ito calculus with stochastic maximum principle methods were used to solve the resulting stochastic optimal control problem. However, stochastic maximum principle could only be used for time dependent decisions. In order to solve coupled design and control problems, a method is needed which can deal with time dependent uncertainties, static uncertainties, time dependent decisions and time independent decisions. In this paper, we are presenting a new approach based on a novel algorithm called Better Optimization of Nonlinear Uncertain Systems (BONUS). BONUS determines the search direction bypassing the need of excessive model evaluations through a reweighting scheme using Kernel Density Estimation. A simple batch reactor with uncertainties in reaction parameters is used as a study case to taste this novel approach looking obtain the optimal temperature profile that maximizes the product concentration.",
+    "presenting_author": "Pablo T. Rodr�guez-Gonz�lez Sr | Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+    "authors": [
+      "Departamento de Ingenier�a Qu�mica | Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+      "Instituto Tecnol�gico de Celaya | Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+      "Celaya | Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+      "Gto | Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+      "Mexico | Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+      "Vicente Rico-Ramirez | Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+      "Urmila Diwekar | Vishwamitra Research Institute, Center for Uncertain Systems: Tools for Optimization and Management, Clarendon Hills, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pablo T. Rodr�guez-Gonz�lez Sr",
+        "affiliation": "Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Departamento de Ingenier�a Qu�mica",
+        "affiliation": "Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+        "designation": "Author"
+      },
+      {
+        "name": "Instituto Tecnol�gico de Celaya",
+        "affiliation": "Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+        "designation": "Author"
+      },
+      {
+        "name": "Celaya",
+        "affiliation": "Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+        "designation": "Author"
+      },
+      {
+        "name": "Gto",
+        "affiliation": "Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+        "designation": "Author"
+      },
+      {
+        "name": "Mexico",
+        "affiliation": "Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+        "designation": "Author"
+      },
+      {
+        "name": "Vicente Rico-Ramirez",
+        "affiliation": "Chemical Engineering, Instituto Tecnologico de Celaya, Celaya, Guanajuato, Mexico",
+        "designation": "Author"
+      },
+      {
+        "name": "Urmila Diwekar",
+        "affiliation": "Vishwamitra Research Institute, Center for Uncertain Systems: Tools for Optimization and Management, Clarendon Hills, IL",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper422425.html",
+    "topic": "Integrating Lyapunov-Based Offset-Free Model Predictive Control with Subspace Identification Methods",
+    "date_time": "Monday, November 9, 2015: 5:28 PM",
+    "abstract": "Owing to their ubiquitous presence, control designs have to deal with the presence of constraints and nonlinearity. Lyapunov-Based Model Predictive Control (LMPC) is one control method that enables achieving stability from a well characterized region [1, 2]. LMPC method like other MPC methods utilizes a model of the plant. In several scenarios, a good first principles model is unavailable, however, sufficient historical data exists to possibly build a data driven model for the purpose of utilization within LMPC based approaches. The subspace identification methods (SIM) approach uses a set of input and output data, to estimate linear time-invariant models in a state space form. These methods are exploit concepts such as geometrical projections and numerical linear algebra. Numerical robustness, fewer user parameters, MIMO systems identification, model order reduction make SIMs a good choice for industrial applications [3]. SIMs are usually non-iterative methods, which makes their application, computationally affordable, and, this simplicity would make the model update, affordable. Motivated by the above, in this work we develop a framework to integrate LMPC with the model identified by SIMs. To this end, a data driven model is first identified and utilized within offset-free LMPC approaches. Simulation results demonstrate the effectiveness of the proposed method. [1] Mahmood, M. and Mhaskar, P. (2012). Lyapunov-based model predictive control of stochastic nonlinear systems. Automatica, 48(9), 2271-2276. [2] Mahmood, M. and P. Mhaskar, Constrained Control Lyapunov Function Based Model Predictive Control Design, Int. J. Rob. & Nonl. Contr., 24, 374–388, 2014. [3] Trnka, P. (2007). Subspace identification methods. PhD thesis, Ph. D. Thesis, Czech Technical University in Prague.",
+    "presenting_author": "Masoud Kheradmandi | Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+    "authors": [
+      "Prashant Mhaskar | Chemical Engineering, McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Masoud Kheradmandi",
+        "affiliation": "Chemical Engineering, McMaster University, Hamilton, ON, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "Chemical Engineering, McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper417531.html",
+    "topic": "Understanding and Predicting the Photocatalytic Properties of Bismuth Vanadate from First Principles",
+    "date_time": "Monday, November 9, 2015: 5:15 PM",
+    "abstract": "Renewable sources of energy are increasingly needed and solar production of hydrogen fuel from water offers significant potential to contribute to these needs. Bismuth vanadate (BiVO 4 ) has received much interest as a promising visible-light-active photocatalyst for water splitting and pollutant decomposition. However, some fundamental aspects of its photocatalysis remain still unclear, including phase-dependent activity, doping effect, and surface reactivity. For instance, molecular mechanisms underlying the oxidative water splitting into molecular oxygen and proton are largely unexplored. In addition, charge localization and transport in BiVO 4 and its effects on the photocatalytic performance need to be further explored. This talk will focus on discussing our recent findings from extensive first-principles calculations regarding the underlying mechanisms of the oxygen evolution reaction as well as the localization and transport of excess charge carriers. The improved understanding may offer important guidance for the rational design of photocatalytic materials.",
+    "presenting_author": "Kyoung Kweon | University of Texas at Austin, Austin, TX",
+    "authors": [
+      "Gyeong Hwang | McKetta Department of Chemical Engineering, University of Texas at Austin, Austin, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gyeong Hwang",
+        "affiliation": "McKetta Department of Chemical Engineering, University of Texas at Austin, Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Kyoung Kweon",
+        "affiliation": "University of Texas at Austin, Austin, TX",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram//data/abstract/aiche/2015/Paper_413352_abstract_71005_0.PNG",
+    "topic": "Title Not Found",
+    "date_time": "November 2015",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper421953.html",
+    "topic": "Real-Time Estimation of Plasma Insulin Concentration in Patients with Type 1 Diabetes",
+    "date_time": "Monday, November 9, 2015: 3:34 PM",
+    "abstract": "Real-Time Estimation of Plasma Insulin Concentration in Patients with Type 1 Diabetes Iman Hajizadeh, MSc 1 ; Kamuran Turksoy, PhD 2 ; Sediqeh Samadi, MSc 1 ; Jianyuhan Feng, MSc 1 ; Ali Cinar, PhD 1,2 1 Department of Chemical and Biological Engineering, Illinois Institute of Technology 2 Department of Biomedical Engineering, Illinois Institute of Technology Closed-loop control of blood glucose concentration, known as artificial pancreas (AP) system, is an alternative treatment for patients with type 1 diabetes, by automatically controlling their blood glucose levels [1]–[2]. These control systems use continuous glucose measurements to calculate optimum amount of insulin to be infused with an insulin pump in order to keep plasma glucose concentration within a safe target range to avoid health problems. Real-time estimations for plasma insulin concentration is beneficial for increasing the efficiency of AP control algorithms. This enables calculation of more realistic insulin infusion rates and prevention of hypoglycemia that would be caused by over dosing of insulin. Our objective is to fulfill a real-time estimation of plasma insulin concentration from continuous glucose monitoring data by using a mathematical model. Hovorka’s model which has been developed to describe glucose-insulin dynamic in different parts of the human body, has been incorporated into a continuous-discrete extended Kalman filter (CDEKF) to provide an estimate of the plasma insulin concentration. The CDEKF is the generalization of the Kalman filter to nonlinear systems with continuous-time state equations and discrete-time measurements. Furthermore, because of variability in system dynamics, uncertain parameters have been considered as new states in Hovorka’s model to be estimated by CDEKF. This methodology has been evaluated by using clinical data from patients with Type 1 diabetes who underwent a closed-loop AP experiment. Real-time insulin estimations have been compared to plasma insulin measurements to evaluate performance and validity of the proposed methodology. Finally, based on simulation results, it has been shown that the proposed method is able to estimate the plasma insulin concentration in real time. Furthermore, the results for estimated continuous glucose measurements and blood glucose concentration have been compared to their real values to acknowledge performance of the proposed method. This method will be beneficial for an AP system in terms of real time estimation of non-measurable variables such as plasma glucose and insulin concentrations. [1] K. Turksoy, L. T. Quinn, E. Littlejohn, and A. Cinar, “An Integrated Multivariable Artificial Pancreas Control System,” J. Diabetes Sci. Technol. , vol. 8, no. 3, pp. 498–507, 2014. [2] K. Turksoy, L. Quinn, E. Littlejohn, and A. Cinar, “Multivariable Adaptive Identification and Control for Artificial Pancreas Systems,” IEEE Trans. Biomed. Eng. , vol. 61, no. 3, pp. 883–891, 2014.",
+    "presenting_author": "Iman Hajizadeh | Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+    "authors": [
+      "Kamuran Turksoy | Biomedical Engineering, Illinois Institute of Technology, Chicago, IL",
+      "Sediqeh Samadi | Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+      "Jianyuan Feng | Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+      "Ali Cinar | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Iman Hajizadeh",
+        "affiliation": "Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Kamuran Turksoy",
+        "affiliation": "Biomedical Engineering, Illinois Institute of Technology, Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Sediqeh Samadi",
+        "affiliation": "Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Jianyuan Feng",
+        "affiliation": "Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Cinar",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425350.html",
+    "topic": "Mapping Photoelectrochemical Current Distribution at Nanoscale Dimensions on Morphologically-Controlled BiVO4",
+    "date_time": "Monday, November 9, 2015: 4:55 PM",
+    "abstract": "Since the first demonstration of photoelectrochemical water splitting on a TiO 2 surface by Fujishima and Honda in 1972, 1 metal oxide semiconductors have become one of the most studied class of materials for a photoelectrochemical water splitting cell (PEC). One of the most promising metal oxide candidates is bismuth vanadate (BiVO 4 ), an n-type semiconductor with a ~2.5 eV band gap and a conduction band position close to H 2 /H + redox potential. BiVO 4 has relatively long minority carrier lifetime (40 ns) 2 compared to other well-studied metal oxides such as TiO 2 , WO 3 , and Fe 2 O 3 . However, due to the low carrier mobility of BiVO 4 , the charge extraction depth of this material is greatly limited. 3 A promising strategy to mitigate the short charge extraction depth of BiVO 4 is nanostructuring, which minimizes photogenerated charge transport distance while maintaining high optical density. Recent studies on nanoporous, 4 nanowires, 5 and inverse opals 6 architectures have proven the success of the nanostructuring strategy. However, the greatest challenge in working with these nanostructured electrodes is identifying the active sites and the photocurrent distribution across the surface of such complex architectures. We develop a qualitative photocurrent mapping strategy on highly active W-doped BiVO 4 electrodes by using the sintering of Au nanoparticles as a nanoscale-resolution oxidation reaction indicator. This simple strategy allows us to identify the active sites on the W-doped BiVO 4 electrodes, which were morphologically-controlled by varying the relative humidity during the sol-gel fabrication process. The electrode synthesized at moderate relative humidity of ~30% has the highest photoelectrochemical activity because it contained the most evenly distributed active sites. This mapping strategy elucidates the correlation between the electrode morphologies and the photoelectrochemical activities. This understanding is essential for designing nanostructured metal oxide electrodes for photoelectrochemical water splitting. (1) Walter, M. G.; Warren, E. L.; McKone, J. R.; Boettcher, S. W.; Mi, Q.; Santori, E. A.; Lewis, N. S. Chem. Rev. 2010, 110 (11), 6446-6473. (2) Abdi, F. F.; Savenije, T. J.; May, M. M.; Dam, B.; van de Krol, R. J. Phys. Chem. Lett. 2013, 4 (16), 2752-2757. (3) Abdi, F. F.; Dabirian, A.; Dam, B.; van de Krol, R. Phys. Chem. Chem. Phys. 2014, 16 (29), 15272-15277. (4) Kim, T. W.; Choi, K. S. Science 2014, 343 (6174), 990-994. (5) (a) Su, J.; Guo, L.; Bao, N.; Grimes, C. A. Nano Lett. 2011, 11 (5), 1928-1933; (b) Rao, P. M.; Cai, L.; Liu, C.; Cho, I. S.; Lee, C. H.; Weisse, J. M.; Yang, P.; Zheng, X. Nano Lett. 2014, 14 (2), 1099-1105; (c) Shi, X.; Choi, I. Y.; Zhang, K.; Kwon, J.; Kim, D. Y.; Lee, J. K.; Oh, S. H.; Kim, J. K.; Park, J. H. Nat. Commun. 2014, 5 . (6) Zhang, L. W.; Reisner, E.; Baumberg, J. J. Energy Environ. Sci. 2014, 7 (4), 1402-1408.",
+    "presenting_author": "Pongkarn Chakthranont | Chemical Engineering, Stanford University, Stanford, CA",
+    "authors": [
+      "Linsey C. Seitz | Chemical Engineering, Stanford University, Stanford, CA",
+      "Thomas F. Jaramillo | Department of Chemical Engineering, Stanford University, Stanford, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pongkarn Chakthranont",
+        "affiliation": "Chemical Engineering, Stanford University, Stanford, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Linsey C. Seitz",
+        "affiliation": "Chemical Engineering, Stanford University, Stanford, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Thomas F. Jaramillo",
+        "affiliation": "Department of Chemical Engineering, Stanford University, Stanford, CA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper422270.html",
+    "topic": "Electrochemical Synthesis of Ammonia at Low-Temperature with Fe-Ni Nanocatalysts",
+    "date_time": "Monday, November 9, 2015: 4:15 PM",
+    "abstract": "The ammonia production market in the U.S. is $20 billion in size, with ammonia being the primary chemical input to agricultural fertilizer. Currently, ammonia synthesis occurs through the Haber-Bosch process, which uses a bulk iron catalyst to reduce nitrogen and hydrogen gas at high temperature and pressure. The source of hydrogen primarily comes from steam reforming of natural gas, where methane combines with water to produce hydrogen, as well as carbon monoxide and carbon dioxide. As a result, the ammonia production industry is responsible for approximately 320 million tons of greenhouse gas emissions per year, putting the ammonia fertilizer industry as the second-largest contributor of greenhouse gas emissions in the U.S. While the invention of the Haber-Bosch process has been the primary reason for agricultural expansion and prosperity over the past 100 years, particularly in developed and industrialized nations, there remains an enormous opportunity to improve upon the Haber-Bosch process both in terms of the energy used and the greenhouse gases produced. Our work has focused on the development of a non-precious bimetallic FeNi nanoparticle material for the alkaline electrochemical reduction of nitrogen to ammonia. FeNi nanoparticles are synthesized using an aqueous-based solution synthesis technique, where first iron core nanoparticles are reduced from an argon-bubbled solution of ferrous sulfate heptahydrate and phosphonate ligand stabilizer. The nickel shell is then added through electroless deposition when a solution of nickel chloride hexahydrate and polyvinylpyrrolidone is added. Through the difference in the standard reduction potentials of Fe 2+ and Ni 2+ (E for Fe 2+ = -0.44 V and E for Ni 2+ = -0.25 V), electrons are transferred from Fe in the core nanoparticle to nickel in solution at the surface of the nanoparticles, and nickel plates down onto the iron nanoparticle surface. The size and morphology of the FeNi nanoparticles are varied by changing the molar ratio of phosphonate stabilizer to iron and the molar ratio of nickel to iron. Alloy versions of the nanoparticles, made through a one-pot synthesis technique are used as comparisons to the core-shell morphology. Ammonia synthesis is evaluated through a series of potentiostatic experiments, where the effect of the applied potential on ammonia production rate is investigated. A gas-tight electrochemical cell is used for all experiments and an in-line acidic acid trap is used to capture offgased ammonia. Due to the alkaline electrolyte and high pH environment, all ammonia is expected to be in the NH 3 form of the NH 3 /NH 4 + pair, and constant nitrogen bubbling during electrochemistry experiments causes the ammonia to flow out of the electrochemical cell and become dissolved as NH 4 + in the aqueous acid trap. Ammonia concentrations are quantified using a commercially-available assay, and mass concentrations are correlated to the current measured over time to determine ammonia production and efficiency as a function of applied potential. In this talk, nanoparticle synthesis and characterization will be discussed, as well as electrochemical and ammonia production results for specific FeNi nanoparticle catalysts.",
+    "presenting_author": "Lauren F. Greenlee | Applied Chemicals and Materials Division, National Institute of Standards & Technology, Boulder, CO",
+    "authors": [
+      "Nikki S. Rentz | Applied Chemicals and Materials Division, National Institute of Standards & Technology, Boulder, CO",
+      "Julie N. Renner | Proton OnSite, Wallingford, CT",
+      "Katherine Ayers | Proton OnSite, Wallingford, CT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Lauren F. Greenlee",
+        "affiliation": "Applied Chemicals and Materials Division, National Institute of Standards & Technology, Boulder, CO",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nikki S. Rentz",
+        "affiliation": "Applied Chemicals and Materials Division, National Institute of Standards & Technology, Boulder, CO",
+        "designation": "Author"
+      },
+      {
+        "name": "Julie N. Renner",
+        "affiliation": "Proton OnSite, Wallingford, CT",
+        "designation": "Author"
+      },
+      {
+        "name": "Katherine Ayers",
+        "affiliation": "Proton OnSite, Wallingford, CT",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425204.html",
+    "topic": "Enhancement Mechanisms By Metal Co-Catalysts and Plasmonic Nanoparticles in the Photo-Electrochemical Activity of Semiconductors",
+    "date_time": "Monday, November 9, 2015: 3:35 PM",
+    "abstract": "In this contribution, I will shed light on the microscopic mechanisms involved in the enhancement of the photo-electrochemical performance of semiconductors by the joint action of metal co-catalysts and plasmonic metal nanoparticles. In particular, I will focus on the effect of Pt co-catalysts and Ag plasmonic nanoparticles on the activity of Si for the photo-electrochemical evolution of hydrogen. 1–3 In addition to the description of my experimental findings, I will present a mathematical model that can capture all the main features of this fairly complex photo-electrocatalytic system. I will discuss how my findings can be transferred to any composite co-catalyst/plasmonic-metal/semiconductor photo-electrochemical system. (1) Hou, Y.; Abrams, B.; Vesborg, P. Nat. Mater. 2011 , 10 , 434–438. (2) Lombardi, I.; Marchionna, S.; Zangari, G.; Pizzini, S. Langmuir 2007 , 23 , 12413–12420. (3) Ingram, D. B.; Christopher, P.; Bauer, J. L.; Linic, S. ACS Catal. 2011 , 1 , 1441–1447.",
+    "presenting_author": "Paul Hernley | Chemical Engineering, University of Michigan, Ann Arbor, MI",
+    "authors": [
+      "Suljo Linic | Department of Chemical Engineering, University of Michigan, Ann Arbor, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Paul Hernley",
+        "affiliation": "Chemical Engineering, University of Michigan, Ann Arbor, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Suljo Linic",
+        "affiliation": "Department of Chemical Engineering, University of Michigan, Ann Arbor, MI",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper432954.html",
+    "topic": "Multifunctional O2-Electrodes for Reversible Li-O2 Batteries",
+    "date_time": "Monday, November 9, 2015: 4:35 PM",
+    "abstract": "The interest in developing rechargeable lithium batteries with high energy capacity and longevity is steadily increasing with the realization of their potential capabilities, especially in electric vehicles.[1] Recently, Li-O 2 (Li-air) batteries have been excessively explored as one of the most promising energy storage technologies due to their high theoretical specific capacity (3.86 Ah/g) and energy density (~11,140 Wh/kg). Key challenges with this technology include high overpotential losses associated with the electrochemical reactions (i.e. oxygen reduction and evolution reactions) at the cathode of the battery and the instability of the electrolyte layer when exposed to the electrochemical oxidizing conditions of the cathode. In this contribution, we aim to address these challenges by (1) investigating the electrochemical activity of layered nickelate (K 2 NiF 4+δ ) oxides as promising cathode electrocatalysts for oxygen evolution, and (2) exploring the functionality and stability of carbon cathodes functionalized with 12-crown-4 ether moieties to facilitate Li + transport at the cathode. We show, using controlled electrochemical experiments and electron microscopy studies that nickelate oxides decrease the charging potential of the battery cells due to (i) their impact in the formation of the discharge product, Li 2 O 2 , during discharge, and (ii) lowering of the activation barrier for the oxygen evolution reaction.[2] Furthermore we show that the functionalization of the carbon with 12-crown-4 ether moieties exhibits promising Li + conduction at the carbon electrodes, opening up opportunities to shield the aprotic electrolyte from the electrochemical oxidizing conditions at the cathode. REFERENCES [1] G. Girishkumar, B. McCloskey, A.C. Luntz, S. Swanson, W. Wilcke, Lithium - Air Battery: Promise and Challenges, J Phys Chem Lett, 1 (2010) 2193-2203. [2] A. Nacy, X. Ma, E. Nikolla, Nanostructured Nickelate Oxides as Efficient and Stable Cathode Electrocatalysts for Li–O2 Batteries, Topics in Catalysis, 58 (2015) 513-521.",
+    "presenting_author": "Ayad Nacy | Department of Chemical Engineering and Materials Science, Wayne State University, Detroit, MI",
+    "authors": [
+      "Suzana Meira | Department of Chemical Engineering and Materials Science, Wayne State University, Detroit, MI",
+      "Mariana Souza | Department of Chemical Engineering and Materials Science, Wayne State University, Detroit, MI",
+      "Xianfeng Ma | Department of Chemical Engineering and Materials Science, Wayne State University, Detroit, MI",
+      "Eranda Nikolla | Department of Chemical Engineering and Materials Science, Wayne State University, Detroit, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ayad Nacy",
+        "affiliation": "Department of Chemical Engineering and Materials Science, Wayne State University, Detroit, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Suzana Meira",
+        "affiliation": "Department of Chemical Engineering and Materials Science, Wayne State University, Detroit, MI",
+        "designation": "Author"
+      },
+      {
+        "name": "Mariana Souza",
+        "affiliation": "Department of Chemical Engineering and Materials Science, Wayne State University, Detroit, MI",
+        "designation": "Author"
+      },
+      {
+        "name": "Xianfeng Ma",
+        "affiliation": "Department of Chemical Engineering and Materials Science, Wayne State University, Detroit, MI",
+        "designation": "Author"
+      },
+      {
+        "name": "Eranda Nikolla",
+        "affiliation": "Department of Chemical Engineering and Materials Science, Wayne State University, Detroit, MI",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper427727.html",
+    "topic": "Information Theory-Based Sequential Parameter Estimation of Bioreactor",
+    "date_time": "Monday, November 9, 2015: 3:53 PM",
+    "abstract": "Identification is an indispensable step in optimization and control of batch bioreactors. Bioreactor models of a practical scale system are usually nonlinear, complex, and are accompanied with a large number of parameters. Optimal Experimental Design (OED), which aims to find the most information-rich operation, is a statistical tool to guide engineers to efficiently identify a system. Despite its wide acceptance as a viable tool, current OED approaches often result in a huge optimization problem. This makes not only the computation prohibitive, but more importantly, makes the analysis of the solution infeasible. In this work, we suggest a new scheme which estimates parameters in a sequential manner. Parameters are ‘lined up’ into an order and estimated by the sequence. Since the parameters are highly correlated in a typical bioreactor system, it is crucial to decide how to group and place parameters in a proper order. First, simulation is performed with a purposely inaccurate (~50%) set of parameters. The objective of this simulation is to observe qualitative behavior of the process state variables, not their exact values. Applying several criterion based on information theory such as sensitivity, we can 1) rule out unidentifiable parameters, 2) combine highly correlated parameters as a set, and 3) place those parameter sets into an order that maximizes the information gain. As a result, we can obtain the ‘estimation schedule’. In the actual implementation, optimal input is calculated at each step in a similar manner to the model predictive control. The parameter identification schedule obtained a priori is used as guidance. Maximum information gain to a certain parameter set over a predefined prediction horizon is used as an objective function. When the information gain for a certain set of parameters exceeds some predefined level, the set is considered fully identified and the objective function switches to identify the next set of parameters. The suggested approach is illustrated with two fed-batch bioreactor models. The first is a theoretical model with five parameters. The second is a practical scale microalgal bioreactor model with more than 10 parameters. Results from both models have shown improved performance and convergence property. The advantages of our approach are twofold. First, unlike other ‘blind’ approach of OED, the suggested approach can make use of the prior knowledge on the system in a quantitative sense. Second, the suggested approach can also handle other issues related to the identification that are being solved by experience or ad hoc including the number of batches required to run for identification and the amount of information that can be obtained with economical constraints.",
+    "presenting_author": "Jung Hun Kim | School of Chemical and Biological Engineering, Seoul National University, Seoul, South Korea",
+    "authors": [
+      "Jong Min Lee | School of Chemical and Biological Engineering, Seoul National University, Seoul, South Korea"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jung Hun Kim",
+        "affiliation": "School of Chemical and Biological Engineering, Seoul National University, Seoul, South Korea",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jong Min Lee",
+        "affiliation": "School of Chemical and Biological Engineering, Seoul National University, Seoul, South Korea",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram//data/abstract/aiche/2015/Paper_413352_abstract_71004_0.PNG",
+    "topic": "Title Not Found",
+    "date_time": "November 2015",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram//data/abstract/aiche/2015/Paper_420366_abstract_71691_0.png",
+    "topic": "Title Not Found",
+    "date_time": "November 2015",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper418824.html",
+    "topic": "Thermodynamic and Achievable Efficiencies of Solar-Driven Electrochemical Conversion of Water and Carbon Dioxide to Transportation Fuels",
+    "date_time": "Monday, November 9, 2015: 3:15 PM",
+    "abstract": "Thermodynamic and achievable limits of solar-driven electrochemical conversion of water and carbon dioxide to fuels will be presented in this talk. The maximum thermodynamic efficiency of adiabatic electrochemical synthesis of various solar-fuels is in the range of 32-42%. The single, double, and triple junction light absorbers are found to be optimal for the electrochemical load ranges of 0-0.9 V, 0.9-1.95 V, and 1.95-3.5 V, respectively. The attainable solar-to-fuel (STF) efficiencies are obtained using Shockley-Queisser limits of multijunction light absorber and the electrochemical load curves for three different configurations such as photoelectrochemical cells (PECs), tandem photoelectrochemical cells, and PV-electrolyzers. The maximum achievable STF efficiencies of PEC producing syngas (CO:H 2 = 1:3) and hythane (CH 4 :H 2 = 2:3) are 25% and 18%, respectively. The quality of solar-fuels such as syngas (using silver) and hythane (using copper) can also be adjusted by tuning the band gaps of triple junction light absorbers. A scheme consisting of tandem double-junction PEC is proposed, where the first PEC produces H 2 and the second PEC utilizes H 2 and CO 2 to make fuels. The STF efficiency of such tandem PECs forming hythane can be 10% higher than the single triple-junction PEC. We also show that PV-electrolyzers can not only be efficient than the PECs but can also provide better control over the quality of solar fuels for the case of varying solar insolation.",
+    "presenting_author": "Meenesh R. Singh | Joint Center for Artificial Photosynthesis, Lawrence Berkeley National Laboratory, Berkeley, CA",
+    "authors": [
+      "Alexis T. Bell | Joint Center for Artificial Photosynthesis, Lawrence Berkeley National Lab, Berkeley, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Meenesh R. Singh",
+        "affiliation": "Joint Center for Artificial Photosynthesis, Lawrence Berkeley National Laboratory, Berkeley, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Alexis T. Bell",
+        "affiliation": "Joint Center for Artificial Photosynthesis, Lawrence Berkeley National Lab, Berkeley, CA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper434446.html",
+    "topic": "Stochastic Model Predictive Control with Bounded Inputs and Joint State Chance Constraints: Application to a Continuous Acetone-Butanol-Ethanol Fermentation Process",
+    "date_time": "Monday, November 9, 2015: 4:50 PM",
+    "abstract": "Model predictive control (MPC) is widely used for achieving high-performance operation of complex systems due to its ability to handle multivariate dynamics, system constraints, and competing sets of objectives [1,2]. To date, the majority of work on MPC of uncertain systems relies on (bounded) deterministic uncertainty descriptions. In deterministic approaches to robust MPC, the control performance is realized in terms of worst-case uncertainties and the system constraints are fulfilled with respect to all uncertainty realizations [3]. Hence, these approaches can lead to an overly conservative closed-loop control performance. Alternatively, stochastic MPC (SMPC) has recently emerged to reduce the inherent conservatism of robust control approaches by using the probabilistic information of system uncertainties in control design. SMPC enables shaping the probability distribution of system states/outputs (either in terms of the complete distribution [4], or its statistical moments [5]) and defining chance constraints, which allow the state constraints to be violated with a-priori specified level of probability. In this talk, a full state-feedback SMPC approach is presented for linear discrete-time systems subject to independent (possibly) unbounded stochastic disturbances (aka process noise). The stochastic optimal control approach includes hard input bounds and joint state chance constraints. The key challenges in solving the SMPC problem are: 1) incorporating state feedback optimally, 2) guaranteeing hard input bounds in the presence of unbounded disturbances, 3) nonconvexity of joint state chance constraints, and 4) establishing (recursive) feasibility and stability of the control approach. A SMPC algorithm is proposed to address these challenges for the above mentioned stochastic linear setup. To obtain a tractable algorithm, the feedback control law is parameterized as an affine disturbance feedback policy, which is equivalent to affine state feedback [6]. Hard input bounds are guaranteed (for the affine disturbance feedback policy) by directly saturating the disturbances in the control law [7,8]. Joint state chance constraints are replaced with a conservative deterministic surrogate in terms of the mean and variance of the predicted states using the Cantelli-Chebyshev inequality [9]. It is demonstrated that this (and, in fact, any) SMPC problem cannot be feasible at all times due to the possibly unbounded stochastic disturbances. In addition, the inclusion of state chance constraints leads to a small region of attraction for the controller. To obviate the feasibility issue, the state chance constraints are softened using an exact penalty function method that gives the same control law as the fully-constrained SMPC problem when the problem is feasible and minimal constraint violation when the problem is infeasible. It is shown that the stochastic control algorithm will result in a stochastically stable closed-loop system by proving that the closed-loop states satisfy a geometric drift condition outside of a compact set when the system matrix is Schur stable. The proposed SMPC approach is applied to a continuous acetone-butanol-ethanol (ABE) fermentation process [10]. The validated fermentation model consists of 12 state variables corresponding to concentration of different species in the Clostridium acetobutylicum metabolic pathway [11]. One hundred Monte Carlo simulations have been performed to assess the closed-loop performance of the SMPC approach. The simulation results indicate satisfactory closed-loop control performance in terms of keeping the process at the desired setpoints, as well as effective constraint satisfaction in the presence of stochastic disturbances. References [1] D. Q. Mayne, J. B. Rawlings, C. V. Rao, and P. O. Scokaert. Constrained model predictive control: Stability and optimality. Automatica , 36 (2000), 789-814. [2] M. Morari and J. H. Lee. Model predictive control: Past, present and future. Computers & Chemical Engineering , 23 (1999): 667-682. [3] A. Bemporad and M. Morari. Robust model predictive control: A survey. In Robustness in Identification and Control . Springer London, 1999, 207-226. [4] E. A. Buehler, J. A. Paulson, A. Akhavan, and A. Mesbah. Lyapunov-based stochastic nonlinear model predictive control: Shaping the state probability density functions. In Proceedings of the IEEE Conference on Decision and Control , 2015, Submitted, Osaka. [5] A. Mesbah, S. Streif, R. Findeisen, and R. D. Braatz. Stochastic nonlinear model predictive control with probabilistic constraints. In Proceedings of the American Control Conference , 2014: 2413-2419, Portland. [6] P. J. Goulart, E. C. Kerrigan, and J. M. Maciejowski. Optimization over state feedback policies for robust control with constraints. Automatica 42 (2006): 523-533. [7] P. Hokayem, D. Chatterjee, and J. Lygeros. On stochastic receding horizon control with bounded control inputs. In Proceedings of IEEE Conference on Decision and Control, 2009: 6359:6364, Shanghai. [8] D. Chatterjee, P. Hokayem, and J. Lygeros. Stochastic receding horizon control with bounded control inputs: a vector space approach. IEEE Transactions on Automatic Control, 56 (2011) 2704-2710. [9] A. W. Marshall, O. Ingram, and B. C. Arnold. Theory of Majorization and its Applications. Springer Science & Business Media, New York, 2011. [10] S. Haus, S. Jabbari, T. Millat, H. Janssen, R. J. Fischer, H. Bahl, J. R. King, and O. A. Wolkenhauer. A systems biology approach to investigate the effect of pH-induced gene regulation on solvent production by Clostridium acetobutylicum in continuous culture. BMC Systems Biology , 5 (2011): 1-13. [11] T. Lütke-Eversloh and B. Hubert. Metabolic engineering of Clostridium acetobutylicum: Recent advances to improve butanol production. Current Opinion in Biotechnology, 22 (2011): 634-647.",
+    "presenting_author": "Ali Mesbah | Department of Chemical and Biomolecular Engineering, University of California-Berkeley, Berkeley, CA",
+    "authors": [
+      "Joel Paulso | Department of Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA",
+      "Edward Buehler | Department of Chemical and Biomolecular Engineering, University of California-Berkeley, Berkeley, CA",
+      "Richard D. Braatz | Department of Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joel Paulso",
+        "affiliation": "Department of Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Edward Buehler",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, University of California-Berkeley, Berkeley, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Richard D. Braatz",
+        "affiliation": "Department of Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, University of California-Berkeley, Berkeley, CA",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram//data/abstract/aiche/2015/Paper_413352_abstract_71006_0.PNG",
+    "topic": "Title Not Found",
+    "date_time": "November 2015",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  }
+]

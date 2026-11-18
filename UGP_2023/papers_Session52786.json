@@ -1,0 +1,306 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663463",
+    "paper_endpoint": "Paper/663463",
+    "paper_id": "663463",
+    "topic": "Development of Thermodynamically-Consistent Machine-Learning Equations of State: Application to the Mie Fluid",
+    "title": "Development of Thermodynamically-Consistent Machine-Learning Equations of State: Application to the Mie Fluid",
+    "date_time": "2023-11-08_12:30:00_15:00:00",
+    "session_id": "52786",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "535",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "Accurately describing the thermophysical properties of fluids is crucial for design and engineering purposes [1]. From a practical perspective, these properties are often correlated (and in some cases predicted) employing analytical empirical, semiempirical or theoretical-based closed-form mathematical expressions denoted as equations of state (EoS). Historically, it has been considered that including physically realistic depictions ( e.g., molecular interactions) into the EoS will improve the robustness and reliability of the model. These more theoretical approaches come at the expense of a long and sometimes cumbersome development. In this contribution, a change in paradigm for developing EoSs [2] is explored, where an artificial neural network (ANNs) is trained to “learn” the Helmholtz free energy of the particles interacting via the Mie potential [ U=C ε ((σ/r) λr - (σ/r) λa ) ], providing a thermodynamically consistent data-driven EoS. Thermophysical properties of the Mie fluid are obtained using high-throughput Molecular Dynamics (MD) simulations. The LAMMPS software [3] is used to perform all simulations. The simulations are run with a cut-off of 5 σ with no tail corrections and expressed in reduced Lennard-Jones units (i.e., equivalently to setting k b =1, ε =1 and σ =1). The MD simulations consider Mie fluids with a repulsive exponent ( λ r ) within the range 7-34 and an attractive exponent ( λ a ) fixed to 6. The simulated phase space considers densities ( ρ * ) from 10 -4 to 1.2 and temperatures ( T * ) from 0.6 to 10.0. The computed database includes over 14000 PVT data points of the Mie fluid. These thermophysical properties are used to train the residual Helmholtz free energy model of the Mie fluid (FE-ANN EoS), defined as follows: A res,* = ANN ( α, ρ * ,1/T * ) - ANN ( α, ρ * =0,1/T * ) ; α = C [1/( λ a - 3) - 1/( λ r - 3)] Where A res, * represents the dimensionless residual Helmholtz free energy, ANN is the neural network to be trained, and α is the van der Waals constant. The proposed formulation incorporates physical insights, e.g., it analytically fulfils the ideal gas law. Moreover, the FE-ANN EoS exactly satisfies Maxwell’s relations. This data-driven model is trained by minimising the mean squared error (MSE) with respect to first- and second-order derivative information, such as the compressibility factor ( Z= P*/ ρ * T * ), internal energy ( U * ), isothermal compressibility ( κ T ), isochoric heat capacity ( C v * ), thermal expansion coefficient ( α P ), heat capacity ratio ( γ= C p * /C v * ) and Joule-Thomson coefficient ( μ JT * ). The FE-ANN EoS is implemented using TensorFlow [4]. The trained FE-ANN EoS accurately describes the Mie fluid’s target properties, as observed in Table 1. Moreover, the physical-inspired formulation of the FE-ANN EoS allows computing other properties for which the model has not been trained. For example, even though the model is trained using only PVT data, the model discovered -on its own- an unstable van der Waals loop, making it capable of computing vapour-liquid equilibria. In Figure 1, it is shown that the FE-ANN EoS model not only predicts the equilibrium densities correctly but also precisely describes the saturation pressure and vaporisation enthalpy of the selected Mie fluids. The thermodynamic consistency of the FE-ANN EoS is also tested using Brown’s characteristic curves. These curves represent specific temperature and density conditions at which an EoS predicts the behaviour of an ideal gas for a given property. These curves include the Zeno curve ( Z=1 ), the Boyle curve ([ dZ/dP] T =0 ), the Charles curve ([ dZ/dV] P =0 ) and the Amagat curve ([ dZ/dT] V =0 ). In Figure 2, it is shown that Brown’s curves predicted by the FE-ANN EoS are physically correct. This is, the Zeno and Boyle curves converge to the same temperature at the low-pressure limit; the Zeno curve intercepts the Charles curve once; and the Boyle, Charles and Amagat curves do not cross. Moreover, the FE-ANN EoS results are in good agreement with published molecular simulation results [5], unseen by the FE-ANN EoS. The proposed framework is capable is accurately learning the Helmholtz free energy surface of the Mie fluid. The FE-ANN EoS’s results are on par with those of SAFT-VR-Mie [6] (arguably the best model for the Mie fluid) but were obtained in a span of a few months as opposed to the decades of development needed for the SAFT-VR-Mie EoS. References [1] Kontogeorgis, et al. (2021). Ind. Eng. Chem. Res . 60(13) , 4987–5013. [2] Rosenberger, et al. (2022). Phys. Rev. E , 105 (4), 045301. [3] Thompson, et al. (2022). Computer Phys. Comm. , 271 , 108171. [4] TensorFlow (2005). URL: https://www.tensorflow.org/ (accessed 6th October 2022) [5] Urschel and Stephan, (2023). J. Chem. Theory Comput. , 19(5), 1537–1552. [6] Lafitte, et al. (2013). J. Chem. Phys., 139(15), 154504.",
+    "presenting_author": "Gustavo Chaparro | Imperial College London, United Kingdom",
+    "authors": [
+      "Gustavo Chaparro | Imperial College London, United Kingdom",
+      "Erich Muller | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gustavo Chaparro",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Erich Muller",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "535a",
+    "sortable_time": "2023-11-08_12:30:00_12:48:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663463"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663560",
+    "paper_endpoint": "Paper/663560",
+    "paper_id": "663560",
+    "topic": "Modeling Three-Dimensional Ising System Using Local Composition Models with Global Renormalization Group Theory",
+    "title": "Modeling Three-Dimensional Ising System Using Local Composition Models with Global Renormalization Group Theory",
+    "date_time": "2023-11-08_12:30:00_15:00:00",
+    "session_id": "52786",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "535",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "This study focuses on the modeling of phase transition and separation in ferromagnetic materials as a special case of liquid-liquid phase transitions, using four prevalent local composition models (Margules [1], NRTL [2], Wilson [3], and COSMO-SAC [4]) in the mean-field framework. Although local composition models have been shown to be powerful in correlating liquid-liquid phase transitions in non-ideal liquid mixtures, their ability to predict the phase behavior of liquid mixtures based on given molecular interactions is not yet fully understood. To investigate the predictive power of local composition models, the exact magnetization (or, equivalently the equilibrium composition) and the Curie temperature (or the upper critical solution temperature) of square-lattice systems are utilized [5]. The results reveal that all four local composition models are capable of correctly predicting the liquid-liquid phase boundary at low temperatures, but their accuracy decreases significantly at high temperatures and overestimates the upper critical solution temperature. To overcome the limitation caused by mean field approximation in local composition models, the global renormalization group theory (GRGT) [6] is introduced to account for composition fluctuations, which are most significant near the critical point. By optimizing the two GRGT parameters, it is found that the COSMO-SAC model is the most accurate in describing the phase boundary of ferromagnetic materials, while other local composition models show significant deviations near the critical point. References [1] M. Margules, Über die Zusammensetzung der gesättigten Dämpfe von Mischungen, Sitzungsber. Akad. Wiss. Wien, math.-naturwiss. Klasse, 104 (1895) 1243-1278. [2] H. Renon, J.M. Prausnitz, Local compositions in thermodynamic excess functions for liquid mixtures, AIChE journal, 14 (1968) 135-144. [3] G. Scatchard, G.M. Wilson, Vapor-liquid equilibrium. XIII. The system water-butyl glycol from 5 to 85, Journal of the American Chemical Society, 86 (1964) 133-137. [4] S.-T. Lin, S.I. Sandler, A priori phase equilibrium prediction from a segment contribution solvation model, Industrial & engineering chemistry research, 41 (2002) 899-913. [5] A. Talapov, H. Blöte, The magnetization of the 3D Ising model, Journal of Physics A: Mathematical and General, 29 (1996) 5727. [6] F. Yu, J. Cai, Renormalization Group Approach to Binary Liquid–Liquid Equilibria, Industrial & Engineering Chemistry Research, 59 (2020) 9611-9618.",
+    "presenting_author": "Yen-Jen Shih | National Taiwan University, Taipei",
+    "authors": [
+      "Yen-Jen Shih | National Taiwan University, Taipei",
+      "Shiang-Tai Lin | National Taiwan University, Taipei"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yen-Jen Shih",
+        "affiliation": "National Taiwan University, Taipei",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Shiang-Tai Lin",
+        "affiliation": "National Taiwan University, Taipei",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "535b",
+    "sortable_time": "2023-11-08_12:48:00_13:06:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663560"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663896",
+    "paper_endpoint": "Paper/663896",
+    "paper_id": "663896",
+    "topic": "Classical Behavior of Hydrogen and the Prediction of Its Mixture Properties",
+    "title": "Classical Behavior of Hydrogen and the Prediction of Its Mixture Properties",
+    "date_time": "2023-11-08_12:30:00_15:00:00",
+    "session_id": "52786",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "535",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "Molecular hydrogen is earmarked to play an increasingly important role in the global economy [1] because its combustion only results in the environmentally benign production of water. As such, there is plenty of incentive to accurately predict both its properties and those of its mixtures. Understanding hydrogen from a theoretical perspective is complicated by the fact that it is a quantum fluid, which means that theoretically rigorous first principles determination of its intermolecular interactions requires solving the Schrödinger equation with a post-Hartree–Fock method. There have been various attempts [2-4] to develop and intermolecular potential for hydrogen, however the focus has been to determine its cryogenic behavior that is affected by quantum behavior. However, many important chemical engineering applications occur at relatively high temperatures at which quantum interactions are not an important consideration. This means that incorporating quantum considerations are actually counter-productive to accurate predictions. For example, the critical properties of hydrogen that are commonly used as inputs to both theory and equation of state modelling [5] are arguably in appropriate beyond cryogenic conditions. To address this issue, we have recently reported [6] a classical intermolecular potential that combines ab inito data for two-body interactions with a three-body potential. The potential yields accurate predictions of the second virial coefficients and pressure-volume-temperature behavior. A consequence of the potential is that yields classical values of the critical properties. This work examines the molecular simulation [7] results for pure fluids and determines the vapor-liquid equilibria of key hydrogen mixtures. It is shown that the classical potential improves the a priori prediction of mixtures by reducing the reliance on combining rules for unlike mixture properties. 1. L. F. Vega and S. E. Kentish, Ind. Eng. Chem. Res. 61, 6065 (2022). 2. P. Diep and K. Johnson,, J. Chem. Phys. 112, 4465 (2000). Erratum: J. Chem. Phys. 113, 3480 (2000). 3. T. Pham Van, and U. K. Deiters, Chem. Phys. 457, 171 (2015). 4. K. Patkowski, W. Cencek, P. Jankowski, K. Szalewicz, J. B. Mehl, G. Garberoglio, and A. H. Harvey, J. Chem. Phys. 129, 094304 (2008). 5. Y. S. Wei and R. J. Sadus, AIChE J. 46, 169 (2000) 6. U. K. Deiters and R. J. Sadus, J. Chem. Phys. (2023), submitted. 7. R. J. Sadus, Molecular Simulation of Fluids: Theory, Algorithms and Object-Orientation (Elsevier, Amsterdam, 1999).",
+    "presenting_author": "Richard Sadus | Swinburne Univ of Technology, Kew, Australia",
+    "authors": [
+      "Ulrich K. Deiters | University of Cologne, Germany",
+      "Richard Sadus | Swinburne Univ of Technology, Kew, Australia"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ulrich K. Deiters",
+        "affiliation": "University of Cologne, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Richard Sadus",
+        "affiliation": "Swinburne Univ of Technology, Kew, Australia",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "535c",
+    "sortable_time": "2023-11-08_13:06:00_13:24:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663896"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663922",
+    "paper_endpoint": "Paper/663922",
+    "paper_id": "663922",
+    "topic": "A Model to Describe Mixtures of Cross-Associating Structural Isomers",
+    "title": "A Model to Describe Mixtures of Cross-Associating Structural Isomers",
+    "date_time": "2023-11-08_12:30:00_15:00:00",
+    "session_id": "52786",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "535",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "One of the most common problems in process engineering is the separation of substances from a mixture. The shift towards the use of more renewable resources in the chemical industry results in an increasing number of different components in product mixtures. A large number of these are structural isomers with functional groups. A sufficiently detailed experimental investigation of mixtures of such isomers is not possible. They are not commercially available in sufficient purity. The ability to predict the phase behavior of these mixtures is therefore an interesting prospect. Most conventional thermodynamic models cannot be applied to such systems. They do not distinguish between structural isomers and require a separate set of parameters for each isomer. The lattice cluster theory (LCT) of Freed et al [1] has been shown to be able to describe the phase behavior of mixtures of branched molecules based on their linear analogues. LCT is only able to do this if the functional groups occupy the same position on the structure. A novel model based on the LCT is developed, which is able to describe structural isomers with functional groups. An approach similar to the Chemical Association Lattice Model (CALM) of Browarzik [2] is chosen to model the association as a chemical association. To cope with the large number of association clusters required, we apply the continuous thermodynamics of Rätsch and Kehlen [3]. The new model is able to take into account the structure of the isomers as well as the structure of the association clusters. It requires only one set of parameters depending on the size and functional group of the molecule. The model is used to correctly predict the liquid-liquid equilibrium phase behavior of mixtures of different alkane isomers and alkanols. It can also predict the liquid-liquid equilibrium phase behavior of cross-associating mixtures of several alkanols. In addition, we give an outlook on the possible application to vapor-liquid equilibria of associating structural isomers. [1] J. Dudowicz und K. F. Freed, „Effect of Monomer Structure and Compressibility on the Properties of Multicomponent Polymer Blends and Solutions: 1. Lattice Cluster Theory of Compressible Systems,“ Macromolecules, 24, pp. 5076-5095, 1991. [2] D. Browarzik, „Calculation of excess functions and phase equilibria in binary and ternary mixtures with one associating component,“ Journal of Molecular Liquids, 146, p. 95–104, 2009. [3] M. Rätsch und H. Kehlen, „Continuous Thermodynamics of Polymer Systems,“ Progress in Polymer Science, 14, pp. 1-46, 1989.",
+    "presenting_author": "Gottfried Segner | Graz University of Technology, Austria",
+    "authors": [
+      "Gottfried Segner | Graz University of Technology, Austria",
+      "Patrick Zimmermann | Graz University of Technology, Austria",
+      "Tim Zeiner | Graz University of Technology, Austria"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gottfried Segner",
+        "affiliation": "Graz University of Technology, Austria",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Patrick Zimmermann",
+        "affiliation": "Graz University of Technology, Austria",
+        "designation": "Author"
+      },
+      {
+        "name": "Tim Zeiner",
+        "affiliation": "Graz University of Technology, Austria",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "535d",
+    "sortable_time": "2023-11-08_13:24:00_13:42:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663922"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663937",
+    "paper_endpoint": "Paper/663937",
+    "paper_id": "663937",
+    "topic": "Phase Equilibria and Relative Permittivity in Fluid Mixtures with Co-Oriented Fluid Functional Equation for Electrostatic Interactions (COFFEE) and Molecular Simulations",
+    "title": "Phase Equilibria and Relative Permittivity in Fluid Mixtures with Co-Oriented Fluid Functional Equation for Electrostatic Interactions (COFFEE) and Molecular Simulations",
+    "date_time": "2023-11-08_12:30:00_15:00:00",
+    "session_id": "52786",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "535",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "Knowledge of thermophysical properties of fluids and fluid mixtures is essential for the successful design and operation of separation equipment used in chemical engineering applications. It is therefore important to have tools that can predict these properties accurately, especially for mixtures, where experimental data are typically scarce. One essential characteristic of a given fluid mixture is its vapor-liquid equilibrium (VLE), which is of central importance e.g. in distillation processes. For industrial applications, models for the excess Gibbs energy ( g E -models) are typically used to describe and predict phase equilibria. However, g E -models depend heavily on binary mixture data to achieve accurate correlations of VLE. A more theoretical approach that can be used to even predict phase equilibria is the use of thermodynamic equations of state (EOS). The SAFT family of EOS [e.g. 1-6] approach in particular has been used extensively in both industry and academic research. However, making accurate predictions for mixtures often still proves challenging when the mixtures’ constituents differ substantially in terms of their polarity, i.e. when non-polar components are mixed with strongly polar ones or when associating polar components are mixed with non-associating polar ones. One reason for these challenges is that association and polar interactions are usually considered through separate contributions to the free energy, although these phenomena are intrinsically linked through their (at least partly) electrostatic nature. That is, associating substances always also exhibit polar interactions although any given polar substance may or may not exhibit association [7]. EOS face additional challenges when used to describe electrolyte solutions. To evaluate ionic interactions with Coulomb’s law, the relative permittivity is required. However, the relative permittivity is typically not accessible by EOS and must be calculated with auxiliary models [8]. The Co-Oriented Fluid Functional Equation for Electrostatic interactions (COFFEE) [9] seeks to address both of these challenges [9,10]. To achieve this, the contribution to the free energy due to electrostatic interactions is formulated as a functional of the orientation distribution function (ODF), which offers a statistical description of the intermolecular orientational structure in the fluid. This is a unique feature for an EOS, which links different but related kinds of electrostatic interactions in a natural way. Through the ODF, the relative permittivity including orientation polarization also becomes directly accessible via Kirkwood’s equation. COFFEE has already been used successfully to describe the VLE of simple polar model fluids and simple mixtures, as previously shown at the AIChE annual meeting. It has also been employed to model the VLE of hydrogen chloride, showing improvements over PC-SAFT-like approaches [9]. Furthermore, the relative permittivity of polar model fluids has been predicted successfully and compared to a variety of other methods [8,10,11]. In this contribution, the study of mixtures is further extended. Using COFFEE’s prediction for the ODF in mixtures in combination with Kirkwood’s equation, the relative permittivity is predicted for a wide variety of binary mixtures containing Lennard-Jones (LJ) and Stockmayer (LJ + point dipole, ST) fluids. The results from COFFEE are compared to new results calculated with molecular dynamics (MD) simulations conducted with the molecular simulation software ms 2 [12]. Results from COFFEE and MD are in good agreement. Only qualitative agreement is found at high dipole strength, where COFFEE underestimates the relative permittivity quantitatively, but still outperforms Kirkwood’s equation without orientation polarization. An overview of the results is given in the attached figure (left), where the results for the permittivity from COFFEE and MD and the ‘ideal’ case, for which the angular correlation is neglected within Kirkwood’s equation, are plotted as a function of the dipole strength for a variety of mixtures. Previously presented results for the VLE of mixtures containing LJ and ST fluids are extended to include binary mixtures containing shifted ST fluids (sST), for which the point dipole is shifted away from the LJ center along its axis. COFFEE is uniquely able to make predictions for such fluids with decentral dipoles. These fluids exhibit an orientational structure typical of associating fluids, which is considered via the incorporation of the ODF into the theory. Results from COFFEE compare favorably to results from Monte-Carlo (MC) simulations [13] conducted with ms 2 for a large variety of different mixtures. The impact of the dipole shift on saturated densities and vapor pressure is predicted correctly by COFFEE, but somewhat underestimated for the latter, which becomes apparent at high sST contents. Exemplary results for a nonpolar-polar mixture are shown in the attached figure (right). Finally, predictions for the VLE of binary mixtures of simple real fluids, including associating and non-associating polar fluids, are presented and evaluated. Avenues for the further development of COFFEE and its application to more complex fluids are discussed briefly. [1] W. G. Chapman, K. E. Gubbins, G. Jackson, M. Radosz, New Reference Equation of State for Associating Liquids, Ind. Eng. Chem. Res. 29 (1990) 1709-1721. [2] S. P. Tan, H. Adidharma, M. Radosz, Recent Advances and Applications of Statistical Associating Fluid Theory, Ind. Eng. Chem. Res. 47 (2008) 8063-8082. [3] C. McCabe, A. Galindo, SAFT Associating Fluids and Fluid Mixtures, Royal Society of Chemistry, Cambridge, 2010. [4] C. O. Emborsky, Z. Feng, K. R. Cox, W. G. Chapman, Recent advances in classical density functional theory for associating and polyatomic molecules, Fluid Phase Equilibr. 306 (2011) 15-30. [5] J. Gross, G. Sadowski: Perturbed-Chain SAFT: An Equation of State on a Perturbation Theory for Chain Molecules, Ind. Eng. Chem. Res. 40 (2001) 1244-1260. [6] J. Gross, G. Sadowski, Application of the Perturbed-Chain SAFT Equation of State to Associating Systems, Ind. Eng. Chem. Res. 41 (2002) 5510-5515. [7] E. Arunan, G. R. Desiraji, R. A. Klein, J. Sadlej, S. Scheiner, I. Alkorta, D. C. Clary, R. H. Crabtree, J. J. Dannenberg, P. Hobza, H. G. Kjaergaard, A. C. Legon, B. Mennucci, D. J. Nesbitt: Defining the hydrogen bond: An account (IUPAC Technical Report), Pure Appl. Chem. 83 (2011) 1619-1636. [8] M. Kohns, J. Marx, K. Langenbach: Relative Permittivity of Stockmayer-Type Model Fluids from MD Simulations and COFFEE, J. Chem. Eng. Data 65 (2020) 5891-5896. [9] K. Langenbach: Co-Oriented Fluid Functional Equation for Electrostatic interactions (COFFEE), Chem. Eng. Sci. 174 (2017) 40-55. [10] K. Langenbach, M. Kohns: Relative Permittivity of Dipolar Model Fluids from Molecular Simulation and from the Co-Oriented Fluid Functional Equation for Electrostatic Interactions, J. Chem. Eng. Data 65 (2020) 980-986. [11] M. Kohns, J. Marx, K. Langenbach: Critical assessment of perturbation theories for the relative permittivity of dipolar model fluids, Chem. Eng. Sci. 245 (2021) 116875. [12] R. Fingerhut, G. Guevara-Carrion, I. Nitzke, D. Saric, J. Marx, K. Langenbach, S. Prokopev, D. Celný, M. Bernreuther, S. Stephan, M. Kohns, H. Hasse, J. Vrabec: ms 2: A molecular simulation tool for thermodynamic properties, release 4.0, Comput. Phys. Commun. 262 (2021) 107860. [13] J. Marx, M. Kohns, K. Langenbach: Vapor-liquid equilibria of binary mixtures containing Stockmayer-type model fluids from Monte-Carlo simulations, Fluid Phase Equilibr. 568 (2023) 113742.",
+    "presenting_author": "Kai Langenbach | University of Innsbruck, Austria",
+    "authors": [
+      "Joshua Marx | University of Innsbruck, Austria",
+      "Maximilian Kohns | RPTU Kaiserslautern, Germany",
+      "Kai Langenbach | University of Innsbruck, Austria"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joshua Marx",
+        "affiliation": "University of Innsbruck, Austria",
+        "designation": "Author"
+      },
+      {
+        "name": "Maximilian Kohns",
+        "affiliation": "RPTU Kaiserslautern, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Kai Langenbach",
+        "affiliation": "University of Innsbruck, Austria",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "535e",
+    "sortable_time": "2023-11-08_13:42:00_14:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663937"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/664854",
+    "paper_endpoint": "Paper/664854",
+    "paper_id": "664854",
+    "topic": "Accuracy of PR+Cosmosac Eos in Predicting Vapor Pressure with Machine Learning",
+    "title": "Accuracy of PR+Cosmosac Eos in Predicting Vapor Pressure with Machine Learning",
+    "date_time": "2023-11-08_12:30:00_15:00:00",
+    "session_id": "52786",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "535",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "Thermodynamic properties are an important piece of information for the design of chemical processes. The Peng-Robinson+COSMO-SAC equation of state [1], denoted as PR+COSMOSAC EOS, has been shown to provide reasonable prediction for thermodynamic properties of pure substances and fluid phase equilibrium of mixtures without the problem of missing parameters. Recently, there are some researches using machine learning to predict thermodynamic properties or combining it and group contribution methods to improve prediction accuracy [2]. In this work, we combine PR+COSMOSAC EOS and machine learning to improve the accuracy of it in predicting vapor pressure. The machine learning model is developed to correlate the prediction result of PR+COSMOSAC EOS. To confirm the reliability of this model, we use 10 different data sets to train the model, and each of the data sets would be trained 10 times. It is found that no matter which set it is, combining PR+COSMOSAC EOS and machine learning is more accurate than PR+COSMOSAC EOS. It indicates this model can learn the diversity of compounds and the relationship of temperature and vapor pressure. Besides, the standard deviation of 100 models is low, so the stability of this model is high. We also change the ratio of training sets to observe whether this model can still learn the diversity of compound. It is found that although the standard deviation would increase, even if the ratio of training set is changes to 0.1, the accuracy of the model is close to that of the ratio of training set is 0.9, and it also learn the diversity of compounds. Our results indicate that machine learning combined with a theoretically based model can be more effective than the machine learning model alone and also improve the accuracy of theoretical model. References [1] Wang L.-H., Hsieh C.-M., Lin. S.-T. Improved prediction of vapor pressure for pure liquids and solids from the PR+COSMOSAC equation of state. Ind. Eng. Chem. Res. 2015; 54: 10115−10125 [2] Gharagheizi, F.; Eslamimanesh, A.; Ilani-Kashkouli, P.; Mohammadi, A. H.; Richon, D., “Determination of vapor pressure of chemical compounds: a group contribution model for an extremely large database”, Ind. Eng. Chem. Res. , 51 (20), 7119-7125, 2012.",
+    "presenting_author": "Hsinghao Liang | nation taiwan unversity, Taipei",
+    "authors": [
+      "Hsinghao Liang | nation taiwan unversity, Taipei",
+      "Shiang-Tai Lin | National Taiwan University, Taipei"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hsinghao Liang",
+        "affiliation": "nation taiwan unversity, Taipei",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Shiang-Tai Lin",
+        "affiliation": "National Taiwan University, Taipei",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "535f",
+    "sortable_time": "2023-11-08_14:00:00_14:18:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/664854"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666854",
+    "paper_endpoint": "Paper/666854",
+    "paper_id": "666854",
+    "topic": "Clapeyron.Jl: An Extensible, Open-Source Fluid-Thermodynamics Toolkit",
+    "title": "Clapeyron.Jl: An Extensible, Open-Source Fluid-Thermodynamics Toolkit",
+    "date_time": "2023-11-08_12:30:00_15:00:00",
+    "session_id": "52786",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "535",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "Thermodynamic models are essential for characterising complex systems, including natural gas, electrolyte, polymer, pharmaceutical, and biological systems. However, the historically challenging and cumbersome implementations of these models have restricted access to black-box commercial tools. Clapeyron.jl represents a groundbreaking open-source fluid-thermodynamics toolkit for developing and utilising thermodynamic models. Built-in Julia, a modern language for scientific computing known for its ease of use, extensibility, and first-class support for differentiable programming, Clapeyron.jl has simplified access to thermodynamic modelling. Our toolkit supports more equations than any other package available, including most commonly used standard cubic (SRK, PR, PSRK, etc.), activity-coefficient (NRTL, UNIFAC, etc.), COSMO-based, and SAFT equations. We also provide a range of property estimation methods for single- and multi-component systems, including bulk, equilibrium, and critical properties. With Clapeyron.jl, researchers and enthusiasts alike can concentrate on the applications while minimising concerns about the implementation. Furthermore, Clapeyron.jl provides a mechanism for researchers in the field to implement their equations or algorithms, benchmark them, and make them available to the broader research community. This will greatly accelerate the development and acquisition of new thermodynamic tools. The future looks promising, with an ever-growing collection of models, including electrolyte approaches, chemical-reaction models, and new group-contribution approaches, planned for future Clapeyron.jl releases. Our toolkit provides a valuable and powerful resource for researchers and industry professionals alike, offering new opportunities for innovation and discovery in thermodynamics.",
+    "presenting_author": "Pierre Walker | Imperial College London, United Kingdom",
+    "authors": [
+      "Pierre Walker | Imperial College London, United Kingdom",
+      "Andrés Riedmann | University of Concepción, Chile",
+      "Paul Yew | Unaffiliated, Perak, Malaysia"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pierre Walker",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Andrés Riedmann",
+        "affiliation": "University of Concepción, Chile",
+        "designation": "Author"
+      },
+      {
+        "name": "Paul Yew",
+        "affiliation": "Unaffiliated, Perak, Malaysia",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "535g",
+    "sortable_time": "2023-11-08_14:18:00_14:36:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666854"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667793",
+    "paper_endpoint": "Paper/667793",
+    "paper_id": "667793",
+    "topic": "Activity Coefficient Acquisition with Thermodynamics-Informed Active Learning for Phase Diagram Construction",
+    "title": "Activity Coefficient Acquisition with Thermodynamics-Informed Active Learning for Phase Diagram Construction",
+    "date_time": "2023-11-08_12:30:00_15:00:00",
+    "session_id": "52786",
+    "session_title": "Thermophysical Properties and Phase Behavior I",
+    "session_number": "535",
+    "program_title": "Engineering Sciences and Fundamentals",
+    "symposium_title": "Thermodynamics and Transport Properties",
+    "abstract": "Knowledge on the activity coefficients of all components in a mixture, particularly their composition and temperature dependances, allows for the full determination of a wide range of thermodynamic properties. However, the experimental or computational determination of activity coefficients is costly, time consuming, and error prone. As such, an intermediate approach is proposed in this work using Gaussian processes (GPs) and active learning. The term “intermediate” is used to signify a model that is not fully predictive (it requires some experimental data for any given system) but not fully correlative either (it requires less data than classical models, while being non-parametric and natively handling experimental uncertainty). Working with synthetic data generated using the NRTL model on a wide temperature range (250-550 K) for several binary mixtures, the best procedures to describe activity coefficients using GPs are initially assessed, particularly on how to leverage their physical bounds and the best choice of kernels for GP-based regression. It is found that, when the GPs are trained using pure-component virtual points and against the natural logarithm of activity coefficients, 20 data points (equally distributed throughout the full composition and temperature windows) are sufficient to fully correlate the activity coefficients of all components in all systems. Moreover, the GP-predicted activity coefficients are found to simultaneously describe the vapor-liquid equilibrium (VLE), liquid-liquid equilibrium (LLE), and solid-liquid equilibrium (SLE) phase diagrams of all systems involved, even when equilibrium occurs at temperatures outside the region used to train the GPs (extrapolation). Having demonstrated the ability of GPs to accurately correlate activity coefficient data, active learning algorithms were then developed to construct phase diagrams. The idea behind this strategy is to fit a GP to a limited amount of initial data, compute its standard deviation on a composition/temperature grid, and use a standard-deviation-based metric (known as acquisition function or policy) to select the next points to probe experimentally or computationally. The use of active learning had a tremendous impact on the amount of data needed to describe the phase diagrams of all systems studied. This was most advantageous when target-specific workflows (error-propagation-based acquisition functions and standard deviations based on the estimated phase diagram at each active learning iteration) were designed to construct VLE and SLE phase diagrams, with many cases requiring as little as a single data point to obtain accurate descriptions. Moreover, the accuracy and performance of these phase-diagram-targeted active learning algorithms can be improved by selecting a tighter criterion for the acquisition function, at the expense of more training data being required. In fact, the ability to define a trade-off between accuracy and amount of data is a GP-specific advantage not offered by any other thermodynamic model and is particularly useful when fast screenings of multiple mixtures are desired. Finally, the active learning algorithms were applied to experimental case-studies, namely the SLE and VLE phase diagrams of deep eutectic solvents (choline chloride/urea, thymol/menthol, and thymol/TOPO), as well as single ion activity coefficients and ternary VLE phase diagrams. Not only was active learning shown to be a valuable tool to minimize the amount of data needed to describe these datasets, but GPs were also shown to be superior to NRTL due to the scarce active-learning-acquired datasets and experimental uncertainty. These results also illustrated many modifications that can be undertaken to tailor both GP formulations and active learning workflows to specific computational or experimental applications, such as different GP inputs, active learning algorithms, and stopping criteria.",
+    "presenting_author": "Dinis Abranches | University of Notre Dame, IN",
+    "authors": [
+      "Dinis Abranches | University of Notre Dame, IN",
+      "Edward Maginn | University of Notre Dame, IN",
+      "Yamil Colón | University of Notre Dame, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dinis Abranches",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Edward Maginn",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Yamil Colón",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "535h",
+    "sortable_time": "2023-11-08_14:36:00_14:54:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667793"
+  }
+]

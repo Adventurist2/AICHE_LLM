@@ -1,0 +1,297 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648551",
+    "paper_endpoint": "Paper/648551",
+    "paper_id": "648551",
+    "topic": "New Measures for Shaping Trajectories in Dynamic Optimization",
+    "title": "New Measures for Shaping Trajectories in Dynamic Optimization",
+    "date_time": "2022-11-15_08:00:00_10:30:00",
+    "session_id": "49199",
+    "session_title": "Advances in Nonlinear and Surrogate Optimization",
+    "session_number": "234",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Dynamic optimization (DO) is sub-field of infinite-dimensional optimization where decision variables are defined on (indexed over) temporal domains [1]. DO encompasses a wide breadth of problem classes such as optimal control [2], model predictive control [3], and parameter estimation of dynamic systems [4]. Problems in DO typically employ the Bolza objective which minimizes the integral of the cost trajectory [5]. This has the effect of uniformly penalizing the cost function over the span of the temporal domain. However, we can envision more advanced DO formulations that aim to shape the cost trajectory with other measures (e.g., peak or excursion costs). For example, Risbeck and Rawlings recently proposed an MPC objective that penalizes the total and peak costs [6]. Risk measures denote modeling constructs in stochastic optimization (SO), another sub-field of infinite-dimensional optimization, that are summarizing statistics (e.g., average, variance, quantiles, worst-case values) that are used to shape the probability density of random cost and constraint functions [7]. These were originally motivated by financial SO problems that sought to manipulate random cost functions in desirable ways (e.g., minimize the impact of extreme events). Following our unifying abstraction for infinite-dimensional optimization (InfiniteOpt) problems in [1], we have shown that DO problems are analogous to (and special cases of) two-stage stochastic programs [8]. Here, a key observation is that the Bolza objective integral from DO and risk measures from SO can be commonly abstracted as measure operators that scalarize infinite-dimensional variables/functions. This connection presents the opportunity for us to transfer risk measures (and their rich theory) from SO to a DO context. In this talk, we propose a new class of measures for shaping time-dependent trajectories in DO that arise from time-valued analogues to risk measures used in SO [8]. We show that this extensive collection of measures provides us with significant flexibility in modeling DO problems, and we show how these can be applied in DO for computing and manipulating interesting features of time-dependent trajectories (e.g., excursion costs and quantiles). Moreover, we establish properties for risk measures in a DO context. We also discuss how to implement these measures in the Julia modeling package InfiniteOpt.jl which we demonstrate via a case study in optimal pandemic isolation policy design. References: [1] Pulsipher, Joshua L., Weiqi Zhang, Tyler J. Hongisto, and Victor M. Zavala. \"A unifying modeling abstraction for infinite-dimensional optimization.\" Computers & Chemical Engineering 156 (2022): 107567. [2] Lewis, Frank L., Draguna Vrabie, and Vassilis L. Syrmos. “Optimal control.” John Wiley & Sons (2012). [3] Rawlings, James Blake, David Q. Mayne, and Moritz Diehl. “Model predictive control: theory, computation, and design.” Vol. 2. Madison: Nob Hill Publishing (2017). [4] Shin, Sungho, Ophelia S. Venturelli, and Victor M. Zavala. \"Scalable nonlinear programming framework for parameter estimation in dynamic biological system models .\" PLoS computational biology 15, no. 3 (2019): e1006828. [5] Bolza, Oskar. \"Über den „Anormalen Fall” beim Lagrangeschen und Mayerschen Problem mit gemischten Bedingungen und variablen Endpunkten.\" Mathematische Annalen 74, no. 3 (1913): 430-446. [6] Risbeck, Michael J., and James B. Rawlings. \"Economic model predictive control for time-varying cost and peak demand charge optimization.\" IEEE Transactions on Automatic Control 65, no. 7 (2019): 2957-2968. [7] Ruszczyński, Andrzej, and Alexander Shapiro. \"Optimization of risk measures.\" Probabilistic and randomized methods for design under uncertainty, Springer, London , (2006): 119-157. [8] Pulsipher, Joshua L., Benjamin R. Davidson, and Victor M. Zavala. \"New Measures for Shaping Trajectories in Dynamic Optimization.\" arXiv preprint arXiv:2110.07041 (2021).",
+    "presenting_author": "Joshua Pulsipher | Carnegie Mellon University, Pittsburg, PA",
+    "authors": [
+      "Joshua Pulsipher | Carnegie Mellon University, Pittsburg, PA",
+      "Benjamin Davidson | University of Wisconsin-Madison",
+      "Victor Zavala | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joshua Pulsipher",
+        "affiliation": "Carnegie Mellon University, Pittsburg, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Benjamin Davidson",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Victor Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "234a",
+    "sortable_time": "2022-11-15_08:00:00_08:18:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648551"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/642716",
+    "paper_endpoint": "Paper/642716",
+    "paper_id": "642716",
+    "topic": "An Implicit Function Formulation for Optimization of Discretized Index-1 Differential Algebraic Systems",
+    "title": "An Implicit Function Formulation for Optimization of Discretized Index-1 Differential Algebraic Systems",
+    "date_time": "2022-11-15_08:00:00_10:30:00",
+    "session_id": "49199",
+    "session_title": "Advances in Nonlinear and Surrogate Optimization",
+    "session_number": "234",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Differential algebraic equations (DAEs) are an expressive class of equations for chemical and process systems engineers. They are capable of representing processes that evolve over continuous time and/or space domains and involve nonlinear physical and chemical phenomena. Complicated interactions among differential states are often described by large numbers of highly nonlinear algebraic equations that represent the thermodynamics, chemical reactions, and transport phenomena of the system. Due to their number and complexity, the ability to simulate or optimize a large-scale DAE relies heavily on the ability to converge these algebraic equations. This work focuses on the optimization of DAE systems via second-order local optimization methods. Two contrasting approaches for DAE optimization are sequential, in which the DAE is simulated each iteration of the optimization algorithm, and simultaneous, in which the discretized DAE is converged during the optimization algorithm. Typically, sequential approaches are more robust while simultaneous approaches are less time-consuming. Simultaneous approaches are popular and accessible due to the availability of modeling and discretization tools such as IDAES [1], Pyomo.DAE [2], and InfiniteOpt [3], which are built on top of the algebraic modeling environments Pyomo and JuMP. Hybrid approaches, including multiple-shooting, have also been proposed and may offer a balance of convergence reliability and solve time. We propose a simultaneous (fully-discretized) approach in which algebraic equations are converged in an implicit function. This approach relies on the index-1 property of the DAE system and uses the implicit function theorem to automatically calculate exact first and second derivatives, which are sent to a nonlinear optimization algorithm. We expect this formulation to yield more reliable convergence as removing the algebraic variables and equations from the optimization formulation leaves it less likely to encounter regions of severe ill-conditioning or degeneracy that can lead to non-convergence. We implement this formulation using PyNumero [4], a Pyomo extension for high-level implementation of nonlinear optimization algorithms with efficient scale-dependent numerical computations. To demonstrate the potential of this formulation to yield more reliable solver convergence, we solve instances of a chemical looping combustion (CLC) dynamic optimization problem from IDAES with IPOPT. Our results, which are shown in Figure 1 for a parameter sweep of instances parameterized by solid inlet flow rate and solid conversion, demonstrate significantly improved convergence reliability over the full-space simultaneous formulation without an associated increase in solve time. In this set of 100 instances, the implicit function formulation converges all 100 instances in an average of 64 s, while the full space formulation converges 69 out of 100 instances in an average of 83 s. In this talk, we describe our formulation, including methods for function and derivative calculations, give the details of our implementation in the PyNumero software framework, and describe our results on a distillation column dynamic optimization problem, a CLC steady state simulation problem, and a CLC dynamic optimization problem. [1] Andrew Lee, Jaffer H. Ghouse, John C. Eslick, Carl D. Laird, John D. Siirola, Miguel A. Zamarripa, Dan Gunter, John H. Shinn, Alexander W. Dowling, Debangsu Bhattacharyya, Lorenz T. Biegler, Anthony P. Burgard, and David C. Miller. The IDAES process modeling framework and model libraryFlexibility for process simulation and optimization. Journal of Advanced Manufacturing and Processing, 3(3):e10095, 2021. [2] Bethany Nicholson, John D. Siirola, Jean-Paul Watson, Victor M. Zavala, and Lorenz T. Biegler. pyomo.dae: A modeling and automatic discretization framework for optimization with differ- ential and algebraic equations. Mathematical Programming Computation, 10(2):187–223, 2018. [3] Joshua L. Pulsipher, Weiqi Zhang, Tyler J. Hongisto, and Victor M. Zavala. A unifying modeling abstraction for infinite-dimensional optimization. Computers & Chemical Engineering, 156, 2022. [4] Jose Rodriguez, Robert Parker, Carl Laird, Bethany Nicholson, John Siirola, and Michael Bynum. Scalable Parallel Nonlinear Optimization with PyNumero and Parapint, 2021. Preprint at http://www.optimization-online.org/DB HTML/2021/09/8596.html.",
+    "presenting_author": "Robert Parker | Los Alamos National Laboratory, NM",
+    "authors": [
+      "Robert Parker | Los Alamos National Laboratory, NM",
+      "Bethany Nicholson | Sandia National Laboratories, Albuquerque, NM",
+      "John Siirola | Sandia National Laboratories, Albuquerque, NM",
+      "Carl Laird | Carnegie Mellon University, Pittsburgh, PA",
+      "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Robert Parker",
+        "affiliation": "Los Alamos National Laboratory, NM",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Bethany Nicholson",
+        "affiliation": "Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "John Siirola",
+        "affiliation": "Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Carl Laird",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Lorenz Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "234b",
+    "sortable_time": "2022-11-15_08:18:00_08:36:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/642716"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/655308",
+    "paper_endpoint": "Paper/655308",
+    "paper_id": "655308",
+    "topic": "Break",
+    "title": "Break",
+    "date_time": "2022-11-15_08:00:00_10:30:00",
+    "session_id": "49199",
+    "session_title": "Advances in Nonlinear and Surrogate Optimization",
+    "session_number": "234",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "",
+    "presenting_author": "",
+    "authors": [],
+    "authors_structured": [],
+    "sortable_time": "2022-11-15_08:36:00_08:54:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/655308"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/644145",
+    "paper_endpoint": "Paper/644145",
+    "paper_id": "644145",
+    "topic": "Learning to Initialize Generalized Benders Decomposition",
+    "title": "Learning to Initialize Generalized Benders Decomposition",
+    "date_time": "2022-11-15_08:00:00_10:30:00",
+    "session_id": "49199",
+    "session_title": "Advances in Nonlinear and Surrogate Optimization",
+    "session_number": "234",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Generalized Benders Decomposition (GBD) has been used widely to solve large scale mathematical optimization problems that arise in the operation of process systems [1-4]. In GBD the problem is decomposed into a master problem and a subproblem which interact though the complicating variables and are coordinated via the addition of cuts in the master problem. Despite the computational advantages over monolithic solution the implementation of GBD is nontrivial. The performance of Benders and Generalized Benders decomposition can be improved by problem reformulation which changes the structure of the problem and thus the decomposition, multicut implementation [5], cut generation and management [6-9] and initialization of the master problem [10]. In this work we will focus on the initialization of the master problem in the first iteration of the algorithm. We will assume that a problem must be solved repeatedly based on updated values of the parameters p of the problem. We will consider the case where the complicating variables are continuous and the parameters of the subproblem do not change. Under these assumptions we can discretize the domain of the complicating variables into n points, compute the cuts once and add them in the master problem every time the problem must be solved with updated values of the parameters. However, the addition of all these cuts will increase the complexity of the master problem, which might increase the computational time. Therefore, given new parameters p we must decide how many cuts to add such that the solution time is minimized. The solution time y depends on the features of the problem φ, such as values of the parameters, and the number of cuts n that are added in the master problem, i.e y = f(φ,n). Given a problem with features φ, we can find the optimal number of cuts n * by minimizing f, i.e. n * = argmin f(φ,n). However, f is not known, i.e. this is a black box optimization problem. To overcome this problem we employ tools from machine learning to learn a surrogate model g. Specifically, we generate random values of the parameters, we solve the problem with different number of cuts in the first iteration and we record the features of the problem, the number of cuts and the CPU time. These are the training data {(φ,n) i ,y i } i=1 N data . Given these data we learn the surrogate model and use it to find the optimal number of cuts, i.e. n * = argmin g(φ,n). We apply the proposed approach to closed loop scheduling and dynamic optimization. We follow the problem formulation proposed in [11], where N products must be manufactured and the time horizon is composed of N slots. The integrated problem considers all the transitions between the products simultaneously and the problem is solved using a hybrid multicut Generalized Benders Decomposition proposed in [12]. In this case the original problem is decomposed into a master problem which considers the scheduling decisions, the subproblems are nonlinear problems and the transitions between the products and the complicating variables are the transition times. We will consider the case where the system is an isothermal CSTR, five products must be manufactured, and disturbances affect the system. The integrated problem must be resolved for updated process information regarding product demand, price, inventory levels, time horizon, etc. We learn the surrogate model as described above using neural networks, decision trees and random forests as surrogate models. Once the surrogate models are trained, we generate 100 random disturbances and use the surrogate models to find the optimal number of cuts. The results show that this approach leads on average to 70 % reduction in total CPU time. The total CPU time is the summation of the solution time of the hybrid multicut GBD algorithm and the time required to decide the optimal number of cuts. Specifically, using random forests as surrogate model lead to 70.5% reduction, using the neural network in 71.71% reduction and the decision trees in 70.53% reduction in CPU time. References: [1]. Geoffrion, A.M., 1972. Generalized benders decomposition. Journal of optimization theory and applications, 10(4), pp.237-260. [2]. Chu, Y. and You, F., 2013. Integration of production scheduling and dynamic optimization for multi-product CSTRs: Generalized Benders decomposition coupled with global mixed-integer fractional programming. Computers & Chemical Engineering, 58, pp.315-333. [3]. Nie, Y., Biegler, L.T., Villa, C.M. and Wassick, J.M., 2015. Discrete time formulation for the integration of scheduling and dynamic optimization. Industrial & Engineering Chemistry Research, 54(16), pp.4303-4315. [4]. Mitrai, I. and Daoutidis, P., 2021. Efficient Solution of Enterprise-Wide Optimization Problems Using Nested Stochastic Blockmodeling. Industrial & Engineering Chemistry Research, 60(40), pp.14476-14494. [5]. You, F. and Grossmann, I.E., 2013. Multicut Benders decomposition algorithm for process supply chain planning under uncertainty. Annals of Operations Research, 210(1), pp.191-211. [6]. Saharidis, G.K. and Ierapetritou, M.G., 2010. Improving Benders decomposition using maximum feasible subsystem (MFS) cut generation strategy. Comp Chem Eng, 34(8), pp.1237-1245. [7]. Pacqueau, R., Soumis, F. and Hoang, L.N., 2012. A fast and accurate algorithm for stochastic integer programming, applied to stochastic shift scheduling. Groupe d'études et de recherche en analyse des décisions. [8]. Jia, H. and Shen, S., 2021. Benders cut classification via support vector machines for solving two-stage stochastic programs. INFORMS Journal on Optimization , 3 (3), pp.278-297.. [9]. Lee, M., Ma, N., Yu, G. and Dai, H., 2020. Accelerating generalized benders decomposition for wireless resource allocation. IEEE Transactions on Wireless Communications , 20 (2), pp.1233-1247. [10]. Saharidis, G.K., Boile, M. and Theofanis, S., 2011. Initialization of the Benders master problem using valid inequalities applied to fixed-charge network problems. Expert Systems with Applications, 38(6), pp.6627-6636. [11]. Mitrai, I., and Daoutidis, P., An adaptive multi-cut decomposition based algorithm for integrated closed loop scheduling and control, Proceedings of the 14th International Symposium on Process Systems Engineering – PSE 2021+, accepted [12]. Mitrai, I., and Daoutidis, P., A hybrid multicut Generalized Benders Decomposition for the integration of process operations and dynamic optimization, under review",
+    "presenting_author": "Ilias Mitrai | The University of Texas at Austin, TX",
+    "authors": [
+      "Ilias Mitrai | The University of Texas at Austin, TX",
+      "Prodromos Daoutidis | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ilias Mitrai",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prodromos Daoutidis",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "234d",
+    "sortable_time": "2022-11-15_08:54:00_09:12:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/644145"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649338",
+    "paper_endpoint": "Paper/649338",
+    "paper_id": "649338",
+    "topic": "Global Convergence Analysis of Data-Driven Spatial Branch-and-Bound Algorithms",
+    "title": "Global Convergence Analysis of Data-Driven Spatial Branch-and-Bound Algorithms",
+    "date_time": "2022-11-15_08:00:00_10:30:00",
+    "session_id": "49199",
+    "session_title": "Advances in Nonlinear and Surrogate Optimization",
+    "session_number": "234",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Recent advancements in computing resources and processing power have enabled us to computationally simulate complex systems [1] . These high-fidelity simulations help in qualitative analysis and decision making, however, often the objective functions and the constraints are available as black-box solvers [2-5] . Machine learning (ML) surrogate models are often employed to model these high-fidelity simulations and expedite the optimization process. Nevertheless, training these ML surrogates is a challenging task and building these models often requires large amount of data. Convergence of surrogate-based methods relies on the selection of a ML model, while small changes in initialization affects the optimal solution found, there is also no information provided on the quality of the incumbent solution found [2, 6, 7] . Furthermore, these ML model parameterizations are highly subjected to the available data and slight changes in the data leads to a different surrogate model parameterization [8] . To tackle these problems, we recently proposed a data-driven equivalent of the spatial branch-and-bound (DDSBB) algorithm based on the idea of constructing convex underestimators to the data from simulations. Since these underestimators are convex and are used as relaxations and when embedded into the b&b algorithm, the search space is progressively partitioned and pruned by branching and pruning heuristics [5, 8] . More recently, we also presented PyDDSBB – an open-source Python package of the DDSBB algorithm implementation. So far, even though we have shown that the proposed approach is more consistent than other surrogate-based methods, we have only applied it in fully black-box scenarios and were unable to guarantee convergence to local and/or global optima of the underlying simulation. For these relaxations to be useful for global optimization, they must converge to the underlying black-box problem rapidly as the search space shrinks. Recent contributions in [9] investigate this for black-box functions on integer subsets but assume the convexity of the function on those integer subsets. Similarly, in [5] , an analysis was performed for smooth, twice-continuously differentiable functions. Utilizing these ideas, in the current study, we present novel results on the global convergence of our PyDDSBB method, for special classes of low-dimensional simulation-based problems stemming from chemical process design, such optimization with embedded process flowsheets and partial differential equation models. We first study convergence properties of our algorithm for the class of convex black-box problems, with respect to number of samples required and computational cost. We also study the convergence properties of our approach as we vary the upper limit on the rate of change of the objective function (i.e., Lipschitz constant), again as a function of the samples collected. We also present how the use of a multifidelity approach using multiple ensemble surrogate predictions can affect the rate of convergence, sampling, and computational cost of our algorithm. References McBride, K. and K. Sundmacher, Overview of Surrogate Modeling in Chemical Process Engineering. Chemie Ingenieur Technik, 2019. 91 (3): p. 228-239. Boukouvala, F., R. Misener, and C.A. Floudas, Global optimization advances in Mixed-Integer Nonlinear Programming, MINLP, and Constrained Derivative-Free Optimization, CDFO. European Journal of Operational Research, 2016. 252 (3): p. 701-727. Rios, L.M. and N.V. Sahinidis, Derivative-free optimization: a review of algorithms and comparison of software implementations. Journal of Global Optimization, 2013. 56 (3): p. 1247-1293. Bhosekar, A. and M.G. Ierapetritou, Advances in surrogate based modeling, feasibility analysis, and optimization: A review. Comput. Chem. Eng., 2018. 108 : p. 250-267. Song, Y., et al., Bounding convex relaxations of process models from below by tractable black-box sampling. Computers & Chemical Engineering, 2021. 153 : p. 107413. Amaran, S., et al., Simulation optimization: a review of algorithms and applications. 4OR, 2014. 12 (4): p. 301-333. Hüllen, G., et al., Managing uncertainty in data-driven simulation-based optimization. Computers & Chemical Engineering, 2020. 136 : p. 106519. Zhai, J. and F. Boukouvala, Data-driven spatial branch-and-bound algorithms for box-constrained simulation-based optimization. Journal of Global Optimization, 2022. 82 (1): p. 21-50. Larson, J., et al., A method for convex black-box integer global optimization. Journal of Global Optimization, 2021. 80 (2): p. 439-477.",
+    "presenting_author": "Suryateja Ravutla | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Suryateja Ravutla | Georgia Institute of Technology, Atlanta, GA",
+      "Jianyuan Zhai | Georgia Institute of Technology, Atlanta, GA",
+      "Fani Boukouvala | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Suryateja Ravutla",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jianyuan Zhai",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Fani Boukouvala",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "234e",
+    "sortable_time": "2022-11-15_09:12:00_09:30:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649338"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649512",
+    "paper_endpoint": "Paper/649512",
+    "paper_id": "649512",
+    "topic": "Exploiting Grey-Box Hybrid Models in Constrained Bayesian Optimization Using a Smoothed Sample Average Approximation",
+    "title": "Exploiting Grey-Box Hybrid Models in Constrained Bayesian Optimization Using a Smoothed Sample Average Approximation",
+    "date_time": "2022-11-15_08:00:00_10:30:00",
+    "session_id": "49199",
+    "session_title": "Advances in Nonlinear and Surrogate Optimization",
+    "session_number": "234",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Optimization is a crucial tool in the process system industry, as optimal solutions for key design parameters can lead to improved performance measured in terms of significant improvement in net profit, sustainability, and/or other key process indicators [1]. A typical optimization procedure not only requires access to an equation-oriented (also known as white-box ) model, but also the ability to efficiently evaluate first- and second-order derivatives of this model [2]. However, in many cases, there is at least one or more components of the model that are unknown (commonly referred to as black-box models) that prevent us from applying established derivative-based optimization methods. In such situations, one often resorts to a general-purpose derivative-free optimization (DFO) solver. DFO methods can be broadly categorized into stochastic and deterministic approaches, with stochastic approaches (e.g., genetic algorithm, particle swarm optimization) being known to require many function evaluations, which prevents them from being applied to expensive-to-evaluate functions [3]. Bayesian optimization (BO) [4] is a class of deterministic DFO methods that are specifically built to handle expensive functions that produce noisy evaluations. There are two main steps in BO: (i) the construction of a probabilistic surrogate model using Bayesian statistics and (ii) the combination of this surrogate model with an expected utility (or acquisition) function to defines the “value” of the next query point, which is maximized to decide where next to sample the expensive objective. Through proper selection of the acquisition function, this sequential optimization procedure automatically tradeoffs between exploration of regions where the surrogate model is most uncertain, and exploitation of the regions predicted to be near-optimal based on the current model. Due to recent successes in several different application domains [5], [6], [7], there has been significant interest in extending BO to settings beyond that of simply an unknown objective with known constraints. For example, two important features that are highly relevant in engineering problems are constraints and hybrid (or grey-box ) models. There has been a significant amount of work on development of constrained BO methods that can broadly categorized as either implicit or explicit. Implicit methods directly modify the acquisition function to account for constraints whereas explicit methods include additional hard constraints in the acquisition optimization sub-problem. No matter which of these methods is chosen, they all assume that the entire problem is black box in nature, meaning we have little-to-no prior information about its structure, which is rarely the case in real-world problems. It has been shown in [8] that this black-box assumption fully limits the attainable rate of convergence, such that we can expect the biggest gains in performance to be achieved when this assumption is relaxed. This concept forms the basis of most grey-box optimization algorithms that have been developed within the process systems engineering community over the past several years, e.g., [9], [10], [11], [12], [13]. Despite the prevalence of grey-box modeling/optimization, there has been limited work in grey-box (constrained) BO due to the complexities introduced when combining known equations with a probabilistic model. Our group recently proposed such a method, COBALT [14], that is applicable to any constrained grey-box optimization model whose objective and/or constraints are represented by composite functions, i.e., f(x)=g(h(x)) where g(.) and h(.) are white-box and black-box functions, respectively. In [14], we demonstrated that COBALT could achieve significant performance gains by exploiting this composite structure in a variety of test and real-world problems. However, a potential challenge with the current version of COBALT is that it uses an explicit constraint handling method based on linearization of the probabilistic surrogate model around its mean function. This approximation method greatly simplifies the constrained acquisition optimization sub-problem (by allowing us to replace complex joint chance constraints with a simple moment-based approximation); however, it makes the theoretical analysis of the algorithm more difficult and may not provide ideal performance when any of the constraints are highly nonlinear. In this talk, we develop a modified version of COBALT that overcomes the previous constraint handling limitation. In particular, we propose a novel acquisition function that directly incorporates constraints without having to define additional parameters related to the degree of “backoff” in the constraints. This acquisition is directly analogous to the expected improvement with constraints (EIC) function from [15] (which is one of the most popular acquisition functions in constrained BO) but extends it to readily account for the composite structure of the constraints. However, even when we use a Gaussian process (GP) model for the unknown portion of the objective and constraints, we cannot evaluate the modified EIC function directly since it is defined in terms of the probability of constraint satisfaction. Although we can easily estimate the required constraint satisfaction probability using the whitening transformation and sample average approximation (SAA), this estimator is non-differentiable due to the indicator functions that appear in the sample-based probability estimate. To overcome this limitation, we incorporate a smoothing function into the SAA that allows us to effectively optimize the modified EIC using state-of-the-art gradient-based optimization methods. Although this introduces some level of approximation error, we show how this error can be sequentially refined by updating the smoothing parameter that ensures the smoothing function converges to the indicator function under an appropriate limit. The resulting modified COBALT method, which is completely parameter-free, is compared to the original COBALT method along with other constrained grey-box optimization algorithms on a variety of test problems including optimization of a complex model of an ambient air & solar (AAS) power plant [16]. We will show that parameter-free version of COBALT can achieve improved performance (in terms of metrics related to sample efficiency) compared to these available alternatives. References [1] J. Herskovits, P. Mappa, E. Goulart, C. M. M. Soares, Mathematical programming models and algorithms for engineering design optimization, Computer Methods in Applied Mechanics and Engineering 194 (30-33) (2005) 3244-3268. [2] N. V. Sahinidis, BARON: A general purpose global optimization software package, Journal of Global Optimization 8 (2) (1996) 201-205. [3] L. M. Rios, N. V. Sahinidis, Derivative-free optimization: A review of algorithms and comparison of software implementations, Journal of Global Optimization 56 (3) (2013) 1247-1293. [4] B. Shahriari, K. Swersky, Z. Wang, R. P. Adams, N. De Freitas, Taking the human out of the loop: A review of Bayesian optimization, Proceedings of the IEEE 104 (1) (2015) 148-175. [5] Sorourifar, F., Makrygirgos, G., Mesbah, A., & Paulson, J. A. (2021). A data-driven automatic tuning method for MPC under uncertainty using constrained Bayesian optimization. IFAC-PapersOnLine, 54(3), 243-250. [6] Sorourifar, F., Choksi, N., & Paulson, J. A. (2021). Computationally efficient integrated design and predictive control of flexible energy systems using multi-fidelity simulation-based Bayesian optimization. Optimal Control Applications and Methods. [7] Frazier, P. I., & Wang, J. (2016). Bayesian optimization for materials design. In Information science for materials discovery and design (pp. 45-75). Springer, Cham. [8] H. Chen. Lower rate of convergence for locating a maximum of a function. The Annals of Statistics, 1330-1334, 1988. [9] J. P. Eason, L. T. Biegler, A trust region filter method for glass box/black box optimization, AIChE Journal 62 (9) (2016) 3124-3136. [10] I. Bajaj, S. S. Iyer, M. M. F. Hasan, A trust region-based two phase algorithm for constrained black-box and grey-box optimization with infeasible initial point, Computers & Chemical Engineering 116 (2018) 306-321. [11] S. H. Kim, F. Boukouvala, Surrogate-based optimization for mixed-integer nonlinear problems, Computers & Chemical Engineering 140 (2020) 106847 [12] B. Beykal, F. Boukouvala, C. A. Floudas, N. Sorek, H. Zalavadia, E. Gildin, Global optimization of grey-box computational systems using surrogate functions and application to highly constrained oil- eld operations, Computers & Chemical Engineering 114 (2018) 99-110 [13] B. Beykal, F. Boukouvala, C. A. Floudas, E. N. Pistikopoulos, Optimal design of energy systems using constrained grey-box multi-objective optimization, Computers & Chemical Engineering 116 (2018) 488-502. [14] J.A. Paulson & C. Lu. COBALT: COnstrained Bayesian optimizAtion of computationaLly expensive grey-box models exploiting derivaTive information. Computers & Chemical Engineering, 160, 107700, 2022. [15] J. R. Gardner, M. J. Kusner, Z. E. Xu, K. Q. Weinberger, and J. P. Cunningham, “Bayesian Optimization with Inequality Constraints,” vol. 32, 2014. [16] S. Yang, “Solar-driven liquid air power plant modeling , design space exploration , and multi-objective optimization,” Energy, vol. 246, p. 123324, 2022, doi: 10.1016/j.energy.2022.123324.",
+    "presenting_author": "Congwen Lu | The Ohio State University, Columbus",
+    "authors": [
+      "Congwen Lu | The Ohio State University, Columbus",
+      "Joel Paulson | The Ohio State University, Columbus"
+    ],
+    "authors_structured": [
+      {
+        "name": "Congwen Lu",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "234f",
+    "sortable_time": "2022-11-15_09:30:00_09:48:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649512"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647106",
+    "paper_endpoint": "Paper/647106",
+    "paper_id": "647106",
+    "topic": "A Novel Surrogate-Based Derivative-Free Optimization Algorithm",
+    "title": "A Novel Surrogate-Based Derivative-Free Optimization Algorithm",
+    "date_time": "2022-11-15_08:00:00_10:30:00",
+    "session_id": "49199",
+    "session_title": "Advances in Nonlinear and Surrogate Optimization",
+    "session_number": "234",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Optimization is required for several chemical engineering applications, including process design and process synthesis, operations, and supply chain management. These applications usually involve complex, high-fidelity simulations and/or physical experiments, which can both require significant resources in terms of cost and time, as well as a large computational expense to collect data. Optimization using traditional gradient-based methods is impractical for these applications because gradient information is not readily available, and approximating gradients is infeasible due to the required expense for multiple simulation evaluations or experiments. In addition, the direct use of deterministic global optimization methods is restrictive in these cases because the computational cost for obtaining data limits the total number of model runs necessary to optimize the system efficiently (Conn et al., 2009; Forrester et al., 2008). To overcome these challenges, derivative-free optimization methods can be employed. There has been considerable progress made in developing approaches for derivative-free optimization by using surrogate models to approximate any explicitly unknown relationships in the systems of interest (Boukouvala et al., 2016; Rios & Sahinidis, 2013). The surrogate approximations aim to guide the search towards the optimum of the original model. However, these algorithms can be difficult to scale to problems with high dimensionality (Bhosekar & Ierapetritou, 2018; Qian et al., 2016). To address this dimensionality issue, we have developed a two-tiered approach for surrogate-based optimization. The first stage aims to shrink the search space through a global search with random forests, and the second stage aims to locate the optimum via a local search within the reduced space. In its initial stage, the algorithm reduces the size of the search space by solving a series of global deterministic subproblems using random forest (RF) models (Breiman, 2001). For each subproblem, an RF model is constructed to approximate the original objective function and is iteratively updated with new sample points based on an adaptive sampling method, Optimization Directed INcremental (ODIN) sampling. ODIN adds new sample points based on a space-filling criterion and by exploiting the regions around the previously identified best solution (Smith, 2015). Previous work has demonstrated that RF models are particularly adept at identifying optimal decision variable values, even for problems with a high number of input dimensions (Williams & Cremaschi, 2021). Formulation of the trained RF model into an optimization problem results in a mixed integer linear problem (MILP). RF models consist of a collection of decision trees, with the final output for the model being the average of the predicted output for each tree in the forest (Breiman, 2001). At each iteration of the algorithm, the search space is reduced by solving the resulting RF MILP and applying the thresholds given by the decision tree rules that lead to the optimal solution as new, reduced bounds on the decision variables. Once a suitable reduction of the search space is achieved from the RF modeling stage, the next step in the DFO algorithm is to refine that solution with a local search in the now reduced search space. Candidate surrogate models for this second stage include Multivariate Adaptive Regression Splines (MARS) (Friedman, 1991) and Automated Learning of Algebraic Models for Optimization (ALAMO) (Cozad et al., 2014) models. Similar to the first stage, a surrogate model is constructed and iteratively improved with adaptive sampling. Based on the final form of the trained surrogate model, a deterministic optimization problem is formulated and solved to refine the solution. MARS and ALAMO models result in MINLP and NLP optimization models, respectively. This presentation will introduce the details of the algorithm, discuss the selection of the appropriate surrogate modeling technique for the second stage of the algorithm, as well as for the selection of the adaptive sampling method at each stage of the algorithm. The algorithm is compared to several commonly used derivative-free optimization algorithms, including NOMAD and SNOBFIT, on a suite of optimization test functions, and these results will also be presented. References: Bhosekar, A., & Ierapetritou, M. (2018). Space mapping based derivative-free optimization framework for supply chain optimization. Computer Aided Chemical Engineering , 44, 985-990. Boukouvala, F., Misener, R., & Floudas, C. A. (2016). Global optimization advances in Mixed-Integer Nonlinear Programming, MINLP, and Constrained Derivative-Free Optimization, CDFO. European Journal of Operational Research , 252, 701-727. Breiman, L. (2001). Random forests. Machine Learning , 45, 5-32. Conn, A., Scheinberg, K., & Vicente, L. (2009). Introduction to Derivative-Free Optimization (Vol. 8). Philadelphia, PA, USA: SIAM. Cozad, A., Sahinidis, N. V., & Miller, D. C. (2014). Learning surrogate models for simulation-based optimization. Aiche Journal , 60, 2211-2227. Forrester, A., Sobester, A., & Keane, A. (2008). Engineering Design via Surrogate Modeling - A Practical Guide. Chichester: Wiley. Friedman, J. H. (1991). Multivariate Adaptive Regression Splines - Rejoinder. Annals of Statistics , 19, 123-141. Qian, H., Hu, Y., & Yu, Y. (2016). Derivative-free optimization of high-dimensional non-convex functions by sequential random embeddings. In G. Brewka (Ed.), Twenty-Fifth International Joint Conference on Artificial Intelligence (IJCAI '16) (pp. 1946-1952). New York, NY: AAAI Press. Rios, L. M., & Sahinidis, N. V. (2013). Derivative-free optimization: a review of algorithms and comparison of software implementations. Journal of Global Optimization , 56, 1247-1293. Smith, J. (2015). Computationally Assisted Biofuel Production: Hydrodynamics, Optimization, and Heuristics . University of Tulsa, Tulsa, OK. Williams, B., & Cremaschi, S. (2021). Selection of surrogate modeling techniques for surface approximation and surrogate-based optimization. Chemical Engineering Research & Design , 170, 76-89.",
+    "presenting_author": "Bianca Williams | Auburn University, AL",
+    "authors": [
+      "Bianca Williams | Auburn University, AL",
+      "Selen Cremaschi | Auburn University, AL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bianca Williams",
+        "affiliation": "Auburn University, AL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Selen Cremaschi",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "234g",
+    "sortable_time": "2022-11-15_09:48:00_10:06:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647106"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648728",
+    "paper_endpoint": "Paper/648728",
+    "paper_id": "648728",
+    "topic": "A Benders Decomposition Framework for the Optimization of Generalized Disjunctive Programming Problems with Ordered Boolean Variables",
+    "title": "A Benders Decomposition Framework for the Optimization of Generalized Disjunctive Programming Problems with Ordered Boolean Variables",
+    "date_time": "2022-11-15_08:00:00_10:30:00",
+    "session_id": "49199",
+    "session_title": "Advances in Nonlinear and Surrogate Optimization",
+    "session_number": "234",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "A current challenge in chemical process optimization is the development of reliable algorithms that can solve complex problems of industrial significance [1] . Also, the need for specialized and improved optimization techniques is increasing with the development of rigorous multi-scale models and frameworks that integrate multiple decision layers such as simultaneous design and control [2] . In this work, disjunctive nonlinear optimization problems with both continuous and logical decisions that affect the structure of the problem are considered. For instance, consider the selection between two process alternatives, e.g., reaction followed by separation vs reactive distillation. In this case, the optimization model must account for the constraints of both process alternatives through a disjunction, and it must also consider that their constraints are mutually exclusive. A modeling alternative that can deal with constraints and variables of this type is Generalized Disjunctive Programming (GDP). The key idea in GDP is to provide a logical modeling framework, where switching decisions between groups of constraints are represented through Boolean variables that activate/deactivate constraints within disjunctions [3] . GDP formulations are very general, e.g., there is an equivalent Mixed-Integer Nonlinear Programming (MINLP) representation for any GDP model [4] . Additionally, the GDP representation has multiple advantages over the classic MINLP formulation including (1) the user can explicitly indicate the relationship between Boolean variables and the constraints they activate/deactivate; (2) the model is not restricted to particular relaxations, e.g., Big-M; (3) numerical issues related to the interaction of continuous and discrete variables are avoided, e.g., zero flow issues [3,5] . GDP problems are commonly reformulated as MINLP problems and then solved using traditional MINLP techniques. However, this procedure precludes the exploitation of the GDP advantages discussed above. Thus, logic-based optimization algorithms such as Logic-based Outer Approximation (L-OA) and Logic-based Branch and Bound (L-BB) have been suggested to take advantage of GDP formulations [6,7] . The key difference between these algorithms and the traditional Outer Approximation and Branch and Bound techniques is that logic-based algorithms solve nonlinear subproblems in a reduced space, i.e., nonlinear constraints and variables related to inactive disjunctions are omitted from the subproblem model. Hence, smaller subproblems are solved at each iteration, and numerical issues related to inactive disjunctions are avoided [8] . In this work, a special case where Boolean variables in the GDP formulation follow an ordered structure is considered. This situation is common in chemical engineering applications, e.g., number of units in series/parallel in a reactor superstructure; selection of the most sensitive stage for distillation temperature control applications; number of times a task is executed during a production schedule. Henceforth, these discrete variables that define ordered discrete decisions will be referred to as external variables . Although L-OA or L-BB algorithms can be applied to solve the problems explained above, these strategies do not account for the ordered nature of discrete decisions in their solution routines. Thus, they may converge to suboptimal solutions because local solutions that can be potentially inferred from ordered Boolean decisions are ignored by these strategies. Recently, it was found that when ordered Boolean variables are explicitly accounted for as external variables , it is possible to apply a logic-based Discrete-Steepest Descent Algorithm (LD-SDA) that captures the ordered nature of the decisions. A recent study has shown that the LD-SDA performs better than logic-based and traditional MINLP algorithms when Boolean variables have an ordered structure [9] . Nevertheless, the LD-SDA requires a user-provided feasible initialization, which prohibits its application as a general-purpose solver. Moreover, it is limited to local optimization only. To alleviate these limitations, it is essential to investigate alternative logic-based strategies to solve GDP problems with Boolean variables that follow an ordered structure. The aim of this work is to introduce the Logic-based Discrete-Benders Decomposition (LD-BD) for GDP optimization problems with ordered Boolean variables . This algorithm was developed under the Logic-Based Benders Decomposition framework [10] , which allowed to generalize the Benders Decomposition algorithm to nonlinear GDP problems with ordered Boolean variables. The LD-BD iteratively solves a master problem and a subproblem until convergence. The master problem fixes the value of Boolean variables, and the subproblem solves the Nonlinear Programming (NLP) problem with fixed Boolean variables in a reduced space, i.e., constraints in inactive disjunctions are ignored. Then, the subproblem computes Benders cuts (i.e., constraints) which are passed to the master problem to obtain a new fixed value of Boolean variables in a new iteration. The algorithm stops when the objective functions from the master problem and the subproblem are within a tolerance criterion. This work presents a novel strategy to obtain Benders cuts based on the solution of the subproblem and the NLPs obtained after fixing the Boolean variables within a neighborhood of the current subproblem. This neighborhood can be defined thanks to the ordered representation of Boolean variables through external variables . In addition, Benders cuts calculated at each iteration are constantly refined such that suboptimal solutions are avoided [11] . Also, a pre-processing step is implemented to obtain a starting feasible solution through the minimization of an infeasibility measure, which allows to guarantee convergence when initializing the problem from an infeasible point. To increase the likelihood of convergence to the global optimum, the LD-BD can be warm-started using random sampling strategies. Overall, these characteristics make the LD-BD an improved solution strategy relative to the LD-SDA for GDP problems with ordered Boolean variables. The LD-BD strategy was applied to the optimal synthesis of two case studies available in the literature. The first case study is a conventional distillation column that separates an equimolar mixture of benzene and toluene; the objective of this case study is to optimize the process economics [5] . In this case, Boolean variables represent the feed location and the number of stages. To test the performance of the LD-BD to handle discrete decisions, the problem was initialized from multiple feasible and infeasible configurations of the Boolean variables. The results show that, in contrast to the L-OA, L-BB, and LD-SDA methods, the LD-BD was able to converge to the global optimum from every initialization in shorter computational times than those reported by L-OA and L-BB. Thus, although the LD-BD is a local optimization strategy, it converges to better solutions than those obtained by the currently available local logic-based solvers. The warm-start capabilities of the LD-BD were tested with a second case study that considers the optimization of multiple CSTRs in series with a recycle [9] . In this case, Boolean variables represent the number of reactors in series and the location of the recycle. The results show that finding the global optimum highly depends on the number of random points sampled. Based on the above, the proposed LD-BD method is a reliable strategy to solve optimal synthesis problems with ordered discrete decisions that emerge in chemical engineering applications. References [1] E.N. Pistikopoulos, A. Barbosa-Povoa, J.H. Lee, R. Misener, A. Mitsos, G.V. Reklaitis, V. Venkatasubramanian, F. You, R. Gani, Process systems engineering – The generation next?, Computers & Chemical Engineering. 147 (2021) 107252. https://doi.org/10.1016/j.compchemeng.2021.107252. [2] B. Burnak, N.A. Diangelakis, E.N. Pistikopoulos, Towards the Grand Unification of Process Design, Scheduling, and Control—Utopia or Reality?, Processes. 7 (2019) 461. https://doi.org/10.3390/pr7070461. [3] M.L. Bynum, G.A. Hackebeil, W.E. Hart, C.D. Laird, B.L. Nicholson, J.D. Siirola, J.-P. Watson, D.L. Woodruff, Generalized Disjunctive Programming, in: M.L. Bynum, G.A. Hackebeil, W.E. Hart, C.D. Laird, B.L. Nicholson, J.D. Siirola, J.-P. Watson, D.L. Woodruff (Eds.), Pyomo — Optimization Modeling in Python, Springer International Publishing, Cham, 2021: pp. 171–180. https://doi.org/10.1007/978-3-030-68928-5_11. [4] I.E. Grossmann, Review of Nonlinear Mixed-Integer and Disjunctive Programming Techniques, Optimization and Engineering. 3 (2002) 227–252. https://doi.org/10.1023/A:1021039126272. [5] J.H. Ghouse, Q. Chen, M.A. Zamarripa, A. Lee, A.P. Burgard, I.E. Grossmann, D.C. Miller, A comparative study between GDP and NLP formulations for conceptual design of distillation columns, in: M.R. Eden, M.G. Ierapetritou, G.P. Towler (Eds.), Computer Aided Chemical Engineering, Elsevier, 2018: pp. 865–870. https://doi.org/10.1016/B978-0-444-64241-7.50139-7. [6] M. Türkay, I.E. Grossmann, Logic-based MINLP algorithms for the optimal synthesis of process networks, Computers & Chemical Engineering. 20 (1996) 959–978. https://doi.org/10.1016/0098-1354(95)00219-7. [7] S. Lee, I.E. Grossmann, New algorithms for nonlinear generalized disjunctive programming, Computers & Chemical Engineering. 24 (2000) 2125–2141. https://doi.org/10.1016/S0098-1354(00)00581-0. [8] Q. Chen, E.S. Johnson, D.E. Bernal, R. Valentin, S. Kale, J. Bates, J.D. Siirola, I.E. Grossmann, Pyomo.GDP: an ecosystem for logic based modeling and optimization development, Optim Eng. (2021). https://doi.org/10.1007/s11081-021-09601-7. [9] D.E. Bernal, D. Ovalle, D.A. Liñán, L.A. Ricardez-Sandoval, J.M. Gómez, I.E. Grossmann, Process Superstructure Optimization through Discrete Steepest Descent Optimization: a GDP Analysis and Applications in Process Intensification [Accepted for publication], in: Computer Aided Chemical Engineering, Elsevier, 2022. [10] J.N. Hooker, G. Ottosson, Logic-based Benders decomposition, Math. Program., Ser. A. 96 (2003) 33–60. https://doi.org/10.1007/s10107-003-0375-9. [11] G.R. Raidl, T. Baumhauer, B. Hu, Boosting an Exact Logic-Based Benders Decomposition Approach by Variable Neighborhood Search, Electronic Notes in Discrete Mathematics. 47 (2015) 149–156. https://doi.org/10.1016/j.endm.2014.11.020.",
+    "presenting_author": "Luis Ricardez-Sandoval | University of Waterloo, Canada",
+    "authors": [
+      "David Liñán | University of Waterloo, Canada",
+      "Luis Ricardez-Sandoval | University of Waterloo, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "David Liñán",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Luis Ricardez-Sandoval",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "234h",
+    "sortable_time": "2022-11-15_10:06:00_10:24:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648728"
+  }
+]

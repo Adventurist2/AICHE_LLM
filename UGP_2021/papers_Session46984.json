@@ -1,0 +1,249 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/630637",
+    "paper_endpoint": "Paper/630637",
+    "paper_id": "630637",
+    "topic": "Nonlinear Predictive Control of an Industrial Selective Catalytic Reduction Unit with Time-Varying Time Delay",
+    "title": "Nonlinear Predictive Control of an Industrial Selective Catalytic Reduction Unit with Time-Varying Time Delay",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46984",
+    "session_title": "Industrial Applications in Design and Operations",
+    "session_number": "428",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Under load-following operation of coal-fired power plants, it is challenging to control nitrogen oxide (NO x ) concentration at the outlet of selective catalytic reduction (SCR) units to comply with environmental regulations. For controlling NO x , excess ammonia (NH 3 ) that often far exceeds the stoichiometric requirement is injected in SCRs leading to NH 3 slip that gets released to the atmosphere and increases plant operating costs. In SCR units, NH 3 adsorbs on the catalyst reacting with NOx in the gas phase; it is practically impossible to measure NH 3 loading on the catalyst. Thus, even when NH 3 loading is depleting or increasing, its effect may not be reflected in the real-time outlet NO x concentration. This leads to a complex, time-varying, time-delay response that is difficult to estimate due to complex adsorption-desorption dynamics of NH 3 on the catalyst coupled with internal and external mass transfer limitations. Thus, the industry-standard feedback-augmented feedforward (FBAFF) controllers and conventional model predicative controllers exhibit poor control performance for SCR control. In this work, first a comprehensive first-principles dynamic model of the SCR unit is developed. In the existing literature, mass transfer limitations, both internal or external, have been neglected [1]–[3]. In addition, the competing NH 3 oxidation reaction, that can consume available NH 3 , particularly when the system experiences thermal disturbances, is often neglected [4]. Additionally, most of these models, including those cited previously, are validated only with lab- or bench-scale data, thus there is a distinct lack of industrial-scale validation for SCR unit models. Data-driven models that have been developed using industrial data lack the predictive capability of first-principles models [5]–[7]. In this work, a first-principles model was developed with consideration for the adsorption-desorption dynamics of NH 3 on the catalyst, the SCR reduction reaction, and the competing NH 3 oxidation reaction, as well as the internal and external mass transfer limitations inherent to the SCR system. Furthermore, the model was validated with industrial data for a wide range of load-following operating conditions to ensure the results were applicable for an industrial-sized SCR unit. In the power plants, control of the SCR is largely handled via FBAFF control using feedforward models of varying complexity coupled with a feedback trim to control NO x emissions via NH 3 injection [8]. In the literature, some applications of model predictive control (MPC) have been reported with the goals of limiting both NO x emissions and NH 3 slip, but considering very simple plant models that lack sufficient details to capture the complex SCR dynamics [9]–[11]. A few papers have considered limiting ammonia slip using a state constraint in their MPC formulations, but these formulations do not necessarily minimize NH 3 slip [12], [13]. In this work, three nonlinear MPC (NMPC) formulation are developed. In the first formulation, tight control of the outlet NO x concentration with the standard quadratic objective function is exhibited. A second NMPC is proposed using a soft constraint on the outlet NO x while minimizing the amount of NH 3 slip. Finally, a third NMPC implementation is proposed with explicit accounting for the time delay due to the adsorption-desorption dynamics. Because the time delay is unknown, a state-observer based approach is used whereby an initial estimate of the time delay based on the kinetic parameters of the SCR reactions is updated recursively. Performance of the NMPC controllers is studied with respect to industrial data for a load-following scenario with comparison drawn against a well-tuned FBAFF controller. Results are discussed from the perspective of controller performance via the standard metrics along with economic considerations in the form of reagent consumption. The study shows that when time-delay is estimated recursively, it leads to considerably superior control performance compared to other approaches especially for rapid changes in the incoming NOx flow and concentration. [1] I. Nova, L. Lietti, E. Tronconi, and P. Forzatti, “Dynamics of SCR reaction over a TiO 2-supported vanadia-tungsta commercial catalyst,” Catal. Today , vol. 60, pp. 73–82, 2000. [2] L. Lietti, I. Nova, S. Camurri, E. Tronconi, and P. Fonatti, “Dynamics of the SCR-DeNO, Reaction by the Transient-Response Method,” AIChE J. , vol. 43, no. 10, pp. 2559–2570, 1997. [3] T. Qin, T. Yang, Y. Lv, F. Hong, and Q. Yao, “Dynamic modeling for SCR system of coal fired power plant,” in Chinese Control Conference, CCC , Jul. 2016, vol. 2016-Augus, pp. 2006–2010, doi: 10.1109/ChiCC.2016.7553660. [4] E. Muñoz, P. Marín, S. Ordóñez, and F. V. Díez, “The role of reaction kinetics and mass transfer in the selective catalytic reduction of NO with NH3 in monolithic reactors,” J. Chem. Technol. Biotechnol. , vol. 90, no. 7, pp. 1299–1307, Jul. 2015, doi: 10.1002/jctb.4437. [5] Y. Lv, J. Liu, T. Yang, and D. Zeng, “A novel least squares support vector machine ensemble model for NOx emission prediction of a coal-fired boiler,” Energy , vol. 55, pp. 319–329, Jun. 2013, doi: 10.1016/j.energy.2013.02.062. [6] S. M. Safdarnejad, J. F. Tuttle, and K. M. Powell, “Dynamic modeling and optimization of a coal-fired utility boiler to forecast and minimize NOx and CO emissions simultaneously,” Comput. Chem. Eng. , vol. 124, pp. 62–79, May 2019, doi: 10.1016/j.compchemeng.2019.02.001. [7] Y. Lv, X. Lv, F. Fang, T. Yang, and C. E. Romero, “Adaptive selective catalytic reduction model development using typical operating data in coal-fired power plants,” Energy , vol. 192, Feb. 2020, doi: 10.1016/j.energy.2019.116589. [8] T. Leopold, “Tuning Ammonia Flow to Optimize SCR Performance,” Power , Jan. 12, 2010. [9] J. Zhang, B. Jia, B. Zou, X. Tian, and C. Liu, “A multiple model control method of coal-fired power plant SCR-DeNOx system,” in Communications in Computer and Information Science , 2018, vol. 925, pp. 306–313, doi: 10.1007/978-981-13-2381-2_29. [10] K. Zhang, J. Zhao, Y. Zhu, and Z. Xu, “Model predictive control case study: Selective catalytic reduction (SCR) system in coal-fired power plant,” in Chinese Control Conference, CCC , Aug. 2016, vol. 2016-August, pp. 4300–4305, doi: 10.1109/ChiCC.2016.7554021. [11] B. Shen, N. Zhao, T. Liu, F. Wu, and C. Zuo, “Modeling and simulation of selective catalytic reduction for flue gas denitration in power plants,” in Advanced Materials Research , 2012, vol. 383–390, pp. 6580–6586, doi: 10.4028/www.scientific.net/AMR.383-390.6580. [12] S. Shah, S. Abrol, S. Balram, and J. Barve, “Optimal Ammonia Injection for Emissions Control in Power Plants,” IFAC-PapersOnLine , vol. 48, no. 30, pp. 379–384, 2015, doi: 10.1016/j.ifacol.2015.12.408. [13] H. Peng, H. Shioya, and R. Zou, “A predictive control strategy for nonlinear nox decomposition process in thermal power plants,” IEEE Trans. Syst. Man, Cybern. Part A Syst. Humans , vol. 36, no. 5, pp. 904–921, 2006, doi: 10.1109/TSMCA.2005.855920.",
+    "presenting_author": "Elijah Hedrick | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Elijah Hedrick | West Virginia University, Morgantown, WV",
+      "Katherine Reynolds | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV",
+      "Stephen Zitney | National Energy Technology Laboratory, Morgantown, WV",
+      "Benjamin P. Omell | National Energy Technology Laboratory, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Elijah Hedrick",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Katherine Reynolds",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephen Zitney",
+        "affiliation": "National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Benjamin P. Omell",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "428a",
+    "sortable_time": "2021-11-10_08:00:00_08:21:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/630637"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/629433",
+    "paper_endpoint": "Paper/629433",
+    "paper_id": "629433",
+    "topic": "Mechanistic Modelling of Reactive Liquid-Liquid Extraction Towers Using Polar PC-SAFT: Industrial Validation and Optimization of Fat/Oil Hydrolysis",
+    "title": "Mechanistic Modelling of Reactive Liquid-Liquid Extraction Towers Using Polar PC-SAFT: Industrial Validation and Optimization of Fat/Oil Hydrolysis",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46984",
+    "session_title": "Industrial Applications in Design and Operations",
+    "session_number": "428",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Biorefineries provide an important alternative for petroleum-based refineries to reduce CO 2 emissions and increase the share of renewable feedstocks for the production of chemicals and fuels. Vegetable oils and animal fats are used as renewable raw materials for the production of oleochemicals. Never before in the history of the oleochemical industry have the changes been more dramatic than in the last decades. The rapid growth of palm oil, the rise of oleochemicals production in Southeast Asian Nations and an increased competition with the biofuel industry for feedstocks form a challenge for the traditional oleochemical players in Europe and North America. 1 This increased competition forces European oleochemical companies such as Oleon NV to diversify the feedstocks they process, ranging from low quality animal fat to higher quality vegetable oils. Operating a continuous installation with a variable feed composition poses significant challenges for process operation and control to ensure resource efficiency, high product yields and excellent product quality. Petroleum refineries regularly use mechanistic and statistical modelling to tackle this challenge of feedstock diversity and adapt process conditions for compositional variability of the incoming crude oil. 2 Applying these techniques to biorefineries, such as for the production of oleochemicals, could aid in utilizing variable bio-based feedstock streams more efficiently, enable the use of lower quality-grade feedstocks and improve adaptability toward future changes in demand and supply. 3 Fat/Oil hydrolysis is the first step in the production of fatty acids. On an industrial scale, oil hydrolysis is mostly performed in large splitting towers via a counter-current reactive liquid-liquid extraction, as shown in Figure 1 . The oil feed is introduced at the bottom of the tower and forms the continuous organic phase, while water is introduced at the top and forms the dispersed aqueous phase. The reaction takes place in the organic phase, and the formed glycerol is extracted via the aqueous phase. For fat/oil hydrolysis, important considerations are a high degree of hydrolysis, a high concentration of glycerol in the aqueous phase and a minimal colour degradation of the fatty acids. In the past, related process optimization was typically performed via ad-hoc experiments, neglecting possible adjustments for other feedstocks. This lack of accounting for feedstock variability highly limits an oleochemical plant’s flexibility to switch between feedstocks. Although the oleochemical industry is mature, modelling research on oil hydrolysis is scarce, due to the complexity of lipid feedstocks and the lack of data on physical properties. 4 In this work, a comprehensive process model of industrial-scale splitting towers that is able to predict the yield for oil hydrolysis is developed and used to investigate optimal processing parameters for different bio-based triglyceride feedstocks. 5 The splitting tower is represented by a compartmental model, using a cascade of continuous stirred tank reactors and liquid-liquid separators. The developed model extends the state of the art by including a variable glycerol equilibrium ratio, which is a function of the composition and temperature and is calculated using the polar version of the perturbed chain statistical association fluid theory (PPC-SAFT). 6 The group contribution method for PPC-SAFT (GC-PPC-SAFT) is used for all lipid compounds to calculate pure compound properties such as segment number m i and segment diameter σ i . 7 The liquid-liquid equilibrium estimated by PPC-SAFT is compared to more traditional property methods UNIFAC_DMD, UNIQUAC and SRK. In addition, the model accounts for the autocatalytic effect of fatty acids in hydrolysis and the isomerization of poly-unsaturated fatty acids. 8, 9 Model validation is performed using process data from three real-life splitting towers covering four feedstock types, i.e., tallow, rapeseed oil, palm oil, and palm fatty acid distillate. The splitting tower model properly estimates the degree of hydrolysis for tallow, palm, PFAD and rapeseed oil. Composition gradients of the organic phase throughout the tower show that it is crucial to properly account for the changes in the glycerol equilibrium ratio. For the hydrolysis of rapeseed oil, the calculated concentration profiles over the tower show that the reaction is slow at the bottom of the tower due to a low amount of free fatty acids in the organic phase. The reaction rate increases towards the middle, due to a better solubility of water in the organic phase and the autocatalytic effect. At the top, the reaction approaches equilibrium and thus slows down. The importance of feedstock flow rate, water/oil ratio, and temperature profile throughout the tower is analysed and confirmed by sensitivity analysis. Our results show that modifying the temperature profile may shift the reaction equilibrium toward the fatty acid product. In addition, the changed settings result in a reduced steam consumption (-8%), saving water and energy, which is equivalent to a reduction of the climate change impact by 13 kg CO 2 eq per tonne hydrolysed rapeseed oil. This knowledge is crucial for improving the energy and resource efficiency of fat/oil hydrolysis, thereby improving its economic and environmental sustainability. Overall, this work shows how process modelling can deliver a strategic advantage to oleochemical companies for understanding and operating their processes on an industrial scale. For this, the collaboration between academia and industry is essential, as it offers realistic use cases to academia and allows displaying the benefits of new developments and methodologies in process systems engineering to industry.1. 1. Biermann, U.; Bornscheuer, U. T.; Feussner, I.; Meier, M.; Metzger, J. O., Fatty Acids and their Derivatives as Renewable Platform Molecules for the Chemical Industry. Angewandte Chemie 2021 , 1-21. 2. Hsu, C. S.; Robinson, P. R., Practical advances in petroleum processing . Springer Science & Business Media: New York, 2007; Vol. 1, p 410. 3. Nachtergaele, P.; De Somer, T.; Gelaude, B.; Hogie, J.; Thybaut, J.; De Meester, S.; Drijvers, D.; Dewulf, J., Iterative Lumping Approach for representing Lipid Feedstocks in Fatty Acid Distillation Simulation and Optimization. AIChE Journal 2021 . 4. Perederic, O. A.; Cunico, L. P.; Kalakul, S.; Sarup, B.; Woodley, J. M.; Kontogeorgis, G. M.; Gani, R., Systematic identification method for data analysis and phase equilibria modelling for lipids systems. The Journal of Chemical Thermodynamics 2018, 121, 153-169. 5. Nachtergaele, P.; Sin, G.; De Meester, S.; Ruysbergh, E.; Lauwaert, J.; Dewulf, J.; Thybaut, J. W., Simulation of an Industrial-Scale Reactive Liquid-Liquid Extraction Tower using Polar PC-SAFT for Understanding and Improving the Hydrolysis of Triglycerides ACS Sustainable Chemistry & Engineering 2021 . 6. Nguyen-Huynh, D.; Passarello, J.-P.; Tobaly, P.; de Hemptinne, J.-C., Application of GC-SAFT EOS to polar systems using a segment approach. Fluid Phase Equilibria 2008, 264, (1-2), 62-75. 7. Rodriguez, G.; Beckman, E. J., Modelling phase behavior of triglycerides, diglycerides and monoglycerides related to biodiesel transesterification in mixtures of alcohols and CO2 using a polar version of PC-SAFT. Fluid Phase Equilibria 2020, 503, 112303. 8. Milliren, A. L.; Wissinger, J. C.; Gottumukala, V.; Schall, C. A., Kinetics of soybean oil hydrolysis in subcritical water. Fuel 2013, 108, 277-281. 9. Gerčar, N.; Šmidovnik, A., Kinetics of geometrical isomerization of unsaturated FA in soybean oil. Journal of the American Oil Chemists' Society 2002, 79, (5), 495-500. Figure 1 . a. Picture of one of the studied industrial-scale splitting towers (Source: Oleon NV). b. Graphical representation of the counter-current reactive liquid-liquid extraction (FA = fatty acids, GLY = Glycerol, TG = Triglycerides).",
+    "presenting_author": "Pieter Nachtergaele | Ghent University, Gent, Belgium",
+    "authors": [
+      "Pieter Nachtergaele | Ghent University, Gent, Belgium",
+      "Gurkan Sin | Technical University of Denmark, 2800 Kgs. Lyngby",
+      "Steven De Meester | Ghent University, Gent, Belgium",
+      "Ewout Ruysbergh | Oleon, Ertvelde, Belgium",
+      "Jeroen Lauwaert | Ghent University, Belgium",
+      "Jo Dewulf | Ghent University, Belgium",
+      "Joris Thybaut | Ghent University, Belgium"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pieter Nachtergaele",
+        "affiliation": "Ghent University, Gent, Belgium",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Gurkan Sin",
+        "affiliation": "Technical University of Denmark, 2800 Kgs. Lyngby",
+        "designation": "Author"
+      },
+      {
+        "name": "Steven De Meester",
+        "affiliation": "Ghent University, Gent, Belgium",
+        "designation": "Author"
+      },
+      {
+        "name": "Ewout Ruysbergh",
+        "affiliation": "Oleon, Ertvelde, Belgium",
+        "designation": "Author"
+      },
+      {
+        "name": "Jeroen Lauwaert",
+        "affiliation": "Ghent University, Belgium",
+        "designation": "Author"
+      },
+      {
+        "name": "Jo Dewulf",
+        "affiliation": "Ghent University, Belgium",
+        "designation": "Author"
+      },
+      {
+        "name": "Joris Thybaut",
+        "affiliation": "Ghent University, Belgium",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "428b",
+    "sortable_time": "2021-11-10_08:21:00_08:42:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/629433"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/624481",
+    "paper_endpoint": "Paper/624481",
+    "paper_id": "624481",
+    "topic": "A Multi-Agent and Distributed Cloud Computing Approach for Industrial Production Scheduling Model Development and Deployment",
+    "title": "A Multi-Agent and Distributed Cloud Computing Approach for Industrial Production Scheduling Model Development and Deployment",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46984",
+    "session_title": "Industrial Applications in Design and Operations",
+    "session_number": "428",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Production scheduling [1] in Dow is a complex process which involves designing production cycles for multiple production trains. A production cycle is a repeating sequence of products that satisfies forecasted demand and balances inventory and product transition costs. Different product cycle sequences and campaigns result in different transition costs. Operationally, these cycles are designed using an excel-based tool and are unrolled into complete schedules which are then adjusted dynamically week-to-week in response to actual customer demand. This process relies heavily on experienced schedulers who build up tribal knowledge over time but also experiences frequent role turnover making the retention of this knowledge a challenge for the business. Furthermore, the current technology does not handle demand allocation of products that are shared across several production trains - this is left to the expertise and judgement of the subject matter expert schedulers. The current work process produces numerous inefficiencies in terms of excess inventory levels and transition costs. In this talk, we will present a multi-agent [2] based mathematical optimization approach that allocates forecasted demand across multiple production trains and finds the detailed product cycle schedule. The overall optimization model is divided in two independent agents. The role of agent 1 is to determine optimal product demand allocations across the trains and ensure that the allocated products can be cycled through (i.e., the product graph is strongly connected [3]) to ensure feasible product transitions in the production cycle. The agent 1 iteratively loops through solving a MILP based product allocation model and a depth first search (DFS) algorithm [4] to check if the product solution is strongly connected. If the product allocation solution is not strongly connected, its corresponding binary solution is cut off in the next iteration until a strongly connected product solution is found. The role of agent 2 is to use the resulting product demand allocations from agent 1 and determine the product cycle design (such as product sequence and campaign length) and production schedule for each production trains. Simultaneous product cycle design and scheduling is computationally expensive. Agent 2 thus leverages a hybrid MILP scheduling and simulation-based approach to address the high computational complexity. Agent 2 first runs a sampling algorithm to generate candidate product sequences and campaign lengths, which are then solved in the scheduling model to determine the inventory and transition loss cost. The product cycle schedule with the least cost is then implemented in the production site. Both the demand allocation model (agent 1) and the single train detailed schedule model (agent 2) are deployed to Dow’s Azure [5] platform. These are deployed as independent Azure Machine Learning [6] pipeline endpoints. Once these endpoints are called a batch compute cluster is spun up, the models are solved, and the results returned. The demand allocation model will trigger the single train model when the optimal demand allocations are calculated without returning to the user between agent 1 and agent 2 solves. A user may also choose to execute only the single train model when they determine that a multi-train model is unnecessary. Agent 2’s sampling solution approach is distributed across the compute cluster using Anyscale’s Ray [7] package to solve each sample in parallel thus greatly reducing the solution time to that of a single sample solve time which is on the order of seconds. The models/agents were tested during a pilot phase deployment where scenarios from different production trains are run and evaluated, and model updates are made to capture all complexities. Having successfully completed this pilot, efforts are underway to scale the solution to over 50 production trains world-wide by the end of the 2022. This work demonstrates the power of combining distributed and parallel cloud computing technologies with traditional MILP models with a sampling approach which may have been impracticable for sequential solution approaches. Furthermore, the deployment and management of the independent agents is done with the help of MLOps [8] strategies which allows for the seamless and automatic testing and deployment of model updates to end users. The approach shows great promise and potential for expansion to include additional agents, potentially using additional methods like machine learning and artificial intelligence, into this multi-agent system where agents trigger other agents automatically and as needed. References: [1] Harjunkoski, Iiro, Christos T. Maravelias, Peter Bongers, Pedro M. Castro, Sebastian Engell, Ignacio E. Grossmann, John Hooker, Carlos Méndez, Guido Sand, and John Wassick. \"Scope for industrial applications of production scheduling models and solution methods.\" Computers & Chemical Engineering 62 (2014): 161-193. [2] Wooldridge, Michael. An introduction to multiagent systems . John wiley & sons, 2009. [3] Nuutila, Esko, and Eljas Soisalon-Soininen. \"On finding the strongly connected components in a directed graph.\" Information processing letters 49, no. 1 (1994): 9-14. [4] Awerbuch, Baruch. \"A new distributed depth-first-search algorithm.\" Information Processing Letters 20, no. 3 (1985): 147-150. [5] Collier, Michael, and Robin Shahan. Microsoft Azure Essentials-Fundamentals of Azure . Microsoft Press, 2015. [6] Klein, Scott. \"Azure machine learning.\" In IoT Solutions in Microsoft's Azure IoT Suite , pp. 227-252. Apress, Berkeley, CA, 2017. [7] https://www.anyscale.com/ray-open-source [8] Demystifying XOps: DataOps, MLOps, ModelOps, AIOps and Platform Ops for AI . Gartner Research. 2021",
+    "presenting_author": "Adam Kelloway | Dow, Inc, Houston, TX",
+    "authors": [
+      "Adam Kelloway | Dow, Inc, Houston, TX",
+      "Hojae Lee | Dow, Lake Jackson, TX",
+      "Apoorva Sampat | Dow Inc., Freeport, TX",
+      "John Wassick | The Dow Chemical Company, Midland"
+    ],
+    "authors_structured": [
+      {
+        "name": "Adam Kelloway",
+        "affiliation": "Dow, Inc, Houston, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Hojae Lee",
+        "affiliation": "Dow, Lake Jackson, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Apoorva Sampat",
+        "affiliation": "Dow Inc., Freeport, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "John Wassick",
+        "affiliation": "The Dow Chemical Company, Midland",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "428d",
+    "sortable_time": "2021-11-10_08:42:00_09:03:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/624481"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/626543",
+    "paper_endpoint": "Paper/626543",
+    "paper_id": "626543",
+    "topic": "A Surrogate-Based Topological Compartment Model for Counter-Current Spray Dryers.",
+    "title": "A Surrogate-Based Topological Compartment Model for Counter-Current Spray Dryers.",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46984",
+    "session_title": "Industrial Applications in Design and Operations",
+    "session_number": "428",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Surrogate-based topological compartment models have been widely used to predict the internal distribution of properties in a unit, providing comparable accuracy to CFD models but with less computational cost. In the area of particle technology, the approach has gained attention for aggregating detailed physics into process models in units such as blenders, coaters, and fluidized beds [1]. However, the use of compartment models in spray drying has been limited. To date, only hybrid data-driven and first principles-based models have been proposed for counter-current spray dryers. The two most relevant models have been developed by Process System Enterprise (PSE) [2] and Ali et al. [3]. In both cases, the fluxes were extracted from a CFD-DPM model and used as boundary conditions to a first-principles model incorporating mass and energy balances for the compartment. The main difference between the two approaches lies in the generation of the compartments and the drying model used. PSE uses homogeneous zones with different diffusion-based models available. Meanwhile Ali et al. [3] prosed a fixed compartmentalization with a combined diffusion and boiling model. The results of both showed low error against the CFD-DPM model that was used for the construction. However, a change in the operating conditions modifies the structure and fluxes, making it necessary to rerun the CFD model every time and thus limiting the reapplication of the model. To overcome these drawbacks, in this work a surrogate-based compartment model is proposed as an alternative. The surrogate-based compartment model has been generated following a step-by-step validation procedure with a decoupling of the momentum, heat, and mass transfer mechanisms as presented in [4]. In the first stage, the distribution and size of each of the zones have been identified based on the volume fraction of the particles. These zones presented in Figure 1 have been made flexible using surrogate models. In the second stage, the fluxes of particles and air between the compartments and the residence time of the particles have been modeled. Unlike previous works, a new numerical procedure has been developed for surrogates based on dimensionless groups. The methodology is based on a three-step algorithm that first selects the necessary dimensionless groups based on minimizing the Bayesian Information Criteria. The second step models the mass fluxes based on these dimensionless groups in the form of Eq. (1) and evaluates the quality of the model; an alternative statistical model is proposed if the model is not good enough. In the same way, the third step of the process generates the surrogate models for the energy fluxes, which have been evaluated under different operating conditions including the heat and mass transfer model defined as in [5]. These surrogate models have been implemented into the final model where the discrete phase is defined by means of a multi-dimensional population balance. The single droplet drying model for the particles includes diffusion and boiling mechanisms as in [5] and it is implemented employing finite differences. The model is finally solved by defining a two-way iterative scheme in Python. F=Ar a ·Re b ·...·St c (1) The model has been validated by decoupling the physics and evaluating it step-by-step. The validation against the momentum of the particles is carried out with the mean residence time of monodispersed injections. The prediction of the mean residence time shows a relative root mean square error of 7%. The validation including the heat and mass transfer is carried out with the temperature at the entrance and exit of every compartment showing an average error of 5 K and a maximum of 11 K in all the compartments evaluated. Even though the differences in predicting the mean residence time and the temperature are low, the errors are still too high to implement the agglomeration and breakage kernels as characterized in the CFD-DPM model. The relative time at which the discrete phase has a wet surface only represents around 1.6% of the total mean residence time. This high level of accuracy required results in too small feasible region for maintaining the surrogate models of the kernels. Thus, the implementation of these kernels into process or compartment models requires at least the use of a data-driven model as an intermediate step and may not yield a significant improvement in the reduction of computational cost. References [1] Rogers, A. Ierapetritou, M. (2015) Challenges and opportunities in modeling pharmaceutical manufacturing processes. Computers & Chemical Engineering, 81, 32-39. [2] Process System Enterprise (2020) Mulizonal tool and Counter-current spray drying model. gProms® Formulated Products. [3] Ali, M. Mahmud, T. Heggs, P.J. Ghadiri, M. (2020) Zonal modelling of a counter-current spray drying tower. Chemical Engineering Research and Design, 155, 180-199. [4] Hernández, B. Fraser, B. Martin de Juan, L. Martin, M. (2018) Computational fluid dynamics (CFD) modeling of swirling flows in industrial counter-current spray-drying towers under fouling conditions. Industrial & Engineering Chemistry Research, 57 (35), 11988-12002. [5] Hernandez, B. Mondragon, R. Pinto, M.A. Hernandez, L. Julia, J.E. Jarque, J.C. Chiva, S. Martin, M. (2021) Single droplet drying of detergents: Experimentation and modelling. Particuology, 58, 35-47.",
+    "presenting_author": "Borja Hernández | Universidad de Salamanca, Spain",
+    "authors": [
+      "Borja Hernández | Universidad de Salamanca, Spain",
+      "Mark Pinto | Procter & Gamble, Newcastle upon Tyne, United Kingdom",
+      "Mariano Martin | University of Salamanca, Spain"
+    ],
+    "authors_structured": [
+      {
+        "name": "Borja Hernández",
+        "affiliation": "Universidad de Salamanca, Spain",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mark Pinto",
+        "affiliation": "Procter & Gamble, Newcastle upon Tyne, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Mariano Martin",
+        "affiliation": "University of Salamanca, Spain",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "428f",
+    "sortable_time": "2021-11-10_09:03:00_09:24:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/626543"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/623023",
+    "paper_endpoint": "Paper/623023",
+    "paper_id": "623023",
+    "topic": "Optimal Design and Operation of an Organic Rankine Cycle (ORC) System Driven By Solar Energy with Sensible Thermal Energy Storage",
+    "title": "Optimal Design and Operation of an Organic Rankine Cycle (ORC) System Driven By Solar Energy with Sensible Thermal Energy Storage",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46984",
+    "session_title": "Industrial Applications in Design and Operations",
+    "session_number": "428",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Since the energy demand is rapidly increasing and climate change deteriorates, the conventional fossil fuel power generation technologies are facing challenges related to greenhouse gas emissions. Environmentally friendly and energy-efficient power generation from renewable energy is a promising way to generate electricity due to the advancements in the renewable energy field beyond hydroelectric power. Among the more recent renewable energy sources, solar energy is the most promising one because of its abundance. However, solar energy has its own weakness such as intermittency and low energy density. To overcome the intermittency of solar energy, the implementation of energy storage allows for more predictable and stable power output systems. Solar energy technologies for electricity production has proven to be a viable option for green energy production. There are a number of different potential power cycles that can convert heat into power. The most versatile and common cycle for this purpose, is the organic Rankine cycle (ORC) for solar energy utilization. Although the conventional steam Rankine cycle dominates in terms of efficiency when utilizing heat sources at temperatures of 400 centigrade or higher, these temperatures are out of reach for conventional solar collector technologies. In addition, the organic Rankine cycle is more compact and less costly compared with conventional steam Rankine cycle power plants. In this study, we investigate the optimal operation of an ORC system driven by solar energy. The main objective is to develop a model describing an organic Rankine cycle driven by solar energy with constant power output. A sensible energy storage system is configured to overcome the intermittency of solar energy. A circulating fluid that connects the solar collector and the ORC system plays a critical role in this system. The mass flow rate of the circulating fluid determines both the temperature of the circulating fluid and the amount of heat absorbed from the solar collector. Among the concentrating solar collectors, the parabolic trough collector (PTC) has reached the highest level of commercial maturity and accounts for the largest share of the current concentrated solar power market. A simulation-based optimization model is developed in this work. Process simulation of the ORC is performed in Aspen HYSYS, and the mathematical model of the energy storage system and the parabolic trough collector is developed in Matlab. The optimal operation of the system including the mass flow rate of the circulating fluid, operating conditions of the ORC, the inlet and outlet temperature of the circulating fluid are determined jointly based on this model. The control strategy of the system can be determined based on the results of this work. The efficiency of the ORC system can be maximized with the proposed system configuration.",
+    "presenting_author": "Haoshui Yu | Technical University of Denmark, Lynby",
+    "authors": [
+      "Haoshui Yu | Technical University of Denmark, Lynby",
+      "Truls Gundersen | NTNU, Trondheim, Norway",
+      "Gurkan Sin | Technical University of Denmark, 2800 Kgs. Lyngby"
+    ],
+    "authors_structured": [
+      {
+        "name": "Haoshui Yu",
+        "affiliation": "Technical University of Denmark, Lynby",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Truls Gundersen",
+        "affiliation": "NTNU, Trondheim, Norway",
+        "designation": "Author"
+      },
+      {
+        "name": "Gurkan Sin",
+        "affiliation": "Technical University of Denmark, 2800 Kgs. Lyngby",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "428g",
+    "sortable_time": "2021-11-10_09:24:00_09:45:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/623023"
+  }
+]

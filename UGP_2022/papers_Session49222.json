@@ -1,0 +1,380 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649472",
+    "paper_endpoint": "Paper/649472",
+    "paper_id": "649472",
+    "topic": "Integrated Design and NMPC-Based Control Under Uncertainty and Structural Decisions: A D-SDA and Mpcc-Based Strategy.",
+    "title": "Integrated Design and NMPC-Based Control Under Uncertainty and Structural Decisions: A D-SDA and Mpcc-Based Strategy.",
+    "date_time": "2022-11-18_08:00:00_10:30:00",
+    "session_id": "49222",
+    "session_title": "Modeling, Control and Optimization Applications",
+    "session_number": "689",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Studies on integration of design and control have demonstrated that the closed-loop performance of the process is directly affected by design decisions [1]. Linear model predictive control (MPC) represents the current state-of-the-art in industry for process control since it offers the feature to explicitly introduce constraints in the controller formulation. Conventionally, linear models are selected for the internal model in MPC (i.e., a linear MPC). However, for highly nonlinear processes, the use of a linear MPC may not be sufficient to maintain the process on target. In those cases, nonlinear MPC (NMPC) is preferred to control those systems; however, they may be computationally more expensive compared to linear MPC [2]. Recently, few works have tackled the integration of design and NMPC-based control for continuous optimization formulations. In a study presented by Hoffmann et al. [3], they implemented a fully discretized dynamic model in combination with an optimal economic NMPC for process design. Results showed notable changes in the process design when dynamic fluctuations (i.e., disturbances) and uncertainty are considered. Palma-Flores and Ricardez-Sandoval [4] implemented a back-off methodology for integrated design and NMPC-based control. They identified more economically attractive and improved control performance process designs when compared to those obtained from linear MPC and conventional PID controllers. Nevertheless, those studies have focused on the solution of continuous formulations. Problems involving discrete (structural) decisions is a challenging task. The introduction of an NMPC-based control for simultaneous design and control leads to a formulation with two decision makers, i.e., the design problem (upper-level problem) requires the control actions to accommodate the process design, while the NMPC problem (lower-level problem) requires the information of the process model to compute optimal control actions. This formulation, with co-dependent optimization problems, is often referred to as a bilevel problem formulation. Bilevel problems with integer decisions can be classified in several categories depending on the location of the integrality conditions [6]. In this work, we are focused on the solution of formulations with mixed-integer upper-level problems and continuous lower-level problems, i.e., a mixed-integer bilevel problem (MIBLP) of type IV [6]. The use of mathematical programs with complementarity constraints (MPCCs) allows the transformation of the original bilevel formulation into a single level optimization formulation. In the MPCC-based strategy, the lower-level problem is expressed in terms of the first-order Karush-Kuhn-Tucker (KKT) conditions of optimality. The resulting system of algebraic equations is embedded as constraints to the master optimization problem (i.e., the design problem). This leads to a single level mixed-integer nonlinear problem with complementarity constraints. In this work, we implement the discrete-steepest descent algorithm (D-SDA) introduced by Linan et al. [7] to handle the integer decisions in the formulation. D-SDA was proposed to optimally place units and streams over superstructures with ordered locations. In the D-SDA method, the mixed-integer problem is decomposed into a master problem and a primal sub-problem. In the master problem, the integer variables are treated as external variables. Given a feasible initialization for the integer variables, D-SDA executes a local search to optimize the process according to an objective function. In the local search, the master problem explores in the neighborhood of the integer decisions by fixing their values and solving the corresponding primal sub-problem, i.e., the MPCC-based formulation for design and control with fixed values on the integer variables. Therefore, the primal sub-problems are solved as conventional nonlinear programming problems (NLPs). This aims to determine the direction of search that provides the steepest decent in the objective function. The algorithm converges to a local optimum when the neighborhood search does not show improvement in the objective function. In general, MPCC-based formulations lead to highly degenerated formulations that are difficult to solve with conventional NLP solvers. Hence, the local search with the D-SDA approach may increase the CPU burden. To circumvent this issue, we explore first the implementation of a linearized MPCC-based formulation to carryout the local search in the D-SDA strategy. Once the steepest decent search direction is identified, the full nonlinear MPCC-based formulation is implemented for the optimization. To verify the validity of the linear neighbor search, the nonlinear formulation is evaluated with the linear solution. If the difference between the optimum value obtained from the linear model and the result of the evaluation using the nonlinear system is less than a user-defined tolerance, then the specific branch is solved by using the nonlinear formulation to determine a new neighbor solution to analyze. The proposed D-SDA approach offers the feature to avoid the solution of a relaxed MINLP to initialize the optimization search. Therefore, the D-SDA approach does not present zero flow issues (a common issue when conventional MINLP solvers are implemented), i.e., the presence of disjunctive constraints does not lead to nonconvexity issues when the integer decisions are relaxed. Our implementation is illustrated with a case study that aims to design a binary distillation column during an operation in closed-loop. We explore the effect on the initialization of the integer variables and the effectiveness of the methodology to converge to an optimum solution. The D-SDA strategy is compared with some of the existing deterministic solution strategies; in particular, state-of-the-art MIINLP solvers such as standard branch and bound (SBB). The results show that the initialization of the integer variables may lead to different local optimums. Moreover, the methodology decreased considerably the CPU time required to converge to an optimum when compared to those CPU times recorded by the conventional MINLP solvers. Hence, the proposed D-SDA methodology has the potential reduce the CPU cost for the solution of integration of design and NMPC-based control problems involving structural decisions. In addition, the use of a MPCC approach has the potential to guarantee optimality in the solution of the bilevel formulation thus making this approach attractive for simultaneous design and control. References [1] Rafiei, M., & Ricardez-Sandoval, L. A. (2020). New frontiers, challenges, and opportunities in integration of design and control for enterprise-wide sustainability. Computers & Chemical Engineering , 132 , 106610. [2] Biegler, L. T., & Thierry, D. M. (2018). Large-scale optimization formulations and strategies for nonlinear model predictive control. IFAC-PapersOnLine , 51 (20), 1-15. [3] Hoffmann, C., Esche, E., & Repke, J. U. (2019). Integration of Design and Control Based on Large-Scale Nlp Formulations and An Optimal Economic Nmpc. In Computer Aided Chemical Engineering (Vol. 47, pp. 125-130). Elsevier. [4] Palma-Flores, O., & Ricardez-Sandoval, L. A. (2022). Simultaneous design and nonlinear model predictive control under uncertainty: A back-off approach. Journal of Process Control , 110 , 45-58. [5] Julier, S. J., & Uhlmann, J. K. (2004). Unscented filtering and nonlinear estimation. Proceedings of the IEEE , 92 (3), 401-422. [6] Dempe, S., Kalashnikov, V., Pérez-Valdés, G. A., & Kalashnykova, N. (2015). Bilevel programming problems. Energy Systems. Springer, Berlin , 10 , 978-3. [7] Liñán, D. A., & Ricardez-Sandoval, L. A. (2021). Optimal design and dynamic transitions of multitask catalytic distillation columns: A Discrete-Steepest Descend Framework. Chemical Engineering and Processing-Process Intensification , 108655.",
+    "presenting_author": "Oscar Palma-Flores | University of Waterloo, Canada",
+    "authors": [
+      "Oscar Palma-Flores | University of Waterloo, Canada",
+      "Luis Ricardez-Sandoval | University of Waterloo, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Oscar Palma-Flores",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Luis Ricardez-Sandoval",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "689a",
+    "sortable_time": "2022-11-18_08:00:00_08:19:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649472"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649953",
+    "paper_endpoint": "Paper/649953",
+    "paper_id": "649953",
+    "topic": "A Systematic Safety-Oriented Process Design and Explicit Model Predictive Control Optimization Approach",
+    "title": "A Systematic Safety-Oriented Process Design and Explicit Model Predictive Control Optimization Approach",
+    "date_time": "2022-11-18_08:00:00_10:30:00",
+    "session_id": "49222",
+    "session_title": "Modeling, Control and Optimization Applications",
+    "session_number": "689",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The recent initiatives towards process design and operational innovation, such as modular process intensification and industry 4.0, have posed new challenges and opportunities to process safety [1-2]. These novel process solutions typically feature a higher degree of task integration and network interaction, which lead to more stringent requirement to ensure operational safety. To this purpose, advanced process control strategies have been leveraged towards proactive safety monitoring, management, and alarm systems with considerations of external disturbances and abnormality occurrences [3-6]. Despite these advances, key open research questions remain on: (i) How to define a metric which can quantitatively relate (multiple) process variables with the resulting process risk as a function of time? (ii) How to develop a multi-time-scale safety-oriented operational strategy which can address the temporal discrepancy for control and risk propagation? and (iii) How to develop an integrated approach for design, control, and safety optimization? To address these challenges, in this work we propose a systematic framework for risk-aware process design and control optimization based on the PAROC (PARametric Optimization and Control) framework [7]. The PAROC framework follows a step-wise procedure to generate the optimal control actions of explicit/multi-parametric model predictive control (mp-MPC), which are expressed as affine functions of the defined parametric set (e.g., disturbance, state variables, design variables). It has been extensively applied for the simultaneous design and control of chemical process systems and for the explicit fault-tolerant multi-parametric control [8-9]. In this work, the dynamic risk assessment strategy introduced by Bao et al. [10] is incorporated to quantify the process risks resulted by fault probability and severity. Thus, the upper bounds on process risk can be explicitly formulated as mp-MPC path constraints to identify the maximum set of disturbances and optimal set point selection to theoretically prevent any constraint violation through operation. The risk value can also be controlled as the output variable and/or optimized leveraging the mp-MPC dynamic optimization formulation. We investigate two classes of dynamic process systems for optimal design, control with predictive safety management: (i) fast dynamic systems – in which the MPC moving horizon estimation can be utilized to forecast the potential fault in the successive time steps, and (ii) slow dynamic systems – in which the propagation time of process risk is much longer than that of the control time scale. In this control, a two-level control structure is developed in analogy to integrated control and scheduling optimization to predict the risk evolution in longer time horizon [11]. The framework will be demonstrated on a continuous stirred tank reactor case study for the processing of methylcyclopentadienyl manganese tricarbonyl at T2 Laboratories. References [1] Yelvington, P., Gokhale, A., Grieco, W., Nara, L. (2019) The link between process safety and process intensification. Available from: https://www.aiche.org/academy/webinars/link-between-process-safety-and-process-intensification . [2] Park, S., Xu, S., Rogers, W., Pasman, H., & El-Halwagi, M. M. (2020). Incorporating inherent safety during the conceptual process design stage: A literature review. Journal of Loss Prevention in the Process Industries, 63, 104040. [3] Leveson, N. G., & Stephanopoulos, G. (2013). A system-theoretic, control-inspired view and approach to process safety. [4] Ahooyi, T. M., Soroush, M., Arbogast, J. E., Seider, W. D., & Oktem, U. G. (2016). Model‐predictive safety system for proactive detection of operation hazards. AIChE Journal, 62(6), 2024-2042. [5] Albalawi, F., Durand, H., & Christofides, P. D. (2017). Process operational safety using model predictive control based on a process Safeness Index. Computers & Chemical Engineering, 104, 76-88. [6] Venkidasalapathy, J. A., & Kravaris, C. (2020). Safety-centered process control design based on dynamic safe set. Journal of Loss Prevention in the Process Industries, 65, 104126. [7] Pistikopoulos, E. N., Diangelakis, N. A., Oberdieck, R., Papathanasiou, M. M., Nascu, I., & Sun, M. (2015). PAROC – An integrated framework and software platform for the optimisation and advanced model-based control of process systems. Chemical Engineering Science, 136, 115-138. [8] Pistikopoulos, E. N., Diangelakis, N. A., & Oberdieck, R. (2020). Multi-parametric Optimization and Control. John Wiley & Sons. [9] Onel, M., Burnak, B., & Pistikopoulos, E. N. (2019). Integrated data-driven process monitoring and explicit fault-tolerant multiparametric control. Industrial & engineering chemistry research, 59(6), 2291-2306. [10] Bao, H., Khan, F., Iqbal, T., & Chang, Y. (2011). Risk‐based fault diagnosis and safety management for process systems. Process Safety Progress, 30(1), 6-17. [11] Burnak, B., Diangelakis, N. A., Katz, J., & Pistikopoulos, E. N. (2019). Integrated process design, scheduling, and control using multiparametric programming. Computers & Chemical Engineering, 125, 164-184.",
+    "presenting_author": "Moustafa Ali | Texas A&M University, College Station, TX",
+    "authors": [
+      "Moustafa Ali | Texas A&M University, College Station, TX",
+      "Xiaoqing Cai | Texas A&M University, College Station, TX",
+      "Faisal Khan | Texas A&M University, College Station, TX",
+      "Efstratios Pistikopoulos | Texas A&M University, College Station, TX",
+      "Yuhe Tian | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Moustafa Ali",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Xiaoqing Cai",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Faisal Khan",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Efstratios Pistikopoulos",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Yuhe Tian",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "689b",
+    "sortable_time": "2022-11-18_08:19:00_08:38:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649953"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648442",
+    "paper_endpoint": "Paper/648442",
+    "paper_id": "648442",
+    "topic": "Estimation-Based Model Predictive Control with State-Dependent Objective Prioritization; An Application to a Natural Gas Combined Cycle Power Plant",
+    "title": "Estimation-Based Model Predictive Control with State-Dependent Objective Prioritization; An Application to a Natural Gas Combined Cycle Power Plant",
+    "date_time": "2022-11-18_08:00:00_10:30:00",
+    "session_id": "49222",
+    "session_title": "Modeling, Control and Optimization Applications",
+    "session_number": "689",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "For control of systems where state, input, and/or controlled variables are unmeasured or are measured, but are corrupted with high noise, an estimator-based model predictive control (EB-MPC) can result in superior performance when the estimated variables are of critical importance to the objective or constraint of the MPC. This work will present the development of an EB-MPC algorithm for a system where some of the critical disturbance inputs and constraints for the MPC are unmeasurable. This work is focused on the control of a system where objectives are prioritized based on the operating state of the plant. While multi-objective MPC (MO-MPC) considers multiple control objectives, the control objectives considered in MO-MPC are competing and therefore a compromise must be made at every instant in terms of the performance of each of the objectives. This work focuses on the control problem where there are multiple control objectives for the MPC, but they are mutually exclusive and priority of the MPC control objective changes based on the operating state of the plant. Furthermore, new manipulated or disturbance variables are added or some of the existing manipulated variables are excluded conditioned on the objective selection. The resulting MPC problem can lead to discontinuity in the optimization problem resulting in difficulty in solving the MPC optimization problem and unacceptable and poor control performance. While there are several papers that can be found in the literature on MO-MPC [1-5], to the best of our knowledge, there is currently no work available in the open literature on MPC with state-dependent objective prioritization. A generic algorithm is developed for the MPC based on the user-provided criterion/criteria for selection of the objective function. The algorithm can accommodate any number of objectives and any number of conditions for selection/exclusion of objective functions. It yields smooth transition from one objective function to another readily accommodating structural changes in the MPC, as desired, conditioned on the selected objective function thus offering favorable properties for the Jacobian and Hessian for the underlying optimization problem. The structure is flexible and can be used for simultaneous selection of multiple objectives, if desired, as opposed to a single objective based on the state of the system. The EB-MPC algorithm with state-dependent objective prioritization is developed with due consideration of synchronization errors between estimator and MPC, model mismatch, measurement noise, and prediction uncertainty for the estimated variables. The algorithm is applied to a superheater system of a natural gas combined cycle (NGCC) power plants where a water spray at the inlet of the superheater is the key manipulated variable where the key control objective under nominal condition is to maintain the outlet temperature of steam from the system. However, due to disturbances, the water spray can excessively increase leading to saturation at the inlet of the superheater. This, in turn, leads to a two-phase flow causing water hammer that can be very damaging for the plant and should be avoided. Thus, under this situation, the priority of the control objective changes to controlling the saturation at the inlet of the superheater. As the magnitude of disturbance increases further, the outlet temperature approaches the upper bound of safe equipment operation. Thus control priority changes to satisfying safety constraints. For this system, the key variables that estimator exchanges information is the heat transfer rate that is a complex function of many operating variables, thermo-physical properties, transport characteristics, and design variables. The estimator algorithm is a modified extended Kalman filter that is developed for estimation for differential algebraic systems with uncertain algebraic states. The estimator includes a detailed 2-d superheater model with rigorous models for heat exchange between the flue gas side and tube m through tube wall heat exchange and between the tube and flowing steam. Performance of the EB-MPC is evaluated for varying magnitudes of disturbances. Smooth transition from one control objective to the other with desired characteristics of the manipulated variables are observed. [1] E. C. Kerrigan and J. M. Maciejowski, “Designing model predictive controllers with prioritised constraints and objectives,” in Proceedings. IEEE International Symposium on Computer Aided Control System Design , 2002, pp. 33–38, doi: 10.1109/CACSD.2002.1036925. [2] J. Barreiro-Gomez, C. Ocampo-Martinez, and N. Quijano, “Evolutionary game-based dynamical tuning for multi-objective model predictive control,” in Lecture Notes in Control and Information Sciences , 2015, vol. 464, pp. 115–138, doi: 10.1007/978-3-319-26687-9_6. [3] C. E. Cortés, D. Sáez, F. Milla, A. Núñez, and M. Riquelme, “Hybrid predictive control for real-time optimization of public transport systems’ operations based on evolutionary multi-objective optimization,” Transp. Res. Part C Emerg. Technol. , vol. 18, no. 5, pp. 757–769, 2010, doi: 10.1016/j.trc.2009.05.016. [4] N. Ryu and S. Min, “Multiobjective optimization with an adaptive weight determination scheme using the concept of hyperplane,” Int. J. Numer. Methods Eng. , vol. 118, no. 6, pp. 303–319, 2019, doi: 10.1002/nme.6013. [5] B. M. Ticha, V. Sircoulomb, and N. Langlois, “Priority switching approach for multi-objective MPC for brandy distillation systems,” 7th Int. Conf. Control. Decis. Inf. Technol. CoDIT 2020 , pp. 1093–1098, 2020, doi: 10.1109/CoDIT49905.2020.9263917.",
+    "presenting_author": "Daniel Beahr | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Daniel Beahr | West Virginia University, Morgantown, WV",
+      "Vivek Saini | West Virginia University, Morgantown, WV",
+      "Elijah Hedrick | West Virginia University, Morgantown, WV",
+      "Sung Min Choi Hong | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daniel Beahr",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Vivek Saini",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Elijah Hedrick",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Sung Min Choi Hong",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "689c",
+    "sortable_time": "2022-11-18_08:38:00_08:57:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648442"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646920",
+    "paper_endpoint": "Paper/646920",
+    "paper_id": "646920",
+    "topic": "Single and Multi-Objective Supervisory Model Predictive Control of Steam Temperature Cycles",
+    "title": "Single and Multi-Objective Supervisory Model Predictive Control of Steam Temperature Cycles",
+    "date_time": "2022-11-18_08:00:00_10:30:00",
+    "session_id": "49222",
+    "session_title": "Modeling, Control and Optimization Applications",
+    "session_number": "689",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In supervisory control applications, advanced controllers are generally used as the preceding layer for common controllers (i.e., in programmable logic controllers, distributed control systems, etc.). In a number of applications, supervisory controllers manipulate the behavior of underlaying feedback controllers by providing estimated setpoints based on pre-defined criteria. The type of setpoints and frequency of setpoint updates may vary depending on the process and desired performance. In this work, a supervisory control system is designed for steam temperature control cycles. In particular, the supervisory layer consists of a model predictive control algorithm that includes an underlying model of the process. A parameter estimation technique is used to recursively estimate the open-loop ARX model parameters of the supervisory control loop as it operates at off-design conditions. The estimated ARX model is then provided to the model predictive control to update the controller design in order to deal with the changing states of the process. The supervisory control layer provides setpoints for proportional-integral-derivative controllers for the desuperheater outlet temperature and/or final steam temperature of a power plant steam generation process. This process consists of a drum where steam is evaporated, superheaters for increasing heat content of the generated steam, desuperheater for regulating the superheated steam temperature, and turbine-generator system for estimating the generated power 1 . The performance of the developed control scheme is evaluated considering two cases: (i) single objective control of final steam temperature; and (ii) multi-objective control of final steam temperature and desuperheater outlet steam temperature. Results for these cases, including validation of the proposed approaches with industrial and existing literature data as available, will be discussed. Reference 1 Agbleze, S., Lima, F. V., Indrawan, N., Panday, R., Pezzini, P., Bonilla-Alvarado, H., Bryden, K. M., Tucker, D., & Shadle, L. J. (2020). Modeling and control of subcritical coal-fired power plant components for fault detection. ASME 2020 Power Conference . https://doi.org/10.1115/power2020-16571",
+    "presenting_author": "Selorme Agbleze | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Selorme Agbleze | West Virginia University, Morgantown, WV",
+      "Paolo Pezzini | Electric Power Research Institute, Charlotte, NC",
+      "Lawrence J. Shadle | National Energy Technology Laboratory, Morgantown, WV",
+      "Harry Bonilla-Alvarado | Ames Laboratory, IA",
+      "Rupendranath Panday | National Energy Technology Laboratory, Morgantown, WV",
+      "Natarianto Indrawan | National Energy Technology Laboratory, Morgantown, WV",
+      "David Tucker | National Energy Technology Laboratory, Morgantown, WV",
+      "Kenneth M. Bryden | Ames Laboratory, IA",
+      "Fernando Lima | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Selorme Agbleze",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Paolo Pezzini",
+        "affiliation": "Electric Power Research Institute, Charlotte, NC",
+        "designation": "Author"
+      },
+      {
+        "name": "Lawrence J. Shadle",
+        "affiliation": "National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Harry Bonilla-Alvarado",
+        "affiliation": "Ames Laboratory, IA",
+        "designation": "Author"
+      },
+      {
+        "name": "Rupendranath Panday",
+        "affiliation": "National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Natarianto Indrawan",
+        "affiliation": "National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "David Tucker",
+        "affiliation": "National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Kenneth M. Bryden",
+        "affiliation": "Ames Laboratory, IA",
+        "designation": "Author"
+      },
+      {
+        "name": "Fernando Lima",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "689d",
+    "sortable_time": "2022-11-18_08:57:00_09:16:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646920"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/642544",
+    "paper_endpoint": "Paper/642544",
+    "paper_id": "642544",
+    "topic": "",
+    "title": "",
+    "date_time": "2022-11-18_08:00:00_10:30:00",
+    "session_id": "49222",
+    "session_title": "Modeling, Control and Optimization Applications",
+    "session_number": "689",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "",
+    "presenting_author": "",
+    "authors": [],
+    "authors_structured": [],
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": ""
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648716",
+    "paper_endpoint": "Paper/648716",
+    "paper_id": "648716",
+    "topic": "Modeling of Anaerobic Digester Using Anaerobic Digestion Model No. 1 (ADM1) in Idaes/Pyomo",
+    "title": "Modeling of Anaerobic Digester Using Anaerobic Digestion Model No. 1 (ADM1) in Idaes/Pyomo",
+    "date_time": "2022-11-18_08:00:00_10:30:00",
+    "session_id": "49222",
+    "session_title": "Modeling, Control and Optimization Applications",
+    "session_number": "689",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Anaerobic Digestion (AD) is inarguably the most widely used industrial process (or green technology) for treating various forms of waste while simultaneously producing methane-rich biogas (bioenergy) and nutrient-rich digestate (organic fertilizer) [1,2,3]. However, AD is marred by process instability under certain operating conditions, which tends to cause the process to fail [3,4]. Model-based analysis, including reactor design and control, can help alleviate these issues, by studying AD design concepts and control architectures that support stability in operation. The need for such models and the complexity of the reactions involved in AD led to the development of a generic and dynamic model called Anaerobic Digestion Model No 1 (ADM1). ADM1 is a structured model developed by the International Water Association (IWA) task group for the mathematical modeling of anaerobic digestion processes. The model has been widely applied and implemented by engineers, operators, and process technology providers for full-scale plant design, operation, process optimization, and control [5]. In this work, the ADM1 model was applied to the anaerobic digestion process of a wastewater treatment plant, with the aim of assessing the life cycle and techno-economic benefits of advanced control architectures, while also predicting the process operating conditions and performance. The ADM1 equations were implemented as differential and algebraic equations (DAE) in the modeling language of Pyomo in the user-friendly environment of IDAES. Pyomo and IDAES are algebraic modeling languages developed as Python-based open-source software packages and are used for designing, formulating, solving, and analyzing diverse sets of optimization models. The ADM1 deployed consists of 32 dynamic state concentration variables and 19 biochemical rate processes [5]. An energy balance was introduced to study temperature disturbance effects and their impact on the dynamic behavior of the AD system. The model was applied to a single-tank digester and simulation results showed that the ADM1 model could predict with good accuracy the process operating conditions such as the pH, gas flows, concentrations of effluents, temperature, methane, and carbon-dioxide contents, at different hydraulic retention times (HRTs). The amount of biogas produced over different HRTs was also determined by the model. The results obtained were validated against literature and commercial data. Acknowledgments This study was supported by the U.S. Department of Energy’s Office of Energy Efficiency and Renewable Energy (EERE) under the Advanced Manufacturing Office, Award Number DE-EE0009497. References [1] F. Boubaker, and B. C. Ridha, “Modelling of the mesophilic anaerobic co-digestion of olive mill wastewater with olive mill solid waste using anaerobic digestion model No. 1 (ADM1),” Bioresource Technology , vol. 99, pp. 6565-6577, Jan. 2008, doi: 10.1016/j.biortech.2007.11.035. [2] L. Yu, P. C. Wensel, J. Ma, and S. Chen, “Mathematical Modeling in Anaerobic Digestion (AD),” J Bioremed Biodeg , S4: 003, doi: 10.4172/2155-6199.S4-003. [3] L. A. Cruz et al., “Application of machine learning in anaerobic digestion: Perspectives and challenges,” Bioresource Technology , vol. 345, Nov. 2021, doi: 10.1016/j.biortech.2021.126433. [4] O. Bernard et. al , “Dynamical model development and parameter identification for an anaerobic wastewater treatment process,” Biotechnology and bioengineering , vol. 75, pp. 424-438, Jun. 2001, doi: 10.1002/bit.10036. [5] D. J. Batstone et al. , “The IWA Anaerobic Digestion Model No 1 (ADM1),” Water science and technology: a journal of the International Association on Water Pollution Research , vol. 45, 10, pp. 65-73, 2002.",
+    "presenting_author": "Mayowa Oladele | University of Connecticut, Storrs",
+    "authors": [
+      "Mayowa Oladele | University of Connecticut, Storrs",
+      "George Bollas | University of Connecticut, Storrs"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mayowa Oladele",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "George Bollas",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "689f",
+    "sortable_time": "2022-11-18_09:35:00_09:54:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648716"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647899",
+    "paper_endpoint": "Paper/647899",
+    "paper_id": "647899",
+    "topic": "Experimental Design for Estimating “Just-in-Time” States in Control-Oriented Behavioral Interventions for Physical Activity",
+    "title": "Experimental Design for Estimating “Just-in-Time” States in Control-Oriented Behavioral Interventions for Physical Activity",
+    "date_time": "2022-11-18_08:00:00_10:30:00",
+    "session_id": "49222",
+    "session_title": "Modeling, Control and Optimization Applications",
+    "session_number": "689",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In spite of a wealth of information available regarding the benefits of physical activity (PA) to human health, insufficient levels of PA is a major issue affecting adults worldwide. Nearly 53% of adults in the US are sedentary [1]. The lack of engagement in sufficient amounts of PA leads to deterioration of body function and is a major contributor in the rise of chronic illnesses such as heart disease, cancer, obesity, and diabetes [2]. The question remains on the best methods to support individuals to engage and maintain healthy levels of PA. Control systems engineering has proven its benefits in many fields, with its adoption in behavioral medicine representing a growing area of research [3,4]. Efforts have been diverse, which include developing process engineering dynamic models of theories of health behavior using fluid analogies for the design and implementation of experimental trials (such as Just Walk ) that enable the use of system identification principles to obtain dynamical models, and development of decision-making frameworks using Model Predictive Control towards the implementation and dissemination, on a large scale, of behavioral interventions that promote healthy levels of PA behavior [3,5,6]. Fluid analogies relying on chemical engineering principles such as conservation of mass enable mathematically representing theories of behavioral change as systems of ordinary differential equations (ODEs). In previous work, a fluid analogy representation of the Social Cognitive Theory (SCT) has been developed to describe dynamics at a daily level [5,6]. In the constructed computational model, interrelations between external stimuli including temperature, daily goals and goal attainment (depicted as inflows/outflows) and the main constructs of SCT such as behavior, self-efficacy, and behavioral outcomes (represented as inventories) have been proposed to model and predict engagement of an individual in healthy behavior. While earlier research findings have been instrumental, the scope of the work was focused on daily level dynamics and did not incorporate within-day dynamic processes in real-world settings that can facilitate (or hinder) engagement in PA. There is still a need for a better understanding of the multi-timescale dynamic processes that constitute an individual's behavior, which would allow for the prediction of the behavior over the timescales of interest, and by extension dynamic decision-making in behavioral interventions. The concept of the “just-in-time” adaptive interventions ( JITAI ) has been advanced in the field of behavioral science [7], where support is provided when the person has the need for a specific type of support, the receptivity to receive the support, and the opportunity to respond favorably to the provided support. This can facilitate the adaptation over time that yields a meaningful and sustained behavioral change. Thus, it is important to provide “just-in-time” support, which can be conceptualized as a multi-timescale problem, in which robust prediction and decision-making are needed in both the short timescale, and the longer timescale. In this work we propose an innovative experimental design to identify “just-in-time” states and multi-timescale dynamics for a digital health intervention, Just Walk JITAI [8]. The experimental design relies on concepts from control engineering and system identification leading to input signals that elicit participant response resulting in an improved understanding of JIT behavior. The design leverages and improves on prior domain knowledge about processes that influence PA in the form of a dynamical model inspired by (SCT) [3,4,5], and are incorporated in our computational model. Two input signals are designed to address two principal components of the Just Walk JITAI intervention: a multisine signal to handle goal setting, and a combination of a pseudo-random binary signal (PRBS) with a three-level random sequence for “inspiring bouts” which define JIT support provision rules for need, receptivity, and opportunity. Each signal design ensures that there is enough excitation of states along different ends of the frequency range (lower frequency for the goal setting, and higher frequency for the inspiring bouts). The orthogonal design of the signals facilitates analysis of the data. The improved SCT computational model is used in simulations to analyze plausible responses for different kinds of participants to the proposed input signal design, in order to assess the quality of the data that will be produced out of the intervention. These simulations indicate that the proposed experimental design will result in experimental data of sufficient quality to capture the multi-timescale dynamics of behavioral change and lead to improved control-oriented interventions. These ideas are currently being evaluated in the Just Walk JITAI. References: [1] Centers for Disease Control and Prevention. (2022, February 17). Adult physical inactivity prevalence maps by race/ethnicity . Centers for Disease Control and Prevention. Retrieved From https://www.cdc.gov/physicalactivity/data/inactivity-prevalence-maps/index.html [2] Saint-Maurice, P. F., Troiano, R. P., Bassett, D. R., Graubard, B. I., Carlson, S. A., Shiroma, E. J., Fulton, J. E., & Matthews, C. E. (2020). Association of Daily Step Count and step intensity with mortality among US adults. JAMA , 323 (12), 1151. https://doi.org/10.1001/jama.2020.1382 [3] Rivera, D.E., Hekler, E.B., Savage, J.S., Downs, D.S. (2018). Intensively Adaptive Interventions Using Control Systems Engineering: Two Illustrative Examples. In: Collins, L., Kugler, K. (eds) Optimization of Behavioral, Biobehavioral, and Biomedical Interventions. Statistics for Social and Behavioral Sciences . Springer, Cham. https://doi.org/10.1007/978-3-319-91776-4_5 [4] Hekler, E. B., Klasnja, P., Riley, W. T., Buman, M. P., Huberty, J., Rivera, D. E., & Martin, C. A. (2016). Agile science: Creating useful products for behavior change in the real world. Translational Behavioral Medicine , 6 (2), 317–328. https://doi.org/10.1007/s13142-016-0395-7 [5] Martin, C. A., Rivera, D. E., Hekler, E. B., Riley, W. T., Buman, M. P., Adams, M. A., & Magann, A. B. (2020). Development of a control-oriented model of social cognitive theory for optimized mhealth behavioral interventions. IEEE Transactions on Control Systems Technology , 28 (2), 331–346. https://doi.org/10.1109/tcst.2018.2873538 [6] Freigoun, M. T., Martin, C. A., Magann, A. B., Rivera, D. E., Phatak, S. S., Korinek, E. V., & Hekler, E. B. (2017). System identification of just walk: A behavioral mhealth intervention for promoting physical activity. 2017 American Control Conference (ACC) . https://doi.org/10.23919/acc.2017.7962940 [7] Perski, O., Hébert, E. T., Naughton, F., Hekler, E. B., Brown, J., &amp; Businelle, M. S. (2021). Technology‐mediated just‐in‐time adaptive interventions (JITAIS) to reduce harmful substance use: A systematic review. Addiction, 117(5), 1220–1241. https://doi.org/10.1111/add.15687 [8] U.S. Department of Health and Human Services. (n.d.). Control Systems Engineering for Counteracting Notification Fatigue: An Examination of Health Behavior Change . National Institutes of Health. Retrieved April 10, 2022, from https://reporter.nih.gov/search/4nbzE01LtkiJMuHh9psRIw/project-details/10359062 R01LM013107: National Institute of Health, National Cancer Institute.",
+    "presenting_author": "Mohamed El Mistiri | Arizona State University, Tempe, AZ",
+    "authors": [
+      "Mohamed El Mistiri | Arizona State University, Tempe, AZ",
+      "Daniel Rivera | Arizona State University, Tempe, AZ",
+      "Junghwan Park | University of California San Diego",
+      "Meelim Kim | University of California San Diego",
+      "Predrag Klasnja | University of Michigan, Ann Arbor",
+      "Eric Hekler | University of California San Diego"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mohamed El Mistiri",
+        "affiliation": "Arizona State University, Tempe, AZ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Daniel Rivera",
+        "affiliation": "Arizona State University, Tempe, AZ",
+        "designation": "Author"
+      },
+      {
+        "name": "Junghwan Park",
+        "affiliation": "University of California San Diego",
+        "designation": "Author"
+      },
+      {
+        "name": "Meelim Kim",
+        "affiliation": "University of California San Diego",
+        "designation": "Author"
+      },
+      {
+        "name": "Predrag Klasnja",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      },
+      {
+        "name": "Eric Hekler",
+        "affiliation": "University of California San Diego",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "689g",
+    "sortable_time": "2022-11-18_09:54:00_10:13:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647899"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645000",
+    "paper_endpoint": "Paper/645000",
+    "paper_id": "645000",
+    "topic": "Application of Gaussian Processes to Online Approximation of Compressor Maps for Load-Sharing Optimization",
+    "title": "Application of Gaussian Processes to Online Approximation of Compressor Maps for Load-Sharing Optimization",
+    "date_time": "2022-11-18_08:00:00_10:30:00",
+    "session_id": "49222",
+    "session_title": "Modeling, Control and Optimization Applications",
+    "session_number": "689",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Devising optimal operating strategies for a compressor station relies on the knowledge of the compressor characteristics. As the compressor characteristics change with time and use, it is necessary to provide accurate models of the characteristics that can be used in optimization of the operating strategy. We propose a new algorithm for online learning of the compressor characteristics using Gaussian Processes. The transport of natural gas along pipelines can range over several thousand kilometres resulting in severe pressure losses due to friction. These pressure losses are compensated by compressor stations at regular intervals such that the pressure of the gas is boosted to ensure adequate transport to the destination of choice. These compressors will have performance characteristics defined in the form of compressor maps, which express the efficiency of the compressor as a function of mass flow and pressure ratio. Additionally, the performance characteristics tend to differ from one machine to the other due to design differences and various degrees of degradation. In general, the compressor operating point can be manipulated to alter the compressor efficiency in order to minimize the power consumption. However, when multiple compressors are combined as part of a compressor station, all with different performance characteristics, the minimization of the power consumption of the whole station becomes a complex optimization problem referred to as load sharing optimization (LSO) [1,2,3,4,5]. LSO works as follows: the compressor station will first get a mass flowrate target for the whole station from a dispatch centre. Load sharing optimization then attempts to determine the allocation of the total flow to each of the individual compressors which minimizes the total power consumption of the station. Whilst simple in principle, the complexity of the problem arises from the fact that an accurate model of the compressor performance characteristics is necessary to achieve an accurate solution to the optimization problem. Without an up-to-date and accurate model, there is a risk that the compressor station can be operated in a sub-optimal manner due to plant-model mismatch. This is a known issue in the real-time optimization literature and several adaptation strategies have been proposed to this end [6]. Namely, three primary approaches can be classified, (i) Model-parameter adaptation or the two-step approach whereby the model parameters are estimated and updated based on output measurements from the system before the updated model is used for optimization. (ii) Modifier adaptation where the cost function and constraints are modified before optimization is performed to ensure the model and plant share the same optimality conditions. (iii) Direct input adaptation whereby the optimization problem is reformulated into a feedback control problem. Specifically, model-parameter adaptation [1,2,3] and modifier adaptation [4,5] have been previously used to address the issue of load sharing optimization applied to compressor stations. However, both approaches have their challenges. A major challenge for the modifier adaptation approach is the accurate estimation of the gradients of the cost function and/or constraints from data [5,6]. Additionally, modifier adaptation can be highly sensitive to noisy measurements which may make the approach less robust when the level of measurement noise is significant [6,7]. On the other hand, the robustness of model-parameter adaptation is reliant on the ability of the adaptation scheme to reduce the plant-model mismatch. When a parametric model is used to represent the system of interest, a structural mismatch may exist between the model and plant if the model structure is not sufficient to capture the real behaviour of the plant [6]. The challenge with compressor performance maps is that a structurally correct representation is seldom available as degradation of compressor performance typically occurs over the lifetime of the compressor. As a result, a parametric model of the compressor map, such as a polynomial expression as used in [1,2,3], may quickly begin to exhibit a structural mismatch after some time. However, [7] argues and demonstrates that if the model used is flexible enough to overcome any structural plant-model mismatch then model-parameter adaptation is a robust and reliable approach in comparison to modifier adaptation. This is especially the case when considering different degrees of plant-model mismatch as well as measurement noise. It is for this reason, we propose the use of a non-parametric model, namely Gaussian Processes (GP) to model the compressor performance characteristics. The chief advantage of using a GP is that, as a non-parametric model, no underlying assumptions regarding the functional form of the system to be represented are made. Consequently, GPs are highly flexible, and the issue of structural mismatch can be avoided while the overall plant-model mismatch can be minimized. This addresses the major limitations of the model-parameter adaptation approach [8]. For the above reasons, we propose a new algorithm that uses Gaussian Processes for online learning of the characteristics of the compressors. The performance of the new approximation is demonstrated in a case study with three compressors. The case study shows that the proposed algorithm accurately captures the characteristics of the compressors even if prior knowledge is initially unavailable. The results show that the flexible nature of Gaussian Processes allow them to adapt to the data online, making them amenable for use in real-time optimization applications. This is clearly depicted in Fig. 1 which shows the evolution of the model of a compressor map (blue surface) over a 72-hour period as data is collected from the system. The collected data is represented by the black points. The green surface represents the true plant compressor map. The red surface represents a polynomial model of the compressor map which clearly exhibits a significant mismatch with the plant. On the other hand, the blue surface represents the Gaussian Process approximation over the 72-hour period. It is clear to see that, although the Gaussian Process approximation initially exhibits a mismatch with the system, after additional data is collected, the blue surface starts to better approximate the true plant compressor map (green surface). This highlights the flexibility of using Gaussian Processes in the model-parameter adaptation approach. References [1] Cortinovis, A., Mercangöz, M., Zovadelli, M., Pareschi, D., De Marco, A. and Bittanti, S., 2016. Online performance tracking and load sharing optimization for parallel operation of gas compressors. Computers and Chemical Engineering, 88, pp.145-156. [2] Paparella, F., Dominguez, L., Cortinovis, A., Mercangoz, M., Pareschi, D. and Bittanti, S., 2013. Load sharing optimization of parallel compressors. 2013 European Control Conference (ECC). [3] Kumar, S. and Cortinovis, A., 2017. Load sharing optimization for parallel and serial compressor stations. 2017 IEEE Conference on Control Technology and Applications (CCTA). [4] Milosavljevic, P., Marchetti, A., Cortinovis, A., Faulwasser, T., Mercangöz, M. and Bonvin, D., 2020. Real-time optimization of load sharing for gas compressors in the presence of uncertainty. Applied Energy, 272, p.114883. [5] Milosavljevic, P., Cortinovis, A., Marchetti, A., Faulwasser, T., Mercangoz, M. and Bonvin, D., 2016. Optimal load sharing of parallel compressors via modifier adaptation. 2016 IEEE Conference on Control Applications (CCA). [6] Chachuat, B., Srinivasan, B. and Bonvin, D., 2009. Adaptation strategies for real-time optimization. Computers and Chemical Engineering, 33(10), pp.1557-1567. [7] Mendoza, D., Graciano, J., dos Santos Liporace, F. and Le Roux, G., 2016. Assessing the reliability of different real-time optimization methodologies. The Canadian Journal of Chemical Engineering, 94(3), pp.485-497. [8] Chanona, E., Petsagkourakis, P., Bradford, E., Graciano, J. and Chachuat, B., 2021. Real-time optimization meets Bayesian optimization and derivative-free optimization: A tale of modifier adaptation. Computers and Chemical Engineering, 147, p.107249.",
+    "presenting_author": "Akhil Ahmed | Imperial College London, United Kingdom",
+    "authors": [
+      "Akhil Ahmed | Imperial College London, United Kingdom",
+      "Marta Zagorowska | Imperial College London, United Kingdom",
+      "Antonio del Rio Chanona | Imperial College London, United Kingdom",
+      "Mehmet Mercangöz | ABB, London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Akhil Ahmed",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Marta Zagorowska",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Mehmet Mercangöz",
+        "affiliation": "ABB, London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "689h",
+    "sortable_time": "2022-11-18_10:13:00_10:32:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645000"
+  }
+]

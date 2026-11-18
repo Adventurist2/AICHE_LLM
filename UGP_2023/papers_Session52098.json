@@ -1,0 +1,260 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/664708",
+    "paper_endpoint": "Paper/664708",
+    "paper_id": "664708",
+    "topic": "A Novel Loss Function for Key Process Variables Prediction of Chemical Process Fault Prognosis",
+    "title": "A Novel Loss Function for Key Process Variables Prediction of Chemical Process Fault Prognosis",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52098",
+    "session_title": "Process monitoring & fault detection I",
+    "session_number": "487",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Abstract With the transformation of industrial production digitization and automation, process fault detection and diagnosis (FDD) has been an indispensable technical method to realize the safe and efficient production of chemical process [1]. FDD may have a long detection delay for some faults, and fault prognosis could detect the occurrence of faults in advance, which would reduce the impact [2]. Accurate prognosis of key process variables in chemical process can indicate the possible change to reduce the probability of abnormal conditions. Current state-of-the-art deep learning forecasting methods, often trained with variants of the Mean Squared Error (MSE), might lack the ability to provide sharp predictions in deterministic data context [3]. The smooth and delayed prediction results could be obtained by the classical models trained by MSE loss function, which could bring great challenges to the predictions of key variables and the fault prognosis of chemical processes. To handle these challenges, Cuturi et al. [4] proposed a learning loss building upon the dynamic time warping (DTW) discrepancy, which computed the soft-minimum and took advantage of a smoothed formulation of DTW. On this basis, Le Guen et al. [3] introduced a distortional loss including shape and time, which tried to predict a sudden change using features of shape and time of process data. The loss can improve the performance and predictions in synth and traffic datasets. Inspired by the shape criteria and soft-DTW, we proposed a novel loss function for key process variables prediction of chemical process fault prognosis. Specifically, we introduced a loss function including trend changes and shape features (LITAS) to deep learning methods. In practical industrial applications, chemical plants are in a smooth operating state in the vast majority of cases, with only rare instances of erratic fluctuations. Firstly, we increased the proportion of data containing abnormal fluctuations by dividing the datasets. Then we applied the proposed LITAS to deep learning models, such as LSTM, BiLSTM and Transformer, and trained the models based on the divided datasets. Finally in the online part, the chemical process fault prognosis was achieved by predicting the changes of process variables. This work used a real fluid catalytic cracking (FCC) dataset of a petrochemical company for application. The process data was collected in a reactor and a regenerator located in the FCC process, which assume an important role in the generation of products from the fluidization reaction and regeneration of the catalyst. The temperature of the reactor was chosen as the key process variable by the chemical plant. The experiments carried out on the real FCC dataset showed good behavior of LITAS compared to models trained with the L1, L2 and Smooth L1 loss function. LITAS could get similar results to Euclidean loss when MSE is used as the judgment criterion in the test dataset, but LITAS could obtain closer prediction results to the ground truth when the process had abnormal fluctuations. And LITAS was proved to be robust to the choice of model, which showed the ability to improve the prediction performance for fully connected networks as well as recurrent networks. In conclusion, we proposed a novel loss function LITAS for key process variables prediction of chemical process fault prognosis. And we applied the loss function to a real FCC process dataset to improve the fault prognosis capability for the key variables. References [1] Bi, X. et al. (2022). One step forward for smart chemical process fault detection and diagnosis. Computers & Chemical Engineering . DOI: 10.1016/j.compchemeng.2022.107884. [2] Bai, Y. et al. (2022). Chapter Three - Data-driven approaches: Use of digitized operational data in process safety, in Methods in Chemical Process Safety , vol. 6, Elsevier, pp. 61–99. [3] Le Guen, V. and Thome, N. (2023). Deep Time Series Forecasting With Shape and Temporal Criteria. IEEE Transactions on Pattern Analysis and Machine Intelligence . DOI: 10.1109/TPAMI.2022.3152862. [4] Cuturi, M. and Blondel, M. (2017). Soft-DTW: a Differentiable Loss Function for Time-Series. Proceedings of the 34th International Conference on Machine Learning .",
+    "presenting_author": "Yiming Bai | Tsinghua University, Beijing, China",
+    "authors": [
+      "Yiming Bai | Tsinghua University, Beijing, China",
+      "Jinsong Zhao | Tsinghua University, Beijing, China"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yiming Bai",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jinsong Zhao",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "487a",
+    "sortable_time": "2023-11-09_12:30:00_12:55:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/664708"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666868",
+    "paper_endpoint": "Paper/666868",
+    "paper_id": "666868",
+    "topic": "High-Order Non-Stationary Information Extraction for Industrial Process Monitoring Using Multi-Cointegration",
+    "title": "High-Order Non-Stationary Information Extraction for Industrial Process Monitoring Using Multi-Cointegration",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52098",
+    "session_title": "Process monitoring & fault detection I",
+    "session_number": "487",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Process monitoring has gained considerable attention in previous decades as an effective method of preventing accidents and improving the stability and safety during real-time industrial process operation. With the widespread application of Distributed Control System (DCS), a large amount of production data can be stored, which provides abundant support for data-driven process monitoring methods. Multivariate statistical process monitoring (MSPM) as a common data-driven method, has been widely used in the monitoring of stationary process. However, some process variables show significant non-stationary characteristics due to process internal mechanism and external disturbances, for which MSPM may not be applicable. Although the non-stationary trends of these variables may be various, there are long-term equilibrium relationships among them, which can be extracted by cointegration analysis (CA). Therefore, CA has already been introduced to process monitoring by monitoring the cointegration relationship among non-stationary variables. However, in industrial practice, the process non-stationarity of variables is not only contributed by linear deterministic trends, but also certain high-order process information, such as the periodic characteristics. In this way, industrial process could be high-order non-stationary, and the cointegration relationship among variables from different orders is not fully considered by traditional CA, resulting in insufficient extraction of non-stationary information. To deal with this issue, a new non-stationary process monitoring strategy based on multi-cointegration is proposed in this work to broaden the application range of CA. The variables are first classified by the differential operation and stationary test according to different integrated orders. CA is then performed on them to extract the long-term equilibrium relationships and multi-cointegration relationships, based on which the monitoring statistics is constructed to determine whether the system is faulty. The proposed strategy is validated through a numerical case and an actual industrial case, and the results compared with other non-stationary process monitoring methods demonstrate its effectiveness in monitoring non-stationary process including high-order non-stationary variables.",
+    "presenting_author": "Jingzhi Rao | Beijing University of Chemical Technology, China",
+    "authors": [
+      "Jingzhi Rao | Beijing University of Chemical Technology, China",
+      "Cheng Ji | Beijing University of Chemical Technology, China",
+      "Jingde Wang | Beijing University of Chemical Technology, China",
+      "Wei Sun | Beijing University of Chemical Technology, China",
+      "Jose A. Romagnoli | Louisiana State University, Baton Rouge, LA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jingzhi Rao",
+        "affiliation": "Beijing University of Chemical Technology, China",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Cheng Ji",
+        "affiliation": "Beijing University of Chemical Technology, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Jingde Wang",
+        "affiliation": "Beijing University of Chemical Technology, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Wei Sun",
+        "affiliation": "Beijing University of Chemical Technology, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Jose A. Romagnoli",
+        "affiliation": "Louisiana State University, Baton Rouge, LA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "487b",
+    "sortable_time": "2023-11-09_12:55:00_13:20:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666868"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667741",
+    "paper_endpoint": "Paper/667741",
+    "paper_id": "667741",
+    "topic": "Detecting Faults in Triplex Reciprocating Pumps with Synthetic Data Generated Using Simulink",
+    "title": "Detecting Faults in Triplex Reciprocating Pumps with Synthetic Data Generated Using Simulink",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52098",
+    "session_title": "Process monitoring & fault detection I",
+    "session_number": "487",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Triplex reciprocating pumps are often used in the oil and gas industries. Due to their moving parts, pumps are more prone to failure compared to static equipment such as vessels. Predictive maintenance enables engineers to service their process equipment at an optimal time whereas preventive maintenance takes a more conservative approach to maintenance scheduling which increases maintenance costs. To develop a predictive maintenance algorithm, raw equipment data is needed to extract condition indicators. To make fault detection models more robust, having enough data representing different fault types is a prerequisite. Generating fault data of expensive assets may be cost-intensive and raise safety concerns too. However, simulation tools such as Simulink and Simscape enable us to develop physics-based models of such assets, and thereby enable us to synthetically generate fault data. In this work, with a Simulink model, we generated fault and healthy data for a triplex reciprocating pump and trained classifiers to classify the type of fault. Fault data includes cylinder leaks, blocked inlet, and increased bearing friction. For each fault type, fault severity ranged from no fault to a significant fault. For different combinations of fault parameter values, simulations were run in parallel to produce a large dataset of pump output pressure, output flow, motor speed, and current. From the pump output flow, condition indicators are extracted to train a classifier to detect pump faults. Some fault conditions such as blocking fault and bearing fault were misclassified as no-fault at fault values close to nominal values. Overall, the validation accuracy was 66% and the accuracy to predict that there is a fault was 94%.",
+    "presenting_author": "Aycan Hacioglu | Mathworks, Natick",
+    "authors": [
+      "Aycan Hacioglu | Mathworks, Natick",
+      "Spandhana Gonuguntla | MathWorks, Bengaluru, India",
+      "Akhil Gopinath | MathWorks, Copenhagen, Denmark"
+    ],
+    "authors_structured": [
+      {
+        "name": "Aycan Hacioglu",
+        "affiliation": "Mathworks, Natick",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Spandhana Gonuguntla",
+        "affiliation": "MathWorks, Bengaluru, India",
+        "designation": "Author"
+      },
+      {
+        "name": "Akhil Gopinath",
+        "affiliation": "MathWorks, Copenhagen, Denmark",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "487c",
+    "sortable_time": "2023-11-09_13:20:00_13:45:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667741"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670535",
+    "paper_endpoint": "Paper/670535",
+    "paper_id": "670535",
+    "topic": "Handling Multiple Simultaneous Faults in Networked Process Control Systems Using a Data-Driven Methodology",
+    "title": "Handling Multiple Simultaneous Faults in Networked Process Control Systems Using a Data-Driven Methodology",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52098",
+    "session_title": "Process monitoring & fault detection I",
+    "session_number": "487",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Recent years have witnessed significant growth in communication and networking capabilities, accompanied with advancements in sensor and actuator manufacturing technologies. As a result, modern process control systems are designed with an extensive network of interconnected sensors and actuators over a shared communication network. The growing dependence of process operations on networked sensors and actuators increases the likelihood of faults occurring in these components, which have the potential to cause significant degradation in the achievable closed-loop control stability and performance, leading to economic losses and safety hazards. In this light, the subject of fault-tolerant control has received considerable attention over the past few decades, with a focus on the problems of fault detection, diagnosis, estimation, and accommodation in process control systems (e.g., see [1, 2, 3]). In the implementation of fault-tolerant control approaches, the problems of fault detection and fault accommodation are often treated separately in the literature. Fault detection requires distinguishing between normal process disturbances and faults, using combinations of past data and first-principles based models. In methods that primarily utilize process data, fault information is typically extracted by comparing the process state trajectory with historical process data [4]. Fault accommodation, on the other hand, has been studied in prior works in the context of traditional feedback control systems where it is assumed that the output measurements or states are continuously available to the controller. However, networked control systems wherein sensor-controller communication is discrete in nature pose challenges. The stability and performance characteristics of these systems exhibit a critical dependence on the sensor-controller communication rate, making fault accommodation more challenging. Several methods have been proposed to address the problem of sensor fault accommodation. These include passive fault-tolerant control methods [5], sensor reconfiguration-based approaches [6], performance-based accommodation of multi-rate sensor faults [7] and performance-based accommodation of sensor faults under sampling delays [8]. These approaches aim to mitigate the impact of sensor faults on the stability and performance of the closed-loop system. Nonetheless, the success of these approaches is dependent on the effectiveness of the schemes developed for detecting and identifying sensor faults. Effective fault compensation strategies often require knowledge of the existence and magnitudes of the faults. Despite recent progress on sensor fault-tolerant control, the problem of handling multiple simultaneous sensor faults still remains a challenging task. Developing robust algorithms for the detection and estimation of such faults is crucial, especially when compared to the case of systems subject to a single fault. While the problems of detection [9] and accommodation [10] in systems subject to multiple simultaneous faults have received some attention lately, the problem of estimation of multiple simultaneous sensor faults has not been rigorously addressed. Furthermore, a unified framework for the detection, estimation and accommodation of such faults remains lacking at this point. This work presents an integrated framework for the active detection, estimation and accommodation for multiple simultaneous sensor faults in networked process control systems. The framework brings together tools for data-based characterization of closed-loop stability, neural-network based fault estimation and model-based controller reconfiguration for accommodation. The region of guaranteed sensor fault-tolerance is initially characterized based on the magnitudes of the faults, the frequency of sensor-controller communication, and the parameters of the controller design. This characterization highlights the critical factors that can be employed to effectively mitigate the impact of these faults once they are detected and identified. A multi-output neural network (MONN) model is trained off-line using state measurements obtained under fault-free conditions and under various fault modes. This classification is used for detection as well as estimation of the magnitudes of the sensor faults. Once the MONN model is trained, a framework is proposed for online implementation of the integrated detection, estimation and accommodation strategy. The effectiveness of the proposed approach is demonstrated through an application to a chemical process example. References [1] Mhaskar P, Liu J, Christofides PD. Fault-Tolerant Process Control: Methods and Applications . Springer Science & Business Media. 2012. [2] Blanke M, Kinnaert M, Lunze J, Staroswiecki M. Diagnosis and Fault-Tolerant Control. Springer, 2016. [3] Amin A, Hasan K. A review of fault-tolerant control systems: Advancements and applications. Measurement . 2019;143:58–68. [4] Venkatasubramanian V, Rengaswamy R, Kavuri SN, Yin K. A review of process fault detection and diagnosis: Part III: Process history based methods. Computers & Chemical Engineering . 2003;27(3):327–346. [5] Gani A, Mhaskar P, Christofides PD. Handling sensor malfunctions in control of particulate processes. Chemical Engineering Science . 2008;63(5):1217–1229. [6] Yao Z, El-Farra NH. Performance-based sensor reconfiguration for fault-tolerant control of uncertain spatially distributed processes. IFAC Proceedings Volumes . 2014; 47(3):5193–5198. [7] Chen S, Allen JT, El-Farra NH. Model-based strategies for sensor fault accommodation in uncertain dynamic processes with multi-rate sampled measurements. Chemical Engineering Research and Design . 2019; 142: 204–213. [8] Allen J, El-Farra NH. Performance-based fault mitigation in sampled-data process systems with sensor faults and measurement delays. IFAC-PapersOnLine . 2020; 53(2):13757–13762. 21st IFAC World Congress. [9] Voutsinas S, Karolidis D, Voyiatzis I, Samarakou M. Development of a multi-output feed-forward neural network for fault detection in Photovoltaic Systems. Energy Reports . 2022;8:33–42. Technologies and Materials for Renewable Energy, Environment and Sustainability. [10] Zhao D, Polycarpou MM. Distributed fault accommodation of multiple sensor faults for a class of nonlinear interconnected systems. IEEE Transactions on Automatic Control . 2021;67(4):2092–2099.",
+    "presenting_author": "Aatam Gajjar | University of California, Davis",
+    "authors": [
+      "Aatam Gajjar | University of California, Davis",
+      "Nael El-Farra | University of California, Davis"
+    ],
+    "authors_structured": [
+      {
+        "name": "Aatam Gajjar",
+        "affiliation": "University of California, Davis",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nael El-Farra",
+        "affiliation": "University of California, Davis",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "487d",
+    "sortable_time": "2023-11-09_13:45:00_14:10:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670535"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/662597",
+    "paper_endpoint": "Paper/662597",
+    "paper_id": "662597",
+    "topic": "Path-Sampling and Machine Learning for Rare Abnormal Events",
+    "title": "Path-Sampling and Machine Learning for Rare Abnormal Events",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52098",
+    "session_title": "Process monitoring & fault detection I",
+    "session_number": "487",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Chemical manufacturing processes can pose serious dangers, and therefore, it is crucial to incorporate safety and reliability measures during their design. Indeed, to minimize the risk of catastrophic accidents, extensive instrumentation such as control systems, alarms, and safety interlocks, are employed routinely in chemical processes. Additionally, common reliability assessment methods such as failure mode and effect analysis (FMEA), fault-tree analysis (FTA), and the like, have proven to be effective in identifying and handling postulated abnormal events that have occurred previously or are more likely to occur, based on process historian data. However, it is difficult to predict and counteract the impact of infrequent and unforeseeable un-postulated abnormal events in real-time, which, when not considered during process design, can lead to the most serious consequences. Hence, existing reliability/safety systems, alone, might prove to be insufficient in monitoring and alerting the operator for un-postulated abnormal events. Over the past couple of years, we developed a novel advisory system for analyzing and monitoring process reliability, consisting of multivariable alarms and reliability systems introduced using process modeling and path-sampling for un-postulated abnormal events (Sudarshan et al., 2021; Sudarshan et al., 2022). Its purpose is to augment and support existing reliability systems, suggesting actions when unanticipated reliability/quality events are approached. While path-sampling algorithms are applied routinely in molecular dynamics to analyze rare events, our work presents the first application of such methods to analyze rare abnormal events in process safety/reliability. Our analyses were demonstrated initially on an exothermic CSTR process and led to promising alarm thresholds and reliability response actions (Sudarshan et al., 2023a). We have been extending our analyses to a polystyrene CSTR exhibiting free-radical polymerization (FRP) mechanisms, known to exhibit complex, nonlinear behavior; e.g., output multiplicity, input multiplicity, isolas, nonminimum phase behavior, and the like. Next, simple rationalization strategies were introduced, wherein the acceptability of every alarm threshold and response action was evaluated, with the alarm thresholds and/or response actions modified accordingly, based on key statistical metrics — seeking to ensure that every alarm is a quality alarm, and its response action is justified appropriately. For the exothermic CSTR, our strategies resulted in a significant reduction in the number of nuisance alarms, focusing on only quality alarms, which, if ignored, were more likely to result in an abnormal shift in operation to the undesirable regions (Sudarshan et al., 2023b). Similar rationalization strategies are being applied to the advisory system developed for the polystyrene CSTR. Additionally, the real-time performance of the rationalized alarms and reliability systems is evaluated using dynamic risk assessment, a method developed by our research group over the past two decades, in which, the risk associated is analyzed by estimating the failure probabilities of the reliability systems (Pariyani et al., 2012b; Moskowitz et al., 2015), based on multiple dynamic simulations for the process, inclusive of control, alarms and reliability systems. Expectedly, the failure probability distribution developed for the exothermic CSTR had a much lower variance as compared to one developed for a flat prior using Bayesian statistics — similar low-variance probability distributions are constructed for the rationalized alarms and safety/reliability systems for the polystyrene CSTR. Keywords: Un-postulated Abnormal Events, Path-Sampling, Advisory System, Alarms, Dynamic Risk Assessment References: Sudarshan, V., Seider, W.D., Patel, A.J., Arbogast, J.E., 2021. Understanding rare safety and reliability events using forward-flux sampling. Computers and Chemical Engineering 153 . Sudarshan, V. , Seider, W. D. , Patel, A. J. , Oktem, U. G. , Arbogast, J. E. , 2022. Alarm and Safety System Design Using Forward Flux Sampling. AIChE Annual Meeting Conference Proceedings . Sudarshan, V., Seider, W.D., Patel, A.J., Oktem, U.G., Arbogast, J.E., 2023a. Reliability Path Sampling and Dynamic Risk Analysis – Part I – Developing an Advisory System To Recognize Rare Unpostulated Reliability Events – in preparation . Sudarshan, V., Seider, W.D., Patel, A.J., Oktem, U.G., Arbogast, J.E., 2023b. Reliability Path Sampling and Dynamic Risk Analysis – Part II – Alarm Rationalization Strategies – in preparation . Pariyani, A., Seider, W.D., Oktem, U.G., Soroush, M., 2012b. Dynamic risk analysis using alarm databases to improve process safety and product quality: Part II-Bayesian analysis. AIChE Journal 58 Moskowitz, I.H., Seider, W.D., Soroush, M., Oktem, U.G., Arbogast, J.E., 2015. Chemical process simulation for dynamic risk analysis: A steam-methane reformer case study. Ind. Eng. Chem. Res 54, 4347–4359.",
+    "presenting_author": "Vikram Sudarshan | University of Pennsylvania, Philadelphia, PA",
+    "authors": [
+      "Vikram Sudarshan | University of Pennsylvania, Philadelphia, PA",
+      "Warren Seider | University of Pennsylvania, Philadelphia, PA",
+      "Amish J. Patel | University of Pennsylvania, Philadelphia, PA",
+      "Ulku Oktem | Near-Miss Management LLC, Philadelphia, PA",
+      "Jeffrey E. Arbogast | American Air Liquide, Newark"
+    ],
+    "authors_structured": [
+      {
+        "name": "Vikram Sudarshan",
+        "affiliation": "University of Pennsylvania, Philadelphia, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Warren Seider",
+        "affiliation": "University of Pennsylvania, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Amish J. Patel",
+        "affiliation": "University of Pennsylvania, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Ulku Oktem",
+        "affiliation": "Near-Miss Management LLC, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jeffrey E. Arbogast",
+        "affiliation": "American Air Liquide, Newark",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "509g",
+    "sortable_time": "2023-11-09_14:10:00_14:35:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/662597"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665043",
+    "paper_endpoint": "Paper/665043",
+    "paper_id": "665043",
+    "topic": "Model-Based Fault Diagnosis for Safety-Critical Chemical Reactors: An Experimental Study",
+    "title": "Model-Based Fault Diagnosis for Safety-Critical Chemical Reactors: An Experimental Study",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52098",
+    "session_title": "Process monitoring & fault detection I",
+    "session_number": "487",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Over the past 20 years, there has been an increased emphasis on ensuring safety in process industries, leading to a growing interest in fault detection and isolation. Fault diagnosis methods are typically classified into two main categories: model-based and statistical/data-driven approaches. In safety-critical chemical reactors, utilizing first-principles models to develop fault detection and isolation algorithms can provide physically meaningful residual signals from material and/or energy balances that do not close properly. This approach offers reliable fault diagnosis and a better understanding of the system's behaviour, making it a more meaningful approach than statistical methods. However, in real-world experiments, random disturbances and noises from measurement render the system not completely deterministic, a probabilistic statistical method will be incorporated into the model. In the present work, we will demonstrate the application of observer-based fault detection and isolation algorithm under sensor noises with an actual CSTR reaction experiment as an example of which partial simulation we presented last year 1 . The alkylpyridine N-oxidation process is an important reaction, this reaction is highly exothermic and can lead to safety concerns due to the possible decomposition of hydrogen peroxide, generating oxygen. Thus any possible fault in the cooling system should be detected readily to ensure a safe operation. The specific reaction has been studied extensively 2,3 , and in this work, the kinetics in homogenous aqueous solution has been inspected experimentally, so a quantitative model is assumed. Extensive research has been conducted on fault detection and isolation in linear systems 4 . More recently, generalizations have been made to a broad range of nonlinear systems 5 , and most recently, for nonlinear systems in the presence of noises 6 . There are numerous simulations and theoretical works, yet no experimental study has been reported on a nonlinear chemical reaction to the best of our knowledge. In an experiment, the noises and/or deviations from sensors and reaction rate fluctuation drive the observations or residuals generated from the observations to be a statistical time series that corresponds to a specific probability distribution. In this work, we first broach the experimental setup, and the kinetics of the 3-Picoline oxidation process in a homogenous aqueous solution is investigated. In addition, we introduce the discrete model for this process. Residual generators are built for two specific faults: coolant inlet temperature fault and feed concentration fault. Furthermore, Generalized Likelihood Ratio (GLR) will be applied to distinguish between normal and faulty operating conditions based on exceeding a GLR-based threshold that is determined by the residual data. The fault detection and isolation is achieved on-the-fly with the experiment running. (1) 2022 AIChE Annual Meeting . https://plan.core-apps.com/aiche2022/abstract/905c3d3d-a6fa-4446-805c-5d39359be482 (accessed 2023-03-29). (2) Cui, X.; Mannan, M. S.; Wilhite, B. A. Towards Efficient and Inherently Safer Continuous Reactor Alternatives to Batch-Wise Processing of Fine Chemicals: CSTR Nonlinear Dynamics Analysis of Alkylpyridines N-Oxidation. Chem. Eng. Sci. 2015 , 137 , 487–503. (3) Wang, J.; Huang, Y.; Wilhite, B. A.; Papadaki, M.; Mannan, M. S. Toward the Identification of Intensified Reaction Conditions Using Response Surface Methodology: A Case Study on 3-Methylpyridine N-Oxide Synthesis. Ind. Eng. Chem. Res. 2019 , 58 (15), 6093–6104. https://doi.org/10.1021/acs.iecr.8b03773. (4) Ding, S. X. Model-Based Fault Diagnosis Techniques: Design Schemes, Algorithms, and Tools ; Springer Science & Business Media, 2008. (5) Venkateswaran, S.; Liu, Q.; Wilhite, B. A.; Kravaris, C. Design of Linear Residual Generators for Fault Detection and Isolation in Nonlinear Systems. Int. J. Control 2022 , 95 (3), 804–820. (6) Venkateswaran, S.; Sheriff, M. Z.; Wilhite, B.; Kravaris, C. Design of Functional Observers for Fault Detection and Isolation in Nonlinear Systems in the Presence of Noises. J. Process Control 2021 , 108 , 68–85. https://doi.org/10.1016/j.jprocont.2021.10.001.",
+    "presenting_author": "Pu Du | Texas A&M University, College Station, TX",
+    "authors": [
+      "Pu Du | Texas A&M University, College Station, TX",
+      "Benjamin Wilhite | Texas A&M University, College Station, TX",
+      "Costas Kravaris | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pu Du",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Benjamin Wilhite",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Costas Kravaris",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "487f",
+    "sortable_time": "2023-11-09_14:35:00_15:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665043"
+  }
+]

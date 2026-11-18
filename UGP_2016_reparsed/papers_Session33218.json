@@ -1,0 +1,586 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466860.html",
+    "topic": "466860Safeprops: A Software for Fast and Reliable Estimation of Safety and Environmental Properties for Organic Compounds",
+    "date_time": "November 2016",
+    "abstract": "We present a new software tool called SAFEPROPS which is able to estimate major safety-related and environmental properties for organic compounds. SAFEPROPS provides accurate, reliable and fast predictions using the Marrero-Gani group contribution (MG-GC) method. It is implemented using Python as the main programming language, while the necessary parameters together with their correlation matrix are obtained from a SQLite database which has been populated using off-line parameter and error estimation routines (Eq. 3-8).The general form of the MG-GC method is:fi(X) = ∑NjCj+ ∑MkDk+ ∑ ElOl(1)f(X) = Tθ (2)Robust regression is implemented for the parameter estimation. Here the Cauchy weight is used to place high weights on small residuals and small weights on large residuals:θ* = arg min ∑ wi(yiexp-yipred)2(3)wi= 1/(1 + (yiexp– yipred)2) (4)Uncertainty of the parameter estimates is based on the asymptotic approximation of the covariance matrix COV(θ*):COV(θ*) = SSE/(n – p) * (J(θ*)TJ(θ*))-1(5)Following the methodology presented by Frutiger et al. [1] [2], the parameter estimates will be described by a student t-distribution:θ*1-α= θ ± √diag(J(θ*)COV(θ*)J(θ*)T) * t(n-p, αt/2) (6)A first guess for the a priori unknown GC factors is provided by applying linear algebra:θ^ = (TtrT)-1* Ttr* f(X) (7)The SAFEPROPS database is accessed to obtain confidence intervals of the property predictions and the following equation is applied:ypred1-α= ypred± √diag(J(θ*)COV(θ*)J(θ*)T) * t(n-p, αt/2) (8)The software can predict the following safety properties at standard conditions: heat of combustion (ΔHc(T0)), the lower and upper flammability limit (LFL(T0) and UFL(T0)), the auto ignition temperature (AIT(T0)) and the median lethal dose (LC50(T0)). Furthermore, it allows predicting the lower flammability limit at different temperatures (LFL(T)).The following environmental properties can be estimated: Global Warming Potential (GWP), Ozone Depletion Potential (ODP).The prediction can be applied to a large variety of chemical compounds including but not limited to hydrocarbons, aromatic compounds, alcohols, acids, esters, ethers, amines, cyclic compounds, hydro-fluorocarbons and chlorine compounds.The practical application of the software is highlighted in a case study for the screening of organic working fluids for thermodynamic cycles. Safety and environmental constraints should be taken into account as early as possible for the screening of potential working fluid candidates. In this study, a large amount of chemical compounds have been computationally screened. Their performance in the cycle has been analyzed. The corresponding safety-related and environmental properties are then estimated by the new prediction software.The study shows that the software is a powerful tool for the design of novel organic working fluids, if experimental data is missing.Finally, a graphical user interface (GUI) is presented which allows the user to search for the compound of interest and obtain the safety and environmental properties including the uncertainty analysis in a tabulated form. An application programming interface (API) is provided to make SAFEPROPS connectible to other modeling environments such as Matlab.[1] Jérôme Frutiger, Jens Abildskov and Gürkan Sin; A Rigorous Methodology for Development and Uncertainty Analysis of Group Contribution Based Property Models; Abstract from Nineteenth Symposium on Thermophysical Properties, Boulder, United States[2] Jérôme Frutiger, Camille Marcarie, Jens Abildskov and Gürkan Sin; A Comprehensive Methodology for Development, Parameter Estimation, and Uncertainty Analysis of Group Contribution Based Property Models – An Application to the Heat of Combustion; J. Chem. Eng. Data, 2016, 61 (1), pp 602-613",
+    "presenting_author": "Mark Jones | CAPEC-PROCESS Research Center, Technical University of Denmark (DTU), Lyngby, Denmark",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Mark Jones",
+        "affiliation": "CAPEC-PROCESS Research Center, Technical University of Denmark (DTU), Lyngby, Denmark",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jerome Frutiger",
+        "affiliation": "Department of Chemical and Biochemical Engineering, Technical University of Denmark, Kgs. Lyngby, Denmark",
+        "designation": "Author"
+      },
+      {
+        "name": "Jens Abildskov",
+        "affiliation": "Department of Chemical and Biochemical Engineering, Technical University of Denmark, Kgs. Lyngby, Denmark",
+        "designation": "Author"
+      },
+      {
+        "name": "Gürkan Sin",
+        "affiliation": "Department of Chemical and Biochemical Engineering, Technical University of Denmark, Kgs. Lyngby, Denmark",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466860.html",
+    "paper_id": "466860"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462355.html",
+    "topic": "462355Optimal Design and Operation of Integrated Multi-Vector Energy Networks",
+    "date_time": "November 2016",
+    "abstract": "Integrated multi-vector energy networks are becoming more important because we have a much greater variety of primary resources of energy such as wind, solar, biomass etc. Whereas existing energy systems are dominated by fossil fuels as the primary resource, with electricity and natural gas as the energy vectors, increasing the penetration of renewable energy will change the energy mix and other energy vectors, such as hydrogen, methanol, syngas, ammonia etc. may also play important roles. There are many different pathways to satisfy energy service demands through different energy vectors: for example, hydrogen, biofuels or electricity are considered promising alternatives to petroleum for the transport sector.The aim of this work is to determine the best design and operation of integrated energy network to obtain the most value from limited available resources while minimising its negative socio-economic and environmental impacts. This endeavour requires the use of mathematical models to provide an accurate representation of the potential technologies and transport infrastructures that may become part of the network, as well as optimisation techniques to determine the most promising designs among the many possible alternatives. This involves selecting the right combinations of conversion and storage technologies, where to locate them, what their capacities should be and how to interconnect them via transport infrastructures. Moreover, the mathematical models need to be sufficiently detailed to account for all of the operational issues at different time scales (e.g. hours, days, seasons, years) and interactions between the different energy vectors. In this conference, we will present a general mixed integer linear programming model that can simultaneously determine the design and operation of any integrated energy networks comprising technologies for conversion and storage and infrastructures for transport of resources (both material and energy). The model takes into account the spatial and temporal distribution of system properties and simultaneously determines the spatial structure, i.e. the location, number, capacity of the technologies and the structure of the transport infrastructures that connect them, as well as the hourly operation of the entire network. It is a dynamic model in order to properly account for the intermittency of renewables and dynamics of energy storage. The model includes detailed and coherent storage inventory balances, thus it is able to track the inventory level of each resource in storage at every hour over the entire planning horizon (e.g. out to 2050).This presentation will describe the model and discuss a decomposition method that enables this very large, and otherwise intractable, optimisation model to be solved. We will also present case studies wherein the design and operation of an integrated electricity-hydrogen-syngas-natural gas network are determined in order to maximise the value (or minimise the cost or environmental impacts) of meeting the demands for heat, electricity and transport fuels in Great Britain.",
+    "presenting_author": "Sheila Samsatli | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Sheila Samsatli",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Department of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Bath",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Bath",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "United Kingdom and Nouri J. Samsatli",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Process Systems Enterprise Ltd.",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "London",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "United Kingdom",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462355.html",
+    "paper_id": "462355"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper450742.html",
+    "topic": "450742Optimization Models for Shale Gas Well Refracture Treatments",
+    "date_time": "November 2016",
+    "abstract": "Optimization Models for Shale Gas WellRefracture TreatmentsMarkus G. Drouven1, Diego C. Cafaro2and\nIgnacio E. Grossmann31,3Department of Chemical EngineeringCarnegie Mellon UniversityPittsburgh, PA 15213, USA2INTEC (UNL – CONICET)Güemes3450, 3000 Santa Fe,\nArgentina1mdrouven@cmu.edu,2dcafaro@fiq.unl.edu.ar3grossmann@cmu.eduAbstractShale gas wells are well-known\nfor their characteristically steep decline curves. In fact, some shale wells\nproduce more than half of their total estimated ultimate recovery (EUR) within\nthe first year of operation. The initial production peak after well completion\nis caused by the sudden release of previously trapped hydrocarbons in the pores\nof the reservoir. The subsequent decline is ultimately driven by pressure\ndepletion and the ultra-low permeability of the shale play. Upstream operators\noftentimes struggle with the production decline curves. For one, they are\ncontractually obligated to providing steady gas deliveries to midstream\ndistributors over time – which is difficult to accomplish given the\ncharacteristic, dramatic production decline immediately after wells are turned\nin line. Moreover, asCafaro and Grossmann [1]\nsuggest and Drouven and Grossmann[2] confirm, operators need to\nmaximize the utilization of production and gathering equipment – such as\npipelines and compressors – in order to stay profitable. In reality, however,\nproduction and gathering equipment is usually sized based on the initially high\nproduction rates. This means that within a matter of months shale gas wells\nfeed into oversized pipelines and compressor stations, and equipment\nutilization drops. Worse even, in order to satisfy contractual gas delivery\nagreements, operators see themselves forced to open up new wells continuously\nto honor theirobligations, and hence the process is\nrepeated over and over again.Refracturing presents a\npromising strategy for addressing the characteristically steep decline rates of\nshale gas wells [3]. The core idea behind refracturing is to restimulate the\nreservoir such that it yields previously untapped hydrocarbons and improves the\noverall production profile of a well. Whether or not a refracture treatment\nwill reinvigorate a shale gas well depends on a number of factors including the\ncharacteristics of the reservoir and the initial completion design.\nHistorically, refracture treatments have been applied predominantly to shale\ngas wells suffering from low production rates due to known suboptimal initial\nstimulations and completions. However, Dozier et al. [4] argue that even wells\nwith effective initial treatments have shown significant production\nimprovements when restimulated after an initial period of production and\npartial reservoir depletion.The problem addressed in\nthis paper can be stated as follows. We assume that a candidate shale gas well\nhas been identified for refracturing. For this well, a long-term production\nforecast as well as the production profile after additional refracture\ntreatments at any point in time over the planning horizon is given. A gas price\nforecast along with expenses for drilling, fracturing, completions and\nrefracturing operations are also available as problem data. The problem is to\ndetermine: (a) whether or not the well should be refractured, (b) how often the\nwell should be refractured over its entire lifespan, and (c) when exactly the\nrefracture treatments should be performed. The objective is to maximize either:\n(a) the estimated ultimate recovery (EUR) of the well, or (b) the net present\nvalue (NPV) of the well development project.First, we present a\ncontinuous-time nonlinear programming (NLP) model to determine whether or not a\nshale gas well should be refractured, and when to schedule the refracture\ntreatment. The proposed NLP model relies on the assumption that the well\nproductivity profile follows a decreasing power function of time. To predict\nwell performance prior to and after a refracture treatment, we propose an\neffective forecast function that mimics real-life curves. Next, we extend the\nproposed framework to allow for multiple refracture treatments and present a\ndiscrete-time mixed-integer linear programming (MILP). In an attempt to reduce\nsolution times to a minimum, we compare three alternative formulations against\neach other (big-M formulation, disjunctive formulation using Standard and\nCompact Hull-Reformulations) and find that the disjunctive models yield the best\ncomputational performance. Finally, we apply the proposed MILP model to two\ncase studies to demonstrate how refracturing can increase the expected recovery\nof a well and improve its profitability by several hundred thousand USD.References[1]Cafaro, D.\nC.; Grossmann, I. E. Strategic Planning, Design, and Development of the Shale\nGas Supply Chain Network.AIChE J.2014.doi: 10.1002/aic.14405.[2] Drouven, M. G.; Grossmann, I. E.\nMulti-Period Planning, Design and Strategic Models for Long-Term\nQuality-Sensitive Shale Gas Development.AIChE J.2016 (accepted for\npublication).[3] Jacobs T. Renewing Mature Shale Wells\nThrough Refracturing.SPE News. 2014, May Issue.[4] Dozier, G.,Elbel,\nJ., Fielder, E., Hoover, R.,Lemp, S., Reeves, S.,Siebrits, E., Wisler, D.,Wolhart,\nS., Refracturing works.Oilfield Review. 2003; 10(8):38-53.",
+    "presenting_author": "Markus G. Drouven | Department of Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Markus G. Drouven",
+        "affiliation": "Department of Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Diego C. Cafaro",
+        "affiliation": "INTEC(UNL-CONICET), 3000 Santa Fe, Argentina",
+        "designation": "Author"
+      },
+      {
+        "name": "Ignacio E. Grossmann",
+        "affiliation": "Department of Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper450742.html",
+    "paper_id": "450742"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470901.html",
+    "topic": "470901Exposome Analysis of Polyaromatic Hydrocarbons",
+    "date_time": "November 2016",
+    "abstract": "This study demonstrates the use of the INTEGRA platform (coupling multi-source multi-route external exposure modeling with a generic PBTK for internal exposure modeling) for estimating exposure to PAHs under a variety of scenarios of key relevance to REACH and the petroleum industry. The objective of the INTEGRA project is to bring together all information necessary for assessing the source-to-dose continuum over the entire life cycle of substances covering an extensive chemical space through the use of QSARs. The major outcome of INTEGRA is a comprehensive computational platform that integrates multimedia environmental and micro-environmental fate, exposure and internal dose within a dynamic framework in time. The platform allows multimedia interactions across different spatial scales, taking into account environmental releases and related processes at global, regional and local scale, up to the level of personal microenvironment. Coupling seamlessly exposure models with refined computational tools for internal dosimetry transforms risk assessment of environmental chemicals since it allows risk characterization to be based on internal dosimetry metrics. In this way high throughput system data such as the ones generated by Tox21 in vitro testing can be used. This opens the way towards a higher level of assessment that incorporates refined exposure (tissue dosimetry) and toxicity testing (Biological Pathway Altering Dose – BPAD) associated to environmental contamination at different scales.Exposure to PAHs has became of particular scientific and regulatory interest the last year, especially in view of the potential for petroleum substances to be included in the different REACH processes (notably Evaluation and Authorisation). In order to meet the requirements of REACH, it is of particular importance the capability of models to predict direct (arising from the use of substances) and indirect (e.g. fuel combustion) PAH exposures. INTEGRA fulfils the requirements for carrying out such a comprehensive assessment and goes event beyond, allowing the estimation of internal dose, as well as the assimilation of biomonitoring data. Several scenarios were requested to be evaluated, and the scenarios with the ir results are listed below:1] Assessing of internal exposure to PAHs (i.e. arising from all sources a consumer is exposed to: environment, food, consumer products) and the relative contribution from different routes (oral-diet; oral-dust, inhalation, dermal). For this scenario, σtarting from annual emissions of 400 tones B[a]P in air within EU, and for regional emissions of 15 tones, distribution across different media and contribution of different pathways and routes was estimated. Higher intake estimates for children result from the higher bodyweight normalized inhalation rate, amount of soil and dust daily ingested; this is illustrated also in the analysis of various pathways contributions as well as when integrating among routes. Soil and dust ingestion are the dominant exposure pathways for children (uptake rate of 8.5E-03 ng/kg bw/day, followed by diet (uptake rate for both adults and children at 6-7E-04 ng/kg bw/day) and inhalation (uptake rate at 5.7-9.6E-07 ng/kg bw/day). Oral is the dominant route of exposure (uptake rate at 3.2E-03-15.2E-03 ng/kg bw/day) followed by inhalation (uptake rate at 1E-06 ng/kg bw/day) and dermal exposure (uptake rate at 9E-08 ng/kg bw/day). Mean B[a]P blood levels are up to 0.00012 ng/L for adults and 0.0007 for children, while the respective urinary concentration of the major specific metabolite 3-OH-B[a]P is 0.01 ng/LInternal exposure to PAHs arising from specific use(s)/source(s) was also calculated and split up according to uses and sources. More specifically:2] Assessment of specific sources such as smoked fish; when accounting for the annual emissions described above, concentration in fish was estimated by the multimedia model equal to 10-7μg/kg. This concentration is compared to the ones identified in the literature from smoked fish analysis, where B[a]P levels in smoked fish range from 0.08 to 4.1 μg/kg (median of 1μg/kg and consumption of 110 grams of fish). Based on the above, intake due to smoked fish consumption dominates among other pathways. The contribution of smoking fish to the total B[a]P content in fish, and consequently the contribution of the consumption of smoked fish to integrated B[a]P exposure (for fish consumers) is 1.4 ng/kg bw/day whereas the corresponding intake rate from soil or dust ingestion are 0.8-2.1E-03 ng/kg bw/day and from inhalation 4E-07 ng/kg bw/day. The respective internal dose of B[a]P upon smoked fish intake results to a peak of 0.4 ng/L of B[a]P in blood, that slowly decreases down to the blood concentration corresponding to the background exposure levels (0.01 ng/L) after almost 72 hours. The peak concentration of urinary 3-OH-B[a]P is 0.01 ng/L, observed after a couple of hours upon smoked fish intake.3] The contribution of petroleum products (e.g. RAE - Residual Aromatic Extracts/ OLBO - other lubricants based oils) to integrated PAH exposure in Europe was reckoned on the basis of:(a) contribution via release of PAHs to the environment (production and downstream use sites of a category of petroleum products) leading to indirect human exposure in the vicinity of an industrial plant of petroleum products. In this case inhalation becomes the dominant exposure pathway (uptake of 2.1E-01 ng/kg bw/day)(b) contribution via consumer use of a category of petroleum products such as lubricants and coatings in rubber boots. Then, the specific consumer use dominates exposure (uptake rate of 6 ng/kg bw/day). In this case, dermal uptake is the dominant route of exposure followed by oral ingestion. However, due to the relatively limited and slow absorption through the skin, the respective peak of internal dose of B[a]P in blood is lower than the one in the smoked fish (0.2 ng/L of B[a]P in blood), but the overall area under the curve is similar, as a result of the slower absorbion into the systemic circulation and concequently the slower elimination.4] Of particular interest is the estimation of external and internal exposure to PAHs from biomass burning for space heating. In a study evaluating the exposure to PAHs in two different urban locations (namely an urban background and a traffic station), it was identified that exposure to PAHs is greatly affected by biomass emissions. In practice, from the urban background site (where PM precence is dominated by biomass emissions), particles are characterized by lower mean aerodynamic diameter and higher PAH content. Accounting for the differences related to PM HRT deposition and the distribution of PAHs adsorbed on PM of various sizes, it was estimated that 2.5 times higher airborne B[a]P resulted in 6 times higher uptake of PAHs retained by the respiratory system. These findings bring us to the conclusion that PM emitted from wood burning for space heating (mostly in open fireplaces) contribute more to the population exposure to PAHs and to the associated health risk than the PM usually found in this urban environment. This finding brings additional evidence to the long-standing debate about the toxicity of PM emitted from biomass burning. Moreover, biomass burning is always accompanied by incomplete combustion which varies between the different combustion practices (temperatures, appliances and type of biomass used), favoring the formation of PAHs. PAHs, and the most carcinogenic compounds (5- and 6-ring) in particular, including BaP, are adsorbed to finer particles. In practice, this is also reflected in the internal dose as well; although ambient air concentration of B[a]P equivalent concentration was measured equal to 4.5 and 1.7 ng/m3for the urban background and the traffic site respectively (for adults), the corresponding B[a]P equivalent levels in blood were estimated equal to 0.38 and 0.06 ng/L respectively.5] Finally, the time-dynamic nature of the INTEGRA computational platform, allowed also to capture environmental, exposure and internal dose dynamics in high temporal resolution, quantifying the effect of real-life different exposure conditions related to daily activities such as driving, eating smoked fish or operating an open fireplace in actual uptake, internal dose and expected biomarker urinary levels. From this analysis it was indicated that internal exposure to B[a]P (and the other PAHs respectivelly) follows the extensively dynamic pattern of external, however, urinary 3-OH-B[a]P fluctuations are slower. In any case, spot samples of urinary PAHs may not be representative of the overall daily exposure, hence biomonitoerd based exposure assessment of PAHs requires multiple samples per day to be collected.",
+    "presenting_author": "Dimosthenis Sarigiannis 1,2 , **Spyros Karakitsios | Environmental Engineering Laboratory, Chemical Engineering, Aristotle University of Thessaloniki, Thessaloniki, Greece",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Dimosthenis Sarigiannis 1,2 , **Spyros Karakitsios",
+        "affiliation": "Environmental Engineering Laboratory, Chemical Engineering, Aristotle University of Thessaloniki, Thessaloniki, Greece",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Evangelos Handakas",
+        "affiliation": "Environmental Engineering Laboratory, Chemical Engineering, Aristotle University of Thessaloniki, Thessaloniki, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Alberto Gotti",
+        "affiliation": "Environmental Health Engineering, Institute for Advanced Study, Pavia, Italy",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470901.html",
+    "paper_id": "470901"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460724.html",
+    "topic": "460724A Composite-Curve-Based Biomass Procurement Planning Approach",
+    "date_time": "November 2016",
+    "abstract": "A\nComposite-Curve-Based Biomass Procurement Planning ApproachWenzhao Wu, Daniel Kurniawan, WenBo Zhu,\nChristos T. Maravelias*Dept. of Chemical and Biological\nEngineering, University of Wisconsin-Madison, Madison, WI 53706The production of fuels\nand chemicals from biomass has received considerable attention recently due to\nenvironmental concerns1. Since the production of biofuels involves\nrelatively expensive feedstock and energy-intensive biomass transportation, any\nbiomass-to-fuels strategy should include an efficient, both in terms of cost\nand environmental impact, biomass (feedstock) supply chain. Unlike fossil\nfuels, biomass, as a low-energy density resource, is sparsely distributed. The\nefficient biomass transportation thus requires biomass procurement planning\nmethods2. In many studies, the farms are treated as points without\nshape or area3. This is a reasonable assumption when the\ntransportation distance is so large that the shape and size of the farms can be\nneglected. In this case, the transportation problem is modeled as a\npoint-to-point (farm-to-refinery) problem. However, the shape and size of the\nfarms cannot be neglected when the refinery is close to the farm, which means\nthat the size of the farm is not significantly smaller than the transportation\ndistances, which in turn means that the error in approximating the real\ntransportation distance with the distance between the center of the farm and\nthe bio-refinery can be quite large. In this case, transportation should be\ntreated as a region-to-point problem. To this end, we discuss a novel approach\nto biomass procurement planning on a region-to-point basis.In terms of\ntransportation, we propose a region-to-point modeling approach based on\nmathematical integration (in a polar coordinate system) over the sourcing\nregion that has unique characteristics such as shape, location, and\nproductivity. The transportation cost is correlated with the amount of biomass\n(“mass”) procured from each farm. The final result is a functionC=f(M), whereMis the mass, andCis the transportation\ncost. In other words, the proposed methods generate a function that returns the\ntotal cost of procuringMmass, which is graphically represented by a\n“procurement curve”. Both algebraic and numerical solution methods are\ndiscussed and demonstrated with examples.In terms of system-level\nprocurement planning, we develop a composite-curve-based approach that\nincorporates the regional transportation modeling method, and aims at\nidentifying the biomass procurement plan that minimizes the total procurement\ncost (including biomass purchasing, harvesting and transportation). The\nspecific steps for the generation of the composite curve using the individual\nprocurement curves, as well as insights into the procurement planning problem\nare discussed. An analogy to the cold/hot composite curves in the pinch design\nmethod for heat exchanger networks4is also presented. A case study\ninvolving 12 farms (which are approximated as polytopes) and one refinery is\npresented (see Figure 1A). The corresponding composite curve is shown in Figure\n2, and the final procurement strategy is graphically represented in Figure 1B.Figure 1.(A) Map of farms (the polytopes)\nsurrounding a bio-refinery (the black dot at the origin) for the case study; (B)\nprocurement strategy (represented by the green dashed areas) for a 11800 T/year\ndemand. The farm numbers are labeled accordingly.Figure2.Individual procurement curves and the composite\ncurve for the case study. The composite curve is marked thick. The demand of\n11800 T/year and the corresponding per-mass supply cost () on the y-axis are marked\nwith dashed lines. The farm numbers are labeled accordingly.The proposed\ncomposite-curve-based method allows us to more accurately calculate\ntransportation distance, and thus transportation costs and GHG emissions due to\ntransportation.  It also provides some key insights into the design of biofuel\nsupply chains. In addition, the methods proposed in this work are integrated\nwith mathematical programming to address complicated problems involving, for\nexample, multiple feedstocks, multiple refineries, and multiple periods. We can\nsolve such problems by either generating multiple composite curves, or directly\nincorporating theC=f(M) function for each farm into a\ngeneral supply chain optimization model.References[1] DOE\nBioenergy Technologies Office, 2014. Multi-year program plan, Washington DC,\nUSA: DOE.[2] DOE/EERE, 2013c. Feedstock supply and\nlogistics: biomass as a commodity, US: Department of Energy, Office of Energy\nEfficiency & Renewable Energy.[3] You,\nF., Tao, L., Graziano, D. & Snyder, S. W., 2012. Optimal Design of\nSustainable Cellulosic Biofuel Supply Chains: Multiobjective Optimization\nCoupled with Life Cycle Assessment and Input-Output Analysis. AIChE Journal, Volume\n58, pp. 1157-1180.[4] Linnhoff,\nB. & Hindmarsh, E., 1983. The pinch design method for heat exchanger\nnetworks. Chemical Engineering Science, 38(5), pp. 745-763. | The production of fuels\nand chemicals from biomass has received considerable attention recently due to\nenvironmental concerns1. Since the production of biofuels involves\nrelatively expensive feedstock and energy-intensive biomass transportation, any\nbiomass-to-fuels strategy should include an efficient, both in terms of cost\nand environmental impact, biomass (feedstock) supply chain. Unlike fossil\nfuels, biomass, as a low-energy density resource, is sparsely distributed. The\nefficient biomass transportation thus requires biomass procurement planning\nmethods2. In many studies, the farms are treated as points without\nshape or area3. This is a reasonable assumption when the\ntransportation distance is so large that the shape and size of the farms can be\nneglected. In this case, the transportation problem is modeled as a\npoint-to-point (farm-to-refinery) problem. However, the shape and size of the\nfarms cannot be neglected when the refinery is close to the farm, which means\nthat the size of the farm is not significantly smaller than the transportation\ndistances, which in turn means that the error in approximating the real\ntransportation distance with the distance between the center of the farm and\nthe bio-refinery can be quite large. In this case, transportation should be\ntreated as a region-to-point problem. To this end, we discuss a novel approach\nto biomass procurement planning on a region-to-point basis. | In terms of\ntransportation, we propose a region-to-point modeling approach based on\nmathematical integration (in a polar coordinate system) over the sourcing\nregion that has unique characteristics such as shape, location, and\nproductivity. The transportation cost is correlated with the amount of biomass\n(“mass”) procured from each farm. The final result is a functionC=f(M), whereMis the mass, andCis the transportation\ncost. In other words, the proposed methods generate a function that returns the\ntotal cost of procuringMmass, which is graphically represented by a\n“procurement curve”. Both algebraic and numerical solution methods are\ndiscussed and demonstrated with examples. | In terms of system-level\nprocurement planning, we develop a composite-curve-based approach that\nincorporates the regional transportation modeling method, and aims at\nidentifying the biomass procurement plan that minimizes the total procurement\ncost (including biomass purchasing, harvesting and transportation). The\nspecific steps for the generation of the composite curve using the individual\nprocurement curves, as well as insights into the procurement planning problem\nare discussed. An analogy to the cold/hot composite curves in the pinch design\nmethod for heat exchanger networks4is also presented. A case study\ninvolving 12 farms (which are approximated as polytopes) and one refinery is\npresented (see Figure 1A). The corresponding composite curve is shown in Figure\n2, and the final procurement strategy is graphically represented in Figure 1B.",
+    "presenting_author": "Wenzhao (Tony) Wu | Department of Chemical and Biological Engineering, University of Wisconsin – Madison, Madison, WI",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Wenzhao (Tony) Wu",
+        "affiliation": "Department of Chemical and Biological Engineering, University of Wisconsin – Madison, Madison, WI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Daniel Kurniawan",
+        "affiliation": "Department of Chemical and Biological Engineering, University of Wisconsin – Madison, Madison, WI",
+        "designation": "Author"
+      },
+      {
+        "name": "Wenbo Zhu",
+        "affiliation": "Department of Chemical and Biological Engineering, University of Wisconsin – Madison, Madison, WI",
+        "designation": "Author"
+      },
+      {
+        "name": "Christos T. Maravelias",
+        "affiliation": "Department of Chemical and Biological Engineering, University of Wisconsin-Madison, Madison, WI",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460724.html",
+    "paper_id": "460724"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper458643.html",
+    "topic": "458643Implementing Robust Vapor-Liquid Equilibrium Calculations in Nonsmooth Multi-Stream Heat Exchanger Models",
+    "date_time": "November 2016",
+    "abstract": "Optimization of the liquefaction process for natural gas has proven to be a challenging task in particular for two reasons. First, the refrigeration cycles introduce computational loops that cause convergence problems. Second, the refrigerants are mostly multicomponent mixtures with strong interactions in the search for optimal heating profiles to match the cooling profile of the natural gas. In addition, the driving forces in the heat exchangers are very tight, asking for rigorous modeling to make sure the simulation mimics the true behavior of the process.Both gradient based methods and stochastic search methods have been used to try to optimize processes for Liquefied Natural Gas (LNG) production, where commercial simulators are used to provide the function values in the optimization, however, with limited success beyond the most simple liquefaction processes. Our research groups have been involved in the development of a new model for these processes with the inherent features required to be able to utilize the latest developments in the field of Global Optimization [1].As an important part of this new approach to LNG optimization, Barton and coworkers at MIT [2] has developed a new non-smooth multi-stream heat exchanger model accounting for phase changes in the process. The model was successfully used to simulate the Poly Refrigerant Integrated Cycle Operations (PRICO) process for liquefied natural gas production. However, it suffered from convergence difficulties when studying more complex single mixed refrigerant (SMR) processes. The primary challenge was flash calculations, which frequently failed even for initial guesses close to the solution. These problems will of course increase even further when moving to Dual Mixed Refrigerant (DMR) processes and the Mixed Fluid Cascade (MFC) process.In this project, an alternative model structure is studied, replacing the equation-oriented framework with a hybrid solution. Rather than converging the vapor-liquid equilibrium calculations simultaneously with the other model equations, they are included as nested subroutines and solved sequentially. Nonsmooth Newton-type methods and the implicit function theorem for lexicographically smooth functions are used for computing analytical derivatives in each subroutine [3, 4]. In addition, more robust flash calculations are attempted by developing a nonsmooth version of the “inside-out” algorithm by Boston and Britt [5] that can be incorporated in the existing model framework. The same SMR processes are then simulated in order to investigate whether the alternative framework is more robust.[1] Floudas, C.A. and Gounaris, C.E., A review of recent advances in global optimization,Journal of Global Optimization, vol. 45(1), pp. 3-38, 2009.[2] Watson, H.A.J., Khan, K.A. and Barton, P.I., Multistream heat exchanger modeling and design,AIChE Jl., vol. 61(10), pp. 3390-3403, 2015.[3] Facchinei, F., and Pang, J.S.,Finite-dimensional variational inequalities and complementarity problems,vol. 2. Springer Science & Business Media, 2007.[4] Khan, K. A., and Barton, P.I., Generalized derivatives for hybrid systems,Submitted, 2015.[5] Boston, J.F. and Britt, H.I., A radically different formulation and solution of the single-stage flash problem,Computers & Chemical Engineering, vol. 2(2), pp. 109-122,Extended Abstract:File Not UploadedSee more of this Session:Energy Systems Design and Operations IISee more of this Group/Topical:Computing and Systems Technology Division",
+    "presenting_author": "Matias Vikse | Energy and Process Engineering, Norwegian University of Science and Technology, Trondheim, Norway",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Matias Vikse",
+        "affiliation": "Energy and Process Engineering, Norwegian University of Science and Technology, Trondheim, Norway",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Harry A. J. Watson",
+        "affiliation": "Process Systems Engineering Laboratory, Massachusetts Institute of Technology, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Truls Gundersen",
+        "affiliation": "Energy and Process Engineering, Norwegian University of Science and Technology, Trondheim, Norway",
+        "designation": "Author"
+      },
+      {
+        "name": "Paul I. Barton",
+        "affiliation": "Chemical Engineering, Massachusetts Institute of Technology, Cambridge, MA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper458643.html",
+    "paper_id": "458643"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper465812.html",
+    "topic": "465812Shared and Practical Approach to Conserve Utilities in Eco-Industrial Parks",
+    "date_time": "November 2016",
+    "abstract": "Eco-Industrial Park (EIP) is a community of manufacturing and service facilities in close proximity. These enterprises collaborate with each other for improving the social, environmental, and economic performance of the whole complex in a sustainable manner by utilizing each other’s resources efficiently, and sharing facilities, services, and utilities (Boix et al., 2015;Côté & Cohen-Rosenthal, 1998;Lowe et al., 1996). Examples of such successful industrial symbiosis are Jurong Island (Singapore), Kalundborg (Denmark), and Rotterdam (Netherlands). EIPs such as Jurong Island in Singapore are interested in assessing the potential for inter-plant heat integration among its inhabitants. The aim of such an enterprise wide heat exchanger network system is to exploit the synergistic heating/cooling needs and reduce total utility costs. However, there are many practical challenges in the implementation, construction, and operation of such an enterprise wide network (Chew et al., 2013) that need to be addressed while synthesizing inter-plant heat exchange network (HEN).(1) The inter-plant heat exchange network synthesis (HENS) methodology should involve all the capital and operating expenses. Since, the exchanger and pipeline costs are comparable in case of long distance transport, inter-plant piping and transport costs cannot be ignored in configuring an EIP-wide HEN.(2) The independent and diverse profit-making enterprises should be willing to participate and collaborate in such an EIP-wide HEN. Hence, there should be attractive economic benefits and fairness guaranteed to motivate the enterprises for such collaboration.(3) The exchangers in an EIP-wide direct heat integration must have real physical locations. Furthermore, if a plant hosts a heat exchanger, it must bear the added responsibilities of maintaining and operating that exchanger, and guaranteeing the safety, security, and confidentiality of any guest streams.(4) Operational disturbances in one plant shouldn’t propagate to other plants, as the plants should be able to operate independently.In this work, we present a novel strategy for EIP-wide HENS that addresses most of the issues highlighted above. We propose a central, shared, mutually agreed location for the HEN. The participating enterprises can appoint a third party logistics provider to manage and operate such a facility. We have considered pumping costs in the operating costs and the pipeline, pump and heat exchanger costs in the capital investment. By optimizing the HEN location, we can minimize the transport and pipeline costs. In our proposed model, we allowed the cooling (heating) of a hot (cold) stream both before entering and after leaving the HEN. To give operational flexibility and control to the parent company, existing in-plant utility heaters/coolers will be retained. Such an arrangement offers several advantages in terms of flexibility, control, cost, safety, security, confidentiality, accountability, operation, and management. We then propose a more practical and rational cost-benefit sharing arrangement. The contribution of an enterprise to capital expenses (CAPEX) and operating expenses (OPEX) is proportional to the utility cost savings it enjoys through the shared HEN. This ensures fairness among the enterprises as each enterprise enjoys an identical rate of return.The EIP-wide HEN must trade off capital and operating costs versus utility savings. Therefore, we develop a mixed-integer non-linear programming (MINLP) model to maximize the net present value (NPV) of an EIP-wide HEN. The superstructure-based formulations allow sub-streams and non-isothermal mixing in a stage (Huang & Karimi, 2013;Yee & Grossmann, 1990). Since we wish to maximize the net present value of the shared HEN, discounted flows and rate of return has been included in the cost equation. Our model allows arbitrary cost expressions for exchangers with both fixed and variable components and cost multipliers for material and installation considerations. The single HEN location allows the full flexibility of multiple heat exchanges among streams from different plants. We have also improved the efficiency of formulation by adding additional constraints for eliminating redundant or complicated network designs. We have limited the number of sub-streams in a stage, avoided repeat identical matches, and included lower limits on exchanger areas and temperature drops to avoid exchangers with small-duty or small-area. If the HEN looks profitable (NPV > 0), each enterprise will enjoy annual savings. In return, it must share the various costs of the HEN in proportion to its annual savings.Our proposed model for the case study inHiete et al. (2012)offers an NPV of $5.71 million with a utility savings of $1.74 million/a for the EIP. The piping and pumping costs are major costs in this shared HEN, which restates their importance in EIP-integration. Enterprise E1 contributes 67.4 % to the CAPEX and OPEX, as it enjoys the most savings. In the game theory based formulation inCheng et al. (2014), enterprise E2 trades streams to E1 and E3, but pays nothing for the exchangers. In contrast, our optimal HEN apportions costs on a more rational and practical basis of utility savings. Since E1 gains the most from the EIP-integration with a utility cost savings of $126 456/a ($29 411 /a for E2 and $71 183 /a) for E3, it contributes the largest share of the costs (E1:55.7 %, E2:13.0 % and E3:31.3 %). Like the case study of direct heat integration inWang et al. (2015), our HEN also achieves a total utility savings of 95 %, which is the thermodynamic limit.Wang et al. (2015)did not clearly indicate the locations of their heat exchangers (or equivalently the streams being transported). E2 contributes 90.5 % of investment costs, as it supplies the cold streams that would otherwise require expensive hot utilities. Hence, solutions are fair, as companies saving expensive heating utilities will have to contribute more in the investment costs.Heat integration has been employed over the years in several chemical processes, in particular refineries and petrochemical. As discussed, EIP-wide heat integration poses several unique economic, design, logistics, operations, and safety challenges. But, the utility costs for refineries and petrochemical plants can be huge every year, which is an incentive to reduce these costs in spite of the various challenges. In fact, modern EIPs like Jurong Island in Singapore and Jubail in Saudi Arabia are very much interested in assessing the potential for inter-plant heat integration. The methodology presented here paves the way for assessing and implementing heat integration for such “futuristic” systems.Boix, M., Montastruc, L., Azzaro-Pantel, C., & Domenech, S. (2015). Optimization methods applied to the design of eco-industrial parks: a literature review. Journal of cleaner production,87, 303-317.Cheng, S.-L., Chang, C.-T., & Jiang, D. (2014). A game-theory based optimization strategy to configure inter-plant heat integration schemes. Chemical Engineering Science,118, 60-73.Chew, K. H., Klemeš, J. J., Wan Alwi, S. R., & Abdul Manan, Z. (2013). Industrial implementation issues of Total Site Heat Integration. Applied thermal engineering,61, 17-25.Côté, R. P., & Cohen-Rosenthal, E. (1998). Designing eco-industrial parks: a synthesis of some experiences. Journal of cleaner production,6, 181-188.Hiete, M., Ludwig, J., & Schultmann, F. (2012). Intercompany Energy Integration. Journal of industrial Ecology,16, 689-698.Huang, K. F., & Karimi, I. A. (2013). Simultaneous synthesis approaches for cost-effective heat exchanger networks. Chemical Engineering Science,98, 231-245.Lowe, E. A., Moran, S. R., Holmes, D. B., & Martin, S. A. (1996). Fieldbook for the Development of Eco-Industrial Parks: Final Report: Indigo Development.Wang, Y., Chang, C., & Feng, X. (2015). A systematic framework for multi-plants Heat Integration combining Direct and Indirect Heat Integration methods. Energy,90, Part 1, 56-67.Yee, T. F., & Grossmann, I. E. (1990). Simultaneous optimization models for heat integration--II. Heat exchanger network synthesis. Computers & chemical engineering,14, 1165-1184.",
+    "presenting_author": "Sajitha K. Nair | Department of Chemical and Biomolecular Engineering, National University of Singapore, Singapore, Singapore",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Sajitha K. Nair",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, National University of Singapore, Singapore, Singapore",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yingjian Guo",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, National University of Singapore, Singapore, Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Ushnik Mukherjee",
+        "affiliation": "Department of Chemical Engineering, University of Waterloo, Waterloo, ON, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Iftekar A. Karimi",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, National University of Singapore, Singapore, Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Elkamel",
+        "affiliation": "Department of Chemical Engineering, University of Waterloo, Waterloo, ON, Canada",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper465812.html",
+    "paper_id": "465812"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462056.html",
+    "topic": "462056Exploiting Dynamic Flexibility to Enable Participation in Multi-Scale Electricity Markets",
+    "date_time": "November 2016",
+    "abstract": "There is significant interest in re-designing the control architectures for a broad spectrum of energy and manufacturing systems to exploit time-varying electricity prices. For example, the Alcoa Point Comfort Power Plant, which is a utility plant that provides electricity and steam to the adjacent aluminum manufacturing facility, re-optimizes its operations every 15 minutes in response to electricity and natural gas price. These new energy-oriented architectures provide load flexibility to the power grid in exchange for monetary payments. Most academic literature on industrial demand response optimization focuses on scheduling and planning decision layers and considers coarse (e.g., 1 hour) time discretizations with multi-day planning horizons. Emphasis has been placed on optimal planning under time-vary electricity prices, although recent work considers providing reserve capacity and interruptible loads. This emphasis missing flexibility at fast timescales (e.g., minutes to seconds) that may be monetized through participating in real-time energy markets and/or providing regulation capacity and other ancillary services.We develop a mathematical model for multi-scale electricity markets run by the California Independent System Operator (CAISO). The model incorporates prices from both the day-ahead (1 hour intervals) and real-time markets (5 – 15 minute intervals), and considers both energy and ancillary service (regulation, reserves, etc.) sales. Market rules are expressed as linear algebraic expressions with continuous and optionally discrete variables. The models are general and applicable to both conventional thermal generators and storage devices (e.g., batteries).Using the market model, we optimize the operation policy of a combined heat and power utility system using real price data for all of 2015. We observe participating in energy markets run at multi-times decreases net operating costs (fuel minus market proceeds) by 14 – 54%, depending on fuel price, without degrading satisfaction of onsite steam and electricity demand. The savings increase if the onsite steam and/or electricity demands are made flexible. Approximately one-quarter to one-half of the anticipated savings are from regulation capacity sales to the market. In CAISO, the automatic generator control (AGC) system sends new electricity production setpoints to generators providing regulation every 5 seconds that are within a specified flexibility band (units: MWe). Capacity payments are based on the size of this band. Thus regulation offers a way to monetize the inherent flexibility in manufacturing/energy systems at faster timescales (seconds compared to electricity price variations that occur at slower timescales (minutes to hours). In practice exploiting this flexibility and realizing revenues from electricity markets requires sophisticated controls strategies that manage multiple time-scales and consider uncertainty in market prices.",
+    "presenting_author": "Alexander W. Dowling | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Alexander W. Dowling",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ranjeet Kumar and Victor M. Zavala",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical and Biological Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Wisconsin",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Madison",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "WI",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462056.html",
+    "paper_id": "462056"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462162.html",
+    "topic": "462162The Study of Ozone Pollution Superposition Caused By Simultaneous Olefin Plant Startups",
+    "date_time": "November 2016",
+    "abstract": "It is indisputable that flare emissions from olefin plant turnaround operations generate large amounts of ozone precursors (NOx and VOCs) that will potentially aggravate the ground-level ozone pollution. In an industrial area where chemical and petrochemical plants are heavily populated, flare emissions can come from multiple plants in different spatial locations with different time periods. Thus, it is important to know the synergistic effect on ozone generations caused by flare emissions from simultaneously turnaround operations of multiple olefin plants in an industrial area. In this paper, a systematic methodology to study the ozone pollution superposition caused by simultaneous olefin plant start-ups has been developed. It couples dynamic start-up flaring profiles from multiple olefin plants and regional air-quality modeling together to examine the linearity and nonlinearity of ozone superposition. Based on our case studies, the synergies of ozone pollution due to multiple olefin plant start-ups cannot be simplified as the linear superposition. Meanwhile, the superposition nonlinearity has strong relations with the starting time of plant start-ups operations as well as the difference of plant distances. The general ozone superposition trends under different starting time and plant distance are also disclosed. Based on our study, the ozone superposition gradually approaches the linearity with the starting time of plant start-up operations changes from 00:00 to 10:00. In comparison to plant distances, the ozone superposition at about 32 km can be approximated as the linearity, and such linearity will decrease along with the decrease of plant distance. This study will be helpful to understand the ozone impacts from industrial point sources and identify cost-effective emission control strategies.",
+    "presenting_author": "Sijie Ge | Dan F. Smith Department of Chemical Engineering, Lamar University, Beaumont, TX",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Sijie Ge",
+        "affiliation": "Dan F. Smith Department of Chemical Engineering, Lamar University, Beaumont, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sujing Wang",
+        "affiliation": "Department of Computer Science, Lamar University, Beaumont, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Qiang Xu",
+        "affiliation": "Dan F. Smith Department of Chemical Engineering, Lamar University, Beaumont, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Thomas Ho",
+        "affiliation": "Dan F. Smith Department of Chemical Engineering, Lamar University, Beaumont, TX",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462162.html",
+    "paper_id": "462162"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper469013.html",
+    "topic": "469013A New Framework for Radiological Impact Assessment in Life Cycle Assessment",
+    "date_time": "November 2016",
+    "abstract": "Life Cycle Assessment (LCA) is a technique aimed at understanding and assessing the relations between human activities and environment. Notably, it is extensively used to compare alternative power-generating technologies and waste management approaches from a sustainable point of view. However, in the nuclear industry, the LCA approach is either applied poorly or not at all. The main reason may be found in the lack of a consistent and standardised approach for the assessment of the impact of ionising radiation. In theory such impact is caused by both the direct radionuclide releases to air or waters from operations, and from nuclear waste stored in a final disposal facility. In fact the few methodologies available today neglect the radiological impact arising from solid nuclear waste. This lack of consistency prevents comparative LCA studies to be applied to the nuclear industry and undermines the results of the few published.The aim of this work is to address this issue by proposing a new framework to be included as a standard procedure in the LCA framework. This framework envisages four steps and assesses the impact of ionising radiation in terms of risk of detrimental effect to human beings. Notably, both air and water releases, and solid waste are included. The fate analysis indeed represents the key step in the methodology, as it aims at quantifying the environmental concentration of a specific pollutant at the receptor location. Given the general framework, two alternative methodologies have been developed and operationalised; they differ in the models underpinning the fate analysis. In one methodology the IAEA generic models [1] coupled with the UK Radioactive Waste Management (RWM) Ltd.’s Post-Closure Safety Assessment [2] is used; whilst, in the other case, a MacKay-type model is adopted to simulate a compartmental multi-media environment. The general approach the two alternative methodologies and the main challenges involving their inclusion in the LCA framework will be discussed at the conference.For the purposes of demonstrating the proposed framework the UK current approach for Nuclear Spent Fuel management is adopted as a case study. According to the approach proposed by Clift et al. [3], the system is divided into two subsystems: Foreground and Background. ‘Real’ data from UK nuclear facilities is used for the processes in the foreground system. Along with the proposed methodology, several other impact categories, including Global Warming Potential, will be analysed. Results of the study will show the overall environmental performance and will also allow to identify the sections of the UK spent nuclear fuel reprocessing procedure that have the most radiological and non-radiological impact. Particular emphasis will be given to the comparison between direct radioactive releases and solid nuclear waste. Preliminary results of the LCA study will be presented at the conference.[1] IAEA, “Generic Models for Use in Assessing the Impact of Discharges of Radioactive Substances to the Environment - Safety Series,” Vienna, 2001.[2] NDA, “Geological Disposal: Generic post-closure safety assessment,” 2010.[3] R. Clift, A. Doig, and G. Finnveden, “The Application of Life Cycle Assessment to Integrated Solid Waste Management,”Process Saf. Environ. Prot., vol. 78, no. 4, pp. 279–287, 2000.",
+    "presenting_author": "Andrea Paulillo | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Andrea Paulillo",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University College London",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "London",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "United Kingdom",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Andrew Milliken",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Sellafield Ltd.",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "United Kingdom",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Steve Palethorpe",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "National Nuclear Laboratory",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "United Kingdom",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Roland Clift",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "School of Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Surrey",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Guildford",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "United Kingdom and Paola Lettieri",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University College London - Torrington Place",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "London WC1E 7JE",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "United Kingdom",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper469013.html",
+    "paper_id": "469013"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464617.html",
+    "topic": "464617Simultaneous Optimization of Design and Operation Strategies for CHP Systems",
+    "date_time": "November 2016",
+    "abstract": "Combined heat and power (CHP) facilities are a very promising path to reducing CO2emissions and increasing efficiency in the power generation sector, especially when combined with residential solar photovoltaic (PV) power generation. CHP facilities rely on natural gas, a cleaner fuel than coal, to generate electricity, as well as hot and chilled water to provide heating and cooling. The ability to supply these essential residential utilities in an efficient way on a medium to large scale opens the path for combining district cooling, heating and power generation, and suggests that CHP plants are an appealing choice as an integrated utility supplier for the neighborhood of the future. Yet, there are currently no CHP plants that serve exclusively residential neighborhoods, and published works exploring this possibility are scarce.In our previous work[1], we demonstrated that a CHP plant with PV integration can in principle meet the demands of a residential neighborhood during the summer months. However, a CHP plant operating in island (i.e., grid-disconnected) mode must be optimally sized to maximize efficiency and to lower the capital and marginal costs, while producing enough electricity, heating, and cooling to meet the neighborhood demands at all times. A majority of the approaches described in literature for the optimal CHP plant sizing tend to select equipment by analyzing the various utility demands (i.e. electricity, steam, and chilled water) individually. Also, they only minimize the capital and O&M costs, overlooking the transitional costs of equipment turning on, by either not allowing the equipment to turn off or ignoring the monetary value of the wear and tear on the equipment. Lastly, many micro-grid papers assume that the main grid will be there to support the system at all times, if the CHP plant is not able to produce the needed energy.In the paper, we describe a novel simultaneous optimization of design and operation strategies for a CHP plant as a utility producer for a residential neighborhood operating in island (i.e., grid-disconnected) mode, incorporating residential photovoltaics, implemented in a centralized fashion. In order to more accurately predict the operational costs of the CHP plant over a long period of time, the integrated design optimization is combined with an operational-oriented scheduling, forming a two-level problem. The first level consists of the presented integrated design and scheduling optimization, which selects equipment for a plant that must meet hourly residential neighborhood utility demands while minimizing the overall cost of the plant. The second level uses the optimal equipment sizes determined from the first level, and schedules the plant for a year, giving a better result of the operation economics of the CHP plant over a longer period of time. Utilizing data collected by Pecan Street Research Inc., a non-profit smart grid demonstration project headquartered at The University of Texas at Austin, a year of hourly residential heating, cooling, and electricity demand are analyzed and evaluated. These data are then used to create a time-resolved energy demand profile describing residential energy use, which is subsequently serves as a basis for optimizing the size and operation of the CHP plant so that all utility demands are met, while minimizing the capital and marginal costs, including transition penalties.References:[1] Ondeck, A.D., Baldea, M., Edgar, T.F. (2015).Data-Driven Modeling and Optimal Operation of District-level Combined Heat and Power and Photovoltaic Power Generation System. Applied Energy, 156, pp. 593-606.",
+    "presenting_author": "Abigail Ondeck | University of Texas at Austin, Austin, TX",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Abigail Ondeck",
+        "affiliation": "University of Texas at Austin, Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Michael Baldea",
+        "affiliation": "McKetta Department of Chemical Engineering, The University of Texas at Austin, Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Thomas F. Edgar",
+        "affiliation": "McKetta Department of Chemical Engineering, The University of Texas at Austin, Austin, TX",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464617.html",
+    "paper_id": "464617"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper465915.html",
+    "topic": "465915Improvement of Dynamic Quantitative Risk Assessment Method: Moving Boundary Conditions.",
+    "date_time": "November 2016",
+    "abstract": "Improvement of dynamic quantitative risk\nassessment methodology: moving boundary conditionWonje\nLee, Ph.D. candidateSeoul\nNational UniversityTo ensure the safety of a process\nsystem, engineers use various methods to identify the potential hazards of a\nsystem. One of the most popular methods is quantitative risk assessment (QRA)\nand it can quantifies the risk of a particular process activity. But one of disadvantages\nof QRA is its isolation and lack of integration with the process operation. A\nconventional QRA methodology is unable to update risk during the life of\nprocess and reflect risk according to the process change because it uses a\nstatistical accident occurrence probability. This was identified as one of the\nmain causes of the BP Texas refinery accident. For this reason, a methodology\nwhich is able to calculate the accident occurrence probability dynamically\nshould be studied. Recently, a dynamic QRA methodology which calculate the\naccident occurrence probability using the remaining time is suggested. The\nremaining time is calculated by measuring the change amount of a process key\nvariable to upper bound or lower bound. But this methodology has two problems.\nFirst, the existing methodology make accident occurrence probability zero when\na variable has no change in a dangerous level. If a variable has no change\ncurrently but is near boundary condition, it should have a reasonable accident occurrence\nprobability. Second, the existing methodology is unable to calculate the\nprobability proper to the oscillation of a variable. For example, a variable\nwhich vibrate with sine function close to upper bound has high probability when\nit is increasing but when it is decreasing, it has very low probability because\nof long distance to lower bound. It cannot classify difference between the\noscillation and the control of a variable dynamically.In this study, improved dynamic QRA methodology\nis suggested being able to consider the current state of a key variable as well\nas the change amount of it. A imaginary boundary condition is calculated and\nupdated dynamically which has the same distance from current value of a\nvariable to nearer boundary condition and opposite direction. The more a\nvariable is near one of the original boundary condition, the more distance\nbetween updated imaginary boundary condition and original boundary condition\nbecome narrow. So, it can calculate reasonable probability about small change\namount of a variable in dangerous level. This methodology is applied to dynamic\nsimulation data of single compressor system which has recycle line and is\nverified by comparison to the result of existing methodology.Session : Sustainable engineering forum –\nenvironmental health & safety and sustainability",
+    "presenting_author": "Wonje Lee | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Wonje Lee",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Seoul National University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Seoul",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Korea",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "The Republic of",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Jonggeol Na",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "School of Chemical & Biological Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Seoul National University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Seoul",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "South Korea and Chonghun Han",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "School of Chemical & Biological Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Seoul National University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Seoul",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Korea",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "The Republic of",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper465915.html",
+    "paper_id": "465915"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468112.html",
+    "topic": "468112A Rolling Horizon Scenario-Based Approach for Smart House Management Under Uncertainty",
+    "date_time": "November 2016",
+    "abstract": "The development of sustainable, efficient and environmental friendly energy supply chains has led to advances in the area of Energy Systems Engineering. In this context, the growing interest in the exploitation of renewable energy sources has led to an increasing use of microgrids, which are decentralized networks able to integrate several heat/power generation systems of low/medium capacity (Hodge et al., 2011; Zhang et al., 2013), with the main purpose of distributing the generated heat/energy locally so as to reduce energy losses and improve the responsiveness to energy demand fluctuations (Kopanos et al., 2013; Tong et al., 2015). These kind of networks usually involve the presence of renewable generators. So, it is imperative that the variations in the behaviour of natural energy sources requires the consideration of uncertainty in microgrids. This variability must be considered in order to ensure the operability and the reliability of the system, since the optimal solution obtained under deterministic conditions can be sub-optimal or even infeasible. Particularly, the operations management of microgrids can be affected by several types of uncertainty, such as energy production and energy demand variations.This work addresses the presence of uncertainty through a discrete-time two-stage stochastic programming approach, which is combined with a rolling horizon approach (Kopanos et al., 2014) for the simultaneous management of energy supply and demand in microgrids. The proposed Mixed Integer Linear Programming (MILP) formulation contains inequality constraints corresponding to the available heat and energy generation technologies, as well as equality constraints corresponding to heat and energy balance equations that describe flows, production, storage and consumption levels. This mathematical formulation uses a scenario-based stochastic programming approach where the scenarios are associated to internal variations in the duration of the energy consumptions as well as in the overall heat demand. However, the high complexity related to the estimated weather forecast, makes the consideration of all possible external scenarios, computationally intensive. The variability in weather conditions may affect the availability and production capacity of renewable energy generators. Thereby, updating input data (i.e., wind profile, heat and energy demand) is needed to ensure the adequate quality in the obtained results. Hence, an MILP two-stage stochastic programming approach was incorporated within a rolling horizon scheme that periodically updates input data information as the uncertain input parameters are revealed or considered to be known with certainty. The main decisions to be made to maximise the profit of the microgrid includes the execution of consumptions, the amount of heat and energy to be produced or purchased, the heat and energy storage levels and the amount of energy to export to the power grid. The methodology proposed above was tested on a case study and promising results demonstrating the applicability of the methodology for decision making were obtained. This work also forms a basis for future work to address more complex problems.ReferencesHodge, B.M., Huang, S., Siirola, J.D., Pekny, J.F. & Reklaitis, G.V. (2011). A multi-paradigm modeling framework for energy systems simulation and analysis. Computers & Chemical Engineering, 35, 1725-1737.Kopanos, G.M., Georgiadis, M.C. & Pistikopoulos, E.N. (2013). Energy production planning of a network of micro combined heat and power generators. Applied Energy, 102, 1522-1534.Kopanos, G.M. & Pistikopoulos, E.N. (2014). Reactive scheduling by a multiparametric programming rolling horizon framework: A case of a network of combined heat and power units. Industrial & Engineering Chemistry Research, 53, 4366-4386.Tong, C.D., Palazoglu, A., El-Farra, N.H. & Yan, X.F. (2015). Energy demand management for process systems through production scheduling and control. AIChE Journal, 61, 3756-3769.Zhang, D., Shah, N. & Papageorgiou, L.G. (2013). Efficient energy consumption and operation management in a smart building with microgrid. Energy Conversion and Management, 74, 209-222.",
+    "presenting_author": "Javier Silvente | Centre for Process Systems Engineering, Department of Chemical Engineering, University College London, London, United Kingdom",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Javier Silvente",
+        "affiliation": "Centre for Process Systems Engineering, Department of Chemical Engineering, University College London, London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Georgios M. Kopanos",
+        "affiliation": "School of Water, Energy & Environment, Cranfield University, Bedfordshire, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Vivek Dua",
+        "affiliation": "Centre for Process Systems Engineering, Department of Chemical Engineering, University College London, London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Lazaros G. Papageorgiou",
+        "affiliation": "Centre for Process Systems Engineering, Centre for Process Systems Engineering, University College London, London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468112.html",
+    "paper_id": "468112"
+  }
+]

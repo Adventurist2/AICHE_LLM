@@ -1,0 +1,314 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper435180.html",
+    "topic": "A Cross Decomposition Method for Stochastic Nonconvex Mixed-Integer Nonlinear Programming",
+    "date_time": "Wednesday, November 11, 2015: 2:35 PM",
+    "abstract": "A cross decomposition approach to stochastic nonconvex mixed-integer nonlinear programming Emmanuel Ogbe, Xiang Li* Department of Chemical Engineering, Queen's University, 19 Division Street, Kingston, ON, K7L 3N6, Canada When considering uncertainties explicitly, many process systems engineering problems (such as process design and operation problems) can be cast as a two-stage stochastic program [1]; when nonlinear models and integer decisions are involved, the stochastic program leads to a large-scale nonconvex mixed nonlinear programming (MINLP) problem in the following general form: (P) Here ω indicates different scenarios, and the size of the problem depends linearly on the number of scenarios included. Problem (P) has a decomposable structure in the sense that, when x 0 (called linking variable) is fixed, the problem is naturally decomposable over the scenarios. Therefore, a decomposition approach is often computationally more efficient than a regular solution method for solving Problem (P). Various decomposition strategies have been developed in the literature for solving Problem (P). When Problem (P) is partially convex (with respect to ) and some constraint qualification holds, Benders decomposition [2] or generalized Benders decomposition [3] can be used to solve Problem (P) to global optimality. Furthermore, if Problem (P) is fully convex, then Dantzig-Wolfe decomposition [4] can also be used to achieve an optimal solution. However, when set or/and functions , are nonconvex, classical decomposition approaches cannot guarantee convergence to a global optimal solution due to the loss of strong duality. Recently, two rigorous decomposition-based global optimization methods have been developed for solving Problem (P) that includes nonconvexity in space. One method utilizes Lagrangian decomposition [5][6], but needing branch-and-bound search in the x 0 space to guarantee global optimality. The other is a variant of (generalized) Benders decomposition that yields values for x 0 via solving convex lower bounding problems, but the convergence to a global optimal solution is guaranteed only when x 0 are integer variables [7]. This paper presents a cross decomposition approach that guarantees finding an ε-optimal solution in finite time, without the need of explicit branch-and-bound search and the convexity assumption for the problem. This approach is motivated by a cross decomposition method [8] that was originally developed for solving mixed-integer linear programming (MILP) problems with special structures. The basic idea of cross decomposition is to use two different decomposition approaches iteratively. The one that is more computationally efficient but less rigorous is performed more frequently, so that good quality solutions or even a global optimal solution can be generated quickly. The one that is relatively inefficient but able to guarantee convergence is performed only when necessary, so that the convergence of lower and upper bounds is guaranteed. It will be shown that, a cross decomposition framework that combines a variant of Dantzig-Wolfe decomposition (also a variant of Lagrangian decomposition) and generalized Benders decomposition, can be used to solve Problem (P) to global optimality, regardless of the convexity of the problem. It will be also shown that, with extensive domain reduction computation at each iteration of the cross decomposition, the efficiency of the cross decomposition can be significantly improved. The computational advantages of the proposed cross decomposition method over state-of-the-art global optimization solvers will be demonstrated through several process network design and operation problems. References [1] Birge, J. R.; Louveaux, F. Introduction to stochastic programming , Second Edition; Springer: New York, 2011. [2] Benders, J. F. Partitioning procedures for solving mixed-variables programming problems. Numer. Math. 1962 , 4, 238-252. [3] Geoffrion, A. M. Generalized Benders decomposition. Journal of Optimization Theory and Applications 1972 , 10, 237–260. [4] Dantzig, G. B.; Wolfe, P. Decomposition principle for linear programs. Operations Research 1960 , 8, 101-111. [5] Karuppiah, R.; Grossmann, I. E. A Lagrangean based branch-and-cut algorithm for global optimization of nonconvex mixed-integer nonlinear programs with decomposable structures. Journal of Global Optimization 2008 , 41, 163-186. [6] Carze, C. C.; Schultz, R. Dual decomposition in stochastic integer programming. Operations Research Letters 1999 , 24, 37–45. [7] Li, X.; Tomasgard, A.; Barton, P. I. Nonconvex generalized Benders decomposition for stochastic separable mixed-integer nonlinear programs. Journal of Optimization Theory and Applications 2011 , 151, 425-454. [8] Van Roy, T. J. Cross decomposition for mixed integer programming. Mathematical Programming 1983 , 25, 46-63.",
+    "presenting_author": "Xiang Li | Chemical Engineering, Queen's University, Kingston, ON, Canada",
+    "authors": [
+      "Emmanuel Ogbe | Chemical Engineering, Queen's University, Kingston, ON, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Emmanuel Ogbe",
+        "affiliation": "Chemical Engineering, Queen's University, Kingston, ON, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Xiang Li",
+        "affiliation": "Chemical Engineering, Queen's University, Kingston, ON, Canada",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper429508.html",
+    "topic": "Branch-and-Model: A Model-Based Derivative-Free Global Optimization Algorithm",
+    "date_time": "Wednesday, November 11, 2015: 1:20 PM",
+    "abstract": "Derivative-free optimization (DFO) addresses the problem of optimizing in the absence of an algebraic model. DFO algorithms can be used to optimize over simulations and experiments, when an algebraic model is not easily available. The subject has found renewed interest in recent time as many DFO algorithms and software have reached a level of maturity that facilitates the successful solution of many applications [1]. Unfortunately, as reported in a recent comparison of 22 DFO solvers on over 500 test problems in [1], the success of current DFO software implementations is typically limited to problems with up to 10 or 20 degrees of freedom. Clearly, there is a strong need for advances in the DFO area. In this paper, we address the optimization of a deterministic function over a box-bounded domain in the absence of an algebraic model for and its derivatives. We assume that can be calculated via simulation or experiment, although the cost of such a calculation may be significant. We present a novel model-based algorithm for this problem. This algorithm, named branch-and-model (BAM) is a DFO algorithm that builds a model around each evaluated point using available surrounding evaluated points. The algorithm performs a dense sense and employs a local search algorithm to identify local optima. We have proved that this algorithm converges to a global optimum of the problem. We present extensive computational experience with the algorithm and comparisons with other DFO algorithms on a publically available collection of 500 test problems ranging from 2 variables to 30 variables [1]. [1] Rios, L. M. and N. V. Sahinidis, Derivative-free optimization: A review of algorithms and comparison of software implementations, Journal of Global Optimization, 56, 1247-1293, 2013.",
+    "presenting_author": "Atharv Bhosekar | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Nick Sahinidis | Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+      "Luis Miguel Rios | Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Atharv Bhosekar",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nick Sahinidis",
+        "affiliation": "Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Luis Miguel Rios",
+        "affiliation": "Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper420105.html",
+    "topic": "Constrained Grey-Box Global Optimization of High Dimensional Problems",
+    "date_time": "Wednesday, November 11, 2015: 12:55 PM",
+    "abstract": "The use of deterministic global optimization methods based on analytical C 2 functions is prohibitive in a large portion of engineering applications which have one or multiple of the following characteristics: (a) high computational cost which implies that the calculation of derivatives is not viable, (b) numerical noise which leads to unreliable derivative information, and (c) lack of closed-form model equations which implies lack of derivative information [1-2]. Optimization without derivatives is becoming necessary in many recent applications dealing with detailed multiscale expensive simulations (i.e., finite element method models, computational fluid dynamic models and non-linear partial differential equation systems). In this work we are interested inconstrained grey-box systems, which are defined as optimization formulations which contain a set of explicitly known equations (constraints and/or objective function) and a set of explicitly unknown equations (constraints and/or objective). In prior work, we have shown that well-designed sampling coupled with iterative fitting of surrogate models coupled with deterministic global optimization has a competitive performance in locating global solutions at a low sampling expense [3-4]. However, treatment of a large set of general constraints (number of constraints > 50) in high dimensional problems (number of dimensions > 100) still remains a challenge in the field of constrained grey-box optimization due to the computational expense associated with collecting samples in high-dimensional spaces, solving large parameter estimation problems and finally optimizing the formulated grey-box formulations globally. Existing approaches in the literature treat such problems as pure “black-boxes”, disregarding any information in the form of constraints or problem structure and limiting their communication and integration with existing deterministic optimization software. Moreover, existing methods have been tested on high dimensional box-constrained problems using local optimization concepts- which are highly dependent on the existence of a good initial point [5]. The ARGONAUT framework (Algorithms for Global Optimization of constraiNed Grey-Box compUtational sysTems), is comprised of several key components which are enhanced in this work to handle higher dimensional problems and problems with a large number of constraints. The main components of the algorithm are: (a) Optimized sampling in constrained regions defined by any known information of the problem, (b) Bounds tightening when this is possible based on known information, (c) Selection of optimal surrogate functions for each individual unknown model from a larger pool of possible regression and interpolation techniques (i.e., linear, quadratic, signomial, kriging and radial-basis functions), (d) Exploration of model sparsity, (e) Sequential treatment of variables based on variable importance and (f) Parallelization of sampling, parameter estimation, model validation and global optimization procedures for computational savings. The proposed framework is highly intertwined with the deterministic global optimization solver ANTIGONE [6] which is necessary for optimizing the constrained non-linear grey-box formulations providing a diverse set of local and global solutions which are good candidates for further sampling. We provide thorough analysis of results on a large set of test problems, and propose different strategies based on the size of the problem as well as the computational expense of the simulation model. Finally, the performance of the developed algorithms are compared to existing software for constrained optimization without derivatives. References: 1. Conn, A.R., Scheinberg, K. Vicente, L.N.:Introduction to Derivative-free Optimization. MPS-SIAM Series on Optimization, vol. 8, SIAM, Philadelphia (2009). 2. Boukouvala, F. , Misener, R., Floudas, C.A.: Global Optimization Advances in Mixed-Integer Nonlinear Programming, MINLP and Constrained Derivative-free Optimization, CDFO. European Journal of Operational Research. Under Review (2015). 3. Hasan, M.M.F., Boukouvala, F., First, E.L., Floudas, C.A.: Nationwide, Regional, and Statewide CO2 Capture, Utilization, and Sequestration Supply Chain Network Optimization. Industrial Engineering & Chemistry Research 53(18), 7489-7506 (2014). 4. Boukouvala, F., Hasan, M.M.F., Floudas, C.A.: Global Optimization of General Constrained Grey-Box Models: New Method and its Application to Constrained PDEs. Submitted to Journal of Global Optimization (2015). 5. Adjengue, L., Audet, C., Yahia, I.B.: A variance-based method to rank input variables of the Mesh Adaptive Direct Search algorithm. Optim Letters 8, 1599- 1610 (2014). 6. Misener, R., Floudas, C.A.: ANTIGONE: Algorithms for Continuous/ Integer Global Optimization of Nonlinear Equations, Journal of Global Optimization 59(2-3), 503-526 (2014).",
+    "presenting_author": "Fani Boukouvala | ",
+    "authors": [
+      "Christodoulos A. Floudas | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Fani Boukouvala",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christodoulos A. Floudas",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper421920.html",
+    "topic": "Using Templates for Demonstrating Good Programming Practices",
+    "date_time": "Wednesday, November 11, 2015: 1:55 PM",
+    "abstract": "������ Computer based numerical problem solving (CBNPS) is one of the most widespread application of the computers in chemical engineering education and practice (Shacham et al. 2009). Mathematical software packages such as Excel�, MAPLE �, MATHCAD�, MATLAB�, Mathematica � , and POLYMATH� are currently used routinely for numerical problem solving in engineering education. In order to familiarize engineering educators with the most widely used packages Cutlip et al. 1999 assembled a set of ten benchmark problems that are �characteristic of various core courses in the chemical engineering curriculum. The solutions of this problem set, using the various packages were presented in the ASEE Summer School of for Chemical Engineering Faculty which was held in Snowbird, UT in August of 1997. Shacham and Cutlip, 1999 carried out a comparison of the various software packages using the benchmark problems. The comparison was based on numerical performance, user friendliness and the guidance provided by the program for preparation and documentation of the model and the results, and alteration of the model for parametric studies. Based on the result of this and additional studies (Cutlip et al. 2009), it has been concluded that packages that do not require programming (such as Polymath) can be preferable with respect to user friendliness and the guidance provided by the program for preparation and documentation of the model and the results, however they are usually limited to solution of Single Model-Single Algorithm (SMSA) problems. The use of packages that require programming (such as MATLAB) is essential for solving more complex problems with some combination of Multiple Models and Multiple Algorithms (MMMA). ������ In order to provide the required guidance for preparation and documentation of the model and the results when using packages that require programming, we prepared templates that guide the user in these aspects. The templates are implemented using MATLAB. So far templates have been prepared for solving systems of nonlinear algebraic equations, systems of ordinary differential equations (ODE), and polynomial, multiple linear and nonlinear regression. The template requires input of the model, variable names, values and units in a standard� format and display a standard format results report. ������ The principles that followed while displaying the results are: 1. Display each result the first time it becomes available in order to help debugging the problem., 2. Display full information (variable name, value and units) for all the variables, 3. Display also information that is not immediately needed, but may be required in the future, and 4. Try to minimize repeated display of the same information. ������ For demonstration of the typical contents of the standard report that follows these principles, let us consider a problem of �Simultaneous Multicomponent Diffusion of Gases� (problem 10.8 in Cutlip and Shacham, 2008). This problem includes three ODEs for computation of the concentration of various components: C A , C B and C C , three explicit equations for calculating mole fractions of the components x A , x B and x C , six constants representing the molar fluxes, N A , N B and N C , and the molecular diffusivities,� D AB , D BC and D AC , of the various components. ������ . The constant and initial variable values (including variable names and units) are displayed in Table 1. This information is displayed before the solution of the problem starts in order to help with the debugging of the problem. � ������� In Table 2 , part of the tabular results, obtained after the integration has been completed, are shown. In the �Results Summary Table� the names, units, minimal, maximal and final values of the state, and explicit variables are displayed. The �Complete Tabular Results� section contains separate tables of the concentrations and the explicit variable values vs. the independent variable according to the number of reporting points requested by the user (only part of this table is displayed). �Observe that the column heading contain variable names and units. A plot of the dependent variables ( C A , C B and C C in this case) vs. the independent variable ( z ) is also presented (Figure 1). ������ We believe that the templates we have developed enable better training of the engineers in the aspects of programming that are the most important for them, namely, the preparation and debugging of the model of the problem in hand and presentation of precise,� accurate and complete information regarding the computational results. ������ The complete set of templates and the associated explanations and examples are available at ftp://ftp.bgu.ac.il/shacham/templates . Our intention is to develop MATLAB templates for advanced numerical problem solving, including solution of ODE boundary value problems, differential-algebraic system of Equations (DAE), partial differential equations (PDE), parameter estimation in dynamic systems and linear and nonlinear programming ������ In the extended abstract and the presentation the complete set of templates that we have developed will be described in more detail and their use in ChE education will be discussed. ����������� References 1. Cutlip, M., J.J. Hwalek, H.E. Nuttall, M. Shacham, J. Brule, J. Widman, T. Han, B. Finlayson, E.M. Rosen, and R. Taylor, �A Collection of 10 Numerical Problems in Chemical Engineering Solved by Various Mathematical Software Packages,� Computer Applications in Engineering Education , 6, 169 (1998) 2. Cutlip, M. B. and Shacham, M. � Problem Solving In Chemical and Biochemical Engineering with Polymath, Excel and MATLAB. Prentice-Hall, Upper Saddle River, New-Jersey, 2008. 3. Cutlip, M. B., � Brauner, N. and M. Shacham, \" Biokinetic Modeling of Imperfect Mixing in a Chemostat � an Example of Multiscale Modeling\", Chemical Engineering Education , Vol. 43. No. 3, 243-248 (2009) 4. Shacham, M. and M. B. Cutlip, �Selecting the Appropriate Numerical Software for a Chemical Engineering Course�, Computers chem. Engng ., 23(suppl.), S645-S649(1999) 5. Shacham, M., Cutlip, M. B. and N. Brauner, \"From Numerical Problem Solving to Model Based Experimentation � Incorporationg Computer Based Tools of Various Scales into the ChE Curriculum\", Chemical Engineering Education , Vol. 43. No. 4, 315- 321 (2009) Table 1. � Display of the initial values for the example problem Prob. 10.8 - Simultaneous Multicomponent Diffusion of Gases � Constants NA = 2.115e-005�� (kg-mol/m^2-s) NB = -0.0004143 �� (kg-mol/m^2-s) NC = 0 �� (kg-mol/m^2-s) DAB = 0.000147 �� (m^2/s) DBC = 0.0001245 �� (m^2/s) DAC = 0.0001075 �� (m^2/s) CT = 0.0074309 �� (kg-mol/m^3) � � Variable values at the initial point z = 0 �� (m) CA = 0.0002229 �� (kg-mol/m^3) CB = 0 �� (kg-mol/m^3) CC = 0.007208 �� (kg-mol/m^3) �Explicit variables� xA = 0.029996 �� (-) xB = 0 �� (-) xC = 0.97001 �� (-) Figure 1. � Plot of the dependent variables vs. the independent variable� for the example problem Table 2. � Display of the solution for the example problem ������ Results Summary Table Variable Minimal Maximal Final Units z 0 0.001 0.001 (m) CA 4.79E-08 0.0002229 4.79E-08 (kg-mol/m^3) CB 0 0.0027013 0.0027013 (kg-mol/m^3) CC 0.0047296 0.007208 0.0047296 (kg-mol/m^3) xA 6.45E-06 0.029996 6.45E-06 (-) xB 0 0.36352 0.36352 (-) xC 0.63648 0.97001 0.63648 (-) ������ Complete Tabular Results z CA CB CC (m) (kg-mol/m^3) (kg-mol/m^3) (kg-mol/m^3) 0 0.0002229 0 0.007208 2.50E-05 0.00021605 8.24E-05 0.0071325 5.00E-05 0.00020928 0.0001639 0.0070577 7.50E-05 0.00020258 0.0002445 0.0069838 0.0001 0.00019596 0.0003243 0.0069106 ������������� � ������������� � ������������� � 0.0009 1.81E-05 0.0024796 0.0049332 0.000925 1.35E-05 0.0025359 0.0048815 0.00095 8.96E-06 0.0025916 0.0048303 0.000975 4.45E-06 0.0026467 0.0047797 0.001 4.79E-08 0.0027013 0.0047296 ������",
+    "presenting_author": "Mordechai Shacham | Ben Gurion University of the Negev, Beer-Sheva, Israel",
+    "authors": [
+      "Michael B. Cutlip | University of Connecticut, Storrs, CT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mordechai Shacham",
+        "affiliation": "Ben Gurion University of the Negev, Beer-Sheva, Israel",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Michael B. Cutlip",
+        "affiliation": "University of Connecticut, Storrs, CT",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper434466.html",
+    "topic": "Sage Math - an Open Source Computer Algebra System",
+    "date_time": "Wednesday, November 11, 2015: 12:47 PM",
+    "abstract": "The choice of a programming language and software package is always a major consideration when planning a course on computational methods in chemical engineering. Feature set, ease of use, extensibility, external adoption, and cost should all play a role in the decision. In this presentation I will make the argument that when it comes to software, the best things in life are free.",
+    "presenting_author": "Brandon S. Curtis | Chemical and Biomolecular Engineering, UC Berkeley, Berkeley, CA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Brandon S. Curtis",
+        "affiliation": "Chemical and Biomolecular Engineering, UC Berkeley, Berkeley, CA",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper428800.html",
+    "topic": "Experiments with Distributed Optimization for Non-Convex Optimization Problems",
+    "date_time": "Wednesday, November 11, 2015: 2:10 PM",
+    "abstract": "We focus on distributed optimization for a class of non-convex optimization problems that are relevant to the process systems engineering community. Distributed optimization refers to the process of solving a centralized optimization problem in a distributed fashion where a collection of “agents” cooperatively and rigorously optimize the centralized problem. It is a branch of optimization that has links to parallel computing, problem decomposition, decentralized computing, agent-based computing, etc. We focus on the following “almost” separable optimization problem. The functions in the objective function can be non-convex and are sufficiently smooth. min sum_{i=1}^{N} f_i(x_i) s.t. sum_{i=1}^{N} A_i x_i = b We will make a case for why this structure is extremely relevant to process optimization and why it is important to solve these problems using distributed optimization techniques. While most of the activity in the broader optimization community is for convex optimization problems, we will talk about our experience with solving distributed non-convex optimization problems using the alternating direction method of multipliers (ADMM) [1, 2]. We will present examples and results from pooling/blending optimization, stochastic programming, and a series of 2-variable test examples that highlight the difficulties (mostly having to do with the Augmented Lagrangian parameter) associated with ADMM as well as potential advantages of doing so. ADMM methods typically have sub-linear / linear global convergence rates for convex problems. Motivated by [3], we present an algorithmic framework for distributed optimization that has good local convergence rates. We also discuss a specific instance of this framework that employs an L1 exact penalty function as a measure of progress and highlight how this is different from the classical Augmented Lagrangian-based methods. References: [1] J. Eckstein and D. P. Bertsekas, “On the Douglas-Rachford splitting method and the proximal point algorithm for maximal monotone operators”, Mathematical Programming, 55, pp. 293-318, 1992 [2] S. Boyd, N. Parikh, E. Chu, B. Peleato and J. Eckstein, “Distributed Optimization and Statistical Learning via the Alternating Direction Method of Multipliers”, Foundations and Trends in Machine Learning, Vol. 3, No. 1, pp. 1–122, 2010 [3] B. Houska, J. Frasch, M. Diehl, “An Augmented Lagrangian Based Algorithm for Distributed Non-convex Optimization”, http://www.optimization-online.org/DB_HTML/2014/07/4427.html",
+    "presenting_author": "Shivakumar Kameswaran | Corporate Strategic Research, ExxonMobil Research and Engineering Company, Clinton, NJ",
+    "authors": [
+      "Frank Curtis | Industrial and Systems Engineering, Lehigh University, Bethlehem, PA",
+      "Stuart Harwoo | Corporate Strategic Research, ExxonMobil Research and Engineering Company, Clinton, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shivakumar Kameswaran",
+        "affiliation": "Corporate Strategic Research, ExxonMobil Research and Engineering Company, Clinton, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Frank Curtis",
+        "affiliation": "Industrial and Systems Engineering, Lehigh University, Bethlehem, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Stuart Harwoo",
+        "affiliation": "Corporate Strategic Research, ExxonMobil Research and Engineering Company, Clinton, NJ",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper433862.html",
+    "topic": "Using Vanderbilt's Chemical Process Innovation Center for Immersive Chemical Engineering Design and Laboratory Courses",
+    "date_time": "Wednesday, November 11, 2015: 1:21 PM",
+    "abstract": "A state-of-the-art Chemical Process Innovation Center was recently created at Vanderbilt to allow immersive education of our chemical engineering undergraduates. Specifically, the Chemical Process Innovation Center is a facility that includes our undergraduate unit operations laboratory modules, most of which are custom designed and built at Vanderbilt, wireless network technology with Apple iMac’s, Apple TV’s, mobile student work stations, and ten 65 inch HDTV monitors positioned throughout the center. In addition to the unit operations labs and the design curriculum that will be discussed, a measurement lab program using any number of our over 50 sensors and interface units is also included in the center. A specific description of the integration of chemical engineering lab, design and safety courses will be provided along with a detailed description of the center. This approach will highlight the immersion experience that chemical engineering students at Vanderbilt receive through the use of this center.",
+    "presenting_author": "Scott A. Guelcher | Chemical and Biomolecular Engineering, Vanderbilt University, Nashville, TN",
+    "authors": [
+      "Russell F. Dunn | Chemical and Biomolecular Engineering, Vanderbilt University, Nashville, TN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Russell F. Dunn",
+        "affiliation": "Chemical and Biomolecular Engineering, Vanderbilt University, Nashville, TN",
+        "designation": "Author"
+      },
+      {
+        "name": "Scott A. Guelcher",
+        "affiliation": "Chemical and Biomolecular Engineering, Vanderbilt University, Nashville, TN",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper427138.html",
+    "topic": "Bifurcation and Stability Analysis of Nonlinear Dynamic Systems Using Complete Search",
+    "date_time": "Wednesday, November 11, 2015: 1:45 PM",
+    "abstract": "Dynamic systems found in chemical and biological engineering are typically governed by parametric nonlinear dynamic systems of the form where and denote the state and parameter vectors, respectively. An important aspect of the asymptotic study of such systems involves computing the equilibrium manifold , and analyzing its stability. Another related aspect is the computation of bifurcation points, whereby qualitative change in the dynamics occur. Typically, stability and bifurcation analysis are performed using continuation methods [ 1 ]. Such methods use numerical integration starting from a grid of initial conditions to identify stable equilibrium points. Then, parameter perturbation and local search are used to reconstruct the equilibrium manifold. Due to their local nature, the results obtained using numerical continuation may be incomplete, which may lead to missing unconnected branches for instance. The focus of this paper is on using complete-search methods to rigorously enclose the equilibrium manifold and all the bifurcation points on a domain . A set-inversion algorithm [ 3 ] is used in order to compute partitions satisfying Enclosures of the image of f under Z are computed using polynomial models, in particular Chebyshev model arithmetic [ 8 ], and optimization-based domain reduction is applied to accelerate the convergence of the set-inversion algorithm [ 5 ]. Furthermore, a set-valued implicit equation solver [ 7 ] is used to compute a Chebyshev model representation of the boundary of the set whenever possible. It is important to note that, in this proposed approach, bifurcation points can be computed without computing the equilibrium manifold first. This is done by appending algebraic conditions for bifurcation (steady-state or Hopf bifurcations) [ 2 ] to the equilibrium constraints. Another contribution of the paper is a validated a posteriori stability analysis of the equilibrium points. This analysis is based on an validated extension of the Neville elimination algorithm for Hurwitz matrices [ 6 ] using Chebyshev models. Bifurcation points can also be obtained as a by-product of this stability analysis. The performance of the proposed algorithm is illustrated with several case studies of various complexity drawn from chemical engineering and systems biology. For illustration, the figure below shows the results of a bifurcation and stability analysis for a simple nutrient-resource-consumer model [ 4 ] with respect to the nutrient density parameter. Stable equilibrium points are shown in blue, unstable points in red, steady-state bifurcation points are shown as circles and Hopf bifurcations as squares. References: E. L. Allgower and K. Georg . Numerical Continuation Methods . Springer Series in Computational Mathematics. Springer-Verlag, Berlin, 1990. M. El Kahoui and A. Weber . Deciding Hopf bifurcations by quantifier elimination in a software-component architecture. Journal of Symbolic Computation , 30(2):161-179, 2000. L. Jaulin and E. Walter . Set inversion via interval analysis for nonlinear bounded-error estimation. Automatica , 29(4):1053-1064, July 1993. B. W. Kooi . Numerical bifurcation analysis of ecosystems in a spatially homogeneous environment. Acta Biotheoretica , 51(3):189-222, 2003. R. Paulen, M. E. Villanueva, and B. Chachuat . Guaranteed parameter estimation of nonlinear dynamic systems using high-order bounding techniques with domain and CPU-time reduction strategies. IMA Journal of Mathematical Control & Information , in press (doi: 10.1093/imamci/dnu055), 2015. J. M. Peña . Characterizations and stable tests for the Routh-Hurwitz conditions and for total positivity. Linear Algebra & Its Applications , 393:319-332, 2004. J. Rajyaguru and B. Chachuat . Taylor models in deterministic global optimization for Large-Scale systems with few degrees of freedom. Computer Aided Chemical Engineering , 32:973-978, 2013. J. Rajyaguru, M. E. Villanueva, B. Houska, and B. Chachuat . Higher-order inclusions of nonlinear systems by Chebyshev models. In Proc. AIChE Annual Meeting 2014 , Paper 385510, 2014.",
+    "presenting_author": "Benoit Chachuat | Centre for Process Systems Engineering, Imperial College London, London, United Kingdom",
+    "authors": [
+      "Mario E. Villanuev | Centre for Process Systems Engineering, Imperial College London, London, United Kingdom",
+      "Hugo Sant'Ana Pereir | Department of Bioengineering, Imperial College London, London, United Kingdom",
+      "Jai Rajyaguru | Centre for Process Systems Engineering, Imperial College London, London, United Kingdom",
+      "Rob Krams | Department of Bioengineering, Imperial College London, London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mario E. Villanuev",
+        "affiliation": "Centre for Process Systems Engineering, Imperial College London, London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Hugo Sant'Ana Pereir",
+        "affiliation": "Department of Bioengineering, Imperial College London, London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Jai Rajyaguru",
+        "affiliation": "Centre for Process Systems Engineering, Imperial College London, London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Rob Krams",
+        "affiliation": "Department of Bioengineering, Imperial College London, London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Benoit Chachuat",
+        "affiliation": "Centre for Process Systems Engineering, Imperial College London, London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper436726.html",
+    "topic": "Computer-Aided Tools for Teaching Sustainable Product-Process Design",
+    "date_time": "Wednesday, November 11, 2015: 12:30 PM",
+    "abstract": "Computer-Aided Tools for Teaching Sustainable Product-Process Design Deenesh K. Babi Department of Chemical and Bio-chemical Engineering, Technical University of Denmark, S�ltofts Plads, Building 229, DK-2800, Kgs. Lyngby Denmark In teaching a course for performing (sustainable) process-product design, different computer-aided tools for generation, selection (and screening) and verification/simulation should be incorporated within the framework of the course. For example, consider the computer-aided process design of a chemical where mass and energy balance data (obtained from the rigorous models) are used for performing a sustainability and LCA analysis. These analyses identify process limitations that are translated into design targets that, if matched, removes and/or eliminates the process limitation, thereby improving the design. This is the approach implemented in teaching (sustainable) process design at the Technical University of Denmark, Department of Chemical and Bio-chemical Engineering. For the sustainability and LCA analysis, the model proposed by the IChemE for calculation of sustainability metrics and the cradle to the gate approach based on ISO framework (ISO 14040) are used, respectively (Carvalho et al., 2013, Kalakul et al., 2014). In generating a feasible product-process design, it is imperative that the student understands concepts related to phase equilibria, reaction engineering and separation processes. In teaching a course at an advanced level related to product-process design, it is important to disseminate within the course current concepts applied in both R&D and industry. For example, consider the following: given a set of customer/market needs (constraints) for a product, design a prototype product that satisfies the design constraints (product design) or given a CO 2 rich stream as part of a power plant effluent, design a chemical process that has a negative net CO 2 emission (objective function, process design). The student can use a 3-stage approach for performing product-process design. In stage 1, for product, needs are translated into target properties that must be satisfied and, for process, feasible reactions are selected that utilizes CO 2 . In stage 2, for product, using property models, compounds (that will constitute the final product) are selected that satisfy property/stability constraints and, for process, flowsheet alternatives are generated for the selected CO 2 reactions. In stage 3, for product, the product is verified trough experiments and /or model based calculations and, for process, the best process for CO 2 utilization is selected based on the calculation and ordering of the objective function followed by process optimization. In each stage, computer-aided tools are utilized. In stage 1, a database is used (for example, ICAS database). In stage 2, computer-aided molecular design tools are used, for example, ProCAMD (Gani et al., 1997), property prediction tools using group contribution methods, for example, ProPred (Gani et al., 1997), simulation tools, for example, VPPD (the product simulator), PROII (process simulator), etc. In stage 3, model-based tools, for example, MoT (Gani et al., 1997). In this presentation, a product-process design problem will be formulated and solved, presenting the various computer-aided tools utilized in courses related to (sustainable) product-process design and separation process design. The presentation will interactively highlight the input and output of each tool through examples of different design problems posed to students. References Carvalho, A., Matos, H. A., & Gani, R. (2013). SustainPro�A tool for systematic process analysis, generation and evaluation of sustainable design alternatives. Computers & Chemical Engineering, 50, 8�27. Gani, R., Hytoft, G., Jaksland, C., & Jensen, A. K. (1997). An integrated computer aided system for integrated design of chemical processes. Computers & Chemical Engineering, 21(10), 1135�1146. Kalakul, S., Malakul, P., Siemanond, K., & Gani, R. (2014). Integration of life cycle assessment software with tools for economic and sustainability analyses and process simulation for sustainable process design. Journal of Cleaner Production, 71, 98�109 Mattei, M., Yunus, N. A., Kalakul, S., Kontogeorgis, G. M., Woodley, J. M., Gernaey, K. V., Gani, R., (2014). The Virtual Product-Process Design Laboratory for Structured Chemical Product Design and Analysis, Computer Aided Chemical Engineering33, 61-66",
+    "presenting_author": "Deenesh K. Babi | Department of Chemical and Biochemical Engineering, Technical University of Denmark, Kgs. Lyngby, Denmark",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Deenesh K. Babi",
+        "affiliation": "Department of Chemical and Biochemical Engineering, Technical University of Denmark, Kgs. Lyngby, Denmark",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425558.html",
+    "topic": "Teaching Aspen Plus and Other Engineering Software through Video at the University of Delaware",
+    "date_time": "Wednesday, November 11, 2015: 2:12 PM",
+    "abstract": "Many students learn to use ASPEN Plus® simulation software as part of their Senior Design course. The University of Delaware (UD) Department of Chemical and Biomolecular Engineering (CBE) has recognized the importance of introducing students to advanced engineering software such as ASPEN Plus® early in the curriculum. UD freshman taking their first chemical engineering course in material and energy balances (CHEG112) are now taught how to model industrially relevant chemical processes using ASPEN Plus®. This year, freshman in CHEG112 were taught how to simulate the hydrogenation of benzene to cyclohexane using ASPEN Plus®. Often, the lack of time available in the classroom and knowledge of ASPEN Plus® prevent the inclusion of such material in the first chemical engineering course. Therefore, we have created a series of ASPEN Plus® tutorial videos that students can access on-line outside of the classroom to learn how to model a variety of unit operations including mixers, heat exchanges, reactors, separators, etc. One advantage to introducing advanced topics using ASPEN Plus® is for the students to make a connection between what they are currently learning and what they will learn in future course work. This presentation will focus on the use of screen-shot software using Camtasia® to create a library of videos for teaching chemical engineering students how to use ASPEN Plus®. We have also used Camtasia in the Fluid Mechanics course to teach AFT Fathom and ANSYS Fluent. Other courses have used screen-capture software to introduce Matlab to chemical engineering students.",
+    "presenting_author": "Mark Shiflett | Central Research and Development, DuPont, Wilmington, DE",
+    "authors": [
+      "Prasad S. Dhurjati | Chemical Engineering, University of Delaware, Newark, DE"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mark Shiflett",
+        "affiliation": "Central Research and Development, DuPont, Wilmington, DE",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prasad S. Dhurjati",
+        "affiliation": "Chemical Engineering, University of Delaware, Newark, DE",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper433214.html",
+    "topic": "Population Balances in Undergraduate Education in Chemical Engineering",
+    "date_time": "Wednesday, November 11, 2015: 1:38 PM",
+    "abstract": "Particle breakage and agglomeration occurs in a variety of processing units in chemical processing at the macroscale, and in colloidal systems as well. Population balance equations (PBEs) are commonly used to model the evolution of particle size distributions due to breakage and/or agglomeration. The difficulty with using PBEs in an undergraduate class is that these partial integral differential equations are difficult to solve and have few analytical solutions. When introducing PBEs in an undergraduate class, the result is that students focus more on the computational techniques than the concepts of breakage and agglomeration and the effects of the parameters. To address this, a preliminary version of a computer software has been developed for use in a particle and crystallization technology elective course, and a nanotechology in chemical applications course. This preliminary version of the software will be presented and discussed.",
+    "presenting_author": "Priscilla Hill | Swalm School of Chemical Engineering, Mississippi State University, Mississippi State, MS",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Priscilla Hill",
+        "affiliation": "Swalm School of Chemical Engineering, Mississippi State University, Mississippi State, MS",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper430226.html",
+    "topic": "Surrogate Based Derivative Free Optimization Methodology for Supply Chain Management",
+    "date_time": "Wednesday, November 11, 2015: 12:30 PM",
+    "abstract": "Surrogate based Derivative Free Optimization Methodology for Supply Chain Management Nihar Sahay and Marianthi Ierapetritou Department of Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ Simulation models are one of the most effective tools to study supply chains. Compared to analytical and mathematical programming techniques, they offer the capability to include a greater deal of fidelity. Different kinds of simulation models have been widely used to study various aspects of supply chain management. These models provide a very convenient approach to generate various �what-if� scenarios and find the optimal values of the discrete variables. However stand-alone simulation models cannot be used to optimize the continuous variables. It is necessary to couple the simulation model with an optimization approach in order to find the optimal values of the continuous variables. During the recent years, supply chains have evolved into global, highly complex networks and the overall supply chain operations are a result of numerous autonomous, adaptive and intelligent entities. A high fidelity simulation model is not only difficult to develop but also difficult to use in an optimization framework due to computational complexity involved in each function evaluation. In order to optimize the variables in these simulation models, deterministic optimization solvers cannot be used as the derivatives are unavailable. Also, since the simulations take long times to run, it is not possible to perform a large number of simulation runs in order to approximate the derivatives. Taking these factors into consideration, we propose a surrogate based derivative free optimization methodology to solve a supply chain planning problem. Simulation based optimization approaches have been extensively studied in the literature. These approaches have been used to solve diverse problems. Jung et al. 1 propose a simulation based optimization framework to determine the safety level of each product at each production site in order to meet the required customer satisfaction. The objective is the minimization of the expected value of the cost of the supply chain. The optimization framework consists of an outer and an inner loop. The outer loop consists of a stochastic simulation coupled with a stochastic gradient based search module for finding the optimal safety level. The inner loop consists of the discrete event simulation model coupled with a deterministic planning and scheduling optimization model.� Wan et al. 2 propose a simulation based optimization framework that includes domain reduction, use of least square support vector machine to construct the surrogate model, and incremental sampling by maximizing Bayesian information and expected improvement. The framework is used to optimize the inventory levels in a three stage supply chain. Mele et al. 3 propose a simulation based optimization framework for parameter optimization of supply chain networks. The logical rules defined for the agents in the simulation model are parametrized and then a genetic algorithm is used to optimize the parameter values. The framework is used to determine the optimal values of the parameters associated with the inventory control policy. Derivative free optimization methods have been comprehensively reviewed by Rios and Sahinidis. 4 Development of surrogate models for solving derivative free optimization problems has also received a great deal of attention in the literature. 5-8 In this work, a surrogate based derivative-free optimization approach is proposed to optimize a supply chain planning problem. An initial global sampling is performed to construct an initial surrogate model using the expensive simulation model, which is improved by adaptive sampling. A kriging model 9 is used to develop the surrogate approximation whereas, a trust region based framework is used to optimize the surrogate model. The proposed optimization framework addresses issues related to the number of function calls required and also the limitations related to high dimensionality. A high dimensional supply chain planning problem is used to demonstrate the effectiveness of the proposed framework. The detailed agent based simulation model that is used as the black box function is able to provide a realistic representation of the supply chain operations. � References: 1. ����������� Jung JY, Blau G, Pekny JF, Reklaitis GV, Eversdyk D. A simulation based optimization approach to supply chain management under demand uncertainty. Computers & Chemical Engineering. 2004;28(10):2087-2106. 2. ����������� Wan X, Pekny JF, Reklaitis GV. Simulation-based optimization with surrogate models�Application to supply chain management. Computers & Chemical Engineering. 2005;29(6):1317-1328. 3. ����������� Mele FD, Guill�n G, Espu�a A, Puigjaner L. A Simulation-Based Optimization Framework for Parameter Optimization of Supply-Chain Networks. Industrial & Engineering Chemistry Research. 2006/04/01 2006;45(9):3133-3148. 4. ����������� Rios L, Sahinidis N. Derivative-free optimization: a review of algorithms and comparison of software implementations. Journal of Global Optimization. 2013/07/01 2013;56(3):1247-1293. 5. ����������� Boukouvala F, Ierapetritou M. Surrogate-Based Optimization of Expensive Flowsheet Modeling for Continuous Pharmaceutical Manufacturing. Journal of Pharmaceutical Innovation. 2013/06/01 2013;8(2):131-145. 6. ����������� Booker AJ, Dennis JE, Jr., Frank PD, Serafini DB, Torczon V, Trosset MW. A rigorous framework for optimization of expensive functions by surrogates. Structural optimization. 1999/02/01 1999;17(1):1-13. 7. ����������� Davis E, Ierapetritou M. A kriging method for the solution of nonlinear programs with black-box functions. AIChE Journal. 2007;53(8):2001-2012. 8. ����������� Huang D, Allen TT, Notz WI, Zeng N. Global Optimization of Stochastic Black-Box Systems via Sequential Kriging Meta-Models. Journal of Global Optimization. 2006/03/01 2006;34(3):441-466. 9. ����������� Sacks J, Welch WJ, Mitchell TJ, Wynn HP. Design and Analysis of Computer Experiments. 1989/11 1989(4):409-423.",
+    "presenting_author": "Nihar Sahay | Department of Chemical and Biochemical Engineering, Rutgers, The State University of New Jersey, Piscataway, NJ",
+    "authors": [
+      "Marianthi Ierapetritou | Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nihar Sahay",
+        "affiliation": "Department of Chemical and Biochemical Engineering, Rutgers, The State University of New Jersey, Piscataway, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Marianthi Ierapetritou",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper434455.html",
+    "topic": "Developing Graphical Interfaces for Solving Distillation Problems Trough Graphical and Short-Cut Methods",
+    "date_time": "Wednesday, November 11, 2015: 1:04 PM",
+    "abstract": "Almost as long as there have been user interfaces, there have been special software systems and tools to help design and implement the user interface software. Many of these tools have demonstrated significant productivity gains for programmers and have become important commercial products. On the other hand, developing interfaces applications is a difficult task; people have to address various common software engineering problems and interfaces-specific issues. To help the developers, a number of patterns have been proposed by the software community. In this work, we have developed interfaces for solving distillation problems in chemical processes. The tool developed help to the professor and student to understand the construction of graphical and shortcut methods for solving distillation problems.",
+    "presenting_author": "Mayra Guadalupe Hern�ndez Jim�nez | Divisi�n Acad�mica de Ingenier�a y Arquitectura, Universidad Ju�rez Aut�noma de Tabasco, Villahermosa, Tabasco, Mexico",
+    "authors": [
+      "Francisco Lopez-Villarreal | Divisi�n Acad�mica de Ingenier�a y Arquitectura, Universidad Ju�rez Aut�noma de Tabasco, Villahermosa, Tabasco, Mexico",
+      "Juan Barajas-Fern�ndez | Divisi�n Acad�mica de Ingenier�a y Arquitectura, Universidad Ju�rez Aut�noma de Tabasco, Villahermosa, Tabasco, Mexico",
+      "Mar�a A. Ol�n-Acost | Divisi�n Acad�mica de Ingenier�a y Arquitectura, Universidad Ju�rez Aut�noma de Tabasco, Villahermosa, Tabasco, Mexico"
+    ],
+    "authors_structured": [
+      {
+        "name": "Francisco Lopez-Villarreal",
+        "affiliation": "Divisi�n Acad�mica de Ingenier�a y Arquitectura, Universidad Ju�rez Aut�noma de Tabasco, Villahermosa, Tabasco, Mexico",
+        "designation": "Author"
+      },
+      {
+        "name": "Juan Barajas-Fern�ndez",
+        "affiliation": "Divisi�n Acad�mica de Ingenier�a y Arquitectura, Universidad Ju�rez Aut�noma de Tabasco, Villahermosa, Tabasco, Mexico",
+        "designation": "Author"
+      },
+      {
+        "name": "Mar�a A. Ol�n-Acost",
+        "affiliation": "Divisi�n Acad�mica de Ingenier�a y Arquitectura, Universidad Ju�rez Aut�noma de Tabasco, Villahermosa, Tabasco, Mexico",
+        "designation": "Author"
+      },
+      {
+        "name": "Mayra Guadalupe Hern�ndez Jim�nez",
+        "affiliation": "Divisi�n Acad�mica de Ingenier�a y Arquitectura, Universidad Ju�rez Aut�noma de Tabasco, Villahermosa, Tabasco, Mexico",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mayra Agustina Pantoja-Castro",
+        "affiliation": "Divisi�n Acad�mica de Ingenier�a y Arquitectura, Universidad Ju�rez Aut�noma de Tabasco, Cunduac�n, Mexico",
+        "designation": "Presenting Author"
+      }
+    ]
+  }
+]

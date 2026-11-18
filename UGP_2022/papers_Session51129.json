@@ -1,0 +1,312 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/642335",
+    "paper_endpoint": "Paper/642335",
+    "paper_id": "642335",
+    "topic": "Stable Economic Nonlinear Model Predictive Control without a Pre-Calculated Steady-State Optimum",
+    "title": "Stable Economic Nonlinear Model Predictive Control without a Pre-Calculated Steady-State Optimum",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "51129",
+    "session_title": "Advances in Process Control II",
+    "session_number": "299",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Model Predictive Control (MPC) has been widely applied to chemical processes in industry for several decades. Due to its success on optimization and control for dynamic systems, MPC has been treated as a mature process control tool. Nonlinear Model Predictive Control (NMPC), which handles nonlinear models and non-convex constraints, is getting more popular because it can realize high-performance control by capturing nonlinear details in the dynamics. Traditionally, economic real-time control is achieved in a two-stage process as depicted in the process control hierarchy (Yang, 2015), where the economic control goals are translated into state setpoints in the real-time optimization (RTO) layer and then they are passed to the advanced process control layer. Next, the advanced controller such as NMPC sends out the optimal control actions to the plant based on the current state and the setpoint. In recent studies, the concept of dynamic real-time optimization (DRTO) is proposed by coordinating the RTO and the advanced control layers, and the so-called economic NMPC (eNMPC) is constructed (Rawlings, 2012, Pontes, 2015). Instead of including the tracking stage cost in the NMPC objective, eNMPC considers the economic stage cost directly based on profit, operating cost, or some other performance measure, which eliminates the inconsistencies between two layers. However, steady-state stabilization is still an important characteristic for chemical processes and standard eNMPC does not guarantee asymptotic stability because the economic stage cost is not always a K function. This is in contrast to the setpoint tracking NMPC, which has stage costs that are K functions and thus guarantee asymptotic stability under terminal conditions, when the horizon is long enough. Recent advances to eNMPC have led to key stability results. Diehl et al. (2011) proved that if the dynamic system is strictly dissipative with the existence of a storage function and satisfies strong duality at the equilibrium point, asymptotic stability can be constructed. However, dissipativity is a system-specific property that is difficult to implement for large-scale systems such as polymer plants and distillation columns. To ensure stability for more general systems, Jäschke et al. (2014) proposed to regularize the economic stage cost by adding a large enough tracking term in order to make the stage cost strongly convex, but this additional term may dominate the economic stage cost and lead to conservative performance. Griffith et al. (2017) derived a stable eNMPC by replacing the regularization term with a stabilizing constraint for better economic performance, while maintaining stability at the same time. Nonetheless, it still requires a specific steady-state optimum to stabilize the dynamic system. Therefore, if there are any parameter updates, off-line optimizations need to re-solve in the RTO layer, which can compromise the dynamic real-time optimization. In this talk, we present a new eNMPC formulation that does not require any pre-calculated steady-state optimum while retaining asymptotic stability. We first derive the KKT conditions for the economic steady-state problem solved in the RTO layer and then define a new Lyapunov function and a new K -function stage cost that satisfy the Lyapunov Stability Theorem. In the NMPC formulation, we retain the economic stage cost in the NMPC objective to maintain the desired performance but add a stabilizing constraint with the new Lyapunov function to ensure asymptotic stability. We apply this eNMPC formulation to a CSTR case study. When the CSTR is controlled by the standard eNMPC, its states oscillate due to periodic negative cost values and never converge to the steady state. On the other hand, when it is controlled by our eNMPC formulation, the dynamic economic optimality is observed with the states ultimately converging to the steady state. In addition, our formulation includes a tuning parameter for the stabilizing constraint that adjusts the convergence rate for the dynamic system. Moreover, we investigate the impact of terminal conditions by implementing either the terminal constraint or the terminal cost. Finally, we demonstrate the benefit of this new eNMPC by updating one of the input parameters in the CSTR model. Our result shows that the system first converges to the optimal steady state and then, after the parameter update, it succeeds to converge to the new optimal steady state without any off-line optimization calculations. This truly realizes the integration dynamic real-time optimization and asymptotically stable control. References X. Yang, Advanced-multi-step and Economically Oriented Nonlinear Model Predictive Control. PhD thesis, Carnegie Mellon University (2015). J. B. Rawlings, D. Angeli, C. N. Bates, Fundamentals of Economic Model Predictive Control, 2012 IEEE 51st Annual Conference in Decision and Control (CDC) (2012) 3851–3861. K. V. Pontes, I. J. Wolf, M. Embiruu, W. Marquardt, Dynamic Real-time Optimization of Industrial Polymerization Processes with Fast Dynamics, Industrial & Engineering Chemistry Research 54 (47) (2015) 11881–11893. M. Diehl, R. Amrit, J. B. Rawlings, A Lyapunov Function for Economic Optimizing Model Predictive Control, IEEE Transactions on Automatic Control 56 (3) (2011) 703–707. J. Jäschke, X. Yang, L. T. Biegler, Fast Economic Model Predictive Control Based on NLP-sensitivities, Journal of Process Control 24 (2014) 1260–1272. D. W. Griffith, V. M. Zavala, L. T. Biegler, Robustly Stable Economic NMPC for Non-dissipative Stage Costs, Journal of Process Control 57 (2017) 116–126.",
+    "presenting_author": "Kuan-Han Lin | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Kuan-Han Lin | Carnegie Mellon University, Pittsburgh, PA",
+      "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kuan-Han Lin",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Lorenz Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "299a",
+    "sortable_time": "2022-11-15_12:30:00_12:49:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/642335"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647068",
+    "paper_endpoint": "Paper/647068",
+    "paper_id": "647068",
+    "topic": "Hybrid Model-Based MPC with Guarantees on Stability and Applicability Domain: Application to Chemical, Biochemical, and Hydraulic Fracturing Systems",
+    "title": "Hybrid Model-Based MPC with Guarantees on Stability and Applicability Domain: Application to Chemical, Biochemical, and Hydraulic Fracturing Systems",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "51129",
+    "session_title": "Advances in Process Control II",
+    "session_number": "299",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Process modeling began with the use of first-principles to build mathematical representations of complex chemical systems. These first-principles include mass and energy conservation laws, thermodynamic laws, kinetic laws, transport laws, etc. These first-principles-based models are interpretable and robust but have limited accuracy as they cannot explain all the complex phenomena that occur within a process [1]. On the other hand, data-based models are easy to build and accurate within their applicability domain (AD). But data-based models show poor accuracy outside the AD [2]. In order to overcome the limitations of both approaches, hybrid modeling is utilized which combines a first-principles-based model with a data-based model such that the resultant hybrid model is more accurate than the first-principles-based model. Recently, a hybrid model was developed for hydraulic fracturing system that utilized a deep neural network (DNN) as its data-based model [3]. One limitation of a DNN is that it shows poor extrapolation outside its AD. Consequently, a DNN-based hybrid model will inherit this limitation and will have poor accuracy outside its AD. Subsequently, the inability of the DNN-based hybrid model to extrapolate will gravely affect MPC performance and could also lead to instability issues. Therefore, it is critical to design an MPC controller with guarantees on stability as well as the AD with respect to the DNN-based hybrid model. Recently, in the field of safety engineering, the concept of Control Barrier Function (CBF) was proposed which in combination with a Control Lyapunov Function (CLF) guarantees safety and stability for nonlinear systems. The proposed control method ensures the stability of the system without it entering the unsafe regions [4]. In this work, we propose to develop a Control Lyapunov-Barrier Function-based model predictive controller (CLBF-MPC) for solving the problem of guarantees on AD and stability of nonlinear systems. First, we build a DNN-based hybrid model for the nonlinear system, define its AD based on the training data, and theoretically, show that its generalization error is bounded within the AD. Second, a CLBF is calculated and then utilized to design an explicit control law which guarantees the convergence of the closed loop system to the steady state without venturing outside the AD. Next, a CLBF-MPC is developed which guarantees stability and avoidance of leaving the AD under sample-and-hold control implementation. Finally, we show the effectiveness of our approach through application to a continuous stirred tank reactor, bioreactor, and hydraulic fracturing systems. Literature cited: [1] Shah, P., Sheriff, M.Z., Bangi, M.S.F., Kravaris, C., Kwon, J.S.I., Botre, C., Hirota, J. Deep neural network-based hybrid modeling and experimental validation for an industry-scale fermentation process: Identification of time-varying dependencies among parameters. Chemical Engineering Journal, 135643, 2022. [2] Alexandridis, A., Stogiannos, M., Papaioannou, N., Zois, E., Sarimveis, H. An inverse neural controller based on the applicability domain of RBF network models. Sensors, 18 (1), 2018. [3] Bangi, M.S.F., Kwon, J.S.I. Deep hybrid modeling of chemical process: application to hydraulic fracturing. Comput. Chem. Eng. , 134 :106696, 2020. [4] Romdlonyab, M.Z., Jayawardhanaa, B. Stabilization with guaranteed safety using Control Lyapunov–Barrier Function. Automatica, 66 :39-47, 2016.",
+    "presenting_author": "Mohammed Saad Faizan Bangi | Texas A&M University, College Station, TX",
+    "authors": [
+      "Mohammed Saad Faizan Bangi | Texas A&M University, College Station, TX",
+      "Joseph Kwon | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mohammed Saad Faizan Bangi",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joseph Kwon",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "299b",
+    "sortable_time": "2022-11-15_12:49:00_13:08:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647068"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648394",
+    "paper_endpoint": "Paper/648394",
+    "paper_id": "648394",
+    "topic": "Model Predictive Control As a Reinforcement Learning Policy: Faster Learning Via Policy Rollouts",
+    "title": "Model Predictive Control As a Reinforcement Learning Policy: Faster Learning Via Policy Rollouts",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "51129",
+    "session_title": "Advances in Process Control II",
+    "session_number": "299",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Reinforcement learning (RL) is a machine learning approach for automatic control that has seen significant research activity in recent years [1]. There exists strong interest in the synergistic application of RL with existing process control structures to alleviate problems with sample inefficiency and safety in using RL directly for process control [2]. Combination of RL with MPC has seen more research interest than combination with other process controllers [3]–[6]; which is also the focus of this work. This talk presents an approach for direct combination of RL and MPC by using the MPC as the control policy for the RL in an approximate RL formulation. In the approach proposed in this work, RL is used to directly improve the value function used in the MPC. The resulting policy amounts to maximization of the learned action-value function, subject to the modeled dynamics, over a predicted trajectory. Because the controller follows the current policy in the projection this is an on-policy algorithm, and the SARSA update to the value function is used. The basis functions used in the approximation of the action-value function are radial basis functions in the states and control moves, multiplied by the standard quadratic terms such that the results objective function is zero at zero and positive elsewhere (guaranteeing stability in the linear case by ensuring that the weights learned by the RL agent are positive definite). This algorithm is applied in two ways, first using the one-step update from the MPC optimization at each timestep. The second approach takes the optimal MPC trajectory as a policy rollout and computes an n-step return for updating the action-value function, where n can be any length up to N p . These algorithms are applied to a benchmark process control example where the states are assumed to be measurable. Learning experiments are carried out in structured episodes, injecting disturbances into the plant and ending once the output has been returned to the setpoint. Learning is carried out at each timestep, and the weights of the RL agent are initialized to unity (corresponding to a static MPC with Q=R=I). Under both the one-step approach and the n-step approach it is shown that superior performance to the static controller is achieved after learning (given the random selection of actions in explorative steps the results are standardized over 20 trials and presented with respect to median performance). In the case of the n-step algorithm faster learning can be achieved through the policy rollout, but performance does not improve monotonically with search depth; it is found that moderate values of n yield the fastest learning (with respect to achieving performance close to the final policy). While this may not be intuitive, the lack in performance with higher values of n stems from propagation of error in the action-value function further into the update, especially during the early stages of learning. While both approaches are able to improve performance over the static MPC, the algorithm using a moderate search depth is able to improve the policy significantly faster that the one-step algorithm. Bibliography [1] D. Silver et al. , “Mastering the game of Go without human knowledge,” Nature , vol. 550, no. 7676, pp. 354–359, Oct. 2017, doi: 10.1038/nature24270. [2] J. Shin, T. A. Badgwell, K. H. Liu, and J. H. Lee, “Reinforcement Learning – Overview of recent progress and implications for process control,” Comput. Chem. Eng. , vol. 127, pp. 282–294, Aug. 2019, doi: 10.1016/j.compchemeng.2019.05.029. [3] D. Görges, “Relations between Model Predictive Control and Reinforcement Learning,” IFAC-PapersOnLine , vol. 50, no. 1, pp. 4920–4928, Jul. 2017, doi: 10.1016/j.ifacol.2017.08.747. [4] S. Gros and M. Zanon, “Data-driven economic NMPC using reinforcement learning,” IEEE Trans. Automat. Contr. , vol. 65, no. 2, pp. 636–648, Feb. 2020, doi: 10.1109/TAC.2019.2913768. [5] M. Zanon and S. Gros, “Safe Reinforcement Learning Using Robust MPC,” IEEE Trans. Automat. Contr. , vol. 66, no. 8, pp. 3638–3652, Aug. 2021, doi: 10.1109/TAC.2020.3024161. [6] E. Hedrick, K. Hedrick, D. Bhattacharyya, S. E. Zitney, and B. Omell, “Reinforcement learning for online adaptation of model predictive controllers: Application to a selective catalytic reduction unit,” Comput. Chem. Eng. , vol. 160, p. 107727, Apr. 2022, doi: 10.1016/j.compchemeng.2022.107727.",
+    "presenting_author": "Elijah Hedrick | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Elijah Hedrick | West Virginia University, Morgantown, WV",
+      "Katherine Hedrick | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV",
+      "Stephen Zitney | National Energy Technology Laboratory, Morgantown, WV",
+      "Benjamin P. Omell | National Energy Technology Laboratory, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Elijah Hedrick",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Katherine Hedrick",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephen Zitney",
+        "affiliation": "National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Benjamin P. Omell",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "299c",
+    "sortable_time": "2022-11-15_13:08:00_13:27:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648394"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645541",
+    "paper_endpoint": "Paper/645541",
+    "paper_id": "645541",
+    "topic": "Model-Based Fault Diagnosis and Fault Tolerant Control for Safety-Critical Chemical Reactors",
+    "title": "Model-Based Fault Diagnosis and Fault Tolerant Control for Safety-Critical Chemical Reactors",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "51129",
+    "session_title": "Advances in Process Control II",
+    "session_number": "299",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In safety-critical chemical reactors with potential hazards, reaction kinetics and heat transfer parameters are usually known and a mathematical model is available. It is then meaningful to base fault detection and isolation algorithms on the first-principles model as opposed to statistics, so that physically meaningful residual signals are generated from material and/or energy balances not closing, leading to reliable fault diagnosis. Also, in order to maintain the safety of the entire system, it is necessary to take appropriate control action based on the mathematical model and the identified faults, so as to minimize their impact and thus ensure safe operation. In the present work, these ideas will be formulated and illustrated through a CSTR case study involving the liquid phase oxidation of alkylpyridine with hydrogen peroxide. Fault detection and isolation in linear systems have been studied extensively 1 and recently, there have been generalizations to a large class of nonlinear systems 2,3 . The approach involves designing a set of disturbance-decoupled linear residual generators, each one becoming active only when a specific fault occurs 2,3 . Once an abnormal event happens and the corresponding fault is detected and isolated, appropriate control action must be taken in order to prevent severe consequences caused by the fault. Re-tuning the controller and/or changing the manipulated input could be involved in the control action. The concepts of Dynamic Safe Set (DSS) 4 , defined as a maximal admissible set, and Dynamic Safety Margin (DSM) 4 , defined as the distance from the boundary of the DSS, play a critical role in formulating and designing the control strategy. Monitoring the position of the system in the interior of the DSS, including the size of the DSM, provides criteria for adapting control action in after the occurrence of an abnormal event. Alkylpyridine N-oxidation with hydrogen peroxide as the oxidizer is an important synthesis step for pharmaceutical intermediates and other useful organic chemicals. This reaction is highly exothermic with possible decomposition of hydrogen peroxide generating oxygen, raising safety concerns. Inherently safer operation conditions were studied based on the boundary diagrams 5 . Recent research has shown that continuous operation in a CSTR is advantageous in controllable temperature profiles and concentration homogeneity, suitable for this specific reaction 6 . In this work, we first study detectability in two groups of faults during the operation of the CSTR: jacket coolant inlet temperature and jacket coolant flow rate; reactant feed ratio and FT-IR sensor faults. We have found that one fault from each group can be effectively isolated via appropriate residual generators, despite persistent disturbances in the reaction rate, both in open loop and in closed loop under temperature control manipulating jacket coolant flow rate or jacket coolant inlet temperature. During the operation of the reactor, state estimates from a nonlinear observer track the system in state space and determine the corresponding DSS. The proposed fault tolerant control strategy monitors the DSM (distance of the system state from the boundary of the DSS) and, when it gets below a certain limit as a result of an abnormal event, the controller parameters are retuned and/or the manipulated input is switched. Simulation results show the effectiveness of the proposed fault tolerant control strategy in dealing with cooling system and sensor faults. (1) Ding, S. X. Model-Based Fault Diagnosis Techniques: Design Schemes, Algorithms, and Tools ; Springer Science & Business Media, 2008. (2) Venkateswaran, S.; Liu, Q.; Wilhite, B. A.; Kravaris, C. Design of Linear Residual Generators for Fault Detection and Isolation in Nonlinear Systems. Int. J. Control 2022 , 95 (3), 804–820. (3) Venkateswaran, S.; Sheriff, M.Z.; Wilhite, B. A.; Kravaris, C. C. Design of Functional Observers for Fault Detection and Isolation in Nonlinear Systems in the presence of noises. J. Process Control. 2021 , 108 , 68-85. (4) Venkidasalapathy, J. A.; Kravaris, C. Safety-Centered Process Control Design Based on Dynamic Safe Set. J. Loss Prev. Process Ind. 2020 , 65 , 104126. (5) Westerterp, K. R.; Lewak, M.; Molga, E. J. Boundary Diagrams Safety Criterion for Liquid Phase Homogeneous Semibatch Reactors. Ind. Eng. Chem. Res. 2014 , 53 (14), 5778–5791. (6) Cui, X.; Mannan, M. S.; Wilhite, B. A. Towards Efficient and Inherently Safer Continuous Reactor Alternatives to Batch-Wise Processing of Fine Chemicals: CSTR Nonlinear Dynamics Analysis of Alkylpyridines N-Oxidation. Chem. Eng. Sci. 2015 , 137 , 487–503.",
+    "presenting_author": "Pu Du | Texas A&M University, College Station, TX",
+    "authors": [
+      "Pu Du | Texas A&M University, College Station, TX",
+      "Joshiba Ariamuthu Venkidasalapathy | Viking Engineering LC, Houston, TX",
+      "Sunjeev Venkateswaran | Texas A&M University, College Station, TX",
+      "Benjamin Wilhite | Texas A&M University, College Station, TX",
+      "Costas Kravaris | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pu Du",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joshiba Ariamuthu Venkidasalapathy",
+        "affiliation": "Viking Engineering LC, Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Sunjeev Venkateswaran",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Benjamin Wilhite",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Costas Kravaris",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "299d",
+    "sortable_time": "2022-11-15_13:27:00_13:46:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645541"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649024",
+    "paper_endpoint": "Paper/649024",
+    "paper_id": "649024",
+    "topic": "Quantum Technologies and Model Predictive Control",
+    "title": "Quantum Technologies and Model Predictive Control",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "51129",
+    "session_title": "Advances in Process Control II",
+    "session_number": "299",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Quantum computation is becoming more widespread, and as a result, it is being investigated for what its potential benefits might be within process systems engineering. Already, works has been done to relate quantum computing to, for example, machine learning and optimization related to faults in industrial systems [1-4]. However, there are relatively few works considering the relationship of control and quantum computing. For example, a model predictive controller for a linear system was implemented on a quantum annealer [5], and there have also been works exploring, for example, preliminary reinforcement learning algorithms within a quantum computing framework [6-8]. We have recently begun to introduce quantum computation within the process control context [9]. Our premise is that, because it is currently unknown whether there exist quantum computing algorithms which might speed up control law execution (particularly for advanced controllers) compared to classical computers, it is necessary to explore the conditions under which algorithms on a quantum computer could even be considered for potential use in control. For example, part of what can enable quantum computers to have special properties compared to their classical counterparts is the ability to put a qubit, the quantum equivalent of a bit of information, into a superposition state [10]. However, coming out of this superposition state could entail a probabilistic operation where the result of the algorithm may not be certain. Understanding whether such a phenomenon could be acceptable in a control-theoretic context, or under what scenarios it might be acceptable, could be beneficial. Motivated by this, we will present a discussion of the relationship between control theory and quantum computing algorithms. We will discuss our first methodology from [9], which explores how the impacts of non-determinism in control action selection can be discussed in the context of advanced control designs like Lyapunov-based economic model predictive control (LEMPC) [11] by considering the discrete nature of solutions to such problems on computers where binary logic is important, as it is in quantum computing. The LEMPC is implemented as a lookup table searched by an (inefficient) quantum algorithm that returns the desired result with probability. Using the concept that the probability of obtaining a desired solution from this LEMPC relates to whether the closed-loop state is guaranteed to stay in a defined region of operation, we can develop the probability that the closed-loop state stays in a defined region of operation for a subsequent sampling period. A backup stabilizing controller could also be included that can be executed whenever the closed-loop state leaves a defined region of state-space. This backup control algorithm could be implemented using deterministic policies if it is desired to only use a quantum computer for the control logic, and not a hybrid of quantum and classical computers. However, the fact that the control-theoretic guarantees of LEMPC cannot be satisfied in a given region of state-space does not necessarily mean that the closed-loop state will exit a defined region; it only means that a set of sufficient (but not necessary) conditions for stability was not met. Therefore, we use a continuous stirred tank reactor example to analyze how many inputs from a variety of points in state-space would meet the stability requirements of LEMPC over a subsequent sampling period, and use this to better understand how even a probabilistic algorithm might be stabilizing over all time through creative coding implementations (e.g., potentially limiting the input space at certain states in state-space) or otherwise enforcing the backup control law. We close by discussing several extensions, such as how control theory is not enough to make entanglement a viable communication means in next-generation manufacturing and how the discussions in this work are related to other concepts in our group about cyberattack detection and handling [9]. [1] Ajagekar, A., Humble, T., You, F., 2020. “Quantum computing based hybrid solution strategies for large-scale discrete-continuous optimization problems.” Computers & Chemical Engineering 132, 106630. [2] Ajagekar, A., You, F., 2019. “Quantum computing for energy systems optimization: Challenges and opportunities.” Energy 179, 76-89. [3] Ajagekar, A., You, F., 2020. “A deep learning approach for fault detection and diagnosis of industrial processes using quantum computing.” 2020 IEEE International Conference on Systems, Man, and Cybernetics (SME), IEEE, Toronto, Ontario, Canada. pp. 2345-2350. [4] Ajagekar, A., You, F., 2020. “Quantum computing assisted deep learning for fault detection and diagnosis in industrial process systems.” Computers & Chemical Engineering 143, 107119. [5] Inoue, D., Yoshida, H., 2020. “Model predictive control for finite input systems using the D-Wave quantum annealer.” Scientific Reports 10(1), pp. 1-10. [6] Dong, D., Chen, C., Li, H., Tarn, T.J., 2008. “Quantum reinforcement learning.” IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics) 38, pp. 1207-1220. [7] Lamata, L., 2017. “Basic protocols in quantum reinforcement learning with superconducting circuits.” Scientific Reports 7, pp. 1-10. [8] Wu, S., Jin, S., Wen, D., Wang, X., 2020. “Quantum reinforcement learning in continuous action space.” arXiv preprint arXiv:2012.10711. [9] Nieman, K., Rangan, K. K., and Durand, H., submitted. “Control Implemented on Quantum Computers: Effects of Noise, Non-Determinism, and Entanglement.” Industrial & Engineering Chemistry Researc h. [10] Yanofsky, N.S., Mannucci, M.A., 2008. Quantum computing for computer scientists. Cambridge University Press . [11] Heidarinejad, M., Liu, J., Christofides, P.D., 2012. “Economic model predictive control of nonlinear process systems using Lyapunov techniques.” AIChE Journal 58, pp. 855-870.",
+    "presenting_author": "Kip Nieman | Wayne State University, Detroit, MI",
+    "authors": [
+      "Kip Nieman | Wayne State University, Detroit, MI",
+      "Helen Durand | Wayne State University, Detroit, MI"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kip Nieman",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Helen Durand",
+        "affiliation": "Wayne State University, Detroit, MI",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "299e",
+    "sortable_time": "2022-11-15_13:46:00_14:05:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649024"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643122",
+    "paper_endpoint": "Paper/643122",
+    "paper_id": "643122",
+    "topic": "Stability-Preserving Automatic Tuning of PID Control with Reinforcement Learning",
+    "title": "Stability-Preserving Automatic Tuning of PID Control with Reinforcement Learning",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "51129",
+    "session_title": "Advances in Process Control II",
+    "session_number": "299",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Proportional-integral-derivative (PID) controllers have been widely used in the process industry, accounting for more than 80% of the market, due to their simplicity in design and effectiveness for controlling practical systems [1]. However, the control performance of PID strictly relies on the tuning of its parameters. Conventional PID tuning techniques, such as Ziegler-Nichols, Cohen-Coon, and internal model control (IMC), are limited by system complexity and may not yield the optimal PID values [2]. Moreover, the PID parameters often remain fixed after tuning and thus lack adaptivity to time-varying dynamics. Adaptive PID methods based on, e.g., evolution optimization [3] and neural network [4], can mitigate the non-adaptivity issue, however, they either suffer from overwhelming computation for online adaption or lack the teaching signal for learning. As an online learning method, reinforcement learning (RL) has shown unique advantages in addressing the above issues, and thus has received attention in the community for enabling online adaptive PID tuning [5-7]. Despite these rapid advancements, maintaining the closed-loop stability during RL search, a critical issue for the safe operation of practical systems, has not been thoroughly studied. In this work we present a stability-preserving automatic PID tuning approach based on RL [8], particularly the deep deterministic policy gradient (DDPG) algorithm [9]. Specifically, the PID parameters to be explored are considered as the RL action and the corresponding control performance is treated as the reward. The RL agent learns the optimal PID parameters (actions) based on the past action-reward interactions with the environment (the closed-loop system). In our DDPG scheme, the parameters in the actor and critic networks are updated once after every episode (i.e., one complete closed-loop step test). To ensure the closed-loop stability of each episode, a baseline PID controller is designed that can present stable responses. When the RL agent explores a set of PID parameters, the running reward, e.g., the accumulated tracking error so far, is closely monitored across each time step in the episode. As soon as it exceeds a threshold, the underlying PID parameters are switched back to baseline values as an early correction to prevent instability. The developed methods are validated through setpoint tracking experiments based on a second-order plus dead-time system. Simulation results reveal that with our stability-preserving strategy, the closed-loop stability can be maintained throughout the RL search and the optimal PID parameters can be discovered efficiently. Moreover, the RL-based PID tuning can adapt to changes in the process model automatically without user intervention. Reference [1] H. Boubertakh, M. Tadjine, P.Y. Glorennec, and S. Labiod. Tuning fuzzy PD and PI controllers using reinforcement learning. ISA Transactions, 49:543–51, 2010. [2] D.E. Seborg, T.F. Edgar, and D.A. Mellichamp, PID controller design, tuning, and troubleshooting, Process Dynamics and Control. 2:300–323, 2004. [3] K. Zhou, and L. Zhen. Optimal design of PID parameters by evolution algorithm. Journal of Huaqiao University (Natural Science), 26:85–88, 2005. [4] J. Chen, and T.C. Huang. Applying neural networks to on-line updated PID controllers for nonlinear process control. Journal of Process Control, 14:211–30, 2004. [5] Y. Qin, W. Zhang, J. Shi, and J. Liu. Improve PID controller through reinforcement learning. In: 2018 IEEE CSAA Guidance, Navigation and Control Conference (CGNCC), pp. 1–6, 2018. [6] W.J. Shipman, and L.C. Coetzee. Reinforcement learning and deep neural networks for PI controller tuning, IFAC-PapersOnLine, 52:111–116, 2019. [7] X.-S. Wang, Y.-H. Cheng, and S. Wei. A proposal of adaptive PID controller based on reinforcement learning, Journal of China University of Mining and Technology, 17:40–44, 2004. [8] A. Lakhani, M. Chowdhury, and Q. Lu. Stability-preserving automatic tuning of PID control with reinforcement learning, Complex Engineering Systems, 2:3, 2022. [9] D. Silver, G. Lever, N. Heess, T. Degris, D. Wierstra, et al. Deterministic policy gradient algorithms. In: International Conference on Machine Learning, pp. 387–395, 2014.",
+    "presenting_author": "Myisha Ahmed Chowdhury | Texas Tech University, Lubbock, TX",
+    "authors": [
+      "Ayub Lakhani | Texas Tech University, Lubbock, TX",
+      "Myisha Ahmed Chowdhury | Texas Tech University, Lubbock, TX",
+      "Qiugang Jay Lu | Texas Tech University, Lubbock, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ayub Lakhani",
+        "affiliation": "Texas Tech University, Lubbock, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Myisha Ahmed Chowdhury",
+        "affiliation": "Texas Tech University, Lubbock, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Qiugang Jay Lu",
+        "affiliation": "Texas Tech University, Lubbock, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "299f",
+    "sortable_time": "2022-11-15_14:05:00_14:24:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643122"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645353",
+    "paper_endpoint": "Paper/645353",
+    "paper_id": "645353",
+    "topic": "An Advanced MPC for Nonlinear Large-Scale Dynamic Systems Based on Data-Driven POD/ANNs Method",
+    "title": "An Advanced MPC for Nonlinear Large-Scale Dynamic Systems Based on Data-Driven POD/ANNs Method",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "51129",
+    "session_title": "Advances in Process Control II",
+    "session_number": "299",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Model Predictive Control (MPC) has been widely used in process industries since the 1990s. With the MPC technique, online optimization has been performed successively in the predictive horizon and the results are used to take control action in the control horizon. In general, models in equation format are needed for MPC control. However, in reality it is often very difficult to obtain formulae for nonlinear dynamic systems with a wide range of time and spatial-scales. In order to apply MPC for nonlinear distributed-parameter large-scale systems with unknown dynamics, as a “black-box” system, a data-driven model reduction-based feedforward artificial neural network (ANN) approach has been developed for MPC control. An off-line model reduction technique, the proper orthogonal decomposition (POD) method, is first applied to extract accurate non-linear low-order models from the non-linear dynamic large-scale distributed system. Then a series of successive feedforward ANNs are trained based on the time coefficients of POD basis functions to obtain the dynamic ANN models for the system. Finally, the MPC control strategy can be applied for system control using the dynamic ANN models. A benchmark case study to use cooling zones to stabilize a tubular reactor with recycle, as shown in Figure 1, will be used as an illustrative example to show this methodology.",
+    "presenting_author": "Weiguo Xie | University of Minnesota - Duluth, MN",
+    "authors": [
+      "Weiguo Xie | University of Minnesota - Duluth, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Weiguo Xie",
+        "affiliation": "University of Minnesota - Duluth, MN",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "299g",
+    "sortable_time": "2022-11-15_14:24:00_14:43:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645353"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643840",
+    "paper_endpoint": "Paper/643840",
+    "paper_id": "643840",
+    "topic": "Quantitative Comparison of Model-Free Reinforcement Learning and Data-Driven Model Based Optimal Control",
+    "title": "Quantitative Comparison of Model-Free Reinforcement Learning and Data-Driven Model Based Optimal Control",
+    "date_time": "2022-11-15_12:30:00_15:00:00",
+    "session_id": "51129",
+    "session_title": "Advances in Process Control II",
+    "session_number": "299",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The sequential use of system identification, filtering, and model predictive control has been the standard procedure to implement the optimal control in the chemical process. Thanks to the linear system theory, computationally efficient methods such as N4SID, Kalman filter, and LQR were developed, and the optimal control implemented by this procedure shows a satisfactory performance. However, because the methods heavily benefit from the linear system theory, their extension to the nonlinear system with the economic cost becomes challenging tasks. Recently, the digitalization of the manufacturing process is expected to provide a platform where the process data can be used online. Therefore, model-free reinforcement learning (RL), the data-based method, is getting attention to be another option to implement optimal control in chemical processes. The model-free RL does not rely on linearity and can learn the optimal control policy using process data only. Focusing on this generality, various studies have been conducted to apply RL to chemical processes, including microfluidic, textile, simulated moving bed, polishing, polymerization, and mainly the bioprocess. These studies certainly show the potential advantages of using RL, emphasizing its ability to handle nonlinear and stochastic systems without a model. However, they also reveal several limitations of RL, such as RL may require excessive data to show a reasonable performance. Conventional RL methods do not ensure the satisfaction of constraints. The performance is sensitive to the value of hyper-parameters. The overall schemes of the model-based approach and RL are presented in Figures 1 and 2, respectively. The key difference is the outcome obtained from the process data. In figure 1, the state-space model is obtained by using the system identification method. Then, the control policy is obtained by performing the optimization using the fitted model. On the other hand, the control policy is directly obtained from the data under the RL scheme. This study quantitatively compares the conventional model-based approach and model-free RL concerning various criteria, such as control performance, data efficiency, performance sensitivity to the system parameter and hyper-parameter, and frequency of constraints violation. Depending on the result, this work can be solid support for developing and implementing the RL method in the chemical process or revealing a proper direction to improve the RL methods. In addition, this work provides the comparison results and environment to test the control method developed in the future. The comparisons are conducted for several selected benchmark chemical processes such as CSTR, distillation, bioprocess, and polymerization. Each benchmark system has its character, which makes it challenging to control. For model-free RL methods, algorithms such as A2C, DDPG, and SAC are applied to the benchmark systems. For the model-based approach, the linear model, Gaussian process, and nonlinear ode represented by the deep neural networks are fitted from the data. Note that the first-principle model with parameter estimation method is excluded because the proper first-principle model may not be available in practice. The model predictive control based on these fitted models is applied to the benchmark systems.",
+    "presenting_author": "Tae Hoon Oh | Kyoto university, Japan",
+    "authors": [
+      "Tae Hoon Oh | Kyoto university, Japan"
+    ],
+    "authors_structured": [
+      {
+        "name": "Tae Hoon Oh",
+        "affiliation": "Kyoto university, Japan",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "299h",
+    "sortable_time": "2022-11-15_14:43:00_15:02:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643840"
+  }
+]

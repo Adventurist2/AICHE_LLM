@@ -1,0 +1,312 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/608054",
+    "paper_endpoint": "Paper/608054",
+    "paper_id": "608054",
+    "topic": "A Two-Stage Stochastic Programming Model for Optimization Under Exogenous and Type I Endogenous Uncertainties",
+    "title": "A Two-Stage Stochastic Programming Model for Optimization Under Exogenous and Type I Endogenous Uncertainties",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "43800",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "411",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Stochastic programming (SP) is one of the common ways of solving optimization problems under uncertainty. This framework is a scenario-based approach, where each scenario is a different realization of the uncertainty present 1 . The uncertainty within these problems come in two different types: decision-independent, exogenous, and decision-dependent, endogenous, uncertainty 2 . A great deal of work has been performed analyzing problems with exogenous uncertainty. Recently, a focus on problems with endogenous uncertainty has emerged 2–6 . There are two types of endogenous uncertainty. Type-1 endogenous uncertainty, where decisions made affect the probability distribution of the resulting scenarios. For type-2 endogenous uncertainty, decisions impact the timing of uncertainty resolution. In this work, we focus on stochastic programs with type-1 endogenous uncertainty. Stochastic programming models containing type-1 endogenous uncertainty tend to arise from problems in which the decision-maker takes imperfect actions, or the results of these actions are stochastic themselves. The reliability optimization of a process through the planning of maintenance 7 or the optimization of the lifetime of an oil well by planning recompletions for the well 8 can be example problems. These problems are generally nonlinear and non-convex due to the probability measure of each scenario being dependent on the decisions made. Two recent studies 6,9 aims to solve SPs with decision-dependent probabilities. Medal et al. 6 present a two-stage stochastic program of a resource allocation problem for facility protection from natural disasters. Two solution approaches were proposed to solve this problem. The first is a greedy algorithm in which protection is iteratively added to the facilities with the largest benefit seen by the additional resources until all resources are allocated. The second approach is a reformulation of the original SP model that exploits the problem characteristics and structure. The authors enumerated all potential recourse actions, estimated their probabilities, and treated them as parameters in the model, which yielded an equivalent mixed integer linear programming (MILP) model. The results showed that the greedy algorithm obtained as good or better solutions than the solution of the MILP model given a computational budget. Hellemo et al. 9 introduce a general procedure to incorporate continuous distributions within a two-stage stochastic program (TSSP) where the first stage decisions are the parameters of the endogenous uncertainty’s probability distributions. The authors use these probability distributions directly and the approximations of the distributions to show that the incorporation of probability distributions with continuous parameters may be modeled without the need for approximations while maintaining computational tractability for MINLP solvers. In this study, we introduce a two-stage stochastic programming model under both exogenous and type-1 endogenous uncertainty. The first stage binary decision variables, , directly impact the probabilities associated with the outcome of possible results due to these decisions. is a vector to define a total of actions to take on the system. In the second stage, fixed recourse actions, , are taken given the resulting outcome of and the exogenous uncertainty pertaining to the state of the system, . The objective of the model is to maximize the expected benefit of the first stage decisions through fixed recourse actions, . The probabilities of each outcome, , depends on both first stage decisions and the exogenous uncertainty in the problem. With actions defined by the vector , there is a nonlinearity in the model for N greater than one. The probability measure of the overall outcome then becomes a product of the probabilities associated with each of the N actions taken, . Further nonlinearity of the model occurs through the calculation of the expected benefit where the product of the outcome probability and the benefit from the fixed recourse action are computed, , resulting in a mixed integer nonlinear programming (MINLP) model. The nonlinear terms in the model can be treated as the multiplication of binary variables, which we linearize by the introduction of new variables 10,11 to obtain an equivalent MILP. We apply the developed TSSP models to a case study that determines the optimal ages for colorectal cancer (CRC) screening by maximizing the expected total quality-adjusted life-years gained (QALYG) due to screening. Colorectal cancer is the third most common and the second most deadly form of cancer worldwide 12 . Based on the late-stage 5-year and the early-stage 5-year survival rates, the early detection of CRC and its precursors via screening is an effective mitigation technique to reduce the overall impact of CRC on society. The first stage decisions of the TSSP model are the ages at which a population should be screened with a colonoscopy. Type I endogenous uncertainty arises from the imperfect nature of the screening test. The probability of detecting CRC, or its precursors, depends both on the test used for screening as well as the current, unknown health state of the individual being screened. The source of exogenous uncertainty is the uncertain nature of the progression of CRC within the human body. The distribution of the exogenous uncertainty is constructed in a data-driven approach, where the data comes from multiple sources including various clinical trials 13–19 and the U.S. National Institute of Health’s Surveillance Epidemiology and End-Results (SEER) database 20 . In the model, each scenario represents a single individual with a differing life history. The fixed recourse actions represent the medical intervention to modify an individual’s life history dependent on the outcome of the first stage decisions. We formulate the CRC screening problem using our TSSP models (MINLP and MILP), where we utilize the direct calculations of the probability measure for each scenario. The first formulation, MINLP1, is the original TSSP model. The second model, MINLP2, is a modified MINLP in which a variable is introduced to remove the nonlinear terms associated with calculating the probability measure of the outcome. The final model is the equivalent MILP model of the TSSP model. The models are implemented in PYOMO using Python 3.6 and solved to optimality using BARON 20.4.14 for the MINLP models and CPLEX 12.6.3.0 for the MILP model. Despite being the largest of the three models, the MILP model is solved quicker (several orders of magnitude shorter) than the MINLP models. References Birge, J. R. & Louveaux, F. Introduction to stochastic programming . (Springer Science & Business Media, 2011). Tarhan, B., Grossmann, I. E. & Goel, V. Stochastic Programming Approach for the Planning of Offshore Oil or Gas Field Infrastructure under Decision-Dependent Uncertainty. Ind. Eng. Chem. Res. 48 , 3078–3097 (2009). Zeng, Z. & Cremaschi, S. Artificial lift infrastructure planning for shale gas producing horizontal wells. Proc. FOCAPO/CPC, Tuscan, AZ, USA 8–12 (2017). Goel, V. & Grossmann, I. E. A stochastic programming approach to planning of offshore gas field developments under uncertainty in reserves. Comput. Chem. Eng. 28 , 1409–1429 (2004). Colvin, M. & Maravelias, C. T. A stochastic programming approach for clinical trial planning in new drug development. Comput. Chem. Eng. 32 , 2626–2642 (2008). Medal, H. R., Pohl, E. A. & Rossetti, M. D. Allocating Protection Resources to Facilities When the Effect of Protection is Uncertain. IIE Trans. 48 , 220–234 (2016). Zied, H., Sofiene, D. & Nidhal, R. An optimal production/maintenance planning under stochastic random demand, service level and failure rate. in 2009 IEEE International Conference on Automation Science and Engineering 292–297 (2009). Drouven, M. G., Grossmann, I. E. & Cafaro, D. C. Stochastic programming models for optimal shale well development and refracturing planning under uncertainty. AIChE J. 63 , 4799–4813 (2017). Hellemo, L., Barton, P. I. & Tomasgard, A. Decision-dependent probabilities in stochastic programs with recourse. Comput. Manag. Sci. 15 , 369–395 (2018). Hammer, P. L. & Rudeanu, S. Boolean methods in operations research and related areas . 7 , (Springer Science & Business Media, 2012). Oral, M. & Kettani, O. A linearization procedure for quadratic and cubic mixed-integer problems. Oper. Res. 40 , S109--S116 (1992). World Heath Organization. Cancer. (2020). Available at: https://www.who.int/news-room/fact-sheets/detail/cancer. (Accessed: 27th February 2019) Hardcastle, J. D. et al. Randomised, controlled trial of faecal occult blood screening for colorectal cancer: results for first 107 349 subjects. Lancet 333 , 1160–1164 (1989). Atkin, W. S. et al. Once-only flexible sigmoidoscopy screening in prevention of colorectal cancer: a multicentre randomised controlled trial. Lancet 375 , 1624–1633 (2010). Kronborg, O., Fenger, C., Olsen, J., Bech, K. & Søndergaard, O. Repeated screening for colorectal cancer with fecal occult blood test: a prospective randomized study at Funen, Denmark. Scand. J. Gastroenterol. 24 , 599–606 (1989). Lieberman, D. A. & Smith, F. W. Screening for colon malignancy with colonoscopy. Am. J. Gastroenterol. 86 , (1991). Koretz, R. L. Malignant polyps: are they sheep in wolves’ clothing? Ann. Intern. Med. 118 , 63–68 (1993). Rickert, R. R., Auerbach, O., Garfinkel, L., Hammond, E. C. & Frasca, J. M. Adenomatous lesions of the large bowel: an autopsy survey. Cancer 43 , 1847–1857 (1979). Thomas, W. M., Pye, G., Hardcastle, J. D. & Walker, A. R. Screening for colorectal carcinoma: an analysis of the sensitivity of haemoccult. Br. J. Surg. 79 , 833–835 (1992). 20. Surveillance, Epidemiology, and End Results Program. SEER",
+    "presenting_author": "David Young | Auburn University, AL",
+    "authors": [
+      "David Young | Auburn University, AL",
+      "Selen Cremaschi | Auburn University, AL"
+    ],
+    "authors_structured": [
+      {
+        "name": "David Young",
+        "affiliation": "Auburn University, AL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Selen Cremaschi",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "411a",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/608054"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/609262",
+    "paper_endpoint": "Paper/609262",
+    "paper_id": "609262",
+    "topic": "Tighter Bounds on Moment Trajectories of Stochastic Processes Via Semidefinite Programming",
+    "title": "Tighter Bounds on Moment Trajectories of Stochastic Processes Via Semidefinite Programming",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "43800",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "411",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Over the last decades, stochastic modeling has become an established paradigm in various disciplines including systems biology, operations research, mathematical finance and more. However, while stochastic models often provide more depth and higher utility than their deterministic counterparts, their analysis is generally more involved. In particular, many numerical analysis techniques for stochastic models such as sampling procedures or moment closure approximations are inherently approximate and lack the ability to rigor ously quantify errors. This ultimately limits the utility of such approaches for robustness analysis and quantitative engineering applications. To address this deficiency, we focus in this work on a class of methods that we refer to as moment bounding schemes. Moment bounding schemes provide theoretically guaranteed lower and upper bounds for the moments associated with a given stochastic process. This is achieved via optimization of a truncated moment sequence subject to a set of so-called moment conditions reflecting the dynamics of the underlying stochastic process and the support of its distribution. By optimizing over increasingly large moment sequence truncations, the bounds can be tightened. Moment bounding schemes for stationary as well as exit time and location distributions have been successfully employed in a range of applications including analysis of stochastic reaction networks [3, 8, 10, 5, 2], diffusion processes [11, 7] and the pricing of financial derivatives [6, 9]. In contrast, bounding schemes for moment trajectories are less well-established. In this work, we extend the recently proposed semidefinite programming based bounding scheme for transient moment solutions of the Chemical Master Equation by Dowdy and Barton [4]. The main contribution is a novel hierarchy of linear and semidefinite moment conditions which directly reflects temporal causality of the moment trajectories. These constraints allow to tighten the generated bounds considerably while possessing a favorable scaling behavior (linear vs. combinatorial) when compared to the set of moment conditions employed by Dowdy and Barton [4]. Additionally, we present a new bounding scheme based on a polynomial restriction of a related continuous-time optimal control problem. The resultant infinite dimensional optimization problem is reduced to a finite semidefinite program via a sum-of-squares characterizations of matrix polynomials [1] to enforce semidefinite constraints over the continuum of time. As an aside, we note that all results naturally extend to bounding the transient moments associated with stochastic processes described by Itô differential equations with polynomial drift and diffusion coefficients. We illustrate the results with examples drawn from stochastic chemical kinetics and other fields. [1] A. A. Ahmadi and B. E. Khadir. Time-varying semidefinite programs. arXiv preprint arXiv:1808.03994 , 2018. [2] M. Backenköhler, L. Bortolussi, and V. Wolf. Bounding First Passage Times in Chemical Reaction Networks. In International Conference on Computational Methods in Systems Biology, pages 379–382. Springer, 2019. [3] G. R. Dowdy and P. I. Barton. Bounds on stochastic chemical kinetic systems at steady state. The Journal of Chemical Physics , 148(8):084106, 2018. [4] G. R. Dowdy and P. I. Barton. Dynamic bounds on stochastic chemical kinetic systems using semidefinite programming. The Journal of Chemical Physics , 149(7):074103, 2018. [5] K. R. Ghusinga, C. A. Vargas-Garcia, A. Lamperski, and A. Singh. Exact lower and up- per bounds on stationary moments in stochastic biochemical systems. Physical Biology , 14(4):04LT01, 2017. [6] K. Helmes, S. Röhl, and R. H. Stockbridge. Computing Moments of the Exit Time Distribution for Markov Processes by Linear Programming. Operations Research , 49 (4):516–530, 2001. [7] J. Kuntz, M. Ottobre, G.-B. Stan, and M. Barahona. Bounding stationary averages of polynomial diffusions via semidefinite programming. SIAM Journal on Scientific Computing , 38(6):A3891–A3920, 2016. [8] J. Kuntz, P. Thomas, G.-B. Stan, and M. Barahona. Bounding the stationary distri butions of the chemical master equation via mathematical programming. The Journal of Chemical Physics , 151(3):034109, 2019. [9] J.-B. Lasserre, T. Prieto-Rumeau, and M. Zervos. Pricing a class of exotic options via moments and SDP relaxations. Mathematical Finance , 16(3):469–494, 2006. [10] Y. Sakurai and Y. Hori. A convex approach to steady state moment analysis for stochastic chemical reactions. In 2017 IEEE 56th Annual Conference on Decision and Control (CDC) , pages 1206–1211. IEEE, 2017. [11] E. Schwerer. A linear programming approach to the steady-state analysis of reflected B rownian motion. Stochastic Models , 17(3):341–368, 2001.",
+    "presenting_author": "Flemming Holtorf | Massachusetts Institute of Technology, Cambridge",
+    "authors": [
+      "Flemming Holtorf | Massachusetts Institute of Technology, Cambridge",
+      "Paul I. Barton | Massachusetts Institute of Technology, Cambridge"
+    ],
+    "authors_structured": [
+      {
+        "name": "Flemming Holtorf",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Paul I. Barton",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "411b",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/609262"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/611314",
+    "paper_endpoint": "Paper/611314",
+    "paper_id": "611314",
+    "topic": "A General Framework for Simultaneous Quantification of Parametric and Structural Model Uncertainty",
+    "title": "A General Framework for Simultaneous Quantification of Parametric and Structural Model Uncertainty",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "43800",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "411",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Over the last few years, the process industries have showed growing interest in the use of computational techniques for the optimization of process operations. This trend is confirmed through the industry 4.0 paradigm, which calls for the systematic use of model-based monitoring, control and optimization for improving product quality [1] as well as process economics [2], reliability and safety [3]. It is important to note that this new reliance on computational tools to optimize industrial operations is not limited to the process industries (it is already affecting other industrial sectors such as pharmaceutical manufacturing and the food industry), thus is expected to continue in the years to come. Therefore, we can envision that model-based monitoring, control and optimization will become the backbone of industry practices in the near future. A key challenge in the systematic implementation of the industry 4.0 goals is the lack of process models, accurate and reliable enough for purposes of process optimization. In fact, the predictions of every mathematical model are affected by both structural and parametric uncertainty, which must be quantified and explicitly considered in most monitoring, control and optimization applications, in order to fully exploit the benefits offered by these advanced process management strategies. Unfortunately, to this day, there are no general methods for the simultaneous quantification of both structural and parametric model uncertainty, thus this research area still offers significant challenges and opportunities. In view of these considerations, we propose an innovative framework for the simultaneous quantification of both structural and parametric model uncertainty, applicable to any type of process model (NLS, ODE, DAE, etc.). Given a set of structurally different candidate models (i.e., a superstructure of model components) and process data (i.e., time series of experimental measurements), the proposed framework follows this rationale: First, we utilize appropriate data smoothing techniques to identify temporal trends in the process data. Then, we compute a structural uncertainty index for every candidate model by multi-objective optimization (structural uncertainty is measured as the discrepancy between experimental and model trends). Next, we calculate a parametric uncertainty index for every candidate model through Bayesian inference (this step requires estimation of the probability distribution of the parameters of every model). Finally, we combine the structural and parametric uncertainty indices into an overall uncertainty score, which allows selection of the best model (the latter is the model associated with the smallest overall uncertainty score). Once the best model has been identified, we can utilize the quantities, computed in steps a-d, to readily estimate any other uncertainty measure (e.g., joint, marginal and conditional probability distributions of the model parameters and states as well as any of their central tendency and dispersion measures), which is more appropriate for the final application of interest (e.g., process design, monitoring, control and optimization under uncertainty). This novel approach to the simultaneous quantification of parametric and structural model uncertainty is demonstrated on two different processes, specifically a continuous stirred tank reactor and a pilot-scale plant for producing oral drug doses (Figure 1). In both case studies, we solve risk-based decision making problems under both structural and parametric model uncertainty, in which the objective is to isolate and reject off-spec products in real time, before they contaminate the on-spec production. The results of these studies confirm that the frequency of false positives (rejection of on-spec product) and false negatives (acceptance of off-spec product) can be reduced by explicitly accounting for the presence of structural uncertainty in the process model, as opposed to the conventional assumption of negligible structural uncertainty. References : [1] Mockus, L., Laínez, J. M., Reklaitis, G., & Kirsch, L. (2011). A Bayesian Approach to Pharmaceutical Product Quality Risk Quantification. Informatica, 22(4), 537-558. [2] Rossi, F., Reklaitis, G., Manenti, F., & Buzzi-Ferraris, G. (2016). Multi-scenario Robust Online Optimization and Control of Fed-batch Systems via Dynamic Model-based Scenario Selection. AIChE Journal, 62(9), 3264-3284. [3] Rossi, F., Manenti, F., Buzzi-Ferraris, G., & Reklaitis, G. (2017). Combined dynamic optimization, optimal control and online runaway detection & prevention under uncertainty.",
+    "presenting_author": "Francesco Rossi | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Francesco Rossi | Purdue University, West Lafayette, IN",
+      "Linas Mockus | Purdue University, West Lafayette, IN",
+      "Gintaras Reklaitis | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Francesco Rossi",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Linas Mockus",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Gintaras Reklaitis",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "411c",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/611314"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/608051",
+    "paper_endpoint": "Paper/608051",
+    "paper_id": "608051",
+    "topic": "Optimal Scenario Tree Generation for Stochastic Programming Using Sinkhorn Distance",
+    "title": "Optimal Scenario Tree Generation for Stochastic Programming Using Sinkhorn Distance",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "43800",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "411",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Practical optimization applications need to account for uncertainty from various sources to obtain realistic solutions. Stochastic programming (Dantzig, 1955) is a class of methods of optimization under uncertainty, which assumes that the probability distribution of the uncertainty is known or can be estimated. Scenario-based stochastic programming has been developed in which the optimization problem is solved for a finite set of scenarios or discrete realizations of uncertainty. However, the complexity of the stochastic optimization problem, and subsequently, the computational time, increases drastically with an increase in the number of scenarios. Therefore, finding the optimal set of scenarios is a significant research objective. Scenario reduction is an important way for scenario generation. The concept of scenario reduction was pioneered by Dupacova, et. al (2003), who put forth the idea of obtaining the closest subset from a larger superset of scenarios, using a natural probability metric as an approximation metric. The authors proposed the use of Fortet-Mourier metrics for the reduction of electrical load scenario trees used for power management under uncertainty. The stability of multistage stochastic programs was analyzed by Heitsch, et. al (2006) who posited that the reduction of multistage scenario trees should be based on L r distances as well as filtration distances. Subsequently, Heitsch and Romisch (2009) derived algorithms for the reduction of multistage scenario trees using this idea. Chen, et. al (2012) developed algorithms using K-means clustering and LP moment matching methods to approximate multistage scenario trees from a large scenario fan description of the uncertain. Floudas and Li (2014) treated the scenario reduction problem as a mixed integer linear programming (MILP) problem. Li, et. al (2016) proposed a computationally efficient algorithm for scenario reduction that circumvents the limitations posed by the aforementioned MILP formulation through the use of transportation distance. In recent work by Zhou, et. al (2019), the authors introduce an improved K-means based on typicality degree (IKBTD) approach for scenario reduction. In this work, we proposed replacing the linear programming (LP) problem associated with transportation distance calculation between original and reduced scenario sets, in the approach proposed by Li, et. al (2016), by the solution to the entropy-regularized transport problem, termed as the Sinkhorn Distance (Cuturi, et. al (2013)). Computationally, the Sinkhorn Distance was found to be more resource efficient than solving the LP transportation problem, especially for very large scenario supersets, as it comprises an iterative calculation procedure to obtain the optimal transport plan, and distance, using the Sinkhorn-Knopp algorithm. The performance of the proposed algorithm using Sinkhorn Distance was analyzed based on – 1) the approximation quality of the optimal reduced subset with respect to the original scenario superset, and 2) the stability of the scenario reduction method. The approximation quality of the proposed algorithm was contrasted with that of the conventional K-means clustering algorithm (Chen, et. al (2012)) by illustrating the reduction of a large scenario fan generated from a random walk process to a multistage scenario tree and using the Kantorovich Distance (KD) as a measure of dissimilarity between the fan and the generated tree. It was found that the proposed algorithm gives a lower KD, thereby generating a scenario tree structure that is more similar to the original fan than the conventional K-means clustering approach. The stability of the proposed algorithm was assessed by checking for both in-sample and out-of-sample stability (Kaut and Wallace (2003)) of the reduced scenario tree’s solution with respect to the true solution, by testing it on the two-stage stochastic programming formulation of the farmer’s problem (Birge and Louveaux (2011)). We found that the proposed algorithm using the Sinkhorn Distance performs well on both fronts, thus making it a suitable method for reduction of large multistage scenario trees in stochastic programming applications. References Dantzig, G. (1955). Linear Programming under Uncertainty. Management Science, 1(3/4), 197-206. Dupačová, J., Gröwe-Kuska, N., & Römisch, W. (2003). Scenario reduction in stochastic programming. Mathematical programming, 95(3), 493-511. Heitsch, H., Römisch, W., & Strugarek, C. (2006). Stability of multistage stochastic programs. SIAM Journal on Optimization, 17(2), 511-525. Heitsch, H., & Römisch, W. (2009). Scenario tree reduction for multistage stochastic programs. Computational Management Science, 6(2), 117-133. Xu, D., Chen, Z., & Yang, L. (2012). Scenario tree generation approaches using K-means and LP moment matching methods. Journal of Computational and Applied Mathematics, 236(17), 4561-4579. Papavasiliou, A., & Oren, S. S. (2013). Multiarea stochastic unit commitment for high wind penetration in a transmission constrained network. Operations Research, 61(3), 578-592. Li, Z., & Floudas, C. A. (2014). Optimal scenario reduction framework based on distance of uncertainty distribution and output performance: I. Single reduction via mixed integer linear optimization. Computers & Chemical Engineering, 70, 50-66. Li, Z., & Li, Z. (2016). Linear programming-based scenario reduction using transportation distance. Computers & Chemical Engineering, 88, 50-58. Zhou, Y., Shi, L., & Ni, Y. (2019, May). An Improved Scenario Reduction Technique and Its Application in Dynamic Economic Dispatch Incorporating Wind Power. In 2019 IEEE Innovative Smart Grid Technologies-Asia (ISGT Asia) (pp. 3168-3178). IEEE. Cuturi, M. (2013). Sinkhorn distances: Lightspeed computation of optimal transport. In Advances in neural information processing systems (pp. 2292-2300). Kaut, M., & Wallace, S. W. (2003). Evaluation of scenario-generation methods for stochastic programming. Birge, J. R., & Louveaux, F. (2011). Introduction to stochastic programming. Springer Science & Business Media.",
+    "presenting_author": "Sanjula Kammammettu | University of Alberta, Edmonton, Canada",
+    "authors": [
+      "Sanjula Kammammettu | University of Alberta, Edmonton, Canada",
+      "Zukui Li | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sanjula Kammammettu",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zukui Li",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "411d",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/608051"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/600005",
+    "paper_endpoint": "Paper/600005",
+    "paper_id": "600005",
+    "topic": "Multistage Robust Mixed-Integer Optimization Under Endogenous Uncertainty",
+    "title": "Multistage Robust Mixed-Integer Optimization Under Endogenous Uncertainty",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "43800",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "411",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Endogenous, i.e. decision-dependent, uncertainty has received increased interest in the stochastic programming community in recent years. In contrast to exogenous uncertainty, endogenous uncertainty is affected by implemented decisions in terms of the underlying distribution or the time of realization. In a robust optimization framework, endogenous uncertainty translates into decision-dependent uncertainty sets whose size and shape are affected by decisions. There has been little work on robust optimization with endogenous uncertainty, and most of the few existing contributions (Lappas & Gounaris, 2018; Nohadani & Sharma, 2018) only address the static case, which does not account for recourse. In this work, we consider multistage robust optimization with mixed-integer recourse and decision-dependent uncertainty sets that can be altered in every stage. Based on a lifting technique proposed by Georghiou et al. (2015), an optimization framework is developed that allows us to consider both continuous and integer recourse, including recourse decisions that affect the uncertainty set. This significantly expands our capability to appropriately model endogenous uncertainty in robust optimization settings. With the introduction of binary decision rules and discontinuous piecewise linear decision rules for continuous recourse variables, we derive a tractable and effective reformulation of the problem. Finally, extensive computational experiments are performed to gain insights on the impact of endogenous uncertainty, the benefit of considering both continuous and integer recourse, and computational performance. Our results indicate that the level of conservatism in the solution can be significantly reduced if endogenous uncertainty and mixed-integer recourse are properly modeled. References Georghiou, A., Wiesemann, W., & Kuhn, D. (2015). Generalized decision rule approximations for stochastic programming via liftings. Mathematical Programming, 152(1-2), 301–338. Lappas, N. H. & Gounaris, C. E. (2018). Robust optimization for decision-making under endogenousuncertainty. Computers and Chemical Engineering, 111, 252–266. Nohadani, O. & Sharma, K. (2018). Optimization under decision-dependent uncertainty. SIAM Journal on Optimization, 28(2), 1773–1795.",
+    "presenting_author": "Wei Feng | Zhejiang University, Hangzhou, China",
+    "authors": [
+      "Wei Feng | Zhejiang University, Hangzhou, China",
+      "Yiping Feng | Zhejiang University, Hangzhou, China",
+      "Qi Zhang | University of Minnesota, Twin Cities, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Wei Feng",
+        "affiliation": "Zhejiang University, Hangzhou, China",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yiping Feng",
+        "affiliation": "Zhejiang University, Hangzhou, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Qi Zhang",
+        "affiliation": "University of Minnesota, Twin Cities, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "411e",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/600005"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/602467",
+    "paper_endpoint": "Paper/602467",
+    "paper_id": "602467",
+    "topic": "Recent Advances in Bounding Transient PDE Models with Parametric Uncertainty",
+    "title": "Recent Advances in Bounding Transient PDE Models with Parametric Uncertainty",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "43800",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "411",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Many systems engineering designs are deemed safety-critical and require strict guarantees of safety and performance. Therefore, it is necessary to identify the worst-case performance of such safety-critical systems for mitigating the impacts of uncertainty at the design stage [1, 2, 3, 4]. For example, in precision cancer therapy, physicians must guarantee that a drug's concentration in the bloodstream is never higher than a maximum safe level while ensuring that a minimum required dose is delivered to a tumor [5]. Approaching this robustness verification problem from a model-based perspective amounts to determining the realization(s) of uncertainty that result in a simulated (worst-case) violation of safety/performance constraints by a system model. For transient systems models, this exercise is equivalent to verifying feasibility of the reachable set. This problem is formulated mathematically as a global dynamic optimization problem with a performance/safety constraint as the objective and uncertain parameters as (bounded) decision variables. Accounting for both dynamics and spatially-dependent behavior or phenomena in the systems models poses significant computational challenges as the corresponding robustness verification problem results in a nonconvex partial differential equation (PDE)-constrained optimization problem that must be solved to guaranteed global optimality. In turn, this requires the efficient calculation of rigorous bounds enclosing the reachable set; which remains an open area of research. The focus of our work in this paper is on solving robustness verification problems for systems with transient PDE models. Currently, several state-of-the-art algorithms have been developed for bounding systems of ordinary differential equation (ODE) initial value problems (IVPs). The common methods for bounding the reachable set include differential inequalities (DI) [6, 7], finite difference approximations [8, 9], and Taylor series expansion with remainder [8, 10]. However, so far these methods have only been aimed at ODEs and have limited applications to transient PDE systems [11]. Constructing valid enclosures of the parametric solutions of PDE systems with sufficient speed and accuracy remains a major challenge which must be overcome to guarantee safety and performance of safety-critical systems at the design stage. Thus, there is a critical need to develop new bounding methods for PDE systems. In this work, a new algorithm is developed for efficiently computing rigorous bounds on solutions of transient PDE models for all realizations of parametric uncertainty [12]. In this approach, we combine the finite difference method (FDM), interval arithmetic (IA) [13], affine arithmetic (AA) [14], and differential inequalities (DI) to construct rigorous and tight bounds on the reachable set of transient PDEs. Specifically, we reformulate a parametric PDE as a large coupled system of ODE-IVPs using the method of lines with the FDM applied to the spatial derivatives. We employ either IA or AA for bounding the spatial derivative terms. Then, we implement both continuous-time and discrete-time DI methods to construct bounds on the parametric solutions of the resulting ODE-IVP system. We demonstrate this approach on several examples and verify that this approach may greatly reduce the conservatism of bounds with the desired computational efficiency. Finally, we implemented the new bounding procedures within the spatial branch-and-bound algorithm for deterministic global optimization of systems modeled as transient PDEs. An example of a mechanistic transport model for drug delivery in a tumor is introduced [15,16]. This example problem represents a current focus of precision neoadjuvant therapy for improving metastatic breast cancer patient outcomes [16]. Physiological parameters representing the mass transfer resistances across vascular walls and within solid tumors are considered uncertain within specified error bounds. A global optimization problem is formulated to determine if a minimum dose of nanoparticle-encapsulated chemotherapeutic is accumulated within the tumor under the worst-case mass transport conditions. The solution of this problem represents the critical next step towards our future goal of determining a patient-specific safe neoadjuvant therapy for optimal patient outcomes. The results of this work are broadly applicable across a spectrum of domains utilizing PDE models in the design of safety-critical systems under uncertainty. References [1] M. D. Stuber and P. I. Barton, “Semi-infinite optimization with implicit functions,” Industrial & Engineering Chemistry Research , vol. 54, no. 1, pp. 307-317, 2015. [2] M. D. Stuber and P. I. Barton, “Robust simulation and design using semi-infinite programs with implicit functions,” International Journal of Reliability and Safety , vol. 5, no. 3-4, pp. 378-397, 2011. [3] W. T. Hale, M. E. Wilhelm, K. A. Palmer, M. D. Stuber, and G. M. Bollas, “Semi-infinite programming for global guarantees of robust fault detection and isolation in safety-critical systems,” Computers & Chemical Engineering , vol. 126, pp. 218-230, 2019. [4] M. D. Stuber, A.Wechsung, A. Sundaramoorthy, and P. I. Barton, “Worst-case design of subsea production facilities using semi-infinite programming,” AIChE Journal , vol. 60, no. 7, pp. 2513-2524, 2014. [5] A. Suarez, E. Stettler, E. Rey, G. Pons, C. Simonetta-Chateauneuf, K. De Bruijn, G. Olive, and J. Lemerle, “Safety, tolerability, efficacy and plasma concentrations of tropisetron after administration at five dose levels to children receiving cancer chemotherapy,” European Journal of Cancer , vol. 30, no. 10, pp. 1436-1441, 1994. [6] K. Shen and J. K. Scott, “Rapid and accurate reachability analysis for nonlinear dynamic systems by exploiting model redundancy,” Computers & Chemical Engineering , vol. 106, pp. 596-608, 2017. [7] J. K. Scott and P. I. Barton, “Bounds on the reachable sets of nonlinear control systems,” Automatica , vol. 49, no. 1, pp. 93-100, 2013. [8] G. F. Corliss, “Survey of interval algorithms for ordinary differential equations,” Applied Mathematics and Computation , vol. 31, pp. 112-120, 1989. [9] M. D. Stuber and P. I. Barton, “Semi-infinite optimization with implicit functions,” Industrial & Engineering Chemistry Research , vol. 54, no. 1, pp. 307-317, 2015. [10] R. E. Moore, Methods and applications of interval analysis , vol. 2. SIAM, 1979. [11] P. Azunre, “Bounding the solutions of parametric weakly coupled second-order semilinear parabolic partial differential equations,” Optimal Control Applications and Methods , vol. 38, no. 4, pp. 618-633, 2017. [12] C. Wang and M. D. Stuber, “Robust simulation of transient PDE models under uncertainty,” in AIChE Annual Meeting 2019 , Orlando, 2019. [13] A. Neumaier and A. Neumaier, Interval methods for systems of equations , vol. 37. Cambridge university press, 1990. [14] J. L. D. Comba and J. Stol, “Affine arithmetic and its applications to computer graphics,” in Proceedings of VI SIBGRAPI ( Brazilian Symposium on Computer Graphics and Image Processing ), pp. 9-18, 1993. [15] L. T. Baxter and R. K. Jain, “Transport of fluid and macromolecules in tumors. i. role of interstitial pressure and convection,” Microvascular research , vol. 37, no. 1, pp. 77-104, 1989. [16] J. D. Martin, M. Panagi, C. Wang, T. T. Khan, M. R. Martin, C. Voutouri, K. Toh, Papageorgis, F. Mpekris, C. Polydorou, et al., “Dexamethasone increases cisplatin-loaded nanocarrier delivery and efficacy in metastatic breast cancer by normalizing the tumor microenvironment,\" ACS nano , 2019.",
+    "presenting_author": "Chenyu Wang | National Energy Technology Laboratory Site-support Contractor, Pittsburgh, PA",
+    "authors": [
+      "Chenyu Wang | National Energy Technology Laboratory Site-support Contractor, Pittsburgh, PA",
+      "Matthew Stuber | University of Connecticut, Storrs"
+    ],
+    "authors_structured": [
+      {
+        "name": "Chenyu Wang",
+        "affiliation": "National Energy Technology Laboratory Site-support Contractor, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Matthew Stuber",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "411f",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/602467"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/603552",
+    "paper_endpoint": "Paper/603552",
+    "paper_id": "603552",
+    "topic": "Integrated Optimization of Design, Storage Sizing, and Maintenance Policy As a Markov Decision Process Considering Varying Failure Rates",
+    "title": "Integrated Optimization of Design, Storage Sizing, and Maintenance Policy As a Markov Decision Process Considering Varying Failure Rates",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "43800",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "411",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Process reliability is important to chemical plants, as it directly impacts the availability of the end products, and thus service level and profitability. In particular, what motivated this work is the reliability of air separation units that supply gas products to designated customers through pipelines, which is at an even higher stake since the interruption of the pipeline supply results in production stoppage at the customer site. Currently, discrete event simulation tools are used to evaluate the reliability/availability of selected redundancy levels to simulate the behavior of every asset in a plant using historical maintenance data and statistical models (Sharda and Bury, 2008). However, this approach cannot systematically consider all possible design alternatives, not to mention other strategies to increase availability as it would be the case in an optimization approach. A number of optimization works have been reported to optimize the reliability of chemical plants. Pistikopoulos et al. (2001) and Goel et al. (2003b) formulate an MILP model for the selection of units with different reliability and the corresponding production and maintenance planning for a fixed system configuration. Terrazas-Moreno et al. (2010) formulate an MILP model using Markov chains to optimize the expected stochastic flexibility of an integrated production site by the selection of pre-specified alternative plants and the design of intermediate storage. Kim (2017) presents a reliability model for k-out-of-n systems without repair using a structured continuous-time Markov Chain, which is solved with a parallel genetic algorithm. As an improvement, our recent mixed-integer framework (Ye et al., 2019) models the stochastic failure-repair process of the superstructure of the ASU process as a continuous-time Markov Chain, and simultaneously optimizes the redundancy selection and the maintenance policy. This work extends the idea of our aforementioned recent work (Ye et al., 2019) to incorporate liquid storage as another strategy for increasing reliability besides considering redundant equipment and condition-based maintenance. To be specific, three strategies over design and maintenance are considered to increase the availability of the system. For design, we can install parallel units for certain processing stages, such that when the primary units fail, other units can fill in its place in order to reduce system downtime. Another design strategy for reliability is to store liquid products which can be vaporized to meet pipeline demands during plant downtimes. Furthermore, we propose to capture equipment failure rate ( bathtub deterioration/failure) and condition-based maintenance with a discrete-time Markov Decision Process. The bathtub curve is discretized into three ”working states” of the unit with different failure rates: 1. Infant, 2. Stable, and 3. Worn-out. When a unit is not working, there are three other possible states: 4. Stand-by, 5. Stopped, and 6. Failed. One and only one action is to be assigned to each state, which is the main decision to make in terms of the maintenance policy. We embed the optimal condition of Markov Decision Processes and the stationary probability distribution conditions of the reduced Markov Chain into an MINLP (DMP) model that considers the economic trade-off among all major decisions. In order to make the model solvable, we propose a standard linearization for the bilinear terms of binary variables and continuous variables, and a reformulation of the objective function that potentially provides a stronger relaxation of the objective. An example based on the reliable design of a real-world air separation unit is used to demonstrate how to extract the model parameters from the raw data. We attempted to solve the MINLP (DMP) directly with several global solvers and found that they would not solve in reasonable amount of time. Therefore, we propose an algorithm that consists of two phases, Enumeration and Bounding, and Rewards Iteration. The validity of the bounding is based on the earlier introduced reformulation of the objective function. Resolving the example shows that the two-phase algorithm greatly reduces the required computational effort. The algorithm also has consistent performance over 20 randomly generated problems based on the original example of 4 processing stages. Another group of 20 random problems of 6 processing stages are also solved and show good computational results.",
+    "presenting_author": "Yixin Ye | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Yixin Ye | Carnegie Mellon University, Pittsburgh, PA",
+      "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA",
+      "Jose M. Pinto | Linde plc, Danbury, CT",
+      "Sivaraman Ramaswamy | Linde plc, Danbury, CT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yixin Ye",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ignacio Grossmann",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jose M. Pinto",
+        "affiliation": "Linde plc, Danbury, CT",
+        "designation": "Author"
+      },
+      {
+        "name": "Sivaraman Ramaswamy",
+        "affiliation": "Linde plc, Danbury, CT",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "411g",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/603552"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2020/meetingapp.cgi/Paper/610085",
+    "paper_endpoint": "Paper/610085",
+    "paper_id": "610085",
+    "topic": "A Multi-Stage Stochastic Programming Approach for Scheduling of Batch Processes Under Decision-Dependent Uncertainty",
+    "title": "A Multi-Stage Stochastic Programming Approach for Scheduling of Batch Processes Under Decision-Dependent Uncertainty",
+    "date_time": "2020-11-17_08:00:00_09:00:00",
+    "session_id": "43800",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "411",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Scheduling is one of the decision-making strategies widely used in the industries to manage time and resources effectively such that the desired targets are satisfied at minimum cost. One of the challenging aspects of industrial scheduling is uncertainty modelling, which is key to obtain realistically feasible solutions. Stochastic programming is one of the most widely used uncertainty modelling approaches that allows two sets of decisions- here and now and wait and see decisions, to be made before and after the realization of uncertainty, respectively. A key factor that increases the complexity of uncertainty modelling is the type of uncertainty involved. Most of the available literature on stochastic programming focuses on exogenous uncertainties, which are independent of model decisions. However, in many cases, uncertainty often depends on the model decisions. There are several chemical engineering applications where the time at which the uncertainty realizes depends on other model decisions (e.g. uncertainty in recycle rates, product yields, etc.). This is referred to as type II endogenous uncertainty in the literature [2]. Due to the dependency on model decisions, accounting for such uncertainties becomes highly complex and are therefore often overlooked, despite being very common in chemical engineering applications (e.g. type II endogenous uncertainties such as recycle rate). In this study, the focus is on type II endogenous uncertainty modelling using a multi-stage stochastic programming approach. The key challenge in developing scenario based stochastic frameworks for modelling type II endogenous uncertainty is to enforce non-anticipativity (ensuring that current decisions are made without anticipating information from the future) throughout the decision-making process. This often involves introduction of auxiliary binary variables and non-anticipativity constraints [4]. Introducing such auxiliary variables and constraints result in large model size, which further increases with the number of scenarios [1], [3]. In our previous work [6], we developed a novel two-stage stochastic approach to model type II endogenous uncertainty that ensures non-anticipativity implicitly via material balance constraints, without the introduction of any auxiliary variable or explicit non-anticipativity constraints. We proposed a large-scale scheduling model to allocate samples (materials) that has to be processed sequentially through a set of tasks and reported significant benefits in using the proposed two-stage approach in modelling actual industrial case studies. The proposed two-stage approach considered uncertainty in recycle rate, i.e. the fraction of samples returned back to a previous task, with a limiting assumption that the recycle rate remains constant throughout the time horizon, independent of how many times a task is being processed. Governed by various operating factors, uncertainties like recycle rate are unlikely to remain constant throughout the operating time horizon. To account for such possible fluctuations in the uncertainty realizations, in this study, we relax the above assumption and provides flexibility to the system by extending the framework to a multi-stage approach, where the time horizon is divided into multiple time periods and a different realization of uncertainty (recycle rate) can be considered in each time period. Enforcing non-anticipativity for a multi-stage framework becomes even more challenging when a type II endogenous uncertainty is considered. To address this challenge, the proposed model considers a node-based approach. Nodes represent the uncertainty realizations. For every time period, the number of nodes represent the number of unique uncertainty realizations of that time period. At every time period, the model solves for each node considering the current uncertainty realization and the realizations of the preceding nodes. Together, with the material balance constraints and the node-based approach, the proposed multi-stage framework enforces implicit non-anticipativity without the need to specify additional auxiliary binary variables and explicit non-anticipativity constraints. The proposed model has been validated using two case studies - a motivating case study, one of the most widely studied process network from literature [5] and an actual large-scale industrial case study. Computational studies were conducted and value of stochastic solution (VSS) was calculated to estimate the benefits of the proposed approach. Further studies were conducted to analyze the model sensitivity to the number of stages, number of uncertainty realizations and the production capacity. The computational results obtained from both the case studies depict significant benefits in using the proposed multi-stage approach. The results from the motivating case study shows more than 11% increase in the production rate, whereas the industrial case study results shows an increase of 8% in the annual earnings. References Colvin, M., & Maravelias, C. T. (2010). Modeling methods and a branch and cut algorithm for pharmaceutical clinical trial planning using stochastic programming. European Journal of Operational Research , 203 (1), 205-215. Goel, V., & Grossmann, I. E. (2006). A class of stochastic programs with decision dependent uncertainty. Mathematical programming , 108 (2-3), 355-394. Gupta, V., & Grossmann, I. E. (2011). Solution strategies for multistage stochastic programming with endogenous uncertainties. Computers & Chemical Engineering , 35 (11), 2235-2247. Jonsbråten, T. W., Wets, R. J., & Woodruff, D. L. (1998). A class of stochastic programs withdecision dependent random elements. Annals of Operations Research , 82 , 83-106. Kondili, E., C. C. Pantelides, and R. W. H. Sargent. \"A general algorithm for short-term scheduling of batch operations—I. MILP formulation.\" Computers & Chemical Engineering2 (1993): 211-227. Menon, K., Fukasawa, R., & Ricardez-Sandoval, L. A. (2019). A Novel Stochastic Programming Approach for Scheduling of Batch Processes with decision dependent Time of Uncertainty Realization. Annals of Operations Research (submitted for publication)",
+    "presenting_author": "Kavitha G Menon | University of Waterloo, Canada",
+    "authors": [
+      "Kavitha G Menon | University of Waterloo, Canada",
+      "Ricardo Fukasawa | University of Waterloo, Canada",
+      "Luis Ricardez-Sandoval | University of Waterloo, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kavitha G Menon",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ricardo Fukasawa",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Luis Ricardez-Sandoval",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "411h",
+    "sortable_time": "2020-11-17_08:00:00_09:00:00",
+    "affiliation_source": "aiche_2020_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2020/meetingapi.cgi/Paper/610085"
+  }
+]

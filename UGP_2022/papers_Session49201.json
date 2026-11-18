@@ -1,0 +1,384 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648982",
+    "paper_endpoint": "Paper/648982",
+    "paper_id": "648982",
+    "topic": "Synthesis of Coffee Wastewater Treatment Network with Single Input and Multiple Output Streams Using the P-Graph Framework",
+    "title": "Synthesis of Coffee Wastewater Treatment Network with Single Input and Multiple Output Streams Using the P-Graph Framework",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49201",
+    "session_title": "Advances in Process Design",
+    "session_number": "183",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Introduction Globally, the food and beverage industries are considered the third largest water consumer (Valta et al., 2016). Soluble coffee production, one of the main products from the beverage industries, generates a significant amount of wastewater during the extraction and freeze- or spray drying processes (Clarke and Macrae, 1987). Rather than treating the entire waste stream for disposal, recovering and reusing part of the wastewater for cooling processes presents a better alternative at reducing the water footprint of the beverage industry. Process Network Synthesis (PNS) refers to the task of algorithmically constructing a process from a set of building blocks; it has been extensively employed for the synthesis of water and wastewater treatment networks, and optimizing the economic, environmental, or social dimension of the projects (Galan and Grossmann, 1998; Grossmann et al., 2014). Traditional methods for wastewater treatment network synthesis have limitations due to simplified technology models and deficiencies in structural enumeration. On the other hand, the more complex models for the treatment technologies lead to a larger and more complicated mixed integer non-linear optimization model, which cannot be properly solved with the contemporary MINPL solvers. Moreover, the formulation of the structural decisions of the problem in terms of binary variables, may derive in structural-related optimal solutions. Rigorous and exhaustive enumeration of all the possible treatment networks coupled with improved models can help overcome these limitations. Methodology In this work, we implement the P-graph framework for designing wastewater treatment networks (Aboagye et al., 2021; Yenkie et al., 2021). The P-graph framework is a graph-theoretic approach for the design of processes, and has been used extensively to evaluate problems of combinatorial nature, such as supply chains, planning of evacuation routes, and industrial PNS problems (Friedler et al., 1998). The axioms of the P-graph framework lead to the identification of all plausible structures for the treatment networks (Friedler et al., 1992). Furthermore, the axioms provide information relating to the structural feasibility of all synthesized networks (Friedler et al., 2022). The combinatorial algorithms of the P-graph framework, which are based on the axioms, help to exclude any inconsistencies in the structural model, thus avoiding incomplete structures that misdirect the optimization. The exclusion of incomplete structures presents a great advantage in our superstructure-based optimization, as unnecessary complexities are avoided leading to simpler mathematical models to be optimized. Due to the structural enumeration, the method is also able to avoid the structure-related local optimums of the problems, which are a major issue for conventional MINLP-based techniques. Figure 1 is the synthesized superstructure for this work. Thus, in this work we first identify all the potentially feasible solution structures using the combinatorial axioms of P-graph framework, and then optimize them individually. The first step is generating a superstructure known as the maximal structure using the Maximal Structure Generation (MSG) algorithm in P-Graph Studio software. This superstructure contains all the treatment technologies, flows, connections, bypasses, and mixers that are considered during the synthesis procedure. We consider a three-stage treatment process comprising sedimentation and membranes technologies at the primary stage, activated sludge, rotating biological contactors, and membrane bioreactors at the secondary stage, while the tertiary stage consists of advanced oxidation processes and ion exchange operations, as shown in Figure 1. The next step is to use the Solution-Structure Generation (SSG) algorithm to identify and enumerate each solution from the maximal structure, thus producing a set of feasible networks from the structural point of view. These combinatorially feasible networks may still be infeasible due to process models and constraints such as mass and energy balance, capacity constraints, thermodynamics and kinetics considerations, and sustainability restraints. Due to this possible infeasibility, we evaluate each combinatorially feasible structure using nonlinear programming (NLP). Since every feasible structure must be also combinatorially feasible, this method evaluates all plausible structures including the globally optimal one. To achieve this, we model each of the feasible structures and their associated operating technologies using MATLAB. Then, we use the NLP solvers found in AMPL to solve the model generated by MATLAB through AMPL-API interface. The main objectives for this problem are to minimize the treatment cost as well as to reduce two sustainability metrics, namely the Sustainable Process Index (SPI) and Emergy (Narodoslawsky and Krotscheck, 1995, 2004; Odum, 1988; Ulgiati et al., 1994). The SPI metric helps to quantify the ecological burden of the treatment process in land area while Emergy accounts for the available energy used in solar energy equivalents. Therefore, to set an objective function, we constrain the SPI and Emergy metrics to the problem and optimize the cost function. Case Study We apply this framework to a soluble coffee processing plant of Nestlé USA, located in Freehold, New Jersey, that generates 1,324,894 L/d of wastewater (Wisniewski et al., 2020). The wastewater stream comprises Chemical Oxygen Demand (COD) and Total Suspended Solids (TSS) contaminants with high conductivity. The desire is to have two effluent streams (Outlet#1 and Outlet#2) with different purity levels where one stream is recycled to the process to reduce freshwater consumption while the remaining is discharged into a water body. The purity specification of the effluent stream to be released into the water body is constrained by the acceptable limits set by the USEPA for wastewater discharge. Table 1 shows the inlet and outlet contaminant specifications. Summary and Conclusion We have already developed an Excel-based tool for evaluating wastewater treatment networks [http://p-graph.org/wastewater-treatment/]. Thus, this is an extension of the previous work where we integrate nonlinear models into P-graph. Furthermore, this work incorporates a simultaneous assessment of economics and sustainability into the synthesis process. Thus, presenting decision-makers with multiple options for consideration for further detailed design. References Aboagye, E.A., Pimentel, J., Orosz, Á., Cabezas, H., Friedler, F., Yenkie, K.M., 2021. Efficient Design and Sustainability Assessment of Wastewater Treatment Networks using the P-graph Approach: A Tannery Waste Case Study. Chemical Engineering Transactions 88, 6. Clarke, R.J., Macrae, R. (Eds.), 1987. Coffee. Springer Netherlands, Dordrecht. https://doi.org/10.1007/978-94-009-3417-7 Friedler, F., Fan, L.T., Imreh, B., 1998. Process network synthesis: Problem definition. Networks 31, 119–124. Friedler, F., Orosz, Á., Pimentel Losada, J., 2022. P-graphs for Process Systems Engineering: Mathematical Models and Algorithms. Springer International Publishing, Cham. https://doi.org/10.1007/978-3-030-92216-0 Friedler, F., Tarján, K., Huang, Y.W., Fan, L.T., 1992. Graph-theoretic approach to process synthesis: axioms and theorems. Chemical Engineering Science 47, 1973–1988. https://doi.org/10.1016/0009-2509(92)80315-4 Galan, B., Grossmann, I.E., 1998. Optimal Design of Distributed Wastewater Treatment Networks. Ind. Eng. Chem. Res. 37, 4036–4048. https://doi.org/10.1021/ie980133h Grossmann, I.E., Martín, M., Yang, L., 2014. Review of optimization models for integrated process water networks and their application to biofuel processes. Current Opinion in Chemical Engineering, Energy and environmental engineering / Reaction engineering 5, 101–109. https://doi.org/10.1016/j.coche.2014.07.003 Narodoslawsky, M., Krotscheck, C., 1995. The sustainable process index (SPI): evaluating processes according to environmental compatibility. Journal of Hazardous Materials, Selected papers presented at the Conference on Hazardous Waste Remediation 41, 383–397. https://doi.org/10.1016/0304-3894(94)00114-V Narodoslawsky, M., Krotscheck, Ch., 2004. What can we learn from ecological valuation of processes with the sustainable process index (SPI) — the case study of energy production systems. Journal of Cleaner Production, Advances in cleaner production technologies 12, 111–115. https://doi.org/10.1016/S0959-6526(02)00184-1 Odum, H.T., 1988. Self-Organization, Transformity, and Information. Science 242, 1132–1139. https://doi.org/10.1126/science.242.4882.1132 Ulgiati, S., Odum, H.T., Bastianoni, S., 1994. Emergy use, environmental loading and sustainability an emergy analysis of Italy. Ecological Modelling 73, 215–268. https://doi.org/10.1016/0304-3800(94)90064-7 Valta, K., Moustakas, K., Sotiropoulos, A., Malamis, D., Haralambous, K.J., 2016. Adaptation measures for the food and beverage industry to the impact of climate change on water availability. Desalination and Water Treatment 57, 2336–2343. https://doi.org/10.1080/19443994.2015.1049407 Wisniewski, C.M., Laurio, M.V.O., Slater, C.S., Savelski, M.J., 2020. Environmental and process assessment of a vibratory nanofiltration system for the recovery of water from soluble coffee manufacturing waste. Environ Prog Sustainable Energy 39. https://doi.org/10.1002/ep.13425 Yenkie, K.M., Pimentel, J., Orosz, Á., Cabezas, H., Friedler, F., 2021. The P-graph approach for systematic synthesis of wastewater treatment networks. AIChE Journal 67, e17253. https://doi.org/10.1002/aic.17253",
+    "presenting_author": "Emmanuel Aboagye | Rowan University, Glassboro, NJ",
+    "authors": [
+      "Emmanuel Aboagye | Rowan University, Glassboro, NJ",
+      "Quint Kearns | Rowan University, Glassboro, NJ",
+      "Jean Pimentel | Budapest University of Technology and Economics, Hungary",
+      "Akos Orosz | University of Pannonia, Veszprem, Hungary",
+      "Heriberto Cabezas | Széchenyi István University, Győr, Hungary",
+      "Ferenc Friedler | Szechenyi Istvan University, Gyor, Hungary",
+      "Kirti Yenkie | Rowan University, Glassboro, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Emmanuel Aboagye",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Quint Kearns",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Jean Pimentel",
+        "affiliation": "Budapest University of Technology and Economics, Hungary",
+        "designation": "Author"
+      },
+      {
+        "name": "Akos Orosz",
+        "affiliation": "University of Pannonia, Veszprem, Hungary",
+        "designation": "Author"
+      },
+      {
+        "name": "Heriberto Cabezas",
+        "affiliation": "Széchenyi István University, Győr, Hungary",
+        "designation": "Author"
+      },
+      {
+        "name": "Ferenc Friedler",
+        "affiliation": "Szechenyi Istvan University, Gyor, Hungary",
+        "designation": "Author"
+      },
+      {
+        "name": "Kirti Yenkie",
+        "affiliation": "Rowan University, Glassboro, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "183a",
+    "sortable_time": "2022-11-14_15:30:00_15:45:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648982"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646547",
+    "paper_endpoint": "Paper/646547",
+    "paper_id": "646547",
+    "topic": "Superstructure Synthesis and Simulation-Optimization of Pharmaceutical Manufacturing Processes Using Pharmapy",
+    "title": "Superstructure Synthesis and Simulation-Optimization of Pharmaceutical Manufacturing Processes Using Pharmapy",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49201",
+    "session_title": "Advances in Process Design",
+    "session_number": "183",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "During the development phase of bringing a new or existing pharmaceutical to market, various design and operational decisions must be made, which impact the cost and time of engineering development. Once a candidate molecule is chosen, a synthesis pathway must be identified where the consideration of cleaner processes and utilization of green chemistry pathways has gained traction over recent years. With the chemical synthesis pathway having been selected, process synthesis decisions must be made on what manufacturing route produces the product in the most economical way while adhering to strict quality guidelines. This challenge can present a significant hurdle due to the computational expense, modeling expertise, and accuracy required for the rigorous digital design of pharmaceutical manufacturing processes. Each of these decisions can be addressed by exploitation of binary and logic-based decision-tree structures to automate and evaluate a candidate compound, its synthesis, and ultimately its manufacturing pathways. One framework that adequately addresses the synthesis problem statement is generalized disjunctive programming (GDP). 1 Here, process structural decisions are mapped to binary variables and a system of disjunctive logic statements define how selecting a particular option at each layer of the decision tree impacts other engineering decisions. In this case we consider that the candidate active pharmaceutical ingredient (API) and chemical synthesis pathway has been chosen beforehand, however the manufacturing route is yet to be determined. Considering the superstructure of a small molecule pharmaceutical manufacturing route, one may require a reaction step followed by a crystallization step for purification and subsequently a filtration step. If the reaction has multiple steps, we must choose if one reactor is sufficient, or more than one is necessary and whether intermediate separation steps are required. Also, there is a need to consider whether continuous or hybrid batch-continuous operating modes should be employed as improvements over the traditional batch processing mode. Thus, we should consider batch, semi-batch, and continuous operating modes for each of the units to understand the trade-off, while adopting the more controllable continuous manufacturing alternatives. Another option can be the fidelity of the model used for each unit. 2 For instance, in crystallizer design, a rigorous population balance model (PBM) solved using the finite volume method (FVM) enables tracking crystal size distribution (CSD) over time and capturing the effects of CSD on downstream operations. However, the computational time required for such a model is high when compared to the lower fidelity method of moments (MoM) model using only the moments of the distribution rather than the full CSD. The decision space can expand further, but it is apparent even with these few decisions for each unit that an organized logical decision framework, such as that employed in GDP, is necessary when performing simulation and optimization over a large number of alternative manufacturing routes. Recently, PharmaPy has been developed as a tool for rapid in-silico comparison and simulation of pharmaceutical manufacturing pathways. 3 There has been work reported employing both derivative-free and derivative-based optimization 3,4,5 methodologies to execute simulation-optimization studies of processes modeled using PharmaPy. In this work, we utilize PharmaPy to simulate processes within an automated decision framework based on disjunctive logic to rapidly compare a large number of manufacturing pathways. The decision tree is pared down using heuristics that are translated into logic statements that significantly reduce the number of alternatives in the search space. These flowsheets are then simulated using a small set of pre-defined operating conditions. Then, those superstructure layouts that were either feasible or close-to feasible based on critical quality attributes (CQAs) and operating constraints were optimized using a derivative-free simulation-optimization method. It was found that fully batch systems tend to have larger design spaces, and thus had a much higher likelihood of adhering the critical quality attributes after the first round of simulation. The quality of the heuristics was also analyzed by performing the enumerated simulation analysis on both the full superstructure search space and the heuristically reduced search space. It was found that for the heuristics chosen in this work, most viable manufacturing routes existed in the reduced space, and thus the reduction in computation time by utilizing a heuristically reduced search space resulted in great benefit. References Türkay, M. and Grossmann, I. “Logic-based MINLP algorithms for the optimal synthesis of process networks” , Computers and Chemical Engineering , 20 (8):959-978, 1996 . Chen, Q. and Grossmann, I. “Modern Modeling Paradigms Using Generalized Disjunctive Programming”, Processes , 7, 839, 2019 Casas-Orozco, D., Laky, D., Wang, V., Abdi, M., Feng, X., Wood, E., Laird, C., Reklaitis, G.V., Nagy, Z.K. “PharmaPy: an object-oriented tool for the development of hybrid pharmaceutical flowsheets”, Computers and Chemical Engineering , 153, 2021 . Laky, D., Casas-Orozco, D., Laird, C.D., Reklaitis, G.V., Nagy, Z.K., “Simulation-optimization framework for grey-box optimization using PharmaPy”, Paper 182f , 2021 AIChE Annual Meeting , AIChE, 2021 . Casas-Orozco, D., Laky, D., Hur, I., Mackey, J., Mufti, A., Reklaitis, G.V., Nagy, Z.K., “Digital design of a Lomustine manufacturing process using PharmaPy”, Paper 317f , 2021 AIChE Annual Meeting , AIChE, 2021 .",
+    "presenting_author": "Daniel Laky | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Daniel Laky | Purdue University, West Lafayette, IN",
+      "Daniel Casas Orozco | Purdue University, West Lafayette, IN",
+      "Gintaras Reklaitis | Purdue University, West Lafayette, IN",
+      "Zoltan Nagy | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daniel Laky",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Daniel Casas Orozco",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Gintaras Reklaitis",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Zoltan Nagy",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "183b",
+    "sortable_time": "2022-11-14_15:45:00_16:00:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646547"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646334",
+    "paper_endpoint": "Paper/646334",
+    "paper_id": "646334",
+    "topic": "Simultaneous Process Design & Optimisation: An Application to Bioprocesses",
+    "title": "Simultaneous Process Design & Optimisation: An Application to Bioprocesses",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49201",
+    "session_title": "Advances in Process Design",
+    "session_number": "183",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Traditional biopharmaceutical process development relies primarily on process- and product- know-how and is aided by wet-lab experimentation. Although this may have proven to be a suitable strategy, able to identify designs that guarantee high product quality and titres, it is often cost- and time- inefficient (Narayanan et al., 2020; Nasr et al., 2017). At the same time, it does not allow for combinatorial studies to clearly identify underlying synergetic and/or antagonistic effects of the process parameters on often-competing Key Performance Indicators (KPIs), such as product purity and process yield. In this work, we propose a framework for the simultaneous design and optimisation of process design and operation. The presented methodology is based on an experimentally validated high-fidelity process model that is used as the virtual experimentation platform (digital twin). The digital twin forms the basis for the execution of Quasi Random Sampling-High dimensional model representation experiments, where design and process parameters are varied within the range of interest. The obtained datasets are subsequently assessed based on process performance with respect to predefined KPIs. A concave hull is constructed by implementing the alpha shape algorithm to identify the Normal Operating Region (NOR) where all constraints are satisfied. Here we showcase the capabilities of the framework on an affinity chromatography purification step, used in monoclonal antibody (mAb) manufacturing. We use the high-fidelity process model as presented by Steinebach et al. (2016) and we focus on assessing the performance of the system: (a) using and comparing three industrially relevant resins (MabSelect SuRe, MabSelect SuRe LX, and CaptivA PriMAB) and (b) under measured disturbances resulting from variations in the feed composition. As KPIs of interest, we focus on process yield and productivity and we use those for the design of the NOR in each case. We demonstrate how our proposed framework can be used to calculate the size of the NOR and quantify a flexibility region (FR) around a chosen operating point. The FR is translated into the allowed deviation of the process conditions, in order for optimal operation to be guaranteed. A uniform maximum deviation with respect to the feed conditions, where the constraints are still satisfied can be quantified for the different resins. The maximum value of productivity inside the NOR is also quantified. Currently, the framework is being expanded to different unit operations both in bioprocesses and beyond, such as energy systems. References Narayanan, H., Luna, M. F., von Stosch, M., Cruz Bournazou, M. N., Polotti, G., Morbidelli, M., Butte, A. & Sokolov, M. (2020) Bioprocessing in the Digital Age: The Role of Process Models. Biotechnol J. 15 (1), e1900172. Nasr, M. M., Krumme, M., Matsuda, Y., Trout, B. L., Badman, C., Mascia, S., Cooney, C. L., Jensen, K. D., Florence, A., Johnston, C., Konstantinov, K. & Lee, S. L. (2017) Regulatory Perspectives on Continuous Pharmaceutical Manufacturing: Moving From Theory to Practice: September 26-27, 2016, International Symposium on the Continuous Manufacturing of Pharmaceuticals. J Pharm Sci. 106 (11), 3199-3206. Steinebach, F., Angarita, M., Karst, D. J., Muller-Spath, T. & Morbidelli, M. (2016) Model based adaptive control of a continuous capture process for monoclonal antibodies production. J Chromatogr A. 1444, 50-56.",
+    "presenting_author": "Steven Sachio | Imperial College London, United Kingdom",
+    "authors": [
+      "Steven Sachio | Imperial College London, United Kingdom",
+      "Cleo Kontoravdi | Imperial College London, United Kingdom",
+      "Maria M. Papathanasiou | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Steven Sachio",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Cleo Kontoravdi",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Maria M. Papathanasiou",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "183c",
+    "sortable_time": "2022-11-14_16:00:00_16:15:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646334"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647631",
+    "paper_endpoint": "Paper/647631",
+    "paper_id": "647631",
+    "topic": "Flowsheet Synthesis through Graph-Based Reinforcement Learning",
+    "title": "Flowsheet Synthesis through Graph-Based Reinforcement Learning",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49201",
+    "session_title": "Advances in Process Design",
+    "session_number": "183",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "The chemical industry is approaching a disruptive transformation towards a more sustainable and circular future. As a major contributor to global emissions, tremendous changes are required and the chemical industry needs to face a paradigm shift. This also includes how novel processes are conceptualized. Simultaneously, innovations are pushed by new possibilities due to emerging digital technologies. Digitization and in particular artificial intelligence play a key role in exploring new methods, therefore having the ability to transform chemical engineering. Compared to current process synthesis methodologies, reinforcement learning has the potential to come up with unexpected and innovative flowsheets topologies [1-5]. We propose a reinforcement learning algorithm for chemical process design based on a state-of-the-art actor-critic logic. We implement a hierarchical and hybrid decision-making process to generate flowsheets, where unit operations are placed iteratively as discrete decisions and corresponding design variables are selected as continuous decisions. This presentation extends the preceding research [1-5] by enhancing the state representation of the flowsheets from a matrix data structure to a graph data structure. Practically, this allows for an alternative workflow to process flowsheets by substituting convolutional neural networks with graph convolutional neural networks. Secondly, the agent selects both unit operations and continuous design variables, which was not achieved in previous works. This entails that the action space for the agent includes discrete and continuous decisions and is therefore called a hybrid action space. We demonstrate the potential of our method to design economically viable flowsheets in an illustrative case study for the production process of Methyl Acetate. The case study comprises equilibrium reactions, azeotropic separation, and recycles. The agent implements a number of unit operations including plug flow reactors, heat exchangers, distillation columns, and recycles. A process simulator is interfaced and acts as the environment for the reinforcement learning agent. In addition, shortcut unit models are implemented in Python to enable efficient pre-training in a transfer learning approach. The results show quick learning in discrete, continuous, and hybrid action spaces. Due to the flexible architecture of the proposed reinforcement learning agent, the method can be extended to larger action-state spaces and other case studies in future research. The presented concept is a significant step towards solving realistic chemical process design tasks using artificial intelligence. References [1] Midgley, L. I. (2020). Deep Reinforcement Learning for Process Synthesis. arXiv preprint arXiv:2009.13265 . [2] Khan, A., & Lapkin, A. (2020). Searching for optimal process routes: a reinforcement learning approach. Computers & Chemical Engineering , 141 , 107027. [3] Göttl, Q., Grimm, D., & Burger, J. (2021). Automated Process Synthesis Using Reinforcement Learning. In Computer Aided Chemical Engineering (Vol. 50, pp. 209-214). Elsevier. [4] Khan, A. A., & Lapkin, A. A. (2022). Designing the process designer: Hierarchical reinforcement learning for optimisation-based process design. Chemical Engineering and Processing-Process Intensification , 108885. [5] Göttl, Q., Grimm, D. G., & Burger, J. (2022). Automated synthesis of steady-state continuous processes using reinforcement learning. Frontiers of Chemical Science and Engineering , 16 (2), 288-302.",
+    "presenting_author": "Artur M. Schweidtmann | Delft University of Technology, Netherlands",
+    "authors": [
+      "Roel J. Leenhouts | Delft University of Technology, Netherlands",
+      "Laura Stops | Delft University of Technology, Netherlands",
+      "Shachi M. Shanbhag | Delft University of Technology, Netherlands",
+      "Qinghe Gao | Delft University of Technology, Netherlands",
+      "Artur M. Schweidtmann | Delft University of Technology, Netherlands"
+    ],
+    "authors_structured": [
+      {
+        "name": "Roel J. Leenhouts",
+        "affiliation": "Delft University of Technology, Netherlands",
+        "designation": "Author"
+      },
+      {
+        "name": "Laura Stops",
+        "affiliation": "Delft University of Technology, Netherlands",
+        "designation": "Author"
+      },
+      {
+        "name": "Shachi M. Shanbhag",
+        "affiliation": "Delft University of Technology, Netherlands",
+        "designation": "Author"
+      },
+      {
+        "name": "Qinghe Gao",
+        "affiliation": "Delft University of Technology, Netherlands",
+        "designation": "Author"
+      },
+      {
+        "name": "Artur M. Schweidtmann",
+        "affiliation": "Delft University of Technology, Netherlands",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "183d",
+    "sortable_time": "2022-11-14_16:15:00_16:30:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647631"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643224",
+    "paper_endpoint": "Paper/643224",
+    "paper_id": "643224",
+    "topic": "Process Synthesis for the Valorisation of Low-Grade Heat: Geothermal Brines and Industrial Waste Streams",
+    "title": "Process Synthesis for the Valorisation of Low-Grade Heat: Geothermal Brines and Industrial Waste Streams",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49201",
+    "session_title": "Advances in Process Design",
+    "session_number": "183",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "With the energy demand reaching maxima every year, hot waste streams and brines are promising resources to increase the share of renewable energy. On the one hand, geothermal energy is becoming of age to produce power and its potential can reach 42 million MW. The reservoirs can be from 110 to 220ºC, however the most abundant are within the range of 110ºC and 160ºC [1]. In addition, industrial hot flue gases that have been used within heat integration schemes may still be available at temperatures around 100ºC [2]. Refrigeration for the disposal of these hot streams results in water or power consumption depending on the technology used, a good example of the water energy-nexus [3]. Alternatively, it is possible to further use any of these streams as hot end for thermodynamic cycles to produce power. A systematic two-stage hybrid approach is presented for the simultaneous selection of thermodynamic cycle, its configuration, thermal fluid and operating conditions for the valorisation of mild hot streams from industry and natural brines. The heuristic-based stage uses previous studies and literature to narrow down the alternatives among the HTF’s and cycle configurations. Next, to capture the thermodynamics of the fluids rigorously, machine learning combined with optimization is used to develop correlations for the entropy and enthalpy of the preselected fluids. The aim is to achieve models that are easier than equations of state to estimate the properties required to perform mass and energy balances to the cycles. Subsequently, the thermodynamic cycles are modelled using an equation-based approach, and optimized to select the number of stages, split fractions, pressures, and temperatures across the flowsheets. Finally, a detailed economic evaluation is performed involving investment and production costs. The pre-screening yields three fluids, benzene, toluene and 1,1,1,2,3,3,3-heptafluoropropane (R227ea) and two promising cycles, dual pressure organic Rankine cycle (ORC) and organic flash Rankine cycle (OFRC). The mathematical optimization shows that for higher temperatures, the OFRC with two flash stages using Benzene is the configuration of choice in terms of thermodynamic performance, but the two-pressure level (dual) ORC provides cheaper electricity. For temperatures of the hot resource lower than 120ºC, the efficiency of both cycles converges, but the best fluid turns out to be R227ea alongside the dual ORC cycle showing better performance and cost. The power production costs present a minimum at DT min equal to 8 ºC. The results of the process analysis are used to evaluate the type of facility, cost and power that can be produced from the resources in Spain as a case study, using the results of this work. Promising production costs can be achieved for hot resources above 120 ºC. Economics of scale can help but a detailed geological study of each reservoir is required to determine the total production capacity of the resources available in Spain. References [1] Barbier E. Geothermal energy technology and current status: an overview. Renew. Sust. Energy Reviews. 6 (1-2) (2002) 3-65 [2] Jouhara H, Khordehagh N, Almahmoud S, Delpech B, Chauhan A, Tassou SA. Waste heat recovery technologies and applications. Thermal Sci. Eng. Progress 6 (2018) 268-289 [3] ] IEA Introduction to the water-energy nexus. 2020 https://www.iea.org/articles/introduction-to-the-water-energy-nexus . Last accessed July 2021",
+    "presenting_author": "Mariano Martin | University of Salamanca, Spain",
+    "authors": [
+      "Victor M. García-Anteportalatina | Department of Chemical Engineering,Universidad de Salamanca, Spain",
+      "Mariano Martin | University of Salamanca, Spain"
+    ],
+    "authors_structured": [
+      {
+        "name": "Victor M. García-Anteportalatina",
+        "affiliation": "Department of Chemical Engineering,Universidad de Salamanca, Spain",
+        "designation": "Author"
+      },
+      {
+        "name": "Mariano Martin",
+        "affiliation": "University of Salamanca, Spain",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "183e",
+    "sortable_time": "2022-11-14_16:30:00_16:45:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643224"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646744",
+    "paper_endpoint": "Paper/646744",
+    "paper_id": "646744",
+    "topic": "Mathematical Modeling and Economic Optimization of a Novel Amine-Based Post-Combustion Carbon Capture Process",
+    "title": "Mathematical Modeling and Economic Optimization of a Novel Amine-Based Post-Combustion Carbon Capture Process",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49201",
+    "session_title": "Advances in Process Design",
+    "session_number": "183",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Mitigating CO 2 emissions from fossil-fuel based power plants is a major requirement if we are to effectively alleviate the global warming problem. In this context, amine scrubbing is a mature and prominent post-combustion capture technology that offers flexibility in scale-up, on/off operation according to demand and retrofit possibilities for existing plants [1]. There is on-going research on exploring new solvents that are more efficient than the traditionally used Monoethanolamine (MEA) as well as on modifying conventional process flowsheets [2]. One novelty in this field that capitalizes on both these opportunities is the Piperazine/Advanced Flash Stripper (PZ/AFS) process. This process, which is viewed as the new benchmark for second-generation amine scrubbing technologies [3], uses PZ as solvent and employs the AFS modification that entails using a flash tank integrated with the stripper column and a steam heater instead of the conventional simple stripper with reboiler. This offers smaller footprint and lower capital costs [3]. Even though this novel process can in principle decrease the energy required for carbon capture significantly, it is not yet deployed at an industrial scale and can benefit from additional process optimization effort to make it more viable economically. To optimize this system, a rigorous mathematical model of the flowsheet is needed. In this work, we present an equation-oriented, rate-based model of this process built in Pyomo, a Python-based algebraic modeling language [4]. The main units in the model are the absorber and stripper columns, which are modeled in a rate-based fashion to achieve satisfactory model fidelity. Using finite differences to evaluate the spatial differential components, mass and heat transfer are modeled using the two-film theory [5, 6]. The effect of liquid film reactions is accounted for with an enhancement factor that requires solving the mass transfer model simultaneously with a speciation model consisting of seven equilibrium reactions [5, 7]. The model also includes a flash tank and heat exchangers along with a complex recycle stream between the two columns with added make-up of water and PZ. Under sufficient resolution of column discretization, the size of the model resulting from this effort exceeds 8,000 constraints and 8,000 variables. It is important to highlight that a non-linear programming problem (NLP) of this size does not converge easily, and to this end, we developed a custom initialization scheme to overcome this challenge. Simulations of the temperature profile in the absorber, which is highly intertwined with the mass transfer, were validated using pilot plant data for the cases with and without intercooler usage [8, 9], while we performed sensitivity analyses on the design and operating conditions that led to important insights about the system. Finally, we implemented an economic objective to account for both capital and operating expenditures [10, 11], which we used as the basis for performing model optimization to determine the minimum cost design. References: [1] Gary Rochelle, Eric Chen, Stephanie Freeman, David Van Wagener, Qing Xu, and Alexander Voice. Aqueous piperazine as the new standard for CO2 capture technology. Chemical Engineering Journal , 171(3):725–733, 2011. Special Section: Symposium on Post-Combustion Carbon Dioxide Capture. [2] Evie Nessi, Athanasios I. Papadopoulos, Panos Seferlis. A review of research facilities, pilot and commercial plants for solvent-based post-combustion CO2 capture: Packed bed, phase-change and rotating processes. International Journal of Greenhouse Gas Control , 111: 103474, 2021. [3] Gary T. Rochelle, Yuying Wu, Eric Chen, Korede Akinpelumi, Kent B. Fischer, Tianyu Gao, Ching-Ting Liu, and Joseph L. Selinger. Pilot plant demonstration of piperazine with the advanced flash stripper. International Journal of Greenhouse Gas Control , 84:72–81, 2019. [4] William E. Hart, Jean-Paul Watson, and David L. Woodruff. Pyomo: modeling and solving mathematical programs in Python. Mathematical Programming Computation 3(3): 219-260, 2011. [5] H.M. Kvamsdal, J.P. Jakobsen, and K.A. Hoff. Dynamic modeling and simulation of a CO2 absorber column for post-combustion co2 capture. Chemical Engineering and Processing: Process Intensification , 48(1):135–144, 2009. [6] Calvin Tsay, Richard C. Pattison, Yue Zhang, Gary T. Rochelle, and Michael Baldea. Rate-based modeling and economic optimization of next-generation amine-based carbon capture plants. Applied Energy , 252:113379, 2019. [7] Sanjay Bishnoi and Gary T. Rochelle. Absorption of carbon dioxide into aqueous piperazine: reaction kinetics, mass transfer and solubility. Chemical Engineering Science , 55(22):5531–5543, 2000. [8] Yue Zhang, Darshan Sachde, Eric Chen, and Gary Rochelle. Modeling of absorber pilot plant performance for CO2 capture with aqueous piperazine. International Journal of Greenhouse Gas Control , 64:300–313, 2017. [9] Jorge Mario Plaza. Modeling of carbon dioxide absorption using aqueous monoethanolamine, piperazine and promoted potassium carbonate. PhD Dissertation, University of Texas at Austin (2012). [10] Patricia Mores, Nestor Rodriguez, Nicolas Scenna, and Sergio Mussati. CO2 capture in power plants: Minimization of the investment and operating cost of the post-combustion process using mea aqueous solution. International Journal of Greenhouse Gas Control , 10:148-163, 2012. [11] Natalie M. Isenberg, Paul Akula, John C. Eslick, Debangsu Bhattacharyya, David C. Miller, and Chrysanthos E. Gounaris. A generalized cutting‐set approach for nonlinear robust optimization in process systems engineering. AIChE J. 2021.",
+    "presenting_author": "Ilayda Akkor | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Ilayda Akkor | Carnegie Mellon University, Pittsburgh, PA",
+      "Shachit S. Iyer | Dow, Lake Jackson, Texas, TX",
+      "John Dowdle | The Dow Chemical Company, Freeport, TX",
+      "Le Wang | The Dow Chemical Company, Lake Jackson, TX",
+      "Chrysanthos Gounaris | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ilayda Akkor",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Shachit S. Iyer",
+        "affiliation": "Dow, Lake Jackson, Texas, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "John Dowdle",
+        "affiliation": "The Dow Chemical Company, Freeport, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Le Wang",
+        "affiliation": "The Dow Chemical Company, Lake Jackson, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Chrysanthos Gounaris",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "183f",
+    "sortable_time": "2022-11-14_16:45:00_17:00:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646744"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647616",
+    "paper_endpoint": "Paper/647616",
+    "paper_id": "647616",
+    "topic": "Integrated Membrane Material Design and System Synthesis",
+    "title": "Integrated Membrane Material Design and System Synthesis",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49201",
+    "session_title": "Advances in Process Design",
+    "session_number": "183",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Membranes have been recognized as a promising separation technology and a potential alternative for inefficient thermally driven separation processes [1]. Due to its compactness, energy efficiency, scalability, and flexibility, membrane gas separation finds applications not only in conventional industrial gas separations but also in emerging applications such as biogas purification and onboard inert gas generation systems. In most commercial applications, polymeric membranes are chosen due to their inexpensive and scalable production. Unfortunately, polymeric materials demonstrate a trade-off in their permeability and selectivity [2], which becomes an obstacle in separation tasks where both purity and recovery are important. To overcome this obstacle, several permeators can be interconnected forming a system. Consequently, early decisions such as the system structure, operating conditions, and membrane materials greatly affect the final economics of the process. Membrane system synthesis often relies on sequential design approaches in which the membrane material is chosen a priori while the remaining decisions are determined afterward. However, these approaches may yield suboptimal final designs due to the restricted search space. Alternatively, the process synthesis can be done through a simultaneous approach where decisions such as structure, operating conditions, and material selection are obtained simultaneously by solving an optimization problem. Most studies in this area focused on problems with only binary mixtures, whereas those with multicomponent mixtures were solved using local methods. While solving the synthesis problem using local solvers is generally computationally inexpensive, the solutions are sometimes significantly worse than the global optimal solution [3]. Accordingly, we present a global optimization approach for integrated membrane material design and system synthesis for multicomponent gas mixture separation. We propose a mixed-integer nonlinear programming (MINLP) model to identify the optimal material(s) and system (i.e., configuration, operating pressures, and flowrates). We employ a richly connected superstructure with structural decisions for interconnections between stages (i.e., retentate and permeate recycle streams), the feed stage, and stage-to-product streams to represent numerous distinct configurations. To describe the permeation in the membranes, we use modified versions of previously developed physics-based surrogate models of crossflow and countercurrent flow permeators [4]. When a list of candidate membrane materials is provided, we consider two strategies: (1) single material is used throughout the system, and (2) different materials may be used in the system. To represent permeation in different materials, we introduce binary variables to denote the material selection and use the convex-hull reformulation for the mass transport equations. We also consider property-targeting membranes whose permeances are variable and costs depend on the distance of the permeances from the Robeson trade-off line. These permeances vary within a domain limited by their lower and upper bounds, the trade-off line correlation, and a specified distance from the trade-off line. Finally, we showcase the applicability of our approach through a case study of biogas upgrading. References [1 ] R. W. Baker and B. T. Low, “Gas separation membrane materials: A perspective,” Macromolecules , vol. 47, no. 20, pp. 6999–7013, 2014, doi: 10.1021/ma501488s. [2] L. M. Robeson, “The upper bound revisited,” Journal of Membrane Science , vol. 320, no. 1–2, pp. 390–400, 2008, doi: 10.1016/j.memsci.2008.04.030. [3] J. A. C. Velasco, R. T. Gooty, M. Tawarmalani, and R. Agrawal, “Optimal design of membrane cascades for gaseous and liquid mixtures via MINLP,” Journal of Membrane Science , 2021, doi: 10.1016/j.memsci.2021.119514. [4] G. S. P. Taifan and C. T. Maravelias, “Generalized optimization-based synthesis of membrane systems for multicomponent gas mixture separation,” Chemical Engineering Science , vol. 252, p. 117482, 2022.",
+    "presenting_author": "Garry S.P. Taifan | Princeton University, NJ",
+    "authors": [
+      "Garry S.P. Taifan | Princeton University, NJ",
+      "Christos Maravelias | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Garry S.P. Taifan",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christos Maravelias",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "183g",
+    "sortable_time": "2022-11-14_17:00:00_17:15:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647616"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648727",
+    "paper_endpoint": "Paper/648727",
+    "paper_id": "648727",
+    "topic": "Mathematical Programming Formulations for Design and Manufacturing of Process Families: Applications to Green Energy Systems",
+    "title": "Mathematical Programming Formulations for Design and Manufacturing of Process Families: Applications to Green Energy Systems",
+    "date_time": "2022-11-14_15:30:00_18:00:00",
+    "session_id": "49201",
+    "session_title": "Advances in Process Design",
+    "session_number": "183",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Design",
+    "abstract": "Significant, timely reduction in carbon emissions requires rapid deployment of a large number of decentralized process systems, including, for example, carbon capture and clean energy production facilities. Considering carbon capture, the range of required installations can be viewed as a family of similar processes that must, collectively, meet a range of design characteristics, including feed properties, capture rates, and other performance criteria. Traditional process design approaches are not appropriate for this kind of broad, rapid deployment of many similar processes. Classical techniques focus on optimizing individual designs for each installation, failing to exploit opportunities for shared components, decreased engineering effort, and reduced manufacturing costs across these installations. While modularization aims to reduce capital costs and decrease deployment timelines[1], capacity requirements are achieved by “numbering up”, which impacts economies of scale and can lead to increased overall costs and decreased flexibility to meet rapid deployment goals. In contrast, in this presentation, we focus on the simultaneous, integrated design of process families for low-cost manufacturing and rapid deployment of green energy systems. Similar to product family design approaches, we consider the trade-off between cost-effectiveness, similarities among processes, and satisfaction of requirements and demands of the process[2]. We present multiple mathematical programming formulations for the simultaneous optimization of process families. A mixedinteger linear programming formulation (MILP) utilizes a discretized set of operating conditions and potential sizing options[3]. The MILP formulation is scalable to large problems because of favorable theoretical properties that allow us to significantly reduce the number of binary variables in the formulation. However, the time-consuming bottleneck of this approach is computation of the input data obtained by sampling across the potential design space. In contrast, we also propose a mixed-integer nonlinear approach that directly works with the process model to determine optimal sizes across operating conditions while avoiding the need to precompute large numbers of simulations. We provide computational comparisons between these formulations, along with a discussion of the theoretical properties of these formulations. We also present case studies that demonstrate the value of this approach in addressing the challenges of rapid, broad deployment of related process systems. Acknowledgements and Disclaimers: Sandia National Laboratories is a multimission laboratory managed and operated by National Technology & Engineering Solutions of Sandia, LLC, a wholly owned subsidiary of Honeywell International Inc., for the U.S. Department of Energy’s National Nuclear Security Administration under contract DE-NA0003525. This work was partially funded by the Institute for the Design of Advanced Energy Systems (IDAES) with funding from the Office of Fossil Energy, Cross-Cutting Research, U.S. Department of Energy. References [1] Baldea, M., Edgar, T. F., Stanley, B. L. & Kiss, A. A. (2017), ‘Modular manufacturing processes: Status, challenges, and opportunities’, AIChE journal 63(10), 4262–4272. [2] Simpson, Timothy & Siddique, Zahed & Jiao, Roger. (2006). Product Platform and Product Family Design: Methods and Applications. 10.1007/978-1-4614-7937-6. [3] C. Zhang, C. Jacobson, Q. Zhang, L.T. Biegler, J.C. Eslick, M. A. Zamarripa, D. Miller, G. Stinchfield, J. D. Siirola , C. D. Laird, “Optimization-based Design of Product Families with Common Components”, to appear in proceedings of PSE 2021+",
+    "presenting_author": "Georgia Stinchfield | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Georgia Stinchfield | Carnegie Mellon University, Pittsburgh, PA",
+      "Michael Bynum | Center for Computing Research, Sandia National Laboratories, Albuquerque, NM",
+      "Miguel A. Zamarripa | National Energy Technology Laboratory Support Contractor, Pittsburgh, PA",
+      "John Siirola | Sandia National Laboratories, Albuquerque, NM",
+      "Carl Laird | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Georgia Stinchfield",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Michael Bynum",
+        "affiliation": "Center for Computing Research, Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Miguel A. Zamarripa",
+        "affiliation": "National Energy Technology Laboratory Support Contractor, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "John Siirola",
+        "affiliation": "Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Carl Laird",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "183h",
+    "sortable_time": "2022-11-14_17:15:00_17:30:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648727"
+  }
+]

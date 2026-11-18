@@ -1,0 +1,366 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717905",
+    "paper_endpoint": "Paper/717905",
+    "paper_id": "717905",
+    "topic": "Continuous Learning of the Value Function Utilizing Deep Reinforcement Learning and Its Use As the Objective in Model Predictive Control",
+    "title": "Continuous Learning of the Value Function Utilizing Deep Reinforcement Learning and Its Use As the Objective in Model Predictive Control",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "57086",
+    "session_title": "10B: AI/ML and Data-Driven Modeling for Control I",
+    "session_number": "259",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Reinforcement learning (RL), a machine learning technique, and model predictive control (MPC) possess an inherent synergy in the manner in which they function. There are many examples in open literature of the integration of RL and MPC. The most common methods evaluate high-level or meta RL in conjunction with MPC as opposed to implementation at the level of control execution [1] . It is often the case that for this high-level implementation, the focus is on tuning of internal weights and hyperparameters of the controller structure itself [2], [3]. RL can also be utilized to modify the objective function of the MPC. In this way, an approximation of an infinite horizon MPC may be derived with the value function (a linear approximation as opposed to an ANN) of the RL algorithm acting as a terminal cost [4], [5]. This approach can allow for a multi-step return to be used in the update procedure for the RL algorithm, taking advantage of the similar structure of the MPC prediction horizon and the return of the RL’s value function. This generally points to a problem (even in simple cases) in RL sample inefficiency, which is discussed widely in the literature [6] In this work, we propose a form of meta-RL to be utilized within the controller structure of a classic MPC. Here, it is assumed that a model of the system is known along with associated constraints and bounds for the system. An RL action-value function is proposed to be used as the typical objective function used in MPC. In this case, a radial basis function is evaluated as the feature vector. In addition, a deep learning neural network is also explored for use. This proposed value-function model predictive controller (VFMPC) seeks to utilize the projected horizons in order to refine the return as well as using a target VF to create off-policy temporal difference learning. In order to maintain the policy of the MPC, it is necessary to modify the VF NN such that a nonlinear constrained optimization problem can be solved over the prediction horizon. In this way, the form and policy of a standard MPC algorithm are maintained, while leveraging RL in order to adapt the controller to changing dynamics of the system. Most continuous RL algorithms adopt an actor-critic structure to circumvent this issue of value function optimization, such as the DDPG [7] or TD3 [8], but in this work the ANN model is converted into a gradient-boosted tree surrogate model by adapting an existing open-source software package OMLT (Optimization \\& Machine Learning Toolkit) [9]. This surrogate can then be solved over the horizon using the Pyomo package and nonlinear solvers, such as IPOPT [10]–[12]. The algorithm is applied to a simple double integrator utilizing the previously mentioned linear value function approximation. This system is also applied to a selective catalytic reduction (SCR) unit in order to control NOx emissions and mitigate ammonia slip [2], a non-square problem. Here we also examine the effects of catalyst decay thus leading to a time-varying system that is challenging for conventional MPC to achieve good control performance. Our proposed approach also evaluates the use of an ANN as the objective function. Following with these points, the main contributions of this work are: We propose to combine RL and MPC in which the learned value function is used as the cost function for the MPC. This formulation yields an optimal constrained MPC policy with respect to the reward function, without the need for extensive tuning or a discrete update of the MPC. This poses a clear advantage over a standard MPC formulation where both of these would be required for the proposed scenarios. The use of MPC as a policy also yields an advantage over standard RL as the actions are subject to the constraints applied over the receding horizon. A key contribution is the proposal of the use of the optimized trajectory from the MPC to accelerate learning, along with analysis of how the search depth in the trajectory affects the rate of learning. We propose two algorithms employing these concepts: VFMPC(0), using the one step return in order to learn the cost function, and VFMPC(n), using the optimal trajectory to learn the n-step return subject to the dynamics of the process model. These algorithms and their performance are exhibited on two process control examples. The introduction of neural networks into the VFMPC(n) algorithm serves to address the controller performance issues due to slowly changing dynamics and plant-model mismatch. This is done without the need for a significant MPC update done by hand as would be needed in a standard MPC format. Following with the idea of reducing plant-model mismatch, the linear approximation for the value function is substituted for a ANN model that is combined with an appropriate surrogate model conversion. With this formulation, it is shown that a superior policy may be found even when using an approximate model within the MPC policy. These algorithms and their performance are exhibited on a benchmark process control example as well as the model of an industrial SCR unit undergoing catalyst decay. References [1] O. Dogru et al. , “Reinforcement Learning in Process Industries : Review and Perspective,” 2 IEEE/CAA J. Autom. Sin. , vol. 11, no. 2, pp. 1–19, 2024, doi: 10.1109/JAS.2024.124227. [2] E. Hedrick, K. Hedrick, D. Bhattacharyya, S. E. Zitney, and B. Omell, “Reinforcement learning for online adaptation of model predictive controllers: Application to a selective catalytic reduction unit,” Comput. Chem. Eng. , vol. 160, p. 107727, 2022, doi: 10.1016/j.compchemeng.2022.107727. [3] S. Gros and M. Zanon, “Data-driven economic NMPC using reinforcement learning,” IEEE Trans. Automat. Contr. , vol. 65, no. 2, pp. 636–648, Feb. 2020, doi: 10.1109/TAC.2019.2913768. [4] Y. Yang and S. Lucia, “Multi-step greedy reinforcement learning based on model predictive control,” IFAC-PapersOnLine , vol. 54, no. 3, pp. 699–705, 2021, doi: 10.1016/j.ifacol.2021.08.323. [5] X. Pan, X. Chen, Q. Zhang, and N. Li, “Model Predictive Control : A Reinforcement Learning-based Approach,” J. Phys. Conf. Ser. , vol. 2203, no. 1, p. 012058, 2022, doi: 10.1088/1742-6596/2203/1/012058. [6] R. Nian, J. Liu, and B. Huang, “A review On reinforcement learning: Introduction and applications in industrial process control,” Comput. Chem. Eng. , vol. 139, p. 106886, Aug. 2020, doi: 10.1016/j.compchemeng.2020.106886. [7] T. P. Lillicrap et al. , “Continuous control with deep reinforcement learning,” 4th Int. Conf. Learn. Represent. ICLR 2016 - Conf. Track Proc. , Sep. 2016, [Online]. Available: http://arxiv.org/abs/1509.02971 [8] S. Fujimoto, H. Van Hoof, and D. Meger, “Addressing Function Approximation Error in Actor-Critic Methods,” in 35th International Conference on Machine Learning, ICML 2018 , Feb. 2018, pp. 2587–2601. [Online]. Available: http://arxiv.org/abs/1802.09477 [9] F. Ceccon et al. , “OMLT: Optimization & Machine Learning Toolkit,” J. Mach. Learn. Res. , vol. 23, pp. 1–8, Feb. 2022, [Online]. Available: http://arxiv.org/abs/2202.02414 [10] W. E. Hart, J.-P. Watson, and D. L. Woodruff, “Pyomo: modeling and solving mathematical programs in Python,” Math. Program. Comput. , vol. 3, no. 3, pp. 219–260, 2011. [11] A. Wächter and L. T. Biegler, “On the implementation of an interior-point filter line-search algorithm for large-scale nonlinear programming,” Math. Program. , vol. 106, no. 1, pp. 25–57, May 2006, doi: 10.1007/s10107-004-0559-y. [12] M. L. Bynum et al. , Pyomo--optimization modeling in python , 3rd ed., vol. 67. Springer Science & Business Media, 2021.",
+    "presenting_author": "Daniel Beahr | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Daniel Beahr | West Virginia University, Morgantown, WV",
+      "Elijah Hedrick | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daniel Beahr",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Elijah Hedrick",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "259a",
+    "sortable_time": "2025-11-04_08:00:00_08:18:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717905"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/711968",
+    "paper_endpoint": "Paper/711968",
+    "paper_id": "711968",
+    "topic": "Control-Informed Reinforcement Learning",
+    "title": "Control-Informed Reinforcement Learning",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "57086",
+    "session_title": "10B: AI/ML and Data-Driven Modeling for Control I",
+    "session_number": "259",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "This work proposes a control-informed reinforcement learning (CIRL) framework that integrates proportional-integral-derivative (PID) control components into deep reinforcement learning (RL) policies for chemical process control [4]. The integration of established control theory with data-driven RL addresses challenges in industrial process control: effectively managing nonlinear dynamics while maintaining operational stability and reducing sample complexity. Process industries traditionally rely on PID controllers for their reliability, interpretability, and well-established tuning methods [1]. Despite decades of development in PID control technology, significant challenges persist. The manual effort required for controller tuning remains substantial, particularly when process conditions change. Furthermore, PID controllers often struggle to provide adequate performance for highly nonlinear and time-varying systems without extensive retuning or gain scheduling [2]. While deep RL shows promise for complex control tasks by learning optimal policies directly from interactions with the environment, it typically requires prohibitively large numbers of samples and fails to leverage existing control knowledge [3], limiting practical industrial adoption. Previous approaches have explored using RL to tune PID gains or implementing gain scheduling strategies, but these methods often treat gain tuning as a separate optimization problem rather than an integrated learning task. Our CIRL framework embeds PID control structures directly into deep RL policy architectures, enabling neural networks to learn adaptive PID gain scheduling while preserving inherent feedback control stability. Unlike methods that treat gain tuning as a separate optimization problem, our approach enables continuous adaptation of PID gains through an integrated neural network, allowing the controller to respond to changing operating conditions in real time. The CIRL agent consists of a deep neural network that takes observed states as inputs and outputs the PID gain parameters, followed by a PID controller layer that computes control actions based on the error signal and the learned gain parameters. For process control regulatory problems, we adopt a reward function that balances tracking performance and control effort, similar to MPC objective functions. The implementation uses a velocity-form PID controller layer to ensure smooth transitions when gains change, and is trained via evolutionary optimization strategies that do not require differentiation through the control structure. We evaluate CIRL on a multivariable continuously stirred tank reactor (CSTR) system with nonlinear reaction kinetics involving two controlled variables: concentration and temperature. Comprehensive simulation studies demonstrate that CIRL significantly outperforms both conventional model-free deep RL and PID controllers. Comparison of the learning curves, shows that CIRL achieves higher performance with significantly fewer training samples compared to pure RL approaches, exhibiting faster convergence and lower variance during training. When tested on setpoint tracking tasks, CIRL shows improved performance in tracking setpoint trajectories and exhibits robustness when encountering previously unseen operating points outside the training distribution. Our experiments include challenging scenarios where the system operates near its upper operational limits, where gradient changes in the process dynamics make control particularly difficult. In these regions, CIRL adaptively decreases the proportional gain to maintain stability, demonstrating its ability to learn appropriate gain scheduling for different operating regimes. Additionally, the embedded control structure enhances robustness against measured disturbances, with test metrics showing improved disturbance rejection compared to pure RL approaches. This improved robustness stems from CIRL’s integrated PID control structure, which continually measures and responds to errors between the set point and the actual system output, allowing it to adapt to unexpected disturbances in real time. The CIRL framework represents a significant advancement in bridging classical control engineering with modern machine learning approaches. By combining the interpretability and reliability of PID control with the adaptability and nonlinear modeling capacity of deep RL, CIRL offers a sample-efficient, robust approach for controlling complex industrial systems. This work establishes a practical pathway for implementing advanced control techniques in process industries while maintaining operational stability and interpretability. The enhanced sample efficiency and robustness to unmodeled disturbances make CIRL particularly suitable for real-world deployment in chemical and biochemical processes. The ability to adaptively tune PID gains in response to changing operating conditions eliminates the need for manual retuning or complex gain scheduling schemes, potentially reducing operational costs and improving control performance across varying process conditions. [1] Dale E Seborg et al. Process dynamics and control. John Wiley & Sons, 2016. [2]Shuichi Yahagi and Itsuro Kajiwara. “Noniterative Data-Driven Gain-Scheduled Controller De- sign Based on Fictitious Reference Signal”. In: IEEE Access 11 (2023), pp. 55883–55894. doi: 10.1109/ACCESS.2023.3278798. [3] Rui Nian, Jinfeng Liu, and Biao Huang. “A review on reinforcement learning: Introduction and applications in industrial process control”. In: Computers & Chemical Engineering 139 (2020), p. 106886. [4] Maximilian Bloor et al. “Control-Informed Reinforcement Learning for Chemical Processes”. In: Industrial & Engineering Chemistry Research 64.9 (2025), pp. 4966–4978. doi: 10.1021/ acs.iecr.4c03233. eprint: https://doi.org/10.1021/acs.iecr.4c03233. url: https: //doi.org/10.1021/acs.iecr.4c03233",
+    "presenting_author": "Maximilian Bloor | Imperial College London, United Kingdom",
+    "authors": [
+      "Maximilian Bloor | Imperial College London, United Kingdom",
+      "Akhil Ahmed | Imperial College London, United Kingdom",
+      "Niki Kotecha | Imperial College London, United Kingdom",
+      "Mehmet Mercangöz | ABB, London, United Kingdom",
+      "Calvin Tsay | Imperial College London, United Kingdom",
+      "Antonio del Rio Chanona | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Maximilian Bloor",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Akhil Ahmed",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Niki Kotecha",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Mehmet Mercangöz",
+        "affiliation": "ABB, London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Calvin Tsay",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "259b",
+    "sortable_time": "2025-11-04_08:18:00_08:36:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/711968"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717273",
+    "paper_endpoint": "Paper/717273",
+    "paper_id": "717273",
+    "topic": "Automated Discovery of Diverse Disturbance Scenarios Via Combinatorial Multi-Arm Bandits and Time-Series Diffusion Models: Application to Building Control Systems",
+    "title": "Automated Discovery of Diverse Disturbance Scenarios Via Combinatorial Multi-Arm Bandits and Time-Series Diffusion Models: Application to Building Control Systems",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "57086",
+    "session_title": "10B: AI/ML and Data-Driven Modeling for Control I",
+    "session_number": "259",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Stochastic and robust model predictive control (SMPC and RMPC) [1,2] have shown strong potential in the control of grid-interactive efficient buildings, due to their ability to account for uncertain and dynamic exogenous disturbances such as ambient temperature, internal heat gains from occupancy, and plug loads. Designing SMPC/RMPC systems that remain robust under rare or extreme disturbances requires access to diverse and representative disturbance scenarios. However, current practice often relies on handcrafted scenarios or simple generative models (e.g., Gaussian process and measurement noise), which fail to capture the complexity and diversity of real-world building operations – potentially leading to over-conservative or unrepresentative control strategies. To address this gap, we propose a new framework that formulates the discovery of diverse disturbance scenarios as a combinatorial multi-armed bandit (CMAB) problem [3] (an extension of the classical multi-arm bandit problem [4]). In this formulation, each “super arm” (i.e., subset of base arms) corresponds to a set of disturbance scenarios selected from historical or synthetic data. A diversity-based reward is defined using pairwise Dynamic Time Warping (DTW) distances [5] between simulation trajectories, and the Combinatorial Upper Confidence Bound (CUCB) algorithm is used to maximize this reward over repeated rounds of simulation. This enables the automatic selection of scenario sets that induce maximally diverse building control responses. To enhance diversity in scenarios beyond what is available in measured datasets, we integrate a time-series diffusion model, Diffusion-TS [6], trained on multi-year disturbance data from a multi-zone office building in Japan. The generative model enables sampling of realistic yet novel disturbance trajectories, thereby expanding the search space for the CUCB algorithm. Our computational experiments show that the proposed framework identifies high-diversity disturbance sets more effectively than greedy baselines, and that the inclusion of synthetic data further improves performance. This hybrid CMAB-diffusion approach provides a scalable and flexible way to generate robust training scenarios for advanced building control strategies. References: [1] Pippia, T., Lago, J., De Coninck, R., & De Schutter, B. (2021). Scenario-based nonlinear model predictive control for building heating systems. Energy and Buildings , 247 , 111108. [2] Gao, Y., Miyata, S., & Akashi, Y. (2023). Energy saving and indoor temperature control for an office building using tube-based robust model predictive control. Applied Energy , 341 , 121106. [3] Chen, W., Wang, Y., & Yuan, Y. (2013, February). Combinatorial multi-armed bandit: General framework and applications. In International conference on machine learning (pp. 151-159). PMLR. [4] Lattimore, T., & Szepesvári, C. (2020). Bandit algorithms . Cambridge University Press. [5] Müller, M. (2007). Dynamic time warping. Information retrieval for music and motion , 69-84. [6] Yuan, X., & Qiao, Y. (2024). Diffusion-TS: Interpretable diffusion for general time series generation. arXiv preprint arXiv:2403.01742 .",
+    "presenting_author": "Wei-Ting Tang | The Ohio State University, Columbus",
+    "authors": [
+      "Wei-Ting Tang | The Ohio State University, Columbus",
+      "Abraham Vinod | Mitsubishi Electric Research Laboratories, Cambridge, MA",
+      "François Germain | Mitsubishi Electric Research Laboratories, Cambridge, MA",
+      "Chris Laughman | Mitsubishi Electric Research Laboratories, Cambridge, MA",
+      "Ankush Chakrabarty | Mitsubishi Electric Research Laboratories, Cambridge, MA",
+      "Joel Paulson | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Wei-Ting Tang",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Abraham Vinod",
+        "affiliation": "Mitsubishi Electric Research Laboratories, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "François Germain",
+        "affiliation": "Mitsubishi Electric Research Laboratories, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Chris Laughman",
+        "affiliation": "Mitsubishi Electric Research Laboratories, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Ankush Chakrabarty",
+        "affiliation": "Mitsubishi Electric Research Laboratories, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "259c",
+    "sortable_time": "2025-11-04_08:36:00_08:54:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717273"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717339",
+    "paper_endpoint": "Paper/717339",
+    "paper_id": "717339",
+    "topic": "Leveraging Large Language Models for Dynamic Fault Recovery Via Finite State Machine Traversal",
+    "title": "Leveraging Large Language Models for Dynamic Fault Recovery Via Finite State Machine Traversal",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "57086",
+    "session_title": "10B: AI/ML and Data-Driven Modeling for Control I",
+    "session_number": "259",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Finite State Machines (FSMs) have long served as a foundational modelling formalism for complex engineered systems, particularly in domains such as process control, automation, and embedded system design [1]. FSMs offer a powerful way to decompose system behaviour into discrete operational modes (states) governed by distinct dynamics or control laws. Each state in an FSM represents a specific regime—such as nominal operation, degraded performance, or fault conditions—while the transitions encode logic for how the system evolves based on triggers like sensor readings, control actions, or environmental changes. This abstraction provides clarity, modularity, and traceability for systems where behaviour is mode-dependent. In the context of industrial control systems, FSMs are commonly used to model fault modes and associated recovery strategies. A well-structured FSM allows engineers to predefine what should happen when certain conditions are met—such as entering a low-pressure state or detecting a valve malfunction—and what actions should be taken to bring the system back to a safer or more profitable regime. However, despite their widespread use and formal rigor, FSMs face critical challenges when applied to modern fault-tolerant systems [2]. A key limitation lies in the combinatorial explosion of states and transitions. In real-world systems, it is often the case that the same observable state (e.g., high temperature in a reactor) can be reached through multiple fault trajectories. For instance, a cooling failure, a sensor misreading, or a volume change could all lead to the same high-temperature reading. However, the recovery strategy for each case might differ. Traditional FSMs require these differences to be explicitly encoded, effectively multiplying the number of states and transitions. This leads to increased complexity, maintenance overhead, and brittle designs that fail gracefully only in predefined conditions. Furthermore, adding new fault types often requires a complete reconfiguration of the FSM structure, hindering scalability and adaptability. To address this limitation, we introduce a novel methodology that uses Large Language Models (LLMs) as dynamic decision-makers [3] to traverse FSMs under fault-induced scenarios. Rather than predefining every possible fault path and recovery sequence, we allow the LLM to reason about the current system state and its trajectory to decide what actions should be taken to recover or stabilize the system. This approach shifts the FSM’s role from being a fully enumerated decision tree to a semantic substrate that informs and constrains LLM-based reasoning. The LLM acts as a reactive planner within the FSM structure—selecting transitions, suggesting control actions, and adjusting plans on the fly based on context. Our proposed framework extends a previously published agentic architecture that integrates LLMs for autonomous control [4]. In this architecture, the LLM is part of a feedback loop composed of five key agents: a monitoring agent , which detects faults or abnormal conditions; an action agent (an LLM) , which determines the next control move; a digital twin agent , which simulates the feasibility of the proposed action; validation agent (may or may not be an LLM) which determines the safety of the proposed action, and a reprompting agent (an LLM) , which refines or rejects actions that lead to unsafe or infeasible outcomes. This closed-loop structure enables the system to self-correct in the face of hallucinations or invalid transitions, a known limitation of LLMs in high-stakes environments. For benchmarking and validation, we rely on the case studies provided in the AI Benchmark for Diagnosis, Reconfiguration, and Planning repository developed by [5]. This benchmark contains a range of realistic plant models modelled in OpenModelica framework. These systems vary in size and complexity, allowing us to test the capabilities and limitations of LLM-based reasoning across a spectrum of control problems. Empirical tests show that with naïve prompting, current off the shelf LLMs can reliably solve FSMs with up to 25 states, although hallucinations and infeasible actions become more frequent beyond that scale. A central aspect of this work is the modeling interface —i.e., how FSMs and system information are presented to the LLM. We explore four primary modalities: (1) verbal descriptions , where the FSM and state dynamics are described in natural language; (2) state-transition diagrams , encoded in text format; (3) knowledge graphs , capturing the causal and structural dependencies between components; and (4) code representations , using OpenModelica or Python to encode logic and transitions. Each of these formats offers trade-offs between interpretability, grounding, and reasoning accuracy. For instance, verbal descriptions are flexible but prone to ambiguity, while code-based logic provides precision but may overwhelm the model without proper abstraction. Part of our ongoing work is to systematically evaluate which formats best support LLM-based reasoning in FSM traversal tasks. Classical control approaches often treat recovery as returning to a nominal setpoint or steady-state. However, in industrial practice, it is often sufficient for the system to reach any state that is safe, stable, and capable of sustaining profitable operation . This broader definition of recovery allows our framework to explore alternative paths, including those that stabilize the plant under suboptimal but acceptable conditions. For example, rather than restoring full heating capacity in a thermal system, the LLM may identify a lower operating temperature that meets production thresholds while avoiding risky interventions. This flexible reasoning is critical in high-dimensional or poorly modelled systems where full recovery may be either infeasible or unnecessary. An illustrative example involves a system with multiple tanks (3 feed tanks and 1 reactor). The case study aims to fill the three tanks sequentially and then empty them into reactor sequentially. This process is subject to multiple anomalies like a clogging valve or a leaking valve or a valve malfunction. A classical FSM would require predefined transitions for each fault type and corresponding controller actions. Our LLM-based framework, however, dynamically proposes actions like changing the setpoint of the pump, inorder to overcome the clogging fault—all validated through a digital twin. If the action is deemed unsafe (e.g., flowrate is still low), the reprompting agent triggers an iterative reasoning loop to explore safer alternatives. This capability transforms the FSM from a rigid execution map into an interactive search space , where transitions are contextually constructed, pruned, and validated. A major technical challenge in this setup is ensuring that the LLM does not make infeasible or unsafe suggestions. While the digital twin helps to filter out such actions, reliance on reprompting can increase latency and computational overhead. Future improvements will focus on incorporating constraint-aware reasoning , where physical or logical constraints are embedded directly into the LLM prompt or model architecture. Another direction involves fine-tuning LLMs on structured control problems to reduce hallucinations and improve reasoning fidelity. The broader implications of this work extend beyond individual plants or benchmarks. The framework can generalize to other cyber-physical systems —including power grids, robotic swarms, and autonomous vehicles—where hybrid dynamics, discrete modes, and fault management are critical. Moreover, it offers a pathway to scalable autonomy : by offloading decision-making from static models to language-based agents, engineers can focus on specifying goals, constraints, and safety envelopes rather than exhaustively coding all transitions. This paradigm could also play a pivotal role in safety verification , where LLMs can reason about edge cases, simulate failure trajectories, and propose recovery actions in digital environments before being deployed in physical systems. In conclusion, this work presents a transformative approach to FSM-based control by embedding LLMs as dynamic reasoning agents capable of real-time fault diagnosis, recovery planning, and safe action execution. By integrating this reasoning loop with formal modeling, validation via digital twins, and feedback through reprompting, we enable control systems that are both flexible and robust. While many challenges remain—including scaling to larger state spaces, reducing hallucinations, and improving interpretability—this work lays the groundwork for a new generation of autonomous industrial controllers that can learn, adapt, and recover without explicit enumeration of all failure modes. References: 1. Cassandras, C. G., & Lafortune, S. (Eds.). (2008). Introduction to discrete event systems . Boston, MA: Springer US. 2. Sampath, M., Sengupta, R., Lafortune, S., Sinnamohideen, K., & Teneketzis, D. (1995). Diagnosability of discrete-event systems. IEEE Transactions on automatic control , 40 (9), 1555-1575 . 3. Huang, W., Abbeel, P., Pathak, D., & Mordatch, I. (2022, June). Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International conference on machine learning (pp. 9118-9147). PMLR. 4. Vyas, J., & Mercangöz, M. (2024). Autonomous Industrial Control using an Agentic Framework with Large Language Models. arXiv preprint arXiv:2411.05904 . 5. Ehrhardt, J., Ramonat, M., Heesch, R., Balzereit, K., Diedrich, A., & Niggemann, O. (2022, September). An AI benchmark for diagnosis, reconfiguration & planning. In 2022 IEEE 27th International Conference on Emerging Technologies and Factory Automation (ETFA) (pp. 1-8). IEEE.",
+    "presenting_author": "Javal Vyas | Imperial College London, United Kingdom",
+    "authors": [
+      "Javal Vyas | Imperial College London, United Kingdom",
+      "Milapji Gill | Helmut Schmidt University, Hamburg, Germany",
+      "Felix Gehlhoff | Helmut Schmidt University, Hamburg, Germany",
+      "Mehmet Mercangöz | ABB, London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Javal Vyas",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Milapji Gill",
+        "affiliation": "Helmut Schmidt University, Hamburg, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Felix Gehlhoff",
+        "affiliation": "Helmut Schmidt University, Hamburg, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Mehmet Mercangöz",
+        "affiliation": "ABB, London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "259d",
+    "sortable_time": "2025-11-04_08:54:00_09:12:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717339"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714070",
+    "paper_endpoint": "Paper/714070",
+    "paper_id": "714070",
+    "topic": "State-Space Neural Network Architecture for Nonlinear Dynamical System Modeling",
+    "title": "State-Space Neural Network Architecture for Nonlinear Dynamical System Modeling",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "57086",
+    "session_title": "10B: AI/ML and Data-Driven Modeling for Control I",
+    "session_number": "259",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Data-driven modeling and control of dynamical systems is essential in chemical process engineering. Because many real industrial systems are both nonlinear and complex, an effective modeling strategy coupled with a suitable model-based control design becomes crucial. Recurrent neural networks (RNNs) are often employed for time-series modeling in these settings, yet standard RNN structures can struggle to accurately capture nonlinear process behavior without additional modifications (e.g., LSTMs or GRUs). Moreover, these enhancements often demand more data to fit the model adequately. Although RNNs bear some resemblance to state-space models, they typically exhibit two key inconsistencies: they use fixed or arbitrary initial hidden states rather than learnable representations of a system’s initial condition, and their internal model structure does not correctly mirror the classical state-space formulation – that is used for explaining any kind of dynamical system. Moreover, standard RNNs impose recurrence in multiple layers instead of confining it to the state variable alone to handle non-linearities. This practice can lead to unnecessarily large, over-parameterized models, thus affecting accuracy. Here, we introduce a state-space neural network (SSNN) with a state space model structure, that resolves these shortcomings. The SSNN treats initial states for each trajectory as trainable parameters, enabling the model to learn a more faithful representation of each sequence’s true starting condition and thereby avoiding issues associated with arbitrary initialization. Further, instead of layering multiple recurrent units, the SSNN adopts a classical state-space perspective, relying on two feedforward neural networks to describe both the state transition and the output equations. This approach ensures that recurrence exists solely through the evolution of a finite-dimensional latent state, eliminating the need to stack recurrent layers to handle non-linearity. There have been SSNN formulations in the past but they do not address the state initialization nor do they eliminate the redundancy of stacking recurrent layers. To demonstrate its effectiveness, we evaluate the SSNN on a nonlinear batch stirred tank reactor simulation. The data includes multiple batch runs with different initial reactant concentrations and operating strategies, testing the model’s ability to generalize across diverse conditions. First, we measure the predictive performance of the SSNN and compare it to standard RNN baselines by examining mean squared error (MSE) on concentration and temperature profiles. We then integrate each model into a Model Predictive Controller (MPC) and compare their closed-loop performance through the resulting optimal input trajectories and objective function values. Across these tests, the SSNN achieves lower MSE than standard RNNs and maintains a much less parameter count. These findings underscore the promise of the SSNN for accurate, parsimonious, and interpretable data-driven modeling and control of nonlinear chemical processes. [1] Lanzetti, N.; Lian, Y. Z.; Cortinovis, A.; Dominguez, L.; Mercangöz, M.; Jones, C. Recurrent Neural Network based MPC for Process Industries. 2019 18th European Control Conference (ECC). 2019; pp 1005–1010. [2] Gu, A.; Goel, K.; Ré, C. Efficiently Modeling Long Sequences with Structured State Spaces. CoRR 2021, abs/2111.00396 . [3] Alhajeri, M. S.; Luo, J.; Wu, Z.; Albalawi, F.; Christofides, P. D. Process structure based recurrent neural network modeling for predictive control: A comparative study. Chemical Engineering Research and Design 2022, 179, 77–89.",
+    "presenting_author": "Aswin Chandrasekar | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Aswin Chandrasekar | McMaster University, Hamilton, Canada",
+      "Prashant Mhaskar | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Aswin Chandrasekar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Prashant Mhaskar",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "259e",
+    "sortable_time": "2025-11-04_09:12:00_09:30:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714070"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714781",
+    "paper_endpoint": "Paper/714781",
+    "paper_id": "714781",
+    "topic": "Physics-Informed Model-Based Policy Optimization of Koopman Economic NMPC Policies",
+    "title": "Physics-Informed Model-Based Policy Optimization of Koopman Economic NMPC Policies",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "57086",
+    "session_title": "10B: AI/ML and Data-Driven Modeling for Control I",
+    "session_number": "259",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Data-driven dynamic models present a promising avenue for rendering (economic) nonlinear model predictive control ((e)NMPC) tractable [1] for complex processes where (i) no mechanistic model is available, or (ii) a mechanistic model is available but cannot be used as part of a real-time capable (e)NMPC policy [2]. While system identification (SI) is the most common approach to training data-driven dynamic models, it narrowly focuses on maximizing average prediction accuracy. Reinforcement learning (RL) offers an alternative or complementary method to SI: It can be used to tune (e)NMPC policies for optimal performance in a specific control task by optimizing the dynamic model [3,4,5] or parameters in the policy’s objective function or constraints [5,6], e.g., state bounds. However, standard RL algorithms are notoriously sample-inefficient, hindering their usage when the number of interactions with the control system for learning purposes is limited [7]. We present a novel approach [8] for sample-efficient RL-based (e)NMPC policy learning in process control by combining a model-based RL algorithm [9] with our previously published method [4] that turns Koopman (e)NMPC policies into automatically differentiable policies. When applied to an eNMPC case study of a continuous stirred-tank reactor (CSTR) model from the literature [10], the approach outperforms benchmark methods, i.e., data-driven eNMPC policies using models based on system identification without further RL tuning of the resulting policy, and neural network controllers trained with model-based RL, by achieving superior control performance and higher sample efficiency [8]. Furthermore, utilizing partial prior knowledge about the system dynamics via physics-informed learning [11,12] further increases sample efficiency [8]. Our work integrates modern methods that increase the sample efficiency of dynamic model learning [10,11] and RL [9] with learning task-optimal data-driven (e)NMPC policies. Thus, it is a step toward making RL-based learning of predictive controllers feasible for complex real-world process control problems where no simulator of the environment is available a priori and learning by interacting with the process is expensive. [1] Tang, W., & Daoutidis, P. (2022). Data-driven control: Overview and perspectives. In 2022 American Control Conference (ACC) , 1048-1064. [2] McBride, K., & Sundmacher, K. (2019). Overview of surrogate modeling in chemical process engineering. Chemie Ingenieur Technik , 91 (3), 228-239. [3] Chen, B., Cai, Z., & Bergés, M. (2019). GNU-RL: A precocial reinforcement learning solution for building HVAC control using a differentiable MPC policy. In Proceedings of the 6th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation , 316-325. [4] Mayfrank, D., Mitsos, A., & Dahmen, M. (2024). End-to-end reinforcement learning of Koopman models for economic nonlinear model predictive control. Computers & Chemical Engineering , 190 , 108824. [5] Gros, S., & Zanon, M. (2019). Data-driven economic NMPC using reinforcement learning. IEEE Transactions on Automatic Control , 65 (2), 636-648. [6] Brandner, D., Talis, T., Esche, E., Repke, J. U., & Lucia, S. (2023). Reinforcement learning combined with model predictive control to optimally operate a flash separation unit. In Computer Aided Chemical Engineering (52), 595-600. [7] Gopaluni, R. B., Tulsyan, A., Chachuat, B., Huang, B., Lee, J. M., Amjad, F., Damarla, S. K., Kim, J. W., and Lawrence, N. P. (2020). Modern machine learning tools for monitoring and control of industrial processes: A survey . IFAC-PapersOnLine , 53(2), 218–229. [8] Mayfrank, D., Velioglu, M., Mitsos, A., & Dahmen, M. (2025). Sample-Efficient Reinforcement Learning of Koopman eNMPC. arXiv preprint arXiv:2503.18787 . [9] Janner, M., Fu, J., Zhang, M., and Levine, S. (2019). When to trust your model: Model-based policy optimization. Advances in Neural Information Processing Systems , 32, 12498–12509. [10] Flores-Tlacuahuac, A., & Grossmann, I. E. (2006). Simultaneous cyclic scheduling and control of a multiproduct CSTR. Industrial & Engineering Chemistry Research , 45 (20), 6698-6712. [11] Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2019). Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. Journal of Computational Physics , 378 , 686-707. [12] Antonelo, E. A., Camponogara, E., Seman, L. O., Jordanou, J. P., de Souza, E. R., & Hübner, J. F. (2024). Physics-informed neural nets for control of dynamical systems. Neurocomputing , 579 , 127419.",
+    "presenting_author": "Alexander Mitsos | RWTH Aachen University, Germany",
+    "authors": [
+      "Daniel Mayfrank | Forschungszentrum Jülich GmbH, Germany",
+      "Mehmet Velioglu | Forschungszentrum Jülich GmbH, Germany",
+      "Alexander Mitsos | RWTH Aachen University, Germany",
+      "Manuel Dahmen | Forschungszentrum Jülich GmbH, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daniel Mayfrank",
+        "affiliation": "Forschungszentrum Jülich GmbH, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Mehmet Velioglu",
+        "affiliation": "Forschungszentrum Jülich GmbH, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Alexander Mitsos",
+        "affiliation": "RWTH Aachen University, Germany",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Manuel Dahmen",
+        "affiliation": "Forschungszentrum Jülich GmbH, Germany",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "259f",
+    "sortable_time": "2025-11-04_09:30:00_09:48:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714781"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/710279",
+    "paper_endpoint": "Paper/710279",
+    "paper_id": "710279",
+    "topic": "Koopman System Identification with Noise Modeling",
+    "title": "Koopman System Identification with Noise Modeling",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "57086",
+    "session_title": "10B: AI/ML and Data-Driven Modeling for Control I",
+    "session_number": "259",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The challenge of modeling nonlinear dynamical systems is compounded by the presence of measurement noise, which obscures the true system dynamics and degrades the accuracy of predictive models. When first-principles models are unavailable, data-driven approaches for system identification, i.e., building mathematical models of dynamical systems using measured data, are needed [1]. Recent data-driven advances leveraging Koopman operator theory enable global linearization of nonlinear dynamics by lifting the state space into a space of observables (functions of system states) [2], where the linear system matrices are typically approximated using dynamic mode decomposition (DMD) [3], [4] or extended DMD (eDMD) [5]. However, these methods fail to explicitly account for stochastic disturbances, instead treating noise by absorbing it into deterministic approximations, leading to degraded predictive performance in noisy environments. In this work, we propose noisy eDMD (neDMD), a data-driven Koopman modeling approach for nonlinear systems that simultaneously identifies linearized system dynamics and characterizes noise distributions when both the governing equations and noise properties (autocorrelations and distributions) are unknown. The method lifts system states and unmeasured noise into a high-dimensional feature space using a dictionary of candidate observables, yielding an approximated linear system, where the process noise, under such a state lifting, is assumed to be approximated as a corresponding nonlinear transformation of a multidimensional white noise signal. The identification problem is formulated as a regularized least squares optimization and solved via block coordinate descent, which alternately estimates: (1) System matrices through regression [6], and (2) the noise sequence in the lifted space. Once the system matrices are learned from training data, the model’s noise-segregation performance is evaluated on unseen test data using moving horizon estimation (MHE) [7]. This approach reconstructs the white noise history, enabling optimal future state prediction in a manner analogous to prediction error methods in system identification [8]. Beyond addressing nonlinear system identification through a data-driven Koopman modeling algorithm, establishing a bound on the generalized error of predicting future outputs from state history remains critical for practical implementation. We provide these guarantees by deriving a probabilistic upper bound on this generalized prediction error using Bernstein’s inequality from statistical learning theory. Numerical case studies—including a Van der Pol oscillator and a methanol-ethanol distillation column—demonstrate that neDMD achieves order-of-magnitude improvements in prediction accuracy over standard eDMD by explicitly accounting for noise effects in the lifted dynamics. References: [1] K. J. Åström and P. Eykhoff, “System identification—a survey,” Automatica , vol. 7, no. 2, pp. 123–162, 1971. [2] M. Budišić, R. Mohr, and I. Mezić, “Applied Koopmanism,” Chaos: An Interdisciplinary Journal of Nonlinear Science , vol. 22, no. 4, 2012. [3] C. W. Rowley, I. Mezić, S. Bagheri, P. Schlatter, and D. S. Henningson, “Spectral analysis of nonlinear flows,” Journal of Fluid Mechanics , vol. 641, pp. 115–127, 2009. [4] P. J. Schmid, “Dynamic mode decomposition of numerical and experimental data,” Journal of Fluid Mechanics , vol. 656, pp. 5–28, 2010. [5] M. O. Williams, I. G. Kevrekidis, and C. W. Rowley, “A data–driven approximation of the Koopman operator: Extending dynamic mode decomposition,” Journal of Nonlinear Science , vol. 25, pp. 1307–1346, 2015. [6] M. O. Williams, M. S. Hemati, S. T. Dawson, I. G. Kevrekidis, and C. W. Rowley, “Extending data-driven Koopman analysis to actuated systems,” IFAC-PapersOnLine , vol. 49, no. 18, pp. 704–709, 2016. [7] D. G. Robertson, J. H. Lee, and J. B. Rawlings, “A moving horizon-based approach for least-squares estimation,” AIChE Journal , vol. 42, no. 8, pp. 2209–2224, 1996. [8] L. Ljung “System identification. In ” Signal analysis and prediction ; MIT Press, 1998; pp. 163–173.",
+    "presenting_author": "Moritz Woelk | NC State University, Raleigh",
+    "authors": [
+      "Moritz Woelk | NC State University, Raleigh",
+      "Wentao Tang | NC State University, Raleigh"
+    ],
+    "authors_structured": [
+      {
+        "name": "Moritz Woelk",
+        "affiliation": "NC State University, Raleigh",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Wentao Tang",
+        "affiliation": "NC State University, Raleigh",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "259g",
+    "sortable_time": "2025-11-04_09:48:00_10:06:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/710279"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/710938",
+    "paper_endpoint": "Paper/710938",
+    "paper_id": "710938",
+    "topic": "Iterative Model Identification Scheme Via Gaussian Process-Based NMPC for Batch Processes",
+    "title": "Iterative Model Identification Scheme Via Gaussian Process-Based NMPC for Batch Processes",
+    "date_time": "2025-11-04_08:00:00_10:30:00",
+    "session_id": "57086",
+    "session_title": "10B: AI/ML and Data-Driven Modeling for Control I",
+    "session_number": "259",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Batch process systems exhibit transient, potentially nonlinear dynamic behavior without an operating equilibrium point 1 . For control of these processes, nonlinear model predictive control (NMPC) is a promising method to control constrained multi-input, multi-output (MIMO) systems 2 . NMPC is particularly beneficial for batch polymerization processes, where strict process safety, quality requirements, and product consistency need to be met for each batch. However, the adoption of NMPC is hindered by the availability of accurate dynamic models 3 , as the control method relies on these models to predict future state trajectories. Such models are often difficult and expensive to obtain via experiments and/or mechanistic knowledge. Considering that batch processes are used to produce small quantities of customized products, the cost of acquiring numerous models is generally not justified. As an alternative for scenarios of no prior knowledge of the system, we propose an iterative batch model identification scheme via Gaussian Process (GP) based NMPC (GP-NMPC) for batch processes. GP regression models have been employed to learn nonlinear discrete-time dynamics directly from available observations 4,5 . Our approach includes NMPC applied to polymerization batches iteratively, with the GP models updated with new observations at the end of each batch. With increasing observations on the operating region, the GP state space model predicts more accurate trajectories, which in turn improves NMPC performance in each batch iteration. As the computational effort of GP inference scales with the data, we use K-means clustering to reduce the size of the inferred dataset. Often, closed-loop responses between iterations are similar, and certain operating regions become dense with repetitive data. Via K-means clustering, we select sparse data from each cluster, reducing computational effort. Since the GPs are only fitted on measured operational data, they yield high accuracy only around the optimal decisions and state trajectory, with convergence of the iterative scheme. Although the representation by the fitted GPs do not generalize to the whole domain, the iterative scheme presents a data efficient approach to obtaining GP models for optimal control. We apply the proposed learning scheme on a semi-batch polymerization reactor in silico to perform temperature setpoint control over batch durations of two hours, with tight quality constraint bounds ±2°C around the setpoint. A total of 10 iterations are performed to observe changes in tracking performance. In addition, a safety constraint on the maximum reactor temperature in the case of cooling failure is implemented. A PI controller is implemented for the first batch iteration to generate starting data and serve as a benchmark, providing observations for initial GP model training. The results show that, with observations from just two polymerization batches, tracking performance of GP-based NMPC quickly converges within 0.02°C for the noiseless case, on par with the full-model NMPC benchmark. The presence of measurement noise is also studied over 10 simulations to prevent bias. With noisy observations, a tracking performance of 0.12°C is achieved with convergence after 4 batches. This control performance is even better compared to 0.16°C from the full-model NMPC in this case study, suggesting the advantage of probabilistic GP for stochastic NMPC. We show a reduction of 97% and 82% in control error by the proposed iterative scheme in comparison with PI control, with and without measurement noise respectively. The GP-NMPC also outperforms linear MPC with the same iterative scheme in terms of constraint violation. In conclusion, the proposed iterative scheme enables the adoption of NMPC without existing models and abundant data for the control of batch processes. Future work includes the implementation of probabilistic constraints to improve robustness and safety of GP-NMPC. References: 1. B. Srinivasan and D. Bonvin, “Stability and Controllability of Batch Processes,” IFAC Proc. Vol. , vol. 39, no. 2, pp. 493–500, Jan. 2006, doi: 10.3182/20060402-4-BR-2902.00493. 2. D. Q. Mayne, J. B. Rawlings, C. V. Rao, and P. O. M. Scokaert, “Constrained model predictive control: Stability and optimality,” Automatica , vol. 36, no. 6, pp. 789–814, Jun. 2000, doi: 10.1016/S0005-1098(99)00214-9. 3. F. Fiedler, B. Karg, L. Lüken, D. Brandner, M. Heinlein, F. Brabender and S. Lucia “do-mpc: Towards FAIR nonlinear and robust model predictive control,” Control Eng. Pract. , vol. 140, p. 105676, Nov. 2023, doi: 10.1016/J.CONENGPRAC.2023.105676. 4. L. Hewing, J. Kabzan, and M. N. Zeilinger, “Cautious Model Predictive Control using Gaussian Process Regression,” IEEE Trans. Control Syst. Technol. , vol. 28, no. 6, pp. 2736–2743, May 2017, doi: 10.1109/TCST.2019.2949757. 5. E. Bradford, L. Imsland, D. Zhang, and E. A. del Rio Chanona, “Stochastic data-driven model predictive control using Gaussian processes,” Comput. Chem. Eng. , vol. 139, p. 106844, Aug. 2020, doi: 10.1016/J.COMPCHEMENG.2020.106844.",
+    "presenting_author": "Eike Cramer | RWTH Aachen University, Germany",
+    "authors": [
+      "Tai Xuan Tan | Process Systems Engineering (AVT.SVT), RWTH Aachen University, Germany",
+      "Alexander Mitsos | RWTH Aachen University, Germany",
+      "Eike Cramer | RWTH Aachen University, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Tai Xuan Tan",
+        "affiliation": "Process Systems Engineering (AVT.SVT), RWTH Aachen University, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Alexander Mitsos",
+        "affiliation": "RWTH Aachen University, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Eike Cramer",
+        "affiliation": "RWTH Aachen University, Germany",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "259h",
+    "sortable_time": "2025-11-04_10:06:00_10:24:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/710938"
+  }
+]

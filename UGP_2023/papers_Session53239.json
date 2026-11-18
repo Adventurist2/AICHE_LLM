@@ -1,0 +1,367 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667783",
+    "paper_endpoint": "Paper/667783",
+    "paper_id": "667783",
+    "topic": "Extracting the Biomarker Potential of N-Glycans with a Machine Learning Framework Applied to Colorectal Cancer",
+    "title": "Extracting the Biomarker Potential of N-Glycans with a Machine Learning Framework Applied to Colorectal Cancer",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "53239",
+    "session_title": "Systems and Quantitative Biology: Disease Mechanisms, Biomarkers, and Therapies I",
+    "session_number": "618",
+    "program_title": "Food, Pharmaceutical & Bioengineering Division",
+    "symposium_title": "Engineering Fundamentals in Life Science",
+    "abstract": "Problem Background Colorectal cancer (CRC) ranks as the third most frequently diagnosed cancer worldwide, accounting for 10.2% of all cases in 2018, and the second leading cause of cancer-related deaths, constituting 9.2% of total cancer deaths in the same year. Existing CRC screening methods present challenges, including invasiveness, reduced sensitivity, and elevated costs. The effectiveness of traditional treatments, such as surgery, chemotherapy, and radiation therapy, is hampered by the inability to detect CRC in its early stages, emphasizing the need to pinpoint specific molecular targets to devise more efficient diagnostic procedures and therapies. The molecular basis of CRC has become better understood due to advances in genomic and proteomic research; however, the discovery of well-validated and clinically useful biomarkers for CRC remains limited. The emerging field of glycomics offers a promising avenue for study and is gaining momentum in cancer research. Although glycans appear to play a role in tumor proliferation, the understanding of the underlying mechanisms significantly trails that of other critical cell components, such as genes and proteins, in large part due to the complexity of N-glycan biosynthesis, which occurs in a non-template driven manner and involves multi-step concerted action of competing enzymes and metabolic co-substrates. Aberrant glycosylation has been observed for CRC patients, and human serum N-glycans have been proposed as potential biomarkers for diagnosis and advanced therapeutic intervention. N-glycans found on immunoglobulin G (IgG), a glycoprotein abundant in human serum, are of particular interest. In healthy adults, IgG makes up about 75% of total serum immunoglobulins. The convenience of sample collection, combined with indications of CRC's associations with aberrant glycosylation, positions IgG N-glycans as an ideal candidate for diagnostic and biomarker discovery efforts, which can be facilitated by the use of machine learning methods. Scope This work proposes a comprehensive machine learning framework for the CRC diagnosis and patient stratification using a dataset from the Study of Colorectal Cancer in Scotland (SOCCS) study (1999-2006), containing IgG N-glycomic profiles of cancer patients and controls. This framework is developed with a focus on interpretability to facilitate the identification of potential N-glycan-based biomarkers, thus complementing existing CRC screening methods for increased specificity and sensitivity. Methods The dataset used for the development of the proposed machine learning framework comprised the relative abundances of 24 N-glycan structures normalized by the total area, the body mass index (BMI), and known glycan covariates such as age and gender for 1,413 patients with pathologically confirmed colorectal cancer and 538 matching healthy controls. Limitations of the dataset include the absence of BMI data for 238 samples and a notable imbalance in the number of controls and cancer patients over the age of 60 years. To avoid having missing values in the dataset, an elaborate pre-processing procedure is carried out, where missing BMI data are iteratively imputed accounting for the information present in the rest dataset features. Additionally, class imbalance with respect to healthy controls is overcome by a modified version of the Synthetic Minority Over-Sampling Technique (SMOTE), which incorporated the knowledge for the distributions of the age, gender, and BMI features across healthy and patient samples to ensure that model classification decisions are attributable to differences in the N-glycomic profiles and not to artificial differences in these covariates as a result of data augmentation. Furthermore, three data scaling methods are used, namely min-max scaling, standard scaling and robust scaling, in order to assess their influence on the performance of the machine learning algorithms used in this study. Regarding the latter, in this study five machine learning methods are trained and compared, namely Random Forest (RF), Support Vector Machines (SVMs), Logistic Regression (LR), Extreme Gradient Boosting (XGBoost) and Soft Voting Ensembles (SVEs). These methods include both non-ensemble and ensemble techniques, which possess different inductive biases, thus constituting a diverse spectrum of classification algorithms that can be used to achieve satisfactory specificity and sensitivity. To avoid data leakage, nested cross-validation (NCV) is employed for hyperparameter tuning and model evaluation, and generalization performance is assessed using learning curves. Finally, biomarker potential is evaluated using permutation feature importance, which is a global agnostic method for interpretability that enables the identification of the most influential N-glycan features in the classification of disease outcome. All computational analysis is carried out using the Python programming language. Results & Implications The results of this study support the existing potential for the development of machine learning-based diagnostic tools for colorectal cancer using blood-derived IgG N-glycomic data. Without data augmentation and discarding all samples for healthy individuals over the age of 60 years, an equally-weighted SVE classifier comprising a base XGBoost classifier with min-max scaling and a base LR classifier with robust scaling achieved a mean Area Under the Curve (AUC) score of 72.3% in diagnosing colorectal cancer patients. After applying the proposed data augmentation technique, the XGBoost classifier achieved a high mean AUC score of 92.0%, thus demonstrating a proof of concept for a supplementary diagnostic tool that could be developed with large, clinically valid datasets. Consequently, future research on the diagnostic potential of glycomic data should focus on acquiring more data points for controls and colorectal cancer patients, along with clinically relevant features such as age, gender, and BMI. Regarding patient stratification, a RF multiclass classifier trained on the non-augmented dataset was able to distinguish early-stage cancer patients from healthy controls with a mean AUC score of 70.1%, thus showing promise in the ability to provide timely CRC prognosis. Finally, permutation feature importance analysis suggested that alterations in the core-fucosylation of IgG glycans could serve as a potential biomarker, supporting existing research findings on the glycosylation characteristics linked to CRC. The proposed framework is designed to be adaptable for other diseases where blood-derived IgG N-glycomic data may be pertinent. Furthermore, due to the observation of aberrant glycosylation in multiple cancer types, this framework has the potential to serve as a general cancer screening tool.",
+    "presenting_author": "Konstantinos Flevaris | Imperial College London, United Kingdom",
+    "authors": [
+      "Joseph Davies | Imperial College London, United Kingdom",
+      "Shoh Nakai | Imperial College London, United Kingdom",
+      "Konstantinos Flevaris | Imperial College London, United Kingdom",
+      "Cleo Kontoravdi | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joseph Davies",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Shoh Nakai",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Konstantinos Flevaris",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Cleo Kontoravdi",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "618a",
+    "sortable_time": "2023-11-05_15:30:00_15:48:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667783"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665866",
+    "paper_endpoint": "Paper/665866",
+    "paper_id": "665866",
+    "topic": "Computational Characterization of the Estrogenic Activity of Environmental Chemicals Using High-Throughput Microscopy and Machine Learning",
+    "title": "Computational Characterization of the Estrogenic Activity of Environmental Chemicals Using High-Throughput Microscopy and Machine Learning",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "53239",
+    "session_title": "Systems and Quantitative Biology: Disease Mechanisms, Biomarkers, and Therapies I",
+    "session_number": "618",
+    "program_title": "Food, Pharmaceutical & Bioengineering Division",
+    "symposium_title": "Engineering Fundamentals in Life Science",
+    "abstract": "The goal of this study is to develop a machine learning framework that can classify the estrogenic activity of endocrine disrupting chemicals (EDCs) and analyze the experimental feature subsets that have the most impact on this prediction. The endocrine system is responsible for regulating a variety of physiological processes in living organisms, and any disruption caused by chemical exposures can have long-term impacts on human and wildlife health [1]. Machine learning approaches possess an untapped opportunity for a facilitated toxicity evaluation of environmental chemicals by learning the patterns in the biological activity data, which can assist in predicting the potential consequences of exposure to these compounds [2]. In this work, we analyze 60 reference EDCs with known estrogen receptor-a activities using an engineered biosensor and collect high throughput/high content microscopy data with mineable size, shape, and intensity attributes that relate to the various mechanistic endpoints on the estrogen receptor signaling pathway [3]. We formulate the interaction of EDCs with the estrogen receptor ligand binding domain (i.e., agonist or antagonist) as a nonlinear classification problem. We train, validate, and test Support Vector Machines (SVM), Random Forests (RFs), and Artificial Neural Networks (ANN) for mapping the separation between agonist and antagonist chemicals with implicit and explicit mathematical models. By following our previously studied preprocessing routines [4,5], we demonstrate the effect of data preparation on the classification model performance. We use clustering analysis to identify the most promising feature subsets using the Fowlkes–Mallows index and perform principal component analysis to minimize experimental noise. Finally, the predictive performance of the three classifiers is evaluated on hold-out chemicals (blind testing), and the classification accuracy across the selected feature groups is quantified. The results show that our ANN classifier with trained with benchmark agonist and antagonist chemicals achieves 98.41% blind testing accuracy, where this number drops to 96.36% for the SVM and 94.36% for the RF model. References 1. Schug, T.T., Janesick, A., Blumberg, B. and Heindel, J.J., 2011. Endocrine disrupting chemicals and disease susceptibility. The Journal of steroid biochemistry and molecular biology , 127 (3-5), pp.204-215. 2. Wang, M.W., Goodman, J.M. and Allen, T.E., 2020. Machine learning in predictive toxicology: recent applications and future directions for classification models. Chemical research in toxicology , 34 (2), pp.217-239. 3. Ashcroft, F. J., Newberg, J. Y., Jones, E. D., Mikic, I., & Mancini, M. a. (2011). High content imaging-based assay to classify estrogen receptor-α ligands based on defined mechanistic outcomes. Gene, 477(1–2), 42–52. 4. Mukherjee, R., Beykal, B., Szafran, A.T., Onel, M., Stossi, F., Mancini, M.G., Lloyd, D., Wright, F.A., Zhou, L., Mancini, M.A. and Pistikopoulos, E.N., 2020. Classification of estrogenic compounds by coupling high content analysis and machine learning algorithms. PLoS computational biology , 16 (9), p.e1008191 5. Aghayev, Z., Szafran, A.T., Tran, A., Ganesh, H.S., Stossi, F., Zhou, L., Mancini, M.A., Pistikopoulos, E.N., Beykal, B., 2023, Machine learning methods for endocrine disrupting potential identification based on single-cell data, Chemical Engineering Science (Under Review).",
+    "presenting_author": "Zahir Aghayev | University of Connecticut, Storrs",
+    "authors": [
+      "Zahir Aghayev | University of Connecticut, Storrs",
+      "George F. Walker | University of Connecticut, Storrs",
+      "Funda Iseri | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+      "Moustafa Ali | Texas A&M University, College Station, TX",
+      "Adam T. Szafran | Molecular and Cellular Biology, Baylor College of Medicine, Houston, TX",
+      "Fabio Stossi | GCC Center for Advanced Microscopy and Image Informatics, Houston, TX",
+      "Michael A. Mancini | Molecular and Cellular Biology, Baylor College of Medicine, Houston, TX",
+      "Efstratios Pistikopoulos | Texas A&M University, College Station, TX",
+      "Burcu Beykal | University of Connecticut, Storrs"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zahir Aghayev",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "George F. Walker",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      },
+      {
+        "name": "Funda Iseri",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Moustafa Ali",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Adam T. Szafran",
+        "affiliation": "Molecular and Cellular Biology, Baylor College of Medicine, Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Fabio Stossi",
+        "affiliation": "GCC Center for Advanced Microscopy and Image Informatics, Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael A. Mancini",
+        "affiliation": "Molecular and Cellular Biology, Baylor College of Medicine, Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Efstratios Pistikopoulos",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Burcu Beykal",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "618b",
+    "sortable_time": "2023-11-05_15:48:00_16:06:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665866"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666626",
+    "paper_endpoint": "Paper/666626",
+    "paper_id": "666626",
+    "topic": "Imaging Mass Cytometry for 30-Plex Single-Cell Spatial Characterization of Cardiac Allograft Dysfunction",
+    "title": "Imaging Mass Cytometry for 30-Plex Single-Cell Spatial Characterization of Cardiac Allograft Dysfunction",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "53239",
+    "session_title": "Systems and Quantitative Biology: Disease Mechanisms, Biomarkers, and Therapies I",
+    "session_number": "618",
+    "program_title": "Food, Pharmaceutical & Bioengineering Division",
+    "symposium_title": "Engineering Fundamentals in Life Science",
+    "abstract": "Organ transplantation is the preferred treatment for terminal organ failure with over 40,000 organ transplants performed in the United States in 2021. However, immunological allograft rejection is the major barrier to long term survival, and further understanding the mechanisms of rejection will improve treatments and prolong graft survival. To this end, heart transplant patients undergo regular endomyocardial biopsies (EMB) in which small tissue samples are taken directly from the graft to provide snapshots of allograft rejection. Imaging mass cytometry (IMC) can maximize the information obtained from EMBs by simultaneously detecting up to 40 markers in fixed tissue sections with subcellular resolution. In this study, we established IMC in the field of heart transplantation and investigated the immune response in cardiac allograft rejection. We designed and validated a cardiac IMC 30-antibody panel and analyzed both allograft rejection and no rejection EMBs. Furthermore, an analysis pipeline enabled cell segmentation, phenotyping, and quantification of over a dozen major cell types in 84 patients. We also investigated the spatial relationships between cells and probed the alloimmune microenvironment using complement, proliferation, and cytokine markers. To our knowledge, this is the first reported cardiac IMC study and demonstrates the potential of IMC to detect new biomarkers, suggest mechanisms of dysfunction, and identify therapeutic targets in both cardiology and allograft rejection.",
+    "presenting_author": "Luke Bugada | University of Michigan, Ann Arbor",
+    "authors": [
+      "Luke Bugada | University of Michigan, Ann Arbor",
+      "Yoav Hammer | University of Michigan, Ann Arbor",
+      "Syed Rizvi | University of Michigan, Ann Arbor",
+      "Christine Yee | University of Michigan, Ann Arbor",
+      "Amer Heider | University of Michigan, Ann Arbor",
+      "Daniel Goldstein | University of Michigan, Ann Arbor",
+      "Monica Colvin | University of Michigan, Ann Arbor",
+      "Fei Wen | University of Michigan, Ann Arbor"
+    ],
+    "authors_structured": [
+      {
+        "name": "Luke Bugada",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yoav Hammer",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      },
+      {
+        "name": "Syed Rizvi",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      },
+      {
+        "name": "Christine Yee",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      },
+      {
+        "name": "Amer Heider",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      },
+      {
+        "name": "Daniel Goldstein",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      },
+      {
+        "name": "Monica Colvin",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      },
+      {
+        "name": "Fei Wen",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "618c",
+    "sortable_time": "2023-11-05_16:06:00_16:24:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666626"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669283",
+    "paper_endpoint": "Paper/669283",
+    "paper_id": "669283",
+    "topic": "The in silico Design and Analysis of Darpin – Alpha-Cobratoxin Complexes",
+    "title": "The in silico Design and Analysis of Darpin – Alpha-Cobratoxin Complexes",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "53239",
+    "session_title": "Systems and Quantitative Biology: Disease Mechanisms, Biomarkers, and Therapies I",
+    "session_number": "618",
+    "program_title": "Food, Pharmaceutical & Bioengineering Division",
+    "symposium_title": "Engineering Fundamentals in Life Science",
+    "abstract": "Designed Ankyrin Repeats (DARPins) are small, single domain (15 kDa) proteins that can bind to target antigen of interest with high affinity and specificity. They are highly thermostable and soluble molecules. Their small size enables them to have high tumor penetrability and the lack of cysteine residues makes them easy to be engineered as drug conjugates. Such characteristics enable these molecules to be favorably considered for therapeutic applications. A common strategy for computationally designing binding proteins such as DARPins is to use docking programs to match them to target antigens and subsequently mutate them to improve their affinities. We have previously described MutDock, a computational tool to simultaneously dock and mutate binding proteins. This enables MutDock to identify alternative epitopes that would not bind well initially but can bind well upon mutation. This presentation will describe MutDock’s application to design DARPins to bind alpha-cobratoxin. MutDock was used to design DARPins to bind two epitopes of alpha-cobratoxin: the region that binds the nicotinic acetylcholine receptor and an alternative epitope with many prestabilized residues. After mutation, a total of 3900 designs were identified, computationally analyzed with the Rosetta Suite, and downs elected to 15 designs for experimental testing.",
+    "presenting_author": "Ritankar Bhattacharya | Auburn University, AL",
+    "authors": [
+      "Ritankar Bhattacharya | Auburn University, AL",
+      "Alan Richard | Auburn University, AL",
+      "Robert Pantazes | Auburn University, AL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ritankar Bhattacharya",
+        "affiliation": "Auburn University, AL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Alan Richard",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      },
+      {
+        "name": "Robert Pantazes",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "618d",
+    "sortable_time": "2023-11-05_16:24:00_16:42:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669283"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669663",
+    "paper_endpoint": "Paper/669663",
+    "paper_id": "669663",
+    "topic": "High-Dimensional Analysis of the Tumor Immune Microenvironment of Metaplastic Breast Carcinoma",
+    "title": "High-Dimensional Analysis of the Tumor Immune Microenvironment of Metaplastic Breast Carcinoma",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "53239",
+    "session_title": "Systems and Quantitative Biology: Disease Mechanisms, Biomarkers, and Therapies I",
+    "session_number": "618",
+    "program_title": "Food, Pharmaceutical & Bioengineering Division",
+    "symposium_title": "Engineering Fundamentals in Life Science",
+    "abstract": "Metaplastic breast carcinoma (MBC) is an aggressive variant of triple-negative breast cancer that has poorer prognosis and increased propensity for metastasis, compared to other triple-negative breast cancers. Common treatments for other breast cancers -- chemotherapy, radiation therapy, and hormonal therapy -- have been ineffective. Furthermore, MBC is rare, accounting for approximately 1% of breast carcinomas, and has limited molecular research. Thus, a deeper understanding of the tumor immune microenvironment (TIME) to identify potential therapeutic targets is needed. We leveraged imaging mass cytometry to investigate the TIME of three clinical subtypes of MBC. From the fixed tissue sections of 26 patients, we detected 35 markers on more than 160,000 cells, and identified 13 major tumor and immune cell types. Immune cells are differentially enriched in different MBC subtypes, representing potential targets for immunotherapy. Further spatial analysis revealed interesting immune–immune and immune–tumor interactions that can affect immunotherapy efficacy. This highly multiplexed analysis provides a framework that can readily be applied to investigate the TIME of other solid tumors for therapeutic target discovery.",
+    "presenting_author": "Christine Yee | University of Michigan, Ann Arbor",
+    "authors": [
+      "Christine Yee | University of Michigan, Ann Arbor",
+      "Syed M. Rizvi | University of Michigan, Ann Arbor",
+      "Luke F. Bugada | University of Michigan, Ann Arbor",
+      "Maria E. Gonzalez | University of Michigan, Ann Arbor",
+      "Celina G. Kleer | University of Michigan, Ann Arbor",
+      "Fei Wen | University of Michigan, Ann Arbor"
+    ],
+    "authors_structured": [
+      {
+        "name": "Christine Yee",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Syed M. Rizvi",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      },
+      {
+        "name": "Luke F. Bugada",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      },
+      {
+        "name": "Maria E. Gonzalez",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      },
+      {
+        "name": "Celina G. Kleer",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      },
+      {
+        "name": "Fei Wen",
+        "affiliation": "University of Michigan, Ann Arbor",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "618e",
+    "sortable_time": "2023-11-05_16:42:00_17:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669663"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/671389",
+    "paper_endpoint": "Paper/671389",
+    "paper_id": "671389",
+    "topic": "Molecular Mechanisms behind Myc Regulation and Function in Cancer",
+    "title": "Molecular Mechanisms behind Myc Regulation and Function in Cancer",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "53239",
+    "session_title": "Systems and Quantitative Biology: Disease Mechanisms, Biomarkers, and Therapies I",
+    "session_number": "618",
+    "program_title": "Food, Pharmaceutical & Bioengineering Division",
+    "symposium_title": "Engineering Fundamentals in Life Science",
+    "abstract": "The transcription factor Myc is known to modulate a multitude of genes and cellular processes. Myc is deregulated in 70% of human cancers and is commonly known as an “undruggable” molecule. Factors such as Myc’s structure and primary nuclear localization make it difficult to directly target Myc in cancer treatments. This has led to an increased interest in identifying indirect ways to target Myc. Therefore, in this work, we sought to understand the molecular mechanisms behind 1) regulation (at the signaling level) and 2) function (at the transcription level) of Myc. In the first part of this work, we used an ODE-based kinetic modeling approach to study how extracellular mechanical and growth cues transduced through intracellular signaling pathways can drive Myc protein stabilization and accumulation in cells. The function of Myc in cancer is well-studied, however, the role of mechanotransduction in driving and sustaining cancers through Myc is yet to be uncovered. Understanding this is important as tissue stiffening is a precursor of various solid cancers. Therefore, we modeled Myc phosphorylation by MAPK, Rho/ROCK, and PI3K/Akt signaling pathways effected by EGF and integrin receptors. Our modeling results show that for normal cellular phenotypes, signaling through the EGF receptor strongly influences Myc phosphorylation. However, in cancerous phenotype, signaling through both EGF and integrin receptors play a combined role in modulating Myc. We, therefore, conclude that growth and mechanical signals play a synergistic role in driving and sustaining cancers by modulating Myc levels. Based on this, we propose that tissue stiffness must be considered as a factor while developing treatment strategies for Myc-driven solid cancers. Further, we systematically perturbed signaling interactions in the model to identify key processes governing Myc in cells. From this analysis, we identified intermediate nodes critical for Myc deregulation, which can be used as indirect targets to treat Myc-driven solid cancers. In the second part of this work, we performed bioinformatics analysis on Myc ChIP-seq datasets to study Myc-DNA interactions. Through motif discovery analysis, we identified a new DNA binding sequence of Myc which we propose is a low-affinity binding site for Myc. From subsequent bioinformatics analysis, we demonstrate that Myc functions cooperatively with other proteins to occupy this low-affinity site and drive transcription of genes. Our future work includes using CRISPR technology and live-imaging of single cells to experimentally complement the bioinformatics work and study the kinetics behind transcription by Myc. The DNA-binding patterns and protein/protein interactions identified from this work will aid in the development of cancer treatment strategies targeting Myc. Overall, in this work, we bridge signaling and transcription to gain a mechanistic understanding of Myc regulation and function in cells. We also identify new interactions and mechanisms critical to Myc activity, which can be used as indirect ways to target Myc in cancer therapies.",
+    "presenting_author": "Reshma Kalyan Sundaram | University of Pennsylvania, Philadelphia, PA",
+    "authors": [
+      "Reshma Kalyan Sundaram | University of Pennsylvania, Philadelphia, PA",
+      "Ravi Radhakrishnan | University of Pennsylvania, Philadelphia, PA",
+      "Bomyi Lim | University of Pennsylvania, Philadelphia, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Reshma Kalyan Sundaram",
+        "affiliation": "University of Pennsylvania, Philadelphia, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ravi Radhakrishnan",
+        "affiliation": "University of Pennsylvania, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Bomyi Lim",
+        "affiliation": "University of Pennsylvania, Philadelphia, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "618f",
+    "sortable_time": "2023-11-05_17:00:00_17:18:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/671389"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/672739",
+    "paper_endpoint": "Paper/672739",
+    "paper_id": "672739",
+    "topic": "Invited Talk: Novel Systems-Based Approaches for Characterizing Regulatory RNAs and Their Overlapping Networks in Bacteria",
+    "title": "Invited Talk: Novel Systems-Based Approaches for Characterizing Regulatory RNAs and Their Overlapping Networks in Bacteria",
+    "date_time": "2023-11-05_15:30:00_18:00:00",
+    "session_id": "53239",
+    "session_title": "Systems and Quantitative Biology: Disease Mechanisms, Biomarkers, and Therapies I",
+    "session_number": "618",
+    "program_title": "Food, Pharmaceutical & Bioengineering Division",
+    "symposium_title": "Engineering Fundamentals in Life Science",
+    "abstract": "Bacterial regulatory RNAs enable dynamic global responses to stresses caused by changes in environmental conditions. These global regulators affect vast networks of targets at, frequently, multiple biological levels. Given their relevance to mechanisms of pathogenesis, understanding their functions is a goal in medicine. While advances in omics-based technologies has led to the discovery of hundreds of bacterial regulatory RNAs throughout a large number of pathogens, their identification and characterization has lagged. Even in the model gram-negative organism, Escherichia coli , only ~40% and 60% of sRNAs have had at least one transcriptional regulator or post-transcriptional target confirmed, respectively. Additionally, the mechanistic roles of RNA-binding proteins in sRNA regulation remains elusive. We have devised a holistic multi-tiered approach using in vivo omics datasets over a variety of cellular conditions to better characterized sRNA systems. In this talk, we will describe our recent advances in the context of the bacterial Carbon Storage Regulatory System (CsrA) and will discuss how insights obtained from these approaches can be used in the basic mechanistic characterization of newly discovered RNAs. The talk will also highlight our use of these methods in conjunction with new biophysical model and machine learning approaches for expanding our understanding of sRNA-based regulation in pathogenic-relevant pathways.",
+    "presenting_author": "Lydia Contreras | The University of Texas at Austin, TX",
+    "authors": [
+      "Lydia Contreras | The University of Texas at Austin, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Lydia Contreras",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "618g",
+    "sortable_time": "2023-11-05_17:18:00_17:58:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/672739"
+  }
+]

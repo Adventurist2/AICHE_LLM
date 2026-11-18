@@ -1,0 +1,559 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632272",
+    "paper_endpoint": "Paper/632272",
+    "paper_id": "632272",
+    "topic": "Community Detection for Distributed Control",
+    "title": "Community Detection for Distributed Control",
+    "date_time": "2021-11-09_15:30:00_17:00:00",
+    "session_id": "46440",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "346",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Control of large-scale plants has been challenging, and centralized and distributed control of these plants have been studied extensively [1, 2, 3, 4]. Distributed control provides a control system with some form of modularity, which eases the task of controller installation, tuning, and maintenance. Also, efforts have been made to develop methods for the systematical decomposition of large-scale systems to subsystems to apply distributed control to the subsystems [5, 6]. In particular, community detection based on steady-state attributes of large-scale plants has been used to conduct the decomposition. For example, interactions have been quantified based on connectivity and response sensitivity at steady-state conditions, and community detection algorithms based on hierarchical clustering and modularity optimization have been proposed [5]. In this work, we present a community detection method that decomposes a system into smaller subsystems based on dynamic attributes and structural controllability of each subsystem with the local manipulated variables of the subsystem. The dynamic attributes include response times and time delays. The application and performance of the method are shown by applying it to the Tennessee Eastman process. The resulting subsystems are compared to those obtained using community detection based on steady-state attributes. A multi-objective whale optimization algorithm is used to solve the community detection problems. References [1] Christofides, Panagiotis D. \"Control of nonlinear distributed process systems: Recent developments and challenges.\" AIChE Journal 47.3 (2001): 514-518. [2] Liu, Jinfeng, David Munoz de la Pena, and Panagiotis D. Christofides. \"Distributed model predictive control of nonlinear process systems.\" AIChE journal 55.5 (2009): 1171-1184. [3] Andreasson, M., Dimarogonas, D. V., Johansson, K. H., & Sandberg, H. (2013, July). Distributed vs. centralized power systems frequency control. In 2013 European Control Conference (ECC) (pp. 3524-3529). IEEE. [4] Dijkstra, E. W. (1982). Self-stabilization in spite of distributed control. In Selected writings on computing: a personal perspective (pp. 41-46). Springer, New York, NY. [5] Daoutidis, Prodromos, Wentao Tang, and Sujit S. Jogwar. \"Decomposing complex plants for distributed control: Perspectives from network theory.\" Computers & Chemical Engineering 114 (2018): 43-51. [6] Tang, W., Allman, A., Pourkargar, D. B., & Daoutidis, P. \"Optimal decomposition for distributed optimization in nonlinear model predictive control through community detection.\" Computers & Chemical Engineering 111 (2018): 43-54.",
+    "presenting_author": "Masoud Soroush | Drexel University, Philadelphia, PA",
+    "authors": [
+      "Leila Samandari Masooleh | Drexel University, Philadelphia, PA",
+      "Jeffrey E. Arbogast | Air Liquide, Paris, France",
+      "Ulku Oktem | Near-Miss Management LLC, Philadelphia, PA",
+      "Warren Seider | University of Pennsylvania, Philadelphia, PA",
+      "Masoud Soroush | Drexel University, Philadelphia, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Leila Samandari Masooleh",
+        "affiliation": "Drexel University, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jeffrey E. Arbogast",
+        "affiliation": "Air Liquide, Paris, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Ulku Oktem",
+        "affiliation": "Near-Miss Management LLC, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Warren Seider",
+        "affiliation": "University of Pennsylvania, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Masoud Soroush",
+        "affiliation": "Drexel University, Philadelphia, PA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "346d",
+    "sortable_time": "2021-11-09_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632272"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/627370",
+    "paper_endpoint": "Paper/627370",
+    "paper_id": "627370",
+    "topic": "Asymmetric Model Predictive Control Strategies for Blood Glucose Control",
+    "title": "Asymmetric Model Predictive Control Strategies for Blood Glucose Control",
+    "date_time": "2021-11-09_15:30:00_17:00:00",
+    "session_id": "46440",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "346",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Introduction Model predictive control (MPC) searches over current and future manipulated inputs to achieve a desired system output. The predictor component forecasts the future system output given a set of input changes that is proposed by the optimizer component. The desired response is iteratively found by minimizing a cost function, also called the control law. The predictive nature, along with an ability to constrain system inputs and outputs, makes MPC an attractive choice for many applications. In the present study, we explore the use of MPC for blood glucose (BG) control. MPC is a common control strategy found in artificial pancreas (AP) systems used by individuals living with Type 1 diabetes mellitus (T1DM). T1DM is characterized by the loss of insulin production from beta cells in the pancreas, which means insulin must be supplied exogenously by the patient to regulate BG levels. AP systems aim to relieve the burden of T1DM by regulating BG levels with automated insulin injections. Several unique challenges exist for automatic BG control [1]. Briefly, 1) the manipulated input, insulin, provides actuation in one direction: it can only lower BG. 2) There exists an asymmetric risk between hyperglycemia (high BG) and hypoglycemia (low BG). While hyperglycemia should be minimized, hypoglycemia, in the near term, must be avoided entirely. A MPC strategy used in practice is Loop , a “do-it-yourself” open-source AP system [2]. The predictor component models 4 effects: Insulin effect on BG Carbohydrate effect on BG Retrospective correction, to account for un-modeled BG effects Momentum correction, to account for recent BG trends In this work we examine how the control law currently used in Loop is designed to cope with the challenges of BG control. We then propose a new control law and compare it to the original using the FDA accepted UVA Padova T1DM simulator [3]. Methods A common control law used in MPC (Equation 1) minimizes the squared predicted residuals of the output (y) from the set-point (r) and squared input changes (∆u) over the prediction (P) and control (M) horizons, respectively. The weight of each contribution is tuned with w. This control law assumes certainty equivalence, which states that the optimal control action would be the control taken when uncertainty is ignored. However, this assumption does not hold for BG control because of the preference for higher BG levels under uncertainty, per points 1) and 2) above. Thus, this control law is not suitable for BG control. Loop uses a “coincidence point” type MPC, where the chosen input will force the predicted output to cross a given point at a specified time in the future. Loop delivers insulin in a way that forces the final predicted BG to cross a pre-set value. The amount of insulin required is found from the final predicted BG using a closed form control law (Equation 2). C is a parameter describing the glucose-lowering effect of insulin, which is unique to each patient. Loop addresses the certainty equivalence violation with two additional heuristic layers: the control and safety overrides. The control override will result in no action being taken if any predicted BG drops below the bottom of a pre-set “correction range,” even if the final predicted BG is above the range. The safety override will cease all insulin delivery if predicted BG ever crosses a lower “suspend threshold”. We propose a control law that directly addresses the violation of certainty equivalence and considers the entire prediction by controlling to a lower bound (Equation 3). In words, we find the amount of insulin necessary to force the minimum of the prediction to a lower bound threshold. To compare the proposed control law to the existing, we pair both control laws to the Loop predictor and simulate across 2-day scenarios consisting of 9 meals using the 11 adult patients contained in the FDA accepted UVA Padova T1DM patient simulator [3]. Performance is evaluated for each scenario with the 70-180 mg/dL time-in-range (TIR) metric [4]. Results Meals act as a large disturbance to BG control, and Loop relies on the patient to announce the size of the meal and provide a proportional amount of insulin to counteract the meal. Thus, in a first scenario (i) the size of the meal is known, and the correct amount of insulin is provided to counteract the BG-elevating effects of the meal. TIR is found to be similar for both control laws. In reality, the exact meal size is rarely known, so a scenario (ii) is explored where meal size is estimated as 150% of the actual value. This results in the patient providing an excess of insulin at mealtime. The controller with the modified control law maintains a higher TIR with less time in hypoglycemia (BG<70 mg/dL). Full results are provided in Table 1 , and average BG traces of the two controllers for this scenario are shown in Figure 1 . The next scenario (iii) explored model inaccuracies. The glucose-lowering effect of insulin assumed by the controller was decreased by 30%. Similar to the previous meal size overestimation scenario, the modified control law increased TIR over the original. The capability of each in a fully closed-loop scenario (iv) was also tested. No meals were announced, requiring the controllers to provide all necessary insulin to regulate BG. Here, the modified control law provided slightly increased TIR. Conclusion A new control law for Loop was proposed that directly addresses the violation of certainty equivalence and considers the entire prediction horizon by controlling to a lower bound threshold. TIR was similar for both laws when the exact meal size was known, but the modified control law yielded an improved TIR (95.2% vs 92.0%) with less time in hypoglycemia (4.0% vs 7.5%) when the meal size was overestimated. Additionally, using the modified control law results in slightly improved TIR over the original when model inaccuracies were introduced and in fully closed-loop mode where no meal announcements were provided. In conclusion, MPC is a general framework readily adaptable to applications with unique challenges, such as asymmetric risk and limited control authority, both of which are found in the BG control problem. [1] Bequette BW. Challenges and recent progress in the development of a closed-loop artificial pancreas. Annu Rev Control. 2012;36(2):255-266. [2] loopkit.github.io/loopdocs/ [Internet]. LoopDocs; c2019 [cited 2020 Mar 18]. Available from: https://loopkit.github.io/loopdocs/ [3] Dalla Man C, Micheletto F, Lv D, Breton M, Kovatchev BP, Cobelli C. The UVA/PADOVA Type 1 Diabetes Simulator: new features. J Diabetes Sci Technol. 2014;8(1):26-34 [4] Beck RW, Bergenstal RM, Riddlesworth TD, et al. Validation of time in range as an outcome measure for diabetes clinical trials. Diabetes Care. 2019;42:400–6.",
+    "presenting_author": "Travis Diamond | Rensselaer Polytechnic Institute, Troy, NY",
+    "authors": [
+      "Travis Diamond | Rensselaer Polytechnic Institute, Troy, NY",
+      "Faye Cameron | Rensselaer Polytechnic Institute, Troy, NY",
+      "B. Wayne Bequette | Rensselaer Polytechnic Institute, Troy, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Travis Diamond",
+        "affiliation": "Rensselaer Polytechnic Institute, Troy, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Faye Cameron",
+        "affiliation": "Rensselaer Polytechnic Institute, Troy, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "B. Wayne Bequette",
+        "affiliation": "Rensselaer Polytechnic Institute, Troy, NY",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "346a",
+    "sortable_time": "2021-11-09_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/627370"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/629462",
+    "paper_endpoint": "Paper/629462",
+    "paper_id": "629462",
+    "topic": "Modeling and Analysis of Endogenous Closed-Loop Control of the Cardiovascular System",
+    "title": "Modeling and Analysis of Endogenous Closed-Loop Control of the Cardiovascular System",
+    "date_time": "2021-11-09_15:30:00_17:00:00",
+    "session_id": "46440",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "346",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The baroreceptor reflex is a multi-input, multi-output physiological control system that regulates short-term blood pressure by modulating parasympathetic and sympathetic nerve activity between the brainstem and the heart. The opposing effects of parasympathetic and sympathetic nerve activity work in conjunction to maintain cardiovascular homeostasis, with imbalances in activity associated with cardiovascular disease. Recently, attention has focused on the role of the intrinsic cardiac nervous system as the final control point of nervous regulation of the heart. Here, we extend existing quantitative closed-loop models of the baroreceptor reflex by incorporating into the model the intrinsic cardiac nervous system. We use this model to investigate, via simulation, the role of the intrinsic cardiac nervous system in integrating and modulating parasympathetic and sympathetic nerve activity in healthy and diseased states.",
+    "presenting_author": "Michelle Gee | Department of Chemical and Biomolecular Engineering, Wellesley, MA",
+    "authors": [
+      "Michelle Gee | Department of Chemical and Biomolecular Engineering, Wellesley, MA",
+      "Eden Hornung | Thomas Jefferson University",
+      "Alison Moss | Thomas Jefferson University",
+      "Lakshmi Kuttippurathu | Thomas Jefferson University",
+      "James S. Schwaber | Thomas Jefferson University, Philadelphia, PA",
+      "Babatunde A. Ogunnaike | University of Delaware, Newark",
+      "Rajanikanth Vadigepalli | Thomas Jefferson University, Philadelphia, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Michelle Gee",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, Wellesley, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Eden Hornung",
+        "affiliation": "Thomas Jefferson University",
+        "designation": "Author"
+      },
+      {
+        "name": "Alison Moss",
+        "affiliation": "Thomas Jefferson University",
+        "designation": "Author"
+      },
+      {
+        "name": "Lakshmi Kuttippurathu",
+        "affiliation": "Thomas Jefferson University",
+        "designation": "Author"
+      },
+      {
+        "name": "James S. Schwaber",
+        "affiliation": "Thomas Jefferson University, Philadelphia, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Babatunde A. Ogunnaike",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Author"
+      },
+      {
+        "name": "Rajanikanth Vadigepalli",
+        "affiliation": "Thomas Jefferson University, Philadelphia, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "346b",
+    "sortable_time": "2021-11-09_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/629462"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/631625",
+    "paper_endpoint": "Paper/631625",
+    "paper_id": "631625",
+    "topic": "Machine Learning Applications in Prediction of Propagation Rate Coefficients of Acrylate-Based Polymers for Electronics Applications",
+    "title": "Machine Learning Applications in Prediction of Propagation Rate Coefficients of Acrylate-Based Polymers for Electronics Applications",
+    "date_time": "2021-11-09_15:30:00_17:00:00",
+    "session_id": "46440",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "346",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Acrylate-based polymers are commonly employed in electronics applications, such as antireflective coatings and photoresists. Microelectronics specialty chemicals have evolved largely and become more sophisticated, as the technology node in semiconductor manufacturing processes has shrunk to the smaller feature sizes. Resist and anti-reflective formulations generally contain several components, including polymer resin (film forming resin), solvent, sensitizer, either photo-initiator or photoacid generator, and additives such as surfactants. The polymer resin is the major component in the formulation; hence, the precise manufacturing and quality control of both chemical and physical properties of the polymer resins are essential. A mathematical model is an indispensable tool to predict and control the properties of polymers, and it can be implemented in manufacturing systems for real-time control of reactions. Along these lines, kinetic modeling is central to developing optimal reaction conditions. Among the different reactions steps, the propagation rate plays an essential role in determining molecular weight (MW), molecular weight distribution (MWD), and composition for co-polymers, thus influencing the performance of products. Therefore, determining the propagation rate accurately is critical in modeling of polymerization processes, product design, and manufacturing scale-up. As Machine Learning (ML) has become popular due to its ability in adapting complex mathematical calculations to big data, analyzing, and decision-making, this tool is aggressively utilized in chemistry (e.g., Chemception [1] ) as well as in the case of complex non-linear processes for which phenomenological understanding is limited [2] . In this work, we developed a kinetic modelling using Deep Learning (DL), such as Long Short-term Memory (LSTM), to study the reaction kinetics of Poly(Methyl Methacrylate-co-Glycidyl Methacrylate), determining the propagation rate coefficients and the reactivity ratios. The reactivity ratios predicted using the ML techniques were compared against the experimental data. [1] Garrett B. Goh et. al., Chemception: A Deep Neural Network with Minimal Chemistry Knowledge Matches the Performance of Expert-developed QSAR/QSPR Models., 2016. (arXiv:1706.06689). [2] S. Curteanu and F. Leon, Polym.-Plast. Technol. Eng., 2006,45, 1013.",
+    "presenting_author": "Tung Nguyen | University of Nebraska-Lincoln",
+    "authors": [
+      "Tung Nguyen | University of Nebraska-Lincoln",
+      "Mona Bavarian | University of Nebraska Lincoln"
+    ],
+    "authors_structured": [
+      {
+        "name": "Tung Nguyen",
+        "affiliation": "University of Nebraska-Lincoln",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mona Bavarian",
+        "affiliation": "University of Nebraska Lincoln",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "346c",
+    "sortable_time": "2021-11-09_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/631625"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/624922",
+    "paper_endpoint": "Paper/624922",
+    "paper_id": "624922",
+    "topic": "Advanced Process Control of Methanol Production from Natural Gas",
+    "title": "Advanced Process Control of Methanol Production from Natural Gas",
+    "date_time": "2021-11-09_15:30:00_17:00:00",
+    "session_id": "46440",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "346",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "With the increasing production of natural gas in the US, natural gas-to-Methanol plants are receiving renewed interest. Methanol is an essential feedstock for obtaining more complex chemical structures, such as acetic acid, methyl tertiary butyl ether, dimethyl ether, and methylamine. It is also used in the manufacture of a variety of industrial and consumer products. In this research, a plant-wide dynamic simulation model of the methanol production process is developed based on an actual manufacturing plant at Natgasoline LLC. Based on this dynamic model, a hierarchical control system comprised of Dynamic Matrix Control (DMC) and a basic regulatory control loop is constructed to optimize the plant operation in terms of eliminating methanol losses and minimizing the utility cost under various process upsets. Rigorous DMCplus controller models are developed based on the subspace identification model and simulated in the ASPEN manufacturing software platform. The DMCplus controller developed in this study shows promising results by minimizing methanol losses by over 80% and utility cost by over 30%. The controller shows robustness in handling variations of ±20% feed flow and ±20% feed composition disturbance. Furthermore, the controller also handles disturbance due to the variation of hydrogen content in the syngas. The developed hierarchical multivariable control system significantly outperforms the regulatory PID control strategy in optimizing the methanol process under process constraints.",
+    "presenting_author": "Md Emdadul Haque | Lamar University, Beaumont, TX",
+    "authors": [
+      "Md Emdadul Haque | Lamar University, Beaumont, TX",
+      "Peter Nazier | Natgasoline LLC, Beaumont, TX",
+      "Srinivas Palanki | Lamar University, Baton Rouge, AL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Md Emdadul Haque",
+        "affiliation": "Lamar University, Beaumont, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Peter Nazier",
+        "affiliation": "Natgasoline LLC, Beaumont, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Srinivas Palanki",
+        "affiliation": "Lamar University, Baton Rouge, AL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "346e",
+    "sortable_time": "2021-11-09_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/624922"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/629380",
+    "paper_endpoint": "Paper/629380",
+    "paper_id": "629380",
+    "topic": "Simulation of Morphological Population Balance for Crystallization Processes Using Cellular Automata",
+    "title": "Simulation of Morphological Population Balance for Crystallization Processes Using Cellular Automata",
+    "date_time": "2021-11-09_15:30:00_17:00:00",
+    "session_id": "46440",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "346",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In the crystallization process, the morphologies and sizes of final products are affected by different growth environments, by which different properties can be obtained, such as stability and solubility, biocompatibility and pharmacodynamics in pharmaceutical industry. Through the simulation of crystallization process, better understanding on process dynamic can be extracted for the quality control of crystal products. In traditional population balance (PB) models, a crystal is characterized by only one-dimensional feature size, but no morphological information is available. Morphological population balance (MPB) models have been adopted to incorporate crystal morphology information into PB simulations so that the morphology of a crystal at any moment can be reconstructed. However, the general numerical solution of MPB model can only provide the distribution of crystal morphology and size in the macroscopic, which cannot show the specific morphology of a certain crystal particle and the difference among crystal morphologies in the microscopic. Cellular automaton (CA) method was first proposed in biosystem research to represent a system through simple cell change and interaction among cells. It does not require the solution of complex differential equations, and is suitable for any chemical and physical system, especially strongly coupled systems. By using it many complex phenomena under different conditions can be visualized by computer programming. In this work, a CA method is introduced for the simulation of crystallization processes with the consideration of growth and nucleation in MPB equations, and a general simulation platform based on CA-MPB was established. Potassium dihydrogen-phosphate (KDP) crystallization was used as a case study to demonstrate the proposed approach. The performance of the proposed scheme is verified by benchmark examples in the literature. By proposed method, the lower computation time can be achieved with similar accuracy. In addition, a visual display can be obtained at the same time, i.e. the morphology, quantity, diameter and distribution of particle during crystallization process are available at each moment, which provide a theoretical reference for identification, modelling and analysis of crystallization, and eventually can be used in the industrial practice of specific crystals.",
+    "presenting_author": "Jiali Ai | Beijing University of Chemical Technology, China",
+    "authors": [
+      "Jiali Ai | Beijing University of Chemical Technology, China",
+      "Chi Zhai | Kunming University of Science and Technology, China",
+      "Jindong Dai | Beijing University of Chemical Technology, China",
+      "Wei Sun | Beijing University of Chemical Technology, China"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jiali Ai",
+        "affiliation": "Beijing University of Chemical Technology, China",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chi Zhai",
+        "affiliation": "Kunming University of Science and Technology, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Jindong Dai",
+        "affiliation": "Beijing University of Chemical Technology, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Wei Sun",
+        "affiliation": "Beijing University of Chemical Technology, China",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "346g",
+    "sortable_time": "2021-11-09_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/629380"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/624741",
+    "paper_endpoint": "Paper/624741",
+    "paper_id": "624741",
+    "topic": "Setting the “PACE” with Advanced Process Control",
+    "title": "Setting the “PACE” with Advanced Process Control",
+    "date_time": "2021-11-09_15:30:00_17:00:00",
+    "session_id": "46440",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "346",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "The world is changing, and with that new technologies are emerging at a record PACE. Demands for plant efficiency are being driven harder by an increasingly competitive environment, therefore the need to incorporate best in class control which minimizes operator intervention, incorporates alarm reduction and safely operates remotely is crucial for a sustainable future. Having a modern, DCS agnostic software that facilitates implementation and improves plant stability was imperative to maintain Air Liquide’s leadership position in the industrial gases sector. This presentation addresses the process of implementing a robust, state of the art Advanced Process Control technology utilizing an MVPC (Multivariable Predictive Control) platform co-developed by an end-user (Shell) and a traditional control system vendor (Yokogawa) called PACE (Platform for Advanced Control and Estimation). The risks of implementing on running air separation and hydrogen plants are covered along with the improvements discovered, the role of effective base layer control strategies play in optimizing overall performance, highlights of the features that PACE brings to the table, unique challenges faced and strong financial gains that are possible with a proper application of this technology.",
+    "presenting_author": "Leticia de Souza Zarpellon | Air Liquide, Houston, TX",
+    "authors": [
+      "Leticia de Souza Zarpellon | Air Liquide, Houston, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Leticia de Souza Zarpellon",
+        "affiliation": "Air Liquide, Houston, TX",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "346h",
+    "sortable_time": "2021-11-09_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/624741"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632147",
+    "paper_endpoint": "Paper/632147",
+    "paper_id": "632147",
+    "topic": "A Hybrid Mechanistic-Machine Learning Approach to Identify Dynamical Models for Sustainability Assessment of Manufacturing Processes: A Soybean Diesel Process Case Study",
+    "title": "A Hybrid Mechanistic-Machine Learning Approach to Identify Dynamical Models for Sustainability Assessment of Manufacturing Processes: A Soybean Diesel Process Case Study",
+    "date_time": "2021-11-09_15:30:00_17:00:00",
+    "session_id": "46440",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "346",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Current dynamic models for full industrial process plants exist as highly accurate mechanistic models based on first-principle relationships that can be quickly found using the dynamic simulation capabilities of a chemical process model software like Aspen Plus Dynamics. However, the prohibitively high order of these models limits analysis of physical interpretation of terms or applications where computational simplicity is a requirement. For these types of applications, lower-order dynamic models that may sacrifice accuracy for simplicity prove more useful. This type of low-order dynamic model is especially promising as a method for analysis of system sustainability by revealing dynamic relationships between critical mass and energy flows. Despite this, there have been few attempts at finding these low-order models of chemical manufacturing processes, with existing work focusing on model development of individual components and weak connections to long term sustainability. This work seeks to fill this gap in the literature by developing a reduced-order model using a hybrid mechanistic-machine learning approach and demonstrating the approach on an entire soybean-oil to soybean-diesel process plant. We use a grey-box machine learning method with a standard nonlinear optimization approach to identify relevant models of governing dynamics as ODEs using the data simulated from mechanistic models in ASPEN Plus Dynamics. Results show that the method identifies a linear ordinary differential equation model that gives an accurate relation to output, input, and selected internal molar flow rates. The identification of a linear model is reflective of underlying stoichiometric mechanisms driving the dynamics for this particular system. We further analyze the water-usage sustainability of this process by identifying model terms relating the system's soybean-diesel output to water consumption, and consider the implications of this interaction if the demand for soybean-diesel increases. This work demonstrates the strength of reduced order model development for long term sustainability assessment of manufacturing processes with lower computational efforts.",
+    "presenting_author": "William Farlessyost | Purdue University, West Lafayette, IN",
+    "authors": [
+      "William Farlessyost | Purdue University, West Lafayette, IN",
+      "Shweta Singh | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "William Farlessyost",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Shweta Singh",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "346j",
+    "sortable_time": "2021-11-09_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632147"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/630246",
+    "paper_endpoint": "Paper/630246",
+    "paper_id": "630246",
+    "topic": "Learning Partial Differential Equations from Multiscale or Experimental Data: A Showcase on Bacterial Chemotaxis",
+    "title": "Learning Partial Differential Equations from Multiscale or Experimental Data: A Showcase on Bacterial Chemotaxis",
+    "date_time": "2021-11-09_15:30:00_17:00:00",
+    "session_id": "46440",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "346",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "E.coli chemotactic motion in the presence of a nutrient field has been extensively studied using wet-lab experiments [1], stochastic computational models [2] or partial differential equations [3]. The most challenging part in bridging these approaches, is the so-called chemotactic term, which describes how bacteria bias their motion up nutrient concentration gradients, as a result of a cascade of biochemical processes. Data-driven models can be used to learn either just the chemotactic term (gray box model), the entire right-hand-side of the chemotactic PDE (black box model) or the correction to a simplified constitutive model (closure model). This approach has been validated through computational data from established Monte Carlo simulations and continuum models. In this work, a machine-learning framework is proposed to uncover data-driven PDEs from multiscale or even experimental data. Even when the data at hand are sparse (coarse in space and/or time), noisy (inherent stochasticity in measurements) or partial (e.g. unaware of the spatiotemporal evolution of the nutrient field), we can attempt to learn the right hand side of a PDE for an evolving bacterial density. In fact, a second-order data-driven PDE in terms of the measurable bacterial density can encode the evolution of both the unmeasured nutrient field and the measured bacterial density (in the spirit of Whitney’s and Takens’s embedding theorems). The algorithmic pipeline proposed includes smoothing algorithms, interpolation with proper orthogonal decomposition/autoencoders and either a feedforward neural network or a Gaussian Process Regression learning of the dynamics. The resulting data-driven PDE can be integrated to predict/reproduce fine scale computational or experimental bacterial density profile data. Moreover, it can also be used to construct nonlinear observations of the (unmeasured) nutrient field evolution. [1] T. Bhattacharjee, D. B. Amchin, J. A. Ott, F. Kratz, S. S. Datta, ”Chemotactic Migration of bacteria in Porous Media”, bioarxiv.org, 2020, doi: https://doi.org/10.1101/2020.08.10.244731 [2] S. Setayeshgar, C. W. Gear, H. G. Othmer, I. G. Kevrekidis, ”Application of Coarse Integration to Bacterial Chemotaxis”, Multiscale Model Simul., 2005, 4(1), 307-327. [3] R. Erban, H. G. Othmer, ”From individual to collective behavior in bacterial chemotaxis”, SIAM J. Appl. Math., 2004, 65(2), 361-391.",
+    "presenting_author": "Georgios Psarellis | Johns Hopkins University, Baltimore, MD",
+    "authors": [
+      "Georgios Psarellis | Johns Hopkins University, Baltimore, MD",
+      "Seungjoon Lee | San Jose State University, CA",
+      "Sujit Datta | Princeton University, NJ",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Georgios Psarellis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Seungjoon Lee",
+        "affiliation": "San Jose State University, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Sujit Datta",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "346m",
+    "sortable_time": "2021-11-09_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/630246"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/628271",
+    "paper_endpoint": "Paper/628271",
+    "paper_id": "628271",
+    "topic": "Reinforcement Learning with Neural Feedback Policies",
+    "title": "Reinforcement Learning with Neural Feedback Policies",
+    "date_time": "2021-11-09_15:30:00_17:00:00",
+    "session_id": "46440",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "346",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "In this work we find an optimal feedback control policy to optimize continuous nonlinear control problems. W e explore the novel use of a single neural network as a closed-loop feedback controller that takes as input the full state of a system and outputs a multivariate constrained control. The strategy resembles closely the policy parametrizations commonly used in reinforcement learning, and could be considered a direct form of policy search when a dynamical model is available. The novel characteristic is the exploitation of a white-box dynamical system model to allow the efficient computation of the policy gradients directly from the ODE sensitivities. The network architecture is posed as a part of the ODE definition, substituting the original controls by a neural network, therefore allowing the weights of the network to be treated as the controllable parameters of the modified system. In this way, the approach connects long-studied ideas in optimal control with recent approaches focused on neural policies and reinforcement learning. The control policy is composed of a single neural network which receives as input the state of the system and outputs the corresponding control actions. The controller is trained in a closed-loop fashion using gradient based optimization via discrete adjoint sensitivities from the dynamic model with respect to the neural network parameters. The technique architecture is inspired by the REINFORCE algorithm from reinforcement learning, but given the explicit availability of the system's, sensitivities may be directly used to calculate the gradient of the loss function over the parameter space of the controller.A discretize-then-optimize approach is used to avoid instability problems of alternatives, which leverages an underlying reverse automatic differentiation for the correct estimation of sensitivities. Gradient based optimization is used directly over the parameterization of the neural network controller to minimize a running and terminal cost over a fixed time interval. As a result, we construct a policy that can handle continuous nonlinear optimal control problems in the same spirit but orders of magnitude more efficiently than with standard policy gradient learning whenever a dynamical model is available. We test our proposed technique in challenging nonlinear optimal control problems from process engineering where the governing dynamical system is available.",
+    "presenting_author": "Panagiotis Petsagkourakis | University College London, United Kingdom",
+    "authors": [
+      "Ilya Orson Sandoval Cárdenas | Imperial College London, United Kingdom",
+      "Panagiotis Petsagkourakis | University College London, United Kingdom",
+      "Antonio del Rio Chanona | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ilya Orson Sandoval Cárdenas",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Petsagkourakis",
+        "affiliation": "University College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "346n",
+    "sortable_time": "2021-11-09_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/628271"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/629638",
+    "paper_endpoint": "Paper/629638",
+    "paper_id": "629638",
+    "topic": "Chemometric Techniques for the Combined Calibration/Parameter Estimation of Pharmaceutical Drug Substance Manufacture",
+    "title": "Chemometric Techniques for the Combined Calibration/Parameter Estimation of Pharmaceutical Drug Substance Manufacture",
+    "date_time": "2021-11-09_15:30:00_17:00:00",
+    "session_id": "46440",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "346",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Numerous initiatives have been pursued over the past decades by the FDA, industry and academia to promote advances in pharmaceutical manufacturing. These efforts have resulted in guiding concepts such as Quality by Design -QbD- and Quality by Control -QbC- [1], [2], which aim to systematically lead to improvements in product quality and process understanding. An essential tool in achieving such improvements are process models based, to the extent possible, on fundamental understanding of the modeled phenomena. However, since even the most fundamental, first principles-based models involve system specific parameters, the estimation of these parameters is a key step that must be successfully executed. The resulting models calibrated to the specific system under investigation enable determination of which variables most significantly impact product quality, processing costs, and process operation within safe and stable limits. For effective parameter estimation, several aspects associated with the model formulation must be considered. First, from a structural point of view, a numerically robust model formulation is essential for reliable execution of the optimization runs required for parameter estimation. One relevant example arises in the choice of kinetic expressions, where various reformulations have been proposed [3]–[5] to facilitate optimization execution. Second, scaling of the state variables employed in the model also plays a role in the efficiency of model solution, since the solution methods invariably make use of numerical approximations. Lastly, for derivative-based optimization, reliable gradient information from the modeled system has direct impact on the convergence speed and accuracy of the of the parameter estimates. The other important element of the parameter estimation problem is the experimental data. The experimental data obtained for operations such as reaction or crystallization typically come from offline/online spectroscopic measurements, resulting in datasets that relate variables of interest to multivariate measurements. This permits the use of rich datasets that contribute to the robustness of the measurements, in particular for multicomponent systems, but also poses some challenges related to handling the increased dimensionality of the mathematical problem which must be solved, and the feasibility of executing the parameter estimation within reasonable computation time. Multivariate data can be incorporated in various ways into a parameter estimation framework. One of the most widespread approaches is to build chemometric models using samples prepared with known concentration of the analyzed components. The measured spectra of the samples are related to their corresponding concentration through these calibration models, either using data at a single wavelength or using multivariate, reduced-dimension linear models such as principal component regression (PCR) or partial least squares (PLS) [6]. On the other hand, multiple curve resolution coupled with alternating least squares (MCR-ALS) [7], [8] approaches the problem by directly analyzing the spectra resulting from the experiment. Here, the spectra changes as a result of the change in chemical composition of the multicomponent system under study are directly considered. Both the concentration of the species of interest and their individual absorptivities are unknown in this method, hence its two-layer structure. Depending whether a first-principles or a data-driven model representing the system is used, the combined methodology is termed as hard-modeling or soft-modeling [9]. The MCR assumes that the spectroscopic response of the system is caused by a linear combination of the absorbing components present in the system, a multicomponent version of the Beer-Lambert law with a bilinear mathematical structure [10]. At the top level of the hard-modeling variant of the MCR-ALS methodology, a first-principles model that contains the parameters to be estimated is used to calculate the concentration of interest, given an initial parameter estimate. Then, determination of the single-component absorptivity is dealt within the MCR component, which calculates a modeled spectra by using the concentrations returned by the model and the experimental spectra. Then, the ALS component performs the parameter optimization by comparing the experimental and calculated spectra and changing the values of the parameters until sufficient agreement is reached. In this manner, both the calibration and the parameter estimation are achieved in a simultaneous fashion. Finally, the mathematical structure of the MCR problem allows it to be posed as the calculation of the modeled spectra as a matrix orthogonal projection calculation, for which expressions for derivative calculations are available [11], [12]. Calculation of the derivative of the orthogonal projectors can be further coupled to the information gained by sensitivity of the original modeled states (e.g. concentration) to enhance the quality of the derivative information passed to the optimization algorithm. In this work, we report a case study involving the synthesis and crystallization of lomustine, [13], [14]. We demonstrate using a dynamic simulation-optimization approach to determine the parameters of the first-principles models for the reaction and crystallization steps drawn from the PharmaPy library [17]. Liquid-phase reaction experiments are carried out in batch and semi-batch reaction setups with automated sampling, and several kinetic reaction mechanisms are evaluated and compared. Also, cooling batch crystallization experiments are used to determine nucleation, growth and dissolution parameters, using the method of moments [15] to model the crystallization process and determine the crystal size distribution. UV-Vis and infrared spectroscopic data are generated for both the reaction and crystallization systems, and analyzed under the MCR-ALS framework. Focused beam reflectance measurement (FBRM) and particle vision and measurement (PVM) are used for the crystallization experiments to determine nucleation and obtain in-situ particle images. Dynamic parametric sensitivities are calculated by a forward sensitivity method, using analytical jacobians for both reaction and crystallization [16], [17]. Lastly, parametric uncertainty in the models is quantified using sampling techniques (i.e. bootstrapping). References [1] L. X. Yu et al. , “Understanding pharmaceutical quality by design,” AAPS J. , vol. 16, no. 4, pp. 771–783, 2014. [2] Q. Su et al. , “A perspective on Quality-by-Control (QbC) in pharmaceutical continuous manufacturing,” Comput. Chem. Eng. , vol. 125, pp. 216–231, 2019. [3] D. G. Watts, “Estimating parameters in nonlinear rate equations,” Can. J. Chem. Eng. , vol. 72, no. 4, pp. 701–710, Aug. 1994. [4] P. Bilardello, X. Joulia, J. M. Le Lann, H. Delmas, and B. Koehret, “A general strategy for parameter estimation in differential—algebraic systems,” Comput. Chem. Eng. , vol. 17, no. 5–6, pp. 517–525, May 1993. [5] M. Quaglio et al. , “An online reparametrisation approach for robust parameter estimation in automated model identification platforms,” Comput. Chem. Eng. , vol. 124, pp. 270–284, 2019. [6] J. C. Marek, “Multivariate analysis in API development,” in Chemical Engineering in the Pharmaceutical Industry , 2nd ed., D. J. am Ende and M. T. am Ende, Eds. Hoboken, NJ, USA: John Wiley & Sons, Inc., 2019, pp. 909–918. [7] C. Ruckebusch and L. Blanchet, “Multivariate curve resolution: A review of advanced and tailored applications and challenges,” Anal. Chim. Acta , vol. 765, pp. 28–36, 2013. [8] G. Puxty, M. Maeder, and K. Hungerbühler, “Tutorial on the fitting of kinetics models to multivariate spectroscopic measurements with non-linear least-squares regression,” Chemom. Intell. Lab. Syst. , vol. 81, no. 2, pp. 149–164, 2006. [9] M. Short, L. T. Biegler, S. García-Muñoz, and W. Chen, “Estimating variances and kinetic parameters from spectra across multiple datasets using KIPET,” Chemom. Intell. Lab. Syst. , vol. 203, no. March, 2020. [10] R. Tauler, “Multivariate curve resolution applied to second order data,” Chemom. Intell. Lab. Syst. , vol. 30, no. 1, pp. 133–146, 1995. [11] G. Golub and V. Pereyra, “Separable nonlinear least squares: the variable projection method and its applications,” Inverse Probl. , vol. 19, no. 2, pp. R1–R26, Apr. 2003. [12] K. M. Mullen, M. Vengris, and I. H. M. Van Stokkum, “Algorithms for separable nonlinear least squares with application to modelling time-resolved spectra,” J. Glob. Optim. , vol. 38, no. 2, pp. 201–213, 2007. [13] L. T. Biegler, Nonlinear Programming: Concepts, Algorithms, and Applications to Chemical Processes . Philadelphia: Siam, 2010. [14] Y. Bard, Nonlinear Parameter Estimation . London.: Academic Press, 1974. [15] A. D. Randolph and M. A. Larson, Theory of Particulate Processes: Analysis and Techniques of Continuous Crystallization , 2nd ed. San Diego, CA: Academic Press, 1988. [16] Z. K. Nagy and R. D. Braatz, “Distributional uncertainty analysis using power series and polynomial chaos expansions,” J. Process Control , vol. 17, no. 3, pp. 229–240, 2007. [17] D. Casas-Orozco et al. , “PharmaPy: an object-oriented tool for the development of hybrid pharmaceutical flowsheets,” Comput. Chem. Eng. , 2021 (submitted).",
+    "presenting_author": "Daniel Casas Orozco | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Daniel Casas Orozco | Purdue University, West Lafayette, IN",
+      "Daniel Laky | Purdue University, West Lafayette, IN",
+      "Jaron Mackey | Purdue University, West Lafayette, IN",
+      "Ahmed Mufti | Purdue University, West Lafayette, IN",
+      "Gintaras Reklaitis | Purdue University, West Lafayette, IN",
+      "Zoltan Nagy | Purdue University, West Lafayette, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daniel Casas Orozco",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Daniel Laky",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Jaron Mackey",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Ahmed Mufti",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Gintaras Reklaitis",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Zoltan Nagy",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "346p",
+    "sortable_time": "2021-11-09_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/629638"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/626496",
+    "paper_endpoint": "Paper/626496",
+    "paper_id": "626496",
+    "topic": "Field Wide Optimization Towards Improved Hydrocarbon Recovery",
+    "title": "Field Wide Optimization Towards Improved Hydrocarbon Recovery",
+    "date_time": "2021-11-09_15:30:00_17:00:00",
+    "session_id": "46440",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "346",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Integrated Asset Modelling (also known as Integrated Production System Modelling ‐ IPSM) is the modelling and simulation of an entire production facility consisting of both subsurface and surface elements. The intent is to holistically capture the complex interactions between the individual components of the system. Historically asset modelling has entailed discrete reservoir, wells and facility models; however this mindset is slowly altering towards integrated asset modelling for production forecasts and optimisation whereby both system imposed constraints i.e. fluid flow from the reservoir and surface handling constraints can be considered simultaneously. This systems based approach is critical and reflects the current industry mind set. The full benefits of the integrated simulation tools employed within industry are not fully realised due to a number of limitations; complexity of the reservoir models and hence limited usability in day to day production optimisation, overcoming the 'silo' discipline mentality that is common within interdisciplinary surveillance teams, simplification of integrated models is often in tension with accuracy and lastly, the limited capability of current tools to apply multi objective optimization analysis. With these challenges, it can often be difficult to justify the effort and investment required to develop and deploy an integrated asset model. Despite these practical challenges, integrated asset modelling, if executed correctly can provide one of the best means of optimising production throughout field life with direct realized benefits such as extended field life and sustained production uptime. The main objective of this research study is to understand the opportunities and limitations with the current existing industry integrated packages and develop a viable, representative alternative that is applicable for day to day surveillance and medium to long term field production optimisation. This research also aims to formally outline the drivers for integrated asset modelling followed by a review of the most common integrated asset modelling tools on the market in addition to review of the optimisation and reservoir modelling simplification methods available in literature. An integrated asset field model was developed including secondary recovery water injection as a test case. Proxy models have been developed using proprietary HDMR meta modelling software at Imperial College London which was extended to the use of full physics reservoir models and associated sensitivity analysis. These surrogate models have also been used in further heuristic based optimization frameworks and sensitivity analysis with very positive results in comparison to the field wide simulators thereby presenting a viable alternative offering significant advantages in simulation time.",
+    "presenting_author": "Shakeel Ramjanee | Imperial College London, United Kingdom",
+    "authors": [
+      "Shakeel Ramjanee | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shakeel Ramjanee",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "346r",
+    "sortable_time": "2021-11-09_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/626496"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632945",
+    "paper_endpoint": "Paper/632945",
+    "paper_id": "632945",
+    "topic": "Gsvd Carleman State Estimation of Nonlinear Discrete-Time Systems with Gross Errors",
+    "title": "Gsvd Carleman State Estimation of Nonlinear Discrete-Time Systems with Gross Errors",
+    "date_time": "2021-11-09_15:30:00_17:00:00",
+    "session_id": "46440",
+    "session_title": "Interactive Session: Systems and Process Control",
+    "session_number": "346",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Control",
+    "abstract": "Reliable state estimation of evolving process dynamics in sensitive systems that experience noise and gross errors is corner stone to optimal decision-making and control of real industrial processes. Nonlinear systems present significant challenges in computation complexities resulting from stability issues. Here, the nonlinear system dynamic constraints are captured in a bilinear Carleman linearization of nonlinear dynamics. Gross error detection is performed using a data reconciliation of system measurements from constrained model expectations. The Generalized Singular Value Decomposition (GSVD) of process observations is used to identify gross error term and estimate the driving state variables. The proposed formulation enables robust analytical computation of state estimates across gross error interferences of outliers, bias and drift. An illustrative example with nonlinear isothermal CSTR is used to demonstrate that the proposed formulation reduces computational efforts.",
+    "presenting_author": "Gbolahan Dada | Pennsylvania State University, State College, PA",
+    "authors": [
+      "Gbolahan Dada | Pennsylvania State University, State College, PA",
+      "Antonios Armaou | The Pennsylvania State University, University Park, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Gbolahan Dada",
+        "affiliation": "Pennsylvania State University, State College, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Antonios Armaou",
+        "affiliation": "The Pennsylvania State University, University Park, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "346u",
+    "sortable_time": "2021-11-09_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632945"
+  }
+]

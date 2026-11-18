@@ -1,0 +1,667 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper461198.html",
+    "topic": "461198Development, Control and Modelling of a Scalable Continuous Manufacturing Process for Multiphase Oxidations",
+    "date_time": "November 2016",
+    "abstract": "In the production of pharmaceuticals and fine chemicals, most reactions are conducted homogeneously in one phase, and typically require additional operations (known as 'work up') to separate the product from byproducts and any remaining starting materials and catalysts at the end of the reaction. Work up/separation procedures can be complicated and time-consuming, and can constitute 40-70% of the costs of chemical processes. They also consume additional resources (energy, materials, solvent, etc.), which is detrimental to the environment [1].Herein we discuss the design and development of a new type of fully integrated continuous process for multiphase oxidations at scale. Inorganic oxidants are generated electrochemically in an aqueous phase from non-hazardous inorganic salts [2]. The aqueous oxidant solution is subsequently dispensed to mix with reactants in an organic solvent forming a liquid/liquid reactive flow. An unstable emulsion is generated from the reactive flow using either a surface membrane module or a high shear mixer in a recirculation loop. The unstable emulsion is fed forward in to a continuously pulsed flow system as a way of overcoming mass transport limitations by enhancing liquid/liquid interactions [3] and maintaining the emulsion in a kinetically dispersed state. After an appropriate residence time the emulsion is eluted into a coalescence column allowing for a facile separation of the two phases. The aqueous phase is retained and recycled back to the electrochemical cell whereas the organic phase is collected for product analysis, simplifying the workup procedure.The experimental mini-plant is supported by a predictive multiphase model that has been developed to incorporate different time constants (residence time, droplet formation and coalescence rates as well as intrinsic reaction rates) in order to identify appropriate operating regimes for any given oxidation process.References[1] Adler, S., et al., Vision 2020: 2000 Separations Roadmap.2000,American Institute of Chemical Engineers: New York. 1-99.[2] Zhu, J., K.K. Hii, and K. Hellgardt, Toward a Green Generation of Oxidant on Demand: Practical Electrosynthesis of Ammonium Persulfate.ACS Sustainable Chem. Eng.,2016. 4(4), 2027-2036.[3] Holdich, R.G., et al., Continuous Membrane Emulsification with Pulsed (Oscillatory) Flow.Ind. Eng. Chem. Res.,2013. 52(1), 507-515.AcknowledgementsThe work is supported by EPSRC grants EP/L012278/1 and EP/L011697/1.",
+    "presenting_author": "Ju Zhu | Department of Chemical Engineering, Imperial College London, London, United Kingdom",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Ju Zhu",
+        "affiliation": "Department of Chemical Engineering, Imperial College London, London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Benjamin Deadman",
+        "affiliation": "Department of Chemistry, Imperial College London, London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Konstantin Loponov",
+        "affiliation": "Department of Chemical Engineering, Loughborough University, Loughborough, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Richard Holdich",
+        "affiliation": "Department of Chemical Engineering, Loughborough University, Loughborough, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Chris Rielly",
+        "affiliation": "Department of Chemical Engineering, Loughborough University, Loughborough, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Mimi Hii",
+        "affiliation": "Department of Chemistry, Imperial College London, London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Klaus Hellgardt",
+        "affiliation": "Department of Chemical Engineering, Imperial College London, London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper461198.html",
+    "paper_id": "461198"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper465654.html",
+    "topic": "465654Optimization-Based Event-Triggered Predictive Control of Process Systems with Control and Communication Constraints",
+    "date_time": "November 2016",
+    "abstract": "The design and analysis of networked control systems have been the subject of significant research interest over the last two decades, both in the industrial and academic circles (e.g., see [1]-[3] for surveys of results in this area). The operational flexibility and substantial economic savings realized through networked control architectures have been a major driving force behind the increased reliance in industrial practice on sensor and control systems that are accessed over shared communication networks. The integration of wireless sensor networks in process control systems, for example, is an appealing goal that promises to expand the capabilities of existing control technology beyond what is possible with wired devices alone, and is regarded as a key enabling mechanism for the transition towards smart plant operations [4]. At the same time, the various fundamental challenges introduced by this technology from a control point of view have motivated numerous research studies. One of the key challenges is the development of resource-aware control methods that can systematically balance the desired stability and performance requirements against the intrinsic constraints on the sensing, computation and communication resources of the networked devices as well as the occasional unreliability of the communication medium due to interference in the field or environmental impact. On the one hand, maximizing control system performance often requires frequent sensor-controller communication and increased levels of network resource utilization. Reducing communication costs, on the other hand, favors keeping the sensing and communication levels to a minimum which can lead to reduced control system performance.A common approach for dealing with communication constraints in networked control systems is the use of event-triggered control strategies. In these strategies, sensor-controller communication over the network is typically suspended or restored in response to certain events which are tied to some specified closed-loop stability and/or performance thresholds. The aim is to keep network utilization to a minimum while guaranteeing minimal levels of control performance. The approach typically starts with the design of a model-based stabilizing feedback controller and ends with the derivation of a constant or state-dependent stability threshold which is used as a trigger for sensor-controller communication. The implementation generally involves monitoring the model estimation error during periods of communication suspension and updating the model states in the event that the stability threshold is breached. This approach is appealing in the context of sensor/actuator networks where reducing network utilization can also reduce the energy expenditures of battery powered wireless devices, and has been widely studied in recent years (e.g., see [5]–[8] for some results in this area).The appealing features of this approach notwithstanding, a close examination of existing event-triggered control strategies reveals a general lack of explicit control performance optimization and constraint handling capabilities in the controller design methodology. In the context of balancing the intrinsic tradeoff between control performance and network resource utilization, there is an apparent increased emphasis on reducing network utilization, often at the expense of control system performance. In addition to the lack of performance optimization considerations, practical implementation considerations such as the presence of constraints on the state and manipulated variables, which are commonly encountered in practical applications, are also ignored in the design formulation. These considerations not only limit the achievable control quality but can also lead to closed-loop instability if not explicitly accounted for at the controller design stage.Motivated by these considerations, we present in this work an optimization-based event-triggered control methodology for systems subject to state, control and sensor-controller communication constraints. The objective is to optimize the control system performance while minimizing communication costs and network utilization at the same time. To this end, a model-based state-feedback controller is initially designed and used to obtain a state-dependent stability threshold which is used as the basis for event-triggered communication. An explicit characterization of the threshold -- in terms of the model and controller design parameters -- is obtained via Lyapunov techniques and used to provide an explicit link between the communication cost and the choice of controller design parameters. A finite-horizon optimal control problem in which the objective function includes explicit penalties on the states, the control action and the extent of sensor-controller communication is then formulated subject to the appropriate state, control and stability constraints. The penalty placed on the sensor-controller communication in the objective function is derived directly from the communication-triggering threshold. The optimization problem is solved in a receding horizon fashion to obtain the optimal controller design parameters over the horizon. Unlike conventional model predictive control formulations, however, the optimization problem is re-solved and the model states are updated only at times when the communication threshold is breached. To this end, the model estimation error is monitored at each sampling time, and communication is restored when the stability threshold is violated. In addition to reducing sensor-controller communication costs and optimizing system performance, the resulting reduction in the computational load associated with the proposed on-line optimization scheme is another appealing feature, especially in the context of nonlinear systems. Finally, the developed methodology is tested and illustrated using a simulated chemical process example.References:[1] J. P. Hespanha, P. Naghshtabrizi, and Y. Xu, “A survey of recent results in networked control systems,”Proc. of IEEE, vol. 95, pp. 138–162, 2007.[2] R. A. Gupta, “Networked control systems: Overview and and research trends,”IEEE Trans. Ind. Electron., vol. 57, pp. 2527–2535, 2010.[3] K.-Y. You and L.-H. Xie, “Survey of recent progress in networked control systems,”Acta Automatica Sinica, vol. 39, pp. 101–117, 2013.[4] P. D. Christofides, J. Davis, N. H. El-Farra, D. Clark, K. Harris, and J. Gipson, “Smart plant operations: Vision, progress and challenges,”AIChE Journal, vol. 53, no. 11, pp. 2734–2741, 2007.[5] M. Mazo and P. Tabuada, “Decentralized event-triggered control over wireless sensor/actuator networks,”IEEE Transactions on Automatic Control, vol. 56, no. 10, pp. 2456–2461, 2011.[6] X. Wang and M. D. Lemmon, “Event-triggering in distributed networked control systems,”IEEE Transactions on Automatic Control, vol. 56, no. 3, pp. 586–601, 2011.[7] E. Garcia and P. J. Antsaklis, “Model-based event-triggered control for systems with quantization and time-varying network delays,”IEEE Transactions on Automatic Control, vol. 58, no. 2, pp. 422–434, 2013.[8] D. Xue and N. H. El-Farra, “Networked event-triggered control of spatially distributed processes using a dual-mode communication strategy,”Proceedings of 54th IEEE Conference on Decision and Control, pp. 1899-1904, 2015.",
+    "presenting_author": "Da Xue and Nael H. El-Farra | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Da Xue and Nael H. El-Farra",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Department of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of California",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Davis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Davis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "CA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper465654.html",
+    "paper_id": "465654"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470645.html",
+    "topic": "470645Robust Optimization Approximation of Chance Constrained Model Predictive Control",
+    "date_time": "November 2016",
+    "abstract": "Uncertainty is an important issue to be considered in the control of process systems. Uncertainties in the system include parameter uncertainty, system disturbance and measurement noise. Conventional model predictive control (MPC) can have severe problems if the uncertainty is not properly dealt with. The problems include: severe constraint violation, instability of the system, unrealistic results, etc. In stochastic MPC, chance constraints are introduced to handle the uncertainty. A probability level of constraint satisfaction is defined by the user to seek a trade-off between robustness and optimality.There are generally two approaches to handle the chance constraints: analytical methods and sampling methods. Typical analytical methods include inverse cumulative distribution function method, ellipsoidal method, and risk allocation method. Most of the aforementioned analytical methods require that the uncertainty distribution being Gaussian. Inverse cumulative distribution function method only applies under the condition of individual chance constraints. For one-dimensional Gaussian distribution, the inverse cumulative distribution function can be calculated directly. The resulting deterministic constraints are then equivalent to the chance constraints [1]. For joint chance constraints, the problem is much more complicated as there is no closed form of cumulative distribution function for multidimensional Gaussian distribution. But closed form exists if the integration area is an ellipsoid. However, the ellipsoidal method leads to very conservative results [2]. Risk allocation method is based on the Boole’s inequality: the probability that at least one of the events happens is not greater than the sum of the probabilities of the individual events. So the joint chance constraint can be decomposed into individual chance constraints, which are much easier to solve [3]. Risk allocation can also be improved by optimizing the risk allocation to each individual chance constraint [4]. Sampling method has the advantage that it is not restricted to certain types of distribution. It includes mixed integer programming based sample average approximation approach and scenario optimization approach. However, those methods are computationally expensive [5,6] and scenario approach may lead to very conservative result [7].In this work, we propose robust optimization approximation method to handle both the individual and the joint chance constraint in MPC problem. By introduction of the uncertainty set, the individual and joint chance constrained problem can be converted to tractable robust optimization problem. Various types of uncertainty set can be introduced to deal with different types of distribution. Box and polyhedral types result in linear constraints and ellipsoidal type results in second order cone constraints. Robust optimization approximation method preserves the simplicity of analytical methods and it is not restricted to certain type of probability distribution. Compared with other classical methods in the case study, robust optimization method leads to good performance in numerical case studies. The proposed method is also applied to the steam assisted gravity drainage (SAGD) process in the oil sands industry. Recursive data-driven modeling methods are applied to build models for the process. Chance constrained MPC is applied and the technique is tested with a reservoir simulator: Petroleum Experts. The robust optimization approximation based chance constrained MPC leads to satisfactory results.Reference:[1] Schwarm, Alexander T., and Michael Nikolaou. \"Chance‐constrained model predictive control.\"AIChE Journal45.8 (1999): 1743-1752.[2] Van Hessem, D. H., C. W. Scherer, and O. H. Bosgra. \"LMI-based closed-loop economic optimization of stochastic process operation under state and input constraints.\"Decision and Control, 2001. Proceedings of the 40th IEEE Conference on. Vol. 5. IEEE, 2001.[3] Nemirovski, Arkadi, and Alexander Shapiro. \"Convex approximations of chance constrained programs.\"SIAM Journal on Optimization17.4 (2006): 969-996.[4] Ono, Masahiro, and Brian C. Williams. \"Iterative risk allocation: A new approach to robust model predictive control with a joint chance constraint.\"Decision and Control, 2008. CDC 2008. 47th IEEE Conference on. IEEE, 2008.[5] Ruszczyński, Andrzej. \"Probabilistic programming with discrete distributions and precedence constrained knapsack polyhedra.\"Mathematical Programming93.2 (2002): 195-215.[6] Blackmore, Lars. \"A probabilistic particle control approach to optimal, robust predictive control.\"Proceedings of the AIAA Guidance, Navigation and Control Conference. No. 10. 2006.[7] Calafiore, Giuseppe C., and Marco C. Campi. \"The scenario approach to robust control design.\"IEEE Transactions on Automatic Control51.5 (2006): 742-753.",
+    "presenting_author": "Wenhan Shen | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Wenhan Shen",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zukui Li",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Biao Huang and Fraser Forbes",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical and Materials Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Alberta",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Edmonton",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "AB",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Canada",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470645.html",
+    "paper_id": "470645"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper451461.html",
+    "topic": "451461Behavior of Crystal Layer Growth in Dynamic Layer Melt Crystallization of Phosphoric Acid",
+    "date_time": "November 2016",
+    "abstract": "Phosphoric acid (PA) and its derivatives have been widely used in numerous fields such as medical, food and electronic industries with stringent limit of impurity ion contents (e.g., Pb2+, K+, Mg2+,). Thus, PA produced by dry or wet process needs further purification to improve the purity by means of separation and purification techniques, such as solvent extraction, chemical precipitation, ion exchange and crystallization. Among these methods, layer melt crystallization is a technically proven method for the preparation of ultrapure substances, forming a crystalline layer on a cooled surface, and commonly further purifying the products by a sweating process to eliminate the impurity inclusions trapped in the crystal layer during its growth. This method is considered as a potential green, environmentally friendly and highly selective separation technology.It is difficult to analyze the processes of layer melt crystallization quantitatively as the heat and mass transfer occurs simultaneously and changeably during the growth of crystal layer. Fortunately, the necessary thermodynamics properties of PA-H2O have been measured in previous works, and these required properties can be used as input data in the mass and heat transfer. The growth rate and the effective thermal conductivity of PA hemihydrate during the crystal layer growth process were measured as a function of process conditions to characterize the manufacture efficiency. Besides, the impurity entrapment phenomenon was investigated in order to achieve a desired separation effect of layer melt crystallization for the purification of PA. A reliable model of dynamic layer melt crystallization was developed by the energy balance and some reasonable assumptions. The essence of this model is the description of heat transport during the crystal layer growth in a forced convective melt, showing the implicit relation between crystal layer growth and the forced convection.During the experiments, the PA melt was mixed by forced convection caused by stirring to eliminate the temperature and concentration difference of the melt, and the variation of the temperatures of the whole process was recorded to have a deeper understanding of the crystallization. An assumed qualitative temperature profile in a cross section of the crystalline system was presented to enable the prediction of profiles of temperature in both the crystal layer and the melt conformed to the experimental data. The initial nucleation and basal crystal layer adhering on the cooled wall were studied as they have a profound and lasting effect on the crystallization process. During the course of crystallization, a recrystallization operation was used after the addition of seeds to guarantee a uniform cylindrical crystal layer around the cooling finger crystallizer. The experimental research on the crystal layer growth was focused on how the operational conditions affect the manufacture efficiency of PA hemihydrate product. Thus, the growth rate of crystal layer was investigated as a function of concentration and the degree of super-cooling. The formed crystalline PA hemihydrate layer is the mixture of the solid crystals and a small amount of mother liquor regarded as a complex, multi-phase, porous material. Then the effective thermal conductivity of PA hemihydrate was calculated by heat transfer coefficient method to characterize the overall heat transfer rate of crystal layer. The effective thermal conductivity of crystal layer of PA is thought to depend strongly on the physical structure affected by temperature and concentration.",
+    "presenting_author": "Kui Chen | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Kui Chen",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yangkang Shao and Jiawen Zhu",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "School of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "East China University of Science and Technology",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Shanghai",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "China",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper451461.html",
+    "paper_id": "451461"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper456977.html",
+    "topic": "456977Output-Feedback Predictive Control for Stochastic Nonlinear Systems",
+    "date_time": "November 2016",
+    "abstract": "Model predictive control (MPC) is widely used for control of complex systems since it is systematically able to handle multivariable dynamics and constraints on the system states and inputs. Robustness to modeling uncertainties and system disturbances is a desired aspect in a MPC algorithm. While the receding-horizon implementation imparts a certain degree of robustness to MPC, nominal MPC formulations cannot systematically account for the effect of stochastic uncertainties in the system [1]. Stochastic MPC (SMPC) with chance constraints provides a systematic framework to address this issue by explicitly incorporating the probabilistic descriptions of uncertainties in the optimal control problem [2]. This work presents an output-feedback stochastic MPC approach for nonlinear systems that are subject to probabilistic modeling uncertainties and system disturbances. The output-feedback approach accounts for the fact that in most engineering systems all the system states cannot be regularly measured, and there is a need for reconciliation of system states from the available noisy measurements.In this work, the generalized polynomial chaos (gPC) framework [3] is used for computationally efficient propagation of the uncertain initial conditions and parametric uncertainties in the system model through the nonlinear system dynamics. The main challenge in using the gPC framework is to enable efficient propagation of the stochastic system disturbances since this requires a large number of basis functions in the polynomial chaos (PC) expansions for describing the independent time-varying system disturbances. To overcome this limitation, this work uses a two-step approach [4] for propagation of the parametric uncertainties and additive disturbances in the space of the PC expansion coefficients under the assumption that these coefficients can be adequately described by a Gaussian distribution. The output-feedback approach is implemented by using a gPC-based histogram filter [5], which is a Bayesian state and parameter estimation algorithm for estimating the posterior probability density functions of the states and uncertain parameters using the available measurements. The constraints on the states are reformulated as a joint chance constraint (JCC), which is satisfied in with a certain probability. A tractable implementation of the JCC is obtained by using a sample-based approach [6].The proposed SMPC approach is implemented for control of the thermal effects of an atmospheric pressure plasma jet (APPJ) simulation case [7]. The system model consists of seven states (three of carrier gas temperature, three of carrier gas composition and one of target surface temperature) of which four are measured and three are unmeasured. The control objective is to regulate the target surface temperature. Chance constraints are imposed on the carrier gas temperature and surface temperature. The simulation results indicate that closed-loop control of the plasma device enables achieving the desired target surface temperature in the presence of system disturbances and modeling uncertainties, while maintaining the constraint satisfaction above the pre-specified probability level.References:Mayne, D. Q. Model predictive control: Recent developments and future promise.Automatica,50:2967—2986, 2014.Mesbah, A. Stochastic model predictive control: An overview and perspectives for future research.IEEE Control Systems Magazine, accepted, 2016.Xiu, D. and Karniadakis, G. E. The Wiener-Askey polynomial chaos for stochastic differential equations.SIAM Journal of Scientific Computation, 24:614—644, 2002.Konda, U., Singla, P., Singh, T. and Scott, P. D. State uncertainty propagation in the presence of parametric uncertainty and additive white noise.Journal ofDynamicSystems, Measurement and Control, Transactions of the ASME, 133(5):051009-1—051009-10, 2011.Bavdekar, V. A. and Mesbah, A. A polynomial chaos-based nonlinear Bayesian approach for estimating state and parameter probability density functions.InProceedings of the American Control Conference, accepted, Boston, 2016.Alamo T., Tempo, R. and Luque, A. On the sample complexity of probabilistic analysis and design methods. InPerspectives in Mathematical System Theory, Control, and Signal Processing, pages 39—50. Springer—Verlag, Berlin Heidelberg, 2010.Gidon, A., Graves, D. B. and Mesbah, A. Model predictive control of thermal effects of an atmospheric pressure plasma jet for biomedical applications.In Proceedings of the American Control Conference, Accepted, Boston, 2016.",
+    "presenting_author": "Vinay Bavdekar and Ali Mesbah | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Vinay Bavdekar and Ali Mesbah",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Department of Chemical and Biomolecular Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of California - Berkeley",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Berkeley",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "CA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper456977.html",
+    "paper_id": "456977"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466299.html",
+    "topic": "466299On the Moment-Based Robust MPC Formulations",
+    "date_time": "November 2016",
+    "abstract": "The control technique commonly used in process industry for constrained multivariable optimal control is the model predictive control (MPC) [1]. The performance of these controllers depends to a large extent on the quality/validity of process models ([2]). In the mean time, more and more rigorous process models that cover wider operating conditions have become available. A valid hypothesis is then the use of this type of models for MPC. The practice, on the other hand, is conflicting since the model based estimation and control algorithms require relatively simple explicit models for efficient and robust calculations in their algorithms. This practical drawback has led to research directions in the area of model simplifications ([3] and references therein) or multiple model MPC approaches ([4]). In addition to the plant-model mismatch as a result of inaccurate identification of model parameters and its dynamics, such simplifications introduce uncertain behavior between the observations induced from the true process and the model predictions. In order to limit the effect of uncertainty on the closed loop performance, robust control techniques are required.In the last couple of decades, different MPC algorithms have been introduced to achieve the desired control objectives while reducing the effect of uncertainty ([5]). We can broadly classify these algorithms into two classes; i) the worst case based techniques (WC-MPC) ([6]), including min-max based, tube based or input-to-state stability based arguments, where under any effect of predefined maximum level of uncertainty, the process variables should not violate the specifications; or ii) chance based MPC algorithms ([7]), including quantile based or scenario based formulations, where the specifications are softened, meaning that the constraints are allowed to be violated, but the chance of being off the specification is kept small, thus violations are rare events. Both of these formulations have their own drawbacks. The WC-MPC implementations are known to be pessimistic, resulting in deterioration of the actual closed loop performance compared to the nominal case where the uncertainties are realistically described with the nominal model. Furthermore the formulation of the problem tends to be overly complex for large-scale process models. The chance-based formulation reduces the conservatism inherent to WC-MPC by discarding the severe-but-rare events out of consideration. This reduces the pessimism of WC-MPC however the computational problems should be expected to occur, due to the tedious numerical integrations over the process trajectories. It is straightforward to see that the stochastic approach to the robustified MPC problem is more powerful than the WC-MPC. The ability to discard rare and severe realizations, by a tuning parameter, leads to balancing the resulting performance and constraint satisfaction tradeoff.In this contribution we make a first attempt to apply stochastic MPC approach with a robustfication step different than the worst case or chance based MPC formulations. Instead of worst case realization or the probability distribution function of state, we consider the statistics, (finite order) moments, of the state predictions to calculate the control actions. We introduce Mean-MPC (M-MPC) and Mean-Variance MPC (MV-MPC), which consider the expectations and variances of the state trajectories and their functions, cost and constraints. By making use of variance of state predictions, one can effectively back-off the operating conditions, as a function of the process dynamics and the uncertainty model. We consider different types of uncertainty models and show parallelism between moment based MPC and aforementioned MPC techniques.We distinguish multiple observations from the M-MPC and the MV-MPC results. Under several technical assumptions we show that the M-MPC is equivalent with nominal MPC. This explains the inherent robustness aspects of the nominal MPC, commented in other publications, e.g., [8]. In case of the MV-MPC formulation we observe that when the cost and constraint functions are mapped to robustified equivalents, the structure of these functions (linear, quadratic etc.) and the uncertainty model effect the resulting MPC problem. For additive disturbance case with quadratic cost and linear constraint functions, the case in this contribution, the resulting MPC problem consists of a cost function weighting both the process variables’ current/predicted values and the spread of the state trajectories. The cost term relating to the variance is growing monotonically with the prediction horizon, which in turn allows us to establish stability without terminal cost function, decreasing the effect of artificial terminal cost. Furthermore, the robustified constraints are improving the chance of satisfying the constraints, by making use of the covariance matrix of the predicted states, hence the process dynamics, explicitly.One another important aspect of the moment based MPC is the computational benefits. Through the use of moment operators, one obtains a MPC problem that is explicit in the optimization variables, meaning that no maximization or integration step is required. Hence for processes with medium to large scale dynamics, the moment based MPC formulation remains computationally tractable. This property leads to adjustable performance vs. robustness specifications, allowing the practitioners to implement moment based MPC for process systems.Acknowledgement:This work has been done within the project ‘Improved Process Operation via Rigorous Simulation Models (IMPROVISE)’ in the Institute for Sustainable Process Technology (ISPT)References:[1] – Bauer, M. and Craig, I.K., 2008. Economic assessment of advanced process control–a survey and framework.Journal of Process Control,18(1), pp.2-18.[2] – Qin, S.J. and Badgwell, T.A., 2003. A survey of industrial model predictive control technology.Control Engineering Practice,11(7), pp.733-764.[3] – Hovland, S., Willcox, K. and Gravdahl, J.T., 2006, December. MPC for large-scale systems via model reduction and multiparametric quadratic programming. In45th IEEE Conference on Decision and Control(pp. 3418-3423).[4] – Özkan, L., Kothare, M.V. and Georgakis, C., 2000. Model predictive control of nonlinear systems using piecewise linear models.Computers & Chemical Engineering,24(2), pp.793-799.[5] – Goodwin, G.C., Kong, H., Mirzaeva, G. and Seron, M.M., 2014. Robust model predictive control: reflections and opportunities.Journal of Control and Decision,1(2), pp.115-148.[6] – Kothare, M.V., Balakrishnan, V. and Morari, M., 1996. Robust constrained model predictive control using linear matrix inequalities.Automatica,32(10), pp.1361-1379.[7] – Schwarm, A.T. and Nikolaou, M., 1999. Chance‐constrained model predictive control.AIChE Journal,45(8), pp.1743-1752.[8] – Mayne, D.Q., 2014. Model predictive control: Recent developments and future promise.Automatica,50(12), pp.2967-2986.",
+    "presenting_author": "Muhammed B. Saltik | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Muhammed B. Saltik",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Leyla Özkan",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Jobert H.A. Ludlage",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Siep Weiland and Paul M.J. Van den Hof",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Electrical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Eindhoven University of Technology",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "5600 MB Eindhoven",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Netherlands",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466299.html",
+    "paper_id": "466299"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper457998.html",
+    "topic": "457998Case Study of a Recrystallization Scale-up with Desirable Psd and Morphology",
+    "date_time": "November 2016",
+    "abstract": "Scale-up to control particle size of an energetic (in this case nitro-containing compound) is particularly challenging due to its inherent safety hazards. The focus of this work is to scale up a recrystallization process for an energetic compound in order to achieve a block-like morphology with a size in the range of 200 – 300 µm. Due to the energetic nature of the material, strategies such as seeding are undesired. Thus our efforts focused on self-seeding via an optimal anti-solvent dosing strategy.Efforts began with a solvent screen and construction of solubility curves, using the Avantium Crystal16™ parallel crystallizer. Experiments were conducted at the 100 mL scale using the Mettler Toledo EasyMax™ workstation to optimize dosing and cooling strategies. In situ FBRM and PVM probes were used.The most promising conditions were then tested at the 2 L scale, using the Mettler Toledo RC1e™. CFD mixing modeling was used to achieve a greater understanding of the effects of mixing regimes on the results of the 2 L recrystallization; this was then used to project the effects of mixing at larger scales up to the target reactor volume of 200 gallons. In addition, FBRM and IR data were used to construct desaturation curves, which aided in reducing the batch cycle time without negatively impacting the crystallization. The 2-L RC-1 resulted in yields greater than 90% and gave isolated solids with improved thermal stability, while meeting the target morphology and size requirements. This process was then used to scale up the crystallization to a 20 L vessel, and finally, to 200 gallons.",
+    "presenting_author": "Bianca Christensen | Nalas Engineering Services, Centerbrook, CT",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Bianca Christensen",
+        "affiliation": "Nalas Engineering Services, Centerbrook, CT",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jerry S. Salan",
+        "affiliation": "Nalas Engineering Services, Centerbrook, CT",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew Jorgensen",
+        "affiliation": "Nalas Engineering Services Inc., centerbrook, CT",
+        "designation": "Author"
+      },
+      {
+        "name": "David am Ende",
+        "affiliation": "Nalas Engineering Services, Inc., Centerbrook, CT",
+        "designation": "Author"
+      },
+      {
+        "name": "**Sarah Rothstein",
+        "affiliation": "Nalas Engineering Services, Centerbrook, CT",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper457998.html",
+    "paper_id": "457998"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper451185.html",
+    "topic": "451185Strategies Towardsthe Robust Multi-Parametric Control of Continuous-Time Systems",
+    "date_time": "November 2016",
+    "abstract": "Strategies\ntowards the robust multi-parametric control of continuous-time\nsystemsMuxin\nSuna,b,\nMario E. VillanuevabBenoît Chachuata,\nEfstratios N. PistikopoulosbaCentre\nfor Process Systems Engineering, Department of Chemical Engineering,\nImperial College London, London, UKbArtie\nMcFerrin Department of Chemical Engineering, Texas A&M\nUniversity, College Station, TX, USA.Keywords:multi-parametric\nprogramming,NCO-tracking,robust optimal controlThe\nneed to improve performance and reduce economic costs of industrial\nprocesses has led to an increased interest in real-time model-based\noptimal control strategies. These strategies need to be able to deal\nwith fast dynamics and hard process constraints, such as operational\nrestrictions and safety requirements. Moreover, the presence of\nuncertainty in the form of process disturbances or model mismatch can\nlead to suboptimal performance and constraint violation. Model\npredictive control (MPC) [1] computes a feedback control law by\nrepeatedly solving an optimization problem on a receding horizon,\nwhich is often a rather computationally demanding task and might\ncause serious delays and/or suboptimal performance.In\nthe multi-parametric programming paradigm [1], the optimization\nproblems are solved off-line, which results in an a priori explicit\nmapping of the solutions as a function of measurable quantities, thus\navoiding the need for repeatedly solving optimization problems\nonline. The case of continuous-time dynamic systems calls for the\nsolution of multi-parametric infinite-dimensional programs, namely\nmulti-parametric dynamic optimization (mp-DO). Another approach for\nreducing the on-line computationally burden is to enforce the\nnecessary conditions for optimality (NCO). In NCO tracking [2,3],\nfeedback control laws are derived in order to track the NCOs along\neach arc of the nominal optimal solution, effectively converting an\noptimal control problem into a self-optimizing feedback control\nproblem. However, NCO tracking often relies on the assumption that\nthe switching structure of the optimal solution remains unchanged,\nwhich may not be the case when the process disturbances or the model\nmismatch are significant.The\nimplementation of classical MPC controllers is based on a\ncertainty-equivalence principle, whereby the system is optimized as\nif neither process disturbances nor model mismatch were present. Due\nto its inherent ability to reject such disturbances, these\ncontrollers exhibit a certain degree of robustness. However, certain\nconstraints may become violated when large disturbances occur, since\nthis is not taken into account when optimizing system trajectories.\nOne way of dealing with this problem involves solving a robust\ncounterpart of the optimal control problem [4], i.e. to guarantee\nfeasibility of the system assuming the worst-case realization of the\nuncertainty.This\npaper explores strategies for robust multi-parametric control of\ncontinuous-time systems. First, we present a methodology for the\ndevelopment of so-called mp-NCO-tracking controllers (see Figure 1),\nwhich unifies mp-DO and NCO-tracking for linear dynamic systems [5].\nFrom an NCO-tracking perspective, the use of mp-DO provides a means\nfor relaxing the constant switching structure assumption by\nconstructing critical regions that correspond to a unique switching\nstructure of the optimal control trajectories; whereas from a mp-DO\nperspective, NCO-tracking leads to a reduction in the number of\ncritical regions compared to the use of discretization methods. Next,\nwe present a robust-counterpart formulation of the mp-DO problem in\norder for the mp-NCO-tracking controllers to be robust towards given\nprocess disturbances or model mismatch that are not measured on-line.\nThis robustification involves backing-off the terminal and path\nconstraints based on rigorous set-propagation techniques [6]. The\nmethodology is illustrated with numerical case studies drawn from\nchemical engineering, including the control of an FCC unit as shown\nin Figure 2.Figure\n1: Framework of multi-parametric NCO-tracking(a)\nmp-DO (b) discretized\nmp-QPFigure\n2: Critical regions in the controllers of an FCC unitReferencesE. N.\tPistikopoulos. From multi-parametric programming theory to\tMPC-on-a-chip multi-scale systems applications.Computer\tand Chemical Engineering,\t47:57-66, 2012.J. V.\tKadam, M. Schlegel, B. Srinivasan, D. Bonvin and W. Marquardt.\tDynamic optimization in the presence of uncertainty: From off-line\tnominal solution to measurement-based implementation.Journal\tof Process Control,\t17:389-398, 2007.D. Bonvin and B. Srinivasan.\tOn the role of the necessary conditions of optimalityin\tstructuring dynamicreal-time\toptimization schemes.Computers\tand ChemicalEngineering,\t51:172-180,\t2013.B. Houska, F. Logist, J. V.\tImpe and M. Diehl. Robust optimization of nonlinear dynamic systems\twith application to a jacketed tubular reactor.Journal\tof Process Control,\t22(6):1152-1160, 2012.M. Sun. ,\tB. Chachuat and E. N. Pistikopoulos, Design of multi-parametric NCO\ttracking controllers for linear dynamic systems.Computer\tand Chemical Engineering,\tin press (DOI:10.1016/j.compchemeng.2016.04.038).B. Chachuat, B. Houska, R.\tPaulen, N. Peric, J. Rajyaguru, M.E. Villanueva, \"Set-theoretic\tapproaches in analysis, estimation and control of nonlinear\tsystems,\"IFAC-PapersOnLine,48(8):981-995, 2015.",
+    "presenting_author": "Muxin Sun** 1,2 , Mario E. Villanueva | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Muxin Sun** 1,2 , Mario E. Villanueva",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Benoit Chachuat",
+        "affiliation": "Centre for Process Systems Engineering, Department of Chemical Engineering, Imperial College London, London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Efstratios N. Pistikopoulos",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper451185.html",
+    "paper_id": "451185"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464752.html",
+    "topic": "46475219th Century Meet the 21st Century: Scaling Batch Reactors",
+    "date_time": "November 2016",
+    "abstract": "The heart of every chemical process is the reactor. The majority of chemical reactions in the chemical processing industry occur in batch reactors. At the laboratory scale, batch reactors are reaction rate limited because they have large heat transfer surface area to reacting volume ratios. The same is generally true for pilot plant batch reactors. However, most commercial-size batch reactors are heat transfer rate limited because their heat transfer surface area to reacting volume ratios are small.Since the mid-1950’s, the cost of computation via digital computers has decreases annually. With the invention of the personal computer and user friendly software since the mid-1980’s, the cost of computation has become miniscule. The chemical processing industry has embraced computation as a means for modifying its historic process development procedure. Today, we use reaction data gathered from a laboratory-sized batch reactor to model as large a batch reactor as deemed safe to commission and operate based on that laboratory data.To model a batch reactor via computation, we first derive the differential equation d[P]/dt = R where [P] is the concentration of product P (moles/m3) and R is the formation of P by chemical reaction (moles/m3*s or moles/m3*min). Our task is to determine R by one of four methods. Those methods areguess the concentration dependence of RP, solve the above differential equation analytically, plot the resulting dependent variable as a function of time, then calculate k, the rate constant, from the slope of the line;determine the concentration dependence of RPusing the initial concentration experimental method, then calculate k;determine the concentration dependence of RPusing the initial time central difference method, then calculate k;determine the concentration dependence of RPusing the initial time polynomial method, then calculate k.These procedures were developed between 1890 and 1940. Today's computing power and user-friendly software allow us to develop a different procedure for determining the kinetics of a batch reaction and to scale that reaction into ever-larger batch reactors.This presentation discusses a new method for determining the kinetics of a reaction occurring in a batch reactor and it discusses how to use this new method to scale the heat transfer requirements of a commercial-sized reactor designed for the reaction in question.",
+    "presenting_author": "Sheli C. Mauck | Nexeo Solutions, The Woodlands, TX",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Sheli C. Mauck",
+        "affiliation": "Nexeo Solutions, The Woodlands, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jacob H. Arredondo",
+        "affiliation": "Chemical Engineering, Rice University, Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Bor-Yea Hsu",
+        "affiliation": "Worstell and Worstell, Consultants, Richmond, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Jonathan H. Worstell",
+        "affiliation": "Worstell and Worstell, Consultants, Richmond, TX",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464752.html",
+    "paper_id": "464752"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper451920.html",
+    "topic": "451920Influence of the Energy Criteria for the Development of Industrialization Strategies in Melt Crystallization",
+    "date_time": "November 2016",
+    "abstract": "Influence\nof the energy criteria for the development of industrialization strategies in\nmelt crystallizationGUILLOU\nL., DENAGNON Y., RIGAUT E.Fives\nProabd, 20C rue de Chemnitz – F-68100 MulhouseThe\nmain purpose of melt crystallization technologies is the purification of organic\nchemicals. These technologies are in general regarded as being alternatives to\nother unit operations. Crystallizations from the melt are therefore quite often\nrestricted to limited amount of situations:-Separation\nof compounds with close boiling points or forming azeotropic systems-Purification\nof heat sensitive or explosive compounds-Ultrapurifications\nfor 99.95+ grades-…This\nframework definition implies that crystallization from the melt is eventually\nat best a complementary technique that is used to overcome issues that would\nnot have been successfully addressed by other approaches. That being said melt\ncrystallization is, within exception of a very limited number of widespread\napplications, a kind of fifth wheel of the cart in the process designer\ntoolbox.The\nmelt static crystallization (MSC) is one of the embodiments of the melt\ntechnologies. Being by nature a batch process, the MSC is quite often regarded\nas being, despite its efficiency, applicable only to limited capacities. Quite\noften a limit set at 10 ktpy is considered. It is associated to applications\ndealing with ultrapurifications. This combination narrows a little bit more the\npotential scope of application as it is understood and expressed in most of the\nreference literature.As\na resulting feature the MSC is regarded as being irrelevant for purifications\nimplying a large composition difference between the feedstock to be treated and\nthe targeted final product. It is indeed considered that these cases will\nrequire using fractional crystallization approaches thus multiplying the number\nof crystallization stages. Such multiplication of recrystallizations would\nimply additional energetic expenses, lowering of the recovery yield…Nothing\ncould be anything but wrong. A majority of applications including the ones\ndealing with ultrapurification requirements or significant concentration of the\ncompound to be purified (purity raised over 50 wt.% or more in concentration\ndifference) are achieved with one or two MSC stages (cf. Fig 1).Though\nselected examples, different purification processes organization taken from\nindustrial plants will be presented and rated. The underlying process design\nstrategies will be examined under the scope of energy consumption optimization\nbetween processes i) without, ii) including or iii) fully based on MSC. This\ncomparative examination is based on the same performances in terms of\ncapacities achieved and qualities of the feedstock and main products.We\nwill show how only by optimization of the energy consumption target function\nthe technical solutions built around a MSC core process can match or even\novertake the most direct and obvious approaches often favored by process\ndesigners.Figure 1: topology of industrial MSC plants\n(based on Fives Proabd® reference portfolio)Keywords:Crystallization,\npurification, energy optimization.",
+    "presenting_author": "Loic Guillou | R&D, Fives PROABD, Mulhouse Cedex, France",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Loic Guillou",
+        "affiliation": "R&D, Fives PROABD, Mulhouse Cedex, France",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yawavi Denagnon",
+        "affiliation": "Fives PROABD",
+        "designation": "Author"
+      },
+      {
+        "name": "Etienne Rigaut",
+        "affiliation": "Fives PROABD",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper451920.html",
+    "paper_id": "451920"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466954.html",
+    "topic": "466954Nonlinear Model Predictive Control with Explicit Performance Specification",
+    "date_time": "November 2016",
+    "abstract": "The operation of chemical plants is hindered by numerous challenges such as inherent nonlinearity, stochastic disturbances, complex variable interactions and process constraints. One well established control method that is effective in handling these challenges is model predictive control (MPC), where an open-loop optimal control problem is solved at each sampling instance over a finite time horizon, subject to the dynamic response of the plant and constraints. The abundant studies and various industrial applications of MPC have also contributed towards better understanding of the rigorous stability and performance properties of MPC.One form of contribution has involved the development of Lyapunov-based MPC, which can explicitly characterize the region from where stability of the closed-loop system is guaranteed in the presence of input and state constraints [1, 2]. This approach is also capable of handling uncertainty through the stochastic characterization of disturbances and robust control formulations [3]. On one hand, robust control approaches counteract the worst-case scenario for the realization of the uncertainty. On the contrary, offset-free MPC augments the state variables with fictitious states that estimate and counteract the uncertainty. The prevailing economic incentive in operating chemical processes has fostered the recent development of economic MPC formulations where the controller determines the set-point internally to satisfy the prescribed economic objective, while a rigorous analysis ensures that stability is preserved.Regardless of the nature of the predictive controller used, relatively fewer studies have explored the explicit characterization of the desired closed-loop behavior in the MPC formulation. The explicit specification of the control performance has been addressed for linear, single-input single-output (SISO) systems in the frequency domain using internal model control (IMC) [5], where the controller is designed to achieve a pre-specified desired closed-loop transfer function. However, it is not always guaranteed that the transfer function of the IMC-based control law will be consistent with the proportional-integral-derivative (PID) control structure. Moreover, the IMC approach does not generalize readily for multi-input multi-output (MIMO) systems with constraints. In an effort to handle MIMO systems, the funnel control approach [6] is proposed where the time-varying output error feedback controller forces the tracking error to be within a bounded prescribed function. Although the funnel control approach is capable of handling nonlinear MIMO systems, the method does not explicitly consider input constraints. To address this inherent limitation, recent contributions proposed a framework that incorporates explicit performance specification for MIMO systems while cognizant of input constraints [7], which is then implemented in conjunction with offset-free model predictive control. The work considers linear time invariant (LTI) systems that are invertible (i.e. the inputs can be explicitly computed). The proposed explicit performance specification based offset-free MPC, using a linearized plant model, was implemented on a nonlinear chemical process. The previous work, however, does not explicitly handle the issue of lack of full state measurements, constraints on the rate of change of the manipulated input, and process nonlinearity.Motivated by the above considerations, in this work we generalize the explicit performance specification based control design to handle the output feedback problem, constraints on the rate of change of the manipulated input, and process nonlinearity. The proposed framework consists of a bi-layer optimization scheme. In the first tier, the optimal trajectory is computed for the given performance specification in the form of a prescribed function. Then, in the second layer, a nonlinear model predictive control scheme computes the optimal inputs so as to closely follow the trajectory as given by the first tier. Results are first presented for the output feedback control for a linear systems, then the handling of rate constraints is illustrated for a nonlinear CSTR example, and finally, the approach is implemented on a reactor separator system.[1] Mahmood, M. and Mhaskar, P., 2014. Constrained control Lyapunov function based model predictive control design. International Journal of Robust and Nonlinear Control, 24(2), pp.374-388.[2] Mhaskar, P., El-Farra, N.H. and Christofides, P.D., 2006. Stabilization of nonlinear systems with state and control constraints using Lyapunov-based predictive control. Systems & Control Letters, 55(8), pp.650-659.[3] Mahmood, M. and Mhaskar, P., 2012. Lyapunov-based model predictive control of stochastic nonlinear systems. Automatica, 48(9), pp.2271-2276.[4] Wallace, M., Das, B., Mhaskar, P., House, J. and Salsbury, T., 2012. Offset-free model predictive control of a vapor compression cycle. Journal of Process Control, 22(7), pp.1374-1386.[5] Garcia, C.E. and Morari, M., 1982. Internal model control. A unifying review and some new results. Industrial & Engineering Chemistry Process Design and Development, 21(2), pp.308-323.[6] Ilchmann, A., Ryan, E.P. and Sangwin, C.J., 2002. Tracking with prescribed transient behaviour. ESAIM: Control, Optimisation and Calculus of Variations, 7, pp.471-493.[7] Wallace, M., Pon Kumar, S.S. and Mhaskar, P., 2016. Offset-Free Model Predictive Control with Explicit Performance Specification. Industrial & Engineering Chemistry Research.",
+    "presenting_author": "Masoud Kheradmandi and Prashant Mhaskar | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Masoud Kheradmandi and Prashant Mhaskar",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "McMaster University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Hamilton",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "ON",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Canada",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper466954.html",
+    "paper_id": "466954"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464293.html",
+    "topic": "464293A State-Space Formulation for Autocovariance-Based Plant-Model Mismatch Estimation in Model Predictive Control",
+    "date_time": "November 2016",
+    "abstract": "Model predictive control (MPC) has become the preferred strategy for handling complex, multivariate control problems in the process industries. MPC uses a model of the plant dynamics to predict response over a control horizon, and provides an optimal sequence of control moves at each time step. MPC is considered a mature technology, with thousands of implementations currently in place, benefiting from several decades of technological developments from both academic and industrial contributors [1]. In recent years, state-space model forms of MPC have gained traction. This is due to their ability to handle the full range of process dynamics, such as integrating and unstable systems, which are not in general dealt with by other model forms, such as the more traditionally used (and still predominant in applications) convolution models. State-space models also offer more flexibility in accounting for unmeasured disturbances in the state estimation step [2].Although MPC confers benefits over, e.g., multi-loop approaches for many multivariable systems, as with any model-based method it is limited in performance by the model quality, i.e. how well the true process dynamics are represented by the model. Frequent system re-identification could in principle be implemented, but this tends to be cost prohibitive in practice; alternative methods are needed to ensure MPC performs as expected. As such, in there has recently been increasing interest in the problem of monitoring and assessing MPC controller performance. More general techniques for controller performance monitoring and assessment have been applied to MPC. Examples include data-driven methods such as Principal Component Analysis (PCA) and Partial Least Squares (PLS)-based fault detection [3], as well as benchmarking against performance indices, e.g. Linear Quadratic Gaussian (LQG) and Minimum Variance Controllers (MVC) [4],[5]. While these methods are often successful in indicating degraded control quality, they are often limited in their ability to provide useful model diagnosis. The development of techniques for quantifying MPC plant-model mismatch remains thus an area of active research.Several approaches have been proposed, e.g., making use of partial correlation analysis [6] and frequency domain analysis with setpoint excitation [7]. In our previous work, we introduced an approach for estimating plant-model mismatch from closed loop operating data by means of an explicit output autocovariance-mismatch relation [8,9]. We demonstrated its effectiveness for MPC in with models in both convolution and transfer function form.In this presentation, we extend our approach to the increasingly important class of MPCs which use state-space form models. We develop an autocovariance-mismatch relation, which explicitly links the mismatch in each of the state-space model parameters to the autocovariance of the process outputs. We then pose mismatch estimation as an optimization problem, wherein we seek to minimize (in the least squares sense) the discrepancy between the predicted output autocovariance and that computed from the actual data. We present a multivariable case study demonstrating the use of this approach, and we discuss some computational and statistical features of the method.References[1] S. J. Qin. Statistical process monitoring: Basics and beond.Journal ofChemometrics, 17:480–502, 2003.[2] Mark L. Darby and Michael Nikolaou. MPC: Current practice and challenges.Control Engineering Practice, 20(4):328–342, 2012.[3] A. AlGhazzawi and B. Lennox. Monitoring a complex refining process using multivariate statistics.Control Engineering Practice, 16:294–307, 2008.[4] J. Yu and S. J. Qin. Statistical MIMO controller performance monitoring. Part I: Data-driven covariance benchmark.J. Proc. Contr., 18:277–296, 2008.[5] T. J. Harris. Assessment of closed loop performance.Can. J. Chem. Eng., 67:856–861, 1989.[6] Abhijit S. Badwe, Ravindra D. Gudi, Rohit S. Patwardhan, Sirish L. Shah, and Sachin C. Patwardhan. Detection of model-plant mismatch in MPC applications.Journal of Process Control, 19(8):1305–1313, 2009.[7] Sehej Kaw, Arun K Tangirala, and Alireza Karimi. Improved methodology and set-point design for diagnosis of model-plant mismatch in control loops using plant-model ratio.Journal of Process Control, 24:1720–1732, 2014.[8] S. Wang and M. Baldea. Autocovariance-based MPC model mismatch estimation for SISO systems. InProceedings of 54th IEEE Conference onDecision and Control, pages 3032–3037, Osaka, Japan, 2015.[9] S. Wang, J. Simkoff, M. Baldea, L. Chiang, I. Castillo, R. Bindlish, and D. Stanley. Data-driven plant-model mismatch quantification in input- constrained linear mpc. InProceedings of The 11th IFAC Symposium onDynamics and Control of Process Systems, Trondheim, Norway, 2016.",
+    "presenting_author": "Jodie Simkoff | McKetta Department of Chemical Engineering, University of Texas at Austin, Austin, TX, Austin, TX",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Jodie Simkoff",
+        "affiliation": "McKetta Department of Chemical Engineering, University of Texas at Austin, Austin, TX, Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Siyun Wang",
+        "affiliation": "McKetta Department of Chemical Engineering, University of Texas at Austin, Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Baldea",
+        "affiliation": "McKetta Department of Chemical Engineering, The University of Texas at Austin, Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Leo H. Chiang",
+        "affiliation": "Analytical Technology Center, The Dow Chemical Company, Freeport, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Ivan Castillo",
+        "affiliation": "Analytical Technology Center, The Dow Chemical Company, Freeport, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Rahul Bindlish",
+        "affiliation": "Engineering Solutions Technology Center, Dow Chemical, Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "David Stanley",
+        "affiliation": "Engineering Solutions Technology Center, Dow Chemical, Freeport, TX",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464293.html",
+    "paper_id": "464293"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper461339.html",
+    "topic": "461339Scale up Methodology and Practical Application of Wet Bead Milling for the Production of Submicron Particles",
+    "date_time": "November 2016",
+    "abstract": "Particle size reduction via wet bead milling of a temperature sensitive pharmaceutical material to a reproducible submicron endpoint is achievable across the Netzsch Delta Vita mill series. The reduced particle size allows for an improved dissolution rate when compared to unmilled material. Wet bead milling offers the advantage of increased heat dissipation and removal when compared to a dry milling process. A total energy model approach was used to properly scale the process while geometrically scaling equipment and holding key process variables including formulation composition, agitator tip speed, and bead characteristics, among other parameters, constant between scales. An advantage of scaling with constant tip speed is that the power and heat transfer surface area also scale by the diameter of the mill which results in similar cooling across scales thereby avoiding unwanted surprises for temperature sensitive products during scale up. The milling process was smoothly scaled from lab to industrial scale.",
+    "presenting_author": "Christopher J. Morrison | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Christopher J. Morrison",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Particle Sciences and Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "GlaxoSmithKline",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "King of Prussia",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "PA",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Deepak Mundhra",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "GSK",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "King of Prussia",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "PA and Wendy Knight",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "GSK",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Stevenage",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "United Kingdom",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper461339.html",
+    "paper_id": "461339"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper457017.html",
+    "topic": "457017Development of an Integrated Framework for Stochastic Model Predictive Control with Moving Horizon Estimation",
+    "date_time": "November 2016",
+    "abstract": "In any practical application of Model Predictive Control (MPC), there is always a certain degree of mismatch between the predictions of the controller model and the plant actual dynamics. To address this challenge, robust control methodologies are a possible alternative, but they are often over conservative [1]. Stochastic Model Predictive Control (SMPC) approaches search for a compromise solution between conservativeness and performance [2], [3]. The central idea of SMPC is to consider probabilistic characteristics of the disturbances in the controller design, thus relaxing some constraints so that they only have to be met at certain probabilistic levels. To enable the industrial implementation of SMPC, a state estimation layer, which is often disregarded, should be included [4]. For this reason, this work integrates a Moving Horizon Estimation (MHE) algorithm into the SMPC framework, bridging the gap between recent academic breakthroughs and tangible industrial needs.Previous contributions on output feedback SMPC considered observers with fixed gain [5], time-varying gain [6] and based on Kalman filter [7]. The integration between MHE and robust MPC was performed by deriving an error bound when an unconstrained observer is applied to linear systems with bounded disturbances, then proposing a tube controller formulation [8]. However, these previous studies did not consider the case of MHE coupled with SMPC, which is the main novelty of this work. Specifically, here we extend the work in [9] to the case of output feedback through the use of an MHE scheme [10]. The main contribution in the proposed SMPC formulation corresponds to a procedure to handle probabilistic constraints despite of the estimation error. The proposed approach considers that the exact value of the current state is unknown, but lies inside a set centered at the estimated state and shaped according to an error set calculated similarly as in [8]. The size of this set is used to tighten the probabilistic constraints, as in the tube-based control strategies. The implementation of such constraints is translated in a deterministic form based on the cumulative density function of the disturbances.In this presentation, we show the theoretical results on recursive feasibility and closed-loop stability guarantees in the integrated setup of SMPC with MHE. In particular, the stability analysis follows the general idea of standard MPC that uses a feasible shifted solution to prove the convergence of the control cost. Therefore, the estimated and the real state are driven towards an invariant set around the set point. The resulting controller is less conservative than the purely robust counterpart due to the relaxation of constraints. Simulation examples of the output-feedback controller show that the derived error bounds are accurate and illustrate the convergence to neighborhoods of the set point.References[1] L. Magni, D. Pala, and R. Scattolini, “Stochastic model predictive control of constrained linear systems with additive uncertainty,” inProceedings of the European Control Conference 2009, Budapest, Hungary, pp. 2235–2240, 2009.[2] P. D. Couchman, M. Cannon, and B. Kouvaritakis, “Stochastic MPC with inequality stability constraints,”Automatica, vol. 42, no. 12, pp. 2169–2174, 2006.[3] D. Van Hessem and O. Bosgra, “Stochastic closed-loop model predictive control of continuous nonlinear chemical processes,”Journal of Process Control, vol. 16, no. 3, pp. 225–241, 2006.[4] J. Yan and R. R. Bitmead, “Incorporating state estimation into model predictive control and its application to network traffic control,”Automatica, vol. 41, no. 4, pp. 595–604, 2005.[5] M. Cannon, Q. Cheng, B. Kouvaritakis, and S. V. Raković, “Stochastic tube MPC with state estimation,”Automatica, vol. 48, no. 3, pp. 536–541, 2012.[6] M. Farina, L. Giulioni, L. Magni, and R. Scattolini, “An approach to output-feedback MPC of stochastic linear discrete-time systems,”Automatica, vol. 55, pp. 140–149, 2015.[7] P. Hokayem, E. Cinquemani, D. Chatterjee, F. Ramponi, and J. Lygeros, “Stochastic receding horizon control with output feedback and bounded controls,”Automatica, vol. 48, no. 1, pp. 77–88, 2012.[8] D. Sui, L. Feng, and M. Hovd, “Robust Output Feedback Model Predictive Control for Linear Systems via Moving Horizon Estimation,” in2008 American Control Conference, Seattle, Washington, pp. 453–458, 2008.[9] B. F. Santoro and D. Odloak, “Stochastic Model Predictive Control for Output Tracking with Bounded Control Inputs,” in2014 AIChE Annual Meeting, Atlanta, USA, 2014.[10] F. V Lima and J. B. Rawlings, “Nonlinear stochastic modeling to improve state estimation in process monitoring and control,”AIChE Journal, vol. 57, no. 4, pp. 996–1007, 2011.",
+    "presenting_author": "Bruno F. Santoro 1,2 and **Fernando V. Lima | Department of Chemical and Biomedical Engineering, West Virginia University, Morgantown, WV",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Bruno F. Santoro 1,2 and **Fernando V. Lima",
+        "affiliation": "Department of Chemical and Biomedical Engineering, West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper457017.html",
+    "paper_id": "457017"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper474607.html",
+    "topic": "474607Mass Transfer Scale-up in Melt Polymerization Processes",
+    "date_time": "November 2016",
+    "abstract": "Many different polymerization processes are of relevance for the production of performance polymers at DSM, from slurry to melt polymerization ones. For all, the understanding of the main limitations to the reaction speed during polymerization is of fundamental importance, especially when new technologies are brought to the market and need to be scaled-up. In this paper, the case of a batch melt-polymerization reactor will be presented.\nIn particular, the interplay of mixing, heating, and mass transfer phenomena on the final batch time will be the focus, for different polymer grades of interest.\nIt is known in literature, that bubbles generation as well as surface renewal of the polymer melt are important factors to determine a complete and fast polymerization in melt processes, by allowing transfer between the melt phase and the gas phase. \nBoth experimental techniques as well as modeling have been used to show the relevance of each of the aforementioned factors, especially when scaling up from laboratory set-up to pilot plant to, finally, commercial scale batch plant.\nThe outcome of the experimental work can be used for the new design of reactors, allowing for an increased productivity of the plant during polymerization.",
+    "presenting_author": "Micaela Caramellino | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Micaela Caramellino",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "DSM",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Geleen",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Netherlands",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Eric Grolman",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "DSM Ahead B.V.",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "DSM",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Geleen",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Netherlands and Louis Pitet",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Ahead Research and Development",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "DSM",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Geleen",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Netherlands",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper474607.html",
+    "paper_id": "474607"
+  }
+]

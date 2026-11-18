@@ -1,0 +1,777 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470239.html",
+    "topic": "470239Discovery and Manipulation of a Native Polyketides Influencing ABE Production inClostridium Acetobutylicum.",
+    "date_time": "November 2016",
+    "abstract": "The production of ABE (acetone, butanol, ethanol) by the anaerobic bacteriaClostridiumis a bioprocess capable of converting various renewable substrates into high value solvents and fuels.Clostridium acetobutylicumATCC 824 has long served as a model organism for clostridial ABE production, with an extensive body of literature ranging from fundamental cellular biology to industrial-scale fermentation. Despite the abundance of knowledge concerning this organism, the series of cellular events responsible for the dramatic and somewhat mysterious transition from acid- to solvent- production (deemed the “metabolic switch”) remain unclear. Towards addressing this phenomena, we investigated a polyketide synthase (PKS) gene fromC. acetobutylicumATCC 824, which has previously been shown to be upregulated directly preceding the metabolic switch in ABE fermentation of this organism. Through targeted gene knockouts, HRMS-guided comparative metabolomics, and extensive structural characterization, we identified a previously undiscovered family of three polyketides synthesized by the PKS gene product. Batch fermentations of PKS-modified strains revealed that while the polyketides are not essential for the metabolic switch (and hence, ABE production), the presence or absence of these compounds could influence both the solvent titers and productivities ofC. acetobutylicum. Through this work, we hope to highlight the potentially significant role of secondary metabolites in clostridial fermentations, and provide a relatively unexplored strategy for manipulating these industrially-relevant organisms.",
+    "presenting_author": "Nicolaus Herman | Department of Chemical and Biomolecular Engineering, University of California-Berkeley, Berkeley, CA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Nicolaus Herman",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, University of California-Berkeley, Berkeley, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ripika Bedi",
+        "affiliation": "University of California-Berkeley, Berkeley, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Seong Jong Kim",
+        "affiliation": "University of California-Berkeley, Berkeley, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jeffrey Li",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, University of California-Berkeley, Berkeley, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Wenjun Zhang",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, University of California, Berkeley, Berkeley, CA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470239.html",
+    "paper_id": "470239"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460660.html",
+    "topic": "460660Feasibility Pump for Solving Convex MINLP Problems with Dicopt",
+    "date_time": "November 2016",
+    "abstract": "Feasibility pump for solving convex MINLP problems with DICOPTDavid E. Bernal, S. Vigerske, F. Trespalacios and I.E. GrossmannDICOPT (short for Discrete Continuous Optimizer) is an MINLP solver based on the outer-approximation method[1,2]. This solver combines the algorithms of outer-approximation, equality relaxation and augmented penalty with other existing NLP and MIP solvers [3]. The outer approximation and equality relaxation algorithm proceeds by alternatingly solving NLP subproblems with fixed discrete variables (in the first iteration is the relaxed MINLP) and an outer-approximation MILP master problem that generates cuts to bound the feasible region. The criteria used by DICOPT for establishing optimality in convex MINLP is a crossover, which is obtained as soon as the bound defined by the objective of the last MIP master problem is worse than the best NLP solution found [3].For some problems, DICOPT has difficulty in finding a first feasible solution. The main reason for this is that by default, DICOPT does not include constraint linearization in infeasible solutions, only no-good cuts. Furthermore, even if the linearizations are included for infeasible solution the issue persists in some problems. In order to allow DICOPT to find an initial feasible solution of convex MINLP problems, the implementation of a feasibility pump [4] is incorporated into DICOPT.The feasibility pump is similar to the outer-approximation, but its objective is to find feasible solutions rather than optimal ones. The main idea of this algorithm is to decompose the original mathematical programming problem in two parts: integer feasibility and constraint feasibility. By solving an MIP subproblem its solution is an integer feasible solution, which may violate the constraints; and by solving a continuous relaxation of the original MINLP (NLP subproblem) the solution is constraint feasible but might not be integral. By minimizing in successive iterations the distance between these two types of solutions it is expected to achieve a solution that is both constraint and integral feasible.The feasibility pump can be used as a standalone solver for convex MINLP problems. This is achieved by iteratively applying the method, while including a bound to the objective function. This bound is obtained by the best known solution and an epsilon improvement. The drawback of this algorithm is that may require many iterations, since each time the objective function is restricted to improve only by epsilon.In this work, the feasibility pump is applied in DICOPT before the outer-approximation method. In the feasibility pump, large improvements in the objective function are enforced at each iteration. After the method finishes, all the cuts and the best known solution are passed to the outer-approximation method to find and prove optimality. The described algorithm has been implemented in DICOPT and is available in GAMS 24.5. We present computational results of the new method with over 50 instances of convex MINLP problems, and show that it outperforms the previous version of DICOPT.References1. Duran, Marco A., and Ignacio E. Grossmann. \"An outer-approximation algorithm for a class of mixed-integer nonlinear programs.\" Mathematical programming 36.3 (1986): 307-339.2. Fletcher, Roger, and Sven Leyffer. \"Solving mixed integer nonlinear programs by outer approximation.\" Mathematical programming 66.1-3 (1994): 327-349.3. G. Kocis and I. Grossmann, \"Computational experience with DICOPT solving MINLP problems in process systems engineering,\" Computers and Chemical Engineering 13.3 (1989): 307-315.4. P. Bonami, G. Cornuéjols, A. Lodi and F. Margot, \"A feasibility pump for mixed integer nonlinear programs,\" Mathematical Programming, vol. 119, pp. 331-352, 2009.",
+    "presenting_author": "David E. Bernal | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "David E. Bernal",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Universidad de los Andes",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Bogota",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Colombia",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Stefan Vigerske",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "GAMS",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Frechen",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Germany",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Francisco Trespalacios",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Corporate Strategic Research",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "ExxonMobil",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Clinton",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "NJ and Ignacio E. Grossmann",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Pittsburgh",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "PA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460660.html",
+    "paper_id": "460660"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460661.html",
+    "topic": "460661Rigorous Surrogate-Based Optimization Strategies That Integrate Glass Box/Black Box Process Models",
+    "date_time": "November 2016",
+    "abstract": "Modern nonlinear programming solvers can efficiently handle very large scale optimization problems when accurate derivative information is available. However, black box or derivative free modeling components are often unavoidable in practice when the modeled phenomena may cross length and time scales. This work is motivated by examples in chemical process optimization where most unit operations have well-known equation oriented representations, but some portion of the model (e.g. a complex reactor model) may only be available with an external function call.Several approaches have been proposed to handle this situation. Perhaps the easiest method to implement is to consider the entire system as a black box and apply black box optimization in the space of independent variables. Inequality constraints can be handled using a penalty function method. In a flowsheeting context, this could mean repeatedly simulating the flowsheet in a sequential modular manner at various operating points. Unfortunately, converging the equality constraints (converging the flowsheet) requires many calls to the black box function for each function call used by the derivative free solver. Another approach to this problem is the use of surrogate models (i.e. reduced models). A surrogate model is an equation oriented approximation of the black box that allows traditional derivative based optimization to be applied directly. However, optimization tends to exploit approximation errors in the surrogate model leading to inaccurate solutions and repeated rebuilding of the surrogate model. However, even if the surrogate model is perfectly accurate at the solution, this only guarantees that the original problem is feasible. Because optimality conditions require gradient information, a higher degree of accuracy is required.In this work, we consider the general problem of hybrid glass box/black box optimization, with focus on guaranteeing a sufficient accuracy level in the surrogate model to bound optimality error at a desired level. We first propose an algorithm that combines ideas from SQP filter methods and derivative free trust region methods to solve this class of problems. The black box portion of the model is replaced by a sequence of surrogate models in trust region subproblems. By carefully managing surrogate model construction, the algorithm is guaranteed to converge to optimal solutions of the original, rigorous problem. We then examine how the hybrid structure of the problem can be exploited to reduce the number of updates to the surrogate model. Moreover, with error bounds for a given surrogate model, it is sometimes possible to propagate this error through to optimality error of the surrogate model optimization problem. This information can be used to derive effective termination criteria for the trust region algorithm, or even to inform surrogate model construction by suggesting desired accuracy bounds. These concepts are demonstrated on optimization benchmarks as well as illustrative examples for process optimization.",
+    "presenting_author": "John P. Eason | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "John P. Eason",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Pittsburgh",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "PA and Lorenz T. Biegler",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Pittsburgh",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "PA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460661.html",
+    "paper_id": "460661"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper463439.html",
+    "topic": "463439Machine Learning-Driven Pathway Optimization: Application of Automation in Industrial Biotechnology",
+    "date_time": "November 2016",
+    "abstract": "Microbial biosynthesis of fuels and chemicals often requires heterologous expression of metabolic pathways. To achieve the highest efficiency, the pathway flux must be carefully tuned by changing the expression level of each enzyme in the pathway coupled with a high-throughput screening. However, the high-throughput screening is unavailable for most targets. Here, we present a versatile platform for pathway optimization where a machine learning algorithm directs the experimentation to find the highest producing combination with a minimum number of experiments. Compared with other methods like Exterior Derivative Estimation (EDE) used by Lee et al., [1], our machine learning algorithm was able to find the maximum of the test data with less than half of evaluations required by EDE model. As proof of concept, we sought to optimize the lycopene biosynthesis pathway with 24 different expression levels for each gene resulting in more than 13,000 different combinations. The expression level gradient was achieved by mutating both the T7 promoter and ribosome binding sites (RBS). Although we have developed the iBioFAB platform [2], assembly and characterization of all these combinations is very difficult and expensive, if not impossible. By adding the machine learning component and developing an automation friendly lycopene extraction assay, we can achieve an unprecedented level of automation in pathway optimization. This machine learning driven pathway optimization strategy can be applied to optimize any pathway of interest, especially when a high throughput screening method is not available.1. Lee, M.E., et al.,Expression-level optimization of a multi-enzyme pathway in the absence of a high-throughput assay.Nucleic Acids Res, 2013.41(22): p. 10668-78.2. Chao, R., Y. Yuan, and H. Zhao,Building biological foundries for next-generation synthetic biology.Sci China Life Sci, 2015.58(7): p. 658-65.",
+    "presenting_author": "Mohammad HamediRad | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Mohammad HamediRad",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "University of Illinois at Urbana Champaign",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Urbana",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "IL",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Ran Chao",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical and Biomolecular Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Carl R. Woese Institute for Genomic Biology",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Illinois at Champaign-Urbana",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Urbana",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "IL",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Saurabh Sinha",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Computer Science",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Illinois at Urbana Champaign",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Urbana",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "IL and Huimin Zhao",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical and Biomolecular Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemistry and Biochemistry",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Carl R. Woese Institute for Genomic Biology",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "University of Illinois at Urbana-Champaign",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Urbana",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "IL",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper463439.html",
+    "paper_id": "463439"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper463428.html",
+    "topic": "463428Multiparametric Programming Based Algorithms for Bilevel Mixed-Integer Linear and Quadratic Programming Problems",
+    "date_time": "November 2016",
+    "abstract": "Optimization problems involving two decision makers at two different decision levels are referred to as bilevel programming problems: the first decision maker (upper level; leader) is solving an optimization problem which includes in its constraint set another optimization problem solved by the second decision maker (lower level; follower). Bilevel programming problems are very challenging to solve, even in the linear case. For classes of problems where the lower level problem also involves discrete variables, this complexity is further increased, typically requiring global optimization methods for its solution. Solution approaches for mixed integer bilevel problems with discrete variables in both levels mainly include reformulation approaches [1, 2], branch and bound techniques [3] or genetic algorithms [4], all of which result in approximate solutions.In this work, we present novel algorithms for theexact andglobal solution of two classes of bilevel programming problems, namely (i) bilevel mixed-integer linear programming problems (B-MILP) and (ii) bilevel mixed-integer quadratic programming problems (B-MIQP) containing both integer and continuous variables at both optimization levels. Based on multi-parametric theory and our earlier results [5, 6], the main idea is to recast the lower level problem as a multi-parametric programming problem, in which the optimization variables of the upper level problem are considered as parameters for the lower level. The resulting exact parametric solutions are then substituted into the upper level problem, which can be solved as a set of single-level deterministic mixed-integer programming problems. Extensions to problems including right-hand-side uncertainty on both lower and upper levels are also discussed.References:[1] Mitsos, A. Global solution of nonlinear mixed-integer bilevel programs (2010) Journal of Global Optimization, 47 (4), pp. 557-582.[2] Saharidis, G.K., Ierapetritou, M.G. Resolution method for mixed integer bi-level linear problems based on decomposition technique (2009) Journal of Global Optimization, 44 (1), pp. 29-51.[3] Gümüş, Z.H., Floudas, C.A. Global optimization of mixed-integer bilevel programming problems (2005) Computational Management Science, 2 (3), pp. 181-212.[4] Nishizaki, I., Sakawa, M. Computational methods through genetic algorithms for obtaining Stackelberg solutions to two-level integer programming problems(2005) Cybernetics and Systems, 36 (6), pp. 565-579.[5] Faísca, N.P., Saraiva, P.M., Rustem, B., Pistikopoulos, E.N. A multi-parametric programming approach for multilevel hierarchical and decentralized optimisation problems (2009) Computational Management Science, 6 (4), pp. 377-397.[6] Faisca, N.P., Dua, V., Rustem, B., Saraiva, P.M., Pistikopoulos, E.N. Parametric global optimisation for bilevel programming (2007) Journal of Global Optimization, 38 (4), pp. 609-623.",
+    "presenting_author": "Styliani Avraamidou | Department of Chemical Engineering, Imperial College London, London, United Kingdom",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Styliani Avraamidou",
+        "affiliation": "Department of Chemical Engineering, Imperial College London, London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Richard Oberdieck",
+        "affiliation": "Department of Chemical Engineering, Imperial College London, London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Nikolaos A. Diangelakis",
+        "affiliation": "Department of Chemical Engineering, Imperial College London, London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Efstratios N. Pistikopoulos",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper463428.html",
+    "paper_id": "463428"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper461769.html",
+    "topic": "461769Global Optimization Algorithm for Miqcps Featuring Spatial Branch-and-Bound and Multiparametric Disaggregation",
+    "date_time": "November 2016",
+    "abstract": "Mixed-integer quadratic constrained problems (MIQCPs) can be found in Process Systems Engineering when dealing with design and operational problems. Examples involve water networks [1-2], blending in petroleum refineries [3-9] and hydroelectric power plants [10]. Due to their non-convex nature, MIQCPs are often very difficult to solve to global optimality and sometimes it is already challenging to find a feasible solution. It is thus not surprising that our community has focused on the development of commercial global optimization solvers such as BARON [11] and ANTIGONE [12], which have improved dramatically over the years and can now effectively tackle small to medium sized problems.A key element for global optimization is the computation of a tight lower bound. Three different strategies can essentially be used to achieve this goal: (i) find an equivalent formulation that differs for the better in the quality of the relaxation (perhaps the pooling problem is the most well-known [13]); (ii) rely on piecewise relaxation approaches [14-20], of which multiparametric disaggregation [19-20] has the advantage of adding a number of binary variables that scales logarithmically with the number of partitions (N) that is translated into a significantly better computational performance forN≥10; (iii) instead of reducing the variables domain simultaneously, do it one by one, an iterative procedure known as spatial branch-and-bound (SB&B) that can converge rather slowly.The main novelty of this work is to integrate SB&B with the powerful mixed-integer linear programming relaxation derived from normalized multiparametric disaggregation [20]. Experiments are conducted after selecting one variable to discretize in every bilinear term and using two alternative settings for the number of partitions:N=10 andN=100. Optimality based bound tightening (OBBT) with the standard McCormick relaxation [21] is also performed at every node of the tree, after bisecting the domain of the variable contributing to the largest discrepancy, so as to compute tight lower and upper bounds for all bilinearly appearing variables.Through the solution of a set of 43 NLP and MINLP benchmark problems from the literature, we show that the proposed global optimization algorithm achieves a better performance in terms of optimality gap compared to BARON 14.0.3 and GloMIQO 2.3 [22], beingN=10 the best alternative. This is an indication that both piecewise relaxation approaches and OBBT should be used to a greater extent. On the other hand, GloMIQO led to the lowest computational time, benefiting from the faster solution time in the easiest problems, while BARON had some difficulties in the process network problems but excelled with the MINLP multiperiod blending problems. The latter result is an indication that we should explore branching on the binary variables in future work.Acknowledgments: Financial support from Fundação para a Ciência e Tecnologia (FCT) through the Investigador FCT 2013 program and project UID/MAT/04561/2013.References:[1] D.C. Faria, M.J. Bagajewicz,Novel bound contracting procedure for global optimization of bilinear MINLP problems with applications to water management problems. Comput. Chem. Eng. 35 (2011), pp. 446–55.[2] J.P. Teles, P.M. Castro, H.A. Matos,Global optimization of water networks design using multiparametric disaggregation. Comput. Chem. Eng. 40 (2012), pp. 132–147.[3] H. Lee, J.M. Pinto, I.E. Grossmann, S. Park,Mixed-integer linear programming model for refinery short-term scheduling of crude oil unloading with inventory management. Ind. Eng. Chem. Res. 35 (1996), pp. 1630–41.[4] Jia Z., Ierapetritou, M., Kelly, J.D.: Refinery short-term scheduling using continuous time formulation: crude-oil operations. Ind Eng Chem Res42, 3085–97 (2003).[5] P.M. Castro, I.E. Grossmann,Global optimal scheduling of crude oil blending operations with RTN Continuous-time and Multiparametric Disaggregation. Ind. Eng. Chem. Res. 53 (2014), pp. 15127-15145.[6] C.A. Meyer, C.A. Floudas,Global optimization of a combinatorially complex generalized pooling problem. AIChE J. 52(2) (2006), pp. 1027-1037.[7] S.P. Kolodziej, I.E. Grossmann, K.C. Furman, N.W. Sawaya,A discretization-based approach for the optimization of the multiperiod blend scheduling problem. Comput. Chem. Eng. 53 (2013), pp. 122–142.[8] P. Castro. New MINLP Formulation for the Multiperiod Pooling Problem. AIChE J. 61 (2015), pp. 3728-3738.[9] I. Lotero, F. Trespalacios, M.-S. Cheon, D.J. Papageorgiou, I.E. Grossmann,An MILP- MINLP decomposition method for the global optimization of a source based model of the multiperiod blending problem. Comput. Chem. Eng. 87 (2016), pp. 13-35.[10] P.M. Castro and I.E. Grossmann,Optimality-based bound contraction with multiparametric disaggregation for the global optimization of mixed-integer bilinear problems. J. Global Optim. 59 (2014), pp. 277-306.[11] M. Tawarmalani, N.V. Sahinidis,A polyhedral branch-and-cut approach to global optimization. Math Program. 103(2) (2005), pp. 225–49.[12] R. Misener, C.A. Floudas,ANTIGONE: Algorithms for coNTinuous / Integer Global Optimization of Nonlinear Equations. J. Glob. Optim. 59 (2014), pp. 503-526.[13] N. Boland, T. Kalinowski, F. Rigterink,New multi-commodity flow formulations for the pooling problem. J. Global Optim. DOI 10.1007/s10898-016-0404-x.[14] M.L. Bergamini, P. Aguirre, I.E. Grossmann,Logic-based outer approximation for globally optimalsynthesis of process networks. Comput. Chem. Eng. 29 (2005), pp. 1914–1933.[15] D.N. Wicaksono, I.A. Karimi,Piecewise MILP under- and overestimators for global optimization of bilinear programs. AIChE J. 54 (2008), pp. 991-1008.[16] C.E. Gounaris, R. Misener, C.A. Floudas,Computational comparison of piecewise-linear relaxations for pooling problems. Ind. Eng. Chem. Res. 48 (2009), pp. 5742-5766.[17] M.M.F. Hasan, I.A. Karimi,Piecewise linear relaxation of bilinear programs using bivariate partitioning. AIChE J. 56 (2010), pp. 1880-1893.[18] P.M. Castro,Tightening piecewise McCormick relaxations for bilinear problems. Comput. Chem. Eng. 72 (2015), pp. 300-311.[19] S. Kolodziej, P.M. Castro and I.E. Grossmann,Global Optimization of Bilinear Programs with a Multiparametric Disaggregation Technique. J. Global Optim. 57 (2013), pp. 1039-1063.[20] P.M. Castro,Normalized multiparametric disaggregation: an efficient relaxation for mixed-integer bilinear problems. J. Global Optim. Doi: 10.1007/s10898-015-0342-z.[21] G.P. McCormick,Computability of global solutions to factorable nonconvex programs. Part I. Convexunderestimating problems. Math. Program. 10 (1976), pp. 147-175.[22] R. Misener, C.A. Floudas,GloMIQO: Global mixed-integer quadratic optimizer. J. Global Optim. 53 (2013), pp. 3–50.",
+    "presenting_author": "Pedro M. Castro | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Pedro M. Castro",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Centro de Matemática Aplicações Fundamentais e Investigação Operacional",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Faculdade de Ciências",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Universidade de Lisboa",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Lisbon",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Portugal",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper461769.html",
+    "paper_id": "461769"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper471627.html",
+    "topic": "471627A Microbial Factory for Sustainable Production of Polymer Precursors: Chain Length-Specified ω‑Hydroxy Fatty Acids and α,ω-Dicarboxylic Acids",
+    "date_time": "November 2016",
+    "abstract": "In the hope of advancing sustainable plastic production, great progress has been made toward efficient microbial conversion of renewable feedstock to short-chain (C2-C8), bifunctional polymer precursors (e.g. succinic acid, cadaverine, 1,4-butanediol). Relatively little attention has been given to medium-chain (C12-C14) monomers such as ω-hydroxy fatty acids (ω-OHFAs) and α,ω-dicarboxylic acids (α,ω-DCAs), which nonetheless are precursors to high performance polyesters and polyamides. In our work, we are engineering complete microbial conversions of glucose to various medium chain ω-OHFAs and α,ω-DCAs, with precise control of product chain length. We combine bioinformatics andin vivoproduction to screen a wide range of enzymes across phyla and identify combinations that yield complete conversion of intermediates to product α,ω- DCAs. This approach, coupled with optimization of culture conditions has allowed us to achieve near g/L titers of specific medium chain α,ω- DCAs. In particular, our results indicate potential for this microbial factory to enable commercially relevant, renewable production of C12 α,ω- DCA – a valuable precursor to the high-performance plastic nylon-6,12.",
+    "presenting_author": "Christopher Bowen | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Christopher Bowen",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Washington University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "St. Louis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "MO and Fuzhong Zhang",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Energy",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Environmental",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "and Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Washington University in St. Louis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "St. Louis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "MO",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper471627.html",
+    "paper_id": "471627"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472557.html",
+    "topic": "472557Model-Guided Metabolic Engineering of Increased 2-Phenylethanol Production in Plants",
+    "date_time": "November 2016",
+    "abstract": "2-Phenylethanol (2-PE) is a naturally occurring aromatic with properties that make it a candidate oxygenate for petroleum-derived gasoline. In plants, biosynthesis of 2-PE competes with the phenylpropanoid pathway for the common precursor phenylalanine. The phenylpropanoid pathway in plants directs approximately 30% of carbon flux towards the biosynthesis of lignin, a major constituent of plant cell walls that impedes the process of biofuel production. Therefore, we propose a genetic engineering strategy at the phenylalanine branch point, whereby a portion of the carbon flux towards lignin biosynthesis is diverted towards the production of an economically valuable product, 2-PE. TransgenicArabidopsis thalianawere generated that overexpress aromatic aldehyde synthase (AAS) in tandem with phenylacetaldehyde reductase (PAR) from tomato introducing a pathway for the production of 2-PE. The primary stem was selected as the experimental system for analyzing competition of Phe between phenylpropanoid metabolism and the engineered 2-PE pathway. Excised 5-week-old stems were exogenously fed different concentrations of13C6-ring labeled Phe. Both the amount and isotopic enrichment of downstream intermediates was quantified using LC-MS/MS at multiple time points after feeding. A kinetic model of the phenylpropanoid network was constructed, and the parameters were identified through non-linear optimization with training datasets, and validated with data from an independent experiment.In silicoanalysis of the results from our model predicted that the endogenous cytosolic Phe pools limit the 2-PE production in these transgenic plants. This prediction was tested by combining overexpression of PAR and PAAS with overexpression of a feedback-insensitive 3-deoxy-D-arabino-heptulosonate 7-phosphate (DAHP) synthase, the latter of which has been previously shown to have hyper-induced phenylalanine biosynthesis in Arabidopsis. This transformation led to a significantly increased accumulation of 2-PE in transgenicArabidopsis. The use of kinetic modeling combined with time-coursein vivometabolite profiling is shown to be a promising approach to rationally engineer plants that accumulate high-value commodity chemicals.",
+    "presenting_author": "Shaunak Ray | School of Chemical Engineering, Purdue University, West Lafayette, IN",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Shaunak Ray",
+        "affiliation": "School of Chemical Engineering, Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joseph Lynch",
+        "affiliation": "Department of Biochemistry, Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "John A. Morgan",
+        "affiliation": "Department of Biochemistry, Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Clint Chapple",
+        "affiliation": "Department of Biochemistry, Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Natalia Dudareva",
+        "affiliation": "Department of Biochemistry, Purdue University, West Lafayette, IN",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472557.html",
+    "paper_id": "472557"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper474734.html",
+    "topic": "474734The Emerging Organism Engineering Industry (Featured Presentation)",
+    "date_time": "November 2016",
+    "abstract": "There is an emerging demand for sourcing plant-derived extracts (nutraceuticals, flavors, fragrances, sweeteners, etc.) from engineered microbes. While recent advances in synthetic biology and metabolic engineering provide feasible approaches to engineering such organisms, commercial success for developing these “cultured” ingredients presents specific challenges. Unlike biofuels, where efforts can be focused on one particular molecule given the enormous market size, cultured ingredients require developing different organism lines in a rapid and low cost fashion. This requires a scalable solution for bio-manufacturing of organisms, which is provided by our state of the art foundry that continues to grow. I will describe how organism development at Ginkgo leverages our foundry to accelerate the design/build/test using specific examples. In particular, I will highlight the value of combining computer-aided engineering software tools, cheap gene synthesis and high resolution-accurate mass LCMS to develop engineered microbes. Finally, I’ll touch on how our improvements in manufacturing organisms lend to opportunities outside of cultured ingredients.",
+    "presenting_author": "Reshma Shetty | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Reshma Shetty",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ginkgo Bioworks",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Boston",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "MA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper474734.html",
+    "paper_id": "474734"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460182.html",
+    "topic": "460182Deterministic Global Optimization of Large-Scale Pooling Problems Via Topological Branch-and-Bound",
+    "date_time": "November 2016",
+    "abstract": "The pooling problem is an industrially-relevant nonconvex nonlinear optimization problem minimizing cost on a feed-forward network of input nodes, intermediate storage or pool nodes, and output nodes [1]. The difficulty of the pooling problem arises from the nonconvex bilinear terms representing linear blending in the pools. These bilinear terms, which track quality across the network, typically multiply flow rates by concentrations or flow fractions.This work develops an algorithm that solves specialized pooling problem instances to global optimality and integrates the algorithm into a branch-and-bound framework for more generic instances. Beginning with simple sub-problems, we parameterize with respect to pool concentrations and find embedded polyhedral properties that generate disjunctive cuts for more meaningful test cases. These disjunctive cuts correspond to distinct network topologies and motivate a novel branch-and-bound algorithm based on the set of active network flows.Each sub-restriction of the standard pooling problem can be represented I-L-J-K where I is the number of input feed nodes, L is the number of intermediate storage pool nodes, J is the number of output nodes, and K is the number of tracked qualities in the network. For example, case I-1-1-1 has an arbitrary number of input nodes, 1 pool node, 1 output node, and 1 tracked quality.For restriction I-1-1-1 with no limits on feed availability or pool capacity, this work shows that at most 3 input nodes are active and analytically calculates the optimal solution. Extending to restriction I-1-J-1, we develop a polynomial-time algorithm based on solving a univariate polynomial. This polynomial-time algorithm generalizes and extends recent work analyzing computational complexity of the pooling problem [2—4] since the analysis additionally integrates source-to-output streams and bounds on the network parameters. An interesting result is that subproblem I-1-J-1 preserves similar topological sparsity to I-1-1-1; there are at most J + 2 active input nodes for problems with no limits on feed availability or pool capacity. We also analyze several other limiting cases and thereby develop solution strategies for small problems that can be translated into effectively solving larger problems.Transitioning from the polynomially solvable to the NP-hard instances, we design a topologically based branch-and-bound algorithm that branches on active network topologies and reduces the search space by eliminating infeasible topologies. Optimal flows are now simple to calculate for a fixed topology, so the topological branch-and-bound algorithm can avoid branching on the continuous variables in the pooling problem. We demonstrate the effectiveness of this method on a large number of problems including test cases in MINLPLib2 and the Dey and Gupte [5] test set. Further, we motivate how our results can extend from the pooling problem to any bilinear optimization problem based on process network topology.This work is important for several reasons. First, we enable the solution of large scale pooling problems. Second, we are able to show why and how discretization is so useful for the pooling problem. Beginning in 2006, a significant body of work has shown that discretization from a nonconvex quadratically-constrained quadratic program (QCQP) into a mixed-integer linear program (MILP) is useful for generating rigorous lower bounds [6–8] and primal heuristic solutions [5] for process networks problems with bilinear terms. Our parametric characterization of the pooling problem, which uncovers embedded polyhedrality and disjunctions, show why this strategy has been working to our advantage and motivates how to choose disjunctions for new problems.[1] R Misener and CA Floudas. Advances for the pooling problem: Modeling, global optimization, and computational studies. Appl. Comput. Math., 8(1):3 – 22, 2009.[2] D Haugland. The computational complexity of the pooling problem. J. Glob. Optim., 64(2), 199–215, 2015.[3] N Boland, T Kalinowski, and F Rigterink. A polynomially solvable case of the pooling problem. J. Glob. Optim., DOI: 10.1007/s10898-016-0432-6, 2016.[4] D Haugland and EMT Hendrix. Pooling Problems with Polynomial-Time Algorithms. J. Optim. Theory Appl., DOI: 10.1007/s10957-016-0890-5, 2016.[5] SS Dey and A Gupte. Analysis of MILP techniques for the pooling problem. Oper. Res., 63(2):412–427, 2015.[6] CA Meyer and CA Floudas. Global optimization of a combinatorially complex generalized pooling problem. AIChE J., 52(3):1027 – 1037, 2006.[7] R Karuppiah and IE Grossmann. Global optimization for the synthesis of integrated water systems in chemical processes. Comput. Chem. Eng., 30:650 – 673, 2006.[8] R Misener, JP Thompson, and CA Floudas. APOGEE: Global optimization of standard, generalized, and extended pooling problems via linear and logarithmic partitioning schemes. Comput. Chem. Eng., 35(5):876–892, 2011.",
+    "presenting_author": "Radu Baltean-Lugojan | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Radu Baltean-Lugojan",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Imperial College London",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "London",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "United Kingdom and Ruth Misener",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Computing",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Imperial College",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "London",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "United Kingdom",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460182.html",
+    "paper_id": "460182"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper461757.html",
+    "topic": "461757Engineering Methanogenesis Pathway of Methanogenic Archaea for Biofuel Production",
+    "date_time": "November 2016",
+    "abstract": "Engineering methanogenesis pathway of methanogenic archaea for biofuel productionMaryam Raeeszadeh-Sarmazdeh, Jacqueline Gonzalez, Wilfred ChenDepartment of Chemical and Biomolecular Engineering, University of Delaware, Newark, DE 19716Methane gas is the second most prevalent greenhouse gas and an abundant source of energy in the United States. Methane is both produced and consumed in marine sediments through anaerobic methanogenesis. Methanogenic archaea primarily use one-carbon substrates such as CO2, acetate, or methanol for growth and methanogenesis through CO2reduction, aceticlastic, or methylotrophic pathways, respectively. The key step in the methanogenesis pathway, reducing methyl-coenzyme M (CH3-S-CoM) and coenzyme B (HS-CoB) to methane, is catalyzed by Methyl-coenzyme M reductase (MCR). This reaction, which leads to the formation of a heterodisulfide substrate (CoM-S-S-CoB), is exergonic. Therefore, for reverse methanogenesis to occur, the methane oxidation reaction needs to be coupled with an endergonic reaction that provides a thermodynamically favorable situation.The genetic toolbox in methanogenic archaea is limited. Therefore, we have investigated Nanoluciferase expression, as a sensitive reporter, through episomal expression and integration into the genome inMethanosarcina acetivorans. In order to engineer anaerobic Methanogenesis pathway to produce biofuel, we have expressed functional Methyl-coenzyme M reductase (MCR) fromMethanothermobacter marburgensisinMethanosarcinals. The recombinant strains showed improvement in methane formation yield compared to the wild-type strain. Furthermore, the effect of soluble electron acceptors such as Fe(III), and the regeneration of a heterodisulfide substrate on methane oxidation were investigated.",
+    "presenting_author": "Maryam Raeeszadeh-Sarmazdeh | Chemical and Biomolecular Engineering, University of Delaware, Newark, DE",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Maryam Raeeszadeh-Sarmazdeh",
+        "affiliation": "Chemical and Biomolecular Engineering, University of Delaware, Newark, DE",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jacqueline Gonzalez",
+        "affiliation": "Chemical and Biomolecular Engineering, University of Delaware, Newark, DE",
+        "designation": "Author"
+      },
+      {
+        "name": "Wilfred Chen",
+        "affiliation": "Chemical Engineering, University of Delaware, Newark, DE",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper461757.html",
+    "paper_id": "461757"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper459970.html",
+    "topic": "459970Production of Wax Esters As High-Value Compounds in YeastYarrowia Lipolytica",
+    "date_time": "November 2016",
+    "abstract": "Wax esters have a lot of applications in lubricant, cosmetics, inking, and coating industries. Currently the main biological source for wax esters is the seeds of jojoba. Mainly due to the limited supply of jojoba, wax esters are currently produced at a high cost. To alleviate this issue, we introduced the wax ester biosynthetic pathway into the oleaginous yeast,Yarrowia lipolytica, which is well known for its superior ability toaccumulate triacylglycerol (TAG) under appropriate culturing condition and genetics combinations. To divert the metabolic flux from TAG biosynthesis to wax ester biosynthesis, the genes involved in the wax synthetic pathway from difference sources with unique substrate specificities were tested, and several metabolic engineering strategies have been applied to increase precursor availability and remove substrate competition. The resulting strain produced wax esters at a titer 5-fold higher than the previous record in literature. With a comprehensive optimization on medium recipe, we anticipate a further significant improvement in wax ester titer.",
+    "presenting_author": "Le Zhao | Chemical and Biological Engineering, Iowa State University, Ames, IA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Le Zhao",
+        "affiliation": "Chemical and Biological Engineering, Iowa State University, Ames, IA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Fuyuan Jing",
+        "affiliation": "Biochemistry, Biophysics, and Molecular Biology, Iowa State University, Ames, IA",
+        "designation": "Author"
+      },
+      {
+        "name": "James Yu",
+        "affiliation": "University of California, Irvine, Irvine, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Suzanne Sandmeyer",
+        "affiliation": "University of California, Irvine, Irvine, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Jacqueline V. Shanks",
+        "affiliation": "Chemical and Biological Engineering, Iowa State University, Ames, IA",
+        "designation": "Author"
+      },
+      {
+        "name": "Zengyi Shao",
+        "affiliation": "Department of Chemical and Biological Engineering, Iowa State University, Ames, IA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper459970.html",
+    "paper_id": "459970"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460618.html",
+    "topic": "460618Solving Mpccs with IPOPT",
+    "date_time": "November 2016",
+    "abstract": "Mathematical Programs with Complementarity Constraints (MPCCs) are used to model certain types of disjunctions without introducing binary variables. Mathematically, bi-level optimization, piecewise functions, and equilibria all can be reformulated as MPCCs. In process optimization, complementarities allow for models containing disappearance of phases, flow reversal, safety valve options, and some other discrete events within an NLP framework. However, MPCCs pose well-known difficulties, particularly because they violate constraint qualifications (CQs), such as the Linear Independence Constraint Qualification and the Mangasarian Fromovitz Constraint Qualification, at all feasible points. Without a CQ, the classical necessary optimality conditions do not apply so the optimum may or may not be a KKT point. Therefore MPCCs are challenging for most NLP solvers, which are based on the KKT conditions.Nevertheless, nonlinear programming reformulation strategies may be used to find strongly stationary MPCC solutions, which are characterized by solutions to relaxed nonlinear programming (RNLP) problems that satisfy LICQ. Such reformulations include i) inequality relaxations of the complementarity constraints, ii) replacing complementarity constraints by smoothed NCP functions and iii) embedding complementarity terms as exact penalties. Inequality relaxations solve a sequence of more and more ill-posed NLPs. Similarly, the NCP function reformulation is extremely nonlinear near the solution leading to numerical difficulty. The exact penalty reformulation requires a priori knowledge of a suitable penalty parameter to be effective.This talk discusses our experiences in extending the well-known primal-dual barrier solver, IPOPT, which is designed for large scale NLP problems, to deal with the solution of MPCCs. First, we propose two automatic penalty adjustment approaches in IPOPT. The first approach is similar to that from Leyffer, Lopez-Calva and Nocedal (2007), in which the complementary error is checked and the penalty parameter is potentially adjusted after each barrier problem is converged. The second approach only adjusts the penalty term after the penalty NLP converges. Next, we propose an improvement to the equality reformulation of MPCCs. When a complementary constraint is biactive, the equality constraint leads to a singular row in the Jacobian. For this case, our previous work on structured regularization can detect dependent equalities automatically and numerically eliminate them at each iteration. Therefore, we propose an altered equality reformulation of MPCCs using structured regularization. If only one part of a complementary constraint is active, we relax the corresponding inequality constraint to effectively remove this constraint. As a result, the problem is well posed at all points and the modified Newton step leads to fast convergence.We evaluate the proposed approaches on 120 problems from the MacMPEC library, other examples that do not have strongly stationary solutions, and several larger MPCCs derived on engineering systems. The latter examples are also scalable to variable problem sizes. For all of these case, we compare the efficiency of the new approaches are compared to previous NLP reformulation strategies.",
+    "presenting_author": "Wei Wan | ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Wei Wan",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Carnegie Mellon Univeristy",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Pittsburgh",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "PA and Lorenz T. Biegler",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Department of Chemical Engineering",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Pittsburgh",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "PA",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460618.html",
+    "paper_id": "460618"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464425.html",
+    "topic": "464425Capacity Planning of Industrial Gas Plants with Rational Markets Under Demand Uncertainty",
+    "date_time": "November 2016",
+    "abstract": "Capacity planning under uncertainty is a crucial problem for industrial gases companies due to the significant capital requirements. With dynamic market conditions, it is extremely important for these companies to develop capacity expansion plans based on realistic models. Insufficient capacity may lead to loss of market share and excessive investments in capacity may have a detrimental impact on their economic performance. Uncertainty in future demands and competition among producers to satisfy them, increase the complexity of the capacity planning problem. However, the role of uncertainty and rational decision-makers is fundamental for the success of capacity expansion projects.Capacity planning for industrial gas producers is a challenging task because expansion plans are highly dependent on market behavior and the future demands [1]. A suboptimal expansion strategy may lead to unnecessary investments or loss of market share. To mitigate the risk associated with uncertain demands and to account for market preferences in the face of competition, a stochastic bi-level MILP optimization model is proposed [4].The stochastic bilevel MILP optimization model involves an upper level that maximizes the expected Net Present Value (NPV) of an industrial producer, and a lower level that minimizes the expected cost paid by the markets over different demand scenarios. The upper level determines capacity planning decisions, which are modeled with discrete variables; whereas the lower level is a Linear Program (LP) which assigns market demands to competing producers. Our formulation finds a Stackelberg equilibrium between the leading producer and the markets. The producer makes the first move by deciding on the expansion plan, considering the rational responses of the markets in each scenario; then, the markets respond according to their cost minimization criterion. The strong Stackelberg equilibrium is found from the solution of the bilevel optimization problem. In order to solve the capacity planning problem, we reformulate it as a single-level MILP optimization problem. This reformulation leverages the strong duality property of the lower-level LP [2,3]. Uncertainty is considered in scenarios describing different realizations of demand. In this way, the upper level of the bi-level program maximizes the expected NPV obtained from the capacity expansion plan, while the lower level minimizes the cost paid by the markets in different scenarios. The model also accommodates the possibility to distribute capacity among different products and has the flexibility to constrain their production ratios.The proposed capacity planning model is first implemented on a small illustrative example. The results demonstrate the advantages over its equivalent deterministic formulation. In particular, in the face of large uncertainties in demands, the proposed stochastic model is more conservative in the investments but resulting in a higher expected NPV compared to implementing the deterministic model under conditions of uncertainly. An effective domain reduction strategy developed to solve large-scale problems is demonstrated with an industrial size example. A stochastic bi-level model for capacity planning with non-uniform time periods is also proposed to better handle demand forecasting and to reduce the problem size of the resulting MILP.[1] Eppen, G.D., R.K. Martin, L.Schrage, 1989. A scenario approach to capacity planning. Operations Research 37 (4), 517–527.[2] Garcia-Herreros, P., Misra, P., Arslan, E., Mehta, S., Grossmann, I. E., 2015. A duality-based approach for bilevel optimization of capacity expansion. In: Krist V. Gernaey, J. K. H., Gani, R. (Eds.), 12th International Symposium on Process Systems Engineering and 25th European Symposium on Computer Aided Process Engineering. Vol. 37 of Computer Aided Chemical Engineering. pp. 2021–2026.[3] Garcia-Herreros, P; Zhang, L., Misra, P., Arslan, E., Mehta, S., Grossmann, I.E., 2015. Mixed-integer bilevel optimization for capacity planning with rational markets. Computers & Chemical Engineering 86, pp. 33-47.[4] Ryu, H., V. Dua, E.N. Pistikopoulos, 2004. A bilevel programming framework for enterprise-wide process networks under uncertainty. Computers & Chemical Engineering 28, 1121–1129",
+    "presenting_author": "Anvitha Kandiraju | Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Anvitha Kandiraju",
+        "affiliation": "Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "**Pablo Garcia-Herreros",
+        "affiliation": "Aurubis A.G., Hamburgh, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Ignacio E. Grossmann",
+        "affiliation": "Department of Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Pratik Misra",
+        "affiliation": "Computational Modeling Center, Air Products and Chemicals, Inc., Allentown, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Erdem Arslan",
+        "affiliation": "Computational Modeling Center, Air Products and Chemicals, Inc., Allentown, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Sanjay Mehta",
+        "affiliation": "Air Products, Allentown, PA",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464425.html",
+    "paper_id": "464425"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462360.html",
+    "topic": "462360Multi-Parametric Quadratic Programming: Past, Present and Future",
+    "date_time": "November 2016",
+    "abstract": "In multi-parametric programming (mp-P), an optimization problem is solved for a range and as a function of certain parameters [1]. Due to its wide variety of applications, there has been a significant interest within the research community to solve mp-P problems efficiently. The most common class of mp-P problems are thereby multi-parametric quadratic programming (mp-QP) problems, as they arise in areas such as explicit model predictive control [2] of discrete-time linear systems and bilevel programming [3]. In this work, we examine the current state-of-the-art for mp-QP theory and algorithms. In particular, we draw upon a historical description of the evolution of the theory and algorithms related to mp-QP problems in order to highlight the current state-of-the-art and the research direction forwards with respect to mp-QP problems. The first comprehensive solution approach for mp-QP problems was presented in 2002 [2], where the geometrical interpretation of the parameter space was used to move from one region, where an active set is optimal, to another. However, as this approach introduces a large number of artificial cuts, several researchers have proposed modifications, including a variable step-size approach [4], inferring the active set of the adjacent critical regions from the irredundant constraints [5] and a combination thereof [6]. Each region of optimality, called critical region, is uniquely identified by its active set. Thus, soon after [2] appeared, researchers suggested the exhaustive enumeration of all active sets in order to solve mp-QP problems [7]. However, this combinatorial approach only became computationally tractable in 2011, when a branch-and-bound algorithm was suggested, which used the fact that if a candidate active set is infeasible, so is its superset [8]. The efficiency of the approach was refined in [9] by considering symmetry elements.Although both approaches solve the same problem, so far no attempt has been made to unify the properties underpinning these algorithms. In this work, we discuss such a unified strategy by proving that the solution to a mp-QP problem is given by a connected graph. Each node is thereby an active set and a connection between two nodes is generated based on geometrical arguments which indicate adjacency. Combined with the branch-and-bound approach in [8], this novel approach limits the number of candidate active sets to be considered. In the case of primal and dual degeneracy, it can be proven that there exists a single graph which solves the problem, resulting in a set of disjoint critical regions. This new development, part of our POP toolbox, is demonstrated through a unique computational study, where the computational abilities of state-of-the-art geometrical, combinatorial and connected-graph algorithm implementations are shown and compared. In addition, these results are compared with the latest version of the MPT toolbox [10], a software tool which solves mp-QP problems by reformulating them as multi-parametric linear complementarity problems. Based on these developments, we investigate the future research directions for mp-QP algorithms. In particular, we highlight the ability to apply parallelization strategies, the limitation of storage requirements and the extension of these results to general multi-parametric non-linear programming.References[1] Pistikopoulos, E. N.; Diangelakis, N. A.; Oberdieck, R.; Papathanasiou, M. M.; Nascu, I.; Sun, M. (2015) PAROC - an Integrated Framework and Software Platform for the Optimization and Advanced Model-Based Control of Process Systems. Chemical Engineering Science, 136, 115 – 138.[2] Bemporad, A.; Morari, M.; Dua, V.; Pistikopoulos, E. N. (2002) The explicit linear quadratic regulator for constrained systems. Automatica, 38(1), 3 – 20.[3] Faisca, N. P.; Dua, V.; Rustem, B.; Saraiva, P. M.; Pistikopoulos, E. N. (2007) Parametric global optimisation for bilevel programming. Journal of Global Optimization, 38(4), 609 – 623.[4] Baotic, M. (2002) An Efficient Algorithm for Multiparametric Quadratic Programming. Technical Report, ETH Zurich.[5] Tondel, P.; Johansen, T. A.; Bemporad, A. (2003) An algorithm for multi-parametric quadratic programming and explicit MPC solutions. Automatica, 39(3), 489 – 497.[6] Spjotvold, J.; Kerrigan, E. C.; Jones, C. N.; Tondel, P.; Johansen, T. A. (2006) On the facet-to-facet property of solutions to convex parametric quadratic programs. Automatica, 42(12), 2209 – 2214.[7] Seron, M. M.; Goodwin, G. C.; de Dona, J. A. (2002) Finitely parameterised implementation of receding horizon control for constrained linear systems. Proceedings of the American Control Conference, vol. 6, 4481 – 4486.[8] Gupta, A.; Bhartiya, S.; Nataraj, P. S. V. (2011) A novel approach to multiparametric quadratic programming. Automatica, 47(9), 2112 – 2117.[9] Feller, C.; Johansen, T. A.; Olaru, S. (2013) An improved algorithm for combinatorial multi-parametric quadratic programming. Automatica, 49(5), 1370 – 1376.[10] Herceg, M.; Jones, C. N.; Kvasnica, M.; Morari, M. (2015) Enumeration-based approach to solving parametric linear complementarity problems. Automatica, 62, 243 – 248.",
+    "presenting_author": "Richard Oberdieck | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Richard Oberdieck",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nikolaos A. Diangelakis",
+        "affiliation": "Department of Chemical Engineering, Imperial College London, London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Efstratios N. Pistikopoulos",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462360.html",
+    "paper_id": "462360"
+  }
+]

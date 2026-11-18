@@ -1,0 +1,337 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714577",
+    "paper_endpoint": "Paper/714577",
+    "paper_id": "714577",
+    "topic": "Reduced-Space Multi-Fidelity Bayesian Optimization of Process Flowsheets",
+    "title": "Reduced-Space Multi-Fidelity Bayesian Optimization of Process Flowsheets",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57102",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "13",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Flowsheet models are integral to process systems engineering, enabling the simulation and optimization of complex (bio)chemical processes. These models offer insights into key performance indicators (KPIs) such as cost, efficiency, and environmental impact. However, these models are often treated as black boxes, particularly when using commercial simulation software that relies on steady-state assumptions and heuristic rules. In such cases, the underlying equations and derivative information are inaccessible, making conventional gradient-based optimization approaches impractical. Data-driven optimization techniques, such as Bayesian Optimization (BO), are well-suited for such expensive and derivative-free problems [1,2]. While BO is well-suited for low-sample, black-box problems, its scalability to high-dimensional settings remains a known challenge [3]. To address this, Global Sensitivity Analysis (GSA) [4] can be employed to identify influential decision variables that drive variability in the objective function and reduce problem dimensionality. By quantifying both individual and interaction effects [5], GSA can help streamline the optimization process by focusing on the most impactful inputs. While this enables more efficient exploration, BO remains computationally expensive when applied directly to high-fidelity simulation models. Conversely, surrogate-based approaches using feedforward artificial neural networks (ANNs) can drastically reduce evaluation time, but suffer from model mismatch: their predicted objective values often deviate from the true objective function, potentially yielding suboptimal solutions when used in isolation [6]. To address this trade-off, we propose a multi-fidelity Bayesian optimization (MFBO) [7] framework that integrates both high-fidelity simulator evaluations and low-fidelity ANN surrogates. The key insight underpinning this approach is that, although ANN predictions may be biased or imprecise in terms of objective value, they nonetheless provide informative guidance toward promising regions in the decision space. We model the high-fidelity objective as a linear transformation of the low-fidelity function, augmented by a discrepancy term, i.e., ƒ high (x) = ρ·ƒ low (x) + δ(x), where ρ is a scaling parameter and δ(x) is a zero-mean Gaussian process capturing the residual. These parameters are estimated via maximum likelihood using co-located evaluations from both fidelities. A multi-fidelity Gaussian process model is constructed over this joint space, enabling the use of acquisition functions such as multi-fidelity expected improvement (MF-EI) to select optimal inputs and fidelity levels at each iteration. We evaluate the proposed MFBO framework on an industrially relevant case study: plasmid DNA production modeled in SuperPro Designer with 18 decision variables. Comparisons are drawn against baseline strategies including simulation-based BO (with and without GSA) and surrogate-based BO. Results demonstrate that MFBO achieves near-optimal solutions while reducing total computational cost by up to two orders of magnitude relative to high-fidelity simulation-based BO. Moreover, MFBO exhibits improved reliability over surrogate-only strategies, by explicitly accounting for surrogate bias and uncertainty. These findings underscore the utility of multi-fidelity optimization for real-time or resource-constrained flowsheet design problems. References : [1] F. Boukouvala, M.G. Ierapetritou, \"Derivative-free optimization for expensive constrained problems using a novel expected improvement objective function,\" AIChE J. , 60(7):2462–2474, 2014. [2]. D. van de Berg, T. Savage, P. Petsagkourakis, D. Zhang, N. Shah, E.A. del Rio-Chanona, \"Data-driven optimization for process systems engineering applications,\" Chem. Eng. Sci. , 248:117135, 2022. [3] E. Brochu, V.M. Cora, N. De Freitas, \"A tutorial on Bayesian optimization of expensive cost functions, with application to active user modeling and hierarchical reinforcement learning,\" arXiv preprint , arXiv:1012.2599, 2010. [4] A. Saltelli, P. Annoni, I. Azzini, F. Campolongo, M. Ratto, S. Tarantola, \"Variance based sensitivity analysis of model output. Design and estimator for the total sensitivity index,\" Comput. Phys. Commun. , 181(2):259–270, 2010. [5] S. Kucherenko, \"SobolHDMR: a general-purpose modeling software,\" Synth. Biol. , pp. 191–224, 2013. [6] N. Triantafyllou, B. Lyons, A. Bernardi, B. Chachuat, C. Kontoravdi, M.M. Papathanasiou, \"Comparative assessment of simulation-based and surrogate-based approaches to flowsheet optimization using dimensionality reduction,\" Comput. Chem. Eng. , 189:108807, 2024. [7] K. Kandasamy, G. Dasarathy, J. Schneider, B. Póczos, \"Multi-fidelity Bayesian optimisation with continuous approximations,\" in Proc. 34th Int. Conf. Mach. Learn. (ICML) , PMLR 70:1799–1808, 2017.",
+    "presenting_author": "Niki Triantafyllou | Imperial College London, United Kingdom",
+    "authors": [
+      "Niki Triantafyllou | Imperial College London, United Kingdom",
+      "Cleo Kontoravdi | Imperial College London, United Kingdom",
+      "Maria Papathanasiou | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Niki Triantafyllou",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Cleo Kontoravdi",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Maria Papathanasiou",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "13a",
+    "sortable_time": "2025-11-02_15:30:00_15:51:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714577"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712953",
+    "paper_endpoint": "Paper/712953",
+    "paper_id": "712953",
+    "topic": "Leveraging Qualitative Information to Improve Hybrid Models",
+    "title": "Leveraging Qualitative Information to Improve Hybrid Models",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57102",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "13",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Abstract Mechanistic modeling (also referred to as first-principle modeling) exploits detailed or phenomenological understanding of physics, chemistry, and biology to obtain a mathematical representation of a manufacturing process. On the other hand, data-driven modeling (i.e., machine learning and artificial intelligence) leverage large datasets to provide a model for a given purpose, e.g., prediction of the product quality. Data-driven models have become increasingly common in the chemical process industry [ 1 , 2]. Mechanistic and data driven modeling offer somewhat complementary benefits and drawbacks. Hybrid modeling [ 3] combines the two paradigms to take the best of both worlds: compared to purely data-driven models, hybrid models offer better interpretability, increased extrapolation performance, and reduced data requirements for training, yet maintaining a reasonably simple development workflow as compared to purely mechanistic models. Hybrid modeling and, more broadly, the integration of process knowledge and data can be achieve in several ways: using mechanistic and data-driven elements as “blocks” in a single model [ 4]; augmenting the dataset for data-driven modeling by designing physically meaningful variables [ 5]; modifying the structure of data-driven models to reflect physical laws (e.g., conservation of mass) [ 6]; and using mechanistic models as constraints in the data-driven model training [7]. All the aforementioned approaches to hybrid modeling rely on the underlying assumption that a mechanistic model is available or can be easily derived from the available data. If this is not the case, a mechanistic model needs to be derived prior or simultaneously to the inclusions of the data-driven model. However, this could entail significant investment of time and resources, plus the need for tailored parameter identification procedures [ 8]. An alternative solution is to exploit another form of domain knowledge: qualitative information. Qualitative domain knowledge is often available at little to no cost, as it only requires an understanding of the fundamentals of the process being modeled. Examples include bounds of variables, monotonicity of the relationship among variables, and information on causality. The use of qualitative information has shown significant benefits in process monitoring [ 9 , 10]. However, this precious form of knowledge remains overlooked in the hybrid modeling literature, with very few studies considering it [ 11 , 12]. Yet, qualitative information has the potential to improve the quality of models derived from process data, especially when data are sparse or offer only partial coverage of the domain of interest, which is the typical case of data from industrial processes [ 13]. In this study, we explore the potential of including qualitative knowledge in the hybrid modeling paradigm. We first provide several examples of qualitative information typically available in chemical engineering modeling tasks. We then discuss possible ways to use qualitative knowledge to improve data-driven models. Finally, we present two examples of hybrid models of chemical processes, e.g., a pH neutralization process and catalytic reaction process, to illustrate the benefits of including qualitative information. References [1] Reis MS, Saraiva PM. Data-centric process systems engineering: A push towards PSE 4.0. Computers & Chemical Engineering. 2021; 155: 107529. [2] Romagnoli JA, Briceno-Mena LA, Manee V. AI in Chemical Engineering. CRC Press 2025. [3] Stosch M, Oliveira R, Peres J, Azevedo Sa. Hybrid semi-parametric modeling in process systems engineering: Past, present and future. Computers & Chemical Engineering. 2014; 60: 86–101. [4] Oliveira R. Combining first principles modelling and artificial neural networks: A general framework. Computers & Chemical Engineering. 2004; 28: 775–766. [5] Severson KA, Attia PM, Jin N, Perkins N, Jiang B, Yang Z, Chen MH, Aykol M, Herring PK, Fraggedakis D, Bazant MZ, Harris SJ, Chueh WC, Braatz RD. Data-driven prediction of battery cycle life before capacity degradation. Nature Energy. 2019; 4: 383–391. [6] Beucler T, Pritchard M, Rasp S, Ott J, Baldi P, Gentine P. Enforcing analytic constraints in neural- networks emulating physical systems. Physical Review Letters. 2021; 126: 098302. [7] Raissi M, Perdikaris P, Karniadakis GE. Physics-informed neural networks: A deep learning frame work for solving forward and inverse problems involving nonlinear partial differential equations. Journal of Computational Physics. 2019; 378: 686–707. [8] Yang A, Martin E, Morris J. Identification of semi-parametric hybrid process models. Computers & Chemical Engineering. 2011; 53: 63–70. [9] Chiang LH, Braatz RD. Process monitoring using causal map and multivariate statistics: fault detection and identification. Chemometrics and Intelligent Laboratory Systems. 2003; 65: 159–178. [10] Reis MS, Gins G, Rato TJ. Incorporation of process-specific structure in statistical process monitoring: A review. Journal of Quality Technology. 2019; 51: 407–421. [11] Muralidhar N, Islam MR, Marwah M, Karpatne A, Ramakrishnan N. Incorporating prior domain knowledge into deep neural networks. in IEEE International Conference on Big Data (Big Data): 36–45 2018. [12] Daw A, Karpatne A, Watkins W, Read J, Kumar V. Physics-guided neural networks (PGNN): An application in lake temperature modeling. arXiv. 2021. 2 [13] Thebelt A, Wiebe J, Kronqvist J, Tsay C, Misener R. Maximizing information from chemical engineering data sets: Applications to machine learning. Chemical Engineering Science. 2022; 252; 117469. Funding Acknowledgements Financial support from The Dow Chemical Company is acknowledged.",
+    "presenting_author": "Elia Arnese Feffin | Massachusetts Institute of Technology, Cambridge",
+    "authors": [
+      "Elia Arnese Feffin | Massachusetts Institute of Technology, Cambridge",
+      "Nidhish Sagar | Massachusetts Institue of Technology, Cambridge",
+      "Luis Briceno-Mena | The Dow Chemical Company, Collegeville",
+      "Birgit Braun | Dow Chemical, Pearland, TX",
+      "Ivan Castillo | The Dow Chemical Company, Lake Jackson, TX",
+      "Caterina Rizzo | The Dow Chemical Company, Terneuzen, Netherlands",
+      "Linh Bui | University of Minnesota, Minneapolis, MN",
+      "Jinsuo Xu | Dow Chemical Company",
+      "Leo Chiang | Dow Inc., Lake Jackson, TX",
+      "Richard D. Braatz | Massachusetts Institute of Technology, Cambridge"
+    ],
+    "authors_structured": [
+      {
+        "name": "Elia Arnese Feffin",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nidhish Sagar",
+        "affiliation": "Massachusetts Institue of Technology, Cambridge",
+        "designation": "Author"
+      },
+      {
+        "name": "Luis Briceno-Mena",
+        "affiliation": "The Dow Chemical Company, Collegeville",
+        "designation": "Author"
+      },
+      {
+        "name": "Birgit Braun",
+        "affiliation": "Dow Chemical, Pearland, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Ivan Castillo",
+        "affiliation": "The Dow Chemical Company, Lake Jackson, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Caterina Rizzo",
+        "affiliation": "The Dow Chemical Company, Terneuzen, Netherlands",
+        "designation": "Author"
+      },
+      {
+        "name": "Linh Bui",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      },
+      {
+        "name": "Jinsuo Xu",
+        "affiliation": "Dow Chemical Company",
+        "designation": "Author"
+      },
+      {
+        "name": "Leo Chiang",
+        "affiliation": "Dow Inc., Lake Jackson, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Richard D. Braatz",
+        "affiliation": "Massachusetts Institute of Technology, Cambridge",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "13b",
+    "sortable_time": "2025-11-02_15:51:00_16:12:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712953"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716912",
+    "paper_endpoint": "Paper/716912",
+    "paper_id": "716912",
+    "topic": "Scale up of Novel Algae Based Ccus Technology- a Multiscale Modeling and Optimization Framework",
+    "title": "Scale up of Novel Algae Based Ccus Technology- a Multiscale Modeling and Optimization Framework",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57102",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "13",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Carbon Capture, Utilization, and Sequestration (CCUS) is expected to play a pivotal role in global efforts to mitigate greenhouse gas (GHG) emissions, particularly from hard-to-abate sectors such as cement, steel, and petrochemicals. Despite its potential, the commercial-scale deployment of CCUS technologies remains limited due to a complex interplay of economic, technological, and policy barriers [1]. One promising pathway to enhance the feasibility of CCUS is carbon valorization wherein the captured CO 2 is transformed into value-added products. This approach not only offsets the cost of carbon capture but also displaces fossil-derived chemicals and fuels, creating a dual benefit. Algae- based CCUS systems are a prime example of this concept, leveraging microalgae’s rapid growth and high CO 2 uptake to convert emissions into biomass, which can be further processed into biofuels, animal feed, nutraceuticals, or specialty chemicals. In this presentation, we present our recent progress in building a holistic, multiscale framework to accelerate the development, scale-up, and evaluation of novel CCUS technologies. This framework is applied on an ongoing DOE project (DEFE-0032108) where a novel algae based CCUS technology is being developed. Our methodology integrates: 1) Process Modeling - We develop detailed physics-based, first-principle models to simulate the dynamic behavior of photobioreactor. This model enables the system to be interrogated under various operational conditions through scenario analyses. 2) Sensitivity and Uncertainty Analysis - Through sensitivity analysis, we identify the most influential parameters impacting system outputs, guiding experimental design, and prioritizing research efforts. [2] 3) Process Optimization and Control - We implement model predictive control strategies [3] to help the system maintain stability as well as improve the performance. 4) Techno-Economic Analysis (TEA) and Life Cycle Assessment (LCA)- At the macroscale, we develop integrated TEA and LCA models [4] to evaluate the levelized cost of biomass production and associated environmental impacts. These assessments provide benchmarking against extant technologies as well as help in evaluating trade-offs between competing objectives. References [1] M. M. F. Hasan, M. S. Zantye, and M.-K. Kazi, “Challenges and opportunities in carbon capture, utilization and storage: A process systems engineering perspective,” Computers & Chemical Engineering, vol. 166, p. 107925, 2022. [2] A. Kiparissides, S. Kucherenko, A. Mantalaris, and E. N. Pistikopoulos, “Global sensitivity analysis challenges in biological systems modeling,” Industrial & Engineering Chemistry Research, vol. 48, no. 15, pp. 7168–7180, 2009. [3] E. N. Pistikopoulos, N. A. Diangelakis, R. Oberdieck, M. M. Papathanasiou, I. Nascu, and M. Sun, “Paroc—an integrated framework and software platform for the optimisation and advanced model-based control of process systems,” Chemical Engineering Science, vol. 136, pp. 115–138, 2015. [4] A. Hugo and E. N. Pistikopoulos, “Environmentally conscious long-range planning and design of supply chain networks,” Journal of Cleaner Production, vol. 13, no. 15, pp. 1471–1491, 2005.",
+    "presenting_author": "Swaminathan Sundar | Texas A&M Energy Institute, Texas A&M University, College Station, TX",
+    "authors": [
+      "Swaminathan Sundar | Texas A&M Energy Institute, Texas A&M University, College Station, TX",
+      "Rahul Kakodkar | Texas A&M University, College Station, TX",
+      "Dustin Kenefake | Texas A&M University, College Station, TX",
+      "Efstratios Pistikopoulos | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Swaminathan Sundar",
+        "affiliation": "Texas A&M Energy Institute, Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Rahul Kakodkar",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Dustin Kenefake",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Efstratios Pistikopoulos",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "13c",
+    "sortable_time": "2025-11-02_16:12:00_16:33:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716912"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712964",
+    "paper_endpoint": "Paper/712964",
+    "paper_id": "712964",
+    "topic": "AI-Assisted Ontology-Based Hybrid Model for Automating and Simulating HAZOP Analysis",
+    "title": "AI-Assisted Ontology-Based Hybrid Model for Automating and Simulating HAZOP Analysis",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57102",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "13",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Hazard and operability (HAZOP) analysis is a systematic way of identifying every possible process deviation, propagational, and adverse hazardous consequences in a chemical plant. This is a complex, time-consuming, and labour-intensive process with multiple levels of brainstorming that can benefit from automating and AI assistance. Though the idea of automating HAZOP analysis is not new [1,2,3] , we propose a novel simulator framework that combines the ontology-based symbolic knowledge and the data-based attention approach to create a hybrid HAZOP graph. Data-based brute-force techniques have a significant downfall regarding explainability and trustworthiness, making these hybrid models work and reason better for precious data problems in chemical engineering. Using an ontology with a well-defined knowledge base with process-specific and process-generic frameworks for failures, causes, and propagation, a HAZOP graph with a property vector for each node corresponding to its failures is introduced. A complete simulation is performed by disturbing these property vectors while the attention mechanism predicts the hazard in the subsequent nodes, mimicking the hazard flow as a continuous and discrete process. Using the simulation results, the likelihoods of failures are quantified and ranked for better analysis. Venkatasubramanian, V. and Vaidhyanathan, R., “A Knowledge-Based Framework for Automating HAZOP Analysis”, AIChE Journal , 40 (3), 1994, pp. 496 – 505. Srinivasan, R. and Venkatasubramanian, V., “Automating HAZOP Analysis of Batch Chemical Plants: Part I. The Knowledge Representation Framework”, Computers and Chemical Engineering, 22 (9), 1998, pp. 1345 – 1355. Zhao, C., Bushan, M. and Venkatasubramanian, V., “PHASuite: An Automated HAZOP Analysis Tool for Chemical Processes Part I Knowledge Engineering Framework”, Process Safety and Environmental Protection , Trans IChemE Part B , 83(B6), 2005.",
+    "presenting_author": "Sanjeevrajan Nagavelu | Columbia University, New York, NY",
+    "authors": [
+      "Sanjeevrajan Nagavelu | Columbia University, New York, NY",
+      "Ruohan Jiang | Columbia University, New York, NY",
+      "Venkat Venkatasubramanian | Columbia University, New York, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sanjeevrajan Nagavelu",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ruohan Jiang",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Venkat Venkatasubramanian",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "13d",
+    "sortable_time": "2025-11-02_16:33:00_16:54:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712964"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716187",
+    "paper_endpoint": "Paper/716187",
+    "paper_id": "716187",
+    "topic": "Physics-Guided Recurrent Generative Adversarial Network for Battery Capacity Prediction",
+    "title": "Physics-Guided Recurrent Generative Adversarial Network for Battery Capacity Prediction",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57102",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "13",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Battery capacity, defined as the maximum available charge or power in a fully charged battery, is a key indicator of its health [1]. Over time, the capacity of batteries declines due to energy loss and aging. Accurately predicting battery capacity is crucial for improving system reliability; however, this task is challenging due to the complex and nonlinear nature of battery systems. Therefore, capacity prediction has been an active area of research. Various methods, broadly classified into physics-based and data-driven approaches, have been proposed. The physics-based approach considers electrochemical characteristics and reactions in the battery and is stable, accurate, and interpretable. However, these models are complex, computationally expensive to solve, and require frequent parameter updates to account for battery aging [2]. In contrast, data-driven methods offer high computational efficiency, but their accuracy heavily depends on the availability of large, high-quality run-to-failure training datasets. Such data is not always accessible due to the high cost and time required for experiments, especially when data representing significant aging or run-to-failure is needed [3]. Generative models, such as generative adversarial networks (GANs), can generate high-quality synthetic data by learning the distribution of real data through adversarial training between a generator and a discriminator [4]. This approach serves as an effective data augmentation technique for enhancing existing battery datasets [3, 5-6]. However, challenges such as training instability (e.g., one network overpowering the other), mode collapse (i.e., limited diversity in generated data), and poor generalization to unseen scenarios have restrained the wider application of GANs for engineering problems [7]. To address these issues, we present a novel physics-guided GAN (PgGAN) for generating high-fidelity synthetic time-series data for batteries. In the proposed PgGAN, the generator employs a long short-term memory (LSTM) network that maps noise to realistic-looking time-series battery signals (temperature, voltage, and current). The discriminator, also implemented as an LSTM, receives both the synthetic and real signals as inputs, and attempts to distinguish between them. The training of PgGAN involves adversarial learning, where the generator aims to fool the discriminator while simultaneously minimizing a physics-based loss. This physics-based loss is formulated based on a combined equivalent-circuit voltage and thermal model [8-9]. With such a multi-objective loss function, the generated synthetic data will not only ensure similarity and consistency with the ground truth, but also satisfy the governing laws expressed as equivalent-circuit battery models. As validated by the case studies, such a presented PgGAN method can improve the training stability, allowing the progress even when one network overpowers the other, and addresses the mode collapse by encouraging diversity in the generated outputs. Further, the proposed PgGAN allows for conditioning features in the generator so that it can generate synthetic battery data according to different operating conditions. The PgGAN model is validated with the NASA prognostics data [10] and its performance is compared with that of the conventional GAN. Each battery's data is divided into training and testing subsets, with the first 100 cycles used for training and the final 60 cycles for testing. PgGAN is trained on the initial cycles and conditioned on corresponding capacity values. To evaluate the performance of the trained generator, we generate synthetic data cycles using the same capacity values as those present in the training set. The assessment of the synthetic profiles are based on dimension reduction methods such as t-SNE and PCA. Further, to test the generalizability, the trained model also generates synthetic cycles for unseen capacity values from the test set. Both t-SNE and PCA results show that the PgGAN outperforms the standard GAN in generating realistic data for both training and testing scenarios. Finally, the synthetic data from both PgGAN and the baseline GAN are used to augment the original dataset for capacity prediction tasks. The results show a significant reduction in the mean squared error in battery capacity prediction, from 0.023 (PgGAN) to 0.0069 (baseline GAN) for NASA Cell B5 and from 0.055 (PgGAN) to 0.03 (baseline GAN) for NASA Cell B6. Such observations demonstrate the effectiveness of PgGAN in addressing the data scarcity issue through high-quality augmentation. Reference [1] Chen, Lin, et al. \"Prediction of lithium-ion battery capacity with metabolic grey model.\" Energy 106 (2016): 662-672. [2] Wang, Fujin, et al. \"Physics-informed neural network for lithium-ion battery degradation stable modeling and prognosis.\" Nature Communications 15.1 (2024): 4332. [3] Ye, Zhuang, Jiantao Chang, and Jianbo Yu. \"Prognosability regularized generative adversarial network for battery state of health estimation with limited samples.\" Energy (2025): 135922. [4] Goodfellow, Ian J., et al. \"Generative adversarial nets.\" Advances in neural information processing systems 27 (2014). [5] Naaz, Falak, Aniruddh Herle, Janamejaya Channegowda, Aditya Raj, and Meenakshi Lakshminarayanan. \"A generative adversarial network‐based synthetic data augmentation technique for battery condition evaluation.\" International Journal of Energy Research 45, no. 13 (2021): 19120-19135. [6] Hu, Fengshuo, et al. \"WGAN-GP with residual network model for lithium battery thermal image data expansion with quantitative metrics.\" 2 023 IEEE 6th International Electrical and Energy Conference (CIEEC) . IEEE, 2023. [7] Huang, Nick, et al. \"The GAN is dead; long live the GAN! A Modern GAN Baseline.\" Advances in Neural Information Processing Systems 37 (2024): 44177-44215. [8] Tian, Ning, et al. \"On parameter identification of an equivalent circuit model for lithium-ion batteries.\" 2017 IEEE Conference on Control Technology and Applications (CCTA) . IEEE, 2017. [9] Kumar, Pradeep, et al. \"Battery thermal model identification and surface temperature prediction.\" IECON 2021–47th Annual Conference of the IEEE Industrial Electronics Society . IEEE, 2021. [10] Saha, Bhaskar, and Kai Goebel. \"Battery data set.\" NASA AMES prognostics data repository (2007).",
+    "presenting_author": "Myisha Ahmed Chowdhury | Texas Tech University, Lubbock, TX",
+    "authors": [
+      "Myisha Ahmed Chowdhury | Texas Tech University, Lubbock, TX",
+      "Qiugang (Jay) Lu | Texas Tech University, Lubbock, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Myisha Ahmed Chowdhury",
+        "affiliation": "Texas Tech University, Lubbock, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Qiugang (Jay) Lu",
+        "affiliation": "Texas Tech University, Lubbock, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "13e",
+    "sortable_time": "2025-11-02_16:54:00_17:15:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716187"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714489",
+    "paper_endpoint": "Paper/714489",
+    "paper_id": "714489",
+    "topic": "Hybrid Modeling of Wastewater Treatment Plants for Greenhouse Gas Emissions Prediction and Control",
+    "title": "Hybrid Modeling of Wastewater Treatment Plants for Greenhouse Gas Emissions Prediction and Control",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57102",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "13",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Wastewater treatment plants (WWTPs) and water resource recovery facilities (WRRFs) play a critical role in environmental protection, but they also contribute to greenhouse gas (GHG) emissions through both direct and indirect ways. Direct emissions are related to the underlying bioprocesses, while indirect emissions are related to energy consumption. Therefore, predicting and controlling GHG emissions in WWTPs/WRRFs is crucial for mitigating environmental impact and meeting regulatory standards. However, predicting and controlling these emissions is difficult due to the complex, nonlinear nature of the biological processes within WWTP/WRRFs, as they are highly influenced by numerous operational and environmental factors [2]. Addressing these challenges requires advanced modeling approaches capable of improving predictive accuracy. Significant efforts have been made to create accurate first-principles mechanistic models for WWTPs/WRRFs. For example, the family of activated sludge models (ASMs) that capture the biochemical processes underlying wastewater treatment are used and studied in the literature extensively [3–5]. However, these models often struggle with predictive accuracy for real-time optimization due to inherent process uncertainties or other underlying mechanisms that are unaccounted for [6]. To enhance model predictive capabilities, data-driven approaches have been explored, leveraging machine learning techniques to improve predictions [7,8]. Despite their promise, pure data-driven models often lack interpretability, generalizability, extrapolability, and adherence to the physical laws [9,10]. Therefore, in recent years, there has been some preliminary investigation into models that integrate both mechanistic and data-driven components [1,6,11,12]; however, there is still much research to be done on the architectures of the integration as well as the application to specific WWTP configurations. To address these gaps, we propose several hybrid modeling approaches for developing highly predictive digital twins of WWTPs, with a specific interest in GHG reduction. Our case study utilizes data from the University of Connecticut’s WWTP, focusing on biological nutrient removal (BNR) and secondary clarification. The mechanistic model is based on the ASMN_G biokinetic framework [13], while the data-driven component refines predictions by leveraging machine learning techniques. By integrating these hybrid models within an economic model predictive control (EMPC) framework, we enable dynamic optimization of treatment operations to minimize GHG emissions while maintaining energy efficiency and effluent quality. This approach improves real-time decision-making and enhances the sustainability of WWTPs. In this presentation, we will discuss the development and validation of the proposed hybrid models, highlighting their advantages over traditional approaches. We will demonstrate how hybrid models can be used to optimize WWTP operations, showcasing the impact of hybrid modeling within an EMPC framework. Additionally, we will explore the trade-offs, computational challenges, and potential future improvements in GHG emission control strategies. Through this discussion, we aim to provide insights into the role of hybrid modeling in advancing sustainable wastewater treatment. References: Khalil M, AlSayed A, Elsayed A, Sherif Zaghloul M, Bell KY, Al-Omari A, et al. Advances in GHG emissions modelling for WRRFs: From State-of-the-Art methods to Full-Scale applications. Chem. Eng. J. 2024;494:153053. Lancioni N, Szelag B, Sgroi M, Barbusiński K, Fatone F, Eusebi AL. Novel extended hybrid tool for real time control and practically support decisions to reduce GHG emissions in full scale wastewater treatment plants. J. Environ. Manage. 2024;365:121502. Gujer W, Henze M, Mino T, Loosdrecht M van. Activated sludge model No. 3. Water Sci. Technol. 1999;39:183–93. Blomberg K, Kosse P, Mikola A, Kuokkanen A, Fred T, Heinonen M, et al. Development of an Extended ASM3 Model for Predicting the Nitrous Oxide Emissions in a Full-Scale Wastewater Treatment Plant. Environ. Sci. Technol. 2018;52:5803–11. Corominas L, Flores-Alsina X, Snip L, Vanrolleghem PA. Comparison of different modeling approaches to better evaluate greenhouse gas emissions from whole wastewater treatment plants. Biotechnol. Bioeng. 2012;109:2854–63. Quaghebeur W, Torfs E, De Baets B, Nopens I. Hybrid differential equations: Integrating mechanistic and data-driven techniques for modelling of water systems. Water Res. 2022;213:118166. Khalil M, AlSayed A, Liu Y, Vanrolleghem PA. Machine learning for modeling N2O emissions from wastewater treatment plants: Aligning model performance, complexity, and interpretability. Water Res. 2023;245:120667. Vasilaki V, Danishvar S, Mousavi A, Katsou E. Data-driven versus conventional N2O EF quantification methods in wastewater; how can we quantify reliable annual EFs? Comput. Chem. Eng. 2020;141:106997. Li K, Duan H, Liu L, Qiu R, van den Akker B, Ni BJ, et al. An Integrated First Principal and Deep Learning Approach for Modeling Nitrous Oxide Emissions from Wastewater Treatment Plants. Environ. Sci. Technol. 2022;56:2816–26. Michałowska K, Goswami S, Karniadakis GE, Riemer-Sørensen S. Neural Operator Learning for Long-Time Integration in Dynamical Systems with Recurrent Neural Networks [Internet]. In: 2024 International Joint Conference on Neural Networks (IJCNN). 2024 [cited 2025 Apr 2]. page 1–8.Available from: https://ieeexplore.ieee.org/document/10650331/citations?tabFilter=papers#citations Schneider MY, Quaghebeur W, Borzooei S, Froemelt A, Li F, Saagi R, et al. Hybrid modelling of water resource recovery facilities: status and opportunities. Water Sci. Technol. 2022;85:2503–24. Mehrani MJ, Bagherzadeh F, Zheng M, Kowal P, Sobotka D, Mąkinia J. Application of a hybrid mechanistic/machine learning model for prediction of nitrous oxide (N2O) production in a nitrifying sequencing batch reactor. Process Saf. Environ. Prot. 2022;162:1015–24. Kim D, Bowen JD, Kinnear D. Comprehensive Numerical Modeling of Greenhouse Gas Emissions from Water Resource Recovery Facilities. Water Environ. Res. 2015;87:1955–69.",
+    "presenting_author": "Alireza Miraliakbar | University of Connecticut, Storrs",
+    "authors": [
+      "Alireza Miraliakbar | University of Connecticut, Storrs",
+      "Pengfei Xu | University of Connecticut, Storrs",
+      "Dimitri Alston | University of Connecticut, Storrs",
+      "Matthew Stuber | University of Connecticut, Storrs"
+    ],
+    "authors_structured": [
+      {
+        "name": "Alireza Miraliakbar",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Pengfei Xu",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      },
+      {
+        "name": "Dimitri Alston",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew Stuber",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "13f",
+    "sortable_time": "2025-11-02_17:15:00_17:36:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714489"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716247",
+    "paper_endpoint": "Paper/716247",
+    "paper_id": "716247",
+    "topic": "Integrated Hybrid Modelling and Hybrid Model Identification for Bioprocessing of Lignin-Derivatives",
+    "title": "Integrated Hybrid Modelling and Hybrid Model Identification for Bioprocessing of Lignin-Derivatives",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57102",
+    "session_title": "10E Data-Driven and Hybrid Modeling for Decision Making I",
+    "session_number": "13",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "As sustainability gains global importance, bio-manufacturing pipelines have attracted more attention. [1] Of particular interest is the valorization of lignocellulosic biomass materials. Studies have demonstrated that Pseudomonas putida can facilitate conversion of lignin derivatives into cis,cis-muconic acid, a bioplastics precursor. [2] This study focuses on the conversion of catechol, a lignin derivative, with the aid of glucose, a growth encouraging substrate, to muconic acid by P.putida . Cells are extremely complex, with numerous reaction pathways, intermediates, products, and regulatory networks. Precise models of cells are a necessity for optimizing performance and controlling bioprocesses. Current bioprocess phenomenological models, similar to reactor kinetic models, bury information regarding biomass heterogeneity and intercellular reactions within empirical parameters based on biological intuition. [3] On the other hand, purely machine learning (ML) models have shown to capture the nonlinear complexity of bioprocess but struggle with extrapolation and physical interpretability. [3] Experimental datasets are often sparse and noisy resulting in poor development and calibration of both these models. To leverage the physical constraints of phenomenological models, and the flexibility and practicality of ML models, hybrid models have been proposed. [3] In this work, an embedded hybrid modelling structure is developed, wherein parameters like growth and consumption rates are modelled using ML models. Our hypothesis is that hybrid models can capture the complex relationships between external metabolites and bacteria physiology. A time variant parameter estimation (TV-PE) technique is employed to train the ML component of the hybrid model. A parameter estimation strategy is explored wherein the errors in the state space and derivative space are minimized to reinforce the learning of the underlying physics behavior. This method is compared to the traditional method of minimizing the error in the state space. Another variation in the hybridization structure is explored: (i) a sequential method where the TV-PE and ML model training is performed sequentially and (ii) an integrated method where the two steps occur simultaneously. A comparison of all methods is performed to determine which can best capture the physics of the bioprocess under interpolating and extrapolating scenarios. Results show that the hybrid model consistently outperforms purely phenomenological and black box models across various data availability and noise levels. Finally, we do not stop at the development of a “first-generation” hybrid model. In fact, hybrid models lend a framework of interpretability by enabling sensitivity analyses on the ML components, providing qualitative insight for missing phenomena. We employ interpretable AI techniques to obtain insight from the ML components, which when combined with biologically-guided intuition, lead to improved hybrid models, with less dependence on black-box components. The sensitivity analysis gives the opportunity to present a train-build-improve model construction cycle. Accurate models will aid in process design and optimization and will allow for implementation of more sound and sophisticated control strategies. These are necessary steps for expediting the widespread scale-up and commercialization of bio-manufacturing processes. References: [1] J. Wesseler, et al., “Measuring the Bioeconomy: Economics and Policies,” Annu. Rev. Resour. Econ., 2017, pp. 275–298, Oct. 2017. [2] N.-Z. Xie, et al., “Biotechnological production of muconic acid: current status and future prospects,” Biotechnol. Adv., vol. 32, no. 3, pp. 615–622, May 2014. [3] A. Tsopanoglou, et al., “Moving towards an era of hybrid modelling: advantages and challenges of coupling mechanistic and data-driven models for upstream pharmaceutical bioprocesses,” Curr. Opin. Chem. Eng., vol. 32, p. 100691, Jun. 2021.",
+    "presenting_author": "Sidharth Laxminarayan | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Sidharth Laxminarayan | Georgia Institute of Technology, Atlanta, GA",
+      "Lily Cheung | Georgia Institute of Technology, Atlanta, GA",
+      "Fani Boukouvala | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sidharth Laxminarayan",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Lily Cheung",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Fani Boukouvala",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "13g",
+    "sortable_time": "2025-11-02_17:36:00_17:57:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716247"
+  }
+]

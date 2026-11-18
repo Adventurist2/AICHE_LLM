@@ -1,0 +1,300 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643220",
+    "paper_endpoint": "Paper/643220",
+    "paper_id": "643220",
+    "topic": "New Results in the Global Minimization of Molecular Potential Energy Functions",
+    "title": "New Results in the Global Minimization of Molecular Potential Energy Functions",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49196",
+    "session_title": "Advances in Global Optimization",
+    "session_number": "10",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The problem of computing the global minimum of a molecular potential energy function has applications ranging from nanocluster physics [1] to biomolecule modeling [2], and has attracted considerable attention over the years [3-6] due to its challenging nature. This problem is highly nonconvex with many local minima and degrees of symmetry, and deterministic global optimization approaches have in the past been limited to very small systems [7]. Putative global minima have been found for a variety of systems [8], but the problem of certifying global optimality is still open. In this work, we introduce novel convexification techniques for minimization problems involving the Lennard-Jones potential, which is commonly used to model van der Waals interactions. Additionally, we present optimality-based bounds on the inter-particle distances in Lennard-Jones clusters. In order to construct these bounds, we extend the argument presented by Blanc [9] and incorporate known upper bounds on the global minima. We present an open-source implementation of these results, and demonstrate their impact using the Lennard-Jones cluster structure prediction problem as a benchmark with the global optimization solver BARON. Finally, we discuss extensions of our results to other molecular potential energy functions. [1] Baletto, F. and Ferrando, R. Structural properties of nanoclusters: Energetic, thermodynamic, and kinetic effects. Rev. Mod. Phys. 2005 , 77(1) , 371–423. [2] Röder, K., Joseph, J.A., Husic, B.E. and Wales, D.J. Energy Landscapes for Proteins: From Single Funnels to Multifunctional Systems. Adv. Theory Simul. , 2019 , 2: 1800175. [3] Hoare, M. R. Structure and Dynamics of Simple Microclusters. In Advances in Chemical Physics, Vol. 40; Rice, S. A., Ed.; Wiley, 1979; pp 49. [4] Northby, J. A. (1987). Structure and Binding of Lennard-Jones Clusters: 13≤N≤147. J. Chem. Phys. 1987 , 87 , 6166-6177. [5] Wales, D. J. and Doye, J. P. K. Global Optimization by Basin-Hopping and the Lowest Energy Structures of Lennard-Jones Clusters Containing up to 110 Atoms. J. Phys. Chem. A 1997 , 101, 28 , 5111-5116. [6] Wang, Y., Lv, J., Zhu, L., Ma, Y. CALYPSO: A Method for Crystal Structure Prediction. Comput. Phys. Commun. 2012 , 183(10) , 2063-2070. [7] Maranas, C. D. and Floudas, C. A. A Global Optimization Approach for Lennard-Jones Microclusters. J. Chem. Phys. 1992 , 97 , 7667-7678. [8] Wales, D. J., Doye, J. P. K., Dullweber, A., Hodges, M. P., Naumkin, F. Y., Calvo, F., Hernández-Rojas, J., and Middleton, T. F. The Cambridge Energy Landscape Database. https://www-wales.ch.cam.ac.uk/CCD.html. Accessed Apr 6, 2022. [9] Blanc, X. Lower Bound for the Interatomic Distance in Lennard-Jones Clusters. Comput. Optim. Appl. 2004 , 29 , 5-12.",
+    "presenting_author": "Anatoliy Kuznetsov | Aspen Technology, Bedford, MA",
+    "authors": [
+      "Anatoliy Kuznetsov | Aspen Technology, Bedford, MA",
+      "Nikolaos Sahinidis | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Anatoliy Kuznetsov",
+        "affiliation": "Aspen Technology, Bedford, MA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nikolaos Sahinidis",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "10a",
+    "sortable_time": "2022-11-13_15:30:00_15:48:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643220"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/644722",
+    "paper_endpoint": "Paper/644722",
+    "paper_id": "644722",
+    "topic": "A Novel Algorithm for Constructing Tight Quadratic Underestimators for Global Optimization",
+    "title": "A Novel Algorithm for Constructing Tight Quadratic Underestimators for Global Optimization",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49196",
+    "session_title": "Advances in Global Optimization",
+    "session_number": "10",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Global optimization problems arise frequently in chemical engineering applications, such as in phase equilibrium, the identification of molecular conformations, distillation sequencing, reactor network design [1], among others. More recently, global optimization has also been used to scheduling hybrid energy sources for hydrogen production [2], regulating nitrogen oxide emissions under process uncertainty [3], synthesizing heat exchanger networks [4], and optimizing superstructures for producing fuels from ethanol [5]. In the aforementioned settings, non-convexities inherently present in the mathematical representation of the problem require the construction of convex relaxations within the context of spatial branch-and-bound search algorithms to identify a globally optimal solution. Hence, as convex relaxation techniques improve in tightness and construction efficiency, practitioners will be enabled to tractably solve to global optimality a greater variety of problem types and sizes. Current state-of-the-art global optimization algorithms address non-convexities by computing convex relaxations, polyhedrally outer approximating those, and solving linear programming (LP) subproblems to determine bounds for the spatial branch-and-bound tree [6]. While polyhedral outer approximations capitalize on the computational efficiency afforded by their construction, the approximations suffer in approximation accuracy. Considering also the strides achieved in the computational efficiency of convex quadratically constrained quadratic programming problems (QCQPs) [7], we conjecture that investing a greater amount of computational resources in the construction of non-linear convex quadratic outer approximations and in solving the resulting convex QCQP bounding subproblem at select nodes in the branch-and-bound tree will produce tighter bounds, expedite fathoming, and ultimately reduce the overall algorithm runtime. In this work, we address foundational work relevant to our hypothesis. We create a novel algorithm to construct valid convex quadratic underestimators for twice differentiable convex functions. In this endeavor, we adopt and expand the work of Su et al. [8] that proposes constructing quadratic underestimators for convex functions by scaling the 2nd-order term of a Taylor series approximation at an arbitrary point of construction. More specifically, we generalize the classes of functions for which constructing such underestimators is possible, going beyond functions that possess specific coordinate-wise monotonicity properties. To that end, we reformulate the underestimation validity problem as a concave minimization problem over a convex set and modify the algorithm in [9] to simultaneously prove underestimation validity and determine the tightest scaling parameter for such scaled Hessian quadratic underestimators. We further capitalize on features of our novel algorithm to naturally extend the construction of valid convex quadratic underestimators to non-convex functions representable as difference of convex (d.c.) functions. The procedure simultaneously convexifies and underestimates the non-convex d.c. functions, allowing direct outer approximation of the non-convex functions. However, as not all non-convex d.c. functions admit a valid convex scaled Hessian quadratic underestimator, we outline conditions under which our algorithm successfully executes. Furthermore, in the context of constrained optimization problems, we identify an opportunity to modify our algorithm to further tighten our quadratic underestimators by permitting them to overestimate target functions in regions of the domain that are ascertained as infeasible in consideration of the external constraint information. We specifically show that integrating external linear constraint information produces tighter underestimators in a computationally tractable manner. We test the performance of our convex quadratic underestimator construction algorithm on a comprehensive set of convex and d.c. functions to explicate the tractability limits of the algorithm and to demonstrate the quality of the underestimators obtained. We compile the test library of functions and optimization problems by adopting and combining different functions from various established optimization benchmark libraries, such as PrincetonLib [10] and MINLPLib [11]. We present the general applicability of our quadratic underestimation procedure to convex functions, demonstrate the results of direct outer approximation of non-convex d.c. functions, and characterize the overall quality of the generated underestimators. [1] Adjiman, Claire S., et al. \"A global optimization method, αBB, for general twice-differentiable constrained NLPs—I. Theoretical advances.\" Computers & Chemical Engineering 22.9 (1998): 1137-1158. [2] Yang, Yu, et al. \"The scheduling of alkaline water electrolysis for hydrogen production using hybrid energy sources.\" Energy Conversion and Management 257 (2022): 115408. [3] Kim, Minsu, et al. \"Data-driven robust optimization for minimum nitrogen oxide emission under process uncertainty.\" Chemical Engineering Journal 428 (2022): 130971. [4] Kazi, Saif R., et al. \"Heat exchanger network synthesis with detailed exchanger designs—2. Hybrid optimization strategy for synthesis of heat exchanger networks.\" AIChE Journal 67.1 (2021): e17057. [5] Restrepo-Flórez, Juan Manuel, and Christos T. Maravelias. \"Advanced fuels from ethanol–a superstructure optimization approach.\" Energy & Environmental Science 14.1 (2021): 493-506. [6] Mohit Tawarmalani and Nikolaos V Sahinidis. A polyhedral branch-and-cut approach to global optimization. Mathematical programming, 103(2):225–249, 2005. [7] Mittelmann, Hans D. Convex continuous qplib benchmark. http://plato.asu.edu/ftp/cconvex.html, 2021. [Online; Accessed: 30-March-2022]. [8] Su, Lijie, et al. \"Improved quadratic cuts for convex mixed-integer nonlinear programs.\" Computers & Chemical Engineering 109 (2018): 77-95. [9] Horst, Reiner, et al. \"On solving a DC programming problem by a sequence of linear programs.\" Journal of Global Optimization 1.2 (1991): 183-203. [10] Vanderbei, Robert. Princeton library of nonlinear programming models. http: //www.gamsworld.org/performance/princetonlib/princetonlib.htm, 2022. [Online; Accessed: 30-March-2022]. [11] Minlplib, a library of mixed-integer and continuous nonlinear programming instances. http://www.minlplib.org/, 2022",
+    "presenting_author": "William Strahl | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "William Strahl | Carnegie Mellon University, Pittsburgh, PA",
+      "Arvind Raghunathan | Mitsubishi Electric Research Laboratories, Cambridge, MA",
+      "Nikolaos Sahinidis | Georgia Institute of Technology, Atlanta, GA",
+      "Chrysanthos Gounaris | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "William Strahl",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Arvind Raghunathan",
+        "affiliation": "Mitsubishi Electric Research Laboratories, Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Nikolaos Sahinidis",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Chrysanthos Gounaris",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "10b",
+    "sortable_time": "2022-11-13_15:48:00_16:06:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/644722"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646811",
+    "paper_endpoint": "Paper/646811",
+    "paper_id": "646811",
+    "topic": "New Mccormick-Style Convex Relaxations of Implicit Functions in Global Optimization",
+    "title": "New Mccormick-Style Convex Relaxations of Implicit Functions in Global Optimization",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49196",
+    "session_title": "Advances in Global Optimization",
+    "session_number": "10",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Several chemical engineering applications demand global optimization of nonconvex process models, including safety verification and determination of thermodynamic equilibria. Deterministic methods for global optimization typically proceed by generating upper and lower bounds on the unknown objective value at a global minimum, and progressively improving these bounds. Lower bounds in global minimization are typically obtained by minimizing convex relaxations of the original objective function. When this function is known in closed form, then useful convex relaxations can be automatically generated using the well-known alphaBB or McCormick relaxations and their later variants. However, these methods do not extend directly to implicit functions defined as the solutions of nonlinear equation systems, such as thermodynamic equations of state and numerical ODE solutions computed by implicit solvers. This presentation introduces a new general formula for automatically generating convex relaxations for implicit functions, where these implicit functions are defined by an equation system that involves a known residual function with known relaxations. This formula is compatible with the multivariate McCormick relaxations of composite functions by Tsoukalas and Mitsos [2], and is readily extended to handle inverse functions, to handle equality constraints in nonlinear programming, and to tighten a priori interval bounds for implicit functions. Unlike previous approaches for handling implicit functions, our approach does not place any structural assumptions on the supplied relaxations of the residual functions; to our knowledge, it is the first approach that can use alphaBB relaxations of the residual function. For example, the attached figure shows our implicit function relaxations based on alphaBB relaxations of a particular residual function. Moreover, our approach does not proceed by essentially relaxing the first iterations of a nonlinear equation solver; instead, it generates its relaxations as the solutions of auxiliary convex NLPs that may be solved or further relaxed by any valid method. Several numerical examples are presented for illustration, demonstrating the tightness and versatility of our new relaxations. References [1] H. Cao and K.A. Khan, Optimization-based convex relaxations of implicit functions, under review. [2] A. Tsoukalas and A. Mitsos, Multivariate McCormick relaxations, J Glob Optim, 59:633-662, 2014.",
+    "presenting_author": "Kamil Khan | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Huiyi Cao | McMaster University, Hamilton, Canada",
+      "Kamil Khan | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Huiyi Cao",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Kamil Khan",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "10c",
+    "sortable_time": "2022-11-13_16:06:00_16:24:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646811"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648675",
+    "paper_endpoint": "Paper/648675",
+    "paper_id": "648675",
+    "topic": "Exact Penalty Bayesian Optimization: No-Regret Data-Driven Optimization with Unknown Equality and Inequality Constraints",
+    "title": "Exact Penalty Bayesian Optimization: No-Regret Data-Driven Optimization with Unknown Equality and Inequality Constraints",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49196",
+    "session_title": "Advances in Global Optimization",
+    "session_number": "10",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "In many engineering applications, we must optimize a set of design parameters where the true system structure is unknown. For example, this can occur in calibration of expensive simulators [1] , automated controller tuning [2] , material design and discovery [3] , as well as many other applications. Under these circumstances, we can only query the objective f(x) (which we seek to minimize) by picking specific inputs from our design space. These so-called “black-box” objective functions are often expensive to query, requiring computationally expensive simulations, or costly real-world experiments. In this low-data regime setting, we must make the trade-off between exploring the design space and exploiting our current knowledge of where f(·) is predicted to be optimal. Bayesian Optimization (BO) is a family of algorithms that can solve black-box problems by modeling f(x) using Gaussian Processes (GP) [4] , which represent a non-parametric and probabilistic class of surrogates that can provide effective models in data-scarce scenarios. Using the queried samples of f(·) , BO constructs a statistical surrogate (most commonly a GP model) for the objective function. The GP model thus gives us a probabilistic distribution of the objective function; we can couple this with an acquisition (or expected utility) function α(x) , which intelligently optimizes the location of our next sample point by trading off between exploration of our design space and exploitation of the current model predictions. In addition to having a fully or partially unknown objective function, many engineering problems also contain expensive-to-evaluate constraints c(x) . This can significantly complicate the optimization process in practice; not only must we explore the objective f (x) , but we must now also identify a feasible region in our design space by also actively exploring the constraint region c(x) . The most common strategy for extending BO to handle constrained problems is to model each constraint separately with an independent GP. Although a significant amount of work on extending BO to constrained problems has been done, it remains an open question for how to best factor the constraints into the definition of the acquisition function. We can roughly sort the different methods for handling constraints in BO into two main categories: explicit and implicit methods. Implicit methods incorporate constraints directly into the acquisition function through a meri-type function, resulting in an unconstrained optimization sub-problem. In the literature, merit-type functions can include a probability of feasibility on the acquisition [5] or follow an augmented Lagrangian approach for BO [6] . However, these methods can run into sensitivity issues, as these merit functions must be tuned specifically to the scale of the current problem, which can be difficult to determine a-priori. Explicit methods, on the other hand, involve optimizing the acquisition function α(x) while imposing a hard constraint on the GP approximations of the unknown constraints. A popular method includes using the mean function GP constraints [7] ; however, when data is scarce, solely relying on the mean function can result in overly conservative solutions. Although many options exist for handling constraints in the black-box setting, no rigorous performance guarantees have been established for any constrained BO method to the best of our knowledge, which makes it difficult to choose from the suite of available methods as well as to decide what technical innovations are most needed. Furthermore, most constrained BO methods do not differentiate between equality and inequality constraints; although we can always convert between these two representations, this often leads to important challenges including lack of feasibility of the sub-problem that can be difficult to handle in practice. In this work, we introduce a novel approach to constraint handling for BO, which we refer to as Exact Penalty BO (EPBO). Taking advantage of the theory of exact penalty functions [8] , we show how EPBO can be interpreted as relaxed version of explicit constraint handling approaches. However, differing from other explicit methods, we show EPBO can always provide a feasible solution to the optimization sub-problem in the presence of both equality and inequality constraints, which can be efficiently obtained by introducing slack variables into the formulation. Additionally, we introduce the notion of penalty-based regret , which is an extension of standard regret that measures the difference between the current recommended solution and the true global minimum. We show that, under certain assumptions on the structure of the penalty term and the class of covariance functions that can be used to model the objective and constraints, we can guarantee that the penalty-based regret is a sub-linearly decaying function of the total number of iterations. A direct consequence of this result is that we can guarantee that there exists a finite iteration in which we are arbitrarily close to the constrained global minimum (i.e., EBPO is a convergent, asymptotically consistent algorithm under mild assumptions). Finally, we demonstrate the that a practical implementation of EPBO can outperform alternative constrained BO methods on a benchmark constrained global optimization problem. [1] B. Sakhdari and N. L. Azad, “Adaptive Tube-Based Nonlinear MPC for Economic Autonomous Cruise Control of Plug-In Hybrid Electric Vehicles,” IEEE Trans. Veh. Technol. , vol. 67, no. 12, pp. 11390–11401, 2018, doi: 10.1109/TVT.2018.2872654. [2] F. Sorourifar, G. Makrygirgos, and A. Mesbah, “A Data-Driven Automatic Tuning Method for MPC under Uncertainty using.” [3] A. M. Schweidtmann, A. D. Clayton, N. Holmes, E. Bradford, R. A. Bourne, and A. A. Lapkin, “Machine learning meets continuous fl ow chemistry : Automated optimization towards the Pareto front of multiple objectives,” Chem. Eng. J. , vol. 352, no. July, pp. 277–282, 2018, doi: 10.1016/j.cej.2018.07.031. [4] C. E. Rasmussen and C. K. . Williams, Gaussian Process for Machine Learning , vol. 7, no. 5. 2000. [5] J. R. Gardner, M. J. Kusner, Z. E. Xu, K. Q. Weinberger, and J. P. Cunningham, “Bayesian Optimization with Inequality Constraints,” vol. 32, 2014. [6] V. Picheny, R. B. Gramacy, and C. O. May, “Bayesian optimization under mixed constraints with a slack-variable augmented Lagrangian,” 2018. [7] M. J. Sasena, P. Papalambros, and P. Goovaerts, “Exploration of Metamodeling Sampling Criteria for Constrained Global Optimization,” vol. 0273, 2010, doi: 10.1080/03052150211751. [8] G. Di, “Exact penalty functions in constrained optimization*,” vol. 27, no. 6, pp. 1333–1360, 1989.",
+    "presenting_author": "Congwen Lu | The Ohio State University, Columbus",
+    "authors": [
+      "Congwen Lu | The Ohio State University, Columbus",
+      "Joel Paulson | The Ohio State University, Columbus"
+    ],
+    "authors_structured": [
+      {
+        "name": "Congwen Lu",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "10d",
+    "sortable_time": "2022-11-13_16:24:00_16:42:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648675"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647661",
+    "paper_endpoint": "Paper/647661",
+    "paper_id": "647661",
+    "topic": "Learning to Accelerate the Global Solution of Quadratically-Constrained Quadratic Programs",
+    "title": "Learning to Accelerate the Global Solution of Quadratically-Constrained Quadratic Programs",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49196",
+    "session_title": "Advances in Global Optimization",
+    "session_number": "10",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Many real-world applications involve the repeated solution of the same high-level semantic nonconvex quadratically-constrained quadratic program (QCQP) with slightly varying model parameters. Examples include the pooling problem with varying input qualities and the cost-efficient operation of the power grid with varying loads and renewables. These hard optimization problems are typically solved using off-the-shelf global optimization software [1-4] that do not exploit the shared problem structure; heuristics within these implementations are engineered to work well on average over a diverse set of instances and may be suboptimal for instances from a specific application. For example, recent work has shown that tailoring branching decisions can have a huge impact on the run times of branch-and-bound algorithms for mixed-integer linear programs (MILPs) [5-8]. In contrast with the MILP literature, there is hardly any work on using machine learning to accelerate the guaranteed global solution of nonconvex nonlinear programs [9-12]. We investigate machine learning approaches for accelerating the global minimization of nonconvex QCQPs using Alpine [4]. Alpine is a Julia-based global solver that determines lower bounds on the optimal value of QCQPs using piecewise convex relaxations. At each iteration, Alpine adaptively refines the partitions of the domains of (a subset of) variables participating in nonconvex terms to determine a sequence of convergent lower bounds. It uses heuristics to specify the locations of the partitioning points for each partitioned variable and continues to refine its variable partitions until the lower and upper bounds converge. The lower bounding problem within Alpine can be formulated as an MILP, with the number of binary variables in the formulation equal to the sum of the number of partitions across the variables. Since the complexity of this lower bounding problem can grow significantly with the number of iterations, the choice of partitioning points, especially in the initial iterations, can have a huge impact on Alpine's overall performance. We propose to learn how to optimally partition the domains of variables participating in nonconvex terms within Alpine. Our goal is to choose the partitioning points so that the resulting piecewise convex relaxation-based lower bound after Alpine's first iteration is maximized. We formulate this problem of \"optimal partitioning'\" as a max-min problem, where the outer-maximization chooses the partitioning points and the inner minimization solves the piecewise relaxation-based MILP lower bounding problem for a given partition. This reference partitioning problem is solved to local optimality by exploiting generalized gradient information of the value function of the inner minimization problem within a bundle solver for nonsmooth nonconvex optimization. We use this optimal partitioning strategy to generate data that is used to train a machine learning model to predict the optimal partitions for a given instance. Numerical experiments on randomly generated QCQPs and instances of the pooling problem demonstrate that using the reference optimal partitioning strategy at the first iteration can reduce Alpine's solution time by an order of magnitude on average. They also illustrate the efficacy of our machine learning models in learning this reference partitioning strategy on homogeneous instances of QCQPs. Finally, we also explore formulations to let the optimizer allocate a different number of partitioning points per variable depending on their relative impact on the lower bound. 1. Misener, R., and Floudas, C. A. (2014). ANTIGONE: algorithms for continuous/integer global optimization of nonlinear equations. Journal of Global Optimization, 59(2), 503-526. 2. Sahinidis, N. V. (1996). BARON: A general purpose global optimization software package. Journal of global optimization, 8(2), 201-205. 3. Bestuzheva, K. et al. (2021). The SCIP Optimization Suite 8.0. arXiv preprint arXiv:2112.08872. 4. Nagarajan, H., Lu, M., Wang, S., Bent, R., and Sundar, K. (2019). An adaptive, multivariate partitioning algorithm for global optimization of nonconvex programs. Journal of Global Optimization, 74(4), 639-675. 5. Lodi, A., and Zarpellon, G. (2017). On learning and branching: a survey. Top, 25(2), 207-236. 6. Gasse, M., Chételat, D., Ferroni, N., Charlin, L., and Lodi, A. (2019). Exact combinatorial optimization with graph convolutional neural networks. Advances in Neural Information Processing Systems, 32. 7. Nair, V., Bartunov, S., Gimeno, F., et al. (2020). Solving mixed integer programs using neural networks. arXiv preprint arXiv:2012.13349. 8. Bengio, Y., Lodi, A., and Prouvost, A. (2021). Machine learning for combinatorial optimization: a methodological tour d’horizon. European Journal of Operational Research, 290(2), 405-421. 9. Baltean-Lugojan, R., Bonami, P., Misener, R., and Tramontani, A. (2019). Scoring positive semidefinite cutting planes for quadratic optimization via trained neural networks. Optimization Online. 10. Lee, M., Yu, G., and Li, G. Y. (2019). Learning to branch: Accelerating resource allocation in wireless networks. IEEE Transactions on Vehicular Technology, 69(1), 958-970. 11. Shen, Y., Shi, Y., Zhang, J., and Letaief, K. B. (2019). LORM: Learning to optimize for resource management in wireless networks with few training samples. IEEE Transactions on Wireless Communications, 19(1), 665-679. 12. Ghaddar, B. et al. (2022). Learning for Spatial Branching: An Algorithm Selection Approach. Optimization Online.",
+    "presenting_author": "Rohit Kannan | Los Alamos National Laboratory, NM",
+    "authors": [
+      "Rohit Kannan | Los Alamos National Laboratory, NM",
+      "Deepjyoti Deka | Los Alamos National Laboratory, NM",
+      "Harsha Nagarajan | Los Alamos National Laboratory, NM"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rohit Kannan",
+        "affiliation": "Los Alamos National Laboratory, NM",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Deepjyoti Deka",
+        "affiliation": "Los Alamos National Laboratory, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Harsha Nagarajan",
+        "affiliation": "Los Alamos National Laboratory, NM",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "10e",
+    "sortable_time": "2022-11-13_16:42:00_17:00:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647661"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646092",
+    "paper_endpoint": "Paper/646092",
+    "paper_id": "646092",
+    "topic": "Improving the Tightness of State Relaxations for Global Dynamic Optimization through Refinement with Invariants",
+    "title": "Improving the Tightness of State Relaxations for Global Dynamic Optimization through Refinement with Invariants",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49196",
+    "session_title": "Advances in Global Optimization",
+    "session_number": "10",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "This talk will introduce the technique of using invariants to tighten the relaxations of solutions of parametric ODEs in dynamic models. Tight state relaxations in such dynamic settings ensure high efficiency in using branch-and-bound (B&B) to solve dynamic optimization (DO) problems to global optimality. Efficient solution of global dynamic optimization (GDO) problems is crucial in many applications, ranging from optimal control of batch reactions to aircraft trajectory tracking with rigorous safety guarantees. In terms of both computational time and relaxation tightness, relaxation preserving dynamics (RPD) [4] is one of the current state-of-the-art methods for computing state relaxations for GDO. It applies McCormick’s relaxation rules to relax the ODE right-hand side functions over a pre-computed interval enclosure of the possible ODE solutions. These relaxations are then used to form a relaxed system of ODEs that can be solved numerically to obtain relaxations of the original ODE solutions (i.e., state relaxations). Unfortunately, RPD produces weak relaxations in many cases. For the similar problem of computing constant upper and lower bounds on the possible ODE solutions (i.e., state bounds), it has been shown that much tighter enclosures can be obtained by using invariants relating the state variables whenever such invariants are available (e.g., conservation of mass or other reaction invariants). Specifically, such relations are used to continuously refine the computed bounds as they are propagated forward in time using various iterative methods [3, 5]. In contrast, no methods have yet been developed that can exploit invariants for tightening state relaxations. Thus, the ability to achieve tight state relaxations for GDO is still limited. The analogy to state-bounding methods suggests that improved state relaxations might be achieved by (i) developing an iterative algorithm for refining pairs of convex/concave relaxations based on invariants, and (ii) embedding this algorithm within the RPD method such that the state relaxations are refined at each point in time before being propagated forward. However, due to technical details of RPD, this approach runs into considerable problems. Specifically, the combination of iterative relaxation refinement with RPD can (and often does) lead to intermediate variables where the convex underestimator lies above the concave overestimator on parts of the decision space. All further computations with these objects, known as ‘empty’ McCormick objects, are undefined using standard McCormick relaxation rules. This causes RPD to terminate unsuccessfully, or, if ignored, can lead to nonconvex state relaxations. Hence, the use of invariants to obtain tighter state relaxations has remained an unaddressed challenge. In the 2020 AIChE meeting, we presented extended McCormick relaxation rules that are well defined for empty objects and preserve the desired convexity/concavity properties [2]. In the 2021 meeting, we presented an improved version of the RPD method (without invariants) that uses these rules to avoid some computationally undesirable details of the RPD method [1]. In this talk, we further utilize the extended McCormick rules to enable the use of invariant-based state relaxation refinement seamlessly within the RPD method. We then present preliminary results showing that state relaxations can indeed be made significantly tighter using this technique. Future work will apply these improved relaxations within B&B to maximize its efficiency in solving GDO problems. References [1] AIChE: An Improved Implementation of the RPD Method for Computing Convex Relaxations for Global Dynamic Optimization (2021) [2] AIChE: Modified McCormick Relaxation Rules for Handling Infeasibility in Relaxation-Based Iterative Domain Reduction Methods (2020) [3] Scott, J.K., Barton, P.I.: Bounds on the reachable sets of nonlinear control systems. Automatica 49(1), 93–100 (2013). DOI https://doi.org/10.1016/j.automatica.2012.09.020 [4] Scott, J.K., Barton, P.I.: Improved relaxations for the parametric solutions of odes using differential inequalities. Journal of Global Optimization 57, 143–176 (2013). DOI 10.1007/s10898-012-9909-0 [5] Shen, K.J., Scott, J.K.: Rapid and accurate reachability analysis for nonlinear dynamic systems by exploiting model redundancy. Computers and Chemical Engineering 106, 596–608 (2017). DOI 10.1016/j.compchemeng.2017.08.001",
+    "presenting_author": "Jason Ye | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Jason Ye | Georgia Institute of Technology, Atlanta, GA",
+      "Joseph Scott | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jason Ye",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joseph Scott",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "10f",
+    "sortable_time": "2022-11-13_17:00:00_17:18:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646092"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643563",
+    "paper_endpoint": "Paper/643563",
+    "paper_id": "643563",
+    "topic": "Global Dynamic Optimization Using Hardware-Accelerated Programming",
+    "title": "Global Dynamic Optimization Using Hardware-Accelerated Programming",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49196",
+    "session_title": "Advances in Global Optimization",
+    "session_number": "10",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Dynamic optimization problems arise in cases where the transient behavior of a system is of prime importance, such as in mechanistic model validation [1] and robust model predictive control [2]. The parametric ordinary differential equation (pODE) systems that comprise these problems are often nonconvex in the parameters, necessitating a global solution. To locate guaranteed global solutions, deterministic search algorithms, such as spatial branch-and-bound (B&B) frameworks, are needed. In this work, we utilize a relax-then-discretize [1, 3, 4] approach and B&B to solve dynamic optimization problems to global optimality. In relax-then-discretize, the right-hand-side functions of the pODE system are relaxed to form an auxiliary pODE system that can be solved to furnish relaxations—convex underestimators and concave overestimators—of the original system. Since this auxiliary system depends on the parameter bounds of any given B&B node, the auxiliary system, a corresponding set of relaxations, and a lower bound on the optimal solution value are typically computed separately for each node. In practice, creating an auxiliary pODE system follows known recursive rules (such as for generating αBB convex relaxations [5? ] or McCormick-based relaxations [6–8] and is computationally fast. However, solving a pODE system to evaluate relaxations and their corresponding subgradients [9, 10], and then using those evaluations to calculate a lower bound of the node in the B&B tree, can be computationally expensive. Even when applying methods that do not require the use of subgradients, such as the black-box sampling method proposed by Song et al. [11], there is still a significant real-time cost arising from the added relaxation evaluations needed to furnish a lower bound. In particular, because the structure of relaxations depends on the parameter domain, pointwise evaluations are typically computed serially, and thus the time cost of computing a lower bound for each node scales linearly with the number of evaluations. In this presentation, we discuss our work to improve the real-time solution speed of global dynamic optimization problems by focusing on hardware-accelerated programming. We start by using a newly developed tool to automatically generate an auxiliary pODE system using McCormick-based relaxations through source-code transformation. The auxiliary system is constructed such that the node-specific structure of the relaxations is embedded within the right-hand-side functions. This embedding enables multiple simultaneous evaluations of the relaxed pODE system that can be distributed across multiple CPU or GPU cores independently of the node bounds in parameter space. We then employ the black-box sampling method of Song et al. [11] to calculate lower bounds, which places the bulk of the computational effort on the parallelized function evaluations. The utility of this parallelization is demonstrated via several literature examples and a case study on identifying catalytic reaction pathways, and numerical results are presented from the implementation of this work as a software extension to the EAGO software package in Julia [12–15]. [1] Adam B. Singer, James W. Taylor, Paul I. Barton, and William H. Green. Global dynamic optimization for parameter estimation in chemical kinetics. The Journal of Physical Chemistry A, 110(3):971–976, dec 2006. doi: 10.1021/jp0548873. [2] D. Limon, T. Alamo, E.F. Camacho, and J.M. Bravo. Robust MPC of constrained nonlinear systems based on interval arithmetic. IEE Proceedings - Control Theory and Applications, 152(3):325–332, may 2005. doi: 10.1049/ip-cta:20040480. [3] Adam B. Singer and Paul I. Barton. Global optimization with nonlinear ordinary differential equations. Journal of Global Optimization, 34(2):159–190, feb 2006. doi: 10.1007/s10898-005-7074-4. [4] Joseph K. Scott and Paul I. Barton. Improved relaxations for the parametric solutions of ODEs using differential inequalities. Journal of Global Optimization, 57(1):143–176, may 2013. doi: 10.1007/s10898-012-9909-0. [5] C.S. Adjiman, S. Dallwig, C.A. Floudas, and A. Neumaier. A global optimization method, αBB, for general twice-differentiable constrained NLPs — I. theoretical advances. Computers & Chemical Engineering, 22(9):1137–1158, aug 1998. doi: 10.1016/s0098-1354(98)00027-1. [6] Adam B. Singer. Global Dynamic Optimization. PhD thesis, Massachusetts Institute of Technology, 2004. [7] Adam B. Singer and Paul I. Barton. Global solution of optimization problems with parameter embedded linear dynamic systems. Journal of Optimization Theory and Applications, 121(3):613–646, jun 2004. doi: 10.1023/b:jota.0000037606.79050.a7. [8] Garth P. McCormick. Computability of global solutions to factorable nonconvex programs: Part I — convex underestimating problems. Mathematical Programming, 10(1): 147–175, dec 1976. doi: 10.1007/bf01580665. [9] Alexander Mitsos, Benoît Chachuat, and Paul I. Barton. McCormick-based relaxations of algorithms. SIAM Journal on Optimization, 20(2):573–601, jan 2009. doi: 10.1137/080717341. [10] Ali M. Sahlodin and Benoît Chachuat. Convex/concave relaxations of parametric ODEs using taylor models. Computers & Chemical Engineering, 35(5):844–857, may 2011. doi: 10.1016/j.compchemeng.2011.01.031. [11] Yingkai Song, Huiyi Cao, Chiral Mehta, and Kamil A. Khan. Bounding convex relaxations of process models from below by tractable black-box sampling. Computers & Chemical Engineering, 153:107413, oct 2021. doi: 10.1016/j.compchemeng.2021.107413. [12] Jeff Bezanson, Alan Edelman, Stefan Karpinski, and Viral B. Shah. Julia: A fresh approach to numerical computing, 2014. [13] Matthew E. Wilhelm, Robert X. Gottlieb, and Matthew D. Stuber. PSORLab/McCormick.jl, 2020. URL: https://github.com/PSORLab/McCormick.jl. [14] Matthew E. Wilhelm and Matthew D. Stuber. Easy advanced global optimization (EAGO): An open-source platform for robust and global optimization in Julia. In AIChE Annual Meeting. AIChE, 2017. [15] Matthew E. Wilhelm and Matthew D. Stuber. EAGO.jl: easy advanced global optimization in Julia. Optimization Methods and Software, pages 1–26, aug 2020. doi: 10.1080/10556788.2020.1786566.",
+    "presenting_author": "Robert Gottlieb | University of Connecticut, Storrs",
+    "authors": [
+      "Robert Gottlieb | University of Connecticut, Storrs",
+      "Matthew Stuber | University of Connecticut, Storrs"
+    ],
+    "authors_structured": [
+      {
+        "name": "Robert Gottlieb",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Matthew Stuber",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "10g",
+    "sortable_time": "2022-11-13_17:18:00_17:36:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643563"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/641623",
+    "paper_endpoint": "Paper/641623",
+    "paper_id": "641623",
+    "topic": "Global Optimal K-Center Clustering with Millions of Samples",
+    "title": "Global Optimal K-Center Clustering with Millions of Samples",
+    "date_time": "2022-11-13_15:30:00_18:00:00",
+    "session_id": "49196",
+    "session_title": "Advances in Global Optimization",
+    "session_number": "10",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Clustering is a fundamental unsupervised machine learning task that plays a vital role in various fields of applications, such as customer grouping [1], data summarization [2], and facility location determination [3]. In this talk, we concentrate on one of the most fundamental centroid-based clustering problems called the k-center problem. Given a dataset, the K-center problem aims to select k samples from the dataset as centers of clusters that minimize the maximum within-cluster distance of the dataset [4]. Although many heuristic algorithms are developed for k-center problem, none of these algorithms can guarantee a global optimal solution. This work provides a practical global optimization algorithm for this task based on a reduced-space spatial branch and bound scheme. This algorithm can guarantee convergence to the global optimum by only branching on the centers of clusters, which is independent of the dataset’s cardinality. In addition, a set of feasibility-based bounds tightening techniques are proposed to determine the assignment of samples, narrow down the domain of centers, and significantly accelerate the convergence. To demonstrate the capacity of this algorithm, we present computational results on 26 UCI datasets [5]. Notably, for the dataset with 4 million samples ((i.e., 1000 times larger than the state-of-the-art method [6] in the literature) and 18 features, the serial implementation of the algorithm can attain the global optimum to an optimality gap of 0.1% within 2 hours. [1] Aggarwal, C. C., Wolf, J. L., and Yu, P. S.-l. Method for targeted advertising on the web based on accumulated self-learning data, clustering users and semantic node graph techniques, March 30 2004. US Patent 6,714,975. [2] Kleindessner, M., Awasthi, P., and Morgenstern, J. Fair k-center clustering for data summarization. In International Conference on Machine Learning, pp. 3448–3457. PMLR, 2019. [3] Hansen, P., Brimberg, J., UroˇseviÅLc, D., and MladenoviÅLc, N. Solving large p-median clustering problems by primal–dual variable neighborhood search. Data Mining and Knowledge Discovery, 19(3):351–375, 2009. [4] Kaufman, L. and Rousseeuw, P. J. Finding groups in data: an introduction to cluster analysis , volume 344. JohnWiley & Sons, 2009. [5] Dua, D. and Graff, C. UCI machine learning repository, 2017. URL http://archive.ics.uci.edu/ml. [6] Duong, K.-C., Vrain, C., et al. Constrained clustering by constraint programming. Artificial Intelligence , 244:70–94, 2017.",
+    "presenting_author": "Yankai Cao | University of British Columbia, Vancouver, Canada",
+    "authors": [
+      "Yankai Cao | University of British Columbia, Vancouver, Canada",
+      "Kaixun Hua | University of South Florida, Tampa"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yankai Cao",
+        "affiliation": "University of British Columbia, Vancouver, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Kaixun Hua",
+        "affiliation": "University of South Florida, Tampa",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "10h",
+    "sortable_time": "2022-11-13_17:36:00_17:54:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/641623"
+  }
+]

@@ -1,0 +1,248 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/630903",
+    "paper_endpoint": "Paper/630903",
+    "paper_id": "630903",
+    "topic": "Integrated Design and Model Predictive Control of Multiscale Systems Using a Multi-Fidelity Bayesian Optimization Approach",
+    "title": "Integrated Design and Model Predictive Control of Multiscale Systems Using a Multi-Fidelity Bayesian Optimization Approach",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46776",
+    "session_title": "Innovations in Concept-to-Manufacturing and Distribution I",
+    "session_number": "485",
+    "program_title": "Topical Conference: Next-Gen Manufacturing",
+    "symposium_title": "Next-Gen Manufacturing",
+    "abstract": "Design and control are interconnected activities that need to be performed simultaneously so that designs with a large degree of operational flexibility can be readily identified [1] . In practice, however, design is typically tackled first (with little-to-no considerations of the dynamics), which can lead to heavily constrained processes with few degrees of freedom available for control. While there is a vast body of literature available on the topic [2]–[4] , a tractable and unified framework for optimal integrated design and control (IDC) has remained elusive. This type of framework is needed to enable the systematic design of next-generation (so-called “flexible”) manufacturing and energy systems including smart grid technology [5] , multiproduct or personalized chemical plants [6] , and combined heat and power systems [7] . Although optimal IDC problems can be formulated as multistage stochastic programs (MSPs), they quickly become intractable when the following features are present [8] : (i) relevant dynamics and uncertainties occur on much shorter timescales than the lifetime of the system; (ii) uncertainties are present that are best described by continuous random variables with large variance; and/or (iii) important operational decisions are discrete (e.g., adaptive scheduling and unit commitment). The first two features relate to the multiscale nature of realistic IDC problems, which pose a major challenge for MSPs that suffer from the curse-of-dimensionality (i.e., exponential growth in number of decision variables as the control decisions can differ for each realization of the uncertainty) [9] . The third feature implies the system model is nonlinear with mixed-integer decisions such that a scenario approximation to the MSP is a very large-scale mixed-integer nonlinear program (MINLP) that is far beyond the capabilities of existing solvers, even when an equation-oriented system model is available. Most previous work on optimal IDC focused on making tractable approximations to the MSP by relaxing features (i)-(iii) (see, e.g., [10]–[13] for several examples including substantially reducing the number of operational stages and uncertainty scenarios). Although these simplifications make the MSP more tractable, they degrade the accuracy of the IDC solution in exactly the ways that need to be captured in order to model the flexibility of the process. To address these challenges, in [14] , we proposed a simulation-based optimization (SO) strategy that can tackle a general class of IDC problems consisting of an outer optimization over the relevant design variables and an inner stochastic simulation that evaluates the expected operating costs and constraints that appear in the outer problem. To reduce dimensionality of the outer problem, we rely on so-called decision rule (DR) approximations [8] to parametrize the recourse/control decisions in a way that scales much more favorably with respect to (i) and (ii) above. In particular, we presented a mixed-integer model predictive control (MIMPC) approach that is able to simultaneously handle scheduling and control decisions mentioned in (iii); this is a significantly more advanced DR than available alternatives that mostly consider PID controllers [15]–[17] , with some exploring linear MPC [18], [19] . Due to the multiscale nature of the IDC problems of interest, we utilized Bayesian optimization (BO) that has become a popular tool for solving black-box optimization problems with objective and/or constraint functions that are prohibitively expensive to compute repeatedly and, therefore, must be evaluated as few times as possible. In [14] , we focused on conventional BO, which assumes only a single (computationally intensive) high-fidelity simulator is available. In IDC problems, however, we have access to several cheap approximations to this simulator such as the previously mentioned simplification methods in, e.g., [10]–[13] . As long as the lower fidelity approximations are reasonably correlated to the high-fidelity simulator, they can be used to cheaply eliminate “bad” designs and thus reserve the most expensive simulations for the most promising designs. To take advantage of these approximations here, we extend [14] by replacing traditional BO with a multi-fidelity BO (MFBO) algorithm [20] . To demonstrate its advantages, we apply MFBO to the design of a solar-powered building heating ventilation and air-conditioning (HVAC) system, with grid and battery support, under uncertain weather and demand conditions that vary at the hour scale for a year-long horizon. We show that MFBO repeatedly identifies more profitable designs than single fidelity BO under a fixed computational budget. In addition, we highlight that the choice and sequence of the lower-fidelity models has a strong impact on the rate of convergence of MFBO. References [1] V. Sakizlis, J. D. Perkins, and E. N. Pistikopoulos, “Recent advances in optimization-based simultaneous process and control design,” Comput. Chem. Eng. , vol. 28, no. 10, pp. 2069–2086, Sep. 2004, doi: 10.1016/j.compchemeng.2004.03.018. [2] L. A. Ricardez-Sandoval, H. M. Budman, and P. L. Douglas, “Integration of design and control for chemical processes: A review of the literature and some recent results,” Annual Reviews in Control , vol. 33, no. 2. Pergamon, pp. 158–171, Dec. 01, 2009, doi: 10.1016/j.arcontrol.2009.06.001. [3] Z. Yuan, B. Chen, G. Sin, and R. Gani, “State-of-the-art and progress in the optimization-based simultaneous design and control for chemical processes,” AIChE J. , vol. 58, no. 6, pp. 1640–1659, Jun. 2012, doi: 10.1002/aic.13786. [4] P. Vega, R. Lamanna de Rocco, S. Revollar, and M. Francisco, “Integrated design and control of chemical processes - Part I: Revision and classification,” Computers and Chemical Engineering , vol. 71. Elsevier Ltd, pp. 602–617, Dec. 04, 2014, doi: 10.1016/j.compchemeng.2014.05.010. [5] A. W. Dowling, R. Kumar, and V. M. Zavala, “A multi-scale optimization framework for electricity market participation,” Appl. Energy , vol. 190, pp. 147–164, Mar. 2017, doi: 10.1016/j.apenergy.2016.12.081. [6] M. C. Tang et al. , “Systematic approach for conceptual design of an integrated biorefinery with uncertainties,” Clean Technol. Environ. Policy , vol. 15, no. 5, pp. 783–799, Oct. 2013, doi: 10.1007/s10098-013-0582-x. [7] R. Madlener and C. Schmid, “Combined Heat and Power Generation in Liberalised Markets and a Carbon-Constrained World,” GAIA - Ecol. Perspect. Sci. Soc. , vol. 12, no. 2, pp. 114–120, Apr. 2017, doi: 10.14512/gaia.12.2.8. [8] A. Hakizimana, “Novel Optimization Approaches for Integrated Design and Operation of Smart Manufacturing and Energy Systems,” Clemson University, 2019. [9] M. V. F. Pereira and L. M. V. G. Pinto, “Multi-stage stochastic optimization applied to energy planning,” Math. Program. , vol. 52, no. 1–3, pp. 359–375, May 1991, doi: 10.1007/BF01582895. [10] I. E. Grossmann, B. A. Calfa, and P. Garcia-Herreros, “Evolution of concepts and models for quantifying resiliency and flexibility of chemical processes,” Comput. Chem. Eng. , vol. 70, pp. 22–34, Nov. 2014, doi: 10.1016/j.compchemeng.2013.12.013. [11] P. Liu, Y. Fu, and A. Kargarian Marvasti, “Multi-stage stochastic optimal operation of energy-efficient building with combined heat and power system,” Electr. Power Components Syst. , vol. 42, no. 3–4, pp. 327–338, Mar. 2014, doi: 10.1080/15325008.2013.862324. [12] D. K. Varvarezos, L. T. Biegler, and I. E. Grossmann, “Multiperiod design optimization with SQP decomposition,” Comput. Chem. Eng. , vol. 18, no. 7, pp. 579–595, Jul. 1994, doi: 10.1016/0098-1354(94)85002-X. [13] T. Zhang, R. Baldick, and T. Deetjen, “Optimized generation capacity expansion using a further improved screening curve method,” Electr. Power Syst. Res. , vol. 124, pp. 47–54, Jul. 2015, doi: 10.1016/j.epsr.2015.02.017. [14] N. A. Choksi and J. A. Paulson, “Simulation-based Integrated Design and Control with Embedded Mixed-Integer MPC using Constrained Bayesian Optimization,” in Proceedings of the American Control Conference , 2021. [15] A. Flores-Tlacuahuac and L. T. Biegler, “Simultaneous mixed-integer dynamic optimization for integrated design and control,” Comput. Chem. Eng. , vol. 31, no. 5–6, pp. 588–600, May 2007, doi: 10.1016/j.compchemeng.2006.08.010. [16] V. Bansal, J. D. Perkins, E. N. Pistikopoulos, R. Ross, and J. M. G. van Schijndel, “Simultaneous design and control optimisation under uncertainty,” Comput. Chem. Eng. , vol. 24, no. 2, pp. 261–266, 2000. [17] M. Rafiei-Shishavan, S. Mehta, and L. A. Ricardez-Sandoval, “Simultaneous design and control under uncertainty: A back-off approach using power series expansions,” Comput. Chem. Eng. , vol. 99, pp. 66–81, 2017. [18] P. Vega, R. Lamanna, S. Revollar, and M. Francisco, “Integrated design and control of chemical processes--Part II: An illustrative example,” Comput. Chem. Eng. , vol. 71, pp. 618–635, 2014. [19] N. A. Diangelakis, B. Burnak, J. Katz, and E. N. Pistikopoulos, “Process design and control optimization: A simultaneous approach by multi-parametric programming,” AIChE J. , vol. 63, no. 11, pp. 4827–4846, 2017. [20] K. Kandasamy, G. Dasarathy, J. Oliva, J. Schneider, and B. Póczos, “Gaussian Process Bandit Optimisation with Multi-fidelity Evaluations,” in NIPS’16: Proceedings of the 30th International Conference on Neural Information Processing Systems , 2016, pp. 1000–1008, doi: 10.5555/3157096.3157208.",
+    "presenting_author": "Joel Paulson | The Ohio State University, Columbus",
+    "authors": [
+      "Farshud Sorourifar | The Ohio State University, Columbus",
+      "Naitik A. Choksi | The Ohio State University, Columbus",
+      "Joel Paulson | The Ohio State University, Columbus"
+    ],
+    "authors_structured": [
+      {
+        "name": "Farshud Sorourifar",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Naitik A. Choksi",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "485a",
+    "sortable_time": "2021-11-10_12:30:00_12:50:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/630903"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/627233",
+    "paper_endpoint": "Paper/627233",
+    "paper_id": "627233",
+    "topic": "Adjustable Robust Optimization for the Planning Operations of Integrated Refinery-Petrochemical Site Under Demand Uncertainty",
+    "title": "Adjustable Robust Optimization for the Planning Operations of Integrated Refinery-Petrochemical Site Under Demand Uncertainty",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46776",
+    "session_title": "Innovations in Concept-to-Manufacturing and Distribution I",
+    "session_number": "485",
+    "program_title": "Topical Conference: Next-Gen Manufacturing",
+    "symposium_title": "Next-Gen Manufacturing",
+    "abstract": "Facing the challenges of tight competition and environmental restriction from global market, petrochemical industry has been forced to seek all potential possible opportunities to improve the overall profit. Therefore, instead of considering planning optimization in refinery and petrochemical plant individually, a comprehensive standpoint of global enterprise optimization has received more attention than ever before [Li et al., 2016; Zhao et al., 2017; Uribe-Rodriguez et al., 2020]. The integrated refinery-petrochemical planning optimization provides a new route to achieve a higher profit margin by producing more valuable products, saving operating cost and raw material purchasing. Furthermore, ignoring the uncertainty in practical manufacturing, such as demand and sale price of final products, can reduce the total profit significantly. To improve the profitability of enterprise-wide refinery-petrochemical planning operations and avoid excess conservativeness derived from the worst-case based classical robust optimization, the framework of adjustable robust optimization under dynamic uncertainty set is proposed for a multi-period problem of integrated refinery-petrochemical site under uncertain demands. Focusing on the operation planning of a large industrial refinery-petrochemical site which is consist of 24 and 15 processing units in each part, respectively, the nonconvex mixed-integer nonlinear programming (MINLP) is formulated. Complex process operation, such as the scheduling of ethylene cracking process and polymerization process are taken into account simultaneously. Binary variables are defined to denote the type of processed crude oil, purchase decision of raw crudes and selection of unit operation modes. Uncertainty lies in demand of final products and corresponding constraints are reformulated using robust counterpart, affinely adjustable robust counterpart, affinely adjustable robust counterpart with dynamic uncertainty set, respectively. The fluctuation and connection in demand of different periods are drawn from historic statistics. The problems are considered in three scenarios with time length varying in 5, 10, 15 periods respectively and solved by commercial solver BARON. Obtaining from the different models, the respective operational strategies are examined in diverse scenarios with random demand of final products. The computational results show that the method of affinely adjustable robust optimization coupled with dynamic set provides a best average performance on these sampling scenarios, following by the affinely adjustable robust optimization alone. The average profit of static robust optimization is the lowest but fluctuation between scenarios is smallest. References Li, J., Xiao, X., Boukouvala, F., Floudas, C. A., Zhao, B., Du, G., Su, X., & Liu, H., Data-driven mathematical modeling and global optimization framework for entire petrochemical planning operations, AIChE Journal, 62, 3020-3040 (2016) Uribe-Rodriguez, A., Castro, P. M., Gonzalo, G.-G., & Chachuat, B., Global optimization of large-scale MIQCQPs via cluster decomposition: Application to short-term planning of an integrated refinery-petrochemical complex, Computers & Chemical Engineering, 140 (2020) Zhao, H., Ierapetritou, M. G., Shah, N. K., & Rong, G., Integrated model of refining and petrochemical plant for enterprise-wide optimization, Computers & Chemical Engineering, 97, 194-207 (2017)",
+    "presenting_author": "Zhang Lifeng | Tsinghua University, Beijing, China",
+    "authors": [
+      "Zhang Lifeng | Tsinghua University, Beijing, China",
+      "Zhihong Yuan | Tsinghua University, Beijing, China",
+      "Bingzhen Chen | Tsinghua University, Beijing, China"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zhang Lifeng",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhihong Yuan",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Bingzhen Chen",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "485b",
+    "sortable_time": "2021-11-10_12:50:00_13:10:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/627233"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/629298",
+    "paper_endpoint": "Paper/629298",
+    "paper_id": "629298",
+    "topic": "A Novel Hybrid Algorithm for Scheduling of Multipurpose Batch Process",
+    "title": "A Novel Hybrid Algorithm for Scheduling of Multipurpose Batch Process",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46776",
+    "session_title": "Innovations in Concept-to-Manufacturing and Distribution I",
+    "session_number": "485",
+    "program_title": "Topical Conference: Next-Gen Manufacturing",
+    "symposium_title": "Next-Gen Manufacturing",
+    "abstract": "As the incremental market demands towards low-volume manufacture and various product categories, a growing number of researchers has been devoted to the investigation on batch processes [1,2]. The inherent flexibility of multipurpose batch process on processing route and shared facilities provides it wide application prospect in industry [2]. As one of the key managerial tools, process scheduling can greatly improve profit and save cost while saving makespan reflected on optimized production schedule. Mathematical programming is the most generally used method to address the batch process scheduling, being classified into sequence-based and time-grid-based models [3]. These formulations show good performance on handling scheduling with various processing features, such as variable processing time, storage policies and intermediate deliveries/demands. Continuous-time formulations [4,5] can effectively address multipurpose process scheduling in small-scale problems but often require large computational time or fail to converge to optimality for industrial-scale applications. The discrete-time formulation with tightening methods [6] is more computationally efficient and can handle intractable large-scale scheduling in reasonable time frames. However, in this approach, the optimal number of time points is not known a priori, which is often identified through the iterative procedure. As a result, the computational time is greatly increased. Metaheuristics such as genetic algorithm (GA), tabu search and particle swarm optimization, have been proven capable to generate good scheduling solutions in a reasonable computational time even for large-scale batch processes. Many studies [7,8] confirmed that the GA shows good exploration of search space for multipurpose process scheduling attributed to its characteristics on inherent parallelism and strong global search ability. Also, GA can significantly reduce the computational time compared with mathematical programming where excessive CPU time is usually required for complicated scheduling problems. However, most existing GA proposed for multipurpose batch processes in literatures are less generalized and easy to prematurely converge to local optimality. Hybrid algorithm [9, 10] combining the advantages of multiple aforementioned methods can eliminate the limitations of single algorithm and show prominence on solving challenging large-scale problems. In this work, we proposed a novel hybrid algorithm for scheduling of multipurpose batch process, which combines the strengths of GA on fast convergence and sequence-based mixed-integer linear programming (MILP) formulation on ensuring global optimum. The goal is to determine batching, allocation and sequencing of tasks eventually minimizing the Makespan under demand requirement. The hybrid algorithm comprises two stages: firstly, a new-designed GA is used to quickly generate feasible solutions, which do not require the iterative procedure to identify the optimal number of time points and hence significantly reduce the computational time. The obtained batching and sequence decisions are then used to fix some corresponding binary variables in MILP model. Then, the sequence-based formulation is quickly solved to optimality. Different fixing strategies of binary variables will be compared and identify the best one. In GA, a three-part encoding method is designed based on real value encoding way to direct batching and assigning determination and impact the processing sequence of tasks. Constraints concerning unit/storage capacity, material balance and product demand are handled in the decoding procedure to guarantee feasible solutions. We use elitist strategy and roulette wheel method [11] to select good individuals in each population. And a special crossover method was devised for the three-part real-value chromosome. We develop the sequence-based MILP formulation referring the model of Pan [12] and improve its efficiency by reformulating the big-M constraints concerning sequence and using less big-M terms to monitor inventory level of storage. To evaluate the performance of the proposed method, four benchmark examples from the literature [5, 6] are solved using the proposed hybrid algorithm. Results show that the proposed algorithm can successfully generate global optimal solutions in all instances. It demonstrates general applicability and strong convergent performance. Compared with existing models, the hybrid algorithm can yield good quality solutions within shorter computational time. For example, in P9 and P11 of the Kallrath example, the method of Vooradi and Shaik [5] cannot converge to optimality in 40000s. By contrast, the proposed algorithm solves these two instances to optimality within 200 s, decreasing the CPU time over two orders of magnitude. In the most complicated instance P0, our approach reports a CPU time reduction by 37.5% compared to that of Velez et al. [6]. More importantly, the hybrid algorithm always generates better solutions than the designed GA. References 1. Rakovitis N, Zhang N, Li J, Zhang LP. A new approach for scheduling of multipurpose batch processes with unlimited intermediate storage policy. Chem. Sci. Eng . 2019; 13(4):784-802. 2. Rakovitis N, Li J, Zhang N. An improved approach to scheduling multipurpose batch processes with conditional sequencing. Aided Chem. Eng . 2019; 46:1387-1392. 3. Harjunkoski I, Maravelias CT, Bongers P, et al. Scope for industrial applications of production scheduling models and solution methods. Comput Chem Eng. 2014; 62:161-193. 4. Vooradi R, Shaik MA, Gupta NM. Three-index model for Westenberger–Kallrath benchmark scheduling problem. AIP Conf. Proc . 2010; 1298:380–385. 5. Vooradi R, Shaik MA. Improved three-index unit-specific event-based model for short-term scheduling of batch plants, Comput Chem Eng. 2012; 43:148-172. 6. Velez S, Merchan AF, Maravelias CT. On the solution of large-scale mixed integer programming scheduling models. Eng. Sci. 2015; 136(2):139-157. 7. He Y, Hui CW. A binary coding genetic algorithm for multi-purpose process scheduling: A case study. Chem. Eng. Sci. 2010; 65(16):4816-4828. 8. Woolway M, Majozi T. A novel metaheuristic framework for the scheduling of multipurpose batch plants. Chem. Eng. Sci. 2018; 192:678-687. 9. Rakovitis N, Li D, Zhang N, et al. Novel Approaches for Energy-Efficient Flexible Job-Shop Scheduling Problems, Eng. Trans. 2020; 20: 823-828. 10. Lee H, Maravelias CT. Combining the advantages of discrete- and continuous-time scheduling models: Part 1. Framework and mathematical formulations, Comput Chem Eng. 2018; 116:176-190. 11. Beheshti Z, Shamsudding S. A review of population-based meta-heuristic algorithms, Int J Adv Soft Comput Appl. 2013; 5:1–35. 12. Pan M, Qian Y, Li XX. A novel precedence-based and heuristic approach for short-term scheduling of multipurpose batch plants. Eng. Sci. 2008; 63:4313-4332.",
+    "presenting_author": "Dan Li | The University of Manchester, United Kingdom",
+    "authors": [
+      "Dan Li | The University of Manchester, United Kingdom",
+      "Dongda Zhang | The University of Manchester, United Kingdom",
+      "Nan Zhang | The University of Manchester, United Kingdom",
+      "Jie Li | The University of Manchester, United Kingdom",
+      "Liping Zhang | Wuhan University of Science and Technology, China",
+      "Xin Xiao | Chinese Academy of Sciences, Beijing, China"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dan Li",
+        "affiliation": "The University of Manchester, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Dongda Zhang",
+        "affiliation": "The University of Manchester, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Nan Zhang",
+        "affiliation": "The University of Manchester, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Jie Li",
+        "affiliation": "The University of Manchester, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Liping Zhang",
+        "affiliation": "Wuhan University of Science and Technology, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Xin Xiao",
+        "affiliation": "Chinese Academy of Sciences, Beijing, China",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "485c",
+    "sortable_time": "2021-11-10_13:10:00_13:30:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/629298"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/629370",
+    "paper_endpoint": "Paper/629370",
+    "paper_id": "629370",
+    "topic": "Impact of Split Delivery in Minimizing LNG Procurement Cost",
+    "title": "Impact of Split Delivery in Minimizing LNG Procurement Cost",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46776",
+    "session_title": "Innovations in Concept-to-Manufacturing and Distribution I",
+    "session_number": "485",
+    "program_title": "Topical Conference: Next-Gen Manufacturing",
+    "symposium_title": "Next-Gen Manufacturing",
+    "abstract": "Historically, LNG has been traded via long term contracts between a producer and a customer. These long term contracts or LTCs, spanned over 15-25 years and provided both, the producer and customer with a stable supply of LNG. With the advent and growth of the LNG spot market in the last decade, many countries have been looking into methods to create a cost effective import portfolio considering both long term contracts and spot market. It is common practice in the LNG industry to load a single cargo for delivery to a single location supplied by a single seller. Since 2017 [1] , split delivery has also been introduced, which offers a new level of operational flexibility to LNG suppliers and importers. But with a split delivery, importers face a trade-off between increased operational costs and reduced cargo costs. Hence it is important for a buyer to create a procurement plan that takes this into account and optimizes overall procurement costs. In this study, we focus on the optimal procurement of LNG at the import terminal and study the benefits by including split delivery as an option. In literature, LNG procurement for the customer has been studied primarily as a long term strategic decision with energy security as the priority while minimizing procurement cost. Shaikh et al. (2017) [2] modelled a natural gas import scheme for China, where they developed a mathematical model aimed at minimizing the import cost, transport distance, domestic and political instability associated with each supplier. Later, with a surge of spot market share in LNG trade, it was studied as the portfolio optimization problem that is determining the ratio of LTC and spot market in total imports. Kim and Kim (2018) [3] developed an optimal portfolio for Korea. In this study, they developed a two-step portfolio model mean-variance optimization model which determines the ratio of LTC and spot in imports followed by a linear programming model which chooses the optimal set of contract for LTC procurement. The benefits of split delivery in LNG supply chains have been discussed mainly from the producer’s end. Mutlu et al. (2015) [4] considers the problem of developing an annual delivery program with least cost for a supplier. They included penalties for deviating from contractual terms, excess production and maintenance of ships and also a spot market revenue by selling excess LNG. Costs were compared with and without split delivery and they established the cost benefits of split delivery for a producer. Sheiktajian et al. (2020) [5] compared the costs of split and non-split delivery for an LNG manufacturer selling LNG via LTC and spot markets by considering deterministic and uncertain scenarios. Shahrukh et al. (2019) [6] were the first to develop an import strategy for an LNG importer under the terms of an ongoing long-term contract and a spot market available to minimize overall procurement costs for the short term (1-12 months) by proposing a mathematical formulation LNGPM. However they did not allow split delivery in their model. No model in existing literature can establish the benefits of split delivery at the customers end in the short term. In this paper, we seek to fill this gap by considering a scenario with split delivery and compare the costs to the scenario where no split delivery is allowed (LNGPM) to understand the various cost benefits due to splitting of delivery. We have formulated the above problem as a mixed integer linear programming problem (MILP). In our formulation, we model the LNG available to the importer as a set of LTC and spot cargoes from which the optimal set having least overall cost has to be procured for satisfying the requirements of the importer. We consider multiple terminals at the importer’s end, with each terminal having separate demand which must be collectively satisfied by the procured cargoes. We also consider limited berths/jetties and capacities of storage tanks at each terminal. For the cargos, we allow each cargo having its own volume, price, availability window and charter costs. In our model, we consider the option of splitting the delivery between the terminals available only to the LTC cargos and restrict the splitting of delivery between two terminals as seen in the real world. To prevent impractical solutions, the ratio of volume unloaded at each of the terminals is taken to be in reasonable limits . The objective function is to minimize the sum of cargo costs and transport costs under contractual stipulations and constraints based on the mentioned resources and obtain an optimal set of cargos to be procured. To understand the benefits of split delivery, we present an illustrative example. The example involves an LNG importer having three regionally distributed terminals, having two LNG berths at each import terminal. The planning horizon is taken as 30 days. During the planning horizon, there are sixty spot cargoes available at different time windows. There are also 4 LTC cargos, each corresponding to a particular contract. Each contract has a minimum and maximum amount of LNG that can be procured from that supplier. Each LTC and spot cargo has a cargo volume, LNG price, travel times, and travel costs associated with each cargo. At each import terminal, capacity of storage tanks and a reorder level is specified. Travel time between all combinations of terminals is also defined in case of a split delivery. The illustrative example is solved for both scenarios and their results are compared. We see that there is an additional saving of 1.6 million USD by utilizing the split delivery option. We observe that using split delivery, we procure same number of LTC cargos, but slightly lesser volume of LNG. The other reason for savings is improved flexibility and better scheduling while ordering spot cargos. The additional travel cost incurred due to travel between terminals during a split delivery is offset by the savings in procurement cost. To reduce the effect of additional inventory at the end of the month, we solve the same scenario for 12 months on a rolling horizon basis to give a better comparison of the models. We see that by allowing split delivery, we are able to save 10.67 million USD (0.93%) when compared to the scenario without utilizing split delivery. In the above example, we have considered benefits of only one customer who avails split delivery. There is a potential to reduce costs further by cooperating with other nearby customers and allowing split deliveries between import terminals of different customers to benefit both customers. In this regard, we have considered three levels of co-operation and compared the benefits among each level. We see that by co-operating and allowing split delivery there is always a reduction in cost seen for the customers. We will also report the observations from various scenarios discussed above. References: 1. Dhul Qidah (2017, August 21). Qatargas, RasGas complete LNG co-loading for split delivery, LNG global. https://www.lngglobal.com/qatargas-rasgas-complete-lng-co-loading-for-split-delivery 2. Shaikh, F., Ji, Q., Fan, Y., Shaikh, P. H. & Uqaili, M. A. ‘Modelling an optimal foreign natural gas import scheme for China’. J. Nat. Gas Sci. Eng. 40, 267–276 (2017). 3. Kim, J. & Kim, J. ‘Optimal Portfolio for LNG Importation in Korea Using a Two-Step Portfolio Model and a Fuzzy Analytic Hierarchy Process’. Energies 11, 3049 (2018). 4. Fatih Mutlu, Mohamed K. Msakni, Hakan Yildiz, Erkut Sonmez, Shaligram Pokharel, ‘A Comprehensive Annual Delivery Program for Upstream Liquefied Natural Gas Supply Chain’. European Journal of Operational Research (2015), doi: 10.1016/j.ejor.2015.10.031 5. Sheikhtajian S, Nazemi A and Feshari M. Marine Inventory-Routing Problem for Liquefied Natural Gas under Travel Time Uncertainty. International Journal of Supply and Operations Management , 7, no.1, pp 93-111 (2020) 6. Shahrukh, Mohd and Srinivasan, R. (2019). Evaluating the Benefits of LNG Procurement through Spot Market Purchase. Computer Aided Chemical Engineering, 46:1723–1728. doi: 10.1016/B978-0-12-818634-3.50288-5",
+    "presenting_author": "Prashanth Ravula | Indian Institute of Technology, Madras, Chennai",
+    "authors": [
+      "Prashanth Ravula | Indian Institute of Technology, Madras, Chennai",
+      "Mohd Shahrukh | Indian Institute of Technology Madras, Chennai",
+      "Rajagopalan Srinivasan | Indian Institute of Technology Madras, Chennai",
+      "Iftekar Karimi | National University of Singapore"
+    ],
+    "authors_structured": [
+      {
+        "name": "Prashanth Ravula",
+        "affiliation": "Indian Institute of Technology, Madras, Chennai",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mohd Shahrukh",
+        "affiliation": "Indian Institute of Technology Madras, Chennai",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Rajagopalan Srinivasan",
+        "affiliation": "Indian Institute of Technology Madras, Chennai",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Iftekar Karimi",
+        "affiliation": "National University of Singapore",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "485d",
+    "sortable_time": "2021-11-10_13:30:00_13:50:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/629370"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/634117",
+    "paper_endpoint": "Paper/634117",
+    "paper_id": "634117",
+    "topic": "Keynote Talk: Toward Autonomy for Safe and on-Demand Biomanufacturing on Mars",
+    "title": "Keynote Talk: Toward Autonomy for Safe and on-Demand Biomanufacturing on Mars",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46776",
+    "session_title": "Innovations in Concept-to-Manufacturing and Distribution I",
+    "session_number": "485",
+    "program_title": "Topical Conference: Next-Gen Manufacturing",
+    "symposium_title": "Next-Gen Manufacturing",
+    "abstract": "Biomanufacturing holds promise as a versatile and economic means to transform in-situ resources into products that support long-term crewed space exploration and human mission to Mars. Bioproduction targets for Martian life-support systems primarily include pharmaceuticals, sustenance, and biopolymers that can be used in diverse additive manufacturing applications. A distinguishing feature of a space biomanufacturing factory compared to Earth-manufacturing factories is how versatile and robust a space factory must be to ensure crew survival in unknown environments and under mission uncertainties. In this talk, we will present our vision as to how the autonomy of a Martian biomanufacturing factory will require the safe, robust, and verifiable composition of deep learning, perception, mission planning, and optimal control in a feedback loop.",
+    "presenting_author": "Ali Mesbah | University of California, Berkeley",
+    "authors": [
+      "Ali Mesbah | University of California, Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "485e",
+    "sortable_time": "2021-11-10_13:50:00_14:25:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/634117"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/634118",
+    "paper_endpoint": "Paper/634118",
+    "paper_id": "634118",
+    "topic": "Keynote Talk: The Roadmap to an Autonomous Chemistry Lab",
+    "title": "Keynote Talk: The Roadmap to an Autonomous Chemistry Lab",
+    "date_time": "2021-11-10_12:30:00_15:00:00",
+    "session_id": "46776",
+    "session_title": "Innovations in Concept-to-Manufacturing and Distribution I",
+    "session_number": "485",
+    "program_title": "Topical Conference: Next-Gen Manufacturing",
+    "symposium_title": "Next-Gen Manufacturing",
+    "abstract": "Current approaches to chemical synthesis rely on time-consuming planning and labor-intensive manual synthesis, which is a rate-limiting step in the discovery of new functional molecules, a significant contributor to the overall cost of preclinical development, and clearly incompatible with the goals of autonomous discovery. In this talk, I will outline the components of a hypothetical autonomous synthesis laboratory designed to facilitate the development and manufacture of new small molecules. We will talk through the hierarchical process of computer-aided synthesis planning, starting from a list of molecules of interest and ending with an optimal schedule of automation-friendly action sequences for their sequential or parallel synthesis. Throughout, I will discuss our and others’ progress towards this goal and where the primary technological barriers lay.",
+    "presenting_author": "Connor Coley | Massachu, Cambridge",
+    "authors": [
+      "Connor Coley | Massachu, Cambridge"
+    ],
+    "authors_structured": [
+      {
+        "name": "Connor Coley",
+        "affiliation": "Massachu, Cambridge",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "485f",
+    "sortable_time": "2021-11-10_14:25:00_15:00:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/634118"
+  }
+]

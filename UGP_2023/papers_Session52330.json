@@ -1,0 +1,387 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/660241",
+    "paper_endpoint": "Paper/660241",
+    "paper_id": "660241",
+    "topic": "Machine Learning Enabled Development of Accurate Force Fields for Hydrofluorocarbons",
+    "title": "Machine Learning Enabled Development of Accurate Force Fields for Hydrofluorocarbons",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52330",
+    "session_title": "Practical Applications of Computational Chemistry and Molecular Simulation",
+    "session_number": "508",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Hydrofluorocarbon (HFC) refrigerants with zero ozone depleting potential have replaced chlorofluorocarbons and are now ubiquitous. However, some HFCs have high global warming potential, which has led to calls by governments to phase these HFCs out. Technologies to recycle and repurpose these HFCs need to be developed. Therefore, thermophysical properties of HFCs are needed over a wide range of conditions. Molecular simulations can help understand and predict thermophysical properties of HFCs. The prediction capability of a molecular simulation is directly tied to the accuracy of the force field. In this work, we applied and refined a machine learning based workflow to optimize the Lennard-Jones parameters of classical HFC force fields for HFC-143a (CF 3 CH 3 ), HFC-134a (CH 2 FCF 3 ), R-50 (CH 4 ), R-170 (C 2 H 6 ), and R-14 (CF 4 ). Our workflow involves liquid density iterations with molecular dynamics simulations and vapor-liquid equilibrium (VLE) iterations with Gibbs ensemble Monte Carlo simulations. Support vector machine classifiers and Gaussian process surrogate models save considerable simulation time and can efficiently select optimal parameters from half a million data sets. Excellent agreement of simulated liquid density, vapor density, vapor pressure, enthalpy of vaporization, and critical properties relative to experiments were obtained. The performance of each new parameter set was superior or similar to the best force field in literature. We find that the new force fields both yield excellent VLE properties and are transferable to a broader scope of properties including transport properties. Future work will use these simulation results as the training set to calibrate a generalized force field for HFCs, and this workflow is extensible to other complex molecular systems.",
+    "presenting_author": "Ning Wang | University of Notre Dame, IN",
+    "authors": [
+      "Ning Wang | University of Notre Dame, IN",
+      "Montana Carlozo | University of Notre Dame, IN",
+      "Eliseo Marin Rimoldi | University of Notre Dame, IN",
+      "Alexander Dowling | University of Notre Dame, IN",
+      "Edward Maginn | University of Notre Dame, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ning Wang",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Montana Carlozo",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Eliseo Marin Rimoldi",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Alexander Dowling",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Edward Maginn",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "508a",
+    "sortable_time": "2023-11-09_12:30:00_12:48:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/660241"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/661793",
+    "paper_endpoint": "Paper/661793",
+    "paper_id": "661793",
+    "topic": "Quantitative in silico Prediction of the Rate of Protodeboronation By a Mechanistic Density Functional Theory-Aided Algorithm",
+    "title": "Quantitative in silico Prediction of the Rate of Protodeboronation By a Mechanistic Density Functional Theory-Aided Algorithm",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52330",
+    "session_title": "Practical Applications of Computational Chemistry and Molecular Simulation",
+    "session_number": "508",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Boronic acids (BAs) have long been of interest to the chemical sciences community due to their irreplaceable role in communications, materials, and medicine. BAs also feature as the nucleophilic coupling partner in several key organic reactions including the Suzuki−Miyaura reaction, Chan−Evans−Lam coupling, Liebeskind−Srogl coupling, and oxidative Heck and can also undergo addition with carbonyls, imines, and enones. A reaction will not work if one of the coupling partners degrades at a significantly faster rate than the rate of the intended reaction, and protodeboronation is one of the most significant, if not the most significant, degradation pathways/side reactions in the aforementioned named organic reactions. Being able to accurately predict the rate of protodeboronation would therefore be hugely beneficial to anyone working with BAs, as it can help with reaction planning. We have developed an algorithm for in silico prediction of the rate of protodeboronation of boronic acids as a function of pH [1]. Protodeboronation can proceed through 7 distinct pathways, though for any particular boronic acid only a subset of the mechanistic pathways are active [2]. The rate of each active mechanistic pathway is linearly correlated with its characteristic energy difference, which can be determined through energy calculations using Density Functional Theory (DFT). To the best of our knowledge, this is the first purpose-built algorithm to be published in the literature capable of making in silico predictions of the rate of protodeboronation. We validated the algorithm using leave-one-out cross-validation on a dataset of 50 boronic acids (469 data points from pH 0 to 14), which showed that the algorithm can explain a majority of the variability in the dataset (R2=0.65), with a Mean Absolute Error (MAE) of 0.86. The rate is measured on a log scale from -9 (22 years half-life) to +2 (7 milliseconds half-life), so MAE below 1 means that the algorithm is capable of predicting the rate of protodeboronation within an order of magnitude, i.e., whether the rate will be on the order of milliseconds, seconds, hours, days, weeks, or years. With such predictions, chemists performing reactions that feature boronic acids, such as Suzuki–Miyaura and Chan-Evans-Lam couplings, are able to better plan their reactions and predict when protodeboronation might become a problem, thus saving valuable time and materials. Considering the abstract figure, the steps in the algorithmic protodeboronation prediction workflow can be summarised as follows: DFT optimisation The mechanistic pathway for determination of the characteristic energy difference is of the form t ransition state -> stable intermediate , and the energies of each of the molecular structures were determined using DFT with Gaussian (computational approach was M06L/6-311++G** in water) [3]. The DFT energy calculations for the transition states were transition state optimisations, while calculations for reaction intermediates were optimised to a local energy minimum. Correlate energies We found that there is a linear relationship between the maximum/saturated rate of a mechanism and the associated characteristic energy difference. Linear regression for the k 2 mechanism can be seen in the abstract figure. Using these linear relationships, the rate can be predicted for novel boronic acids. Algorithmic amalgamation The observed rate of reaction is the sum of the rate contributions from each active mechanism. The experimental rate measurements span from +2 (half-life of roughly 7 milliseconds) to -9 (half-life of roughly 22 years), and the predicted rate has been capped to fall within this region as well. Leave-one-out cross-validation (LOOCV) was used to assess the quality of the fit for each molecule, and the construction of a parity plot showed that the model was able to explain a majority of the variability (R2=0.65). De novo prediction Finally, the algorithm was used to predict in silico the rate of protodeboronation as a function of pH for 50 novel boronic acids of academic and industrial relevance. These predictions were made available in the supplementary information [1], which allows chemists running reactions featuring boronic acids to simply look up the predicted rate of protodeboronation for these molecules. The associated code can be found on GitHub, such that anyone can generate their own predictions. We also hope that this work may serve as inspiration as a method for predicting the rate of reaction when the mechanistic details about a reaction are known and can be simplified as a set of interacting linear equations. [1] Wigh, D. S.; Tissot, M.; Pasau, P.; Goodman, J. M.; Lapkin, A. A. Quantitative In Silico Prediction of the Rate of Protodeboronation by a Mechanistic Density Functional Theory-Aided Algorithm. J. Phys. Chem. A 2023 . https://doi.org/10.1021/acs.jpca.2c08250 . [2] Cox, P. Protodeboronation. Ph.D. thesis, The University of Edinburgh, 2016. [3] Gaussian 16, Revision C.01 , Frisch, M. J.; Trucks, G. W.; Schlegel, H. B.; Scuseria, G. E.; Robb, M. A.; Cheeseman, J. R.; Scalmani, G.; Barone, V.; Petersson, G. A.; Nakatsuji, H.; Li, X.; Caricato, M.; Marenich, A. V.; Bloino, J.; Janesko, B. G.; Gomperts, R.; Mennucci, B.; Hratchian, H. P.; Ortiz, J. V.; Izmaylov, A. F.; Sonnenberg, J. L.; Williams-Young, D.; Ding, F.; Lipparini, F.; Egidi, F.; Goings, J.; Peng, B.; Petrone, A.; Henderson, T.; Ranasinghe, D.; Zakrzewski, V. G.; Gao, J.; Rega, N.; Zheng, G.; Liang, W.; Hada, M.; Ehara, M.; Toyota, K.; Fukuda, R.; Hasegawa, J.; Ishida, M.; Nakajima, T.; Honda, Y.; Kitao, O.; Nakai, H.; Vreven, T.; Throssell, K.; Montgomery, J. A., Jr.; Peralta, J. E.; Ogliaro, F.; Bearpark, M. J.; Heyd, J. J.; Brothers, E. N.; Kudin, K. N.; Staroverov, V. N.; Keith, T. A.; Kobayashi, R.; Normand, J.; Raghavachari, K.; Rendell, A. P.; Burant, J. C.; Iyengar, S. S.; Tomasi, J.; Cossi, M.; Millam, J. M.; Klene, M.; Adamo, C.; Cammi, R.; Ochterski, J. W.; Martin, R. L.; Morokuma, K.; Farkas, O.; Foresman, J. B.; Fox, D. J. Gaussian, Inc., Wallingford CT, 2016.",
+    "presenting_author": "Daniel Wigh | University of Cambridge, United Kingdom",
+    "authors": [
+      "Daniel Wigh | University of Cambridge, United Kingdom",
+      "Matthieu Tissot | UCB Pharma S.A., Brussels, Belgium",
+      "Patrick Pasau | UCB Pharma S.A., Brussels, Belgium",
+      "Jonathan Goodman | University of Cambridge, United Kingdom",
+      "Alexei A. Lapkin | University of Cambridge, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daniel Wigh",
+        "affiliation": "University of Cambridge, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Matthieu Tissot",
+        "affiliation": "UCB Pharma S.A., Brussels, Belgium",
+        "designation": "Author"
+      },
+      {
+        "name": "Patrick Pasau",
+        "affiliation": "UCB Pharma S.A., Brussels, Belgium",
+        "designation": "Author"
+      },
+      {
+        "name": "Jonathan Goodman",
+        "affiliation": "University of Cambridge, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Alexei A. Lapkin",
+        "affiliation": "University of Cambridge, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "508b",
+    "sortable_time": "2023-11-09_12:48:00_13:06:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/661793"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/662959",
+    "paper_endpoint": "Paper/662959",
+    "paper_id": "662959",
+    "topic": "Assessment of Thermodynamic Models Using Brown’s Characteristic Curves",
+    "title": "Assessment of Thermodynamic Models Using Brown’s Characteristic Curves",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52330",
+    "session_title": "Practical Applications of Computational Chemistry and Molecular Simulation",
+    "session_number": "508",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "For several applications, thermodynamic properties of fluids need to be modeled at high pressure and temperature, e.g. in rocket propulsion systems, geology, and astronomy. However, in parts, no experiments for determining thermophysical property data are feasible today at such conditions. Using molecular thermodynamics, physically-based models can be used for making predictions of the thermodynamic behavior at such conditions. Their reliability at such regimes is evidently – due to the lack of experimental data – a priori unknown. Hence, thermodynamic consistency tests play an important role for the assessment of the reliability of models at such conditions. An interesting strategy for testing the thermodynamic consistency is based on Brown’s characteristic curves. E.H. Brown proposed four characteristic curves that define lines on the thermodynamic surface where special thermodynamic conditions hold [1]. There is one first-order curve (called Zeno curve) and three second-order characteristic curves (called Amagat, Boyle, and Charles curve), cf. Fig. 1-left. These curves are located within a large pressure and temperature range. For a given molecular fluid, Brown's characteristic curves are known to exhibit certain thermodynamic features [1,2]. The behavior of a given thermodynamic model can be tested regarding these features to assess its consistency. In this work, both molecular simulation and molecular-based equation of state (EOS) models are assessed regarding the thermodynamic consistency of Brown’s criteria. In a first step, a rigorous and generalized simulation method was developed for determining the characteristic curves from a given force field [3]. The method was tested using multiple model fluids and was then applied to complex real fluids such as alkanes, alcohols, and aromatic components. For the model fluids, the classical Lennard-Jones fluid, different Mie fluids, and Stockmayer fluids were studied. For the real substance fluids, methane, ethane, propane, ethanol, and toluene (cf. Fig. 1-right) were studied. In all cases, both classical force fields and molecular-based EOS were applied. If available, also multi-parameter EOS models were used for comparison. For the model fluids, the zero-density limits of the characteristic curves were determined exactly using the virial route. The results provide a wealth of insights in the thermodynamic consistency of such models at large pressure and temperature: The molecular force field models yield characteristic curves that are conform with Brown’s criteria in all cases. This is interesting as Brown derived the criteria from rational thermodynamics for simple (repulsive-dispersive) particles only. The molecular-based EOS models considered in the evaluation show important differences, i.e. some exhibit artifacts, whereas others yield predictions that are fully conform with Brown’s postulates (and show excellent agreement with the force field predictions, cf. Fig. 1-right). This is astonishing considering the fact that both the force field models and the EOS models were parametrized with respect to vapor-liquid equilibrium data alone. In some cases, also empirical EOS models were used in the evaluation that are found to exhibit artifacts in several cases. This study moreover yields insights into the applicability of the corresponding states principle at high pressure and temperature and reveals that the corresponding states principle fails at such conditions even for simple fluids. In Summary, this work contributes to the question how the quality of models can be rigorously assessed even if no experimental data is available. References [1] E.H. Brown: On the thermodynamic properties of fluids, Bulletin de l’Institut International du Froid Annexe 1960–1, 169–178 (1960). [2] S. Stephan, U. Deiters: Characteristic curves of the Lennard-Jones fluid, International Journal of Thermophysics 41, 147 (2020). [3] M. Urschel, S. Stephan: Determining Brown’s characteristic curves using molecular simulation, Journal of Chemical Theory and Computation 19, 5 (2023) 1537.",
+    "presenting_author": "Simon Stephan | RPTU Kaiserslautern, Germany",
+    "authors": [
+      "Maximilian Urschel | RPTU Kaiserslautern, Germany",
+      "Simon Stephan | RPTU Kaiserslautern, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Maximilian Urschel",
+        "affiliation": "RPTU Kaiserslautern, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Simon Stephan",
+        "affiliation": "RPTU Kaiserslautern, Germany",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "508c",
+    "sortable_time": "2023-11-09_13:06:00_13:24:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/662959"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663597",
+    "paper_endpoint": "Paper/663597",
+    "paper_id": "663597",
+    "topic": "An Application of Complex Modeling in Biology: Studying Mechanochemical Dependence of Intracellular Entry Efficiency",
+    "title": "An Application of Complex Modeling in Biology: Studying Mechanochemical Dependence of Intracellular Entry Efficiency",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52330",
+    "session_title": "Practical Applications of Computational Chemistry and Molecular Simulation",
+    "session_number": "508",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Mathematical modeling of complex systems has become ever-increasingly demanded in the biology of living cells for validating experiments, generating hypotheses, and interpreting findings. Complex modeling is particularly effective for studying in vivo biological systems at nano-scales, where conducting experiments is challenging. Here, we built a complex model to study clathrin-mediated endocytosis (CME), the major cellular pathway of internalizing surface-bound cargo molecules. CME plays essential roles in many diseases, including COVID, cancer, and Alzheimer’s. During CME, clathrin forms a self-assembled basket to consecutively bend the membrane to enclose the cargos into a ~100nm-wide vesicle within ~25 seconds before intracellular release. Multiple endocytic proteins (EP) other than clathrin also contribute to this process. However, little is clear regarding the detailed role of the EPs in assisting the clathrin basket to bend membrane mainly because of the insufficient understanding of the mechanical relation between the EPs and the cell membrane. To fill this gap, we developed a state-of-the-art stochastic model that incorporates the clathrin basket, the endocytic proteins, the cell membrane, and their mechanical interactions. We show, experimentally, that CALM (an adaptor protein) is required to initiate curvature. Next, we adjust the model based on the CALM result and the known flexibility of clathrin to predict two distinct states of the clathrin baskets at equilibrium: a shallow open state that defines abortive CME events and a curved, closed state that defines productive CME events. We further explore various values of a parameter that controls the tightness of the clathrin baskets, and discover a phase transition from the closed to open state. We hypothesize and then experimentally confirm that curvature induced by a regulatory protein dynamin2 determines the transition from open to closed states and drives productive CME. We conclude: 1) There is a checkpoint indicating a competition between the energy in clathrin baskets and the energy of membrane bending, resulting in two distinct fates of CME: abortive and productive, and 2) Dynamin2 powers clathrin baskets to pass the checkpoint and drive productive CME to enhance CME efficiency. In sum, our interdisciplinary study complementing quantitative experiments with a complex model serves as an example of bridging physics and cell biology at nanoscales.",
+    "presenting_author": "Xinxin Wang | UT Southwestern Medical Center, Dallas, TX",
+    "authors": [
+      "Xinxin Wang | UT Southwestern Medical Center, Dallas, TX",
+      "Zhiming Chen | University of South China, Hengyang",
+      "Sandra Schmid | CZ Biohub, San Francisco, CA",
+      "Gaudenz Danuser | UT Southwestern Medical Center, Dallas, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Xinxin Wang",
+        "affiliation": "UT Southwestern Medical Center, Dallas, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhiming Chen",
+        "affiliation": "University of South China, Hengyang",
+        "designation": "Author"
+      },
+      {
+        "name": "Sandra Schmid",
+        "affiliation": "CZ Biohub, San Francisco, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Gaudenz Danuser",
+        "affiliation": "UT Southwestern Medical Center, Dallas, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "508d",
+    "sortable_time": "2023-11-09_13:24:00_13:42:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663597"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/679215",
+    "paper_endpoint": "Paper/679215",
+    "paper_id": "679215",
+    "topic": "Break",
+    "title": "Break",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52330",
+    "session_title": "Practical Applications of Computational Chemistry and Molecular Simulation",
+    "session_number": "508",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "",
+    "presenting_author": "",
+    "authors": [],
+    "authors_structured": [],
+    "sortable_time": "2023-11-09_13:42:00_14:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/679215"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666633",
+    "paper_endpoint": "Paper/666633",
+    "paper_id": "666633",
+    "topic": "Theoretical Assessment of PET Pyrolysis Via Reactive Molecular Dynamic Simulation and Kinetic Modeling",
+    "title": "Theoretical Assessment of PET Pyrolysis Via Reactive Molecular Dynamic Simulation and Kinetic Modeling",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52330",
+    "session_title": "Practical Applications of Computational Chemistry and Molecular Simulation",
+    "session_number": "508",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "The rapid growth of demand for PET plastic products has resulted in a critical need to develop effective processes to reduce PET pollution by establishing a circular economy. Pyrolysis, a promising technology to produce lighter and recyclable components from wasted plastic products, has received considerable attention as a means of chemical recycling. While significant progress has been made in the experimental studying of the decomposition of PET, molecular-level observations of PET pyrolysis and its detailed reaction model remain largely missing. In this work, the pyrolysis process of PET was studied using reactive molecular dynamics (MD) simulations to elucidate its mechanism and develop kinetic models capable of describing the process. The ester oxygen-alkyl carbon bond dissociation was observed in the simulations, producing ethylene and TPA radicals. These radicals can be further transformed into long-chain components such as char, and CO 2 was released as a product. MD simulations revealed a chain reaction pattern for yielding gas species, which includes the generation of TPA radicals from long-chain breaking and condensation reactions to form a long chain with phenyl benzoate structure to consume TPA radicals. This mechanism explained the correlation between CO 2 release and long-chain formation. Moreover, since atomistic simulations are generally conducted at the time scale of a few nanoseconds, a high temperature (i.e., > 1000 K) is typically adopted for accelerated reaction. To address the issue of the limitation of time and temperature scale, we developed a set of ordinary differential equations-based kinetic models that could describe the key products of PET pyrolysis under practical temperature scales and analyze the optimal reaction conditions. Overall, this study conducted a detailed mechanism study on PET pyrolysis and established a kinetic model with effective assessment. The workflow presented herein is capable of extracting key information from atomistic MD simulations for establishing kinetic models, which can be used in related areas for performing pre-experimental screening and mechanism prediction in order to further assist in the development of effective pyrolysis solutions. This study highlights the importance of theoretical research on pyrolysis and its potential for innovative solutions to address the growing issue of plastic pollution by developing a circular economy.",
+    "presenting_author": "Shuangxiu Ma | Ohio state university, Columbus",
+    "authors": [
+      "Shuangxiu Ma | Ohio state university, Columbus",
+      "Bhavik Bakshi | Ohio State University, Columbus",
+      "Li-Chiang Lin | The Ohio State University, Columbus"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shuangxiu Ma",
+        "affiliation": "Ohio state university, Columbus",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Bhavik Bakshi",
+        "affiliation": "Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Li-Chiang Lin",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "508f",
+    "sortable_time": "2023-11-09_14:00:00_14:18:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666633"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670176",
+    "paper_endpoint": "Paper/670176",
+    "paper_id": "670176",
+    "topic": "Efficient Simulation of Complex Fluid Phase Diagrams within Self-Consistent Field Theory Using Bayesian Optimization",
+    "title": "Efficient Simulation of Complex Fluid Phase Diagrams within Self-Consistent Field Theory Using Bayesian Optimization",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52330",
+    "session_title": "Practical Applications of Computational Chemistry and Molecular Simulation",
+    "session_number": "508",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "The phase diagrams of complex fluids are essential for understanding solubility and miscibility, properties of central importance in polymer formulation. At a typical industrial resolution of 10 wt%, exhaustive exploration of a ternary phase diagram requires simulation or experimentation at 63 composition points, a number which grows exponentially with the number of components. Using a new objective function derived from Self-Consistent Field Theory (SCFT) computations coupled with a constrained Bayesian optimization algorithm, we demonstrate efficient search of phase boundaries in a sample two-phase ternary modeled by polymer SCFT with 50% fewer simulations than an exhaustive search. Our approach is general, gradient-free, and can be applied to either simulation or experimental campaigns.",
+    "presenting_author": "Steven G. Arturo | The Dow Chemical Company, Collegeville",
+    "authors": [
+      "Steven G. Arturo | The Dow Chemical Company, Collegeville",
+      "Clyde Fare | IBM Research UK, Warrington, United Kingdom",
+      "Kaoru Aou | Dow Chemical, Lake Jackson, TX",
+      "Huikuan Chao | Dow, Inc., Midland, MI",
+      "Daniel Dermody | The Dow Chemical Company, Midland",
+      "William Edsall | The Dow Chemical Company, Midland",
+      "Jillian Emerson | The Dow Chemical Company, Midland",
+      "Kathryn Grzesiak | The Dow Chemical Company, Midland",
+      "Arjita Kulshreshtha | The Dow Chemical Company, Midland",
+      "Paul M. Mwasame | The Dow Chemical Company, Collegeville",
+      "Jed W. Pitera | IBM Almaden Research Center, San Jose, CA",
+      "Edward Pyzer-Knapp | IBM Research UK, Warrington, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Steven G. Arturo",
+        "affiliation": "The Dow Chemical Company, Collegeville",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Clyde Fare",
+        "affiliation": "IBM Research UK, Warrington, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Kaoru Aou",
+        "affiliation": "Dow Chemical, Lake Jackson, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Huikuan Chao",
+        "affiliation": "Dow, Inc., Midland, MI",
+        "designation": "Author"
+      },
+      {
+        "name": "Daniel Dermody",
+        "affiliation": "The Dow Chemical Company, Midland",
+        "designation": "Author"
+      },
+      {
+        "name": "William Edsall",
+        "affiliation": "The Dow Chemical Company, Midland",
+        "designation": "Author"
+      },
+      {
+        "name": "Jillian Emerson",
+        "affiliation": "The Dow Chemical Company, Midland",
+        "designation": "Author"
+      },
+      {
+        "name": "Kathryn Grzesiak",
+        "affiliation": "The Dow Chemical Company, Midland",
+        "designation": "Author"
+      },
+      {
+        "name": "Arjita Kulshreshtha",
+        "affiliation": "The Dow Chemical Company, Midland",
+        "designation": "Author"
+      },
+      {
+        "name": "Paul M. Mwasame",
+        "affiliation": "The Dow Chemical Company, Collegeville",
+        "designation": "Author"
+      },
+      {
+        "name": "Jed W. Pitera",
+        "affiliation": "IBM Almaden Research Center, San Jose, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Edward Pyzer-Knapp",
+        "affiliation": "IBM Research UK, Warrington, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "508g",
+    "sortable_time": "2023-11-09_14:18:00_14:36:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670176"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670864",
+    "paper_endpoint": "Paper/670864",
+    "paper_id": "670864",
+    "topic": "Investigating the Effect of Topology on the Shape Memory Properties of Thermoset Shape Memory Polymers Using Coarse-Grained Molecular Dynamics Simulations",
+    "title": "Investigating the Effect of Topology on the Shape Memory Properties of Thermoset Shape Memory Polymers Using Coarse-Grained Molecular Dynamics Simulations",
+    "date_time": "2023-11-09_12:30:00_15:00:00",
+    "session_id": "52330",
+    "session_title": "Practical Applications of Computational Chemistry and Molecular Simulation",
+    "session_number": "508",
+    "program_title": "Computational Molecular Science and Engineering Forum",
+    "symposium_title": "Computational Molecular Science and Engineering Forum",
+    "abstract": "Thermoset shape memory polymers (TSMPs) are materials that can change shape when exposed to heat, making them useful for various applications in fields like biomedicine, aerospace, automotive, robotics, and smart textiles. This study focuses on how manipulating the topology of TSMPs can improve their properties and potential for use in additive manufacturing. Via a coarse-grained model, we investigated various ways to quantify network quality (i.e., degree of topological perfection), and demonstrated that network quality has important effects on rubbery elastic modulus, recovery stress, and recovery ratio. We also found that our best parameter to describe network quality (the topological score) is a better predictor of network properties than crosslinking fraction. Additionally, higher hardener functionality also improved material properties, especially when the topological score is also high. These results demonstrate that topology significantly affects the mechanical and shape memory properties of TSMPs, and such an effect can be quantitatively characterized in terms of network perfection and quantified by a simple parameter. This study suggests that increasing crosslinking fraction and hardener functionality, combined with methods to improve network quality, can lead to significant improvements in the shape memory properties of TSMPs.",
+    "presenting_author": "Pouria Nourian | Louisiana Tech University, Ruston, LA",
+    "authors": [
+      "Pouria Nourian | Louisiana Tech University, Ruston, LA",
+      "Collin D. Wick | Louisiana Tech University, Ruston, LA",
+      "Andrew J. Peters | Louisiana Tech University, Ruston, LA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pouria Nourian",
+        "affiliation": "Louisiana Tech University, Ruston, LA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Collin D. Wick",
+        "affiliation": "Louisiana Tech University, Ruston, LA",
+        "designation": "Author"
+      },
+      {
+        "name": "Andrew J. Peters",
+        "affiliation": "Louisiana Tech University, Ruston, LA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "508h",
+    "sortable_time": "2023-11-09_14:36:00_14:54:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670864"
+  }
+]

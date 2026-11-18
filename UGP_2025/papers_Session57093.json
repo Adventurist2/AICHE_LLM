@@ -1,0 +1,331 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714097",
+    "paper_endpoint": "Paper/714097",
+    "paper_id": "714097",
+    "topic": "Multi-Fidelity Bayesian Optimization Using Global Optimization",
+    "title": "Multi-Fidelity Bayesian Optimization Using Global Optimization",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "57093",
+    "session_title": "10C: Data-driven Optimization",
+    "session_number": "681",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "High-fidelity models are often required to optimize operations for dynamical systems characterized by complex dynamics. However, such models [2, 3, 4] can be computationally expensive to evaluate, and their evaluation is often a bottleneck in their use for optimization. Active learning techniques like BO [5] intelligently sample design spaces for such high-fidelity models in hopes of minimizing the number of expensive model evaluations made during optimization. To further accelerate/improve the optimization scheme, we can also leverage a lower-fidelity model to gain useful information about the high-fidelity space while reducing the overall computational expense. Recent research [4] highlights the use of multi-fidelity Gaussian Processes (GPs) [6, 7], hierarchical models that combine a low-fidelity GP with a correction GP, as surrogate models. This enhances model flexibility by accounting for the discrepancy between the high-fidelity and low-fidelity model- and better capturing complex behavior. Sapsis et al. combined a multi-fidelity GP with a fidelity-weighted [2] acquisition function. The fidelity-weighted approach adjusts the acquisition function using a cost-ratio penalty term to account for the significant difference in computational expense between the high-fidelity and low-fidelity functions. However, further studies highlighted poor information exchange between the low-fidelity and high-fidelity models with this approach. Kandasamy et al. propose an intuitive multi-fidelity acquisition function [8] based on Upper Confidence Bounds (UCB) which exhibits better information exchange. However, instead of a multi-fidelity GP, they utilize a standard GP as the high-fidelity surrogate model, constructed solely from the high-fidelity data. To improve upon existing multi-fidelity approaches, we propose a framework which combines multi-fidelity GPs with the multi-fidelity UCB as the acquisition function. Just like standard acquisition functions, multi-fidelity acquisition functions often exhibit a multimodal landscape - so that the exploitative component of the acquisition function develops multiple local optima. For explorative acquisition functions, uncertain regions result in additional local optima. Commonly used strategies to mitigate local optima, like the multi-start L-BFGS-B, initialize a local solver from multiple starting points. However, these approaches do not guarantee convergence to the global optimum. Deterministic global optimizers such as Branch and Bound algorithms [8], however, do guarantee convergence to the global optima, yet the use of such algorithms becomes computationally prohibitive for multimodal acquisition functions. Recent advances in GP optimization [9] have made global optimization of GPs more accessible. Although related work theorizes about the potential benefits [10] of such approaches, their practical implementation remains largely unexplored. By utilizing this optimization approach for our framework, we aim to further advance the development of practical global optimization for multi-fidelity GPs. We propose to leverage the open-source deterministic solver MAiNGO (McCormick-based Algorithm for mixed-integer Nonlinear Global Optimization) [12] which employs a reduced-space formulation. Augmented to exploit parallel computing capabilities, MAiNGO becomes a practical choice to better optimize multi-fidelity GP acquisition functions. We aim to benchmark our multi-fidelity optimization framework over a suite of optimization problems, including (a) enzymatic reaction networks [11] where the Quasi Steady State Approximation produces a low-fidelity model that is lower-dimensional but remains accurate only within limited parameter regimes; and (b) a programmable ammonia catalysis model [1], where varying computational accuracy (and thus speed) creates two distinct fidelity models. By emphasizing the constructive interaction between the levels of fidelity, facilitated by multi-fidelity GP, we aim to demonstrate the potential of our framework in optimizing expensive functions and advancing multi-fidelity optimization algorithms. Simultaneously, we utilize our approach for state-of-the-art dynamic catalysis to enhance production of ammonia, a key component in the drive towards renewable energy. References [1] G. R. Wittreich, S. Liu, P. J. Dauenhauer, and D. G. Vlachos. Catalytic resonance of ammonia synthesis by simulated dynamic ruthenium crystal strain. Science Advances , 8(4):eabl6576, 2022. [2] S. Guth, B. Champenois, and T. P. Sapsis. Application of gaussian process multi-fidelity optimal sampling to ship structural modeling. 2022. [3] S. Guth and T. P. Sapsis. Wave episode based gaussian process regression for extreme event statistics in ship dynamics: Between the scylla of karhunen–loève convergence and the charybdis of transient features. Ocean Engineering , 266:112633, 2022. [4] T. Savage, N. Basha, J. McDonough, O. K. Matar, and E. A. del Rio Chanona. Multi-fidelity data-driven design and analysis of reactor and tube simulations. Computers Chemical Engineering , 179:108410, 2023. [5] B. Shahriari, K. Swersky, Z. Wang, R. P. Adams, and N. de Freitas. Taking the human out of the loop: A review of bayesian optimization. Proceedings of the IEEE, 104(1):148–175, 2016. [6] M. C. Kennedy and A. O’Hagan. Predicting the output from a complex computer code when fast approximations are available. Biometrika , 87(1):1–13, 2000. [7] L. Le Gratiet and J. Garnier. Recursive co-kriging model for Design of Computer experiments with multiple levels of fidelity. International Journal for Uncertainty Quantification , 4(5):365–386, 2014. [8] K. Kandasamy, G. Dasarathy, and B. Póczos. Multi-fidelity gaussian process bandit optimisation. Journal of Artificial Intelligence Research , 66:151–196, 2019. [9] A. M. Schweidtmann, D. Bongartz, D. Grothe, T. Kerkenhoff, X. Lin, J. Najman, and A. Mitsos.Deterministic global optimization with gaussian processes embedded. Mathematical Programming Computation , 13(3):553–581, 2021. [10] J. T. Wilson, F. Hutter, and M. P. Deisenroth. Maximizing acquisition functions for bayesian optimization. In Advances in Neural Information Processing Systems , volume 31, pages 9906–9917, 2018. [11] N. Evangelou, N. J. Wichrowski, G. A. Kevrekidis, F. Dietrich, M. Kooshkbaghi, S. McFann, and I. G. Kevrekidis. On the parameter combinations that matter and on those that do not: data-driven studies of parameter (non)identifiability. PNAS Nexus , 1(4):pgac154, 09 2022. [12] D. Bongartz, J. Najman, S. Sass, and A. Mitsos, “MAiNGO - McCormick-based Algorithm for mixed-integer Nonlinear Global Optimization,” 2018. accessed 2023/07/20.",
+    "presenting_author": "Arjun Manoj | Johns Hopkins University, Baltimore, MD",
+    "authors": [
+      "Arjun Manoj | Johns Hopkins University, Baltimore, MD",
+      "Anastasia Georgiou | Princeton University, NJ",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Arjun Manoj",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Anastasia Georgiou",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "681a",
+    "sortable_time": "2025-11-06_11:30:00_11:51:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714097"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716339",
+    "paper_endpoint": "Paper/716339",
+    "paper_id": "716339",
+    "topic": "Graph Neural Networks for Supply Chain Inventory Management",
+    "title": "Graph Neural Networks for Supply Chain Inventory Management",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "57093",
+    "session_title": "10C: Data-driven Optimization",
+    "session_number": "681",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Major disruptions since the COVID-19 pandemic have forced companies to rethink inventory management policies. Making decisions at one time period requires information about future customer demand, and often, information is not shared among different echelons, leading to suboptimal inventory management policies. Supply chain inventory management is not a new field. Many different methods have been explored in the supply chain inventory management space, from deterministic and stochastic mathematical programming models [1] to recent reinforcement learning techniques [2]. Given the graph structural nature of supply chain networks, with this research, we seek to understand how we can leverage graph neural networks to improve supply chain inventory management. Instead of tabular inputs to neural networks, graph neural networks (GNN) take in graphical inputs with a set of features associated with each node. GNNs can be used to make predictions on different levels, whether that is node-level, graph-level, or even missing link predictions. One of the known properties of graph neural networks is their ability to generalize to different structures [3, 4]. Deterministic mathematical programming models provide optimal solutions but can be computationally expensive, especially once the size of the problem increases. Given the capability of generalization of graph neural networks, we show that these networks can generalize to other unknown structures. As a proof-of-concept problem, we consider a serial single-product supply chain network as reported in the paper by Hubbs et al. [5]. Data is generated for different structures using a deterministic mixed-integer linear program (MILP) with stochastic demand realizations. This model finds the optimal reorder quantity for each network node that maximizes the entire system's net revenue. A GNN is trained on this data and used to make predictions on the optimal reorder quantities for each node within the network. We connect this model with a simulation environment, which enforces feasibility. We develop a custom message-passing neural network (MPNN) architecture that provides better predictions than off-the-shelf graph neural network software. The MPNN involves a concatenation step of neighboring features per node followed by a Multi-Layer Perceptron (MLP). We show that the MPNN performs very well for in-distribution networks and provides close to optimal reorder predictions during non-startup and shut-down periods. For in-distribution samples, the MPNN connected with the environment provides close to optimal results with less than a 1% optimality gap for in-distribution networks and around a 1-5% optimality gap for out-of-distribution networks. References [1] D. Simchi-Levi and Y. Zhao, “Performance evaluation of stochastic multi-echelon inventory systems: A survey,” Advances in Operations Research , vol. 2012, pp. 1–34, 2012. doi:10.1155/2012/126254 [2] B. Rolf et al. , “A review on reinforcement learning algorithms and applications in supply chain management,” International Journal of Production Research , vol. 61, no. 20, pp. 7151–7179, Nov. 2022. doi:10.1080/00207543.2022.2140221 [3] S. Qin, R. Van Lehn, V. Zavala, and T. Jin, Predicting critical micelle concentrations for surfactants using graph convolutional neural networks , Apr. 2021. doi:10.26434/chemrxiv.14384693.v1 [4] K. D. Lamb and P. Gentine, “Zero-shot learning of aerosol optical properties with graph neural networks,” Scientific Reports , vol. 13, no. 1, Oct. 2023. doi:10.1038/s41598-023-45235-8 [5] C. D. Hubbs et al., “OR-gym: A reinforcement learning library for operations research problems,” 8 2020",
+    "presenting_author": "Arsh Bhatia | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Arsh Bhatia | Carnegie Mellon University, Pittsburgh, PA",
+      "Ellen A. Murray | The Dow Chemical Company, Lake Jackson, TX",
+      "Ellen Du | The Dow Chemical Company, Lake Jackson, TX",
+      "María Paz Ochoa | The Dow Chemical Company, Lake Jackson, TX",
+      "Adriana Vazquez | The Dow Chemical Company, Lake Jackson, TX",
+      "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA",
+      "Carl Laird | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Arsh Bhatia",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ellen A. Murray",
+        "affiliation": "The Dow Chemical Company, Lake Jackson, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Ellen Du",
+        "affiliation": "The Dow Chemical Company, Lake Jackson, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "María Paz Ochoa",
+        "affiliation": "The Dow Chemical Company, Lake Jackson, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Adriana Vazquez",
+        "affiliation": "The Dow Chemical Company, Lake Jackson, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Ignacio Grossmann",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Carl Laird",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "681b",
+    "sortable_time": "2025-11-06_11:51:00_12:12:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716339"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717361",
+    "paper_endpoint": "Paper/717361",
+    "paper_id": "717361",
+    "topic": "Physics-Informed Inverse Design of Hexagonal Composite and Aluminium Structures for Crashworthiness Optimization",
+    "title": "Physics-Informed Inverse Design of Hexagonal Composite and Aluminium Structures for Crashworthiness Optimization",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "57093",
+    "session_title": "10C: Data-driven Optimization",
+    "session_number": "681",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Composite materials and aluminum alloys are integral to aerospace, automotive, and civil engineering due to their high strength-to-weight ratios and cost efficiency [1-3]. However, as Industry 4.0 demands lighter, safer, and sustainable structures, optimizing their crashworthiness—particularly for energy-absorbing hexagonal geometries—remains a critical challenge. While aluminum offers ductility and cost efficiency, composites provide tailored stiffness and fatigue resistance; yet their distinct failure mechanisms under dynamic loading necessitate material-specific design frameworks [4]. Traditional optimization methods, reliant on empirical testing or high-fidelity simulations, lack efficiency in addressing the nonlinear interactions between geometric parameters and material-specific crash behaviors [5]. To overcome these limitations, this study introduces a novel Inverse Physics-Informed Neural Network (IPINN) framework for optimizing the crashworthiness of hexagonal ring structure of (1) woven roving glass/epoxy composite and (2) aluminium. The IPINN uniquely integrates experimental data with physics-based constraints through three key steps: Forward-Inverse Coupling: A forward Physics-Informed Neural Network (PINN) learns the nonlinear relationship between design parameters (e.g., hexagonal interior angles, loading rates) and crashworthiness metrics, including Specific Energy Absorption (SEA) and structural weight. This is coupled with an inverse model that rapidly identifies optimal geometries for user-defined performance targets. Sparse System Identification via PySINDy: Governing equations governing deformation dynamics are extracted from limited experimental and simulated data using the Sparse Identification of Nonlinear Dynamical Systems (PySINDy) method. This ensures the model prioritizes dominant physics-driven trends over black-box correlations. Ensemble Classification for Stability: A hybrid classifier combining Naïve Bayes, Support Vector Machines (SVM), Random Forest, and Artificial Neural Networks (ANNs) filters physically inconsistent inverse predictions, enhancing robustness and interpretability. The framework is validated through quasi-static and dynamic compression tests on hexagonal rings of woven roving glass/epoxy composites and aluminium, with results demonstrating a 20–30% improvement in SEA for interior angles between 65° and 70°, achieved through controlled interlaminar stress distribution and delayed delamination. Crucially, the IPINN requires 60–80% less training data than conventional ML models while maintaining computational efficiency (<30 minutes per design iteration). By bridging sparse experimental data with mechanistic principles, this work advances crashworthiness optimization in three ways: (1) It provides a physics-consistent, data-efficient inverse design tool for metals and composites; (2) It quantifies the role of hexagonal angles in mitigating anisotropic failure; (3) It offers a template for lightweight material development in resource-constrained industrial environments. The framework’s ability to generalize beyond training domains supports its adoption in safety-critical applications, from electric vehicle battery housings to helicopter subfloor structures, aligning with Industry 4.0’s demands for sustainable, resilient engineering solutions. References: [1] Elmarakbi A. Advanced composite materials for automotive applications: Structural integrity and crashworthiness: John Wiley & Sons, 2013. [2] Sreejith M, Rajeev RS. 25 - Fiber reinforced composites for aerospace and sports applications. In: Joseph K, Oksman K, George G, Wilson R, Appukuttan S, editors. Fiber Reinforced Composites: Woodhead Publishing; 2021. p. 821-59. [3] Alghannam AA, Soliman MS, Seikh AH, Alnaser IA, Fouly A, Mohammed JA, et al. Investigation on mechanical properties and corrosion resistance of Ti-modified AA5083 aluminum alloy for aerospace and automotive applications. Scientific Reports. 2023;13:11535. [4] Wilbert A, Jang WY, Kyriakides S, Floccari JF. Buckling and progressive crushing of laterally loaded honeycomb. International Journal of Solids and Structures. 2011;48:803-16. [5] Kazi M-K, Eljack F, Mahdi E. Optimal Filler Content for Cotton Fiber/PP Composite based on Mechanical Properties using Artificial Neural Network. Composite Structures. 2020:112654.",
+    "presenting_author": "Nahid Sarker | South Dakota School of Mines and Technology, Rapid City, SD",
+    "authors": [
+      "Nahid Sarker | South Dakota School of Mines and Technology, Rapid City, SD",
+      "Monzure-Khoda Kazi | South Dakota School of Mines and Technology, Rapid City, SD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nahid Sarker",
+        "affiliation": "South Dakota School of Mines and Technology, Rapid City, SD",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Monzure-Khoda Kazi",
+        "affiliation": "South Dakota School of Mines and Technology, Rapid City, SD",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "681c",
+    "sortable_time": "2025-11-06_12:12:00_12:33:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717361"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717907",
+    "paper_endpoint": "Paper/717907",
+    "paper_id": "717907",
+    "topic": "Data-Driven Optimization through a Combined ML/MINLP Approach",
+    "title": "Data-Driven Optimization through a Combined ML/MINLP Approach",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "57093",
+    "session_title": "10C: Data-driven Optimization",
+    "session_number": "681",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Considerable progress has been made in the optimization area over the past few decades, leading to increasingly sophisticated algorithms for the solution of algebraic optimization problems. The solution of algebraic NLP and MINLP problems has progressed so much that we can now routinely solve problems with hundreds of thousands or even millions of variables and constraints. Yet, in the absence of algebraic models, optimization problems with even a few dozen variables are still very challenging to solve, especially to global optimality. The need for hyperparameter tuning in machine learning, process optimization over simulators, and experimental design of novel materials and processes motivates further development of algorithms for data-driven optimization that can be utilized in the absence of algebraic models. This area of research is sometimes also referred to as derivative-free optimization, simulation optimization, and black-box optimization and has recently received increased attention [1, 2]. We have recently proposed the branch-and-model (BAM) algorithm for data-driven optimization. Similar to branch-and-bound for MINLP, BAM partitions the search space of a data-driven optimization problem. However, unlike branch-and-bound, BAM relies on a novel domain partitioning scheme that redraws subdomain boundaries in every iteration based on recently collected measurements [3]. BAM relies on machine learning (ALAMO [4]) to build local surrogate models that are solved to global optimality with global MINLP technology (BARON [5]) to identify new points in the domain where measurements should be taken. The current work addresses a fundamental question in global data-driven optimization, namely when to perform local search. Local search is needed to obtain good solutions. However, repeated local searches in the same basin of a local optimum are wasteful, slow down the search, and increase the number of measurements required to obtain high quality solutions. Excessive local searches can be detrimental, especially when measurement collection relies on expensive experimentation. We rely on machine learning (clustering) to develop a systematic means for clustering measurements to identify clusters corresponding to local basins of the objective function. We perform extensive computational experiments on over 500 publicly available test problems. The results demonstrate that timing of local search is critical in data-driven optimization and a specific type of clustering accurately reflects BAM’s progress. When BAM is equipped with this cluster learning algorithm, it correctly identifies unique local basins, avoids redundant local searchers, and expedites convergence. References Conn, A.R., Scheinberg, K., Vicente, L.N.: Introduction to derivative-free optimization. SIAM, Philadelphia, 2009. Rios, L. M. and N. V. Sahinidis, Derivative-free optimization: A review of algorithms and comparison of software implementations, Journal of Global Optimization, 56, 1247-1293, 2013. Ma, K., L. M. Rios, A. Bhosekar, N. V. Sahinidis and S. Rajagopalan, Branch-and-Model: A derivative-free global optimization algorithm, Computational Optimization and Applications, 85, 337-367, 2023. Wilson, Z. T and N. V. Sahinidis, The ALAMO approach to machine learning, Computers & Chemical Engineering, 106, 785-795, 2017. Zhang, Y. and N. V. Sahinidis, Solving continuous and discrete nonlinear programs with BARON, Computational Optimization and Applications, 2024 https://doi.org/10.1007/s10589-024-00633-0 .",
+    "presenting_author": "Nikolaos Sahinidis | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Kaiwen Ma | Carnegie Mellon University, Pittsburgh, PA",
+      "Nikolaos Sahinidis | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kaiwen Ma",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Nikolaos Sahinidis",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "681d",
+    "sortable_time": "2025-11-06_12:33:00_12:54:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717907"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712130",
+    "paper_endpoint": "Paper/712130",
+    "paper_id": "712130",
+    "topic": "Hyperplane Decision Trees As Piecewise Linear Surrogate Models for Optimization Problems",
+    "title": "Hyperplane Decision Trees As Piecewise Linear Surrogate Models for Optimization Problems",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "57093",
+    "session_title": "10C: Data-driven Optimization",
+    "session_number": "681",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Recent advancements in process systems engineering emphasize the importance of data-driven modeling in optimization and decision-making. In particular, regression models such as neural networks can be embedded as surrogates in optimization problems. While neural networks can effectively capture complex, high-dimensional relationships, their training can be expensive, unreliable, and data-hungry. In this presentation, we introduce hyperplane decision trees (HTs) as a general, highly expensive, and efficient surrogate model architecture. HTs are locally linear and feature linear decision boundaries, yielding a piecewise linear model which can be formulated as a set of mixed-integer linear constraints. This is achieved by a linear feature engineering step and a recursive training procedure. Our open-source PyTorch implementation provides a fast, flexible, and accessible tool for building accurate piecewise linear models which can be directly embedded in optimization problems via Pyomo and the Optimization and Machine Learning Toolkit (OMLT).",
+    "presenting_author": "Ethan Sunshine | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Ethan Sunshine | Carnegie Mellon University, Pittsburgh, PA",
+      "Carolina Colombo Tedesco | Carnegie Mellon University, Pittsburgh, PA",
+      "Sneha Akhade | Lawrence Livermore National Laboratory, CA",
+      "Matthew Mcnenly | Lawrence Livermore National Laboratory, CA",
+      "John Kitchin | Carnegie Mellon University, Pittsburgh, PA",
+      "Carl Laird | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ethan Sunshine",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Carolina Colombo Tedesco",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Sneha Akhade",
+        "affiliation": "Lawrence Livermore National Laboratory, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew Mcnenly",
+        "affiliation": "Lawrence Livermore National Laboratory, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "John Kitchin",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Carl Laird",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "681e",
+    "sortable_time": "2025-11-06_12:54:00_13:15:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712130"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713389",
+    "paper_endpoint": "Paper/713389",
+    "paper_id": "713389",
+    "topic": "A New Approach for Multi-Objective Bayesian Optimization Based on Pareto Projection and Sampling",
+    "title": "A New Approach for Multi-Objective Bayesian Optimization Based on Pareto Projection and Sampling",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "57093",
+    "session_title": "10C: Data-driven Optimization",
+    "session_number": "681",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Optimizing experimental and black-box systems often involves multiple conflicting objectives [1,2]. In such settings, it is necessary to build models for the different objectives using limited data; these models are then used to help discover and quantify trade-offs (typically in the form of a Pareto frontier). Bayesian Optimization (BO) is a powerful approach for doing this, as it leverages uncertainty information to guide data collection and to enable model building and optimization [3,4]. Most implementations of BO are targeted towards single-objective problems and extending BO to handle multiple objectives is challenging. The core difficulty in multi-objective BO (MOBO) lies in the need to identify non-dominated solutions and the Pareto front using few data points. The Expected Hypervolume Improvement (EHVI) approach is a widely used MOBO methodology that enables identification of non-dominated solutions but this requires the selection of reference points, which can lead to suboptimal exploration [5]. Other MOBO approaches include Thompson sampling and Pareto exploration using distance-based selection criteria [6]. These approaches are powerful but they are challenging to implement. This work introduces a MOBO framework that relies on Pareto projections and sampling. This approach uses data to build probabilistic surrogate models for the different objectives and uses the models to build a predicted Pareto frontier (which captures the limiting predicted performance of the system). We note that this step projects the experimental design space into the objective space (which is often low-dimensional). In a subsequent step, we use uncertainty information of the surrogate models to identify regions in the predicted Pareto frontier that have the highest uncertainty and we select experiments at such points. The proposed 2-step framework naturally captures exploitation (used to build the predicted Pareto frontier) and exploration (used to target regions of high uncertainty). We show that this approach is easy to implement and is effective at discovering the real Pareto frontier in a few cycles/iterations. We also show that the approach is sample efficient, as probabilistic models effectively reconstruct the frontier (via interpolation) using sparse support points. The approach also enables batch experiment sampling and helps provide a comprehensive picture of the trade-off space (thus facilitating interpretability). We demonstrate the effectiveness of the approach using simulated and real experimental studies arising in reaction engineering, electrochemistry, and biomass processing. We also discuss challenges associated with handling many objectives; in such settings, we discuss alternatives that rely on low-dimensional Pareto projections. References [1] González, Leonardo D., and Victor M. Zavala. \"Implementation of a Bayesian Optimization Framework for Interconnected Systems.\" Industrial & Engineering Chemistry Research (2025). [2] Paulson, J. A., & Lu, C. (2022). COBALT: COnstrained Bayesian optimizAtion of computationaLly expensive grey-box models exploiting derivaTive information. Computers & Chemical Engineering, 160, 107700. [3] Mockus, J. Bayesian Approach to Global Optimization. In Theory and Applications. Springer Science & Business Media, 2012. [4] Paulson, J. A., & Tsay, C. (2024). Bayesian optimization as a flexible and efficient design framework for sustainable process systems. Current Opinion in Green and Sustainable Chemistry, 100983. [5] Yang, K., Emmerich, M., Deutz, A., & Bäck, T. (2019). Efficient computation of expected hypervolume improvement using box decomposition algorithms. Journal of Global Optimization, 75, 3-34. [6] Kudva, A., Tang, W. T., & Paulson, J. A. (2025). Multi-Objective Bayesian Optimization for Networked Black-Box Systems: A Path to Greener Profits and Smarter Designs. arXiv preprint arXiv:2502.14121 .",
+    "presenting_author": "Brenda Cansino Loeza | University of Wisconsin-Madison",
+    "authors": [
+      "Brenda Cansino Loeza | University of Wisconsin-Madison",
+      "Jukbin Kim | University of Wisconsin-Madison",
+      "J. E. Umaña | University of Wisconsin-Madison",
+      "Alejandro Ayala-Cortés | University of Wisconsin-Madison",
+      "Victor M. Zavala | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Brenda Cansino Loeza",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jukbin Kim",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "J. E. Umaña",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Alejandro Ayala-Cortés",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      },
+      {
+        "name": "Victor M. Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "681f",
+    "sortable_time": "2025-11-06_13:15:00_13:36:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713389"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/706986",
+    "paper_endpoint": "Paper/706986",
+    "paper_id": "706986",
+    "topic": "Not Every Data-Driven Model Plays Nice: Why Structure Matters in Optimization.",
+    "title": "Not Every Data-Driven Model Plays Nice: Why Structure Matters in Optimization.",
+    "date_time": "2025-11-06_11:30:00_14:00:00",
+    "session_id": "57093",
+    "session_title": "10C: Data-driven Optimization",
+    "session_number": "681",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Industries often require nonlinear process models to identify profitable steady-states for operation. These models can be developed using first-principles, such as conservation laws. However, a significant limitation is the incomplete process knowledge available to practitioners, often resulting in model mismatches between the true process dynamics and the estimated model. Maintaining these models is expensive, as their performance can degrade over time. Recent advances in machine learning have enabled data-driven models that eliminate the need for detailed process knowledge. These models excel at predictions and are increasingly applied in process control and monitoring (Sansana et al., 2021). However, data-driven models are typically unsuitable for process optimization because they do not inherently follow conservation laws. While enforcing physical laws using approaches like PINNs can help, these laws are not naturally embedded in the models. Moreover, during optimization, the model takes steps based on its own predictions, with no feedback to correct errors, unlike in process control applications. This limitation can lead to entirely unrealistic optima. A promising approach to address these challenges is to approximate only the unknown components of the first-principles model using neural networks. This strategy naturally enforces physical laws. We refer to the extent of process knowledge embedded in these models as structure (Kumar and Rawlings, 2023). In this work, we demonstrate the performance of structured models in optimizing the benchmark vinyl acetate monomer plant (Luyben and Tyréus, 1998). In the plant's first-principles model, we approximate the rate laws using neural networks, followed by standard system identification experiments to learn the rate laws. We then use the identified structured model to determine the plant's economic optimum and compare its performance with that of a purely data-driven model. Additionally, we discuss the data requirements and challenges associated with training structured models. Our results show that both models predict the plant's behavior well. However, despite achieving a high-quality fit to the data, the data-driven model fails to find the economic optimum, while the structured model proves to be more reliable. We conclude that successful optimization requires not more data, but more structure. Our findings highlight the potential of structured models for practical industrial applications. References: J. Sansana, M. N. Joswiak, I. Castillo, Z. Wang, R. Rendall, L. H. Chiang, and M. S. Reis. Recent trends on hybrid modeling for industry 4.0. Comput. Chem. Eng., 151:107365, 2021. P. Kumar and J. B. Rawlings. Structured nonlinear process modeling using neural networks and application to economic optimization. Comput. Chem. Eng., 177, 2023. M. L. Luyben and B. D. Tyréus. An industrial design/control study for the vinyl acetate monomer process. Comput. Chem. Eng., 22(7-8):867–877, 1998.",
+    "presenting_author": "Prithvi Dake | University of California Santa Barbara",
+    "authors": [
+      "Prithvi Dake | University of California Santa Barbara",
+      "James Rawlings | University of California, Santa Barbara",
+      "Rahul Bindlish | The Dow Chemical Company, Houston, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Prithvi Dake",
+        "affiliation": "University of California Santa Barbara",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "James Rawlings",
+        "affiliation": "University of California, Santa Barbara",
+        "designation": "Author"
+      },
+      {
+        "name": "Rahul Bindlish",
+        "affiliation": "The Dow Chemical Company, Houston, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "681g",
+    "sortable_time": "2025-11-06_13:36:00_13:57:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/706986"
+  }
+]

@@ -1,0 +1,268 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/715712",
+    "paper_endpoint": "Paper/715712",
+    "paper_id": "715712",
+    "topic": "Beyond the Limits of Conventional Ammonia Synthesis: Enhancing Single-Pass Conversion and Unlocking Load-Flexible Operation Via Polytropic Fixed-Bed Reactors",
+    "title": "Beyond the Limits of Conventional Ammonia Synthesis: Enhancing Single-Pass Conversion and Unlocking Load-Flexible Operation Via Polytropic Fixed-Bed Reactors",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "57414",
+    "session_title": "Improvements for Ammonia Production",
+    "session_number": "501",
+    "program_title": "Process Development Division",
+    "symposium_title": "Process Development Division",
+    "abstract": "Introduction The Power-to-Ammonia concept is a promising approach for global, chemically based storage and transportation of renewable energies [1] . However, the use of electrolytically produced hydrogen as a reactant presents new challenges to the ammonia synthesis process. These challenges mainly arise due to the intermittent nature of renewable energy supply, which leads to volatile process inputs, e.g., changing hydrogen feed flows from dynamically operated electrolyzer units. To reduce costly intermediate reactant storage, an ammonia synthesis reactor concept is required that performs well, safe, and efficiently not only at a fixed nominal load but also across a wide load-range as well as under dynamic conditions (load-flexibility). Conventional heat integrated, Adiabatic Quench-Cooled multi-bed Reactor (AQCR) systems (i.e., autothermal reactor concept) are known to be prone to oscillatory behavior under changing loads [2-4] . While advanced control strategies can improve process stability, handling changing loads, especially ramping the reactor from low to high loads, is still challenging and time consuming due to the high thermal inertia of adiabatic reactors [3] . Moreover, even in state-of-the-art ammonia synthesis reactor types, single-pass conversion remains relatively low, at approximately 15 to 20 %. Thus, this study focuses on numerical simulation studies to identify alternative reactor and operating concepts to enhance single-pass conversion and to enable load-flexible ammonia synthesis. One promising approach, but so far unexploited for ammonia synthesis, is the use of polytropic fixed-bed reactors, as recent studies on CO 2 methanation reveal that these are particularly better suited for dynamic operation compared to autothermal concepts [5] . Methodology For the mathematical description of the polytropic fixed-bed reactor (EDCR: External Direct Cooled Reactor), a two-dimensional dynamic pseudo-homogeneous reactor model, considering heat and mass dispersion, is developed. Activity-based kinetic models are chosen to describe the reaction rate on two different catalyst: (i) a former commercially used magnetite-based iron catalyst [6] and (ii) a modern industrial iron catalyst from the company Clariant AG [7] . Furthermore, a catalyst effectiveness factor is incorporated to account for temperature-dependent intraparticle mass transport limitations, pressure loss is described by the Ergun equation, and gas densities are calculated via the Peng-Robinson equation of state. To solve the reactor model, the PDE system is discretized in its spatial domains by applying the finite volume method. The resulting DAE system is solved in MATLAB using the IDAS integrator from the SUNDIALS suite. Based on detailed numerical simulations studies the potential of EDCR operation in terms of single-pass conversion and load-flexibility is evaluated and compared to a state-of-the-art AQCR. Selected Results The simulation results indicate that adiabatic operation is strongly limited by the chemical equilibrium (Figure 1, left). Even when using more active catalyst, single-pass conversion is only marginally increased to about 20 % as elevated inlet temperatures are still required to ignite the reaction. In contrast, the EDCR concept benefits greatly from the deployment of more active catalysts, enhancing single-pass conversion from 22 to 31 % - and potentially up to 55 % by additionally reducing the GHSV [8] . Crucial for economical viable EDCR operation is the higher activity of modern ammonia synthesis catalyst at temperatures between 400 and 450 °C. This enables the use of simpler heat transfer fluids such as thermal oil. Whereas in adiabatic operation heat is supplied to the reactor only by convection and reaction, in polytropic operation a sufficient amount of energy is transferred to the fluid mixture through the cooling jacket. Consequently, the thermal inertia of the heavy catalyst packing has a significantly less dominant influence in the EDCR, enabling the polytropic reactor to exhibit noticeably improved dynamic behavior. In particularly, we found that the EDCR can be operated over a wide load-range from less than 10 to up to 200 % of nominal load, while maintaining adequate nitrogen conversions of at least 20 %. Even for drastic load changes, such as ramping the polytropic reactor from 10 to 200 % load in less than 20 min, fast, smooth, and stable transitions were observed (Figure 1, right). Key Conclusions The feasibility of load-flexible ammonia synthesis via polytropic fixed-bed reactors was demonstrated by detailed numerical simulation studies. The results show that the proposed reactor concept can be operated over a remarkably wide load-range and fast transient transitions are viable. In fact, these findings suggest that the operational load-range of an EDCR is predominantly constrained by economic considerations - specifically, the elevated construction costs of the EDCR design - rather than stability concerns. Additionally, polytropic reactor operation fully exploits the potential of a more active catalyst enhancing single-pass conversion significantly, particularly in comparison to state-of-the-art AQCRs. References [1] O. Elishav, B. M. Lis, E. M. Miller, D. J. Arent, A. Valera-Medina, A. G. Dana, G. E. Shter, G. S. Grader, 2020. Progress and Prospective of Nitrogen-Based Alternative Fuels. Chemical Reviews 120, 5352-5436. [2] J. C. Morud, S. Skogestad, 1998. Analysis of Instability in an Industrial Ammonia Reactor. AIChE Journal 44 (4), 888-895. [3] J. W. Rosbo, T. K. S. Ritschel, S. Hørsholt, J. K. Huusom, J. B. Jørgensen, 2023. Flexible Operation, Optimisation and Stabilising Control of a Quench Cooled Ammonia Reactor for Power-to-Ammonia. Computers & Chemical Engineering 176, 108316. [4] L. Gottheil, J. Bremer, 2024. Enabling load-flexible ammonia synthesis via polytropic fixed-bed reactors. Computer Aided Chemical Engineering: 34th European Symposium on Computer Aided Process Engineering / 15th International Symposium on Process Systems Engineering, 1891-1896. [5] J. Bremer, K. H. G. Rätze, K. Sundmacher, 2017. CO2 Methanation: Optimal Start-Up Control of a Fixed-Bed Reactor for Power-to-Gas Applications. AIChE Journal 63 (1), 23-31. [6] D. C. Dyson, J.M. Simon 1968. Kineitc Expression with Diffusion Correction for Ammonia Synthesis on Industrial Catalyst. Industrial & Engineering Chemistry Researrch 7 (4), 605-610. [7] T. Cholewa, B. Steinbach, C. Heim, F. Nestler, T. Nanba, R. Güttel, O. Salem, 2024. Reaction kinetics for ammonia synthesis using ruthenium and iron based catalysts under low temperature and pressure conditions. Sustainable Energy & Fules 8 (10) 45 (12), 4150-4155. [8] L. Gottheil, J. Bremer, 2025. Advancing towards load-flexible ammonia synthesis via polytropic fixed-bed reactors. Submitted. Figure 1: Left: Average cross-sectional N 2 conversion as a function of central reactor temperature utilizing the magnetite-based catalyst (Fe mag ) and the modern industrial iron catalyst (Fe ind ) for AQCR and EDCR operation. Right: Dynamic simulations of a polytropic fixed-bed reactor (EDCR) subjected to changing GHSV using the industrial iron catalyst. The reactor is designed for a nominal GHSV of 7’500 h -1 .",
+    "presenting_author": "Lukas Gottheil | Clausthal University of Technology, Clausthal-Zellerfeld, Germany",
+    "authors": [
+      "Lukas Gottheil | Clausthal University of Technology, Clausthal-Zellerfeld, Germany",
+      "Jens Bremer | Clausthal University of Technology, Clausthal-Zellerfeld, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Lukas Gottheil",
+        "affiliation": "Clausthal University of Technology, Clausthal-Zellerfeld, Germany",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jens Bremer",
+        "affiliation": "Clausthal University of Technology, Clausthal-Zellerfeld, Germany",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "501a",
+    "sortable_time": "2025-11-05_08:00:00_08:21:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/715712"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/725612",
+    "paper_endpoint": "Paper/725612",
+    "paper_id": "725612",
+    "topic": "Break",
+    "title": "Break",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "57414",
+    "session_title": "Improvements for Ammonia Production",
+    "session_number": "501",
+    "program_title": "Process Development Division",
+    "symposium_title": "Process Development Division",
+    "abstract": "",
+    "presenting_author": "",
+    "authors": [],
+    "authors_structured": [],
+    "sortable_time": "2025-11-05_08:21:00_08:42:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/725612"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714395",
+    "paper_endpoint": "Paper/714395",
+    "paper_id": "714395",
+    "topic": "Metal Halide Absorbents for the Production of Green Ammonia",
+    "title": "Metal Halide Absorbents for the Production of Green Ammonia",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "57414",
+    "session_title": "Improvements for Ammonia Production",
+    "session_number": "501",
+    "program_title": "Process Development Division",
+    "symposium_title": "Process Development Division",
+    "abstract": "Ammonia is the second most produced chemical by mass (200 Mt yr -1 ) due to its central role in the production of fertilisers which enable food production for 50% of the global population. This global demand is projected to triple in the next 25 years due to the increasingly recognised potential of green ammonia in storing renewable energy in its carbon-free chemical bonds, effectively serving as a renewable fuel replacement for fossil fuels. However, the realisation of the so-called ‘green ammonia economy’ requires innovations to convert the conventional, emissions-intensive (2.4 t CO2 /t NH3 ), continuous Haber-Bosch process into one that is driven by renewable energy. 1,2 One of the main challenges in achieving this is related to the intermittent and distributed nature of renewable energy which necessitates the need for small-scale, flexible ammonia production processes that can effectively ramp production capacity. 3,4 In this context, absorption-enhanced ammonia synthesis opens the door to mild pressure operations at 30 bar rather than traditional Haber-Bosch conditions of 200 bar, thereby enabling the process to ramp up and down quickly and safely. 5,6 Whilst the thermodynamics and capacities of many absorbent materials are well documented, reliable kinetic data has remained elusive due to the transient nature of the reaction which complicates kinetic measurements. Furthermore, metal halide absorbents experience agglomeration under cyclic conditions as well as decomposition during pre-treatment, both of which have critical implications on the absorption kinetics and capacities of these materials. In this work, we present a robust way of measuring the kinetics of absorption and desorption of ammonia in metal halides. We have developed a novel experimental protocol to measure reaction kinetics in a variety of absorbent materials in flow under isothermal and isobaric conditions. These new capabilities provide insights into the agglomeration of metal halides under reaction conditions and how losses in capacity can be mitigated through material design. The findings from these studies will have a profound impact on the design of absorption-enhanced processes to accelerate the deployment of these materials not only for green ammonia production but also in the refrigeration and energy storage industries where these metal halide absorbents are seeing increased usage and prevalence. References [1] IRENA. Innovation Outlook: Renewable Ammonia . 2022. [2] David, William I. F., et al. “2023 Roadmap on Ammonia as a Carbon-Free Fuel.” JPhys Energy , vol. 6, no. 2, IOP Publishing, Nov. 2023, https://doi.org/10.1088/2515-7655/ad0a3a . [3] Smith, Collin, and Laura Torrente-Murciano. “The Importance of Dynamic Operation and Renewable Energy Source on the Economic Feasibility of Green Ammonia.” Joule , vol. 8, no. 1, Jan. 2024, pp. 157–74, https://doi.org/10.1016/j.joule.2023.12.002 . [4] Torrente‐Murciano, Laura, and Collin Smith. “Process Challenges of Green Ammonia Production.” Nature Synthesis , vol. 2, no. 7, Nature Portfolio, June 2023, pp. 587–88, https://doi.org/10.1038/s44160-023-00339-x . [5] Smith, Collin, and Laura Torrente‐Murciano. “Exceeding Single‐Pass Equilibrium with Integrated Absorption Separation for Ammonia Synthesis Using Renewable Energy—Redefining the Haber‐Bosch Loop.” Advanced Energy Materials , vol. 11, no. 13, Feb. 2021, p. 2003845, https://doi.org/10.1002/aenm.202003845 [6] Smith, Collin, et al. “Current and Future Role of Haber–Bosch Ammonia in a Carbon-Free Energy Landscape.” Energy & Environmental Science, vol. 13, no. 2, Feb. 2020, pp. 331–44, https://doi.org/10.1039/C9EE02873K .",
+    "presenting_author": "Luc Liedtke | University of Cambridge, United Kingdom",
+    "authors": [
+      "Luc Liedtke | University of Cambridge, United Kingdom",
+      "Collin Smith | University of Cambridge, United Kingdom",
+      "Laura Torrente Murciano | University of Cambridge, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Luc Liedtke",
+        "affiliation": "University of Cambridge, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Collin Smith",
+        "affiliation": "University of Cambridge, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Laura Torrente Murciano",
+        "affiliation": "University of Cambridge, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "501c",
+    "sortable_time": "2025-11-05_08:42:00_09:03:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714395"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712394",
+    "paper_endpoint": "Paper/712394",
+    "paper_id": "712394",
+    "topic": "Ammonia Synthesis in Packed Bed Reactors: Identifying Pore Scale Improvements and Quantifying Their Global Impact.",
+    "title": "Ammonia Synthesis in Packed Bed Reactors: Identifying Pore Scale Improvements and Quantifying Their Global Impact.",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "57414",
+    "session_title": "Improvements for Ammonia Production",
+    "session_number": "501",
+    "program_title": "Process Development Division",
+    "symposium_title": "Process Development Division",
+    "abstract": "Ammonia synthesis in packed bed reactors: identifying pore scale improvements and quantifying their global impact The synthesis of ammonia via the Haber-Bosch process is one of the most massive industrial processes worldwide [1]. Performed in traditional packed bed reactors, this large-scale operation suffers from multiple inefficiencies mostly stemming from mass and heat transfer limitations [2]. Currently, the process yields hundreds of millions of tons of ammonia [1], contributing about 1.6% of global carbon dioxide emissions [3] and relying on about 1-2% of the worldwide energy supply [1]. Thus, improving the efficiency of these reactors would have far-reaching economic and sustainability benefits. There have been numerous efforts to increase the performance of packed bed reactors, including ones used for ammonia synthesis [1, 4]. These included changes in the process itself, its operating conditions, and catalyst choices, as well as adopting entirely new technologies like photocatalytic reactors [5]. In this work, we present an innovative approach that enables exploring the potential improvements that can be made to the packed bed reactors on the pore scale. We computationally model a small portion of the reactor, discerning catalyst pellets, and the void space. We then sample numerous randomly generated pellet arrangements and use small differences in the reactor’s performance to statistically determine the routes to improved synthesis. To characterize the reactor we use two types of tessellations and elements of graph theory while the performance is assessed by tracking the yield, outlet temperature, and hydraulic permeability. By analyzing the subtle changes in the outcomes as a function of the pellet arrangements, we can identify unique mechanisms of performance optimization that are possible to be applied on the reactor’s pore scale. We have previously demonstrated the success of our approach in a two-dimensional model of an isothermal flow of fluid [6] and a two-dimensional representation of an ammonia synthesis reactor. Here we demonstrate the viability of our approach in a three-dimensional ammonia synthesis reactor and link the pore-scale findings with its macroscopic performance. [1] Faria, J.A., 2021. Renaissance of ammonia synthesis for sustainable production of energy and fertilizers. Current Opinion in Green and Sustainable Chemistry , 29, p.100466. [2] Andrigo, P., Bagatin, R. and Pagani, G., 1999. Fixed bed reactors. Catalysis Today , 52(2-3), pp.197-221. [3] Cunanan, C.J., Elorza Casas, C.A., Yorke, M., Fowler, M. and Wu, X.Y., 2022. Design and analysis of an offshore wind power to ammonia production system in Nova Scotia. Energies , 15(24), p.9558. [4] El-Shafie, M. and Kambara, S., 2023. Recent advances in ammonia synthesis technologies: Toward future zero carbon emissions. International Journal of Hydrogen Energy , 48(30), pp.11237-11273. [5] Zhang, S., Zhao, Y., Shi, R., Waterhouse, G.I. and Zhang, T., 2019. Photocatalytic ammonia synthesis: Recent progress and future. EnergyChem , 1(2), p.100013. [6] Geohagan, A. and Truszkowska, A., 2025. Finding the Dominant Properties of Porous Media: An Example of Fluid Flow. Multiscale Science and Engineering , pp.1-13.",
+    "presenting_author": "Michael Abeiku Daniels | University of Alabama in Huntsville",
+    "authors": [
+      "Michael Abeiku Daniels | University of Alabama in Huntsville",
+      "Agnieszka Truszkowska | The University of Alabama in Huntsville"
+    ],
+    "authors_structured": [
+      {
+        "name": "Michael Abeiku Daniels",
+        "affiliation": "University of Alabama in Huntsville",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Agnieszka Truszkowska",
+        "affiliation": "The University of Alabama in Huntsville",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "501d",
+    "sortable_time": "2025-11-05_09:03:00_09:24:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712394"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/711895",
+    "paper_endpoint": "Paper/711895",
+    "paper_id": "711895",
+    "topic": "Designing the Optimal Adiabatic Indirect Cooled Reactor System for Renewable Ammonia Production",
+    "title": "Designing the Optimal Adiabatic Indirect Cooled Reactor System for Renewable Ammonia Production",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "57414",
+    "session_title": "Improvements for Ammonia Production",
+    "session_number": "501",
+    "program_title": "Process Development Division",
+    "symposium_title": "Process Development Division",
+    "abstract": "Ammonia is one of the most widely produced substances worldwide due to its vital role in the food industry as a fertilizer, and the global ammonia demand is forecasted to increase further. In the face of climate change, sustainable ammonia production from green hydrogen should be increasingly favored. Green hydrogen is produced from renewable electricity sources that often fluctuate in availability. While modern hydrogen electrolyzers can quickly adapt to these varying conditions, ammonia is traditionally produced at constant process conditions in the Haber-Bosch (HB) process. To couple a traditionally designed HB plant with green hydrogen production, a large hydrogen buffer tank is required between the plants. Because large quantities of hydrogen storage can be costly, another approach is to operate the HB plant flexibly to accommodate varying supplies. However, to increase the flexibility of the traditional HB process, its design needs to be updated. [1] The core part of every HB plant is the reactor system, which usually comprises several heat-integrated reactor beds. Several reactor types are used in the industry; however, we focus on the adiabatic indirect cooled reactor (AICR) system, which is particularly favorable for renewable HB plants due to its stable operability under varying process conditions and ability to enable high hydrogen conversion rates [2]. The AICR reactor consists of two to four reactor beds, with stream inlet cooling provided by interbed heat exchangers and the feed-to-effluent heat exchanger. A sensitivity analysis reveals that the precise sizing of the adiabatic reactor beds has a significant influence on the single-path hydrogen conversion, ultimately leading to decreased equivalent annual operating costs (EAOC). Besides the bed sizes, the controlled bed inlet temperatures also significantly affect the conversion rate and need to be considered during the sizing of the reactor beds. To achieve our goal of finding the optimal AICR design by maximizing its single-pass conversion or minimizing the EAOC, we connect the stochastic black-box optimizer MOSKopt [3] with an HB simulation model. The simulation model encompasses all process and product quality constraints, providing rigorous results. Before initiating the optimization procedure, initial design points are sampled from the specified bounds for the decision variables. For each design point, Monte Carlo simulations are performed by sampling the uncertain parameters from their respective distributions. The mean objective values of these simulations are then used to construct the surrogate model. Subsequently, the surrogate model is optimized to propose new design points, which are again evaluated using Monte Carlo simulations. The results from all simulations are used to update the surrogate model through iterative adaptive sampling. After a specified number of iterations, the design with the best mean objective value is selected. This work provides a systematic basis for designing AICR systems, laying the groundwork for recent approaches in planning renewable ammonia plants coupled with green hydrogen production. The combination of sensitivity and uncertainty analysis with optimization enables process designers to make data-driven decisions supported by rigorous process simulations, thereby increasing the efficiency of flexible, renewable ammonia production plants. [1] C. Smith, A. K. Hill, and L. Torrente-Murciano, “Current and future role of Haber–Bosch ammonia in a carbon-free energy landscape,” Energy & Environmental Science , vol. 13, no. 2, pp. 331–344, Feb. 2020, doi: 10.1039/C9EE02873K. [2] J. W. Rosbo, A. D. Jensen, J. B. Jørgensen, and J. K. Huusom, “Comparison, operation and cooling design of three general reactor types for Power-to-Ammonia processes,” Chemical Engineering Journal , vol. 496, p. 153660, Sep. 2024, doi: 10.1016/j.cej.2024.153660. [3] R. Al, C. R. Behera, K. v. Gernaey, and G. Sin, “Stochastic simulation-based superstructure optimization framework for process synthesis and design under uncertainty,” Computers & Chemical Engineering , vol. 143, p. 107118, Dec. 2020, doi: 10.1016/j.compchemeng.2020.107118.",
+    "presenting_author": "Niklas Groll | Technical University of Denmark, 2800 Kgs. Lyngby",
+    "authors": [
+      "Niklas Groll | Technical University of Denmark, 2800 Kgs. Lyngby",
+      "Tuse Asrav | Technical University of Denmark, Kongens Lyngby",
+      "Gurkan Sin | Technical University of Denmark, 2800 Kgs. Lyngby"
+    ],
+    "authors_structured": [
+      {
+        "name": "Niklas Groll",
+        "affiliation": "Technical University of Denmark, 2800 Kgs. Lyngby",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Tuse Asrav",
+        "affiliation": "Technical University of Denmark, Kongens Lyngby",
+        "designation": "Author"
+      },
+      {
+        "name": "Gurkan Sin",
+        "affiliation": "Technical University of Denmark, 2800 Kgs. Lyngby",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "501e",
+    "sortable_time": "2025-11-05_09:24:00_09:45:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/711895"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/710466",
+    "paper_endpoint": "Paper/710466",
+    "paper_id": "710466",
+    "topic": "Scheduling and Control of Green Ammonia Plants",
+    "title": "Scheduling and Control of Green Ammonia Plants",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "57414",
+    "session_title": "Improvements for Ammonia Production",
+    "session_number": "501",
+    "program_title": "Process Development Division",
+    "symposium_title": "Process Development Division",
+    "abstract": "Green ammonia is widely regarded to play an important role in decarbonizing existing ammonia use cases and as a potential energy carrier of the future. Green ammonia plants can typically be divided into three main sections: the hydrogen production by electrolysis, the nitrogen production in an air separation unit, and the Haber-Bosch plant. Additionally, the plant may contain intermediate storage facilities for electricity (batteries), hydrogen, and nitrogen. Due to the fluctuating availability of renewable power, the sizing of the main plant components and storage facilities in combination with their operation yields an integrated scheduling and design problem. This problem is typically approached by linear or mixed-integer linear programming, considering a representative a year of historical weather data. (WANG 2023, SALMON 2023) The scheduling and control problem involves the first to third layer as described in the international standard for the integration of enterprise and control systems (ISA-95) and is different from the integrated scheduling and design problem due to the limited knowledge of future energy availability. Salmon and Bañares-Alcántara (2023) conducted a receding-horizon scheduling of a green ammonia plant designed by solving a linear program considering one year of weather data. They found that the suboptimal operation due to the limited prediction horizon resulted in the storage being insufficient in many cases, requiring multiple plant shutdowns per year. The scheduling problem assumed 12–48 h of ideal power production forecasts and a linear plant model. The study by Salmon and Bañares-Alcántara (2023) underlines that the typical design optimization results in a plant that can only achieve the production target with perfect knowledge of the future availability of renewable power. In our work, we present a novel scheduling and control framework for green ammonia plants. A plant configuration is obtained by linear-programming-based design. A detailed dynamic UniSim Design® simulation of a Haber-Bosch plant based on the one described in our previous work (FAHR 2025) is used and supplemented by simplified models of an electrolyzer and an air separation unit. The plant is operated based on the load profiles obtained from a receding-horizon linear program. Therefore, the scheduling takes place online, i.e., the inputs of the scheduling problem are given by the current state of the detailed simulation and the base control layer of the plant follows the setpoints provided by the scheduler. By using prediction horizons on the order of 24 h, including forecast errors, and providing a detailed dynamic plant model, we present realistic operating conditions. This allows an assessment of the robustness of plants designed by linear programming in real operation and helps to draw conclusions for robust plant design. Our results show that with suitable scheduling and realistic prediction horizons, safe operation based on renewable energy sources can be achieved without shutdowns or excessive use of backup power. At the same time, production losses due to overly conservative storage usage and additional capital expenditure for robust plant configurations are kept at a minimum. Literature Wang C, Walsh SDC, Longden T, Palmer G, Lutalo I, Dargaville R. Optimising renewable generation configurations of off-grid green ammonia production systems considering Haber–Bosch flexibility. Energy Convers Manage 2023; 280: 116790. http://dx.doi.org/10.1016/j.enconman.2023.116790. Salmon N, Bañares-Alcántara R. Impact of process flexibility and imperfect forecasting on the operation and design of Haber–Bosch green ammonia. RSC Sustain 2023; 1(4): 923–37. http://dx.doi.org/10.1039/D3SU00067B. Fahr S., Kender R., Bohn J.-P., Rehfeldt S., Peschel A., Klein H. Dynamic simulation of a highly load-flexible Haber–Bosch plant. International Journal of Hydrogen Energy 2025; 102: 1231–1242. https://doi.org/10.1016/j.ijhydene.2025.01.039.",
+    "presenting_author": "Steffen Fahr | Technical University of Munich (TUM), Garching, Germany",
+    "authors": [
+      "Steffen Fahr | Technical University of Munich (TUM), Garching, Germany",
+      "Robert Kender | Linde, Pullach im Isartal, Germany",
+      "Jan-Peter Bohn | Linde, Pullach im Isartal, Germany",
+      "Sebastian Rehfeldt | Technical University of Munich (TUM), Garching, Germany",
+      "Andreas Peschel | Forschungszentrum Jülich GmbH, Germany",
+      "Harald Klein | Technical University of Munich (TUM), Garching, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Steffen Fahr",
+        "affiliation": "Technical University of Munich (TUM), Garching, Germany",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Robert Kender",
+        "affiliation": "Linde, Pullach im Isartal, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Jan-Peter Bohn",
+        "affiliation": "Linde, Pullach im Isartal, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Sebastian Rehfeldt",
+        "affiliation": "Technical University of Munich (TUM), Garching, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Andreas Peschel",
+        "affiliation": "Forschungszentrum Jülich GmbH, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Harald Klein",
+        "affiliation": "Technical University of Munich (TUM), Garching, Germany",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "501f",
+    "sortable_time": "2025-11-05_09:45:00_10:06:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/710466"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712146",
+    "paper_endpoint": "Paper/712146",
+    "paper_id": "712146",
+    "topic": "Process Design and Optimization for Green Ammonia Production",
+    "title": "Process Design and Optimization for Green Ammonia Production",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "57414",
+    "session_title": "Improvements for Ammonia Production",
+    "session_number": "501",
+    "program_title": "Process Development Division",
+    "symposium_title": "Process Development Division",
+    "abstract": "Large scale industrial ammonia production is essential to support the world population as approximately 85% of global production is converted to fertilizers and applied in the agricultural sector. The conventional Haber–Bosch process is based on hydrogen production from steam methane reforming, which results in approximately 235 million tons of CO 2 emissions per year [1]. In this context, a crucial challenge is to reduce the environmental impact of ammonia production, while keeping up with the production demand. One of the most promising opportunities in this field is green ammonia, whose production is based on green hydrogen [2]. Water electrolysis generates H 2 and O 2 from deionized water taking advantage of renewable electricity sources such as solar, wind, and hydropower. Even if shifting from fossil-based to renewable-based H 2 could enable substantial decarbonization of ammonia synthesis, green ammonia is not yet competitive at the current costs of green hydrogen production [3]. This work, developed within the FME Hydrogeni project funded by the Resource Council of Norway, aims at reducing the Levelized Cost of Ammonia (LCOA) through energy integration and optimal process design. More specifically, this work includes: Modelling of the green ammonia production process in a steady-state process simulator; Quantification of mass and energy balances and assessment of Key Performance Indicators (KPIs); Sensitivity analysis to identify optimal process configuration (electrolyser type, operating pressure); LCOA for the optimized process. An industrial-relevant electrolyser scale of 500 MW is considered as the process size. Model structure Submodels have been developed to characterize the building blocks involved in green ammonia synthesis, namely Air Separation Unit (ASU), Proton Exchange Membrane (PEM) and Solid Oxide Electrolyser Cell (SOEC) electrolysers, and the ammonia synthesis reactor. A rigorous model approach is followed for both the ammonia synthesis reactor and ASU. The conventional Haber-Bosch model is largely based on the process description reported in Ullmann’s encyclopaedia [4]. The main assumptions are: operating pressure is 210 bar; three packed beds in series with intermediate cooling. Inlet temperature to each bed is 380°C; kinetics of forward and reverse reactions retrieved from Burrows and Bollas [5]; ammonia recovery by liquefaction in two steps operating at 20°C and 0°C, respectively. For the low-pressure process, a pressure range between 50 and 100 bar is investigated. The kinetics for the ruthenium catalyst is retrieved from Yoshida et al. [6]. At reduced pressure, lower temperatures are needed to condense ammonia. The major implication is the need to replace the ammonia refrigeration cycle considered for Haber-Bosch with alternative refrigerants. A list of the adopted cycles for different operating pressures is available in Table 1.The electrolyser is represented with a simplified soft model accounting only for the global water splitting reaction, and the corresponding efficiencies and performance indicators are directly retrieved from a previously published work [7].Flowsheet is developed in COCO-COFE (CAPE-OPEN to CAPE-OPEN – CAPE-OPEN Simulation Environment), a simulation package available free of charge. The Peng-Robinson Equation of State is used as the thermodynamic model. The flowsheet of the integrated process is drawn in Figure 1 (for the PEM case-study). Costs assessment Costs will be calculated through a class III estimate. Mass and energy balances from the COFE model are used for unit sizing and to quantify raw materials and utilities consumption. CAPEX and OPEX will be determined using published correlations [8,9]. Sensitivity analysis Performances of green ammonia production at conventional pressure using PEM and SOEC are compared in terms of KPIs and LCOA. A sensitivity analysis is carried out to investigate how energy requirements and reactor size change when operating with Ru-catalyst at different pressures between 50 and 100 bar. The target is to find the optimal pressure and compare low-pressure process with conventional Haber-Bosch. Results Table 2 compares the KPIs for the conventional Haber-Bosch process integrated with PEM and SOEC electrolysers, respectively. Results show that SOEC and PEM provide the same ammonia yield. However, SOEC allows generating a higher ammonia flow (+19%) thanks to the higher hydrogen production at given electrolyser power (500 MW). On the other hand, the increase in the total electricity demand observed for SOEC is limited to 1%. Noteworthily, more than 70% of the steam needed for SOEC can be produced through heat integration using the residual heat available from the hot streams leaving each packed bed in ammonia synthesis (T > 450°C). Table 3 reports a summary of the main KPIs for the low-pressure process using PEM electrolysers. The following considerations can be drawn: At lower pressure, lower temperatures are required to condense ammonia. This results in a considerable increase in the electricity requirement of the refrigeration cycle. The lower the pressure, the higher the flow of unconverted reactants to be recycled. Indeed, the thermodynamic equilibrium of NH 3 production becomes less favorable, so the conversion per pass decreases. The reaction kinetics is slower at lower pressure. Circulating flows inside the reactor are higher, thus higher packed bed heights are needed to achieve the same yield. Working at lower pressures considerably drops the cost for make-up gas compression. The optimal pressure range for the low-pressure ammonia synthesis is 90 bar. The total electricity demand is only +6.5% compared to conventional Haber-Bosch. Similar considerations hold for the SOEC-based low-temperature process. Calculations of the LCOA for PEM and SOEC-based processes at both 210 bar (conventional) and 90 bar (optimized low-pressure) are in progress and will be presented at the meeting. This will be crucial to assess the economic feasibility of the proposed integrated ammonia production process. Acknowledgement The present work received financial support from the Norwegian Research Council’s Centres for Environment-friendly Energy Research program. References [1] B. Lee, L.R. Winter, H. Lee, D. Lim, H. Lim, M. Elimelech, Pathways to a Green Ammonia Future, ACS Energy Lett (2022) 3032–3038. https://doi.org/10.1021/ACSENERGYLETT.2C01615/ASSET/IMAGES/MEDIUM/NZ2C01615_M002.GIF. [2] A.G. Olabi, M.A. Abdelkareem, M. Al-Murisi, N. Shehata, A.H. Alami, A. Radwan, T. Wilberforce, K.J. Chae, E.T. Sayed, Recent progress in Green Ammonia: Production, applications, assessment; barriers, and its role in achieving the sustainable development goals, Energy Convers Manag 277 (2023) 116594. https://doi.org/10.1016/J.ENCONMAN.2022.116594. [3] C. Arnaiz del Pozo, S. Cloete, Techno-economic assessment of blue and green ammonia as energy carriers in a low-carbon future, Energy Convers Manag 255 (2022) 115312. https://doi.org/10.1016/J.ENCONMAN.2022.115312. [4] K.H.R. Rouwenhorst, P.M. Krzywda, N.E. Benes, G. Mul, L. Lefferts, Ammonia, 4. Green Ammonia Production, in: Ullmann’s Encyclopedia of Industrial Chemistry, Wiley-VCH, 2020. [5] L. Burrows, G.M. Bollas, Stability Assessment of Small-Scale Distributed Ammonia Production Systems, Ind Eng Chem Res 61 (2022) 16081–16092. https://doi.org/10.1021/ACS.IECR.2C00631/SUPPL_FILE/IE2C00631_SI_001.PDF. [6] M. Yoshida, T. Ogawa, Y. Imamura, K.N. Ishihara, Economies of scale in ammonia synthesis loops embedded with iron- and ruthenium-based catalysts, Int J Hydrogen Energy 46 (2021) 28840–28854. https://doi.org/10.1016/J.IJHYDENE.2020.12.081. [7] A. Zaccara, A. Petrucciani, I. Matino, T.A. Branca, S. Dettori, V. Iannino, V. Colla, M. Bampaou, K. Panopoulos, Renewable Hydrogen Production Processes for the Off-Gas Valorization in Integrated Steelworks through Hydrogen Intensified Methane and Methanol Syntheses, Metals 2020, Vol. 10, Page 1535 10 (2020) 1535. https://doi.org/10.3390/MET10111535. [8] K.M. Guthrie, Process Plant Estimating, Evaluation and Control, Solana Ed., 1974. [9] R. Turton, J.A. Shaewitz, D. Bhattacharya, W.B. Whiting, Analysis, Synthesis, and Design of Chemical Processes, Fifth Edition, Pearson, 2018.",
+    "presenting_author": "Matteo Gilardi | SINTEF Industry, Trondheim, Norway",
+    "authors": [
+      "Matteo Gilardi | SINTEF Industry, Trondheim, Norway",
+      "Bjørn Christian Enger | SINTEF Industry, Trondheim, Norway"
+    ],
+    "authors_structured": [
+      {
+        "name": "Matteo Gilardi",
+        "affiliation": "SINTEF Industry, Trondheim, Norway",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Bjørn Christian Enger",
+        "affiliation": "SINTEF Industry, Trondheim, Norway",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "501g",
+    "sortable_time": "2025-11-05_10:06:00_10:27:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712146"
+  }
+]

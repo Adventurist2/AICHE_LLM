@@ -1,0 +1,482 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467109.html",
+    "topic": "An Optimization-Based Approach for the Design of Self-Assembled DNA Tiles",
+    "date_time": "Thursday, November 17, 2016: 10:45 AM",
+    "abstract": "In structural DNA nanotechnology, DNA strands exceed their\ntraditional role in gene expression and are being used as programmable building\nblocks for nanoscale structures. This self-assembly is driven by hybridization\nfollowing the Watson-Crick rule.[1-3] Depending on the design of the DNA\nstrands, structures with a rich set of nanoscale features can be\nself-assembled. A special class of DNA structures are the so-called DNA tiles,[4]\nwhich are self-assembled from a relatively small number of DNA strands.\nExperimental methods to self-assemble DNA tiles for a given design of DNA\nstrands are well developed. However, a challenge is to find the optimal design\nof the individual DNA strands to self-assemble a desired DNA tile. In general, the design of DNA strands for self-assembly of tiles\ninvolves two steps, 1) structural design and, 2) sequence generation. For\nstructural design, the aim is to select optimal locations for so-called crossovers,\nwhich involves bridging of two DNA double helices (see Figure 1). Each\ncrossover connects two double helices by a pair of shared single strands\nDNA.[1,3] For sequence generation, an optimal sequence of nucleotides for each\nDNA strand needs to be selected to enable the formation of the selected\ncrossovers. Generally speaking, efficient algorithms for sequence generation\nexist. However, for the structural design, existing methods typically only\nprovide a modeling framework for prediction and visualization of a stable\nstructure for a given structural design (i.e., for solving the 'forward'\nproblem).[6-9] In contrast, finding a structural design that allows for\nself-assembly of a desired final structure with high stability (i.e., solving\nthe 'inverse' problem) remains challenging. The objective of this work is to investigate an optimization-based\napproach for the optimal structural design of self-assembled DNA tiles. A\nsemi-empirical model from literature [8] is used to predict the potential\nenergy of a self-assembled DNA tile. First, minimization of the potential energy for a given design\n(i.e., locations of crossovers) is studied for three different types of\ntiles.[5,10,11] The optimization problem was implemented in Matlab (2014a,\nMathworks, Inc.) using the solver fmincon and\nin General Algebraic Modeling System (GAMS) Release 24.4.6. (GAMS Development\nCorporation, Washington, DC, USA, 2015) using different non-linear programming\n(NLP) solvers. Figure 2 illustrates the structural configurations of various\nself-assembled DNA tiles that were found after minimization of the potential\nenergy. Different local minima were identified depending on the randomly chosen\ninitial guesses. In all cases, the structure with the lowest potential energy\ncorresponded to the intended structure reported in literature. Furthermore, in\nall cases, a significant part of the initial guesses converged to local minima.\nThe structural configurations corresponding to those local minima could be\nsignificantly different from the intended structure (Figure 1), which\nillustrates the practical importance of avoiding local. Both a multi-start\noptimization method and deterministic global optimization using GAMS/BARON were\ninvestigated to identify the global minimum. Second, self-assembly of the DNA tensegrity triangle [5,12](Figure\n1) is chosen as the case to investigate model-based optimization of the\nstructural design. This tile has been synthesized experimentally[5] and has\npractical relevance as template for protein crystallization. The optimization\nproblem aims to minimize the potential energy of the tile, to maximize\nstability, using the orientation and position of the helices and the locations\nof the crossovers as degrees of freedom. Since the length of the DNA strands is\ntypically short, decisions regarding the locations of crossovers are discrete\ndecisions (represented by integer variables). Therefore, the optimization\nproblem is formulated as a mixed-integer nonlinear programming (MINLP) problem.\nThe optimization problem was implemented in GAMS using the solver SBB, which is\nbased on branch-and-bound. The solution obtained with the MINLP formulation was\ncompared to the solution obtained by exhaustive enumeration of the integer\nvariables and solving an NLP problem at each node. The lowest potential energy\ncould be obtained by using 27 nucleotides between each crossover for an\nequilateral triangle design, which matches experimental findings[5] and was\nalso found using branch-and-bound with a 10-fold smaller CPU time compared to\nexhaustive enumeration. Finally, the design problem was also solved with the\nnumber of nucleotides between crossovers on each side of the triangle as a\ndecision variable. The proposed MINLP optimization method was again able to\nidentify the same mixed-integer solution compared to exhaustive enumeration at\na much smaller CPU time (200-fold), which demonstrates the strength of a\nbranch-and-bound algorithm for structural design of self-assembled DNA tiles. Figure 1: An example of a self-assembled DNA tile (tensegrity triangle)\nand detailed view of the structure of crossovers that interlink DNA helices. Figure 2: Identified local minima when minimizing the\npotential-energy of three different types of DNA tiles with fixed locations of\ncrossovers. The percentage of randomly chosen initial guesses that led to each\nstructure is indicated below the potential energy of the structure Reference [1] Seeman, N. C. An overview of structural DNA nanotechnology. Mol. Biotechnol. 37, 246-257\n(2007). [2] Seeman, N. C. DNA in a material world. Nature 421, 427-431\n(2003). [3] Seeman, N. C. DNA nanotechnology: novel DNA constructions. Annu. Rev. Biophys. Biomol.\nStruct. 27, 225-248\n(1998). [4] Park, S. H. et\nal. Programmable\nDNA self-assemblies for nanoscale organization of ligands and proteins. Nano Lett. 5, 729-733\n(2005). [5] Zheng, J. et\nal. From\nmolecular to macroscopic via the rational design of a self-assembled 3D DNA\ncrystal. Nature 461, 74-77\n(2009). [6] Birac, J. J., Sherman, W. B., Kopatsch, J., Constantinou, P.\nE. & Seeman, N. C. Architecture with GIDEON, a program for design in\nstructural DNA nanotechnology. J.\nMol. Graph. Model. 25, 470-480\n(2006). [7] Castro, C. E. et\nal. A\nprimer to scaffolded DNA origami. Nat.\nMethods 8, 221-229\n(2011). [8] Zhu, J., Wei, B., Yuan, Y. & Mi, Y. UNIQUIMER 3D, a\nsoftware system for structural DNA nanotechnology design, analysis and\nevaluation. Nucleic\nAcids Res. 37, 2164-2175\n(2009). [9] Pan, K. et\nal. Lattice-free\nprediction of three-dimensional structure of programmed DNA assemblies. Nat. Commun. 5, (2014). [10] Wei, B. & Mi, Y. A new triple crossover triangle (TXT)\nmotif for DNA self-assembly. Biomacromolecules 6, 2528-2532\n(2005). [11] He, Y. et\nal. Self-Assembly\nof Hexagonal DNA Two-Dimensional ( 2D ) Arrays. J. Am. Chem. Soc. 12202-12203\n(2005). [12] Liu, D., Wang, M., Deng, Z., Walulu, R. & Mao, C.\nTensegrity: construction of rigid DNA triangles with flexible four-arm DNA\njunctions. J.\nAm. Chem. Soc. 126, 2324-2325 (2004).",
+    "presenting_author": "Yu Gao | Chemical and Biomolecular Engineering, Hong Kong University of Science and Technology, Hong Kong, China",
+    "authors": [
+      "Yongli Mi and Richard Lakerveld | Chemical and Biomolecular Engineering, Hong Kong University of Science and Technology, Hong Kong, China"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yu Gao",
+        "affiliation": "Chemical and Biomolecular Engineering, Hong Kong University of Science and Technology, Hong Kong, China",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Yongli Mi and Richard Lakerveld",
+        "affiliation": "Chemical and Biomolecular Engineering, Hong Kong University of Science and Technology, Hong Kong, China",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470463.html",
+    "topic": "How Macromolecular Solvation Influences Its Conformations",
+    "date_time": "Thursday, November 17, 2016: 10:00 AM",
+    "abstract": "Under ambient conditions, globular proteins sacrifice their conformational entropy, and fold into well-defined “native” states. They do so because folding leads to favorable intra-molecular interactions, and importantly, to more favorable (or less unfavorable) interactions with the solvent. Consequently, proteins can be denatured under a variety of conditions, by either making the folded protein-solvent interactions less favorable, or unfolded protein-solvent interactions more favorable. Such conditions include lower temperatures, higher pressures, proximity to hydrophobic interfaces, and the presence of co-solutes that act as denaturants. Using hydrophobic polymers as model globular proteins, here we study how the hydration environment of a polymer influences its collapse. We find that near ambient conditions, typical hydrophobic macromolecules are situated at the edge of a collective collapse transition, making them sensitive to perturbations such as the application of pressure or the presence of co-solutes.",
+    "presenting_author": "Zhitong Jiang and  Amish Patel | University of Pennsylvania, Philadelphia, PA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Zhitong Jiang and  Amish Patel",
+        "affiliation": "University of Pennsylvania, Philadelphia, PA",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462113.html",
+    "topic": "Viscous Solvents Enable a Model Prebiotic Nucleic Acid Replication Cycle",
+    "date_time": "Thursday, November 17, 2016: 10:15 AM",
+    "abstract": "Increased control of molecular self-assembly is important for the further development of nucleic acid-based technologies. While nucleic acid technology research has been carried out almost exclusively in aqueous buffer, alternative solvents could increase our ability to direct nucleic acid assembly. Deep eutectic solvents (DES), closely related to ionic liquids, are characterized by significantly lower melting points than their separate components. Recently, DES have been shown to preserve nucleic acid base pairing and duplex formation, offering a relatively unexplored medium for directing nucleic acid assembly. In this work, we show that DES provide a highly effective means for tuning nucleic acid thermodynamics and kinetics. The power of alternative solvents to alter a nucleic acid assembly pathway is illustrated by our ability to circumvent the “strand inhibition problem” by thermally cycling nucleic acids in a DES. Strand inhibition describes the propensity of a long nucleic acid polymer to form a duplex with its complementary strand rather than to serve as a template for assembly of oligonucleotides. This longstanding problem in the field of prebiotic chemistry has limited demonstration of a prebiotic nucleic acid replication mechanism. We address the problem of nucleic acid strand inhibition by employing highly viscous solvents to control the annealing rates of long templates and shorter oligonucleotides. In a viscous environment, nucleic acid mobility is slowed in a length-dependent manner, so that long nucleic acid polymers (such as template and copy strands) are kinetically trapped. Meanwhile, short oligonucleotides can diffuse quickly and bind to their complementary targets on the templates. Template duplex formation is further slowed by the formation of intramolecular secondary structure on the template single strands. Based on these thermodynamic and kinetic effects, we show that thermal cycling in a viscous environment can be used to copy a gene-length region (over 300 nucleotides) of a longer mixed sequence template, using both DNA and RNA systems.",
+    "presenting_author": "Christine He 1 | ",
+    "authors": [
+      "Martha A. Grover | ",
+      "Isaac Gallego | ",
+      "Brandon Laughli | ",
+      "Nicholas Hu | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Christine He 1",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Martha A. Grover 1",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Isaac Gallego 2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "3",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Brandon Laughlin 2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "3 and Nicholas Hud 2",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "3",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462113.html",
+    "paper_id": "462113"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper462698.html",
+    "topic": "Drying of Almonds: Single Particle",
+    "date_time": "Thursday, November 17, 2016: 10:43 AM",
+    "abstract": "Abstract Drying is important in many food processing applications, and particularly so in the dry fruits industry. We have experimentally as well as computationally investigated drying of almonds. Drying of almonds exhibit many characteristic key features: non-spherical shape, swelling/ shrinkage as a function of moisture content, uneven drying because of peculiar shape and proximity of other almonds and so on. Mettler Toledo Halogen Moisture Analyzer unit was used to quantify drying kinetics of a single almond particle. In this widely used equipment, internal flow patterns and therefore heat and mass transfer depend on natural circulation. In this work, we have used detailed three dimensional computational fluid dynamics (CFD) model to simulate flow, heat and mass transfer in Mettler Toledo unit while drying of almond particles. Systematic experiments with a single re-wetted almond were conducted in Mettler Toledo Moisture Analyzer Excellence Plus HX204 unit at three set temperatures of 55, 65 and 75 o C. Acquired transient moisture data was used to estimate key parameters of interest (drying kinetics and effective diffusivity). A comprehensive CFD model was developed and used to simulate natural convection within the moisture analyzer. Radiation heat transfer was modelled using the discrete ordinate mode (ANSYS Inc). The computational model was validated by comparing simulated and measured temperature near almond nut. The temperature near almond surface was found to be lower (by about 5 C) than the temperature set point of the moisture analyzer. Actual measured temperature near the almond surface was used while obtaining drying kinetics. Simulated flow results were used to estimate local heat transfer coefficients for almond surfaces. Based on estimated effective diffusivity and analogy between thermal and concentration boundary layers, distribution of mass transfer coefficient around almond surface was estimated. The results provide quantitative information about non-uniform heat and mass transfer and therefore non-uniform drying of a single almond particle. The presented approach, models and results will be useful for enhancing utility of the results obtained with moisture analyzer units and improve ability to extend the results obtained with such units to industrial systems. The results and models presented here will also provide useful basis for further work on multiple almond particles and on tray dryers. Acknowledgements Authors would like to Thank CSIR for funding this research via its Indus MAGIC (CSC123) project. References ANSYS® ANSYS Fluent, Release 14.5",
+    "presenting_author": "Amarvir G. Chilka | Chemical Engineering & Process Development Division, Academy of Scientific and Innovative Research (AcSIR), CSIR-National Chemical Laboratory (CSIR-NCL) Campus, Pune, India and  Vivek V. Ranade, Chemical Engineering & Process Development Division, National Chemical Laboratory, Pune, India",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Amarvir G. Chilka",
+        "affiliation": "Chemical Engineering & Process Development Division, Academy of Scientific and Innovative Research (AcSIR), CSIR-National Chemical Laboratory (CSIR-NCL) Campus, Pune, India and  Vivek V. Ranade, Chemical Engineering & Process Development Division, National Chemical Laboratory, Pune, India",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper468232.html",
+    "topic": "Tension-Dependent Free Energies of Nucleosome Unwrapping",
+    "date_time": "Thursday, November 17, 2016: 10:30 AM",
+    "abstract": "Nucleosomes form the basic unit of compaction within eukaryotic genomes and their locations represent an important, yet poorly understood, mechanism of genetic regulation. Quantifying the strength of interactions within the nucleosome is a central problem in biophysics and is critical to understanding how nucleosome positions influence gene expression. By comparing to single-molecule experiments, we demonstrate that a coarse-grained molecular model of the nucleosome can reproduce key aspects of nucleosome unwrapping. Using detailed simulations of DNA and histone proteins, we calculate the tension-dependent free energy surface corresponding to the unwrapping process. The model reproduces quantitatively the forces required to unwrap the nucleosome, and reveals the role played by electrostatic interactions during this process. We then demonstrate that histone modifications and DNA sequence can have significant effects on the energies of nucleosome formation. Most notably, we show that histone tails are crucial for stabilizing the outer turn of nucleosomal DNA.",
+    "presenting_author": "Joshua Lequieu | Institute for Molecular Engineering, University of Chicago, Chicago, IL",
+    "authors": [
+      "Andres Cordoba and Juan J. de Pablo | Institute for Molecular Engineering, University of Chicago, Chicago, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joshua Lequieu",
+        "affiliation": "Institute for Molecular Engineering, University of Chicago, Chicago, IL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Andres Cordoba and Juan J. de Pablo",
+        "affiliation": "Institute for Molecular Engineering, University of Chicago, Chicago, IL",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper463581.html",
+    "topic": "Effect of Particle Size and Shape on Drying and Stress Development in Colloidal Coatings",
+    "date_time": "Thursday, November 17, 2016: 9:46 AM",
+    "abstract": "Coatings prepared from colloidal particle suspensions have a wide range of applications including barrier coatings, antireflective coatings and printed electronic devices. For coatings prepared from colloidal suspensions, major changes in microstructure and properties occur during drying. As-deposited, the liquid suspension is stress-free, but during drying stress develops and may cause defects, such as cracking, curling or delamination. The study of coatings stress development and microstructure change during drying provides a basis for developing formulations and processing conditions to control stress and defects and provide for high performance. Mineral pigments like calcium carbonate, clay and talc are extensively used in the paper industry. Latex like styrene butadiene, styrene acrylic and polyvinyl acetate are used to provide good cohesion of the porous structure formed by rigid pigments. Different pigments size, shape and blending ratio can significantly impact dispersion properties, as well as the appearance and physical properties of the coated products. Past research has demonstrated that coatings made from suspensions of large particles develop lower stresses and are less likely to crack compared with those made from suspensions of fine particles. In this work, the effect of particle size is further explored by studying coatings with similar average particle size but different particle size distribution. In addition, particulate coatings with clays of different shape, relative size and content ratio to other pigments in the coating formulation are also investigated. This research addresses the effects of particle size and shape on coatings stress development, microstructure formation and mechanical properties. In this research, we studied aqueous coating systems containing ground calcium carbonate particles, latex particles and clays. Coating drying behavior, including weight loss and stress development, was monitored under controlled conditions (temperature and humidity). Drying stress was determined by substrate deflection method. SEM and cryo-SEM techniques were used to relate the coating stress development and cracking behavior to microstructure changes. The cracking behavior was studied by measuring the critical cracking thickness and mechanical properties (i.e., hardness, modulus and fracture toughness) using nanoindenter. Critical cracking thickness was found to increase with clay content in certain systems. The objective of this study is to understand this phenomenon and the effects of particle sizes and shape on coating stress development and mechanical properties, which are responsible for coating performance.",
+    "presenting_author": "Yan Wu | Chemical Engineering and Materials Science, University of Minnesota, MINNEAPOLIS, MN and Lorraine F Francis, Chemical Engineering and Materials Science, University of Minnesota, Minneapolis, MN",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Yan Wu",
+        "affiliation": "Chemical Engineering and Materials Science, University of Minnesota, MINNEAPOLIS, MN and Lorraine F Francis, Chemical Engineering and Materials Science, University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper460038.html",
+    "topic": "Parametric Analysis of Fluidized Bed Drying of Pharmaceutical Materials",
+    "date_time": "Thursday, November 17, 2016: 9:08 AM",
+    "abstract": "Parametric Analysis of Fluidized Bed Drying of Pharmaceutical Materials Hao Chen, Xue Liu, Cody Bishop, Benjamin J. Glasser Department of Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ, 08854 Fluidized beds are extensively used in the pharmaceutical and other chemical industries either as a batch or continuous process for drying moist powders and granular solids because of good mixing of solids and intensive heat and mass transfer between the solid and hot gas phases in the system. It has been reported that an average of 12% of all energy consumed is used on drying, and the cost of drying could reach up to 60%-70% of total cost of investments [1]. Therefore, optimal operation of the drying process is sought to meet the requirements for cost-effective manufacturing. In this work, parametric analysis of four fluidized bed dryer operating parameters – initial moisture content, material loading, heating air temperature and air flux – and their effect on drying were studied using two factorial experimental designs. Two different dryer scales, the Glatt GPCG-1 and MiniGlatt, were used to dry Dibasic Calcium Phosphate powders. According to a Pareto analysis, initial moisture content and air flux are the most significant variables. For the larger GPCG-1, the four variables used in the factorial tests were found to be independent. For the smaller MiniGlatt, the interaction of the initial moisture content and the air flow rate was also significant. From the parametric analysis, it was observed that drying is dominated by the constant drying stage, and zero-order kinetics, for the mild drying conditions (appropriate for many pharmaceutical products) we considered in this work. A comparison of the two dryers and an evaluation of energy efficiency were also carried out. It was found that drying should be carried out with relatively low temperatures and high air fluxes for both the large and small scale dryers in order to maximize the energy efficiency. In the second part of this work, the effect of particle size on drying was investigated. It is commonly believed that during the constant drying stage, where convective drying dominates, small particles dry faster than larger particles because the former have larger surface-area-to-volume ratio. However, it was observed for the DCPA that large (150-212 micron) and small (53 – 106 micron) particles have the same drying rate during the constant-rate drying stage. Similar phenomena were also found for the MCC (microcrystalline cellulose) PH101 and the wet granules mainly consisting of lactose and MCC. This indicates that surface area may not be a key variable controlling the drying rate during the constant-rate stage. A comparison of fluid bed drying and oven drying is also carried out in this work. Our work serves to characterize performance of fluidized bed dryer systems and provide physical insight into the fundamentals of drying of porous materials. [1] M. S. H. Sarker, M. N. Ibrahim, N. Abdul Aziz, and M. S. Punan, \"Energy and exergy analysis of industrial fluidized bed drying of paddy,\" Energy, vol. 84, pp. 131-138, 5/1/ 2015.",
+    "presenting_author": "Hao Chen | Department of Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+    "authors": [
+      "Xue Liu | ",
+      "Cody Bishop | Department of Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+      "Benjamin Glasser | Department of Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hao Chen",
+        "affiliation": "Department of Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Xue Liu",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Cody Bishop",
+        "affiliation": "Department of Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Benjamin Glasser",
+        "affiliation": "Department of Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper455953.html",
+    "topic": "Destabilization of Proteins in Extreme Conditions: Molecular Simulations of the Denaturation of Trp-Cage Miniprotein",
+    "date_time": "Thursday, November 17, 2016: 8:30 AM",
+    "abstract": "Proteins are stable in their compact, folded structures only in a narrow range of physiological conditions. Deviation from these conditions, such as changes in temperature and salt concentrations, can destabilize the folded structures. Investigating the mechanism(s) of protein denaturation induced by these extreme conditions has a fundamental importance in understanding of the evolution of organisms with extreme habitats and formulating effective long-term preservation strategies for biological therapeutics. Using replica-exchange molecular dynamics simulations, we examine the mechanisms of cold- and salt-induced denaturation of a fully-atomistic model of the Trp-cage miniprotein, and we make direct comparison with the unfolding behavior at high temperatures. In contrast to the complete unraveling of the secondary and tertiary structures observed during heat denaturation, the cold-denatured structure of the Trp-cage is compact and partially folded with stable alpha-helix, despite the loss of salt bridges. We also find that the salt-denatured structures exhibit a strong resemblance to the cold-unfolded Trp-cages. The mechanism of cold- and salt-induced protein denaturation is examined by analyzing the structural change, thermodynamic quantities, and protein-solvent interaction.",
+    "presenting_author": "Sang Beom Kim | Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+    "authors": [
+      "Jeremy C. Palmer | ",
+      "Pablo G. Debenedetti | Chemical and Biological Engineering, Princeton University, Princeton, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sang Beom Kim",
+        "affiliation": "Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jeremy C. Palmer",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Pablo G. Debenedetti",
+        "affiliation": "Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472328.html",
+    "topic": "Membrane Guided Self-Assembly of Dimers and Trimers of Tight Junction Proteins",
+    "date_time": "Thursday, November 17, 2016: 9:15 AM",
+    "abstract": "Tight junctions (TJ) constituted by the claudin family of transmembrane proteins determine solute permeability in the paracellular space of various tissues. Multimeric aggregation of the claudin tight junction strands is difficult to probe using experimental methods. However, understanding how the membrane environment guides the claudin-claudin interactions into TJ assembly has far-reaching significance to a range of biochemical, mechanistic and physiological processes. In this study, we have employed molecular simulations to probe the membrane-driven self-assembly of cis interactions in seven prototypic classic claudins. Hydrophobic mismatch between the transmembrane domains and the bulk lipid medium initiates polymerization that leads to dimeric, trimeric, and higher order assemblies. There are both conformational and morphological differences between individual claudins. Specifically in the case of claudin-2, we observed dimeric conformations that are potentially the cation channel forming dimer, which is important for cation absorption in the kidneys. Furthermore, trimeric assemblies were observed in claudin-2, -4 and -19 that match with the receptor configurations for trimeric Clostridium perfringens enterotoxin (CPE), revealing the potential mechanism for pathogenesis. These important findings observed in the long-timescale self-assembly simulations provide unprecedented molecular level clues about the tight junction architecture.",
+    "presenting_author": "Flaviyan Jerome Irudayanathan | Department of Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY",
+    "authors": [
+      "Xiaoyi Wang | Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY",
+      "Nan Wang | ",
+      "Shikha Nangi | Department of Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Flaviyan Jerome Irudayanathan",
+        "affiliation": "Department of Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Xiaoyi Wang",
+        "affiliation": "Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Nan Wang",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Shikha Nangi",
+        "affiliation": "Department of Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper459043.html",
+    "topic": "Estimating Thermal Diffusivity of Bulk Solids",
+    "date_time": "Thursday, November 17, 2016: 9:27 AM",
+    "abstract": "Conductive heat transfer in packed beds is of industrial interest for numerous processes. Packed beds are widely used in catalytic reactors, gas-cooled nuclear reactors, drying, mixing, adsorption processes, pebble bed heaters, high performance cryogenic insulations, absorbers, evaporators and thermal energy storage devices. The large surface area to total volume ratio in packed beds lends itself to excellent heat & mass transfer along with good mixing of the continuous phase. To operate packed bed based processes, one must have a fundamental understanding of packing structure, porosity distribution, fluid flow, pressure drop and heat transfer mechanisms. For engineering purposes, it is desirable to represent the composite heterogeneous media by an equivalent (or effective) continuous and homogenous media. This approach is justifiable as long as the macroscopic scale of the physical process is significantly larger than the microscopic scale describing the structure of the composite media. Similar approach is taken to describe the thermal conductivity of a packed bed with stagnant fluid. The overall thermal conductivity of a packed bed can be lumped into a single representative value called effective thermal diffusivity. In steady state methods, the packed bed of well defined simple geometry (cylindrical, cube or parallelepiped) is allowed to achieve steady state in heat flux and temperature gradient. By knowing the precise boundary conditions, temperature gradient and heat flux, and applying Fourier or Laplace equations, the value of thermal conductivity of packed bed can be estimated. The transient method extends the above analysis by imposing a sudden change in boundary condition, either as a step or sinusoidal input, and observing the dynamic thermal response of the packed bed. The thermal conductivity of the packed bed can be determined by fitting the experimental data to the predicted unsteady state thermal response. In this work, we have measured the effective thermal diffusivity of packed beds (with stagnant fluids) using both steady state and transient methods, and compared the results with available correlations in the literature. Further, the effect of bed voidage has been investigated.",
+    "presenting_author": "Shrikant Dhodapkar | The Dow Chemical Company, Freeport, TX",
+    "authors": [
+      "Ravi Dixit | The Dow Chemical Company, Freeport, TX",
+      "Remi Trottier | ",
+      "Mark Davis | ",
+      "Pradeep Jai | The Dow Chemical Company, Freeport, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shrikant Dhodapkar",
+        "affiliation": "The Dow Chemical Company, Freeport, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ravi Dixit",
+        "affiliation": "The Dow Chemical Company, Freeport, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Remi Trottier",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Mark Davis",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Pradeep Jai",
+        "affiliation": "The Dow Chemical Company, Freeport, TX",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper470416.html",
+    "topic": "Understanding the Structural Differences Between Psychrophilic and Thermophilic Enzymes: A Molecular Dynamics Study",
+    "date_time": "Thursday, November 17, 2016: 8:45 AM",
+    "abstract": "Industrial use of enzymes has grown at a tremendous rate. The global market for industrial enzymes is predicted to reach $7 billion by 2018. This is not surprising, given enzymatic catalysis results in high yields, low cost and is environmentally friendly compared to many conventional chemical catalysts. A wide range of industrial markets, such as food industry, textile industry, pharmaceuticals, deployable biosensors and production of biofuels are exploring enzymatic catalysis. These diverse markets demand more robust enzymes which can tolerate environments ranging from low to high temperatures. However, most enzymes are inactive and denature at such extreme conditions. Extremophile proteins – that include thermophilic and psychrophilic proteins are being investigated as enzymes for extreme temperatures. Thermophilic and psychrophilic proteins refer to enzymes that are active at high and low temperatures respectively but not at ambient temperatures. Thermophilic enzymes are more stable at high temperatures while psychrophilic enzymes tend to have shorter lifetimes and tend to be less stable at ambient temperatures. The underlying reasons for the differences in the range of the temperatures that these enzymes are active is not yet understood. Studies have suggested that the active site flexibility of psychrophilic enzymes provides their high activity at low temperatures. In contrast, the loss of flexibility helps thermophilic enzymes retain stability at high temperatures. We test this hypothesis through large-scale all-atom molecular dynamics (MD) simulations. Specifically, we perform simulations of G. thermocatenulatus (GTL) – a thermophilic enzyme and P . lipolyticum (M37L) – a psychrophilic enzyme in a range of temperatures. We investigate the differences in the global and local flexibility, specifically near the active site in both enzymes. In our talk, we will present these results and comment on their implications for designing enzymes with a broader range of stability and activity.",
+    "presenting_author": "Siva Dasetty | Department of Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+    "authors": [
+      "Weigao Wang | Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+      "Sapna Sarupri | Department of Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+      "Mark A. Blenner | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Siva Dasetty",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Weigao Wang",
+        "affiliation": "Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Sapna Sarupri",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Mark A. Blenner",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper467349.html",
+    "topic": "Drying of Spent Coffee Grounds",
+    "date_time": "Thursday, November 17, 2016: 10:05 AM",
+    "abstract": "The objective of this work is to delve into the intricacies of drying spent coffee grounds for purposes such as the facilitation of transport and yield increase for biodiesel production, using a tray dryer as a preliminary study. The research first considers and develops a consistent approach to account for periodic variance in the utilized testing apparatus. This allows for the subsequent analysis of pertinent drying parameters for spent coffee grounds: the convective heat and mass transfer coefficients, the effective diffusivity, and the possible presence of constant rate drying periods to facilitate large-scale drying operations. In order to do this, inlet and outlet airstream qualities were periodically measured in a tray dryer operation concerning spent coffee grounds for over three hours per test. The environmental variance was measured by analyzing two minutes of second-by-second data. Ultimately, temperature and humidity was predictably periodic, and air flow speed proved to be mostly erratic. The results for the convective transfer coefficients seemed reasonable but no studies were not found in pertinent literature to compare against, while the diffusivity was mostly consistent with prior studies. The consistent appearance of two constant rate drying periods, with similar qualities across tests, directly contradicts with prior claims that no such period exists and therefore warrants further investigation.",
+    "presenting_author": "Enrico N. Martinez  and John Ph. McGee | Chemical Engineering, Purdue University, West Lafayette, IN",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Enrico N. Martinez  and John Ph. McGee",
+        "affiliation": "Chemical Engineering, Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper469431.html",
+    "topic": "Scaling of Heat Transfer and Temperature Distribution in Granular Flows in Rotating Drums",
+    "date_time": "Thursday, November 17, 2016: 8:49 AM",
+    "abstract": "Rotating drums are one of the most common devices used for industrial processes that involve thermal treatment of granular materials. To improve efficiency, several factors, including the physical, mechanical, and thermal properties of the powder & calciner, as well as, operating conditions such as feed rate and speed of rotation, need to be considered. A powerful approach towards achieving an efficient process is to develop predictive models for the particles’ temperature distribution (space & time), particularly for the purposes of scale-up from laboratory scale experiments. We used discrete element method (DEM) simulations to study the scaling of particles’ temperature distribution in rotating drums at low temperatures, where conduction through particle-particle and particle-wall contact area is the dominant heat transfer mechanism. A wide range of several particle properties and operating conditions were considered in the simulations. Based on the results, we show that the most important timescales relevant to the heat transfer process are the time to heat up a single particle to the drum wall temperature and the time of contact between a particle and the drum wall. Then, using these timescales, we developed a model to predict the particles’ temperature distribution at any time during the heating process. All of the simulations can be collapsed into one relationship. This model can be used to predict the required time to heat up all particles to the desired temperature. The results from this model also compare very well with experimental results conducted at low temperatures.",
+    "presenting_author": "Bereket Yohannes | Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ, Heather N. Emady, School of Chemical Engineering, ASU, Ingrid J. Paredes, Department of Chemical & Biochemical Engineering, Rutgers, the State University of New Jersey, Piscataway, NJ, Maham Javed, Chemical and Bio-Chemical Engineering, Rutgers University, Piscataway, NJ, William G. Borghard, ExxonMobil Research & Engineering, Annandale, NJ, Fernando J. Muzzio, Department of Chemical and Biochemical Engineering, Rutgers, The State University of New Jersey, Piscataway, NJ, Benjamin Glasser, Department of Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ and Alberto Cuitiño, Department of Mechanical and Aerospace Engineering, Rutgers, the State University of New Jersey, Piscataway, NJ",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Bereket Yohannes",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ, Heather N. Emady, School of Chemical Engineering, ASU, Ingrid J. Paredes, Department of Chemical & Biochemical Engineering, Rutgers, the State University of New Jersey, Piscataway, NJ, Maham Javed, Chemical and Bio-Chemical Engineering, Rutgers University, Piscataway, NJ, William G. Borghard, ExxonMobil Research & Engineering, Annandale, NJ, Fernando J. Muzzio, Department of Chemical and Biochemical Engineering, Rutgers, The State University of New Jersey, Piscataway, NJ, Benjamin Glasser, Department of Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ and Alberto Cuitiño, Department of Mechanical and Aerospace Engineering, Rutgers, the State University of New Jersey, Piscataway, NJ",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper464675.html",
+    "topic": "Self-Assembled Peptides with RGD Motifs As Scaffolds for Tissue Engineering",
+    "date_time": "Thursday, November 17, 2016: 9:00 AM",
+    "abstract": "Self-assembled peptides gain increasing interest as biocompatible and biodegradable scaffolds for tissue engineering (1). Rationally designed self-assembling building blocks that carry cell attachment motifs such as RGD are especially attractive. We have been using a combination of theoretical and experimental approaches towards such rational designs (2-5). We have been especially focusing on modular designs that consist of a central ultrashort amphiphilic motif derived from the adenovirus fiber shaft (2-4). This central motif is combined with the RGD motif and cysteine residues that allow further functionalization possibilities, such as conjugation of growth factors or attachment to surfaces. We employed replica exchange MD simulations and free energy calculations using CHARMM (6) to computationally investigate the self-assembly properties of possible designed peptide sequences. Our simulations provide insights into the amyloidogenic β-sheet rich self-assembling conformations of the peptides. We performed a detailed analysis on the highly-ordered and well- aligned β-sheet containing conformations and provided insights into the structural arrangement of the peptides’ functional groups. The designer peptides experimentally self-assemble into fibers that are structurally characterized with Transmission Electron Microscopy, Scanning Electron Microscopy and X-ray fiber diffraction. Furthermore, they support cell attachment and proliferation of model cell lines. Such short self-assembling peptides that are amenable to computational design offer open-ended possibilities towards multifunctional tissue engineering scaffolds of the future. References 1. Loo Y, Goktas M, Tekinay AB, Guler MO, Hauser CAE, Mitraki A. (2015) Self-assembled proteins and peptides as scaffolds for tissue regeneration. Advanced Healthcare Materials 16: 2557-86. 2. Tamamis, P., Kasotakis, E., Mitraki, A., and Archontis, G. (2009) Amyloid-like self-assembly of peptide sequences from the adenovirus fiber shaft: insights from molecular dynamics simulations. J. Phys. Chem. B. 113: 15639-15647. 3. Tamamis, P., Kasotakis, E., Archontis, G., Mitraki, A. (2014) Combination of Theoretical and Experimental Approaches for the Design and Study of Fibril-forming Peptides. In Protein Design: Methods and Applications. Methods Mol. Biol. 1216: 53-70. 4. Tamamis, P., Archontis, G. (2011) Amyloid-like Self-Assembly of a Dodecapeptide Sequence from the Adenovirus Fiber Shaft: Perspectives from Molecular Dynamics Simulations. Journal of Non-Crystalline Solids, 357 (2): 717-722. 5. Tamamis, P., Terzaki, K., Kassinopoulos, M., Mastrogiannis, L., Mossou, E., Forsyth, V. T., Mitchell, E. P., Mitraki, A., Archontis, G. (2014) Self-Assembly of an Aspartate-Rich Sequence from the Adenovirus Fiber Shaft: Insights from Molecular Dynamics Simulations and Experiments. Journal of Physical Chemistry B, 118 (7): 1765-1774. 6. B.R. Brooks, C.L. Brooks, III, A.D. MacKerell, Jr., L. Nilsson, R.J. Petrella, B. Roux, Y. Won, G. Archontis, C. Bartels, S. Boresch, A. Caflisch, L. Caves, Q. Cui, A.R. Dinner, M. Feig, S. Fischer, J. Gao, M. Hodoscek, W. Im, K. Kuczera, T. Lazaridis, J. Ma, V. Ovchinnikov, E. Paci, R.W. Pastor, C.B. Post, J.Z. Pu, M. Schaefer, B. Tidor, R. M. Venable, H. L. Woodcock, X. Wu, W. Yang, D.M. York, and M. Karplus. (2009) CHARMM: The Biomolecular Simulation Program J Comput Chem. 30(10): 1545–1614.",
+    "presenting_author": "Sai Vamshi R Jonnalagadda | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College station, TX",
+    "authors": [
+      "\n\t\n\t\tGraziano Dei | Department of Materials Science and Technology, University of Crete, Heraklion, Greece",
+      "Jacob W Spies | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College station, TX",
+      "Anthi Ranell | Department of Materials Science and Technology, University of Crete, Heraklion, Greece",
+      "Estelle Mossou | EPSAM/ISTM, Keele University, Staffordshire, United Kingdom",
+      "V. Trevor Forsyth | EPSAM/ISTM, Keele University, Staffordshire, United Kingdom",
+      "Edward P Mitchell | European Synchrotron Radiation Facility, Grenoble, France",
+      "Anna Mitraki | Department of Materials Science and Technology, University of Crete, Heraklion, Greece",
+      "Phanourios Tamamis | "
+    ],
+    "authors_structured": [
+      {
+        "name": "\n\t\n\t\tGraziano Dei",
+        "affiliation": "Department of Materials Science and Technology, University of Crete, Heraklion, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Sai Vamshi R Jonnalagadda",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jacob W Spies",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Anthi Ranell",
+        "affiliation": "Department of Materials Science and Technology, University of Crete, Heraklion, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Estelle Mossou",
+        "affiliation": "EPSAM/ISTM, Keele University, Staffordshire, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "V. Trevor Forsyth",
+        "affiliation": "EPSAM/ISTM, Keele University, Staffordshire, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Edward P Mitchell",
+        "affiliation": "European Synchrotron Radiation Facility, Grenoble, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Anna Mitraki",
+        "affiliation": "Department of Materials Science and Technology, University of Crete, Heraklion, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Phanourios Tamamis",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472489.html",
+    "topic": "Assessing the Effectiveness of Dry Product Recycling",
+    "date_time": "Thursday, November 17, 2016: 10:24 AM",
+    "abstract": "Product build up on the dryer surface (i.e. rind formation) may significantly decrease the overall heat transfer and increase the drying time. In industrial practice, dry product recycling (i.e. leaving a dry product heel in the dryer at the start of the operation) is utilized in contact dryers to reduce the adhesion and build up of the wet mass on the dryer. Mixing the wet mass with the dry product decreases the overall liquid content immediately prior to the drying and increases the flowability of the wet mass. Increased flowability means better turnover of the powder bed, and better contact with the heating surface. In this study, we investigate the validity of the thermal conductivity values of particulate materials presented at the AIChE Annual meeting over the last couple of years and the extent of enhancement in the drying time with dry product recycle in a laboratory scale contact drying. The results will be presented for powders with varying physical properties such as particle size and porosity.",
+    "presenting_author": "Defne Kayrak-Talay | ",
+    "authors": [
+      "Andrew Horton and Karl Jacob | ",
+      "Core R&D | ",
+      "The Dow Chemical Company | ",
+      "Midland | ",
+      "MI | "
+    ],
+    "authors_structured": [
+      {
+        "name": "Defne Kayrak-Talay",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Andrew Horton and Karl Jacob",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Core R&D",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "The Dow Chemical Company",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "Midland",
+        "affiliation": "",
+        "designation": "Author"
+      },
+      {
+        "name": "MI",
+        "affiliation": "",
+        "designation": "Author"
+      }
+    ],
+    "affiliation_source": "aiche_2016_confex_reparse",
+    "source_url": "https://aiche.confex.com/aiche/2016/webprogram/Paper472489.html",
+    "paper_id": "472489"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2016/webprogram/Paper459217.html",
+    "topic": "Insights into Self-Assembly Mechanisms of Intrinsically Disordered Proteins from Atomistic Simulations",
+    "date_time": "Thursday, November 17, 2016: 9:30 AM",
+    "abstract": "Intrinsically disordered proteins (IDPs), which lack well­-defined stable structures yet still perform key biological functions, comprise more than one-third of the eukaryotic proteome. Well-ordered fibril structures or aggregation of many IDPs are associated with the pathology of a number of debilitating human diseases including Alzheimer's, Parkinson's, Huntington's, amyotrophic lateral sclerosis, type II diabetes, etc. Moreover, certain types of low sequence-complexity IDPs f orm non-membrane bound intracellular assemblages that co-exist with the cytoplasm showing liquid-like properties, i.e. deform under shear, fuse with one another and take a spherical shape. In this work, we study IDPs, such as TAR DNA-binding protein 43 (TDP-43) or FUsed in Sarcoma (FUS) or Islet Amyloid PolyPeptide (IAPP), forming which are the major constituents of membrane-free assemblages and/or well-ordered pathological aggregates. Structural properties of these IDPs from molecular simulations shed light on intra - and inter-molecular interactions leading self-assembly/aggregation of these proteins.",
+    "presenting_author": "Gul H. Zerze  and Jeetain Mittal | Department of Chemical and Biomolecular Engineering, Lehigh University, Bethlehem, PA",
+    "authors": [],
+    "authors_structured": [
+      {
+        "name": "Gul H. Zerze  and Jeetain Mittal",
+        "affiliation": "Department of Chemical and Biomolecular Engineering, Lehigh University, Bethlehem, PA",
+        "designation": "Presenting Author"
+      }
+    ]
+  }
+]

@@ -1,0 +1,306 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645355",
+    "paper_endpoint": "Paper/645355",
+    "paper_id": "645355",
+    "topic": "Feedback State-Space Mapping Framework for Dynamic Operability Analysis",
+    "title": "Feedback State-Space Mapping Framework for Dynamic Operability Analysis",
+    "date_time": "2022-11-15_15:30:00_17:00:00",
+    "session_id": "49221",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "365",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The optimal design and control policies for chemical systems have complex impacts on each other [1]. In recent years, operability approaches have been developed to simultaneously optimize a process design (physical dimensions, material properties, etc.) while considering the controller implementation capabilities [2,3]. Dynamic operability studies extended the steady-state input-output operability analysis to dynamic systems. However, the existing operability mapping discretizes the input space by partitioning it for each input variable, so that the number of input combinations required to cover the achievable input set (AIS) grows exponentially with the number of inputs. In this work, a novel dynamic operability mapping framework based on a feedback procedure is proposed to address this challenge. This framework takes advantage of the discrete-time state-space structure of the dynamic model to reduce the number of input mapping combinations by augmenting the AIS to include the achievable output set (AOS) of the state variables from the previous time step. The proposed dynamic operability mapping framework consists of three components: the AOS inspector, the AIS divider, and the merger of the AOS from the previous time with the AIS. Specifically, the AOS inspector evaluates if the current input-output combinations are approximately accurate to the real AOS when all input combinations are mapped to the output space. In case the AOS inspector gauges that the current AOS is not sufficiently precise, the AIS divider systematically generates more input-output combinations based on the current AOS. This feedback process is repeated until an accuracy tolerance is reached. To reduce computational effort, the merger component creates a set of bounding boxes to find the tightest overestimation of the current AOS before merging it with the AIS for the following time step mapping. A dynamic operability analysis of a Fischer-Tropsch process is provided to demonstrate the application of the proposed framework. The Fischer-Tropsch bubble column reactor is simulated using a reduced-order model with dynamic discrepancy [4]. Monte Carlo simulations are then employed to confirm the accuracy of the proposed framework. References [1] A. Flores-Tlacuahuac, I.E. Grossmann, Simultaneous Cyclic Scheduling and Control of Tubular Reactors: Parallel Production Lines, Industrial & Engineering Chemistry Research. 50 (2011) 8086–8096. [2] V. Gazzaneo, F.V. Lima, Multilayer Operability Framework for Process Design, Intensification, and Modularization of Nonlinear Energy Systems, Ind. Eng. Chem. Res. 58 (2019) 6069–6079. [3] V. Gazzaneo, J.C. Carrasco, D.R. Vinson, F.V. Lima, Process Operability Algorithms: Past, Present, and Future Developments, Ind. Eng. Chem. Res. 59 (2020) 2457–2470. [4] S. Dinh, J. Bohorquez, D.S. Mebane, F.V. Lima, Dynamic Discrepancy Reduced-Order Modeling and Model Predictive Control of a Fischer-Tropsch Slurry Bubble Column Reactor, In preparation (2022).",
+    "presenting_author": "San Dinh | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "San Dinh | Carnegie Mellon University, Pittsburgh, PA",
+      "Fernando Lima | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "San Dinh",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Fernando Lima",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "365a",
+    "sortable_time": "2022-11-15_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645355"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/647730",
+    "paper_endpoint": "Paper/647730",
+    "paper_id": "647730",
+    "topic": "Mixed-Integer Adjustable Robust Optimization Under Exogenous Uncertainty",
+    "title": "Mixed-Integer Adjustable Robust Optimization Under Exogenous Uncertainty",
+    "date_time": "2022-11-15_15:30:00_17:00:00",
+    "session_id": "49221",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "365",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Adjustable robust optimization (ARO) is a class of optimization problems that involves uncertainties and considers both “here-and-now” decisions (i.e. decisions to be taken before uncertainties are revealed) and “wait-and-see” decisions (i.e. decisions to be taken after uncertainties are revealed) [1]. ARO can be applied to several types of control and scheduling optimization problems as a less conservative formulation than the classical robust optimization formulation, although finding the exact and global solution of mixed-integer ARO problems is very challenging due to the computational complexity of the problem [2]. Ways to reduce the computational effort have been proposed, with the most popular being the affine decision rules, where “wait-and-see” decisions are approximated as affine adjustments of the uncertainty [3]; an approximation which can be overly conservative for general ARO problems. In this work, we propose a novel algorithm for solving mixed-integer linear and quadratic ARO problems under exogenous uncertainty (i.e. uncertainty that does not depend on “here-and-now” decisions) to global optimality. Building on our previous work on the solution of linear ARO problems under endogenous uncertainty [4], the proposed approach reformulates the ARO problem as a tri-level optimization problem, with the uncertainty optimization sub-problem treated as the leader or first level optimization problem. The resulting tri-level problem is then solved using our previously developed mixed-integer tri-level optimization solvers [5]. Several numerical examples are used to test the performance of our proposed algorithm. In addition, typical approaches such as the column-and-constraint generation algorithm [6] and the classical affine decision rules [3] are used for benchmarking, comparing both the computational efficiency and quality of solution for ARO problems with varying dimensionalities. References: [1] Ben-Tal, A., El Ghaoui, L., & Nemirovski, A. (2009). Robust optimization. In Robust optimization. Princeton university press. [2] Pappas, I., Kenefake, D., Burnak, B., Avraamidou, S., Ganesh, H. S., Katz, J., ... & Pistikopoulos, E. N. (2021). Multiparametric programming in process systems engineering: Recent developments and path forward. Frontiers in Chemical Engineering, 32. [3] Ben-Tal, A., Goryashko, A., Guslitzer, E., & Nemirovski, A. (2004). Adjustable robust solutions of uncertain linear programs. Mathematical programming, 99(2), 351-376. [4] Avraamidou, S., & Pistikopoulos, E. N. (2020). Adjustable robust optimization through multi-parametric programming. Optimization Letters, 14(4), 873-887. [5] Avraamidou, S. & Pistikopoulos, E. N. (2019) Multi-parametric global optimization approach for tri-level mixed-integer linear optimization problems. Journal of Global Optimization 74(3), 443-465. [6] Zeng, B., & Zhao, L. (2013). Solving two-stage robust optimization problems using a column-and-constraint generation method. Operations Research Letters, 41(5), 457-461.",
+    "presenting_author": "Byungjun Lee | University of Wisconsin-Madison",
+    "authors": [
+      "Byungjun Lee | University of Wisconsin-Madison",
+      "Styliani Avraamidou | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Byungjun Lee",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Styliani Avraamidou",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "365b",
+    "sortable_time": "2022-11-15_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/647730"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643909",
+    "paper_endpoint": "Paper/643909",
+    "paper_id": "643909",
+    "topic": "Towards an Integrated Field Wide Production Optimization Approach for Upstream Hydrocarbon Recovery",
+    "title": "Towards an Integrated Field Wide Production Optimization Approach for Upstream Hydrocarbon Recovery",
+    "date_time": "2022-11-15_15:30:00_17:00:00",
+    "session_id": "49221",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "365",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Integrated Asset Modelling (also known as Integrated Production System Modelling ‐ IPSM) is the modelling and simulation of an entire production facility consisting of both subsurface and surface elements. The intent is to holistically capture the complex interactions between the individual components of the system. Historically asset modelling has entailed discrete reservoir, wells and facility models; however this mindset is slowly altering towards integrated asset modelling for production forecasts and optimisation whereby both system imposed constraints i.e. fluid flow from the reservoir and surface handling constraints can be considered simultaneously. This systems based approach is critical and reflects the current industry mind set. The full benefits of the integrated simulation tools employed within industry are not fully realised due to a number of limitations; complexity of the reservoir models and hence limited usability in day to day production optimisation, overcoming the 'silo' discipline mentality that is common within interdisciplinary surveillance teams, simplification of integrated models is often in tension with accuracy and lastly, the limited capability of current tools to apply multi objective optimization analysis. With these challenges, it can often be difficult to justify the effort and investment required to develop and deploy an integrated asset model. Despite these practical challenges, integrated asset modelling, if executed correctly can provide one of the best means of optimising production throughout field life with direct realized benefits such as extended field life and sustained production uptime. The main objective of this research study is to understand the opportunities and limitations with the current existing industry integrated packages and develop a viable, representative alternative that is applicable for day to day surveillance and medium to long term field production optimisation. This research also aims to formally outline the drivers for integrated asset modelling followed by a review of the most common integrated asset modelling tools on the market in addition to review of the optimisation and reservoir modelling simplification methods available in literature. An integrated asset field model was developed including secondary recovery water injection as a test case. Proxy models have been developed using proprietary HDMR meta modelling software at Imperial College London which was extended to the use of full physics reservoir models and associated sensitivity analysis. These surrogate models have also been used in further heuristic based optimization frameworks (ANN's with associated GA optimizatin) and sensitivity analysis with very positive results in comparison to the field wide simulators thereby presenting a viable alternative offering significant advantages in simulation time.",
+    "presenting_author": "Shakeel Ramjanee | Imperial College London, United Kingdom",
+    "authors": [
+      "Shakeel Ramjanee | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shakeel Ramjanee",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "365c",
+    "sortable_time": "2022-11-15_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643909"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/644531",
+    "paper_endpoint": "Paper/644531",
+    "paper_id": "644531",
+    "topic": "New and Efficient Interval Sampling Method for Use of P-Boxes in Off-Line Quality Control",
+    "title": "New and Efficient Interval Sampling Method for Use of P-Boxes in Off-Line Quality Control",
+    "date_time": "2022-11-15_15:30:00_17:00:00",
+    "session_id": "49221",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "365",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Parameter design is an off-line quality-control method for designing products and manufacturing processes that are robust in the face of uncontrollable variations. The goal of parameter design is to identify design settings that make the product's performance less sensitive to manufacturing and environmental variations and deterioration. The parameter design problem can be formulated as optimization under uncertainty problem, where variance in the output variable of interest is minimized in the face of uncertainty. Risk analysts recognize two fundamentally distinct forms of uncertainty. The first is the variability that arises from environmental stochasticity, inhomogeneity of materials, fluctuations in time, variation in space, or heterogeneity or other differences among components or individuals. Variability is sometimes called Type I uncertainty, or less cryptically, aleatory uncertainty to emphasize its relation to the randomness in gambling and games of chance. It is also sometimes called irreducible uncertainty because, in principle, it cannot be reduced by further empirical study (although it may be better characterized). The second kind of uncertainty is the incertitude of scientific ignorance, measurement uncertainty, unobservability, censoring, or other lack of knowledge. This is sometimes called Type II uncertainty or simply epistemic uncertainty. In contrast with aleatory uncertainty, epistemic uncertainty is sometimes called reducible uncertainty because an additional empirical effort can generally reduce it. For situations in which the uncertainty about quantities is purely aleatory, probability theory is usually preferred. However, when strictly epistemic uncertainties, or both aleatory and epistemic uncertainties, are present several researchers have converged on essentially the same idea: that one can work with bounds on probability for this purpose. In the 1990s, researchers introduced interval-type bounds on cumulative distribution functions, which have been called \"probability boxes\" or \"p-boxes\" for short [2,3,8]. Uncertainty propagation for uncertainties described by probability distributions is generally carried out using sampling techniques. For p-box uncertainties, researchers use interval Monte Carlo for propagation [1,6,7]. However, this method is computationally intensive. Recently, we developed and evaluated five new efficient interval sampling techniques for P-boxes. These sampling techniques are derived from quasi-Monte Carlo sequences like Hammersley and Sobol sequences, uniformity theory, and interval mathematics. These sampling techniques are evaluated using various functions of two to 800 uncertain variables defined by p-box uncertainties. Heuristics for selecting an efficient sampling technique based on the number of uncertainties is presented [5]. In this paper, we present a real-world example of quality control of a CSTR using one of the efficient sampling techniques presented earlier and is applicable to this problem [6]. The example illustrates how a change in estimates of uncertainty can affect the optimal quality control designs. References Dige N. and U. Diwekar (2018), \"An Efficient sampling algorithm for large-scale optimization under uncertainty problems\", Computers and Chemical Engineering, 115, 431. A. Enszer, Y. Lin, S. Ferson, G. F. Corliss, M. A. Stadtherr, “Probability bounds analysis for nonlinear dynamic process models”, AIChE J. 57 (2011) 404–422. Ferson, J. G. Hajagos, “Arithmetic with uncertain numbers: Rigorous and (often) best possible answers”, Reliab. Eng. Syst. Safe. 85 (2004) 135–152. Kalagnanam J. and U. Diwekar, \"An Efficient Sampling Technique for Off-line Quality Control\" (1997), Technometrics, 38, 308. Kochumani P., U. Diwekar, and M. Stadtherr (2021), \"New and Efficient Interval Sampling Methods for P-box Uncertainties\", Paper presented in AIChE annual meeting, Boston. Taguchi, G., and Wu, Y. (1980), Introduction to Off-line Quality Control, Papageorgiou, A., and Wasilkowski, G. W. (1990), \"On Average Case Com- Nagoya, Japan: Central Japan Quality Control. Wang R., U. Diwekar, and C. Gregoire-Padro, \"Latin Hypercube Hammersley Sampling for Risk and Uncertainty Analysis\", (2004), Environmental Progress., 23, 141. Williamson RC, Downs T. “Probabilistic arithmetic I. Numerical methods for calculating convolutions and dependency bounds”, Int J Approx Reason. 1990;4:89–158.",
+    "presenting_author": "Urmila Diwekar | Vishwamitra Research Institute, Clarendon Hills, IL",
+    "authors": [
+      "Urmila Diwekar | Vishwamitra Research Institute, Clarendon Hills, IL",
+      "Mark A. Stadtherr | University of Notre Dame, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Urmila Diwekar",
+        "affiliation": "Vishwamitra Research Institute, Clarendon Hills, IL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mark A. Stadtherr",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "365d",
+    "sortable_time": "2022-11-15_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/644531"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645334",
+    "paper_endpoint": "Paper/645334",
+    "paper_id": "645334",
+    "topic": "A Reinforcement Learning Approach for Optimal Scheduling of Multiproduct Batch Plants",
+    "title": "A Reinforcement Learning Approach for Optimal Scheduling of Multiproduct Batch Plants",
+    "date_time": "2022-11-15_15:30:00_17:00:00",
+    "session_id": "49221",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "365",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Batch chemical plants are quite popular due to their flexibility in producing multiple products in a single plant. The flexibility in the batch plant is due to the use of the same equipment in the production of different products. However, this poses a profound challenge in how and when we allocate particular equipment for a particular task. Multiproduct batch plants are often represented using a recipe network or state task network. In this work, we represent the multiproduct batch plant using a State-Task Network (STN) in which state nodes represent various feeds, intermediates, and products in the process, whereas task nodes represent various unit operations that convert input states to output states. In general, there exist different approaches to determine the optimal scheduling of batch operations viz mathematical programming, heuristic methods, artificial intelligence, etc. In this study, we present an optimization formulation of a batch scheduling problem based on discrete-time representation. This optimization problem involves both binary and continuous decision variables. The binary variable signifies the allocation of equipment for a specific task at a given time, whereas continuous variables signify the quantity of material that is being processed in a equipment for a specific task at a given time, and the amount of material that is stored in a particular state at a given time. The resulting optimization problem is a Mixed Integer Linear Programming (MILP) problem. However, the number of binary decision variables increases with an increase in the number of products to be processed, longer processing stages, availability of multiple equipment for a task, and longer scheduling time horizon. Therefore, for large-scale batch plants, the challenge with this formulation is that the computation time for solving these problems increases with the number of binary variables. Therefore, the focus of this work is to optimally schedule a multiproduct batch plant using reinforcement learning. Batch scheduling problems that are formulated as a MILP can be solved using branch and bound, cutting plane, or branch and cut methods. In this work, we restrict our discussion to cutting plane-based solution methodology. In the cutting plane method, the MILP is relaxed to a linear programming (LP) problem, by dropping the integer constraint on the variables, for which efficient solvers are available. Then, a linear constraint (known as a cut) is added to the LP iteratively such that some part of the feasible region of the previous LP is removed while retaining the integer solution of the MILP problem within the feasible region. However, at each iteration of the method, a number of cuts are possible from which a single cut is added to the set of previously available constraints. The decisions on cut additions (such as the number of cuts to be added, the type of cut, etc) at any particular iteration are often based on heuristic rules. Since we are dealing with the MILP problem, we use Gomory’s mixed-integer (GMI) cuts. GMI cuts ensure the convergence of a problem in a fixed number of iterations. These heuristics will have a significant impact in the computational cost. Therefore, in this work, we aim at developing a reinforcement learning (RL) framework that aids in the selection of a suitable GMI cut such that an optimal batch schedule is obtained with a low computational cost. To this end, we reformulate the cutting plane method as a Markov decision process (MDP) in which the solver acts as an environment and the deep neural network acts as an agent. In MDP, we define the following: state space, action space, reward, and state-action policy. The state space is defined by a set of constraints of the current LP relaxation, the optimal solution of the relaxed LP problem, the objective function, and all possible GMI cuts that can be generated using the current simplex tableau. The action space is defined by all possible GMI cuts that can be generated using the current simplex tableau. The reward is defined as the difference in objective function values of two successive iterates. The state-action policy is a deep neural network architecture that relates a cut to a quantifiable metric. Using the policy, the agent selects the most appropriate cut for the next iteration, and send it to the environment. In the next iteration, the environment computes the new state, and the reward. This aids the agent to add cuts that reduces the gap such that the optimal solution is achieved faster. The agent is based on a neural network-based architecture known as an attention network. The attention network ensures that the selection of the cutting plane is not dependent on the order of the cut in the set. This network is trained over a number of unlabeled MILP problems. We demonstrate the computational efficacy of the proposed RL-based solution methodology in a benchmark case study of hydrolubes batch plant.",
+    "presenting_author": "Nabil Magbool Jan | Indian Institute of Technology Tirupati",
+    "authors": [
+      "Prasoon Gupta | Indian Institute of Technology Tirupati",
+      "Nabil Magbool Jan | Indian Institute of Technology Tirupati"
+    ],
+    "authors_structured": [
+      {
+        "name": "Prasoon Gupta",
+        "affiliation": "Indian Institute of Technology Tirupati",
+        "designation": "Author"
+      },
+      {
+        "name": "Nabil Magbool Jan",
+        "affiliation": "Indian Institute of Technology Tirupati",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "365f",
+    "sortable_time": "2022-11-15_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645334"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649635",
+    "paper_endpoint": "Paper/649635",
+    "paper_id": "649635",
+    "topic": "Development of Artificial Intelligence Based Models for Biomass Gasification",
+    "title": "Development of Artificial Intelligence Based Models for Biomass Gasification",
+    "date_time": "2022-11-15_15:30:00_17:00:00",
+    "session_id": "49221",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "365",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "As a renewable and naturally abundant fuel, biomass has a huge potential for energy generation and subsequent replacement of fossil fuels. A common and very efficient mode of energy generation using biomass is via its gasification. However, designing the gasifier is a tedious task. The characteristics of the feedstock and gasifier conditions have the most influence on the performance of the gasification. Monitoring the performance of the gasifier can be tedious, costly, and time-consuming. The performance of the gasifier is very sensitive to the characteristics and type of the biomass feedstock used. Certain types of gasifiers are exceedingly difficult to scale up due to sensitivity of gasifier performance to operating conditions and process parameters. Therefore, identification of optimal operating conditions for a specific gasifier design employing a certain biomass feedstock can be long-drown-out and expensive. The use of simulation and modeling can save resources required to design the gasifier. Computational fluid dynamics (CFD) can be used to model the gasifier operation. Formulation of and execution of CFD models can be extraordinarily complex due to multitude of homogenous and heterogeneous reactions occurring in a gasifier, with multiple uncontrollable undesired side reactions. Obtaining solutions of these models is very time consuming and requires powerful processors, especially for three dimensional CFD models. The solid particles in the CFD models can only be simulated as perfect spheres, which is a significant limitation since biomass is rarely in perfect spherical shape. In this work, biomass gasification is modeled using four artificial intelligence (AI) based models to find the syngas compositions, and the performance of these models is compared using appropriate evaluation methods. The four models are based on Decision Tree Regression (DTR), Random Forest Regression (RFR), Support-Vector Regression (SVR), and Artificial Neural Network (ANN). The characteristics of biomass (ultimate and proximate analysis) and gasifier conditions (such as equivalence ratio and temperature) are inputs to the models and the outputs of the models include the gasification effluent composition, the gasifier effluent being typically comprised of hydrogen, carbon monoxide, carbon dioxide, methane, and other low carbon number hydrocarbons. Large databases from gasification experiments reported in the literature were used in the development of the four AI models. The databases cover wide ranges of biomass feedstocks and gasifier operating conditions. The four AI models represent the gasifier operations with good accuracy and have reliable predictive ability with respect to data not used in model development. For example, the ANN model has an overall mean square error (MSE) of 0.87. The AI based models will be useful aids in economical design of biomass gasifiers.",
+    "presenting_author": "Satish Parulekar | Illinois Institute of Technology, Chicago",
+    "authors": [
+      "Satish Parulekar | Illinois Institute of Technology, Chicago",
+      "Essa Almutar | Illinois Institute of Technology, Chicago"
+    ],
+    "authors_structured": [
+      {
+        "name": "Satish Parulekar",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Essa Almutar",
+        "affiliation": "Illinois Institute of Technology, Chicago",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "365g",
+    "sortable_time": "2022-11-15_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649635"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643384",
+    "paper_endpoint": "Paper/643384",
+    "paper_id": "643384",
+    "topic": "System-Wide Anomaly Detection By Single Value Using Mscred in MEG Regeneration Pilot Plant",
+    "title": "System-Wide Anomaly Detection By Single Value Using Mscred in MEG Regeneration Pilot Plant",
+    "date_time": "2022-11-15_15:30:00_17:00:00",
+    "session_id": "49221",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "365",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Process plant data have many different sensor measurements such as temperature, pressure, level. In general these inputs are correlated with each other and also correlated with its own past time series data. However, in a field of anomaly detection of a process, cannot put these all in concern. Here we suggest system wide spatio-temporal anomaly detection using the modified MSCRED(Multi Scale Convolutional Recurrent Encoder -Decoder) framework. MSCRED is data driven, especially using deep learning models. This framework detects anomalies resulting in anomaly scores, which is modified as univariate time series data, which allows real-time monitoring of the system. Anomaly score increases when many sensor’s data are out of normal temporal behavior and decreases when sensors show normal behavior. Anomaly scores were clustered with time series correlation coefficients to be classified by its fault cases. Data used for validating the algorithm was gathered by a MEG regeneration pilot plant with 42 sensor data, with 5 normal cases, 4 issue cases and 1 start-up case. This framework has been trained with different subset of normal data and compared to find optimal training set, and anomaly detection was carried out for all 4 issue cases and start up case for many window sizes, each resulting in a time series anomaly score. These results were clearly clustered and classified for each fault case, showing that the anomaly score can classify fault cases and indicate the faults. In this study we suggest the single time series variable obtained from a data-driven framework to monitor the plant wide sensor data to detect the system anomalies and identify the fault characteristics.",
+    "presenting_author": "Nayoung Lee | Seoul National University, Korea, Republic of (South)",
+    "authors": [
+      "Nayoung Lee | Seoul National University, Korea, Republic of (South)",
+      "Hyunho Kim | National University of Singapore",
+      "Jinkwan Jang | Seoul National University, Korea, Republic of (South)",
+      "Yutaek Seo | Seould National University, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nayoung Lee",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Hyunho Kim",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      },
+      {
+        "name": "Jinkwan Jang",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Yutaek Seo",
+        "affiliation": "Seould National University, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "365h",
+    "sortable_time": "2022-11-15_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/643384"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/644290",
+    "paper_endpoint": "Paper/644290",
+    "paper_id": "644290",
+    "topic": "Multiperiod Generalized Disjunctive Programming Optimization in Idaes: Simultaneous Design and Operation of an Integrated Energy System",
+    "title": "Multiperiod Generalized Disjunctive Programming Optimization in Idaes: Simultaneous Design and Operation of an Integrated Energy System",
+    "date_time": "2022-11-15_15:30:00_17:00:00",
+    "session_id": "49221",
+    "session_title": "Interactive Session: Systems and Process Operations",
+    "session_number": "365",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Increase in variable renewable energy penetration in the electrical grid has required fossil-based generators to be more flexible, while maintaining their thermal efficiency. One approach to increase the flexibility of these generators is the integration with thermal energy storage (TES) systems [Li et al., 2019], which offer the opportunity to save energy (charge) and use stored energy (discharge) during periods of low and high electricity prices, respectively. The integration of TES systems to fossil-based generators adds complexity to the already challenging thermal-generator model, since this integration represents the addition of more units to the flowsheet, increasing the difficulty of the optimization problem to determine the optimal design and operation of the generator and storage system given an electricity price signal. Currently, these integrated systems are operated and designed by evaluating the performance of the charge and discharge systems independently, which can lead to sub-optimal designs and scheduling of the TES system since there is a limited capability to evaluate the performance of the system as a whole. To address this problem, in this work, we propose a multiperiod Generalized Disjunctive Programming (GDP) model of an integrated ultra-supercritical power plant (USCPP) to determine the optimal hourly operating design and schedule of the TES systems under a price taker assumption. The objective is to maximize total profit over a given time horizon, taking into account operating and capital costs. To perform the simultaneous design and operation optimization in the USCPP multiperiod GDP model, we consider two types of variables in the model: operational variables, to determine the operating conditions of the USCPP and storage systems, and design variables, to select the storage system to integrate with the USCPP and its design parameters (area of heat exchangers). To determine the storage system to integrate with the USCPP, we included three different operation modes to the USCPP model: no storage mode, which represents the USCPP superstructure without any storage, and charge and discharge mode, which integrate a charge and discharge heat exchanger, respectively, with the USCPP superstructure to an optimal fixed location. The selection of the operation mode is formulated using a disjunction, where each operation mode is included to the USCPP model as a discrete decision using a GDP formulation; if a particular operation mode is selected, a set of units, variables, and constraints for the respective mode are to be included to the global model equations. The USCPP GDP model is built using IDAES (Institute for the Design of Advanced Energy Systems Integrated Platform), an open-source platform that enables the design and optimization of integrated energy systems [Lee et al., 2021]. IDAES, built on Pyomo [Hart et al., 2017], supports the use of advanced solvers such as GDPopt, a solver that allows users to solve nonlinear Generalized Disjunctive Programming models in a reduced space using a variety of decomposition algorithms, including logic-based outer approximation [Chen et al., 2021]. To construct the multiperiod GDP model, we consider a steady-state USCPP GDP model for each time period, including coupling variables to link each time step. In our case study, two linking variables are considered: the optimal dispatch of the thermal power plant and the amount of storage material available at the end of each time period. The charge and discharge storage systems are subject to nonanticipativity constraints, which state that the design area of the storage heat exchangers and the hot temperature of the storage material in each time period must take equal values. In this case study, we use Solar salt as the storage material in the TES systems. In our results, we show that with the proposed multiperiod GDP price-taker analysis, we were able to explore the use of discrete decisions to obtain an optimal schedule and design of the charge and discharge TES systems integrated with the USCPP while maximizing profit. For a 12 hour period, we observe that we increase the flexibility of the plant by dispatching the maximum power capacity of the USCPP and discharge storage system at high-electricity price periods, while satisfying the ramping limits of the boiler in the USCPP. While maintaining a boiler efficiency of about 85% to 95% in the explored time periods, both TES systems areas are obtained along with the hot solar salt temperature, which reaches the maximum temperature value of the Solar salt of 853.15 K, maximizing the use of its heat capacity. Since the multiperiod GDP model involves discrete decisions for the USCPP operation mode selection at each time period, it is combinatorially explosive, leading to approximately 3 12 possible alternatives. The optimal schedule of the integrated USCPP is obtained using the reduced integer cut decomposition strategy in GDPopt after 100 master iterations using a commercial laptop. Disclaimer Sandia National Laboratories is a multimission laboratory managed and operated by National Technology and Engineering Solutions of Sandia, LLC., a wholly owned subsidiary of Honeywell International, Inc., for the U.S. Department of Energy's National Nuclear Security Administration under contract DE-NA-0003525. This paper describes objective technical results and analysis. Any subjective views or opinions that might be expressed in the paper do not necessarily represent the views of the U.S. Department of Energy or the United States Government. Acknowledgments This work was conducted as part of the Institute for the Design of Advanced Energy Systems (IDAES) and Design and Optimization Infrastructure for Tightly Coupled Hybrid Systems (DISPATCHES) with support through (1) Simulation-Based Engineering, Crosscutting Research Program within the U.S. Department of Energy's Office of Fossil Energy and Carbon Management and (2) the Grid Modernization Laboratory Consortium, a strategic partnership between DOE and the national laboratories to bring together leading experts, technologies, and resources to collaborate on the goal of modernizing the nation's grid. References [Chen et al., (2021)] Q. Chen, E. S. Johnson, D. E. Bernal, R. Valentin, S. Kale, J. Bates, J. D. Siirola, and I. E. Grossmann. Pyomo.gdp: an ecosystem for logic based modeling and optimization development. Optimization and Engineering, 2021. doi: 10.1007/s11081-021-09601-7. [Hart et al., (2017)] W. E. Hart, C. D. Laird, J.-P. Watson, D. L. Woodru, G. A. Hackebeil, B. L. Nicholson, and J. D. Siirola. Pyomo-optimization modeling in Python, Volume 67. Springer Science & Business Media, Second edition, 2017. [Lee et al., (2021)] A. Lee, J. H. Ghouse, J. C. Eslick, C. D. Laird, J. D. Siirola, M. A. Zamarripa, D. Gunter, J. H. Shinn, A. W. Dowling, D. Bhattacharyya, L. T. Biegler, A. P. Burgard, and D. C. Miller. The IDAES process modeling framework and model library-flexibility for process simulation and optimization. Journal of Advanced Manufacturing and Processing , 3(3), 5 2021. doi: 10.1002/amp2.10095. [Li et al., (2019)] D. Li, W. Zhang, and J. Wang. Flexible Operation of Supercritical Power Plant via Integration of Thermal Energy Storage . IntechOpen, Rijeka, 2019. doi: 10.5772/in-techopen.79735. URL https://doi.org/10.5772/intechopen.79735.",
+    "presenting_author": "Edna Rawlings | Sandia National Laboratories, Livermore, CA",
+    "authors": [
+      "Edna Rawlings | Sandia National Laboratories, Livermore, CA",
+      "Jaffer Ghouse | NETL Support Contractor, Pittsburgh, PA",
+      "Naresh Susarla | National Energy Technology Laboratory, Pittsburgh, PA",
+      "John Siirola | Sandia National Laboratories, Albuquerque, NM",
+      "David Miller | National Energy Technology Laboratory, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Edna Rawlings",
+        "affiliation": "Sandia National Laboratories, Livermore, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jaffer Ghouse",
+        "affiliation": "NETL Support Contractor, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Naresh Susarla",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "John Siirola",
+        "affiliation": "Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "David Miller",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "365i",
+    "sortable_time": "2022-11-15_15:30:00_17:00:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/644290"
+  }
+]

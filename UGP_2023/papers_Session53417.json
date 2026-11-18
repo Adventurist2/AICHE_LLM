@@ -1,0 +1,260 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667547",
+    "paper_endpoint": "Paper/667547",
+    "paper_id": "667547",
+    "topic": "A Semantic Based Decision Support Framework to Enable Model and Data Integration",
+    "title": "A Semantic Based Decision Support Framework to Enable Model and Data Integration",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53417",
+    "session_title": "Data-driven and hybrid modeling for decision making II",
+    "session_number": "374",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "ABSTRACT Process modelling and simulation are employed as vital tools to design and evaluate biorefining technologies. With an increasing number of models and data built by various computer aided process engineering (CAPE) tools in the domain of biorefining, the researchers who stand to benefit from such an updated understanding are manifold. However, this large number of models and data distributed from CAPE tools results in heterogeneity and further requires expertise to establish interoperability. The emergence of developing a common interface has led to the CAPE-OPEN initiative. CAPE-OPEN is a standard that defines rules and interfaces that allows CAPE tools and/or models to interoperate at a software engineering level. The CAPE-OPEN mainly focuses on the interoperability of flowsheet simulation. The interoperability is established between the process modelling components (PMCs) that are developed in various process modelling environments (PME) using a “middleware” The middleware is a connectivity mechanism that hosts communication across heterogeneous modelling environments by providing their functions, as well as input and output parameters (CO-LaN consortium, 2003). Despite the awareness and visibility of CAPE-OPEN within chemical engineering community, most end users without much software engineering expertise provided feedback that some found it difficult to use as it requires expert level support (Baur, 2018). To gain a fuller ability to increase awareness and to retain the most suitable model and/or data amongst existing models and data, the development of a systematic approach is required. In this paper, a new approach for model integration however builds upon the CAPE-OPEN framework proposes the use of ontology and replaces the middleware with more flexible semantic repository ((Koo, Trokanas and Cecelja, 2017). Models are described by Semantic Web Services (SWS) using Ontology Web Language for Services (OWL-S) as an enabler of web services through service discovery, selection, composition, and execution stages (Figure 1). By The same token, datasets are also described by the OWL-S through their outputs and auxiliary precondition for their execution, i.e. extraction, modification and deletion (Figure 2). The process of model and data discovery using input/output matching has been supported by the structure of domain ontology. The matching process was employed as a method to perform the flexible discovery of models and data, which allows partial matching for inputs and outputs. Users are then given choices of ranked discovered models and data based on the requirements to assist them to make an inform decision. Once the relevant models and data sets are chosen, the demonstration of establishing interoperability is performed by composition and execution process. This paper mainly focuses on the key parameters used in the formation of model integration through input/output matching based on semantic relevance between the models and data. The heterogeneous models and data in the domain of biorefining are semantically described in a domain ontology, OntoCAPEmodel ontology. The ontology acts as a framework that serves as a blueprint for knowledge dissemination and exchange by defining the basic terminology and interaction between models and data. The structure of unit is configured by a coupling through the different inlet and outlet ports where a unit can be connected to another unit, which is separated from the functional behaviour of the unit model. A set of data to be exchanged from one unit to another is distinguished by three different types: material, energy, and information streams. In addition, the stream properties are characterised by thermodynamics and physical properties, e.g. composition, temperature, pressure, flow, etc., with associated variables describing quantitative properties, e.g. physical dimension, value, unit, etc. The structure of the ontology further guides a process to record details about the models and data in an explicit format, and concomitantly supports registration and instantiation of the models and data. The whole process is verified by a case of model integration for a supply chain modelling in biorefining. References Baur, R. (2018) CAPE-OPEN Survey CAPE-OPEN Survey - Objectives, CAPE-OPEN 2018 Annual Meeting, CO-LaN. Available at: http://www.colan.org/presentation/cape-open-survey-2/. CO-LaN Consortium (2003) CAPE-OPEN Methods & Tools Integrated Guidelines, Cape-Open. Koo, L., N. Trokanas, et al. (2017). \"A semantic framework for enabling model integration for biorefining.\" Computers & Chemical Engineering 100: 219-231",
+    "presenting_author": "Franjo Cecelja | University of Surrey, Guildford, United Kingdom",
+    "authors": [
+      "Franjo Cecelja | University of Surrey, Guildford, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Franjo Cecelja",
+        "affiliation": "University of Surrey, Guildford, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "374a",
+    "sortable_time": "2023-11-07_12:30:00_12:55:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667547"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667688",
+    "paper_endpoint": "Paper/667688",
+    "paper_id": "667688",
+    "topic": "Hybrid Modeling of CHO Cell Culture Using Physics Informed Neural Networks",
+    "title": "Hybrid Modeling of CHO Cell Culture Using Physics Informed Neural Networks",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53417",
+    "session_title": "Data-driven and hybrid modeling for decision making II",
+    "session_number": "374",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "In the biopharmaceutical industry, Chinese hamster ovary (CHO) cell culture is widely used to produce therapeutics such as recombinant protein and monoclonal antibodies 1 . Due to the intrinsic complexity and variability of this process, process conditions can have a significant impact on the process output 2 . To ensure cell culture reproducibility and establish the optimal processing conditions, mathematical modeling of bioreactors has garnered significant attention from researchers 3,4 . The development of accurate bioreactor models is hindered by two primary factors: the complexity of the underlying mechanism, and the limited availability of data. From a first principle modeling (FPM) perspective, bioreactors involve multiscale biochemical and physical processes that encompass growth, metabolism, and transport phenomenon, which can be difficult or even infeasible to capture. As a standalone FPM is also susceptible to process perturbation and characteristics that are specific to the cell line or equipment. From a data-driven modeling (DDM) perspective, due to the limited number of runs, the data quantity is usually insufficient to construct a high-precision model and the resulting model often generalizes poorly. Hybrid modeling is a promising approach to address the challenge of system complexity and data scarcity, which marry the strengths of both components 5 . Physics informed neural networks (PINNs) is an emerging hybrid modeling technique that combines the adaptability of deep learning with the rigor of mechanistic laws 6 . Compared to traditional hybrid modeling techniques where DDMs and FPMs are arranged in a structural manner, PINN completely integrates the FPM component into a neural network by enforcing the mechanistic laws (usually in the form of ordinary or partial differential equations) during the model training process. This ensures model predictions fall within realistic bounds. The PINN hybrid modeling framework has shown itself to be useful in describing a growing number of diverse and complex systems while remaining computationally scalable 5 . This study discusses using PINNs for the macroscopic modeling of CHO cell bioreactor. Our strategy uses PINN to combine mechanistic cell culture model (such as cell growth and metabolite consumption) with process data (such as pH and dissolved oxygen). The proposed modeling approach will be illustrated using real-world data from Pfizer’s bioreactors across multiple scales. Predictive performance of the proposed PINN model is compared with pure FPM and DDM, and improved modeling accuracy and extrapolation performance is shown. References: (1) Dumont, J.; Euwart, D.; Mei, B.; Estes, S.; Kshirsagar, R. Human Cell Lines for Biopharmaceutical Manufacturing: History, Status, and Future Perspectives. Critical Reviews in Biotechnology 2016 , 36 (6), 1110–1122. https://doi.org/10.3109/07388551.2015.1084266. (2) Kontoravdi, C.; Pistikopoulos, E. N.; Mantalaris, A. Systematic Development of Predictive Mathematical Models for Animal Cell Cultures. Computers & Chemical Engineering 2010 , 34 (8), 1192–1198. https://doi.org/10.1016/j.compchemeng.2010.03.012. (3) Karra, S.; Sager, B.; Karim, M. N. Multi-Scale Modeling of Heterogeneities in Mammalian Cell Culture Processes. Ind. Eng. Chem. Res. 2010 , 49 (17), 7990–8006. https://doi.org/10.1021/ie100125a. (4) Hong, M. S.; Braatz, R. D. Mechanistic Modeling and Parameter-Adaptive Nonlinear Model Predictive Control of a Microbioreactor. Computers & Chemical Engineering 2021 , 147 , 107255. https://doi.org/10.1016/j.compchemeng.2021.107255. (5) Bradley, W.; Kim, J.; Kilwein, Z.; Blakely, L.; Eydenberg, M.; Jalvin, J.; Laird, C.; Boukouvala, F. Perspectives on the Integration between First-Principles and Data-Driven Modeling. Computers & Chemical Engineering 2022 , 166 , 107898. https://doi.org/10.1016/j.compchemeng.2022.107898. (6) Raissi, M.; Perdikaris, P.; Karniadakis, G. E. Physics-Informed Neural Networks: A Deep Learning Framework for Solving Forward and Inverse Problems Involving Nonlinear Partial Differential Equations. Journal of Computational Physics 2019 , 378 , 686–707. https://doi.org/10.1016/j.jcp.2018.10.045.",
+    "presenting_author": "Huiyi Cao | Pfizer Inc., Peapack, NJ",
+    "authors": [
+      "Huiyi Cao | Pfizer Inc., Peapack, NJ",
+      "Shu Yang | Pfizer Inc., Peapack, NJ",
+      "William Fahey | Pfizer Inc., Grange Castle, Ireland",
+      "Reza Kamyar | Pfizer Inc., Peapack, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Huiyi Cao",
+        "affiliation": "Pfizer Inc., Peapack, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Shu Yang",
+        "affiliation": "Pfizer Inc., Peapack, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "William Fahey",
+        "affiliation": "Pfizer Inc., Grange Castle, Ireland",
+        "designation": "Author"
+      },
+      {
+        "name": "Reza Kamyar",
+        "affiliation": "Pfizer Inc., Peapack, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "374b",
+    "sortable_time": "2023-11-07_12:55:00_13:20:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667688"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667965",
+    "paper_endpoint": "Paper/667965",
+    "paper_id": "667965",
+    "topic": "Guaranteed Error-Bounded Surrogate Modeling for Process Simulation, Optimization, and Control",
+    "title": "Guaranteed Error-Bounded Surrogate Modeling for Process Simulation, Optimization, and Control",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53417",
+    "session_title": "Data-driven and hybrid modeling for decision making II",
+    "session_number": "374",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "The accurate prediction, simulation, optimization, and control of complex systems often requires the use of rigorous mathematical models that capture the underlying equilibrium, transport, and thermodynamic relationships. However, these first-principles-based models are often large and nonlinear, resulting in significant computational challenges when employed in process synthesis and intensification frameworks [1]. To alleviate the computational burden, data-driven surrogate modeling approaches such as artificial neural networks, polynomial response surfaces, Kriging, or Gaussian processes can be employed [2-3]. Nevertheless, one of the major challenges of these models is the non-deterministic nature of their approximation types and overall model prediction error. For example, current ANN-based models cannot always guarantee the desired approximation types (underestimation or overestimation), and purely data-driven surrogates cannot provide bounds on the prediction error over the entire domain of interest [4]. To overcome these challenges, we focus on two key aspects: developing simple-yet-accurate surrogates with guaranteed error-bounds, and using them to solve a generic system of equations that may constitute difficult-to-converge simulation problems. We propose a data-driven surrogate modeling approach that quantifies and ensures a guaranteed global maximum bound on the model prediction error [5-7]. The technique utilizes the upper bound on the diagonal Hessian elements of the model to construct edge-concave underestimators and edge-convex overestimators [8]. The simplices formed by the edge-concavity/convexity-based estimators are able to provide guaranteed under-or-over approximation based only on data samples at select points [9]. A non-interpolating surrogate is then obtained by solving a parameter estimation problem with additional novel constraints, such as, enforcing the surrogate approximation to be bounded between the vertex polyhedral under- and over-estimators of the original model, thereby providing guaranteed error bounds. Repeated application of the parameter-estimation problem within a branch-and-bound framework ultimately yields a guaranteed solution to the system of equations. To facilitate the use of our approach, we have also developed a package called GEMS (Guaranteed Error-bounded Modeling of Surrogates) that integrates all the associated tasks, including the selection of the location of sample evaluations, Hessian bounds estimation, and generation of the surrogate forms such as QRS, kriging, or ANN [7]. GEMS utilizes the minimum number of sample points while ensuring sufficient exploration of the entire domain. Using in-house automatic differentiation schemes and interval-arithmetic rules, GEMS can also calculate the guaranteed upper bound on the Hessian of high dimensional models. These bounds are then utilized to formulate the novel constraints within the parameter-estimation problem to obtain the surrogates. To demonstrate the applicability of the surrogate modeling technique, we consider a process simulation case study that involves recycling loops. We extract the underlying model equations and utilize the GEMS framework to solve the simulation problem, i.e., find roots of the model equations. We demonstrate that the solution returned by GEMS is a valid solution to the simulation problem. The quantified global prediction error of the surrogate progressively becomes smaller as the branching occurs, leading to an efficient solution to large-scale computationally expensive simulation problems. Keywords: Surrogate modeling, Underestimation, Error bounds, Hessian bounds, Edge-concavity, Data-driven Modeling. References: [1] Demirel, S. E., Li, J., Hasan, M. M. F. (2017). Systematic process intensification using building blocks. Computers & Chemical Engineering, 105, 2–38. [2] Schweidtmann, A.M., Mitsos, A. 2019. Deterministic global optimization with artificial neural networks embedded. Journal of Optimization Theory and Applications ,180(3), pp. 925–948. [3] Tsay, C., Kronqvist, J., Thebelt, A., Misener, R. 2021. Partition-Based Formulations for Mixed-Integer Optimization of Trained ReLU Neural Networks. Advances in Neural Information Processing Systems , 34, pp. 3068—3080. [4] Bhosekar, A., Ierapetritou, M. 2018. Advances in surrogate based modeling, feasibility analysis, and optimization: A review. Computers & Chemical Engineering , 108, pp. 250–267. [5] Iftakher, A., Aras, C.M., Monjur, M.S., Hasan, M. M. F., 2022. Data-driven approximation of thermodynamic phase equilibria. AIChE Journal , e17624. [6] Iftakher, A., Aras, C.M., Monjur, M.S., Hasan, M. M. F., 2022. GEMS: Guaranteed Error-bounded Modeling of Surrogates. Proceedings of the 14th International Symposium on Process Systems Engineering – PSE 2021+, 49, pp. 1831–1836. [7] Iftakher, A., Aras, C.M., Monjur, M.S., Hasan, M. M. F., 2022. A Framework for Guaranteed Error-bounded Surrogate Modeling. Proceedings of the 2022 American Control Conference (ACC), pp. 4814-4819. [8] Hasan, M. M. F., 2018, An Edge-concave Underestimator for the Global Optimization of Twice-differentiable Nonconvex Problems. Journal of Global Optimization , 71(4), pp. 735–752. [9] Bajaj, I.; Hasan, M. M. F., 2020. Deterministic Global Derivative-free Optimization of Black-Box Problems with Bounded Hessian. Optimization Letters , 14, pp. 1011–1026.",
+    "presenting_author": "Ashfaq Iftakher | Texas A&M University, College Station, TX",
+    "authors": [
+      "Ashfaq Iftakher | Texas A&M University, College Station, TX",
+      "Chinmay Aras | Texas A&M University, College Station, TX",
+      "Faruque Hasan | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ashfaq Iftakher",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chinmay Aras",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Faruque Hasan",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "374c",
+    "sortable_time": "2023-11-07_13:20:00_13:45:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667965"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668352",
+    "paper_endpoint": "Paper/668352",
+    "paper_id": "668352",
+    "topic": "Development of Hybrid First Principles – Artificial Intelligence Models: Applications to an Industrial Steam Superheater System",
+    "title": "Development of Hybrid First Principles – Artificial Intelligence Models: Applications to an Industrial Steam Superheater System",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53417",
+    "session_title": "Data-driven and hybrid modeling for decision making II",
+    "session_number": "374",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "First-principles models can provide very good prediction even for cases where there are no data at all, or data are limited in certain range of operating conditions or for cases where data collection is infeasible. However, first-principles physics-based models for complex nonlinear dynamic systems are often time consuming to construct, computationally expensive, and often intractable for online adaptation. It can also be difficult, if not impossible, to develop accurate models for some complex phenomena, that are poorly understood. On the contrary, artificial intelligence (AI) or data-driven models can be relatively easier to develop, simulate, and adapt online 1 , even for complex and ill-defined dynamic systems. However, development of AI models requires large amount of data, and therefore can be infeasible where data acquisition is prohibitive or collection of certain type of data is practically impossible provided the current state of the measurement technology. Furthermore, AI models may not be predictive especially when they are extrapolated and/or if the data used for developing such data-driven models suffer from information gap. This work develops several approaches where the first-principles models are synergistically coupled with the machine learning models, thus exploiting their key strengths. The integration of physics-based (first-principles) models with machine learning approaches have found numerous implementations in the form of lumped parameter models 2 , residual modeling 3 , physics informed models 4 and digital twin development 5 . These models can lead to improved interpretability and extrapolation capabilities 6 . However there are significant opportunities for exploiting the synergistic hybridization of first-principles models with data-driven models. Several novel coupling approaches are developed as part of this work including series, parallel, and cross-coupling of first-principles and data-driven models. For such hybrid models to be successful and yield desired outcomes, various other aspects need to be considered other than the coupling approaches. In particular, it is important to consider what information need to be exchanged between first-principles models and data-driven models and at what interval, how to select the specific data-driven model for the desired outcome, and how to adapt the hybrid model. The presence of nonlinear transients in both the first-principles and AI models makes it notably difficult for the optimal synthesis of such hybrid models with due consideration of complexity, computational expense, and accuracy. Furthermore, different AI models may have specific advantages and limitations, which become critical while addressing any particular phenomena pertaining to the operation of the superheater system under different load conditions. The proposed algorithms have been developed for modeling boiler components where complex dynamics associated with reactive-diffusive processes leading to oxide scale formation in the superheater tube banks coupled with mass and heat transfer pose to be considerably challenging. Despite many studies on hybrid modeling 5 and process monitoring 7 of thermal power plants using AI models to estimate certain key parameters from historical operational data, accurate modeling of heat transfer dynamics of in-service power plants over the full working range still remains a challenge. A first-principles model of an industrial steam superheater system as part of a coal-fired power plant is developed. The first-principles model is a three-dimensional differential-algebraic equation (DAE) model with a detailed model of heat transfer through thick-walled tubes. Two types of data-driven models are developed, namely artificial neural networks (ANN) and Bayesian machine learning (BML) models. Hybrid series and parallel all-nonlinear dynamic-static neural networks are leveraged as ANN. These networks have been shown to yield superior performance compared to many of the existing state-of-the-art models 8 like long short-term memory (LSTM) or gated recurrent unit (GRU) types of recurrent networks. Developed BML algorithms offer capabilities for handling noisy data and uncertainty quantification along with estimation of interpretable model parameters. The hybrid modeling approaches are used to address several challenges in modeling of industrial superheaters including time-varying uncertainties in fouling deposit due to coal ash, non-uniform distribution of flue gas and steam that is affected by the load and state of fouling deposit, lack of measurements especially for the flue gas, and uncertainties in the boundary conditions especially for the flue gas, etc. Overall, the proposed hybrid models are found to yield very accurate prediction of the transients of the superheater when tested with the industrial data. References : Su, H.-T., Bhat, N., Minderman, P. A. & McAvoy, T. J. Integrating Neural Networks With First Principles Models for Dynamic Modeling . Dynamics and Control of Chemical Reactors, Distillation Columns and Batch Processes (IFAC, 1993). doi:10.1016/b978-0-08-041711-0.50054-4. Psichogios, D. C. & Ungar, L. H. A hybrid neural network‐first principles approach to process modeling. AIChE J. 38 , 1499–1511 (1992). Rajulapati, L., Chinta, S., Shyamala, B. & Rengaswamy, R. Integration of machine learning and first principles models. AIChE J. 68 , 1–17 (2022). Raissi, M., Perdikaris, P. & Karniadakis, G. E. Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. J. Comput. Phys. 378 , 686–707 (2019). Yu, J., Petersen, N., Liu, P., Li, Z. & Wirsum, M. Hybrid modelling and simulation of thermal systems of in-service power plants for digital twin development. Energy 260 , 125088 (2022). Bradley, W. et al. Perspectives on the integration between first-principles and data-driven modeling. Comput. Chem. Eng. 166 , 107898 (2022). Hamid, A., Hasan, A. H., Azhari, S. N., Harun, Z. & Putra, Z. A. Hybrid modelling for remote process monitoring and optimisation. Digit. Chem. Eng. 4 , 100044 (2022). Mukherjee, A. & Bhattacharyya, D. Hybrid Series/Parallel All-Nonlinear Dynamic-Static Neural Networks: Development, Training, and Application to Chemical Processes. Ind. Eng. Chem. Res. 62 , 3221–3237 (2023).",
+    "presenting_author": "Angan Mukherjee | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Angan Mukherjee | West Virginia University, Morgantown, WV",
+      "Vivek Saini | West Virginia University, Morgantown, WV",
+      "Samuel Adeyemo | West Virginia University, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Angan Mukherjee",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Vivek Saini",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Samuel Adeyemo",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "374d",
+    "sortable_time": "2023-11-07_13:45:00_14:10:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668352"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/671193",
+    "paper_endpoint": "Paper/671193",
+    "paper_id": "671193",
+    "topic": "Material Flow Optimization of Acetaminophen Production Network Via Hybrid Mechanistic Machine Learning Approach to Minimize Waste Generation",
+    "title": "Material Flow Optimization of Acetaminophen Production Network Via Hybrid Mechanistic Machine Learning Approach to Minimize Waste Generation",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53417",
+    "session_title": "Data-driven and hybrid modeling for decision making II",
+    "session_number": "374",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "The growing demand for acetaminophen, a widely used analgesic and antipyretic drug, has led to a substantial increase in its production rate in the US. This growth poses significant environmental challenges, primarily concerning waste generation and resource utilization. This study presents a novel approach to mapping and optimizing the material flow of the acetaminophen production network, consisting of 6 industrial systems classified into 4 NAICS sector, using a hybrid mechanistic machine learning (ML) approach that effectively minimizes waste generation and enhances sustainability. 1 The research methodology focuses on the development of a comprehensive material flow map, identifying and quantifying the inputs, outputs, and interconnections of each industrial systems involved in the acetaminophen production network. 2 By utilizing Physical Supply & Use Tables (PSUTs), the material exchanges and interdependencies within the network are systematically quantified, enabling a thorough assessment of its performance and waste generation patterns. Furthermore, this material flow quantification offers valuable insights into potential areas for enhancement, such as process inefficiencies, bottlenecks, and waste reduction opportunities. 3 The material flow optimization is proposed to be achieved through the application of a hybrid data-driven machine learning technique that employs the use of Sparse Identification of Nonlinear Dynamics (SINDy), a system identification and inverse problem-solving algorithm, on the mechanistic process flow model of the 6 industries. 4,5 This technique facilitates the identification of optimal operating conditions for each process stage, minimizing waste generation while maintaining desired production levels. The proposed optimization framework adopts a multi-objective approach, balancing economic, environmental, and social factors to ensure a sustainable acetaminophen production network. The outcomes of this study will highlight the efficacy of the material flow mapping and optimization methodology in significantly reducing waste generation in the acetaminophen production network. By implementing the system-identified improvements, the acetaminophen industry can enhance its sustainability, mitigate its environmental impact, and promote responsible resource management. This research, therefore, contributes to the broader scientific discourse on sustainable industrial production and resource management and can be adapted for application in other chemical production networks as well. References: Tsolakis, N. & Srai, J. S. Mapping supply dynamics in renewable feedstock enabled industries: A systems theory perspective on ‘green’ pharmaceuticals. Oper. Manag. Res. 11 , 83–104 (2018). Vunnava, V. S. G. & Singh, S. Integrated mechanistic engineering models and macroeconomic input–output approach to model physical economy for evaluating the impact of transition to a circular economy. Energy Environ. Sci. 14 , 5017–5034 (2021). Fischer‐Kowalski, M. et al. Methodology and Indicators of Economy‐wide Material Flow Accounting: State of the Art and Reliability Across Sources. J. Ind. Ecol. 15 , 855–876 (2011). Brunton, S. L., Proctor, J. L. & Kutz, J. N. Discovering governing equations from data by sparse identification of nonlinear dynamical systems. Proc. Natl. Acad. Sci. 113 , 3932–3937 (2016). Kaptanoglu, A. et al. PySINDy: A comprehensive Python package for robust sparse system identification. J. Open Source Softw. 7 , 3994 (2022).",
+    "presenting_author": "Abhimanyu Raj Shekhar | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Abhimanyu Raj Shekhar | Purdue University, West Lafayette, IN",
+      "Shweta Singh | Purdue University"
+    ],
+    "authors_structured": [
+      {
+        "name": "Abhimanyu Raj Shekhar",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Shweta Singh",
+        "affiliation": "Purdue University",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "374e",
+    "sortable_time": "2023-11-07_14:10:00_14:35:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/671193"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666795",
+    "paper_endpoint": "Paper/666795",
+    "paper_id": "666795",
+    "topic": "Optimal Storage Sizing of Sustainable Power-to-X System Using Generative Adversarial Networks",
+    "title": "Optimal Storage Sizing of Sustainable Power-to-X System Using Generative Adversarial Networks",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "53417",
+    "session_title": "Data-driven and hybrid modeling for decision making II",
+    "session_number": "374",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "This paper proposes a data-driven framework to optimize the storage size and design of power-to-X (PtX) process incorporating the fluctuation of renewable power via the generative adversarial network (GAN). The main challenge in the PtX design is considering complex patterns of the renewable fluctuation and constraining potential usage of grid for carbon neutralization. Under the time-series uncertainty of renewable power, optimal storage and design should be figured out to minimize levelized cost of X (LCOX) while constraining grid usage in probabilistic domain. To address these challenges, The framework consists of three modules: renewable scenario generator, implicit scheduling model, and reliability analysis. The proposed framework employs a GAN as a renewable scenario generator to train temporal dynamics of renewable patterns in different geographical sites, using 20 years of historical data of wind and solar. The generator part of the GAN is used as a data-driven scenario generator that generates indistinguishable fake wind and solar profiles from noise vectors. In contrast to the model-based approach that uses empirical equations or probabilistic groups, the data-driven approach can generate an annual renewable profile simply by sampling a random vector from a Gaussian distribution. The implicit scheduling model determines the power allocation of renewable and grid power of the PtX systems, taking into account the mixing of solar and wind power, intermittent storage, and X production system. The time-series profile of power distribution can be computed using this model to satisfy continuous X production. The techno-economic performance of the PtX system is then computed using the determined allocation profile. The probabilistic distribution of LCOX and grid penetration can be directly computed under time-series uncertainty of the renewable, with the LCOX as the objective function and the grid penetration as the constraint. The reliability analysis is adopted to calculate the probability of grid penetration which violates constraints, and the subset simulation is employed in combination with the scenario generator and scheduling model to calculate the constraints. The overall framework has four deterministic inputs: installation capacity of wind and solar power plant, intermittent storage capacity, and X production capacity. The NSGA-ii optimizer iteratively updates the populations to determine the optimal population sets which minimize the probabilistic distribution of LCOX while satisfying grid penetration constraint. The paper includes a case study on the production of methanol and hydrogen on Jeju island in South Korea, describing how the proposed framework can provide reliable storage size and design, balancing the fluctuation of renewable power and power allocation integrated with the grid for sustainable production. The Pareto frontier shows a trade-off between the mean and variance in the LCOX distribution, with reducing the mean of LCOX increasing its variance, which describes the impact of uncertainty to PtX becoming more significant at lower LCOX distribution. The estimated minimal production cost for X is 1581.1 USD/ton, while the highest variance in cost under uncertainty is 4713.1. The mean cost increases to 2804.8 USD/ton with a minimal variance of 91.1. The Pareto curve line reveals two general trendlines: an increase in wind power plant installation capacity and a decrease in X production capacity. The wind fraction close to 1.0 results in maximum variance in production cost due to the lower fluctuations in wind power compared to solar power, making it uncertain. However, it is important to note that this trend is location-specific, as some studies report greater uncertainty associated with wind power in certain regions. Meanwhile, by reducing the production capacity, there is more room to accommodate fluctuations in renewable power. A case study involving the production of methanol on Jeju Island in South Korea demonstrates how the mean and variance of production cost and other performance indicators can be balanced in the reliable design of PtX processes under renewable energy uncertainty, providing insights for decision-making in such situations.",
+    "presenting_author": "Jeongdong Kim | Yonsei university, Seoul, Korea, Republic of (South)",
+    "authors": [
+      "Jeongdong Kim | Yonsei university, Seoul, Korea, Republic of (South)",
+      "Young Woo Chon | Inha university, Incheon, Korea, Republic of (South)",
+      "Hyungjoon Yoon | Yonsei University, Seoul, Korea, Republic of (South)",
+      "Jinwoo Park | Dongguk university, Seoul, Korea, Republic of (South)",
+      "Junghwan Kim | Yonsei University, Seoul, Korea, Republic of (South)",
+      "Il Moon | Yonsei University, Seoul, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jeongdong Kim",
+        "affiliation": "Yonsei university, Seoul, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Young Woo Chon",
+        "affiliation": "Inha university, Incheon, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Hyungjoon Yoon",
+        "affiliation": "Yonsei University, Seoul, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Jinwoo Park",
+        "affiliation": "Dongguk university, Seoul, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Junghwan Kim",
+        "affiliation": "Yonsei University, Seoul, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Il Moon",
+        "affiliation": "Yonsei University, Seoul, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "374f",
+    "sortable_time": "2023-11-07_14:35:00_15:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666795"
+  }
+]

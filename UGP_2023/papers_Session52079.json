@@ -1,0 +1,266 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663993",
+    "paper_endpoint": "Paper/663993",
+    "paper_id": "663993",
+    "topic": "Hierarchical Planning-Scheduling-Control - Is Derivative-Free Optimization All You Need?",
+    "title": "Hierarchical Planning-Scheduling-Control - Is Derivative-Free Optimization All You Need?",
+    "date_time": "2023-11-08_15:30:00_18:00:00",
+    "session_id": "52079",
+    "session_title": "Data-driven optimization",
+    "session_number": "430",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Companies within the process industries rely on mathematical optimization for their operations to remain competitive in an environment of increasingly stringent safety, environmental, and economic requirements. Significant value can be captured by integrating units across all hierarchical levels of decision-making (from design, planning, scheduling, to control) [1]. Conventionally, decision-making happens sequentially : upper-level decisions are taken while disregarding lower-level considerations, and then fed as setpoints to the lower levels. In the hierarchical approach, upper-level decision-makers consider not only lower-level feasibility, but also optimality. This results in multi-level formulations, which are numerically intractable and mathematically difficult [2]. Data-driven techniques in the form of optimality surrogates and black-box optimization can be leveraged to find a tractable solution to tri-level planning-scheduling-control formulations [3]. In this work, we investigate if we can use black-box optimization for the end-to-end integration of planning-scheduling-control, avoiding the introduction of model inaccuracies associated with optimality surrogates. There are two main options to decrease the computational burden: We can exploit 1) the mathematical structure of the optimization problem in decomposition or distributed optimization schemes [4], or 2) relaxation or aggregation techniques that relax the original formulation or replace parts of it using surrogate models that are easier to handle [5]. While research into the intersection of data-driven techniques and decomposition algorithms is less common [6], surrogate modelling is inherently 'data-driven’, and as such has been studied widely across many fields under various names [7-8]. The advances of Machine Learning and surrogate modelling have also spurred developments in the use of (model-based) derivative-free optimization (DFO). DFO algorithms are typically classified into either 'direct' methods that directly handle function evaluations, or 'model-based' methods that rely on the intermediate construction and optimization of surrogates [9]. We use the term DFO synonymously with data-driven, black-box, simulation-based, or gradient-free optimization [10-11]. While, DFO gains traction within the chemical engineering community, DFO has also been exploited to solve integration problems that traditionally are targeted via decomposition algorithms, such as in coordination [12] and multi-level [13] problems in process systems engineering and even in the hierarchical integration of process operations [14]. While scale-bridging optimality or feasibility surrogates present a popular way of alleviating the computational burden of integrated planning-scheduling-control formulations, these approaches inevitably incur the risk of losing solution accuracy however. For applications with little tolerance for approximation errors, we propose the end-to-end use of derivative-free optimization to solve a multi-site, multi-product, tri-level planning-scheduling-control problem.In our example, at each iteration, a derivative-free optimization solver suggests a new combination of 472 planning-specific variables that fix all degrees of freedom in the planning level. The planning targets are fixed and fed as setpoints into 12 scheduling problems (one for each planning horizon step). Then, each scheduling problem is solved in parallel to find the batch production targets that achieve the planning targets at minimal makespan. For each scheduling problem (12), for each event-equipment-production combination (7 events x 2 equipment items), we solve an optimal control problem to determine the optimal processing time and energy cost to produce said batch size. The optimal makespan decisions are fed back into the scheduling problem to check the feasibility of the batch sequence at the update processing times. Finally, the planning-level objective is augmented by the optimal scheduling and control cost and returned to the derivative-free optimization solver to determine the new iteration of planning-level variables. We show that given the distributed nature of the information flow in this hierarchical problem we can leverage parallelization to solve each DFO evaluation in a fifth of the time required to solve the planning problems with embedded optimality surrogates. But most importantly, we do not have to forfeit model accuracy and solution quality in the scheduling-control integration. We discuss the trade-offs involved in the choice between the DFO and optimality surrogate approaches in terms of tolerance against model approximation errors, available online versus offline solution time, and warm-start approaches. We also discuss ways to exploit mathematical structure in the DFO variables to objective mappings to make the DFO approach even more competitive. References C. E. Gounaris, I. E. Grossmann, 2019, A preface to the special issue on enterprise-wide optimization, Optimization and Engineering 20(4), 965–968 Y. Chu, F. You, 2015, Model-based integration of control and operations: Overview, challenges, advances, and opportunities, Computers & Chemical Engineering 83, 2–20 D. van de Berg, N. Shah, E. A. del Rio-Chanona, 2023, Data-driven distributed optimization for systems consisting of expensive black-box subproblems, 33rd European Symposium on Computer-Aided Process Engineering (accepted) I. Mitrai, P. Daoutidis, 2020, Decomposition of integrated scheduling and dynamic optimization problems using community detection, Journal of Process Control, 90, 63-74 O. Andrés-Martínez, L.A. Ricardez-Sandoval, 2022, Integration of planning, scheduling, and control: A review and new perspectives, Canadian Journal of Chemical Engineering, 100, 2057 Y. Bengio, A. Lodi, A. Prouvost, 2021, Machine learning for combinatorial optimization: A methodological tour d’horizon, European Journal of Operational Research 290(2), 405–421 G. G. Wang, S. Shan, 2007, Review of Metamodeling Techniques in Support of Engineering Design Optimization, Journal of Mechanical Design, 129(4), 370-380 J. Du, J. Park, I. Harjunkoski, M. Baldea, 2015, A time scale-bridging approach for integrating production scheduling and process control, Computers & Chemical Engineering, 79, 56-69 J. Larson, M. Menickelly, S. Wild, 2019, Derivative-free optimization methods. Acta Numerica 28, 287-404 S. Amaran, N. V. Sahinidis, B. Sharda, S. J. Bury, 2014, Simulation optimization: a review of algorithms and applications, 4OR 12(4), 301–333 D. van de Berg, T. Savage, P. Petsagkourakis, D. Zhang, N. Shah, E. A. del Rio-Chanona, 2022, Data-driven optimization for process systems engineering applications. Chemical Engineering Science 248, 117135 D. van de Berg, P. Petsagkourakis, N. Shah, E. A. del Rio-Chanona, 2022, Data-driven distributed optimization for systems consisting of expensive black-box subproblems, 14th International Symposium on Process Systems Engineering (accepted) F. Zhao, I. E. Grossmann, S. Garcia-Munoz, S. D. Stamatis, 2021, Flexibility index of black-box models with parameter uncertainty through derivative- free optimization, AIChE Journal, 67(5), 17189 B. Beykal, S. Avraamidou, E. N. Pisti kopoulos, 2022, Data-driven optimization of mixed-integer bi-level multi-follower integrated planning and scheduling problems under demand uncertainty, Computers & Chemical Engineering 156, 107551",
+    "presenting_author": "Damien van de Berg | Imperial College London, United Kingdom",
+    "authors": [
+      "Damien van de Berg | Imperial College London, United Kingdom",
+      "Nilay Shah | Imperial College London, United Kingdom",
+      "Ehecatl Antonio del Rio Chanona | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Damien van de Berg",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nilay Shah",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Ehecatl Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "430a",
+    "sortable_time": "2023-11-08_15:30:00_15:55:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663993"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665844",
+    "paper_endpoint": "Paper/665844",
+    "paper_id": "665844",
+    "topic": "Data-Driven Optimization of Highly Constrained Oil Recovery Processes Using Neural Network Surrogate Models and Classification Based Implicit Constraint Handling Schemes",
+    "title": "Data-Driven Optimization of Highly Constrained Oil Recovery Processes Using Neural Network Surrogate Models and Classification Based Implicit Constraint Handling Schemes",
+    "date_time": "2023-11-08_15:30:00_18:00:00",
+    "session_id": "52079",
+    "session_title": "Data-driven optimization",
+    "session_number": "430",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Crude oil production is a critical component in the global energy sector. As the discovery of new oil fields is becoming increasingly challenging, extending existing reserves through oil recovery is becoming equally important [1]. Oil companies employ waterflooding as a secondary oil recovery technique to release trapped oil and improve the recoverable oil amount by injecting water into reservoirs [2-3]. Globally, 250 million barrels of water are produced per day to recover 80 million barrels of oil per day from depleting reservoirs (an average of three barrels of water for each barrel of oil produced) [4]. As a result, more than $40 billion is spent every year to deal with unwanted water [4]. Optimizing waterflooding can decrease water use, lower operating costs, and increase oil field life, which in turn assists in the sustainability and profitability of crude oil production. However, due to the complex nature of the reservoir characteristics and thousands of process constraints involved, deterministic optimization of secondary oil recovery becomes computationally intractable. In this work, we present a data-driven optimization framework where highly accurate feedforward neural network (FFNN) surrogate models and classification-based feasibility analysis are employed to address the computational limitations of highly expensive simulations while providing feasible superior solutions to the original problem. We formulate the problem using a well-pressure control approach to maximize the net present value (NPV) of reservoir operations. First, we collect samples from the reservoir simulation offline and train a highly accurate deep FFNN (blind testing R 2 > 0.90) with sigmoid activation functions and 4 hidden layers using 10,000 well bottom hole pressure samples and their corresponding NPV outputs. The validated and tested neural network then serves as the reservoir simulator to carry out data-driven optimization. For constraint handling, we incorporate a classification algorithm to model and filter out the infeasible samples. This approach was previously shown to be an effective strategy when several constraints are present in the formulation [5,6]. Here, we test this implicit classification modeling approach on thousands of reservoir constraints and make comparisons to the case where these were modeled explicitly with individual surrogate models [7]. We train C -parametrized Support Vector Machines with radial basis kernel using the constraint violation data of the collected samples and classify inputs according to their predicted feasibility. We demonstrate our approach on two benchmark reservoir simulation studies, the Egg model [8] and the UNISIM model [9], and test the performance of local and global data-driven optimization algorithms in maximizing the NPV of reservoir operations. Our results show that significant computational savings can be achieved by integrating regression and classification-based surrogate models in data-driven optimization of computationally expensive simulations where superior objective function values are obtained compared to explicit constraint handling strategies. References 1. Muggeridge, A., Cockin, A., Webb, K., Frampton, H., Collins, I., Moulds, T., and Salino, P., Recovery rates, enhanced oil recovery and technological limits. Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences , 2014, Volume 372, 20120320. 2. Ahmed, T., Principles of Waterflooding. Reservoir engineering handbook , 2018, 901-1093. 3. United States Department of Energy, Office of Fossil Energy: Enhanced Oil Recovery, (n.d.). http://energy.gov/fe/science­innovation/oil­gas­research/enhanced­oil­recovery 4. Bailey, B., Crabtree, M., Tyrie, J., Elphick, J., Kuchuk, F., Romano, C., and Roodhart, L., Water control. Oilfield review , 2000, Volume 12, 30-51. 5. Beykal, B., Aghayev, Z., Onel, O., Onel, M. and Pistikopoulos, E.N., 2022. Data-driven Stochastic Optimization of Numerically Infeasible Differential Algebraic Equations: An Application to the Steam Cracking Process. In Computer Aided Chemical Engineering (Vol. 49, pp. 1579-1584). Elsevier. 6. Dias, L.S. and Ierapetritou, M.G., 2019. Data-driven feasibility analysis for the integration of planning and scheduling problems. Optimization and Engineering , 20 , pp.1029-1066. 7. Beykal, B., Boukouvala, F., Floudas, C.A., Sorek, N., Zalavadia, H. and Gildin, E., 2018. Global optimization of grey-box computational systems using surrogate functions and application to highly constrained oil-field operations. Computers & Chemical Engineering , 114, pp.99-110. 8. Jansen, J.D., Fonseca, R.M., Kahrobaei, S., Siraj, M.M., Van Essen, G.M. and Van den Hof, P.M.J., 2014. The egg model–a geological ensemble for reservoir simulation. Geoscience Data Journal , 1 (2), pp.192-195. 9. Gaspar, A.T., Avansi, G.D., Maschio, C., Santos, A.A. and Schiozer, D.J., 2016, June. UNISIM-IM: Benchmark case proposal for oil reservoir management decision-making. In SPE Trinidad and Tobago Section Energy Resources Conference . OnePetro.",
+    "presenting_author": "Zahir Aghayev | University of Connecticut, Storrs",
+    "authors": [
+      "Zahir Aghayev | University of Connecticut, Storrs",
+      "Dimitrios Voulanas | Texas A&M University, College Station, TX",
+      "Daniel Badawi | Texas A&M University, College Station, TX",
+      "Eduardo Gildin | Texas A&M University, College Station, TX",
+      "Burcu Beykal | University of Connecticut, Storrs"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zahir Aghayev",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Dimitrios Voulanas",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Daniel Badawi",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Eduardo Gildin",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Burcu Beykal",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "430b",
+    "sortable_time": "2023-11-08_15:55:00_16:20:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665844"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666752",
+    "paper_endpoint": "Paper/666752",
+    "paper_id": "666752",
+    "topic": "A Bayesian Optimization Framework for Solving Generic Inverse Optimization Problems",
+    "title": "A Bayesian Optimization Framework for Solving Generic Inverse Optimization Problems",
+    "date_time": "2023-11-08_15:30:00_18:00:00",
+    "session_id": "52079",
+    "session_title": "Data-driven optimization",
+    "session_number": "430",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Data-driven inverse optimization (IO) is an emerging method for learning unknown decision-making processes [1]. The fundamental idea is to use mathematical optimization as the model for decision-making, where decisions can be viewed as the optimal or near-optimal solutions to an underlying optimization problem. Given observed decisions made by an agent, the goal of IO is to learn the unknown optimization model that best represents the agent’s decision-making process. The key advantage of the IO approach is that it can directly consider constraints, which allows us to leverage all the modeling flexibility of mathematical programming, incorporate domain knowledge, and hence obtain interpretable decision-making models [2]. An IO problem is typically formulated as a bilevel optimization problem with as many lower-level problems as the number of training data points. Here, each lower-level problem represents the parameterized forward optimization problem (FOP) for a given observed decision, and the objective of the upper-level problem is to find the model parameters that lead to optimal solutions of the FOP which best fit the observed decisions. IO problems are notoriously difficult to solve; common solution approaches include single-level reformulations [3, 4] and cutting-plane methods [5]. The computational complexity is exacerbated in cases where the FOP is nonconvex, which may render a single-level reformulation impossible and a cutting-plane approach inefficient. In this work, we propose a Bayesian optimization (BO) approach [6] to solving IO problems by treating the lower-level FOPs as black-box functions. The major advantage of BO is that, at each iteration, we only need to evaluate the loss function with fixed model parameter values, which merely requires the solution of the FOP for each data point, as opposed to the solution to a bilevel optimization problem. As a result, BO can be applied even when the FOP is nonconvex. Also, it naturally allows decomposition as the FOPs can be solved independently in parallel. To assess the efficacy of the BO approach for various classes of FOPs, we perform computational case studies wherein we learn cellular objectives in flux balance analysis of metabolic networks as well as planner decision rules in pooling problems. For the flux balance problems, we consider both convex and non-convex objective functions subject to a large number of linear constraints. For the pooling problem, we consider continuous and mixed-integer quadratically constrained programs. The computational experiments show that BO can efficiently identify good estimates of the model parameters within a relatively small number of iterations, especially in cases where the size of the FOP is large relative to the number of model parameters. References [1] T. C. Y. Chan, R. Mahmood, and I. Y. Zhu, “Inverse optimization: Theory and applications,” arXiv Prepr. arXiv2109.03920 , 2021. [2] R. Gupta and Q. Zhang, “Efficient learning of decision-making models: A penalty block coordinate descent algorithm for data-driven inverse optimization,” Comput. Chem. Eng. , vol. 170, no. October 2022, p. 108123, 2023. [3] A. Keshavarz, Y. Wang, and S. Boyd, “Imputing a convex objective function,” IEEE Int. Symp. Intell. Control - Proc. , pp. 613–619, 2011. [4] T. C. Y. Chan, T. Lee, and D. Terekhov, “Inverse optimization: Closed-form solutions, geometry, and goodness of fit,” Manage. Sci. , vol. 65, no. 3, pp. 1115–1135, 2019. [5] L. Wang, “Cutting plane algorithms for the inverse mixed integer linear programming problem,” Oper. Res. Lett. , vol. 37, no. 2, pp. 114–116, 2009. [6] B. Shahriari, K. Swersky, Z. Wang, R. P. Adams, and N. de Freitas, “Taking the Human Out of the Loop: A Review of Bayesian Optimization,” Proc. IEEE , vol. 104, no. 1, pp. 148–175, 2016.",
+    "presenting_author": "Yen-An Lu | University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "Yen-An Lu | University of Minnesota, Minneapolis, MN",
+      "Joel Paulson | The Ohio State University, Columbus",
+      "Wei-Shou Hu | University of Minnesota, Minneapolis, MN",
+      "Qi Zhang | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yen-An Lu",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Wei-Shou Hu",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      },
+      {
+        "name": "Qi Zhang",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "430c",
+    "sortable_time": "2023-11-08_16:20:00_16:45:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666752"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667251",
+    "paper_endpoint": "Paper/667251",
+    "paper_id": "667251",
+    "topic": "A Data-Driven Framework for the Design of Reactor Simulations: Exploiting Multiple Continuous Fidelities",
+    "title": "A Data-Driven Framework for the Design of Reactor Simulations: Exploiting Multiple Continuous Fidelities",
+    "date_time": "2023-11-08_15:30:00_18:00:00",
+    "session_id": "52079",
+    "session_title": "Data-driven optimization",
+    "session_number": "430",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "The development of new manufacturing techniques such as 3D printing have enabled the creation of previously infeasible chemical reactor designs. These novel reactor configurations have increasingly been considered for chemical synthesis, for example, microfluidic reactors, and mesoscale reactors. Microfluidic reactors can enable finer control over local conditions resulting in increased product selectivity, and improved heat transfer resulting in more sustainable processes. 3D printed mesoscale reactors have been proposed as next-generation alternatives to traditionally manufactured designs, lending to their large potential design space. The modeling and design of traditional chemical reactors has largely been considered an art, with small improvements in performance resulting in wider impacts on product yield, sustainability, and economic costs. However, with the promise of new reactors comes the need for new analytical techniques to model and optimize in increasingly complex design spaces. Chemical reactors have been investigated through computational fluid dynamics (CFD) simulations, where systems of partial differential equations (PDEs) with large degrees of freedom are solved iteratively, resulting in large computational costs. In addition to being expensive, gradient information is practically unavailable. Derivative-free optimization has found significant application in domains where mathematical expressions or gradients are unavailable. With the advent of new technologies in reactor design, reactor geometries are becoming highly parameterized, resulting in higher-dimensional, more complex derivative-free optimization problems. As such, there exists significant scope for a robust, domain-specific approach for the optimization of simulated chemical reactors to support the next generation of sustainable chemical processes. In many real-world and simulated engineering systems, differing quality evaluations of quantities of interest exist. Reactor performance can be quantified by a correlation of dimensionless numbers, a CFD simulation, or a pilot-scale experiment. These all attempt to capture the true underlying performance of a system, with differing accuracies and associated costs. Taking the view that only the industrial-scale reactor in its intended setting will provide a true evaluation of performance: any approximation to this, including pilot and lab-scale experiments, simulations, and basic calculations all become valid lower-fidelity evaluations which may be used simultaneously for design and optimization. For CFD simulations of a reactor, fidelities are most often associated with the number of finite element cells in a simulation as they dictate the accuracy and computational cost. By motivating the notion that all predicted, unmeasured quantities derive from a lower-fidelity approximation to a desired high-fidelity function, it becomes pertinent to investigate methodologies that apply these approximations to learn about the true system of interest. Multi-fidelity Bayesian optimization algorithms have been developed and applied across a number of domains. All approaches all have a common characteristic in that both decision variables x, and fidelity parameters z, need to be selected at each iteration. How these decisions are made, with respect to the trade-off between information gained, and expense incurred, are key aspects of multi-fidelity Bayesian optimization algorithms. Here we present a framework to rapidly solve this nonlinear, computationally expensive, and derivative-free problem, enabling the fast prototype of novel reactor parameterizations. Table 1 demonstrates the merits of our approach. In addition to dependency on simulation fidelity, the cost of a simulation is also dependent on inputs x in chemical reactor simulation domains. Variable step-size CFD solvers, along with early stopping criteria both contribute to how x can influence simulation cost, particularly in cases where operating conditions are optimized over. As such, two-step approaches cannot be applied, where x is selected first, and then z, as the second step where information and cost is traded off becomes dependent on x. Therefore, we follow an approach utilizing a cost-adjusted acquisition function to trade off information gain and cost in a single step. To do so, the optimization objective and cost of simulation are modeled by two separate Gaussian processes. A single optimization step consists of solving the single cost-adjusted acquisition function to obtain both the next set of inputs and next simulation fidelity, to maximise the weighted expected information gain. In traditional Bayesian optimization, function evaluations are terminated when the computational budget is exhausted, and the evaluated data point with the highest objective is selected as a final solution. In a multi-fidelity framework, this criterion contains subtle nuances. As the underlying function of interest is where the fidelity is the ‘highest’, the optimal solution returned should be the highest evaluated function-value evaluated at the highest fidelity. Throughout optimization the underlying high-fidelity function is maximized through lower fidelity simulations, with no guarantee that simulations at the highest fidelity will be selected to be evaluated. Therefore, within our framework we derive a novel criterion for monitoring the progress and dictating the termination of multi-fidelity Bayesian optimization, ensuring a high-fidelity solution is returned before experimental budget is exhausted. Algorithm 1 demonstrates our framework. We demonstrate our framework by investigating the optimization of helical-tube reactors under pulsed-flow conditions, which have demonstrated outstanding mixing characteristics, have the potential to be highly parameterized, and are easily manufactured using 3D printing. A helical-tube reactor is parameterized by a coil radius, coil pitch, and inversion. Coil pitch denoted by φ controls how extended the helical tube is, coil radius denoted by ρ controls how tight the coils are within the helical tube, and the inversion parameter is denoted by δ controls the change in coil direction. Inversions within helical-tube reactors have been shown to provide effective mixing properties. δ takes a value between 0 and 1, and specifies where along the coil the inversion takes place. In addition to geometric design and oscillatory parameters, the output of a simulation is also influenced by one or more fidelities. A typical fidelity used within CFD simulations is the number of discrete finite elements that are contained within the mesh, known as cell count. Fluid behaviour within pulsed-flow helical-tube reactors is complex due to the transient formation and unravelling vortex structures affecting axial and radial mixing. Therefore, it is important to capture simulation resolution both axially, through the length of the tube, as well as radially throughout the cross-section of the tube for a high-quality simulation. In this work, as opposed to applying cell count as a single scalar fidelity parameter, we instead maintain the ability to adapt the resolution of a simulation both axially and radially resulting in two independent fidelities. We implement a custom meshing procedure that allows for axial and radial fidelity to be varied independently. The simulation that serves as the highest fidelity corresponds to when both the axial and radial fidelities are greatest. Whilst both axial and radial fidelities are discrete due to their meaning within a finite element context, we treat them as continuous parameters. During mesh creation values of both fidelities are rounded to the nearest integer. Within the solution to CFD problems, a number of solver options may be considered as valid fidelities. However, as many of these take on non-continuous or Boolean values, we leave their integration for future work. Figure 1 shows the optimization progress throughout the 64 hours. The time to generate, and objective values of initial solutions generated are denoted by using negative iteration and wall-clock time values. Therefore, optimization itself it denoted as starting at iteration 0, and at a wall-clock time of 0. Figure 2 shows the different simulation fidelities evaluated throughout optimisation. The optimal coil geometry has a pitch of 1.04cm, radius of 1.25cm, and an inversion that occurs 66% along the coil length. The associated optimal operating conditions are pulsed-flow with an amplitude of 1mm, frequency of 2 Hz and a Reynolds number of 50. Figure 3 highlights the specific behaviour of fluid within the optimal reactor throughout a single oscillatory cycle. Streamlines are coloured with tracer concentration to show the movement through the coil. The optimal geometry is 3D printed and evaluated using associated optimal pulsed-flow operating conditions, validating both the performance of the framework as well as our multi-fidelity model. We investigate the effect of hyper-parameters within our framework, demonstrating their effect of convergence. In obtaining a robust and explainable solution, so we demonstrate our design framework to be extensible to a broad variety of expensive simulation-based optimization problems, supporting the design of the next generation of highly parameterized chemical reactors.",
+    "presenting_author": "Tom Savage | Imperial College London, United Kingdom",
+    "authors": [
+      "Tom Savage | Imperial College London, United Kingdom",
+      "Nausheen Basha | Imperial College London, United Kingdom",
+      "Jonathan McDonough | Newcastle University, Newcastle upon Tyne, United Kingdom",
+      "Omar Matar | Imperial College London, United Kingdom",
+      "Antonio del Rio Chanona | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Tom Savage",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nausheen Basha",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Jonathan McDonough",
+        "affiliation": "Newcastle University, Newcastle upon Tyne, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Omar Matar",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "430d",
+    "sortable_time": "2023-11-08_16:45:00_17:10:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667251"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668705",
+    "paper_endpoint": "Paper/668705",
+    "paper_id": "668705",
+    "topic": "A Reinforcement Learning Strategy with Recurrent Neural Networks for Optimal Scheduling of Job-Shop Batch Chemical Plants Under Uncertainty",
+    "title": "A Reinforcement Learning Strategy with Recurrent Neural Networks for Optimal Scheduling of Job-Shop Batch Chemical Plants Under Uncertainty",
+    "date_time": "2023-11-08_15:30:00_18:00:00",
+    "session_id": "52079",
+    "session_title": "Data-driven optimization",
+    "session_number": "430",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "In recent years, Deep Reinforcement Learning (DRL) has become an alternative in the optimization of scheduling problems for industrial facilities. These methods aim to design an intelligent agent that can take decisions and learn how to perform a task, e.g., a short-term schedule for manufacturing production or the execution of a specific response when unexpected events occur in a system, e.g., change in product demands. The features from DRL agents that have become attractive for scheduling applications under uncertainty include the unique method to explore solutions in complex systems, fast adaptation to unexpected deviations in the process’ parameters, and the method’s ability to provide immediate responses through a trained policy. In the context of optimal process scheduling, DRL has just started to emerge as an option to current methods in short-term scheduling for job-shops and flow-shops chemical manufacturing plants. Although research in this field is at early stages, the existing implementations have shown promising results in creating schedules through different methods such as multi agent systems and Q-Learning applications [1]–[5]. These implementations have shown that DRL agents are able to handle uncertainty in parameters related to the schedule formulation such as machine availability and demand realizations. Challenges in these implementations mainly consist in the adequate use of information in the training process, which is critical to obtain reliable and robust scheduling policies, and the effective translation of the optimization problem with a system of penalties and rewards. In the literature, the common approach for decision-making models involving DRL applications has been the Markov Decision Process (MDP), which basically uses only information from the present state to take the next actions in the model. Since process scheduling often involves the planification of a historical sequence of events that are intercorrelated, MDPs may not be the best alternative for processing observations from the instance. On the other hand, Hidden Markov Models (HMM) are typically used for time series where the process to be modelled is a sequence of interconnected time steps. These models use a set of consecutive observations which is called observation window to take the next action in the plant model. In this work, a methodology to develop a RL agent that acts as an online scheduler on a job-shop chemical plant subject to uncertainty is presented. A key feature in this formulation is that processing times and product demands are described using a discrete set of uncertain scenarios. A Deep Recurrent Q-Learning (DRQN) method is used to train the agent, which is designed using a Recurrent Neural Network (RNN). These networks are used to generalize HMMs in sequential decision processes, which is a typical characteristic in scheduling problems. To the authors’ knowledge, this method has not been considered to address the scheduling in job-shops under uncertainty in chemical batch plants. The proposed DRL formulation assumes that there are several routes for producing predesigned batches for a determined number of products. Also, the formulation includes zero-wait restrictions during the process; however, storage is available for completed products. The agent was trained to build an online schedule of the initialization of these routes in the chemical batch plant. The resulting schedule is required to satisfy product demands given at the beginning of the process and demand realizations that take place at specific times during operation. Note that those demands are not known a priori; hence, they are considered as discrete uncertain parameters in the proposed DRQN framework. Also, the agent is motivated through a set of rewards to initially complete the demands of every product, and subsequently to fill the available storage for each product without exceeding their capacities. Moreover, the agent aims to minimize the makespan of the process subject to a set of user-defined process constraints, e.g., allocation and mass conversation balance constraints. These objectives are enforced using a reward shaping strategy. For each processing route in the chemical plant, there is a set of machines which processing times are uncertain parameters to the agent. Hence, no information about the characteristics of these times is given a priori to the agent. The HMM is used to know the true value of the uncertainty realization in the processing times by gathering information from present and recent past events. That is, the agent acquires knowledge from the processing times and their possible deviations through the sequence of events that are given as input in the observation window. Although the literature has shown methods to approach uncertainty using MDP, the use of this model assumes that the system is fully observable and that all the information needed for taking the next decision is available in the present time, which may not be the usual case in real applications. Uncertainty effects are propagated through time in the environment. In the present DRQN framework, these features are captured through the observation window that the HMM uses to take the next action. The observation vectors in the window that are inputs to the agent contain the information related to time intervals, demand satisfaction for each product, and machine availability. The proposed RL framework was tested on a case study involving the scheduling of a job-shop chemical facility with a number of products, where each product has different processing routes. A scheduling horizon was set for the agent to satisfy the products’ demands. At the beginning of the process there is an initial demand for each product; these individual demands are updated at specific (user-defined) times during the operation The processing times from the machines in the plant and the demand realizations are uncertain and can take different values that are set in the plant model but are not given to the agent. For the present case study, the agent trained with the DRQN method was able to return online schedules of the batch units depending on the previous states of the plant and satisfy the demands during the scheduling time horizon. Moreover, if there was time left and be economically attractive, the agent would proceed to fill the storage tanks. The results showed that the agent designed with RNNs was able to extract from the instance the knowledge to create a model that accounts for the constraints, the objective function, and the uncertainty in the processing times. Also, the agent was able to react to changes in the demands by adjusting the scheduling policies online. The uncertainty in both demands and processing times was handled by the agent in the form of a preventive behaviour, i.e., the agent takes conservative actions by not activating processes in between specific products in order to prevent a possible overlapping in the machines. In the proposed framework, the agent is able to produce attractive online schedules for different uncertainty realizations. Although the training might take time, the response of a trained agent is less than a second as it consists of the evaluation of a neural network. This feature results more attractive for large-scale scheduling applications under uncertainty since current optimization algorithms might need considerable time to produce an action at every sampling interval. References [1] C. D. Hubbs, C. Li, N. V. Sahinidis, I. E. Grossmann, and J. M. Wassick, ‘A deep reinforcement learning approach for chemical production scheduling’, Computers & Chemical Engineering , vol. 141, p. 106982, Oct. 2020, doi: 10.1016/j.compchemeng.2020.106982. [2] C. Hubbs, A. Kelloway, J. Wassick, N. Sahinidis, and I. Grossmann, An Industrial Application of Deep Reinforcement Learning for Chemical Production Scheduling . 2020. [3] C. D. Paternina-Arboleda and T. K. Das, ‘A multi-agent reinforcement learning approach to obtaining dynamic control policies for stochastic lot scheduling problem’, Simulation Modelling Practice and Theory , vol. 13, no. 5, pp. 389–406, Jul. 2005, doi: 10.1016/j.simpat.2004.12.003. [4] B. Waschneck et al. , ‘Optimization of global production scheduling with deep reinforcement learning’, Procedia CIRP , vol. 72, pp. 1264–1269, Jan. 2018, doi: 10.1016/j.procir.2018.03.212. [5] T. Altenmüller, T. Stüker, B. Waschneck, A. Kuhnle, and G. Lanza, ‘Reinforcement learning for an intelligent and autonomous production control of complex job-shops under time constraints’, Prod. Eng. Res. Devel. , vol. 14, no. 3, pp. 319–328, Jun. 2020, doi: 10.1007/s11740-020-00967-8.",
+    "presenting_author": "Luis Ricardez-Sandoval | University of Waterloo, Canada",
+    "authors": [
+      "Daniel Rangel Martinez | University of Waterloo, Canada",
+      "Luis Ricardez-Sandoval | University of Waterloo, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daniel Rangel Martinez",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Luis Ricardez-Sandoval",
+        "affiliation": "University of Waterloo, Canada",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "430e",
+    "sortable_time": "2023-11-08_17:10:00_17:35:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668705"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670447",
+    "paper_endpoint": "Paper/670447",
+    "paper_id": "670447",
+    "topic": "Decision-Focused Learning of Constraint Parameters with Feasibility Guarantee",
+    "title": "Decision-Focused Learning of Constraint Parameters with Feasibility Guarantee",
+    "date_time": "2023-11-08_15:30:00_18:00:00",
+    "session_id": "52079",
+    "session_title": "Data-driven optimization",
+    "session_number": "430",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "In traditional data-driven optimization, we often follow a two-step predict-then-optimize approach, i.e. we first predict the unknown model parameters from data with external features and then solve the optimization problem with those predicted inputs. Here, the learning step focuses on minimizing the parameter estimation error; however, this does not necessarily lead to the best decisions (evaluated with the true parameter values) in the optimization step. In contrast, decision-focused learning (Wilder et al., 2019), also known as smart predict-then-optimize (Elmachtoub and Grigas, 2022), integrates the two steps to explicitly account for the quality of the optimization solution in the learning of the model parameters (i.e. minimize the decision error). Existing works on decision-focused learning, many of which are based on deep learning with differentiable optimization layers (Amos and Kolter, 2017), have shown that significantly improved solutions can be achieved compared to the traditional predict-then-optimize approach. However, virtually all of them consider the case where the unknown model parameters only affect the objective function, which simplifies the problem considerably since feasibility is not a concern. Yet in many applications, we also need to use data to predict parameters in the constraints; the treatment of this case is in theory possible but difficult using existing methods. In this work, we address this problem by formulating the learning problem as a bilevel optimization problem with constraints that ensure the feasibility of the optimal solutions obtained with the estimated parameter model. To solve this problem, we leverage our recently proposed efficient penalty-based block coordinate descent algorithm (Gupta and Zhang, 2022). In a computational case study, we demonstrate the effectiveness of the proposed approach and highlight its benefits compared with the conventional predict-then-optimize approach. References: Amos, B. and Kolter, J.Z., 2017. Optnet: Differentiable optimization as a layer in neural networks. Proceedings of the International Conference on Machine Learning , pp. 136-145. Elmachtoub, A.N. and Grigas, P., 2022. Smart “predict, then optimize”. Management Science , 68 (1), pp. 9-26. Gupta, R. and Zhang, Q., 2023. Efficient learning of decision-making models: A penalty block coordinate descent algorithm for data-driven inverse optimization. Computers and Chemical Engineering , 170 , p.108123. Wilder, B., Dilkina, B., and Tambe, M., 2019. Melding the data-decisions pipeline: Decision-focused learning for combinatorial optimization. Proceedings of the AAAI Conference on Artificial Intelligence , pp. 1658-1665.",
+    "presenting_author": "Rishabh Gupta | University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "Rishabh Gupta | University of Minnesota, Minneapolis, MN",
+      "Qi Zhang | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rishabh Gupta",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Qi Zhang",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "430f",
+    "sortable_time": "2023-11-08_17:35:00_18:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670447"
+  }
+]

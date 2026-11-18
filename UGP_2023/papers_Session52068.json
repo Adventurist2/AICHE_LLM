@@ -1,0 +1,313 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/666077",
+    "paper_endpoint": "Paper/666077",
+    "paper_id": "666077",
+    "topic": "Clustering Based Surrogate Optimization (CBSO) Framework for the Global Optimization of Box-Constrained Systems.",
+    "title": "Clustering Based Surrogate Optimization (CBSO) Framework for the Global Optimization of Box-Constrained Systems.",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52068",
+    "session_title": "Data-driven and Surrogate Optimization in Operation I",
+    "session_number": "282",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Global optimization features in many complex problems related to oil and gas, aerospace, pharmaceutical, supply chain, chemical, and medical industries. Despite the advances in processing power and computing technologies, global optimization of systems involving high-fidelity, expensive, black-box simulations (e.g., CFD or Computational Fluid Dynamics) is complex and time-consuming.(Forrester and Keane, 2009; McBride and Sundmacher, 2019) Widely used gradient-based algorithms are not suited for black-box optimization, as gradient evaluations are prohibitive. Derivative-free optimization (DFO) algorithms do not require gradient information, hence are more suitable. Commonly used DFO algorithms include metaheuristic algorithms such as Particle Swarm Optimization (PSO), Genetic Algorithm (GA), and Simulated Annealing (SA) and direct search algorithms such as mesh adaptive direct search (MADS), generating pattern search (GPS), and generating search set (GSS), etc. They typically require many function evaluations and cannot guarantee convergence to a global optimum. In many cases, they get stuck in a local optimum.(Rios and Sahinidis, 2013). The time and cost for optimizing an expensive system are largely determined by the number of function evaluations. Therefore, the concept of surrogate-based global optimization (SBGO), or the idea of employing simple and computationally cheap surrogate models for global optimization has received much attention over the last few decades. This has prompted numerous works, including review articles on SBGO techniques to assist global optimization of black box systems. (Bhosekar and Ierapetritou, 2018; Queipo et al., 2005; Regis and Shoemaker, 2007) There are two key motivations behind the development of this work. First, most SBGO works have focused on the development of global surrogates or surrogates built over the entire design space (Haftka et al., 2016), such as single surrogates (Regis and Shoemaker, 2007), multiple surrogates (Gu et al., 2012), and ensemble surrogates (Müller and Shoemaker, 2014). These approaches may face challenges for complex systems that display diverse characteristics across various subdomains or regions of the design space. Given the task of representing the function over the entire space, these surrogates tend to be highly complex. A more natural approach towards optimizing such systems is to identify the various zones or regions of the input space and develop a specific and simple surrogate for each region. Such a divide-and-conquer approach decomposes a large and complex global optimization problem into multiple simpler optimization problems. Multiple local surrogates also offer better accuracy. While clustering has been as used as means of exploration or design space reduction for global optimization using global surrogates (Dong et al., 2018; Müller and Piché, 2011; Ye and Pan, 2017), the existing body of literature on utilizing clustering and multiple local surrogates for surrogate based global optimization of single objective box-constrained problems is quite limited. Second, some SBGO algorithms exploit surrogate specific features such as the expected improvement in Kriging (Jones et al., 1998; Viana et al., 2013). As highlighted by numerous works, the choice of best surrogate may vary from system to system (Ahmad and Karimi, 2021; Bhosekar and Ierapetritou, 2018). Therefore, surrogate specific SBGO algorithms may not be the best choice across all systems. We aim to develop clustering-based optimization algorithm that is independent of surrogate model/technique. In this work, we have developed a Clustering Based Surrogate Optimization (CBSO) algorithm that utilizes a partition-based clustering algorithm and multiple local surrogates for global optimization. The key features of our algorithm are as follows. First, the input design space is partitioned into clusters using K-means clustering and the best surrogate is developed for each cluster. We identify the best surrogate for each cluster using k-fold cross validation and we optimize each surrogate within their cluster domain. Second, the surrogate model and technique can vary from cluster to cluster for better accuracy, Third, the number of clusters are identified automatically using the elbow or silhouette method. Finally, we sample a maximum of three points using only the best clusters and their surrogates identified through local exploitation (Törn, 1986). Once the new points are sampled, we update our dataset and we cluster the new set of points to obtain a new clustering profile. We repeat the above process using the new set of clusters, and we repeat this iterative clustering-optimization process until the user-specified maximum number of functional evaluations is reached. Our proposed algorithm aims at answering the following key questions: Which is the better method (elbow vs silhouette) for K-means clustering? What is the best set of models or model library for clustering-based surrogate optimization? We have evaluated our algorithm over 43 box-constrained problems with dimensions ranging from two to ten (Surjanovic and Bingham, 2013). The Latin Hypercube Sampling technique is used to sample our initial design. The surrogates considered for this work include Multivariate Adaptive Regression Spline (MARS), Polynomial Response Surface Models (PRSMs), and six types of radial basis functions (Biharmonic, Cubic, Multi-quadratic, Inverse Multiquadric, Gaussian, and Thin Plate Spline). This presentation will introduce the details of our algorithm, and discuss the results across the different model libraries and the different heuristics methods used for K-means clustering. We also present a comparison of the algorithm’s performance over these functions against several DFO solvers and algorithms, including NOMAD, SNOBFIT, and the Two Stage Framework (TSF) (developed by our lab and presented at AIChE 2019 Annual Meeting) (Garud et al., 2019). REFERENCES: Ahmad, M., Karimi, I.A., 2021. Revised learning based evolutionary assistive paradigm for surrogate selection (LEAPS2v2). Computers & Chemical Engineering 152, 107385. https://doi.org/10.1016/j.compchemeng.2021.107385 Bhosekar, A., Ierapetritou, M., 2018. Advances in surrogate based modeling, feasibility analysis, and optimization: A review. Computers & Chemical Engineering 108, 250–267. https://doi.org/10.1016/j.compchemeng.2017.09.017 Dong, H., Song, B., Wang, P., Dong, Z., 2018. Surrogate-based optimization with clustering-based space exploration for expensive multimodal problems. Struct Multidisc Optim 57, 1553–1577. https://doi.org/10.1007/s00158-017-1826-x Forrester, A.I.J., Keane, A.J., 2009. Recent advances in surrogate-based optimization. Progress in Aerospace Sciences 45, 50–79. https://doi.org/10.1016/j.paerosci.2008.11.001 Garud, S.S., Mariappan, N., Karimi, I.A., 2019. Surrogate-based black-box optimisation via domain exploration and smart placement. Computers & Chemical Engineering 130, 106567. https://doi.org/10.1016/j.compchemeng.2019.106567 Gu, J., Li, G.Y., Dong, Z., 2012. Hybrid and adaptive meta-model-based global optimization. Engineering Optimization 44, 87–104. https://doi.org/10.1080/0305215X.2011.564768 Haftka, R.T., Villanueva, D., Chaudhuri, A., 2016. Parallel surrogate-assisted global optimization with expensive functions – a survey. Struct Multidisc Optim 54, 3–13. https://doi.org/10.1007/s00158-016-1432-3 Jones, D.R., Schonlau, M., Welch, W.J., 1998. Efficient Global Optimization of Expensive Black-Box Functions. Journal of Global Optimization 13, 455–492. https://doi.org/10.1023/A:1008306431147 McBride, K., Sundmacher, K., 2019. Overview of Surrogate Modeling in Chemical Process Engineering. Chemie Ingenieur Technik 91, 228–239. https://doi.org/10.1002/cite.201800091 Müller, J., Piché, R., 2011. Mixture surrogate models based on Dempster-Shafer theory for global optimization problems. J Glob Optim 51, 79–104. https://doi.org/10.1007/s10898-010-9620-y Müller, J., Shoemaker, C.A., 2014. Influence of ensemble surrogate models and sampling strategy on the solution quality of algorithms for computationally expensive black-box global optimization problems. J Glob Optim 60, 123–144. https://doi.org/10.1007/s10898-014-0184-0 Queipo, N.V., Haftka, R.T., Shyy, W., Goel, T., Vaidyanathan, R., Kevin Tucker, P., 2005. Surrogate-based analysis and optimization. Progress in Aerospace Sciences 41, 1–28. https://doi.org/10.1016/j.paerosci.2005.02.001 Regis, R.G., Shoemaker, C.A., 2007. A Stochastic Radial Basis Function Method for the Global Optimization of Expensive Functions. INFORMS Journal on Computing 19, 497–509. https://doi.org/10.1287/ijoc.1060.0182 Rios, L.M., Sahinidis, N.V., 2013. Derivative-free optimization: a review of algorithms and comparison of software implementations. J Glob Optim 56, 1247–1293. https://doi.org/10.1007/s10898-012-9951-y Surjanovic, S., Bingham, D., 2013. Virtual Library of Simulation Experiments: Test Functions and Datasets. https://www.sfu.ca/~ssurjano/about.html (accessed 3.2.23). Törn, A.A., 1986. Clustering Methods in Global Optimization. IFAC Proceedings Volumes 19, 247–252. https://doi.org/10.1016/S1474-6670(17)59803-1 Viana, F.A.C., Haftka, R.T., Watson, L.T., 2013. Efficient global optimization algorithm assisted by multiple surrogate techniques. J Glob Optim 56, 669–689. https://doi.org/10.1007/s10898-012-9892-5 Ye, P., Pan, G., 2017. Global optimization method using ensemble of metamodels based on fuzzy clustering for design space reduction. Engineering with Computers 33, 573–585. https://doi.org/10.1007/s00366-016-0490-x",
+    "presenting_author": "Srikar Venkataraman Srinivas | National University of Singapore",
+    "authors": [
+      "Srikar Venkataraman Srinivas | National University of Singapore",
+      "Iftekar Karimi | National University of Singapore"
+    ],
+    "authors_structured": [
+      {
+        "name": "Srikar Venkataraman Srinivas",
+        "affiliation": "National University of Singapore",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Iftekar Karimi",
+        "affiliation": "National University of Singapore",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "282a",
+    "sortable_time": "2023-11-07_12:30:00_12:51:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/666077"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665429",
+    "paper_endpoint": "Paper/665429",
+    "paper_id": "665429",
+    "topic": "A Modified Trust Region Filter Framework Designed for Computationally Expensive Black-Box Optimization",
+    "title": "A Modified Trust Region Filter Framework Designed for Computationally Expensive Black-Box Optimization",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52068",
+    "session_title": "Data-driven and Surrogate Optimization in Operation I",
+    "session_number": "282",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Glass box/black box optimization represents systems which include both equation-oriented process models and black-box models. There is no direct available derivative information for black-box functions, which offers great challenges to conventional derivative-based NLP solvers. In addition, black-box systems may be potentially computationally expensive. For example, when solving computational fluid dynamics problems, each simulation can be relatively time-consuming so that the number of calls to black-box functions becomes the bottleneck of the overall optimization speed. To address the issues efficiently and accelerate optimization, derivative-free optimization methods are preferred to search for the optimum while avoiding construction of derivative information, and the calls to black-box functions should be minimized as well. In this study, we attempt to modify the trust region filter (TRF) method, which was first proposed by Eason and Biegler in 2016 [1] , to formulate a general optimization framework for chemical systems involving computationally expensive black-box functions. The TRF method can deal with hybrid glass box/black box optimization by using a reduced model with κ-fully linear properties for prediction, and a filter to balance the trade-off between feasibility and the objective function. However, iteratively updating reduced models means plenty of calls to black-box functions per iteration. To improve the sampling efficiency, two main contributions can be summarized in this work: By employing the Gaussian process as the reduced model, we can utilize the known data beyond the trust region to assist modelling; by using information entropy, how to sample within the trust region can be guided automatically. Through comparison and validation of benchmark tests and case study, it demonstrates that using Gaussian process as the reduced model can reduce the number of calls to black-box functions by approximately half compared to linear and quadratic models, and the guidance of information entropy enables variable number of samplings depending on the current existing information within the trust region. With this high efficiency modelling method and sampling strategy, significant improvements and quantitative speed-ups can be achieved and convergence to first-order critical points can still be guaranteed. References [1] Eason, J. P., & Biegler, L. T. (2016). A trust region filter method for glass box/black box optimization. AIChE Journal, 62(9), 3124-3136.",
+    "presenting_author": "Runzhe Liang | Tsinghua University, Beijing, China",
+    "authors": [
+      "Runzhe Liang | Tsinghua University, Beijing, China",
+      "Zhihong Yuan | Tsinghua University, Beijing, China",
+      "Lorenz T. Biegler | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Runzhe Liang",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhihong Yuan",
+        "affiliation": "Tsinghua University, Beijing, China",
+        "designation": "Author"
+      },
+      {
+        "name": "Lorenz T. Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "282b",
+    "sortable_time": "2023-11-07_12:51:00_13:12:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665429"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669450",
+    "paper_endpoint": "Paper/669450",
+    "paper_id": "669450",
+    "topic": "Constrained Bayesian Optimization for Expensive Noisy Hybrid Models Using Differentiable Quantile Function Approximations",
+    "title": "Constrained Bayesian Optimization for Expensive Noisy Hybrid Models Using Differentiable Quantile Function Approximations",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52068",
+    "session_title": "Data-driven and Surrogate Optimization in Operation I",
+    "session_number": "282",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Bayesian optimization (BO) has recently become one of the most popular frameworks for efficient data-driven discovery of globally optimal solutions for expensive black-box functions subjected to noisy observations. BO’s effectiveness is derived from its probabilistic representation of the black-box objective and constraint functions that allow it to systematically address the exploration (learning for the future) and exploitation (immediately advancing toward the goal) tradeoff [1,2]. Any specific BO method consists of two major components. First, the construction of some predictive model given by a Bayesian posterior distribution over the black-box functions, which acts as a “surrogate model” equipped with uncertainty estimates. One typically relies on Gaussian process (GP) models due to their non-parametric form [3]. Second, the selection of an “acquisition function”, that depends on the posterior distribution of the unknown functions, whose value at any future sample quantifies the benefit of evaluating the functions at this point. Due to recent successes in a variety of application domains including hyperparameter tuning in machine learning [4], material and drug design [5], and calibration of computationally expensive simulation models [6], BO has extended in many directions including the incorporation of black-box constraints [7], multiple models and objectives [8,9], and robust uncertainty handling [10]. There has been limited work, however, on extending the BO paradigm to handle so-called hybrid models that frequently appear in important science and engineering problems. The phrase “hybrid model” here refers to a combination of mechanistic (first principles) models and black-box (data-driven) models – the mechanistic portion thus represents a type of “prior information” that can be utilized within the BO process to improve the prediction accuracy of the surrogate models and is almost always available in practice. Although the traditional BO framework can be applied in such cases by simply treating the hybrid model as a black-box, it has been shown that this assumption places a fundamental limitation on the achievable rate of convergence [11]. This observation has motivated significant work by the process systems engineering community on so-called hybrid or grey-box modeling/optimization frameworks over the past several years, e.g., [12-16]. None of these works, however, take a BO perspective and thus are not often applicable when the black-box portions of the model are very expensive to evaluate. Our group recently proposed COBALT, which is, to the best of our knowledge, the first constrained BO method that is applicable to hybrid models represented by composite functions, i.e., f(x) = g(h(x)) where g (•) and h (•) are white- and black-box functions, respectively [17]. We showed that COBALT can achieve significant (orders of magnitude) gains in sampling efficiency over state-of-the-art alternatives on a variety of problems; however, it does have certain restrictions: (i) the acquisition function does not directly handle noisy function observations; (ii) it uses an approximate constraint handling method based on linearization of the probabilistic surrogate model around its mean prediction, which may lead to problems when the constraints are highly nonlinear; and (iii) there is not a straightforward way to theoretically analyze its performance including establishing bounds on its rate of convergence. In this talk, we develop a novel approach for constrained BO of expensive noisy hybrid models that addresses the three restrictions of COBALT mentioned previously. The fundamental basis for the proposed method is the notion of quantile functions, which can be used to evaluate the likely prediction range of a random variable given a desired probability level. In the fully black-box case (with GP surrogate models), the predictions of the unknown functions will be normally distributed such that the quantile function has an analytic form – this leads to the well-known upper confidence bound (UCB) acquisition function [18] whose practical and theoretical performance has been extensively studied in the literature in the presence and absence of noise [19-21]. Extending UCB to hybrid models is non-trivial due to the difficulty in evaluating and optimizing over the quantile function for non-standard distributions. We overcome this challenge by developing a sample-based approximation wherein the Nα sorted sample (when N samples are sorted in ascending order) is a convergent estimate of the quantile function evaluated at probability level α . Since sorting is non-differentiable, we also develop a differentiable sorting approximation via soft projection operators [22], which allows us to apply efficient maximize the quantile-based acquisition function. Using these differentiable quantile function approximations for the objective and constraints, we can directly address the noise (i) and constraint (ii) problems of COBALT. We further establish theoretical performance guarantees (to address (iii)) on the cumulative regret and constraint violation by bounding the predictions from the quantile function in terms of the maximum information gain of the GP models. This implies that, for a wide class of covariance functions, we can guarantee a finite iteration exists in which our best sample point is arbitrarily close to the constrained global solution. Thus, in sharp contrast to existing methods, our method is easy to implement, effective in practice, and enjoys a guarantee of global optimality. The effectiveness of the proposed quantile-based BO method is demonstrated on several test problems including parameter estimation in an environmental model and real-time optimization of a nonlinear reactor system wherein we consistently observe similar or improved performance over COBALT. References: [1] Frazier, Peter I. \"A tutorial on Bayesian optimization.\" arXiv preprint arXiv:1807.02811 (2018). [2] Shahriari, B., Swersky, K., Wang, Z., Adams, R. P., & De Freitas, N. (2015). Taking the human out of the loop: A review of Bayesian optimization. Proceedings of the IEEE, 104(1), 148-175. [3] Williams, Christopher KI, and Carl Edward Rasmussen. Gaussian processes for machine learning. Vol. 2. No. 3. Cambridge, MA: MIT press, 2006. [4] M. Lindauer, K. Eggensperger, M. Feurer, A. Biedenkapp, D. Deng, C. Benjamins, T. Ruhkopf, R. Sass, and F. Hutter, “Smac3: A versatile bayesian optimization package for hyperparameter optimization,” Journal of Machine Learning Research, vol. 23, pp. 1–9, 2022. [5] P. I. Frazier and J. Wang, “Bayesian optimization for materials design,” in Information Science for Materials Discovery and Design. Springer, 2016, pp. 45–75. [6] R. A. Vargas-Hernandez, “Bayesian optimization for calibrating and selecting hybrid-density functional models,” The Journal of Physical Chemistry A, vol. 124, no. 20, pp. 4053–4061, 2020 [7] Lu, Congwen, and Joel A. Paulson. \"No-regret Bayesian optimization with unknown equality and inequality constraints using exact penalty functions.\" IFAC-PapersOnLine 55.7 (2022): 895-902. [8] Khan, Nazan, David E. Goldberg, and Martin Pelikan. \"Multi-objective Bayesian optimization algorithm.\" Proceedings of the 4th Annual Conference on Genetic and Evolutionary Computation. 2002. [9] Song, Jialin, Yuxin Chen, and Yisong Yue. \"A general framework for multi-fidelity bayesian optimization with gaussian processes.\" The 22nd International Conference on Artificial Intelligence and Statistics. PMLR, 2019. [10] Kudva, Akshay, Farshud Sorourifar, and Joel A. Paulson. \"Constrained robust Bayesian optimization of expensive noisy black‐box functions with guaranteed regret bounds.\" AIChE Journal 68.12 (2022): e17857. [11] H. Chen. Lower rate of convergence for locating a maximum of a function. The Annals of Statistics, 1330-1334, 1988. [12] J. P. Eason, L. T. Biegler, A trust region filter method for glass box/black box optimization, AIChE Journal 62 (9) (2016) 3124-3136. [13] I. Bajaj, S. S. Iyer, M. M. F. Hasan, A trust region-based two phase algorithm for constrained black-box and grey-box optimization with infeasible initial point, Computers & Chemical Engineering 116 (2018) 306-321. [14] S. H. Kim, F. Boukouvala, Surrogate-based optimization for mixed-integer nonlinear problems, Computers & Chemical Engineering 140 (2020) 106847 [15] B. Beykal, F. Boukouvala, C. A. Floudas, N. Sorek, H. Zalavadia, E. Gildin, Global optimization of grey-box computational systems using surrogate functions and application to highly constrained oil- eld operations, Computers & Chemical Engineering 114 (2018) 99-110 [16] B. Beykal, F. Boukouvala, C. A. Floudas, E. N. Pistikopoulos, Optimal design of energy systems using constrained grey-box multi-objective optimization, Computers & Chemical Engineering 116 (2018) 488-502. [17] J.A. Paulson & C. Lu. COBALT: COnstrained Bayesian optimizAtion of computationaLly expensive grey-box models exploiting derivaTive information. Computers & Chemical Engineering, 160, 107700, 2022. [18] Srinivas, N., Krause, A., Kakade, S. M., & Seeger, M. W. (2012). Information-theoretic regret bounds for gaussian process optimization in the bandit setting. IEEE transactions on information theory, 58(5), 3250-3265. [19] Berkenkamp, Felix, Angela P. Schoellig, and Andreas Krause. \"No-regret bayesian optimization with unknown hyperparameters.\" arXiv preprint arXiv:1901.03357 (2019). [20] Chowdhury, Sayak Ray, and Aditya Gopalan. \"On kernelized multi-armed bandits.\" International Conference on Machine Learning. PMLR, 2017. [21] Vakili, Sattar, Kia Khezeli, and Victor Picheny. \"On information gain and regret bounds in gaussian process bandits.\" International Conference on Artificial Intelligence and Statistics. PMLR, 2021. [22] Blondel, M., Teboul, O., Berthet, Q., & Djolonga, J. (2020, November). Fast differentiable sorting and ranking. In International Conference on Machine Learning (pp. 950-959). PMLR.",
+    "presenting_author": "Congwen Lu | The Ohio State University, Columbus",
+    "authors": [
+      "Congwen Lu | The Ohio State University, Columbus",
+      "Joel Paulson | The Ohio State University, Columbus"
+    ],
+    "authors_structured": [
+      {
+        "name": "Congwen Lu",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "282c",
+    "sortable_time": "2023-11-07_13:12:00_13:33:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669450"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/671135",
+    "paper_endpoint": "Paper/671135",
+    "paper_id": "671135",
+    "topic": "A Multiparametric Programming Approach to Solving Neural Network-Based Optimization Problems with Application to Control",
+    "title": "A Multiparametric Programming Approach to Solving Neural Network-Based Optimization Problems with Application to Control",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52068",
+    "session_title": "Data-driven and Surrogate Optimization in Operation I",
+    "session_number": "282",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Recently, it has been shown that rectified linear unit (ReLU) based neural networks (NN) are mixed integer linear representable and, therefore, can be incorporated into mixed integer programming frameworks. This has led to many applications, including detecting adversarial inputs to a ReLU NN classifier [1], explicit model predictive control [2], and optimization of oil production [3]. Many contributions to the literature have focused on the effective tightening of ReLU mixed integer representations, thus making the mixed integer program more tractable to solve [1, 4, 5]. In this presentation, we propose a novel tightening procedure based on a multiparametric programming reformulation of the corresponding ReLU reformulated optimization problem. The bounding procedure features 1) generating valid tight bounds on the individual auxiliary variables introduced from the ReLU NN reformulation and 2) generating bounds on the binary variables relating to each layer of the ReLU reformulation. The tightened bounds are valid for all realizations of parameters and, thus, are valid for any realization of the problem and would only happen once and offline. As this bounds-tightening procedure is applied offline, more computationally expensive methods for formulation tightening can be applicable than in the case where tightening occurs purely online. Thus larger computational benefits can be observed than in the online case. We demonstrate the effectiveness of this method in a case study of model predictive control of a nonlinear chemostat where the dynamics are approximated via a ReLU NN. [1] Calvin Tsay, Jan Kronqvist, Alexander Thebelt, and Ruth Misener. Partition-based formulations for mixed-integer optimization of trained relu neural networks. Advances in Neural Information Processing Systems, 34:3068–3080, 2021. [2] Justin Katz, Iosif Pappas, Styliani Avraamidou, and Efstratios N Pistikopoulos. Integrating deep learning models and multiparametric programming. Computers & Chemical Engineering, 136:106801, 2020. [3] Bjarne Grimstad and Henrik Andersson. Relu networks as surrogate models in mixed-integer linear programs. Computers & Chemical Engineering, 131:106580, 2019. [4] Ross Anderson, Joey Huchette, Will Ma, Christian Tjandraatmadja, and Juan Pablo Vielma. Strong mixed-integer programming formulations for trained neural networks. Mathematical Programming, 183(1):3–39, 2020. [5] Christian Tjandraatmadja, Ross Anderson, Joey Huchette, Will Ma, Krunal Kishor Patel, and Juan Pablo Vielma. The convex relaxation barrier, revisited: Tightened single-neuron relaxations for neural network verification. Advances in Neural Information Processing Systems, 33:21675–21686, 2020.",
+    "presenting_author": "Dustin Kenefake | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+    "authors": [
+      "Dustin Kenefake | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+      "Rahul Kakodkar | Texas A&M University, College Station, TX",
+      "Moustafa Ali | Texas A&M University, College Station, TX",
+      "Efstratios Pistikopoulos | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Dustin Kenefake",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Rahul Kakodkar",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Moustafa Ali",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Efstratios Pistikopoulos",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "282d",
+    "sortable_time": "2023-11-07_13:33:00_13:54:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/671135"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/665720",
+    "paper_endpoint": "Paper/665720",
+    "paper_id": "665720",
+    "topic": "Mixed-Integer Programming Representations of Linear Model Decision Tree Surrogates",
+    "title": "Mixed-Integer Programming Representations of Linear Model Decision Tree Surrogates",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52068",
+    "session_title": "Data-driven and Surrogate Optimization in Operation I",
+    "session_number": "282",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Significant advances in mixed-integer linear programming (MILP) and mixed-integer quadratic constrained programming (MIQCP) solvers (e.g., Gurobi) have resulted in increased interest in piecewise-linear surrogates within optimization settings. Piecewise-linear functions can be formulated as MILPs (Vielma et al., 2010), and they have been utilized extensively to approximate nonlinear, nonconvex functions that are difficult to optimize. More recently, several piecewise-linear machine learning (ML) models such as neural networks (NNs) with rectified linear unit (ReLU) activation functions (Fischetti & Jo, 2018), ensembles of decision trees (Mistry et al., 2021; Mišić, 2020) and linear model decision trees, have also been explored within optimization frameworks. However, given the many possible MILP and MIQCP representations of these piecewise-linear models and recent advances in solver capabilities, questions remain concerning the computational performance of these different representations when embedded within a broader optimization setting. In this work, we aim to gain insight into this general question by specifically evaluating the computational performance of linear model decision trees, ReLU NNs, and gradient boosted decision trees (GBDTs) embedded within MILPs and MIQCPs. Linear model decision trees differ from standard decision trees by returning linear regression models rather than constants at the leaf nodes. Among many of their advantages include their ability to represent discontinuous functions, and potentially approximate arbitrary functions with smaller trees and reduced error. When embedding these smaller linear model decision trees within optimization problems, their fewer leaves correspond to fewer constraints. Multiple MILP and MIQCP representations of linear model decision trees have been developed utilizing Generalized Disjunctive Programming (GDP) formulations, extensions of existing formulations for standard trees, and hybrid Big-M methods. We present several case studies, including process family design (Stinchfield et al., 2022), flexibility analysis (Swaney & Grossmann, 1985), and global optimization that showcase the benefits of linear model decision trees. We also investigate the computational performance of different representations for linear model decision trees, including both MILP and MICQP formulations, and discuss the properties of these formulations. Finally, we compare the performance of linear model decision trees against other ML models, including GBDTs using the Optimization and Machine Learning Toolkit (OMLT) (Ceccon et al., 2022). Acknowledgements Sandia National Laboratories is a multimission laboratory managed and operated by National Technology & Engineering Solutions of Sandia, LLC, a wholly owned subsidiary of Honeywell International Inc., for the U.S. Department of Energy’s National Nuclear Security Administration under contract DE-NA0003525. This paper describes objective technical results and analysis. Any subjective views or opinions that might be expressed in the paper do not necessarily represent the views of the U.S. Department of Energy or the United States Government References Ceccon, F., Jalving, J., Haddad, J., Thebelt, A., Tsay, C., Laird, C. D., and Misener, R. (2022). “OMLT: Optimization & Machine Learning Toolkit.” Journal of Machine Learning Research, 23(349):1–8. Fischetti, M. and Jo, J. (2018). “Deep Neural Networks and Mixed Integer Linear Optimization.” Constraints, 23:296–309. Mistry, M., Letsios, D., Krennrich, G., Lee, R. M., and Misener, R. (2021). “Mixed-integer Convex Nonlinear Optimization with Gradient-boosted Trees Embedded.” INFORMS Journal on Computing, 33:1103–1119. Mišić, V. V. (2020). “Optimization of Tree Ensembles.” Operations Research, 68:1605–1624. Stinchfield, G., Biegler, L. T., Eslick, J. C., Jacobson, C., Miller, D. C., Siirola, J. D., Zamarripa A., Zhang, C., Zhang, Q., and Laird, C. D. (2022). “Optimization-based Approaches for Design of Chemical Process Families Using ReLU Surrogates.” in proceedings of Foundations of Computer Aided Process Operations, Jan. 2023. Swaney, R. E. and Grossmann, I. E. (1985). “An Index for Operational Flexibility in Chemical Process Design.” AIChE Journal, 31:621–630 Vielma, J. P., Ahmed, S., and Nemhauser, G. (2010). “Mixed-integer Models for Nonseparable Piecewise-linear Optimization: Unifying Framework and Extensions.” Operations Research, 58:303–315.",
+    "presenting_author": "Bashar Ammari | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Bashar Ammari | Carnegie Mellon University, Pittsburgh, PA",
+      "Emma Johnson | Center for Computing Research, Sandia National Laboratories, Albuquerque, NM",
+      "Georgia Stinchfield | Carnegie Mellon University, Pittsburgh, PA",
+      "Taehun Kim | Georgia Institute of Technology, Atlanta, GA",
+      "Michael Bynum | Center for Computing Research, Sandia National Laboratories, Albuquerque, NM",
+      "William E. Hart | Sandia National Laboratories, Albuquerque, NM",
+      "Joshua Pulsipher | Carnegie Mellon University, Pittsburg, PA",
+      "Carl Laird | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bashar Ammari",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Emma Johnson",
+        "affiliation": "Center for Computing Research, Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Georgia Stinchfield",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Taehun Kim",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Bynum",
+        "affiliation": "Center for Computing Research, Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "William E. Hart",
+        "affiliation": "Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Joshua Pulsipher",
+        "affiliation": "Carnegie Mellon University, Pittsburg, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Carl Laird",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "282e",
+    "sortable_time": "2023-11-07_13:54:00_14:15:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/665720"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/663488",
+    "paper_endpoint": "Paper/663488",
+    "paper_id": "663488",
+    "topic": "Hierarchical Planning-Scheduling-Control - Optimality Surrogates upon Optimality Surrogates",
+    "title": "Hierarchical Planning-Scheduling-Control - Optimality Surrogates upon Optimality Surrogates",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52068",
+    "session_title": "Data-driven and Surrogate Optimization in Operation I",
+    "session_number": "282",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Mathematical optimization is key to the hierarchical integration of process operations ranging from process and supply chain design down to planning, scheduling, and control [1]. Traditionally, upper-level decisions are taken while disregarding lower-level considerations, and then fed as setpoints to the lower levels. Ensuring lower-level feasibility and optimality however leads to large-scale, potentially multilevel, formulations which are not just computationally intractable, but also mathematically difficult [2]. Optimality surrogates and black-box optimization have already been leveraged to find good solutions to multilevel formulations in the integration of planning, scheduling, and control [3]. In this work, we explore if we can use optimality surrogates for both the integration of planning and scheduling and the integration of scheduling and control. The use of surrogate models for the integration of planning-scheduling-control is well-established and is related to the concepts of meta-, scale-bridging, or reduced models [4-7]. Advances in data-driven techniques have been twofold for this community [8]: First, supervised learning has shifted the focus of surrogate type from system identification to supervised learning techniques such as Artificial Neural Networks, Gaussian Processes, and Decision Trees. Second, software developments have enabled the seamless merging of Machine Learning and optimization pipelines. OMLT for example automates the reformulation of trained neural networks and decision trees into mixed-integer linear constraints and their subsequent embedding into Pyomo blocks [9]. We draw another distinction in the use of approximation models that only map the upper-level relevant variables as a function of the variables that feed from the upper into the lower level [5, 10]: We call `feasibility surrogates' and `optimality surrogates' the use of any approximation model used to map lower-level feasibility or lower-level optimal response variables or objectives as a function of upper-level complicating variables or `setpoints'. ‘Optimality surrogates’ have analogues and similarities across many disciplines, from multi-parametric model predictive control [11], to learning value functions in Reinforcement Learning [12]. In this work, we start by training optimal control surrogates that map a set of sampled batch production targets to their corresponding optimal control responses. The optimal control surrogate can then be seamlessly integrated into the scheduling optimization formulation, collapsing a bi-level into a single-level integrated scheduling-control formulation. Similarly, we train an integrated scheduling-control surrogate on planning targets and their corresponding integrated scheduling-control optimization results. As such, we can find an approximate solution to the tri-level planning-scheduling-control problem by solving a single-level planning formulation with these embedded approximate optimal scheduling and control cost surrogates. Given our choice in surrogates, this is an MILP which can be tractably solved by state-of-the-art solvers as compared to monolithic MINLP formulations. The use of surrogates inherently involves a trade-off between computational tractability and optimization solution quality. Employing composite optimality surrogates (approximations of approximations) increases the risk of small model inaccuracies being amplified to the point that they cannot be used for optimization. Consequently, we use multi-objective Bayesian optimization [13] for hyperparameter tuning of the optimality surrogate architecture to trade-off the optimization solution time and solution quality obtained after embedding the integrated scheduling-control surrogates into the planning optimization problem. Sometimes, decision-making at the different hierarchical levels is intractable enough to prevent any attempt at integration. We highlight under which conditions optimality surrogates can be used towards a tractable planning-scheduling-control solution of a multi-site, multi-product case study [3]. We place special emphasis in our discussion on the role that understanding the interplay of Machine Learning and optimization pipelines has on navigating the inherent accuracy-tractability trade-off, and discuss other tools to hedge the risk that surrogate model inaccuracies pose. Finally, we discuss how we can adaptively leverage data and update models in practice to efficiently solve the integrated problem on a monthly basis. References C. E. Gounaris, I. E. Grossmann, 2019, A preface to the special issue on enterprise-wide optimization, Optimization and Engineering 20(4), 965–968 Y. Chu, F. You, 2015, Model-based integration of control and operations: Overview, challenges, advances, and opportunities, Computers & Chemical Engineering 83, 2–20 D. van de Berg, N. Shah, E. A. del Rio-Chanona, 2023, Data-driven distributed optimization for systems consisting of expensive black-box subproblems, 33rd European Symposium on Computer-Aided Process Engineering (accepted) G. G. Wang, S. Shan, 2007, Review of Metamodeling Techniques in Support of Engineering Design Optimization, Journal of Mechanical Design, 129(4), 370-380 J. Du, J. Park, I. Harjunkoski, M. Baldea, 2015, A time scale-bridging approach for integrating production scheduling and process control, Computers & Chemical Engineering, 79, 56-69 C. Tsay, A. Kumar, J. Flores-Cerrillo, M. Baldea, 2019, Optimal demand response scheduling of an industrial air separation unit using data-driven dynamic models, Computers & Chemical Engineering, 126, 22-34 O. Andrés-Martínez, L.A. Ricardez-Sandoval, 2022, Integration of planning, scheduling, and control: A review and new perspectives, Canadian Journal of Chemical Engineering, 100, 2057 C. Tsay, M. Baldea, 2019, 110th Anniversary: Using Data to Bridge the Time and Length Scales of Process Systems, Industrial & Engineering Chemistry Research, 58, 36, 16696–16708 F. Ceccon, J. Jalving, J. Haddad, A. Thebelt, C. Tsay, C. D. Laird, R. Misener, 2022, OMLT: Optimization & Machine Learning Toolkit, Journal of Machine Learning Research, 23, 1-8 L.S. Dias, M.G. Ierapetritou, 2020, Integration of planning, scheduling and control problems using data-driven feasibility analysis and surrogate models. Computers & Chemical Engineering, 134, 106714 S. Avraamidou, E. N. Pistikopoulos, 2019, A Bi-Level Formulation And Solution Method For The Integration Of Process Design And Scheduling. Proceedings of the 9th International Conference on Foundations of Computer-Aided Process Design, 47, 17-22 S. Sachio, M. Mowbray, M. Papathanasiou, E.A. del Rio-Chanona, P. Petsagkourakis, 2021, Integrating process design and control using reinforcement learning. Chemical Engineering Research and Design, 183, 160-169 Y. Li, Y. Shen, W. Zhang, Y. Chen, H. Jiang, M. Liu, J. Jiang, J. Gao, W. Wu, Z. Yang, C. Zhang, B. Cui, 2021, OpenBox: A Generalized Black-box Optimization Service, Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery & Data Mining, 3209-3219",
+    "presenting_author": "Damien van de Berg | Imperial College London, United Kingdom",
+    "authors": [
+      "Damien van de Berg | Imperial College London, United Kingdom",
+      "Nilay Shah | Imperial College London, United Kingdom",
+      "Ehecatl Antonio del Rio Chanona | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Damien van de Berg",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nilay Shah",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Ehecatl Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "282f",
+    "sortable_time": "2023-11-07_14:15:00_14:36:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/663488"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670902",
+    "paper_endpoint": "Paper/670902",
+    "paper_id": "670902",
+    "topic": "Differentiable Physics-Based Surrogate Models and Automated Sensor Placement Optimization for Efficient Risk Control of Chemical Leaks",
+    "title": "Differentiable Physics-Based Surrogate Models and Automated Sensor Placement Optimization for Efficient Risk Control of Chemical Leaks",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52068",
+    "session_title": "Data-driven and Surrogate Optimization in Operation I",
+    "session_number": "282",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The accidental release of hazardous chemicals can lead to large-scale industrial disasters, such as fires, explosions, or poisoning. Detection and appropriate response to chemical leaks are crucial in preventing such accidents. In this study, we propose the optimization process defines a refined risk function and objective function that includes coverage, rather than just reducing detection time. This allows for more accurate and effective optimization of sensor placement, specifically tailored to real-world industrial scenarios, while still operating robustly in new scenarios. We present a framework for detecting chemical leaks using a differentiable physics-based surrogate model and a sensor placement optimization tool, which combines a limited number of sensors. The surrogate model is developed based on differentiable physics and provides faster results than traditional CFD tools. By optimizing the sensor placement, this framework can quickly respond to chemical leaks. The surrogate model can also be combined with a CNN-based deep learning model to provide high-resolution outputs from low-resolution inputs. Using MINLP, sensor placement optimization can be performed, taking into account various constraints. Overall, this study has the potential to contribute to the development of effective solutions for detecting and preventing the uncertainty of chemical leaks.",
+    "presenting_author": "Kangseop Kim | Myongji University, Yongin, Korea, Republic of (South)",
+    "authors": [
+      "Kangseop Kim | Myongji University, Yongin, Korea, Republic of (South)",
+      "Donghyeon Lee | Myongji University, Yongin, Korea, Republic of (South)",
+      "Dongil Shin | Myongji University, Yongin, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kangseop Kim",
+        "affiliation": "Myongji University, Yongin, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Donghyeon Lee",
+        "affiliation": "Myongji University, Yongin, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Dongil Shin",
+        "affiliation": "Myongji University, Yongin, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "282g",
+    "sortable_time": "2023-11-07_14:36:00_14:57:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670902"
+  }
+]

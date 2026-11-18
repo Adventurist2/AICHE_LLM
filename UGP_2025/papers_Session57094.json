@@ -1,0 +1,271 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/712092",
+    "paper_endpoint": "Paper/712092",
+    "paper_id": "712092",
+    "topic": "Multi Agent Reinforcement Learning and Graph Neural Networks for Inventory Management",
+    "title": "Multi Agent Reinforcement Learning and Graph Neural Networks for Inventory Management",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57094",
+    "session_title": "10C: Operations Under Uncertainty",
+    "session_number": "125",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "1. Introduction Classic methods to solve the inventory control problem involve heuristics such as the (s,S) and (r,Q) policy [1, 2]. These heuristics are traditionally used due to the ease of their implementation but lack adaptability to changing demand patterns and coordination amongst different entities leading to sub-optimal performance [2]. Another common method involves dynamic programming, a mathematical optimization technique which solves complex problems by breaking them down into small subproblems. This offers a more robust solution but becomes computationally infeasible for complex systems due to the curse of dimensionality. Reinforcement learning (RL) offers a promising alternative approach by combining the strengths of dynamic programming and heuristics, offering an approximate dynamic programming solution [3]. This allows RL to adapt better to changing demand patterns and uncertainties in the supply chain, enhancing decision-making in supply chains. However, as the supply chain grows in size, traditional RL, and Linear Programming (LP) methods may struggle due to the increased complexity and computational requirements. Moreover, both LP and RL can provide optimal solutions but require full online information about the system, which may not always be feasible or practical in real-world scenarios when information sharing constraints are present. 2. Methodology MARL and GNN Framework for Supply Chain Optimization To overcome these limitations, we propose a multi-agent reinforcement learning (MARL) framework enhanced with Graph Neural Networks (GNNs) for multi-echelon inventory management. MARL operates in a distributed decision-making framework, allowing agents to make decisions based on local observations and interactions, improving scalability and coordination in large-scale supply chains. Our framework follows the Centralized Training, Decentralized Execution (CTDE) paradigm, where central state information is shared offline during training, while only local state information is required during online execution. Additionally, to capture the inherent structure of supply chains, we model the supply chain as a graph, where nodes represent individual entities (such as retailers, warehouses, or suppliers) and edges capture interactions such as inventory flow. GNNs leverage this graph structure to aggregate information from neighboring nodes, capturing hidden interdependencies that are critical for improving coordination and decision-making in multi-agent systems. This aggregated information is then used to train the critic, enhancing policy learning and guiding more effective and collaborative inventory strategies. We introduce two versions of our framework: (1) a GNN-critic approach, where the aggregated vector from the GNN trains the critic, improving policy learning through hidden interdependencies, and (2) a global mean pooling framework that aggregates vectors from the GNN hence reducing dimensionality and computational complexity without compromising performance as shown in Figure 2. Both frameworks leverage the supply chain's structure to learn hidden interdependencies, enhancing communication and coordination between entities for improved decision-making in the multi-agent system. Action Space Redefinition While the MARL+GNN framework addresses scalability and coordination challenges, RL often struggles with integer or mixed-integer decisions, which are common in inventory management problems (e.g., order quantities). As the scale of inventory systems increases, the complexity of the decision-making process grows, resulting in a significantly larger action space. This increased complexity can hinder the effectiveness of RL algorithms, requiring extensive training data and longer convergence times to identify optimal policies. To mitigate these challenges, we redefine the action space to parametrize a heuristic (s, S) policy, as shown in Figure 1, enhancing adaptability, practicality, and explainability for real-world implementation. Rather than directly predicting order replenishment quantities, which can be difficult to scale, we model the action space as continuous in the range [-1, 1], allowing the policy to dynamically adjust the reorder point (s) and order-up-to level (S). By treating these parameters as stochastic variables drawn from Gaussian distributions, our approach adapts more effectively to fluctuations in demand and lead-time uncertainties, improving performance across various supply chain configurations. 3. Results and Discussion We evaluate our framework across four supply chain configurations, ranging from 6 to 24 nodes, and compare its performance against the heuristic (s, S) policy, single-agent RL, and two multi-agent RL baselines — IPPO (Independent Proximal Policy Optimization) and MAPPO (Multi Agent Proximal Policy Optimization). Our evaluation focuses on key KPIs such as profit, backlog, and on-hand inventory as shown in Figure 3. The results demonstrate that graph-based methods consistently outperform traditional approaches, with the GNN framework using global mean pooling and regularization achieving the best results. This framework balances computational efficiency with optimal decision-making by leveraging global mean pooling to reduce dimensionality and applying regularization to prevent overfitting, ensuring robust performance across diverse supply chain environments. Additionally, we perform an uncertainty analysis by varying the level of uncertainty in demand to assess the robustness of the policies as shown in Figure 4. We observe that the standard deviation of profit remains relatively unchanged, indicating that the policies are robust to fluctuations in demand. 4. Conclusions This work presents a MARL framework enhanced with GNNs for multi-echelon inventory management, addressing scalability and coordination challenges in large-scale supply chains. By modeling the supply chain as a graph, our approach captures critical interdependencies between entities, improving decision-making across diverse environments. We redefine the action space to parametrize a heuristic (s, S) policy, enabling dynamic adjustments of reorder points and order-up-to levels. Our results show that graph-based methods consistently outperform traditional approaches, with the GNN framework using global mean pooling and regularization achieving the best performance. Future work will explore the integration of attention networks to assign varying importance to neighboring nodes, allowing the framework to retain more local, spatial information. We plan to extend the approach to more complex systems involving a larger number of products and non-stationary demand, better mimicking real-world supply chain conditions and further improving the scalability and adaptability of the model. The full paper is available at https://arxiv.org/abs/2410.18631 and the codes are available at https://github.com/OptiMaL-PSE-Lab/MultiAgentRL_InventoryControl . [1] Jackson, I., Tolujevs, J. and Kegenbekov, Z., 2020. Review of inventory control models: a classification based on methods of obtaining optimal control parameters. Transport and Telecommunication, 21(3), pp.191-202. [2] Brunaud, B., Laínez‐Aguirre, J.M., Pinto, J.M. and Grossmann, I.E., 2019. Inventory policies and safety stock optimization for supply chain planning. AIChE journal, 65(1), pp.99-112. [3] Hubbs, C.D., Li, C., Sahinidis, N.V., Grossmann, I.E. and Wassick, J.M., 2020. A deep reinforcement learning approach for chemical production scheduling. Computers & Chemical Engineering, 141, p.106982. [4] Daoutidis, P., Allman, A., Khatib, S., Moharir, M.A., Palys, M.J., Pourkargar, D.B. and Tang, W., 2019. Distributed decision making for intensified process systems. Current Opinion in Chemical Engineering, 25, pp.75-81. [5] Sarkis, M., Bernardi, A., Shah, N. and Papathanasiou, M.M., 2021. Decision support tools for next-generation vaccines and advanced therapy medicinal products: present and future. Current Opinion in Chemical Engineering, 32, p.100689. [6] Mousa, M., van de Berg, D., Kotecha, N., del Rio-Chanona, E.A. and Mowbray, M., 2023. An Analysis of Multi-Agent Reinforcement Learning for Decentralized Inventory Control Systems. arXiv preprint arXiv:2307.11432. [7] Liu, X., Hu, M., Peng, Y. and Yang, Y., 2022. Multi-Agent Deep Reinforcement Learning for Multi-Echelon Inventory Management. Available at SSRN.",
+    "presenting_author": "Niki Kotecha | Imperial College London, United Kingdom",
+    "authors": [
+      "Niki Kotecha | Imperial College London, United Kingdom",
+      "Antonio del Rio Chanona | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Niki Kotecha",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Antonio del Rio Chanona",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "125a",
+    "sortable_time": "2025-11-03_12:30:00_12:51:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/712092"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714392",
+    "paper_endpoint": "Paper/714392",
+    "paper_id": "714392",
+    "topic": "Global and Robust Optimisation for Non-Convex Quadratic Programs",
+    "title": "Global and Robust Optimisation for Non-Convex Quadratic Programs",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57094",
+    "session_title": "10C: Operations Under Uncertainty",
+    "session_number": "125",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Robust optimisation aims to find solutions that remain feasible for all values within a given uncertainty set while optimising for the worst-case scenario. The main challenge lies in reformulating the uncertain problem into a deterministic, tractable form. For nonlinear convex problems, convex analysis can enable such reformulations for convex uncertainty sets. However, in many practical cases, a local robust solution is insufficient, requiring a combination of robust and global optimisation techniques. In [1], a tailored branch-and-bound algorithm was applied to scheduling crude oil operations under demand uncertainty, deriving the robust counterparts of the uncertain constraints. The robust pooling problems using both dual reformulations and cutting plane methods was evaluated in [2] while adaptively adjusting the tolerance of the global solver. In [3], a robust cutting set algorithm was developed to certify robust solutions for non-convex problems with many equalities. Additionally, [4] applied enhanced multiparametric disaggregation (ENMDT) and bound tightening to solve refinery planning under uncertainty. [5] proposed a global optimisation method that bypasses convexity by iteratively relaxing constraints in the outer minimisation problem, relying instead on continuity. The robustness and optimality of these solutions often depend on the solver used being either robust optimal or robust feasible. Our research hypothesis is that the integrated exploration of global and robust optimality can yield computational benefits. To this end, we have introduced a novel algorithm that conducts a concurrent global optimality and robustness search for continuous non-convex problems [6]. The key idea of the Robust spatial-Branch-and-Bound (RsBB) algorithm is that while exploring the branch-and-bound tree, we assess the robustness of nodes entailing the best-found solutions. In the proposed Robust-spatial-Branch-and-Bound algorithm (RsBB), we aim to integrate the robust cutting planes with the spatial Branch-and-Bound (sBB) algorithm. Relying on a local NLP solver, the proposed algorithm is evaluating the robustness of the solutions in a branching tree. The outline of the proposed algorithm is presented in Figure 1. The performance and benefits of our proposed approach is assessed via benchmark Quadratically Constrained Quadratic Programs (QCQPs) of pooling problems. For the original non-convex pooling problem we derive the convex relaxation using McCormick envelopes . For the initial variable bounds at the root node, problem is solved using a local solver. If the computed solution at a node is as good as the best-found so far , an infeasibility test is performed to evaluate the robustness of the obtained solution. The infeasibility test entails solving linear problems that aim to maximise the uncertain constraint violation. If such a violation occurs, then the corresponding robust cuts are added both to and . The cutting plane algorithm continues at the root node until no more robustness violations are detected. Until this step, the proposed algorithm follows the typical robust cutting plane algorithm. The following steps of the algorithm correspond the Branch-and-Bound algorithm. The branching variable is selected based on the maximum approximation error and a pseudoscore evaluation. The branching point is selected as the bisection in the domain of the selected branching variable. Nodes for which the solution is greater than the best-found solution of are fathomed. The next node is updated as the waiting node with the lowest solution. If the waiting nodes are exhausted, the robust optimal solution of the problem is obtained. For the computational experiments we evaluate the performance of the RsBB algorithm for 10 benchmark pooling problems under feed quality uncertainty for box, ellipsoidal and polyhedral uncertainty sets of varying size. Figure 1 shows that the number of tree nodes explored by the RsBB algorithm generally decreases as the uncertainty set size increases. For set sizes above 0.15, all set types lead to fewer than 15 nodes, with little variation. At smaller sizes, variability increases, with the box set requiring the most nodes, followed by ellipsoidal and polyhedral. This is due to the box set representing the most conservative uncertainty, while ellipsoidal and polyhedral sets require more iterations to capture extreme parameter combinations. For the foulds2 problem (Figure 3) increasing the uncertainty size (Ψ) reduces RsBB iterations, and the root node optimality gap. Figure 3b shows that for Ψ = 0.15, 11 robust cut iterations lead to the robust optimal solution, while Ψ = 0.1 results in fewer cuts and a higher gap. Overall, greater conservatism—via set size or type—improves RsBB performance by tightening the feasible region through robust cuts. In conclusion, the proposed RsBB algorithm combines the principles of spatial branch-and-bound (sBB) and robust cutting planes to solve continuous non-convex problems under convex uncertainty sets. The proposed approach is applied to QCQP pooling problems utilising McCormick envelopes to obtain convex lower bounds. The inlet quality parameter was treated as uncertain, with its range defined by box, ellipsoidal, and polyhedral uncertainty sets of varying sizes. We observed that using robust cutting planes in the sBB algorithm serves as an effective feasibility bounds tightening method. Finally, the integration of robust cuts is proven to have a beneficial impact on the sBB algorithm facilitating the optimality search both in terms of problem tractability and CPU time. Ongoing work in our work is looking into extending this approach to general non-convex problems. Acknowledgements Financial support under the EPSRC grant ADOPT (EP/W003317/1) is gratefully acknowledged by the authors. References [1] Li, J., Misener, R., & Floudas, C. A. (2011). Scheduling of Crude Oil Operations Under Demand Uncertainty: A Robust Optimization Framework Coupled with Global Optimization. AIChE Journal, 58, 2373–2396. https://doi.org/10.1002/aic.12772 [2] Wiebe, J., Cecĺlio, I., & Misener, R. (2019). Robust Optimization for the Pooling Problem. Industrial and Engineering Chemistry Research, 58(28), 12712–12722. https://pubs.acs.org/doi/full/10.1021/acs.iecr.9b01772 [3] Isenberg, N. M., Akula, P., Eslick, J. C., Bhattacharyya, D., Miller, D. C., & Gounaris, C. E. (2021). A generalized cutting-set approach for nonlinear robust optimization in process systems engineering. AIChE Journal, 67(5), e17175. https://doi.org/10.1002/AIC.17175 [4] Zhang, L., Yuan, Z., & Chen, B. (2021). Refinery-wide planning operations under uncertainty via robust optimization approach coupled with global optimization. Computers & Chemical Engineering, 146, 107205. https://doi.org/10.1016/J.COMPCHEMENG.2020.107205 [5] Mitsos, A., Tsoukalas, A. (2015). Global optimization of generalized semi-infinite programs via restriction of the right hand side. Journal of Global Optimization 61, 1–17. https://doi.org/10.1007/S10898-014-0146-6 [6] Marousi A., Charitopoulos V. M. (2025). Global and Robust Optimisation for Non-Convex Quadratic Programs. arXiv preprint. arXiv:2503.07310",
+    "presenting_author": "Asimina Marousi | University College London, WC1E 7JE, United Kingdom",
+    "authors": [
+      "Asimina Marousi | University College London, WC1E 7JE, United Kingdom",
+      "Vassilis Charitopoulos | University College London, WC1E 7JE, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Asimina Marousi",
+        "affiliation": "University College London, WC1E 7JE, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Vassilis Charitopoulos",
+        "affiliation": "University College London, WC1E 7JE, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "125b",
+    "sortable_time": "2025-11-03_12:51:00_13:12:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714392"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/718535",
+    "paper_endpoint": "Paper/718535",
+    "paper_id": "718535",
+    "topic": "Demand Response Aggregation Under Customer Response Uncertainty",
+    "title": "Demand Response Aggregation Under Customer Response Uncertainty",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57094",
+    "session_title": "10C: Operations Under Uncertainty",
+    "session_number": "125",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Demand response (DR), where electricity consumers adjust their consumption profiles in response to price signals from the electricity market, is considered a crucial strategy for maintaining a stable power grid and achieving a sustainable energy system with net-zero carbon emissions [1]. In the context of DR, smaller loads are often combined such they can collectively participate in the wholesale electricity market. This aggregation of DR resources is typically coordinated by DR aggregators that serve as intermediaries between the electricity consumers and the market or grid operator. In this work, we take the perspective of a DR aggregator that operates in the ancillary services market to provide interruptible load to the grid using their customers' aggregated load. Interruptible load refers to load reduction capacity that the grid operator can call upon during contingency events when power demand exceeds supply in the grid [2]. In such an event, electricity consumers providing interruptible load can be requested to reduce their load up to an agreed maximum amount. Here, the DR aggregator decides how much interruptible load to sell to the market while ensuring that this required load reduction can be provided by their customers, i.e. the electricity consumers, when requested. A major challenge is due to the fact that the DR aggregator typically cannot force their customers to reduce their load but instead needs to offer a payment to incentivize load reduction. However, while the likelihood of a customer accepting the payment and performing the corresponding load reduction increases with the offered price, we do not know in advance how high this price has to be [3, 4]. We address this problem of DR aggregation under customer response uncertainty, where the amount of load reduction that each customer is willing to provide is an uncertain parameter, using a robust optimization approach. The uncertainty set is decision-dependent as it changes as a function of the price offered by the DR aggregator; the resulting robust optimization problem is known to be very difficult to solve [5]. However, it turns out that in this case, the uncertainty set has a specific structure that can be exploited. Specifically, it allows us to develop a tailored column-and-constraint generation algorithm that involves the generation of cuts parametrized by the decisions affecting the uncertainty. Each cut represents a possible realization of the uncertainty, which in turn corresponds to a vertex of the polyhedral uncertainty set; hence, we can parametrize it using the set of active constraints at that vertex. Results from our computational experiments show that the proposed algorithm significantly outperforms the traditional reformulation method [6] in larger instances. In our case study, we also demonstrate the advantage of the robust optimization approach over a deterministic approach that ignores the uncertainty in an out-of-sample analysis. References 1. IEA. Tracking clean energy progress 2023. Technical report, International Energy Agency, 2023. URL https://www.iea.org/energy-system/energy-efficiency-and-demand/demand-response. 2. Jnana Sai Jagana, Satyajith Amaran, and Qi Zhang. Multistage robust mixed-integer optimization for industrial demand response with interruptible load. Computers & Chemical Engineering, 194:108974, 2025. 3. Xiaoxing Lu, Xinxin Ge, Kangping Li, Fei Wang, Hongtao Shen, Peng Tao, Junjie Hu, Jingang Lai, Zhao Zhen, Miadreza Shafie-khah, et al. Optimal bidding strategy of demand response aggregator based on customers’ responsiveness behaviors modeling under different incentives. IEEE Transactions on Industry Applications, 57(4):3329–3340, 2021. 4. Fei Wang, Xinxin Ge, Peng Yang, Kangping Li, Zengqiang Mi, Pierluigi Siano, and Neven Dui´c. Day-ahead optimal bidding and scheduling strategies for der aggregator considering responsive uncertainty under real-time pricing. Energy, 213:118765, 2020. 5. Nikolaos H Lappas and Chrysanthos E Gounaris. Robust optimization for decision-making under endogenous uncertainty. Computers & Chemical Engineering, 111:252–266, 2018. 6. Qi Zhang and Wei Feng. A unified framework for adjustable robust optimization with endogenous uncertainty. AIChe journal, 66(12):e17047, 2020.",
+    "presenting_author": "Jnana Sai Jagana | University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "Jnana Sai Jagana | University of Minnesota, Minneapolis, MN",
+      "Qi Zhang | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jnana Sai Jagana",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Qi Zhang",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "125c",
+    "sortable_time": "2025-11-03_13:12:00_13:33:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/718535"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714546",
+    "paper_endpoint": "Paper/714546",
+    "paper_id": "714546",
+    "topic": "Improved Computational Tractability of Optimal Experiment Design in Pyomo",
+    "title": "Improved Computational Tractability of Optimal Experiment Design in Pyomo",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57094",
+    "session_title": "10C: Operations Under Uncertainty",
+    "session_number": "125",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Advancements within science typically involve observing phenomena and utilizing experimental data to verify a scientific hypothesis to explain why or how this observation can be explained. These experiments require thought and experience to curate data revealing important scientific information about the hypothesis. However, in many areas of interest, experimental campaigns are limited by costs associated with material availability (e.g., novel pharmaceutical materials), labor or time availability (e.g., biological or population experiments), and equipment availability (e.g., atomic material characterization). For this reason, it is essential to design experimental campaigns that maximize the information about the system in the least number of experiments possible. Typical experimental design procedures involve factorial [1], partial factorial, or space-filling designs [2]. However, these procedures scale with the number of experimental design decisions, presenting significant challenges with high-cost systems. Model-based design of experiments (MBDoE) utilizes a mathematical model to guide experimentation by fitting a surface to experimental data and leveraging statistical information content to design the most impactful experiments [3]. Typically, this is done with response surface models [4], which ignore any knowledge of the first-principles equations that dictate system behavior. Therefore, science-based design of experiments (SBDoE) utilizes the same statistical information criteria as MBDoE but leverages the mathematical structure of the first-principles model to guide optimal experimental design. Over the past couple of years, we have developed and improved Pyomo.DoE [5], an open-source, equation-oriented experimental design tool to automate building and solving optimal SBDoE problems. We typically use the most common statistical criteria, A- and D-optimality, to minimize the average variance of the estimated parameters or the overall volume of the confidence ellipsoid of the estimated parameters, respectively. These criteria are convenient because they can be posed directly within an equation-oriented framework relatively quickly. However, the most popular objective, D-optimality, tends to focus on improving the confidence in the direction of the highest confidence, subsequently ignoring areas of high uncertainty within the model. Therefore, E- and ME- (or K-) optimality, minimizing the uncertainty of the most uncertain parameter or balancing the uncertainty of the most and least certain parameters, respectively, are significantly more relevant in cases where there are parameters with relatively large uncertainty. To the author’s knowledge, these criteria have remained unimplemented in equation-oriented platforms (such as Pyomo.DoE) due to the difficulty of extracting eigenvalues on the fly within an algebraic program. However, using grey-box optimization within Pyomo [6], these objectives can be realized within Pyomo.DoE. One challenge while implementing grey-box models within Pyomo is the high-quality derivative information required of the external computation (e.g., the E- or ME-optimality objectives). Therefore, analytical expressions for E- and ME-optimality objective derivatives have been derived and implemented. In addition, computing D-optimal designs in Pyomo.DoE currently requires factorization to explicitly compute the determinant in an algebraic form [7]. With the grey-box approach, D-optimal designs have seen a speedup of two times with less than half of the solver iterations required when compared with the explicit algebraic alternative. We present these new capabilities in Pyomo.DoE and show their ability to improve models that have parameters with identifiability problems. Ongoing work includes benchmarking the new GreyBox implementation on a suite of MBDoE test problems. This includes challenging large-scale applications, such as carbon dioxide removal, to identify isotherm parameters and optimal experimental conditions for improved model quality with plans for future model (isotherm) discrimination. The addition of grey-box objectives diversifies the functionality of Pyomo.DoE and improves computational efficiency on popular objectives (e.g., D-optimality) when compared with the current algebraic implementation. Acknowledgement The authors acknowledge funding from the U.S. Department of Energy, Office of Fossil Energy and Carbon Management, through the Carbon Dioxide Removal Program. Disclaimer This project was funded by the Department of Energy, National Energy Technology Laboratory an agency of the United States Government, in part, through a support contract. Neither the United States Government nor any agency thereof, nor any of its employees, nor the support contractor, nor any of their employees, makes any warranty, expressor implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof, or any of their contractors. References: A. Jankovic, G. Chaudhary and F. Goia, Designing the design of experiments (DOE) – An investigation on the influence of different factorial designs on the characterization of complex systems, Energy and Buildings 250 (2021) 111298 E. Skubalska-Rafajlowicz and E. Rafajlowicz, Searching for optimal experimental designs using space-filling curves Appl. Math. and Camp. Sci. 8 (3) (1998) pp.647-656 R.A. Fisher. The Design of Experiments. Oliver & Boyd ; 1949. E.M. Williamson, Z. Sun, L. Mora-Tamez, and R.L. Brutchey, Design of experiments for nanocrystal syntheses: A how-to guide for proper implementation, Chemistry of Materials 34 (22) (2022) J. Wang, A. W. Dowling, Pyomo.DoE: An open-source package for model-based design of experiments in python, AIChE Journal 68 (12) (2022) e17813. J. S. Rodriguez, C. D. Laird, V. M. Zavala, Scalable pre-conditioning of block-structured linear algebra systems using ADMM, Computers & Chemical Engineering 133 (2020) 106478. doi: https://doi.org/10.1016/j.compchemeng.2019.06.003 . J. Wang, Z. Peng, R. Hughes, D. Bhattacharyya, D.E. Bernal Neira, and A.W. Dowling, Measure this, not that: Optimization the cost and model-based information content of measurements, Computers & Chemical Engineering 189 (2024) 108786",
+    "presenting_author": "Daniel Laky | University of Notre Dame, IN",
+    "authors": [
+      "Daniel Laky | University of Notre Dame, IN",
+      "Alexander Dowling | University of Notre Dame, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daniel Laky",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Alexander Dowling",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "125d",
+    "sortable_time": "2025-11-03_13:33:00_13:54:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714546"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716419",
+    "paper_endpoint": "Paper/716419",
+    "paper_id": "716419",
+    "topic": "Decision-Aware Scenario Reduction Via Partial Optimal Transport for Efficient Stochastic Optimization",
+    "title": "Decision-Aware Scenario Reduction Via Partial Optimal Transport for Efficient Stochastic Optimization",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57094",
+    "session_title": "10C: Operations Under Uncertainty",
+    "session_number": "125",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Stochastic optimization is a framework for modeling decision-making under uncertainty, where the objective is to find a decision that minimizes the expected cost over a distribution of uncertain parameters. In practice, the underlying probability distribution is often approximated by a finite empirical distribution derived from sampled scenarios. However, solving stochastic optimization problems with a large number of scenarios can be computationally prohibitive. Various scenario reduction methods have been proposed [1,2,3]. However, few of them consider the decision quality while applied to the stochastic optimization problems [4]. To address this challenge, we propose a decision-aware scenario reduction framework based on partial optimal transport theory that balances computational tractability with solution fidelity. Our approach formulates scenario reduction as a constrained optimization problem in which a reduced distribution is constructed by reweighting a subset of scenarios from the original empirical distribution while discarding the rest. To control the fraction of information retained, we introduce a dummy scenario that absorbs the discarded mass, parameterized by a user-defined retention ratio. The reduced distribution is supported on the original scenarios, and the optimal transport from the full to the reduced distribution is constrained to have zero cost under the Wasserstein metric, ensuring that probability mass can only be transferred from a scenario to itself or to the dummy point. This enforces strict subset selection and prevents mixing between distinct scenarios. One advantage of this proposed method is that it does not use integer variables in the final optimization model. We propose decision-aware scenario reduction frameworks through incorporating the impact of scenario reduction on the stochastic optimization task. Two frameworks for decision-aware scenario reduction are proposed: 1) In the first framework, we precompute optimal values from single-scenario deterministic subproblems and define a cost matrix over these outcomes. A classical optimal transport problem is then formulated to minimize the Wasserstein distance between the full and reduced distributions of objective values, ensuring the decision quality is preserved post-reduction. The stochastic optimization problem can be implemented based on the reduced scenarios subsequently. 2) In the second framework, we jointly optimize both the scenario reduction and the stochastic optimization objective, i nstead of solving each scenario-specific subproblem in advance. This is achieved by formulating a composite objective that combines the scenario reduction loss and the stochastic optimization cost, weighted appropriately. We develop an efficient iterative algorithm that alternates between updating the reduced distribution and solving the stochastic optimization problem We demonstrate the effectiveness of the proposed method using stochastic supply chain optimization problems. The results show that the reduced scenario set maintains high fidelity to the original optimization outcomes, as evidenced by the preservation of both the scenario distribution and the distribution of optimal values. The proposed framework bridges the gap between data-driven scenario generation and decision-aware learning, offering an effective tool for solving stochastic optimization models. References: [1] Heitsch, H., & Römisch, W. Scenario reduction algorithms in stochastic programming. Computational optimization and applications, 2003, 24, 187-206. [2] S. Kammammettu, Z. Li. Scenario Reduction and Scenario Tree Generation for Stochastic Programming using Sinkhorn Distance. Computers & Chemical Engineering. 2023, 170, 108122. [3] Zhuangzhi Li, Z. Li. Linear Programming based Scenario Reduction using Transportation Distance. Computers & Chemical Engineering. 2016, 88, 50-58. [4] Z. Li, C.A. Floudas. Optimal scenario reduction framework based on distance of uncertainty distribution and output performance: I. Single reduction via mixed integer linear optimization. Computers & Chemical Engineering. 2014, 70, 50-66.",
+    "presenting_author": "Zukui Li | University of Alberta, Edmonton, Canada",
+    "authors": [
+      "Zukui Li | University of Alberta, Edmonton, Canada",
+      "Zhongyu Zhang | University of Alberta, Edmonton, Canada",
+      "Adrian Paredes Bozzo | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zukui Li",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhongyu Zhang",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Adrian Paredes Bozzo",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "125e",
+    "sortable_time": "2025-11-03_13:54:00_14:15:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716419"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713619",
+    "paper_endpoint": "Paper/713619",
+    "paper_id": "713619",
+    "topic": "A Framework for Uncertainty Quantification Based on Differentiable Programming",
+    "title": "A Framework for Uncertainty Quantification Based on Differentiable Programming",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57094",
+    "session_title": "10C: Operations Under Uncertainty",
+    "session_number": "125",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Uncertainty quantification (UQ) in mapping/propagation is a ubiquitous problem in science. It permeates our field broadly, ranging from applications associated with the biopharmaceutical manufacturing sector [1], epidemiological modeling [2], and integrated fuel and process design [3] to name a few. Therefore, its importance cannot be underestimated. Traditional uncertainty mapping methods [4], such as Monte Carlo (MC) sampling, polynomial chaos expansion (PCE), and linear methods based on Taylor series expansions often face limitations when dealing with nonlinearities or high-dimensional problems, given inherent computational burden or model selection complexity. Motivated by this, in this work, we developed a UQ approach that is based on differentiable programming concepts. This novel approach takes advantage of the increased commoditization of machine learning frameworks [5], especially the ones related to automatic differentiation of complete codebases, that gives access to accurate, precise and fast evaluations of high-order derivatives of implicit and high-dimensional mathematical models. Our approach is conceptually straightforward, consisting of employing the implicit function theorem (IFT) and a path integration boundary from Domain to Image. This has been applied generally as an inverse problem [6], and in this work we motivate the boundaries in terms of uncertainty regions generated by covariance among parameters, as well as more complex uncertainty envelopes, including multimodal and high-dimensional distributions (e.g., described by ellipsoids). Our uncertainty mapping approach inherits some desired properties from our previous work [6] such as: (i) the direction of the uncertainty mapping is flexible, and uncertainties can be mapped as a forward or inverse problem which relates to uncertainty propagation and inverse UQ; (ii) it does not require brute-force enumeration to obtain the Image; and (iii) it is conceptually simpler to be employed when compared to the current uncertainty mapping techniques in the literature while maintaining adequate solution accuracy, as long as a differentiable process model is available. Case studies related to process systems engineering applications of increased complexity are addressed, ranging from simple models with analytical solutions to systems of differential equations, in which an iterative solution is required in order to quantify uncertainty related to process variables. The results show that the proposed method when compared against Monte Carlo simulations, yields accurate results while being easier to employ and computationally more efficient. Additionally, it maps uncertainty regions within a confidence interval, irrespective of the shape of the given region. Therefore, this work can be considered as an initial step towards employing differentiable programming in a practical way for engineering problems related to UQ. References [1] L. H. Mervin, S. Johansson, E. Semenova, K. A. Giblin, and O. Engkvist, “Uncertainty quantification in drug design,” Drug Discov. Today, vol. 26, no. 2, pp. 474–489, Feb. 2021, doi: 10.1016/j.drudis.2020.11.027. [2] “The impact of uncertainty on predictions of the CovidSim epidemiological code | Nature Computational Science.” Accessed: Apr. 03, 2025. [Online]. Available: https://www.nature.com/articles/s43588-021-00028-9 [3] M. Panofen, P. Ackermann, J. Viell, A. Mitsos, and M. Dahmen, “Uncertainty Quantification in Integrated Fuel and Process Design,” Energy Fuels, vol. 38, no. 15, pp. 14743–14756, Aug. 2024, doi: 10.1021/acs.energyfuels.4c02285. [4] S. H. Lee and W. Chen, “A comparative study of uncertainty propagation methods for black-box-type problems,” Struct. Multidiscip. Optim., vol. 37, no. 3, pp. 239–253, Jan. 2009, doi: 10.1007/s00158-008-0234-7. [5] J. R. Kitchin, V. Alves, and C. D. Laird, “Beyond the fourth paradigm of modeling in chemical engineering,” Nat. Chem. Eng., vol. 2, no. 1, pp. 11–13, Jan. 2025, doi: 10.1038/s44286-024-00170-x. [6] V. Alves, J. R. Kitchin, and F. V. Lima, “An inverse mapping approach for process systems engineering using automatic differentiation and the implicit function theorem,” AIChE J., vol. 69, no. 9, p. e18119, 2023, doi: 10.1002/aic.18119.",
+    "presenting_author": "Victor Alves | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Victor Alves | Carnegie Mellon University, Pittsburgh, PA",
+      "Carl Laird | Carnegie Mellon University, Pittsburgh, PA",
+      "Fernando Lima | West Virginia University, Morgantown, WV",
+      "John Kitchin | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Victor Alves",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Carl Laird",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Fernando Lima",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "John Kitchin",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "125f",
+    "sortable_time": "2025-11-03_14:15:00_14:36:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713619"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716290",
+    "paper_endpoint": "Paper/716290",
+    "paper_id": "716290",
+    "topic": "Distributionally Robust Optimization for Gaussian Mixture Model Ambiguity Under Moment Variations",
+    "title": "Distributionally Robust Optimization for Gaussian Mixture Model Ambiguity Under Moment Variations",
+    "date_time": "2025-11-03_12:30:00_15:00:00",
+    "session_id": "57094",
+    "session_title": "10C: Operations Under Uncertainty",
+    "session_number": "125",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "In conventional deterministic optimization problems, it is typically assumed that all model parameters are precisely known and fixed. However, this assumption is often unrealistic in practice, as many parameters may be unknown or difficult to predict accurately, and they can fluctuate over time or be influenced by random factors.[1] Assuming uncertain parameters are known with certainty often leads to infeasible or suboptimal decisions when implemented in real-world situations. Distributionally robust optimization (DRO) methods have gained significant attention as effective approaches for addressing uncertainty in solving optimization problems. It aims to determine an optimal solution that remains effective under the worst-case distribution within the ambiguity set. The Wasserstein DRO method[2], which does not impose assumptions on the properties of candidate distributions within the ambiguity set, has been extensively studied. However, in some cases, a Gaussian mixture model (GMM) serves as an effective representation of the distribution of uncertain parameters. The existing W d weight DRO method[3] uses this property by constructing an ambiguity set around a GMM, where the Gaussian components of the candidate distributions are fixed, and variability arises from the component weights. But this approach may suffer from inaccuracies in the specified Gaussian components and risks insufficient robustness when ambiguity set saturation occurs. In this work, we propose a complementary GMM-based DRO approach W d moment that specifies the component weights of the candidate GMM distributions while allowing variability in the Gaussian components. The tractable formulation is developed using the McCormick envelope, and an iterative bound tightening algorithm is applied. The proposed method is compared with Wasserstein DRO and W d weight DRO. The results show that the proposed DRO method achieves a favorable balance between conservatism and robustness. [1] Balasubramanian, J.; Grossmann, I. E. Scheduling optimization under uncertainty—an alternative approach. Computers & Chemical Engineering 2003, 27, 469–490. [2] Kuhn, Daniel, et al. \"Wasserstein distributionally robust optimization: Theory and applications in machine learning.\" Operations research & management science in the age of analytics. Informs, 2019. 130-166. [3] Kammammettu, S.; Yang, S.-B.; Li, Z. Distributionally robust optimization using optimal transport for Gaussian mixture models. Optimization and Engineering 2023, 1–26.",
+    "presenting_author": "Zhongyu Zhang | University of Alberta, Edmonton, Canada",
+    "authors": [
+      "Zhongyu Zhang | University of Alberta, Edmonton, Canada",
+      "Biao Huang | University of Alberta, Edmonton, Canada",
+      "Zukui Li | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zhongyu Zhang",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Biao Huang",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Zukui Li",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "125g",
+    "sortable_time": "2025-11-03_14:36:00_14:57:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716290"
+  }
+]

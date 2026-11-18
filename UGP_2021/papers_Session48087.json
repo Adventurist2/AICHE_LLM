@@ -1,0 +1,354 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/629589",
+    "paper_endpoint": "Paper/629589",
+    "paper_id": "629589",
+    "topic": "Machine Learning for Process Applications in Cement Industries",
+    "title": "Machine Learning for Process Applications in Cement Industries",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48087",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "287",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "1. Introduction Cement grinding is a key process in the cement industry. During this phase , gypsum and mineral or artificial raw materials (eg pozzolan, ash, limestone) are added to the clinker (basic raw material for cement production) and, then grinded in special mills until a very small grain size is achieved. During the grinding process, corrective actions are constantly taken, in both the quota of the ingredients of the recipe and the operating parameters of the mill in order to achieve the appropriate fineness of the mixture. Large amount of electrical energy is consumed for mill operation. Therefore, it is essential for a cement industry to estimate its energy consumption in its cement mills. Estimation of the energy consumption can be used in a number of processes, such as assisting in the process of compliance with the requirements of ISO 50001 for energy efficiency, detecting changes in the operating parameters of the mill to save energy and executing scenarios for the energy consumption footprint of new mixtures. To this end, we propose a model that estimates the energy consumption of a cement mill. We followed a data-driven approach, utilizing historical data recorded during the grinding process, and we designed and implemented machine learning models for energy prediction. Our models have been applied in TITAN SA plant in Kamari Viotia. Results show that we achieved an improvement of accuracy for energy consumption prediction by one order of magnitude, based on baseline method. 2. Background TITAN uses a proprietary methodology for creating a model for estimating energy consumption in the company’s cement mills. This methodology takes into consideration a number of variables, such as the cement mix composition and the product’s blaine. At the core of this modelling approach is a linear function with weighted fractions of clinker, gypsum, slag, fly ash, pozzolan, limestone and other components in the product. The weights assigned to each component of the mix are estimated for each of TITAN’s cement mills using linear regression on past data. The methodology also adds to the model corrections for overgrinding of the softer components, and also takes into consideration the operational parameters for each type of cement mill (e.g. mill type, separator type etc). The model created by this methodology, calculates the estimation of power consumption for a standard blaine value, and then , using an adjustment formula , corrects it to the final estimation based on the product’s blaine. In our approach we were granted full access to the proprietary methodology adopted by TITAN (not to be disclosed in this abstract ), in order to use it as a baseline method and compare the results of our methodology. 3. Methodology 3.1 Data collection We collected hourly operations data from TITAN Kamari cement plant, near Athens, from January 2018 to August 2019. The processing of the data resulted in a dataset with 15,592 records and 43 features. Data is comprised of features for cement mix composition (e.g. the percentage of, clinker, gypsum, fly ash, etc), and operational parameters (e.g, like separator speed, fan speed, etc). Furthermore, measurements from sensors (temperature in various stages of the mill process, etc), quantities of additives and qualitative characteristics of the mix (blaine, etc) are some extra sets of features that were included in the data. 3.2 Prediction Methods based on Machine Learning We implemented a group of models using 7 prediction methods, grouped in 3 major categories, (a) Multiple Linear Regression, (b) Ensemble Methods, and (c) Hyperplanes. Multiple Linear Regression includes the classic form of linear regression that calculates the coefficients of a linear function by minimizing the mean square error between the predicted and the actual values. In the Ensemble Methods, AdaBoost , XGBoost and Random Forests perform target estimation by combining estimates of many individual prediction models based on decision trees. Finally, Hyperplanes included Support Vector Regression-SVR is based on the support vector machine classification model. Feature selection and cross-validation . We performed feature ranking through recursive feature elimination and cross-validated selection of the best number of features. More particularly, starting with a list of all features, the method recursively deletes one feature in every repetition. Finally, we came up with a list of features that returned the best results during the evaluation of the model based on the validation set. F or the implementation of our methods, 80% of the whole dataset is used as the training set and the rest as testing set which is used for the evaluation of the model. M odel implementation was performed with the method of cross-validation Specifically, we applied K-Fold cross-validation. This method uses different parts of data to fit and test the model. In particular, the method consists of the following steps: Data is splitted into K equal-sized folds. For the k-th fold, the model is fitted to the other K-1 folds. Prediction error of the fitted model is calculated when predicting the k-th fold. The second and third step are repeated for all folds and the K estimates of prediction error are combined. In t he K-Fold cross-validation that we performed, we have split the training set into 4 folds with suffling. Evaluation metrics . For every dataset that we used in our methodology (training, validation and testing), we calculate evaluation metrics to understand the model’s behavior and its’ predictive ability. A simple metric is Mean Absolute Error (MAE) which is the sum of the average of the absolute difference between the predicted and actual values. Another metric used is the Mean Squared Error (MSE), which is the same as the MAE, but the difference is that it squares the difference between actual and predicted values before summing them all. Root Mean Squared Error (RMSE) is taking the square root of MSE. Also, we used R ^2 (R-squared) which quantifies the quality of fit of a set of predicted output values to the actual output values. 4. Results As mentioned above, in our experiment the K-Fold cross-validation we have split the training set into 4 folds with suffling. Initially, we examined the evaluation metrics in a validation set. For the Multiple Linear Regression methods, the R ^2 and MSE in every fold of the validation set had high standard deviation, indicating poor performance of these methods. Hence, it was not worthwhile to check their evaluation metrics in the testing set. The same behavior was observed for Support Vector Regression. In contrast, Ensemble methods performed very well, so we continued by exploring the evaluation metrics, for those methods, in the testing set. The baseline method had a poor performance, indicated by the negative R ^2 , and high values of MAE, MSE and RMSE. Among Ensemble methods, AdaBoost had the worst performance with an R ^2 in the testing set not exceeding 0.6, and MAE almost 1.8. Concerning Random Forest, even though the results in the training set seemed promising, its performance in the validation and the testing sets wasn’t as good as expected. Finally, XGBoost Regression delivered the best results among all methods, regarding all evaluation metrics, since the R ^2 in the testing set fluctuated near 0.65, the MAE was reduced even more and the MSE was the lowest observed among all three methods. Comparing the results from the XG-Boost to those from the baseline method, we observe a decrease both in MAE and MSE. In general, Ensemble methods delivered improved results. To this end, as results demonstrate, the machine learning methods used in this study, outperformed the baseline method. 5. Conclusions To summarise, following data science practices and adopting machine learning (ML) technologies, we developed energy consumption prediction models for a cement mill of TITAN SA plant in Kamari Viotia. The models exploit historical sensor measurements and operational data and give predictions for energy consumption achieving an improvement of accuracy for energy consumption prediction by one order of magnitude, based on baseline method. Specifically, the top three models reached MAE less than 1.77 (the existing baseline method has a MAE >4.00) and R2 more than 0.57 (the existing baseline method has a R2 <0,20).",
+    "presenting_author": "Thanasis Gentimis | SYMBIOLABS Circular Intelligence PC, Marousi, Greece",
+    "authors": [
+      "Christos Chatzilenas | SYMBIOLABS Circular Intelligence PC, Marousi, Greece",
+      "Thanasis Gentimis | SYMBIOLABS Circular Intelligence PC, Marousi, Greece",
+      "Antonios Kokosis | National Technical University of Athens, Greece",
+      "Theodore Dalamagas | SYMBIOLABS Circular Intelligence PC, Marousi, Greece"
+    ],
+    "authors_structured": [
+      {
+        "name": "Christos Chatzilenas",
+        "affiliation": "SYMBIOLABS Circular Intelligence PC, Marousi, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Thanasis Gentimis",
+        "affiliation": "SYMBIOLABS Circular Intelligence PC, Marousi, Greece",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Antonios Kokosis",
+        "affiliation": "National Technical University of Athens, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Theodore Dalamagas",
+        "affiliation": "SYMBIOLABS Circular Intelligence PC, Marousi, Greece",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "287a",
+    "sortable_time": "2021-11-09_12:30:00_12:49:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/629589"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632061",
+    "paper_endpoint": "Paper/632061",
+    "paper_id": "632061",
+    "topic": "Deep Learning Tools for Dense Fluorescent Microscopic Images and C. Elegans Whole-Brain Imaging",
+    "title": "Deep Learning Tools for Dense Fluorescent Microscopic Images and C. Elegans Whole-Brain Imaging",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48087",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "287",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "C. elegans is an extremely useful model organism in understanding neural basis of behaviors because of several advantageous features. The nematode has a small and fully mapped nervous system, displays complex behaviors, and is amenable to fluorescence imaging. Recent advances in microscopy have enabled simultaneous recording of activities of the entire brain of freely behaving C. elegans, thus producing a mine of rich datasets. Advances in deep learning and computer vision have revolutionized analysis of neuron activity and behavioral data in neuroscience community but tools for C. elegans are not available. Here we present a deep learning (DL) toolbox – a collection of three deep learning methods to solve challenging problems in C. elegans whole-brain imaging. First, accurate segmentation of densely packed nuclei in fluorescence channels is critical for downstream tasks such as cell tracking, signal extraction and identity annotation. While many deep learning methods are available for 2D images, 3D segmentation methods for highly anisotropic images are not available. We combined a well-known DL framework for instance segmentation in 2D images [1] with optimal transport [2] based clustering to produce 3D segmentations in anisotropic images. Comparison against other methods on experimental and synthetic datasets show that our method is more accurate (5-8% higher F1 score) and more robust across a range of baseline cell signals and image noise levels (6-17% higher F1 score). Further DL method is 3.7 times faster than previous method. Second, whole-brain imaging in freely moving worms is currently not widespread because of the requirement of custom designed microscopes with low-magnification behavior tracking and high-magnification fluorescence imaging channels [3-4]. However, commonly available microscopes in most laboratories do not have two light-paths for simultaneous low-magnification and high-magnification imaging. Thus, we developed and optimized a fast DL framework (30-644 times smaller model size and 5-8 times faster than previous methods) to directly predict the worm pose (skeleton) from high-magnification fluorescence channels, a key step in analyzing the behavior of animal. Fast inference of pose using only fluorescence channel enables worm-tracking thus eliminating the need of separate behavior channel. We show that predicted worm pose can be used for behavior analysis and cell-tracking in videos. Further, eliminating the need of custom microscopes will enable more labs to do whole-brain imaging in freely moving animals. Third, image quality produced in microscope depends on acquisition parameters such as speed of imaging, laser power etc. For whole-brain imaging applications, high speed (>2 volumes per second) is necessary to capture fast activity transients, and low laser power is favorable to prevent photo-bleaching of fluorophores, light damage to worms etc. However high speed and low laser power acquisition decreases the signal-to-noise-ratio (SNR) in images. We developed a DL framework for restoring low SNR fluorescence images (acquired at low laser power/low exposure time) to high SNR images. Low laser power imaging eliminates photo-bleaching of fluorophores, light damage to worms and enables long-term neuron activity imaging across days. Image restoration can be performed on both GCaMP (green fluorescent protein for measuring neuron activity) and RFP (red fluorescent protein) channels. We show that restored images provide cleaner calcium signals compared to traditional de-noising methods (13-30% smaller mean-absolute error compared to clean trace). Additionally, restored images improve cell detection, tracking and identity annotation tasks. Methods in our toolbox can be easily adapted for similar tasks in other organisms. These three methods will enable several applications e.g. accurate cell detection will improve cell tracking and signal extraction thus enabling faster analysis of datasets. Skeleton prediction method will enable more researchers to do whole-brain imaging in freely moving animals thus advancing the whole-brain research. Finally signal restoration method will enable newer studies such as long-term imaging of whole-brain circuits without photo-damage. Further cleaner neuron activity traces extracted from restored images will empower downstream statistical analysis such PCA, low-dimensional manifold projection etc. He, K., Gkioxari, G., Dollár, P., & Girshick, R. (2017). Mask R-CNN. 2017 IEEE International Conference on Computer Vision (ICCV), 2980–2988. https://doi.org/10.1109/ICCV.2017.322 Cuturi, M. (2013). Sinkhorn Distances: Lightspeed Computation of Optimal Transport. In C. J. C. Burges, L. Bottou, M. Welling, Z. Ghahramani, & K. Q. Weinberger (Eds.), Advances in Neural Information Processing Systems (Vol. 26). Curran Associates, Inc. https://proceedings.neurips.cc/paper/2013/file/af21d0c97db2e27e13572cbf59eb343d-Paper.pdf Nguyen, J. P., Shipley, F. B., Linder, A. N., Plummer, G. S., Liu, M., Setru, S. U., Shaevitz, J. W., & Leifer, A. M. (2015). Whole-brain calcium imaging with cellular resolution in freely behaving Caenorhabditis elegans. Proceedings of the National Academy of Sciences of the United States of America, 9, 33. https://doi.org/10.1073/pnas.1507110112 Venkatachalam, V., Ji, N., Wang, X., Clark, C., Mitchell, J. K., Klein, M., Tabone, C. J., Florman, J., Ji, H., Greenwood, J., Chisholm, A. D., Srinivasan, J., Alkema, M., Zhen, M., & Samuel, A. D. T. (2016). Pan-neuronal imaging in roaming Caenorhabditis elegans. In Proceedings of the National Academy of Sciences of the United States of America (Vol. 113, Issue 8). https://doi.org/10.1073/pnas.1507109113",
+    "presenting_author": "Shivesh Chaudhary | Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Shivesh Chaudhary | Georgia Institute of Technology, Atlanta, GA",
+      "Hang Lu | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shivesh Chaudhary",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Hang Lu",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "287b",
+    "sortable_time": "2021-11-09_12:49:00_13:08:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632061"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632203",
+    "paper_endpoint": "Paper/632203",
+    "paper_id": "632203",
+    "topic": "Machine Learning to Speed up Dynamic Flux Balance Analysis (FBA) and FBA-Based Reactive Transport Simulations",
+    "title": "Machine Learning to Speed up Dynamic Flux Balance Analysis (FBA) and FBA-Based Reactive Transport Simulations",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48087",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "287",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Advancement in experimental and instrumental technologies has generated an increasingly large body of omics data for environmental systems. Genome-scale metabolic networks are considered an ideal tool to integrate these molecular data for predictive biogeochemical modeling. We recently developed a workflow using the DOE’s KBase (www.kbase.us) modeling pipeline for biogeochemical and reactive transport modeling based on genome-scale metabolic networks built from metagenomes and other omics data. Flux balance analysis of genome-scale metabolic networks is an established method for predicting microbial flux distributions and growth, but its coupling with reactive transport models is challenging due to the significant computational burden. To overcome this barrier, here we present neural network-based reduced-order modeling as a new component of our genome-scale network-based biogeochemical and reactive transport modeling pipeline. We demonstrated the effectiveness of this new pipeline in 0-dimensional batch/continuous reactor and 1-dimensional column configurations. In case studies using metagenomes and high-resolution metabolomic data of river corridor samples collected by the PNNL’s River Corridor Scientific Focus Area (SFA) team, the neural network-based reduced-order models achieved significant time reduction, e.g., from hours to less than a second in the column simulation. This development therefore enables an unprecedented level of detail in representing biogeochemistry in reactive transport models while reducing the computational time to the point that the incorporation of molecular data and insights into multi-scale biogeochemical and reactive transport modeling is possible in practical settings. Ultimately this development will lead to improved understanding and enhanced predictions at larger scales.",
+    "presenting_author": "Hyun-Seob Song | University of Nebraska-Lincoln",
+    "authors": [
+      "Hyun-Seob Song | University of Nebraska-Lincoln",
+      "Joon-Yong Lee | Pacific Northwest National Laboratory, Richland, WA",
+      "William Nelson | Pacific Northwest National Laboratory, Richland, WA",
+      "Christopher S. Henry | Argonne National Laboratory, IL",
+      "Janaka N. Edirisinghe | Argonne National Laboratory, Lemont, IL",
+      "J. David Moulton | Los Alamos National Laboratory, NM",
+      "Xingyuan Chen | Pacific Northwest National Laboratory, Richland, WA",
+      "Timothy Scheibe | Pacific Northwest National Laboratory, Richland, WA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hyun-Seob Song",
+        "affiliation": "University of Nebraska-Lincoln",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joon-Yong Lee",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      },
+      {
+        "name": "William Nelson",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      },
+      {
+        "name": "Christopher S. Henry",
+        "affiliation": "Argonne National Laboratory, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Janaka N. Edirisinghe",
+        "affiliation": "Argonne National Laboratory, Lemont, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "J. David Moulton",
+        "affiliation": "Los Alamos National Laboratory, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Xingyuan Chen",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      },
+      {
+        "name": "Timothy Scheibe",
+        "affiliation": "Pacific Northwest National Laboratory, Richland, WA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "287c",
+    "sortable_time": "2021-11-09_13:08:00_13:27:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632203"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/632207",
+    "paper_endpoint": "Paper/632207",
+    "paper_id": "632207",
+    "topic": "Coarse-Grained Dynamics for Epidemics on Adaptive Networks",
+    "title": "Coarse-Grained Dynamics for Epidemics on Adaptive Networks",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48087",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "287",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Modeling of epidemic dynamics is crucial in understanding and mitigating the spreading of diseases in the real world, and it has attracted increased attention from mathematicians again due to the ongoing coronavirus break-out since last year. The more well-known mathematical models for epidemic dynamics are the family of compartmental models, which can be studied in both a mean-field setting and with complex, possibly adaptive, network coupling [1]. Adaptive networks can successfully incorporate the change of status of individuals and their connections in a larger community. The so-called Adaptive Susceptible-Infected-Susceptible (SIS) network is actually a dynamic graph in which every person appears as a node with social connections as edges [2]. Such models can accurately account for the interacting individual level; yet, the most valuable information comes at the system-level. For example, healthcare policies must be made or revised based on a few collective variable predictions, rather than the time-series of individuals. Here, we use Diffusion Maps (DMAP), a popular dimension-reduction approach, to parameterize and learn coarse-grained dynamics. However, as with other unsupervised learning methods, DMAP is typically applied to data points that are vectors in Euclidean space with an appropriate distance metric; we thus need to transform our original data, where each point is a large labelled graph. To achieve this we consider the different types of graph nodes separately, and for each type, we obtain information about corresponding subgraph densities (e.g. number of edges, 2-connected edges and triangles, etc, see Figure for illustration); we concatenate these features, and normalize the resulting vector [3]. These vectors will be fed into the DMAP algorithm to generate our data-driven low-dimensional representations. We then use black-box models (e.g. deep neural networks) to learn, and subsequently predict temporal evolution of these coarse variables, circumventing the time-consuming computation involved in long-time runs of the adaptive SIS network stochastic simulations. Additionally, after these tasks have been performed, we use bifurcation analysis on the surrogate macroscopic dynamics to explore how predictions will change with operating/policy parameters. Finally, we suggest such bifurcation/stability analysis and the resulting predictions could enable closed-loop control of epidemic processes, and therefore possibly faster epidemic containment. [1] Eubank S, Guclu H, Anil Kumar VS, Marathe MV, Srinivasan A, Toroczkai Z, Wang N. Modelling disease outbreaks in realistic urban social networks. Nature 2004; 429:180-4; PMID:15141212; http://dx.doi.org/10.1038/nature02541 [2] Gross T, Kevrekidis IG. Robust oscillations in SIS epidemics on adaptive networks: Coarse graining by automated moment closure. Epl-Europhys Lett 2008; 82:38004; http://dx.doi.org/10.1209/0295-5075/82/38004 [3] Kattis1 AA, Holiday A, Stoica A-A, Kevrekidis IG. Modeling epidemics on adaptively evolving networks: A data-mining perspective. Virulence 2016; 7(2): 153; http://dx.doi.org/10.1080/21505594.2015.1121357 Figure: Converting a labelled graph to a vector containing information of 2-connect edge densities. Here, black and white nodes respectively stand for susceptible and infected individuals, and edges reflect their social connections.",
+    "presenting_author": "Tianqi Cui | Johns Hopkins University, Baltimore, MD",
+    "authors": [
+      "Tianqi Cui | Johns Hopkins University, Baltimore, MD",
+      "Alexei Makeev | Lomonosov Moscow State University, Russian Federation",
+      "Thomas Bertalan | Amgen, Inc., Cambridge, MA",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Tianqi Cui",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Alexei Makeev",
+        "affiliation": "Lomonosov Moscow State University, Russian Federation",
+        "designation": "Author"
+      },
+      {
+        "name": "Thomas Bertalan",
+        "affiliation": "Amgen, Inc., Cambridge, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "287d",
+    "sortable_time": "2021-11-09_13:27:00_13:46:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/632207"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/622441",
+    "paper_endpoint": "Paper/622441",
+    "paper_id": "622441",
+    "topic": "Explainable AI: Generating Causal Explanations of Machine Learning-Derived Models from Data",
+    "title": "Explainable AI: Generating Causal Explanations of Machine Learning-Derived Models from Data",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48087",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "287",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "One of the main concerns of purely data-driven black-box models obtained via machine learning techniques is the lack of their explanatory power. On the other hand, mechanistic models derived from fundamental physiochemical mechanisms do not suffer this limitation, but they require considerable effort and expertise to develop. Here we present a hybrid system, an explainable AI-based modeling engine (X-AIME) that generates natural language-like mechanistic explanations of the models automatically discovered from data. Our philosophy is to combine certain aspects of expert systems, lessons learned from the largely forgotten era of symbolic AI, with the numeric AI of modern machine learning. This hybrid system is equipped with knowledge about fundamental physicochemical processes, variables, feature transformations of the variables, common model forms and their elementary explanations. We demonstrate the end-to-end information pipeline through which the system generates mechanistically feasible models and automatically generates explanations about the models using test cases from reaction engineering and transport phenomena.",
+    "presenting_author": "Abhishek Sivaram | Columbia University, New York, NY",
+    "authors": [
+      "Abhishek Sivaram | Columbia University, New York, NY",
+      "Venkat Venkatasubramanian | Columbia University, New York, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Abhishek Sivaram",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Venkat Venkatasubramanian",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "287e",
+    "sortable_time": "2021-11-09_13:46:00_14:05:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/622441"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/625278",
+    "paper_endpoint": "Paper/625278",
+    "paper_id": "625278",
+    "topic": "Data-Driven Multi-Stage Stochastic Optimization on Time Series",
+    "title": "Data-Driven Multi-Stage Stochastic Optimization on Time Series",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48087",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "287",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Multi-stage stochastic optimization provides a versatile modeling framework for sequential decision-making under uncertainty with diverse applications in process systems engineering, energy systems, finance, and management science [1-3]. Because even multi-stage stochastic linear programs can be very hard to solve to optimality, most existing approaches for their solution either resort to tractable sample-based approximations [1,3], or restrict the space of recourse decisions to derive amenable approximations [4]. Sampling-based approaches for multi-stage stochastic programs usually assume that the decision-maker can generate so-called conditional samples of the underlying stochastic process as needed [1]. However, in practice, decision-makers often only have access to a finite number of (historical) observations of the stochastic process in a stochastic programming model. We study data-driven approaches for multi-stage stochastic linear programs assuming only access to a single trajectory of the underlying stochastic process. The goal is to choose a decision that minimizes the expected system cost conditioned on the current state of the stochastic process. Building on residuals-based data-driven approximations for two-stage conditional stochastic programs [5,6], we investigate approaches that integrate a time series prediction model within a sample-based approximation to the multi-stage stochastic program at hand. Our formulations are flexible and accommodate popular parametric and nonparametric time series models, including nonlinear vector autoregressive models, autoregressive models with exogenous variables, and multivariate GARCH models. Unlike previous approaches [7,8], we do not assume access to multiple independent historical sample paths of the underlying stochastic process but only assume access to a single trajectory. We derive conditions on the stochastic process, the time series model, and the stochastic program under which solutions to our data-driven sample-based approximations possess asymptotic and finite sample guarantees. We validate our theoretical results through numerical experiments on a portfolio optimization model and illustrate the potential benefits of our data-driven formulations over existing approaches even when the time series prediction model is misspecified. We also demonstrate how our data-driven approximation of the portfolio optimization model can be solved efficiently using stochastic dual dynamic programming. 1. Shapiro, Alexander, Darinka Dentcheva, and Andrzej Ruszczynski. Lectures on stochastic programming: modeling and theory. Society for Industrial and Applied Mathematics, 2014. 2. Grossmann, Ignacio E., Robert M. Apap, Bruno A. Calfa, Pablo Garcia-Herreros, and Qi Zhang. Recent advances in mathematical programming techniques for the optimization of process systems under uncertainty. Computers & Chemical Engineering 91 (2016): 3-14. 3. Pereira, Mario VF, and Leontina MVG Pinto. Multi-stage stochastic optimization applied to energy planning. Mathematical Programming 52.1 (1991): 359-375. 4. Georghiou, Angelos, Wolfram Wiesemann, and Daniel Kuhn. Generalized decision rule approximations for stochastic programming via liftings. Mathematical Programming 152.1 (2015): 301-338. 5. Kannan, Rohit, Güzin Bayraksan, and James R. Luedtke. Data-driven sample average approximation with covariate information. Available on Optimization Online (July 2020). 6. Kannan, Rohit, Güzin Bayraksan, and James R. Luedtke. Heteroscedasticity-aware residuals-based contextual stochastic optimization. arXiv preprint arXiv:2101.03139 (2021). 7. Bertsimas, Dimitris, and Christopher McCord. From predictions to prescriptions in multistage optimization problems. arXiv preprint arXiv:1904.11637 (2019). 8. Bertsimas, Dimitris, Christopher McCord, and Bradley Sturt. Dynamic optimization with side information. arXiv preprint arXiv:1907.07307 (2019).",
+    "presenting_author": "Rohit Kannan | Not found",
+    "authors": [
+      "Rohit Kannan | Not found",
+      "Nam Ho-Nguyen | The University of Sydney Business School, Australia",
+      "James Luedtke | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rohit Kannan",
+        "affiliation": "Not found",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nam Ho-Nguyen",
+        "affiliation": "The University of Sydney Business School, Australia",
+        "designation": "Author"
+      },
+      {
+        "name": "James Luedtke",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "287f",
+    "sortable_time": "2021-11-09_14:05:00_14:24:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/625278"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/625906",
+    "paper_endpoint": "Paper/625906",
+    "paper_id": "625906",
+    "topic": "Learning Decision-Making Models Via Data-Driven Inverse Optimization",
+    "title": "Learning Decision-Making Models Via Data-Driven Inverse Optimization",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48087",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "287",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Process systems engineering (PSE) is to a large extent about the development of systematic and efficient tools for decision making, and as a community, we have established such tools in many diverse and complex applications. But we have rarely considered the inverse problem, which is: given decisions made by a decision maker or decision-making system, determine how it arrived at those decisions. This problem arises when one wants to learn about a decision-making process that is unknown. Examples include preference learning [1] and apprenticeship learning [2], which involve human decision makers, but similar questions can be asked about engineered and natural systems designed or evolved to make decisions. Various machine learning approaches have been applied to this problem; however, they typically can only address simple, usually unconstrained problems, where decision-making mechanisms can be modeled using simple decision rules, or require large amounts of data. As a result, they are not suited for complex systems involving many constraints and where obtaining data may be difficult or expensive, such as those common in PSE applications. In this work, we conjecture that decision-making processes can be naturally modeled as mathematical optimization problems, and apply the concept of inverse optimization [3] to learn such decision-making models from data. We assume that observed decisions are optimal solutions (possibly with some noise) to a parameterized optimization model. Then, the data-driven inverse optimization problem is to determine the model parameters that minimize the difference between the observations and the model predictions obtained from solving the resulting learned optimization model. We formulate the problem as a bilevel program and apply a KKT-based reformulation to obtain a single-level optimization problem. The resulting nonconvex nonlinear problem is solved with an approximate block coordinate descent-based solution method. The main advantages of the proposed data-driven inverse optimization method are threefold: (i) flexibility, i.e. the capacity to directly incorporate first-principles knowledge and constraints, (ii) interpretability, since clear cause-effect relationships are directly encoded in the model, and (iii) accuracy, as reflected in a high prediction quality relative to the amount of data required. We demonstrate the effectiveness of the proposed approach in computational experiments and show that it frequently, especially in problems involving more complex constraints, outperforms alternative machine learning methods. References 1. Chu, W. & Ghahramani, Z. Preference learning with Gaussian processes. ICML 2005 - Proc. 22nd Int. Conf. Mach. Learn. 137–144 (2005). 2. Abbeel, P. & Ng, A. Y. Apprenticeship learning via inverse reinforcement learning. in Proceedings, Twenty-First International Conference on Machine Learning, ICML 2004 (2004). 3. Ahuja, R. K. & Orlin, J. B. Inverse optimization. Oper. Res. 49, 771–783 (2001).",
+    "presenting_author": "Rishabh Gupta | University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "Rishabh Gupta | University of Minnesota, Minneapolis, MN",
+      "Qi Zhang | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rishabh Gupta",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Qi Zhang",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "287g",
+    "sortable_time": "2021-11-09_14:24:00_14:43:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/625906"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/625987",
+    "paper_endpoint": "Paper/625987",
+    "paper_id": "625987",
+    "topic": "Simultaneous Planning and Scheduling Under Demand Uncertainty for Multi-Product Systems Using Data-Driven Bi-Level Optimization",
+    "title": "Simultaneous Planning and Scheduling Under Demand Uncertainty for Multi-Product Systems Using Data-Driven Bi-Level Optimization",
+    "date_time": "2021-11-09_12:30:00_15:00:00",
+    "session_id": "48087",
+    "session_title": "Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "287",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Current industrial processes require the coordination of many interconnected pieces that involve multi-dimensional, multi-purpose, and multi-product systems. Across the different layers of supply chain management, starting from the supply chain structure to production planning and scheduling, the optimal coordination of each element and their robust response to changing market conditions is essential for increasing efficiency, resiliency, productivity, and profitability of any enterprise [1-3]. Yet, the modeling and optimization of such interdependent systems are still burdensome and requires a holistic approach to ensure feasible realizations of the individual activities of the supply chain [4]. Bi-level multi-follower programming is well-suited for the task, as scheduling problems (followers) provide constraints for the decision making in the planning problem (leader). However, there are many algorithmic challenges for this class of mathematical programs, especially when high number of integer variables are present at the scheduling problems. These challenges are further amplified in the presence of uncertainty at the tactical level where planning and scheduling decisions will have to account for unknown product demands, resource availabilities, and current market conditions [2,5]. In this work, we address the simultaneous modeling and optimization of medium-term planning and short-term scheduling problems under demand uncertainty using mixed-integer bi-level multi-follower programming, scenario analysis, and data-driven optimization. Bi-level multi-follower programs model the natural hierarchy between different layers of supply chain management holistically, while scenario analysis and data-driven optimization allow us to retrieve the guaranteed feasible solutions of the integrated formulation under various demand considerations. The data-driven optimization of this challenging class of problems is performed using the DOMINO framework [6], and the proposed formulation and solution approach is demonstrated on a multi-product batch production plant [7]. We further analyze the effects of the scheduling level complexity on the solution performance, which spans over several hundred continuous and binary variables, and thousands of constraints. References [1] Papageorgiou, L.G. Supply chain optimisation for the process industries: Advances and opportunities. Computers & Chemical Engineering, 2009, 33:1931-1938. [2] I. Grossmann. Enterprise-wide optimization: a new frontier in process systems engineering. AIChE Journal , 2005, 51(7):1846-1857. [3] C.T. Maravelias, C. Sung. Integration of production planning and scheduling: overview, challenges and opportunities. Computers & Chemical Engineering , 2009, 33(12): 1919-1930. [4] S. Avraamidou, E.N. Pistikopoulos. A novel algorithm for the global solution of mixed-integer bi-level multi-follower problems and its application to planning & scheduling integration. 2018 European Control Conference (ECC) June 12-15, 2018. Limassol, Cyprus, pp. 1056-1061. [5] S. Avraamidou, E.N. Pistikopoulos. A Multiparametric Mixed-integer Bi-level Optimization Strategy for Supply Chain Planning Under Demand Uncertainty. IFAC World Congress, 2017, IFAC-PapersOnLine 50 Paper 1, pp 10178-10183. [6] B. Beykal, S. Avraamidou, I.P.E. Pistikopoulos, M. Onel, E.N. Pistikopoulos. DOMINO: Data-driven Optimization of bi-level Mixed-Integer NOnlinear Problems. Journal of Global Optimization, 2020, 78:1-36. [7] Kondili, E., 1987. Optimal scheduling of batch processes. Ph.D. Thesis, Imperial College London, London, UK.",
+    "presenting_author": "Burcu Beykal | Texas A&M University, College Station, TX",
+    "authors": [
+      "Burcu Beykal | Texas A&M University, College Station, TX",
+      "Styliani Avraamidou | Texas A&M University, College Station, TX",
+      "Efstratios Pistikopoulos | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Burcu Beykal",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Styliani Avraamidou",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Efstratios Pistikopoulos",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "287h",
+    "sortable_time": "2021-11-09_14:43:00_15:02:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/625987"
+  }
+]

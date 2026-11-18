@@ -1,0 +1,348 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667357",
+    "paper_endpoint": "Paper/667357",
+    "paper_id": "667357",
+    "topic": "Mindtpy: The Mixed-Integer Nonlinear Decomposition Toolbox in Pyomo",
+    "title": "Mindtpy: The Mixed-Integer Nonlinear Decomposition Toolbox in Pyomo",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52099",
+    "session_title": "Software Tools and Implementations for Process Systems Engineering",
+    "session_number": "216",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "In process system engineering, Mixed-Integer Nonlinear Programming (MINLP) has a widespread application ranging from optimal process design and synthesis, process planning, scheduling, control, and molecular design [1]. However, the versatile modeling ability of continuous and discrete decisions and linear and nonlinear constraints also increases the computational complexity of finding its optimal solution. Over the last two decades, the algorithms for solving MINLPs have received growing attention, and significant progress has been made on both the theoretical and computational sides. Generally, the algorithms for MINLPs fall into two major categories, branch and bound-based method, and MILP decomposition-based method. Correspondingly, solvers can be classified using these categories. BARON [2], ANTIGONE [3], and SCIP [4] can be seen as branch-and-bound-based solvers, and solvers such as DICOPT [5],, BONMIN [6], SHOT [7], and Pajarito [8] being considered MILP decomposition-based. This work presents the Mixed-Integer Nonlinear Decomposition Toolbox in Pyomo [9] (MindtPy), which is open-source and the first Python code to solve MINLPs. MindtPy supports different decomposition algorithms to solve both convex and nonconvex Mixed-Integer Nonlinear Programs(MINLP). For convex MINLP problems, MindtPy provides the Extended Cutting Plane (ECP) method, Outer-Approximation (OA) method, and a novel Regularized Outer-Approximation (ROA) method [10]. As a novel technique in MindtPy, the Regularized Outer-Approximation method solves an extra projection problem for finding new integer combinations to be used within the Outer-Approximation (OA) method. A set of regularization functions based on distance metrics and Lagrangean approximations are supported. This approach has been shown to be efficient for highly nonlinear convex MINLP problems. Besides that, the Feasibility Pump (FP) method has also been implemented in MindtPy as an initialization strategy to find feasible solutions and a standalone strategy to find optimal solutions. For nonconvex MINLPs, MindtPy provides both a local and a global Outer-Approximation method. The local Outer-Approximation method is based on two heuristic methods similar to those implemented in DICOPT, i.e., equality relaxation and augmented penalty. In the global Outer-Approximation method, the validity of the Mixed-integer Linear Programming relaxation of the original problem is guaranteed via Generalized McCormick envelopes, computed using the package MC++. Besides iteratively solving the MIP problem and the fixed NLP problem, MindtPy also supports the so-called single-tree implementation of decompositions algorithms, i.e. (global/regularized) LP/NLP based branch and bound algorithm. The MIP problem must be solved only once, and cuts are added through lazy constraints callback in the MIP solver. More importantly, MindtPy also integrates the above algorithms with advanced techniques such as solution pool, tabu-list, and Auto-Persistent Pyomo Solver Interfaces to perform better. We perform a computational experiment considering convex and nonconvex MINLP problems in the benchmark library MINLPLib. The computational results demonstrate the competitive and promising performance of MindtPy to both open-source and commercial solvers. A further advantage of MindtPy is that it is entirely based on Pyomo [9], making it easy to integrate with other Pyomo-based packages such as SUSPECT [11], Coramin, etc. Moreover, MindtPy follows the object-oriented programming paradigm designed to allow easy extension and modification of the core algorithm by users and developers. Therefore, MindtPy is also a good base version for new decomposition algorithm development and problem-specific decompositions method development. References [1] Grossmann, I. E. (2012). Advances in mathematical programming models for enterprise-wide optimization. Computers & Chemical Engineering, 47, 2-18. [2] Ryoo, H. S., & Sahinidis, N. V. (1996). A branch-and-reduce approach to global optimization. Journal of global optimization, 8, 107-138. [3] Misener, R., & Floudas, C. A. (2014). ANTIGONE: algorithms for continuous/integer global optimization of nonlinear equations. Journal of Global Optimization, 59(2-3), 503-526. [4] Bestuzheva, K., Besançon, M., Chen, W. K., Chmiela, A., Donkiewicz, T., van Doornmalen, J., ... & Witzig, J. (2021). The SCIP optimization suite 8.0. arXiv preprint arXiv:2112.08872. [5] Viswanathan, J., & Grossmann, I. E. (1990). A combined penalty function and outer-approximation method for MINLP optimization. Computers & Chemical Engineering, 14(7), 769-782. [6] Bonami, P., Biegler, L. T., Conn, A. R., Cornuéjols, G., Grossmann, I. E., Laird, C. D., ... & Wächter, A. (2008). An algorithmic framework for convex mixed integer nonlinear programs. Discrete optimization, 5(2), 186-204. [7] Lundell, A., Kronqvist, J., & Westerlund, T. (2022). The supporting hyperplane optimization toolkit for convex MINLP. Journal of Global Optimization, 84(1), 1-41. [8] Coey, C., Lubin, M., & Vielma, J. P. (2020). Outer approximation with conic certificates for mixed-integer convex problems. Mathematical Programming Computation, 12(2), 249-293. [9] Hart, W. E., Laird, C. D., Watson, J. P., Woodruff, D. L., Hackebeil, G. A., Nicholson, B. L., & Siirola, J. D. (2017). Pyomo-optimization modeling in python (Vol. 67, p. 277). Berlin: Springer. [10] Bernal, D. E., Peng, Z., Kronqvist, J., & Grossmann, I. E. (2022). Alternative regularizations for Outer-Approximation algorithms for convex MINLP. Journal of Global Optimization, 84(4), 807-842. [11] Ceccon, F., Siirola, J. D., & Misener, R. (2020). SUSPECT: MINLP special structure detector for pyomo. Optimization Letters, 14, 801-814.",
+    "presenting_author": "Zedong Peng | Purdue University, West Lafayette, IN",
+    "authors": [
+      "Zedong Peng | Purdue University, West Lafayette, IN",
+      "David E. Bernal Neira | Universities Space Research Association – Research Institute of Advanced Computer Science, Mountain View, CA",
+      "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zedong Peng",
+        "affiliation": "Purdue University, West Lafayette, IN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "David E. Bernal Neira",
+        "affiliation": "Universities Space Research Association – Research Institute of Advanced Computer Science, Mountain View, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ignacio Grossmann",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "216a",
+    "sortable_time": "2023-11-07_12:30:00_12:48:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667357"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/667599",
+    "paper_endpoint": "Paper/667599",
+    "paper_id": "667599",
+    "topic": "Training a Deep Learning Model on GPU to Estimate the Remaining Useful Life of a Lithium-Ion Battery",
+    "title": "Training a Deep Learning Model on GPU to Estimate the Remaining Useful Life of a Lithium-Ion Battery",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52099",
+    "session_title": "Software Tools and Implementations for Process Systems Engineering",
+    "session_number": "216",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "MATLAB is a widely used scientific computation tool in chemical engineering for tasks such as numeric and symbolic computations, data analysis, and visualization, and implementation of control, optimization, and AI algorithms. Some of these computational tasks such as training AI models may require the use of parallel computing and GPUs. Chemical engineers share the results of their work with their audience and collaborators in various forms including reports, stand-alone executables, web apps, and using source control tools. To test the models in the real world, they need deployable code. Many chemical engineers utilize data-driven modeling techniques for process modeling, predictive maintenance, and remaining useful life estimation. We implemented an AI model to estimate the remaining useful life of a lithium-ion battery using MATLAB based on “ Data-driven prediction of battery cycle life before capacity degradation” by Severson et. Al . To shorten the training time of the deep learning model, we took advantage of MATLAB’s built-in GPU support for deep learning. We automatically generated C code from MATLAB code for deployment. Using source code integration, we maintained our code base. In this talk, we will showcase how we created these artifacts. Our MATLAB-based approach to scale up computations, share results, and create deployable code can be applied to other chemical engineering modeling tasks as well.",
+    "presenting_author": "Aycan Hacioglu | Mathworks, Natick",
+    "authors": [
+      "Mehernaz Savai | MathWorks, Santa Clara, CA",
+      "Aycan Hacioglu | Mathworks, Natick",
+      "Spandhana Gonuguntla | MathWorks, Bengaluru, India",
+      "Akhil Gopinath | MathWorks, Copenhagen, Denmark"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mehernaz Savai",
+        "affiliation": "MathWorks, Santa Clara, CA",
+        "designation": "Author"
+      },
+      {
+        "name": "Aycan Hacioglu",
+        "affiliation": "Mathworks, Natick",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Spandhana Gonuguntla",
+        "affiliation": "MathWorks, Bengaluru, India",
+        "designation": "Author"
+      },
+      {
+        "name": "Akhil Gopinath",
+        "affiliation": "MathWorks, Copenhagen, Denmark",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "216b",
+    "sortable_time": "2023-11-07_12:48:00_13:06:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/667599"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668001",
+    "paper_endpoint": "Paper/668001",
+    "paper_id": "668001",
+    "topic": "Generic Universal Modeling Platform Software",
+    "title": "Generic Universal Modeling Platform Software",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52099",
+    "session_title": "Software Tools and Implementations for Process Systems Engineering",
+    "session_number": "216",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "We present the Generic Universal Modeling Platform Software (GUMPS) as a modeling support library. The purpose of this software is to aid modelers with common tasks while also taking care to follow best practices in their implementation. This is accomplished by dividing a model into smaller component pieces: a Kernel, a Study, a Solver and a Problem. Surrogate model building only requires a working model with a vector of inputs and outputs and the library takes care of the sampling, variable transformations, model training, and prediction. Uncertainty Quantification can use a surrogate or a model and only requires the target probabilities and degree of accuracy required and will sample until the requirements are met. The ODE solver can handle discontinuities with the modelers only needing to specify when they have a discontinuity in the system. Parameter estimation and optimization are supported with both single and multiple-objectives with a composable system of loss functions and automatic variable transformation in order to improve convergence with visualization and aid in understanding. The GUMPS software is written in Python and has full unit test coverage. We use parallel processing on CPU and GPU as appropriate to the problem. Many of the advanced features are built using pyTorch.",
+    "presenting_author": "William Heymann III | Amgen Research (Munich) GmbH, München, Germany",
+    "authors": [
+      "William Heymann III | Amgen Research (Munich) GmbH, München, Germany",
+      "Joao Alberto De Faria | Amgen, Tampa, FL",
+      "Pablo A. Rolandi | Amgen, Cambridge, MA"
+    ],
+    "authors_structured": [
+      {
+        "name": "William Heymann III",
+        "affiliation": "Amgen Research (Munich) GmbH, München, Germany",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Joao Alberto De Faria",
+        "affiliation": "Amgen, Tampa, FL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Pablo A. Rolandi",
+        "affiliation": "Amgen, Cambridge, MA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "216c",
+    "sortable_time": "2023-11-07_13:06:00_13:24:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668001"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/668505",
+    "paper_endpoint": "Paper/668505",
+    "paper_id": "668505",
+    "topic": "Why Doesn't My NLP Converge? – Debugging Nonlinear Programs with an Intermediate Callback",
+    "title": "Why Doesn't My NLP Converge? – Debugging Nonlinear Programs with an Intermediate Callback",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52099",
+    "session_title": "Software Tools and Implementations for Process Systems Engineering",
+    "session_number": "216",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Nonlinear optimization is a powerful decision-support tool in chemical engineering and a critical component of many process control algorithms. However, while nonlinear local optimization algorithms have global convergence proofs, solvers can fail to converge in practice for a variety of reasons including poor conditioning, degeneracy, cycling, and local infeasibility. In such cases, the reasons for non-convergence can be difficult to identify, especially if a higher level algebraic modeling environment such as AMPL, GAMS, Pyomo, or JuMP is used to communicate with the solver and if the solver’s internal data structures are not available in the user’s programming environment. Tighter integration of the modeling language and solver can help identify causes of failure by allowing investigation of a solver’s internal data structures with potentially model-specific debugging routines. In particular, the intermediate callback provided by the nonlinear optimization solver Ipopt can be used to investigate the primal-dual iterates and infeasibilities during the iterations of a solve. If derivative information of the optimization problem is available, Jacobian and Hessian matrices may be investigated as well. In a full-featured programming language like Python or Julia, linear algebra and graph theory packages are available, allowing sophisticated analysis of the state of the optimization problem at every iteration. This presentation demonstrates the use of Ipopt’s intermediate callback in conjunction with matrix factorizations and graph-based decompositions to diagnose sources of ill-conditioning and degeneracy in nonlinear optimization problems. We use singular value decomposition and the degeneracy-locating integer program of [1] as well as Dulmage-Mendelsohn and block triangular decompositions of the variable-constraint incidence matrix, as in [3]. These approaches are demonstrated on nonlinear optimization problems from the IDAES modeling framework [2] using the CyIpopt interface to access the intermediate callback and PyNumero [4] for complete derivative information. We present insights that can be gained from these analyses as well as software tools to facilitate these debugging procedures. References: [1] Dowling and Biegler. \"Degeneracy Hunter: An algorithm for determining irreducible sets of degenerate constraints in mathematical programs\". 2015. [2] Lee et al. \"The IDAES process modeling framework and model library--Flexibility for process simulation and optimization\". 2021. [3] Parker et al. \"An application of the Dulmage-Mendelsohn partition for the analysis of a discretized dynamic chemical looping reactor model\". 2023. [4] Rodriguez et al. \"Scalable parallel nonlinear optimization with PyNumero and Parapint\". 2023.",
+    "presenting_author": "Robert Parker | Los Alamos National Laboratory, NM",
+    "authors": [
+      "Robert Parker | Los Alamos National Laboratory, NM",
+      "Alexander Dowling | University of Notre Dame, IN",
+      "Douglas A. Allan | National Energy Technology Laboratory Support Contractor, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Robert Parker",
+        "affiliation": "Los Alamos National Laboratory, NM",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Alexander Dowling",
+        "affiliation": "University of Notre Dame, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Douglas A. Allan",
+        "affiliation": "National Energy Technology Laboratory Support Contractor, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "216d",
+    "sortable_time": "2023-11-07_13:24:00_13:42:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/668505"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669102",
+    "paper_endpoint": "Paper/669102",
+    "paper_id": "669102",
+    "topic": "Energiapy - an Open Source Python Package for Multiscale Modeling & Optimization of Energy Systems",
+    "title": "Energiapy - an Open Source Python Package for Multiscale Modeling & Optimization of Energy Systems",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52099",
+    "session_title": "Software Tools and Implementations for Process Systems Engineering",
+    "session_number": "216",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "The energy transition poses formidable challenges [1], such as a plethora of technology and resource options, renewable intermittency, uncertainty of future scenarios, a dearth of materials to establish technology pathways, resiliency to disruptions, the accounting of carbon emissions over the life cycle of technology use, interaction and competition with vital chains such as food and water [2]. Tools that support data-driven decision making are essential to achieve net-carbon neutrality over the coming decades. To this end, numerous energy systems modeling frameworks have been developed utilizing disparate architectures and programming languages such as AMPL, Python, Julia, etc. [3, 4]. Here, we present energiapy , a decisions making and risk analysis tool for the design and optimiza- tion of energy systems. The novelty of energiapy lies in the highly configurable system agnostic component-based approach. Notably, formulations can span from the level of individual processes to networks spanning multiple regions. The object-oriented approach allows deterministic factors to be assigned at the appropriate level, viz. localization factors at the location level, and pro- cess parameters at the process level. The components involved follow a suggested hierarchy which allows the formulation of models ranging from multi-scale mixed integer programs (MIPs) to multi- parametric, and robust stochastic programs [5]. This lends significant flexibility to the user in both developing network models, as well as the scenarios over which these models are tested. Moreover, scenarios can also be aggregated and solved over a set of representative temporal periods, used to generate graphs for network analysis, and both the data input and solutions can be visualized. These developments are demonstrated over a detailed hydrogen economy case study [6] which is solved through different approaches. First as a determinsitic mixed integer linear program (MILP), then as a multi-parametric linear program (mpLP), and then as its robust equivalent. The key applications illustrated in the study include: 1) the design of future energy systems (network design), 2) scheduling under uncertainty, 3) life-cycle and environmental impact assessment, 4) techno-economic analysis, 4) system resiliency and reliability characterization. References [1] R. Kakodkar, G. He, C. Demirhan, M. Arbabzadeh, S. Baratsas, S. Avraamidou, D. Mallapra- gada, I. Miller, R. Allen, E. Gen ̧ cer, et al. , “A review of analytical and optimization methodolo- gies for transitions in multi-scale energy systems,” Renewable and Sustainable Energy Reviews , vol. 160, p. 112277, 2022. [2] M. Di Martino, S. Avraamidou, J. Cook, and E. N. Pistikopoulos, “An optimization framework for the design of reverse osmosis desalination plants under food-energy-water nexus considera- tions,” Desalination , vol. 503, p. 114937, 2021. [3] MIT Energy Initiative and Princeton University ZERO lab, “Genxproject/genx: Genx: A con- figurable power system capacity expansion model for studying low-carbon energy futures. more details at : https://genx.mit.edu.” [4] M. Langiu, D. Y. Shu, F. J. Baader, D. Hering, U. Bau, A. Xhonneux, D. M ̈ uller, A. Bardow, A. Mitsos, and M. Dahmen, “Comando: A next-generation open-source framework for energy systems optimization,” Computers & chemical engineering , vol. 152, p. 107366, 2021. [5] A. Ben-Tal and A. Nemirovski, “Robust solutions of uncertain linear programs,” Operations research letters , vol. 25, no. 1, pp. 1–13, 1999. [6] R. Kakodkar, S. Sundar, and E. Pistikopoulos, “Hydrogen-based dense energy carriers in energy transition solutions,” in Handbook of Smart Energy Systems , pp. 1–21, Springer, 2022.",
+    "presenting_author": "Rahul Kakodkar | Texas A&M University, College Station, TX",
+    "authors": [
+      "Rahul Kakodkar | Texas A&M University, College Station, TX",
+      "Efstratios Pistikopoulos | Texas A&M University, College Station, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rahul Kakodkar",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Efstratios Pistikopoulos",
+        "affiliation": "Texas A&M University, College Station, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "216e",
+    "sortable_time": "2023-11-07_13:42:00_14:00:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669102"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/669747",
+    "paper_endpoint": "Paper/669747",
+    "paper_id": "669747",
+    "topic": "Advances in EAGO.jl: Updates, Dynamics, and Parallelism",
+    "title": "Advances in EAGO.jl: Updates, Dynamics, and Parallelism",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52099",
+    "session_title": "Software Tools and Implementations for Process Systems Engineering",
+    "session_number": "216",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Mathematical optimization is an essential tool for process systems engineers; yet, for many researchers and practitioners, problems of interest often require advanced problem formulations and complex user-defined functions. For this reason, EAGO.jl was released six years ago as the first open-source global optimizer for general nonlinear programs (NLPs), with a design goal of handling both AML- and script-defined functions [1, 2]. Since its release, EAGO has continued to mature as a software package and incorporates recent advances in reduced-space McCormick relaxations [3–6], a variety of domain reduction techniques [7–9] and improved linearization methods [10] that also appear in the C++ optimizer MAiNGO [11], as well as specialized tools for handling composite bilinear terms that are ubiquitous in NLP problem formulations [12]. EAGO is aided by the unique features and high performance of the Julia programming language [13] as well as a diverse set of active, integrated development communities covering the fields of optimization (e.g., JuMP-dev [14] and MathOptInterface [15]), machine learning (e.g., SciML [16, 17] and Flux [18, 19]), and general packages for numerical analysis. This talk will focus on recent development efforts and future directions for the EAGO package. To start, EAGO’s internal nonlinear expression handling has been updated for compatibility with the latest revisions to the JuMP modeling language and the MathOptInterface backend. We will also discuss and highlight our recent developments in extending EAGO for GPGPU compatibility, improvements to handling global dynamic optimization problems through the DynamicBounds.jl subpackage, as well as our efforts to improve the documentation of the core software and public-facing examples. The utility of the package and the impact of the added features will be demonstrated with a brief tutorial on a relevant case study. References [1] Matthew E. Wilhelm and Matthew D. Stuber. Easy advanced global optimization (EAGO): An open-source platform for robust and global optimization in Julia. In AIChE Annual Meeting. AIChE, 2017. [2] Matthew E. Wilhelm and Matthew D. Stuber. EAGO.jl: easy advanced global optimization in Julia. Optimization Methods and Software, 37(2):425–450, aug 2022. doi: 10.1080/10556788.2020.1786566. [3] Alexander Mitsos, Benoît Chachuat, and Paul I. Barton. McCormick-based relaxations of algorithms. SIAM Journal on Optimization, 20(2):573–601, jan 2009. doi: 10.1137/080717341. [4] Joseph K. Scott, Matthew D. Stuber, and Paul I. Barton. Generalized McCormick relaxations. Journal of Global Optimization, 51(4):569–606, feb 2011. doi: 10.1007/s10898-011-9664-7. [5] Angelos Tsoukalas and Alexander Mitsos. Multivariate McCormick relaxations. Journal of Global Optimization, 59(2-3):633–662, apr 2014. doi: 10.1007/s10898-014-0176-0. [6] Kamil A. Khan, Harry A. J. Watson, and Paul I. Barton. Differentiable McCormick relaxations. Journal of Global Optimization, 67(4):687–729, may 2016. doi: 10.1007/s10898-016-0440-6. [7] Stefan Vigerske. Decomposition in Multistage Stochastic Programming and a Constraint Integer Programming Approach to Mixed-Integer Nonlinear Programming. PhD thesis, Humboldt-Universität zu Berlin, Mathematisch-Naturwissenschaftlichen Fakultät II, 2013. [8] Achim Wechsung, Joseph K. Scott, Harry A. J. Watson, and Paul I. Barton. Reverse propagation of McCormick relaxations. Journal of Global Optimization, 63(1):1–36, apr 2015. doi: 10.1007/s10898-015-0303-6. [9] Ambros M. Gleixner, Timo Berthold, Benjamin Müller, and Stefan Weltge. Three enhancements for optimization-based bound tightening. Journal of Global Optimization, 67(4):731–757, jun 2017. doi: 10.1007/s10898-016-0450-4. [10] Jaromi ł Najman, Dominik Bongartz, and Alexander Mitsos. Linearization of McCormick relaxations and hybridization with the auxiliary variable method. Journal of Global Optimization, feb 2021. doi: 10.1007/s10898-020-00977-x. [11] Dominik Bongartz, Jaromi ł Najman, Susanne Sass, and Alexander Mitsos. MAiNGO - McCormick-based Algorithm for mixed-integer Nonlinear Global Optimization. Technical report, RWTH-Aachen, 2018. URL https://www.avt.rwth-aachen.de/global/show_document.asp?id=aaaaaaaaabclahw. [12] Matthew E. Wilhelm and Matthew D. Stuber. Improved convex and concave relaxations of composite bilinear forms. Journal of Optimization Theory and Applications, mar 2023. doi: 10.1007/s10957-023-02196-2. [13] Jeff Bezanson, Alan Edelman, Stefan Karpinski, and Viral B. Shah. Julia: A fresh approach to numerical computing, 2014. [14] Iain Dunning, Joey Huchette, and Miles Lubin. JuMP: A modeling language for mathematical optimization. SIAM Review, 59(2):295–320, jan 2017. doi: 10.1137/15m1020575. [15] Benoît Legat, Oscar Dowson, Joaquim Dias Garcia, and Miles Lubin. MathOptInterface: a data structure for mathematical optimization problems. arXiv preprint arXiv:2002.03447, 2020. doi: 10.48550/ARXIV.2002.03447. [16] Yingbo Ma, Shashi Gowda, Ranjan Anantharaman, Chris Laughman, Viral Shah, and Chris Rackauckas. ModelingToolkit: A composable graph transformation system for equation-based modeling. arXiv preprint arXiv:2103.05244, 2021. doi: 10.48550/ARXIV.2103.05244. [17] Christopher Rackauckas and Qing Nie. DifferentialEquations.jl – a performant and feature-rich ecosystem for solving differential equations in Julia. Journal of Open Research Software, 5, may 2017. doi: 10.5334/jors.151. [18] Michael Innes, Elliot Saba, Keno Fischer, Dhairya Gandhi, Marco Concetto Rudilosso, Neethu Mariya Joy, Tejan Karmali, Avik Pal, and Viral Shah. Fashionable modelling with Flux. arXiv preprint arXiv:1811.01457, 2018. doi: 10.48550/ARXIV.1811.01457. [19] Michael Innes. Flux: Elegant machine learning with Julia. Journal of Open Source Software, 3(25):602, may 2018. doi: 10.21105/joss.00602.",
+    "presenting_author": "Robert Gottlieb | University of Connecticut, Storrs",
+    "authors": [
+      "Robert Gottlieb | University of Connecticut, Storrs",
+      "Dimitri Alston | University of Connecticut, Storrs",
+      "Pengfei Xu | University of Connecticut, Storrs",
+      "Matthew Stuber | University of Connecticut, Storrs"
+    ],
+    "authors_structured": [
+      {
+        "name": "Robert Gottlieb",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Dimitri Alston",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      },
+      {
+        "name": "Pengfei Xu",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew Stuber",
+        "affiliation": "University of Connecticut, Storrs",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "216f",
+    "sortable_time": "2023-11-07_14:00:00_14:18:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/669747"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670310",
+    "paper_endpoint": "Paper/670310",
+    "paper_id": "670310",
+    "topic": "Recent Advances in Pyros: The Pyomo Solver for Two-Stage Nonconvex Robust Optimization",
+    "title": "Recent Advances in Pyros: The Pyomo Solver for Two-Stage Nonconvex Robust Optimization",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52099",
+    "session_title": "Software Tools and Implementations for Process Systems Engineering",
+    "session_number": "216",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "Two-stage robust optimization (RO) is a particularly useful framework for obtaining robust designs of chemical process and energy systems. Optimization models for process and energy systems are often subject to parametric uncertainty, which may arise from the use of empirical correlations as property models, temporal variability in feedstock, or economic stochasticity [1, 2]. Since any changes in the prevailing values of these uncertain parameters may significantly affect the model outputs, deterministic optimization may yield system designs which are suboptimal or infeasible under off-nominal scenarios. Moreover, the design of a plant should account for any built-in controllability that will allow the operator to adjust plant response during operation. In such contexts, two-stage RO is an appropriate framework for design [1, 3]. The recently developed two-stage RO solver PyROS [4] is designed to obtain robust solutions to process models. A typical process design model features nonconvexities, design and recourse degrees of freedom, and a large prevalence of equality constraints which constitute the “simulation part” of the model. The equality constraints are often highly complex, to the extent that they cannot, in general, be reformulated out of the model [1]. Based on a generalization [1] of the robust cutting set algorithm of [5], PyROS is the first two-stage RO solver that systematically handles the equality constraints without reformulation requirements [6]. PyROS is designed for ease of use, and implemented for models written in Pyomo [7], a widely used, open-source algebraic modeling language. Successful invocation of PyROS requires only a deterministic model, a partitioning of the model’s degrees of freedom variables into design (first-stage) and recourse (second-stage) variables, an uncertainty set, and access to subordinate local and global nonlinear programming optimizers. The underlying solution methodology uses polynomial decision rules to approximate the adjustability of the second-stage variables with respect to the uncertain parameters [1, 6]; the desired degree of the decision rules can optionally be specified. In this work, we present recent algorithmic and implementation advances of PyROS, and a benchmarking study which demonstrates the utility of PyROS for two-stage RO problems. Our advances include extensions of the scope of PyROS to models with uncertain variable bounds, improvements to the initializations of the subproblems used by the underlying cutting set algorithm, and extensions of the uncertainty set interfaces. Our benchmarking study is performed on a library of over 8,500 instances, with variations in the nonlinearities, degree-of-freedom partitioning, uncertainty sets, and polynomial decision rule approximations. Overall, our results highlight the effectiveness of PyROS for obtaining robust solutions to process models with uncertain equality constraints. References [1] Isenberg NM, Akula P, Eslick JC, Bhattacharyya D, Miller DC, Gounaris CE. A generalized cutting‐set approach for nonlinear robust optimization in process systems engineering. AIChE Journal. 2021 May;67(5):e17175. [2] Morgan JC, Bhattacharyya D, Tong C, Miller DC. Uncertainty quantification of property models: Methodology and its application to CO2‐loaded aqueous MEA solutions. AIChE Journal. 2015 Jun;61(6):1822-39. [3] Ben-Tal A, Goryashko A, Guslitzer E, Nemirovski A. Adjustable robust solutions of uncertain linear programs. Mathematical programming. 2004 Mar;99(2):351-76. [4] Isenberg, NM, Sherman, JA, Siirola, JD, & Gounaris, CE. PyROS Solver . Pyomo Documentation. 2023. https://pyomo.readthedocs.io/en/stable/contributed_packages/pyros.html [5] Mutapcic A, Boyd S. Cutting-set methods for robust convex optimization with pessimizing oracles. Optimization Methods & Software. 2009 Jun 1;24(3):381-406. [6] Isenberg, NM, Sherman, JA, Siirola, JD, & Gounaris, CE. PyROS: The Pyomo Robust Optimization Solver. Forthcoming . 2023. [7] Bynum ML, Hackebeil GA, Hart WE, Laird CD, Nicholson BL, Siirola JD, Watson JP, Woodruff DL. Pyomo-optimization modeling in python. Berlin/Heidelberg, Germany: Springer; 2021 Mar 30.",
+    "presenting_author": "Jason Sherman | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Jason Sherman | Carnegie Mellon University, Pittsburgh, PA",
+      "Natalie Isenberg | Carnegie Mellon University, Pittsburgh, PA",
+      "John Siirola | Sandia National Laboratories, Albuquerque, NM",
+      "Chrysanthos Gounaris | Carnegie Mellon University, Pittsburgh, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jason Sherman",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Natalie Isenberg",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "John Siirola",
+        "affiliation": "Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "Chrysanthos Gounaris",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "216g",
+    "sortable_time": "2023-11-07_14:18:00_14:36:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670310"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2023/meetingapp.cgi/Paper/670568",
+    "paper_endpoint": "Paper/670568",
+    "paper_id": "670568",
+    "topic": "Modeling Based on Modular Decomposition of a Process Graph and Implementation into a Bioenergy Process Analysis Tool",
+    "title": "Modeling Based on Modular Decomposition of a Process Graph and Implementation into a Bioenergy Process Analysis Tool",
+    "date_time": "2023-11-07_12:30:00_15:00:00",
+    "session_id": "52099",
+    "session_title": "Software Tools and Implementations for Process Systems Engineering",
+    "session_number": "216",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Computing Systems and Technology Division",
+    "abstract": "The digital era of chemical engineering requires methods that support the modeling and analysis tools suitable to decompose complex systems into manageable components from conceptual design. This work presents examples on how the digitalization of chemical processes as graphs can facilitate their modeling and analysis. In a process graph, inputs, outputs and unit operations are represented as nodes and streams are edges which can be weighted using process variables such as flow rate. Once a process is represented as a graph, community detection algorithms can be applied to identify process modules that can then serve as a structure for model development. This approach based on modular decompositions helps to identify highly related unit operations in a flowsheet which can be analysed for insightful directions to improve a chemical process. The general methodology is shown in Figure 1. Modules would be containers of highly related unit operations and their interactions captured by module models. This also facilitates the development of machine learning models and hybrid modular modelling which capture process relationships among unit operations. This in turn can be used for faster and more insightful evaluation of processes alternatives and can facilitate the application of process integration and intensification principles. The potential of the approach is exemplified by presenting the Bioenergy Process Economic, Environmental, Safety and Socioeconomic Analysis Tool as a decision support platform which implements a modeling structure based on a modular decomposition of bioenergy processes, using the Julia programming language. In particular, the process modular structure is the basis for developing hybrid or surrogate models for simulation of bioenergy and biofuel production processes including bioethanol, biobutanol, biomass gasification and bio-jet fuel. A case study on a bio-jet fuel process will be used to illustrate the approach and advantages of the modelling approach including facilitation of artificial neural network model development and life cycle assessment (LCA) modelling for faster calculations.",
+    "presenting_author": "Elias Martinez-Hernandez | MEXICAN INSTITUTE OF PETROLEUM, MEXICO CITY, Mexico",
+    "authors": [
+      "Elias Martinez-Hernandez | MEXICAN INSTITUTE OF PETROLEUM, MEXICO CITY, Mexico",
+      "Arick Castillo Landero | MEXICAN INSTITUTE OF PETROLEUM, MEXICO CITY, Mexico",
+      "Diana Dominguillo Ramirez | MEXICAN INSTITUTE OF PETROLEUM, MEXICO CITY, Mexico",
+      "Aburto Jorge | MEXICAN INSTITUTE OF PETROLEUM, MEXICO CITY, Mexico"
+    ],
+    "authors_structured": [
+      {
+        "name": "Elias Martinez-Hernandez",
+        "affiliation": "MEXICAN INSTITUTE OF PETROLEUM, MEXICO CITY, Mexico",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Arick Castillo Landero",
+        "affiliation": "MEXICAN INSTITUTE OF PETROLEUM, MEXICO CITY, Mexico",
+        "designation": "Author"
+      },
+      {
+        "name": "Diana Dominguillo Ramirez",
+        "affiliation": "MEXICAN INSTITUTE OF PETROLEUM, MEXICO CITY, Mexico",
+        "designation": "Author"
+      },
+      {
+        "name": "Aburto Jorge",
+        "affiliation": "MEXICAN INSTITUTE OF PETROLEUM, MEXICO CITY, Mexico",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "216h",
+    "sortable_time": "2023-11-07_14:36:00_14:54:00",
+    "affiliation_source": "aiche_2023_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2023/meetingapi.cgi/Paper/670568"
+  }
+]

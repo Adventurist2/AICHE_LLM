@@ -1,0 +1,396 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648524",
+    "paper_endpoint": "Paper/648524",
+    "paper_id": "648524",
+    "topic": "Dynamic Real-Time Scheduling and Control Under Uncertainty",
+    "title": "Dynamic Real-Time Scheduling and Control Under Uncertainty",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "51175",
+    "session_title": "Design and Operations under Uncertainty - II",
+    "session_number": "483",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "In recent years, several papers have addressed the integration of scheduling and control (ISC) either in the form of a review of developments and trends 1-3 , or to propose an integration framework 4-7 . However, ISC under uncertainty in a real-time setting has received little attention. The present work aims to address this gap through an ISC framework that utilizes a two-stage stochastic formulation, coupled with a feedback mechanism based on measurements of plant response variables and inventory levels. We consider uncertainty in demand and process model parameters, and consider MPC as well as PI control as the plant control system. The ISC formulation proposed in this work follows a two-level automation structure in which plant economics are considered at an upper, dynamic real-time optimization (DRTO) level, which provides a set-point trajectory to an underlying regulatory control level. A schematic representation is given in Figure 1. A key feature of our approach is the use, at the DRTO level, of the closed-loop dynamic response of the plant under the action of the regulatory control system, referred to as closed-loop DRTO (CL-DRTO) 8 . It was shown in earlier work 8 that utilization of the open-loop plant response at the DRTO level results in suboptimal performance, particularly when the regulatory controllers are detuned, such as in the presence of dead time and right-half plane transmission zeros. Later work included scheduling decisions at the DRTO level 6 , where the DRTO problem was posed as a MILP. In this work, we extend the framework to account for uncertainty directly within the DRTO problem formulation. We first consider the case of multiproduct plants controlled by a constrained linear MPC (Figure 1a) and operated under uncertainty in the demand level of the distinct product grades. The MPC action can be rigorously accounted for in the DRTO problem formulation via the equivalent first-order Karush-Kuhn-Tucker conditions 8 where the complementary conditions are exactly reformulated as mixed-integer linear constraints 6 . Because the resulting problem can be computationally expensive to solve, Jamaludin and Swartz (2017) propose three different methods to approximate the closed-loop prediction, including an input-clipping approximation 9 where the constrained MPC control action is approximated by the unconstrained counterpart for which an analytical solution exists 10 , coupled with a truncation mechanism for inputs that exceed physical constraint bounds. We compare the performance of both the rigorous and input-clipping approaches in the present study. The proposed ISC formulation also requires a dynamic process model. For nonlinear models, we explore linearization as well as piecewise affine approximation to maintain an MILP formulation of the DRTO problem. Demand uncertainty is accounted for using a scenario-based stochastic optimization approach in which each potential realization of the demand uncertainty constitutes a scenario 11 . Application of the proposed ISC formulation in closed-loop simulations led to a 10% increase in the profit of a linear plant and a 60 % increase in the profit of a nonlinear plant, respectively, compared to the case where the demand uncertainty is not accounted for, and the nominal deterministic problem is solved in the DRTO level instead. Second, we consider a linear plant that has a PI as control system (Figure 1b) and is operated under demand as well as model uncertainty. As with the MPC, the PI control action is modelled in the DRTO formulation, providing it the ability to predict the closed-loop plant response. The scenario-based stochastic approach is again used to account for uncertainty at the DRTO level. The performance of the proposed approach is evaluated through closed-loop simulations for different execution frequencies of the DRTO layer. As before, significant improvement in the expected profit of the plant is achieved by accounting for uncertainty. Increasing the execution frequency leads to considerable improvement in the performance of the nominal DRTO problem. The scenario-based formulation still shows a performance improvement over the nominal formulation, but the difference in performance is reduced, demonstrating the importance of the feedback frequency in DRTO applications under uncertainty. The proposed ISC formulation advances the current state-of-the-art by accounting for model and demand uncertainty in the DRTO level while also predicting the closed-loop process response. It is shown to led to significant improvement in the expected profit of the plant even in the presence of uncertainties that are not accounted for in the problem formulation. We also provide valuable insights regarding the online closed-loop implementation of integrated scheduling and control frameworks. In future work, we plan to address further sources of uncertainty such as uncertainty in the cost coefficients of the DRTO objective function, and investigate decomposition approaches to reduce computation times. References 1. Harjunkoski, Iiro, Rasmus Nyström, and Alexander Horch. \"Integration of scheduling and control—Theory or practice?\" Computers & Chemical Engineering 33, no. 12 (2009): 1909-1918. 2. Baldea, Michael, and Iiro Harjunkoski. \"Integrated production scheduling and process control: A systematic review.\" Computers & Chemical Engineering 71 (2014): 377-390. 3. Caspari, Adrian, Calvin Tsay, Adel Mhamdi, Michael Baldea, and Alexander Mitsos. \"The integration of scheduling and control: Top-down vs. bottom-up.\" Journal of Process Control 91 (2020): 50-62. 4. Zhuge, Jinjun, and Marianthi G. Ierapetritou. \"Integration of scheduling and control with closed loop implementation.\" Industrial & Engineering Chemistry Research 51, no. 25 (2012): 8550-8565. 5. Burnak, Baris, Justin Katz, Nikolaos A. Diangelakis, and Efstratios N. Pistikopoulos. \"Simultaneous process scheduling and control: a multiparametric programming-based approach.\" Industrial & Engineering Chemistry Research 57, no. 11 (2018): 3963-3976. 6. Remigio, Jerome EJ, and Christopher LE Swartz. \"Production scheduling in dynamic real-time optimization with closed-loop prediction.\" Journal of Process Control 89 (2020): 95-107. 7. Simkoff, Jodie M., and Michael Baldea. \"Production scheduling and linear MPC: Complete integration via complementarity conditions.\" Computers & Chemical Engineering 125 (2019): 287-305. 8. Jamaludin, Mohammad Zamry, and Christopher LE Swartz. \"Dynamic real‐time optimization with closed‐loop prediction.\" AIChE Journal 63, no. 9 (2017): 3896-3911. 9. Jamaludin, Mohammad Zamry, and Christopher LE Swartz. \"Approximation of closed-loop prediction for dynamic real-time optimization calculations.\" Computers & Chemical Engineering 103 (2017): 23-38. 10. Li, Hao, and Christopher LE Swartz. \"Approximation techniques for dynamic real-time optimization (DRTO) of distributed MPC systems.\" Computers & Chemical Engineering 118 (2018): 195-209. 11. Birge, John R., and Francois Louveaux. Introduction to stochastic programming . Springer Science & Business Media, 2011.",
+    "presenting_author": "Daniela Dering De Lima Silva | McMaster University, Hamilton, Canada",
+    "authors": [
+      "Daniela Dering De Lima Silva | McMaster University, Hamilton, Canada",
+      "Christopher Swartz | McMaster University, Hamilton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Daniela Dering De Lima Silva",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christopher Swartz",
+        "affiliation": "McMaster University, Hamilton, Canada",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "483a",
+    "sortable_time": "2022-11-16_12:30:00_12:48:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648524"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/648238",
+    "paper_endpoint": "Paper/648238",
+    "paper_id": "648238",
+    "topic": "Parallel Solution of Optimal Gas Network Control Under Uncertainty",
+    "title": "Parallel Solution of Optimal Gas Network Control Under Uncertainty",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "51175",
+    "session_title": "Design and Operations under Uncertainty - II",
+    "session_number": "483",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "We present the parallel solution of optimal gas network control problems on distributed memory machines while considering uncertainty, obtaining solution times two orders of magnitude faster than state-of-the-art NLP solvers. Optimal control of gas networks is critical both for reliable operation of the electric grid and residential heating. Furthermore, consideration of uncertainty is becoming increasingly important as renewable penetration increases [1]. However, the addition of uncertainty adds a great deal of complexity to an already complex problem. The combination of spatial discretization, time discretization, and uncertainty lead to extremely large nonlinear programming problems (NLPs). However, these problems have inherent structure that can be exploited for parallel solution. We present a framework for both parallel modeling and solution of optimal gas network control under uncertainty. Our pipeline models are distributed with IDEAS [2], making the development of gas network models quick, intuitive, and less error prone. Parallel solution on distributed memory machines is enabled with Parapint [3]. Parapint is an open-source Python package that utilizes the Message Passing Interface (MPI) and Schur-Complement decomposition within an interior-point algorithm for parallel solution of structured NLPs [4]. Our numerical results demonstrate over two orders of magnitude speedup compared to state-of-the-art solver Ipopt [5]. Sandia National Laboratories is a multimission laboratory managed and operated by National Technology & Engineering Solutions of Sandia, LLC, a wholly owned subsidiary of Honeywell International Inc., for the U.S. Department of Energy’s National Nuclear Security Administration under contract DE-NA0003525. This work was funded by the Institute for the Design of Advanced Energy Systems (IDAES) with funding from the Office of Fossil Energy, Cross-Cutting Research, U.S. Department of Energy. Works Cited [1] V. Zavala, \"Stochastic optimal control model for natural gas networks,\" Computers & Chemical Engineering, vol. 64, pp. 103-113, 2014. [2] A. Lee, J. Ghouse, J. Eslick, C. Laird, J. Siirola, M. Zamarripa, D. Gunter, J. Shinn, A. Dowling, D. Bhattacharyya, L. Biegler, A. Burgard and D. Miller, \"The IDAES process modeling framework and model library - Flexibility for process simulation and optimization,\" Journal of Advanced Manufacturing and Processing, vol. 3, no. 3, p. e10095, 2021. [3] J. Rodriguez, R. Parker, C. Laird, B. Nicholson, J. Siirola and M. Bynum, \"Scalable Parallel Nonlinear Optimization with PyNumero and Parapint,\" Optimization Online, 22 09 2021. [4] D. Word, J. Kang, J. Akesson and C. Laird, \"Efficient parallel solution of large-scale nonlinear dynamic optimization problems,\" Computational Optimization and Applications, vol. 59, no. 3, pp. 667-688, 2014. [5] A. Wachter and L. Biegler, \"On the implementation of an interior-point filter line-search algorithm for large-scale nonlinear programming,\" Mathematical Programming, vol. 106, no. 1, pp. 25-57, 2006.",
+    "presenting_author": "Michael Bynum | Center for Computing Research, Sandia National Laboratories, Albuquerque, NM",
+    "authors": [
+      "Michael Bynum | Center for Computing Research, Sandia National Laboratories, Albuquerque, NM",
+      "Lorenz Biegler | Carnegie Mellon University, Pittsburgh, PA",
+      "Carl Laird | Carnegie Mellon University, Pittsburgh, PA",
+      "Sakshi Naik | Carnegie Mellon University, Pittsburgh, PA",
+      "Robert Parker | Los Alamos National Laboratory, NM",
+      "John Siirola | Sandia National Laboratories, Albuquerque, NM"
+    ],
+    "authors_structured": [
+      {
+        "name": "Michael Bynum",
+        "affiliation": "Center for Computing Research, Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Lorenz Biegler",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Carl Laird",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Sakshi Naik",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Robert Parker",
+        "affiliation": "Los Alamos National Laboratory, NM",
+        "designation": "Author"
+      },
+      {
+        "name": "John Siirola",
+        "affiliation": "Sandia National Laboratories, Albuquerque, NM",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "483b",
+    "sortable_time": "2022-11-16_12:48:00_13:06:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/648238"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649982",
+    "paper_endpoint": "Paper/649982",
+    "paper_id": "649982",
+    "topic": "Constrained Robust Bayesian Optimization of Expensive Black-Box Functions Under Uncertainty",
+    "title": "Constrained Robust Bayesian Optimization of Expensive Black-Box Functions Under Uncertainty",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "51175",
+    "session_title": "Design and Operations under Uncertainty - II",
+    "session_number": "483",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Uncertainty is inevitably present in real-world problems due to noisy and incomplete datasets and highly variable environmental “disturbances” (such as product demand, raw material price, and many others). Therefore, so-called “optimal” solutions found by solving an underlying nominal optimization problem, which neglects these many sources of uncertainty can often be suboptimal, or even worse, infeasible [1]. Sensitivity-based methods are commonly used to study the impact of the uncertainties on specific designs; however, although these can be used to compare the robustness amongst a finite set of designs, they are not able to systematically improve robustness directly. Robust optimization [2], which adopts a minimax approach to define the robust optimal design as the one with the best worst-case performance subject to worst-case constraint satisfaction, is one such strategy for formulating optimization problems in the presence of uncertainty. Although there have been significant developments in robust optimization theory over the past two decades, a substantial gap remains between the currently available methods and problems that one encounters in the real world. In particular, most robust optimization methods are restricted to convex problems [3] or non-convex problems with particular structure [4]. In addition to having challenging nonlinearities, many relevant design problems involve the use of experiments or high-fidelity computer-based simulations such that the relationship between the design variables and the objective/constraints are not available as explicitly defined functions. In such cases, one often resorts to so-called derivative free optimization (DFO) methods that can be applied to any queryable black-box function. However, there has been limited work on DFO methods for robust optimization, with even less work on constrained robust optimization. A potential reason for this limited work is likely due to the fact that problems in this class involve expensive functions (e.g., an embedded partial differential equation solver or molecular dynamics simulation), which prohibit the use of many DFO methods that require a large number of function evaluations. Bayesian optimization (BO) has become a popular surrogate-based DFO method in recent years due to its data efficiency. By constructing a Gaussian process (GP) model of the objective and constraint functions, BO can sequentially decide where next to sample the expensive functions in a way that tradeoffs between exploration (where the uncertainty in the prediction is large) and exploitation (where the mean function is predicted to have good performance). Although BO has been successfully applied to many different nominal problems, it has proved difficult to extend BO to the robust optimization setting due to the minimax problem requiring two competing optimization stages. The MiMaReK algorithm [5] is one of the earliest attempts to develop a robust BO strategy, which uses a two-level expected improvement acquisition function that requires a growing number of samples at each iteration. Thus, MiMaReK has limited applicability for very expensive functions. Adversarially robust BO (ARBO) [6][7] is a more recent attempt that overcomes this limitation by simultaneously modelling the effect of the design variables and uncertainties on the objective function. ARBO only requires a single expensive function evaluation at every iteration, which can potentially result in a drastic reduction in the number of function evaluations needed to achieve convergence. Furthermore, ARBO was able to provide a bound on the number of iterations needed to achieve convergence by exploiting recent theory developed based in terms of the lower and upper confidence bounds of the GP. Although powerful, ARBO does not directly handle worst-case constraints, which are important in a wide-variety of safety-critical applications in engineering and beyond. In this work, we propose a constrained extension of ARBO, which we refer to as constrained ARBO (CARBO), that is applicable to constrained robust optimization problems whose objective and/or constraint functions are defined in terms of expensive, black-box functions. CARBO builds on recent work from our group on exploiting exact penalty functions to develop convergent constrained BO algorithms [8]. To prove convergences in the robust constrained optimization context, we need to introduce the notion of robust penalty-based regret, which measures the difference in quality between our recommended point and (unknown) globally optimal robust solution. We will prove that the cumulative robust penalty-based regret is a sub-linearly decaying function of the total number of iterations, which implies there exists a (finite) iteration such that our recommended point is arbitrarily close to the constrained robust global solution. We demonstrate CARBO’s performance on multiple test problems including a high-fidelity simulation of a complex bioreactor [9]. We also discuss the importance of the final recommendation procedure including a new heuristic strategy for improving the quality of the estimated worst-case performance and constraint satisfaction. References [1] Dimitris Bertsimas, Omid Nohadani, Kwong Meng Teo, (2010) Robust Optimization for Unconstrained Simulation-Based Problems. Operations Research 58(1):161-178. [2] Ben-Tal, Aharon, and Arkadi Nemirovski. \"Robust optimization–methodology and applications.\" Mathematical programming 92.3 (2002): 453-480. [3] Žakovi´c, S., C. Pantelides. 2000. An interior point algorithm for computing saddle points of constrained continuous minimax. Ann. Oper. Res. 99 59–77. [4] Diehl, M., H. G. Bock, E. Kostina. 2006. An approximation technique for robust nonlinear optimization. Math. Programming, Ser. B 107 213–230. [5] B. Shahriari, K. Swersky, Z. Wang, R. P. Adams, N. De Freitas, Taking the human out of the loop: A review of Bayesian optimization, Proceedings of the IEEE 104 (1) (2015) 148-175. [6] J. Marzat, E. Walter, and H. Piet-Lahanier, “A new expected improvement algorithm for continuous minimax optimization,” Journal of Global Optimization, vol. 64, no. 4, pp. 785–802, 2016. [7] I. Bogunovic, J. Scarlett, S. Jegelka, and V. Cevher, “Adversarially robust optimization with Gaussian processes,” 2018 [8] 24. J.A. Paulson, G. Makrygiorgos, and A. Mesbah. Adversarially robust Bayesian optimization for efficient auto-tuning of generic control structures under uncertainty. AIChE Journal, e17591, 2021. [9] C. Lu and J.A Paulson. “No-regret Bayesian optimization with unknown equality and inequality constraints using exact penaly functions”, IFAC Symposium on Dynamics and Control of Process Systems, including Biosystems, 2022 (accepted). [10] J. Chen, J. Daniell, D. Griﬃn, X. Li, and M. A. Henson, “Experimental testing of a spatiotemporal metabolic model for carbon monoxide fermentation with Clostridium autoethanogenum,” Biochem. Eng. J., vol. 129, pp. 64–73, 2018.",
+    "presenting_author": "Akshay Kudva | The Ohio State University, Columbus",
+    "authors": [
+      "Akshay Kudva | The Ohio State University, Columbus",
+      "Farshud Sorourifar | The Ohio State University, Columbus",
+      "Joel Paulson | The Ohio State University, Columbus"
+    ],
+    "authors_structured": [
+      {
+        "name": "Akshay Kudva",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Farshud Sorourifar",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "483c",
+    "sortable_time": "2022-11-16_13:06:00_13:24:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649982"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/641645",
+    "paper_endpoint": "Paper/641645",
+    "paper_id": "641645",
+    "topic": "Deep Reinforcement Learning to Address Uncertainties in Computational Molecular Design",
+    "title": "Deep Reinforcement Learning to Address Uncertainties in Computational Molecular Design",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "51175",
+    "session_title": "Design and Operations under Uncertainty - II",
+    "session_number": "483",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The tuning of microscale molecular properties to improve the functionality and efficiency of products and processes have long served as the primary means for the development of novel products and processes. However, in current paradigms, uncertainty estimates of both property models and property data are not factored into the design of molecules, leading to suboptimal or even infeasible solutions due to the potential violation of property, product, and/or process constraints. Herein, we present DRL-CMD, a deep reinforcement learning (DRL) framework for addressing the uncertainties present in computational molecular design (CMD) by providing molecular solutions with uncertainty estimates. A standard molecular design case study is used to compare the performance of our approach to published solutions in the literature. Computational results show that the DRL framework provides superior solutions that factor in uncertainties associated with molecular properties. The flexibility and efficiency of the devised DRL framework are promising for solving not only molecular design problems, but also multiscale product and process design problems.",
+    "presenting_author": "Abdulelah Alshehri | Cornell University, Ithaca, NY",
+    "authors": [
+      "Bryan Tantisujjatham | Cornell University, Ithaca, NY",
+      "Abdulelah Alshehri | Cornell University, Ithaca, NY",
+      "Fengqi You | Cornell University, Ithaca, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Bryan Tantisujjatham",
+        "affiliation": "Cornell University, Ithaca, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Abdulelah Alshehri",
+        "affiliation": "Cornell University, Ithaca, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Fengqi You",
+        "affiliation": "Cornell University, Ithaca, NY",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "483d",
+    "sortable_time": "2022-11-16_13:24:00_13:42:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/641645"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/645363",
+    "paper_endpoint": "Paper/645363",
+    "paper_id": "645363",
+    "topic": "Technology Prioritization for Biofuel Supply Chain Design Via Stochastic Optimization",
+    "title": "Technology Prioritization for Biofuel Supply Chain Design Via Stochastic Optimization",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "51175",
+    "session_title": "Design and Operations under Uncertainty - II",
+    "session_number": "483",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Technology is a critical component in biofuel supply chain. As a strategic decision, technology selection incurs large capital costs (Govindan, Fattahi, and Keyvanshokooh 2017), thus decision makers must commit to certain technologies under the budget constraint. At the same time, technology selection decisions are made under uncertain future budgets, along with other uncertainties surrounding the design and long-term planning setting. Consider a set of technologies, each converts one compound to another compound and requires continued funding over the coming years. Different technologies improve different compound conversion processes while competing for the uncertain annual budget. In addition, uncertainties around demand, price, and biomass yield should also be taken into account. Most studies from literature address the aforementioned issue by solving for a portfolio of technologies via stochastic optimization, while decision makers in practice often form a rank-ordered list of technologies and select those with the highest priority until the budget is exhausted instead. Both approaches have their shortcomings: a portfolio of technologies based on assumptions on uncertain parameters can be fragile with respect to changes to those parameters not captured by uncertainty modeling, while a rank-ordered list is often based on the merits of individual technologies and does not capture the combined effects of technologies when they are selected together. Koç and Morton (Koç and Morton 2014) proposed a prioritization approach based on stochastic optimization. This approach generates a rank-ordered list which recognizes that items in the list work together as a portfolio when selected. We generalize the work by Koç and Morton to a multi-stage multi-period setting for biofuel supply chain design problems. Specifically, we define binary variables that model the relative priority between technologies as first-stage variables, and the remaining variables enforce that a higher priority technology must be selected before selecting a lower priority technology and capture the relationship between other decision variables and technology selections. We demonstrate the capability of our method to identify high-priority technologies through a case study located in the Midwest region of USA with realistic data. Our results provide insights into technology selection for biofuel supply chain design. References Govindan, Kannan, Mohammad Fattahi, and Esmaeil Keyvanshokooh. 2017. “Supply Chain Network Design under Uncertainty: A Comprehensive Review and Future Research Directions.” European Journal of Operational Research 263 (1): 108–41. https://doi.org/10.1016/J.EJOR.2017.04.009. Koç, Ali, and David P. Morton. 2014. “Prioritization via Stochastic Optimization.” Management Science 61 (3): 586–603. https://doi.org/10.1287/MNSC.2013.1865.",
+    "presenting_author": "Yifu Chen | University of Wisconsin-Madison",
+    "authors": [
+      "Yifu Chen | University of Wisconsin-Madison",
+      "Eric O'Neill | Princeton University, NJ",
+      "Christos Maravelias | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yifu Chen",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Eric O'Neill",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Christos Maravelias",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "483e",
+    "sortable_time": "2022-11-16_13:42:00_14:00:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/645363"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/644592",
+    "paper_endpoint": "Paper/644592",
+    "paper_id": "644592",
+    "topic": "Multi-Objective Optimization of Flexible Integrated Biorefinery Design",
+    "title": "Multi-Objective Optimization of Flexible Integrated Biorefinery Design",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "51175",
+    "session_title": "Design and Operations under Uncertainty - II",
+    "session_number": "483",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The growing concerns over global warming and environmental issues motivate the research on replacing oil-based feedstocks with biomass raw material for chemical and fuel production. Various technologies have been developed, scaled up, and commercialized over the years. 1 However, most biomass conversion technologies are optimized to selectively convert a specific feedstock component (e.g., cellulose, 2 hemicellulose, 3 or lignin 4 ) while the rest becomes the waste stream. Hence, the integrated biorefinery is proposed to combine different conversion technologies and fully utilize all biomass components. 5 The superstructure optimization framework with all available alternative reaction routes is commonly used to design the biorefinery. 6 In addition to selecting the most economical or sustainable feedstock-technology-product combinations, the integrated biorefinery strategy also gives the process more flexibility to adjust its production in the volatile chemical market. Many sources of uncertainty could have different impacts on biorefinery design and operations. Uncertain parameters including biomass feedstock composition, supply, 7 product demand, and price 8 could be measured on-time to allow recourse actions. 9 On the other hand, uncertainty introduced due to reaction kinetics and the difference between lab experiments and scaled-up plant performance can only be estimated rather than measured directly. 10, 11 Hence, it is important to incorporate uncertainties in biorefinery design optimization to allow for additional flexibility. 12 Flexibility index problem is commonly used to measure system’s ability to ensure feasible operation over the uncertainty range, which is defined as finding hyperrectangular feasible operating envelopes. 11 Another commonly used technique, stochastic programming, samples probability distributions of uncertain parameters and optimizes the expected values of the objective functions. 13 Bhosekar et al. applied the two-stage stochastic programming formulation for a biorefinery superstructure optimization to illustrate the effects of uncertainties on the trade-of between process profit and emission. 14 A successful biorefinery design is expected to strike a balance between high profit, low emission, and sufficient flexibility. In this work, we aim to develop a methodology for designing such an integrated biorefinery by combining two-stage stochastic programming and flexibility index optimization. A variety of process flowsheets that use biomass feedstocks to synthesize different chemicals are developed in Aspen Plus using experimental and literature data. 15 The raw material usage, chemical production, cost, and emission of each flowsheet are extracted to define the economic and environmental objective functions. The ε-constraint method is utilized to convert flexibility index and global warming potential objectives into the model constraints. 14 The technology choices and plant capacities are decided in the first stage of the stochastic optimization. 16 Since multiple plant configurations may have the same flexibility index, direct enumeration of all alternatives during the design stage is impossible. Hence, a surrogate model of the biorefinery's flexibility index is built as a function of plant capacities under reaction conversion, supply, and demand uncertainties. The uncertainty probability distributions of price, supply, and demand are then introduced in the second stage of stochastic programming. Finally, the operation-level decisions representing the optimal flow rates of raw material and intermediates for each biomass conversion unit are chosen to maximize the expected profit and minimize the expected greenhouse gas emission. Reference Ögmundarson, Ó.; Herrgård, M. J.; Forster, J.; Hauschild, M. Z.; Fantke, P., Addressing environmental sustainability of biochemicals. Nat. Sustainability 2020, 3 (3), 167-174. Athaley, A.; Annam, P.; Saha, B.; Ierapetritou, M., Techno-economic and life cycle analysis of different types of hydrolysis process for the production of p-Xylene. Comput. Chem. Eng. 2019, 121 , 685-695. Han, J.; Sen, S. M.; Alonso, D. M.; Dumesic, J. A.; Maravelias, C. T., A strategy for the simultaneous catalytic conversion of hemicellulose and cellulose from lignocellulosic biomass to liquid transportation fuels. Green Chem. 2014, 16 (2), 653-661. Liao, Y.; Koelewijn, S.-F.; Van den Bossche, G.; Van Aelst, J.; Van den Bosch, S.; Renders, T.; Navare, K.; Nicolaï, T.; Van Aelst, K.; Maesen, M.; Matsushima, H.; Thevelein, J.; Van Acker, K.; Lagrain, B.; Verboekend, D.; Sels, B. F., A sustainable wood biorefinery for low–carbon footprint chemicals production. Science 2020, 367 (6484), 1385-1390. Kokossis, A. C.; Tsakalova, M.; Pyrgakis, K., Design of integrated biorefineries. Comput. Chem. Eng. 2015, 81 , 40-56. Gong, J.; You, F., Optimal Design and Synthesis of Algal Biorefinery Processes for Biological Carbon Sequestration and Utilization with Zero Direct Greenhouse Gas Emissions: MINLP Model and Global Optimization Algorithm. Ind. Eng. Chem. Res. 2014, 53 (4), 1563-1579. Gulcan, B.; Eksioglu, S. D.; Song, Y.; Roni, M.; Chen, Q., Optimization models for integrated biorefinery operations. Optimization Letters 2021 . Noh, N. M.; Bahar, A.; Zainuddin, Z. M., Scenario Based Two-Stage Stochastic Programming Approach for the Midterm Production Planning of Oil Refinery. MATEMATIKA: Malaysian Journal of Industrial and Applied Mathematics 2018, 34 (3), 45-55. Ostrovsky, G. M.; Datskov, I. V.; Achenie, L. E. K.; Volin, Y. M., Process uncertainty: Case of insufficient process data at the operation stage. AlChE J. 2003, 49 (5), 1216-1232. Yue, D.; You, F., Optimal supply chain design and operations under multi-scale uncertainties: Nested stochastic robust optimization modeling framework and solution algorithm. AlChE J. 2016, 62 (9), 3041-3055. Ochoa, M. P.; García-Muñoz, S.; Stamatis, S.; Grossmann, I. E., Novel flexibility index formulations for the selection of the operating range within a design space. Comput. Chem. Eng. 2021, 149 , 107284. Sahinidis, N. V., Optimization under uncertainty: state-of-the-art and opportunities. Comput. Chem. Eng. 2004, 28 (6), 971-983. Martín, M.; Martínez, A., Addressing Uncertainty in Formulated Products and Process Design. Ind. Eng. Chem. Res. 2015, 54 (22), 5990-6001. Bhosekar, A.; Athaley, A.; Ierapetritou, M., Multiobjective modular biorefinery configuration under uncertainty. Ind. Eng. Chem. Res. 2021, 60 (35), 12956-12969. Ibarra-Gonzalez, P.; Rong, B.-G., Integrated Methodology for the Optimal Synthesis of Lignocellulosic Biomass-to-Liquid Fuel Production Processes: 1. Simulation-Based Superstructure Synthesis and Development. Ind. Eng. Chem. Res. 2020 . Gebreslassie, B. H.; Yao, Y.; You, F., Design under uncertainty of hydrocarbon biorefinery supply chains: Multiobjective stochastic programming models, decomposition algorithm, and a Comparison between CVaR and downside risk. AlChE J. 2012, 58 (7), 2155-2179.",
+    "presenting_author": "Yuqing Luo | University of Delaware, Newark",
+    "authors": [
+      "Yuqing Luo | University of Delaware, Newark",
+      "Marianthi Ierapetritou | University of Delaware, Newark"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yuqing Luo",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Marianthi Ierapetritou",
+        "affiliation": "University of Delaware, Newark",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "483f",
+    "sortable_time": "2022-11-16_14:00:00_14:18:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/644592"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/649926",
+    "paper_endpoint": "Paper/649926",
+    "paper_id": "649926",
+    "topic": "An End-to-End Design and System Integration for Biomanufacturing on Mars Under Uncertainty",
+    "title": "An End-to-End Design and System Integration for Biomanufacturing on Mars Under Uncertainty",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "51175",
+    "session_title": "Design and Operations under Uncertainty - II",
+    "session_number": "483",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "A promising route towards supporting a crew on Mars leverages biotechnological advancements with inherent mass, power, and volume advantages over alternative approaches. Within this scope, the Center for Utilization of Biological Engineering in Space (CUBES) attempts to study the efficient utilization of Martian in situ resources (ISRU) for integrated biomanufacturing of the necessary products for Martian exploration, including biologically produced pharmaceuticals, cell-based treatments/therapeutics, and materials for on-demand and modular additive manufacturing applications [1] to sustain a crewed mission over an extended period. Although a wide array of fundamental scientific breakthroughs has recently been made to develop biotic life-support technologies for deep space missions, attempts to synthesize an end-to-end biomanufacturing system with proper unit integration have been scarce. The purpose of this work is to provide a comprehensive in silico study towards ISRU to manufacture the necessary products for sustaining a human mission, while respecting unique constraints based on space biomanufacturing principles. To this end, we leverage relevant systems modeling work [2,3] to present an optimal design approach that connects the most essential elements towards a biomanufactory on Mars. We assign the key processes involved in ISRU into useful commodities and formulate an optimization problem based on major technoeconomic considerations by using novel design metrics tied to human space exploration. We consider the case of an end-to-end biomanufacturing system that targets the downstream production of biopolymer following a sequence of upstream operations that utilize in situ resources such as water, atmosphere and sunlight. The primary source of reducing equivalents for biological CO 2 conversion to acetate is H 2 , which can be obtained from solar-driven electrolysis of water. Acetate is fed to a downstream process where it acts as a primary substrate for bacteria to synthesize poly(3-hydroxybutyrate) (PHB), a biopolyester useful for additive manufacturing. To achieve an optimal design of the above integrated system, the target PHB production rates, as well as other relevant production goals, such as biomass productivity for downstream utilization, are accounted for as hard constraints, driven by the needs on food and material towards scientific exploration and survival of crew members. The mission design objective function is derived based on the extended Equivalent System Mass (xESM) metrics [4], a framework that is used to quantify the cost of some set of extraterrestrial operations, considering mass, volume, power, and crew time demands. The above constitutes a constrained, mixed-integer non-linear problem (MINLP), whose solution yields the optimal decisions for designing an integrated system to be employed, including optimal flow rates, operational times, resource allocation and system specifications. Moreover, since the simulated environment is unknown, we consider parametric uncertainty in our optimization model and extend the solution to a robust setting. Our findings pave the way towards a system engineering and optimization formulation for deep space exploration and provide estimates for biomanufacturing production costs on Mars. [1] Berliner, A. J., Hilzinger, J. M., Abel, A. J., McNulty, M. J., Makrygiorgos, G., Averesch, N. et al., (2021). Towards a biomanufactory on Mars. Frontiers in Astronomy and Space Sciences , 8 , 120. [2] Cestellos-Blanco, S., Friedline, S., Sander, K. B., Abel, A. J., Kim, J. M., Clark, D. S., Arkin, A.P., & Yang, P. (2021). Production of PHB from CO2-derived acetate with minimal processing assessed for space biomanufacturing. Frontiers in Microbiology , 12 . [3] Abel, A. J., Adams, J. D., & Clark, D. S. (2021). A comparative life cycle analysis of electromicrobial production systems. bioRxiv. [4] Berliner, A., Makrygiorgos, G., & Hill, A. (2021). Extension of Equivalent System Mass for Human Exploration missions on mars, Preprints",
+    "presenting_author": "Georgios Makrygiorgos | University of California, Berkeley",
+    "authors": [
+      "Georgios Makrygiorgos | University of California, Berkeley",
+      "Aaron J. Berliner | University of California at Berkeley",
+      "Anthony Abel | University of California, Berkeley",
+      "Stefano Cestellos-Blanco | University of California, Berkeley",
+      "Jeremy Adams | University of California, Berkeley",
+      "Nishi Thapliyal | University of California, Berkeley",
+      "Amor Menezes | University of Florida, Gainesville",
+      "Peidong Yang | University of California, Berkeley",
+      "Douglas S. Clark | University of California, Berkeley",
+      "Adam P. Arkin | University of California Berkeley",
+      "Ali Mesbah | University of California, Berkeley"
+    ],
+    "authors_structured": [
+      {
+        "name": "Georgios Makrygiorgos",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Aaron J. Berliner",
+        "affiliation": "University of California at Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Anthony Abel",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Stefano Cestellos-Blanco",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Jeremy Adams",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Nishi Thapliyal",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Amor Menezes",
+        "affiliation": "University of Florida, Gainesville",
+        "designation": "Author"
+      },
+      {
+        "name": "Peidong Yang",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Douglas S. Clark",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Adam P. Arkin",
+        "affiliation": "University of California Berkeley",
+        "designation": "Author"
+      },
+      {
+        "name": "Ali Mesbah",
+        "affiliation": "University of California, Berkeley",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "483g",
+    "sortable_time": "2022-11-16_14:18:00_14:36:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/649926"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/646553",
+    "paper_endpoint": "Paper/646553",
+    "paper_id": "646553",
+    "topic": "Development of a Health Monitoring Framework Under Uncertainty for Supercritical Coal Power Plants Considering Material and Operational Uncertainties",
+    "title": "Development of a Health Monitoring Framework Under Uncertainty for Supercritical Coal Power Plants Considering Material and Operational Uncertainties",
+    "date_time": "2022-11-16_12:30:00_15:00:00",
+    "session_id": "51175",
+    "session_title": "Design and Operations under Uncertainty - II",
+    "session_number": "483",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "With the increased penetration of renewable sources of power in the electric grid, fossil-fired power plants are adapting their operational strategy accordingly changing their load faster and more frequently, which has greatly impacted the equipment health in these power plants. In plants that operate at extreme conditions, like supercritical pulverized coal-fired (SCPC) power plants, this impact is particularly profound, especially in the boilers of SCPC plants where the highest temperatures and pressures are reached. Therefore, as SCPC plants operate under load-following conditions more frequently, it is vital that the health of their equipment be monitored to avoid significant damage that would lead to costly unplanned shutdowns for maintenance or replacement. To predict the damage done under load-following conditions, a high-fidelity model of the SCPC boiler is essential, since the thermal and pressure profiles of the water / steam and coal / flue gas, as well as the thermal profiles of the boiler tubes and steam headers, which are the components that tend to be susceptible to cycling damage.[1], [2] Variables such as temperature can be difficult to measure due to the harsh operating conditions in the boiler, the through-wall temperature profiles in the tubes are not practical to measure, and the spatial profiles of thermal and mechanical stress are also practically impossible to measure. Therefore, it is necessary to estimate these variables using few measurements that are available[3], [4] and a detailed model. Since the exact locations of the highest stress and most damage are not known and shift as the load changes, a monitoring approach based solely on measurements may fail to identify the most damaged component. Thus, a model-based approach was developed in this work where a dynamic, distributed-parameter model of an SCPC boiler was developed to obtain the relevant thermal and pressure profiles within the boiler, which were then used to calculate the thermomechanical stresses at all locations in the boiler that can then be used to determine indicators of damage. In contrast to available boiler models that tend to either neglect essential variables for health monitoring, such as the thermal profiles of the tubes and headers,[5] or are too complex to run real- or near real-time,[6] the boiler model that was developed here retains enough complexity to capture the key variables for health monitoring while still being able to simulate a load-following boiler in real-time. The first-principles, dynamic model developed here is validated against load-following, transient industrial data for not only the main steam conditions, as has been done in the open literature,[7] but also for multiple points along the boiler where measurements were available. As part of this validation, data reconciliation was performed using the detailed, dynamic boiler model, which has full consideration of the thermohydraulics and heat transfer limitations within the boiler, rather than a simple model that only ensures satisfaction of mass and energy balances, as is common in the literature.[8], [9] The validated boiler model with consideration of the tri-axial stresses on the tubes and steam headers formed the basis of the health monitoring framework. The framework was designed to account for uncertainty in both the operation of SCPC power plants and the material properties of the boiler. The operational uncertainty was characterized based on three years’ worth of power demand data from CA ISO’s OASIS,[10] where the past power demand for non-renewable power sources was used to define “typical” operating days for each season, as the power demand is highly seasonal, as well as the 95% confidence ranges for power demand at each hour for the “typical” operating days. Material uncertainties were quantified similarly where data was available to do such analysis, defining confidence intervals for the material properties, such as the rupture time, based on data for various temperatures and pressures. Following the quantification of the uncertainty, Monte Carlo analysis, simulating over expected trajectories, was used to define the distribution of the expected Remaining Useful Life (RUL) of the boiler with regard to damage indicators, such as the rupture time and number of allowable cycles,[11], [12] under load-following conditions. This framework allows for the use of historical data to update the RUL such that the uncertainty in the estimate reduces with time. Using the framework, results of a case study will be presented wherein the RUL for an SCPC boiler is projected for ten years, then historical data for the first year is added to the framework as an update. The framework exhibits how the uncertainty in prediction changes as more data becomes available. Multiple scenarios for that first year are presented (e.g., one in which the plant cycled aggressively, one where the plant cycled normally, and one where the plant cycled conservatively) to show how the RUL evolves with different operational strategies. References [1] A. Shibli and J. Ford, “Damage to coal power plants due to cyclic operation,” in Coal Power Plant Materials and Life Assessment: Developments and Applications , Elsevier Inc., 2014, pp. 333–357. doi: 10.1533/9780857097323.2.333. [2] R. K. Smith, “Analysis of hourly generation patterns at large coal-fired units and implications of transitioning from baseload to load-following electricity supplier,” Journal of Modern Power Systems and Clean Energy 2018 7:3 , vol. 7, no. 3, pp. 468–474, Dec. 2018, doi: 10.1007/S40565-018-0470-9. [3] M. Jaremkiewicz and J. Taler, “Online determining heat transfer coefficient for monitoring transient thermal stresses,” Energies (Basel) , vol. 13, no. 3, 2020, doi: 10.3390/en13030704. [4] J. Taler et al. , “Thermal stress monitoring in thick walled pressure components of steam boilers,” Energy , vol. 175, pp. 645–666, May 2019, doi: 10.1016/j.energy.2019.03.087. [5] M. Trojan, “Modeling of a steam boiler operation using the boiler nonlinear mathematical model,” Energy , vol. 175, pp. 1194–1208, May 2019, doi: 10.1016/j.energy.2019.03.160. [6] M. Granda, M. Trojan, and D. Taler, “CFD analysis of steam superheater operation in steady and transient state,” Energy , vol. 199, p. 117423, Mar. 2020, doi: 10.1016/j.energy.2020.117423. [7] A. K. Olaleye, “Modelling and Operational Analysis of Coal Fired Supercritical Power Plant Integrated with Post Combustion Carbon Capture,” 2015. [8] X. Jiang, P. Liu, and Z. Li, “A data reconciliation based framework for integrated sensor and equipment performance monitoring in power plants,” Applied Energy , vol. 134, pp. 270–282, Dec. 2014, doi: 10.1016/j.apenergy.2014.08.040. [9] S. Guo, P. Liu, and Z. Li, “Data processing of thermal power plants based on dynamic data reconciliation,” Chemical Engineering Transactions , vol. 61, pp. 1327–1332, 2017, doi: 10.3303/CET1761219. [10] California ISO, “Open Access Same-time Information System (OASIS).” http://oasis.caiso.com/mrioasis/logon.do (accessed Apr. 07, 2022). [11] ECCC, “ECCC Data Sheets 2005.” D G Robertson & S R Holdsworth ETD Ltd., Sep. 2005. [12] “Water-tube boilers and auxiliary installations - Part 3: Design and calculation of pressure parts,” London, UK, May 2002.",
+    "presenting_author": "Katherine Hedrick | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Katherine Hedrick | West Virginia University, Morgantown, WV",
+      "Elijah Hedrick | West Virginia University, Morgantown, WV",
+      "Benjamin P. Omell | National Energy Technology Laboratory, Pittsburgh, PA",
+      "Stephen Zitney | National Energy Technology Laboratory, Morgantown, WV",
+      "Debangsu Bhattacharyya | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Katherine Hedrick",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Elijah Hedrick",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Benjamin P. Omell",
+        "affiliation": "National Energy Technology Laboratory, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephen Zitney",
+        "affiliation": "National Energy Technology Laboratory, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Debangsu Bhattacharyya",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "483h",
+    "sortable_time": "2022-11-16_14:36:00_14:54:00",
+    "affiliation_source": "aiche_2022_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2022/meetingapi.cgi/Paper/646553"
+  }
+]

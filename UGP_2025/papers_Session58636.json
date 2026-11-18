@@ -1,0 +1,402 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717975",
+    "paper_endpoint": "Paper/717975",
+    "paper_id": "717975",
+    "topic": "Model Development and Parameter Estimation of Mechanochemical Population Balance Models – Utilities and Limitations of the Physics-Informed Neural Network Approach",
+    "title": "Model Development and Parameter Estimation of Mechanochemical Population Balance Models – Utilities and Limitations of the Physics-Informed Neural Network Approach",
+    "date_time": "2025-11-04_12:30:00_15:00:00",
+    "session_id": "58636",
+    "session_title": "10D: Applied Math and Numerical Methods for Industrial Applications",
+    "session_number": "329",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Population Balance Models (PBMs) are a class of Ordinary Differential Equations (ODEs) representing the evolving mass fractions of particulate processes. PBMs are widely used to model particle size distributions, most notably tracking the breakage and agglomeration rates of pharmaceutical milling [1], crystallization [2], and polymerization [3] processes. These key industrial operations rely on accurate particulate distribution models and their mechanistic interpretations to inform industrial scale-up studies, enable Quality by Design (QbD) process control, and embed these unit operations within process-scale flowsheet modeling. Recently, mechanochemical processes have emerged as a promising and sustainable technology for reactive milling of solid feedstocks, since transient impact areas of high dissipated energies and elevated local temperatures can obviate the need for the costly bulk heating and large solvent volumes associated with many traditional chemical processes. Among a growing list of application areas, this class of reactors has displayed its potential in depolymerizing polystyrene [4], poly(ethylene terephthalate) [5], [6], and poly(methyl methacrylate) [7] for plastics recycling applications, synthesizing carbon fibers and other commercial goods from lignin feeds [8], and even providing a mild-conditioned ammonia synthesis pathway [9]. In order for mechanochemical reactors to approach industrial maturity, the development of mechanistically informed PBMs to predict process outcomes and product properties remains an indispensable tool towards the design, integration and adoption of this technology. The modeling of reactive milling systems is uniquely challenging since there is mechanistic and kinetic uncertainty in the mechanical collisions that form reactive hot spots, and in the molecular reactions that take place in them. This work considers a case study of the mechanochemical depolymerization of polystyrene in a lab-scale vibratory reactor that exhibits experimental molecular weight distributions (MWDs), which are notably distinct from those characterized in traditional depolymerization literature [4]. To aid in the development of the mechanochemical PBM kernels, we develop a model identification routine based on candidate kinetic pathways and mechanochemical assumptions, which are encoded into the PBM kernels and model parameters. The PBM kernels parameterize the reaction rates and product distributions of discretized molecular weight classes, with the capacity to additionally represent nonlinear particulate interactions such as reaction inhibition [10]. However, the consideration of nonlinear interactions requires each molecular weight reactivity to become dependent on the mass fractions of all other molecular weights, thereby introducing an additional nested summation into the PBM ODE system. We show the necessary quantity of PBM ODEs to be on the order of 50-100 to sufficiently model the MWD process data across standard milling conditions, and at this limit, parameter estimation of nonlinear PBM kernels becomes computationally challenging with traditional methods. Thus, we develop a physics-informed neural network (PINN) approach to PBM parameter estimation for multi-parameter systems with limited data availability and several candidate PBM kernels, extending initial literature implementations of PINNs for non-reactive, linear PBMs [11]. Once trained on a subset of experimental data, the PINN can reduce the computational expense of parameter estimation by estimating ODE evaluations as backpropagated values [12], thereby reducing reliance on repeated forward solutions of the PBM at varied parameter sets. We compare the computational and data requirements of the novel PINN approach to stochastic and deterministic global optimization routines involving repeated forward ODE simulations at varied parameter sets, as well as form-specific methods developed for PBMs. Specifically, we identify and map the most appropriate parameter estimation methods for varying levels of PBM complexity, model uncertainty, and data availability, defining clearly the use cases of each methodology as it relates to mechanochemical and general particulate processes. In conclusion, the novelty of this work is multifaceted – first, we unify milling and depolymerization kinetic literature by developing a mechanistic PBM that models polystyrene’s evolving MWD during reactive milling. Second, to aid in the model identification and parameter estimation of the PBM, we develop a PINN approach that encodes the physical constraints of mechanochemical kinetic assumptions into a computationally inexpensive surrogate model, which can consider a wide range of potential mechanistic PBM forms. Lastly, we provide a comprehensive comparison of the PBM-PINN approach towards model identification and parameter estimation for particulate process assumptions of varying complexity to map the types of systems that benefit most from this ML-based approach. References: [1] S. Fadda, A. Cincotti, A. Concas, M. Pisu, and G. Cao, “Modelling breakage and reagglomeration during fine dry grinding in ball milling devices,” Powder Technol , vol. 194, no. 3, pp. 207–216, Sep. 2009, doi: 10.1016/J.POWTEC.2009.04.009. [2] C. B. B. Costa, M. R. W. Maciel, and R. M. Filho, “Considerations on the crystallization modeling: Population balance solution,” Comput Chem Eng , vol. 31, no. 3, pp. 206–218, Jan. 2007, doi: 10.1016/J.COMPCHEMENG.2006.06.005. [3] C. Kotoulas and C. Kiparissides, “A generalized population balance model for the prediction of particle size distribution in suspension polymerization reactors,” Chem Eng Sci , vol. 61, no. 2, pp. 332–346, Jan. 2006, doi: 10.1016/J.CES.2005.07.013. [4] Y. Chang et al. , “Kinetic Phenomena in Mechanochemical Depolymerization of Poly(styrene),” ACS Sustain Chem Eng , vol. 12, no. 1, pp. 178–191, Jan. 2024, doi: 10.1021/acssuschemeng.3c05296. [5] A. W. Tricker et al. , “Stages and Kinetics of Mechanochemical Depolymerization of Poly(ethylene terephthalate) with Sodium Hydroxide,” ACS Sustain Chem Eng , vol. 10, no. 34, pp. 11338–11347, Aug. 2022, doi: 10.1021/acssuschemeng.2c03376. [6] E. Anglou, Y. Chang, W. Bradley, C. Sievers, and F. Boukouvala, “Modeling Mechanochemical Depolymerization of PET in Ball-Mill Reactors Using DEM Simulations,” ACS Sustain Chem Eng , vol. 12, no. 24, pp. 9003–9017, Jun. 2024, doi: 10.1021/acssuschemeng.3c06081. [7] E. Jung, M. Cho, G. I. Peterson, and T. L. Choi, “Depolymerization of Polymethacrylates with Ball-Mill Grinding,” Macromolecules , vol. 57, no. 7, pp. 3131–3137, Apr. 2024, doi: 10.1021/acs.macromol.3c02664. [8] Y. Luo et al. , “Introducing thermo-mechanochemistry of lignin enabled the production of high-quality low-cost carbon fiber,” Green Chemistry , vol. 26, no. 6, pp. 3281–3300, Mar. 2024, doi: 10.1039/D3GC04288J. [9] G. F. Han et al. , “Mechanochemistry for ammonia synthesis under mild conditions,” Nature Nanotechnology 2020 16:3 , vol. 16, no. 3, pp. 325–330, Dec. 2020, doi: 10.1038/s41565-020-00809-9. [10] M. Capece, R. N. Davé, and E. Bilgili, “On the origin of non-linear breakage kinetics in dry milling,” Powder Technol , vol. 272, pp. 189–203, Mar. 2015, doi: 10.1016/J.POWTEC.2014.11.040. [11] X. Chen, L. G. Wang, F. Meng, and Z. H. Luo, “Physics-informed deep learning for modelling particle aggregation and breakage processes,” Chemical Engineering Journal , vol. 426, p. 131220, Dec. 2021, doi: 10.1016/J.CEJ.2021.131220. [12] M. Raissi, P. Perdikaris, and G. E. Karniadakis, “Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations,” J Comput Phys , vol. 378, pp. 686–707, Feb. 2019, doi: 10.1016/J.JCP.2018.10.045.",
+    "presenting_author": "Jacob Sweet | School of Chemical and Biomolecular Engineering, Georgia Institute of Technology, Atlanta, GA",
+    "authors": [
+      "Jacob Sweet | School of Chemical and Biomolecular Engineering, Georgia Institute of Technology, Atlanta, GA",
+      "Elisavet Anglou | Georgia Institute of Technology, Atlanta, GA",
+      "Yuchen Chang | Georgia Institute of Technology, Atlanta, GA",
+      "Carsten Sievers | Georgia Institute of Technology, Atlanta, GA",
+      "Fani Boukouvala | Georgia Institute of Technology, Atlanta, GA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jacob Sweet",
+        "affiliation": "School of Chemical and Biomolecular Engineering, Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Elisavet Anglou",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Yuchen Chang",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Carsten Sievers",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      },
+      {
+        "name": "Fani Boukouvala",
+        "affiliation": "Georgia Institute of Technology, Atlanta, GA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "329a",
+    "sortable_time": "2025-11-04_12:30:00_12:48:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717975"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716253",
+    "paper_endpoint": "Paper/716253",
+    "paper_id": "716253",
+    "topic": "Macro–Micro–Meso Multiscale Coupled Modeling for Optimizing Two-Sided Drying Conditions in Battery Separator Manufacturing",
+    "title": "Macro–Micro–Meso Multiscale Coupled Modeling for Optimizing Two-Sided Drying Conditions in Battery Separator Manufacturing",
+    "date_time": "2025-11-04_12:30:00_15:00:00",
+    "session_id": "58636",
+    "session_title": "10D: Applied Math and Numerical Methods for Industrial Applications",
+    "session_number": "329",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Separators are critical components of lithium-ion batteries and significantly influence their performance [1]. Due to their inherently limited mechanical and thermal stability, separators typically require a ceramic slurry coating to enhance their overall robustness and reliability. The uniformity and microstructure of the ceramic coating are particularly critical, as they directly influence the battery lifespan and performance. Furthermore, the drying step following slurry coating not only determines the final coating quality but also accounts for a substantial portion of energy consumption in the overall manufacturing process. Therefore, optimization of drying process conditions is essential. To effectively control the coating quality, the operational conditions at the macroscale, such as airflow velocity, temperature, and drying rate, must be precisely managed. However, the ultimate coating characteristics are determined by phenomena at the microscale, including internal solvent distribution and thickness, and at the mesoscale, such as particle interactions and microstructure formation. Thus, a comprehensive multiscale modeling approach that captures interactions across all scales is required. This study proposes a multiscale model to quantitatively analyze the interactions between macro-scale drying conditions and micro/meso-scale coating properties, aiming to optimize the conditions for high-quality separator coatings. Our multiscale framework integrates three distinct scales. At the macroscale, computational fluid dynamics (CFD) simulated solvent evaporation and airflow dynamics within a floating-type oven [2] featuring impinging jets from slot nozzles. At the microscale, differential algebraic equation (DAE) modeling predicts the solvent concentration, temperature distribution, and coating thickness by utilizing heat transfer coefficients, partial pressures, and zone temperatures obtained from CFD [3,4,5]. At the meso-scale, a coarse-grained molecular dynamics (CGMD) model [6] was used to analyze the slurry particle interactions and microstructure. A macro-micro-meso data exchange platform was also prepared to facilitate integration across these scales and is currently under development. An iterative two-way coupling between the CFD and DAE models ensures a continuous exchange of boundary condition data, such as the evaporative mass flux and surface temperature, at each time step. Multiscale modeling successfully provided quantitative predictions of the localized temperature, solvent distribution, thickness evolution, and drying rates during simultaneous two-sided drying, which was unattainable using conventional single-scale approaches. Notably, the distinct drying characteristics of the upper and lower surfaces clarified the root cause of the coating coverage nonuniformities. These results are essential for identifying optimal drying conditions, minimizing front-to-back quality variations, and enabling the production of uniformly coated separators. Ultimately, the proposed method contributes significantly to enhanced coating quality, manufacturing efficiency, and reduced-energy consumption. Future research will integrate the meso-scale CGMD model into the established macro-micro-meso data exchange platform to complete the multiscale framework. Additionally, uncertainty quantification will be used to assess realistic operational variabilities, such as variations in temperature, humidity, and equipment fluctuations, and surrogate-based Model Predictive Control (MPC) [7] will be implemented for real-time process optimization and quality enhancement. Reference [1] Costa, C. M., Lee, Y. H., Kim, J. H., Lee, S. Y., & Lanceros-Méndez, S. (2019). Recent advances on separator membranes for lithium-ion battery applications: From porous membranes to solid electrolytes. Energy Storage Materials, 22, 346-375. [2] PNT Inc., Apparatus for coating both sides of thin material, Korea Patent 1020120041143, 2012. [3] A. Mesbah, A. N. Ford Versypt, X. Zhu, and R. D. Braatz, Nonlinear model-Based control of thin-film drying for continuous pharmaceutical manufacturing. Industrial & Engineering Chemistry Research, 2014. 53(18):7447-7460. [4] Dias, B. S., et al. (2022). \"Multi-scale modeling and simulation of IR radiative drying for coil coating processes.\" Drying Technology 40(16): 3466-3482. [5] Susarla, N., et al. (2018). \"Modeling and analysis of solvent removal during Li-ion battery electrode drying.\" Journal of Power Sources 378: 660-670. [6] Yao, X., et al. (2023). \"Coarse-grained molecular dynamics simulations of microstructure evolution and debonding in water-based cathode electrode drying.\" Journal of Materials Processing Technology 321. [7] J. A. Paulson, A. Mesbah, S. Streif, R. Findeisen, Fast stochastic model predictive control of high-dimensional systems. in Proceedings of the 53rd IEEE Conference on Decision and Control, pp. 2802-2809, 2014.",
+    "presenting_author": "Hyeonjeong Oh | Ewha Womans University, Seoul, Korea, Republic of (South)",
+    "authors": [
+      "Hyeonjeong Oh | Ewha Womans University, Seoul, Korea, Republic of (South)",
+      "Anseong Park | Seoul National University, Korea, Republic of (South)",
+      "Eunyeong Jung | Seoul National University, Korea, Republic of (South)",
+      "Wonbo Lee | Seoul National University, Korea, Republic of (South)",
+      "Jonggeol Na | Ewha Womans University, Seoul, Korea, Republic of (South)"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hyeonjeong Oh",
+        "affiliation": "Ewha Womans University, Seoul, Korea, Republic of (South)",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Anseong Park",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Eunyeong Jung",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Wonbo Lee",
+        "affiliation": "Seoul National University, Korea, Republic of (South)",
+        "designation": "Author"
+      },
+      {
+        "name": "Jonggeol Na",
+        "affiliation": "Ewha Womans University, Seoul, Korea, Republic of (South)",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "329b",
+    "sortable_time": "2025-11-04_12:48:00_13:06:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716253"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/718957",
+    "paper_endpoint": "Paper/718957",
+    "paper_id": "718957",
+    "topic": "Modeling and State Estimation of Wax Deposition in a Subsea Pipeline Segment",
+    "title": "Modeling and State Estimation of Wax Deposition in a Subsea Pipeline Segment",
+    "date_time": "2025-11-04_12:30:00_15:00:00",
+    "session_id": "58636",
+    "session_title": "10D: Applied Math and Numerical Methods for Industrial Applications",
+    "session_number": "329",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Wax deposition presents an ongoing and costly challenge in offshore oil transportation, particularly in subsea pipelines where low ambient temperatures can greatly lower the temperature of the oil being transported. It can accumulate progressively along the inner walls of the pipeline, resulting in a decrease in flow area, increased pumping pressure needed to maintain a particular production rate, and potentially complete obstruction. In severe situations, the wax deposit can become excessively thick, making it impossible to remove through standard pigging methods. This scenario may necessitate the replacement of the pipeline and the cutting-off of the clogged section, potentially costing millions of dollars [1]. In addition, too frequent or excessive pigging operations can lead to significant economic costs. Thus, accurately forecasting wax growth rates and deposition thickness is essential for effectively timing pigging operations [2]. Many current models fail to accurately depict the internal temperature and wax concentration profiles within the deposited layer, and they also do not account for their transient evolution. These limitations highlight the necessity for a model that can illustrate the spatiotemporal dynamics of temperature and wax concentration within the deposit. In this research, we modify the previously developed model designed for predicting wax deposition in a cold-finger experimental setup to a more applicable and realistic geometry: a radial slice of a subsea pipeline [3]. We extend the governing equations for a laboratory-scale cylindrical apparatus to propose a transient heat and mass transfer model for wax deposition in a radial slice of a submerged pipeline focusing on the inward growth of wax deposits due to the surrounding cold seawater. The wax layer is presumed to consist of a single representative component. This modification allows us to investigate the spatial and temporal evolution of temperature and the concentration in the deposit under moving boundary conditions and conditions that reflect real-world operations. Challenges in implementing spatially distributed sensors have led to significant research efforts in the field of chemical engineering to address the estimation of spatiotemporal states in distributed parameter systems [4, 5]. In this research, the governing equations represent a nonlinear distributed parameter system (DPS) because of their PDE nature, and the resulting model captures spatially varying states such as temperature and concentration within the wax layer. However, these internal parameters are unmeasurable in practice, particularly in deep-water settings where implementing sensors is challenging or impossible. To estimate these states, we propose designing a nonlinear state observer that relies solely on the measured bulk oil temperature as the system output. The continuous PDE system is discretized in the radial direction through the finite difference method. Subsequently, an observer is developed to reconstruct the full state vector, which includes concentration and temperature profiles as well as the moving interface location between oil and wax. This allows for real-time monitoring of the wax deposit growth, providing a foundation for system monitoring. This approach is generalizable and can be extended to accommodate multi-component wax systems and the axial direction of the pipeline. References [1] Lee HS. Computational and Rheological Study of Wax Deposition and Gelation in Subsea Pipelines. PhD Thesis, University of Michigan, Ann Arbor, MI, 2007. [2] Zheng S, Fogler HS, Haji‐Akbari A. A fundamental wax deposition model for water‐in‐oil dispersed flows in subsea pipelines. AIChE Journal. 2017 Sep;63(9):4201-13. [3] Mahir, Luqman Hakim Ahmad, et al. \"An experimentally validated heat and mass transfer model for wax deposition from flowing oil onto a cold surface.\" AIChE Journal 67.2 (2021): e17063. [4] Xie J, Xu Q, Ni D, Dubljevic S. Observer and filter design for linear transport-reaction systems. European Journal of Control. 2019; 49:26-43. [5] Zhang L, Xie J, Dubljevic S. Tracking model predictive control and moving horizon estimation design of distributed parameter pipeline systems. Computers & Chemical Engineering. 2023; 178:108381.",
+    "presenting_author": "Stevan Dubljevic | University of Alberta, Edmonton, Canada",
+    "authors": [
+      "Safa Khari | University of Alberta, Edmonton, Canada",
+      "Stevan Dubljevic | University of Alberta, Edmonton, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Safa Khari",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Author"
+      },
+      {
+        "name": "Stevan Dubljevic",
+        "affiliation": "University of Alberta, Edmonton, Canada",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "329c",
+    "sortable_time": "2025-11-04_13:06:00_13:24:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/718957"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/715646",
+    "paper_endpoint": "Paper/715646",
+    "paper_id": "715646",
+    "topic": "Novel Approaches to Protonic Ceramic Electrochemical Cells Digital Twin Modeling Based on Embedded Karhunen-Loève Decomposed Gaussian Processes",
+    "title": "Novel Approaches to Protonic Ceramic Electrochemical Cells Digital Twin Modeling Based on Embedded Karhunen-Loève Decomposed Gaussian Processes",
+    "date_time": "2025-11-04_12:30:00_15:00:00",
+    "session_id": "58636",
+    "session_title": "10D: Applied Math and Numerical Methods for Industrial Applications",
+    "session_number": "329",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Protonic Ceramic Electrolytic Cells (PCECs), which involve water splitting reactions, have emerged as efficient technologies for hydrogen production due to their cost-effectiveness, moderate temperature operation, and high efficiency 1 . Several publications report experimental studies on PCEC 1,2,3 ; however, there is significantly less work on digital twin models of PCECs that can be used to provide actionable insights based on operational data. This research aims to develop a digital twin model based on physics with embedded Gaussian Processes (GPs). The GPs will be used as a mode of estimating uncertain quantities, such as diffusivities and reaction rate constants, as implicit functions of the dynamic states, including concentrations and temperatures. The GPs replace the uncertain parameters within the physical model, which will help overcome any plant-model mismatch. This leads to computationally fast and accurate digital twins, without the loss of interpretability and extrapolability. A key shortcoming of full GP models is their cubic complexity, due to the calculation of the inverse of the covariance matrix via Cholesky decomposition. To make GPs more scalable, Karhunen-Loève (KL) decomposed GPs will be implemented with a BSS-ANOVA kernel , which reduces the complexity to O(NP 2 ) for training and O(P) for each point of inference, where N is the number of training points and P is number of terms in the expansion. To improve the proposed method's speed further, forward variable selection will also be implemented to truncate the number of terms. References: (1) Tian, H.; Li, W.; Ma, L.; Yang, T.; Guan, B.; Shi, W.; Kalapos, T. L.; Liu, X. Deconvolution of Water-Splitting on the Triple-Conducting Ruddlesden–Popper-Phase Anode for Protonic Ceramic Electrolysis Cells. ACS Appl. Mater. Interfaces 2020 , 12 (44), 49574–49585. https://doi.org/10.1021/acsami.0c12987 . (2) Tong, Y.; Meng, X.; Luo, T.; Cui, C.; Wang, Y.; Wang, S.; Peng, R.; Xie, B.; Chen, C.; Zhan, Z. Protonic Ceramic Electrochemical Cell for Efficient Separation of Hydrogen, ACS Appl. Mater. Interfaces 2020 , 12 (23), 25809–25817. https://doi.org/10.1021/acsami.0c04024 . (3) Oh, S.; Kim, H.; Jeong, I.; Kim, D.; Yu, H.; Lee, K. T. Recent Progress in Oxygen Electrodes for Protonic Ceramic Electrochemical Cells. Korean Ceram. Soc. 2024 , 61 (2), 224–249. https://doi.org/10.1007/s43207-023-00360-y .",
+    "presenting_author": "Venkata Srikar Devarakonda | West Virginia University, Morgantown, WV",
+    "authors": [
+      "Venkata Srikar Devarakonda | West Virginia University, Morgantown, WV",
+      "Fernando Lima | West Virginia University, Morgantown, WV",
+      "David S. Mebane | West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Venkata Srikar Devarakonda",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Fernando Lima",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "David S. Mebane",
+        "affiliation": "West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "329d",
+    "sortable_time": "2025-11-04_13:24:00_13:42:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/715646"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716104",
+    "paper_endpoint": "Paper/716104",
+    "paper_id": "716104",
+    "topic": "Modeling and Simulation of Two-Phase Flow through Porous Media Arising in Gas-Separation Membranes",
+    "title": "Modeling and Simulation of Two-Phase Flow through Porous Media Arising in Gas-Separation Membranes",
+    "date_time": "2025-11-04_12:30:00_15:00:00",
+    "session_id": "58636",
+    "session_title": "10D: Applied Math and Numerical Methods for Industrial Applications",
+    "session_number": "329",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "While introducing a liquid sweep into the permeate side of a polymeric membrane (the lower pressure side to which gas permeates) can improve the ability of a membrane to separate a gas mixture [1,2], numerical simulations of the two-phase flow are challenging. The system of partial-differential equations is highly coupled and nonlinear and becomes degenerate near the inlet boundary of pure liquid. To address the nonlinearities, we first discretize the variational form of the problem with piecewise linear functions on an unstructured mesh of rectangles and solve the equations with Newton’s method using a line search. To obtain a solution that conserves mass, we then post-process the local flowrates into the lowest-order Raviart-Thomas space [3]. A mesh refinement analysis indicates reasonable convergence rates compared to analytical rates for linear problems. A comparison to experiments allows the utility of simulations to be further assessed. References: 1. Loprete, K. E. (Compact Membrane Systems Inc. dba Ardent Process Technologies). Method for Humidifying Facilitated-Transport Membranes. US 17/276,639. 2021. 2. Majumdar, S. (Compact Membrane Systems Inc. dba Ardent Process Technologies). Humidification and Selective Permeation Module. US 17/772,247. 2022. 3. Raviart, P. A.; Thomas, J. M. A Mixed Finite Element Method for 2 nd Order Elliptic Problems. Mathematical Aspects of Finite Element Methods , 1977.",
+    "presenting_author": "Robert DeJaco | Ardent Process Technologies, New Castle",
+    "authors": [
+      "Robert DeJaco | Ardent Process Technologies, New Castle",
+      "Lloyd Lobo | Ardent Process Technologies, New Castle",
+      "Brandon Burghardt | Ardent Process Technologies, New Castle",
+      "Ryan Evans | National Institute of Standards and Technology, Gaithersburg, MD",
+      "Anthony J. Kearsley | National Institute of Standards and Technology, Gaithersburg, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Robert DeJaco",
+        "affiliation": "Ardent Process Technologies, New Castle",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Lloyd Lobo",
+        "affiliation": "Ardent Process Technologies, New Castle",
+        "designation": "Author"
+      },
+      {
+        "name": "Brandon Burghardt",
+        "affiliation": "Ardent Process Technologies, New Castle",
+        "designation": "Author"
+      },
+      {
+        "name": "Ryan Evans",
+        "affiliation": "National Institute of Standards and Technology, Gaithersburg, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Anthony J. Kearsley",
+        "affiliation": "National Institute of Standards and Technology, Gaithersburg, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "329e",
+    "sortable_time": "2025-11-04_13:42:00_14:00:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716104"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716534",
+    "paper_endpoint": "Paper/716534",
+    "paper_id": "716534",
+    "topic": "Data-Driven Discrepancy Quantification in Microkinetic Modeling of Catalytic Processes Via Bayesian Calibration",
+    "title": "Data-Driven Discrepancy Quantification in Microkinetic Modeling of Catalytic Processes Via Bayesian Calibration",
+    "date_time": "2025-11-04_12:30:00_15:00:00",
+    "session_id": "58636",
+    "session_title": "10D: Applied Math and Numerical Methods for Industrial Applications",
+    "session_number": "329",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Computational modeling has become a powerful tool in catalyst design and reaction engineering, facilitating a shift from empirical trial-and-error approaches to predictive mechanistically grounded ones that guide experimentation and accelerate the discovery of efficient catalytic systems [1-3]. First-principles-based models—particularly those based on density functional theory (DFT) and transition state theory (TST)—are instrumental in elucidating elementary reaction mechanisms and estimating kinetic parameters at the atomic level. However, these models often diverge from experimental observations due to idealized representations of surface structure and thermodynamic conditions, oversimplified microkinetic schemes, and insufficient treatment of the multiscale complexity and inherent uncertainty in catalytic systems. These models offer mechanistic insight into adsorption, surface reactions, and activation barriers, essential for constructing microkinetic models of heterogeneous catalytic processes [4,5]. Bridging the gap between theoretical predictions and experimental data requires hybrid modeling frameworks that integrate mechanistic understanding with empirical observations. This work introduces a Bayesian discrepancy correction framework that couples physics-based models with experimental data to improve predictive accuracy and model reliability. Unlike conventional methods that neglect measurement uncertainty, the proposed approach incorporates independent probabilistic error terms for both model predictions and experimental measurements. Initial implementations that assumed negligible experimental noise were found to have limited generalizability when Gaussian process (GP) regression was applied to correct model discrepancies. By relaxing this assumption and employing noise-aware GP modeling, the revised framework captures model-inform errors more effectively across a wide range of operating conditions. This probabilistic calibration approach enhances both the interpretability and robustness of kinetic models, facilitating data-driven model refinement and systematic uncertainty propagation—key capabilities for model-based design, optimization, and control. Although the framework incurs additional computational costs due to probabilistic inference and hyperparameter tuning, these are offset by the substantial improvements in model fidelity and predictive performance [6,7]. The methodology is demonstrated using dry reforming of methane (DRM) as a representative case study. DRM is a catalytically driven process that converts CH 4 and CO 2 into synthesis gas (H 2 and CO), offering a promising pathway for CO 2 utilization. However, practical implementation is limited by challenges such as carbon deposition and catalyst deactivation. A mean-field microkinetic model is developed based on DFT-derived energetics for Ni surfaces, encompassing key elementary steps including CH 4 and CO 2 adsorption, sequential C–H bond dissociation, hydrogen spillover, and metal-support interactions. The influence of support materials—specifically ceria (CeO 2 ) and alumina (γ-Al 2 O 3 )—is incorporated by modeling CO 2 activation pathways involving Lewis acid-base interactions and oxygen vacancy sites [8-10]. Recent experimental findings have demonstrated that Ni catalysts supported on ceria outperform those on alumina, particularly under high space velocities and elevated temperatures. These improvements are attributed to ceria’s capacity to enhance CO 2 activation, inhibit side reactions such as the reverse water-gas shift and methanation, and stabilize Ni particles through strong metal–support interactions [11]. The case study illustrates how integrating mechanistic models with data-driven corrections can reconcile DFT-informed microkinetic models with experimental behavior, enabling more accurate predictions and informing rational catalyst design under realistic conditions. References: [1] Nørskov, J.K., Bligaard, T., Rossmeisl, J., Christensen, C.H. (2011). Towards the computational design of solid catalysts. Nature Chemistry, 1(1), 37–46. [2] Butler, K.T., Davies, D.W., Cartwright, H., Isayev, O., Walsh, A. (2018). Machine learning for molecular and materials science. Nature, 559(7715), 547–555. [3] Hongliang X., “Catalyst design with machine learning.” Nature Energy 7.9 (2022): 790-791. [4] Chorkendorff, J. W. Niemantsverdriet, Concepts of modern catalysis and kinetics, John Wiley & Sons, 2017. [5] Motagamwala A.H., Dumesic J.A., Microkinetic modeling: A tool for rational catalyst design, Chemical Reviews 121 (2) (2020) 1049–1076. [6] Kennedy M. C., & O’Hagan A. (2001). Bayesian calibration of computer models. Journal of the Royal Statistical Society: Series B (Statistical Methodology), 63(3), 425-464. [7] Brynjarsdóttir J., & O’Hagan A. (2014). Learning about physical parameters: The importance of model discrepancy. Inverse Problems, 30(11), 114007. [8] Zhu Y.A., Chen D., Zhou X.G., Yuan W.K., DFT studies of dry reforming of methane on Ni catalyst, Catalysis Today 148 (3-4) (2009) 260–267. [9] Fan C., Zhu Y.A., Yang M.L., Sui Z.J., Zhou X.G., Chen D., Density functional theory-assisted microkinetic analysis of methane dry reforming on Ni catalyst, Industrial & Engineering Chemistry Research 54 (22) (2015) 5901–5913. [10] Liu S., Zhou Z., Chen J., Fu Y., Cai C., Adsorption and decomposition of CO 2 on γ-Al 2 O 3 (1 0 0): First-principles investigation, Applied Surface Science 611 (2023) 155645 [11] Ighalo J.O., et al. “Dry reforming of methane at high space velocities on CeO 2 -supported Ni catalysts.” Chemical Engineering Journal 508 (2025): 160707.",
+    "presenting_author": "Amirmohammad Ebrahimi | Kansas State University, Manhattan, KS",
+    "authors": [
+      "Amirmohammad Ebrahimi | Kansas State University, Manhattan, KS",
+      "Thiago Oliveira Cabral | Kansas State University, Manhattan, KS",
+      "Joshua Ighalo | Kansas State University, Manhattan, KS",
+      "Placidus B. Amama | Kansas State University, Manhattan, KS",
+      "Davood Pourkargar | Kansas State University, Manhattan, KS"
+    ],
+    "authors_structured": [
+      {
+        "name": "Amirmohammad Ebrahimi",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Thiago Oliveira Cabral",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Author"
+      },
+      {
+        "name": "Joshua Ighalo",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Author"
+      },
+      {
+        "name": "Placidus B. Amama",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Author"
+      },
+      {
+        "name": "Davood Pourkargar",
+        "affiliation": "Kansas State University, Manhattan, KS",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "329f",
+    "sortable_time": "2025-11-04_14:00:00_14:18:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716534"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/709534",
+    "paper_endpoint": "Paper/709534",
+    "paper_id": "709534",
+    "topic": "Atomistic-Mesoscopic Modeling of Area-Selective Aluminum Oxide Deposition on Silicon Oxide and Silicon Hydride Surfaces",
+    "title": "Atomistic-Mesoscopic Modeling of Area-Selective Aluminum Oxide Deposition on Silicon Oxide and Silicon Hydride Surfaces",
+    "date_time": "2025-11-04_12:30:00_15:00:00",
+    "session_id": "58636",
+    "session_title": "10D: Applied Math and Numerical Methods for Industrial Applications",
+    "session_number": "329",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "In order to meet the rising demand for greater computational power, semiconductor manufacturing processes continue to become more and more complicated [2]. To fabricate these devices, a silicon substrate undergoes upwards of 500 process steps to create a single product [1]. These steps typically consist of a rotation between bulk deposition of a material, photolithography to form the desired structure, and etch to remove the undesired material. Recently, a new fabrication method known as “Area-Selective Atomic Layer Deposition” (ASALD) has received attention due to its ability to combine the three aforementioned process steps into a singular process step. This comes by taking advantage of the patterns in the underlying layer. Specifically, the substrate can be separated into a Non-Growth Area with a very low deposition rate and a Growth Area with a high deposition rate [3]. Thus, deposition will selectively occur on the Growth Area, removing the need for a photolithography and etch step. One ASALD reaction that has great potential for reducing the number of process steps is the deposition of Al₂O₃ on SiOH as the Growth Area with SiH as the Non-Growth Area. However, due to the heavy reliance on the selectivity between the Non-Growth Area and the Growth Area, reaction selection is critical, as a low selectivity will result in undesired deposition in the Non-Growth Area. Mesoscopic and atomistic modeling offer a way to analyze and predict this selectivity behavior. In particular, mesoscopic simulations using kinetic Monte Carlo (kMC) methods can capture how selectivity evolves over time and across deposition cycles. This approach allows for time-resolved modeling that can reveal when the selectivity begins to diverge from experimentally observed values—especially in scenarios where the ideal high selectivity cannot be maintained across multiple batches. Rather than seeking an optimal operating condition, this work aims to identify the batch number at which selectivity loss begins to occur. To support this, atomistic modeling is used to first break down the ASALD process into its elementary reactions and extract relevant reaction coefficients such as activation energies and sticking coefficients. These coefficients are generated using numerical methods such as electronic structure optimization and the nudged elastic band technique [5]. With these constants, reaction rates in both the Growth Area and Non-Growth Area can be calculated and fed into the mesoscopic kMC model [4]. The combined approach allows us to study how selectivity degrades under realistic processing conditions, enabling better understanding of process limitations and informing future experimental or industrial implementations. Richard, C., 2023. Understanding Semiconductors: A Technical Guide for Non-Technical People. Apress, Berkeley, CA. Jurczak, M., Collaert, N., Veloso, A., Hoffmann, T., Biesemans, S., 2009. Review of FINFET technology. In: 2009 IEEE International SOI Conference, 1–4, Foster City, CA, USA. Yarbrough, J., et al., 2023. Area-Selective Atomic Layer Deposition of Al2O3 with a Methanesulfonic Acid Inhibitor. Bent Chemistry of Materials 35 (15), 5963-5974 Wang, H., M. Tom, F. Ou, G. Orkoulas and P. D. Christofides, ''Multiscale Computational Fluid Dynamics Modeling of an Area-Selective Atomic Layer Deposition Process Using a Discrete Feed Method,'' Dig. Chem. Eng., 10, 100140, 2024. Yun, S., F. Ou, H. Wang, M. Tom, G. Orkoulas and P. D. Christofides, \"Atomistic-Mesoscopic Modeling of Area-Selective Thermal Atomic Layer Deposition,\" Chem. Eng. Res. & Des., 188, 271-286, 2022.",
+    "presenting_author": "Feiyang Ou | University of California, Los Angeles",
+    "authors": [
+      "Feiyang Ou | University of California, Los Angeles",
+      "Henrik Wang | University of California, Los Angeles",
+      "Julius Suherman | University of California, Los Angeles",
+      "Gerassimos Orkoulas | Widener University, Chester, PA",
+      "Panagiotis Christofides | University of California, Los Angeles"
+    ],
+    "authors_structured": [
+      {
+        "name": "Feiyang Ou",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Henrik Wang",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Julius Suherman",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      },
+      {
+        "name": "Gerassimos Orkoulas",
+        "affiliation": "Widener University, Chester, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Panagiotis Christofides",
+        "affiliation": "University of California, Los Angeles",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "329g",
+    "sortable_time": "2025-11-04_14:18:00_14:36:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/709534"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714429",
+    "paper_endpoint": "Paper/714429",
+    "paper_id": "714429",
+    "topic": "Digital Twin Model Development for Catalytic CO₂ Methanation",
+    "title": "Digital Twin Model Development for Catalytic CO₂ Methanation",
+    "date_time": "2025-11-04_12:30:00_15:00:00",
+    "session_id": "58636",
+    "session_title": "10D: Applied Math and Numerical Methods for Industrial Applications",
+    "session_number": "329",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Applied Mathematics and Numerical Analysis",
+    "abstract": "Digital Twins (DTs) hold great promise as paradigm-shifting tools in process engineering, with the potential to redefine industrial asset management through real-time monitoring, predictive analytics, and performance optimization. By definition, a DT is a virtual replica of a physical asset that is dynamically synchronized through continuous bi-directional communication between the asset and its digital counterpart [1]. This technology is proving to be particularly transformative for difficult-to-access, dynamic systems - such as offshore platforms or remote industrial facilities - where rapid adaptation to changing conditions is essential to ensure economic viability, safety and sustainability. Despite its growing adoption, the term \"Digital Twin\" remains inconsistently defined across disciplines, often diluted to a buzzword that obscures its technical foundation. In this work, we focus on the modeling principles of DTs using the example of catalytic CO₂ methanation - a representative example of a Power-to-X process that convert renewable electricity into a storable synthetic fuel. In such systems, a plug flow reactor facilitates the dynamic conversion of CO₂ and H₂ to CH₄ and H₂O, governed by coupled transport phenomena and reaction kinetics. Efforts to directly integrate this process with offshore wind turbines, operating in remote, disturbance-prone environments, highlight both the need and the challenges of deploying DTs. The system's sensitivity to fluctuating inputs (e.g., intermittent renewable power) and complex multiphase dynamics make it an ideal test case for DT frameworks. These challenges require models that not only replicate system behavior but also conform to specific operational constraints. To meet these requirements, four criteria define effective DT models: (i) predictive capability, (ii) computational efficiency coupled with numerical stability to enable real-time execution, (iii) adaptability to evolving data, and (iv) generalizability. These models prioritize \"fit-for-purpose\" accuracy [2] over maximum precision, aligning with industrial needs where rapid decision-making outweighs exhaustive simulation. Traditional mechanistic models have long been used to capture the detailed physics of such processes. For example, the spatially resolved mass and energy balances for a catalytic CO₂ methanation reactor - expressed in terms of time ( t ) and spatial coordinates ( z, r ) - are shown in Fig. 1a, following the framework established in [3]. Here, X denotes the degree of CO₂ conversion and T the temperature. These equations provide predictive insight into reactor dynamics and allow parameter estimation through calibration. However, their computational complexity remains a fundamental barrier to real-time use. To mitigate this, advanced numerical strategies can be employed: stiff ODE solvers use structured Jacobians to linearize and accelerate convergence, while higher-order discretization methods such as orthogonal collocation reduce spatial approximation errors through polynomial interpolation at strategically chosen nodes. In addition, adaptive time stepping optimizes computational complexity by adjusting step sizes based on local error estimates. But even with these refinements, persistent challenges remain. Frequent parameter updates - essential for adaptability - introduce prohibitive computational costs, and the inherent complexity of mechanistic models requires expert intervention to maintain stability and portability across operational scenarios. To address these limitations, surrogate modeling has emerged to balance computational efficiency. By approximating the input-output behavior of high-dimensional systems, surrogate models retain essential dynamics while dramatically reducing complexity. Three broad categories dominate the field: statistical data-fit models, model order reduction (MOR), and simplified models. Guided by our fourth criterion-generalizability-we focus on non-intrusive, data-driven approaches that avoid system-specific assumptions and ensure adaptability to diverse operational regimes. We evaluate three surrogate techniques applied to the catalytic CO₂ methanation reactor, each representing a different methodological paradigm. To assess generalizability, the models were trained on four different operational scenarios (e.g., changing flow rates and cooling temperature) and tested on unseen future data [4]. The predictions of all surrogate models, along with the ground truth, are shown in Fig. 1b for both CO₂ conversion and temperature. Spatio-temporal Graph Neural Networks (ST-GNNs) [5]: ST-GNNs are purely data-driven architectures that learn spatio-temporal relationships through two core mechanisms: graph structures encode spatial dependencies (nodes represent reactor locations, edges model adjacency relationships), while temporal attention mechanisms dynamically weight critical time steps in sequential data. In benchmarks, they achieved an average relative Frobenius error —used to measure matrix discrepancies— of <0.3 % when trained on the full dataset (>10,000 samples). While our current implementation prioritizes accuracy over speed, further optimization could improve computational efficiency for real-time use. Operator Inference (OpInf) [6]: This non-intrusive MOR technique projects high-dimensional dynamics onto a low-dimensional subspace via PCA and infers quadratic polynomial operators via regression. With a mean relative Frobenius error of <0.3 %, OpInf reduced the computational cost by an order of magnitude compared to full-order models. Notably, it was the only method that met all four criteria of predictive accuracy, efficiency, adaptability, and robustness, although its performance depends on careful subspace selection. Greedy Nonlinear System Identification (GN-SINDy) [7]: GN-SINDy identifies sparse governing equations via sequential thresholded regression, recovering dominant terms with only 0.02 % of the data points. While interpretable and data efficient, its average relative Frobenius error reached up to 6.5 %, capturing basic dynamics but struggling with finer transients. Critically, these surrogate models are entirely data-driven and require no prior mechanistic knowledge. Given sufficient sensor coverage to resolve key variables (e.g., temperature, and conversion), they can be calibrated and validated directly from measurements - an advantage in systems where empirical data are more accessible than first-principles understanding. While our results highlight the potential of numerical tools and surrogate models, further work is needed to integrate them into full-scale DTs. Key steps include parameterizing surrogates over broader operating windows and embedding mechanisms for quantifying uncertainty. With such refinements, these models could enable more efficient and flexible monitoring of complex processes, supporting the transition to resilient, data-centric industrial systems. Figure 1. (a) Spatially resolved governing equations (mass and energy balances) for the catalytic CO₂ methanation reactor. (b) Surrogate model predictions (GAT, OpInf, GN-SINDy) compared to ground truth for CO₂ conversion and temperature profiles. Models were trained on transient dynamics (including flow rate variations and cooling temperature changes) and evaluated through multi-step prediction of future system states. The test trajectories show progression toward steady-state conditions, while training data captures more complex transient dynamics. [1] Peterson L, Gosea IV, Benner P, Sundmacher K. Digital twins in process engineering: An overview on computational and numerical methods. Comput Chem Eng 108917 (2025) https://doi.org/10.1016/j.compchemeng.2024.108917 [2] Ferrari A, Willcox KE. Digital twins in mechanical and aerospace engineering. Nat Comp Sci 4.3 (2024) https://doi.org/10.1038/s43588-024-00613-8 [3] Zimmermann RT, Bremer J, Sundmacher K. Load-flexible fixed-bed reactors by multi period design optimization. Chem Eng J 428:130771 (2022) https://doi.org/10.1016/j.cej.2021.130771 [4] Peterson L, Forootani A, Sanchez Medina EI, Gosea IV, Benner P, Sundmacher K. Towards Digital Twins for Power-to-X: Comparing Surrogate Models for a Catalytic CO 2 Methanation Reactor. TechRxiv (2024) https://doi.org/10.36227/techrxiv.172263007.76668955/v1 [5] Veličković P, Cucurull G, Casanova A, Romero A, Lio P, Bengio Y. Graph attention networks. arXiv 1710.10903 (2017) https://doi.org/10.48550/arXiv.1710.10903 [6] Kramer B, Peherstorfer B, Willcox KE. Learning nonlinear reduced models from data with operator inference. Annu Rev Fluid Mech 56:521-548 (2024) https://doi.org/10.1146/annurev-fluid-121021-025220 [7] Forootani A, Benner P. GN-SINDy: Greedy sampling neural network in sparse identification of nonlinear partial differential equations. arXiv 2405.08613 (2024) https://doi.org/10.48550/arXiv.2405.08613",
+    "presenting_author": "Luisa Peterson | Max Planck Institute for Dynamics of Complex Technical Systems, Magdeburg, Germany",
+    "authors": [
+      "Luisa Peterson | Max Planck Institute for Dynamics of Complex Technical Systems, Magdeburg, Germany",
+      "Ali Forootani | Helmholtz Centre for Environmental Research, Leipzig, Germany",
+      "Edgar Ivan Sanchez Medina | Max Planck Institute for Dynamics of Complex Technical Systems, Magdeberg, Germany",
+      "Ion Victor Gosea | Max Planck Institute for Dynamics of Complex Technical Systems, Magdeburg, Germany",
+      "Peter Benner | Otto von Guericke University, Magdeburg, Germany",
+      "Kai Sundmacher | Otto von Guericke University, Magdeburg, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Luisa Peterson",
+        "affiliation": "Max Planck Institute for Dynamics of Complex Technical Systems, Magdeburg, Germany",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ali Forootani",
+        "affiliation": "Helmholtz Centre for Environmental Research, Leipzig, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Edgar Ivan Sanchez Medina",
+        "affiliation": "Max Planck Institute for Dynamics of Complex Technical Systems, Magdeberg, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Ion Victor Gosea",
+        "affiliation": "Max Planck Institute for Dynamics of Complex Technical Systems, Magdeburg, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Peter Benner",
+        "affiliation": "Otto von Guericke University, Magdeburg, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Kai Sundmacher",
+        "affiliation": "Otto von Guericke University, Magdeburg, Germany",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "329h",
+    "sortable_time": "2025-11-04_14:36:00_14:54:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714429"
+  }
+]

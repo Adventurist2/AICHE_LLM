@@ -1,0 +1,295 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/708873",
+    "paper_endpoint": "Paper/708873",
+    "paper_id": "708873",
+    "topic": "An Inverse Optimization Framework for Learning Interpretable Models of Expert Decision Making",
+    "title": "An Inverse Optimization Framework for Learning Interpretable Models of Expert Decision Making",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "58617",
+    "session_title": "10E Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "469",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Understanding the way experts make decisions and being able to transfer that knowledge is important, especially in complex engineering applications. It is highly valuable for the training of novices, helps improve the performance of human-machine systems, and can potentially enable fully autonomous systems that perform as well as human experts. However, an expert’s decision-making strategy may not be directly accessible as it is gained through many years of experience and is often not well documented; obtaining that knowledge becomes particularly challenging if the expert themself is no longer accessible, e.g. due to retirement. This has motivated the use of observed decisions made by the expert in the past to learn an interpretable model that captures the expert’s decision-making process. The knowledge gap between an expert and a non-expert often materializes in two ways: (i) Different preferences (or perceived costs) that may encode information about hidden costs and intuitive anticipation of future events or uncertainty [1]. (ii) Specific rules applied to make decisions, which may again reflect knowledge about hidden costs and uncertainty but also additional constraints. These decision rules often follow a given logic (e.g. “if condition A met, then perform operation B”) and can also serve as heuristics for the expert to arrive at their decisions quickly [2]. In this work, we apply an inverse optimization (IO) approach [3] to jointly learn an expert decision maker’s perceived costs and decision rules. The key idea of IO is to model the decision-making process as an optimization problem and estimate the unknown model parameters (in this case cost parameters) using the given decision data. The postulated decision rules can generally be stated as logical propositions, which in turn can be formulated as mixed-integer linear constraints, resulting in a mixed-integer linear program. The resulting IO problem is solved using a cutting-plane algorithm [4, 5]. The results are inherently interpretable as they directly indicate the perceived costs as well as which decision rules apply. Another major advantage of the IO approach is its ability to explicitly incorporate all physical constraints, which improves data efficiency [6, 7] and ensures that the predicted decisions are feasible. We apply the proposed approach to the Amazon Challenge dataset [8, 9], where we predict the routes chosen by expert human drivers to deliver packages to a pre-defined set of stops, based on their past routing decisions. The given stops are grouped into zones, and the drivers tend to visit all the stops in one zone before moving on to the next. The results from solving the corresponding IO problem also indicate that these zones themselves are arranged into larger clusters and that the zones within a cluster are visited before moving on to another cluster. Applying this additional decision rule ultimately led to better predictions, which showcases the ability of the IO approach, with its greater modeling flexibility, to accurately capture and replicate human experts’ decision-making processes in a real-world setting. References: [1] Mikael Rönnqvist, Gunnar Svenson, Patrik Flisberg, and Lars-Erik Jönsson. Calibrated route finder: Improving the safety, environmental consciousness, and cost effectiveness of truck routing in Sweden. Interfaces , 47(5):372–395, 2017. [2] Robert JB Hutton and Gary Klein. Expert decision making. Systems Engineering: The Journal of The International Council on Systems Engineering , 2(1):32–45, 1999. [3] Ravindra K Ahuja and James B Orlin. Inverse optimization. Operations Research , 49(5):771–783, 2001. [4] Lizhi Wang. Cutting plane algorithms for the inverse mixed integer linear programming problem. Operations Research Letters , 37(2):114–116, 2009. [5] Mahsa Moghaddass and Daria Terekhov. Inverse integer optimization with multiple observations. Optimization Letters , 15(4):1061–1079, 2021. [6] Rishabh Gupta and Qi Zhang. Decomposition and adaptive sampling for data-driven inverse linear optimization. INFORMS Journal on Computing , 34(5):2720–2735, 2022. [7] Rishabh Gupta and Qi Zhang. Efficient learning of decision-making models: A penalty block coordinate descent algorithm for data-driven inverse optimization. Computers & Chemical Engineering , 170:108123, 2023. [8] Amazon Last-Mile Routing Research Challenge | supported by the MIT Center for Transportation & Logistics. https://routingchallenge.mit.edu/. [9] Daniel Merchán, Jatin Arora, Julian Pachon, Karthik Konduri, Matthias Winkenbach, Steven Parks, and Joseph Noszek. 2021 Amazon Last Mile Routing Research Challenge: Data Set. Transportation Science , 58(1):8–11, 2022.",
+    "presenting_author": "Anurag Holani | University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "Anurag Holani | University of Minnesota, Minneapolis, MN",
+      "Rishabh Gupta | ExxonMobil Technology and Engineering Company, Spring, TX",
+      "Qi Zhang | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Anurag Holani",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Rishabh Gupta",
+        "affiliation": "ExxonMobil Technology and Engineering Company, Spring, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Qi Zhang",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "469a",
+    "sortable_time": "2025-11-05_08:00:00_08:21:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/708873"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714667",
+    "paper_endpoint": "Paper/714667",
+    "paper_id": "714667",
+    "topic": "Composite Gaussian Kernel Selection for High-Dimensional Design Space Identification",
+    "title": "Composite Gaussian Kernel Selection for High-Dimensional Design Space Identification",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "58617",
+    "session_title": "10E Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "469",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Precise identification of the design space (DSp) is crucial for optimizing chemical process development and ensuring adherence to industry standards related to product quality, safety, and performance. However, conventional methods often face challenges when addressing the computational complexity and expense associated with analyzing high-dimensional, non-convex design spaces [1]. This study presents an innovative framework that merges Gaussian Process Regression (GPR) with alpha shape-based space reconstruction, enabling efficient evaluation and visualization of design spaces across various dimensions. The core methodology significantly reduces the computational burden of knowledge space generation by utilizing GPR surrogate models enhanced through an integrated kernel optimization procedure. This procedure employs a greedy tree search algorithm to select the most suitable composite kernel [2], substantially improving the model’s ability to capture complex, non-linear patterns typical of chemical engineering datasets. As a result, the design space can be accurately approximated using limited data, reducing the overall computational effort required for DSp analysis. To delineate the feasible region boundaries without relying on convexity assumptions, alpha shape reconstruction is employed. Alpha shapes extend the concept of convex hulls to accommodate non-convex and disconnected geometries, yielding a more accurate depiction of intricate design spaces [3]. The reconstruction is performed using the Python package ‘dside’ developed by Sachio et al. [3], which applies Delaunay Triangulations and a bisection search to identify the largest alpha radius, effectively reconstructing the design space geometry. The proposed approach was validated through a series of benchmark tests involving constrained, non-convex functions and engineering design problems in spaces ranging from two to seven dimensions. Results confirm that the method reconstructs complex design spaces with high fidelity while requiring significantly fewer computational resources than other surrogate-based approaches. For example, in three-dimensional scenarios, the methodology delivered near-optimal predictive performance using markedly fewer training points [4]. This work advances alpha shape-based design space identification to higher dimensions by addressing computational challenges via surrogate modeling. The proposed framework provides a robust and flexible tool for design space exploration, supporting effective decision-making in chemical process design and optimization. The integration of GPR with kernel optimization and alpha shape reconstruction presents considerable potential for industrial applications requiring fast and reliable design space evaluation. Acknowledgements Funding from the UK Engineering & Physical Sciences Research Council (EPSRC) for the i-PREDICT:Integrated adaPtive pRocEss DesIgn and ConTrol (Grant reference: EP/W035006/1) is gratefully acknowledged. References [1] Bhosekar, A., & Ierapetritou, M. (2018). Advances in surrogate based modeling, feasibility analysis, and optimization: A review. Computers & Chemical Engineering, 108, 250–267. https://doi.org/10.1016/j.compchemeng.2017.09.017 [2] Boukouvala, F., & Ierapetritou, M. G. (2012). Feasibility analysis of black-box processes using an adaptive sampling Kriging-based method. Computers & Chemical Engineering, 36, 358–368. https://doi.org/10.1016/j.compchemeng.2011.06.005 [3] Liu, H., Ong, Y.-S., & Cai, J. (2018). A survey of adaptive sampling for global metamodeling in support of simulation-based complex engineering design. Structural and Multidisciplinary Optimization, 57(1), 393–416. https://doi.org/10.1007/s00158-017-1739-8 [4] Geremia, M., Bezzo, F., & Ierapetritou, M. G. (2023). A novel framework for the identification of complex feasible space. Computers & Chemical Engineering, 179, 108427. https://doi.org/10.1016/j.compchemeng.2023.108427 [5] Kudva, A., Tang, W.-T., & Paulson, J. A. (2024). Robust Bayesian optimization for flexibility analysis of expensive simulation-based models with rigorous uncertainty bounds. Computers & Chemical Engineering, 181, 108515. https://doi.org/10.1016/j.compchemeng.2023.108515 [6] Kucherenko, S., Giamalakis, D., Shah, N., & García-Muñoz, S. (2020). Computationally efficient identification of probabilistic design spaces through application of metamodeling and adaptive sampling. Computers & Chemical Engineering, 132, 106608. https://doi.org/10.1016/j.compchemeng.2019.106608",
+    "presenting_author": "Andrea Galeazzi | Imperial College London, United Kingdom",
+    "authors": [
+      "Andrea Galeazzi | Imperial College London, United Kingdom",
+      "Elizaveta Marich | Imperial College London, United Kingdom",
+      "Maria Papathanasiou | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Andrea Galeazzi",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Elizaveta Marich",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Maria Papathanasiou",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "469b",
+    "sortable_time": "2025-11-05_08:21:00_08:42:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714667"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/714814",
+    "paper_endpoint": "Paper/714814",
+    "paper_id": "714814",
+    "topic": "Symantic: A Symbolic Regression Framework for Scalable, Interpretable, and Efficient Model Discovery",
+    "title": "Symantic: A Symbolic Regression Framework for Scalable, Interpretable, and Efficient Model Discovery",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "58617",
+    "session_title": "10E Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "469",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Symbolic regression (SR) [1, 2] aims to discover concise, interpretable mathematical expressions that describe relationships in data – offering a compelling alternative to black-box machine learning (ML) models (such as neural networks and gradient-boosted decision trees), particularly in scientific and engineering domains where transparency and extrapolation are critical. Unlike conventional regression, SR does not assume a fixed functional form but instead searches over symbolic expressions to reveal governing equations or empirical laws. This flexibility makes SR attractive for tasks such as physical law discovery, dynamical system identification, and property prediction. Over the past decade, a wide range of SR methods have emerged. Early approaches based on genetic programming (GP) [3, 4] are expressive but computationally expensive and prone to bloat. More recent neural-guided SR methods [5, 6] leverage deep learning to scale to larger problems but often require extensive training data and lack robustness in noisy or low-data settings. A third family of methods reformulates SR as sparse regression over a constructed feature library (e.g., ALAMO [7], SISSO [8], and SINDy [9]), enabling greater control over model complexity. However, these approaches still struggle with hyperparameter tuning, correlated features, and navigating the trade-off between model accuracy and interpretability. To overcome these limitations, we introduce SyMANTIC (Symbolic Modeling with Adaptive iNtelligent feaTure expansIon) [10], a fast, flexible, and interpretable SR framework designed for data-driven scientific discovery. SyMANTIC builds on the sparse regression paradigm but introduces several key innovations: (1) a recursive, information-theoretic feature expansion strategy guided by Maximal Information Coefficient (MIC) screening; (2) a modified sparse regression formulation based on L 0 -regularization with adaptive constraints on model dimensionality; and (3) an MDL-inspired model complexity metric to rank expressions along an approximate Pareto frontier (finding models that better balance predictive accuracy and complexity). These components are integrated into a GPU-accelerated PyTorch framework with automated hyperparameter tuning, enabling rapid and robust symbolic modeling with minimal user intervention. We benchmark SyMANTIC across a diverse set of problems, including synthetic expressions, physical equations, real-world chemical and materials property prediction, and chaotic dynamical systems. On standard symbolic regression benchmarks, SyMANTIC recovers over 95% of ground-truth equations, significantly outperforming state-of-the-art baselines that recover just over 50%. It also produces more concise models (30–40% fewer terms on average) and achieves these results with an order-of-magnitude speedup relative to existing methods. In the challenging task of learning the chaotic Lorenz system from limited data, SyMANTIC accurately recovers governing equations using just five time points – surpassing popular approaches like SINDy [9]. In a materials property prediction task relevant to sustainable battery design, SyMANTIC outperforms both symbolic and black-box ML models in predictive accuracy, while yielding compact, interpretable expressions. Together, these results establish SyMANTIC as a high-performance, user-friendly SR tool for interpretable model discovery in noisy, high-dimensional, and data-scarce scientific domains. References: [1] Makke, N., & Chawla, S. (2024). Interpretable scientific discovery with symbolic regression: a review. Artificial Intelligence Review, 57(1), 2. [2] Angelis, D., Sofos, F., & Karakasidis, T. E. (2023). Artificial intelligence in physical sciences: Symbolic regression trends and perspectives. Archives of Computational Methods in Engineering, 30(6), 3845-3865. [3] Koza, J. R. (1994). Genetic programming as a means for programming computers by natural selection. Statistics and computing, 4, 87-112. [4] Cranmer, M. (2023). Interpretable machine learning for science with PySR and SymbolicRegression. jl. arXiv preprint arXiv:2305.01582. [5] Petersen, B. K., Landajuela, M., Mundhenk, T. N., Santiago, C. P., Kim, S. K., & Kim, J. T. (2019). Deep symbolic regression: Recovering mathematical expressions from data via risk-seeking policy gradients. arXiv preprint arXiv:1912.04871. [6] Kamienny, P. A., d'Ascoli, S., Lample, G., & Charton, F. (2022). End-to-end symbolic regression with transformers. Advances in Neural Information Processing Systems, 35, 10269-10281. [7] Wilson, Z. T., & Sahinidis, N. V. (2017). The ALAMO approach to machine learning. Computers & Chemical Engineering, 106, 785-795. [8] Ouyang, R., Curtarolo, S., Ahmetcik, E., Scheffler, M., & Ghiringhelli, L. M. (2018). SISSO: A compressed-sensing method for identifying the best low-dimensional descriptor in an immensity of offered candidates. Physical Review Materials, 2(8), 083802. [9] Brunton, S. L., Proctor, J. L., & Kutz, J. N. (2016). Discovering governing equations from data by sparse identification of nonlinear dynamical systems. Proceedings of the national academy of sciences, 113(15), 3932-3937. [10] Muthyala, M. R., Sorourifar, F., Peng, Y., & Paulson, J. A. (2025). SyMANTIC: An Efficient Symbolic Regression Method for Interpretable and Parsimonious Model Discovery in Science and Beyond. Industrial & Engineering Chemistry Research.",
+    "presenting_author": "Madhav Muthyala | The Ohio State University, Columbus",
+    "authors": [
+      "Madhav Muthyala | The Ohio State University, Columbus",
+      "Farshud Sorourifar | The Ohio State University, Columbus",
+      "You Peng | The Dow Chemical Company, Lake Jackson, TX",
+      "Joel Paulson | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Madhav Muthyala",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Farshud Sorourifar",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "You Peng",
+        "affiliation": "The Dow Chemical Company, Lake Jackson, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Joel Paulson",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "469c",
+    "sortable_time": "2025-11-05_08:42:00_09:03:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/714814"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717653",
+    "paper_endpoint": "Paper/717653",
+    "paper_id": "717653",
+    "topic": "Learning & Solving: Equation Discovery across Disjoint Domains",
+    "title": "Learning & Solving: Equation Discovery across Disjoint Domains",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "58617",
+    "session_title": "10E Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "469",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "In this work, we explore how to learn governing equations from partial and spatially separated data ensembles , focusing on the challenge of information sharing between disconnected regions —a problem reminiscent of communication between agents in generative AI systems [1, 2]. Specifically, we consider two disjoint space-time “corridors” of data (produced from a one-dimensional, nonlinear, parabolic partial differential equation), each with sensor measurements near their boundaries and ask: What is the minimal amount of shared information required to recover the underlying dynamics? Once the underlying dynamics are recovered, the missing region can then be appropriately filled in. We begin by applying a “vanilla” dense neural network (DNN/MLP) to learn from both corridors jointly, in a supervised manner, but find that it fails to capture the dynamics. We then utilize a Deep Hidden Physics Model (DHPM) [3, 4], which employs one network to model the solution and another to infer the governing equation, therefore forcing the model to understand not only the provided data, but its derivatives as well. We show that when the full space of candidate derivatives is represented across the two regions, the model can recover the correct equation—highlighting how a shared symbolic structure to bridge spatial gaps. Finally, we explore the use of multi-agent DHPM , in which each corridor is modeled by independent networks that are connected through a separate network forced to learn the same equation. This setup allows us to investigate the minimal information each agent must contribute for successful joint learning. We demonstrate this framework on the FitzHugh-Nagumo model [5]. Our findings are reminiscent of “in-painting” in image processing: missing information in one region can be recovered using structural constraints shared with another. The work also draws loose parallels to multi-agent AI, where entities must communicate in a common “language” to solve tasks jointly. We conclude with potential insights from our toy example into the nature of knowledge transfer between agents: how much information must be shared, and what form it must take, to enable collaborative understanding of complex dynamical systems from fragmented, incomplete data. [1] Shu, R., Das, N., Yuan, M., Sunkara, M., & Zhang, Y. (2024). Towards Effective GenAI Multi-Agent Collaboration: Design and Evaluation for Enterprise Applications. Arxiv preprint. [2] Di Wu, Xian Wei, Guang Chen, Hao Shen, Xiangfeng Wang, Wenhao Li, & Bo Jin. (2025). Generative Multi-Agent Collaboration in Embodied AI: A Systematic Review. Arxiv preprint. [3] González-García, R., Rico-Martínez, R., & Kevrekidis, I. (1998). Identification of distributed parameter systems: A neural net based approach. Computers & Chemical Engineering, 22, S965–S968. [4] Maziar Raissi (2018). Deep Hidden Physics Models: Deep Learning of Nonlinear Partial Differential Equations. Journal of Machine Learning Research, 19(25), 1–24. [5] FitzHugh, R. (1961). Impulses and Physiological States in Theoretical Models of Nerve Membrane. Biophysical Journal, 1(6), 445–466.",
+    "presenting_author": "Anastasia Georgiou | Johns Hopkins University, Baltimore, MD",
+    "authors": [
+      "Anastasia Georgiou | Johns Hopkins University, Baltimore, MD",
+      "Gianluca Fabiani | Johns Hopkins University, Baltimore, MD",
+      "Somdatta Goswami | Johns Hopkins University, Baltimore, MD",
+      "Ioannis Kevrekidis | Johns Hopkins University, Baltimore, MD"
+    ],
+    "authors_structured": [
+      {
+        "name": "Anastasia Georgiou",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Gianluca Fabiani",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Somdatta Goswami",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      },
+      {
+        "name": "Ioannis Kevrekidis",
+        "affiliation": "Johns Hopkins University, Baltimore, MD",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "469d",
+    "sortable_time": "2025-11-05_09:03:00_09:24:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717653"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713665",
+    "paper_endpoint": "Paper/713665",
+    "paper_id": "713665",
+    "topic": "Understanding the Solution of Optimization Problems Via Explainable Artificial Intelligence",
+    "title": "Understanding the Solution of Optimization Problems Via Explainable Artificial Intelligence",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "58617",
+    "session_title": "10E Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "469",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "In this work we propose a novel framework to understand and explain the solution of optimization problems using explainable artificial intelligence and graph neural networks . Decision-making problems arise in a wide range of applications such as process design, control, production scheduling, and planning. Over the last decades, significant effort has been devoted to reduce the effort required to formulate and implement a solution algorithm by developing mathematical programming formulations in standardized forms and general purpose solvers/algorithms for a wide range of problems. Despite this progress, explaining and understanding the optimal solution returned by a solver is usually a time-consuming task since it requires extensive domain knowledge. Mathematical optimization is usually treated as a black box, i.e., for a given problem formulation and parameters it provides a solution. However, the solution can be counterintuitive and practitioners might not trust it. This has motivated the development of several approaches for explaining the solution of an optimization problem. Traditionally, shadow prices (or multipliers) and active constraints have been used to analyze the effect of constraints on the optimal solution [1]. Recent approaches either focus on “what-if” kind of analysis using the so-called counterfactual explanations in tandem with inverse optimization and large language models [2-6], aim to identify a subset of the variables and constraints that affect the solution [7], or compare the solution with previously obtained ones [8]. Despite this progress, these approaches can either be applied to certain classes of optimization problems or require the repeated solution of the optimization problem under consideration which is not tractable for online applications. In the general, the solution of an optimization problem depends on the parameters, the constraints, the objective, and the domain of the variables. Thus, when explaining the solution of the problem, one must consider all these aspects simultaneously. In this work, we propose a novel approach to explain the solution of an optimization problem by combining explainable artificial intelligence and graph neural networks . Specifically, for a given optimization problem, we seek to find a subset of the variables, constraints, and parameters that have a crucial role in identifying the optimal solution. To achieve this, first, the optimization problem is represented as a bipartite graph where the nodes are the variables and constraints of the problem, and the edges capture the presence of a variable in a constraint. Such graph representations have been used extensively for learning to accelerate optimization algorithms using machine learning [9-11]. Under this representation, an optimization problem is represented by three matrices: the adjacency matrix A which captures the structural coupling among the variable and constraints; the node feature matrix V which captures information about the variables (such as bounds, domain) and constraints (equality, inequality, convexity); and the edge matrix E which captures information about the numerical value of a parameter in a constraint. This representation is used as the input to a graph neural network (GNN) model which predicts the value of the objective function at the optimal solution while accounting for the structural and functional coupling of the variables and constraints. For training the GNN, we use supervised learning and generate a distribution of optimization problems (varying the number of variables, constraints, and the values of the parameters). The features are the three matrices A, V, E and the label is the value of the objective function at the optimal solution. Given the trained GNN and an optimization problem with its graph representation with features, we use explainable artificial intelligence algorithms (xAI) [12,13] to identify a subgraph, i.e., a subset of nodes (variables and constraints), edges (parameters), and features (variable bounds and domain) that have a crucial role in the GNN’s prediction of the optimal solution. We use the identified variables, parameters, and constraints as an explanation for the optimal solution of the optimization problem. We note that this approach can be applied to generic optimization problems, and once the GNN is trained, explaining the prediction for a new optimization problem is faster (order of 1 second) than solving the optimization problem. We apply the proposed approach to a case study considering the real-time operation of a continuous production system. We assume that a dynamic optimization problem is solved to determine the optimal operation of the systems such that the demand is satisfied. We train a GNN by varying the demand profile, the initial condition and flowrate, and time horizon, i.e., we train the GNN model with optimization problems with different number of variables, constraints, and parameters. The application of xAI to the graph representation of such problems shows that the most important constraints for predicting the value of the objective function at the optimal solution are ramping constraints which limit how fast the production rate can change. In addition, xAI reveals that the solution depends on the initial state of the system (this is to be expected from domain knowledge) and the upper bound (a feature) of the inlet flowrate. In general, the proposed approach can be applied to generic optimization problems and offers a new approach to identify the most important variables, constraints, and parameters which affect the most the optimal solution of an optimization problem. References [1]. Greenberg, H.J., 1993. How to analyze the results of linear programs—Part 2: Price interpretation. Interfaces , 23 (5), pp.97-114. [2]. Kurtz, J., Birbil, Ş.İ. and Hertog, D.D., 2024. Counterfactual explanations for linear optimization. arXiv preprint arXiv:2405.15431 . [3]. Korikov, A. and Beck, J.C., 2021. Counterfactual explanations via inverse constraint programming. In 27th International Conference on Principles and Practice of Constraint Programming (CP 2021) (pp. 35-1). Schloss Dagstuhl–Leibniz-Zentrum für Informatik. [4]. Korikov, Anton, and J. Christopher Beck. \"Objective-Based Counterfactual Explanations for Linear Discrete Optimization.\" In International Conference on Integration of Constraint Programming, Artificial Intelligence, and Operations Research , pp. 18-34. Cham: Springer Nature Switzerland, 2023. [5]. Forel, A., Parmentier, A. and Vidal, T., 2023, July. Explainable data-driven optimization: From context to decision and back again. In International Conference on Machine Learning (pp. 10170-10187). PMLR. [6]. Chen, H., Constante-Flores, G.E. and Li, C., 2024. Diagnosing infeasible optimization problems using large language models. e INFOR: Information Systems and Operational Research , 62 (4), pp.573-587. [7]. Rathi, T., Gupta, R., Pinto, J.M. and Zhang, Q., 2024. Enhancing explainability of stochastic programming solutions via scenario and recourse reduction. Optimization and Engineering , 25 (2), pp.795-820. [8]. Aigner, K.M., Goerigk, M., Hartisch, M., Liers, F. and Miehlich, A., 2024, March. A framework for data-driven explainability in mathematical optimization. In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 38, No. 19, pp. 20912-20920). [9]. Cappart, Q., Chételat, D., Khalil, E.B., Lodi, A., Morris, C. and Veličković, P., 2023. Combinatorial optimization and reasoning with graph neural networks. Journal of Machine Learning Research , 24 (130), pp.1-61. [10]. Chen, Z., Liu, J., Wang, X., Lu, J. and Yin, W., 2022. On representing linear programs by graph neural networks. arXiv preprint arXiv:2209.12288 . [11]. Mitrai, I. and Daoutidis, P., 2024. Taking the human out of decomposition-based optimization via artificial intelligence, Part I: Learning when to decompose. Computers & Chemical Engineering , 186 , p.108688. [12]. Ying, Z., Bourgeois, D., You, J., Zitnik, M. and Leskovec, J., 2019. GNNexplainer: Generating explanations for graph neural networks. Advances in neural information processing systems , 32 . [13]. Luo, D., Cheng, W., Xu, D., Yu, W., Zong, B., Chen, H. and Zhang, X., 2020. Parameterized explainer for graph neural network. Advances in neural information processing systems, 33, pp.19620-19631.",
+    "presenting_author": "Ilias Mitrai | The University of Texas at Austin, TX",
+    "authors": [
+      "Jiyong Lee | The University of Texas at Austin, TX",
+      "Ilias Mitrai | The University of Texas at Austin, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jiyong Lee",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Ilias Mitrai",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "469e",
+    "sortable_time": "2025-11-05_09:24:00_09:45:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713665"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713272",
+    "paper_endpoint": "Paper/713272",
+    "paper_id": "713272",
+    "topic": "Robust Training of Machine Learning Models Using Multi-Objective Bayesian Optimization",
+    "title": "Robust Training of Machine Learning Models Using Multi-Objective Bayesian Optimization",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "58617",
+    "session_title": "10E Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "469",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "An increasing number of chemical and process engineering applications rely on machine learning models as surrogates or for data-driven insights [1-2]. Modern machine learning models are vulnerable to poisoning attacks, where adversarial manipulation of even a small fraction of training data can lead to catastrophic failures [3]. Data poisoning attacks occur when an actor can strategically modify training data to compromise model performance or introduce specific vulnerabilities. These attacks can manifest in multiple forms: untargeted attacks (potentially measurement noise) aim to degrade overall model performance causing denial-of-service [4-5]; targeted attacks compromise performance on specific input types [6-7]; and backdoor attacks maintain normal model behavior while introducing trigger patterns that cause errors during deployment [8-9]. Despite their significance, existing defenses are typically attack-specific and provide no guarantees against new attack methods, creating an ineffective \"arms race\" between attackers and defenders. Our recent work introduces Abstract Gradient Training (AGT), a framework that computes sound certificates of robustness against general poisoning adversaries for models trained with first-order optimization methods [10-11]. AGT treats poisoning attacks as constraints over an adversary's perturbation budget and leverages convex relaxations to bound the impact of various attack types. Unlike prior approaches, AGT applies to unmodified models and training algorithms, making it applicable to existing training pipelines. However, achieving both high performance and robustness remains challenging due to the complex relationship between hyperparameter choices and a model's vulnerability to adversarial attacks. This work advances the design of robust machine learning pipelines by introducing a novel multi-objective Bayesian Optimization methodology that leverages AGT to tune hyperparameters for both performance and certified robustness. Bayesian Optimization has previously been applied to the problem of hyperparameter tuning in machine learning settings [12], though typically purely to optimize the performance of the model. In contrast, our approach formulates the hyperparameter tuning problem with dual objectives: minimizing validation error and minimizing the certified error bound computed using AGT. We demonstrate how our framework identifies Pareto-optimal solutions that balance model performance and robustness. Experimental results show that configurations optimized solely for performance exhibit greater vulnerability to actual data poisoning attacks, while our robust solutions effectively resist adversarial perturbations. References: [1] Bhosekar, A., & Ierapetritou, M. (2018). Advances in surrogate based modeling, feasibility analysis, and optimization: A review. Computers & Chemical Engineering, 108, 250-267. [2] Thebelt, A., Wiebe, J., Kronqvist, J., Tsay, C., & Misener, R. (2022). Maximizing information from chemical engineering data sets: Applications to machine learning. Chemical Engineering Science, 252, 117469. [3] Carlini, N., Jagielski, M., Choquette-Choo, C. A., Paleka, D., Pearce, W., Anderson, H., ... & Tramèr, F. (2024, May). Poisoning web-scale training datasets is practical. In 2024 IEEE Symposium on Security and Privacy (SP) (pp. 407-425). IEEE. [4] Muñoz-González, L., Biggio, B., Demontis, A., Paudice, A., Wongrassamee, V., Lupu, E. C., & Roli, F. (2017, November). Towards poisoning of deep learning algorithms with back-gradient optimization. In Proceedings of the 10th ACM workshop on artificial intelligence and security (pp. 27-38). [5] Newell, A., Potharaju, R., Xiang, L., & Nita-Rotaru, C. (2014, November). On the practicality of integrity attacks on document-level sentiment analysis. In Proceedings of the 2014 Workshop on Artificial Intelligent and Security Workshop (pp. 83-93). [6] Shafahi, A., Huang, W. R., Najibi, M., Suciu, O., Studer, C., Dumitras, T., & Goldstein, T. (2018). Poison frogs! targeted clean-label poisoning attacks on neural networks. Advances in neural information processing systems, 31. [7] Zhu, C., Huang, W. R., Li, H., Taylor, G., Studer, C., & Goldstein, T. (2019, May). Transferable clean-label poisoning attacks on deep neural nets. In International conference on machine learning (pp. 7614-7623). PMLR. [8] Chen, X., Liu, C., Li, B., Lu, K., & Song, D. (2017). Targeted backdoor attacks on deep learning systems using data poisoning. arXiv preprint arXiv:1712.05526. [9] Saha, A., Subramanya, A., & Pirsiavash, H. (2020, April). Hidden trigger backdoor attacks. In Proceedings of the AAAI conference on artificial intelligence (Vol. 34, No. 07, pp. 11957-11965). [10] Sosnin, P., Müller, M. N., Baader, M., Tsay, C., & Wicker, M. (2024). Certified robustness to data poisoning in gradient-based training. arXiv preprint arXiv:2406.05670. [11] Wicker, M., Sosnin, P., Shilov, I., Janik, A., Müller, M. N., de Montjoye, Y. A., ... & Tsay, C. (2024). Certification for Differentially Private Prediction in Gradient-Based Training. arXiv preprint arXiv:2406.13433. [12] Chen, Y., Huang, A., Wang, Z., Antonoglou, I., Schrittwieser, J., Silver, D., & de Freitas, N. (2018). Bayesian optimization in alphago. arXiv preprint arXiv:1812.06855",
+    "presenting_author": "Philip Sosnin | Imperial College London, United Kingdom",
+    "authors": [
+      "Philip Sosnin | Imperial College London, United Kingdom",
+      "Calvin Tsay | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Philip Sosnin",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Calvin Tsay",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "469f",
+    "sortable_time": "2025-11-05_09:45:00_10:06:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713272"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/710330",
+    "paper_endpoint": "Paper/710330",
+    "paper_id": "710330",
+    "topic": "Staying Alive: Maintaining Neural Network Models in the Presence of Systemic Drift",
+    "title": "Staying Alive: Maintaining Neural Network Models in the Presence of Systemic Drift",
+    "date_time": "2025-11-05_08:00:00_10:30:00",
+    "session_id": "58617",
+    "session_title": "10E Advances in Machine Learning and Intelligent Systems II",
+    "session_number": "469",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Information Management and Intelligent Systems",
+    "abstract": "Deep learning is an increasingly widespread method for mapping inputs to outputs for systems where using first-principles models is impossible or impractical due to computational constraints[1], [2], [3]. Currently, deep learning models are typically developed in an offline train-then-deploy paradigm using past data. However, this paradigm does not reflect realistic applications where the underlying data-generating physical systems tend to change/evolve in time. As these systems evolve, the discrepancy between model predictions and the true system behavior increases[4], [5].In these cases, the neural network must be altered or amended to ensure that its predictions remain accurate—a process that we refer to as model maintenance. Current work using neural networks for process systems engineering rarely considers model maintenance. When discrepancies between the model and the underlying process are considered, the model is usually finetuned—weights are modified by retraining the model on recent measurements, and using the current model parameters as the initial guess. Finetuning, however, is unsuitable for real-time processes such as control as the time required for iterative evaluation across the finetuning dataset would cause delays. We are interested in maintaining the accuracy of previously trained neural network models online, amid drift in the underlying physical system. We assume that the drift is slow, monotonic, and that the structure of the governing equations of the physical system remain unchanged (and that there are no discontinuities). In contrast to the default method of finetuning, we propose an online method for updating neural network (NN) models as new measurements become available: the Subset Extended Kalman Filter (SEKF). The SEKF addresses two essential questions in updating NN model parameters: which parameters to update, and how to update them. To the first, point, the gradient of the loss function (which is available via backpropagation) is used to select the NN parameters with the highest impact on the magnitude of the loss function as it is affected by drift. To the second question, we formulate an EKF whose structure is aligned with updating only the subset of parameters selected in the previous step. Applying updates to only a subset of neural network model parameters has two benefits. First, it significantly reduces the computational cost of the update step which increases exponentially with the number of parameters updated. Second, it introduces some stability or permeance within the model, by leaving the majority of the NN model parameters unchanged. We compare the performance of finetuning and the SEKF in terms of error, computational expense, and manual tuning required to maintain previously trained neural network models of dynamical systems of increasing complexity, up to a plant-wide dynamic model of a fluidized bed catalytic cracker/fractionator unit. We find that across all case studies that the SEKF requires less manual hyperparameter tuning, requires less time to perform an update, and achieves at worst similar prediction error as finetuning, though often models maintained using the SEKF have significantly lower error. References [1] G. Zeng, Y. Chen, B. Cui, and S. Yu, “Continual learning of context-dependent processing in neural networks,” Nat Mach Intell , vol. 1, no. 8, pp. 364–372, Aug. 2019, doi: 10.1038/s42256-019-0080-x. [2] O. Santander, V. Kuppuraj, C. A. Harrison, and M. Baldea, “Deep learning economic model predictive control for refinery operation: A fluid catalytic cracker-fractionator case study,” in 2022 26th International Conference on System Theory, Control and Computing, ICSTCC 2022 - Proceedings , Institute of Electrical and Electronics Engineers Inc., 2022, pp. 331–336. doi: 10.1109/ICSTCC55426.2022.9931761. [3] P. Kumar, J. B. Rawlings, M. J. Wenzel, and M. J. Risbeck, “Grey-box model and neural network disturbance predictor identification for economic MPC in building energy systems,” Energy Build , vol. 286, May 2023, doi: 10.1016/j.enbuild.2023.112936. [4] G. I. Webb, L. K. Lee, F. Petitjean, and B. Goethals, “Understanding Concept Drift,” Apr. 2017, [Online]. Available: http://arxiv.org/abs/1704.00362 [5] J. Gama, I. Zliobaite, A. Bifet, M. Pechenizkiy, and A. Bouchachia, “A survey on concept drift adaptation,” Apr. 01, 2014, Association for Computing Machinery . doi: 10.1145/2523813.",
+    "presenting_author": "Joshua Hammond | The University of Texas at Austin, TX",
+    "authors": [
+      "Joshua Hammond | The University of Texas at Austin, TX",
+      "Tyler Soderstrom | Exxonmobil, Houston, TX",
+      "Brian A. Korgel | The University of Texas at Austin, TX",
+      "Michael Baldea | The University of Texas at Austin, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joshua Hammond",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Tyler Soderstrom",
+        "affiliation": "Exxonmobil, Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Brian A. Korgel",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Baldea",
+        "affiliation": "The University of Texas at Austin, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "469g",
+    "sortable_time": "2025-11-05_10:06:00_10:27:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/710330"
+  }
+]

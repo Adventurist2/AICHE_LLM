@@ -1,0 +1,289 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/629521",
+    "paper_endpoint": "Paper/629521",
+    "paper_id": "629521",
+    "topic": "Nested Sampling Algorithm for Probabilistic Design Space Definition with Recourse Action",
+    "title": "Nested Sampling Algorithm for Probabilistic Design Space Definition with Recourse Action",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46982",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "417",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The increasing pressure to continually improve pharmaceutical manufacturing practices has promoted the use of process systems engineering techniques to support pharmaceutical process development. Of particular interest is the use of model-centric approaches to defining a design space in pharmaceutical quality-by-design (QbD) [1]. But such mathematical models carry uncertainty, typically in the form of uncertain parameters. Accounting for this uncertainty is of paramount importance to prevent false positives, in agreement with the ICH quality guideline Q8 (R2) [2]. This leads to the concept of probabilistic design space [3], which is akin to stochastic flexibility analysis [4,5] in the process systems engineering literature. As a consequence of these developments, interest in numerical tools capable of characterising a probabilistic design space has grown significantly. Existing algorithms either approximate the design space with a set of samples [6,7] or seek to inscribe a given shape inside the design space of interest [8,9]. As the use of process analytical technology and advanced process controls are becoming commonplace in modern pharmaceutical manufacturing, the ability to consider recourse system variables during design space definition is paramount [10]. There is, therefore, a need for algorithms which rigorously account for model uncertainty and recourse actions, whilst simultaneously remain general and tractable for solving a wide range of practical problems. This talk presents an extension to the nested sampling algorithm for probabilistic design space definition [6] that enables processes with recourse variables. The main idea entails the combination of adaptive sampling of the critical process parameter (CCP) space, with a recourse optimization problem that maximizes the feasibility probability for each CPP realization. The former is based on the nested sampling algorithm implemented in the Python package DEUS [6]. The latter approximates the chance constraints via Monte Carlo sampling of the uncertain model parameters, and it considers either a mixed-integer programming formulation or its continuous relaxation for computational tractability [5], both implemented in Pyomo. The approach is illustrated for several steady-state design space problems, where the recourse action is essentially acting as a perfect control. Comparisons are also made with the counterpart design space problems without recourse action to demonstrate the potential benefits (see Figure). References García-Muñoz, S., et al. (2015) Definition of design spaces using mechanistic models and geometric projections of probability maps. Org. Process Res. Dev. 19 , 1012–1023 Holm, P. et al. (2017) Q8(R2), in: ICH Quality Guidelines, pp. 535–577, John Wiley & Sons, Inc. Peterson, J. J. (2008) A Bayesian approach to the ICH Q8 definition of design space. J. Biopharm. Stat. 18 , 959–975 Straub, D. A. & Grossmann, I. E. (1990) Integrated stochastic metric of flexibility for systems with discrete state and continuous parameter uncertainties. Comput. Chem. Eng. 14 , 967–985 Pulsipher, J. L. & Zavala, V. M. (2019) A scalable stochastic programming approach for the design of flexible systems. Comput. Chem. Eng. 128 , 69–76 Kusumo, K. P. et al. (2020) Bayesian approach to probabilistic design space characterization: A nested sampling strategy. Ind. Eng. Chem. Res. 59 , 2396–2408 Kucherenko S, et al. (2020) Computationally efficient identification of probabilistic design spaces through application of metamodeling and adaptive sampling, Comput. Chem. Eng. 132 , 106608 Laky, D. et al. (2019) An optimization-based framework to define the probabilistic design space of pharmaceutical processes with model uncertainty. Processes 7 , 96 Paz Ochoa, M. & Grossmann, I. E. (2020) Novel MINLP formulations for flexibility analysis for measured and unmeasured uncertain parameters, Comput. Chem. Eng. 135, 106727 von Stosch, M. et al. Working within the Design Space: Do Our Static Process Characterization Methods Suffice? Pharmaceutics 12 , 562 (2020).",
+    "presenting_author": "Kennedy Kusumo | Imperial College London, United Kingdom",
+    "authors": [
+      "Kennedy Kusumo | Imperial College London, United Kingdom",
+      "Cornel Marck | Imperial College London, United Kingdom",
+      "Nilay Shah | Imperial College London, United Kingdom",
+      "Benoit Chachuat | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kennedy Kusumo",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Cornel Marck",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nilay Shah",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Benoit Chachuat",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      }
+    ],
+    "paper_number": "417a",
+    "sortable_time": "2021-11-10_08:00:00_08:19:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/629521"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/627540",
+    "paper_endpoint": "Paper/627540",
+    "paper_id": "627540",
+    "topic": "Rare-Event Sampling for Efficient Scenario Generation for Stochastic Programs",
+    "title": "Rare-Event Sampling for Efficient Scenario Generation for Stochastic Programs",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46982",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "417",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Stochastic programming (SP) is a common approach to solve optimization problems under uncertainty (Birge and Louveaux, 2011). Such problems arise when the decision-maker incorporates aspects of a problem that are not fully known or cannot be controlled, i.e., the weather, demand, or estimated process parameters. This uncertain information is generally modeled as a probability distribution based on previous data or expert opinion. To solve these problems with a SP framework, samples from the distribution, or scenarios, are used to approximate the distribution. Naturally, the better the set of scenarios are at depicting the underlying distribution, the more accurate the solution is. However, as the number of the scenarios grows, so does the problem size, leading to the model tractability issues. Balancing the model size and the accuracy of the distribution estimation leads to the need for efficient scenario generation (Henrion and Römisch, 2018; Park et al., 2019; Shapiro et al., 2014). In many stochastic programs, the most probable scenarios are enough to estimate the distribution for a high-quality solution. There are, however, some problems, such as those in safety and reliability engineering, supply chain resilience, and health services, in which the least likely events have the most impact on the optimal decisions. These events occur in the tail(s) of the distribution and are likely to be not accurately represented within the scenarios. To fully describe the tail(s), it is necessary to either create a large number of samples or use a rare-event sampling technique. In these types of problems, the need to properly represent the tail(s) of the distribution while maintaining a computationally tractable model becomes even more of an issue. In this work, we evaluate the efficacy of two different implementations of importance sampling (Papavasiliou and Oren, 2013; Parpas et al., 2014) and two clustering approaches to generate scenarios for SP models emphasizing the rare-event space efficiently. Importance sampling is a variance reduction technique in which samples are taken from an auxiliary distribution, the importance distribution (ID), which emphasizes the region of the distribution that has the greatest impact on a measure of interest. The samples are then tied back to the original distribution through an assigned weight, the likelihood ratio, to maintain an unbiased estimation of that measure of interest. The determination of an ID is a non-trivial task and is where the two tested implementations differ. The first implementation (Parpas et al., 2014) uses a Markov Chain Monte Carlo approach to generate samples from a theoretical ID where the normalization constant is unknown, and the ID is approximated using kernel density estimation. The approximation of the ID is then used to generate samples with known probabilities. The second approach (Papavasiliou and Oren, 2013) utilizes a large number of samples from the original distribution to accurately estimate the expectation of the measure of interest. A subset of the initial samples is then chosen using an approximated ID, constructed using the estimated expectation of the measure of interest. Clustering is a data analysis technique that takes in a large dataset and groups the data into subsets, or clusters, of points that share similarities, originally used as a classification technique (Driver and Kroeber, 1932). This technique can be used for scenario reduction by clustering a large dataset and generating representative samples from each of the clusters as the scenarios for an optimization problem (Li et al., 2020). The clustering techniques used are the k-means and affinity propagation algorithms. The k-means is a general-purpose algorithm that separates the data set into k different clusters based on the distance between the mean vectors of the data (Yadav and Sharma, 2013). The affinity propagation algorithm utilizes a similarity measure to tie data points to a representative point, known as an exemplar, to form the clusters (Dueck, 2009). We also include a crude Monte Carlo generation approach as a baseline in the framework. We test the scenario reduction techniques on a healthcare-related problem, in which the objective is to maximize the expected life-years gained by screening for Colorectal cancer (CRC). The solution identifies at what ages screening tests should occur within a population to maximize the benefit. For this problem, only a small percentage of the population, 4-4.5 % (American Cancer Society, 2020), develops CRC within their lifetime. Hence, for the majority of the population, screening for CRC is a burden. To properly maximize the expected benefit of screening, it is necessary to accurately portray the impact of the lower probability scenarios on the objective function. After the scenario sets are generated, we solved the optimization problem and compare the resulting objective function to a rigorous simulation to determine how effective the approximation is for the various techniques. This presentation will discuss the effectiveness in estimating the true objective value, the quality of the solutions obtained, and the computation budget needed for each scenario generation method. References American Cancer Society, 2020. Colorectal Cancer Facts & Figures [WWW Document]. URL https://www.cancer.org/research/cancer-facts-statistics/colorectal-cancer-facts-figures.html (accessed 2.27.19). Birge, J.R., Louveaux, F., 2011. Introduction to stochastic programming. Springer Science & Business Media. Driver, H.E., Kroeber, A.L., 1932. Quantitative expression of cultural relationships. Berkeley: University of California Press. Dueck, D., 2009. Affinity propagation: clustering data by passing messages. (Thesis) Citeseer. Henrion, R., Römisch, W., 2018. Problem-based optimal scenario generation and reduction in stochastic programming. Math. Program. 1–23. Li, B., Sedzro, K., Fang, X., Hodge, B.M., Zhang, J., 2020. A clustering-based scenario generation framework for power market simulation with wind integration. J. Renew. Sustain. Energy 12. https://doi.org/10.1063/5.0006480 Papavasiliou, A., Oren, S.S., 2013. Multiarea stochastic unit commitment for high wind penetration in a transmission constrained network. Oper. Res. 61, 578–592. https://doi.org/10.1287/opre.2013.1174 Park, S., Xu, Q., Hobbs, B.F., 2019. Comparing scenario reduction methods for stochastic transmission planning. IET Gener. Transm. Distrib. 13, 1005–1013. Parpas, P., Ustun, B., Webster, M., Tran, Q.K., 2014. Importance Sampling in Stochastic Programming: A Markov Chain Monte Carlo Approach. INFORMS J. Comput. 27, 358–377. https://doi.org/10.1287/ijoc.2014.0630 Shapiro, A., Dentcheva, D., Ruszczyński, A., 2014. Lectures on Stochastic Programming: Modeling and Theory, Second Edition. Lect. Stoch. Program. Model. Theory, Second Ed. https://doi.org/10.1137/1.9781611973433 Yadav, J., Sharma, M., 2013. A Review of K-mean Algorithm. Int. J. Eng. trends Technol. 4, 2972–2976.",
+    "presenting_author": "David Young | Auburn University, AL",
+    "authors": [
+      "David Young | Auburn University, AL",
+      "Mark Carpenter | Auburn University, AL",
+      "Selen Cremaschi | Auburn University, AL"
+    ],
+    "authors_structured": [
+      {
+        "name": "David Young",
+        "affiliation": "Auburn University, AL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mark Carpenter",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      },
+      {
+        "name": "Selen Cremaschi",
+        "affiliation": "Auburn University, AL",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "417b",
+    "sortable_time": "2021-11-10_08:19:00_08:38:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/627540"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/621094",
+    "paper_endpoint": "Paper/621094",
+    "paper_id": "621094",
+    "topic": "Design Centering through Derivative-Free Optimization",
+    "title": "Design Centering through Derivative-Free Optimization",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46982",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "417",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "In the pharmaceutical industry, design space is defined as “the multidimensional combination and interaction of input variables and process parameters that have been demonstrated to provide assurance of quality” [1]. The product quality can meet specifications as long as the process parameters vary within the proposed design space. Process parameters [2] correspond to degrees of freedom or variables that can be manipulated in the operation of a manufacturing process, and which can be measured and set within the controller tolerance for a desired value. Design spaces are defined using predictions from a model (either empirical or deterministic). Thus, the uncertainty in the model parameters plays an important role. The values of the model parameters are estimated from data, and commonly assumed to follow a Gaussian distribution from which confidence intervals can be defined. Design space definition is one of the key components in pharmaceutical research and development. Flexibility index [3] and design centering [4] are two ways to estimate a candidate design space. Flexibility index is used to describe an operational range, which represents a maximum scaled departure of all process parameters from the given nominal conditions, such as a largest rectangle inscribed in the feasible space of steady-state operation in which control or recourse variables are adjusted. Since the design space is limited by the qualification ranges for process parameters, the result of flexibility index can be used to approximate the design space as an inscribed largest feasible region, which may be a rectangle, ellipse or other appropriate and acceptable shapes. If the nominal conditions of the process parameters are unknown, the flexibility index problem can be extended to a design centering problem, which focuses on determining the optimal nominal conditions, while maximizing the feasible operating region. The goal of a design centering problem is to find an optimal nominal point, which corresponds to the largest flexibility index; thus, the design centering problem can be solved based on the flexibility index model. From a mathematical viewpoint, the design centering problem corresponds to a bi-level optimization model [5]. In the upper-level problem, the nominal point is searched within the feasible region; in the lower-level problem, an exact flexibility index should be calculated for each nominal point. Flexibility index problems are commonly formulated as a mixed-integer linear or nonlinear programming (MILP/MINLP) model [6-8]. For a general bi-level optimization problem, the most important issue is how to guarantee finding the global optimal solution of the lower-level model at each iteration. Similarly, for the design centering problem, the key issue is to guarantee locating the global optimal flexibility index for each nominal point. In this work, since the design centering is a bi-level optimization problem, we first propose a novel formulation of the flexibility index for the lower-level optimization. A search direction is used to define the candidate flexibility index along a direction from the given nominal point for a specified shape of the feasible region. By applying the Karush-Kuhn-Tucker (KKT) conditions and complementarity conditions, the flexibility index model can be transformed into a single-level MINLP model. Thus, a global optimization solver (e.g., BARON) can be used to solve this model, and the exact flexibility index for a given nominal point can be obtained. This new formulation of flexibility index mainly has three features: (1) Compared with the traditional tri-level model, the proposed formulation is a bi-level model, and the corresponding MINLP model is simpler because it only requires once the KKT reformulation; (2) The traditional Haar condition [6] is not required, because the proposed model has ability to find the direction corresponding to the active constraint directly; (3) The proposed method can be extended to any shape of feasible region, as long as the representation of the shape can be provided. For the upper-level optimization of the design centering model, a derivative-free optimization (DFO) method [9] is applied to search the nominal point in the entire feasible region. The main steps of the proposed design centering method are: (1) Perform the Latin Hypercube Sampling (LHS) strategy over the space of process parameters, where upper and lower bounds are required; (2) Check the feasibility of each sampling point. (3) Solve the DFO model of design centering problem for each feasible LHS point. The proposed flexibility index model is used to calculate the exact flexibility index at each iteration, and the obtained flexibility index for each candidate nominal point is stored. (4) The optimal nominal point is the one that has the largest value of flexibility index. In the case studies, Pyomo [10] is applied to define the models. BARON is called to solve the MINLP model through the interface of Pyomo and GAMS. Rectangular and elliptical sets for the process parameters are considered in each case. Several cases with convex and nonconvex feasible regions demonstrate the computational efficiency of the proposed design centering method. Keywords: design space; flexibility index; design centering; derivative-free optimization. Reference: [1] Kusumo KP, Gomoescu L, Paulen R, García-Muñoz S, Pantelides CC, Shah N, Chachuat B. Bayesian Approach to Probabilistic Design Space Characterization: A Nested Sampling Strategy. Ind Eng Chem Res . 2019;59(6):2396-2408. [2] Hakemeyer C, McKnight N, John RS, Meier S, Trexler-Schmidt M, Kelley B, Zettl F, Puskeiler R, Kleinjans A, Lim F, Wurth, C. Process characterization and design space definition. Biologicals . 2016;44(5):306-318. [3] Swaney RE, Grossmann IE. An index for operational flexibility in chemical process design. Part I: Formulation and theory. AIChE J. 1985;31(4):621-630. [4] Harwood SM, Barton PI. How to solve a design centering problem. Math Methods Oper Res . 2017;86(1):215-254. [5] Colson B, Marcotte P, Savard G. An overview of bilevel optimization. Ann Oper Res. 2007;153(1):235-256. [6] Grossmann IE, Floudas CA. Active constraint strategy for flexibility analysis in chemical processes. Comput Chem Eng. 1987;11(6):675-693. [7] Ochoa MP, Grossmann IE. Novel MINLP formulations for flexibility analysis for measured and unmeasured uncertain parameters. Comput Chem Eng . 2020;135:106727. [8] Pulsipher JL, Zavala VM. A mixed-integer conic programming formulation for computing the flexibility index under multivariate gaussian uncertainty. Comput Chem Eng . 2018;119: 302-308. [9] Rios LM, Sahinidis NV. Derivative-free optimization: a review of algorithms and comparison of software implementations. J Glob Optim . 2013;56(3):1247-1293. [10] Hart WE, Laird CD, Watson JP, Woodruff DL, Hackebeil GA, Nicholson BL, Siirola JD. Pyomo-optimization modeling in Python. Second Edition. Springer, 2017.",
+    "presenting_author": "Fei Zhao | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Fei Zhao | Carnegie Mellon University, Pittsburgh, PA",
+      "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA",
+      "Salvador Garcia Munoz | Eli Lilly and Company, Indianapolis, IN",
+      "Stephen D. Stamatis | Eli Lilly and Company, Indianapolis, IN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Fei Zhao",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Ignacio Grossmann",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Salvador Garcia Munoz",
+        "affiliation": "Eli Lilly and Company, Indianapolis, IN",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephen D. Stamatis",
+        "affiliation": "Eli Lilly and Company, Indianapolis, IN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "417c",
+    "sortable_time": "2021-11-10_08:38:00_08:57:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/621094"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/622096",
+    "paper_endpoint": "Paper/622096",
+    "paper_id": "622096",
+    "topic": "Random Field Optimization",
+    "title": "Random Field Optimization",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46982",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "417",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Random field theory is a branch of mathematics and statistics that provides theoretical and computational techniques for characterizing statistical maps [1]. A random field generalizes the notion of a multivariate (vector-valued) random variable (e.g., multivariate Gaussian variables) to that of random variables that live in infinite-dimensional domains (e.g., space and time) [2]. For instance, a time series is a multivariate random variable given by a collection of random variables defined at a discrete number of time points; a random field can be seen as the infinite-dimensional limit of the time series obtained by treating the time domain as continuous. In this talk, we observe that random field theory enables us to readily model a wide range of uncertainties that a system might exhibit over general problem domains. Random fields also provide a general modeling abstraction that captures stochastic processes, stochastic programs, and Gaussian processes and enables us to establish connections with areas such as spatio-temporal modeling, machine learning, topological data analysis, and Bayesian optimization [3, 4, 5, 6]. Example application areas include functional brain imaging [7], computer-generated imagery [8], weather forecasting [9], structural topological design [10], and robotic modeling [11]. However, random field theory has not been incorporated into optimization theory and it has shown limited applications within the process systems community. Random field theory allow us to explore infinite-dimensional limits of traditional stochastic programming models. For instance, typical stochastic programs consider a multi-stage decision-making setting that involve a discrete-time stochastic process, decisions and decisions made at each time point [12,13]. Prominent application areas of this paradigm include model predictive control [14], process design [15], and flexibility analysis [16]. The probability space defined by the stochastic process is typically handled using a so-called scenario tree; unfortunately, the complexity of such trees increases exponentially with the number of time points [13]. This complexity can be mitigated by assuming stage-wise independence (i.e., it is I.I.D. over time) [17], but this assumption often does not hold for real-world systems. Furthermore, multi-stage problems are inherently designed for discrete time stages and do not readily generalize to decisions that need to be made in continuous time or over more general domains (e.g., space-time domains, as those found in optimization with stochastic PDEs). To address some of these challenges, we integrate modeling constructs of random field theory and stochastic programming, giving rise to a new class of problems that we call \"random field optimization.\" The integration of these paradigms is readily motivated through lens of our unifying abstraction for infinite-dimensional optimization (e.g., problems that consider decision functions/policies that are indexed over continuous domains) [18]. We demonstrate that decision functions with uncertainty (e.g., random policies defined over space-time) can be treated as random fields. Moreover, we show that the correlations over general domains (e.g., space-time) can be modeled via random fields and directly incorporated into system optimization problems. References: [1] Matthew Brett, Will Penny, and Stefan Kiebel. Introduction to random field theory. Human brain function 2, 2003. [2] Erik Vanmarcke. Random fields: analysis and synthesis. World scientific, 2010. [3] Erhan Cinlar. Introduction to stochastic processes. Courier Corporation, 2013. [4] Carl Edward Rasmussen. Gaussian processes in machine learning. In Summer school on machine learning, pp. 63-71. Springer, Berlin, Heidelberg, 2003. [5] Jonathan Taylor, Akimichi Takemura, and Robert J. Adler. Validity of the expected Euler characteristic heuristic. Annals of Probability 33, no. 4 (2005): 1362-1396. [6] Peter I Frazier. A tutorial on Bayesian optimization. arXiv preprint arXiv:1807.02811 (2018). [7] William D Penny, Karl J Friston, John T.Ashburner, Stefan J Kiebel, and Thomas E Nichols, eds. Statistical parametric mapping: the analysis of functional brain images. Elsevier, 2011. [8] Derek C Bertilone, Robert S Caprari, Philip B Chapple, and Steven Angeli. Spatial statistics of natural-terrain imagery. II. Oblique visible backgrounds and stochastic simulation. Applied optics 36, no. 35 (1997): 9177-9185. [9] Linus Magnusson. Sampling uncertainties in ensemble weather forecasting. PhD diss., Department of Meteorology, Stockholm University, 2009. [10] Junpeng Zhao and Chunjie Wang. Robust structural topology optimization under random field loading uncertainty. Structural and Multidisciplinary Optimization, 50(3):517–522, 2014. [11] Marco Imperoli, Ciro Potena, Daniele Nardi, Giorgio Grisetti, and Alberto Pretto. An effective multi-cue positioning system for agricultural robotics. IEEE Robotics and Automation Letters 3, no. 4 (2018): 3685-3692. [12] John R Birge and Francois Louveaux. Introduction to stochastic programming. Springer Science & Business Media, 2011. [13] Vijay Gupta and Ignacio E Grossmann. Solution strategies for multistage stochastic programming with endogenous uncertainties. Computers & Chemical Engineering 35, no. 11 (2011): 2235-2247. [14] Ranjeet Kumar, Michael J Wenzel, Mohammad N ElBsat, Michael J Risbeck, Kirk H Drees, and Victor M Zavala. Stochastic model predictive control for central HVAC plants. Journal of Process Control 90 (2020): 1-17. [15] Joaquin Acevedo and Efstratios N Pistikopoulos. Stochastic optimization based algorithms for process synthesis under uncertainty. Computers & Chemical Engineering 22, no. 4-5 (1998): 647-671. [16] Joshua L Pulsipher and Victor M Zavala. A scalable stochastic programming approach for the design of flexible systems. Computers & Chemical Engineering 128 (2019): 69-76. [17] Jikai Zou, Shabbir Ahmed, and Xu Andy Sun. Multistage stochastic unit commitment using stochastic dual dynamic integer programming. IEEE Transactions on Power Systems 34, no. 3 (2018): 1814-1823. [18] Joshua L Pulsipher, Weiqi Zhang, Tyler J Hongisto, and Victor M Zavala. A unifying abstraction for modeling infinite-dimensional optimization problems. Under Review, 2021",
+    "presenting_author": "Joshua Pulsipher | University of Wisconsin-Madison",
+    "authors": [
+      "Joshua Pulsipher | University of Wisconsin-Madison",
+      "Victor M. Zavala | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Joshua Pulsipher",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Victor M. Zavala",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "417d",
+    "sortable_time": "2021-11-10_08:57:00_09:16:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/622096"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/622923",
+    "paper_endpoint": "Paper/622923",
+    "paper_id": "622923",
+    "topic": "Assessing the Demand Response Potential of Power-Intensive Processes By Stochastic Scheduling Optimization",
+    "title": "Assessing the Demand Response Potential of Power-Intensive Processes By Stochastic Scheduling Optimization",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46982",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "417",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Electricity for power-intensive production processes can be purchased on the day-ahead and intraday electricity market 24 hours in advance and during the day of commitment, respectively. Flexible processes can adjust their load to time-varying electricity price signals. As part of this so-called demand response, scheduling optimization can be used to determine cost-optimal process operation and electricity purchases on the two markets [1–3]. Besides possible economic advantages for the plant operator, demand response helps balancing the electricity grid [4,5]. In particular, short-term imbalances caused by volatile renewable energy can be reduced by quickly adjusting the load of large consumers in response to intraday market price movements. Intraday prices exhibit a high uncertainty, which can be explicitly taken into account in scheduling optimization by means of stochastic programming [6,7]. Stochastic scheduling optimization considering price uncertainty has proven to be economically promising [8,9], however, is associated with a high computational burden. Simkoff and Baldea [3] therefore employ a reduced-order model in their two-stage stochastic scheduling of a chlor-alkali electrolysis plant and Zhang et al. [9] and Leo et al. [10] rely on tailored solution methods such as progressive hedging or Benders decomposition. Furthermore, Zhang et al. [9] and Leo et al. [10] propose to use risk-averse scheduling optimization, i.e., minimization of both the expected cost and the conditional value-at-risk, to greatly reduce the financial risk of electricity trading while still achieving high expected electricity procurement savings. The question arises which processes are primary candidates for demand response addressing both day-ahead and intraday electricity markets. We approach this question by means of stochastic scheduling optimization of a generic process model [7] that allows to describe flexible electricity demand based on few characteristic process parameters such as utilization rate, ramping limits, or storage capacity. Following the market assumptions made by Simkoff and Baldea [3], we optimize the process operation for the next day assuming known day-ahead prices and employing scenarios as possible realizations of the uncertain intraday prices. We integrate the risk-averse formulation proposed by Zhang et al. [9], i.e., we weigh the expected electricity cost and the conditional value-at-risk evenly in the objective function. By systematically varying the generic process parameters, we study the relative impact of different process characteristics on the additional savings achieved by flexible operation and stochastic scheduling. Our analysis reveals which process characteristics are most important for reducing energy procurement costs through trading flexibility on both markets and thus can be used to shortlist concrete process candidates suitable for scheduling under price uncertainty. References: [1] B. Daryanian, R.E. Bohn, R.D. Tabors, Optimal Demand-Side Response to Electricity Spot Prices for Storage-Type Customers, IEEE Power Eng. Rev. 9 (1989) 36. [2] G. Dalle Ave, I. Harjunkoski, S. Engell, A non-uniform grid approach for scheduling considering electricity load tracking and future load prediction, Comput. Chem. Eng. 129 (2019) 106506. [3] J.M. Simkoff, M. Baldea, Stochastic scheduling and control using data-driven nonlinear dynamic models: Application to demand response operation of a chlor-alkali plant, Ind. Eng. Chem. Res. 59 (2020) 10031–10042. [4] Q. Zhang, I.E. Grossmann, Planning and Scheduling for Industrial Demand Side Management: Advances and Challenges, in: Alternative Energy Sources and Technologies, Springer, Cham, 2016: pp. 383–414. [5] J. Burre, D. Bongartz, L. Brée, K. Roh, A. Mitsos, Power-to-X: Between electricity storage, e-production, and demand side management, Chemie Ing. Tech. 92 (2020) 74–84. [6] I.E. Grossmann, R.M. Apap, B.A. Calfa, P. García-Herreros, Q. Zhang, Recent advances in mathematical programming techniques for the optimization of process systems under uncertainty, Comput. Chem. Eng. 91 (2016) 3–14. [7] Z. Chen, L. Wu, Y. Fu, Real-time price-based demand response management for residential appliances via stochastic optimization and robust optimization, IEEE Trans. Smart Grid. 3 (2012) 1822–1831. [8] M.G. Ierapetritou, D. Wu, J. Vin, P. Sweeney, M. Chigirinskiy, Cost Minimization in an Energy-Intensive Plant Using Mathematical Programming Approaches, Ind. Eng. Chem. Res. 41 (2002) 5262–5277. [9] Q. Zhang, J.L. Cremer, I.E. Grossmann, A. Sundaramoorthy, J.M. Pinto, Risk-based integrated production scheduling and electricity procurement for continuous power-intensive processes, Comput. Chem. Eng. 86 (2016) 90–105. [10] E. Leo, G. Dalle Ave, I. Harjunkoski, S. Engell, Stochastic short-term integrated electricity procurement and production scheduling for a large consumer, Comput. Chem. Eng. 145 (2020) 107191.",
+    "presenting_author": "Sonja Germscheid | Forschungszentrum Jülich GmbH, Germany",
+    "authors": [
+      "Sonja Germscheid | Forschungszentrum Jülich GmbH, Germany",
+      "Manuel Dahmen | Forschungszentrum Jülich GmbH, Germany",
+      "Alexander Mitsos | Forschungszentrum Jülich GmbH, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Sonja Germscheid",
+        "affiliation": "Forschungszentrum Jülich GmbH, Germany",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Manuel Dahmen",
+        "affiliation": "Forschungszentrum Jülich GmbH, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Alexander Mitsos",
+        "affiliation": "Forschungszentrum Jülich GmbH, Germany",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "417e",
+    "sortable_time": "2021-11-10_09:16:00_09:35:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/622923"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/624528",
+    "paper_endpoint": "Paper/624528",
+    "paper_id": "624528",
+    "topic": "Accounting for Uncertainty in Production Scheduling in the Presence of Feedback: Method Comparison, Paradoxes, and Guidelines",
+    "title": "Accounting for Uncertainty in Production Scheduling in the Presence of Feedback: Method Comparison, Paradoxes, and Guidelines",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46982",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "417",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "When a schedule is computed, disruptions or the arrival of new information can render the current schedule sub-optimal or even infeasible, thereby necessitating online (re)scheduling. Hence, the scheduling optimization problems are solved iteratively as the horizon is shifted forward, to determine the open-loop schedules. Based on feedback (i.e., injecting the decisions computed at the initial times of each open-loop schedule), the closed-loop schedule is generated. An important consideration when computing schedules is the incorporation of uncertainty in the online model. For this several methods exist: (i) deterministic optimization; (ii) robust optimization; and (iii) stochastic programming (Engell, 2009 and Gupta et al ., 2020). In this work, we focus on batch scheduling under demand uncertainty, wherein demand is modeled in the form of orders with the order sizes being drawn from a probability distribution. Demand uncertainty is composed of two aspects: (i) observation horizon (η), which is the length of the horizon within which demand is deterministically known and (ii) order size max-mean relative difference (ε), that captures the relative difference between the maximum and mean order size (Gupta et al ., 2019). In deterministic optimization, the model does not incorporate information about the uncertainties and a mean order size is assumed for orders beyond . In robust optimization, an order size near the maximum order size value (from the given distribution) is assumed for orders beyond . Lastly, in stochastic programming, a moment matching technique is used to generate a discrete set of scenarios from the continuous probability distribution (Hoyland et al., 2001), for orders beyond . We have found that the “load” (Λ) on the network used in the scheduling problem, calculated based on the production capacity of the network and the demand profile, plays an important role in differentiating the performance of the methods. On analyzing the closed-loop performance of the three methods across η, ε, and Λ for different networks, we conclude that at low and very high Λ or large η, all three methods perform similarly. At intermediate Λ and small η, the best choice of method depends on network characteristics. Furthermore, we draw interesting insights on how important it is to account for uncertainty apriori at high Λ and small η compared to feedback, since the stochastic programming model that is re-optimized infrequently performs much better than the deterministic model that is re-optimized frequently. We explain why choosing the best method to mitigate demand uncertainty for any given network is non-trivial and expound on the paradoxes observed that depend on the network characteristics. To the best of our knowledge, our work is the first of its kind in understanding the importance of accounting for uncertainty apriori (i.e., using robust optimization, stochastic programming) compared to closed-loop batch scheduling based solely on feedback (i.e., using deterministic optimization). References Engell, S. (2009) Uncertainty, decomposition and feedback in batch production scheduling. Computer Aided Chemical Engineering , 26 , 43-62. Gupta, D., and Maravelias, C.T. (2020) Framework for studying online production scheduling under endogenous uncertainty. Computers & Chemical Engineering , 129 , 106517. Gupta, D., and Maravelias, C.T. (2019) On the design of online production scheduling algorithms. Computers & Chemical Engineering , 135 , 106670. Hoyland, K., and Wallace, S.W. (2001) Generating scenario trees for multistage decision problems. Management Science , 47(2) , 295-307.",
+    "presenting_author": "Venkatachalam Avadiappan | University of Wisconsin-Madison, Princeton, NJ",
+    "authors": [
+      "Venkatachalam Avadiappan | University of Wisconsin-Madison, Princeton, NJ",
+      "Christos Maravelias | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Venkatachalam Avadiappan",
+        "affiliation": "University of Wisconsin-Madison, Princeton, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christos Maravelias",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "417f",
+    "sortable_time": "2021-11-10_09:35:00_09:54:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/624528"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2021/meetingapp.cgi/Paper/625277",
+    "paper_endpoint": "Paper/625277",
+    "paper_id": "625277",
+    "topic": "Data-Driven Sample Average Approximation with Covariate Information",
+    "title": "Data-Driven Sample Average Approximation with Covariate Information",
+    "date_time": "2021-11-10_08:00:00_10:30:00",
+    "session_id": "46982",
+    "session_title": "Design and Operations Under Uncertainty",
+    "session_number": "417",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Stochastic programming is a powerful modeling framework for decision-making under uncertainty that finds applications in engineering, operations research, and economics [1]. Because the distributions of the underlying random vectors in stochastic programming models are typically unknown, popular data-driven approaches such as sample average approximation (SAA) only assume access to a finite sample. In many real-world applications, the random vector in a stochastic programming formulation (e.g., demand for water and energy) can be predicted using available covariate information (e.g., weather). We study optimization for data-driven decision-making when we have observations of the uncertain parameters within the optimization model together with concurrent observations of covariates. Given a new covariate observation, the goal is to choose a decision that minimizes the expected system cost conditioned on this observation. Applications of this framework include (i) shipment planning under uncertainty [2], where historical demands, weather forecasts, and web search results can be used to predict products’ demands before making production and inventory decisions, (ii) grid scheduling under uncertainty [3], where seasonality, weather, and historical demand data can be used to predict the load and wind energy availability before creating generator schedules, and (iii) portfolio optimization under market uncertainty [4], where stock prices can be predicted using economic indicators and historical stock data before making investment decisions. We investigate three data-driven frameworks that integrate a machine learning prediction model within a sample average approximation for approximating the solution to this conditional stochastic program [5,6]. Two of the SAA frameworks are new and use out-of-sample residuals of leave-one-out prediction models for scenario generation. The frameworks we investigate are flexible and accommodate parametric, nonparametric, and semiparametric regression techniques. The generality of our framework enables decision-makers to choose the modeling approach that works best for their application. We derive conditions on the data generation process, the prediction model, and the stochastic program under which solutions of these data-driven SAAs are consistent and asymptotically optimal, and also derive convergence rates and finite sample guarantees. Computational experiments on a resource allocation model validate our theoretical results, demonstrate the potential advantages of our data-driven formulations over existing approaches (even when the prediction model is misspecified), and illustrate the benefits of our new data-driven formulations in the limited data regime. Our approach provides a modular framework for using covariate information in stochastic optimization and can be readily generalized to the multi-stage and distributionally robust optimization settings [7]. 1. Shapiro, Alexander, Darinka Dentcheva, and Andrzej Ruszczynski. Lectures on stochastic programming: modeling and theory. Society for Industrial and Applied Mathematics, 2014. 2. Bertsimas, Dimitris, and Nathan Kallus. From predictive to prescriptive analytics. Management Science 66.3 (2020): 1025-1044. 3. Donti, Priya L., Brandon Amos, and J. Zico Kolter. Task-based end-to-end model learning in stochastic optimization. arXiv preprint arXiv:1703.04529 (2017). 4. Dou, Xialiang, and Mihai Anitescu. Distributionally robust optimization with correlated data from vector autoregressive processes. Operations Research Letters 47.4 (2019): 294-299. 5. Kannan, Rohit, Güzin Bayraksan, and James R. Luedtke. Data-driven sample average approximation with covariate information. Available on Optimization Online (July 2020). 6. Kannan, Rohit, Güzin Bayraksan, and James R. Luedtke. Heteroscedasticity-aware residuals-based contextual stochastic optimization. arXiv preprint arXiv:2101.03139 (2021). 7. Kannan, Rohit, Güzin Bayraksan, and James R. Luedtke. Residuals-based distributionally robust optimization with covariate information. arXiv preprint arXiv:2012.01088 (2020).",
+    "presenting_author": "Rohit Kannan | Not found",
+    "authors": [
+      "Rohit Kannan | Not found",
+      "Güzin Bayraksan | The Ohio State University, Columbus",
+      "James Luedtke | University of Wisconsin-Madison"
+    ],
+    "authors_structured": [
+      {
+        "name": "Rohit Kannan",
+        "affiliation": "Not found",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Güzin Bayraksan",
+        "affiliation": "The Ohio State University, Columbus",
+        "designation": "Author"
+      },
+      {
+        "name": "James Luedtke",
+        "affiliation": "University of Wisconsin-Madison",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "417g",
+    "sortable_time": "2021-11-10_09:54:00_10:13:00",
+    "affiliation_source": "aiche_2021_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2021/meetingapi.cgi/Paper/625277"
+  }
+]

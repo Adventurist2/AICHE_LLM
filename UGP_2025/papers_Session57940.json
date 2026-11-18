@@ -1,0 +1,343 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/715370",
+    "paper_endpoint": "Paper/715370",
+    "paper_id": "715370",
+    "topic": "Computationally Efficient Framework for the Optimal Design of Large-Scale Pipeline Networks with General Topologies and Multiphase Flows",
+    "title": "Computationally Efficient Framework for the Optimal Design of Large-Scale Pipeline Networks with General Topologies and Multiphase Flows",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57940",
+    "session_title": "10C: Planning, Scheduling, Supply Chain and Logistics",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "The optimal design of large-scale pipeline networks has become a critical challenge for energy companies, particularly following the expansion of shale oil and gas production [Cafaro et al., 2022]. In such systems, multiphase flows comprising oil, gas, and water streams, produced by geographically dispersed production wells, must be gathered to processing facilities where phase separation occurs. After processing, each component is subsequently routed to its corresponding delivery point. This infrastructure planning problem is characterized by economical and operational complexities. From an economic standpoint, a trade-off arises between centralized and decentralized processing configurations. Centralized schemes benefit from economies of scale but often require expensive infrastructure to manage pressure losses over long distances. Conversely, decentralized configurations typically reduce pipeline investment costs, but require the installation of a larger number of smaller processing facilities, increasing unit capital costs. Pipeline network optimization is further complicated by the time-varying nature of well production profiles, particularly in unconventional reservoirs where production typically exhibits an initial peak followed by a steep decline. Moreover, the implementation of enhanced production techniques, such as refracturing, artificial lifting or waterflooding, can lead to erratic flowrates and compositions over the asset’s lifecycle. At its core, this problem can be framed as a multiperiod allocation problem, similar to the bin-packing problem [Montagna et al., 2021; Presser et al., 2024], wherein production from different wells must be allocated to processing facilities of different capacities. However, two primary factors contribute significantly to its complexity. First, the underlying network topology introduces a combinatorial explosion of feasible configurations, especially when alternative pipeline diameters and facility locations are considered. Second, the nonlinear and non-convex nature of multiphase hydraulic equations must be accurately captured to ensure feasibility of the network design. To overcome these challenges, this work proposes a generalized mathematical optimization framework capable of solving large-scale instances of the multiphase gathering network design problem under realistic operational conditions. In contrast to previous contributions [Presser et al., 2025] the framework is agnostic to the hydraulic model and/or correlation used to predict multiphase fluid dynamics, thereby allowing different approaches as required by the decision-maker. Furthermore, no limiting assumptions are imposed on the network topology. The optimization problem is formally defined as follows. Given are: (a) a long-term, multiperiod planning horizon, (b) a set of production wells with forecasted productivity profiles and wellhead pressures; (c) a set of candidate facility locations, associated processing capacities, capital expenditures, and operating costs; (d) a set of feasible pipeline connections between nodes, available pipeline diameters, installation and operating costs; and (e) minimum pressure requirements at processing nodes. The objective is to determine the optimal number, location, and size of processing facilities, as well as the topology and diameter of pipeline segments across the gathering network, such that the total net present cost is minimized. Fluid-dynamic conditions are ensured by imposing that every multiphase stream maintains sufficient pressure throughout its assigned path. The proposed solution approach is decomposed into two algorithmic methods, each tailored to address one of the intrinsic sources of complexity. On the one hand, efforts are focused on progressively adding complicating constraints, drawing inspiration from the Selective Tightening Algorithm (STA) [Presser et al., 2024]. STA adopts a row-generation strategy wherein critical hydraulic constraints on promising arcs are iteratively incorporated into the model. Unlike the traditional STA approach, the methodology proposed in this work avoids the explicit inclusion of highly nonlinear fluid-dynamic constraints. Instead, infeasible configurations identified through offline hydraulic evaluations are excluded via integer cuts. This allows the optimization model to remain within the class of mixed-integer linear programming (MILP), enabling efficient solution procedures. One of the keys of the algorithm is the identification of Minimal Infeasible Trees , defined as the smallest network substructure whose selection leads to infeasibility. By excluding these subgraphs, the algorithm can effectively prune large portions of the solution space without requiring exhaustive enumeration. Despite the aforementioned advancement, scalability remains a significant challenge. The number of integer cuts required to achieve a feasible solution increases rapidly with the size of the network, leading to intractability for instances beyond 20 nodes. So far, the problem has been formulated using a flow-based framework, where each potential connection may be selected unless explicitly excluded by an integer cut. This approach guarantees global optimality, but the computational burden becomes prohibitive as network size increases. To overcome this limitation, the problem is reformulated using a path-based modeling approach. In this context, a path is defined as a sequence of arcs through which production from a given well can reach a processing facility. Consequently, the pipeline network can be interpreted as a combination of paths, one for each producing node. The decision variables in the new formulation are no longer associated with individual connections but rather with entire paths. Needless to say, the number of paths grows exponentially with the network size, making full enumeration impractical. However, many of these paths can be readily identified as infeasible or suboptimal, and then be disregarded during the solution process. To this end, a second algorithmic component is developed based on column generation principles [Desaulniers et al., 2005] yielding a reduced subset of paths, hereafter referred to as columns . In the path-based formulation, a relaxed restricted master problem (rRMP) is solved iteratively, with additional columns being incorporated by solving a pricing subproblem. The latter is modelled as a flow-based MILP formulation that enables the systematic detection of promising topological structures from dual values of the rRMP. The proposed framework initiates the optimization process from a fully decentralized configuration, in which a processing facility is installed at every production node. Iterations proceed until the pricing subproblem can no longer suggest more promising columns. At this point, the algorithm finally solves the restricted master problem (RMP) formulated as an MILP, building the network from the pool of paths. It is important to emphasize that while individual paths are evaluated independently and confirmed to be hydraulically feasible during the column generation phase, their combination may result in conflicts when paths share some arcs (i.e., overlap). From that, integer cuts are still essential to enforce feasibility. However, candidate paths are pre-screened for feasibility and selected based on their cost-efficiency, reducing the search space and leading to high computational efficiency. To assess the performance and scalability of the proposed framework, two computational experiments have been conducted. The first experiment seeks to evaluate both the solution quality and the computational efficiency of the algorithm. To this end, the framework is tested on 100 randomly generated instances comprising eight nodes. These instances are tractable using the conventional flow-based formulation, which serves as a benchmark for global optimal solutions. Results indicate that the proposed framework achieves a two-orders-of-magnitude reduction in computational time on average, at the expense of a mean relative deviation of 0.96% from the optimal cost. Moreover, 27 out of the 100 instances are solved to global optimality. These outcomes demonstrate that, for small instances, the algorithm is computationally efficient and also maintains a high level of accuracy when compared to exact methods. In the second experiment, the framework is applied to larger problems consisting of 16, 32, and 50 nodes, which cannot be solved in reasonable times using the flow-based model. In all cases, the proposed method successfully produces good feasible solutions in less than one hour of computation. For the largest networks, the number of column generation steps needs to be limited to reduce the computational burden. Despite this restriction, the framework maintains its ability to find cost-effective designs. Summarizing, the novel approach demonstrates the ability to obtain near-optimal solutions when benchmarked against exact methods in small-scale instances, and it remains computationally tractable for medium and large-scale networks where traditional methods fail to converge due to combinatorial complexity. Future work will focus on extending the framework to networks comprising more than 100 production nodes, including decisions regarding capacity expansion planning and single-component delivery after separation. References [1] Cafaro, D.C., Presser, D.J. & Grossmann, I.E. Recent contributions to the optimal design of pipeline networks in the energy industry using mathematical programming. TOP 30, 618–648 (2022). https://doi.org/10.1007/s11750-022-00635-3 [2] Desaulniers, G., Desrosiers, J. & Solomon, M.M. (eds). Column Generation. Springer, Boston, MA (2006). https://doi.org/10.1007/b135457 [3] Montagna, A.F., Cafaro, D.C., Grossmann, I.E. et al. Pipeline network design for gathering unconventional oil and gas production using mathematical optimization. Optim Eng 24, 539–589 (2023). https://doi.org/10.1007/s11081-021-09695-z [4] Presser, D.J., Cafaro, D.C., Grossmann, I.E. et al. Selective tightening algorithm for the optimization of pipeline network designs in the energy industry. Comput Chem Eng 182, 108537 (2024). https://doi.org/10.1016/j.compchemeng.2023.108537 [5] Presser, D.J., Trucco, D.J., Cafaro, D.C., Grossmann, I.E. et al. Addressing multiphase fluid-dynamics in the optimal design of oil and gas pipeline networks. Manuscript in preparation for submission to Ind Eng Chem Res .",
+    "presenting_author": "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Diego Trucco | Facultad de Ingeniería Química, Universidad Nacional del Litoral, Santa Fe, Argentina",
+      "Diego Cafaro | INTEC (UNL-CONICET), Santa Fe, Argentina",
+      "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA",
+      "R. Cory Allen | ExxonMobil Technology and Engineering Company, Spring, TX",
+      "Feiyang Zhao | ExxonMobil Technology and Engineering Company, Spring, TX",
+      "Xiangyi Fan | ExxonMobil Technology and Engineering Company, Spring, TX",
+      "Chung Jae Lee | ExxonMobil Technology and Engineering Company, Spring, TX",
+      "Minas Chatzos | (Formerly) ExxonMobil Technology and Engineering Company, Spring, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Diego Trucco",
+        "affiliation": "Facultad de Ingeniería Química, Universidad Nacional del Litoral, Santa Fe, Argentina",
+        "designation": "Author"
+      },
+      {
+        "name": "Diego Cafaro",
+        "affiliation": "INTEC (UNL-CONICET), Santa Fe, Argentina",
+        "designation": "Author"
+      },
+      {
+        "name": "Ignacio Grossmann",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "R. Cory Allen",
+        "affiliation": "ExxonMobil Technology and Engineering Company, Spring, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Feiyang Zhao",
+        "affiliation": "ExxonMobil Technology and Engineering Company, Spring, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Xiangyi Fan",
+        "affiliation": "ExxonMobil Technology and Engineering Company, Spring, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Chung Jae Lee",
+        "affiliation": "ExxonMobil Technology and Engineering Company, Spring, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Minas Chatzos",
+        "affiliation": "(Formerly) ExxonMobil Technology and Engineering Company, Spring, TX",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12a",
+    "sortable_time": "2025-11-02_15:30:00_15:51:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/715370"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/717543",
+    "paper_endpoint": "Paper/717543",
+    "paper_id": "717543",
+    "topic": "Optimal Well Design and Injection Planning for CO 2 Storage into Deep Saline Aquifers Using Mathematical Programming",
+    "title": "Optimal Well Design and Injection Planning for CO 2 Storage into Deep Saline Aquifers Using Mathematical Programming",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57940",
+    "session_title": "10C: Planning, Scheduling, Supply Chain and Logistics",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Carbon Capture and Storage (CCS) has emerged as a critical technological pathway toward the reduction of greenhouse gas (GHG) emissions, in particular for nations committed to reach net-zero carbon by 2050 [Air Products, 2025]. Among various storage options, geological trapping into deep saline aquifers is frequently preferred due to its substantial capacity and widespread availability around the world. Optimization techniques can play a crucial role to ensure viability and regulatory compliance of CCS projects while making an efficient use of the storage capacity [Ismail & Gaganis, 2023]. The development of an effective injection plan to maximize CO 2 storage and retention into deep saline aquifers remains a significant challenge. Numerous studies have shown that injection strategies deeply influence the extension of the CO 2 front (usually called “plume”), thereby affecting brine displacement and overall storage efficiency [Kumar, 2007; Shamshiri & Jafarpour, 2010]. However, accurately predicting plume extension requires solving highly nonlinear and nonconvex systems of coupled partial differential equations. As a result, simulation-based optimization (SBO) has become the predominant approach in literature [Zou & Durlofsky, 2023]. SBO typically combines high-fidelity numerical reservoir simulators (NRS) with heuristic or sampling-based algorithms aimed at identifying injection plans that improve the so-called fitness function. Nevertheless, such methods face several limitations. On the one hand, simulators often operate as proprietary “black-box” systems, precluding access to internal derivatives and thereby restricting the use of gradient-based optimization techniques. On the other hand, SBO relies on heuristic search methods that entail a large number of simulations (in the order of hundreds or even thousands), rendering the process computationally expensive, without reference to the quality of the solution. To overcome these challenges, the research team has recently proposed a physics-informed optimization approach based on mathematical programming, devised for 2D representations of the reservoir [Trucco et al., 2025]. In that model, first-principle equations—such as Darcy’s law—are embedded directly into a Nonlinear Programming (NLP) formulation, using a spatial-time discretization. The framework leverages the use of derivative information through advanced reduced-gradient solvers, yielding enhanced convergence properties and low computational costs. Furthermore, subsurface engineering constraints and regulatory requirements can be explicitly incorporated into the formulation as constraints, without the need for penalization terms and feasibility repair procedures that often deteriorate the solution quality. Prior results have demonstrated the ability of the NLP model to achieve local optimal solutions more efficiently than metaheuristics for this problem. Building upon these findings, the current work extends the model’s capabilities in two principal directions. First, the model transitions from a 2D to a 3D coordinate system to better approximate the physical characteristics of real-world reservoirs. The novel 3D representation is based on a cylindrical abstraction that reflects the radial nature of pressure propagation and CO 2 plume migration around vertical injection wells, thus providing an accurate tool to manage storage capacity. The modified discretization is made up of cells with non-uniform sizes, whose geophysical properties (namely permeability and porosity) may also vary in space. Second, the optimization framework is enhanced by including discrete decisions concerning the depth of injection points along each vertical well. Motivated by previous results suggesting that the injection layers significantly affect storage efficiency [Trucco et al., 2025], the new model introduces 0-1 variables to represent the geological layers selected for injection. This extension yields a Mixed-Integer Nonlinear Programming (MINLP) formulation that can find more efficient solutions, taking advantage of heterogeneous properties across the reservoir while mitigating pressure interference among adjacent wells. Summarizing, the extended optimization problem addressed in this work can be formally stated as follows. Given are: (a) a multi-layer, heterogeneous saline aquifer with known geological properties in 3D; (b) a set of vertical injection wells with predetermined placement in the x - y coordinates of the aquifer; (c) a long-term, multi-period planning horizon; and (d) a maximum amount of CO 2 available for injection at every period to be distributed among the wells. The objective is to determine the optimal design for each well (injection layers), the bottom-hole pressure and injection rates over time, so as to maximize the cumulative amount of CO 2 stored by the end of the planning horizon. The problem is limited by two primary operational constraints: (i) maintaining pressure at each block below critical fracture thresholds, and (ii) ensuring that the CO 2 plume remains contained within a prescribed control volume to avoid leakage risks in the long term. The transition from a continuous NLP to an MINLP formulation introduces significant computational challenges. In the original 2D model, active-set solvers such as CONOPT [Drud, 1996] have demonstrated superior performance as they navigate the feasible region along constraint boundaries. These solvers are particularly effective in preserving feasibility once it is achieved, which is essential given the stringent requirement to satisfy thousands of mass and pressure balance constraints across the discretized reservoir domain. However, typical MINLP solvers such as branch-and-bound often disrupt this feasibility. In particular, each branching decision involves fixing a binary variable to either zero or one, which can render previous solutions infeasible, yielding a very large number of iterations to solve each child node. To overcome this, a tailored solution algorithm has been developed. The algorithm begins by solving the relaxed MINLP model and afterwards enforcing the integrality condition of 0-1 variables by means of penalty terms in the objective function. An iterative procedure makes 0-1 variables be gradually driven toward one of their integer bounds. By maintaining feasibility of mass and pressure balances throughout the optimization process, the algorithm mitigates instability commonly observed in pressure-sensitive reservoir models and enhances convergence toward high-quality, physically consistent solutions. Several instances of an illustrative case study have been conducted to evaluate the performance of the proposed MINLP model under realistic conditions. Each scenario considers a reservoir discretized into four directions, with 84 blocks per direction and seven geological layers, resulting in a total of 336 volume elements. Four injection wells are positioned in a rectangular configuration, and each well can be opened up to any of the vertical layers. The planning horizon spans over 20 years: CO 2 injection is allowed during the first 9 years, followed by an additional 11-years containment period in which the plume must remain within prescribed boundaries to ensure long-term storage. The resulting optimization model comprises 245,417 decision variables and 266,477 constraints. The model has been solved using CONOPT4, requiring approximately four hours of CPU time per instance to converge to an optimal solution. It is worth highlighting that a substantial portion of the computational time is spent by the initial iteration, during which the solver seeks to establish a feasible point that satisfies the full set of mass and pressure balance equations across the reservoir domain. This observation reinforces the importance of preserving feasibility throughout the optimization process and underscores the limitations of typical MINLP solution strategies. Results demonstrate that the optimal selection of injection layers plays a pivotal role in enhancing storage performance, particularly in the presence of geological heterogeneity. In contrast to uniform reservoir instances, heterogeneous permeability distributions yield better solutions and also guide the optimization process toward more efficient outcomes by breaking symmetries, thereby accelerating convergence. In general, the model tends to favor deeper injections into multiple layers; however, it is not optimal for all wells to target the same layers, as pressure interference between wells becomes a limiting factor and must be carefully managed. Overall, this work extends the capabilities of former mathematical models for optimizing CO 2 injection into deep saline aquifers. It reinforces the value of mathematical programming in supporting strategic decisions for well design and injection planning with the aim of maximizing storage efficiency. However, it is important to emphasize that optimization models do not replace high-fidelity reservoir simulation. The solutions identified through these models must still be validated using detailed numerical simulators. Nevertheless, compared to metaheuristics that typically require numerous simulations, mathematical programming approaches significantly reduce the number of validation steps, as they converge more directly toward promising configurations. Future work will focus on extending the current framework to include other physical features like compressibility, miscibility and thermodynamic phenomena, thus leveraging its applicability to large-scale, real-world CCS projects. References [1] Air Products and Chemicals Inc., 2025. Louisiana Clean Energy Complex. https://www.airproducts.com/energy-transition/louisiana-clean-energy-complex (accessed 19 March 2025). [2] Drud, A.S., 1996. CONOPT—a large-scale GRG code. ORSA J. Comput. 6 (2), 207–216. [3] Ismail, I., Gaganis, V., 2023. Carbon capture, utilization, and storage in saline aquifers: Subsurface policies, development plans, well control strategies and optimization approaches—A review. Clean Technol. 5 (2), 609–637. [4] Kumar, D., 2007. Optimization of well settings to maximize residually trapped CO 2 in geologic carbon sequestration. Master’s Thesis, Stanford University, Stanford, CA. [5] Shamshiri, H., Jafarpour, B., 2010, November. Optimization of geologic CO2 storage in heterogeneous aquifers through improved sweep efficiency. In: SPE Int. Conf. on CO2 Capture, Storage, and Utilization, pp. SPE-139643. SPE. [6] Trucco, D., Presser, D., Cafaro, D., Grossmann, I., Shenvi Usgaonkar, S., Zhang, Q., Misra, P., Binagia, H., Rowe, W., Mehta, S., 2025. A Mathematical Programming Model for the Optimal Utilization of Deep Saline Aquifers for CO2 Storage. Submitted for publication to Comput Chem Eng. [7] Zou, A., Durlofsky, L.J., 2023. Integrated framework for constrained optimization of horizontal/deviated well placement and control for geological CO2 storage. SPE J. 28, 2462–2481.",
+    "presenting_author": "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA",
+    "authors": [
+      "Diego Trucco | Facultad de Ingeniería Química, Universidad Nacional del Litoral, Santa Fe, Argentina",
+      "Demian Presser | Facultad de Ingeniería Química, Universidad Nacional del Litoral, Santa Fe, Argentina",
+      "Diego Cafaro | INTEC (UNL-CONICET), Santa Fe, Argentina",
+      "Ignacio Grossmann | Carnegie Mellon University, Pittsburgh, PA",
+      "Saurabh Shenvi Usgaonkar | Air Products and Chemicals, Inc., Allentown, PA",
+      "Qi Zhang | Air Products and Chemicals, Inc., Allentown, PA",
+      "Pratik Misra | Air Products and Chemicals, Inc., Allentown, PA",
+      "Heather Binagia | Air Products and Chemicals, Inc., Allentown, PA",
+      "Wayne Rowe | Air Products and Chemicals, Inc., Allentown, PA",
+      "Sanjay Mehta | Air Products and Chemicals, Inc., Allentown, PA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Diego Trucco",
+        "affiliation": "Facultad de Ingeniería Química, Universidad Nacional del Litoral, Santa Fe, Argentina",
+        "designation": "Author"
+      },
+      {
+        "name": "Demian Presser",
+        "affiliation": "Facultad de Ingeniería Química, Universidad Nacional del Litoral, Santa Fe, Argentina",
+        "designation": "Author"
+      },
+      {
+        "name": "Diego Cafaro",
+        "affiliation": "INTEC (UNL-CONICET), Santa Fe, Argentina",
+        "designation": "Author"
+      },
+      {
+        "name": "Ignacio Grossmann",
+        "affiliation": "Carnegie Mellon University, Pittsburgh, PA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Saurabh Shenvi Usgaonkar",
+        "affiliation": "Air Products and Chemicals, Inc., Allentown, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Qi Zhang",
+        "affiliation": "Air Products and Chemicals, Inc., Allentown, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Pratik Misra",
+        "affiliation": "Air Products and Chemicals, Inc., Allentown, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Heather Binagia",
+        "affiliation": "Air Products and Chemicals, Inc., Allentown, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Wayne Rowe",
+        "affiliation": "Air Products and Chemicals, Inc., Allentown, PA",
+        "designation": "Author"
+      },
+      {
+        "name": "Sanjay Mehta",
+        "affiliation": "Air Products and Chemicals, Inc., Allentown, PA",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12b",
+    "sortable_time": "2025-11-02_15:51:00_16:12:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/717543"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/710217",
+    "paper_endpoint": "Paper/710217",
+    "paper_id": "710217",
+    "topic": "Advanced Available-to-Promise in Online Chemical Production Scheduling",
+    "title": "Advanced Available-to-Promise in Online Chemical Production Scheduling",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57940",
+    "session_title": "10C: Planning, Scheduling, Supply Chain and Logistics",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "In our fast-paced modern society, consumers have grown accustomed to the convenience of ordering goods online and receiving real-time information about availability and expected delivery date. This is widespread in the retail sector and is similarly gaining traction in the manufacturing industry. Offering competitive order promises and generating these offers quickly and reliably has become increasingly important for maintaining customer satisfaction and increasing market share [1, 2]. Order promising is a critical process in supply chain operations and resource planning. It involves determining whether a customer order can be fulfilled and, if so, assigning a reliable delivery date as well as scheduling production and distribution accordingly to ensure on-time delivery. Available-to-promise (ATP) is a widely used framework in supply chain management systems for responding to customer order inquiries. It provides visibility into the uncommitted portions of the current and expected future inventory, enabling companies to respond to customer orders by determining the quantities to accept and generating accurate due dates [3]. However, most studies on ATP assume that the manufacturing plant has a constant capacity, ignoring any extended operational flexibility as well as variability in resource availability. This rather crude consideration of the manufacturing operations can lead to highly suboptimal or even infeasible order-promising solutions. To address these limitations, we apply an advanced available-to-promise (AATP) approach where we jointly optimize detailed order promising and production scheduling decisions. Although several previous studies highlight the benefits of AATP in discrete manufacturing, its application in chemical production remains largely unexplored. We develop an AATP optimization model by incorporating order-promising decisions into the well-known state-task network (STN) scheduling framework [4], which effectively captures the complexities of chemical manufacturing. Additionally, we use a state-space modeling approach to ease the use of the model in an online scheduling setting [5, 6]. As customer orders arrive over time, they are collected within predefined batching intervals, and the AATP model is periodically executed to make order promising and production scheduling decisions based on the new information. Two computational case studies are conducted to evaluate the performance of the AATP model and compare it to the conventional ATP approach. Our results demonstrate that AATP achieves higher order acceptance rates, reduces inventory holding costs, and improves overall profitability. We show that while ATP only performs well when the demand forecast is relatively accurate, AATP’s performance is quite stable across different demand forecast scenarios, indicating its robustness under uncertain demand conditions. Our analysis further demonstrates that longer batching intervals lead to an increase in the number of rejected orders, as more orders fail to receive a response before the response due date specified by the customer. References: [1] Hosang Jung. An available-to-promise model considering customer priority and variance of penalty costs. The International Journal of Advanced Manufacturing Technology, 49:369–377, 2010. [2] Christoph Kilger and Herbert Meyr. Demand fulfilment and atp. Supply chain management and advanced planning: concepts, models, software, and case studies , pages 177–194, 2015. [3] Michael O Ball, Chien-Yu Chen, and Zhen-Ying Zhao. Available to promise. Handbook of quantitative supply chain analysis: modeling in the e-business era , pages 447–483, 2004. [4] Emilia Kondili, Constantinos C Pantelides, and Roger WH Sargent. A general algorithm for short-term scheduling of batch operations—i. milp formulation. Computers & Chemical Engineering , 17(2):211–227, 1993. [5] Dhruv Gupta and Christos T Maravelias. On deterministic online scheduling: Major considerations, paradoxes and remedies. Computers & Chemical Engineering , 94:312–330, 2016. [6] Dhruv Gupta, Christos T Maravelias, and John M Wassick. From rescheduling to online scheduling. Chemical Engineering Research and Design , 116:83–97, 2016.",
+    "presenting_author": "Vishnu Sahu | University of Minnesota, Minneapolis, MN",
+    "authors": [
+      "Vishnu Sahu | University of Minnesota, Minneapolis, MN",
+      "Qi Zhang | University of Minnesota, Minneapolis, MN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Vishnu Sahu",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Qi Zhang",
+        "affiliation": "University of Minnesota, Minneapolis, MN",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12c",
+    "sortable_time": "2025-11-02_16:12:00_16:33:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/710217"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/711131",
+    "paper_endpoint": "Paper/711131",
+    "paper_id": "711131",
+    "topic": "Novel Formulations of Capacitated Arc Routing Problems with Location Decision Extension",
+    "title": "Novel Formulations of Capacitated Arc Routing Problems with Location Decision Extension",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57940",
+    "session_title": "10C: Planning, Scheduling, Supply Chain and Logistics",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Plastics have become an integral part of modern life and have undeniably improved our quality of life in many ways. Unfortunately, increased use of plastics means increased production of plastic waste, which has the potential to become long-lasting pollutants if not disposed of properly. Decades after plastics have become commonplace in our lives, the plastic recycling supply chain remains a challenging problem. Not only are some plastics hard to recycle from a technical perspective, but the plastic waste collection step requires careful consideration as well. Since plastic recycling often suffers from lack of sufficient economic incentives, 1 optimizing the collection step of the supply chain will improve the overall economic viability of plastic recycling. Our work examines this collection step in the plastic waste management supply chain, which can be formulated as capacitated arc routing problems (CARPs). Here, we represent the street networks travelled by waste collection vehicles using a graph G=(N,A) , where N is the set of nodes and A is the set of arcs. The nodes can represent street intersections or point facilities (the most common case is a node which represents the depot from which collection vehicles depart from and return to). The arcs represent the streets of the network, with each arc allowing travel in one direction only. Some of these arcs will have associated demand, representing streets requiring curbside recycling pickup, while others may have no demand but can be travelled (this is referred to as ‘deadheading’). Two-way streets, in which a vehicle can travel in either direction and still collect waste from both sides, are represented by two directed arcs in the graph. We solve the CARP to find the optimal set of routes by which a given fleet of vehicles (either homogeneous or heterogeneous in composition) collects all demand from required arcs while minimizing total traversal and service costs. These costs can be calculated as a function of time or distance. The CARP was first proposed by Golden and Wong 2 in 1981, and it has been studied in many variants since. We introduce a new formulation for the basic CARP problem which has comparable performance to the baseline CARP formulation proposed by Gouveia 3 on commonly used benchmarks. CARP formulations typically only track if arcs are serviced or deadheaded, and do not give information on the order of traversal or service. The key feature of our formulation is a 5-index binary Y(n1,n2,n3,n4,k) , which determines if arc (n1,n2) is served directly before arc (n3,n4) by vehicle type k . Knowing the order of service allows us to trace the route in its entirety and track the cumulative demand collected along the route, which is represented in the formulation by the flow variable F(n1,n2,n3,n4,k) . As each route in the solution can be defined solely by the sequence of links between the depot and serviced arcs, we do not need to use the vehicle index k to distinguish individual routes from each other. Instead, the index k gives information on the vehicle type used to travel a given route. This means our formulation is agnostic to vehicle fleet size, as the model size only grows if more vehicle types are considered. This opens the possibility of investigating how different vehicle types affect the routing problem without significantly increasing the model size. To avoid exponential numbers of the Y(n1,n2,n3,n4,k) binaries, we only define them over a pre-determined set L , which contains the set of permissible links between successively serviced arcs. We can take advantage of the set L to reduce the size of the model and solve larger problem instances. For example, we can limit the routes to only service arcs sequentially if the shortest path between them is less than some maximum distance applied uniformly to all arcs. Going a step further, inspired by the principles of the path-scanning heuristic 4 , we might only allow links from an arc to arcs for which the shortest path between them is less than the length of the xth -shortest path possible. We also demonstrate that we can easily extend our formulation to include design decisions regarding where to locate depots. These problems are known as location arc routing problems (LARPs). We propose a novel method of representing LARPs which uses a ‘tagging’ system built into the flow variables to enforce ‘return-to-facility’ (RtF) constraints, which ensure each vehicle route returns to the depot it departed from. In this system, a ‘tag’ unique to each depot node is added to all flows leaving from that depot. These ‘tags’ have magnitudes which are a multiple of the vehicle capacity and are carried through the flow variables associated with the route leaving that depot. When the route returns to a depot, the depot ‘untags’ the incoming flows by subtracting its unique ‘tag’. Once ‘untagged’, all flows entering a depot must be within 0 and the vehicle capacity. Only by returning to the depot it departed from can a route satisfy this constraint. Our ‘tagging’ method means we do not need to add a depot index to flow and binary variables, or add constraints with separate binaries assigning arcs to depots, as is often done in literature 5–7 . In this way, our model does not increase dramatically in size with the inclusion of location decisions. Our formulation can solve several benchmark LARP instances to optimality in times comparable to some heuristics, and can solve both single and multiple depot problems. To reduce pollution and energy usage in the plastic recycling life cycle, we must also take care to design collection routes to be fuel-efficient. We can easily incorporate environmental objectives through a cost per ton-distance which represents the increased fuel cost (and corresponding pollution) associated with the increasing vehicle weight along a waste collection route. Our formulation already tracks the cumulative demand throughout the route, and therefore introducing an environmental objective will not necessitate modification of the formulation. We present case studies to demonstrate the applicability of our formulation to different arc routing problems seen in waste collection, as well as a computational study to show the efficiency of our formulation. References Vollmer I, Jenks MJF, Roelands MCP, et al. Beyond Mechanical Recycling: Giving New Life to Plastic Waste. Angewandte Chemie - International Edition . 2020;59(36):15402-15423. doi:10.1002/anie.201915651 Golden BL, Wong RT. Capacitated arc routing problems. Networks . 1981;11(3):305-315. doi:10.1002/NET.3230110308 Gouveia L, Cândida Mourão M, Santiago Pinto L. Lower bounds for the mixed capacitated arc routing problem. Comput Oper Res . 2010;37:692-699. doi:10.1016/j.cor.2009.06.018 Liu G, Yang H, Zhao H, Zhiwei DW. A Two-stage heuristic framework for location-arc routing optimization for a fleet of street sweepers. 2024 IEEE International Conference on Cybernetics and Intelligent Systems (CIS) and IEEE International Conference on Robotics, Automation and Mechatronics (RAM) . Published online August 8, 2024:168-173. doi:10.1109/CIS-RAM61939.2024.10673198 Hashemi Doulabi SH, Seifi A. Lower and upper bounds for location-arc routing problems with vehicle capacity constraints. Eur J Oper Res . 2013;224(1):189-208. doi:10.1016/J.EJOR.2012.06.015 Lopes RB, Plastria F, Ferreira C, Santos BS. Location-arc routing problem: Heuristic approaches and test instances. Comput Oper Res . 2014;43:309-317. doi:10.1016/J.COR.2013.10.003 Amini A, Tavakkoli-Moghaddam R, Ebrahimnejad S. A bi-objective transportation-location arc routing problem. Transportation Letters . 2020;12(9):623-637. doi:10.1080/19427867.2019.1679405",
+    "presenting_author": "Shuheng Wang | Princeton University, NJ",
+    "authors": [
+      "Shuheng Wang | Princeton University, NJ",
+      "Christos Maravelias | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Shuheng Wang",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christos Maravelias",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12d",
+    "sortable_time": "2025-11-02_16:33:00_16:54:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/711131"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/713544",
+    "paper_endpoint": "Paper/713544",
+    "paper_id": "713544",
+    "topic": "On Multiple Heterogeneous Time Grids for Continuous Production Scheduling Milps",
+    "title": "On Multiple Heterogeneous Time Grids for Continuous Production Scheduling Milps",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57940",
+    "session_title": "10C: Planning, Scheduling, Supply Chain and Logistics",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Multiproduct facilities convert low value raw materials into higher value final products through the execution of tasks, and chemical production scheduling (CPS) involves assigning those tasks to specific units while determining the best times to execute them in order to achieve specific production goals. Scheduling is crucial in the optimization of manufacturing operations because the overall performance of a facility depends on timing decisions and task-unit assignments. Research in the field of CPS has aimed to improve the computational efficiency of mixed-integer linear programming (MILP) models because an increase in the number of constraints and variables rapidly increases computational complexity, especially in discrete-time models. Several innovative solution methods have been proposed to reduce the solution times of discrete-time scheduling models such as decomposition-based algorithms, parallel computing tools, reformulations, and tightening methods, however, most of these efforts have been in the context of batch processes 1 . Continuous processes have received less attention in the literature. Modeling continuous processes, particularly with startups, shutdowns, and direct transitions, has been a challenge because the approaches that involve integrated scheduling–dynamic optimization usually lead to accurate models but can only be applied to small systems with few tasks/units due to computational limitations. To address these challenges, we propose implementing multiple discrete-time grids where tasks, units, and materials each possess their own time grid, and spacing between time points is nonuniform (i.e., heterogeneous). Since multi-grid models have been shown to be computationally more effective than single, uniform grids in batch production scheduling models 2–5 , we extend this concept to continuous production scheduling MILP models by employing heterogeneous time grids for each material, task, and unit. Integrating multiple discrete‐time grids within a model is readily implementable because the locations of all time points are predetermined, a feature not available in continuous‐time models. First, we describe how to reformulate the original constraints and define the required subsets, enabling users to select a unique heterogeneous time grid for specific materials, tasks, units, or any combination thereof. We also outline the parameter adjustments needed to accurately capture the original process characteristics. Given that transient operations are an inherent aspect of continuous processes, we demonstrate how subtasks (building blocks used to model continuous tasks) are handled across varying levels of time grid granularity. Because different sections of a process may operate on different time scales, one may wish to impose heterogeneous time grids based on the processing stage of a task/unit. In CPS applications, upstream units – often larger and operating in a batch-like fashion with higher processing rates and reduced flexibility – contrast with downstream units that typically require finer control due to precision demands. For example, in pharmaceutical processes upstream fermenters and bioreactors produce large volumes of biological material, while downstream purification systems handle smaller, more precisely controlled quantities. Consequently, applying a fine time grid to the upstream operations is less critical, prompting users to adopt heterogeneous grids that better reflect the natural time scales of each process stage. The same principle is applied to materials, considering how upstream materials are oftentimes produced/consumed in larger quantities relative to downstream materials. Thus, we describe the constraints needed to employ material-specific time grids. Furthermore, the schedule for immediate operations holds greater significance than the uncertain schedule further into the future due to the higher likelihood of needing to re-optimize the model in the future, so the time grid near the end of the horizon could reasonably be coarser than the time grid at the beginning. We discuss how this time grid heterogeneity can easily be incorporated. Since the number of binary variables and constraints is proportional to the number of time points, these modifications can reduce model size and significantly decrease its computational resource requirements. We perform a computational study to illustrate the significant computational enhancements that can be achieved with this reformulation technique, obtaining results for material-specific, task-specific, and unit-specific grids. Combinations of the aforementioned grids were also employed as well as heterogeneous grids that have coarser discretizations near the end of the horizon. Our results indicate that applying multiple, heterogeneous grids can yield solution times that are an average of over four times faster than the original model, substantially decreasing the computational resources required to solve instances. Additionally, after the time points in the grids are specified, the resulting model consists of the same types of constraints as the original model with uniformly spaced time grids. Thus, reformulation techniques, such as record keeping variables (RKVs), developed for production scheduling models can still easily be applied. Preliminary results confirm that RKVs can be readily integrated in conjunction with multiple, heterogeneous time grids. Notably, this technique is not restricted to continuous production scheduling models or even CPS models; it can be applied to other classes of discrete-time-based scheduling models. References Harjunkoski I, Maravelias CT, Bongers P, et al. Scope for industrial applications of production scheduling models and solution methods. Comput Chem Eng . 2014;62:161-193. doi:10.1016/J.COMPCHEMENG.2013.12.001 Velez S, Maravelias CT. Multiple and nonuniform time grids in discrete-time MIP models for chemical production scheduling. Comput Chem Eng . 2013;53:70-85. doi:10.1016/j.compchemeng.2013.01.014 Velez S, Maravelias CT. Theoretical framework for formulating MIP scheduling models with multiple and non-uniform discrete-time grids. Comput Chem Eng . 2015;72:233-254. doi:10.1016/j.compchemeng.2014.03.003 Lagzi S, Lee DY, Fukasawa R, Ricardez-Sandoval L. A Computational Study of Continuous and Discrete Time Formulations for a Class of Short-Term Scheduling Problems for Multipurpose Plants. Ind Eng Chem Res . 2017;56(31):8940-8953. doi:10.1021/acs.iecr.7b01718 Stevenson Z, Fukasawa R, Ricardez-Sandoval L. A dynamic approach to selecting time points for short-term scheduling with application to multipurpose facilities. Ind Eng Chem Res . 2020;59(19):9180-9197. doi:10.1021/ACS.IECR.0C00472",
+    "presenting_author": "Amin Samadi | Princeton University, NJ",
+    "authors": [
+      "Amin Samadi | Princeton University, NJ",
+      "Christos Maravelias | Princeton University, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Amin Samadi",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christos Maravelias",
+        "affiliation": "Princeton University, NJ",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12e",
+    "sortable_time": "2025-11-02_16:54:00_17:15:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/713544"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/709986",
+    "paper_endpoint": "Paper/709986",
+    "paper_id": "709986",
+    "topic": "A Deep Reinforcement Learning Framework for Multi-Period Facility Location in Decentralized Pharmaceutical Supply Chain Networks",
+    "title": "A Deep Reinforcement Learning Framework for Multi-Period Facility Location in Decentralized Pharmaceutical Supply Chain Networks",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57940",
+    "session_title": "10C: Planning, Scheduling, Supply Chain and Logistics",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Increasing disruptions and uncertainties, such as pandemics, geopolitical tensions, and supply chain interruptions, have exposed significant vulnerabilities in traditional centralized pharmaceutical manufacturing networks. To improve resilience and flexibility, decentralized pharmaceutical supply chains with strategically located production facilities are essential. This work addresses the multi-period facility location and demand allocation problem for decentralized pharmaceutical manufacturing networks, explicitly considering annual demand growth, facility capacity limitations, and single-source assignment constraints. We rigorously formulate the sequential decision-making process as a Markov Decision Process (MDP), in which each state encodes previously selected facility locations, evolving regional demand patterns, and available production capacities. Actions involve choosing new facility locations and dynamically assigning demand nodes to facilities for each planning period, aiming to minimize the cumulative transportation costs over the entire horizon. Given the combinatorial and high-dimensional nature of the problem, we develop an attention-based encoder-decoder neural architecture trained via a policy gradient reinforcement learning algorithm. This framework effectively captures complex temporal and spatial relationships, learning adaptive decision-making strategies that dynamically respond to changing demands and network constraints. To further enhance training efficiency and model robustness, we introduce a tailored synthetic data generation procedure that explicitly coordinates facility capacities with demand distributions, ensuring feasible and realistic training scenarios. Finally, we validate the effectiveness and practical relevance of our proposed framework through comprehensive case studies involving multiple pharmaceutical products distributed throughout the United States.",
+    "presenting_author": "Guzhong Chen | Columbia University, New York, NY",
+    "authors": [
+      "Guzhong Chen | Columbia University, New York, NY",
+      "Venkat Venkatasubramanian | Columbia University, New York, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Guzhong Chen",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Venkat Venkatasubramanian",
+        "affiliation": "Columbia University, New York, NY",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12f",
+    "sortable_time": "2025-11-02_17:15:00_17:36:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/709986"
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2025/meetingapp.cgi/Paper/716157",
+    "paper_endpoint": "Paper/716157",
+    "paper_id": "716157",
+    "topic": "Supply Chain Optimisation of Sludge-Derived Biocoal and Hydrogen for DRI-EAF Steel Production: A Case Study",
+    "title": "Supply Chain Optimisation of Sludge-Derived Biocoal and Hydrogen for DRI-EAF Steel Production: A Case Study",
+    "date_time": "2025-11-02_15:30:00_18:00:00",
+    "session_id": "57940",
+    "session_title": "10C: Planning, Scheduling, Supply Chain and Logistics",
+    "session_number": "12",
+    "program_title": "Computing and Systems Technology Division",
+    "symposium_title": "Systems and Process Operations",
+    "abstract": "Background The steel industry is among the largest contributors to carbon emissions globally, accounting for ~7% of total greenhouse gas emissions worldwide [1]. Approximately 70% of world’s steel is produced using the blast furnace-basic oxygen furnace (BF-BOF) technology, which is highly carbon intensive as it relies on coal, particularly in the form of coke, both as a fuel and a reducing agent [2]. Iron ore, primarily made of iron oxides, is first reduced to iron in the BF using coke as reducing agent, then sent to a BOF where pure oxygen is used to oxidise any excess carbon and impurities, obtaining molten steel. Overall, a typical BF-BOF plant emits between 1.9-2.3 tonnes of CO 2 per tonne of steel produced, with the BF being the main contributor with ~70% of the total direct emissions [3]. Moreover, coke is obtained from metallurgical coal heated up at high temperature (1000-1200 o C) in the absence of oxygen to remove volatile compounds in the coal and obtain near pure carbon coke, which results in additional emissions. A promising alternative to reduce the steel carbon intensity is via direct reduction of iron (DRI) in combination with an electric arc furnace (EAF). DRI uses either methane or hydrogen as reducing agents instead of coke which lowers the CO 2 emissions, while EAF uses electricity as energy source to melt the iron resulting in higher energy efficiency compared to BOF. Currently, the DRI-EAF route has a carbon intensity of about 1.4 tonnes of CO 2 per tonne of steel, and further reductions could be achieved through the use of low-carbon hydrogen, biomethane and renewable electricity [2]. Yet another alternative entails the pyrolysis of sewage sludge, the solid residue produced by wastewater treatment plants (WWTPs). While sewage sludge contains biogenic carbon, nitrogen and phosphorus, its use as a fertiliser or soil improver is hindered by the presence of pathogens, heavy metals and other chemicals, and it is usually incinerated as a result. Instead, sewage sludge pyrolysis can produce a carbon-based catalyst, which in turn can be used for the catalytic cracking of methane or biomethane from anaerobic digestion [4]. This route would produce hydrogen for the hydrogen-DRI process, while replacing fossil-based coal with the derived biocoal. Methods We assessed the feasibility of a waste-to-biocoal and hydrogen process for a DRI-EAF plant located in Hamburg, Germany. To derive a potential supply and value chain for the proposed waste-to-biocoal and hydrogen process, we simulated each WWTP within a 250 km radius of the Hamburg’s DRI-EAF as a biocoal supply node, with a maximum biochar production rate corresponding to their existing dried sludge production capacities. We assumed the sludge pyrolysis units to be on site of the WWTPs, and the biogas cracking to be centralised at the steel manufacturing plant, taking advantage of the natural gas grid for biogas transportation. Vehicular routes for the transportation of the carbon-based catalyst between each WWTP and the steel plant were calculated through the Open-Source Routing Machine (OSRM) [5], which provides both route distance and approximate travel times. We also modelled alternative waste management strategies for the sludge, including incineration and landfill, to provide a measure of the emissions avoided when the dried sludge is valorised and recycled. To maximise the impact of the waste-to-biocoal and hydrogen process, we also developed an optimisation model to determine a subset of WWTPs that would provide at least the same amount of biocoal as the initial network whilst reducing transport-related greenhouse gas emissions. It was assumed that each truck transports the catalyst between a single WWTP and the DRI-EAF plant. As such, the number of 42-tonne trucks required for each WWTP - and hence per transport route - was calculated based on the catalyst amount. As the distances between each WWTP and the steel plant were provided as parameters for the optimisation model, distance-based emission factors from the UK Department of Energy Security and Net-Zero (DESNZ), corresponding to an average laden heavy goods vehicle were used [6]. For the optimisation model to calculate the total emissions, a mixed integer linear programme (MILP) was required, where a binary variable was defined to signal if a given WWTP and hence route is active within the optimal solution. A dummy variable was introduced, corresponding to emissions related to each route only if it was active and defined using the BigM method. Results Through scaling up process mass balances, we estimated that 133 tonnes of hydrogen are required daily by the DRI-EAF plant with an annual steel production capacity of 1.1 million tonnes when using a hydrogen-only DRI process. The amount of dried sludge provided by the top 35 WWTPs adds up to 450.3 tonnes per day, corresponding to 43% of all dried sludge produced within 250 km of the steel plant and 32 tonnes of methane from the anaerobic digestion. To produce sufficient hydrogen, we estimated that an additional 530 tonnes per day of methane from outside of the immediate value chain need to be injected in the process. As the number of biomethane plants keeps increasing, currently representing a total installed capacity of 6.4 billion cubic meters of biomethane per year, extracting this amount of methane from the grid per day is however feasible. This strategy results in a surplus of biocoal produced, which can cover all the carbon requirements of the DRI-EAF plant, as well as 32% of the coal used in neighbouring BF-BOF plants with an annual steel production capacity of 2.6 million tonnes. Sludge pyrolysis also offers emissions-related benefits, avoiding approximately tonnes per day of GHG emissions compared to the incineration and landfill of dried sludge, respectively. When optimising the selection of WWTPs to reduce transport-related GHG emissions, the optimal solution increased the total number of supplying WWTPs to 41, which produced 451 tonnes of dried sludge per day. The network-wide emissions from the transportation of the carbon-based catalyst were reduced to 5.9 tonnes of GHG emissions per day, a 12% reduction from the initial WTTP selection. This was achieved through selecting WWTPs that had smaller production capacities but were located closer to the DRI-EAF plant instead of the mid-sized WWTPs located further away, as illustrated in Figure 1. Implications The conversion of waste sludge to biocoal and hydrogen provides an alternative strategy for producing low-carbon hydrogen in steel manufacturing, thereby reducing reliance on electrolysers and renewable energy capacityin an already energy-intensive industry. And while H-DRI plants are increasingly being viewed as the future of steelmaking [7, 8], the transition period would still heavily rely on existing BF-BOF plants. The valorisation of waste sludge material and production of biocoal could also reduce the emissions from BF-BOF plants during the transition period. Acknowledgments This work was supported by the European Union - European Innovation Council - H2STEEL project - Grant Agreement 101070741. References [1] Ren, Lei, et al. \"A review of CO2 emissions reduction technologies and low-carbon development in the iron and steel industry focusing on China.\" Renewable and Sustainable Energy Reviews 143 (2021): 110846. [2] Zang, Guiyan, et al. \"Cost and life cycle analysis for deep CO2 emissions reduction of steelmaking: Blast furnace-basic oxygen furnace and electric arc furnace technologies.\" International Journal of Greenhouse Gas Control 128 (2023): 103958. [3] Azimi, Arezoo, and Mijndert Van der Spek. \"Prospective Life Cycle Assessment Suggests Direct Reduced Iron Is the Most Sustainable Pathway to Net-Zero Steelmaking.\" Industrial & Engineering Chemistry Research 7 (2025): 3871-3885. [4] Salimbeni, Andrea, et al. \"Opportunities of integrating slow pyrolysis and chemical leaching for extraction of critical raw materials from sewage sludge.\" Water 6 (2023): 1060. [5] Open-source routing machine. https://project-osrm.org/ Last accessed: 04/04/2025 [6] UK Department of Energy Security and Net-Zero. https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting Last accessed 04/04/2025 [7] Zang, Guiyan, et al. \"Cost and life cycle analysis for deep CO2 emissions reduction for steel making: direct reduced iron technologies.\" steel research international 6 (2023): 2200297. [8] Graupner, Yannik, Christian Weckenborg, and Thomas S. Spengler. \"Effects of European emissions trading on the transformation of primary steelmaking: Assessment of economic and climate impacts in a case study from Germany.\" Journal of Industrial Ecology 6 (2024): 1524-1540.",
+    "presenting_author": "Qiao Yan Soh | Imperial College London, United Kingdom",
+    "authors": [
+      "Qiao Yan Soh | Imperial College London, United Kingdom",
+      "Andrea Bernardi | Imperial College London, United Kingdom",
+      "Benoit Chachuat | Imperial College London, United Kingdom",
+      "Nilay Shah | Imperial College London, United Kingdom"
+    ],
+    "authors_structured": [
+      {
+        "name": "Qiao Yan Soh",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Andrea Bernardi",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Benoit Chachuat",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Nilay Shah",
+        "affiliation": "Imperial College London, United Kingdom",
+        "designation": "Author"
+      }
+    ],
+    "paper_number": "12g",
+    "sortable_time": "2025-11-02_17:36:00_17:57:00",
+    "affiliation_source": "aiche_2025_meetingapi",
+    "api_url": "https://aiche.confex.com/aiche/2025/meetingapi.cgi/Paper/716157"
+  }
+]

@@ -1,0 +1,401 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper427980.html",
+    "topic": "Simulation of an Tablet-Coating Process on Industrial Scale",
+    "date_time": "Monday, November 9, 2015: 4:55 PM",
+    "abstract": "Introduction Tablet coating is a widely used unit operation in the pharmaceutical industry and is used to coat the tablet core with with one or more polymer layers that have a certain function, such as enteric coating to protect the tablet core from the acidic content of the stomach. Sometimes, the layer can contain an active pharmaceutical ingredient (API). Inter tablet coating mass variation (CoV) has to be low when coating an API onto a tablet to achieve a consistent high product quality. Therefore, a good understanding of the process is needed. Experiments focus mostly on the laboratory scale, due to costs. Thus, for large-scale optimization simulation is a promising tool. So far, numerical simulations focused on laboratory scale equipment due to computational limitations [1], [2]. However, it is now possible to simulate millions of particles using massive parallelization capabilities of graphical processing units (GPU). This presentation demonstrates the capabilities of DEM simulations executed on GPUs using the example of an industrial tablet coating process with more than one million tablets. Objective This work is based on an active coating process for the production of tablets that contain two APIs: one in the core and one in the coating. Gastrointestinal therapeutic systems (GITS) were used as starting material (Bayer Pharma AG, Leverkusen, Germany). GITS are round-shaped biconvex tablets with a diameter of 9 mm and a height of 5 mm. In the modeled process, an aqueous coating solution containing an API is added. The central aim of this study was to reduce the inter tablet coating variability (CoV) by comparing different process settings, e.g., drum load, rotation velocity, number of nozzles. Material and methods Drum Coater Coating runs were performed in a high-performance Bohle Film Coater (BFC 400, L.B Bohle Maschinen + Verfahren GmbH, Ennigerloh, Germany), which �is a commercially available production scale coater . During the coating process the tablets are flowing in the rotating drum of the coater and are mixed axially and radially by baffles integrated into the coater design, allowing efficient mixing. Simulation software ��eXtended Particle System� (XPS) is an in-house developed Discrete Element Method algorithm written in CUDA [3]. CUDA is a C extension developed by nVidia, specifically designed for GPU computing. Modern GPU architecture allows parallel computing on over 2000 so-called CUDA cores. Parallelizing the DEM algorithm allows the simulation in the range of several 10 million spheres on a single GPU. To calculate the interaction of non-spherical particles such as tablets, a glued sphere approach is used. The simulated particle consists of eight single spheres glued together. These spheres are allowed to overlap to approximate the real shape of a particle. In Figure 1, the filled drum is shown as seen during the simulation. The material properties were determined experimentally as described in [4]. The results, e.g. the CoV , were calculated via post processing routines. CoV results received from 90 seconds simulated time were extrapolated and compared to experimental measurements. Figure 1: Filled drum coater with the position of the spray nozzles from the side. The drum is filled with 290 kg (1,028,369 tablets) and is rotated with 8 rpm Summary and Conclusion The goal of this work was to simulate the tablet coating process in an industrial scale drum coater, filled with up to 290 kg (1,028,369� tablets), using the Discrete Element Method. Simulations were done to investigate the influence different process parameters on the process outcome. The parameters studied were the drum load, ranging from 230 kg to 290 kg and the rotation velocity, ranging from 8 to 10 rpm. The spray rate and number of nozzles was varied as well and showed a significant impact on the CoV. The CoV (Figure 2) results from the simulation match results from experiments closely. This work shows that simulation can be used to get more insight into the tablet coating process on the industrial scale based on state-of-the-art simulation tools. Figure 2: CoV for experiments and simulations in a bar chart [Load, Rotation velocity, Spray Rate, Process Time] (A: [260kg, 9rpm, 160 g/min, 172 min] B: [240kg, 9rpm, 360 g/min, 248 min] C: [250 kg, 9rpm, 360 g/min, 368 min]� D: [250 kg, 9 rpm, 160 g/min, 345 min] E:[250 kg, 9 rpm, 240g/min, 522 min]) References [1]����� W. R. Ketterhagen, M. T. am Ende, and B. C. Hancock, �Process modeling in the pharmaceutical industry using the discrete element method,� J. Pharm. Sci. , vol. 98, pp. 442�470, 2009. [2]����� G. Toschkoff, S. Just, K. Knop, P. Kleinebudde, A. Funke, A. Altmeyer, D. Djuric, and G. Scharrer, �Design-of-Experiment based DEM simulation of an active tablet coating process .� [3]����� C.. Radeke, B. J. Glasser, and J. G. Khinast, �Large-scale powder mixer simulations using massively parallel GPUarchitectures,� Chem. Eng. Sci. , vol. 65, no. 24, pp. 6435�6442, Dec. 2010. [4]����� S. Just, G. Toschkoff, A. Funke, D. Djuric, G. Scharrer, J. G. Khinast, K. Knop, and P. Kleinebudde, �Experimental Analysis of Tablet Properties for Discrete Element Modeling of an Active Coating Process,� AAPS PharmSciTech , vol. 14, no. 1, pp. 402�411, 2013.",
+    "presenting_author": "Peter Boehling | Area 1 Modeling and Predicition, Research Center Pharmaceutical Engineering, Graz, Austria",
+    "authors": [
+      "Johannes G. Khinast | Research Center Pharmaceutical Engineering (RCPE), Graz, Austria",
+      "Rok Dreu | Department of Pharmaceutical Technology, University of Ljubljana, Ljubljana, Slovenia",
+      "Klaus Knop | Institute of Pharmaceutics and Biopharmaceutics, Heinrich Heine University, D�sseldorf, Germany",
+      "Peter Kleinebudde | Institute of Pharmaceutics and Biopharmaceutics, Heinrich Heine University, D�sseldorf, Germany",
+      "Adrian Funke | Global Chemical and Pharmaceutical Development, Bayer Pharma AG, Berlin, Germany",
+      "Pavol Rajniak | Research Center Pharmaceutical Engineering, Graz, Austria",
+      "Hubertus Rehbaum | L.B.Bohle Maschinen + Verfahren GmbH, Ennigerloh, Germany"
+    ],
+    "authors_structured": [
+      {
+        "name": "Peter Boehling",
+        "affiliation": "Area 1 Modeling and Predicition, Research Center Pharmaceutical Engineering, Graz, Austria",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Johannes G. Khinast",
+        "affiliation": "Research Center Pharmaceutical Engineering (RCPE), Graz, Austria",
+        "designation": "Author"
+      },
+      {
+        "name": "Rok Dreu",
+        "affiliation": "Department of Pharmaceutical Technology, University of Ljubljana, Ljubljana, Slovenia",
+        "designation": "Author"
+      },
+      {
+        "name": "Klaus Knop",
+        "affiliation": "Institute of Pharmaceutics and Biopharmaceutics, Heinrich Heine University, D�sseldorf, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Peter Kleinebudde",
+        "affiliation": "Institute of Pharmaceutics and Biopharmaceutics, Heinrich Heine University, D�sseldorf, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Adrian Funke",
+        "affiliation": "Global Chemical and Pharmaceutical Development, Bayer Pharma AG, Berlin, Germany",
+        "designation": "Author"
+      },
+      {
+        "name": "Pavol Rajniak",
+        "affiliation": "Research Center Pharmaceutical Engineering, Graz, Austria",
+        "designation": "Author"
+      },
+      {
+        "name": "Hubertus Rehbaum",
+        "affiliation": "L.B.Bohle Maschinen + Verfahren GmbH, Ennigerloh, Germany",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper431350.html",
+    "topic": "NOx Emissions from Premixed Syngas/Air Flames at Atmospheric Pressure",
+    "date_time": "Monday, November 9, 2015: 5:15 PM",
+    "abstract": "Syngas combustion offers a considerable opportunity for clean power generation applications with high efficiency in decreasing pollutant emissions from gas turbines. Hydrogen in syngas results in elevated combustion temperatures that facilitate the thermal formation of nitrogen oxides (NO x ). In contrast, higher temperatures promote complete combustion and reduce the emission of carbon monoxide (CO). Lean premixed combustion has been used to reduce pollutant emissions by controlling the flame temperature. The optimum flame temperature of a lean premixed combustor is designed to be near the lean flammability limit and consequently, its performance is characterized by a CO/NO x trade-off. The efficiency of the process can be improved through the identification of various parameters such as pressure, temperature, and composition of the fuel, while a detailed understanding of the NO x formation is required in order to reduce the emissions. This study reports an experimental investigation of the effects of different parameters on the structure and emission characteristics of premixed H 2 /CO/air flames generated on a McKenna burner. Axial and radial temperature profiles in the post-flame zone for various stoichiometries, (equivalence ratio from 0.5 to 1 with H 2 /CO ratio ranging from 0.25 to 1) and flow rates were obtained. Acquiring an accurate temperature profile throughout the system is critical for making accurate predictions via kinetic simulations. Samples from the post-flame zone were drawn via a water-cooled quartz sampling probe feeding into a Fourier transform infrared (FTIR) spectrometer. Using the FTIR technique, concentrations of CO and individual NO x species, i.e. NO, NO 2 and N 2 O can be distinguished as opposed to the total NO x measurements reported in the literature. Additionally, kinetic simulations are being performed employing a gas turbine reaction network to obtain species profiles in the post-flame zone and a comparison with the experimental data will be provided.",
+    "presenting_author": "Nazli Asgari | University of South carolina, Columbia, SC, Tanvir Farouk, Department of Mechanical Engineering, University of South Carolina, Columbia, SC",
+    "authors": [
+      "Bihter Padak | Chemical Engineering, University of South Carolina, Columbia, SC"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nazli Asgari",
+        "affiliation": "University of South carolina, Columbia, SC, Tanvir Farouk, Department of Mechanical Engineering, University of South Carolina, Columbia, SC",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Bihter Padak",
+        "affiliation": "Chemical Engineering, University of South Carolina, Columbia, SC",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper443411.html",
+    "topic": "Title Not Found",
+    "date_time": "November 2015",
+    "abstract": "",
+    "presenting_author": "Not Indexed | University Unavailable",
+    "authors": [],
+    "authors_structured": []
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper430580.html",
+    "topic": "Sulfur Trioxide Formation during Oxy-Coal Combustion",
+    "date_time": "Monday, November 9, 2015: 3:35 PM",
+    "abstract": "Oxy-coal combustion technology can be a promising solution to meet the challenge of reducing carbon footprint while continuing with the fossil fuel usage for energy generation. Implementation of such technology will require the removal of N 2 (nitrogen) from oxidizer and the combustion process to occur in a CO 2 (carbon dioxide)-rich environment, which in turn, will reduce the flue gas volume to be handled for CO 2 storage and sequestration. But such volume reduction along with the change in combustion medium is to affect the reaction network and as a result, higher concentrations of SO x (sulfur oxide) species are expected in an oxy-coal system. Presence of SO 3 (sulfur trioxide) in parts per million (ppmv) levels can cause severe damage to the valuable plant units, both at high and low temperature regions. Due to the concerns regarding the highly corrosive nature of SO 3 , a comprehensive study focused on the sulfur chemistry in oxy-combustion is crucial. This elaborate investigation intends to reveal the temporal profile of SO 3 in an oxy-coal combustion system under variable operating conditions. A simulated oxy-combustion environment; employing the temperature profile of an actual plant boiler, has been created in a unique lab-scale setup by introducing the mixtures of desired combustibles. Flue gas samples have been collected from different temperature points of the reactor and quantification of the evolved SO 3 has been performed using the salt method and FTIR (Fourier transform infrared) spectroscopy. Influences of different parameters on SO 3 evolution, e.g., equivalence ratio (0.8-0.98), O 2 (oxygen) percentage and SO 2 (sulfur dioxide) concentration in the oxidizer, have been investigated experimentally in the course of this study. To observe the effect of NO (nitric oxide), different concentrations (200-1000 ppmv) have been introduced into the system and the samples have been collected to generate the temporal profile of SO 3 . In addition to the experiments, kinetic modeling employing the Chemkin software has been conducted to simulate the reactor conditions using two different combustion mechanisms. A parametric study has been performed to observe the influence of variable operating conditions, while dominating reactions for SO 3 generation have been identified for each mechanism by performing sensitivity analysis. Distinct SO 3 evolution profiles along with variable reactor exit concentrations were observed for different mechanisms and compared to experimentally collected data. This data can be utilized to improve the combustion mechanisms and to obtain more accurate prediction of SO x concentrations in coal power plants operating under oxy-combustion conditions.",
+    "presenting_author": "Nujhat Choudhury | Chemical Engineering, University of South Carolina, Columbia, SC",
+    "authors": [
+      "Bihter Padak | Chemical Engineering, University of South Carolina, Columbia, SC"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nujhat Choudhury",
+        "affiliation": "Chemical Engineering, University of South Carolina, Columbia, SC",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Bihter Padak",
+        "affiliation": "Chemical Engineering, University of South Carolina, Columbia, SC",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper430387.html",
+    "topic": "The Dependence of the Effective Gas-Solid Drag in Filtered Two-Fluid Models on the Sub-Filter Solid Turbulence",
+    "date_time": "Monday, November 9, 2015: 3:15 PM",
+    "abstract": "We present a new approach for the closure of the effective drag force appearing in the filtered two-fluid model (TFM) for gas-solid flow. In particular, we show that the effective drag can be systematically described by using the filtered volume fraction and the kinetic energy of the meso-scale velocity fluctuations, k s . Characterizing the effective drag as a function of these two markers appears insensitive to the actual configuration of the fine grid simulation as well as to the particle diameter. In addition, the fractional correction, which is a measure for the sub-filter heterogeneities and thus, determines the effective drag, can be easily collapsed to a single band for a wide range of filtered solid volume fractions. This collapse can be simply modeled by the logarithm of k s . We will further show that this special form of the fractional correction is an intrinsic property of the microscopic drag employed in this study by theoretical considerations. However, employing these findings to coarse grid simulations requires closures for k s . Our analysis demonstrates that in a first step k s can modeled by Smagorinsky type closure. Nevertheless, the presented constitutive relation for the kinetic energy of the cluster fluctuations requires a modification of its single phase counterpart to include the considerable impact of the sub-filter generation of k s (due to microscopic right hand side of the microscopic solids momentum equation) as well as the transport of k s at low macroscopic scalar shear rates. At large macroscopic scalar shear rates the presented model approaches the original form of the single phase Smagorinsky model.",
+    "presenting_author": "Simon Schneiderbauer | Department of Particulate Flow Modelling, Johannes Kepler University, Linz, Austria, Stefan Pirker, Department of Particluate Flow Modelling, Johannes Kepler University, Linz, Austria",
+    "authors": [
+      "Sankaran Sundaresan | Department of Chemical and Biological Engineering, Princeton University, Princeton, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Simon Schneiderbauer",
+        "affiliation": "Department of Particulate Flow Modelling, Johannes Kepler University, Linz, Austria, Stefan Pirker, Department of Particluate Flow Modelling, Johannes Kepler University, Linz, Austria",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Sankaran Sundaresan",
+        "affiliation": "Department of Chemical and Biological Engineering, Princeton University, Princeton, NJ",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper431897.html",
+    "topic": "Pilot-Scale Investigation of Heat Flux, Radiation and CO Distribution from an Oxy-Coal Flame",
+    "date_time": "Monday, November 9, 2015: 3:55 PM",
+    "abstract": "The Carbon-Capture Multidisciplinary Simulation Center (CCMSC) at the University of Utah is a 5-year US$16M research program funded by the U.S. Department of Energy through the Predictive Science Academic Alliance Program. The objective of the center is to demonstrate that exascale computing, coupled with formalized Verification & Validation with Uncertainty Quantification (V&V/UQ), can be used to more rapidly deploy new technologies for achieving low cost, low emission, coal-fired power generation. We are using a hierarchical validation approach to obtain simultaneous consistency between a set of selected experiments and simulations at several different scales (0.1 KWth, 100 KWth, 1.5 MWth and 15 MWth) that embody the key physics components (large eddy simulations, multiphase flow, particle combustion and radiation) to predict performance in an industrial-scale facility, which for this project is a 350MWe oxy-fired boiler. As a portion of the first year activities of this program, oxy-combustion with flue gas recycle (FGR) experiments were performed in the University of Utah’s 1.5 MWth pulverized coal furnace (L1500). The furnace was configured with heat flux probes, radiometers and additional temperature measurements. Throughout a week period, operating conditions in the furnace were replicated each day for two burner swirl conditions, thus providing multiple data sets for uncertainty quantification of the data and for validation/uncertainty quantification (V/UQ) of the Large Eddy Simulation (LES) tool that will be used in this program. For these tests the furnace was fitted with 8 water cooled tube bundles in the first four sections of the reactor. The temperature of the water in and out and the temperature of tube surface were measured, along with the cooling water flow rate. A set of three radiometers were installed in the near flame region. These devices were configured to differentiate between radiation from the hot refractory walls and from the coal flame. From these data the heat flux could be determined by multiple methods at four axial locations relative to the flame. Close scrutiny of the heat flux and radiometer data indicate that these techniques are sensitive enough to resolve changes in burner operating conditions. However the magnitude of the heat transfer is not constant throughout a test period due to accumulation of ash on heat transfer and background surfaces. Measurements of gas composition, including O 2 and CO were performed as part of these measurements. Extractive samples of gas were collected from three radial positions at seven axial location downstream of the flame. These data compare CO profiles in the furnace for swirled vs. non-swirled flames and will be used to validate char oxidation kinetics and in the model.",
+    "presenting_author": "Andrew Fry | Department of Chemical Engineering, University of Utah, Salt Lake City, UT",
+    "authors": [
+      "Jennifer Spinti | Chemical Engineering, University of Utah, Institute for Clean and Secure Energy, Salt Lake City, UT",
+      "Ignacio Preciado | University of Utah, Salt Lake City, UT",
+      "Oscar Diaz-Ibarr | Chemical Engineering, University of Utah, Institute for Clean and Secure Energy, Salt Lake City, UT",
+      "Eric G. Eddings | Chemical Engineering, The University of Utah, Salt Lake City, UT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Andrew Fry",
+        "affiliation": "Department of Chemical Engineering, University of Utah, Salt Lake City, UT",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Jennifer Spinti",
+        "affiliation": "Chemical Engineering, University of Utah, Institute for Clean and Secure Energy, Salt Lake City, UT",
+        "designation": "Author"
+      },
+      {
+        "name": "Ignacio Preciado",
+        "affiliation": "University of Utah, Salt Lake City, UT",
+        "designation": "Author"
+      },
+      {
+        "name": "Oscar Diaz-Ibarr",
+        "affiliation": "Chemical Engineering, University of Utah, Institute for Clean and Secure Energy, Salt Lake City, UT",
+        "designation": "Author"
+      },
+      {
+        "name": "Eric G. Eddings",
+        "affiliation": "Chemical Engineering, The University of Utah, Salt Lake City, UT",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper422913.html",
+    "topic": "Discrete Element Modeling of High Shear Wet Granulation: Effect of Process Parameters and Equipment Scale on Particle Level Mechanisms",
+    "date_time": "Monday, November 9, 2015: 4:30 PM",
+    "abstract": "Wet granulation is a commonly employed unit operation in the pharmaceutical manufacturing of many oral solid dosage products. Wet granulation affords processing robustness by preventing segregation of materials, improving flow, and reducing the sensitivity to input material variability. Several mechanisms are at play during wet granulation. These include wetting and nucleation, growth and consolidation, and breakage/attrition. Particle level mechanisms influence the resulting granule properties, and thus the final quality attributes of the drug product. While particle level mechanisms strongly influence process performance, these quantities are challenging to measure experimentally. Numerical tools, such as the Discrete Element Method (DEM), can be used in conjunction with experiments to elucidate how particle level processes affect resulting granule properties. In this work, the DEM technique was employed to study the effect of process parameters and equipment scale on particle-level physics involved in wet granulation. Material calibration was performed to ensure that the computational elements represent a typical pharmaceutical material (microcrystalline cellulose). Particle velocity and localized forces were calculated from DEM simulations. These quantities were verified experimentally using advanced real-time analytic tools. The studies provide a quantitative relationship between the process variables (impeller tip speed, granulator fill level, granulator blade design and equipment scale) and measurable properties (velocity profiles, normal, and shear stress distributions) in the radial, tangential and axial directions. The DEM simulations showed that impeller tip speed had the most significant effect on resulting particle velocities while fill level, granulator blade design and equipment scale had minimal impact on particle velocities. Normal and shear stress distribution were affected by impeller tip speed, fill level, and equipment scale while blade design had minimal impact within the space studied. By numerical calculations of pressure, velocity, and shear stress in different regions of the granulator, this study provides guidelines on achieving reproducible particle environment with changes in scale, granulator design, fill level, and impeller speed.",
+    "presenting_author": "Brenda Remy | Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+    "authors": [
+      "Atul Dubey | Tridiagonal Solutions Inc., San Antonio, TX",
+      "Stephen Cole | DEM Solutions Ltd., Edinburgh, United Kingdom",
+      "Richard D. LaRoche | DEM Solutions USA Inc., Lebanon, NH",
+      "Preetanshu Pandey | Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+      "Ajit Narang | Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+      "Dilbir Bindr | Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Brenda Remy",
+        "affiliation": "Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Atul Dubey",
+        "affiliation": "Tridiagonal Solutions Inc., San Antonio, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Stephen Cole",
+        "affiliation": "DEM Solutions Ltd., Edinburgh, United Kingdom",
+        "designation": "Author"
+      },
+      {
+        "name": "Richard D. LaRoche",
+        "affiliation": "DEM Solutions USA Inc., Lebanon, NH",
+        "designation": "Author"
+      },
+      {
+        "name": "Preetanshu Pandey",
+        "affiliation": "Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Ajit Narang",
+        "affiliation": "Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Dilbir Bindr",
+        "affiliation": "Drug Product Science and Technology, Bristol-Myers Squibb, New Brunswick, NJ",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper422452.html",
+    "topic": "Optimization and Scale up of Dry Impregnation Using DEM Simulations",
+    "date_time": "Monday, November 9, 2015: 5:20 PM",
+    "abstract": "Dry impregnation of active metals onto a porous catalyst support is an important step in the preparation of catalyst. In a typical dry impregnation process, metal solutions are sprayed over a particulate bed in a mixing vessel until the pore volume is reached. The inter-particle variability of the impregnated liquids inside the particles and metal content may significantly affect the activity and selectivity of the resulting catalyst. Current scale-up practices lead to poor fluid distribution and inhomogeneity in metal content. The aim of this work is to understand the dynamic behavior of the particles under the spray nozzle, which is essential for desired content uniformity, and to develop a scale-up model for the dry impregnation process. DEM simulations were conducted in a full length cylinder vessel of 30cm long and 20cm in diameter to study the effect of several parameters: rotation speed, particle size and shape. Identical experiments were done under the same conditions: 2 rotation speeds (9 rpm and 25 rpm) and spray rate of 1 L/hr. Axial water distribution is compared and good agreement is found between experiments and simulations. High water content is observed in the center due to insufficient mixing. Using DEM simulations we predict a more homogeneous axial water distribution at higher rotation speeds (50 rpm). The calculation of axial dispersion coefficient shows that particle dispersion is faster along the axis at higher rotation speeds, resulting a more uniform water distribution. Two dimensionless numbers are used to characterize the scale up of the system: Froude number (Fr) and Spray Flux number (Ψ). The Froude number is defined as the ratio of inertial force to gravitational force. The calculation of Fr gives the correlation between rotation speed (ω) and vessel size (R). Spray Flux number measures the density of spray droplet in the spray zone. The location and area of spray zone can significantly affect the overall content uniformity. Results in the cylindrical vessel show that a homogeneous liquid distribution with optimal particle mixing is obtained by minimizing the spray rate and Ψ for an optimal Fr number. The rules are further examined in the double cone geometry, where three different rotation speeds (7rpm, 15rpm, and 25rpm) are compared with three different spray rates (1.5L/hr, 3L/hr, and 5L/hr). It is found that keeping Fr number at the optimal value and lower spray rates increase the content uniformity of the resulting particles. Using the cylindrical vessel, the effect of particle size on the overall mixing and metal content uniformity was also studied. The optimal conditions previously ascertained (7rpm of rotation speed and 0.3 L/hr of flow rate) were used as a baseline for comparing different particle sizes (4.7mm, 3mm, and 2.4mm). Results show that in the smaller particle system, mixing is slower, which leads to a poor content uniformity. Furthermore, mixing and content uniformity are studied for mixtures of different particle sizes. The binary system is composed of 50% of small particles (2.4mm) and 50% of large particles (4.7mm). Tertiary system has 1/3 of each of the three particle sizes. In the particle mixtures, small particles tend to pass through the interstices of the large particles when they are flowing, and heavy particles tend to roll down the sloped bed surface, resulting in particle segregation and poor content uniformity.",
+    "presenting_author": "Yangyang Shen | Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+    "authors": [
+      "William G. Borghar | Department of Chemical & Biochemical Engineering, Rutgers, the State University of New Jersey, Piscataway, NJ",
+      "Arthur W. Chester | Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+      "M. Silvina Tomassone | Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ"
+    ],
+    "authors_structured": [
+      {
+        "name": "Yangyang Shen",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "William G. Borghar",
+        "affiliation": "Department of Chemical & Biochemical Engineering, Rutgers, the State University of New Jersey, Piscataway, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "Arthur W. Chester",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      },
+      {
+        "name": "M. Silvina Tomassone",
+        "affiliation": "Chemical and Biochemical Engineering, Rutgers University, Piscataway, NJ",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper431435.html",
+    "topic": "Response Surface Modeling of Flare Performance and Characterization of the Incipient Smoke Point",
+    "date_time": "Monday, November 9, 2015: 4:35 PM",
+    "abstract": "Current EPA regulations (40CFR60.18) require smokeless flaring, which motivates flare operators to over-steam or over-air to suppress smoke at the expense of combustion efficiency (CE). It is also well known that incipient smoke point (ISP) is a good indicator for good combustion, but the phenomena is neither well understood nor scientifically defined. Further, many factors affect soot emission and unburned/ produced volatile organic compounds (VOCs) emissions. This leads to a question of how to operate the flares in order to achieve the optimal over-all environmental performance. In this study, the flare test data from 1983 to 2014 with soot emission, destruction and removal efficiency (DRE), and CE data (including 1983/1984 EPA, 2010 TCEQ, 2009/2010 Marathon Detroit/Texas City, and 2014 Carleton University) were analyzed. All CE data were corrected for soot emissions. Easy to use response surface models were developed to predict DRE/CE and soot yield for steam and air assisted flares burning propylene, propane, natural gas, methane and ethylene. Soot yield is expressed in pounds per million British Thermal Unit (lb/MMBTU). The input variables include vent gas combustibility (net heating value (NHV) /lower flammability limit(LFL)/combustible concentration(C)), vent gas species (olefins, alkynes, aromatics, hydrogen, nitrogen, hydrogen to carbon ratio, carbon number), and operating parameters (steam/air assists, stack diameter, and exit velocity). Vent gas NHV/LFL/C can be combined with steam and air assists at combustion zone as NHV CZ /LFL CZ /C CZ to simplify the models for easy visualization and simple control. The combination of stack diameter and exit velocity is then used to obtain the Richardson Number (gd/v^2). NHV CZ /LFL CZ / C CZ can be redefined to include a portion of upper steam used. To estimate the desirable range of controllable operating variables, inverse response models were developed in which the operating parameters were expressed as a function of performance variables. The goal is to estimate the desirable operating set point with a high CE (>96.5%) and a low soot yield (0.01lb/MMBTU) simultaneously. Test cases were used in characterization of ISP with plume opacity and soot yield. Plume opacity was estimated using the Beer – Lambert law in terms of soot concentration, flame diameter, and black carbon absorptivity. The average opacity was found to be 10% and 40% for steam and air assisted flares at the ISP. Linear relations were established between soot yield and opacity normalized to flame diameter with goodness of fit 0.98 and 0.99 for air and steam assisted flares. These relations can be used to link the visible emission scale = 5 at the ISP (in Marathon's 2009/2010 data) to opacity = 10% for steam-assisted flares and opacity = 40% for air-assisted flares. As a result, visible emission rating data can be converted to soot yields in the case of Marathon's flare tests data. Keywords: Propylene, Propane, Methane, Ethylene, Natural gas, soot emissions, Flare performance, Richardson number, Lower flammability limit, Net heating value at combustion zone, response surface models.",
+    "presenting_author": "Arokiaraj Alphones | Dan F. Smith Department of Chemical Engineering, Lamar University, Beaumont, TX",
+    "authors": [
+      "Vijaya Damodar | Dan F. Smith Department of Chemical Engineering, Lamar University, Beaumont, TX",
+      "Daniel Che | Dan F. Smith Department of Chemical Engineering, Lamar University, Beaumont, TX",
+      "Edward Fortner | Aerodyne Research Inc, Billerica, MA",
+      "Scott Evans | Clean Air Engineering, Palatine, IL",
+      "Matthew Johnso | Mechanical & Aerospace Eng., Carleton University, Ottawa, ON, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Arokiaraj Alphones",
+        "affiliation": "Dan F. Smith Department of Chemical Engineering, Lamar University, Beaumont, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Vijaya Damodar",
+        "affiliation": "Dan F. Smith Department of Chemical Engineering, Lamar University, Beaumont, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Daniel Che",
+        "affiliation": "Dan F. Smith Department of Chemical Engineering, Lamar University, Beaumont, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Edward Fortner",
+        "affiliation": "Aerodyne Research Inc, Billerica, MA",
+        "designation": "Author"
+      },
+      {
+        "name": "Scott Evans",
+        "affiliation": "Clean Air Engineering, Palatine, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Matthew Johnso",
+        "affiliation": "Mechanical & Aerospace Eng., Carleton University, Ottawa, ON, Canada",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper431597.html",
+    "topic": "Soot Formation and Secondary Pyrolysis in Oxy-Coal Combustion with Large-Eddy Simulation",
+    "date_time": "Monday, November 9, 2015: 4:15 PM",
+    "abstract": "Soot Formation and Secondary Pyrolysis in Oxy-Coal Combustion with Large-Eddy Simulation Alexander J Josephson, David O. Lignell Abstract--AIChE 2015 Annual Meeting Recent research has been dedicated to the control carbon pollutants from energy sources. One such purposed system is the oxy-combustion of fuels. When burning fuels under oxy-fuel conditions, carbon capture techniques become more economically feasible. Computer simulations of these purposed systems have been accomplished using Large-Eddy Simulation (LES); however, until now these simulations have been incomplete and have not incorporated models for secondary pyrolysis or soot formation. This research focuses on the oxy-combustion of coal and the challenges associated with it. Coal combustion is different from combustion of other fuels. With respect to soot, when coal pyrolyzes light gases are given off in companion with a heavier tar. This tar can transform into soot and is the principle source of soot particles in conventional coal combustion systems. Soot can also be formed by the light gas products of primary pyrolysis. These light gases may radicalize and nucleate into soot precursors which may grow into larger particles. In both cases, particle growth can occur through the agglomeration of particles with one another, or the coagulation of lighter molecules onto the surface of the soot particle. Our proposed soot formation model will include soot transformed from tar and grown from nucleated light gases along with growth mechanisms for these particles. In addition to the formation of tar and soot, a complete model of secondary pyrolysis needs to include the destruction of tar and soot. Tar and soot are destroyed in a combustion system through a combination of gasification and oxidation. The gasification and oxidation of tar and soot is secondary pyrolysis and can contribute to overall mass/energy balance and radiation of any combustion system. Possible cracking of the particles will also be explored. Oxy-coal combustion LES with models for secondary pyrolysis and soot will be presented with comparisons to simulations lacking those. Effects on radiation, gas temperature, and heat loss will be explored and presented. These simulations will be carried out on the Fulton Supercompter at Brigham Young University and incorporated in the LES software developed by the University of Utah, as part of a larger project exploring oxy-coal combustion in full-scale reactors. With the development of accurate simulations, production of oxy-coal reactors with reduced pollution production could become possible. In addition, the physics, tools, and models developed in the process could be readily applicable to other research with minor to little adjustment.",
+    "presenting_author": "Alexander J Josephson | Chemical Engineering, Brigham Young University, Provo, UT",
+    "authors": [
+      "David O. Lignell | Chemical Engineering, Brigham Young University, Provo, UT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Alexander J Josephson",
+        "affiliation": "Chemical Engineering, Brigham Young University, Provo, UT",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "David O. Lignell",
+        "affiliation": "Chemical Engineering, Brigham Young University, Provo, UT",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper417560.html",
+    "topic": "Deposition of Coal Ash on a Vertical Surface in a 100 KW Downflow Laboratory Combustor: A Comparison of Theory and Experiment",
+    "date_time": "Monday, November 9, 2015: 3:15 PM",
+    "abstract": "This paper is concerned with deposition rates of coal ash on a vertical surface in a 100 kW rated down-flow laboratory coal combustor. At that scale, flow in the post flame where deposition occurs, is laminar, and the deposits on a vertical surface are similar to the early, sticky, inner deposits on horizontal surfaces. Therefore the problem addressed has relevance to understanding mechanisms of deposit formation in general. Experimental data presented here consist of particle size distributions of the ash aerosol, and time resolved measurements of the vertical deposit mass, for various controlled surface temperatures, one coal, and two combustion conditions: air-firing and oxy-firing with 50% inlet O 2 . Theory consisted of a transport model in which the criterion on whether an ash particle was captured, depended on a newly introduced “Thermophoresis Number”, Tp, which is the ratio of the time taken for the particle to contact the (cold) surface through thermophoresis, to that for the particle to pass by the surface. If Tp < 1 the particle is captured; otherwise it escapes. It is assumed that only those particles in the sub-micron vaporization mode are both subject to thermophoresis and will stick to the surface. Equilibrium calculations showed that the ash aerosol in the vaporization mode had condensed just upstream of the thermal boundary layer next to the cold surface and later calculations showed that additional ultrafines condensed within the thermal boundary layer had insufficient mass to account for the deposition rates measured. Using calculated velocity and temperature fields in the fluid next to the vertical surface, and the Tp < 1 criterion alluded to above, it was possible to calculate a two-dimensional cross-sectional area that defined the area through which all particles that will contact the vertical surface must pass. Ash deposition rates so calculated were compared to experimental data. Quantitative agreement between theory and experiment was good, considering the difficulties in accurately measuring deposition rates and in view of simplifications contained in the model.",
+    "presenting_author": "Zhonghua Zhan | Department of Chemical Engineering, University of Utah, Salt Lake City, UT",
+    "authors": [
+      "Andrew Fry | Department of Chemical Engineering, University of Utah, Salt Lake City, UT",
+      "Jost O. L. Wendt | Department of Chemical Engineering, University of Utah, Salt Lake City, UT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Zhonghua Zhan",
+        "affiliation": "Department of Chemical Engineering, University of Utah, Salt Lake City, UT",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Andrew Fry",
+        "affiliation": "Department of Chemical Engineering, University of Utah, Salt Lake City, UT",
+        "designation": "Author"
+      },
+      {
+        "name": "Jost O. L. Wendt",
+        "affiliation": "Department of Chemical Engineering, University of Utah, Salt Lake City, UT",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper435284.html",
+    "topic": "Quantitative Assessment of Fine-Grid Kinetic-Theory-Based Predictions of Mean-Flow Properties in Unbounded Fluidization",
+    "date_time": "Monday, November 9, 2015: 3:40 PM",
+    "abstract": "For several decades, it has been well known that kinetic-theory-based continuum models are qualitatively able to capture dynamic particle clustering in high-velocity, gas-solid flows. The quantitative accuracy of such descriptions, however, remains unclear mostly due to the computational requirements involved in such simulations. In particular, these particle clusters - regions where the local solids concentration exceeds the mean - occur at the so-called meso-scale, a length scale intermediate to the particle size and the system size. Numerical grids on the order of 1 to 20 particle diameters are typically required to fully resolve these heterogeneous structures. Such an approach is very computationally expensive, precluding its use in most industrial and pilot-scale applications. Therefore strategies to model, rather than directly simulate, the full range of meso-scale structures currently remains a highly active area of research. At present, the approach taken most frequently uses fine-grid continuum simulations to constitute additional closure models for coarse-grid filtered models. However, assessing the quantitative accuracy of these underlying kinetic-theory-based continuum models, which have many simplifying assumptions of their own, has not received the same amount of attention. Recent high-resolution CFD-DEM simulations (Radl and Sundarsean, 2014) of an unbounded sedimenting (or fluidization) system is used as ideal data to validate mean flow properties predicted by a new two-fluid model of Garzo, Tenneti, Subramaniam, and Hrenya (2012). Overall the comparisons are quite good both qualitatively and quantitatively, which is a bit surprising given the low-gradient assumption inherent in kinetic-theory models and the high concentration gradients present at the interface between clustered and dilute regions. Small differences at the highest concentrations are noted, and discussed in terms of the assumptions inherent in kinetic theory.",
+    "presenting_author": "William Fullmer | Chemical and Biological Engineering, University of Colorado, Boulder, CO",
+    "authors": [
+      "Christine M. Hrenya | Chemical and Biological Engineering, University of Colorado at Boulder, Boulder, CO"
+    ],
+    "authors_structured": [
+      {
+        "name": "William Fullmer",
+        "affiliation": "Chemical and Biological Engineering, University of Colorado, Boulder, CO",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Christine M. Hrenya",
+        "affiliation": "Chemical and Biological Engineering, University of Colorado at Boulder, Boulder, CO",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper432509.html",
+    "topic": "Combustion and Emission from Biodiesel/Diesel and Alcohol/Diesel Surrogate Flames",
+    "date_time": "Monday, November 9, 2015: 4:55 PM",
+    "abstract": "With the growing interest and utilization of oxygenated fuels as alternatives or additives to petroleum-derived fuels, there are a number of critical aspects about these fuels that need to be studied and well understood. The present study focuses on analyzing the impact of two main oxygenated fuels—alcohol and ester—on the sooting tendency and the soot oxidative reactivity, two important aspects of particulate matter (PM) emissions. Biodiesel is an ester content fuel known to improve the combustion properties and to reduce PM emission from conventional diesel fuel. Methyl decanoate (biodiesel surrogate) was added to n-dodecane (diesel surrogate) to understand the effect of the ester moiety in the mixture of biodiesel/diesel surrogate. The effect of addition of alcohol on the sooting behavior of n-dodecane was also investigated by using n-butanol. A two-stage burner was used to characterize the oxidation of soot for different mixtures and to isolate the soot oxidation from the soot formation process. A scanning mobility particle sizer (SMPS) was used to measure the soot particle size distributions (PSDs) at different heights in the flame during oxidation, and soot oxidation rates were estimated using the PSDs. Temperature profiles were measured along the centerline of the flame for the fuel mixtures. Gaseous species such as O 2 , CO, CO 2 , H 2 were measured by online gas chromatography and used to validate a detailed kinetic model which predict the OH concentration in the secondary flame. Soot oxidation rates were calculated by Neoh expression and compared with experimental data.",
+    "presenting_author": "Hossein Ghiassi | University of Utah, Salt Lake City, UT, Isabel Jaramillo, University of Utah, Salt Lake CIty, UT",
+    "authors": [
+      "JoAnn S. Lighty | Department of Chemical Engineering, University of Utah, Salt Lake City, UT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Hossein Ghiassi",
+        "affiliation": "University of Utah, Salt Lake City, UT, Isabel Jaramillo, University of Utah, Salt Lake CIty, UT",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "JoAnn S. Lighty",
+        "affiliation": "Department of Chemical Engineering, University of Utah, Salt Lake City, UT",
+        "designation": "Author"
+      }
+    ]
+  }
+]

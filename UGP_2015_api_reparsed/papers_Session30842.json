@@ -1,0 +1,476 @@
+[
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper423126.html",
+    "topic": "Addressing Control Challenges of Discontinuous Processes with Multi-Fidelity Model Predictive Control",
+    "date_time": "Wednesday, November 11, 2015: 2:36 PM",
+    "abstract": "Petroleum currently fulfills 32% of total national energy demand, more than any other source of energy, and is likely to continue to do so for at least the next 30 years [ 1 ] . While the need for alternative sources of energy is clear, the growth and maturity of renewable energies has been slow and unable to meet energy demands, especially in transportation. Therefore, to meet the growing demand for energy, more efficient, robust, and reliable technological advances are needed in the petroleum industry. The petroleum industry is historically divided into upstream and downstream divisions. The upstream division finds and extracts oil and gas from geologic formations, while the downstream division refines the crude oil and gas into usable products. The downstream sector has seen many technological advances in process control and optimization, but many processes in the upstream sector, such as oil well drilling, still lack any significant automation [ 2 ] . When automation is optimized, it improves safety and efficiency over manual control by responding faster to process disturbances and by operating closer to process constraints. However, a unique challenge of automating Managed Pressure Drilling (MPD) for oil and gas is the discontinuous nature of the process [ 2 ] . An oil or gas well is created by drilling into the earth for several hundred to several thousand feet, stopping to insert and cement in place a segment of casing pipe to the well bore, then repeating the process until the target depth is reached. Before the casing pipe is inserted into the well bore, the string of drill pipe must be removed from the well, set aside, and then placed back in the well to resume operations. As the well deepens, more drill pipe is connected to the drillstring. At the bottom of the drillstring, a Bottom Hole Assembly (BHA), consisting of measurement and steering equipment, is attached to the drill bit. The drill bit is cooled by the drilling fluid, or mud, which also moves the rock cuttings to the surface and maintains pressure in the well annulus (see Figure 1). The well annulus pressure consistently needs to be greater than the geologic reservoir pressure to prevent hydrocarbons from entering the well during the drilling process. If the mud pressure in the well is too high, it can damage the rock formation; if it is too low, hydrocarbons from the subsurface reservoir can come to the surface in an uncontrolled and dangerous manner. When this catastrophe happens it is known as a blowout. The well bore pressure must be maintained within a small range of pressures that balances the reservoir fluid pressure to prevent damaged formations and blowouts. Maintaining the pressure balance in the well is the goal of MPD [ 3 ] . Figure 1 A simplified diagram of the MPD process Currently, industrial MPD is completely manual. However, it has been demonstrated that an automated controller can maintain borehole pressure and reject disturbances faster and more accurately than manual control by using Nonlinear Model Predictive Control (NMPC) [ 4 ] . A controller can coordinate the mud pump flow rate and the annulus choke valve opening to reach the desired bit pressure set point [ 5 ] . One of the challenges with automated control of MPD is the necessary stopping and starting of operations. This discontinuous process can cause pressure sensors in the drillstring and BHA to lose calibration and controller models to lose tuning in the intervals. To address these challenges, this work simulates multiple control models arranged in an ensemble control structure to maintain control over various process stages: normal drilling operations, pipe reconnection procedures, and the disturbance of unwanted gas influx from the reservoir to the well bore. The novel control structure allows switching among control models of varying accuracy. A high fidelity model of the process is used when available, but the long computation time makes it unavailable for every control instance. The faster and less accurate low-order first principles model is the primary controller, yet it may not converge to an optimal solution at every time step due to the use of dynamic parameter estimation using Moving Horizon Estimation (MHE). An empirical First Order Plus Dead Time (FOPDT) model generally converges to an optimal solution at each time step, yet it is the least accurate model available. The controller makes use of these multi-fidelity models based on the availability and accuracy of the past model predictions compared to the current process state. The model solution with the least error is used to control the process at the present control instance. A limitation on the rate of change of process inputs is set to avoid sudden jumps when switching between models. An additional benefit of this control structure is the ability to tune one model while another is being used to control the process. Thus, model tuning can be accomplished without interrupting the drilling process [ 6 ] . Hence, the redundant model control structure offers benefits typically associated with redundant process measurements. This novel ensemble controller is capable of maintaining control over the discontinuous MPD process.�� ������ References 1.����������� Annual Energy Outlook 2014, U. S. Energy Information Administration. p. A-1. 2.����������� Godhavn, J.M., et al., Drilling Seeking Automation Control Solutions , in 18th IFAC World Congress . 2011: Milano, Italy. 3.����������� Breyholtz, O., G. Nygaard, and M. Nikolaou. Automatic control of managed pressure drilling . in American Control Conference (ACC), 2010 . 2010. 4.����������� Asgharzadeh Shishavan, R., et al., Combined Rate of Penetration and Pressure Regulation for Drilling Optimization by Use of High-Speed Telemetry SPE Drilling and Completion Journal, 2015. 30 (1). 5.����������� Breyholtz, O., et al. Evaluating control designs for co-ordinating pump rates and choke valve during managed pressure drilling operations . in Control Applications, (CCA) & Intelligent Control, (ISIC), 2009 IEEE . 2009. 6.����������� Sui, D., et al., Ensemble Methods for Process Monitoring in Oil and Gas Industry Operations. Journal Of Natural Gas Science and Engineering, 2011. 3 : p. 748-753.",
+    "presenting_author": "Ammon Eaton | Chemical Engineering, Brigham Young University, Provo, UT",
+    "authors": [
+      "Logan Beal | Chemical Engineering, Brigham Young University, Provo, UT",
+      "Ethan Janis | Brigham Young University",
+      "Sam Thorpe | Brigham Young University",
+      "Casey Hubbell | Brigham Young University",
+      "John D. Hedengre | Chemical Engineering, Brigham Young University, Provo, UT"
+    ],
+    "authors_structured": [
+      {
+        "name": "Ammon Eaton",
+        "affiliation": "Chemical Engineering, Brigham Young University, Provo, UT",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Logan Beal",
+        "affiliation": "Chemical Engineering, Brigham Young University, Provo, UT",
+        "designation": "Author"
+      },
+      {
+        "name": "Ethan Janis",
+        "affiliation": "Brigham Young University",
+        "designation": "Author"
+      },
+      {
+        "name": "Sam Thorpe",
+        "affiliation": "Brigham Young University",
+        "designation": "Author"
+      },
+      {
+        "name": "Casey Hubbell",
+        "affiliation": "Brigham Young University",
+        "designation": "Author"
+      },
+      {
+        "name": "John D. Hedengre",
+        "affiliation": "Chemical Engineering, Brigham Young University, Provo, UT",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper414068.html",
+    "topic": "Modular Cell Culture Platform with Passive Fluid Controls for GI Tract - Liver Tissue Co-Culture",
+    "date_time": "Wednesday, November 11, 2015: 12:48 PM",
+    "abstract": "Modular Cell Culture Platform with Passive Fluid Controls for GI tract - Liver Tissue Co-Culture Mandy B. Esch , 1 Michael L. Shuler 2 (1) Dept. of Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY; (2) Dept. of Biomedical Engineering, Cornell University, Ithaca, NY We have developed a microfluidic cell culture platform and used it to culture GI tract epithelial cells and primary liver cells together for 14 days. In the body, these tissues are responsible for the first pass meatbolism of nutrients and drugs. Both, GI tract epithelium and liver were scaled down from in vivo values by a factor of 110,000. Both tissues were perfused at physiologic fluid flow rates that were controlled via passive device elements. Representing the GI tract epithelium, Caco-2 cells maintained a transepithelial resistance (TEER) of 200 to 380 �cm 2 . Representing human liver tissue, a mixture of human primary nonparenchymal cells (fibrolbasts, stellate and Kupffer cells) and parenchymal cells (hepatocytes), maintained urea and albumin synthesis for the entire culture period of 14 days. The modular design enabled us to culture both tissues separate from each other in order to reach maturity before combining them. The device presents a low cost approach to culturing multiple tissue with ratios of tissue volumes and fluid flow rates that are of physiologic relevance. Introduction: Patients who suffer from diabetes regularly inject insulin subcutaneously. If they took insulin orally, their stomach and intestine would break it down to such a high degree that even though any remaining insulin would be delivered directly to the liver, its concentration would be too low to be effective. In the case of insulin, the direct delivery to the liver would be an advantage, because that's where it's needed. Drugs that are needed at other organs, such as painkillers, are often additionally broken down in the liver. Considerable efforts go into developing drug formulations that can overcome these obstacles .[1] Animal models do not predict the first pass effects well,[2] and in vitro models of the human GI tract – liver unit would be of significant use when assessing new formulations of drug that seek to increase bioavailability. Materials and Methods: We designed a modular device using Solidworks and printed it with a 3D Object printer from Stratasys (Israel). We calculated channel resistances so that medium flow rates reach physiologic values when tilted the device at an angle of 18�. On separate tissue chips we cultured Caco-2 cells (for 16 days), and 150,000 primary human nonparenchymal cells (a mixture of fibrolbasts, stellate and Kupffer cells) and 250,000 hepatocytes (for 7 days). The two tissue chips contained chambers that were scaled down from human tissue volumes 110,000 fold. After maturation, we inserted the GI tract and liver chips into the multi-organ platform and operated the device for 14 days. We replaced 50% of medium with fresh medium dayly. We measured TEER, activity of CYP enzymes (CYP 3A4 and 1A1), and urea and albumin synthesis for 14 days. Results and Discussion: The devices operated for 14 days without loss of function of the tissues. The GI tract epithelium maintained TEER values between 200 and 380 �cm 2 for the entire culture period (Fig.1 A). The liver tissue produced urea (Fig. 1B) and albumin (not shown) at rates we and others have previously observed under fluidic flow.[3] The cells also responded with CYP enzyme activity when stimulated with rifampicin or 3-Methylmethaxocine (results not shown). Figure 1. A) TEER of Caco-2 cells for 14 days of co-culture. B) Urea synthesis of the liver tissue consisting of primary human liver cells [non- parenchymal cells (fibroblasts, stellate and Kupffer cells) and parenchymal cells ( hepatocytes )]. Conclusions: We have developed a modular microfluidic device that operated without loss of tissue function for 21 days. We believe this device design could be useful when utilizing primary cells or stem cells to generate tissues for the purpose of combining them in order to simulate the first pass metabolism in vitro . The device design is expandable, meaning additional tissue modules could be designed and integrated in the future. Ref.: [1] S. Kalra, Diabetol Metab Syndr ., 2010, 2, 66. [2] X.Gao, Pharmaceutical Research, 2006, 23(8), 1675. [3] Ebrahimkhani, ADDR, 2014, 69/70, 132.",
+    "presenting_author": "Mandy B. Esch | Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY",
+    "authors": [
+      "Michael Shuler | Biomedical Engineering, Cornell University, Ithaca, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Mandy B. Esch",
+        "affiliation": "Biomedical and Chemical Engineering, Syracuse University, Syracuse, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Michael Shuler",
+        "affiliation": "Biomedical Engineering, Cornell University, Ithaca, NY",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper432561.html",
+    "topic": "Deployment of a Search Space Reduction Algorithm to an NMPC Problem - Comparative Experimental Analysis to a Fuel Cell System",
+    "date_time": "Wednesday, November 11, 2015: 2:18 PM",
+    "abstract": "Nowadays, the increase in energy demands, the tighter environmental regulations and various economic considerations require for the systems and processes to operate over a wider range of conditions and often near the boundaries of their operating region. Moreover, the interconnection and cooperation of various systems into integrated units is a prerequisite for efficient resource handling and allocation. In the sight of these issues, advance process control, such as Model Predictive Control (MPC) aims to facilitate the improvement of the response and overall behavior of systems and processes. In general the impact of control technology is evident in a wide range of application areas, including fuel cells, as it is the necessary facilitator for achieving desired objectives and fulfilling application-specific goals. Fuel cells represent a versatile and efficient electricity generation source that can be applied in a wide range of industries - from vehicles and primary energy systems to autonomous back-up power stations and portable consumer electronics devices. Fuel cell systems exhibit fast dynamics, nonlinearities and uncertainties that constitute challenges requiring appropriate control in order to be confronted effectively. This work presents an alternative way of combining components from two advanced MPC methodologies for a multi-variable nonlinear control problem in order to systematically exploit their synergistic benefits. More specifically at the core of a nonlinear model predictive control (NMPC) formulation a nonlinear programming (NLP) problem is solved utilising a discretized nonlinear dynamic model. Prior to the online solution of the NLP problem a pre-processing search space reduction (SSR) algorithm is applied. The SSR algorithm adjusts the search space of selected variables, based on a pre-computed augmented low-complexity piecewise affine (PWA) approximation of the feasible space. The behavior of the proposed synergetic formulation is illustrated through a multivariable nonlinear control problem involving the operation of a small scale fully automated Polymer Electrolyte Membrane (PEM) fuel cell unit. Overall, four different MPC-based approaches are formulated and subsequently evaluated by addressing the control issues that arise during the operation of the fuel cell system. The aim of comparative experimental study is to explore the behavior of MPC-based configurations and summarize the characteristics of each approach with respect to the specific control problem. To achieve this objective an experimental scenario is formed which is applied to the PEM fuel cell unit using each time a different control configuration. The proposed framework is developed and deployed online to an industrial-grade Supervisory Control and Data Acquisition (SCADA) system. The response of the multivariable nonlinear controllers are assessed through a set of experimental studies, illustrating that the control objectives are achieved and the fuel cell system operates at a stable environment regardless of the varying operating conditions. The performance of the deployed controllers is assessed based on their response, their qualitative response characteristics and the required energy for the heat-up and the cooling during each experiment. The comparative experimental study presents the benefits and challenges of each configuration.",
+    "presenting_author": "Chrysovalantou Ziogou | Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece",
+    "authors": [
+      "Efstratios N. Pistikopoulos | Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+      "Michael C. Georgiadis | Department of Chemical Engineering, Aristotle University of Thessaloniki, Thessaloniki, Greece",
+      "Spyros S. Voutetakis | Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece",
+      "Simira Papadopoulou | Department of Automation Engineering, Alexander Technological Educational Institute of Thessaloniki, Thessaloniki, Greece"
+    ],
+    "authors_structured": [
+      {
+        "name": "Chrysovalantou Ziogou",
+        "affiliation": "Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Efstratios N. Pistikopoulos",
+        "affiliation": "Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael C. Georgiadis",
+        "affiliation": "Department of Chemical Engineering, Aristotle University of Thessaloniki, Thessaloniki, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Spyros S. Voutetakis",
+        "affiliation": "Chemical Process and Energy Resources Institute, Centre for Research and Technology-Hellas, Thessaloniki, Greece",
+        "designation": "Author"
+      },
+      {
+        "name": "Simira Papadopoulou",
+        "affiliation": "Department of Automation Engineering, Alexander Technological Educational Institute of Thessaloniki, Thessaloniki, Greece",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper430925.html",
+    "topic": "Power Management of Microgrids: Multiparametric Programming Approach to Improved Handling of System Uncertainties",
+    "date_time": "Wednesday, November 11, 2015: 12:48 PM",
+    "abstract": "Local power quality and environmental concerns associated with the conventional energy systems have spurred a move towards an improved grid system consisting of distributed, hybrid energy sources (renewable and non-renewable) and loads – microgrid. In the face of external uncertainties arising from electricity demand, price, and the availability of renewable resources, the microgrid system is required to operate seamlessly and optimally with or without interactions with a central grid network. This study presents a multi-parametric programming (MPP) based operational strategy for efficient and tractable integration and management of the distributed energy sources in a residential level microgrid. The hybrid system comprises of renewable (solar photovoltaic and wind turbine) and conventional systems (microturbine and utility grid connection). The overall problem is formulated using multi-parametric mixed-integer linear programming (mp-MILP) via parameterizations of the uncertain coordinates of the wind and solar resources. This results in a bi-level optimization problem, where choice of the parameterization scheme is made at the upper level while system operation decisions are made at the lower level. The mp-MILP formulation leads to significant improvements in uncertainty management, solution quality and computational burden; by easing dependency on the need for accurate meteorological information and removing the limitations of multiple computational cycles of the traditional online optimization techniques. The problem is solved offline on a day-ahead basis, allowing online implementation to be achieved on hourly system state updates. We consider two microgrid arrangements where one operates under a fixed feed-in-tariff (FIT) contract with a local distribution company, while the other goes through the price bidding system to take advantage of the time-of-use electricity price dynamics through the energy trading system (ETS). In the first scenario, renewables feed-in incentives discountenance any energy storage requirement. For the second scenario, the variable electricity pricing system calls for smart economic decisions where renewable energy surpluses to local load are stored in a battery when selling price is low, and subsequently sold when price is high. These two case studies of microgrid energy systems are used to assess the performance of the MPP algorithm. Lastly, the algorithm is applied to an experimental microgrid located in Sarnia, Ontario. Our preliminary results evidence the feasibility and the effectiveness of the proposed approach.",
+    "presenting_author": "Eva Umeozor | Chemical & Petroleum Engineering, University of Calgary, Calgary, AB, Canada",
+    "authors": [
+      "Milana Trifkovic | Chemical & Petroleum Engineering, University of Calgary, Calgary, AB, Canada"
+    ],
+    "authors_structured": [
+      {
+        "name": "Eva Umeozor",
+        "affiliation": "Chemical & Petroleum Engineering, University of Calgary, Calgary, AB, Canada",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Milana Trifkovic",
+        "affiliation": "Chemical & Petroleum Engineering, University of Calgary, Calgary, AB, Canada",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper418204.html",
+    "topic": "A Microtissue Array Device to Evaluate Effects of Multiwall Carbon Nanotubes on Lung Tissue Mechanics and Pulmonary Toxicity",
+    "date_time": "Wednesday, November 11, 2015: 1:06 PM",
+    "abstract": "Multi-wall carbon nanotubes (MWCNT) are widely used in many biomedical applications due to their excellent physical and chemical characteristics. However, the applications of MWCNT also raise health concerns. The small size and light weight of MWCNT allow them to enter the working environment as particulate matter of respirable sizes. Animal studies have shown that MWCNT cause inflammation, thickening and stiffening of the lung tissue, which leads to pulmonary diseases that are fatal and incurable. Therefore, understanding the effects of MWCNT on lung mechanics and pulmonary toxicity is important to the health safety in the applications involving MWCNT. However, due to the high cost and low throughput of the animal models, the progress in this field is very slow. The bio-microelectromechanical systems (bio-MEMS) technology allows realistic modeling of 3D human tissue and high throughput testing of many samples in a single device, thus provides a potentially viable solution to screen the pathogenic factors. Here we report the development of a 3D human lung microtissue array device to evaluate the impact of two different types of MWCNT on lung mechanics and pulmonary toxicity. Our device consists of arrays of PDMS microwells with each microwell containing a self-assembled microtissue hanging between a pair of micropillars. Using this device, we measured the changes in the mechanical properties and biomarkers related to the fibrogenesis in BEAS-2B human bronchial epithelial cells-populated microtissues. MWCNT (10-50um in length) and short-MWCNT (0.2-2um in length) with carboxyl modification (short-MWCNT-COOH) were selected. The cytotoxic effects of these 2 MWCNT were first evaluated by cell growth measurement and the reactive oxygen species (ROS) assay. BEAS-2B cells were treated with MWCNT at different concentrations (0, 50ng/mL, and 5ug/mL). At 48h post treatment, all treated groups showed the inhibition of cellular growth and generated significant ROS stress. Next, the self-assembled BEAS-2B microtissues were used to study the biomechanical impacts of MWCNT. Almost all of the microtissues formed nice dog-bone shape between the micropillars and produced substantial contraction force at day 1 after initial seeding, except for the 5ug/ml short-MWCNT-COOH group, which was likely due to the cytotoxicity caused by overdose treatment of the short-MWCNT-COOH. The contraction forces continued to increase for all groups over a 3-day culture period and the 50ng/mL short-MWCNT-COOH treatment showed the largest contraction force and tissue width. However, the contraction force and tissue width of the 50ng/mL MWCNT treatment were closed to the untreated control group. MicroRNA-21, a small non-coding RNA, has been found to mediate fibrogenic activation of lung fibrosis through the TGF-b signaling pathway, and thus represents a good biomarker for fibrogenic potential evaluation. Results from qRT-PCR showed significant up-regulation of microRNA-21 in 50ng/mL short-MWCNT-COOH treated BEAS-2B microtissues, which agreed with the high contraction force observed previously. Similarly, significant down-regulation of microRNA-21 was observed in 5ug/ml short-MWCNT-COOH treated microtissues, which was consistent with our contraction force results and probably due to the extensive cytotoxicity caused by such high concentration. The 3D microtissue array device mimicked in vivo environment and allowed in-situ collection of mechanical properties of the model tissue under different treatment conditions. We demonstrated its application in investigating the effects of MWCNT on lung tissue mechanics and pulmonary toxicity. The applications of microtissue array may be extended to high throughput screening of potential pathogenic factors induced by pathogens and toxic materials.",
+    "presenting_author": "Qixin Wang | Biomedical Engineering, University at Buffalo, State University of New York, Buffalo, NY",
+    "authors": [
+      "Zhaowei Che | Biomedical Engineering, University at Buffalo, State University of New York, Buffalo, NY",
+      "Chang Liu | Biomedical Engineering, University at Buffalo, State University of New York, Buffalo, NY",
+      "Ruogang Zhao | Biomedical Engineering, University at Buffalo, Buffalo, NY",
+      "Yun Wu | Biomedical Engineering, University at Buffalo, State University of New York, Buffalo, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Qixin Wang",
+        "affiliation": "Biomedical Engineering, University at Buffalo, State University of New York, Buffalo, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Zhaowei Che",
+        "affiliation": "Biomedical Engineering, University at Buffalo, State University of New York, Buffalo, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Chang Liu",
+        "affiliation": "Biomedical Engineering, University at Buffalo, State University of New York, Buffalo, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Ruogang Zhao",
+        "affiliation": "Biomedical Engineering, University at Buffalo, Buffalo, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Yun Wu",
+        "affiliation": "Biomedical Engineering, University at Buffalo, State University of New York, Buffalo, NY",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425762.html",
+    "topic": "A Microfluidic Single Particle Tracking Platform for Screening Ebolavirus Antivirals",
+    "date_time": "Wednesday, November 11, 2015: 1:42 PM",
+    "abstract": "Antiviral candidates are assessed based on their ability to prevent infection in animal models and cell lines, but these infectivity screens typically do not yield information on the mechanism of action of the potential drug. For example, the severity of the recent Ebola outbreak spurred the development of several antiviral strategies including antibodies and channel blockers, but it is not known what part of the viral life cycle these compounds are affecting. We present a platform that probes the ability of antivirals to block the entry of enveloped viruses. This platform provides us with information on how antivirals impact viral entry kinetics without the need for live Ebolavirus and microfluidics enable us to screen multiple compounds simultaneously. Our platform has two configurations, both of which use supported lipid bilayers (SLB). In the first configuration, SLB are embedded with the receptors used for viral entry and mimic the endosomal membrane. Virus-like particles (VLP) containing the Ebolavirus fusion protein are fluorescently labeled then passed over the bilayers. Binding and fusion of individual VLPs is tracked using total internal fluorescence microscopy. In the second configuration, the SLB is embedded with viral fusion proteins to mimic the viral membrane and fluorescently labeled vesicles containing the receptor are passed over the SLB. In either configuration, the data from particle tracking is used to study the fusion between the virus-like and host cell-like membranes to determine the fusion kinetics. Measuring kinetic parameters in the presence and absence of various antivirals can provide us with insight into their mechanism of action and will allow us to determine whether or not potential Ebolavirus therapeutics impact the binding or fusion of the virus.",
+    "presenting_author": "Lakshmi Nathan | Chemical and Biomolecular Engineering, Cornell University, Ithaca, NY",
+    "authors": [
+      "Chih-Yun Hsi | Chemical and Biomolecular Engineering, Cornell University, Ithaca, NY",
+      "Jean Millet | Department of Microbiology and Immunology, Cornell University, Ithaca",
+      "Susan Daniel | Chemical and Biomolecular Engineering, Cornell University, Ithaca, NY"
+    ],
+    "authors_structured": [
+      {
+        "name": "Lakshmi Nathan",
+        "affiliation": "Chemical and Biomolecular Engineering, Cornell University, Ithaca, NY",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Chih-Yun Hsi",
+        "affiliation": "Chemical and Biomolecular Engineering, Cornell University, Ithaca, NY",
+        "designation": "Author"
+      },
+      {
+        "name": "Jean Millet",
+        "affiliation": "Department of Microbiology and Immunology, Cornell University, Ithaca",
+        "designation": "Author"
+      },
+      {
+        "name": "Susan Daniel",
+        "affiliation": "Chemical and Biomolecular Engineering, Cornell University, Ithaca, NY",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425468.html",
+    "topic": "On the Optimal Sizing and Dispatch Problem for Microgrids with Stochastic Generators � When Is the Expected-Cost Differentiable?",
+    "date_time": "Wednesday, November 11, 2015: 1:06 PM",
+    "abstract": "This presentation concerns the problem of jointly optimizing the component sizes and dispatching rules for microgrids incorporating intermittent renewable resources such and wind and solar. The stochasticity introduced by these renewable resources, and to a lesser extent by the loads, plays a central role in this problem. First, it is well known that sizing components (e.g., generators and storage units) based on average resource availabilities can lead to designs that are highly unreliable or suboptimal in reality. Moreover, dispatching decisions must be made under large uncertainties about the future demand and resource availabilities, despite the fact that the relative costs and benefits of the competing options may change radically across alternative futures. Thus, the optimization problem at hand involves complex trade-offs between cost and reliability arising from the interplay of both design and operational decisions over time. To capture these trade-offs, a number of detailed simulation models have recently been developed. A given design is typically evaluated through an hourly time-series simulation over the course of a year. Hourly load, irradiance, and wind speed data are supplied by the user or stochastically generated from monthly averages. In each hour, these data are used to compute the net available power and dispatch decisions are made, typically based on a fixed set of logical rules parameterized by user-defined thresholds. Finally, model equations are solved for each component to update the system state and evaluate performance over the hour. The high temporal resolution of these simulations makes it possible to incorporate accurate performance and operational cost models for the system components. Moreover, these simulations can be driven with randomized load and generation profiles to accurately evaluate the expected cost of a system, including both stochastic operational costs and reliability metrics. In light of the preceding discussion, the optimal microgrid sizing and dispatch problem can be formulated as a nonlinear program in which the objective is defined as the expected-value of randomized time-series simulations. In fact, this simulation-optimization formulation has been used extensively in conjunction with heuristic optimization algorithms that view the stochastic simulation as a black-box. However, in the interest of enabling more efficient optimization approaches, we consider here the important question of whether or not the expected-cost is a continuously differentiable function of the decision variables (i.e., the component sizes and parameters influencing the dispatching rules). We begin by formulating time-series microgrid simulations generically as discrete-time stochastic hybrid systems (DTSHS) with associated stage and terminal costs. Alarmingly, for any fixed realization of uncertainty, we find that discrete dispatching decisions can introduce discontinuities in the system cost at every time-step along the simulation horizon. This observation carries over to finite sample averages of the cost, so that formally optimizing such an average would require the introduction of very many binary variables (there is a relation to the conventional multistage stochastic programming formulation of the problem here). Remarkably, our findings show that the true expected-value of the cost function is nonetheless continuously differentiable under very general conditions, and hence is amenable to gradient-based optimization strategies. We provide sufficient conditions for continuous differentiability and demonstrate their verification for some representative microgrid models. We also highlight particular model features and dispatching strategies that may lead to violations. Finally, we present improved optimization results using a stochastic gradient-descent algorithm.",
+    "presenting_author": "Joseph Scott | Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+    "authors": [
+      "Alphonse Hakizimana | Chemical and Biomolecular Engineering, Clemson University, Clemson, SC"
+    ],
+    "authors_structured": [
+      {
+        "name": "Alphonse Hakizimana",
+        "affiliation": "Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+        "designation": "Author"
+      },
+      {
+        "name": "Joseph Scott",
+        "affiliation": "Chemical and Biomolecular Engineering, Clemson University, Clemson, SC",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425064.html",
+    "topic": "A MULTI-Objective Optimization Approach to Optimal Sensor Location Problem in IGCC POWER Plants",
+    "date_time": "Wednesday, November 11, 2015: 1:42 PM",
+    "abstract": "A MULTI-OBJECTIVE OPTIMIZATION APPROACH TO OPTIMAL SENSOR LOCATION PROBLEM IN IGCC POWER PLANTS ABSTRACT In order to operate an IGCC power plant in a safe and stable manner, many input and output process parameters need to be monitored. However, due to economic and operational constraints it is infeasible to place sensors at locations pertaining to all of these parameters. Hence, it becomes important to select the most effective sensor locations which can lead us to gain maximum information about the plant conditions. Drawing on the work done by “Lee & Diwekar”, this paper attempts to broaden the realm of the optimal sensor location problem to address simultaneous optimization of multiple objective functions. In addition to “Fisher Information”, two other objective functions, viz., “thermal efficiency of the power plant” and “cost”, will be considered. Practical issues present in an IGCC power plant such as harsh physical conditions and variability in process parameters make the optimal sensor location problem an especially complicated one. Advanced simulation software and data from a set of existent sensors are used to collect information about the output parameters which do not have any sensors to gauge them yet. In order to solve this real world large scale problem, we use a novel algorithm called Better Optimization of Nonlinear Uncertain Systems (BONUS). BONUS works in probability distribution space and avoids sampling for each optimization and derivative calculations iterations. A non-linear stochastic multi-objective problem has been solved to determine the non-dominated or Pareto set which contains different options for optimal sensor network locations that can simultaneously satisfy the three objective functions, (maximizing observability, minimizing cost and maximizing the IGCC power plant thermal efficiency).",
+    "presenting_author": "Urmila Diwekar | ",
+    "authors": [
+      "Pallabi Se | Industrial Engineering, University of Illinois at Chicago, Chicago, IL",
+      "Kinnar Se | Industrial Engineering, University of Illinois at Chicago, Chicago, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Pallabi Se",
+        "affiliation": "Industrial Engineering, University of Illinois at Chicago, Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Kinnar Se",
+        "affiliation": "Industrial Engineering, University of Illinois at Chicago, Chicago, IL",
+        "designation": "Author"
+      },
+      {
+        "name": "Urmila Diwekar",
+        "affiliation": "",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper413342.html",
+    "topic": "Exploring Alternative Materials to Fabricate Microfluidic Gradient Generators to Study Algal Growth and Migration",
+    "date_time": "Wednesday, November 11, 2015: 12:30 PM",
+    "abstract": "Algae play crucial roles in providing nutrients and food resources for the higher trophic levels in addition to serving as a promising biofuel source and an environmental hazard (in the form of harmful algal blooms, HABs). Current methods employed to evaluate algal growth, viability, and migration rely on batch culturing in shaker flasks that require large volumes of reagents, extended incubation times to achieve necessary biophase concentrations, and external counting and assessment. These flasks are also limited to uniform doses and concentrations of nutrients that do not accurately reconstitute the heterogeneous, dynamic environment in which the algae reside. Advantages of using a microfluidic approach over current methods include (i) the direct, real-time visualization of single algal species, (ii) a significant reduction in experimental time and reagent volume, and (iii) the ability to create heterogeneous or homogeneous cellular microenvironments. This presentation highlights the development of a microfluidic gradient generator, fabricated from different materials, capable of both short- and long-term experimentation on algal growth and migration. One challenge in the design of a microfluidic device compatible with algae is the elimination of direct flow while allowing for the formation of a nutrient gradient in the culturing channels as algae are non-adherent cells. This was achieved in a device comprised of three separate fluidic channels fabricated into PDMS layered on top of an agarose slab. The two outer channels provided continuous flow of nutrients and, if necessary, a chemical gradient, while the center, ‘flow-free’, channel served as the experimental culture channel. To achieve a fluid tight seal in the channel, the PDMS/agarose device was enclosed in a custom built Plexiglas chamber. To overcome the need for this external chamber, we explored an alternative polymeric material using thiol-ene chemistry to generate the top and bottom components of the device. By tuning the polymerization chemistry of the thiol-acrylate, we were able to fabricate a rigid, PDMS-like top layer that could be chemically bound to a porous, hydrogel-like bottom layer to allow for ‘flow-free’ diffusion into the center channel. Nutrient diffusion and the stability of the chemical gradients of both materials were evaluated using both fluorescent microscopy and by COMSOL simulation. Finally, both devices fabricated from both materials were used to assess both the long-term growth dynamics and chemotactic response of the model algal species Chlamydomonas reinhardtii under varying nitrogen and phosphorus concentration. Ultimately, this technology allows for greater control and reduced experimental time and cost compared to current methods to assess algal growth and viability.",
+    "presenting_author": "Adam Melvin | Chemical Engineering, Louisiana State University, Baton Rouge, LA",
+    "authors": [
+      "Kelly O'Qui | Chemical Engineering, Louisiana State University, Baton Rouge, LA",
+      "Benjamin Roberts | Chemical Engineering, Louisiana State University, Baton Rouge, LA",
+      "Devin Manning | Chemical Engineering, Louisiana State University, Baton Rouge, LA",
+      "Michael Tullier | Chemistry, Louisiana State University, Baton Rouge, LA",
+      "John Pojm | Chemistry, Louisiana State University, Baton Rouge, LA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Kelly O'Qui",
+        "affiliation": "Chemical Engineering, Louisiana State University, Baton Rouge, LA",
+        "designation": "Author"
+      },
+      {
+        "name": "Benjamin Roberts",
+        "affiliation": "Chemical Engineering, Louisiana State University, Baton Rouge, LA",
+        "designation": "Author"
+      },
+      {
+        "name": "Devin Manning",
+        "affiliation": "Chemical Engineering, Louisiana State University, Baton Rouge, LA",
+        "designation": "Author"
+      },
+      {
+        "name": "Michael Tullier",
+        "affiliation": "Chemistry, Louisiana State University, Baton Rouge, LA",
+        "designation": "Author"
+      },
+      {
+        "name": "John Pojm",
+        "affiliation": "Chemistry, Louisiana State University, Baton Rouge, LA",
+        "designation": "Author"
+      },
+      {
+        "name": "Adam Melvin",
+        "affiliation": "Chemical Engineering, Louisiana State University, Baton Rouge, LA",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper432717.html",
+    "topic": "Model Predictive Control of Integrated Gasification Combined Cycle Power Plants with Membrane Reactors for Carbon Capture",
+    "date_time": "Wednesday, November 11, 2015: 1:24 PM",
+    "abstract": "In recent years, facing the challenge of global climate change, technologies of power plants with carbon capture have been studied worldwide. Integrated gasification combined cycle (IGCC) plants, which have potential for higher efficiencies than the conventional pulverized coal-fired power plants [1], are an emerging candidate for carbon capture. In this work, we analyze the implementation of model predictive control (MPC) strategies for an IGCC power plant equipped with a water gas shift membrane reactor (WGS-MR) unit for carbon capture. A model for this IGCC power plant represented by a system of differential algebraic equations was previously developed in MATLAB/Octave [2]. Using this model, two centralized control strategies based on linear and nonlinear MPC algorithms are presented to address different power generation scenarios. The linear MPC control strategy is based on a dynamic matrix control (DMC) method. For this method, a multiple-input multiple-output step response matrix is obtained employing step tests in the IGCC plant. The nonlinear MPC control strategy, NLMPC [2, 3], is based on the conversion of the differential algebraic equation system into a large-scale nonlinear programming (NLP) problem, which is solved using IPOPT, an efficient interior point-based large-scale nonlinear optimization algorithm. In the proposed multivariate control strategies, the following variables are considered as controlled output variables (CVs): carbon capture rate, power generation, temperature of cooled syngas stream, temperature of cooled permeate stream, steam to CO ratio at the WGS-MR inlet and hydrogen purity in the permeate stream. Also, the selected manipulated variables (MVs) are: water flow rates for syngas and permeate cooling, steam injection flow to syngas for the facilitation of the WGS reaction, total coal/water slurry, oxygen enriched air flow for the gasifier, sweep flow for the WGS-MR and air flow for the gas turbine. A number of control scenarios for the IGCC power plant are addressed. These scenarios include: (i) setpoint tracking associated with a power generation demand change, in which the IGCC power plant demand imposes a step increase from its original power generation steady point; (ii) disturbance rejection related to the variability in the quality of the coal feed. In this case, the power generation should be kept at the setpoint while the carbon content in the coal/slurry is reduced; and (iii) a combination of both setpoint tracking and disturbance rejection cases. In this presentation, results on the closed-loop responses for these different scenarios will be analyzed and compared considering the advanced linear and nonlinear MPC control strategies. References [1] Lima, F. V. P. Daoutidis, M. Tsapatsis, and J. J. Marano. Modeling and optimization of membrane reactors for carbon capture in Integrated Gasification Combined Cycle units. Ind. Eng. Chem. Res., 51(15):5480–5489, 2012. [2] Lima, F. V., R. Amrit, M. Tsapatsis, and P. Daoutidis. Nonlinear model predictive control of IGCC plants with membrane reactors for carbon capture. In Proceedings of the American Control Conference. Washington, DC, June 17-19 2013. [3] R. Amrit, J. B. Rawlings, and L. T. Biegler. Optimizing process economics online using model predictive control. Computers and Chemical Engineering, 58:334-343, 2013.",
+    "presenting_author": "Fernando V. Lima | Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+    "authors": [
+      "Xin He | Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+      "Rishi Amrit | Westhollow Technology Center, Shell Global Solutions (US) Inc., Houston, TX",
+      "Richard Turto | Department of Chemical Engineering, West Virginia University, Morgantown, WV"
+    ],
+    "authors_structured": [
+      {
+        "name": "Xin He",
+        "affiliation": "Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Rishi Amrit",
+        "affiliation": "Westhollow Technology Center, Shell Global Solutions (US) Inc., Houston, TX",
+        "designation": "Author"
+      },
+      {
+        "name": "Richard Turto",
+        "affiliation": "Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+        "designation": "Author"
+      },
+      {
+        "name": "Fernando V. Lima",
+        "affiliation": "Department of Chemical Engineering, West Virginia University, Morgantown, WV",
+        "designation": "Presenting Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper434902.html",
+    "topic": "Smart Grid Coordination of an IGCC Plant: Comparison of Multi-Stage Stochastic Programming and Empc",
+    "date_time": "Wednesday, November 11, 2015: 2:00 PM",
+    "abstract": "The Integrated Gasification Combined Cycle (IGCC) possesses a number of benefits over traditional power generation plants, ranging from increased energy conversion efficiency to flex-fuel and carbon capture opportunities. A less known benefit of the IGCC configuration is the ability to load track electricity market prices. The idea being that material storage can be used to time-shift power production away from periods of low power value to periods of high power value. Due to the uncertainty of electricity prices, the problem of sizing material storage units within the process must be formulated as a stochastic program. However, rather than being a fairly simple two-stage stochastic program, the dynamics imposed by the storage devices requires the formulation to be of the far more challenging multistage class. Due to the computationally intense nature of multistage stochastic programming, many have advocated the use of Economic MPC. The objective of this work is to provide a head-to-head comparison of feedback policies generated from multi-stage stochastic programming and EMPC. This comparison of policies provides a validation of EMPC based equipment design procedures.",
+    "presenting_author": "Jin Zhang | Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+    "authors": [
+      "Donald J. Chmielewski | Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL"
+    ],
+    "authors_structured": [
+      {
+        "name": "Jin Zhang",
+        "affiliation": "Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Donald J. Chmielewski",
+        "affiliation": "Chemical and Biological Engineering, Illinois Institute of Technology, Chicago, IL",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper432449.html",
+    "topic": "Microfluidic Cell Squeezing for Testing the Deformability of Tumor Cells",
+    "date_time": "Wednesday, November 11, 2015: 2:18 PM",
+    "abstract": "Metastasizing tumor cells must be able to squeeze through several narrow barriers, such as extracellular matrices and microvessels, on their way to secondary colony targets. During this process, the deformability of tumor cells is expected to play an important role. Microfluidics provides a unique opportunity to mimic in vivo cell squeezing and phenotype tumor cells based on their deformability. In this study, we developed a microfluidic device with arrays of microconstrictions. As cells flow through this multisqueezer device, we quantify cell sizes and phenotype them based on two deformability parameters – entry and transit time. We also determine the influence of channel wall friction on these two deformability parameters. We test the capabilities of the device with highly and weakly invasive prostate and breast cancer cells. We also assess the deformability of breast cancer cells that metastasize to the brain and those that do not. We find that in general entry and transit times increase with cell size. Highly invasive prostate cancer cells CL1 have higher entry/transit times compared to lowly invasive LNCaP cells. A similar result is obtained for highly invasive breast cancer cells MB231 when tested against weakly invasive MCF7 cells. The multisqueezer device is also able to distinguish the breast cancer cells from pericardial effusion (HTB131) and brain metastasis (MB231BR). However, the device is unable to differentiate MB231BR (a subtype of MB231 cells that metastasize to brain only) and MB231 cells. These result suggest that the deformability metrics – entry and transit time – can distinguish at least some cancer cell lines. We hypothesize that differences in the frictional properties of MB231 and MB231BR might be more significant than differences in deformability allowing the MB231BR cells to cross the blood-brain barrier. We will test this hypothesis by coating the channel walls with polymers and results will be presented on the role of friction in tumor cell transport.",
+    "presenting_author": "Nabiollah Kamyabi | Chemical Engineering, Texas Tech University, Lubbock, TX, Zeina S. Khan, Chemical Engineering, Texas Tech Department, Lubbock, TX",
+    "authors": [
+      "Siva Vanapalli | Chemical engineering, Texas Tech University, Lubbock, TX"
+    ],
+    "authors_structured": [
+      {
+        "name": "Nabiollah Kamyabi",
+        "affiliation": "Chemical Engineering, Texas Tech University, Lubbock, TX, Zeina S. Khan, Chemical Engineering, Texas Tech Department, Lubbock, TX",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Siva Vanapalli",
+        "affiliation": "Chemical engineering, Texas Tech University, Lubbock, TX",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425408.html",
+    "topic": "High-Density 3D CELL Culture and Analysis in an Integrated Microfluidic Platform",
+    "date_time": "Wednesday, November 11, 2015: 1:24 PM",
+    "abstract": "The development of robust high-throughput screening devises combining cell culture and detection systems is required for drug screening or for the applications of stem cells in therapy. In these fields, droplet-based microfluidics has recently shown avenues for controlled biological compartmentalization and high throughput cellular analysis, together with a significant reduction of the volume of reagents. 3D cultures have demonstrated improved biological functions of various mammalian cell types. In particular, the spheroids, which are tissue-like cellular aggregates, were reported to represent a physiologically relevant environment to mimic in vivo behavior. Various methods enable the formation of spheroids including hanging drops, low attachment wells etc. However, the application of these tools for high content screening is hindered by the limits on the number or the reproducibility of the spheroids. Moreover, these tools show limited compatibility with detection systems for in situ spheroid monitoring and analysis. Here we demonstrate a microfluidic platform that integrates high-density spheroid formation, long-term culture and analysis. This platform is based on droplet techniques, with modifications that allow long term 3D culture at time scales relevant with drug or cellular microenvironment screening. Nanoliter-sized aqueous droplets containing liquid agarose and hepactocytes were generated in fluorinated oil by flow focusing, in a microfabricated PDMS chip. The confined droplets were trapped in an array of 500 capillary anchors, through the reduction of their surface energy. After spheroid formation and hydrogel gelation, the oil phase was replaced with culture medium. The on-chip immobilized spheroids were cultivated and analyzed in situ during a 7 days culture period. The individual spheroid formation kinetics was obtained by live imaging. Representative size and shape evolutions were determined and deviations from the mean behavior were identified. In situ live/dead, immuno-cytochemistry and BrdU staining were performed on-chip at various time points of the culture period. The analysis of over 10.000 spheroids indicated sustained viability and proliferation as well as improved expression of functional markers (i.e. intracellular albumin) compared to conventional 2D cultures. Moreover, the inter-spheroid analysis shed light on a significant correlation between albumin expression and morphometric parameters (i.e. spheroid index and size). The results were further validated by RT-PCR analysis on extracted spheroids from the chip. Furthermore, on chip intra-spheroids analysis was performed on over 100.000 cells. It was found a highly significant correlation between cellular organization (distance between cells) and the cell function. Altogether, this study contributes to understanding the unique properties of 3D cultures by correlating micro-structural cues with the cell function. More importantly, this study demonstrates for the first time, the application of the droplet-based microfluidics into a robust and integrated long-term 3D culture and analysis platform, with potential applications in drug screening, stem cell and cancer research.",
+    "presenting_author": "S�bastien Sart | Hydrodynamics Laboratory, Ecole Polytechnique, Palaiseau, France",
+    "authors": [
+      "Raphael Tomasi | LADHYX, Ecole Poytechnique, Palaiseau, France",
+      "Gabriel Amselem | LADHYX, Ecole Poytechnique, Palaiseau, France",
+      "Charles N. Barou | LADHYX, Ecole Poytechnique, Palaiseau, France"
+    ],
+    "authors_structured": [
+      {
+        "name": "S�bastien Sart",
+        "affiliation": "Hydrodynamics Laboratory, Ecole Polytechnique, Palaiseau, France",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Raphael Tomasi",
+        "affiliation": "LADHYX, Ecole Poytechnique, Palaiseau, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Gabriel Amselem",
+        "affiliation": "LADHYX, Ecole Poytechnique, Palaiseau, France",
+        "designation": "Author"
+      },
+      {
+        "name": "Charles N. Barou",
+        "affiliation": "LADHYX, Ecole Poytechnique, Palaiseau, France",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper425418.html",
+    "topic": "Optimal Scheduling of Demand Responsive Industrial Production with Hybrid Renewable Energy Systems",
+    "date_time": "Wednesday, November 11, 2015: 12:30 PM",
+    "abstract": "The operational scheduling problem, including the management of energy demand and utilization associated with production processes, has received significant attention over the last decade, especially in light of the increased penetration levels of renewable and smart grid technologies, along with the adoption of time-varying electricity pricing policies. While the benefits of integrating renewable generation into the existing energy infrastructure have been widely recognized, the resulting time variations in energy flows between generation and consumption may significantly influence the cost of electricity. Taking the varying energy costs into account over a future time horizon in the production scheduling phase has already been shown to be technically feasible and economically plausible in a number of previous studies (e.g., see [1-3]). One of the merging trends aimed at achieving optimal economic performance is the smart scheduling between the power grid and the consumers. A two-way communication scheme is envisioned in the future smart grid. A major focus from the power system research side is on the multi-agent communication and scheduling of electricity generation [4]. However, the demand side should also take an active role in optimizing the grid operations and end-user economic performance, especially when renewable energy generation systems are incorporated and selling excess power back to the grid is allowed to gain benefits. This paper presents a methodology to apply real-time optimization and game theory techniques to the problem of optimally scheduling and managing the interaction between electricity providers and consumers so that the grid and loads can come to an agreement to achieve optimal economic performance. The energy flows in a typical energy-intensive industrial process, such as the chlor-alkali production, are simulated to conduct day-ahead scheduling and real-time demand response behaviors, while the smart grid allows for buying or selling electricity. The chlor-alkali production plant also combines photovoltaic/thermal hybrid solar systems, wind energy conversion systems and fuel cells, focusing on the supply and recovery of power, heat and materials. A communication and incentive scheme is first proposed for the complete energy scheduling process. The trade-off between following the contracted electricity profiles and paying penalties for any deviations from the contract to ensure maximum real-time profits is analyzed. Energy management strategies are then developed to realize the objectives of meeting production requirements while minimizing the overall operating costs and environmental impact. Production demand response to maximize profits is also integrated into the proposed methodology. Finally, it is demonstrated that load contracting can bring benefits such as reduced uncertainties to the grid as well. References: [1] K. Nolde and M. Morari, “Electrical load tracking scheduling of a steel plant,” Computers & Chemical Engineering , vol. 34, no. 11, pp. 1899–1903, 2010. [2] X. Wang, H. Teichgraeber, A. Palazoglu, and N. H. El-Farra, “An economic receding horizon optimization approach for energy management in the chlor-alkali process with hybrid renewable energy generation,” Journal of Process Control , vol. 24, no. 8, pp. 1318–1327, 2014. [3] S. Mitra, I. E. Grossmann, J. M. Pinto, and N. Arora, “Optimal production planning under time-sensitive electricity prices for continuous power-intensive processes,” Computers & Chemical Engineering , vol. 38, pp. 171–184, 2012. [4] W. Saad, Z. Han, H. V. Poor, and T. Basar, “Game-theoretic methods for the smart grid: An overview of microgrid systems, demand-side management, and smart grid communications,” Signal Processing Magazine, IEEE , vol. 29, no. 5, pp. 86–105, 2012.",
+    "presenting_author": "Xiaonan Wang | Chemical Engineering and Materials Science, UC Davis, Davis, CA, Ahmet Palazoglu, Chemical Engineering & Materials Science, UC Davis, Davis, CA",
+    "authors": [
+      "Nael H. El-Farra | Department of Chemical Engineering & Materials Science, University of California, Davis, Davis, CA"
+    ],
+    "authors_structured": [
+      {
+        "name": "Xiaonan Wang",
+        "affiliation": "Chemical Engineering and Materials Science, UC Davis, Davis, CA, Ahmet Palazoglu, Chemical Engineering & Materials Science, UC Davis, Davis, CA",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Nael H. El-Farra",
+        "affiliation": "Department of Chemical Engineering & Materials Science, University of California, Davis, Davis, CA",
+        "designation": "Author"
+      }
+    ]
+  },
+  {
+    "url": "https://aiche.confex.com/aiche/2015/webprogram/Paper432123.html",
+    "topic": "Culturing Spatially Separated Anaerobes in Porous Microfluidic Culture Chambers",
+    "date_time": "Wednesday, November 11, 2015: 2:00 PM",
+    "abstract": "Title: Culturing Spatially Separated Anaerobes in Porous Microfluidic Culture Chambers Authors: Peter G. Shankles, M. J. Doktycz, J. Morrell-Falvey, M. Podar, S. T. Retterer Microbial communities are found throughout our environment and adapt unique architectures that enhance their survival and function. Their impact on our ecosystems and our individual health is tremendous. Current studies often rely on the use of non-culture based methods to study natural community composition. Such metagenomic and single-cell genomic techniques give rise to a more complete understanding of the individuals that comprise these communities and their metabolic potential. However, these techniques fail to capture the spatial dependencies and heterogeneities that shape community structure and function. Moreover, such techniques do not yield organisms for physiological studies, screening of specific microbe-microbe interactions, or the construction and testing of synthetic communities that can be used to recapitulate the function of natural communities. The oral microbiome consists of over 1000 distinct species of microbes, and has a much higher culture rate than other natural environments. Nonetheless, only about half of the microbes catalogued using omics analysis have been successfully cultured. Even fewer of those associated with periodontal disease have been successfully isolated. Coevolution has caused the microbes associated with this disease to develop a complex system of relationships that are crucial to the growth of the microbes. As a result, the microbes do not grow when isolated individually. In order to culture uncultured bacteria from the oral microbiome, a co-culture approach, where bacteria are cultured together based on predicted dependencies, can be used. In this study, we look at cultured strains of bacteria associated with periodontal disease in a microfluidic culture chamber to better understand the effects that co-culture has on growth of these bacteria. The goal of this study is to develop a platform through which sustainable culture of microbes associated with periodontitis can be achieved. To this end, we have developed a PDMS-based microfluidic device that incorporates culture chambers, media channels, and gas diffusion to allow for the culture of anaerobic bacteria. Multiple chambers are linked through micro- and nanofabricated pores that constrict the movement of microbes between chambers, but allow for cell-to-cell communication through molecular diffusion. The device is kept in an anaerobic state with a gas diffusion layer in the PDMS. CO 2 and N 2 are mixed at a ratio of 20:80 and flowed through the system. A thin, 100 mm separation, allows for gas diffusion that maintains an anaerobic environment. In earlier work, operation of the microfluidic culture chamber array, and transport across the porous membranes was characterized using fluorescent small molecules, nanoparticles and sender and receiver strains of E. coli . In the latter case, the production of AHL by the sender strains and transport of the small molecule signal across the connecting membranes was characterized by observing the fluorescence of the receiver strain in response to the diffusing AHL signal. Ongoing tests are intended to quantify the effects of co-culture on oral microbiome species such as Synergistetes and Desulfobulbus . Effects of co-culture on community health will be determined using these cultured microbes. In future studies, the demonstrated device can be applied to uncultured oral microbes as well as microbes from other environments.",
+    "presenting_author": "Peter Shankles | Bredesen Center, University of Tennessee, Knoxville, TN",
+    "authors": [
+      "Mitchel J Doktycz | Center for Nanophase Materials Sciences, Oak Ridge National Laboratory, Oak Ridge, TN",
+      "Jennifer Morrell-Falvey | Biosciences Division, Oak Ridge National Laboratory, Oak Ridge, TN",
+      "Mircea Podar | Biosciences Division, Oak Ridge National Laboratory, Oak Ridge, TN",
+      "Scott T. Retterer | Center for Nanophase Materials Sciences, Oak Ridge National Laboratory, Oak Ridge, TN"
+    ],
+    "authors_structured": [
+      {
+        "name": "Peter Shankles",
+        "affiliation": "Bredesen Center, University of Tennessee, Knoxville, TN",
+        "designation": "Presenting Author"
+      },
+      {
+        "name": "Mitchel J Doktycz",
+        "affiliation": "Center for Nanophase Materials Sciences, Oak Ridge National Laboratory, Oak Ridge, TN",
+        "designation": "Author"
+      },
+      {
+        "name": "Jennifer Morrell-Falvey",
+        "affiliation": "Biosciences Division, Oak Ridge National Laboratory, Oak Ridge, TN",
+        "designation": "Author"
+      },
+      {
+        "name": "Mircea Podar",
+        "affiliation": "Biosciences Division, Oak Ridge National Laboratory, Oak Ridge, TN",
+        "designation": "Author"
+      },
+      {
+        "name": "Scott T. Retterer",
+        "affiliation": "Center for Nanophase Materials Sciences, Oak Ridge National Laboratory, Oak Ridge, TN",
+        "designation": "Author"
+      }
+    ]
+  }
+]
