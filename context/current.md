@@ -1,11 +1,76 @@
-# Current repository map — November 6, 2026
+# Current repository map — November 18, 2026
 
 This summarizes the current project snapshot. No credentials are recorded here.
 
+## November 18 GitHub update review
+
+Reviewed the app, twelve-height cluster/index data, and newly completed extraction
+outputs against the existing remote `chandan` branch. All 14 regression tests,
+full Streamlit checks at twelve heights, index/count/hierarchy audits, and
+independent paper-ranking audits passed. Changed text files passed credential
+pattern and local-key-value checks without exposing any values.
+
+The update includes 505 new `groq/extracted_results_2017/` JSON outputs containing
+4,276 records. Every referenced source chunk exists; its paper URLs identify 2017.
+These are raw extraction outputs, not additions to the installed 173,438-keyword
+snapshot. The November 4 newer-keyword Ward run remains failed. Notebook source
+is unchanged; execution-output-only changes and operational logs remain local.
+Reports, manuscript drafts, credentials, environments and editor caches stay
+excluded. Large NumPy data remains tracked through Git LFS.
+
 ## November 6 publication status
 
-The repository is being published on its existing `chandan` branch, with code,
-datasets, archives, validation reports, aggregate snapshots, and web indices.
+### Installed threshold expansion
+
+The completed 173,438-keyword Ward tree now has twelve installed cuts: 0.25,
+0.40, 0.50, 0.60, 0.75, 0.90, 1.00, 1.25, 1.50, 2.00, 2.50 and 3.00.
+The three broader cuts have 8,347, 4,989 and 3,354 themes. New cuts/indices were
+staged in the excluded reports directory, audited together with existing cuts,
+and installed only after the full country/year/member/hierarchy and independent
+paper-ranking audits passed. `verify_indices.verify(paths=...)` and
+`verify_trends.verify(directories=...)` accept optional staged inputs for this audit.
+Existing live cuts, aggregate and shared paper records were preserved. The
+newer 183,489-keyword rebuild remains unfinished and is not mixed with these cuts.
+The app lists every available height and explains Whole theme versus One keyword.
+The full Streamlit verification passed all twelve heights: selected-keyword
+carry-over, theme metrics, map values and institute counts matched the prepared
+source data, and exact-keyword mode remained consistent. Browser checks confirmed
+both 2.50 and 3.00 update the live trend rankings and theme totals.
+
+### Paper-based top themes and changes
+
+The Trend direction field explicitly offers Both signs (largest magnitude),
+Positive trends (+), and Negative trends (−). Both sorts absolute endpoint change
+while retaining signs (not equal positive/negative quotas). Legacy direction
+widget values are migrated to the clearer labels. Focused calculation/UI tests
+verify each mode, including a large decline ranking above smaller increases.
+
+The `/trends` route now presents Top themes & trends. Users can rank one year's
+distinct-paper counts or normalized endpoint share changes, filter rising/falling
+or largest absolute changes, and request Top 10/20/50/100, Custom, or All. The
+global height defines membership. `trend_analysis.py` deduplicates papers within
+themes, validates source IDs/years and snapshot compatibility, and uses matched
+keyword-bearing papers as denominators, including papers without affiliations.
+`trend_page.py` provides chart/table/evidence tabs, minimum support, CSV exports,
+member keywords, supporting papers, and histories with missing-year gaps. Charts
+cap at 20; tables and exports include every requested qualifying result.
+
+The About guide distinguishes these paper shares from Explorer/Geography mentions.
+`verify_trends.py` independently checks all prepared-height/year counts and endpoint
+changes against sets of paper IDs. Fixture tests cover duplicate mentions, missing
+years, invalid joins, and adjustable UI controls. Reports and manuscript drafts
+remain local under Git ignore rules.
+
+Validation for this change: 12 regression/calculation tests plus the focused UI
+test passed (13 tests total). The independent audit passed all nine observed-year
+rankings and endpoint changes at all five prepared heights. The integrated 2014–2024
+top ten at each height exactly matches the 50 previously calculated local report
+selections and their full-precision share changes. Browser checks confirmed dark
+mode, height 1.50, adjustable Top 20 and correctly ordered signed bars.
+
+The repository uses its existing `chandan` branch for code, datasets, archives,
+installed aggregate snapshots, and web indices. Analysis reports and manuscript
+drafts remain local and excluded from Git.
 Large aggregate files and NumPy arrays use Git LFS. Local environments, model
 caches, editor state, and credentials remain excluded. The root README includes
 fresh-clone setup instructions.
@@ -13,7 +78,8 @@ fresh-clone setup instructions.
 The November 4 worker stopped at 21:58 that day with exit code 1073807364;
 `reports/keyword_refresh_2026-11-04/refresh_status.json` records `failed`.
 Its frozen 183,489-keyword input is retained, but its Ward tree and twelve-height
-results did not complete or replace the live 173,438-keyword, five-height snapshot.
+results did not complete or replace the live 173,438-keyword snapshot, whose
+completed tree now provides twelve heights as described above.
 The running/pending descriptions below are historical November 4 progress notes.
 
 ## November 4 refresh (supersedes dated status notes below)

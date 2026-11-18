@@ -1,7 +1,7 @@
 # Repo Context — Index
 
-**Last scanned commit:** `f856d9ddd54642a529ef3d3288792fc1261aa72d`
-**Last scanned:** 2026-11-04 (current working tree, including uncommitted changes)
+**Last scanned commit:** `0fbe564908e3efc99b4f6246cb23efe9c530e049`
+**Last scanned:** 2026-11-18 (incremental publication review of app, twelve-height data and new 2017 extractions, against the recorded base commit)
 
 ## Current implementation
 

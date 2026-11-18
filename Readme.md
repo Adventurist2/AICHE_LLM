@@ -25,7 +25,7 @@ py -3.12 -m venv .venv
 & .\.venv\Scripts\python.exe -m streamlit run .\05_webapp\app.py
 ```
 
-Open http://localhost:8501. The five pages are Explorer, Trends, Geography,
+Open http://localhost:8501. The five pages are Explorer, Top themes & trends, Geography,
 Institutes, and About & metrics. The prepared indices allow the app to start
 without rebuilding the Ward tree. Semantic search may download its embedding
 model on first use. API credentials are only needed for the extraction services;
@@ -36,14 +36,20 @@ without LFS downloads contains pointer files in their place. Local environments,
 model caches, editor state, and credentials are excluded; the code and datasets
 are retained.
 
-### Snapshot status at upload (November 6, 2026)
+### Snapshot status at upload (November 18, 2026)
 
 The installed explorer snapshot contains 173,438 keywords and 313,858 mentions
-at five clustering heights. A newer local input contains 183,489 keywords
+at twelve clustering heights from 0.25 through 3.00. A newer local input contains 183,489 keywords
 and 331,849 mentions, with partial 2017 extraction coverage. Its Ward rebuild
 stopped on November 4 before producing a completed new tree. Its saved status
 and frozen inputs remain in the excluded local reports directory; the newer
-twelve-height results are not installed in the published explorer snapshot.
+keywords are not installed in the explorer snapshot. The twelve available
+heights were cut from the completed 173,438-keyword tree.
+
+The November 18 update also includes 505 additional completed 2017 extraction
+JSON files (4,276 records), verified against their saved 2017 source URLs. These
+raw outputs are preserved separately from the installed explorer snapshot and
+require a later aggregate/clustering refresh before appearing in the website.
 
 ## 1. Project Overview
 

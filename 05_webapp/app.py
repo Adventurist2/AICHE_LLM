@@ -24,7 +24,7 @@ with st.container(key='page_header'):
 
 page = st.navigation([
     st.Page('views/explorer.py', title='Explorer', default=True),
-    st.Page('views/trends.py', title='Trends', url_path='trends'),
+    st.Page('views/trends.py', title='Top themes & trends', url_path='trends'),
     st.Page('views/geography.py', title='Geography', url_path='geography'),
     st.Page('views/institutes.py', title='Institutes', url_path='institutes'),
     st.Page('views/about.py', title='About & metrics', url_path='about'),
@@ -48,8 +48,10 @@ with st.container(key='global_threshold'):
     with st.expander('Clustering controls · specific to broad', expanded=page.title == 'Explorer'):
         threshold = st.select_slider('Clustering distance threshold', options=thresholds,
                                      value=1.0 if 1.0 in indices else thresholds[0],
-                                     format_func=lambda value: f'{value:.2f}', key='threshold')
+                                     format_func=lambda value: f'{value:.2f}', key='threshold',
+                                     help='Higher heights merge keywords into broader themes. In Explorer, choose Whole theme to see merged totals; One keyword keeps exact-keyword counts.')
         st.caption('Specific ← → Broad themes')
+        st.caption('Available heights: ' + ' · '.join(f'{height:.2f}' for height in thresholds))
 index_dir, meta, version = indices[threshold]
 stats_path = Path(INDEX_DIR) / 'keyword_stats.json'
 if not stats_path.exists():

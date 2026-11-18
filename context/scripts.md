@@ -1,5 +1,17 @@
 # Scripts
 
+## Current paper-ranking modules (November 6, 2026)
+
+- `05_webapp/trend_analysis.py`: validates source-backed paper/year/keyword joins
+  and cluster membership; computes distinct-paper prevalence and signed endpoint
+  changes. Reads the selected `index/dt*/` membership and shared paper Parquets;
+  returns in-memory rankings without changing the dataset.
+- `05_webapp/trend_page.py`: cached Streamlit UI for top counts, all/custom counts,
+  years, rising/falling filters, minimum support, chart/table/evidence and downloads.
+- `05_webapp/verify_trends.py`: independent set-based audit of all prepared-height
+  yearly rankings and endpoint changes. Regression coverage lives in
+  `tests/test_trend_analysis.py` and `tests/test_trend_page.py`.
+
 > Historical August 16 scan. See [current.md](current.md) for the current
 > aggregate, Ward clustering, index-building and Streamlit scripts.
 

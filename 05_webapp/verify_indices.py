@@ -8,11 +8,11 @@ from countries import country_counts
 from search import IndexBundle, INDEX_DIR
 
 
-def verify():
+def verify(paths=None):
     snapshot = json.loads(Path(INDEX_DIR, 'keyword_stats.json').read_text(encoding='utf-8'))
     stats = snapshot['keywords']
     total = sum(rec['total_count'] for rec in stats.values())
-    paths = sorted(Path(INDEX_DIR).glob('dt*/meta.json'))
+    paths = list(paths) if paths is not None else sorted(Path(INDEX_DIR).glob('dt*/meta.json'))
     assert paths, 'No threshold indices found'
     previous = None
     for path in sorted(paths, key=lambda p: float(json.loads(p.read_text())['threshold'])):

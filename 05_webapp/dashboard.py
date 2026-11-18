@@ -219,21 +219,8 @@ def render_explorer():
 
 
 def render_trends():
-    ctx = context()
-    bundle, stats, threshold, institution_data = (ctx[k] for k in ('bundle', 'stats', 'threshold', 'institution_data'))
-    st.title('Research trends')
-    st.caption('Which themes appear most often in a meeting year?')
-    st.write('Bar length counts keyword mentions across a theme’s members. Use this ranking to explore prominent topics in the selected meeting; it does not measure scientific impact. Compare coverage before comparing years.')
-    years = sorted(bundle.cluster_year['year'].unique(), reverse=True)
-    if years:
-        chosen_year = st.selectbox('Year', years, key='year_pick')
-        n = st.slider('Show top N', 5, 30, 15, key='year_top_n')
-        top = bundle.cluster_year[bundle.cluster_year.year == chosen_year].merge(
-            bundle.clusters[['row_idx', 'representative']], on='row_idx').sort_values('count', ascending=False).head(n)
-        fig = px.bar(top, x='count', y='representative', orientation='h')
-        st.plotly_chart(ranking_chart(fig, len(top)), width='stretch', config=CHART_CONFIG)
-        st.caption('Ranked by keyword mentions')
-    st.page_link('views/about.py', label='Understanding trends and coverage →')
+    from trend_page import render_paper_trends
+    render_paper_trends(context(), INDEX_DIR)
 
 
 def render_geography():
@@ -241,7 +228,7 @@ def render_geography():
     bundle, stats, threshold, institution_data = (ctx[k] for k in ('bundle', 'stats', 'threshold', 'institution_data'))
     st.title('Geographic landscape')
     st.caption('Explore prominent themes linked to a reported country.')
-    st.write('Bar length counts keyword mentions attributed to this country. International records can credit several countries. These are reported names from extraction records, not independently geocoded author locations.')
+    st.write('Bar length counts keyword mentions attributed to this country. International records can credit several countries.')
     countries = sorted(bundle.cluster_country['country'].unique())
     if countries:
         chosen_country = st.selectbox('Country', countries,

@@ -3,7 +3,8 @@
 The interface has five native pages, with direct URLs and top navigation:
 
 - **Explorer** (`/`): search, selected-theme metrics, time series and map.
-- **Trends** (`/trends`): themes ranked within a meeting year.
+- **Top themes & trends** (`/trends`): distinct-paper rankings within a year,
+  or normalized endpoint changes with rising/falling filters.
 - **Geography** (`/geography`): themes ranked for a reported country.
 - **Institutes** (`/institutes`): selected-theme affiliations or an institute directory,
   with supporting papers and downloads.
@@ -18,6 +19,29 @@ does not discard them when those widgets leave the current page.
 file-based routes and `about.py` contains the reading guide. Tables and supporting
 details use bounded grids or expanders to keep the pages focused.
 
+## Paper-based rankings
+
+Choose Top 10/20/50/100, Custom, or All. The global height selector updates theme
+membership and rankings. Top themes counts distinct source-matched,
+keyword-bearing papers in one year. Change rankings compare paper shares
+between two observed years in percentage points. Largest changes ranks absolute
+magnitude. The Trend direction field offers Both signs (largest magnitude),
+Positive trends (+), and Negative trends (−). Both mixes signs by magnitude,
+so a −5 pp change ranks above +3 pp, without reserving half the slots per sign.
+Minimum support uses the
+selected year or both endpoints. These measures differ from keyword mentions.
+
+Tables and CSVs contain every requested qualifying result; charts show up to 20
+for readability. Evidence provides members, histories with missing-year gaps,
+and distinct source-paper links/downloads. Denominators include matched papers
+without affiliations. Shares overlap across themes. Unequal coverage and
+automatic theme labels remain limitations.
+
+`trend_analysis.py` validates source IDs/years, membership and snapshot
+fingerprints. `trend_page.py` caches by input versions and renders the controls.
+Run `python 05_webapp/verify_trends.py` to independently audit every observed-year
+ranking and endpoint change at every height using sets of source paper IDs.
+
 From the repository root:
 
 ```powershell
@@ -29,6 +53,10 @@ python -m streamlit run 05_webapp/app.py
 The clustering job builds one Ward tree, caches it, and cuts it at **0.25,
 0.40, 0.50, 0.60, 0.75, 0.90, 1.00, 1.25, 1.50, 2.00, 2.50, and 3.00**.
 Lower heights create finer themes; higher heights create broader themes.
+All twelve heights are installed for the current 173,438-keyword snapshot.
+The broader 2.00, 2.50 and 3.00 cuts contain 8,347, 4,989 and 3,354 themes,
+respectively. These cuts reuse the completed tree; the unfinished newer-keyword
+rebuild is separate. All pages discover the installed heights automatically.
 These are Ward linkage distances, not percentages or confidence scores.
 Use `--thresholds` to add other positive heights,
 then rebuild the indices. The slider discovers all prepared heights. Changing

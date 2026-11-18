@@ -39,6 +39,15 @@ A paper with two institutes can count once for each, so summing institute rows c
 For example, 80 out of 100 means 80% coverage among matched papers, not 80% of the full conference.
 Source-file/title coverage tables count references before duplicate papers are combined.
 ''')
+        with st.expander('Top themes, paper shares, and change rankings'):
+            st.markdown('''**Theme papers:** distinct matched paper IDs containing at least one member keyword. Several member keywords on one paper count once within that theme.
+
+**Paper share:** theme papers ÷ distinct source-matched, keyword-bearing papers in that year × 100. Papers without affiliations remain eligible. A paper can support multiple themes, so their shares can sum above 100%.
+
+**Change (pp):** end-year paper share minus start-year paper share. A move from 1% to 2% is +1 percentage point. Trend direction offers Positive (+), Negative (−), or Both signs (largest magnitude). Both ranks absolute change while retaining its sign: −5 pp comes before +3 pp, without reserving equal slots per sign. This is endpoint change, not maximum variation, significance, or prediction.
+
+**Top count and minimum support:** Top 10/20/custom/All controls the table and export. Minimum support requires that many papers in the chosen year or across the two endpoints. The chart shows up to 20 for readability. Coverage differences and extraction errors can affect every ranking.
+''')
     with graphs:
         st.markdown('''### Research over time — line chart
 The horizontal axis is the meeting year; the vertical axis is keyword mentions for
@@ -56,8 +65,14 @@ value in this selection; that does not establish absence of research. Color scal
 change with the selection, so compare actual values rather than shades across maps.
 Country assignments come from extraction records, not independent affiliation geocoding.
 
-### Trends and geography — ranked bars
-Bar length is keyword mentions for a theme in the chosen meeting year or country.
+### Top themes & trends — paper rankings
+Bars show normalized paper share for one year or signed percentage-point change
+between two chosen years. Larger positive values indicate a larger observed share;
+negative values indicate a smaller share. Evidence shows member keywords, yearly
+paper shares, and supporting source papers. Missing years break the evidence line.
+
+### Geography — ranked bars
+Bar length is keyword mentions for a theme in the chosen country.
 The longest bar ranks highest by this count within the current snapshot and threshold.
 Top N limits the displayed rows; omitted themes still exist. These charts show observed
 prominence, not quality, citations, funding or a country’s research productivity.
@@ -111,5 +126,6 @@ that every scrape, AI-extracted keyword or semantic cluster is correct.
 Year, country and institute coverage differs. For research comparisons, examine
 distinct-paper shares with a clearly stated denominator and minimum sample size,
 review name variants, and separate incomplete years. Those normalized comparisons
-are not what the current raw-count plots display.
+are displayed on Top themes & trends. Explorer and Geography retain their
+separately labeled mention counts; they should not be compared as if they were paper shares.
 ''')
